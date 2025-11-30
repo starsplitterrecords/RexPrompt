@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assembler</title>
+<style>
+body { font-family: sans-serif; padding: 20px; }
+select, button { margin: 0 10px 20px 0; }
+pre { background:#eee; padding:10px; white-space:pre-wrap; }
+.block { margin-bottom:15px; }
+</style>
+</head>
+<body>
+
+<h3>Assembler</h3>
+
+<div class="block">
+  <label>Scene (recipes)</label>
+  <select id="sceneSel"></select>
+</div>
+
+<div id="manualInputs"></div>
+
+<button id="buildBtn">Build</button>
+<pre id="out"></pre>
+
+<script>
+const files = [
+  "blocking.json",
+  "characters.json",
+  "dialogue.json",
+  "direction.json",
+  "factions.json",
+  "lighting.json",
+  "mood.json",
+  "negatives.json",
+  "regions.json",
+  "settings.json",
+  "scenes_prequel.json"
+];
+
+async function load(path) {
+  const r = await fetch("data/" + path);
+  if (!r.ok) throw new Error("load fail: " + path);
+  return r.json();
+}
+
+async function init() {
+  const manual = document.getElementById("manualInputs");
+  const sceneSel = document.getElementById("sceneSel");
+  const store = {};
+
+  // load everything
+  for (const f of files) {
+    const data = await load(f);
+    store[f] = data;
+  }
+
+  // populate scene dropdown
+  const scenes = store["scenes_prequel.json"];
+  Object.keys(scenes).forEach(k => {
+    const o = document.createElement("option");
+    o.value = k;
+    o.textContent = k;
+    sceneSel.appendChild(o);
+  });
+
+  // manual fallback dropdowns
+  for (const f of files) {
+    if (f === "scenes_prequel.json") continue; // scene handled separately
+
+    const wrap = document.createElement("div");
+    wrap.className = "block";
+
+    const label = document.createElement("label");
+    label.textContent = f;
+    wrap.appendChild(label);
+
+    const sel = document.createElement("select");
+    sel.dataset.file = f;
+
+    const keys = Object.keys(store[f]);
+    sel.appendChild(new Option("[none]",""));
+    keys.forEach(k => sel.appendChild(new Option(k, k)));
+
+    wrap.appendChild(sel);
+    manual.appendChild(wrap);
+  }
+
+  document.getElementById("buildBtn").onclick = () => {
+    const out = [];
+    const sceneKey = sceneSel.value;
+    const scene = scenes[sceneKey];
+
+    if (scene) {
+      out.push("=== SCENE: " + sceneKey + " ===");
+      out.push(scene.summary || "");
+
+      // auto-expand each referenced field
+      const expand = (file, keys, title) => {
+        if (!keys || !keys.length) return;
+        out.push("\n[" + title + "]");
+        keys.forEach(k => {
+          const entry = store[file][k];
+          if (!entry) return;
+          out.push(formatEntry(entry));
+        });
+      };
+
+      // single refs
+      if (scene.setting) {
+        const entry = store["settings.json"][scene.setting];
+        if (entry) out.push("\n[SETTING]\n" + formatEntry(entry));
+      }
+      if (scene.region) {
+        const entry = store["regions.json"][scene.region];
+        if (entry) out.push("\n[REGION]\n" + formatEntry(entry));
+      }
+
+      // arrays
+      expand("factions.json", scene.factions, "FACTIONS");
+      expand("characters.json", scene.characters, "CHARACTERS");
+      expand("dialogue.json", scene.dialog, "DIALOGUE");
+      expand("direction.json", scene.direction, "DIRECTION");
+
+      // manual overrides
+      collectManual(out, store);
+    } else {
+      // no scene selected → only manual
+      collectManual(out, store);
+    }
+
+    document.getElementById("out").textContent = out.join("\n").trim();
+  };
+}
+
+// pretty-print any entry
+function formatEntry(e) {
+  if (typeof e === "string") return e;
+  if (e.text) return e.text;
+  if (e.name) return e.name;
+  if (e.summary) return e.summary;
+  return JSON.stringify(e);
+}
+
+// collect manual dropdown selections
+function collectManual(out, store) {
+  const manual = document.querySelectorAll("#manualInputs select");
+  manual.forEach(sel => {
+    const f = sel.dataset.file;
+    const k = sel.value;
+    if (!k) return;
+    const entry = store[f][k];
+    if (entry) out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
+  });
+}
+
+init().catch(err => {
+  document.getElementById("out").textContent = err.message;
+});
+</script>
+
+</body>
+</html>
