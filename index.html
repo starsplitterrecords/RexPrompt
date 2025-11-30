@@ -45,18 +45,40 @@ async function load(path) {
   return r.json();
 }
 
+function getHandle(charId, charactersJson) {
+  const entry = charactersJson[charId];
+  return entry ? entry.handle || entry.name || charId : charId;
+}
+
+function formatEntry(e) {
+  if (typeof e === "string") return e;
+  if (e.text) return e.text;
+  if (e.name) return e.name;
+  if (e.summary) return e.summary;
+  return JSON.stringify(e);
+}
+
+function collectManual(out, store) {
+  const manual = document.querySelectorAll("#manualInputs select");
+  manual.forEach(sel => {
+    const f = sel.dataset.file;
+    const k = sel.value;
+    if (!k) return;
+    const entry = store[f][k];
+    if (entry) out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
+  });
+}
+
 async function init() {
   const manual = document.getElementById("manualInputs");
   const sceneSel = document.getElementById("sceneSel");
   const store = {};
 
-  // load everything
   for (const f of files) {
     const data = await load(f);
     store[f] = data;
   }
 
-  // populate scene dropdown
   const scenes = store["scenes_prequel.json"];
   Object.keys(scenes).forEach(k => {
     const o = document.createElement("option");
@@ -65,9 +87,8 @@ async function init() {
     sceneSel.appendChild(o);
   });
 
-  // manual fallback dropdowns
   for (const f of files) {
-    if (f === "scenes_prequel.json") continue; // scene handled separately
+    if (f === "scenes_prequel.json") continue;
 
     const wrap = document.createElement("div");
     wrap.className = "block";
@@ -95,64 +116,60 @@ async function init() {
     if (scene) {
       out.push("=== SCENE: " + sceneKey + " ===");
       out.push(scene.summary || "");
+      out.push("This is a 10 second vertical orientation clip for an 8k, high budget, modern-futuristic, prestige TV show");
 
-      // auto-expand each referenced field
-      const expand = (file, keys, title) => {
-        if (!keys || !keys.length) return;
-        out.push("\n[" + title + "]");
-        keys.forEach(k => {
-          const entry = store[file][k];
-          if (!entry) return;
-          out.push(formatEntry(entry));
-        });
-      };
-
-      // single refs
       if (scene.setting) {
         const entry = store["settings.json"][scene.setting];
         if (entry) out.push("\n[SETTING]\n" + formatEntry(entry));
       }
+
       if (scene.region) {
         const entry = store["regions.json"][scene.region];
         if (entry) out.push("\n[REGION]\n" + formatEntry(entry));
       }
 
-      // arrays
-      expand("factions.json", scene.factions, "FACTIONS");
-      expand("characters.json", scene.characters, "CHARACTERS");
-      expand("dialogue.json", scene.dialog, "DIALOGUE");
-      expand("direction.json", scene.direction, "DIRECTION");
+      if (scene.factions && scene.factions.length) {
+        out.push("\n[FACTIONS]");
+        scene.factions.forEach(k => {
+          const e = store["factions.json"][k];
+          if (e) out.push(formatEntry(e));
+        });
+      }
 
-      // manual overrides
+      if (scene.characters && scene.characters.length) {
+        out.push("\n[CHARACTERS]");
+        scene.characters.forEach(k => {
+          const e = store["characters.json"][k];
+          if (e) out.push(formatEntry(e));
+        });
+      }
+
+      if (scene.dialog && scene.dialog.length) {
+        out.push("\n[DIALOGUE]");
+        scene.dialog.forEach(k => {
+          const d = store["dialogue.json"][k];
+          if (!d) return;
+          const speaker = getHandle(d.speakerId, store["characters.json"]);
+          const line = d.text || "";
+          out.push(speaker + ": " + line);
+        });
+      }
+
+      if (scene.direction && scene.direction.length) {
+        out.push("\n[DIRECTION]");
+        scene.direction.forEach(k => {
+          const e = store["direction.json"][k];
+          if (e) out.push(formatEntry(e));
+        });
+      }
+
       collectManual(out, store);
     } else {
-      // no scene selected → only manual
       collectManual(out, store);
     }
 
     document.getElementById("out").textContent = out.join("\n").trim();
   };
-}
-
-// pretty-print any entry
-function formatEntry(e) {
-  if (typeof e === "string") return e;
-  if (e.text) return e.text;
-  if (e.name) return e.name;
-  if (e.summary) return e.summary;
-  return JSON.stringify(e);
-}
-
-// collect manual dropdown selections
-function collectManual(out, store) {
-  const manual = document.querySelectorAll("#manualInputs select");
-  manual.forEach(sel => {
-    const f = sel.dataset.file;
-    const k = sel.value;
-    if (!k) return;
-    const entry = store[f][k];
-    if (entry) out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
-  });
 }
 
 init().catch(err => {
