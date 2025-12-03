@@ -171,7 +171,7 @@ async function init() {
       });
     }
 
-    cameoSet.forEach(h => out.push("@" + h));
+    cameoSet.forEach(h => out.push(h));
 
     if (scene) {
       out.push("\n=== SCENE: " + sceneKey + " ===");
@@ -207,7 +207,7 @@ async function init() {
           if (!d) return;
           const h = getHandle(d.speakerId, store["characters.json"]);
           const line = d.text || "";
-          out.push("@" + h + ' says "' + line + '"');
+          out.push(h + ' says "' + line + '"');
           if (d.subtext) out.push("  (" + d.subtext + ")");
         });
       }
