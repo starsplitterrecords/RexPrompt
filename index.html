@@ -12,22 +12,18 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-
 .container {
   max-width: 100%;
   width: 100%;
   overflow-x: hidden;
 }
-
 select, button {
   margin: 0 10px 20px 0;
 }
-
 button {
   font-size: 1.1rem;
   padding: 14px 20px;
 }
-
 pre {
   background: #eee;
   padding: 10px;
@@ -36,11 +32,9 @@ pre {
   max-width: 100%;
   box-sizing: border-box;
 }
-
 .block {
   margin-bottom: 15px;
 }
-
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -60,16 +54,13 @@ pre {
     <select id="sceneSel"></select>
   </div>
 
-<div class="btn-row">
+  <div class="btn-row">
     <button id="buildBtn">Build</button>
     <button id="copyBtn">Copy Assembled Text</button>
     <button id="commitBtn">Commit Scene</button>
   </div>
-  
+
   <pre id="out"></pre>
-
-  
-
   <div id="manualInputs"></div>
 
 </div>
@@ -110,13 +101,10 @@ function formatEntry(e) {
 
 function collectManual(out, store) {
   const manual = document.querySelectorAll("#manualInputs select");
-
   manual.forEach(sel => {
     const f = sel.dataset.file;
     const k = sel.value;
     if (!k) return;
-
-    // manual dialogue subtext selector
     if (f === "dialogue.json_subtext") {
       const entry = store["dialogue.json"][k];
       if (entry && entry.subtext) {
@@ -124,8 +112,6 @@ function collectManual(out, store) {
       }
       return;
     }
-
-    // normal manual selections
     const entry = store[f] && store[f][k];
     if (entry) {
       out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
@@ -134,7 +120,6 @@ function collectManual(out, store) {
 }
 
 async function init() {
-  const manual = document.getElementById("manualInputs");
   const sceneSel = document.getElementById("sceneSel");
   const buildBtn = document.getElementById("buildBtn");
   const copyBtn = document.getElementById("copyBtn");
@@ -143,8 +128,7 @@ async function init() {
 
   const store = {};
   for (const f of files) {
-    const data = await load(f);
-    store[f] = data;
+    store[f] = await load(f);
   }
 
   const scenes = store["scenes_prequel.json"];
@@ -153,12 +137,11 @@ async function init() {
   function sceneLabel(key) {
     const scene = scenes[key];
     if (!scene || !scene.summary) return key;
-    const summary = scene.summary.trim();
+    const s = scene.summary.trim();
     const maxLen = 60;
-    if (summary.length <= maxLen) return key + " - " + summary;
-    let cut = summary.lastIndexOf(" ", maxLen);
-    if (cut === -1) cut = maxLen;
-    return key + " - " + summary.slice(0, cut);
+    if (s.length <= maxLen) return key + " - " + s;
+    const cut = s.lastIndexOf(" ", maxLen);
+    return key + " - " + s.slice(0, cut === -1 ? maxLen : cut);
   }
 
   function rebuildSceneOptions() {
@@ -173,88 +156,62 @@ async function init() {
 
   rebuildSceneOptions();
 
-  // manual dropdowns (all non-scene files)
-  for (const f of files) {
-    if (f === "scenes_prequel.json") continue;
-
-    const wrap = document.createElement("div");
-    wrap.className = "block";
-
-    const label = document.createElement("label");
-    label.textContent = f;
-    wrap.appendChild(label);
-
-    // primary selector
-    const sel = document.createElement("select");
-    sel.dataset.file = f;
-    sel.appendChild(new Option("[none]", ""));
-    const keys = Object.keys(store[f]);
-    keys.forEach(k => sel.appendChild(new Option(k, k)));
-    wrap.appendChild(sel);
-
-    // extra selector for dialogue subtext
-    if (f === "dialogue.json") {
-      const subSel = document.createElement("select");
-      subSel.dataset.file = "dialogue.json_subtext";
-      subSel.appendChild(new Option("[none]", ""));
-      keys.forEach(k => subSel.appendChild(new Option(k, k)));
-      wrap.appendChild(document.createElement("br"));
-      wrap.appendChild(subSel);
-    }
-
-    manual.appendChild(wrap);
-  }
-
   function build() {
-    const out = [];
     const sceneKey = sceneSel.value;
     const scene = scenes[sceneKey];
+    const out = [];
+
+    const cameoSet = new Set();
+    if (scene && scene.dialog) {
+      scene.dialog.forEach(k => {
+        const d = store["dialogue.json"][k];
+        if (!d) return;
+        const h = getHandle(d.speakerId, store["characters.json"]);
+        cameoSet.add(h);
+      });
+    }
+
+    cameoSet.forEach(h => out.push("@" + h));
 
     if (scene) {
-      out.push("=== SCENE: " + sceneKey + " ===");
-      out.push(scene.summary || "");
-      out.push("This is a 10 second vertical orientation clip for an all new original 8k, high budget, modern-futuristic, prestige TV show. This is a work of fiction. All characters and personas are entirely imaginary. Any resemblance to actual individuals, living or dead, is purely coincidental. No real likenesses are referenced or requested.");
+      out.push("\n=== SCENE: " + sceneKey + " ===");
+      out.push((scene.summary || "").trim());
+      out.push("10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.");
+
       if (scene.setting) {
-        const entry = store["settings.json"][scene.setting];
-        if (entry) out.push("\n[SETTING]\n" + formatEntry(entry));
+        const e = store["settings.json"][scene.setting];
+        if (e) out.push("\n[SETTING]\n" + formatEntry(e));
       }
-
       if (scene.region) {
-        const entry = store["regions.json"][scene.region];
-        if (entry) out.push("\n[REGION]\n" + formatEntry(entry));
+        const e = store["regions.json"][scene.region];
+        if (e) out.push("\n[REGION]\n" + formatEntry(e));
       }
-
-      if (scene.factions && scene.factions.length) {
+      if (scene.factions?.length) {
         out.push("\n[FACTIONS]");
         scene.factions.forEach(k => {
           const e = store["factions.json"][k];
           if (e) out.push(formatEntry(e));
         });
       }
-
-      if (scene.characters && scene.characters.length) {
+      if (scene.characters?.length) {
         out.push("\n[CHARACTERS]");
         scene.characters.forEach(k => {
           const e = store["characters.json"][k];
           if (e) out.push(formatEntry(e));
         });
       }
-
-      if (scene.dialog && scene.dialog.length) {
+      if (scene.dialog?.length) {
         out.push("\n[DIALOGUE]");
         scene.dialog.forEach(k => {
           const d = store["dialogue.json"][k];
           if (!d) return;
-          const speaker = getHandle(d.speakerId, store["characters.json"]);
+          const h = getHandle(d.speakerId, store["characters.json"]);
           const line = d.text || "";
-          const sub = d.subtext ? ("(" + d.subtext + ")") : "";
-
-          out.push(speaker + ": " + line);
-          if (sub) out.push("  " + sub);
+          out.push("@" + h + ' says "' + line + '"');
+          if (d.subtext) out.push("  (" + d.subtext + ")");
         });
       }
-
-      if (scene.direction && scene.direction.length) {
+      if (scene.direction?.length) {
         out.push("\n[DIRECTION]");
         scene.direction.forEach(k => {
           const e = store["direction.json"][k];
@@ -263,49 +220,33 @@ async function init() {
       }
 
       collectManual(out, store);
-    } else {
-      collectManual(out, store);
     }
 
     outEl.textContent = out.join("\n").trim();
   }
 
-  // Build button = apply current scene + manual selections
   buildBtn.onclick = build;
-
-  // Auto-build on scene change
   sceneSel.onchange = build;
 
-  // Commit Scene rotates ordering after the selected scene
   commitBtn.onclick = () => {
-    const currentKey = sceneSel.value;
-    const idx = sceneOrder.indexOf(currentKey);
-    if (idx === -1) return;
-
-    const before = sceneOrder.slice(0, idx + 1);
-    const after = sceneOrder.slice(idx + 1);
+    const key = sceneSel.value;
+    const i = sceneOrder.indexOf(key);
+    if (i === -1) return;
+    const before = sceneOrder.slice(0, i + 1);
+    const after = sceneOrder.slice(i + 1);
     sceneOrder = after.concat(before);
-
     rebuildSceneOptions();
-
-    if (sceneOrder.length > 0) {
-      sceneSel.value = sceneOrder[0];
-    }
+    sceneSel.value = sceneOrder[0];
     build();
   };
 
-  // Copy assembled text
   copyBtn.onclick = async () => {
-    const txt = outEl.textContent || "";
     try {
-      await navigator.clipboard.writeText(txt);
-    } catch (e) {
-      console.error("copy fail", e);
-    }
+      await navigator.clipboard.writeText(outEl.textContent || "");
+    } catch {}
   };
 
-  // initial build
-  if (sceneOrder.length > 0) {
+  if (sceneOrder.length) {
     sceneSel.value = sceneOrder[0];
     build();
   }
