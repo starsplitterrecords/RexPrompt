@@ -1,131 +1,627 @@
 {
-  "D201": { "speakerId": "C_liora", "text": "The timing drift isn’t random. The variance repeats every cycle." },
-  "D202": { "speakerId": "C_lochran", "text": "Patterns appear when people look for them, Engineer Virelia." },
-  "D203": { "speakerId": "C_damiar", "text": "Let’s keep language steady until we confirm impact. Stability matters today." },
-  "D204": { "speakerId": "C_nereth", "text": "Same convoy, same timestamp set—logged twice. That’s not scheduling error." },
-  "D205": { "speakerId": "C_liora", "text": "Echo-lag. The lane’s elasticity is slipping." },
-  "D206": { "speakerId": "C_nereth", "text": "If this spreads, arrivals stop lining up with reality." },
-  "D207": { "speakerId": "C_heska", "text": "Late arrivals never happen. Not during festival rotations." },
-  "D208": { "speakerId": "C_announcer", "text": "Our distinguished guests have… just arrived—please offer a warm welcome." },
-  "D209": { "speakerId": "C_heska", "text": "These metadata offsets don’t match any archival standard." },
-  "D210": { "speakerId": "C_liora", "text": "Drift this small becomes drift catastrophic when the system’s interconnected." },
-  "D211": { "speakerId": "C_damiar", "text": "People trust a calm voice, even when the facts still sharpen." },
-  "D212": { "speakerId": "C_traveler", "text": "How did my sister’s convoy arrive twice? Which timestamp is real?" },
-  "D213": { "speakerId": "C_trafficCtrl", "text": "We’re recalculating windows. Please remain in the designated lanes." },
-  "D214": { "speakerId": "C_aveth", "text": "Hold steady—your family’s safe. Let us get clean signal first." },
-  "D215": { "speakerId": "C_lochran", "text": "Focus on cooperative continuity, not projected turbulence." },
-  "D216": { "speakerId": "C_damiar", "text": "Understood. We’ll ground the briefing in reassurance." },
-  "D217": { "speakerId": "C_liora", "text": "This drift curve accelerates. The network’s under mounting tension." },
-  "D218": { "speakerId": "C_iskari", "text": "Her models hold. Delay risks corridor instability across multiple arcs." },
-  "D219": { "speakerId": "C_lochran", "text": "We will not trigger alarm on projections. Not today." },
+"D201": {
+"speakerId": "C_liora",
+"text": "The timing drift isn’t random. The variance repeats every cycle.",
+"subtext": "I’ve checked this too many times to be brushed off as paranoid again."
+},
+"D202": {
+"speakerId": "C_lochran",
+"text": "Patterns appear when people look for them, Engineer Virelia.",
+"subtext": "If this becomes real in the record, I’m accountable for fixing it."
+},
+"D203": {
+"speakerId": "C_damiar",
+"text": "Let’s keep language steady until we confirm impact. Stability matters today.",
+"subtext": "I need them calm more than I need them fully informed right now."
+},
+"D204": {
+"speakerId": "C_nereth",
+"text": "Same convoy, same timestamp set—logged twice. That’s not scheduling error.",
+"subtext": "They can’t hand-wave this away; the system itself is stuttering."
+},
+"D205": {
+"speakerId": "C_liora",
+"text": "Echo-lag. The lane’s elasticity is slipping.",
+"subtext": "The physics is telling us to stop, and no one wants to hear it."
+},
+"D206": {
+"speakerId": "C_nereth",
+"text": "If this spreads, arrivals stop lining up with reality.",
+"subtext": "I’m spelling it out so even the politicians can’t pretend they misunderstood."
+},
+"D207": {
+"speakerId": "C_heska",
+"text": "Late arrivals never happen. Not during festival rotations.",
+"subtext": "History says this is impossible, which scares me more than the glitch itself."
+},
+"D208": {
+"speakerId": "C_announcer",
+"text": "Our distinguished guests have… just arrived—please offer a warm welcome.",
+"subtext": "If I keep smiling, maybe no one will notice the timing doesn’t add up."
+},
+"D209": {
+"speakerId": "C_heska",
+"text": "These metadata offsets don’t match any archival standard.",
+"subtext": "The record is bending, and my tools for trusting it are breaking."
+},
+"D210": {
+"speakerId": "C_liora",
+"text": "Drift this small becomes drift catastrophic when the system’s interconnected.",
+"subtext": "They’re underestimating what happens when every error multiplies across worlds."
+},
+"D211": {
+"speakerId": "C_damiar",
+"text": "People trust a calm voice, even when the facts still sharpen.",
+"subtext": "If I sound worried, the whole corridor will break before the lanes do."
+},
+"D212": {
+"speakerId": "C_traveler",
+"text": "How did my sister’s convoy arrive twice? Which timestamp is real?",
+"subtext": "If I can’t trust the clocks, I can’t trust that she’s actually safe."
+},
+"D213": {
+"speakerId": "C_trafficCtrl",
+"text": "We’re recalculating windows. Please remain in the designated lanes.",
+"subtext": "I’m stalling because I have nothing solid to offer them yet."
+},
+"D214": {
+"speakerId": "C_aveth",
+"text": "Hold steady—your family’s safe. Let us get clean signal first.",
+"subtext": "I can’t promise that’s true, but panic will make us lose them for sure."
+},
+"D215": {
+"speakerId": "C_lochran",
+"text": "Focus on cooperative continuity, not projected turbulence.",
+"subtext": "If they start thinking in worst-case scenarios, governance unravels fast."
+},
+"D216": {
+"speakerId": "C_damiar",
+"text": "Understood. We’ll ground the briefing in reassurance.",
+"subtext": "I’ll translate their fear into something the public can swallow."
+},
+"D217": {
+"speakerId": "C_liora",
+"text": "This drift curve accelerates. The network’s under mounting tension.",
+"subtext": "Every moment they delay, they choose spectacle over survival."
+},
+"D218": {
+"speakerId": "C_iskari",
+"text": "Her models hold. Delay risks corridor instability across multiple arcs.",
+"subtext": "I’m putting my reputation behind her so they can’t sidestep action."
+},
+"D219": {
+"speakerId": "C_lochran",
+"text": "We will not trigger alarm on projections. Not today.",
+"subtext": "I’d rather be wrong quietly than right and blamed for the panic."
+},
 
-  "D301": { "speakerId": "C_liora", "text": "The harmonic bowing sharpened overnight. The slope is climbing, not settling." },
-  "D302": { "speakerId": "C_nereth", "text": "Three corridors echoed inside the same window. That’s structural fatigue." },
-  "D303": { "speakerId": "C_liora", "text": "If we don’t relieve tension soon, the lattice will choose its own release point." },
-  "D304": { "speakerId": "C_ruvian", "text": "We’re patching beacon housings with scrap. Nothing syncs right anymore." },
-  "D305": { "speakerId": "C_outerTech", "text": "We asked for replacements half a cycle ago. Nobody at Core answered." },
-  "D306": { "speakerId": "C_aveth", "text": "I can’t route medicine through windows that shift every hour." },
-  "D307": { "speakerId": "C_trafficCtrl", "text": "Then route blind. These boards won’t stabilize today." },
-  "D308": { "speakerId": "C_heska", "text": "Dawn Era logs reference a full-network damping cycle. Not myth—blueprints." },
-  "D309": { "speakerId": "C_lochran", "text": "We stay ahead of the narrative. People need confidence, not disruption." },
-  "D310": { "speakerId": "C_damiar", "text": "I’ll draft language that keeps the tone steady." },
-  "D311": { "speakerId": "C_traveler", "text": "Why did my departure window vanish twice?" },
-  "D312": { "speakerId": "C_staff", "text": "Glitch in the boards—happens sometimes. Please keep your place in line." },
-  "D313": { "speakerId": "C_liora", "text": "The tension model now predicts synchronized failure across nodes." },
-  "D314": { "speakerId": "C_iskari", "text": "Her math is sound. We must restrict traffic before the break spreads." },
-  "D315": { "speakerId": "C_lochran", "text": "We restrict nothing without proof." },
-  "D316": { "speakerId": "C_damiar", "text": "We can frame this as an internal recalibration—no panic." },
-  "D317": { "speakerId": "C_liora", "text": "The chamber exists. It’s intact. We can bleed off the pressure." },
-  "D318": { "speakerId": "C_nereth", "text": "If calibration holds, yes. If it doesn’t, we accelerate the collapse." },
-  "D319": { "speakerId": "C_iskari", "text": "Then calibrate perfectly. We have no other instrument left." },
+"D301": {
+"speakerId": "C_liora",
+"text": "The harmonic bowing sharpened overnight. The slope is climbing, not settling.",
+"subtext": "This is the last gentle warning the system is going to give us."
+},
+"D302": {
+"speakerId": "C_nereth",
+"text": "Three corridors echoed inside the same window. That’s structural fatigue.",
+"subtext": "We’re past anomalies; the bones of this thing are starting to creak."
+},
+"D303": {
+"speakerId": "C_liora",
+"text": "If we don’t relieve tension soon, the lattice will choose its own release point.",
+"subtext": "Either we schedule the pain or it arrives where it wants to."
+},
+"D304": {
+"speakerId": "C_ruvian",
+"text": "We’re patching beacon housings with scrap. Nothing syncs right anymore.",
+"subtext": "Core keeps pretending we’re fine while we weld miracles in the dark."
+},
+"D305": {
+"speakerId": "C_outerTech",
+"text": "We asked for replacements half a cycle ago. Nobody at Core answered.",
+"subtext": "They only remember us when the failure reaches their doorstep."
+},
+"D306": {
+"speakerId": "C_aveth",
+"text": "I can’t route medicine through windows that shift every hour.",
+"subtext": "Lives are hanging on schedules the system keeps lying about."
+},
+"D307": {
+"speakerId": "C_trafficCtrl",
+"text": "Then route blind. These boards won’t stabilize today.",
+"subtext": "I’m out of good options, so I’m offering you the desperate one."
+},
+"D308": {
+"speakerId": "C_heska",
+"text": "Dawn Era logs reference a full-network damping cycle. Not myth—blueprints.",
+"subtext": "The last generation prepared for this; we chose to forget it."
+},
+"D309": {
+"speakerId": "C_lochran",
+"text": "We stay ahead of the narrative. People need confidence, not disruption.",
+"subtext": "If the story fractures, authority goes with it—and so do we."
+},
+"D310": {
+"speakerId": "C_damiar",
+"text": "I’ll draft language that keeps the tone steady.",
+"subtext": "I’m still trying to believe words can hold this together."
+},
+"D311": {
+"speakerId": "C_traveler",
+"text": "Why did my departure window vanish twice?",
+"subtext": "If they can’t track a simple gate, what else are they hiding?"
+},
+"D312": {
+"speakerId": "C_staff",
+"text": "Glitch in the boards—happens sometimes. Please keep your place in line.",
+"subtext": "If they start asking real questions, I’ve got nothing to give them."
+},
+"D313": {
+"speakerId": "C_liora",
+"text": "The tension model now predicts synchronized failure across nodes.",
+"subtext": "I’m putting doom on the table so they can’t claim surprise later."
+},
+"D314": {
+"speakerId": "C_iskari",
+"text": "Her math is sound. We must restrict traffic before the break spreads.",
+"subtext": "Every corridor we leave open is another crime we’ll answer for."
+},
+"D315": {
+"speakerId": "C_lochran",
+"text": "We restrict nothing without proof.",
+"subtext": "Unless I can show a clean casualty forecast, no one will back me politically."
+},
+"D316": {
+"speakerId": "C_damiar",
+"text": "We can frame this as an internal recalibration—no panic.",
+"subtext": "If we rename the emergency, maybe they’ll accept it."
+},
+"D317": {
+"speakerId": "C_liora",
+"text": "The chamber exists. It’s intact. We can bleed off the pressure.",
+"subtext": "You asked for a solution; I’m risking everything by offering one."
+},
+"D318": {
+"speakerId": "C_nereth",
+"text": "If calibration holds, yes. If it doesn’t, we accelerate the collapse.",
+"subtext": "We’re balancing between a controlled burn and lighting the whole lattice on fire."
+},
+"D319": {
+"speakerId": "C_iskari",
+"text": "Then calibrate perfectly. We have no other instrument left.",
+"subtext": "I know perfection is impossible, but admitting that terrifies them more."
+},
 
-  "D401": { "speakerId": "C_liora", "text": "These emitters predate half the network. Nothing here was built for constant load." },
-  "D402": { "speakerId": "C_nereth", "text": "Or constant politics. If this cycle fires crooked, everything shears." },
-  "D403": { "speakerId": "C_liora", "text": "Then we align it ourselves. No interference." },
-  "D404": { "speakerId": "C_lochran", "text": "We apply the stability coefficients. Public trust cannot fracture." },
-  "D405": { "speakerId": "C_damiar", "text": "If the engineers protest, we call it calibration variance and move on." },
-  "D406": { "speakerId": "C_ruvian", "text": "This node’s shaking itself apart. You feel that? That’s structural panic." },
-  "D407": { "speakerId": "C_outerTech", "text": "If the chamber fails, the outer ring goes first. Tell your Core friends that." },
-  "D408": { "speakerId": "C_liora", "text": "Field alignment holding—just barely. Keep the secondaries warm." },
-  "D409": { "speakerId": "C_nereth", "text": "Stability at two percent drift. That’s the best we’ve seen in cycles." },
-  "D410": { "speakerId": "C_coalitionTech", "text": "Council says deploy the override. They say it’s harmless." },
-  "D411": { "speakerId": "C_lochran", "text": "Execute the sequence. Reassurance needs metrics." },
-  "D412": { "speakerId": "C_liora", "text": "What is that surge? This isn’t our configuration." },
-  "D413": { "speakerId": "C_nereth", "text": "They pushed new coefficients. They don’t match the matrix." },
-  "D414": { "speakerId": "C_liora", "text": "Shut it down—now—before it feeds back." },
-  "D415": { "speakerId": "C_shipCaptain", "text": "We’re seeing double silhouettes—like our own ship trailing behind us." },
-  "D416": { "speakerId": "C_liora", "text": "Not ghosts. Harmonics folding late. The lanes are slipping their anchor." },
-  "D417": { "speakerId": "C_lochran", "text": "We can contain this. We must contain this." },
-  "D418": { "speakerId": "C_damiar", "text": "The alarms say otherwise. People deserve the truth." },
-  "D419": { "speakerId": "C_iskari", "text": "Containment is over. Prepare for coordinated failure." },
+"D401": {
+"speakerId": "C_liora",
+"text": "These emitters predate half the network. Nothing here was built for constant load.",
+"subtext": "We upgraded everything except the pieces carrying the real risk."
+},
+"D402": {
+"speakerId": "C_nereth",
+"text": "Or constant politics. If this cycle fires crooked, everything shears.",
+"subtext": "They bent safety around image; now the hardware’s finally protesting."
+},
+"D403": {
+"speakerId": "C_liora",
+"text": "Then we align it ourselves. No interference.",
+"subtext": "If they touch this process, they’ll trade precision for optics again."
+},
+"D404": {
+"speakerId": "C_lochran",
+"text": "We apply the stability coefficients. Public trust cannot fracture.",
+"subtext": "I’d rather risk the chamber than admit uncertainty to the worlds."
+},
+"D405": {
+"speakerId": "C_damiar",
+"text": "If the engineers protest, we call it calibration variance and move on.",
+"subtext": "We can’t afford a public fight between math and authority today."
+},
+"D406": {
+"speakerId": "C_ruvian",
+"text": "This node’s shaking itself apart. You feel that? That’s structural panic.",
+"subtext": "The metal understands the danger better than your committees do."
+},
+"D407": {
+"speakerId": "C_outerTech",
+"text": "If the chamber fails, the outer ring goes first. Tell your Core friends that.",
+"subtext": "We’re the ones who die for their shortcuts, not the people in the towers."
+},
+"D408": {
+"speakerId": "C_liora",
+"text": "Field alignment holding—just barely. Keep the secondaries warm.",
+"subtext": "We have one chance at a soft landing, and it’s already slipping."
+},
+"D409": {
+"speakerId": "C_nereth",
+"text": "Stability at two percent drift. That’s the best we’ve seen in cycles.",
+"subtext": "I’m lowering the bar so they’ll understand how desperate this ‘success’ is."
+},
+"D410": {
+"speakerId": "C_coalitionTech",
+"text": "Council says deploy the override. They say it’s harmless.",
+"subtext": "I don’t believe them, but my console answers to their signatures."
+},
+"D411": {
+"speakerId": "C_lochran",
+"text": "Execute the sequence. Reassurance needs metrics.",
+"subtext": "If we can show numbers, maybe they’ll forgive what we’re about to risk."
+},
+"D412": {
+"speakerId": "C_liora",
+"text": "What is that surge? This isn’t our configuration.",
+"subtext": "Someone changed the rules behind our backs, and we’re already mid-jump."
+},
+"D413": {
+"speakerId": "C_nereth",
+"text": "They pushed new coefficients. They don’t match the matrix.",
+"subtext": "Core trusted a theory over the people who keep this breathing."
+},
+"D414": {
+"speakerId": "C_liora",
+"text": "Shut it down—now—before it feeds back.",
+"subtext": "I’d rather take the blame for aborting than watch a whole ring tear loose."
+},
+"D415": {
+"speakerId": "C_shipCaptain",
+"text": "We’re seeing double silhouettes—like our own ship trailing behind us.",
+"subtext": "Space shouldn’t do this. If they’re wrong, we’re already half-lost."
+},
+"D416": {
+"speakerId": "C_liora",
+"text": "Not ghosts. Harmonics folding late. The lanes are slipping their anchor.",
+"subtext": "I need them scared enough to listen, not superstitious."
+},
+"D417": {
+"speakerId": "C_lochran",
+"text": "We can contain this. We must contain this.",
+"subtext": "If I admit it’s bigger than us, my entire office loses purpose."
+},
+"D418": {
+"speakerId": "C_damiar",
+"text": "The alarms say otherwise. People deserve the truth.",
+"subtext": "I’ve crossed the line where reassurance feels like a lie I can’t carry."
+},
+"D419": {
+"speakerId": "C_iskari",
+"text": "Containment is over. Prepare for coordinated failure.",
+"subtext": "We’re shifting from prevention to triage, whether they’re ready or not."
+},
 
-  "D501": { "speakerId": "C_shipCaptain", "text": "Harmonics are ripping sideways—our hull’s throwing shadows in open space." },
-  "D502": { "speakerId": "C_liora", "text": "That’s lane geometry folding. Keep engines idle until I map the distortion." },
-  "D503": { "speakerId": "C_nereth", "text": "Idle won’t matter if the anchor points slip again." },
-  "D504": { "speakerId": "C_traveler", "text": "Why does every board say CLOSED? Where are the ships?" },
-  "D505": { "speakerId": "C_staff", "text": "We’re verifying lanes—stay in the concourse, please." },
-  "D506": { "speakerId": "C_aveth", "text": "Stay with me. Don’t run. Running only makes this worse." },
-  "D507": { "speakerId": "C_orneth", "text": "Lockouts won’t take. Every channel returns dead authority." },
-  "D508": { "speakerId": "C_lochran", "text": "You must enforce the closures—people depend on those boundaries." },
-  "D509": { "speakerId": "C_nereth", "text": "The node’s detaching—get every living body off that arm now." },
-  "D510": { "speakerId": "C_orneth", "text": "I can’t close the approach. Pilots are still coming in blind." },
-  "D511": { "speakerId": "C_shipCaptain", "text": "We’re losing nav. Someone guide us or we go into the spin." },
-  "D512": { "speakerId": "C_aveth", "text": "We detour through Sector 9 or we lose the medicine entirely." },
-  "D513": { "speakerId": "C_trafficCtrl", "text": "Sector 9 doesn’t even know it’s open. You’re flying on faith." },
-  "D514": { "speakerId": "C_ruvian", "text": "Power grid’s buckling. One more surge and the ring drops atmosphere." },
-  "D515": { "speakerId": "C_outerTech", "text": "Then we brace it with whatever we’ve got. No one’s coming to help." },
-  "D516": { "speakerId": "C_lochran", "text": "We must project command. Panic will kill more than the drift." },
-  "D517": { "speakerId": "C_iskari", "text": "Denial already killed more than you know." },
-  "D518": { "speakerId": "C_damiar", "text": "Every world needs guidance—anything—now." },
-  "D519": { "speakerId": "C_nereth", "text": "Pulling survivors from the drift pocket—keep the beacon stable." },
-  "D520": { "speakerId": "C_shipCaptain", "text": "If the pocket shifts again, we all scatter into null space." },
-  "D521": { "speakerId": "C_liora", "text": "The last five nodes just died. The network is gone." },
+"D501": {
+"speakerId": "C_shipCaptain",
+"text": "Harmonics are ripping sideways—our hull’s throwing shadows in open space.",
+"subtext": "I’m watching the laws I rely on unravel around my ship."
+},
+"D502": {
+"speakerId": "C_liora",
+"text": "That’s lane geometry folding. Keep engines idle until I map the distortion.",
+"subtext": "Any movement now could turn you into test data we can’t interpret."
+},
+"D503": {
+"speakerId": "C_nereth",
+"text": "Idle won’t matter if the anchor points slip again.",
+"subtext": "The reference frame itself is failing; no piloting can fix that."
+},
+"D504": {
+"speakerId": "C_traveler",
+"text": "Why does every board say CLOSED? Where are the ships?",
+"subtext": "Silence feels more dangerous than any warning they could post."
+},
+"D505": {
+"speakerId": "C_staff",
+"text": "We’re verifying lanes—stay in the concourse, please.",
+"subtext": "If they scatter, we’ll never get them back under control."
+},
+"D506": {
+"speakerId": "C_aveth",
+"text": "Stay with me. Don’t run. Running only makes this worse.",
+"subtext": "I need you close so I can save you if any route opens."
+},
+"D507": {
+"speakerId": "C_orneth",
+"text": "Lockouts won’t take. Every channel returns dead authority.",
+"subtext": "My badge is meaningless, and that terrifies me more than the alarms."
+},
+"D508": {
+"speakerId": "C_lochran",
+"text": "You must enforce the closures—people depend on those boundaries.",
+"subtext": "If the lines on our maps fail, so does the idea of safety I built."
+},
+"D509": {
+"speakerId": "C_nereth",
+"text": "The node’s detaching—get every living body off that arm now.",
+"subtext": "I won’t watch people die because the system clung to ceremony."
+},
+"D510": {
+"speakerId": "C_orneth",
+"text": "I can’t close the approach. Pilots are still coming in blind.",
+"subtext": "I’m powerless to stop the very disaster I was trained to prevent."
+},
+"D511": {
+"speakerId": "C_shipCaptain",
+"text": "We’re losing nav. Someone guide us or we go into the spin.",
+"subtext": "I’m giving you our last moment of control—use it or lose us."
+},
+"D512": {
+"speakerId": "C_aveth",
+"text": "We detour through Sector 9 or we lose the medicine entirely.",
+"subtext": "I’ll gamble with routes before I gamble with the people waiting for us."
+},
+"D513": {
+"speakerId": "C_trafficCtrl",
+"text": "Sector 9 doesn’t even know it’s open. You’re flying on faith.",
+"subtext": "I can’t vouch for this, but I can’t offer anything better either."
+},
+"D514": {
+"speakerId": "C_ruvian",
+"text": "Power grid’s buckling. One more surge and the ring drops atmosphere.",
+"subtext": "We’re one misstep away from turning this into a graveyard."
+},
+"D515": {
+"speakerId": "C_outerTech",
+"text": "Then we brace it with whatever we’ve got. No one’s coming to help.",
+"subtext": "Shard rules apply: we save ourselves or we don’t get saved."
+},
+"D516": {
+"speakerId": "C_lochran",
+"text": "We must project command. Panic will kill more than the drift.",
+"subtext": "Authority is the only tool I still know how to reach for."
+},
+"D517": {
+"speakerId": "C_iskari",
+"text": "Denial already killed more than you know.",
+"subtext": "Your insistence on composure is written in the casualty lists."
+},
+"D518": {
+"speakerId": "C_damiar",
+"text": "Every world needs guidance—anything—now.",
+"subtext": "My voice delayed action; it has to push for it now."
+},
+"D519": {
+"speakerId": "C_nereth",
+"text": "Pulling survivors from the drift pocket—keep the beacon stable.",
+"subtext": "I can’t lose the one fixed point that still lets us reach them."
+},
+"D520": {
+"speakerId": "C_shipCaptain",
+"text": "If the pocket shifts again, we all scatter into null space.",
+"subtext": "I need them to understand this isn’t drama—it’s the edge of existence."
+},
+"D521": {
+"speakerId": "C_liora",
+"text": "The last five nodes just died. The network is gone.",
+"subtext": "Everything I built my work and faith on has just ended."
+},
 
-  "D601": { "speakerId": "C_localLeader", "text": "Someone has to choose who eats and who waits. Who decides now?" },
-  "D602": { "speakerId": "C_aveth", "text": "We start with heat and water. Everything else we solve after they’re breathing." },
-  "D603": { "speakerId": "C_coreAdvocate", "text": "Without protocol, we descend into chaos. Order keeps people alive." },
-  "D604": { "speakerId": "C_vergeVoice", "text": "Flexibility keeps people alive. Order failed us when the lanes broke." },
-  "D605": { "speakerId": "C_outerTech", "text": "Both of you talk theory. We need bodies fixing what’s left." },
-  "D606": { "speakerId": "C_ruvian", "text": "Brace that conduit—if it buckles, the whole node goes dark." },
-  "D607": { "speakerId": "C_outerTech", "text": "Shard nodes live on grit, not permission. Keep welding." },
-  "D608": { "speakerId": "C_aveth", "text": "New routes rely on trust. If you stall, ten families lose their medicine." },
-  "D609": { "speakerId": "C_staff", "text": "Trust works until someone cuts a corner. Then what?" },
-  "D610": { "speakerId": "C_lochran", "text": "This sigil meant safety for generations. It will mean safety again." },
-  "D611": { "speakerId": "C_fieldOfficer", "text": "If we repaint it, people will expect protection we can’t guarantee." },
-  "D612": { "speakerId": "C_iskari", "text": "Symbols without standards are lies. This isn’t how safety works." },
-  "D613": { "speakerId": "C_lochran", "text": "Safety is what people believe. Belief holds worlds together." },
-  "D614": { "speakerId": "C_fieldOfficer", "text": "Marking this door means claiming it. Not sure anyone’s earned that." },
-  "D615": { "speakerId": "C_liora", "text": "Every system failed because no one maintained it. Unity wasn’t natural—it was work." },
-  "D616": { "speakerId": "C_damiar", "text": "I believed reassurance was duty. I know now it was negligence." },
-  "D617": { "speakerId": "C_ruvian", "text": "Shardwork starts with what you can weld, not what you hope for." },
-  "D618": { "speakerId": "C_aveth", "text": "Convoys start with who you trust, not who commands you." },
-  "D619": { "speakerId": "C_iskari", "text": "Codes start with responsibility, not fear. Choose carefully—your futures diverge here." },
+"D601": {
+"speakerId": "C_localLeader",
+"text": "Someone has to choose who eats and who waits. Who decides now?",
+"subtext": "If we guess wrong, people I know personally will starve."
+},
+"D602": {
+"speakerId": "C_aveth",
+"text": "We start with heat and water. Everything else we solve after they’re breathing.",
+"subtext": "Triage is ugly, but it’s the only framework I trust anymore."
+},
+"D603": {
+"speakerId": "C_coreAdvocate",
+"text": "Without protocol, we descend into chaos. Order keeps people alive.",
+"subtext": "If we abandon the old rules, I don’t know who I am here."
+},
+"D604": {
+"speakerId": "C_vergeVoice",
+"text": "Flexibility keeps people alive. Order failed us when the lanes broke.",
+"subtext": "Your precious structure snapped first; stop pretending it didn’t."
+},
+"D605": {
+"speakerId": "C_outerTech",
+"text": "Both of you talk theory. We need bodies fixing what’s left.",
+"subtext": "Debate won’t hold the ceiling up when it finally gives."
+},
+"D606": {
+"speakerId": "C_ruvian",
+"text": "Brace that conduit—if it buckles, the whole node goes dark.",
+"subtext": "I’ve seen what darkness means out here; I refuse to repeat it."
+},
+"D607": {
+"speakerId": "C_outerTech",
+"text": "Shard nodes live on grit, not permission. Keep welding.",
+"subtext": "We’re done waiting for signatures from people worlds away."
+},
+"D608": {
+"speakerId": "C_aveth",
+"text": "New routes rely on trust. If you stall, ten families lose their medicine.",
+"subtext": "Every hesitation writes another name onto my quiet grief list."
+},
+"D609": {
+"speakerId": "C_staff",
+"text": "Trust works until someone cuts a corner. Then what?",
+"subtext": "We’ve already seen what shortcuts do; I don’t want to live that again."
+},
+"D610": {
+"speakerId": "C_lochran",
+"text": "This sigil meant safety for generations. It will mean safety again.",
+"subtext": "If the symbol fails, so does the legacy I built my life on."
+},
+"D611": {
+"speakerId": "C_fieldOfficer",
+"text": "If we repaint it, people will expect protection we can’t guarantee.",
+"subtext": "I can’t stomach lying with a brush I’m holding."
+},
+"D612": {
+"speakerId": "C_iskari",
+"text": "Symbols without standards are lies. This isn’t how safety works.",
+"subtext": "We owe them more than comforting slogans over empty corridors."
+},
+"D613": {
+"speakerId": "C_lochran",
+"text": "Safety is what people believe. Belief holds worlds together.",
+"subtext": "If faith collapses, no system we design will survive long."
+},
+"D614": {
+"speakerId": "C_fieldOfficer",
+"text": "Marking this door means claiming it. Not sure anyone’s earned that.",
+"subtext": "I’m asking whose life we’re willing to stake this paint on."
+},
+"D615": {
+"speakerId": "C_liora",
+"text": "Every system failed because no one maintained it. Unity wasn’t natural—it was work.",
+"subtext": "They treated stability like a birthright, not a job they kept skipping."
+},
+"D616": {
+"speakerId": "C_damiar",
+"text": "I believed reassurance was duty. I know now it was negligence.",
+"subtext": "My careful tone cost lives, and I have to live with that ledger."
+},
+"D617": {
+"speakerId": "C_ruvian",
+"text": "Shardwork starts with what you can weld, not what you hope for.",
+"subtext": "Dreams don’t hold pressure; steel and callouses do."
+},
+"D618": {
+"speakerId": "C_aveth",
+"text": "Convoys start with who you trust, not who commands you.",
+"subtext": "We rebuild the lanes one relationship at a time, not with decrees."
+},
+"D619": {
+"speakerId": "C_iskari",
+"text": "Codes start with responsibility, not fear. Choose carefully—your futures diverge here.",
+"subtext": "The rules you write now decide whether Resolve becomes cure or repeat disaster."
+},
 
-  "D701": { "speakerId": "C_liora", "text": "I won’t finish the gaps. If they want unity, they must build it, not borrow it." },
-  "D702": { "speakerId": "C_iskari", "text": "These lines undermine safety. I won’t endorse them." },
-  "D703": { "speakerId": "C_ruvian", "text": "And these charts ignore real-world breakage. I’m correcting that myself." },
-  "D704": { "speakerId": "C_aveth", "text": "If this text can’t serve people, it’s just doctrine with better handwriting." },
-  "D705": { "speakerId": "C_aveth", "text": "Everyone gets a copy, but not everyone gets it first." },
-  "D706": { "speakerId": "C_courier", "text": "Then who decides the order? You? Core? Outer? Name the law that still stands." },
-  "D707": { "speakerId": "C_ruvian", "text": "You shipped us dead batteries. That node almost collapsed." },
-  "D708": { "speakerId": "C_outerTech", "text": "We needed power hours ago, not apologies." },
-  "D709": { "speakerId": "C_lochran", "text": "You assume sabotage where there is only exhaustion." },
-  "D710": { "speakerId": "C_liora", "text": "My words were never meant to crown anyone. They describe work, not rule." },
-  "D711": { "speakerId": "C_iskari", "text": "Work demands standards. Without them, corridors kill twice—once by drift, once by error." },
-  "D712": { "speakerId": "C_ruvian", "text": "Standards don’t matter if you don’t survive long enough to use them." },
-  "D713": { "speakerId": "C_aveth", "text": "People survive through each other, not codes or welds alone." },
-  "D714": { "speakerId": "C_engineer", "text": "Then decide what we can all carry, or Resolve collapses before it forms." },
-  "D715": { "speakerId": "C_iskari", "text": "This sigil means responsibility. Nothing more." },
-  "D716": { "speakerId": "C_ruvian", "text": "To us it means survival. Not your authority." },
-  "D717": { "speakerId": "C_aveth", "text": "To our convoys, it means you can ask for help without shame." },
-  "D718": { "speakerId": "C_heska", "text": "Three texts, three truths. History won’t know which one to trust." },
-  "D719": { "speakerId": "C_archivist", "text": "Then we preserve all of them and let the future decide." },
-  "D720": { "speakerId": "C_lochran", "text": "Command must rest with Core. It always has." },
-  "D721": { "speakerId": "C_fieldOfficer", "text": "Our people won’t follow someone they’ve never met." },
-  "D722": { "speakerId": "C_iskari", "text": "This isn’t command. This is stewardship—and none of us agree on its shape." },
-  "D723": { "speakerId": "C_engineer", "text": "Hull integrity is green. She’s ready to launch." },
-  "D724": { "speakerId": "C_ruvian", "text": "Shard crew is aboard. Don’t mistake us for passengers." },
-  "D725": { "speakerId": "C_aveth", "text": "Verge route-map loaded. We move with or without central command." },
-  "D726": { "speakerId": "C_liora", "text": "They’ll build more ships—many more. Each certain it honors the truth." },
-  "D727": { "speakerId": "C_damiar", "text": "And none of them will agree on what your truth meant." }
+"D701": {
+"speakerId": "C_liora",
+"text": "I won’t finish the gaps. If they want unity, they must build it, not borrow it.",
+"subtext": "My words nearly became chains once; I won’t forge them tighter."
+},
+"D702": {
+"speakerId": "C_iskari",
+"text": "These lines undermine safety. I won’t endorse them.",
+"subtext": "If my name rests here, people will die trusting bad doctrine."
+},
+"D703": {
+"speakerId": "C_ruvian",
+"text": "And these charts ignore real-world breakage. I’m correcting that myself.",
+"subtext": "If they won’t write our scars in, I’ll carve them into the margins."
+},
+"D704": {
+"speakerId": "C_aveth",
+"text": "If this text can’t serve people, it’s just doctrine with better handwriting.",
+"subtext": "I’m not hauling another beautiful failure across broken space."
+},
+"D705": {
+"speakerId": "C_aveth",
+"text": "Everyone gets a copy, but not everyone gets it first.",
+"subtext": "Need decides priority now, not prestige."
+},
+"D706": {
+"speakerId": "C_courier",
+"text": "Then who decides the order? You? Core? Outer? Name the law that still stands.",
+"subtext": "I’m tired of invisible hands steering routes none of us voted on."
+},
+"D707": {
+"speakerId": "C_ruvian",
+"text": "You shipped us dead batteries. That node almost collapsed.",
+"subtext": "We remember every time your negligence nearly killed us."
+},
+"D708": {
+"speakerId": "C_outerTech",
+"text": "We needed power hours ago, not apologies.",
+"subtext": "You can’t patch a blackout with regret."
+},
+"D709": {
+"speakerId": "C_lochran",
+"text": "You assume sabotage where there is only exhaustion.",
+"subtext": "If this becomes intentional in the story, we’ll never rebuild trust."
+},
+"D710": {
+"speakerId": "C_liora",
+"text": "My words were never meant to crown anyone. They describe work, not rule.",
+"subtext": "I won’t let them twist this into another mandate for control."
+},
+"D711": {
+"speakerId": "C_iskari",
+"text": "Work demands standards. Without them, corridors kill twice—once by drift, once by error.",
+"subtext": "If we stay vague, we invite another collapse dressed as improvisation."
+},
+"D712": {
+"speakerId": "C_ruvian",
+"text": "Standards don’t matter if you don’t survive long enough to use them.",
+"subtext": "I won’t prioritize tidy manuals over air and power."
+},
+"D713": {
+"speakerId": "C_aveth",
+"text": "People survive through each other, not codes or welds alone.",
+"subtext": "Without trust, neither your rules nor our fixes will hold."
+},
+"D714": {
+"speakerId": "C_engineer",
+"text": "Then decide what we can all carry, or Resolve collapses before it forms.",
+"subtext": "We need a shared minimum, not seven competing scriptures."
+},
+"D715": {
+"speakerId": "C_iskari",
+"text": "This sigil means responsibility. Nothing more.",
+"subtext": "If they read power into it, that’s their hunger, not my intent."
+},
+"D716": {
+"speakerId": "C_ruvian",
+"text": "To us it means survival. Not your authority.",
+"subtext": "We’ll wear your mark only if it protects, not governs."
+},
+"D717": {
+"speakerId": "C_aveth",
+"text": "To our convoys, it means you can ask for help without shame.",
+"subtext": "I want this symbol to open doors, not checkpoints."
+},
+"D718": {
+"speakerId": "C_heska",
+"text": "Three texts, three truths. History won’t know which one to trust.",
+"subtext": "I’m sealing ambiguity into the record and hoping future minds are kinder."
+},
+"D719": {
+"speakerId": "C_archivist",
+"text": "Then we preserve all of them and let the future decide.",
+"subtext": "Our duty is to keep the argument alive, not settle it."
+},
+"D720": {
+"speakerId": "C_lochran",
+"text": "Command must rest with Core. It always has.",
+"subtext": "If we lose central authority, I lose the world I was built for."
+},
+"D721": {
+"speakerId": "C_fieldOfficer",
+"text": "Our people won’t follow someone they’ve never met.",
+"subtext": "Loyalty here is earned face to face, not mailed from orbit."
+},
+"D722": {
+"speakerId": "C_iskari",
+"text": "This isn’t command. This is stewardship—and none of us agree on its shape.",
+"subtext": "We’re inventing a role that might never fit cleanly, and it scares me."
+},
+"D723": {
+"speakerId": "C_engineer",
+"text": "Hull integrity is green. She’s ready to launch.",
+"subtext": "The ship is sound; it’s the people arguing over her purpose that worry me."
+},
+"D724": {
+"speakerId": "C_ruvian",
+"text": "Shard crew is aboard. Don’t mistake us for passengers.",
+"subtext": "We expect a say in how this vessel is used, not just where it docks."
+},
+"D725": {
+"speakerId": "C_aveth",
+"text": "Verge route-map loaded. We move with or without central command.",
+"subtext": "I’m done waiting for permission to save who we can."
+},
+"D726": {
+"speakerId": "C_liora",
+"text": "They’ll build more ships—many more. Each certain it honors the truth.",
+"subtext": "My words will fracture into banners I never intended."
+},
+"D727": {
+"speakerId": "C_damiar",
+"text": "And none of them will agree on what your truth meant.",
+"subtext": "I’ve spent my life smoothing meanings; I know how easily they split."
+}
 }
