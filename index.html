@@ -211,8 +211,7 @@ async function init() {
     if (scene) {
       out.push("=== SCENE: " + sceneKey + " ===");
       out.push(scene.summary || "");
-      out.push("This is a 10 second vertical orientation clip for an 8k, high budget, modern-futuristic, prestige TV show");
-
+      out.push("This is a 10 second vertical orientation clip for an all new original 8k, high budget, modern-futuristic, prestige TV show. This is a work of fiction. All characters and personas are entirely imaginary. Any resemblance to actual individuals, living or dead, is purely coincidental. No real likenesses are referenced or requested.");
       if (scene.setting) {
         const entry = store["settings.json"][scene.setting];
         if (entry) out.push("\n[SETTING]\n" + formatEntry(entry));
