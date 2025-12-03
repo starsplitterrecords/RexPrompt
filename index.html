@@ -3,30 +3,74 @@
 <head>
 <meta charset="utf-8">
 <title>Assembler</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body { font-family: sans-serif; padding: 20px; }
-select, button { margin: 0 10px 20px 0; }
-pre { background:#eee; padding:10px; white-space:pre-wrap; }
-.block { margin-bottom:15px; }
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+select, button {
+  margin: 0 10px 20px 0;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 14px 20px;
+}
+
+pre {
+  background: #eee;
+  padding: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.block {
+  margin-bottom: 15px;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 </style>
 </head>
 <body>
 
-<h3>Assembler</h3>
+<div class="container">
 
-<div class="block">
-  <label>Scene (recipes)</label>
-  <select id="sceneSel"></select>
+  <h3>Assembler</h3>
+
+  <div class="block">
+    <label>Scene (recipes)</label>
+    <select id="sceneSel"></select>
+  </div>
+
+  <pre id="out"></pre>
+
+  <div class="btn-row">
+    <button id="buildBtn">Build</button>
+    <button id="copyBtn">Copy Assembled Text</button>
+    <button id="commitBtn">Commit Scene</button>
+  </div>
+
+  <div id="manualInputs"></div>
+
 </div>
-
-
-<pre id="out"></pre>
-
-<button id="buildBtn">Build</button>
-
-<div id="manualInputs"></div>
-
-
 
 <script>
 const files = [
@@ -64,33 +108,70 @@ function formatEntry(e) {
 
 function collectManual(out, store) {
   const manual = document.querySelectorAll("#manualInputs select");
+
   manual.forEach(sel => {
     const f = sel.dataset.file;
     const k = sel.value;
     if (!k) return;
-    const entry = store[f][k];
-    if (entry) out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
+
+    // manual dialogue subtext selector
+    if (f === "dialogue.json_subtext") {
+      const entry = store["dialogue.json"][k];
+      if (entry && entry.subtext) {
+        out.push("\n[dialogue.json_subtext:" + k + "]\n(" + entry.subtext + ")");
+      }
+      return;
+    }
+
+    // normal manual selections
+    const entry = store[f] && store[f][k];
+    if (entry) {
+      out.push("\n[" + f + ":" + k + "]\n" + formatEntry(entry));
+    }
   });
 }
 
 async function init() {
   const manual = document.getElementById("manualInputs");
   const sceneSel = document.getElementById("sceneSel");
-  const store = {};
+  const buildBtn = document.getElementById("buildBtn");
+  const copyBtn = document.getElementById("copyBtn");
+  const commitBtn = document.getElementById("commitBtn");
+  const outEl = document.getElementById("out");
 
+  const store = {};
   for (const f of files) {
     const data = await load(f);
     store[f] = data;
   }
 
   const scenes = store["scenes_prequel.json"];
-  Object.keys(scenes).forEach(k => {
-    const o = document.createElement("option");
-    o.value = k;
-    o.textContent = k;
-    sceneSel.appendChild(o);
-  });
+  let sceneOrder = Object.keys(scenes);
 
+  function sceneLabel(key) {
+    const scene = scenes[key];
+    if (!scene || !scene.summary) return key;
+    const summary = scene.summary.trim();
+    const maxLen = 60;
+    if (summary.length <= maxLen) return key + " - " + summary;
+    let cut = summary.lastIndexOf(" ", maxLen);
+    if (cut === -1) cut = maxLen;
+    return key + " - " + summary.slice(0, cut);
+  }
+
+  function rebuildSceneOptions() {
+    sceneSel.innerHTML = "";
+    sceneOrder.forEach(key => {
+      const o = document.createElement("option");
+      o.value = key;
+      o.textContent = sceneLabel(key);
+      sceneSel.appendChild(o);
+    });
+  }
+
+  rebuildSceneOptions();
+
+  // manual dropdowns (all non-scene files)
   for (const f of files) {
     if (f === "scenes_prequel.json") continue;
 
@@ -101,18 +182,28 @@ async function init() {
     label.textContent = f;
     wrap.appendChild(label);
 
+    // primary selector
     const sel = document.createElement("select");
     sel.dataset.file = f;
-
+    sel.appendChild(new Option("[none]", ""));
     const keys = Object.keys(store[f]);
-    sel.appendChild(new Option("[none]",""));
     keys.forEach(k => sel.appendChild(new Option(k, k)));
-
     wrap.appendChild(sel);
+
+    // extra selector for dialogue subtext
+    if (f === "dialogue.json") {
+      const subSel = document.createElement("select");
+      subSel.dataset.file = "dialogue.json_subtext";
+      subSel.appendChild(new Option("[none]", ""));
+      keys.forEach(k => subSel.appendChild(new Option(k, k)));
+      wrap.appendChild(document.createElement("br"));
+      wrap.appendChild(subSel);
+    }
+
     manual.appendChild(wrap);
   }
 
-  document.getElementById("buildBtn").onclick = () => {
+  function build() {
     const out = [];
     const sceneKey = sceneSel.value;
     const scene = scenes[sceneKey];
@@ -155,7 +246,10 @@ async function init() {
           if (!d) return;
           const speaker = getHandle(d.speakerId, store["characters.json"]);
           const line = d.text || "";
+          const sub = d.subtext ? ("(" + d.subtext + ")") : "";
+
           out.push(speaker + ": " + line);
+          if (sub) out.push("  " + sub);
         });
       }
 
@@ -172,8 +266,48 @@ async function init() {
       collectManual(out, store);
     }
 
-    document.getElementById("out").textContent = out.join("\n").trim();
+    outEl.textContent = out.join("\n").trim();
+  }
+
+  // Build button = apply current scene + manual selections
+  buildBtn.onclick = build;
+
+  // Auto-build on scene change
+  sceneSel.onchange = build;
+
+  // Commit Scene rotates ordering after the selected scene
+  commitBtn.onclick = () => {
+    const currentKey = sceneSel.value;
+    const idx = sceneOrder.indexOf(currentKey);
+    if (idx === -1) return;
+
+    const before = sceneOrder.slice(0, idx + 1);
+    const after = sceneOrder.slice(idx + 1);
+    sceneOrder = after.concat(before);
+
+    rebuildSceneOptions();
+
+    if (sceneOrder.length > 0) {
+      sceneSel.value = sceneOrder[0];
+    }
+    build();
   };
+
+  // Copy assembled text
+  copyBtn.onclick = async () => {
+    const txt = outEl.textContent || "";
+    try {
+      await navigator.clipboard.writeText(txt);
+    } catch (e) {
+      console.error("copy fail", e);
+    }
+  };
+
+  // initial build
+  if (sceneOrder.length > 0) {
+    sceneSel.value = sceneOrder[0];
+    build();
+  }
 }
 
 init().catch(err => {
