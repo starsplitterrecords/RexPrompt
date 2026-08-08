@@ -1,8 +1,8 @@
 # RexPrompt
 
-RexPrompt is a lightweight, browser-based prompt assembler for **Star Splitter** scene production. It takes structured scene, character, dialogue, setting, faction, region, and direction data from JSON files and assembles it into a consistent, ready-to-copy generation prompt.
+RexPrompt is a lightweight, browser-based prompt assembler for **Star Splitter** scene production. It takes structured scene, character, dialogue, setting, faction, region, and direction data from JSON files and assembles them into a consistent, ready-to-copy generation prompt.
 
-The current prompt format is aimed at short fictional video scenes and includes the scene summary, character handles, dialogue and subtext, setting, region, factions, characters, and direction.
+The assembler is intentionally simple: the application code stays the same while different shows provide different data packages.
 
 ## Use it
 
@@ -10,26 +10,81 @@ The current prompt format is aimed at short fictional video scenes and includes 
 
 **GitHub repository:** https://github.com/starsplitterrecords/RexPrompt
 
-## How it works
+## Multi-show model
 
-RexPrompt has no backend and no build process. The application is contained in `index.html`, with its source material stored as JSON under `data/`.
+Available shows are defined in:
 
-When the page loads:
+```text
+data/shows.json
+```
 
-1. `index.html` loads the JSON data files in `data/`.
-2. `data/scenes_prequel.json` provides the scene recipes shown in the **Scene** dropdown.
-3. Selecting a scene resolves the IDs in that recipe against the supporting data files.
-4. Character IDs are converted to their Star Splitter handles.
-5. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
-6. Setting, region, factions, characters, and direction are added as formatted prompt sections.
-7. The assembled result is displayed in the output area and can be copied directly to the clipboard.
+Each entry points RexPrompt at a data directory and tells it which scene-recipe file to load.
 
-A generated prompt currently follows roughly this structure:
+Example:
+
+```json
+[
+  {
+    "id": "prequel",
+    "name": "Star Splitter Prequel",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json"
+  },
+  {
+    "id": "rex-fleet-s1",
+    "name": "Rex Fleet — Season One",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "scenes_prequel.json"
+  }
+]
+```
+
+The **Show** dropdown is built from this manifest. Changing shows unloads the current dataset, loads the selected show's JSON files, rebuilds the Scene dropdown, and resets that show's in-browser scene queue.
+
+The last selected show is remembered in browser local storage.
+
+## Adding a show
+
+A show data directory uses the same simple files RexPrompt has always used:
+
+```text
+data/shows/my-show/
+├── blocking.json
+├── characters.json
+├── dialogue.json
+├── direction.json
+├── factions.json
+├── lighting.json
+├── mood.json
+├── negatives.json
+├── regions.json
+├── scenes_prequel.json
+└── settings.json
+```
+
+The scene file can have another name; set that name in `shows.json` as `scenesFile`.
+
+After copying the JSON package into its directory, add one entry to `data/shows.json`. **No assembler code needs to change for the new show.**
+
+The original prequel remains in the root `data/` directory for backward compatibility.
+
+## How assembly works
+
+When a show is selected:
+
+1. RexPrompt loads that show's JSON dictionaries.
+2. The selected scene recipe resolves IDs against those dictionaries.
+3. Character IDs become Star Splitter handles.
+4. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
+5. Setting, region, factions, characters, and direction are appended as formatted prompt sections.
+6. The assembled result is displayed and can be copied directly to the clipboard.
+
+A generated prompt follows roughly this structure:
 
 ```text
 @character.handle
 
-=== SCENE: 2 ===
+=== SCENE: SCENE_ID ===
 Scene summary...
 10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.
 
@@ -55,65 +110,55 @@ Scene summary...
 
 ## Controls
 
+### Show
+
+Selects the data package currently loaded by RexPrompt.
+
+### Scene
+
+Selects a recipe from the active show.
+
 ### Build
 
-Rebuilds the prompt for the currently selected scene.
-
-Changing the scene selection also automatically rebuilds the prompt.
+Rebuilds the prompt for the selected scene. Changing the scene selection also rebuilds automatically.
 
 ### Copy Assembled Text
 
-Copies the complete assembled prompt to the system clipboard so it can be pasted into the generation workflow.
+Copies the complete assembled prompt to the clipboard.
 
 ### Commit Scene
 
-Moves the current scene to the end of the scene list and advances to the next scene.
+Moves the current scene to the end of the active show's in-browser queue and advances to the next scene.
 
-Despite the name, **Commit Scene does not commit or write anything to GitHub or to the JSON files**. The reordered queue exists only in the current browser session. Reloading the page restores the original order from `scenes_prequel.json`.
+Despite the name, **Commit Scene does not write anything to GitHub or the JSON files**. Reloading the show restores its original order.
 
 ## Data files
 
-The application currently loads these files:
+Each show supplies:
 
-- `data/scenes_prequel.json` — scene recipes and summaries
-- `data/characters.json` — characters, names, handles, roles, and notes
-- `data/dialogue.json` — dialogue lines and character subtext
-- `data/direction.json` — scene direction entries
-- `data/settings.json` — locations/settings
-- `data/regions.json` — regional context
-- `data/factions.json` — faction information
-- `data/blocking.json` — blocking patterns
-- `data/lighting.json` — lighting guidance
-- `data/mood.json` — mood and tension guidance
-- `data/negatives.json` — negative visual guidance
+- `scenes_prequel.json` (or the configured `scenesFile`) — scene recipes and summaries
+- `characters.json` — characters, names, handles, roles, and notes
+- `dialogue.json` — dialogue lines and character subtext
+- `direction.json` — scene direction entries
+- `settings.json` — locations/settings
+- `regions.json` — regional context
+- `factions.json` — faction information
+- `blocking.json` — blocking patterns
+- `lighting.json` — lighting guidance
+- `mood.json` — mood and tension guidance
+- `negatives.json` — negative visual guidance
 
-The scene recipe is the central piece. A scene points to the IDs it needs, and the assembler looks those IDs up in the appropriate data files when building the final text.
+The scene recipe is the central piece. It points to the IDs needed for that generation unit; RexPrompt performs deterministic lookup and assembly rather than interpreting the story itself.
 
 ## Deployment
 
-RexPrompt is a static site. There is:
+RexPrompt is a static site: no package manager, build step, application server, database, or server-side API is required.
 
-- no package manager
-- no compile/build step
-- no application server
-- no database
-- no server-side API
-
-Deployment consists of serving `index.html` and the `data/` directory from the repository root.
-
-The project can therefore be hosted directly with **GitHub Pages** from the `main` branch at the repository root. The resulting project URL follows GitHub Pages' standard project-site format:
-
-```text
-https://starsplitterrecords.github.io/RexPrompt/
-```
-
-Changes pushed to the published branch become part of the deployed static site once GitHub Pages publishes the updated files.
+It can be hosted directly with GitHub Pages from `main`.
 
 ## Running locally
 
-Because the application loads JSON with `fetch()`, run it through a local web server rather than opening `index.html` directly with a `file://` URL.
-
-For example, from the repository directory:
+Because RexPrompt loads JSON with `fetch()`, use a local web server rather than opening `index.html` with a `file://` URL.
 
 ```bash
 python -m http.server 8000
@@ -132,21 +177,13 @@ RexPrompt/
 ├── index.html
 ├── README.md
 └── data/
-    ├── blocking.json
-    ├── characters.json
-    ├── dialogue.json
-    ├── direction.json
-    ├── factions.json
-    ├── lighting.json
-    ├── mood.json
-    ├── negatives.json
-    ├── regions.json
-    ├── scenes_prequel.json
-    └── settings.json
+    ├── shows.json
+    ├── ...prequel data...
+    └── shows/
+        └── <show-id>/
+            └── ...show JSON package...
 ```
 
-## Editing RexPrompt
+## Design principle
 
-Most content changes do not require changing the application code. Add or revise entries in the JSON files and reference their IDs from the appropriate scene recipe.
-
-Changes to the generated prompt format, scene-queue behavior, or UI controls are handled in `index.html`.
+RexPrompt should remain a small deterministic assembler. New shows should add data, not application logic.
