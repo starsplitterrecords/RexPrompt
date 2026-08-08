@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Assembler</title>
+<title>RexPrompt Assembler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -19,6 +19,10 @@ body {
 }
 select, button {
   margin: 0 10px 20px 0;
+}
+select {
+  min-width: 260px;
+  max-width: 100%;
 }
 button {
   font-size: 1.1rem;
@@ -41,18 +45,30 @@ pre {
   gap: 10px;
   margin-bottom: 20px;
 }
+.status {
+  color: #666;
+  font-size: 0.9rem;
+  margin: -8px 0 14px;
+}
 </style>
 </head>
 <body>
 
 <div class="container">
 
-  <h3>Assembler</h3>
+  <h3>RexPrompt Assembler</h3>
 
   <div class="block">
-    <label>Scene (recipes)</label>
+    <label for="showSel">Show</label><br>
+    <select id="showSel"></select>
+  </div>
+
+  <div class="block">
+    <label for="sceneSel">Scene (recipes)</label><br>
     <select id="sceneSel"></select>
   </div>
+
+  <div id="status" class="status"></div>
 
   <div class="btn-row">
     <button id="buildBtn">Build</button>
@@ -66,7 +82,8 @@ pre {
 </div>
 
 <script>
-const files = [
+const SHOW_MANIFEST = "data/shows.json";
+const DATA_FILES = [
   "blocking.json",
   "characters.json",
   "dialogue.json",
@@ -76,14 +93,17 @@ const files = [
   "mood.json",
   "negatives.json",
   "regions.json",
-  "settings.json",
-  "scenes_prequel.json"
+  "settings.json"
 ];
 
-async function load(path) {
-  const r = await fetch("data/" + path);
-  if (!r.ok) throw new Error("load fail: " + path);
+async function loadJson(path) {
+  const r = await fetch(path, { cache: "no-store" });
+  if (!r.ok) throw new Error("load fail: " + path + " (" + r.status + ")");
   return r.json();
+}
+
+function joinPath(base, file) {
+  return String(base || "data").replace(/\/$/, "") + "/" + file;
 }
 
 function getHandle(charId, charactersJson) {
@@ -106,7 +126,7 @@ function collectManual(out, store) {
     const k = sel.value;
     if (!k) return;
     if (f === "dialogue.json_subtext") {
-      const entry = store["dialogue.json"][k];
+      const entry = store["dialogue.json"]?.[k];
       if (entry && entry.subtext) {
         out.push("\n[dialogue.json_subtext:" + k + "]\n(" + entry.subtext + ")");
       }
@@ -119,125 +139,203 @@ function collectManual(out, store) {
   });
 }
 
+async function loadShow(show) {
+  const basePath = show.basePath || "data";
+  const scenesFile = show.scenesFile || "scenes.json";
+  const store = {};
+
+  await Promise.all(DATA_FILES.map(async f => {
+    store[f] = await loadJson(joinPath(basePath, f));
+  }));
+
+  const rawScenes = await loadJson(joinPath(basePath, scenesFile));
+  store.__scenes = Array.isArray(rawScenes) ? rawScenes : Object.values(rawScenes);
+  return store;
+}
+
 async function init() {
+  const showSel = document.getElementById("showSel");
   const sceneSel = document.getElementById("sceneSel");
   const buildBtn = document.getElementById("buildBtn");
   const copyBtn = document.getElementById("copyBtn");
   const commitBtn = document.getElementById("commitBtn");
   const outEl = document.getElementById("out");
+  const statusEl = document.getElementById("status");
 
-  const store = {};
-  for (const f of files) {
-    store[f] = await load(f);
+  const shows = await loadJson(SHOW_MANIFEST);
+  if (!Array.isArray(shows) || !shows.length) {
+    throw new Error("No shows are defined in " + SHOW_MANIFEST);
   }
 
-  const scenes = store["scenes_prequel.json"];
-  let sceneOrder = Object.keys(scenes);
+  shows.forEach(show => {
+    const o = document.createElement("option");
+    o.value = show.id;
+    o.textContent = show.name || show.id;
+    showSel.appendChild(o);
+  });
 
-  function sceneLabel(key) {
-    const scene = scenes[key];
-    if (!scene || !scene.summary) return key;
+  let store = {};
+  let scenes = [];
+  let sceneOrder = [];
+  let activeShow = null;
+
+  function currentScene() {
+    const index = Number(sceneSel.value);
+    return Number.isFinite(index) ? scenes[index] : null;
+  }
+
+  function sceneIdentity(scene, index) {
+    return scene?.id || String(index + 1);
+  }
+
+  function sceneLabel(index) {
+    const scene = scenes[index];
+    const id = sceneIdentity(scene, index);
+    if (!scene || !scene.summary) return id;
     const s = scene.summary.trim();
-    const maxLen = 60;
-    if (s.length <= maxLen) return key + " - " + s;
+    const maxLen = 70;
+    if (s.length <= maxLen) return id + " - " + s;
     const cut = s.lastIndexOf(" ", maxLen);
-    return key + " - " + s.slice(0, cut === -1 ? maxLen : cut);
+    return id + " - " + s.slice(0, cut === -1 ? maxLen : cut);
   }
 
-  function rebuildSceneOptions() {
+  function rebuildSceneOptions(selectedIndex = null) {
     sceneSel.innerHTML = "";
-    sceneOrder.forEach(key => {
+    sceneOrder.forEach(index => {
       const o = document.createElement("option");
-      o.value = key;
-      o.textContent = sceneLabel(key);
+      o.value = String(index);
+      o.textContent = sceneLabel(index);
       sceneSel.appendChild(o);
     });
+    if (selectedIndex !== null && sceneOrder.includes(selectedIndex)) {
+      sceneSel.value = String(selectedIndex);
+    }
   }
 
-  rebuildSceneOptions();
-
   function build() {
-    const sceneKey = sceneSel.value;
-    const scene = scenes[sceneKey];
+    const scene = currentScene();
+    if (!scene) {
+      outEl.textContent = "No scene selected.";
+      return;
+    }
+
+    const sceneIndex = Number(sceneSel.value);
+    const sceneKey = sceneIdentity(scene, sceneIndex);
     const out = [];
 
     const cameoSet = new Set();
-    if (scene && scene.dialog) {
+    if (scene.dialog) {
       scene.dialog.forEach(k => {
-        const d = store["dialogue.json"][k];
+        const d = store["dialogue.json"]?.[k];
         if (!d) return;
-        const h = getHandle(d.speakerId, store["characters.json"]);
+        const h = getHandle(d.speakerId, store["characters.json"] || {});
         cameoSet.add(h);
       });
     }
 
     cameoSet.forEach(h => out.push(h));
 
-    if (scene) {
-      out.push("\n=== SCENE: " + sceneKey + " ===");
-      out.push((scene.summary || "").trim());
-      out.push("10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.");
+    out.push("\n=== SCENE: " + sceneKey + " ===");
+    out.push((scene.summary || "").trim());
+    out.push("10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.");
 
-      if (scene.setting) {
-        const e = store["settings.json"][scene.setting];
-        if (e) out.push("\n[SETTING]\n" + formatEntry(e));
-      }
-      if (scene.region) {
-        const e = store["regions.json"][scene.region];
-        if (e) out.push("\n[REGION]\n" + formatEntry(e));
-      }
-      if (scene.factions?.length) {
-        out.push("\n[FACTIONS]");
-        scene.factions.forEach(k => {
-          const e = store["factions.json"][k];
-          if (e) out.push(formatEntry(e));
-        });
-      }
-      if (scene.characters?.length) {
-        out.push("\n[CHARACTERS]");
-        scene.characters.forEach(k => {
-          const e = store["characters.json"][k];
-          if (e) out.push(formatEntry(e));
-        });
-      }
-      if (scene.dialog?.length) {
-        out.push("\n[DIALOGUE]");
-        scene.dialog.forEach(k => {
-          const d = store["dialogue.json"][k];
-          if (!d) return;
-          const h = getHandle(d.speakerId, store["characters.json"]);
-          const line = d.text || "";
-          out.push(h + ' says "' + line + '"');
-          if (d.subtext) out.push("  (" + d.subtext + ")");
-        });
-      }
-      if (scene.direction?.length) {
-        out.push("\n[DIRECTION]");
-        scene.direction.forEach(k => {
-          const e = store["direction.json"][k];
-          if (e) out.push(formatEntry(e));
-        });
-      }
-
-      collectManual(out, store);
+    if (scene.setting) {
+      const e = store["settings.json"]?.[scene.setting];
+      if (e) out.push("\n[SETTING]\n" + formatEntry(e));
+    }
+    if (scene.region) {
+      const e = store["regions.json"]?.[scene.region];
+      if (e) out.push("\n[REGION]\n" + formatEntry(e));
+    }
+    if (scene.factions?.length) {
+      out.push("\n[FACTIONS]");
+      scene.factions.forEach(k => {
+        const e = store["factions.json"]?.[k];
+        if (e) out.push(formatEntry(e));
+      });
+    }
+    if (scene.characters?.length) {
+      out.push("\n[CHARACTERS]");
+      scene.characters.forEach(k => {
+        const e = store["characters.json"]?.[k];
+        if (e) out.push(formatEntry(e));
+      });
+    }
+    if (scene.dialog?.length) {
+      out.push("\n[DIALOGUE]");
+      scene.dialog.forEach(k => {
+        const d = store["dialogue.json"]?.[k];
+        if (!d) return;
+        const h = getHandle(d.speakerId, store["characters.json"] || {});
+        const line = d.text || "";
+        out.push(h + ' says "' + line + '"');
+        if (d.subtext) out.push("  (" + d.subtext + ")");
+      });
+    }
+    if (scene.direction?.length) {
+      out.push("\n[DIRECTION]");
+      scene.direction.forEach(k => {
+        const e = store["direction.json"]?.[k];
+        if (e) out.push(formatEntry(e));
+      });
     }
 
+    collectManual(out, store);
     outEl.textContent = out.join("\n").trim();
+  }
+
+  async function selectShow(showId) {
+    const show = shows.find(s => s.id === showId) || shows[0];
+    activeShow = show;
+    showSel.value = show.id;
+    localStorage.setItem("rexprompt.selectedShow", show.id);
+
+    statusEl.textContent = "Loading " + (show.name || show.id) + "…";
+    outEl.textContent = "";
+    sceneSel.disabled = true;
+    buildBtn.disabled = true;
+    commitBtn.disabled = true;
+
+    try {
+      store = await loadShow(show);
+      scenes = store.__scenes || [];
+      sceneOrder = scenes.map((_, index) => index);
+      rebuildSceneOptions();
+      statusEl.textContent = (show.name || show.id) + " — " + scenes.length + " scenes";
+      sceneSel.disabled = false;
+      buildBtn.disabled = false;
+      commitBtn.disabled = false;
+      if (sceneOrder.length) {
+        sceneSel.value = String(sceneOrder[0]);
+        build();
+      } else {
+        outEl.textContent = "This show contains no scenes.";
+      }
+    } catch (err) {
+      statusEl.textContent = "Unable to load show.";
+      outEl.textContent = err instanceof Error ? err.message : String(err);
+    }
   }
 
   buildBtn.onclick = build;
   sceneSel.onchange = build;
 
+  showSel.onchange = () => {
+    void selectShow(showSel.value);
+  };
+
   commitBtn.onclick = () => {
-    const key = sceneSel.value;
-    const i = sceneOrder.indexOf(key);
-    if (i === -1) return;
-    const before = sceneOrder.slice(0, i + 1);
-    const after = sceneOrder.slice(i + 1);
+    const index = Number(sceneSel.value);
+    const position = sceneOrder.indexOf(index);
+    if (position === -1) return;
+    const before = sceneOrder.slice(0, position + 1);
+    const after = sceneOrder.slice(position + 1);
     sceneOrder = after.concat(before);
     rebuildSceneOptions();
-    sceneSel.value = sceneOrder[0];
-    build();
+    if (sceneOrder.length) {
+      sceneSel.value = String(sceneOrder[0]);
+      build();
+    }
   };
 
   copyBtn.onclick = async () => {
@@ -246,14 +344,13 @@ async function init() {
     } catch {}
   };
 
-  if (sceneOrder.length) {
-    sceneSel.value = sceneOrder[0];
-    build();
-  }
+  const savedShow = localStorage.getItem("rexprompt.selectedShow");
+  const initialShow = shows.some(s => s.id === savedShow) ? savedShow : shows[0].id;
+  await selectShow(initialShow);
 }
 
 init().catch(err => {
-  document.getElementById("out").textContent = err.message;
+  document.getElementById("out").textContent = err instanceof Error ? err.message : String(err);
 });
 </script>
 
