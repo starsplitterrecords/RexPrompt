@@ -31,32 +31,12 @@ def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def inspect_recoverable_base64(path, text):
-    pad = text.find("=")
-    if pad < 0:
-        return
-    end = pad + 1
-    while end < len(text) and text[end] == "=":
-        end += 1
-    prefix = text[:end]
-    try:
-        raw = base64.b64decode(prefix, validate=True)
-        decoded = json.loads(gzip.decompress(raw).decode("utf-8"))
-        scenes = normalize(decoded)
-    except Exception:
-        return
-    print(f"{path.name}: recoverable prefix has {len(scenes)} scenes")
-    for scene in scenes[-6:]:
-        print(f"RECOVERABLE {scene.get('id')}: {scene.get('summary','')}")
-
-
 def load_encoded(path):
     text = "".join(path.read_text(encoding="utf-8").split())
     print(f"Checking {path.name}: {len(text)} base64 chars")
     try:
         raw = base64.b64decode(text, validate=True)
     except Exception as exc:
-        inspect_recoverable_base64(path, text)
         raise SystemExit(f"{path.name}: invalid base64: {exc}") from exc
     try:
         decoded = gzip.decompress(raw).decode("utf-8")
@@ -77,6 +57,7 @@ if base != legacy_e1:
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
 base.extend(e2)
 expected_overlay_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
+loaded = {"S1E01": list(base[:len(legacy_e1)]), "S1E02": list(e2)}
 
 for n in range(3, 13):
     ep = f"S1E{n:02d}"
@@ -91,6 +72,7 @@ for n in range(3, 13):
     if len(ids) != len(set(ids)):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
     expected_overlay_counts[ep] = len(incoming)
+    loaded[ep] = incoming
     base.extend(incoming)
 
 expected_order = [f"S1E{n:02d}" for n in range(1, 13)]
@@ -124,3 +106,6 @@ print("Rex Fleet validation passed")
 print("Total scenes:", len(base))
 for ep in expected_order:
     print(f"{ep}: {counts[ep]}")
+print("Episode 10 final beats:")
+for scene in loaded["S1E10"][-6:]:
+    print(f"  {scene.get('id')}: {scene.get('summary','')}")
