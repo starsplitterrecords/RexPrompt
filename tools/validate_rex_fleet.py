@@ -36,16 +36,10 @@ def load_encoded(path):
     print(f"Checking {path.name}: {len(text)} base64 chars")
     try:
         raw = base64.b64decode(text, validate=True)
-    except Exception as exc:
-        raise SystemExit(f"{path.name}: invalid base64: {exc}") from exc
-    try:
         decoded = gzip.decompress(raw).decode("utf-8")
-    except Exception as exc:
-        raise SystemExit(f"{path.name}: invalid gzip/UTF-8: {exc}") from exc
-    try:
         return json.loads(decoded)
     except Exception as exc:
-        raise SystemExit(f"{path.name}: invalid JSON after decompression: {exc}") from exc
+        raise SystemExit(f"{path.name}: decode failure: {exc}") from exc
 
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
@@ -106,6 +100,12 @@ print("Rex Fleet validation passed")
 print("Total scenes:", len(base))
 for ep in expected_order:
     print(f"{ep}: {counts[ep]}")
-print("Episode 10 final beats:")
-for scene in loaded["S1E10"][-6:]:
-    print(f"  {scene.get('id')}: {scene.get('summary','')}")
+
+# Deterministically emit a corrected E10 payload with the two non-story notes removed.
+remove_ids = {"RF_S1E10_A31", "RF_S1E10_A32"}
+clean_e10 = [scene for scene in loaded["S1E10"] if scene.get("id") not in remove_ids]
+raw_json = json.dumps(clean_e10, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+clean_payload = base64.b64encode(gzip.compress(raw_json, compresslevel=9, mtime=0)).decode("ascii")
+print("CLEAN_E10_BEGIN")
+print(clean_payload)
+print("CLEAN_E10_END")
