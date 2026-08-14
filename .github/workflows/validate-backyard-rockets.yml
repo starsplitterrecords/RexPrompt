@@ -7,6 +7,8 @@ on:
       - 'data/shows.json'
       - 'data/shows/backyard-rockets-s1/**'
       - 'tools/validate_backyard_rockets.py'
+      - 'tools/audit_backyard_rockets_continuity.py'
+      - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
 
 jobs:
@@ -19,3 +21,5 @@ jobs:
           python-version: '3.12'
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
+      - name: Audit Backyard Rockets continuity
+        run: python tools/audit_backyard_rockets_continuity.py
