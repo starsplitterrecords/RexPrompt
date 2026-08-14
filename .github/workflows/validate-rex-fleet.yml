@@ -1,0 +1,21 @@
+name: Validate Rex Fleet data
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/shows/rex-fleet-s1/**'
+      - 'tools/validate_rex_fleet.py'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate overlays
+        run: python tools/validate_rex_fleet.py
