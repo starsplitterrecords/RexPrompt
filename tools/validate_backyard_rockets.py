@@ -94,8 +94,11 @@ if compressed != expected_eps:
     raise SystemExit(f"Episode ordering invalid: {compressed}")
 
 counts = Counter(eps)
-# Episodes 1-5 are adapted one RexPrompt production recipe per authored source scene.
-# The source contains 144/224/136/128/104 cinematic beats nested inside these scenes.
+print("Observed scene counts:", dict(counts), flush=True)
+print("Observed payload boundaries:", flush=True)
+for file, count, first_id, last_id in file_counts:
+    print(f"  {file}: {count} [{first_id} .. {last_id}]", flush=True)
+
 expected_authored = {
     "S1E01": 18,
     "S1E02": 28,
@@ -118,7 +121,6 @@ for scene in scenes:
     if not (scene.get("directionInline") or scene.get("direction")):
         raise SystemExit(f"{scene.get('id')}: missing direction")
 
-# Every faction and region key referenced by a scene must resolve in show dictionaries.
 factions = load_json(SHOW / "factions.json")
 regions = load_json(SHOW / "regions.json")
 for scene in scenes:
@@ -134,6 +136,3 @@ print("Total scenes:", len(scenes))
 for ep in expected_eps:
     label = "authored" if ep in expected_authored else "outline-only"
     print(f"{ep}: {counts[ep]} ({label})")
-print("Payload files:")
-for file, count, first_id, last_id in file_counts:
-    print(f"  {file}: {count} [{first_id} .. {last_id}]")
