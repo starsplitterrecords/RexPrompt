@@ -13,8 +13,12 @@
     "sceneOverlays": [
       {
         "file": "scenes_e02.json",
-        "replaceEpisode": "S1E02",
-        "afterId": "RF_S1E01_S11"
+        "replaceEpisode": "S1E02"
+      },
+      {
+        "file": "encoded/scenes_e03_e12.json.gzb64",
+        "encoding": "gzip-base64",
+        "replaceEpisodes": ["S1E03", "S1E04", "S1E05", "S1E06", "S1E07", "S1E08", "S1E09", "S1E10", "S1E11", "S1E12"]
       }
     ]
   }
