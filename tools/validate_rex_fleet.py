@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "rex-fleet-s1"
+MANIFEST = ROOT / "data" / "shows.json"
 
 
 def normalize(raw):
@@ -38,6 +39,12 @@ def load_encoded(path):
     return json.loads(decoded)
 
 
+shows = load_json(MANIFEST)
+show = next((s for s in shows if s.get("id") == "rex-fleet-s1"), None)
+if not show:
+    raise SystemExit("Rex Fleet show missing from data/shows.json")
+overlays = {o.get("replaceEpisode"): o for o in show.get("sceneOverlays", [])}
+
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
 legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
 base = normalize(load_json(SHOW / "scenes_e01.json"))
@@ -63,6 +70,8 @@ for n in range(3, 13):
         raise SystemExit(f"{ep}: one or more scenes are missing IDs")
     if len(ids) != len(set(ids)):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
+    excluded = set(overlays.get(ep, {}).get("excludeIds", []))
+    incoming = [s for s in incoming if s.get("id") not in excluded]
     expected_counts[ep] = len(incoming)
     base.extend(incoming)
 
@@ -86,7 +95,7 @@ if len(all_ids) != len(set(all_ids)):
 
 for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
     if forbidden in all_ids:
-        raise SystemExit(f"Non-story metadata beat survived cleanup: {forbidden}")
+        raise SystemExit(f"Non-story metadata beat survived exclusion: {forbidden}")
 
 for scene in base:
     if not scene.get("summary"):
