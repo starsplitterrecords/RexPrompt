@@ -100,8 +100,31 @@ def continuity(text,present):
         if any(n not in present for n in named):continue
         keep.append(c)
     return head.rstrip(' —-')+': '+' | '.join(keep) if keep else ''
+def derive_setting(summary,present):
+    low=summary.lower()
+    if any(k in low for k in ('aegis interception suite','aegis command rover','interceptor vehicle','interceptor cockpit')):
+        return 'Aegis field-interception position — immaculate graphite corporate hardware, restrained cyan/amber status light, precise contemporary systems, Mojave terrain visible beyond.'
+    if any(k in low for k in ('inside the tanker','tanker workshop','workbench','launch-shop','launch shop')):
+        return 'Mobile Launch-Shop tanker — maintained retro-industrial aerospace workshop, tactile analog-digital instruments, organized tools and sun-warmed Mojave light.'
+    if 'salt flat' in low or 'salt pan' in low:
+        return 'Mojave salt flat — immense bright mineral basin, hard blue sky, heat shimmer, distant mountains and clean geometric horizons.'
+    if any(k in low for k in ('limestone ridge','limestone outcrop','quarry','ridge line','ridge-line','ridge')):
+        return 'Mojave limestone ridge — pale fractured stone, bright high-desert sun, long sightlines and sparse scrub above the launch corridor.'
+    if 'canyon' in low:
+        return 'Mojave box canyon — sun-cut rock walls, narrow vehicle access, dry wash floor and hard reflected desert light.'
+    if 'cave' in low or 'cavern' in low:
+        return 'Mojave limestone cave — cool mineral interior, practical portable worklights, rough stone and equipment carried in from the bright desert.'
+    if 'solar array' in low or 'photovoltaic' in low:
+        return 'Collapsed solar-array salvage site — maintained recovery operation among damaged photovoltaic structures, bright open desert and organized technical gear.'
+    if 'launch pad' in low or 'launch site' in low or 'rocket' in low:
+        return 'Mojave field launch site — maintained hand-built aerospace hardware, compact support equipment, hard desert light and broad unobstructed sky.'
+    if present==['Cyrus']:
+        return 'Aegis Mojave observation position — clean graphite interceptor equipment, disciplined field geometry and long-range desert visibility.'
+    return 'Mojave field site — bright open-desert salvager workspace with maintained legacy aerospace equipment, practical rigging and dramatic geological distance.'
 def patch(scene):
     s=strings(scene); present=cast(s)
+    if 'settingText' in s and not str(s.get('settingText','')).strip(): s['settingText']=derive_setting(s.get('summary',''),present)
+    if not s.get('settingText') and not s.get('setting'): s['settingText']=derive_setting(s.get('summary',''),present)
     if 'charactersInline' in s:s['charactersInline']=[{'name':n,'handle':CANON[n]} for n in present]
     if 'characters' in s:s['characters']=[CANON[n] for n in present]
     if 'dialogueInline' in s:s['dialogueInline']=dialogue(s,present)
