@@ -31,12 +31,32 @@ def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def inspect_recoverable_base64(path, text):
+    pad = text.find("=")
+    if pad < 0:
+        return
+    end = pad + 1
+    while end < len(text) and text[end] == "=":
+        end += 1
+    prefix = text[:end]
+    try:
+        raw = base64.b64decode(prefix, validate=True)
+        decoded = json.loads(gzip.decompress(raw).decode("utf-8"))
+        scenes = normalize(decoded)
+    except Exception:
+        return
+    print(f"{path.name}: recoverable prefix has {len(scenes)} scenes")
+    for scene in scenes[-6:]:
+        print(f"RECOVERABLE {scene.get('id')}: {scene.get('summary','')}")
+
+
 def load_encoded(path):
     text = "".join(path.read_text(encoding="utf-8").split())
     print(f"Checking {path.name}: {len(text)} base64 chars")
     try:
         raw = base64.b64decode(text, validate=True)
     except Exception as exc:
+        inspect_recoverable_base64(path, text)
         raise SystemExit(f"{path.name}: invalid base64: {exc}") from exc
     try:
         decoded = gzip.decompress(raw).decode("utf-8")
