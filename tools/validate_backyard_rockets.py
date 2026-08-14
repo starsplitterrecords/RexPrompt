@@ -94,17 +94,18 @@ if compressed != expected_eps:
     raise SystemExit(f"Episode ordering invalid: {compressed}")
 
 counts = Counter(eps)
-# Episodes 1-5 are fully authored cinematic-beat adaptations from the supplied show export.
+# Episodes 1-5 are adapted one RexPrompt production recipe per authored source scene.
+# The source contains 144/224/136/128/104 cinematic beats nested inside these scenes.
 expected_authored = {
-    "S1E01": 144,
-    "S1E02": 224,
-    "S1E03": 136,
-    "S1E04": 128,
-    "S1E05": 104,
+    "S1E01": 18,
+    "S1E02": 28,
+    "S1E03": 17,
+    "S1E04": 16,
+    "S1E05": 16,
 }
 for ep, expected in expected_authored.items():
     if counts[ep] != expected:
-        raise SystemExit(f"{ep}: expected {expected} authored beats, found {counts[ep]}")
+        raise SystemExit(f"{ep}: expected {expected} authored source scenes, found {counts[ep]}")
 for ep in ("S1E06", "S1E07", "S1E08"):
     if counts[ep] < 1:
         raise SystemExit(f"{ep}: outline-only episode has no production adaptation beats")
