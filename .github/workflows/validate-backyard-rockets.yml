@@ -1,0 +1,21 @@
+name: Validate Backyard Rockets data
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/shows/backyard-rockets-s1/**'
+      - 'tools/validate_backyard_rockets.py'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Backyard Rockets show
+        run: python tools/validate_backyard_rockets.py
