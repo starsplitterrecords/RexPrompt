@@ -36,16 +36,18 @@ def load_encoded(path):
     return json.loads(gzip.decompress(raw).decode("utf-8"))
 
 
-base = normalize(load_json(SHOW / "scenes_prequel.json"))
-original_e1 = [s.get("id") for s in base if episode(s) == "S1E01"]
+legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
+legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
+base = normalize(load_json(SHOW / "scenes_e01.json"))
+if base != legacy_e1:
+    raise SystemExit("Explicit Episode 1 base differs from the original Rex Fleet Episode 1")
 
-# Apply Episode 2 JSON overlay.
+# Episode 2 is the already-approved enriched JSON adaptation.
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
-first = next(i for i, s in enumerate(base) if episode(s) == "S1E02")
-base = [s for s in base if episode(s) != "S1E02"]
-base[first:first] = e2
+base.extend(e2)
+expected_overlay_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
 
-expected_overlay_counts = {"S1E02": len(e2)}
+# Episodes 3-12 are enriched compressed overlays, appended in season order.
 for n in range(3, 13):
     ep = f"S1E{n:02d}"
     path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
@@ -54,39 +56,40 @@ for n in range(3, 13):
     if bad:
         raise SystemExit(f"{ep}: payload contains scenes from another episode: {bad[:5]}")
     ids = [s.get("id") for s in incoming]
+    if not ids or any(not scene_id for scene_id in ids):
+        raise SystemExit(f"{ep}: one or more scenes are missing IDs")
     if len(ids) != len(set(ids)):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
     expected_overlay_counts[ep] = len(incoming)
-    positions = [i for i, s in enumerate(base) if episode(s) == ep]
-    insert_at = positions[0] if positions else len(base)
-    base = [s for s in base if episode(s) != ep]
-    base[insert_at:insert_at] = incoming
+    base.extend(incoming)
 
-# E1 must be bit-for-bit identical by identity and order.
-final_e1 = [s.get("id") for s in base if episode(s) == "S1E01"]
-if final_e1 != original_e1:
-    raise SystemExit("Episode 1 changed or moved internally")
-
-# Every season episode appears in one contiguous block and in numerical order.
+expected_order = [f"S1E{n:02d}" for n in range(1, 13)]
 sequence = [episode(s) for s in base]
-season_sequence = [e for e in sequence if e and e.startswith("S1E")]
 compressed = []
-for e in season_sequence:
+for e in sequence:
     if not compressed or compressed[-1] != e:
         compressed.append(e)
-expected_order = [f"S1E{n:02d}" for n in range(1, 13)]
 if compressed != expected_order:
     raise SystemExit(f"Episode order invalid: {compressed}")
 
-# Overlay counts must survive replacement exactly once.
 counts = {ep: sum(1 for s in base if episode(s) == ep) for ep in expected_order}
 for ep, expected in expected_overlay_counts.items():
     if counts[ep] != expected:
-        raise SystemExit(f"{ep}: expected {expected} scenes after overlay, found {counts[ep]}")
+        raise SystemExit(f"{ep}: expected {expected} scenes, found {counts[ep]}")
 
-all_ids = [s.get("id") for s in base if s.get("id")]
+all_ids = [s.get("id") for s in base]
 if len(all_ids) != len(set(all_ids)):
     raise SystemExit("Duplicate scene IDs exist in final assembled season")
+
+# Basic RexPrompt production contract for enriched scenes.
+for scene in base:
+    if not scene.get("summary"):
+        raise SystemExit(f"{scene.get('id')}: missing summary")
+    if episode(scene) != "S1E01":
+        if not (scene.get("settingText") or scene.get("setting")):
+            raise SystemExit(f"{scene.get('id')}: missing setting")
+        if not (scene.get("regionText") or scene.get("region")):
+            raise SystemExit(f"{scene.get('id')}: missing region")
 
 print("Rex Fleet validation passed")
 print("Total scenes:", len(base))
