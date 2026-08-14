@@ -33,13 +33,9 @@ def load_json(path):
 
 def load_encoded(path):
     text = "".join(path.read_text(encoding="utf-8").split())
-    print(f"Checking {path.name}: {len(text)} base64 chars")
-    try:
-        raw = base64.b64decode(text, validate=True)
-        decoded = gzip.decompress(raw).decode("utf-8")
-        return json.loads(decoded)
-    except Exception as exc:
-        raise SystemExit(f"{path.name}: decode failure: {exc}") from exc
+    raw = base64.b64decode(text, validate=True)
+    decoded = gzip.decompress(raw).decode("utf-8")
+    return json.loads(decoded)
 
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
@@ -50,13 +46,15 @@ if base != legacy_e1:
 
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
 base.extend(e2)
-expected_overlay_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
-loaded = {"S1E01": list(base[:len(legacy_e1)]), "S1E02": list(e2)}
+expected_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
 
 for n in range(3, 13):
     ep = f"S1E{n:02d}"
     path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
-    incoming = normalize(load_encoded(path))
+    try:
+        incoming = normalize(load_encoded(path))
+    except Exception as exc:
+        raise SystemExit(f"{path.name}: decode failure: {exc}") from exc
     bad = [s.get("id") for s in incoming if episode(s) != ep]
     if bad:
         raise SystemExit(f"{ep}: payload contains scenes from another episode: {bad[:5]}")
@@ -65,8 +63,7 @@ for n in range(3, 13):
         raise SystemExit(f"{ep}: one or more scenes are missing IDs")
     if len(ids) != len(set(ids)):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
-    expected_overlay_counts[ep] = len(incoming)
-    loaded[ep] = incoming
+    expected_counts[ep] = len(incoming)
     base.extend(incoming)
 
 expected_order = [f"S1E{n:02d}" for n in range(1, 13)]
@@ -79,13 +76,17 @@ if compressed != expected_order:
     raise SystemExit(f"Episode order invalid: {compressed}")
 
 counts = {ep: sum(1 for s in base if episode(s) == ep) for ep in expected_order}
-for ep, expected in expected_overlay_counts.items():
+for ep, expected in expected_counts.items():
     if counts[ep] != expected:
         raise SystemExit(f"{ep}: expected {expected} scenes, found {counts[ep]}")
 
 all_ids = [s.get("id") for s in base]
 if len(all_ids) != len(set(all_ids)):
     raise SystemExit("Duplicate scene IDs exist in final assembled season")
+
+for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
+    if forbidden in all_ids:
+        raise SystemExit(f"Non-story metadata beat survived cleanup: {forbidden}")
 
 for scene in base:
     if not scene.get("summary"):
@@ -100,12 +101,3 @@ print("Rex Fleet validation passed")
 print("Total scenes:", len(base))
 for ep in expected_order:
     print(f"{ep}: {counts[ep]}")
-
-# Deterministically emit a corrected E10 payload with the two non-story notes removed.
-remove_ids = {"RF_S1E10_A31", "RF_S1E10_A32"}
-clean_e10 = [scene for scene in loaded["S1E10"] if scene.get("id") not in remove_ids]
-raw_json = json.dumps(clean_e10, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-clean_payload = base64.b64encode(gzip.compress(raw_json, compresslevel=9, mtime=0)).decode("ascii")
-print("CLEAN_E10_BEGIN")
-print(clean_payload)
-print("CLEAN_E10_END")
