@@ -8,6 +8,7 @@ on:
       - 'data/shows/backyard-rockets-s1/**'
       - 'tools/validate_backyard_rockets.py'
       - 'tools/audit_backyard_rockets_continuity.py'
+      - 'tools/export_backyard_rockets_scene_payloads.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
 
@@ -23,9 +24,13 @@ jobs:
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
         run: python tools/audit_backyard_rockets_continuity.py
-      - name: Upload continuity report
+      - name: Export source scene payloads for continuity repair
+        run: python tools/export_backyard_rockets_scene_payloads.py
+      - name: Upload continuity working set
         uses: actions/upload-artifact@v4
         with:
-          name: backyard-rockets-continuity-report
-          path: backyard-rockets-continuity-report.json
+          name: backyard-rockets-continuity-working-set
+          path: |
+            backyard-rockets-continuity-report.json
+            backyard-rockets-scene-payloads.json
           if-no-files-found: error
