@@ -9,13 +9,19 @@
     "id": "rex-fleet-s1",
     "name": "Rex Fleet — Season 1",
     "basePath": "data/shows/rex-fleet-s1",
-    "scenesFile": "scenes_prequel.json",
+    "scenesFile": "scenes_e01.json",
     "sceneOverlays": [
-      {
-        "file": "scenes_e02.json",
-        "replaceEpisode": "S1E02",
-        "afterId": "RF_S1E01_S11"
-      }
+      {"file": "scenes_e02.json", "replaceEpisode": "S1E02"},
+      {"file": "encoded/scenes_e03.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E03"},
+      {"file": "encoded/scenes_e04.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E04"},
+      {"file": "encoded/scenes_e05.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E05"},
+      {"file": "encoded/scenes_e06.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E06"},
+      {"file": "encoded/scenes_e07.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E07"},
+      {"file": "encoded/scenes_e08.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E08"},
+      {"file": "encoded/scenes_e09.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E09"},
+      {"file": "encoded/scenes_e10.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E10", "excludeIds": ["RF_S1E10_A31", "RF_S1E10_A32"]},
+      {"file": "encoded/scenes_e11.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E11"},
+      {"file": "encoded/scenes_e12.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E12"}
     ]
   }
 ]
