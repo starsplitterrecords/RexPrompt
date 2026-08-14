@@ -32,8 +32,20 @@ def load_json(path):
 
 
 def load_encoded(path):
-    raw = base64.b64decode("".join(path.read_text(encoding="utf-8").split()), validate=True)
-    return json.loads(gzip.decompress(raw).decode("utf-8"))
+    text = "".join(path.read_text(encoding="utf-8").split())
+    print(f"Checking {path.name}: {len(text)} base64 chars")
+    try:
+        raw = base64.b64decode(text, validate=True)
+    except Exception as exc:
+        raise SystemExit(f"{path.name}: invalid base64: {exc}") from exc
+    try:
+        decoded = gzip.decompress(raw).decode("utf-8")
+    except Exception as exc:
+        raise SystemExit(f"{path.name}: invalid gzip/UTF-8: {exc}") from exc
+    try:
+        return json.loads(decoded)
+    except Exception as exc:
+        raise SystemExit(f"{path.name}: invalid JSON after decompression: {exc}") from exc
 
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
@@ -42,12 +54,10 @@ base = normalize(load_json(SHOW / "scenes_e01.json"))
 if base != legacy_e1:
     raise SystemExit("Explicit Episode 1 base differs from the original Rex Fleet Episode 1")
 
-# Episode 2 is the already-approved enriched JSON adaptation.
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
 base.extend(e2)
 expected_overlay_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
 
-# Episodes 3-12 are enriched compressed overlays, appended in season order.
 for n in range(3, 13):
     ep = f"S1E{n:02d}"
     path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
@@ -81,7 +91,6 @@ all_ids = [s.get("id") for s in base]
 if len(all_ids) != len(set(all_ids)):
     raise SystemExit("Duplicate scene IDs exist in final assembled season")
 
-# Basic RexPrompt production contract for enriched scenes.
 for scene in base:
     if not scene.get("summary"):
         raise SystemExit(f"{scene.get('id')}: missing summary")
