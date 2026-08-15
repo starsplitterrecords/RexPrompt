@@ -29,7 +29,6 @@ def without_quotes(text): return re.sub(r"[“\"]([^\"”]*)[”\"]"," ",text)
 def narrative_names(summary):
     text=without_quotes(summary)
     return [n for n,h in PRINCIPALS.items() if re.search(rf"(?<![A-Za-z]){n}(?![A-Za-z])|{re.escape(h)}",text,re.I)]
-def add(issues,scene,kind,detail,file): issues.append({"scene":scene,"episode":episode({"id":scene}) if scene.startswith("BR_") else "STRUCTURE","kind":kind,"detail":detail,"file":file})
 
 shows=load(MANIFEST); show=next(s for s in shows if s.get("id")==SHOW_ID); base=ROOT/show["basePath"]
 base_scenes=norm(load(base/show.get("scenesFile","scenes_base.json")))
@@ -42,7 +41,7 @@ characters=load(base/"characters.json")
 canon_handles={v.get("handle") for v in characters.values() if isinstance(v,dict) and v.get("handle")}
 issues=[]; rows=[]
 legacy_patterns=[
-    (r"left[- ]hand.{0,60}(?:synthetic|graft)|(?:synthetic|graft).{0,60}left[- ]hand","Arvin left-hand graft conflict"),
+    (r"left[- ]hand[^.;]{0,30}(?:synthetic|graft)|(?:synthetic|graft)[^.;]{0,30}left[- ]hand","Arvin left-hand graft conflict"),
     (r"\b(?:junk-built|scrap-built|rickety) rocket\b","obsolete junk-built rocket language"),
     (r"\b(?:gutted fuel tanker|rusted tanker|rusted fuel tanker|oil-slicked belly)\b","obsolete decay-led tanker language"),
     (r"\b(?:tattered camouflage net|graveyard of fallen communications towers|primitive control console)\b","obsolete post-apocalyptic production language"),
@@ -93,10 +92,11 @@ ids=[s.get("id") for s in scenes]
 for sid,count in Counter(ids).items():
     if sid and count>1: issues.append({"scene":sid,"episode":"STRUCTURE","kind":"duplicate_scene_id","detail":f"appears {count} times","file":"manifest/overlays"})
 
+counts=Counter(episode(s) for s in scenes)
 report={
     "authority":["latest approved generated model sheets","approved recurring vehicle/location/prop sheets","current scene narrative summaries","legacy source/export prose only where non-conflicting"],
-    "sceneCount":len(scenes),"episodes":dict(sorted(Counter(episode(s) for s in scenes).items())),
-    "outlineOnlyEpisodes":[ep for ep,c in sorted(Counter(episode(s) for s in scenes).items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if episode(s)==ep)],
+    "sceneCount":len(scenes),"episodes":dict(sorted(counts.items())),
+    "outlineOnlyEpisodes":[ep for ep,c in sorted(counts.items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if episode(s)==ep)],
     "qualityGatePassed":not issues,"issueCount":len(issues),"issueKinds":dict(sorted(Counter(i["kind"] for i in issues).items())),"issues":issues,"scenes":rows,
 }
 REPORT.write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding="utf-8")
