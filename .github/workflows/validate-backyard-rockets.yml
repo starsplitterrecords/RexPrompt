@@ -9,6 +9,7 @@ on:
       - 'tools/validate_backyard_rockets.py'
       - 'tools/audit_backyard_rockets_continuity.py'
       - 'tools/fix_backyard_rockets_continuity.py'
+      - 'tools/expand_backyard_rockets_dialogue.py'
       - 'tools/export_backyard_rockets_scene_payloads.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
@@ -29,6 +30,8 @@ jobs:
           python-version: '3.12'
       - name: Repair Backyard Rockets continuity
         run: python tools/fix_backyard_rockets_continuity.py
+      - name: Expand Backyard Rockets dialogue
+        run: python tools/expand_backyard_rockets_dialogue.py
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
@@ -43,13 +46,13 @@ jobs:
             backyard-rockets-continuity-report.json
             backyard-rockets-scene-payloads.json
           if-no-files-found: error
-      - name: Commit deterministic scene repairs
+      - name: Commit deterministic scene repairs and dialogue expansion
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           if ! git diff --quiet -- data/shows/backyard-rockets-s1; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/shows/backyard-rockets-s1
-            git commit -m "Repair Backyard Rockets scene continuity"
+            git commit -m "Expand Backyard Rockets scene dialogue"
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
