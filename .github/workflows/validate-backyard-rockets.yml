@@ -10,6 +10,7 @@ on:
       - 'tools/audit_backyard_rockets_continuity.py'
       - 'tools/fix_backyard_rockets_continuity.py'
       - 'tools/expand_backyard_rockets_dialogue.py'
+      - 'tools/reconcile_backyard_rockets_dialogue_cast.py'
       - 'tools/export_backyard_rockets_scene_payloads.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
@@ -44,6 +45,8 @@ jobs:
           PY
       - name: Expand Backyard Rockets dialogue
         run: python tools/expand_backyard_rockets_dialogue.py
+      - name: Reconcile expanded-dialogue cast and visual locks
+        run: python tools/reconcile_backyard_rockets_dialogue_cast.py
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
