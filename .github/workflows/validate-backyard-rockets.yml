@@ -30,18 +30,16 @@ jobs:
           python-version: '3.12'
       - name: Repair Backyard Rockets continuity
         run: python tools/fix_backyard_rockets_continuity.py
-      - name: Ensure every authored scene is explicitly reviewed for dialogue
+      - name: Reconcile dialogue coverage with actual loaded scenes
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
           p = Path('tools/expand_backyard_rockets_dialogue.py')
           text = p.read_text(encoding='utf-8')
-          marker = "'BR_S1E02_A05_SC01':[]"
-          needle = "'BR_S1E02_A04_SC06':[],\n" + marker
-          if needle not in text:
-              if marker not in text:
-                  raise SystemExit('Could not locate insertion point for BR_S1E02_A04_SC06')
-              text = text.replace(marker, needle, 1)
+          # BR_S1E02_A04_SC06 is not a loaded RexPrompt scene; it was an editorial-map artifact.
+          text, n = re.subn(r"^'BR_S1E02_A04_SC06':.*\n", '', text, count=1, flags=re.M)
+          if n:
               p.write_text(text, encoding='utf-8')
           PY
       - name: Expand Backyard Rockets dialogue
