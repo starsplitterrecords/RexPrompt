@@ -36,12 +36,12 @@ jobs:
           from pathlib import Path
           p = Path('tools/expand_backyard_rockets_dialogue.py')
           text = p.read_text(encoding='utf-8')
-          mapping = "'BR_S1E02_A04_SC06':"
-          if mapping not in text:
-              marker = "'BR_S1E02_A05_SC01':[]"
+          marker = "'BR_S1E02_A05_SC01':[]"
+          needle = "'BR_S1E02_A04_SC06':[],\n" + marker
+          if needle not in text:
               if marker not in text:
                   raise SystemExit('Could not locate insertion point for BR_S1E02_A04_SC06')
-              text = text.replace(marker, "'BR_S1E02_A04_SC06':[],\n" + marker, 1)
+              text = text.replace(marker, needle, 1)
               p.write_text(text, encoding='utf-8')
           PY
       - name: Expand Backyard Rockets dialogue
