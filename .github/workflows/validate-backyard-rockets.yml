@@ -36,8 +36,8 @@ jobs:
           from pathlib import Path
           p = Path('tools/expand_backyard_rockets_dialogue.py')
           text = p.read_text(encoding='utf-8')
-          scene = "'BR_S1E02_A04_SC06'"
-          if scene not in text:
+          mapping = "'BR_S1E02_A04_SC06':"
+          if mapping not in text:
               marker = "'BR_S1E02_A05_SC01':[]"
               if marker not in text:
                   raise SystemExit('Could not locate insertion point for BR_S1E02_A04_SC06')
