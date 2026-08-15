@@ -133,7 +133,6 @@ ADDITIONS.update({
 'BR_S1E02_A04_SC03':[L('Cyrus','What would make them stop voluntarily?'),L('Cyrus','Something they believe is more important than winning.')],
 'BR_S1E02_A04_SC04':[L('Milo','What if he is not wrong about us?'),L('Lucia','He is not wrong about everything.'),L('Milo','That is worse.'),L('Lucia','Usually.')],
 'BR_S1E02_A04_SC05':[L('Arvin','Do you want me to say we are the good people?'),L('Milo','No.'),L('Arvin','Good.'),L('Milo','I want to know what you think we owe people when our choices spill into their lives.'),L('Arvin','More than an apology. Less than obedience. I am still solving the interval.')],
-'BR_S1E02_A04_SC06':[L('Lucia','That answer is why I stay.'),L('Arvin','It was incomplete.'),L('Lucia','Exactly.')],
 'BR_S1E02_A05_SC01':[],
 'BR_S1E02_A05_SC02':[L('Milo','If we ever get boring, will you tell me?'),L('Lucia','Immediately.'),L('Milo','What counts as boring?'),L('Lucia','When we start believing our own mythology.')],
 'BR_S1E02_A05_SC03':[L('Arvin','What do you call this, then?'),L('Lucia','Tuesday.'),L('Milo','That is why she is in charge of morale.')],

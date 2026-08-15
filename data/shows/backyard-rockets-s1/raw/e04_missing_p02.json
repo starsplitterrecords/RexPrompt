@@ -7,13 +7,24 @@
     "settingText": "Mojave Launch-Shop field site — bright open-desert workspace with maintained legacy aerospace equipment, organized tools, practical rigging and dramatic geological distance.",
     "region": "BR_Mojave",
     "factions": [
-      "BR_Salvagers"
+      "BR_Salvagers",
+      "BR_Aegis"
     ],
     "dialogueInline": [
       {
         "handle": "@brk.Lucia",
         "speaker": "Lucia",
         "text": "The parts you're looking for won't help you build a radio, but they'll certainly make that bird fly faster."
+      },
+      {
+        "handle": "@brk.Cyrus",
+        "speaker": "Cyrus",
+        "text": "What happens when pursuit becomes identity?"
+      },
+      {
+        "handle": "@brk.Cyrus",
+        "speaker": "Cyrus",
+        "text": "You stop noticing whether the target still justifies it."
       }
     ],
     "directionInline": [
@@ -24,7 +35,7 @@
         "text": "SCENE ACTION — SOURCE-LOCKED: Milo sits on a low crate in the lower deck of the tanker, struggling to thread a thick copper wire through a series of ceramic insulators while the floor vibrates from a distant sandstorm. Lucia stands over him, her hand resting on the hilt of a ceramic blade tucked into her belt as she watches his grease-stained fingers fumble with the delicate electronics. She leans down and purposefully kicks a small box of essential mounting brackets under a heavy coolant tank, her eyes remaining fixed on Milo to see if he notices the deliberate movement. Milo pauses, his brow furrowing as he looks around the cluttered floor for the missing components, unaware that Lucia has already replaced them with unstable, high-velocity ignition caps. Lucia smiles thinly, her expression hidden in the shadows of the engine room as she watches him reach for the compromised hardware."
       },
       {
-        "text": "CHARACTER CONTINUITY — MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. LUCIA: exact approved model sheet; athletic build; black asymmetric razor-cut hair; dark precise field jacket with restrained cyan piping; fitted practical trousers; polished black boots. Faction wardrobe and body proportions do not change because of location, lighting or action."
+        "text": "CHARACTER CONTINUITY — MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. LUCIA: exact approved model sheet; athletic build; black asymmetric razor-cut hair; dark precise field jacket with restrained cyan piping; fitted practical trousers; polished black boots. CYRUS: exact approved model sheet; older broad-shouldered build; silvered hair; pale blue eyes; immaculate graphite technical armor with minimal seams and restrained amber-cyan status lines. Faction wardrobe and body proportions do not change because of location, lighting or action."
       },
       {
         "text": "LOCATION / PROP / STATE CONTINUITY — Mojave Launch-Shop field site — bright open-desert workspace with maintained legacy aerospace equipment, organized tools, practical rigging and dramatic geological distance. Preserve exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage into adjacent scenes until explicitly changed. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."
@@ -41,6 +52,10 @@
       {
         "name": "Lucia",
         "handle": "@brk.Lucia"
+      },
+      {
+        "name": "Cyrus",
+        "handle": "@brk.Cyrus"
       }
     ]
   },
@@ -59,6 +74,26 @@
         "handle": "@brk.Milo",
         "speaker": "Milo",
         "text": "Let it go now, before the heat of the core fuses your fingers to the frame."
+      },
+      {
+        "handle": "@brk.Lucia",
+        "speaker": "Lucia",
+        "text": "What do you think he sees when he looks at us?"
+      },
+      {
+        "handle": "@brk.Arvin",
+        "speaker": "Arvin",
+        "text": "A problem with faces."
+      },
+      {
+        "handle": "@brk.Milo",
+        "speaker": "Milo",
+        "text": "That is grim."
+      },
+      {
+        "handle": "@brk.Arvin",
+        "speaker": "Arvin",
+        "text": "I suspect the faces are beginning to complicate the problem."
       }
     ],
     "directionInline": [
@@ -69,7 +104,7 @@
         "text": "SCENE ACTION — SOURCE-LOCKED: Arvin stands at the base of a towering, patchwork rocket made of corrugated iron and scavenged turbine blades, his hand pressed firmly against the vibrating hull. Milo crouches near the ignition lead, his hands trembling as he prepares to touch the live wires together while the wind howls across the cracked surface of the dry lake bed. The sun hangs low on the horizon, painting the scene in deep oranges and long, dramatic shadows that stretch toward the dust clouds of approaching Aegis interceptors. Arvin nods slowly, his eyes locked on Milo, signaling the start of a countdown that relies more on physical instinct than any digital clock. Milo grips the copper leads, his knuckles white, waiting for the precise moment the pressure gauge hits the red line marked in permanent marker."
       },
       {
-        "text": "CHARACTER CONTINUITY — ARVIN: exact approved model sheet; lean narrow angular older engineer; short steel-gray hair; olive utility jacket with blue solar-cell shoulder straps; synthetic graft on RIGHT HAND ONLY; left hand natural. MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. Faction wardrobe and body proportions do not change because of location, lighting or action."
+        "text": "CHARACTER CONTINUITY — ARVIN: exact approved model sheet; lean narrow angular older engineer; short steel-gray hair; olive utility jacket with blue solar-cell shoulder straps; synthetic graft on RIGHT HAND ONLY; left hand natural. MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. LUCIA: exact approved model sheet; athletic build; black asymmetric razor-cut hair; dark precise field jacket with restrained cyan piping; fitted practical trousers; polished black boots. Faction wardrobe and body proportions do not change because of location, lighting or action."
       },
       {
         "text": "LOCATION / PROP / STATE CONTINUITY — Mojave limestone cave — cool pale mineral interior, practical portable worklights, rough stone and equipment carried in from the bright desert. Preserve exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage into adjacent scenes until explicitly changed. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."
@@ -86,6 +121,10 @@
       {
         "name": "Milo",
         "handle": "@brk.Milo"
+      },
+      {
+        "name": "Lucia",
+        "handle": "@brk.Lucia"
       }
     ]
   }
