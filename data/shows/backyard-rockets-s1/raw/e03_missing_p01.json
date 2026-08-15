@@ -4,24 +4,44 @@
     "episode": "S1E03",
     "act": "ACT 2",
     "summary": "The ground shakes as a kinetic penetrator dropped by Cyrus hits the desert floor a mile away, sending a massive wall of dust toward the camp. Milo scrambles into the driver’s seat of the launch tanker, his hands fumbling with the oversized iron gear shift as the entire cabin rattles violently. In the distance, Cyrus stands atop his armored interceptor vehicle, watching through a thermal scope as the scavengers try to flee the impact zone. Milo slams the lever forward with both hands, his face contorted with the effort of fighting the seized mechanical components. \"Shift the gears manually before the transmission grinds itself into useless, red-hot iron dust.\"",
-    "settingText": "The interior of a converted nomadic water tanker, filled with hanging wires and industrial scrap.",
+    "settingText": "Mojave limestone cave — cool pale mineral interior, practical portable worklights, rough stone and equipment carried in from the bright desert.",
     "region": "BR_Mojave",
     "factions": [
+      "BR_Salvagers",
       "BR_Aegis"
-    ],
-    "characters": [
-      "@brk.Cyrus"
     ],
     "dialogueInline": [
       {
-        "handle": "@brk.Cyrus",
-        "speaker": "Cyrus",
+        "handle": "@brk.Milo",
+        "speaker": "Milo",
         "text": "Shift the gears manually before the transmission grinds itself into useless, red-hot iron dust."
       }
     ],
     "directionInline": [
       {
-        "text": "CONTINUITY: The rusted pipe wrench with a blue painted handle."
+        "text": "BACKYARD ROCKETS VISUAL LANGUAGE: bright, colorful prestige science fiction rooted in the natural beauty of the American Southwest. The Launch-Shop culture is clean, capable solar-wave retrofuturism: maintained late-20th-century aerospace forms, painted metal, tactile analog-digital instruments, practical repairs, organized tools and purposeful field engineering. Aegis is a distinct newer layer of graphite composite, brushed alloy, technical ceramic, robotics and restrained cyan/amber status light. No junkyard/post-apocalyptic styling, pervasive grime, rust-as-aesthetic, garbage piles, lanterns, glowing crystals or excessive holography. Clothing stays tied to character/faction regardless of environment."
+      },
+      {
+        "text": "SCENE ACTION — SOURCE-LOCKED: The ground shakes as a kinetic penetrator dropped by Cyrus hits the desert floor a mile away, sending a massive wall of dust toward the camp. Milo scrambles into the driver’s seat of the launch tanker, his hands fumbling with the oversized iron gear shift as the entire cabin rattles violently. In the distance, Cyrus stands atop his armored interceptor vehicle, watching through a thermal scope as the scavengers try to flee the impact zone. Milo slams the lever forward with both hands, his face contorted with the effort of fighting the seized mechanical components."
+      },
+      {
+        "text": "CHARACTER CONTINUITY — MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. CYRUS: exact approved model sheet; older broad-shouldered build; silvered hair; pale blue eyes; immaculate graphite technical armor with minimal seams and restrained amber-cyan status lines. Faction wardrobe and body proportions do not change because of location, lighting or action."
+      },
+      {
+        "text": "LOCATION / PROP / STATE CONTINUITY — Mojave limestone cave — cool pale mineral interior, practical portable worklights, rough stone and equipment carried in from the bright desert. Preserve the exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage established here into adjacent scenes until the story explicitly changes it. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."
+      },
+      {
+        "text": "CAMERA / LIGHT — Readable prestige-TV coverage with bright Southwest color separation and motivated practical light. Favor physical scale, hands performing real work, clear geography and legible silhouettes over murky atmosphere or generic action coverage."
+      }
+    ],
+    "charactersInline": [
+      {
+        "name": "Milo",
+        "handle": "@brk.Milo"
+      },
+      {
+        "name": "Cyrus",
+        "handle": "@brk.Cyrus"
       }
     ]
   },
@@ -29,15 +49,11 @@
     "id": "BR_S1E03_A03_SC01",
     "episode": "S1E03",
     "act": "ACT 3",
-    "summary": "Arvin and Milo crouch inside the skeletal remains of a derelict hauler under the blistering midday sun. Arvin brushes thick orange dust off a titanium fuel valve, his fingers tracing the hairline fractures in the metal while Milo pulls a heavy wrench from his belt and taps the casing, listening for the density of the alloy. The sun beats down through the gaps in the overhead metal, casting sharp, zebra-striped shadows across their sweat-slicked faces as they evaluate the salvage. \"This valve is the only thing keeping us from becoming a crater,\" Arvin says while tightening a rusted bolt with his bare hand.",
-    "settingText": "Arvin and Milo working in the shadow of a weathered, maintained tanker.",
+    "summary": "Arvin and Milo crouch inside the skeletal remains of a derelict hauler under the blistering midday sun. Arvin brushes thick orange dust off a titanium fuel valve, his fingers tracing the hairline fractures in the metal while Milo pulls a heavy wrench from his belt and taps the casing, listening for the density of the alloy. The sun beats down through the gaps in the overhead metal, casting sharp, zebra-striped shadows across their sweat-slicked faces as they evaluate the salvage. \"This valve is the only thing keeping us from becoming a crater,\" Arvin says while tightening a weathered bolt with his bare hand.",
+    "settingText": "Mojave Launch-Shop field site — bright open-desert workspace with maintained legacy aerospace equipment, organized tools, practical rigging and dramatic geological distance.",
     "region": "BR_Mojave",
     "factions": [
       "BR_Salvagers"
-    ],
-    "characters": [
-      "@brk.Arvin",
-      "@brk.Milo"
     ],
     "dialogueInline": [
       {
@@ -48,16 +64,29 @@
     ],
     "directionInline": [
       {
-        "text": "ACTION — Arvin and Milo crouch inside the skeletal remains of a derelict hauler under the blistering midday sun. Arvin brushes thick orange dust off a titanium fuel valve, his fingers tracing the hairline fractures in the metal while Milo pulls a heavy wrench from his belt and taps the casing, listening for the density of the alloy. The sun beats down through the gaps in the overhead metal, casting sharp, zebra-striped shadows across their sweat-slicked faces as they evaluate the salvage. \"This valve is the only thing keeping us from becoming a crater,\" Arvin says while tightening a rusted bolt with his bare hand."
+        "text": "BACKYARD ROCKETS VISUAL LANGUAGE: bright, colorful prestige science fiction rooted in the natural beauty of the American Southwest. The Launch-Shop culture is clean, capable solar-wave retrofuturism: maintained late-20th-century aerospace forms, painted metal, tactile analog-digital instruments, practical repairs, organized tools and purposeful field engineering. Aegis is a distinct newer layer of graphite composite, brushed alloy, technical ceramic, robotics and restrained cyan/amber status light. No junkyard/post-apocalyptic styling, pervasive grime, rust-as-aesthetic, garbage piles, lanterns, glowing crystals or excessive holography. Clothing stays tied to character/faction regardless of environment."
       },
       {
-        "text": "SUBTEXT — The technical precision of the build is the only thing keeping their mounting anxiety at bay."
+        "text": "SCENE ACTION — SOURCE-LOCKED: Arvin and Milo crouch inside the skeletal remains of a derelict hauler under the blistering midday sun. Arvin brushes thick orange dust off a titanium fuel valve, his fingers tracing the hairline fractures in the metal while Milo pulls a heavy wrench from his belt and taps the casing, listening for the density of the alloy. The sun beats down through the gaps in the overhead metal, casting sharp, zebra-striped shadows across their sweat-slicked faces as they evaluate the salvage. Arvin says while tightening a weathered bolt with his bare hand."
       },
       {
-        "text": "CAMERA / PERFORMANCE — Medium shot focusing on the tactile application of sealant and the sweat on Arvin's temple."
+        "text": "CHARACTER CONTINUITY — ARVIN: exact approved model sheet; lean narrow angular older engineer; short steel-gray hair; olive utility jacket with blue solar-cell shoulder straps; synthetic graft on RIGHT HAND ONLY; left hand natural. MILO: exact approved model sheet; broad grounded build; dense dark curls; fixed facial cybernetic markings; brown mechanical vest over dark work shirt; realistic tools. Faction wardrobe and body proportions do not change because of location, lighting or action."
       },
       {
-        "text": "CONTINUITY: The cracked oxygen injector being sealed with blue industrial goop."
+        "text": "LOCATION / PROP / STATE CONTINUITY — Mojave Launch-Shop field site — bright open-desert workspace with maintained legacy aerospace equipment, organized tools, practical rigging and dramatic geological distance. Preserve the exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage established here into adjacent scenes until the story explicitly changes it. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."
+      },
+      {
+        "text": "CAMERA / LIGHT — Readable prestige-TV coverage with bright Southwest color separation and motivated practical light. Favor physical scale, hands performing real work, clear geography and legible silhouettes over murky atmosphere or generic action coverage."
+      }
+    ],
+    "charactersInline": [
+      {
+        "name": "Arvin",
+        "handle": "@brk.Arvin"
+      },
+      {
+        "name": "Milo",
+        "handle": "@brk.Milo"
       }
     ]
   },
@@ -66,14 +95,10 @@
     "episode": "S1E03",
     "act": "ACT 3",
     "summary": "Inside the humid, cramped belly of the tanker, Arvin secures a row of mismatched copper pipes while Lucia watches from the narrow doorway, holding a canister of high-volatile propellant. She steps over a heap of discarded wiring, her boots crunching on the grit-covered floor, and holds the canister out toward him like a silent challenge. Arvin wipes grease onto his thigh and stares at the chemical seal, his jaw tightening as he refuses to reach for the dangerous fuel. \"If you pour that poison into my lines, the seals will melt before we clear the ridge,\" Arvin says, his eyes locked on Lucia’s unwavering hand.",
-    "settingText": "Arvin and Milo on the tanker roof.",
+    "settingText": "Mojave limestone ridge — pale fractured stone, bright high-desert sun, long sightlines, sparse scrub and the launch corridor below.",
     "region": "BR_Mojave",
     "factions": [
       "BR_Salvagers"
-    ],
-    "characters": [
-      "@brk.Arvin",
-      "@brk.Lucia"
     ],
     "dialogueInline": [
       {
@@ -84,13 +109,29 @@
     ],
     "directionInline": [
       {
-        "text": "ACTION — Inside the humid, cramped belly of the tanker, Arvin secures a row of mismatched copper pipes while Lucia watches from the narrow doorway, holding a canister of high-volatile propellant. She steps over a heap of discarded wiring, her boots crunching on the grit-covered floor, and holds the canister out toward him like a silent challenge. Arvin wipes grease onto his thigh and stares at the chemical seal, his jaw tightening as he refuses to reach for the dangerous fuel. \"If you pour that poison into my lines, the seals will melt before we clear the ridge,\" Arvin says, his eyes locked on Lucia’s unwavering hand."
+        "text": "BACKYARD ROCKETS VISUAL LANGUAGE: bright, colorful prestige science fiction rooted in the natural beauty of the American Southwest. The Launch-Shop culture is clean, capable solar-wave retrofuturism: maintained late-20th-century aerospace forms, painted metal, tactile analog-digital instruments, practical repairs, organized tools and purposeful field engineering. Aegis is a distinct newer layer of graphite composite, brushed alloy, technical ceramic, robotics and restrained cyan/amber status light. No junkyard/post-apocalyptic styling, pervasive grime, rust-as-aesthetic, garbage piles, lanterns, glowing crystals or excessive holography. Clothing stays tied to character/faction regardless of environment."
       },
       {
-        "text": "SUBTEXT — Arvin's obsession with perfection is the only thing keeping them alive in a world of scrap."
+        "text": "SCENE ACTION — SOURCE-LOCKED: Inside the humid, cramped belly of the tanker, Arvin secures a row of mismatched copper pipes while Lucia watches from the narrow doorway, holding a canister of high-volatile propellant. She steps over a heap of discarded wiring, her boots crunching on the grit-covered floor, and holds the canister out toward him like a silent challenge. Arvin wipes grease onto his thigh and stares at the chemical seal, his jaw tightening as he refuses to reach for the dangerous fuel. Arvin says, his eyes locked on Lucia’s unwavering hand."
       },
       {
-        "text": "CONTINUITY: The fractured titanium thruster nozzle held in @brk.Arvin's grease-stained hands."
+        "text": "CHARACTER CONTINUITY — ARVIN: exact approved model sheet; lean narrow angular older engineer; short steel-gray hair; olive utility jacket with blue solar-cell shoulder straps; synthetic graft on RIGHT HAND ONLY; left hand natural. LUCIA: exact approved model sheet; athletic build; black asymmetric razor-cut hair; dark precise field jacket with restrained cyan piping; fitted practical trousers; polished black boots. Faction wardrobe and body proportions do not change because of location, lighting or action."
+      },
+      {
+        "text": "LOCATION / PROP / STATE CONTINUITY — Mojave limestone ridge — pale fractured stone, bright high-desert sun, long sightlines, sparse scrub and the launch corridor below. Preserve the exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage established here into adjacent scenes until the story explicitly changes it. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."
+      },
+      {
+        "text": "CAMERA / LIGHT — Readable prestige-TV coverage with bright Southwest color separation and motivated practical light. Favor physical scale, hands performing real work, clear geography and legible silhouettes over murky atmosphere or generic action coverage."
+      }
+    ],
+    "charactersInline": [
+      {
+        "name": "Arvin",
+        "handle": "@brk.Arvin"
+      },
+      {
+        "name": "Lucia",
+        "handle": "@brk.Lucia"
       }
     ]
   }
