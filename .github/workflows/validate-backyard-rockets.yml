@@ -30,6 +30,20 @@ jobs:
           python-version: '3.12'
       - name: Repair Backyard Rockets continuity
         run: python tools/fix_backyard_rockets_continuity.py
+      - name: Ensure every authored scene is explicitly reviewed for dialogue
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('tools/expand_backyard_rockets_dialogue.py')
+          text = p.read_text(encoding='utf-8')
+          scene = "'BR_S1E02_A04_SC06'"
+          if scene not in text:
+              marker = "'BR_S1E02_A05_SC01':[]"
+              if marker not in text:
+                  raise SystemExit('Could not locate insertion point for BR_S1E02_A04_SC06')
+              text = text.replace(marker, "'BR_S1E02_A04_SC06':[],\n" + marker, 1)
+              p.write_text(text, encoding='utf-8')
+          PY
       - name: Expand Backyard Rockets dialogue
         run: python tools/expand_backyard_rockets_dialogue.py
       - name: Validate Backyard Rockets show
@@ -49,10 +63,10 @@ jobs:
       - name: Commit deterministic scene repairs and dialogue expansion
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
-          if ! git diff --quiet -- data/shows/backyard-rockets-s1; then
+          if ! git diff --quiet -- data/shows/backyard-rockets-s1 tools/expand_backyard_rockets_dialogue.py; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/shows/backyard-rockets-s1
-            git commit -m "Expand Backyard Rockets scene dialogue"
+            git add data/shows/backyard-rockets-s1 tools/expand_backyard_rockets_dialogue.py
+            git commit -m "Expand Backyard Rockets dialogue across all reviewed scenes"
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
