@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 SHOW_ID='backyard-rockets-s1'
 CANON={'Arvin':'@brk.Arvin','Milo':'@brk.Milo','Lucia':'@brk.Lucia','Cyrus':'@brk.Cyrus','Tamz':'@brk.Tamz'}
+VOICE_REWRITES=json.loads((ROOT/'data/shows/backyard-rockets-s1/dialogue-voice-rewrites.json').read_text(encoding='utf-8'))
 
 # Carefully authored additions. Keys are scene IDs; values are ordered lines to append after any
 # source-authored dialogue already present. Empty list means the scene was intentionally reviewed
@@ -221,6 +222,13 @@ def patch(scene):
     if sid not in ADDITIONS:raise KeyError(f'Unreviewed Backyard Rockets scene: {sid}')
     existing=scene.get('dialogueInline',[]) or []
     scene['dialogueInline']=existing+ADDITIONS[sid]
+    for raw_index,rewrite in VOICE_REWRITES.get(sid,{}).items():
+        index=int(raw_index)
+        if index>=len(scene['dialogueInline']):
+            raise IndexError(f'Voice rewrite {sid}[{index}] exceeds {len(scene["dialogueInline"])} dialogue lines')
+        line=scene['dialogueInline'][index]
+        speaker=rewrite['speaker']
+        line.update(handle=CANON[speaker],speaker=speaker,text=rewrite['text'])
     return scene
 
 shows=load(ROOT/'data/shows.json');show=next(s for s in shows if s.get('id')==SHOW_ID);base=ROOT/show['basePath']

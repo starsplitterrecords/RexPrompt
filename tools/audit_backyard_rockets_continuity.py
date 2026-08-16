@@ -9,6 +9,7 @@ MANIFEST=ROOT/"data/shows.json"
 REPORT=ROOT/"backyard-rockets-continuity-report.json"
 P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz"}
 SALV={"Arvin","Milo","Lucia","Tamz"}
+VOICE_REWRITES=json.loads((ROOT/"data/shows/backyard-rockets-s1/dialogue-voice-rewrites.json").read_text(encoding="utf-8"))
 
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def norm(x):
@@ -85,12 +86,14 @@ for file,group in groups:
 
         qs=quotes(summary)
         dt=[d.get("text","").strip() for d in dia if isinstance(d,dict)]
-        # Adaptation may add dialogue, but every source-authored quote must survive exactly and in order.
-        pos=0;missing=[]
-        for q in qs:
-            try:
-                pos=dt.index(q,pos)+1
-            except ValueError:
+        # Source dialogue must survive exactly unless a scene-indexed, reviewable voice rewrite
+        # explicitly replaces it. Added adaptation dialogue follows the source lines.
+        missing=[]
+        scene_rewrites=VOICE_REWRITES.get(sid,{})
+        for source_index,q in enumerate(qs):
+            actual=dt[source_index] if source_index<len(dt) else None
+            rewrite=scene_rewrites.get(str(source_index))
+            if actual!=q and (not rewrite or actual!=rewrite.get("text")):
                 missing.append(q)
         if missing:
             issues.append({"scene":sid,"episode":e,"kind":"dialogue_quote_coverage","detail":f"missing source quotes={missing}; dialogueInline={dt}","file":file})
@@ -123,12 +126,12 @@ for sid,c in Counter(s.get("id") for s in scenes).items():
     if sid and c>1: issues.append({"scene":sid,"episode":"STRUCTURE","kind":"duplicate_scene_id","detail":f"appears {c} times","file":"manifest/overlays"})
 
 counts=Counter(ep(s) for s in scenes)
-report={"authority":["latest approved generated model sheets","approved recurring vehicle/location/prop sheets","current scene narrative summaries","expanded dialogue adaptation","legacy prose only where non-conflicting"],"sceneCount":len(scenes),"episodes":dict(sorted(counts.items())),"outlineOnlyEpisodes":[e for e,c in sorted(counts.items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if ep(s)==e)],"sourceDialogueQuotes":sum(len(quotes(s.get("summary",""))) for s in scenes),"totalDialogueLines":sum(len(s.get("dialogueInline",[]) or []) for s in scenes),"qualityGatePassed":not issues,"issueCount":len(issues),"issueKinds":dict(sorted(Counter(i["kind"] for i in issues).items())),"issues":issues,"scenes":rows}
+report={"authority":["latest approved generated model sheets","approved recurring vehicle/location/prop sheets","current scene narrative summaries","expanded dialogue adaptation","scene-indexed voice rewrites","legacy prose only where non-conflicting"],"sceneCount":len(scenes),"episodes":dict(sorted(counts.items())),"outlineOnlyEpisodes":[e for e,c in sorted(counts.items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if ep(s)==e)],"sourceDialogueQuotes":sum(len(quotes(s.get("summary",""))) for s in scenes),"voiceRewrites":sum(len(v) for v in VOICE_REWRITES.values()),"totalDialogueLines":sum(len(s.get("dialogueInline",[]) or []) for s in scenes),"qualityGatePassed":not issues,"issueCount":len(issues),"issueKinds":dict(sorted(Counter(i["kind"] for i in issues).items())),"issues":issues,"scenes":rows}
 REPORT.write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding="utf-8")
 print("BACKYARD ROCKETS CONTINUITY QUALITY GATE")
 print("Scenes:",report["sceneCount"],"Episodes:",report["episodes"])
 print("Outline-only source episodes:",report["outlineOnlyEpisodes"])
-print("Source dialogue quotes preserved:",report["sourceDialogueQuotes"],"Total dialogue lines:",report["totalDialogueLines"])
+print("Source dialogue quotes accounted for:",report["sourceDialogueQuotes"],"Voice rewrites:",report["voiceRewrites"],"Total dialogue lines:",report["totalDialogueLines"])
 print("Passed:",report["qualityGatePassed"],"Findings:",report["issueCount"],report["issueKinds"])
 for i in issues: print(f'{i["scene"]}\t{i["kind"]}\t{i["detail"]}\t[{i["file"]}]')
 print("Report:",REPORT)
