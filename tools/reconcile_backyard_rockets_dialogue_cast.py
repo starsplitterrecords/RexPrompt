@@ -36,6 +36,8 @@ def write(p, x, enc=None):
         p.write_text(json.dumps(x, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 def patch(scene):
+    if scene.get("documentaryChannel"):
+        return scene
     cast = []
     for c in scene.get("charactersInline", []) or []:
         n = c.get("name") if isinstance(c, dict) else None
@@ -48,7 +50,7 @@ def patch(scene):
     scene["charactersInline"] = [{"name":n,"handle":CANON[n]} for n in cast]
     factions = []
     if any(n in SALVAGERS for n in cast): factions.append("BR_Salvagers")
-    if "Cyrus" in cast: factions.append("BR_Aegis")
+    if "Cyrus" in cast: factions.append("BR_Tethergrid")
     scene["factions"] = factions
 
     dirs = scene.get("directionInline", []) or []

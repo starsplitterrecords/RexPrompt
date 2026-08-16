@@ -100,11 +100,11 @@ for file, count, first_id, last_id in file_counts:
     print(f"  {file}: {count} [{first_id} .. {last_id}]", flush=True)
 
 expected_authored = {
-    "S1E01": 18,
-    "S1E02": 28,
-    "S1E03": 17,
-    "S1E04": 16,
-    "S1E05": 16,
+    "S1E01": 20,
+    "S1E02": 30,
+    "S1E03": 19,
+    "S1E04": 18,
+    "S1E05": 20,
 }
 for ep, expected in expected_authored.items():
     if counts[ep] != expected:

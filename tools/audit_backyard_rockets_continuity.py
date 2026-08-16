@@ -7,8 +7,9 @@ ROOT=Path(__file__).resolve().parents[1]
 SHOW_ID="backyard-rockets-s1"
 MANIFEST=ROOT/"data/shows.json"
 REPORT=ROOT/"backyard-rockets-continuity-report.json"
-P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz"}
+P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
 SALV={"Arvin","Milo","Lucia","Tamz"}
+VOICE_REWRITES=json.loads((ROOT/"data/shows/backyard-rockets-s1/dialogue-voice-rewrites.json").read_text(encoding="utf-8"))
 
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def norm(x):
@@ -56,7 +57,7 @@ legacy=[
 (r"\b(?:junk-built|scrap-built|rickety) rocket\b","obsolete junk-built rocket language"),
 (r"\b(?:gutted fuel tanker|rusted tanker|rusted fuel tanker|oil-slicked belly)\b","obsolete decay-led tanker language"),
 (r"\b(?:tattered camouflage net|graveyard of fallen communications towers|primitive control console)\b","obsolete post-apocalyptic production language"),
-(r"\b(?:white armored interceptor|chrome-and-white armor|bulky fantasy plating)\b","obsolete Cyrus/Aegis design language"),
+(r"\b(?:white armored interceptor|chrome-and-white armor|bulky fantasy plating)\b","obsolete Cyrus/Tethergrid design language"),
 (r"\b(?:smartphone|iphone|android phone|macbook|ultrabook|gaming laptop)\b","wrong consumer-device era language")]
 
 for file,group in groups:
@@ -79,18 +80,21 @@ for file,group in groups:
 
         ef=[]
         if any(n in SALV for n in dn): ef.append("BR_Salvagers")
-        if "Cyrus" in dn: ef.append("BR_Aegis")
+        if "Cyrus" in dn or "Tetherwell Narrator" in dn: ef.append("BR_Tethergrid")
+        if "Dryline Reporter" in dn: ef.append("BR_Dryline")
         if (s.get("factions") or [])!=ef:
             issues.append({"scene":sid,"episode":e,"kind":"faction_mismatch","detail":f"declared={s.get('factions')}; expected={ef}","file":file})
 
         qs=quotes(summary)
         dt=[d.get("text","").strip() for d in dia if isinstance(d,dict)]
-        # Adaptation may add dialogue, but every source-authored quote must survive exactly and in order.
-        pos=0;missing=[]
-        for q in qs:
-            try:
-                pos=dt.index(q,pos)+1
-            except ValueError:
+        # Source dialogue must survive exactly unless a scene-indexed, reviewable voice rewrite
+        # explicitly replaces it. Added adaptation dialogue follows the source lines.
+        missing=[]
+        scene_rewrites=VOICE_REWRITES.get(sid,{})
+        for source_index,q in enumerate(qs):
+            actual=dt[source_index] if source_index<len(dt) else None
+            rewrite=scene_rewrites.get(str(source_index))
+            if actual!=q and (not rewrite or actual!=rewrite.get("text")):
                 missing.append(q)
         if missing:
             issues.append({"scene":sid,"episode":e,"kind":"dialogue_quote_coverage","detail":f"missing source quotes={missing}; dialogueInline={dt}","file":file})
@@ -102,7 +106,12 @@ for file,group in groups:
         if not loc: issues.append({"scene":sid,"episode":e,"kind":"missing_setting","detail":"settingText empty","file":file})
         dirs=s.get("directionInline",[]) or []
         labels=[str(x.get("text","")) for x in dirs if isinstance(x,dict)]
-        req=("BACKYARD ROCKETS VISUAL LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","CHARACTER CONTINUITY —","LOCATION / PROP / STATE CONTINUITY —","CAMERA / LIGHT —")
+        if s.get("documentaryChannel")=="tethergrid":
+            req=("TETHERGRID DOCUMENTARY LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","PRESENTER CONTINUITY —","LOCATION / GRAPHIC CONTINUITY —","CAMERA / EDITORIAL GRAMMAR —")
+        elif s.get("documentaryChannel")=="dryline":
+            req=("DRYLINE DOCUMENTARY LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","PRESENTER CONTINUITY —","LOCATION / GRAPHIC CONTINUITY —","CAMERA / EDITORIAL GRAMMAR —")
+        else:
+            req=("BACKYARD ROCKETS VISUAL LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","CHARACTER CONTINUITY —","LOCATION / PROP / STATE CONTINUITY —","CAMERA / LIGHT —")
         if len(labels)!=5 or any(not labels[i].startswith(req[i]) for i in range(min(len(labels),5))):
             issues.append({"scene":sid,"episode":e,"kind":"direction_schema_mismatch","detail":"five canonical production locks required","file":file})
         if labels:
@@ -123,12 +132,12 @@ for sid,c in Counter(s.get("id") for s in scenes).items():
     if sid and c>1: issues.append({"scene":sid,"episode":"STRUCTURE","kind":"duplicate_scene_id","detail":f"appears {c} times","file":"manifest/overlays"})
 
 counts=Counter(ep(s) for s in scenes)
-report={"authority":["latest approved generated model sheets","approved recurring vehicle/location/prop sheets","current scene narrative summaries","expanded dialogue adaptation","legacy prose only where non-conflicting"],"sceneCount":len(scenes),"episodes":dict(sorted(counts.items())),"outlineOnlyEpisodes":[e for e,c in sorted(counts.items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if ep(s)==e)],"sourceDialogueQuotes":sum(len(quotes(s.get("summary",""))) for s in scenes),"totalDialogueLines":sum(len(s.get("dialogueInline",[]) or []) for s in scenes),"qualityGatePassed":not issues,"issueCount":len(issues),"issueKinds":dict(sorted(Counter(i["kind"] for i in issues).items())),"issues":issues,"scenes":rows}
+report={"authority":["latest approved generated model sheets","approved recurring vehicle/location/prop sheets","current scene narrative summaries","expanded dialogue adaptation","scene-indexed voice rewrites","legacy prose only where non-conflicting"],"sceneCount":len(scenes),"episodes":dict(sorted(counts.items())),"outlineOnlyEpisodes":[e for e,c in sorted(counts.items()) if c==1 and any("OUTLINE" in (s.get("id") or "") for s in scenes if ep(s)==e)],"sourceDialogueQuotes":sum(len(quotes(s.get("summary",""))) for s in scenes),"voiceRewrites":sum(len(v) for v in VOICE_REWRITES.values()),"totalDialogueLines":sum(len(s.get("dialogueInline",[]) or []) for s in scenes),"qualityGatePassed":not issues,"issueCount":len(issues),"issueKinds":dict(sorted(Counter(i["kind"] for i in issues).items())),"issues":issues,"scenes":rows}
 REPORT.write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding="utf-8")
 print("BACKYARD ROCKETS CONTINUITY QUALITY GATE")
 print("Scenes:",report["sceneCount"],"Episodes:",report["episodes"])
 print("Outline-only source episodes:",report["outlineOnlyEpisodes"])
-print("Source dialogue quotes preserved:",report["sourceDialogueQuotes"],"Total dialogue lines:",report["totalDialogueLines"])
+print("Source dialogue quotes accounted for:",report["sourceDialogueQuotes"],"Voice rewrites:",report["voiceRewrites"],"Total dialogue lines:",report["totalDialogueLines"])
 print("Passed:",report["qualityGatePassed"],"Findings:",report["issueCount"],report["issueKinds"])
 for i in issues: print(f'{i["scene"]}\t{i["kind"]}\t{i["detail"]}\t[{i["file"]}]')
 print("Report:",REPORT)
