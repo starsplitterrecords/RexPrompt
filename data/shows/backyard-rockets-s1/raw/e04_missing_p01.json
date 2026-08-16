@@ -191,5 +191,49 @@
         "handle": "@brk.Cyrus"
       }
     ]
+  },
+  {
+    "id": "BR_S1E04_DOC_DL04",
+    "episode": "S1E04",
+    "act": "DOCUMENTARY INTERSTITIAL",
+    "summary": "A technician examines a cracked pump casing beside a community controller running the Launch-Shop's open protocol. A draw-history graph shows the pump exceeding its safe window after a local operator removed the shared limit.",
+    "settingText": "The Dryline Report — forensic field report at a damaged community wellhead.",
+    "region": "BR_Mojave",
+    "factions": [
+      "BR_Dryline"
+    ],
+    "charactersInline": [
+      {
+        "name": "Dryline Reporter",
+        "handle": "@brk.DrylineReporter",
+        "visibility": "voice-over only; never shown"
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "Dryline Reporter",
+        "handle": "@brk.DrylineReporter",
+        "text": "Open access did not create more water. Someone overrode the community limit, damaged this pump and shortened the neighboring wells' remaining season.",
+        "delivery": "voice-over"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "DRYLINE DOCUMENTARY LANGUAGE: rigorous independent investigative journalism made under field constraints; handheld but legible footage, natural desert color, direct equipment evidence, sourced records, restrained annotation and honest uncertainty. Visually imperfect never means incompetent or sensationalized."
+      },
+      {
+        "text": "SCENE ACTION — SOURCE-LOCKED: A technician examines a cracked pump casing beside a community controller running the Launch-Shop's open protocol. A draw-history graph shows the pump exceeding its safe window after a local operator removed the shared limit."
+      },
+      {
+        "text": "PRESENTER CONTINUITY — Voice-over only. Do not show, silhouette, or invent an on-camera narrator or reporter unless a later scene explicitly introduces one."
+      },
+      {
+        "text": "LOCATION / GRAPHIC CONTINUITY — The Dryline Report — forensic field report at a damaged community wellhead. Preserve all named screens, labels, footage sources, water states and equipment conditions exactly; the two channels may reuse identical footage with different crops or evidence overlays."
+      },
+      {
+        "text": "CAMERA / EDITORIAL GRAMMAR — 10-second vertical documentary insert. Make every statistic, authorization state and physical water consequence immediately legible. Tethergrid controls the frame; Dryline reveals what was cropped out."
+      }
+    ],
+    "documentaryChannel": "dryline"
   }
 ]

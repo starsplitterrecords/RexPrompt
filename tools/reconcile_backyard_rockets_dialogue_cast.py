@@ -36,6 +36,8 @@ def write(p, x, enc=None):
         p.write_text(json.dumps(x, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 def patch(scene):
+    if scene.get("documentaryChannel"):
+        return scene
     cast = []
     for c in scene.get("charactersInline", []) or []:
         n = c.get("name") if isinstance(c, dict) else None

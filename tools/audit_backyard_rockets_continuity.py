@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SHOW_ID="backyard-rockets-s1"
 MANIFEST=ROOT/"data/shows.json"
 REPORT=ROOT/"backyard-rockets-continuity-report.json"
-P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz"}
+P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
 SALV={"Arvin","Milo","Lucia","Tamz"}
 VOICE_REWRITES=json.loads((ROOT/"data/shows/backyard-rockets-s1/dialogue-voice-rewrites.json").read_text(encoding="utf-8"))
 
@@ -80,7 +80,8 @@ for file,group in groups:
 
         ef=[]
         if any(n in SALV for n in dn): ef.append("BR_Salvagers")
-        if "Cyrus" in dn: ef.append("BR_Tethergrid")
+        if "Cyrus" in dn or "Tetherwell Narrator" in dn: ef.append("BR_Tethergrid")
+        if "Dryline Reporter" in dn: ef.append("BR_Dryline")
         if (s.get("factions") or [])!=ef:
             issues.append({"scene":sid,"episode":e,"kind":"faction_mismatch","detail":f"declared={s.get('factions')}; expected={ef}","file":file})
 
@@ -105,7 +106,12 @@ for file,group in groups:
         if not loc: issues.append({"scene":sid,"episode":e,"kind":"missing_setting","detail":"settingText empty","file":file})
         dirs=s.get("directionInline",[]) or []
         labels=[str(x.get("text","")) for x in dirs if isinstance(x,dict)]
-        req=("BACKYARD ROCKETS VISUAL LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","CHARACTER CONTINUITY —","LOCATION / PROP / STATE CONTINUITY —","CAMERA / LIGHT —")
+        if s.get("documentaryChannel")=="tethergrid":
+            req=("TETHERGRID DOCUMENTARY LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","PRESENTER CONTINUITY —","LOCATION / GRAPHIC CONTINUITY —","CAMERA / EDITORIAL GRAMMAR —")
+        elif s.get("documentaryChannel")=="dryline":
+            req=("DRYLINE DOCUMENTARY LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","PRESENTER CONTINUITY —","LOCATION / GRAPHIC CONTINUITY —","CAMERA / EDITORIAL GRAMMAR —")
+        else:
+            req=("BACKYARD ROCKETS VISUAL LANGUAGE:","SCENE ACTION — SOURCE-LOCKED:","CHARACTER CONTINUITY —","LOCATION / PROP / STATE CONTINUITY —","CAMERA / LIGHT —")
         if len(labels)!=5 or any(not labels[i].startswith(req[i]) for i in range(min(len(labels),5))):
             issues.append({"scene":sid,"episode":e,"kind":"direction_schema_mismatch","detail":"five canonical production locks required","file":file})
         if labels:

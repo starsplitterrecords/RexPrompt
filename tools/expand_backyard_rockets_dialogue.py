@@ -204,6 +204,8 @@ ADDITIONS.update({
 
 # Outline-only episodes are not fabricated into pseudo-scenes. They are reviewed and intentionally left without added dialogue.
 ADDITIONS.update({'BR_S1E06_OUTLINE_01':[],'BR_S1E07_OUTLINE_01':[],'BR_S1E08_OUTLINE_01':[]})
+DOCUMENTARY_SPECS=json.loads((ROOT/'data/shows/backyard-rockets-s1/documentary-interstitials.json').read_text(encoding='utf-8'))
+ADDITIONS.update({spec['id']:[] for spec in DOCUMENTARY_SPECS})
 
 def load(p):return json.loads(p.read_text(encoding='utf-8'))
 def norm(x):

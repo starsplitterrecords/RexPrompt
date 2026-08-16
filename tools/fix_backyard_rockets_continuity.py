@@ -130,6 +130,7 @@ def directions(summary,present,loc):
  {"text":"LOCATION / PROP / STATE CONTINUITY — "+loc+" Preserve exact condition, placement and ownership of every named vehicle, tool, component, injury, garment, weapon and piece of damage into adjacent scenes until explicitly changed. Do not invent extra dirt, damage, accessories, vehicles or wardrobe changes."},
  {"text":"CAMERA / LIGHT — Readable prestige-TV coverage with bright Southwest color separation and motivated practical light. Favor physical scale, hands performing real work, clear geography and legible silhouettes over murky atmosphere or generic action coverage."}]
 def patch(scene):
+ if scene.get("documentaryChannel"):return scene
  s=strings(scene);present=cast(s);summary=s.get("summary","");sid=s.get("id","");loc=setting(summary,present,sid)
  s["settingText"]=loc;s.pop("setting",None);s["charactersInline"]=[{"name":n,"handle":CANON[n]} for n in present];s.pop("characters",None)
  s["dialogueInline"]=dialogue(s,present);s.pop("dialog",None);f=[]
