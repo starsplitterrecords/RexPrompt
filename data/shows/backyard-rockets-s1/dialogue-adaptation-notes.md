@@ -14,6 +14,33 @@ Rules for the production data:
 - Never add dialogue merely to increase line count.
 - Episodes 6–8 remain outline-only until authored scene material exists; do not fabricate full episodes from those outlines.
 
+## Story engine and moral conflict
+
+- Tethergrid Corp operates Tetherwell, the authorization network required by nearly every modern
+  well, pump, purification system, and water-treatment plant in the Mojave. When Tetherwell denies
+  a signal, physically functional water equipment enters a locked conservation state.
+- Tetherwell began as a necessary response to genuine scarcity. Coordinated pumping, aquifer draw
+  limits, purification loads, and emergency rationing prevented independent users from exhausting
+  or contaminating a shared water supply. There is still not enough water for everyone to draw
+  without limits.
+- Tethergrid converted that stewardship into an exploitative subscription monopoly. Missed fees,
+  expired licenses, corporate priority tiers, and proprietary repair authentication now determine
+  who can reach life-sustaining water. The shortage is real; the allocation is corrupt.
+- The Launch-Shop is not trying to abolish water management or unlock unlimited pumping. Arvin has
+  invented a competing distributed network, carried by short-lived low-orbit satellites, that can
+  authorize equipment, coordinate local draw limits, share telemetry, and return allocation power
+  to the affected communities without Tethergrid.
+- Each launch creates a temporary service corridor before Tethergrid jams, intercepts, or deorbits
+  the satellite. A successful launch can mean another pumping window, a filled reservoir, a working
+  purifier, or a settlement surviving the week.
+- Cyrus's obvious concern is safety: unauthorized rockets and uncoordinated pumping can kill people,
+  contaminate systems, or collapse an aquifer. His deeper concern is commercial. Tetherwell is
+  Tethergrid's moat and recurring-revenue engine. He no longer knows—and does not care to discover—
+  when protecting conservation became holding water access hostage for profit.
+- The central argument is not freedom versus safety. Arvin believes scarce water must be managed;
+  Cyrus knows the monopoly is coercive. The question is whether Arvin can build open, accountable
+  access that manages scarcity better than the corporation he is dismantling.
+
 ## Character voice locks
 
 ### Arvin

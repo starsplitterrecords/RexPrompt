@@ -48,7 +48,7 @@ def patch(scene):
     scene["charactersInline"] = [{"name":n,"handle":CANON[n]} for n in cast]
     factions = []
     if any(n in SALVAGERS for n in cast): factions.append("BR_Salvagers")
-    if "Cyrus" in cast: factions.append("BR_Aegis")
+    if "Cyrus" in cast: factions.append("BR_Tethergrid")
     scene["factions"] = factions
 
     dirs = scene.get("directionInline", []) or []

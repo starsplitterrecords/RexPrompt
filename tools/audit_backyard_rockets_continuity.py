@@ -57,7 +57,7 @@ legacy=[
 (r"\b(?:junk-built|scrap-built|rickety) rocket\b","obsolete junk-built rocket language"),
 (r"\b(?:gutted fuel tanker|rusted tanker|rusted fuel tanker|oil-slicked belly)\b","obsolete decay-led tanker language"),
 (r"\b(?:tattered camouflage net|graveyard of fallen communications towers|primitive control console)\b","obsolete post-apocalyptic production language"),
-(r"\b(?:white armored interceptor|chrome-and-white armor|bulky fantasy plating)\b","obsolete Cyrus/Aegis design language"),
+(r"\b(?:white armored interceptor|chrome-and-white armor|bulky fantasy plating)\b","obsolete Cyrus/Tethergrid design language"),
 (r"\b(?:smartphone|iphone|android phone|macbook|ultrabook|gaming laptop)\b","wrong consumer-device era language")]
 
 for file,group in groups:
@@ -80,7 +80,7 @@ for file,group in groups:
 
         ef=[]
         if any(n in SALV for n in dn): ef.append("BR_Salvagers")
-        if "Cyrus" in dn: ef.append("BR_Aegis")
+        if "Cyrus" in dn: ef.append("BR_Tethergrid")
         if (s.get("factions") or [])!=ef:
             issues.append({"scene":sid,"episode":e,"kind":"faction_mismatch","detail":f"declared={s.get('factions')}; expected={ef}","file":file})
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply the approved Backyard Rockets character-voice pass to every production payload."""
+"""Apply the approved Backyard Rockets voice and story-canon pass to production payloads."""
 
 import base64
 import gzip
@@ -17,6 +17,17 @@ CANON = {
     "Cyrus": "@brk.Cyrus",
     "Tamz": "@brk.Tamz",
 }
+
+
+def apply_story_canon(value):
+    """Remove the obsolete Aegis brand and install Tethergrid faction identifiers."""
+    if isinstance(value, str):
+        return value.replace("BR_Aegis", "BR_Tethergrid").replace("Aegis", "Tethergrid")
+    if isinstance(value, list):
+        return [apply_story_canon(item) for item in value]
+    if isinstance(value, dict):
+        return {key: apply_story_canon(item) for key, item in value.items()}
+    return value
 
 
 def load(path, encoding=None):
@@ -73,7 +84,7 @@ total_changed = 0
 visited = set()
 for relative, encoding in files:
     path = base / relative
-    payload = load(path, encoding)
+    payload = apply_story_canon(load(path, encoding))
     changed, seen = apply_to_scenes(payload)
     total_changed += changed
     visited |= seen

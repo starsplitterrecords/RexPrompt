@@ -20,8 +20,8 @@ PHRASE_FIXES={
 "towering mess of rusted barrels and salvaged aerospace tubing":"towering hand-built assembly of maintained legacy pressure vessels and reclaimed aerospace tubing",
 "oil drums and aerospace scrap":"legacy pressure vessels and reclaimed aerospace hardware","industrial scrap":"reclaimed industrial hardware","discarded circuitry":"sorted reclaimed circuitry",
 "frayed nylon ropes and wooden beams":"weathered heavy-duty rigging and timber cribbing","discarded ceramic tiles":"salvaged refractory ceramic tiles",
-"primitive control console":"analog field control console","sleek, white armored interceptor vehicle":"sleek graphite Aegis interceptor vehicle",
-"white armored interceptor":"graphite Aegis interceptor","polished black armor":"matte graphite technical armor","amateur welds":"field welds",
+"primitive control console":"analog field control console","sleek, white armored interceptor vehicle":"sleek graphite Tethergrid interceptor vehicle",
+"white armored interceptor":"graphite Tethergrid interceptor","polished black armor":"matte graphite technical armor","amateur welds":"field welds",
 "The synthetic skin of Arvin's hand":"The synthetic skin on the back of Arvin's RIGHT hand"}
 # Editorially resolved only where grammar/context is genuinely ambiguous. These supersede contaminated legacy speaker metadata.
 DIALOGUE_OVERRIDES={
@@ -31,7 +31,7 @@ DIALOGUE_OVERRIDES={
 "BR_S1E05_A01_SC03":["Arvin"],"BR_S1E05_A01_SC05":["Arvin"],"BR_S1E05_A02_SC05":["Milo"]}
 VISUAL=("BACKYARD ROCKETS VISUAL LANGUAGE: bright, colorful prestige science fiction rooted in the natural beauty of the American Southwest. "
 "Launch-Shop culture is clean, capable solar-wave retrofuturism: maintained late-20th-century aerospace forms, painted metal, tactile analog-digital instruments, practical repairs, organized tools and purposeful field engineering. "
-"Aegis is a distinct newer layer of graphite composite, brushed alloy, technical ceramic, robotics and restrained cyan/amber status light. "
+"Tethergrid is a distinct newer layer of graphite composite, brushed alloy, technical ceramic, robotics and restrained cyan/amber status light. "
 "No junkyard/post-apocalyptic styling, pervasive grime, rust-as-aesthetic, garbage piles, lanterns, glowing crystals or excessive holography. Clothing stays tied to character/faction regardless of environment.")
 LOCK={
 "Arvin":"ARVIN: exact approved model sheet; lean narrow angular older engineer; short steel-gray hair; olive utility jacket with blue solar-cell shoulder straps; synthetic graft on RIGHT HAND ONLY; left hand natural.",
@@ -108,7 +108,7 @@ def dialogue(scene,present):
 def setting(summary,present,sid):
  if "OUTLINE" in sid:return "EPISODE OUTLINE — production beats not yet developed into individual scene recipes in source."
  l=summary.lower()
- if any(k in l for k in ("aegis interception suite","aegis command rover","interceptor cockpit","cockpit of a sleek","inside the interceptor")):return "Aegis mobile interception platform — immaculate graphite corporate hardware, brushed alloy, tactile/glass controls, restrained cyan/amber status light, Mojave terrain beyond."
+ if any(k in l for k in ("tethergrid interception suite","tethergrid command rover","interceptor cockpit","cockpit of a sleek","inside the interceptor")):return "Tethergrid mobile interception platform — immaculate graphite corporate hardware, brushed alloy, tactile/glass controls, restrained cyan/amber status light, Mojave terrain beyond."
  if any(k in l for k in ("inside the pressurized welding bay","inside the storage tanker","inside the shadows of a storage tanker","inside the tanker","inside the dim","inside the cramped","inside the cavernous","inside the belly","inside the hull","storage hold","engine bay of the tanker","mobile tanker base","mobile tanker workshop","air of the tanker","mobile workshop","within the tanker","lead tanker","converted fuel tanker")):return "Mobile Launch-Shop tanker interior — maintained retro-industrial aerospace workshop, painted metal, tactile analog-digital instruments, organized tools, practical task lighting and controlled localized wear."
  if any(k in l for k in ("cab of the lead tanker","cabin of the lead truck","control trailer","launch trailer")):return "Launch-Shop mobile control cabin — compact maintained retro-aerospace controls, analog gauges, physical switches, restrained digital readouts and bright Mojave light through the windows."
  if any(k in l for k in ("flatbed truck","tanker roof","atop a","roof of","command deck")):return "Launch-Shop exterior work deck — maintained tanker/flatbed structure, organized field hardware, hard Mojave sun and broad desert horizon."
@@ -120,7 +120,7 @@ def setting(summary,present,sid):
  if any(k in l for k in ("limestone ridge","limestone outcrop","limestone overlook","ridge","overlook")):return "Mojave limestone ridge — pale fractured stone, bright high-desert sun, long sightlines, sparse scrub and the launch corridor below."
  if any(k in l for k in ("salt flat","salt flats","salt pan","dry lake bed","white salt")):return "Mojave salt flat — immense bright mineral basin, hard blue sky, heat shimmer, distant mountains and clean geometric horizons."
  if any(k in l for k in ("launch pad","launch site","launch rail","base of the rocket","under the skeletal frame","rocket's fuselage","rocket’s fuselage")):return "Mojave field launch site — maintained hand-built aerospace hardware, compact support equipment, practical rigging, hard desert light and broad unobstructed sky."
- if present==["Cyrus"]:return "Aegis Mojave observation position — immaculate graphite interceptor equipment, disciplined field geometry and long-range desert visibility."
+ if present==["Cyrus"]:return "Tethergrid Mojave observation position — immaculate graphite interceptor equipment, disciplined field geometry and long-range desert visibility."
  return "Mojave Launch-Shop field site — bright open-desert workspace with maintained legacy aerospace equipment, organized tools, practical rigging and dramatic geological distance."
 def action(summary):return re.sub(r'\s+',' ',noquotes(summary)).strip()
 def directions(summary,present,loc):
@@ -134,7 +134,7 @@ def patch(scene):
  s["settingText"]=loc;s.pop("setting",None);s["charactersInline"]=[{"name":n,"handle":CANON[n]} for n in present];s.pop("characters",None)
  s["dialogueInline"]=dialogue(s,present);s.pop("dialog",None);f=[]
  if any(n in SALVAGERS for n in present):f.append("BR_Salvagers")
- if "Cyrus" in present:f.append("BR_Aegis")
+ if "Cyrus" in present:f.append("BR_Tethergrid")
  s["factions"]=f;s["directionInline"]=directions(summary,present,loc);s.pop("direction",None);return s
 shows=load(ROOT/"data/shows.json");show=next(s for s in shows if s.get("id")==SHOW_ID);base=ROOT/show["basePath"]
 files=[(show.get("scenesFile","scenes_base.json"),None)]+[(o["file"],o.get("encoding")) for o in show.get("sceneOverlays",[])]

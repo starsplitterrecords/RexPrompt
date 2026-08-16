@@ -130,7 +130,7 @@ ADDITIONS.update({
 'BR_S1E02_A03_SC05':[L('Lucia','He will remember that for ten years.'),L('Arvin','That seems inefficient.'),L('Lucia','People are inefficient. We have discussed this.')],
 'BR_S1E02_A03_SC06':[L('Milo','What are you afraid the numbers will tell you?'),L('Arvin','That I was correct for the wrong reason.'),L('Milo','That bothers you more than being wrong?'),L('Arvin','Much more.')],
 'BR_S1E02_A04_SC01':[L('Lucia','What would make you turn around?'),L('Arvin','Evidence.'),L('Lucia','Not fear?'),L('Arvin','Fear is evidence. It is simply badly labeled.')],
-'BR_S1E02_A04_SC02':[L('Arvin','What do you think he wants from us?'),L('Lucia','For us to become legible.'),L('Arvin','To Aegis?'),L('Lucia','To himself.')],
+'BR_S1E02_A04_SC02':[L('Arvin','What do you think he wants from us?'),L('Lucia','For us to become legible.'),L('Arvin','To Tethergrid?'),L('Lucia','To himself.')],
 'BR_S1E02_A04_SC03':[L('Cyrus','What would make them stop voluntarily?'),L('Cyrus','Something they believe is more important than winning.')],
 'BR_S1E02_A04_SC04':[L('Milo','What if he is not wrong about us?'),L('Lucia','He is not wrong about everything.'),L('Milo','That is worse.'),L('Lucia','Usually.')],
 'BR_S1E02_A04_SC05':[L('Arvin','Do you want me to say we are the good people?'),L('Milo','No.'),L('Arvin','Good.'),L('Milo','I want to know what you think we owe people when our choices spill into their lives.'),L('Arvin','More than an apology. Less than obedience. I am still solving the interval.')],
@@ -222,6 +222,7 @@ def patch(scene):
     if sid not in ADDITIONS:raise KeyError(f'Unreviewed Backyard Rockets scene: {sid}')
     existing=scene.get('dialogueInline',[]) or []
     scene['dialogueInline']=existing+ADDITIONS[sid]
+    scene['factions']=['BR_Tethergrid' if x=='BR_Aegis' else x for x in scene.get('factions',[])]
     for raw_index,rewrite in VOICE_REWRITES.get(sid,{}).items():
         index=int(raw_index)
         if index>=len(scene['dialogueInline']):
