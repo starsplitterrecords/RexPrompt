@@ -1,9 +1,9 @@
 name: Extract Stardust Page 11
 
 on:
-  push:
+  pull_request:
     branches:
-      - agent/extract-stardust-page11
+      - main
 
 permissions:
   contents: read
@@ -18,8 +18,7 @@ jobs:
         run: |
           import base64, gzip, json
           from pathlib import Path
-          root = Path('.')
-          show = root / 'data' / 'shows' / 'stardust-station'
+          show = Path('data/shows/stardust-station')
           path = show / 'encoded' / 'pages_e01_p07_p12.json.gzb64'
           encoded = ''.join(path.read_text(encoding='utf-8').split()).rstrip('=')
           encoded += '=' * ((4 - len(encoded) % 4) % 4)
