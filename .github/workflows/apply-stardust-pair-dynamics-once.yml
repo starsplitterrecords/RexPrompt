@@ -1,0 +1,40 @@
+name: Apply Stardust pair-dynamics pass once
+
+on:
+  push:
+    branches:
+      - agent/stardust-pair-dynamics-pass
+    paths:
+      - data/shows/stardust-station/raw/pages_e01_p15_p20_pair_dynamics.json
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/stardust-pair-dynamics-pass
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply pair-dynamics revision
+        run: python tools/apply_stardust_pair_dynamics.py
+      - name: Validate Stardust Station
+        run: python tools/validate_stardust_station.py
+      - name: Commit generated production bundles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/stardust-station/encoded/pages_e01_p13_p18.json.gzb64 \
+                  data/shows/stardust-station/encoded/pages_e01_p19_p22.json.gzb64 \
+                  tools/validate_stardust_station.py
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Apply Stardust Issue 1 pair-dynamics revision"
+            git push origin HEAD:agent/stardust-pair-dynamics-pass
+          fi
