@@ -6,6 +6,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOW_ID = "stardust-station"
+BASE_SOURCE = 'Stardust Station — Issue 1 Full Script v4: Continuity-Compressed Draft'
+REVISION_SOURCE = 'Stardust Station — Issue 1 Pair-Dynamics Revision, approved 2026-08-21'
+REVISED_PAGE_NUMBERS = set(range(15, 21))
+
 SHOW = ROOT / "data" / "shows" / SHOW_ID
 MANIFEST = ROOT / "data" / "shows.json"
 INDEX = ROOT / "index.html"
@@ -169,7 +173,8 @@ for page, (number, title, panels) in zip(pages, EXPECTED):
         raise SystemExit(f"{expected_id}: expected {panels} panels, found {page.get('panelCount')}")
     if len(page.get("panelPlan", [])) != panels:
         raise SystemExit(f"{expected_id}: panelPlan must contain exactly {panels} entries")
-    if page.get("source") != "Stardust Station — Issue 1 Full Script v4: Continuity-Compressed Draft":
+    expected_source = REVISION_SOURCE if number in REVISED_PAGE_NUMBERS else BASE_SOURCE
+    if page.get("source") != expected_source:
         raise SystemExit(f"{expected_id}: source authority drift")
     if page.get("setting") not in settings:
         raise SystemExit(f"{expected_id}: unknown setting {page.get('setting')}")
@@ -204,7 +209,8 @@ for page, (number, title, panels) in zip(pages, EXPECTED):
         if not line.get("text"):
             raise SystemExit(f"{expected_id}: blank dialogue line")
         subtext = line.get("subtext", "")
-        if f"Panel " not in subtext or "exact source dialogue" not in subtext:
+        dialogue_lock = "exact approved revision dialogue" if number in REVISED_PAGE_NUMBERS else "exact source dialogue"
+        if f"Panel " not in subtext or dialogue_lock not in subtext:
             raise SystemExit(f"{expected_id}: dialogue lacks exact panel/source lock: {line.get('text')}")
         try:
             panel_no = int(subtext.split("Panel ",1)[1].split(" ",1)[0])
@@ -229,6 +235,33 @@ for page, (number, title, panels) in zip(pages, EXPECTED):
         raise SystemExit(f"{expected_id}: exact panel-count lock missing")
     if "do not add, remove, merge, reorder, paraphrase or invent" not in direction[5].lower():
         raise SystemExit(f"{expected_id}: zero-drift lettering/layout guardrail missing")
+
+
+# Pair-dynamics production pass: Pages 15-19 must break the ensemble into owned small groups,
+# and Page 20 must deliberately reconverge the ensemble.
+relationship_expected = {
+    15: ("small-group", ["Jax / Glorp / Kreeb"]),
+    16: ("small-group", ["Jax / Mira / Zib"]),
+    17: ("small-group", ["Astra / Mira / Inspector"]),
+    18: ("small-group", ["Astra / Mira / Pixa"]),
+    19: ("split-small-groups", ["Astra / Glorp / Kreeb", "Jax / Noola / Brick"]),
+    20: ("ensemble-reconvergence", ["Ensemble reconvergence after Pages 15–19 small-group sequence"]),
+}
+for number, (mode, focus) in relationship_expected.items():
+    page = pages[number - 1]
+    if page.get("relationshipMode") != mode:
+        raise SystemExit(f"Page {number}: relationship mode drift")
+    if page.get("relationshipFocus") != focus:
+        raise SystemExit(f"Page {number}: relationship focus drift")
+for number in (15, 16, 17, 18):
+    cast = {c.get("handle") for c in pages[number - 1].get("charactersInline", []) if isinstance(c, dict)}
+    if len(cast) != 3:
+        raise SystemExit(f"Page {number}: small-group page must have exactly three declared characters")
+page20_dialogue = " ".join(line.get("text", "") for line in pages[19].get("dialogueInline", [])).lower()
+if "underfunded" in page20_dialogue:
+    raise SystemExit("Page 20: stale underfunded framing returned")
+if "overbuilt, under-noticed" not in page20_dialogue:
+    raise SystemExit("Page 20: overbuilt/under-noticed series premise missing")
 
 if sum(p["panelCount"] for p in pages) != 133:
     raise SystemExit("Issue 1 panel total drift")
