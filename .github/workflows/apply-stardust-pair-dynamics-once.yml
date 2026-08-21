@@ -6,6 +6,7 @@ on:
       - agent/stardust-pair-dynamics-pass
     paths:
       - data/shows/stardust-station/raw/pages_e01_p15_p20_pair_dynamics.json
+      - data/shows/stardust-station/raw/.apply_pair_dynamics_trigger
 
 permissions:
   contents: write
