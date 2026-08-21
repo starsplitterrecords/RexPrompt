@@ -1,12 +1,13 @@
 name: Apply Stardust pair-dynamics pass once
 
 on:
-  push:
+  pull_request:
     branches:
-      - agent/stardust-pair-dynamics-pass
+      - main
     paths:
       - data/shows/stardust-station/raw/pages_e01_p15_p20_pair_dynamics.json
-      - data/shows/stardust-station/raw/.apply_pair_dynamics_trigger
+      - tools/apply_stardust_pair_dynamics.py
+      - .github/workflows/apply-stardust-pair-dynamics-once.yml
 
 permissions:
   contents: write
