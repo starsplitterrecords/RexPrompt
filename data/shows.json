@@ -11,64 +11,17 @@
     "basePath": "data/shows/rex-fleet-s1",
     "scenesFile": "scenes_e01.json",
     "sceneOverlays": [
-      {
-        "file": "scenes_e02.json",
-        "replaceEpisode": "S1E02"
-      },
-      {
-        "file": "encoded/scenes_e03.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E03"
-      },
-      {
-        "file": "encoded/scenes_e04.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E04"
-      },
-      {
-        "file": "encoded/scenes_e05.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E05"
-      },
-      {
-        "file": "encoded/scenes_e06.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E06"
-      },
-      {
-        "file": "encoded/scenes_e07.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E07"
-      },
-      {
-        "file": "encoded/scenes_e08.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E08"
-      },
-      {
-        "file": "encoded/scenes_e09.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E09"
-      },
-      {
-        "file": "encoded/scenes_e10.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E10",
-        "excludeIds": [
-          "RF_S1E10_A31",
-          "RF_S1E10_A32"
-        ]
-      },
-      {
-        "file": "encoded/scenes_e11.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E11"
-      },
-      {
-        "file": "encoded/scenes_e12.json.gzb64",
-        "encoding": "gzip-base64",
-        "replaceEpisode": "S1E12"
-      }
+      {"file": "scenes_e02.json", "replaceEpisode": "S1E02"},
+      {"file": "encoded/scenes_e03.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E03"},
+      {"file": "encoded/scenes_e04.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E04"},
+      {"file": "encoded/scenes_e05.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E05"},
+      {"file": "encoded/scenes_e06.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E06"},
+      {"file": "encoded/scenes_e07.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E07"},
+      {"file": "encoded/scenes_e08.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E08"},
+      {"file": "encoded/scenes_e09.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E09"},
+      {"file": "encoded/scenes_e10.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E10", "excludeIds": ["RF_S1E10_A31", "RF_S1E10_A32"]},
+      {"file": "encoded/scenes_e11.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E11"},
+      {"file": "encoded/scenes_e12.json.gzb64", "encoding": "gzip-base64", "replaceEpisode": "S1E12"}
     ]
   },
   {
@@ -77,108 +30,33 @@
     "basePath": "data/shows/backyard-rockets-s1",
     "scenesFile": "scenes_base.json",
     "sceneOverlays": [
-      {
-        "file": "encoded/scenes_e01_p01.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e01_p02.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e01_p03.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e01_p04.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p01.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p02.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p03.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p04.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p05.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e02_p06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e03_p01.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e03_p02.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "raw/e03_missing_p01.json"
-      },
-      {
-        "file": "raw/e03_missing_p02.json"
-      },
-      {
-        "file": "encoded/scenes_e03_p04.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "raw/e04_missing_p01.json"
-      },
-      {
-        "file": "raw/e04_missing_p02.json"
-      },
-      {
-        "file": "encoded/scenes_e04_p02.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e04_p03.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e04_p04.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e05_p01.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e05_p02.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "raw/e05_missing_p01.json"
-      },
-      {
-        "file": "raw/e05_missing_p02.json"
-      },
-      {
-        "file": "encoded/scenes_e06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e07.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/scenes_e08.json.gzb64",
-        "encoding": "gzip-base64"
-      }
+      {"file": "encoded/scenes_e01_p01.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e01_p02.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e01_p03.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e01_p04.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p01.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p02.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p03.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p04.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p05.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e02_p06.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e03_p01.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e03_p02.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "raw/e03_missing_p01.json"},
+      {"file": "raw/e03_missing_p02.json"},
+      {"file": "encoded/scenes_e03_p04.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "raw/e04_missing_p01.json"},
+      {"file": "raw/e04_missing_p02.json"},
+      {"file": "encoded/scenes_e04_p02.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e04_p03.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e04_p04.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e05_p01.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e05_p02.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "raw/e05_missing_p01.json"},
+      {"file": "raw/e05_missing_p02.json"},
+      {"file": "encoded/scenes_e06.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e07.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/scenes_e08.json.gzb64", "encoding": "gzip-base64"}
     ]
   },
   {
@@ -189,22 +67,10 @@
     "unitLabel": "PAGE",
     "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
     "sceneOverlays": [
-      {
-        "file": "encoded/pages_e01_p01_p06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p07_p12.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p13_p18.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p19_p22.json.gzb64",
-        "encoding": "gzip-base64"
-      }
+      {"file": "encoded/pages_e01_p01_p06.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p07_p12.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p13_p18.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p19_p22.json.gzb64", "encoding": "gzip-base64"}
     ]
   },
   {
@@ -215,25 +81,13 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait comic page. Source-locked sequential art from Stardust Station Issue #1. Preserve exact panel count, panel order, character continuity and exact lettering. Fictional production.",
     "sceneOverlays": [
-      {
-        "file": "encoded/pages_e01_p01_p06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p07_p12.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p13_p18.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p19_p22.json.gzb64",
-        "encoding": "gzip-base64"
-      }
+      {"file": "encoded/pages_e01_p01_p06.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p07_p12.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p13_p18.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e01_p19_p22.json.gzb64", "encoding": "gzip-base64"}
     ]
-  },
-  {
+  }
+  ,{
     "id": "azure-reach-s1-e02",
     "name": "Azure Reach — Season 1 / Issue 2",
     "basePath": "data/shows/azure-reach-s1",
@@ -241,22 +95,10 @@
     "unitLabel": "PAGE",
     "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
     "sceneOverlays": [
-      {
-        "file": "encoded/pages_e02_p01_p06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e02_p07_p12.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e02_p13_p18.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e02_p19_p22.json.gzb64",
-        "encoding": "gzip-base64"
-      }
+      {"file": "encoded/pages_e02_p01_p06.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e02_p07_p12.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e02_p13_p18.json.gzb64", "encoding": "gzip-base64"},
+      {"file": "encoded/pages_e02_p19_p22.json.gzb64", "encoding": "gzip-base64"}
     ]
   }
 ]
