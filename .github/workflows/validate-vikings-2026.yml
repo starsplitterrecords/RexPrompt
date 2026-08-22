@@ -1,0 +1,24 @@
+name: Validate Vikings 2026
+on:
+  push:
+    paths:
+      - 'data/shows/vikings-2026-s1/**'
+      - 'data/shows.json'
+      - 'tools/validate_vikings_2026.py'
+      - '.github/workflows/validate-vikings-2026.yml'
+  pull_request:
+    paths:
+      - 'data/shows/vikings-2026-s1/**'
+      - 'data/shows.json'
+      - 'tools/validate_vikings_2026.py'
+      - '.github/workflows/validate-vikings-2026.yml'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/validate_vikings_2026.py
