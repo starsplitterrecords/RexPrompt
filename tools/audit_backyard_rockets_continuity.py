@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SHOW_ID="backyard-rockets-s1"
 MANIFEST=ROOT/"data/shows.json"
 REPORT=ROOT/"backyard-rockets-continuity-report.json"
-P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
+P={"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz","Tamsin":"@brk.Tamsin","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
 SALV={"Arvin","Milo","Lucia","Tamz"}
 VOICE_REWRITES=json.loads((ROOT/"data/shows/backyard-rockets-s1/dialogue-voice-rewrites.json").read_text(encoding="utf-8"))
 

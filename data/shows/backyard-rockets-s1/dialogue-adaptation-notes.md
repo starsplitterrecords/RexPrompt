@@ -12,7 +12,7 @@ Rules for the production data:
 - Cyrus should develop through observation, self-questioning, and increasingly complicated judgments rather than generic villain monologues.
 - Action, suspense, visual-comedy, and contemplative scenes may use little or no added dialogue when silence is stronger.
 - Never add dialogue merely to increase line count.
-- Episodes 6–8 remain outline-only until authored scene material exists; do not fabricate full episodes from those outlines.
+- Episodes 6–8 are now fully source-authored production sequences. Preserve their authored dialogue and late-season causal structure rather than regenerating them from the retired outline payloads.
 
 ## Story engine and moral conflict
 
