@@ -104,14 +104,14 @@ expected_authored = {
     "S1E02": 30,
     "S1E03": 19,
     "S1E04": 18,
-    "S1E05": 20,
+    "S1E05": 21,
+    "S1E06": 19,
+    "S1E07": 19,
+    "S1E08": 22,
 }
 for ep, expected in expected_authored.items():
     if counts[ep] != expected:
         raise SystemExit(f"{ep}: expected {expected} authored source scenes, found {counts[ep]}")
-for ep in ("S1E06", "S1E07", "S1E08"):
-    if counts[ep] < 1:
-        raise SystemExit(f"{ep}: outline-only episode has no production adaptation beats")
 
 for scene in scenes:
     if not scene.get("summary"):
