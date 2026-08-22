@@ -7,6 +7,7 @@ on:
       - 'data/shows/azure-reach-s1/**'
       - 'index.html'
       - 'tools/validate_azure_reach.py'
+      - 'tools/validate_azure_reach_e02.py'
       - '.github/workflows/validate-azure-reach.yml'
   workflow_dispatch:
 
@@ -19,5 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate Azure Reach page-production data
-        run: python tools/validate_azure_reach.py
+        run: |
+          python tools/validate_azure_reach.py
+          python tools/validate_azure_reach_e02.py
 
