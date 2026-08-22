@@ -9,11 +9,12 @@ on:
       - 'tools/validate_backyard_rockets.py'
       - 'tools/audit_backyard_rockets_continuity.py'
       - 'tools/export_backyard_rockets_scene_payloads.py'
+      - 'tools/enhance_backyard_rockets_late_season.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -26,6 +27,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Build enhanced Backyard Rockets late season
+        if: ${{ hashFiles('tools/enhance_backyard_rockets_late_season.py') != '' }}
+        run: python tools/enhance_backyard_rockets_late_season.py
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
@@ -40,3 +44,12 @@ jobs:
             backyard-rockets-continuity-report.json
             backyard-rockets-scene-payloads.json
           if-no-files-found: error
+      - name: Commit generated production package
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && hashFiles('tools/enhance_backyard_rockets_late_season.py') != ''
+        run: |
+          rm -f tools/enhance_backyard_rockets_late_season.py .github/workflows/apply-backyard-rockets-late-season.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Enhance Backyard Rockets Issues 4-8"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
