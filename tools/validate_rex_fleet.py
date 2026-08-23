@@ -99,6 +99,10 @@ def validate_issue_2(scenes):
     if "failed heater module" not in " ".join(by_id["RF_S1E02_A05"].get("directionInline", [])).lower():
         raise SystemExit("RF_S1E02_A05: civilian heater consequence is missing")
 
+    for scene in scenes:
+        if scene.get("dialog") or scene.get("direction"):
+            raise SystemExit(f"{scene['id']}: S1E02 must use canonical inline dialogue and direction only")
+
 
 shows = load_json(MANIFEST)
 show = next((s for s in shows if s.get("id") == "rex-fleet-s1"), None)
@@ -106,7 +110,19 @@ if not show:
     raise SystemExit("Rex Fleet show missing from data/shows.json")
 overlays = {o.get("replaceEpisode"): o for o in show.get("sceneOverlays", [])}
 
+legacy_dialogue = load_json(SHOW / "dialogue.json")
+legacy_direction = load_json(SHOW / "direction.json")
+old_dialogue_keys = sorted(k for k in legacy_dialogue if k.startswith("D_RF_E02_"))
+old_direction_keys = sorted(k for k in legacy_direction if k.startswith("X_RF_E02_"))
+if old_dialogue_keys:
+    raise SystemExit(f"Obsolete S1E02 dialogue lookup keys remain: {old_dialogue_keys}")
+if old_direction_keys:
+    raise SystemExit(f"Obsolete S1E02 direction lookup keys remain: {old_direction_keys}")
+
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
+legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
+if legacy_other:
+    raise SystemExit(f"Superseded scenes remain in scenes_prequel.json: {legacy_other[:5]}")
 legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
 base = normalize(load_json(SHOW / "scenes_e01.json"))
 if base != legacy_e1:
@@ -158,6 +174,11 @@ if len(all_ids) != len(set(all_ids)):
 for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
     if forbidden in all_ids:
         raise SystemExit(f"Non-story metadata beat survived exclusion: {forbidden}")
+
+season_serialized = json.dumps(base, ensure_ascii=False).lower()
+for retired_name in ("ilyra venn", "varra cindral", "elyra vorn", "sira red fang", "nira sol", "elder branth"):
+    if retired_name in season_serialized:
+        raise SystemExit(f"Retired Rex Fleet identity remains in assembled season: {retired_name}")
 
 for scene in base:
     if not scene.get("summary"):
