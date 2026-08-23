@@ -53,6 +53,7 @@ def load(path):
 
 def decode_overlay(path):
     raw = "".join(path.read_text(encoding="utf-8").split())
+    raw += "=" * (-len(raw) % 4)
     return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
 
 manifest = load(MANIFEST)
