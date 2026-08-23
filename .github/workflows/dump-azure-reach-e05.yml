@@ -1,0 +1,43 @@
+name: Dump Azure Reach Issue 5 Editorial Context
+
+on:
+  pull_request:
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode editorial context
+        run: |
+          python - <<'PY'
+          import base64, gzip, json
+          from pathlib import Path
+
+          root = Path('data/shows/azure-reach-s1/encoded')
+          def load(name):
+              raw=''.join((root/name).read_text().split())
+              return json.loads(gzip.decompress(base64.b64decode(raw)).decode())
+
+          e5=load('pages_e05.json.gzb64')
+          e6=load('pages_e06.json.gzb64')
+          pages=e5[7:]+e6[:2]
+          for p in pages:
+              print('\n'+'='*78)
+              print(p['id'], '|', p.get('pageTitle',''), '| panels', p.get('panelCount'))
+              print('SETTING:', p.get('setting'))
+              print('SUMMARY:', p.get('summary'))
+              print('CAST:', ', '.join(c.get('handle','') for c in p.get('charactersInline',[])))
+              print('PANEL PLAN:')
+              for i,x in enumerate(p.get('panelPlan',[]),1):
+                  print(f'  {i}. {x.get("text",x)}')
+              print('DIALOGUE:')
+              for d in p.get('dialogueInline',[]):
+                  print(' ', d.get('handle'), ':', d.get('text'))
+              print('DIRECTION:')
+              for x in p.get('directionInline',[]):
+                  print(' ',x.get('text',x))
+          PY
