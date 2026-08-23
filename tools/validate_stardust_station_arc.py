@@ -21,7 +21,11 @@ def load(path):
 
 def decode(path):
     encoded="".join(path.read_text(encoding="utf-8").split())
-    return json.loads(gzip.decompress(base64.b64decode(encoded,validate=True)).decode("utf-8"))
+    try:
+        raw=base64.b64decode(encoded,validate=True)
+        return json.loads(gzip.decompress(raw).decode("utf-8"))
+    except Exception as exc:
+        raise SystemExit(f"Failed to decode {path.name}: {exc}") from exc
 
 characters=load(SHOW/"characters.json")
 handles={v.get("handle") for v in characters.values() if isinstance(v,dict) and v.get("handle")}
@@ -93,67 +97,30 @@ for issue,pages in issues.items():
         [p.get("summary","")] + [d.get("text","") for p in pages for d in p.get("dialogueInline",[])]
     )
 
-# Residue remains physical/correlational. No semantic or mind-reading mechanism may enter canon.
 for issue,text in story_text.items():
     lower=text.lower()
     forbidden=(
-        "the dust knows",
-        "the residue knows",
-        "the dust wants",
-        "the residue wants",
-        "reads feelings",
-        "reads emotion",
-        "crystals chose",
-        "the station chose",
-        "positive emotions make",
-        "conflict makes better",
-        "argument makes better",
+        "the dust knows","the residue knows","the dust wants","the residue wants",
+        "reads feelings","reads emotion","crystals chose","the station chose",
+        "positive emotions make","conflict makes better","argument makes better",
     )
     for term in forbidden:
         if term in lower:
             raise SystemExit(f"Issue {issue}: semantic/telemetric residue drift: {term}")
 
-# Cross-issue causal ladder.
 required={
-    5:(
-        "Behavioral intervention is not approved.",
-        "WELLNESS BASELINE WEEK BEGINS MONDAY.",
-    ),
-    6:(
-        "Intervention altered operating conditions.",
-        "No-entry accepted.",
-        "No one owes a feeling.",
-    ),
-    7:(
-        "ON-SITE OPERATIONS LIAISON RECOMMENDED.",
-        "Fine. I own the visitor route.",
-        "VISITOR CONFIRMED: STARTRUST OPERATIONS LIAISON.",
-    ),
-    8:(
-        "No behavioral recipe.",
-        "Passive collection only.",
-        "TARGET MASS UPDATED.",
-    ),
-    9:(
-        "Target missed.",
-        "Quality varied independently of mass.",
-        "PILOT STATUS REVIEW SCHEDULED.",
-    ),
-    10:(
-        "We have a fourth.",
-        "No inferred emotional fields.",
-        "Adaptive Operations / Incidental Materials Observation.",
-        "No target.",
-        "STATION STATUS: ACTIVE.",
-        "Normal enough.",
-    ),
+    5:("Behavioral intervention is not approved.","WELLNESS BASELINE WEEK BEGINS MONDAY."),
+    6:("Intervention altered operating conditions.","No-entry accepted.","No one owes a feeling."),
+    7:("ON-SITE OPERATIONS LIAISON RECOMMENDED.","Fine. I own the visitor route.","VISITOR CONFIRMED: STARTRUST OPERATIONS LIAISON."),
+    8:("No behavioral recipe.","Passive collection only.","TARGET MASS UPDATED."),
+    9:("Target missed.","Quality varied independently of mass.","PILOT STATUS REVIEW SCHEDULED."),
+    10:("We have a fourth.","No inferred emotional fields.","Adaptive Operations / Incidental Materials Observation.","No target.","STATION STATUS: ACTIVE.","Normal enough."),
 }
 for issue,terms in required.items():
     for term in terms:
         if term not in story_text[issue]:
             raise SystemExit(f"Issue {issue}: missing continuity payoff: {term}")
 
-# Character progression must accumulate rather than reset.
 if "My strongest skill is becoming unavailable." in story_text[8] or "scheduled with myself" in story_text[8]:
     raise SystemExit("Jax reset detected after Issue 3")
 for term in ("This one is mine.","Fine. I own the visitor route."):
