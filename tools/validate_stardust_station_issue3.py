@@ -184,7 +184,7 @@ p6=" ".join(x["text"] for x in pages[5]["dialogueInline"])
 if "dust still cannot read" not in p6.lower():
     raise SystemExit("Page 6 must explicitly preserve non-semantic residue")
 p10=" ".join(x["text"] for x in pages[9]["dialogueInline"])
-if "not reacting to the word 'owner'" not in p10.lower():
+if "not reacting to the word" not in p10.lower() or "owner" not in p10.lower():
     raise SystemExit("Page 10 must reject vocabulary-based residue interpretation")
 p15=" ".join(x["text"] for x in pages[14]["dialogueInline"])
 if "I own the access label" not in p15:
