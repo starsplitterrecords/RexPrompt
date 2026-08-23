@@ -52,33 +52,21 @@ def validate_recovered_pages(parsed):
             raise SystemExit(f"Recovered Issue 5 missing continuity line: {required}")
 
 
-def diagnose_page10(text, exc):
+def diagnose_intact_prefix(text, exc):
     marker10 = '{"id":"AZR_S1E05_P10"'
-    marker11 = '{"id":"AZR_S1E05_P11"'
     p10 = text.find(marker10)
-    p11 = text.find(marker11)
     print(f"Issue 5 recovered JSON error at character {exc.pos}")
-    print(f"P10 start={p10}; P11 start={p11}")
-    if p10 < 0 or p11 < 0 or p11 <= p10:
-        lo = max(0, exc.pos - 500)
-        hi = min(len(text), exc.pos + 500)
-        print("CONTEXT-BEGIN")
-        print(repr(text[lo:hi]))
-        print("CONTEXT-END")
+    print(f"P10 start={p10}")
+    if p10 < 0:
         raise exc
-
     prefix = text[:p10].rstrip().rstrip(",") + "]"
-    suffix = "[" + text[p11:]
     before = json.loads(prefix)
-    after = json.loads(suffix)
-    print(f"Intact before: {len(before)} pages / {sum(p['panelCount'] for p in before)} panels / {sum(len(p.get('dialogueInline', [])) for p in before)} lettering")
-    print(f"Intact after: {len(after)} pages / {sum(p['panelCount'] for p in after)} panels / {sum(len(p.get('dialogueInline', [])) for p in after)} lettering")
-    required_letters = 160 - sum(len(p.get('dialogueInline', [])) for p in before + after)
-    required_panels = 113 - sum(p['panelCount'] for p in before + after)
-    print(f"P10 required by season totals: {required_panels} panels / {required_letters} lettering entries")
-    print("P10-DAMAGED-BEGIN")
-    print(repr(text[p10:p11]))
-    print("P10-DAMAGED-END")
+    print(f"INTACT PREFIX: {len(before)} pages / {sum(p['panelCount'] for p in before)} panels / {sum(len(p.get('dialogueInline', [])) for p in before)} lettering")
+    print("PREFIX-SUMMARIES-BEGIN")
+    for p in before:
+        print(f"{p['id']} | panels={p['panelCount']} | letters={len(p.get('dialogueInline', []))} | setting={p.get('setting')} | summary={p.get('summary')}")
+    print("PREFIX-SUMMARIES-END")
+    print(f"REMAINING REQUIRED: {113-sum(p['panelCount'] for p in before)} panels / {160-sum(len(p.get('dialogueInline', [])) for p in before)} lettering")
     raise exc
 
 
@@ -92,7 +80,7 @@ def recover_json_bytes(data):
     try:
         parsed = json.loads(text)
     except json.JSONDecodeError as exc:
-        diagnose_page10(text, exc)
+        diagnose_intact_prefix(text, exc)
     validate_recovered_pages(parsed)
     return recovered
 
