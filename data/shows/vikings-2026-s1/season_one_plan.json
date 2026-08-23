@@ -14,69 +14,15 @@
   "coreConflict": "Integration versus assimilation.",
   "emotionalCore": "Responsibility for people who did not ask for your help and will not stop needing it.",
   "issues": [
-    {
-      "issue": 1,
-      "title": "Arrival in Time",
-      "function": "Arrival, DTI intake, premise establishment",
-      "beatCoverage": "1-12",
-      "status": "released canon"
-    },
-    {
-      "issue": 2,
-      "title": "Landfall Bushwick",
-      "function": "Apartment adaptation and neighborhood integration",
-      "beatCoverage": "13-20",
-      "status": "locked story structure; production continuity follows released/approved pages"
-    },
-    {
-      "issue": 3,
-      "title": "The Iron Worm",
-      "function": "Transit systems and subway adaptation; Gunnar learns the city as navigable terrain and then uses that knowledge to complete the errand and lead the group home",
-      "beatCoverage": "21-27",
-      "status": "production-ready 24-page enhanced script encoded in RexPrompt"
-    },
-    {
-      "issue": 4,
-      "title": "The Tally of Dishonor",
-      "function": "Financial legibility and hoard logic; approved Chase Bank material is the issue core",
-      "beatCoverage": "28-32",
-      "status": "approved production-ready 24-page script; preserve existing payload"
-    },
-    {
-      "issue": 5,
-      "title": "The Skaldic Interface",
-      "function": "Neighborhood-memory and emerging belonging. The city begins to remember the Vikings through repeated ordinary relationships; library material is one component rather than the issue premise.",
-      "beatCoverage": "33-36 plus modular neighborhood-memory fragments where pacing supports them",
-      "status": "production-ready 24-page enhanced script source added to RexPrompt"
-    },
-    {
-      "issue": 6,
-      "title": "Trial of Toil",
-      "function": "Civic/work placement and modern institutional participation",
-      "beatCoverage": "37-41",
-      "status": "normalized; Community College anchor with related DMV material"
-    },
-    {
-      "issue": 7,
-      "title": "The Corporate Vestibule",
-      "function": "Corporate placement conflict",
-      "beatCoverage": "42-46",
-      "status": "normalized; Corporate Lobby, Executive Elevator, and War Council material require full scene/page enhancement"
-    },
-    {
-      "issue": 8,
-      "title": "The Filing of Grievances",
-      "function": "Bureaucratic escalation, filing/audit pressure, and hearing preparation",
-      "beatCoverage": "47-52",
-      "status": "normalized; Filing Room anchor requires full scene/page enhancement"
-    },
-    {
-      "issue": 9,
-      "title": "Permanent Residency / Trial by Combat",
-      "function": "Residency hearing and legal resolution",
-      "beatCoverage": "53-58",
-      "status": "normalized; exact ruling remains open"
-    }
+    {"issue":1,"title":"Arrival in Time","function":"Arrival, DTI intake, premise establishment","beatCoverage":"1-12","status":"released canon"},
+    {"issue":2,"title":"Landfall Bushwick","function":"Apartment adaptation and neighborhood integration","beatCoverage":"13-20","status":"locked story structure; production continuity follows released/approved pages"},
+    {"issue":3,"title":"The Iron Worm","function":"Transit systems and subway adaptation; Gunnar learns the city as navigable terrain and then uses that knowledge to complete the errand and lead the group home","beatCoverage":"21-27","status":"production-ready 24-page enhanced script encoded in RexPrompt"},
+    {"issue":4,"title":"The Tally of Dishonor","function":"Financial legibility and hoard logic; approved Chase Bank material is the issue core","beatCoverage":"28-32","status":"approved production-ready 24-page script; preserve existing payload"},
+    {"issue":5,"title":"The Skaldic Interface","function":"Neighborhood-memory and emerging belonging. The city begins to remember the Vikings through repeated ordinary relationships; library material is one component rather than the issue premise.","beatCoverage":"33-36 plus modular neighborhood-memory fragments where pacing supports them","status":"production-ready 24-page enhanced script encoded in RexPrompt"},
+    {"issue":6,"title":"Trial of Toil","function":"Civic/work placement and modern institutional participation","beatCoverage":"37-41","status":"normalized; Community College anchor with related DMV material"},
+    {"issue":7,"title":"The Corporate Vestibule","function":"Corporate placement conflict","beatCoverage":"42-46","status":"normalized; Corporate Lobby, Executive Elevator, and War Council material require full scene/page enhancement"},
+    {"issue":8,"title":"The Filing of Grievances","function":"Bureaucratic escalation, filing/audit pressure, and hearing preparation","beatCoverage":"47-52","status":"normalized; Filing Room anchor requires full scene/page enhancement"},
+    {"issue":9,"title":"Permanent Residency / Trial by Combat","function":"Residency hearing and legal resolution","beatCoverage":"53-58","status":"normalized; exact ruling remains open"}
   ],
   "productionPayloads": [
     {
@@ -92,31 +38,20 @@
       "identityRule": "S1E02 is a legacy stable payload identifier from the prior package, not the current issue number. Do not rewrite dialogue, page beats, or lettering solely to renumber these stable production IDs."
     },
     {
+      "payloadIds": "VIK_S1E05_P01-P24",
       "sourceFile": "issue_05_skaldic_interface_enhanced.md",
       "currentStoryPlacement": "Issue 5 — The Skaldic Interface",
-      "status": "production-ready 24-page enhanced script source; overlay encoding remains a mechanical follow-up",
+      "status": "production-ready 24-page enhanced script encoded in four six-page gzip-base64 overlays",
       "storyLock": "Neighborhood-memory issue. Use recurring civilians, routine, Kin background adaptation, bodega, coffee vendor, library, laundromat, park, and hotdog-vendor continuity to show emerging belonging. Do not turn the issue into another system-decoding lesson. Gunnar must broaden beyond navigation."
     }
   ],
-  "teleplaySegments": [
-    "LANDFALL BUSHWICK",
-    "THE HOARD OF CHASE BANK",
-    "BLOOD FEUD 311",
-    "THE IRON WORM",
-    "SIEGE OF THE DMV",
-    "WAR COUNCIL",
-    "THE ORACLE'S COUCH",
-    "TRIAL BY COMBAT"
-  ],
+  "teleplaySegments": ["LANDFALL BUSHWICK","THE HOARD OF CHASE BANK","BLOOD FEUD 311","THE IRON WORM","SIEGE OF THE DMV","WAR COUNCIL","THE ORACLE'S COUCH","TRIAL BY COMBAT"],
   "teleplayNote": "Named teleplay segments are source material, not a competing issue map. Preserve useful scenes and beats while organizing production under the current nine-issue structure. WAR COUNCIL and THE ORACLE'S COUCH remain comparatively skeletal. The neighborhood-memory / one-paragraph scene-bank material is continuity fabric, not optional leftovers, and should be deployed where ordinary repetition builds belonging.",
   "toneLock": "Bright, ordinary 2026 documentary-sitcom realism. Time-displaced people are routine civic reality. Vikings are intelligent and dignified; comedy comes from incompatible systems, New York indifference, and bureaucratic ritual rather than stupidity.",
   "documentaryRule": "Mockumentary/documentary language is production style only. No visible documentary crew is acknowledged in-world.",
   "neighborhoodMemoryRule": "Assimilation is shown through repetition and local recognition: same merchants, counters, neighbors, public spaces, routines, and incidental relationships. These scenes are not side quests. Recurring civilians remain ordinary city people, not over-written sitcom side characters.",
   "kinBackgroundRule": "In early and middle issues, keep the Kin visible but lightly foregrounded: errands, shopping, laundry, snacks, vendors, parks, neighbors, and ordinary participation. Do not explain how well they are adapting until the later reveal/hearing material recontextualizes these seeds.",
-  "obsoleteMechanisms": [
-    "Atavistic Projection",
-    "Functional Congruence as named canon terminology or in-world mechanism"
-  ],
+  "obsoleteMechanisms": ["Atavistic Projection","Functional Congruence as named canon terminology or in-world mechanism"],
   "finaleLock": "Trial by Combat is a nonliteral residency-hearing ordeal. Bjorn arrives in armor. Carrie does not ask him to remove it. There is no literal combat.",
   "openDecisions": [
     "Carrie's full legal/display name",
