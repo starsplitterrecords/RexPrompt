@@ -38,7 +38,17 @@ def recover_json_bytes(data):
     recovered = dec.decompress(data[start:]) + dec.flush()
     if not dec.eof:
         raise SystemExit("Issue 5 DEFLATE stream is incomplete; cannot repair safely")
-    parsed = json.loads(recovered.decode("utf-8"))
+    text = recovered.decode("utf-8")
+    try:
+        parsed = json.loads(text)
+    except json.JSONDecodeError as exc:
+        lo = max(0, exc.pos - 350)
+        hi = min(len(text), exc.pos + 350)
+        print(f"Issue 5 recovered JSON error at character {exc.pos}")
+        print("CONTEXT-BEGIN")
+        print(repr(text[lo:hi]))
+        print("CONTEXT-END")
+        raise
     if len(parsed) != 22:
         raise SystemExit(f"Recovered Issue 5 page count is {len(parsed)}, expected 22")
     expected_ids = [f"AZR_S1E05_P{i:02d}" for i in range(1, 23)]
@@ -48,7 +58,6 @@ def recover_json_bytes(data):
         raise SystemExit("Recovered Issue 5 panel count is not intact")
     if sum(len(p.get("dialogueInline", [])) for p in parsed) != 160:
         raise SystemExit("Recovered Issue 5 lettering count is not intact")
-    text = recovered.decode("utf-8")
     for required in (
         "Fifty thousand verified actions in seven days.",
         "Eighteen thousand four hundred twelve.",
