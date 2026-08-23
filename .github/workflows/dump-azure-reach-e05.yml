@@ -21,6 +21,8 @@ jobs:
           def load(name):
               raw=''.join((root/name).read_text().split())
               return json.loads(gzip.decompress(base64.b64decode(raw)).decode())
+          def text(x):
+              return x.get('text', json.dumps(x, ensure_ascii=False)) if isinstance(x, dict) else str(x)
 
           e5=load('pages_e05.json.gzb64')
           e6=load('pages_e06.json.gzb64')
@@ -33,11 +35,11 @@ jobs:
               print('CAST:', ', '.join(c.get('handle','') for c in p.get('charactersInline',[])))
               print('PANEL PLAN:')
               for i,x in enumerate(p.get('panelPlan',[]),1):
-                  print(f'  {i}. {x.get("text",x)}')
+                  print(f'  {i}. {text(x)}')
               print('DIALOGUE:')
               for d in p.get('dialogueInline',[]):
                   print(' ', d.get('handle'), ':', d.get('text'))
               print('DIRECTION:')
               for x in p.get('directionInline',[]):
-                  print(' ',x.get('text',x))
+                  print(' ', text(x))
           PY
