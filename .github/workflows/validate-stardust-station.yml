@@ -8,6 +8,7 @@ on:
       - 'tools/validate_stardust_station.py'
       - 'tools/validate_stardust_station_issue2.py'
       - 'tools/validate_stardust_station_issue3.py'
+      - 'tools/validate_stardust_station_arc.py'
       - '.github/workflows/validate-stardust-station.yml'
   workflow_dispatch:
 
@@ -25,3 +26,5 @@ jobs:
         run: python tools/validate_stardust_station_issue2.py
       - name: Validate Stardust Station Issue 3 page production data
         run: python tools/validate_stardust_station_issue3.py
+      - name: Validate Stardust Station Issues 4-10 arc production data
+        run: python tools/validate_stardust_station_arc.py
