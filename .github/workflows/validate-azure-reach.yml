@@ -8,6 +8,7 @@ on:
       - 'index.html'
       - 'tools/validate_azure_reach.py'
       - 'tools/validate_azure_reach_e02.py'
+      - 'tools/validate_azure_reach_s1_complete.py'
       - '.github/workflows/validate-azure-reach.yml'
   workflow_dispatch:
 
@@ -23,4 +24,5 @@ jobs:
         run: |
           python tools/validate_azure_reach.py
           python tools/validate_azure_reach_e02.py
+          python tools/validate_azure_reach_s1_complete.py
 
