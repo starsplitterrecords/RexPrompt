@@ -120,6 +120,9 @@ if old_direction_keys:
     raise SystemExit(f"Obsolete S1E02 direction lookup keys remain: {old_direction_keys}")
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
+legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
+if legacy_other:
+    raise SystemExit(f"Superseded scenes remain in scenes_prequel.json: {legacy_other[:5]}")
 legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
 base = normalize(load_json(SHOW / "scenes_e01.json"))
 if base != legacy_e1:
@@ -171,6 +174,11 @@ if len(all_ids) != len(set(all_ids)):
 for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
     if forbidden in all_ids:
         raise SystemExit(f"Non-story metadata beat survived exclusion: {forbidden}")
+
+season_serialized = json.dumps(base, ensure_ascii=False).lower()
+for retired_name in ("ilyra venn", "varra cindral", "elyra vorn", "sira red fang", "nira sol", "elder branth"):
+    if retired_name in season_serialized:
+        raise SystemExit(f"Retired Rex Fleet identity remains in assembled season: {retired_name}")
 
 for scene in base:
     if not scene.get("summary"):
