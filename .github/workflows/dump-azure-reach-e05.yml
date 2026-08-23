@@ -1,45 +1,139 @@
-name: Dump Azure Reach Issue 5 Editorial Context
+name: Polish Azure Reach Issue 5 Editorial Context
 
 on:
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
-  dump:
+  polish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Decode editorial context
+      - name: Apply surgical dialogue polish
         run: |
           python - <<'PY'
           import base64, gzip, json
           from pathlib import Path
 
-          root = Path('data/shows/azure-reach-s1/encoded')
-          def load(name):
-              raw=''.join((root/name).read_text().split())
-              return json.loads(gzip.decompress(base64.b64decode(raw)).decode())
-          def text(x):
-              return x.get('text', json.dumps(x, ensure_ascii=False)) if isinstance(x, dict) else str(x)
+          path=Path('data/shows/azure-reach-s1/encoded/pages_e05.json.gzb64')
+          raw=''.join(path.read_text().split())
+          pages=json.loads(gzip.decompress(base64.b64decode(raw)).decode())
+          by_id={p['id']:p for p in pages}
 
-          e5=load('pages_e05.json.gzb64')
-          e6=load('pages_e06.json.gzb64')
-          pages=e5[7:]+e6[:2]
-          for p in pages:
-              print('\n'+'='*78)
-              print(p['id'], '|', p.get('pageTitle',''), '| panels', p.get('panelCount'))
-              print('SETTING:', p.get('setting'))
-              print('SUMMARY:', p.get('summary'))
-              print('CAST:', ', '.join(c.get('handle','') for c in p.get('charactersInline',[])))
-              print('PANEL PLAN:')
-              for i,x in enumerate(p.get('panelPlan',[]),1):
-                  print(f'  {i}. {text(x)}')
-              print('DIALOGUE:')
-              for d in p.get('dialogueInline',[]):
-                  print(' ', d.get('handle'), ':', d.get('text'))
-              print('DIRECTION:')
-              for x in p.get('directionInline',[]):
-                  print(' ', text(x))
+          replacements={
+            'AZR_S1E05_P10': [
+              'The refill already happened.',
+              "Where's the activation?",
+              'Gone.',
+              'The register already knows whether they refilled.',
+              'Then the register is the verification.',
+              'So we remove a step and improve the number.',
+              'We remove a step and improve the line. The number can come along.',
+            ],
+            'AZR_S1E05_P11': [
+              'New denominator: unique guests. One action, one count.',
+              'So one refill cannot become five because five departments noticed it.',
+              'This dashboard is becoming aggressively honest.',
+              'Separate public actions from staff operations.',
+              'Done.',
+              'And stop counting me as a guest.',
+              'That one was statistically embarrassing.',
+            ],
+            'AZR_S1E05_P12': [
+              'Physical card or app. Same action, same credit.',
+              'No account required?',
+              'Correct.',
+              "My battery's at two percent.",
+              'Paper is having an excellent day.',
+              'We should advertise that.',
+              'Then it becomes special. Make it normal.',
+            ],
+            'AZR_S1E05_P13': [
+              'No new animal behavior for the campaign.',
+              'Agreed.',
+              'And no extra keeper passes.',
+              'Then what do we show?',
+              'Tuesday.',
+              'Water tests. Food prep. Habitat checks. Turns out Tuesday has a plot.',
+              'Good. Film Tuesday.',
+            ],
+            'AZR_S1E05_P14': [
+              'Fifty thousand was the headline.',
+              'It was our target. It was not the contract.',
+              'The contract requires verified engagement.',
+              'So what am I putting in front of the board?',
+              'The number that survives the next question.',
+              'Less confetti. Fewer follow-up emails.',
+              "That's the deck.",
+            ],
+            'AZR_S1E05_P17': [
+              'Eighteen thousand four hundred twelve.',
+              'Say that again.',
+              'Eighteen thousand four hundred twelve verified actions.',
+              'Unique participants. Duplicates removed.',
+              'And the park stayed functional.',
+              'And I stopped being a guest.',
+              'Show me everything behind the number.',
+            ],
+            'AZR_S1E05_P20': [
+              'Keep the methodology in the final report.',
+              'Gladly.',
+              'And the missed target?',
+              'Especially the missed target.',
+              'That will ruin at least three charts.',
+              'Then improve the charts.',
+              'Now the charts have a point.',
+            ],
+            'AZR_S1E05_P21': [
+              'We learned something scalable.',
+              'That word has hurt us before.',
+              'The process. Not the campaign.',
+              'Useful action first.',
+              'Then decide what counts.',
+              'Then decide how you know it counted.',
+              'Then make it look effortless.',
+              'There it is.',
+            ],
+          }
+
+          for page_id,texts in replacements.items():
+              lines=by_id[page_id]['dialogueInline']
+              assert len(lines)==len(texts), (page_id,len(lines),len(texts))
+              for line,new_text in zip(lines,texts):
+                  line['text']=new_text
+
+          assert len(pages)==22
+          assert sum(p['panelCount'] for p in pages)==113
+          assert sum(len(p['dialogueInline']) for p in pages)==160
+          blob=json.dumps(pages,ensure_ascii=False,separators=(',',':')).encode()
+          encoded=base64.b64encode(gzip.compress(blob,compresslevel=9,mtime=0)).decode()+'\n'
+          path.write_text(encoded)
+          verify=json.loads(gzip.decompress(base64.b64decode(encoded)).decode())
+          text=json.dumps(verify,ensure_ascii=False)
+          for required in ('Fifty thousand verified actions in seven days.','Eighteen thousand four hundred twelve.','The gala deck is tomorrow.'):
+              assert required in text, required
+          print('Issue 5 editorial polish encoded and verified: 22 pages / 113 panels / 160 lettering entries')
           PY
+      - name: Validate Azure Reach
+        run: |
+          python tools/validate_azure_reach.py
+          python tools/validate_azure_reach_e02.py
+          python tools/validate_azure_reach_s1_complete.py
+      - name: Commit polished payload
+        run: |
+          if git diff --quiet -- data/shows/azure-reach-s1/encoded/pages_e05.json.gzb64; then
+            echo "Issue 5 already polished."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/azure-reach-s1/encoded/pages_e05.json.gzb64
+          git commit -m "Polish Azure Reach Issue 5 dialogue"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
