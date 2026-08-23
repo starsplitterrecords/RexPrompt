@@ -39,6 +39,67 @@ def load_encoded(path):
     return json.loads(decoded)
 
 
+def dialogue_texts(scene):
+    return [item.get("text", "") for item in scene.get("dialogueInline", [])]
+
+
+def validate_issue_2(scenes):
+    expected_ids = [f"RF_S1E02_A{n:02d}" for n in range(1, 28)]
+    ids = [scene.get("id") for scene in scenes]
+    if ids != expected_ids:
+        raise SystemExit(f"S1E02: expected ordered A01-A27, found {ids}")
+
+    serialized = json.dumps(scenes, ensure_ascii=False).lower()
+    forbidden_fragments = {
+        "lantern": "retired Issue 2 lantern metaphor",
+        "commerce finds a way": "retired commerce refrain",
+        "flow finds a way.": "retired Issue 2 closing line",
+        "ilyra venn": "retired character identity",
+        "varra cindral": "retired character identity",
+        "elyra vorn": "retired character identity",
+        "sira red fang": "retired character identity",
+        "nira sol": "retired character identity",
+        "elder branth": "retired character identity",
+    }
+    for fragment, reason in forbidden_fragments.items():
+        if fragment in serialized:
+            raise SystemExit(f"S1E02: {reason} survived: {fragment!r}")
+
+    by_id = {scene["id"]: scene for scene in scenes}
+    required_dialogue = {
+        "RF_S1E02_A22": ["Log the crossing. Keep the lane open."],
+        "RF_S1E02_A25": [
+            "Verge convoy to Thunderbreak. Thanks for the shadow.",
+            "You brought them through, Captain.",
+        ],
+        "RF_S1E02_A26": ["Next time, I choose the mark."],
+        "RF_S1E02_A27": ["Now they need the road. Tomorrow they need me."],
+    }
+    for scene_id, expected in required_dialogue.items():
+        actual = dialogue_texts(by_id[scene_id])
+        if actual != expected:
+            raise SystemExit(f"{scene_id}: canonical dialogue mismatch: {actual}")
+
+    required_names = {
+        "RF_S1E02_A09": {"Billie Rusk"},
+        "RF_S1E02_A11": {"Tessa Banks"},
+        "RF_S1E02_A14": {"Captain Naomi Sol"},
+        "RF_S1E02_A19": {"Billie Rusk", "Abby Saville"},
+        "RF_S1E02_A22": {"Commodore Ella Venn"},
+        "RF_S1E02_A24": {"Tessa Banks", "Abby Saville"},
+        "RF_S1E02_A25": {"Captain Naomi Sol", "Commodore Ella Venn"},
+        "RF_S1E02_A26": {"Billie Rusk", "Abby Saville"},
+        "RF_S1E02_A27": {"Jex Marrin"},
+    }
+    for scene_id, expected in required_names.items():
+        actual = {c.get("name") for c in by_id[scene_id].get("charactersInline", [])}
+        if not expected.issubset(actual):
+            raise SystemExit(f"{scene_id}: missing canonical character identity: {sorted(expected - actual)}")
+
+    if "failed heater module" not in " ".join(by_id["RF_S1E02_A05"].get("directionInline", [])).lower():
+        raise SystemExit("RF_S1E02_A05: civilian heater consequence is missing")
+
+
 shows = load_json(MANIFEST)
 show = next((s for s in shows if s.get("id") == "rex-fleet-s1"), None)
 if not show:
@@ -52,6 +113,7 @@ if base != legacy_e1:
     raise SystemExit("Explicit Episode 1 base differs from the original Rex Fleet Episode 1")
 
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
+validate_issue_2(e2)
 base.extend(e2)
 expected_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
 
