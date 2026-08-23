@@ -9,11 +9,12 @@ on:
       - 'tools/validate_backyard_rockets.py'
       - 'tools/audit_backyard_rockets_continuity.py'
       - 'tools/export_backyard_rockets_scene_payloads.py'
+      - 'tools/repair_backyard_rockets_e07_dialogue.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -21,10 +22,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Repair Issue 7 dialogue payload
+        if: ${{ hashFiles('tools/repair_backyard_rockets_e07_dialogue.py') != '' }}
+        run: python tools/repair_backyard_rockets_e07_dialogue.py
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
@@ -39,3 +44,13 @@ jobs:
             backyard-rockets-continuity-report.json
             backyard-rockets-scene-payloads.json
           if-no-files-found: error
+      - name: Commit repaired Issue 7 payload
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && hashFiles('tools/repair_backyard_rockets_e07_dialogue.py') != ''
+        run: |
+          rm tools/repair_backyard_rockets_e07_dialogue.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e07_ablative_armor.json.gzb64 tools/repair_backyard_rockets_e07_dialogue.py
+          git commit -m "Repair Backyard Rockets Issue 7 dialogue payload"
+          git pull --rebase origin ${{ github.event.pull_request.head.ref }}
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
