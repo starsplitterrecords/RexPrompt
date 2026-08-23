@@ -19,13 +19,10 @@ RANGES=((1,6),(7,12),(13,18),(19,22))
 def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
-def decode(path):
+def decode_uncached(path):
     encoded="".join(path.read_text(encoding="utf-8").split())
-    try:
-        raw=base64.b64decode(encoded,validate=True)
-        return json.loads(gzip.decompress(raw).decode("utf-8"))
-    except Exception as exc:
-        raise SystemExit(f"Failed to decode {path.name}: {exc}") from exc
+    raw=base64.b64decode(encoded,validate=True)
+    return json.loads(gzip.decompress(raw).decode("utf-8"))
 
 characters=load(SHOW/"characters.json")
 handles={v.get("handle") for v in characters.values() if isinstance(v,dict) and v.get("handle")}
@@ -39,14 +36,29 @@ for issue in range(4,11):
     if sid not in show_ids:
         raise SystemExit(f"Manifest selection missing: {sid}")
 
+# Decode every new payload before semantic validation so transport defects are
+# reported as one punchlist instead of being discovered serially.
+payload_cache={}
+decode_errors=[]
+for issue in range(4,11):
+    for a,b in RANGES:
+        path=SHOW/"encoded"/f"pages_e{issue:02d}_p{a:02d}_p{b:02d}.json.gzb64"
+        if not path.exists():
+            decode_errors.append(f"{path.name}: missing")
+            continue
+        try:
+            payload_cache[path]=decode_uncached(path)
+        except Exception as exc:
+            decode_errors.append(f"{path.name}: {type(exc).__name__}: {exc}")
+if decode_errors:
+    raise SystemExit("Payload decode preflight failed:\n- " + "\n- ".join(decode_errors))
+
 issues={}
 for issue in range(4,11):
     pages=[]
     for a,b in RANGES:
         path=SHOW/"encoded"/f"pages_e{issue:02d}_p{a:02d}_p{b:02d}.json.gzb64"
-        if not path.exists():
-            raise SystemExit(f"Missing payload: {path.name}")
-        pages.extend(decode(path))
+        pages.extend(payload_cache[path])
     if len(pages)!=22:
         raise SystemExit(f"Issue {issue}: expected 22 pages, found {len(pages)}")
     if [p.get("page") for p in pages] != list(range(1,23)):
