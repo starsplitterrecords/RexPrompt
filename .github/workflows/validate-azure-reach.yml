@@ -9,14 +9,46 @@ on:
       - 'tools/validate_azure_reach.py'
       - 'tools/validate_azure_reach_e02.py'
       - 'tools/validate_azure_reach_s1_complete.py'
+      - 'tools/repair_azure_reach_e05.py'
       - '.github/workflows/validate-azure-reach.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  validate:
+  repair-e05:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Repair Azure Reach Issue 5 payload if needed
+        run: python tools/repair_azure_reach_e05.py
+      - name: Commit repaired payload
+        run: |
+          if git diff --quiet -- data/shows/azure-reach-s1/encoded/pages_e05.json.gzb64; then
+            echo "Issue 5 payload already clean."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/azure-reach-s1/encoded/pages_e05.json.gzb64
+          git commit -m "Repair Azure Reach Issue 5 encoded payload"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
+
+  validate:
+    needs: repair-e05
+    if: always() && (needs.repair-e05.result == 'success' || needs.repair-e05.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
