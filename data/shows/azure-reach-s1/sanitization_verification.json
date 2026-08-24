@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "pages": 132,
+  "panels": 726,
+  "dialogueLetteringEntries": 1092,
+  "sanitizerIdempotent": true,
+  "validators": [
+    "validate_azure_reach_sanitization.py",
+    "validate_azure_reach.py",
+    "validate_azure_reach_e02.py",
+    "validate_azure_reach_s1_complete.py"
+  ]
+}
