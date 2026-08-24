@@ -65,6 +65,7 @@ jobs:
           for filename in targets:
               path = pathlib.Path(filename)
               current_text = path.read_text(encoding='utf-8')
+              current_error = None
               try:
                   canonical, decoded = decode_text(current_text)
                   if canonical != re.sub(r'\s+', '', current_text):
@@ -75,8 +76,8 @@ jobs:
                           'unitCount': len(decoded) if isinstance(decoded, list) else len(decoded or {}),
                       })
                   continue
-              except Exception as current_error:
-                  pass
+              except Exception as exc:
+                  current_error = str(exc)
 
               commits = subprocess.check_output(
                   ['git', 'log', '--all', '--format=%H', '--', filename], text=True
@@ -106,7 +107,7 @@ jobs:
                   results.append({
                       'file': filename,
                       'status': 'historical-recovery',
-                      'currentError': str(current_error),
+                      'currentError': current_error,
                       'recoveredFromCommit': candidate['commits'][0],
                       'equivalentValidCommits': candidate['commits'],
                       'unitCount': len(candidate['decoded']) if isinstance(candidate['decoded'], list) else len(candidate['decoded'] or {}),
@@ -119,7 +120,7 @@ jobs:
                   'summary': 'SOURCE DATA ERROR: this manifest-referenced RexPrompt payload could not be decoded, and no single unambiguous valid historical payload was available. No story content has been inferred for this missing span.',
                   'sourceReviewError': {
                       'file': filename,
-                      'currentError': str(current_error),
+                      'currentError': current_error,
                       'validHistoricalVariants': len(valid),
                       'historyCommitsChecked': len(commits),
                   },
@@ -128,7 +129,7 @@ jobs:
               results.append({
                   'file': filename,
                   'status': 'source-error-placeholder',
-                  'currentError': str(current_error),
+                  'currentError': current_error,
                   'validHistoricalVariants': len(valid),
                   'historyCommitsChecked': len(commits),
               })
