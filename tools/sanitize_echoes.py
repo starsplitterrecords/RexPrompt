@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Semantically sanitize Echoes of a Forgotten War RexPrompt data.
 
-Preserves authored story, dialogue, scene order, reveal order, and intentional
-staging while removing duplicated production scaffolding, stale correction
-history, and identity/behavior prose stored at the wrong scope.
+Preserve authored story, dialogue, scene order, reveal order, state and unique
+staging. Remove repeated production scaffolding, stale correction language,
+duplicated identity prose and model-originated representational residue.
 
 The migration is intentionally idempotent.
 """
@@ -17,8 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
-
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
+REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
 
 SHOW_ENTRY = {
     "id": "echoes-forgotten-war-s1",
@@ -29,8 +29,8 @@ SHOW_ENTRY = {
     "generationLine": (
         "Prestige cosmic science-fiction graphic-novel scenes grounded in human-scale acting "
         "and clear physical storytelling. Erased history returns through memory, matter, "
-        "institutions and relationships; mythic scale appears through consequence and lived "
-        "experience rather than technical explanation. Fictional production."
+        "institutions and relationships; mythic scale appears through consequence, memory and "
+        "lived experience. Fictional production."
     ),
 }
 
@@ -52,29 +52,52 @@ POSITIVE_REGIONS = {
     "EFW_ZenithSpire": "Administrative and archival center where institutional authority is expressed through controlled access, sealed records and elevated public spaces."
 }
 
-REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
-
 TECHNICAL_MARKERS = (
-    "readout", "diagnostic", "scanner", "measurement", "instrumentation",
-    "engineering", "technical explanation", "technical language", "mechanism",
-    "hologram", "probability jargon", "pseudo-scientific", "invented physics",
-    "tolerance", "percentage", "percent", "frequency", "calibration",
+    "readout", "diagnostic", "scanner", "measurement", "instrumentation", "engineering",
+    "technical", "mechanism", "hologram", "probability jargon", "pseudo-scientific",
+    "invented physics", "tolerance", "percentage", "percent", "frequency", "calibration",
+    "projection", "calculation", "tactical graphic", "scientific dating"
 )
 
 META_STARTS = (
-    "this is the reader's clearest experience",
-    "this is the first time the reader",
-    "this is the clue",
-    "this is the finale",
-    "this is the causal climax",
-    "this is the ensemble payoff",
-    "this is ancient adrian's full reveal",
-    "this is atlas's debut",
-    "this is arbiter's human center",
-    "seed the finale",
-    "issue 7 will",
-    "issue 8 will",
-    "the series should",
+    "this is the reader's clearest experience", "this is the first time the reader",
+    "this is the clue", "this is the finale", "this is the causal climax",
+    "this is the ensemble payoff", "this is ancient adrian's full reveal",
+    "this is atlas's debut", "this is arbiter's human center", "seed the finale",
+    "issue 7 will", "issue 8 will", "the series should"
+)
+
+EXACT_REWRITES = {
+    "Starbreaker is exhausted, not theatrical.": "Starbreaker is exhausted and subdued.",
+    "Its wrongness comes from age, scale and Theo's recognition, not from behaving like a machine.": "Its wrongness comes from age, scale and Theo's recognition.",
+    "This is avoidance, not clinical examination.": "",
+    "Adrian will not explain a mechanism.": "",
+    "She is not collecting measurements.": "",
+    "Do not make their exchange a contest of deductions.": "",
+    "Containment is a moral instinct, not a field setting.": "Containment reads through Redlin's choices as a moral instinct.",
+    "Show abandoned streets, evacuation fires and ordinary belongings, not tactical graphics.": "Show abandoned streets, evacuation fires and ordinary belongings.",
+    "This is two incompatible forms of courage colliding, not one hero defeating another.": "Frame the moment as two incompatible forms of courage colliding.",
+    "This is the first clear statement of the war's trap: each side can point to real lives saved by its logic and real lives destroyed by the other's failure.": "Let the aftermath expose the war's trap: each side can point to real lives saved by its logic and real lives destroyed by the other's failure.",
+    "Adrian knows history and consequence, not the operating rules of reality.": "Adrian's knowledge is historical and consequential.",
+    "No alarms, no explanation.": "",
+}
+
+FRAGMENT_REWRITES = (
+    ("Adrian uses ordinary envoy authority, not impossible technical tricks, to", "Adrian uses ordinary envoy authority to"),
+    (" rather than spectacle", ""),
+    (" rather than a command chamber", ""),
+    (" but no abstract battlefield overview", ", kept close to civilians"),
+    (" rather than an effects showcase", ""),
+)
+
+FORBIDDEN_RESIDUE = (
+    "do not explain", "do not present", "do not make", "do not depict", "do not imply",
+    "do not reward", "avoid a grand entrance", "not tactical graphics", "not a machine",
+    "not clinical examination", "not collecting measurements", "not impossible technical tricks",
+    "operating rules of reality", "no projections", "no scanner", "no mechanism",
+    "technical jargon", "probability jargon", "pseudo-scientific", "interactive hologram",
+    "engineering-tolerance", "invented physics", "diagnostic readout", "floating tactical diagrams",
+    "earlier 'redline' spelling was rejected", "reveal order was not recovered"
 )
 
 
@@ -93,39 +116,50 @@ def split_sentences(text: str) -> list[str]:
     return re.split(r"(?<=[.!?])\s+(?=[A-Z0-9@\"'“])", text)
 
 
-def is_scaffolding_sentence(sentence: str) -> bool:
-    lower = sentence.strip().lower()
-    if not lower:
-        return True
+def normalize_fragments(text: str) -> str:
+    out = text
+    for old, new in FRAGMENT_REWRITES:
+        out = out.replace(old, new)
+    return re.sub(r"\s+", " ", out).strip()
+
+
+def rewrite_sentence(sentence: str) -> str:
+    sentence = sentence.strip()
+    if sentence in EXACT_REWRITES:
+        return EXACT_REWRITES[sentence]
+    lower = sentence.lower()
     if any(lower.startswith(prefix) for prefix in META_STARTS):
-        return True
-
-    directive = lower.startswith(("do not ", "don't ", "avoid ", "strip all ", "no "))
-    if directive and any(marker in lower for marker in TECHNICAL_MARKERS):
-        return True
-
-    if ("ancient theo" in lower or "ancient rae" in lower) and lower.startswith(("do not ", "don't ", "no ")):
-        return True
-    if lower.startswith("do not show redlin"):
-        return True
-    if lower.startswith("do not reveal") and any(term in lower for term in ("ancient", "identity", "midpoint")):
-        return True
-    return False
+        return ""
+    if lower.startswith(("do not ", "don't ", "avoid ", "strip all ")):
+        return ""
+    if lower.startswith("no ") and any(marker in lower for marker in TECHNICAL_MARKERS):
+        return ""
+    if ("ancient theo" in lower or "ancient rae" in lower) and lower.startswith(("no ", "never ")):
+        return ""
+    return normalize_fragments(sentence)
 
 
-def clean_direction_text(text: str) -> str:
-    kept = [s.strip() for s in split_sentences(text) if not is_scaffolding_sentence(s)]
+def clean_production_text(text: str) -> str:
+    kept = []
+    for sentence in split_sentences(normalize_fragments(text)):
+        rewritten = rewrite_sentence(sentence)
+        if rewritten:
+            kept.append(rewritten)
     return " ".join(kept).strip()
 
 
 def story_fingerprint(scene: dict) -> dict:
-    """Everything except directionInline must remain byte-equivalent as data."""
-    return {k: copy.deepcopy(v) for k, v in scene.items() if k != "directionInline"}
+    """Story fields remain identical; only production prose may be normalized."""
+    return {
+        k: copy.deepcopy(v)
+        for k, v in scene.items()
+        if k not in {"directionInline", "settingText"}
+    }
 
 
 def sanitize_scenes() -> tuple[int, int]:
     scene_count = 0
-    removed_sentences = 0
+    changed_blocks = 0
     for path in SCENE_FILES:
         scenes = load(path)
         if not isinstance(scenes, list):
@@ -133,17 +167,20 @@ def sanitize_scenes() -> tuple[int, int]:
         before = [story_fingerprint(scene) for scene in scenes]
         for scene in scenes:
             scene_count += 1
-            blocks = scene.get("directionInline")
-            if not blocks:
-                continue
+            if isinstance(scene.get("settingText"), str):
+                cleaned_setting = clean_production_text(scene["settingText"])
+                if cleaned_setting and cleaned_setting != scene["settingText"]:
+                    scene["settingText"] = cleaned_setting
+                    changed_blocks += 1
+            blocks = scene.get("directionInline") or []
             cleaned_blocks = []
             for block in blocks:
                 if not isinstance(block, dict) or not isinstance(block.get("text"), str):
                     cleaned_blocks.append(block)
                     continue
-                original = block["text"]
-                cleaned = clean_direction_text(original)
-                removed_sentences += max(0, len(split_sentences(original)) - len(split_sentences(cleaned)))
+                cleaned = clean_production_text(block["text"])
+                if cleaned != block["text"]:
+                    changed_blocks += 1
                 if cleaned:
                     new_block = copy.deepcopy(block)
                     new_block["text"] = cleaned
@@ -156,22 +193,22 @@ def sanitize_scenes() -> tuple[int, int]:
         if before != after:
             raise RuntimeError(f"Story fingerprint changed in {path.name}")
         dump(path, scenes)
-    return scene_count, removed_sentences
+    return scene_count, changed_blocks
 
 
 def sanitize_direction_dictionary() -> int:
     path = SHOW / "direction.json"
     data = load(path)
-    removed = 0
+    changed = 0
     for entry in data.values():
         if not isinstance(entry, dict) or not isinstance(entry.get("text"), str):
             continue
-        original = entry["text"]
-        cleaned = clean_direction_text(original)
-        removed += max(0, len(split_sentences(original)) - len(split_sentences(cleaned)))
+        cleaned = clean_production_text(entry["text"])
+        if cleaned != entry["text"]:
+            changed += 1
         entry["text"] = cleaned
     dump(path, data)
-    return removed
+    return changed
 
 
 def sanitize_characters() -> int:
@@ -207,27 +244,26 @@ def sanitize_settings_and_regions() -> None:
 
 
 def sanitize_revision_charter() -> None:
-    data = {
+    dump(SHOW / "revision_charter.json", {
         "series": "Echoes of a Forgotten War",
         "mode": "enhance",
         "storyRule": "Each discovery advances what is returning, who the ancient people were, what they chose, or what restored continuity could cost.",
-        "phenomenonLanguage": "Ancient phenomena are described through observable consequence, recognition, memory, atmosphere and character reaction. Ordinary practical measurements appear only when immediate action genuinely requires them.",
+        "phenomenonLanguage": "Ancient phenomena are described through observable consequence, recognition, memory, atmosphere and character reaction. Ordinary practical measurements appear when immediate action genuinely requires them.",
         "historicalDrama": "Memory vignettes are complete dramatic scenes driven by personal wants, relationships, grief, affection, rivalry, judgment and consequence.",
         "humanScale": "Ordinary work, fatigue, humor, irritation, care, silence and mundane objects provide contrast for cosmic events.",
         "spectacle": "Recurring mythic imagery is reserved for meaningful turns so large events retain scale and impact.",
         "voiceScope": "Durable character voice and psychology live in Notion's Echoes character reference; RexPrompt character records carry production identity and role only.",
         "revealStructure": {
             "champions": REVEAL_ORDER,
-            "ancientTheoRae": "Their remembered physical presence becomes visible only after Adrian's Issue 4 identity reveal.",
+            "ancientTheoRae": "Their remembered physical presence becomes visible after Adrian's Issue 4 identity reveal.",
             "form": "Distinct past/present structures progressively converge through Issues 5–8."
         },
-        "continuityTest": "A scene must change knowledge, relationship, choice, consequence or present-day state; anomaly behavior alone is not a dramatic turn."
-    }
-    dump(SHOW / "revision_charter.json", data)
+        "continuityTest": "A dramatic scene changes knowledge, relationship, choice, consequence or present-day state."
+    })
 
 
 def sanitize_identity_reset() -> None:
-    data = {
+    dump(SHOW / "identity_reset.json", {
         "series": "Echoes of a Forgotten War",
         "status": "locked",
         "identityRule": "Theo and Rae are literally the same people who lived during the forgotten war; their present lives continue those same identities across the Reset.",
@@ -241,8 +277,7 @@ def sanitize_identity_reset() -> None:
         "consequenceOfReturn": "As replacement history fails, people, places, institutions and relationships can recover contradictory lived histories, including different loyalties, loves, losses, origins and remembered selves.",
         "mysteryFocus": "The Reset is understood through what was erased, who made the choice, what survived, and what restored continuity changes in the present.",
         "formEscalation": "Past and present begin clearly separated, move through split issues and shorter intercuts, alternate at page scale in Issue 7, and converge in Issue 8."
-    }
-    dump(SHOW / "identity_reset.json", data)
+    })
 
 
 def sanitize_warrior_gods() -> None:
@@ -253,26 +288,20 @@ def sanitize_warrior_gods() -> None:
     data["revealRule"] = "One previously unseen champion is fully introduced per issue in this order: " + " → ".join(REVEAL_ORDER) + ". Previously introduced champions may recur."
     data["interactionRule"] = "Early issues present the ancient story as recovered history. Theo and Rae's autobiographical presence becomes visible after Adrian's Issue 4 reveal."
     data.pop("memoryBearers", None)
-
     for name, entry in (data.get("characters") or {}).items():
         if not isinstance(entry, dict):
             continue
-        entry.pop("visualDevelopment", None)
-        entry.pop("developmentGap", None)
-        entry.pop("nameNote", None)
-        entry.pop("constraint", None)
-        entry.pop("historyNote", None)
-        entry.pop("relationships", None)
+        for field in ("visualDevelopment", "developmentGap", "nameNote", "constraint", "historyNote", "relationships"):
+            entry.pop(field, None)
         if name == "General Mero":
             entry["nature"] = "Human general serving among cosmic champions."
         if name == "Kyn":
             entry["identity"] = "Individual empath who experiences suffering at civilization scale."
-
     data["unresolved"] = [
         "Flux's disappearance before the Reset remains unexplained.",
         "Regent is historically real but remains unrevealed in the first eight issues.",
         "The exact personal betrayal associated with the Desert Marker remains unresolved.",
-        "Later arcs must determine how uneven restored continuity reshapes societies without erasing the reality of present lives."
+        "Later arcs must determine how uneven restored continuity reshapes societies while preserving the reality of present lives."
     ]
     dump(path, data)
 
@@ -280,14 +309,13 @@ def sanitize_warrior_gods() -> None:
 def sanitize_relationships() -> None:
     path = SHOW / "ancient_relationships_v1.json"
     data = load(path)
-    if "rule" in data:
-        data["relationshipPrinciple"] = "Ancient ideology is expressed through existing relationships, immediate personal wants and accumulated history."
-        data.pop("rule", None)
+    data.pop("rule", None)
+    data["relationshipPrinciple"] = "Ancient ideology is expressed through existing relationships, immediate personal wants and accumulated history."
     for rel in data.get("relationships", []):
         if isinstance(rel, dict):
             rel.pop("revealRule", None)
-    data["scenePrinciple"] = "Write the immediate personal want first, relationship history second and ideological disagreement third."
     data.pop("sceneRule", None)
+    data["scenePrinciple"] = "Write the immediate personal want first, relationship history second and ideological disagreement third."
     dump(path, data)
 
 
@@ -299,8 +327,8 @@ def sanitize_timeline() -> None:
     data["unresolved"] = [
         "The exact personal betrayal associated with the Desert Marker remains unresolved.",
         "Flux's disappearance remains intentionally unexplained.",
-        "Regent is historically real but its decisive later-arc event remains undeveloped.",
-        "Theo's and Rae's final ancient choices are revealed through the scripted second half rather than summarized ahead of the story."
+        "Regent is historically real and its decisive later-arc event remains undeveloped.",
+        "Theo's and Rae's final ancient choices are revealed through the scripted second half."
     ]
     dump(path, data)
 
@@ -321,7 +349,7 @@ def sanitize_page_spine() -> None:
     data["globalRules"] = [
         "Readability first, scale second, spectacle third.",
         "Early memory transitions remain unmistakable; later issues allow the visual grammar to become increasingly implicit.",
-        "Ancient Theo and Rae become visible only after the Issue 4 identity reveal.",
+        "Ancient Theo and Rae become visible after the Issue 4 identity reveal.",
         "Champion debuts receive enough page space to establish personality and relationship.",
         "Page turns prioritize changed meaning, character revelation and consequence.",
         "Issue 7 uses deliberate present/past page alternation; Issue 8 progressively converges those structures."
@@ -329,9 +357,8 @@ def sanitize_page_spine() -> None:
     for issue in data.get("issues", []):
         for page in issue.get("pages", []):
             for field in ("beat", "turn"):
-                value = page.get(field)
-                if isinstance(value, str):
-                    cleaned = clean_direction_text(value)
+                if isinstance(page.get(field), str):
+                    cleaned = clean_production_text(page[field])
                     if cleaned:
                         page[field] = cleaned
     dump(path, data)
@@ -360,23 +387,45 @@ def sanitize_manifest() -> None:
     dump(MANIFEST, data)
 
 
+def production_strings() -> list[tuple[str, str]]:
+    strings = []
+    direction = load(SHOW / "direction.json")
+    for key, entry in direction.items():
+        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
+            strings.append((f"direction:{key}", entry["text"]))
+    settings = load(SHOW / "settings.json")
+    for key, entry in settings.items():
+        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
+            strings.append((f"setting:{key}", entry["text"]))
+    for path in SCENE_FILES:
+        for scene in load(path):
+            if isinstance(scene.get("settingText"), str):
+                strings.append((f"{scene.get('id')}:settingText", scene["settingText"]))
+            for block in scene.get("directionInline", []) or []:
+                if isinstance(block, dict) and isinstance(block.get("text"), str):
+                    strings.append((f"{scene.get('id')}:direction", block["text"]))
+    spine = load(SHOW / "comic_page_spine_v1.json")
+    for rule in spine.get("globalRules", []):
+        strings.append(("page-spine:rule", str(rule)))
+    for issue in spine.get("issues", []):
+        for page in issue.get("pages", []):
+            for field in ("beat", "turn"):
+                if isinstance(page.get(field), str):
+                    strings.append((f"page-spine:{issue.get('issue')}:{page.get('page')}:{field}", page[field]))
+    return strings
+
+
 def verify_clean() -> None:
     chars = load(SHOW / "characters.json")
     for key, entry in chars.items():
-        if isinstance(entry, dict) and "notes" in entry:
-            raise RuntimeError(f"Character behavior prose remains in RexPrompt registry: {key}")
+        if isinstance(entry, dict) and (set(entry) - {"name", "handle", "role"}):
+            raise RuntimeError(f"Out-of-scope character prose remains: {key}")
 
-    scan_paths = [SHOW / "direction.json", SHOW / "settings.json", SHOW / "revision_charter.json", SHOW / "warrior_gods.json"] + SCENE_FILES
-    forbidden = (
-        "engineering-tolerance", "pseudo-technical teleplay", "earlier 'redline' spelling was rejected",
-        "reveal order was not recovered", "floating tactical diagrams", "interactive hologram",
-        "invented physics", "diagnostic readout"
-    )
-    for path in scan_paths:
-        text = path.read_text(encoding="utf-8").lower()
-        for term in forbidden:
-            if term in text:
-                raise RuntimeError(f"Sanitization residue {term!r} remains in {path.name}")
+    for label, text in production_strings():
+        lower = text.lower()
+        for term in FORBIDDEN_RESIDUE:
+            if term in lower:
+                raise RuntimeError(f"Sanitization residue {term!r} remains at {label}: {text}")
 
     architecture = load(SHOW / "season_architecture_v2.json")
     order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
@@ -400,8 +449,8 @@ def verify_clean() -> None:
 
 
 if __name__ == "__main__":
-    scene_count, scene_removed = sanitize_scenes()
-    dict_removed = sanitize_direction_dictionary()
+    scene_count, scene_changes = sanitize_scenes()
+    direction_changes = sanitize_direction_dictionary()
     character_removed = sanitize_characters()
     sanitize_settings_and_regions()
     sanitize_revision_charter()
@@ -415,5 +464,5 @@ if __name__ == "__main__":
     sanitize_manifest()
     verify_clean()
     print(f"Sanitized {scene_count} Echoes scenes")
-    print(f"Removed {scene_removed + dict_removed} repeated/meta direction sentences")
-    print(f"Removed {character_removed} character-scope fields from RexPrompt registry")
+    print(f"Normalized {scene_changes + direction_changes} production-text blocks")
+    print(f"Removed {character_removed} out-of-scope character fields")
