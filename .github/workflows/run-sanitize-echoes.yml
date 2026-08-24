@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sanitize-echoes
+  cancel-in-progress: true
+
 jobs:
   sanitize:
     runs-on: ubuntu-latest
