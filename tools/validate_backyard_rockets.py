@@ -32,7 +32,13 @@ for overlay in show.get("sceneOverlays", []):
     path = base_path / overlay["file"]
     if not path.exists(): raise SystemExit(f"Manifest references missing file: {overlay['file']}")
     try:
-        incoming = normalize(load_encoded(path) if overlay.get("encoding") == "gzip-base64" else load_json(path))
+        encoding = overlay.get("encoding")
+        if encoding == "gzip-base64":
+            incoming = normalize(load_encoded(path))
+        elif encoding:
+            raise ValueError(f"unsupported encoding {encoding}")
+        else:
+            incoming = normalize(load_json(path))
     except Exception as exc:
         raise SystemExit(f"{overlay['file']}: decode failure: {exc}") from exc
     excluded = set(overlay.get("excludeIds", []))
