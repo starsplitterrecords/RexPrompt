@@ -1,21 +1,22 @@
 {
   "series": "Sun Comes Through: The Musical",
-  "season": "S1",
-  "status": "working season structure; 8-part RexPrompt dramatic map of one two-act musical",
-  "seasonTheme": "Proofs versus presence.",
-  "seasonQuestion": "Can Alex love Mira without turning love into a system he must understand and control?",
+  "structure": "one continuous two-act musical",
+  "status": "working dramatic map",
+  "theme": "Proofs versus presence.",
+  "dramaticQuestion": "Can Alex love Mira without turning love into a system he must understand and control?",
+  "rexPromptIdNote": "S1/E-style identifiers are stable RexPrompt production IDs only; they do not indicate episodic storytelling.",
   "actMap": {
-    "Act I": "Episodes 1-3: grace, pattern, pressure, comparison, fracture.",
-    "Act II": "Episodes 4-8: grief, unrealized dreams, boundaries, separation, surrender, reconnection, social reframing, changed behavior."
+    "Act I": "Movements 1-3: grace, pattern, pressure, comparison, fracture.",
+    "Act II": "Movements 4-8: grief, unrealized dreams, boundaries, separation, surrender, reconnection, social reframing, changed behavior."
   },
-  "episodes": [
-    {"episode":1,"title":"Morning Light","status":"developed outline","summary":"Alex experiences an ordinary morning with Mira as grace in The Sun Comes Through, then reveals in Figure It Out that he instinctively converts uncertainty into systems and proofs."},
-    {"episode":2,"title":"Still We Go","status":"developed outline","summary":"The Weight of These Times turns the city into a pressure chorus. At home, Mira asks to be heard while Alex answers feelings with plans and fixes."},
-    {"episode":3,"title":"The Storm We Measure","status":"developed outline","summary":"Tidal Waves of Love begins as gratitude and becomes comparison. Mira realizes she is being made responsible for stabilizing Alex; their relationship fractures when he tries to solve the conflict itself."},
-    {"episode":4,"title":"Empty Rooms","status":"developed outline","summary":"Phantom Limb gives absence physical form. Plans We Never Made reveals that Alex's need to control love is tied to a larger fear of never becoming somebody."},
-    {"episode":5,"title":"Space","status":"developed outline","summary":"Mira builds a free-form community workshop and sings Give Me Space. In Here I Am / There You Are, Alex asks to be caught while Mira offers care without surrendering autonomy."},
-    {"episode":6,"title":"Borrowed Time","status":"developed outline","summary":"When Will I See You Again tracks separation without immediate repair. Cold Wind lets Alex admit the relationship was fading before the final rupture and stop arguing with the past."},
-    {"episode":7,"title":"No Need to Steer","status":"developed outline","summary":"Weightless moves Alex from counting to embodied flow. A chance café encounter in Tangy, Sour lets Alex and Mira share memory without forcing a conclusion."},
-    {"episode":8,"title":"The Unfinished Score","status":"developed finale outline","summary":"Empire Burn reframes private catastrophe-thinking as a cultural habit. Alex then enters Mira's workshop without taking over and offers a score with blank measures for whoever is present. The Sun Comes Through returns as a communal finale."}
+  "movements": [
+    {"movement":1,"rexPromptUnit":"E01","title":"Morning Light","status":"developed outline","summary":"Alex experiences an ordinary morning with Mira as grace in The Sun Comes Through, then reveals in Figure It Out that he instinctively converts uncertainty into systems and proofs."},
+    {"movement":2,"rexPromptUnit":"E02","title":"Still We Go","status":"developed outline","summary":"The Weight of These Times turns the city into a pressure chorus. At home, Mira asks to be heard while Alex answers feelings with plans and fixes."},
+    {"movement":3,"rexPromptUnit":"E03","title":"The Storm We Measure","status":"developed outline","summary":"Tidal Waves of Love begins as gratitude and becomes comparison. Mira realizes she is being made responsible for stabilizing Alex; their relationship fractures when he tries to solve the conflict itself."},
+    {"movement":4,"rexPromptUnit":"E04","title":"Empty Rooms","status":"developed outline","summary":"Phantom Limb gives absence physical form. Plans We Never Made reveals that Alex's need to control love is tied to a larger fear of never becoming somebody."},
+    {"movement":5,"rexPromptUnit":"E05","title":"Space","status":"developed outline","summary":"Mira builds a free-form community workshop and sings Give Me Space. In Here I Am / There You Are, Alex asks to be caught while Mira offers care without surrendering autonomy."},
+    {"movement":6,"rexPromptUnit":"E06","title":"Borrowed Time","status":"developed outline","summary":"When Will I See You Again tracks separation without immediate repair. Cold Wind lets Alex admit the relationship was fading before the final rupture and stop arguing with the past."},
+    {"movement":7,"rexPromptUnit":"E07","title":"No Need to Steer","status":"developed outline","summary":"Weightless moves Alex from counting to embodied flow. A chance café encounter in Tangy, Sour lets Alex and Mira share memory without forcing a conclusion."},
+    {"movement":8,"rexPromptUnit":"E08","title":"The Unfinished Score","status":"developed finale outline","summary":"Empire Burn reframes private catastrophe-thinking as a cultural habit. Alex then enters Mira's workshop without taking over and offers a score with blank measures for whoever is present. The Sun Comes Through returns as a communal finale."}
   ]
 }
