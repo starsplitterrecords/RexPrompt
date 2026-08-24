@@ -1,0 +1,43 @@
+name: Run Echoes sanitizer
+
+on:
+  push:
+    branches:
+      - enhance/echoes-s1
+    paths:
+      - '.github/workflows/run-sanitize-echoes.yml'
+      - 'tools/sanitize_echoes.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out working branch
+        uses: actions/checkout@v4
+        with:
+          ref: enhance/echoes-s1
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sanitize Echoes production data
+        run: python tools/sanitize_echoes.py
+      - name: Show migration diff
+        run: git diff --stat && git diff --check
+      - name: Commit sanitized data
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No sanitization changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows.json data/shows/echoes-forgotten-war-s1
+          git commit -m 'Sanitize Echoes production data'
+          git push origin HEAD:enhance/echoes-s1
