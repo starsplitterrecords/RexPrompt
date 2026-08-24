@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Check out RexPrompt
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,16 +36,69 @@ jobs:
       - name: Install PDF dependency
         run: python -m pip install --disable-pip-version-check reportlab==4.2.5
 
-      - name: Diagnose encoded overlays
+      - name: Recover malformed referenced payloads for review only
         run: |
           python - <<'PY'
-          import base64, pathlib, re
-          for path in pathlib.Path('data/shows').glob('**/*.gzb64'):
-              raw = re.sub(r'\s+', '', path.read_text(encoding='utf-8'))
+          import base64, gzip, json, pathlib, re, subprocess
+
+          recoveries = {
+              'data/shows/vikings-2026-s1/encoded/pages_e03_p13_p18.json.gzb64': '0302170c9dc8481d0a9b1267e821dc016ad669dc',
+              'data/shows/vikings-2026-s1/encoded/pages_e03_p19_p24.json.gzb64': '0302170c9dc8481d0a9b1267e821dc016ad669dc',
+          }
+
+          def decode_text(text):
+              raw = re.sub(r'\s+', '', text)
+              return json.loads(gzip.decompress(base64.b64decode(raw)).decode('utf-8'))
+
+          applied = []
+          for filename, commit in recoveries.items():
+              path = pathlib.Path(filename)
               try:
-                  base64.b64decode(raw)
-              except Exception as exc:
-                  print(f'INVALID {path} chars={len(raw)} error={exc}')
+                  decode_text(path.read_text(encoding='utf-8'))
+                  continue
+              except Exception as current_error:
+                  historical = subprocess.check_output(
+                      ['git', 'show', f'{commit}:{filename}'], text=True
+                  )
+                  decoded = decode_text(historical)
+                  path.write_text(historical.strip(), encoding='utf-8')
+                  applied.append({
+                      'file': filename,
+                      'recoveredFromCommit': commit,
+                      'reason': f'Current manifest-referenced payload did not decode: {current_error}',
+                      'recoveredUnitCount': len(decoded) if isinstance(decoded, list) else len(decoded or {}),
+                  })
+
+          if applied:
+              note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
+              note.write_text(json.dumps({
+                  'reviewOnlyRecovery': True,
+                  'note': 'The production review used the last complete historical payload for each listed file because the current manifest-referenced encoded file could not be decoded. Repository production data was not modified by this review build.',
+                  'recoveries': applied,
+              }, indent=2) + '\n', encoding='utf-8')
+              print(json.dumps(applied, indent=2))
+          PY
+
+      - name: Include advanced-development Markdown in review data
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          for package in pathlib.Path('data/shows').iterdir():
+              if not package.is_dir():
+                  continue
+              files = sorted(package.glob('*.md'))
+              if not files:
+                  continue
+              payload = {
+                  'sourceType': 'advanced-development-markdown',
+                  'documents': [
+                      {'file': p.name, 'content': p.read_text(encoding='utf-8')}
+                      for p in files
+                  ],
+              }
+              (package / 'review_markdown_extras.json').write_text(
+                  json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8'
+              )
           PY
 
       - name: Build all current production review PDFs
