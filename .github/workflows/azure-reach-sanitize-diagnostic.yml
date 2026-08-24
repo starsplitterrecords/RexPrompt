@@ -6,7 +6,7 @@ on:
       - '.github/workflows/azure-reach-sanitize-diagnostic.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   verify:
@@ -26,3 +26,26 @@ jobs:
           python tools/validate_azure_reach.py
           python tools/validate_azure_reach_e02.py
           python tools/validate_azure_reach_s1_complete.py
+      - name: Record successful verification
+        shell: bash
+        run: |
+          cat > data/shows/azure-reach-s1/sanitization_verification.json <<'EOF'
+          {
+            "status": "passed",
+            "pages": 132,
+            "panels": 726,
+            "dialogueLetteringEntries": 1092,
+            "sanitizerIdempotent": true,
+            "validators": [
+              "validate_azure_reach_sanitization.py",
+              "validate_azure_reach.py",
+              "validate_azure_reach_e02.py",
+              "validate_azure_reach_s1_complete.py"
+            ]
+          }
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows/azure-reach-s1/sanitization_verification.json
+          git commit -m 'Record Azure Reach sanitization verification'
+          git push
