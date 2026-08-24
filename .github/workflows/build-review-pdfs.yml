@@ -1,0 +1,46 @@
+name: Build production review PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/**'
+      - 'tools/export_review_pdfs.py'
+      - '.github/workflows/build-review-pdfs.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'tools/export_review_pdfs.py'
+      - '.github/workflows/build-review-pdfs.yml'
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out RexPrompt
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab==4.2.5
+
+      - name: Build all current production review PDFs
+        run: python tools/export_review_pdfs.py --out dist/review-pdfs
+
+      - name: Upload review bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: rexprompt-production-review-pdfs-${{ github.sha }}
+          path: dist/review-pdfs/
+          if-no-files-found: error
+          retention-days: 30

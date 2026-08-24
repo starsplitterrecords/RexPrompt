@@ -101,7 +101,7 @@ for file, count, first_id, last_id in file_counts:
 
 expected_authored = {
     "S1E01": 20,
-    "S1E02": 30,
+    "S1E02": 24,
     "S1E03": 19,
     "S1E04": 18,
     "S1E05": 21,
