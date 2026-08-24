@@ -1,4 +1,4 @@
-name: Azure Reach sanitization diagnostic
+name: Azure Reach semantic sanitization
 
 on:
   push:
@@ -9,69 +9,24 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  sanitize:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build decoded sanitization report
-        shell: bash
-        run: |
-          python - <<'PY'
-          import base64, collections, gzip, json
-          from pathlib import Path
-
-          show = Path('data/shows/azure-reach-s1')
-          pages=[]
-          files=[]
-          for path in sorted((show/'encoded').glob('pages_e*.json.gzb64')):
-              raw=''.join(path.read_text(encoding='utf-8').split())
-              data=json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode('utf-8'))
-              pages.extend(data)
-              files.append({'file': path.name, 'pages': len(data)})
-
-          char_keysets=collections.Counter()
-          direction_prefixes=collections.Counter()
-          dialogue_subtexts=collections.Counter()
-          panel_keysets=collections.Counter()
-          page_keysets=collections.Counter()
-          for p in pages:
-              page_keysets[tuple(sorted(p.keys()))]+=1
-              for c in p.get('charactersInline',[]) or []:
-                  if isinstance(c,dict): char_keysets[tuple(sorted(c.keys()))]+=1
-              for d in p.get('directionInline',[]) or []:
-                  if isinstance(d,dict):
-                      text=str(d.get('text',''))
-                      prefix=text.split(':',1)[0]+':' if ':' in text else text[:80]
-                      direction_prefixes[prefix]+=1
-              for d in p.get('dialogueInline',[]) or []:
-                  if isinstance(d,dict) and d.get('subtext'):
-                      dialogue_subtexts[str(d['subtext'])]+=1
-              for panel in p.get('panelPlan',[]) or []:
-                  if isinstance(panel,dict): panel_keysets[tuple(sorted(panel.keys()))]+=1
-
-          report={
-              'totalPages': len(pages),
-              'files': files,
-              'pageKeysets': [{'count':n,'keys':list(k)} for k,n in page_keysets.most_common()],
-              'characterInlineKeysets': [{'count':n,'keys':list(k)} for k,n in char_keysets.most_common()],
-              'directionPrefixes': [{'count':n,'prefix':k} for k,n in direction_prefixes.most_common()],
-              'dialogueSubtextCount': sum(dialogue_subtexts.values()),
-              'dialogueSubtextUnique': len(dialogue_subtexts),
-              'dialogueSubtextsTop': [{'count':n,'text':k} for k,n in dialogue_subtexts.most_common(50)],
-              'panelKeysets': [{'count':n,'keys':list(k)} for k,n in panel_keysets.most_common()],
-              'firstPage': pages[0],
-              'sampleIssue2Page1': next(p for p in pages if p.get('id')=='AZR_S1E02_P01'),
-              'sampleIssue3Page1': next(p for p in pages if p.get('id')=='AZR_S1E03_P01'),
-              'lastPage': pages[-1],
-          }
-          out=show/'sanitization_diagnostic.json'
-          out.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-          PY
-      - name: Commit diagnostic report
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sanitize Azure Reach production data
+        run: python tools/sanitize_azure_reach.py
+      - name: Commit sanitized production data
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/shows/azure-reach-s1/sanitization_diagnostic.json
-          git commit -m 'Add Azure Reach sanitization diagnostic report'
-          git push
+          git add index.html data/shows/azure-reach-s1/direction.json data/shows/azure-reach-s1/encoded
+          if git diff --cached --quiet; then
+            echo 'No sanitization changes required.'
+          else
+            git commit -m 'Sanitize Azure Reach RexPrompt production data'
+            git push
+          fi
