@@ -219,7 +219,9 @@ def sanitize_page(page: dict, common: list[str], issue_ref: str | None) -> tuple
         if isinstance(item, dict) and str(item.get("text", "")).startswith(LEGACY_PREFIXES)
     )
     if not legacy_count:
-        # Already sanitized. Keep current local direction intact and only verify fingerprint.
+        # Already sanitized: recompute only persistent references so stale scoped
+        # production guidance can be removed without touching creative fields.
+        out["direction"] = persistent_refs(out, issue_ref)
         after = story_fingerprint(out)
         if before != after:
             raise RuntimeError(f"Story fingerprint drift on {page.get('id')}")
@@ -280,18 +282,20 @@ def sanitize() -> tuple[int, int, int, bool]:
     registry = load(SHOW / "direction.json")
     registry.update(CORE_DIRECTIONS)
 
-    issue_refs: dict[str, str | None] = {}
-    for episode, common in common_by_episode.items():
-        if common:
-            issue_num = int(episode[-2:])
-            ref = f"AZR_E{issue_num:02d}_CONTINUITY"
-            registry[ref] = {"text": f"ISSUE {issue_num} CONTINUITY — " + " ".join(common)}
-            issue_refs[episode] = ref
-        else:
-            # Preserve a previously derived issue-level ref on idempotent reruns.
-            issue_num = int(episode[-2:])
-            existing = f"AZR_E{issue_num:02d}_CONTINUITY"
-            issue_refs[episode] = existing if existing in registry else None
+    # Repetition alone is not authority. Remove machine-derived issue entries and
+    # retain only issue-level production truth independently supported by canon.
+    for key in list(registry):
+        if re.fullmatch(r"AZR_E\d{2}_CONTINUITY", key):
+            registry.pop(key)
+    registry["AZR_E02_CONTINUITY"] = {
+        "text": (
+            "ISSUE 2 CONTINUITY — Dolphins retrieve guest-dropped objects and guests project meaning "
+            "onto that behavior. Shellabration Saturdays is only a background Corporate roadmap gag, "
+            "not the issue premise."
+        )
+    }
+    issue_refs: dict[str, str | None] = {episode: None for episode in common_by_episode}
+    issue_refs["S1E02"] = "AZR_E02_CONTINUITY"
 
     removed = 0
     local_count = 0
