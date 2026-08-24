@@ -2,44 +2,28 @@
 import base64
 import gzip
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SHOW = ROOT / "data" / "shows" / "azure-reach-s1"
-MANIFEST = ROOT / "data" / "shows.json"
+SHOW = ROOT / "data/shows/azure-reach-s1"
+MANIFEST = ROOT / "data/shows.json"
 
 SHOW_IDS = {
-    1: "azure-reach-s1",
-    2: "azure-reach-s1-e02",
-    3: "azure-reach-s1-e03",
-    4: "azure-reach-s1-e04",
-    5: "azure-reach-s1-e05",
-    6: "azure-reach-s1-e06",
+    1: "azure-reach-s1", 2: "azure-reach-s1-e02", 3: "azure-reach-s1-e03",
+    4: "azure-reach-s1-e04", 5: "azure-reach-s1-e05", 6: "azure-reach-s1-e06",
 }
 EXPECTED = {
-    1: (22, 136, 303),
-    2: (22, 127, 164),
-    3: (22, 116, 146),
-    4: (22, 117, 149),
-    5: (22, 113, 160),
-    6: (22, 117, 170),
+    1: (22, 136, 303), 2: (22, 127, 164), 3: (22, 116, 146),
+    4: (22, 117, 149), 5: (22, 113, 160), 6: (22, 117, 170),
 }
-DIR_PREFIXES = (
-    "AZURE REACH VISUAL LANGUAGE:",
-    "PAGE ACTION — SOURCE-LOCKED:",
-    "CHARACTER CONTINUITY —",
-    "LOCATION / PROP / STATE CONTINUITY —",
-    "COMIC PAGE / LETTERING —",
-)
 FORBIDDEN = (
-    "The Pelican Drop",
-    "retrieval rings",
-    "Julian Vale",
-    "Flora Fontaine",
-    "Pip Hart",
-    "Pippa Hart",
-    "@arv1.",
-    "@starsplit.",
+    "The Pelican Drop", "retrieval rings", "Julian Vale", "Flora Fontaine",
+    "Pip Hart", "Pippa Hart", "@arv1.", "@starsplit.",
+)
+LEGACY_PREFIXES = (
+    "AZURE REACH VISUAL LANGUAGE:", "PAGE ACTION — SOURCE-LOCKED:", "CHARACTER CONTINUITY —",
+    "LOCATION / PROP / STATE CONTINUITY —", "COMIC PAGE / LETTERING —",
 )
 HANDOFFS = {
     3: ("Make the person exclusive, not the water.", "Feeding Stream Live."),
@@ -47,13 +31,22 @@ HANDOFFS = {
     5: ("Fifty thousand verified actions in seven days.", "Eighteen thousand four hundred twelve.", "The gala deck is tomorrow."),
     6: ("We can replicate the process.", "The public sees the moment. The work is everything that lets the moment happen.", "Make it invisible."),
 }
+FACTION_DIRECTION = {
+    "AZR_BrineSquad": "AZR_VIS_BRINE",
+    "AZR_GuestRelations": "AZR_VIS_GUEST_RELATIONS",
+    "AZR_Finfluencers": "AZR_VIS_FINFLUENCERS",
+    "AZR_Corporate": "AZR_VIS_CORPORATE",
+}
+
 
 def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
-def decode_overlay(path):
+
+def decode(path):
     raw = "".join(path.read_text(encoding="utf-8").split())
     return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
+
 
 manifest = load(MANIFEST)
 by_id = {s.get("id"): s for s in manifest}
@@ -61,14 +54,13 @@ characters = load(SHOW / "characters.json")
 factions = load(SHOW / "factions.json")
 regions = load(SHOW / "regions.json")
 settings = load(SHOW / "settings.json")
-canonical_handles = {
-    v.get("handle")
-    for v in characters.values()
-    if isinstance(v, dict) and v.get("handle")
-}
+directions = load(SHOW / "direction.json")
+canonical_handles = {v.get("handle") for v in characters.values() if isinstance(v, dict) and v.get("handle")}
+
+issue_direction_keys = {k for k in directions if re.fullmatch(r"AZR_E\d{2}_CONTINUITY", k)}
+assert issue_direction_keys == {"AZR_E02_CONTINUITY"}, issue_direction_keys
 
 season_pages = []
-
 for issue in range(1, 7):
     show_id = SHOW_IDS[issue]
     entry = by_id.get(show_id)
@@ -80,65 +72,61 @@ for issue in range(1, 7):
 
     pages = []
     for overlay in entry.get("sceneOverlays", []):
-        assert overlay.get("encoding") == "gzip-base64", (show_id, overlay)
+        assert overlay.get("encoding") == "gzip-base64"
         path = SHOW / overlay["file"]
-        assert path.exists(), f"Missing overlay: {path}"
-        pages.extend(decode_overlay(path))
+        assert path.exists(), path
+        pages.extend(decode(path))
 
     expected_pages, expected_panels, expected_letters = EXPECTED[issue]
     assert len(pages) == expected_pages, (issue, len(pages))
-    assert [p.get("id") for p in pages] == [
-        f"AZR_S1E{issue:02d}_P{i:02d}" for i in range(1, 23)
-    ]
+    assert [p.get("id") for p in pages] == [f"AZR_S1E{issue:02d}_P{i:02d}" for i in range(1, 23)]
     assert [p.get("page") for p in pages] == list(range(1, 23))
     assert all(p.get("episode") == f"S1E{issue:02d}" for p in pages)
 
     issue_panels = 0
     issue_letters = 0
     for page in pages:
-        page_id = page["id"]
-        assert page.get("summary"), f"{page_id}: missing summary"
-        assert page.get("setting") in settings, f"{page_id}: unknown setting"
-        assert page.get("region") in regions, f"{page_id}: unknown region"
-        for faction in page.get("factions", []):
-            assert faction in factions, f"{page_id}: unknown faction {faction}"
+        pid = page["id"]
+        assert page.get("summary")
+        assert page.get("setting") in settings
+        assert page.get("region") in regions
+        assert all(f in factions for f in page.get("factions", []))
+        assert len(page.get("panelPlan", [])) == page.get("panelCount")
+        issue_panels += page["panelCount"]
 
-        panel_count = page.get("panelCount")
-        assert len(page.get("panelPlan", [])) == panel_count, f"{page_id}: panelPlan mismatch"
-        issue_panels += panel_count
-
-        cast_handles = {
-            c.get("handle")
-            for c in page.get("charactersInline", [])
-            if isinstance(c, dict) and c.get("handle")
-        }
-        assert cast_handles, f"{page_id}: no cast"
-        assert not (cast_handles - canonical_handles), f"{page_id}: noncanonical cast"
-
+        cast = {c.get("handle") for c in page.get("charactersInline", []) if isinstance(c, dict) and c.get("handle")}
+        assert cast and not (cast - canonical_handles), f"{pid}: noncanonical cast"
         lines = page.get("dialogueInline", [])
-        assert lines, f"{page_id}: no lettering"
+        assert lines
         issue_letters += len(lines)
         for line in lines:
             handle = line.get("handle")
-            assert line.get("text"), f"{page_id}: blank lettering"
-            assert handle in canonical_handles, f"{page_id}: noncanonical speaker {handle}"
+            assert line.get("text") and handle in canonical_handles
             if handle != "@azr.Comments":
-                assert handle in cast_handles, f"{page_id}: speaker not in cast {handle}"
+                assert handle in cast
 
-        direction = [
-            x.get("text", "")
-            for x in page.get("directionInline", [])
-            if isinstance(x, dict)
-        ]
-        assert len(direction) == 5, f"{page_id}: production lock count"
-        for text, prefix in zip(direction, DIR_PREFIXES):
-            assert text.startswith(prefix), f"{page_id}: production lock schema {prefix}"
-        locked_action = direction[1].split(DIR_PREFIXES[1], 1)[1].strip()
-        assert locked_action == page["summary"], f"{page_id}: summary/action drift"
-        if issue >= 3:
-            safety = direction[0].lower()
-            assert "animal" in safety and any(word in safety for word in ("safe", "welfare", "voluntary", "calm", "care")), f"{page_id}: animal safety lock"
-        assert "professional" in direction[4].lower() and "letter" in direction[4].lower(), f"{page_id}: lettering lock"
+        refs = page.get("direction", [])
+        assert "AZR_PRODUCTION_CORE" in refs and "AZR_LETTERING" in refs
+        assert not (set(refs) - set(directions)), f"{pid}: unknown direction refs"
+        for faction in page.get("factions", []):
+            ref = FACTION_DIRECTION.get(faction)
+            if ref:
+                assert ref in refs, f"{pid}: missing {ref}"
+        handles = cast
+        if handles & {"@azr.Maya", "@azr.Pip"}:
+            assert "AZR_VIS_MAYA_PIP_SEPARATION" in refs
+        if issue == 2:
+            assert "AZR_E02_CONTINUITY" in refs
+        else:
+            assert not any(re.fullmatch(r"AZR_E\d{2}_CONTINUITY", r) for r in refs)
+
+        local = page.get("directionInline", []) or []
+        assert len(local) <= 2, f"{pid}: excess local production scaffolding"
+        assert page["summary"] not in json.dumps(local, ensure_ascii=False)
+        for item in local:
+            text = item.get("text", "") if isinstance(item, dict) else str(item)
+            assert text.startswith(("PAGE CONTINUITY —", "PAGE DESIGN —"))
+            assert not text.startswith(LEGACY_PREFIXES)
 
     assert issue_panels == expected_panels, (issue, issue_panels, expected_panels)
     assert issue_letters == expected_letters, (issue, issue_letters, expected_letters)
