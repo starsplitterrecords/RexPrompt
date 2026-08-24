@@ -6,14 +6,14 @@ on:
       - '.github/workflows/azure-reach-sanitize-diagnostic.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   diagnose:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect decoded Azure Reach payloads
+      - name: Build decoded sanitization report
         shell: bash
         run: |
           python - <<'PY'
@@ -22,48 +22,56 @@ jobs:
 
           show = Path('data/shows/azure-reach-s1')
           pages=[]
+          files=[]
           for path in sorted((show/'encoded').glob('pages_e*.json.gzb64')):
               raw=''.join(path.read_text(encoding='utf-8').split())
               data=json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode('utf-8'))
               pages.extend(data)
+              files.append({'file': path.name, 'pages': len(data)})
 
-          print('TOTAL_PAGES', len(pages))
-          print('PAGE_KEYS', sorted(pages[0].keys()))
-          print('FIRST_PAGE_JSON')
-          print(json.dumps(pages[0], ensure_ascii=False, indent=2))
-
-          keysets=collections.Counter()
+          char_keysets=collections.Counter()
+          direction_prefixes=collections.Counter()
+          dialogue_subtexts=collections.Counter()
+          panel_keysets=collections.Counter()
+          page_keysets=collections.Counter()
           for p in pages:
+              page_keysets[tuple(sorted(p.keys()))]+=1
               for c in p.get('charactersInline',[]) or []:
-                  if isinstance(c,dict): keysets[tuple(sorted(c.keys()))]+=1
-          print('CHARACTER_INLINE_KEYSETS')
-          for k,n in keysets.most_common(): print(n,k)
-
-          prefixes=collections.Counter()
-          for p in pages:
+                  if isinstance(c,dict): char_keysets[tuple(sorted(c.keys()))]+=1
               for d in p.get('directionInline',[]) or []:
                   if isinstance(d,dict):
                       text=str(d.get('text',''))
                       prefix=text.split(':',1)[0]+':' if ':' in text else text[:80]
-                      prefixes[prefix]+=1
-          print('DIRECTION_PREFIXES')
-          for k,n in prefixes.most_common(): print(n,repr(k))
-
-          subs=collections.Counter()
-          for p in pages:
+                      direction_prefixes[prefix]+=1
               for d in p.get('dialogueInline',[]) or []:
                   if isinstance(d,dict) and d.get('subtext'):
-                      subs[str(d['subtext'])]+=1
-          print('DIALOGUE_SUBTEXT_COUNT', sum(subs.values()), 'UNIQUE', len(subs))
-          for text,n in subs.most_common(30): print(n,repr(text))
-
-          panel_keys=collections.Counter()
-          for p in pages:
+                      dialogue_subtexts[str(d['subtext'])]+=1
               for panel in p.get('panelPlan',[]) or []:
-                  if isinstance(panel,dict): panel_keys[tuple(sorted(panel.keys()))]+=1
-          print('PANEL_KEYSETS')
-          for k,n in panel_keys.most_common(): print(n,k)
+                  if isinstance(panel,dict): panel_keysets[tuple(sorted(panel.keys()))]+=1
 
-          print('LAST_PAGE_JSON')
-          print(json.dumps(pages[-1], ensure_ascii=False, indent=2))
+          report={
+              'totalPages': len(pages),
+              'files': files,
+              'pageKeysets': [{'count':n,'keys':list(k)} for k,n in page_keysets.most_common()],
+              'characterInlineKeysets': [{'count':n,'keys':list(k)} for k,n in char_keysets.most_common()],
+              'directionPrefixes': [{'count':n,'prefix':k} for k,n in direction_prefixes.most_common()],
+              'dialogueSubtextCount': sum(dialogue_subtexts.values()),
+              'dialogueSubtextUnique': len(dialogue_subtexts),
+              'dialogueSubtextsTop': [{'count':n,'text':k} for k,n in dialogue_subtexts.most_common(50)],
+              'panelKeysets': [{'count':n,'keys':list(k)} for k,n in panel_keysets.most_common()],
+              'firstPage': pages[0],
+              'sampleIssue2Page1': next(p for p in pages if p.get('id')=='AZR_S1E02_P01'),
+              'sampleIssue3Page1': next(p for p in pages if p.get('id')=='AZR_S1E03_P01'),
+              'lastPage': pages[-1],
+          }
+          out=show/'sanitization_diagnostic.json'
+          out.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
           PY
+      - name: Commit diagnostic report
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows/azure-reach-s1/sanitization_diagnostic.json
+          git commit -m 'Add Azure Reach sanitization diagnostic report'
+          git push
