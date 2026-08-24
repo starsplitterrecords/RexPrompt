@@ -1,248 +1,1127 @@
 {
-  "series":"Echoes of a Forgotten War",
-  "status":"working graphic-novel page architecture",
-  "workingPageTarget":22,
-  "pageCountRule":"Twenty-two story pages per issue is a working production target, not locked canon. Preserve the structural rhythm and page-turn functions if later page counts change.",
-  "globalRules":[
+  "series": "Echoes of a Forgotten War",
+  "status": "working graphic-novel page architecture",
+  "workingPageTarget": 22,
+  "pageCountRule": "Twenty-two story pages per issue is a working production target, not locked canon. Preserve the structural rhythm and page-turn functions if later page counts change.",
+  "globalRules": [
     "Readability first, scale second, spectacle third.",
-    "Early memory transitions are unmistakable. After the midpoint, the visual grammar may become increasingly implicit.",
-    "Do not show ancient Theo or ancient Rae before the Issue 4 ending reveal.",
-    "A champion debut gets enough page space to establish personality and relationship, not merely a splash image.",
-    "Page turns should reveal a person, changed meaning, or consequence more often than an effect.",
-    "Issue 7 uses a deliberate present/past page alternation. Issue 8 progressively breaks that grammar until past and present share panels.",
-    "Do not allow captions, screens or exposition to explain how memory, powers or the Reset work."
+    "Early memory transitions remain unmistakable; later issues allow the visual grammar to become increasingly implicit.",
+    "Ancient Theo and Rae become visible only after the Issue 4 identity reveal.",
+    "Champion debuts receive enough page space to establish personality and relationship.",
+    "Page turns prioritize changed meaning, character revelation and consequence.",
+    "Issue 7 uses deliberate present/past page alternation; Issue 8 progressively converges those structures."
   ],
-  "issues":[
+  "issues": [
     {
-      "issue":1,
-      "title":"THE WEIGHT OF DEAD IRON",
-      "mode":"present-dominant",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Olyria-Prime at shift end. Ordinary excavation work, tired crew, Theo refusing to stop.","turn":"End with Vark asking what Theo thinks is down there."},
-        {"page":2,"mode":"PRESENT","beat":"Theo cannot justify the certainty without admitting the recurring dream. Vark thinks he is overtired, not prophetic.","turn":"The drill hits something that is not stone."},
-        {"page":3,"mode":"PRESENT","beat":"Crew clears dust. A black buried surface emerges. Theo recognizes it before anyone else has language for it.","turn":"Reveal the Desert Marker as a physical object."},
-        {"page":4,"mode":"PRESENT","beat":"Vark orders everyone back. Theo approaches anyway, driven by recognition rather than curiosity.","turn":"Theo's bare palm touches the Marker."},
-        {"page":5,"mode":"MEMORY","beat":"First clean break into forgotten history: ruined battlefield, broken sky, a moment of unnatural quiet. STARBREAKER is present as a tired, furious person preparing to act.","turn":"An unseen person asks him to wait."},
-        {"page":6,"mode":"MEMORY→PRESENT","beat":"Starbreaker: 'You know what happens if I do.' The memory ends before the act. Theo crashes back into the trench; Vark saw only fragments.","turn":"Theo knows the name Starbreaker without knowing why."},
-        {"page":7,"mode":"PRESENT","beat":"Rae at Zenith Spire sees an erased location quietly rewrite itself into the archive.","turn":"The words REDLIN PROTOCOL appear beside it."},
-        {"page":8,"mode":"PRESENT","beat":"Caelum interrupts. Rae hides alarm behind routine paperwork and dry irritation.","turn":"After he leaves, the forbidden entry remains."},
-        {"page":9,"mode":"PRESENT","beat":"Rae recognizes an evacuation mark from her dreams and copies the returning material.","turn":"She says 'Redlin' aloud and feels recognition without context."},
-        {"page":10,"mode":"PRESENT","beat":"Adrian arrives at the excavation. Theo demands acknowledgment; Adrian conspicuously avoids looking at the Marker.","turn":"Theo says 'Starbreaker.' Adrian reacts."},
-        {"page":11,"mode":"PRESENT","beat":"Adrian admits only that Starbreaker was real and warns Theo not to touch the Marker again.","turn":"He refuses to say why Theo knew the name."},
-        {"page":12,"mode":"PRESENT","beat":"Rae and Caelum confront each other over the copied records. She asks why the history was erased.","turn":"Rae says Redlin's name; Caelum flinches."},
-        {"page":13,"mode":"PRESENT","beat":"Human-scale decompression: triage tent, bad coffee, missing boot, Vark's incident form. Theo expects Vark to report everything.","turn":"Vark tears away the identifying sheet instead."},
-        {"page":14,"mode":"PRESENT","beat":"Vark admits he saw another sky and chooses to protect the workers from institutional ownership of the site.","turn":"He tells Theo the discovery no longer belongs only to him."},
-        {"page":15,"mode":"PRESENT","beat":"Rae searches the lower archive and finds Adrian already there. She tests him with the Redlin name and the evacuation mark.","turn":"Adrian admits the history was removed, not lost."},
-        {"page":16,"mode":"PRESENT","beat":"Rae asks what was so dangerous. Adrian instead asks when she first dreamed the mark.","turn":"He tells her she already knows enough to be in danger."},
-        {"page":17,"mode":"PRESENT","beat":"Theo returns to hide the Marker before authorities arrive. Adrian watches until Theo finally asks for help.","turn":"Theo admits proof is no longer what he wants."},
-        {"page":18,"mode":"PRESENT","beat":"Adrian helps conceal the Marker and redirects a patrol through ordinary envoy authority.","turn":"He asks not what the object is, but who the forgotten history recognizes."},
-        {"page":19,"mode":"PRESENT","beat":"Rae destroys the copied archive trail rather than surrender it to Caelum.","turn":"Caelum warns that people will come for what she remembers."},
-        {"page":20,"mode":"PRESENT","beat":"Theo catches Adrian preserving a record of the buried site. Adrian admits he does not know what recognized Theo.","turn":"If this were only buried matter, none of them would be afraid."},
-        {"page":21,"mode":"PRESENT","beat":"Adrian helps Rae sever the identity markers the Spire can use to track her. He reveals that others have remembered impossible history before.","turn":"Rae leaves the institution behind."},
-        {"page":22,"mode":"PRESENT","beat":"Theo sits with the fragment he secretly kept. He hears the remembered orbital canopy break. Adrian reacts before he can hide it. Theo asks whether Adrian remembers that sky too. Adrian says yes.","turn":"Final state: shared history is real; Adrian knows why, but will not say."}
+      "issue": 1,
+      "title": "THE WEIGHT OF DEAD IRON",
+      "mode": "present-dominant",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Olyria-Prime at shift end. Ordinary excavation work, tired crew, Theo refusing to stop.",
+          "turn": "End with Vark asking what Theo thinks is down there."
+        },
+        {
+          "page": 2,
+          "mode": "PRESENT",
+          "beat": "Theo cannot justify the certainty without admitting the recurring dream. Vark thinks he is overtired, not prophetic.",
+          "turn": "The drill hits something that is not stone."
+        },
+        {
+          "page": 3,
+          "mode": "PRESENT",
+          "beat": "Crew clears dust. A black buried surface emerges. Theo recognizes it before anyone else has language for it.",
+          "turn": "Reveal the Desert Marker as a physical object."
+        },
+        {
+          "page": 4,
+          "mode": "PRESENT",
+          "beat": "Vark orders everyone back. Theo approaches anyway, driven by recognition rather than curiosity.",
+          "turn": "Theo's bare palm touches the Marker."
+        },
+        {
+          "page": 5,
+          "mode": "MEMORY",
+          "beat": "First clean break into forgotten history: ruined battlefield, broken sky, a moment of unnatural quiet. STARBREAKER is present as a tired, furious person preparing to act.",
+          "turn": "An unseen person asks him to wait."
+        },
+        {
+          "page": 6,
+          "mode": "MEMORY→PRESENT",
+          "beat": "Starbreaker: 'You know what happens if I do.' The memory ends before the act. Theo crashes back into the trench; Vark saw only fragments.",
+          "turn": "Theo knows the name Starbreaker without knowing why."
+        },
+        {
+          "page": 7,
+          "mode": "PRESENT",
+          "beat": "Rae at Zenith Spire sees an erased location quietly rewrite itself into the archive.",
+          "turn": "The words REDLIN PROTOCOL appear beside it."
+        },
+        {
+          "page": 8,
+          "mode": "PRESENT",
+          "beat": "Caelum interrupts. Rae hides alarm behind routine paperwork and dry irritation.",
+          "turn": "After he leaves, the forbidden entry remains."
+        },
+        {
+          "page": 9,
+          "mode": "PRESENT",
+          "beat": "Rae recognizes an evacuation mark from her dreams and copies the returning material.",
+          "turn": "She says 'Redlin' aloud and feels recognition without context."
+        },
+        {
+          "page": 10,
+          "mode": "PRESENT",
+          "beat": "Adrian arrives at the excavation. Theo demands acknowledgment; Adrian conspicuously avoids looking at the Marker.",
+          "turn": "Theo says 'Starbreaker.' Adrian reacts."
+        },
+        {
+          "page": 11,
+          "mode": "PRESENT",
+          "beat": "Adrian admits only that Starbreaker was real and warns Theo not to touch the Marker again.",
+          "turn": "He refuses to say why Theo knew the name."
+        },
+        {
+          "page": 12,
+          "mode": "PRESENT",
+          "beat": "Rae and Caelum confront each other over the copied records. She asks why the history was erased.",
+          "turn": "Rae says Redlin's name; Caelum flinches."
+        },
+        {
+          "page": 13,
+          "mode": "PRESENT",
+          "beat": "Human-scale decompression: triage tent, bad coffee, missing boot, Vark's incident form. Theo expects Vark to report everything.",
+          "turn": "Vark tears away the identifying sheet instead."
+        },
+        {
+          "page": 14,
+          "mode": "PRESENT",
+          "beat": "Vark admits he saw another sky and chooses to protect the workers from institutional ownership of the site.",
+          "turn": "He tells Theo the discovery no longer belongs only to him."
+        },
+        {
+          "page": 15,
+          "mode": "PRESENT",
+          "beat": "Rae searches the lower archive and finds Adrian already there. She tests him with the Redlin name and the evacuation mark.",
+          "turn": "Adrian admits the history was removed, not lost."
+        },
+        {
+          "page": 16,
+          "mode": "PRESENT",
+          "beat": "Rae asks what was so dangerous. Adrian instead asks when she first dreamed the mark.",
+          "turn": "He tells her she already knows enough to be in danger."
+        },
+        {
+          "page": 17,
+          "mode": "PRESENT",
+          "beat": "Theo returns to hide the Marker before authorities arrive. Adrian watches until Theo finally asks for help.",
+          "turn": "Theo admits proof is no longer what he wants."
+        },
+        {
+          "page": 18,
+          "mode": "PRESENT",
+          "beat": "Adrian helps conceal the Marker and redirects a patrol through ordinary envoy authority.",
+          "turn": "He asks not what the object is, but who the forgotten history recognizes."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Rae destroys the copied archive trail rather than surrender it to Caelum.",
+          "turn": "Caelum warns that people will come for what she remembers."
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "Theo catches Adrian preserving a record of the buried site. Adrian admits he does not know what recognized Theo.",
+          "turn": "If this were only buried matter, none of them would be afraid."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Adrian helps Rae sever the identity markers the Spire can use to track her. He reveals that others have remembered impossible history before.",
+          "turn": "Rae leaves the institution behind."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Theo sits with the fragment he secretly kept. He hears the remembered orbital canopy break. Adrian reacts before he can hide it. Theo asks whether Adrian remembers that sky too. Adrian says yes.",
+          "turn": "Final state: shared history is real; Adrian knows why, but will not say."
+        }
       ]
     },
     {
-      "issue":2,
-      "title":"GLASS DUST AND VIOLET LIGHT",
-      "mode":"past-dominant",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Theo and Rae compare the Desert Marker memory. Theo remembers Starbreaker's fear of waiting; Rae remembers evacuation.","turn":"They realize they remember different parts of the same day."},
-        {"page":2,"mode":"PRESENT→MEMORY","beat":"Adrian says neither is wrong. A shared phrase pulls the issue backward.","turn":"Ancient Desert Marker fills the page."},
-        {"page":3,"mode":"PAST","beat":"Starbreaker presses Mero to act before the threat widens. Mero says Redlin asked for time.","turn":"Starbreaker: 'Redlin always asks for time.'"},
-        {"page":4,"mode":"PAST","beat":"Mero challenges Starbreaker's addiction to endings. Their familiarity establishes that this is not the first impossible decision.","turn":"Redlin arrives from the civilian line."},
-        {"page":5,"mode":"PAST","beat":"REDLIN debut. No heroic entrance: dusty, irritated, human. Starbreaker and Redlin immediately fall into an old argument.","turn":"Redlin: 'Maybe because you keep burning them.'"},
-        {"page":6,"mode":"PAST","beat":"Mero tries to stop the argument. The reader sees that Starbreaker and Redlin know exactly how to wound one another.","turn":"Redlin takes Mero out of the room."},
-        {"page":7,"mode":"PAST","beat":"Civilian shelter. Redlin makes Mero learn names rather than assess abstract losses.","turn":"Mero asks what happens if Redlin cannot hold the line."},
-        {"page":8,"mode":"PAST","beat":"Redlin: 'Then I'll know who I failed.' Small acts of care among evacuees define his character.","turn":"Cut to Starbreaker waiting on the ridge."},
-        {"page":9,"mode":"PAST","beat":"Starbreaker shows Mero ruined places left by earlier hesitation. No maps, only aftermath.","turn":"Starbreaker: 'There can still be places left to fix.'"},
-        {"page":10,"mode":"PAST","beat":"Mero sees the real grief under Starbreaker's decisiveness.","turn":"He calls both men back for one last pause."},
-        {"page":11,"mode":"PAST","beat":"Mero orders one hour. Starbreaker and Redlin reveal how repetitive their conflict has become.","turn":"Mero asks whether they remember speaking without a battlefield between them."},
-        {"page":12,"mode":"PAST","beat":"Redlin: 'I do. That's the problem.' The argument breaks without resolution.","turn":"Redlin returns to the outer line."},
-        {"page":13,"mode":"PAST","beat":"Redlin evacuates civilians personally—carry, steady, move, keep the disaster from reaching the next person.","turn":"He looks up and sees Starbreaker on the ridge."},
-        {"page":14,"mode":"PAST","beat":"Starbreaker and Redlin meet alone. Factional posture drops; old respect becomes visible.","turn":"Each asks the other to stop."},
-        {"page":15,"mode":"PAST","beat":"They cannot. 'Then we both remember better days.' Their relationship, not doctrine, is the page's wound.","turn":"The crisis visibly worsens behind them."},
-        {"page":16,"mode":"PAST","beat":"Mero realizes the point of no clean choice has arrived. No one has a speech left.","turn":"Mero says Starbreaker's name."},
-        {"page":17,"mode":"PAST","beat":"Starbreaker acts. Redlin keeps trying to protect what remains. The sky starts behaving impossibly.","turn":"Full-page break in reality without explaining it."},
-        {"page":18,"mode":"PAST","beat":"Glass dust and violet light. Silence. People emerge, do not emerge, search for one another.","turn":"Starbreaker says: 'It stopped.'"},
-        {"page":19,"mode":"PAST","beat":"Redlin tells him to look around. Mero names the trap: one sees what did not happen, one sees what did.","turn":"The memory begins to collapse."},
-        {"page":20,"mode":"PAST→PRESENT","beat":"One final image of Starbreaker and Redlin standing in the same ruin, neither victorious. Return to Theo/Rae.","turn":"Theo says Starbreaker was afraid."},
-        {"page":21,"mode":"PRESENT","beat":"Rae remembers Redlin carrying a little girl. Theo does not. Theo remembers the ridge. Rae does not.","turn":"They look to Adrian."},
-        {"page":22,"mode":"PRESENT","beat":"Theo asks how two people can remember private details from different places on the same day. He finally asks: 'Were either of us there?' Adrian: 'Not tonight.' Rae: 'That's not a no.'","turn":"The memory now has a hidden subject the reader does not yet know is missing."}
+      "issue": 2,
+      "title": "GLASS DUST AND VIOLET LIGHT",
+      "mode": "past-dominant",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae compare the Desert Marker memory. Theo remembers Starbreaker's fear of waiting; Rae remembers evacuation.",
+          "turn": "They realize they remember different parts of the same day."
+        },
+        {
+          "page": 2,
+          "mode": "PRESENT→MEMORY",
+          "beat": "Adrian says neither is wrong. A shared phrase pulls the issue backward.",
+          "turn": "Ancient Desert Marker fills the page."
+        },
+        {
+          "page": 3,
+          "mode": "PAST",
+          "beat": "Starbreaker presses Mero to act before the threat widens. Mero says Redlin asked for time.",
+          "turn": "Starbreaker: 'Redlin always asks for time.'"
+        },
+        {
+          "page": 4,
+          "mode": "PAST",
+          "beat": "Mero challenges Starbreaker's addiction to endings. Their familiarity establishes that this is not the first impossible decision.",
+          "turn": "Redlin arrives from the civilian line."
+        },
+        {
+          "page": 5,
+          "mode": "PAST",
+          "beat": "REDLIN debut. No heroic entrance: dusty, irritated, human. Starbreaker and Redlin immediately fall into an old argument.",
+          "turn": "Redlin: 'Maybe because you keep burning them.'"
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "Mero tries to stop the argument. The reader sees that Starbreaker and Redlin know exactly how to wound one another.",
+          "turn": "Redlin takes Mero out of the room."
+        },
+        {
+          "page": 7,
+          "mode": "PAST",
+          "beat": "Civilian shelter. Redlin makes Mero learn names rather than assess abstract losses.",
+          "turn": "Mero asks what happens if Redlin cannot hold the line."
+        },
+        {
+          "page": 8,
+          "mode": "PAST",
+          "beat": "Redlin: 'Then I'll know who I failed.' Small acts of care among evacuees define his character.",
+          "turn": "Cut to Starbreaker waiting on the ridge."
+        },
+        {
+          "page": 9,
+          "mode": "PAST",
+          "beat": "Starbreaker shows Mero ruined places left by earlier hesitation. No maps, only aftermath.",
+          "turn": "Starbreaker: 'There can still be places left to fix.'"
+        },
+        {
+          "page": 10,
+          "mode": "PAST",
+          "beat": "Mero sees the real grief under Starbreaker's decisiveness.",
+          "turn": "He calls both men back for one last pause."
+        },
+        {
+          "page": 11,
+          "mode": "PAST",
+          "beat": "Mero orders one hour. Starbreaker and Redlin reveal how repetitive their conflict has become.",
+          "turn": "Mero asks whether they remember speaking without a battlefield between them."
+        },
+        {
+          "page": 12,
+          "mode": "PAST",
+          "beat": "Redlin: 'I do. That's the problem.' The argument breaks without resolution.",
+          "turn": "Redlin returns to the outer line."
+        },
+        {
+          "page": 13,
+          "mode": "PAST",
+          "beat": "Redlin evacuates civilians personally—carry, steady, move, keep the disaster from reaching the next person.",
+          "turn": "He looks up and sees Starbreaker on the ridge."
+        },
+        {
+          "page": 14,
+          "mode": "PAST",
+          "beat": "Starbreaker and Redlin meet alone. Factional posture drops; old respect becomes visible.",
+          "turn": "Each asks the other to stop."
+        },
+        {
+          "page": 15,
+          "mode": "PAST",
+          "beat": "They cannot. 'Then we both remember better days.' Their relationship, not doctrine, is the page's wound.",
+          "turn": "The crisis visibly worsens behind them."
+        },
+        {
+          "page": 16,
+          "mode": "PAST",
+          "beat": "Mero realizes the point of no clean choice has arrived. No one has a speech left.",
+          "turn": "Mero says Starbreaker's name."
+        },
+        {
+          "page": 17,
+          "mode": "PAST",
+          "beat": "Starbreaker acts. Redlin keeps trying to protect what remains. The sky starts behaving impossibly.",
+          "turn": "Full-page break in reality without explaining it."
+        },
+        {
+          "page": 18,
+          "mode": "PAST",
+          "beat": "Glass dust and violet light. Silence. People emerge, do not emerge, search for one another.",
+          "turn": "Starbreaker says: 'It stopped.'"
+        },
+        {
+          "page": 19,
+          "mode": "PAST",
+          "beat": "Redlin tells him to look around. Mero names the trap: one sees what did not happen, one sees what did.",
+          "turn": "The memory begins to collapse."
+        },
+        {
+          "page": 20,
+          "mode": "PAST→PRESENT",
+          "beat": "One final image of Starbreaker and Redlin standing in the same ruin, neither victorious. Return to Theo/Rae.",
+          "turn": "Theo says Starbreaker was afraid."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Rae remembers Redlin carrying a little girl. Theo does not. Theo remembers the ridge. Rae does not.",
+          "turn": "They look to Adrian."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Theo asks how two people can remember private details from different places on the same day. He finally asks: 'Were either of us there?' Adrian: 'Not tonight.' Rae: 'That's not a no.'",
+          "turn": "The memory now has a hidden subject the reader does not yet know is missing."
+        }
       ]
     },
     {
-      "issue":3,
-      "title":"THE ARCHITECTURE OF RUIN",
-      "mode":"present-dominant",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Arrival at ordinary modern Vael-Tor: commuters, rain, vendors, luggage. Rae stops at a corridor she should not know.","turn":"She knows where it goes."},
-        {"page":2,"mode":"PRESENT","beat":"Theo and Rae follow recognition into a public archive while Adrian urges them to leave history alone.","turn":"An old city becomes visible beneath the current map."},
-        {"page":3,"mode":"PRESENT","beat":"Rae says 'Atlas' without knowing why. Theo recognizes the name too.","turn":"Emergency landing request interrupts them."},
-        {"page":4,"mode":"PRESENT","beat":"A damaged refugee transport approaches. Vael-Tor's forgotten defenses begin treating it as an enemy.","turn":"Adrian admits he knows what this place once did."},
-        {"page":5,"mode":"PRESENT","beat":"Port workers panic; civilians are moved. Rae touches an old wall while trying to reach the landing controls.","turn":"Hard transition into memory."},
-        {"page":6,"mode":"PAST","beat":"ATLAS debut: physically holding a populated world together under catastrophic strain.","turn":"Starbreaker tells him he cannot hold it forever."},
-        {"page":7,"mode":"PAST","beat":"Atlas refuses to make the population an acceptable loss. Starbreaker asks what happens when saving them carries disaster elsewhere.","turn":"Atlas: 'Then we save that one too.'"},
-        {"page":8,"mode":"PAST→PRESENT","beat":"Memory ends before proving Atlas right or wrong. Rae returns to the live refugee crisis.","turn":"She chooses present people over chasing answers."},
-        {"page":9,"mode":"PRESENT","beat":"Theo compares her choice to Atlas. Rae rejects the comparison. They join port workers.","turn":"Theo feels the Marker fragment pulling his attention downward."},
-        {"page":10,"mode":"PRESENT","beat":"Theo descends into service levels. Adrian intercepts him.","turn":"Theo asks what is under the city."},
-        {"page":11,"mode":"PRESENT","beat":"Adrian finally says: 'A warship.' No mechanism, no scanner.","turn":"They keep descending."},
-        {"page":12,"mode":"PRESENT","beat":"Rae works with port staff and officials to keep the refugee transport from being sacrificed as the easy solution.","turn":"She forces an open path long enough for another attempt."},
-        {"page":13,"mode":"PRESENT","beat":"Theo and Adrian reach modern foundations bolted directly into an enormous black hull.","turn":"The city is literally built on forgotten war matter."},
-        {"page":14,"mode":"PRESENT","beat":"Theo asks how long it has been there. Adrian redirects: ask who built their life on top of it.","turn":"Above them, the ground begins to shift."},
-        {"page":15,"mode":"PRESENT","beat":"Refugee ship comes in hard. Rae refuses to leave the field until people are down.","turn":"Theo returns with the words: 'There's a ship under the city.'"},
-        {"page":16,"mode":"PRESENT","beat":"Rae: 'Of course there is.' Exhausted humor breaks tension. They finish the immediate rescue.","turn":"The city cracks open beyond the landing field."},
-        {"page":17,"mode":"PRESENT","beat":"Ancient hull becomes visible beneath streets and buildings. Not a launch: an excavation by reality itself.","turn":"Residents on balconies see it."},
-        {"page":18,"mode":"PRESENT","beat":"The exposed dreadnought dominates the skyline while modern utilities and homes remain attached to it.","turn":"Rae: 'Everyone can see it.'"},
-        {"page":19,"mode":"PRESENT","beat":"Adrian: 'Yes.' Theo says good; Adrian tells him he will not think so for long.","turn":"Cut away from spectacle to passengers emerging."},
-        {"page":20,"mode":"PRESENT","beat":"Refugees emerge alive into rain. Rae and Theo stay emotionally with them rather than the ship.","turn":"Theo understands why Atlas's memory mattered."},
-        {"page":21,"mode":"PRESENT","beat":"Night. Vael-Tor has already begun treating the impossible hull as a civic fact: barriers, gawkers, families still going home.","turn":"Theo asks Adrian if he erased this."},
-        {"page":22,"mode":"PRESENT","beat":"Adrian says no. Rae: 'You erased what it meant.' Adrian: 'Yes.' He admits he needed that to be enough.","turn":"The material rule is locked: forgetting never removed the world the war made."}
+      "issue": 3,
+      "title": "THE ARCHITECTURE OF RUIN",
+      "mode": "present-dominant",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Arrival at ordinary modern Vael-Tor: commuters, rain, vendors, luggage. Rae stops at a corridor she should not know.",
+          "turn": "She knows where it goes."
+        },
+        {
+          "page": 2,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae follow recognition into a public archive while Adrian urges them to leave history alone.",
+          "turn": "An old city becomes visible beneath the current map."
+        },
+        {
+          "page": 3,
+          "mode": "PRESENT",
+          "beat": "Rae says 'Atlas' without knowing why. Theo recognizes the name too.",
+          "turn": "Emergency landing request interrupts them."
+        },
+        {
+          "page": 4,
+          "mode": "PRESENT",
+          "beat": "A damaged refugee transport approaches. Vael-Tor's forgotten defenses begin treating it as an enemy.",
+          "turn": "Adrian admits he knows what this place once did."
+        },
+        {
+          "page": 5,
+          "mode": "PRESENT",
+          "beat": "Port workers panic; civilians are moved. Rae touches an old wall while trying to reach the landing controls.",
+          "turn": "Hard transition into memory."
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "ATLAS debut: physically holding a populated world together under catastrophic strain.",
+          "turn": "Starbreaker tells him he cannot hold it forever."
+        },
+        {
+          "page": 7,
+          "mode": "PAST",
+          "beat": "Atlas refuses to make the population an acceptable loss. Starbreaker asks what happens when saving them carries disaster elsewhere.",
+          "turn": "Atlas: 'Then we save that one too.'"
+        },
+        {
+          "page": 8,
+          "mode": "PAST→PRESENT",
+          "beat": "Memory ends before proving Atlas right or wrong. Rae returns to the live refugee crisis.",
+          "turn": "She chooses present people over chasing answers."
+        },
+        {
+          "page": 9,
+          "mode": "PRESENT",
+          "beat": "Theo compares her choice to Atlas. Rae rejects the comparison. They join port workers.",
+          "turn": "Theo feels the Marker fragment pulling his attention downward."
+        },
+        {
+          "page": 10,
+          "mode": "PRESENT",
+          "beat": "Theo descends into service levels. Adrian intercepts him.",
+          "turn": "Theo asks what is under the city."
+        },
+        {
+          "page": 11,
+          "mode": "PRESENT",
+          "beat": "Adrian finally says: 'A warship.' No mechanism, no scanner.",
+          "turn": "They keep descending."
+        },
+        {
+          "page": 12,
+          "mode": "PRESENT",
+          "beat": "Rae works with port staff and officials to keep the refugee transport from being sacrificed as the easy solution.",
+          "turn": "She forces an open path long enough for another attempt."
+        },
+        {
+          "page": 13,
+          "mode": "PRESENT",
+          "beat": "Theo and Adrian reach modern foundations bolted directly into an enormous black hull.",
+          "turn": "The city is literally built on forgotten war matter."
+        },
+        {
+          "page": 14,
+          "mode": "PRESENT",
+          "beat": "Theo asks how long it has been there. Adrian redirects: ask who built their life on top of it.",
+          "turn": "Above them, the ground begins to shift."
+        },
+        {
+          "page": 15,
+          "mode": "PRESENT",
+          "beat": "Refugee ship comes in hard. Rae refuses to leave the field until people are down.",
+          "turn": "Theo returns with the words: 'There's a ship under the city.'"
+        },
+        {
+          "page": 16,
+          "mode": "PRESENT",
+          "beat": "Rae: 'Of course there is.' Exhausted humor breaks tension. They finish the immediate rescue.",
+          "turn": "The city cracks open beyond the landing field."
+        },
+        {
+          "page": 17,
+          "mode": "PRESENT",
+          "beat": "Ancient hull becomes visible beneath streets and buildings. Not a launch: an excavation by reality itself.",
+          "turn": "Residents on balconies see it."
+        },
+        {
+          "page": 18,
+          "mode": "PRESENT",
+          "beat": "The exposed dreadnought dominates the skyline while modern utilities and homes remain attached to it.",
+          "turn": "Rae: 'Everyone can see it.'"
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Adrian: 'Yes.' Theo says good; Adrian tells him he will not think so for long.",
+          "turn": "Cut away from spectacle to passengers emerging."
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "Refugees emerge alive into rain. Rae and Theo stay emotionally with them rather than the ship.",
+          "turn": "Theo understands why Atlas's memory mattered."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Night. Vael-Tor has already begun treating the impossible hull as a civic fact: barriers, gawkers, families still going home.",
+          "turn": "Theo asks Adrian if he erased this."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Adrian says no. Rae: 'You erased what it meant.' Adrian: 'Yes.' He admits he needed that to be enough.",
+          "turn": "The material rule is locked: forgetting never removed the world the war made."
+        }
       ]
     },
     {
-      "issue":4,
-      "title":"SILENCE IN THE VAULT",
-      "mode":"past-dominant / midpoint reveal",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Theo, Rae and Adrian enter quiet Pax-Aeterna treaty vault. Theo and Rae both recognize the same empty chair.","turn":"The room begins remembering around them."},
-        {"page":2,"mode":"PRESENT→PAST","beat":"No activation. Present details simply become ancient ones while the chair remains fixed.","turn":"Mero, Atlas and Redlin occupy the remembered room."},
-        {"page":3,"mode":"PAST","beat":"Mero prepares a negotiation no one believes will hold. Atlas and Redlin unexpectedly agree evacuation continues regardless.","turn":"A brief joke proves these people still know how to be people."},
-        {"page":4,"mode":"PAST","beat":"ARBITER debut. Arbiter asks who promised the civilians time and insists the person making a promise remain present for its consequence.","turn":"Atlas claims responsibility."},
-        {"page":5,"mode":"PAST","beat":"Atlas and Arbiter move into private argument: no population should be sacrificed versus refusing sacrifice does not prevent other deaths.","turn":"Neither can dismiss the other's burden."},
-        {"page":6,"mode":"PAST","beat":"Starbreaker enters; Redlin needles him about ending the meeting before it begins. Mero and Arbiter's dry familiarity grounds the ensemble.","turn":"Negotiation starts."},
-        {"page":7,"mode":"PAST","beat":"The ceasefire begins to fail through human details—evacuation routes close, ships turn back, separated families wait.","turn":"Starbreaker says: 'Now.'"},
-        {"page":8,"mode":"PAST","beat":"Redlin says not with transports still inside. Atlas insists they keep moving people. Arbiter states that not everyone will leave.","turn":"Mero admits he knows."},
-        {"page":9,"mode":"PAST","beat":"Mero and Arbiter alone. Mero asks whether Arbiter can live with the extinction decision.","turn":"Arbiter: living with it is not the standard."},
-        {"page":10,"mode":"PAST","beat":"Arbiter says choosing or refusing both have consequences and responsibility cannot make either clean.","turn":"Mero receives no absolution."},
-        {"page":11,"mode":"PAST","beat":"Atlas, Redlin and Starbreaker work together among evacuees despite their argument. One injured person requires all three.","turn":"Shared action makes the coming division worse."},
-        {"page":12,"mode":"PAST","beat":"The final evacuation limit arrives. The room regathers. No clean option remains.","turn":"Arbiter begins: 'I am ending it here.'"},
-        {"page":13,"mode":"PAST","beat":"Atlas refuses assent. Redlin asks for every remaining minute. Starbreaker says no one gets to call this clean.","turn":"Mero does not stop Arbiter."},
-        {"page":14,"mode":"PAST","beat":"The civilization-scale decision occurs without showing a mechanism. Stay with people who understand that an irreversible choice was made.","turn":"Doors close."},
-        {"page":15,"mode":"PAST","beat":"Afterward, Atlas stays with Arbiter. He says responsibility is not redemption.","turn":"Arbiter: 'Mine.'"},
-        {"page":16,"mode":"PAST","beat":"Hold on Arbiter alone with ownership, not absolution. Let the treaty chamber empty.","turn":"The empty chair matches the present-day opening composition."},
-        {"page":17,"mode":"PAST→PRESENT","beat":"The vault returns to present. Theo and Rae are physically where they began.","turn":"Rae says Arbiter crossed out the first line."},
-        {"page":18,"mode":"PRESENT","beat":"Theo says Mero had not slept in three days. Neither detail appeared in what the reader saw.","turn":"They realize they know off-frame information."},
-        {"page":19,"mode":"PRESENT","beat":"Adrian understands that autobiographical continuity is returning and tries to leave.","turn":"Theo blocks the exit with the question: 'Were we there?'"},
-        {"page":20,"mode":"PRESENT","beat":"Adrian says yes. Rae rejects it before he can continue.","turn":"He tells Rae she sat beside Arbiter."},
-        {"page":21,"mode":"PRESENT","beat":"Adrian tells Rae she recorded the rulings and Theo he was Mero's junior attaché. They demand to know why they never saw themselves.","turn":"Adrian: 'Because that was the last thing the Reset took.'"},
-        {"page":22,"mode":"PRESENT","beat":"Rae asks what they did. Adrian: 'That's what I'm afraid you'll remember next.'","turn":"Midpoint transformation: the mystery becomes personal culpability."}
+      "issue": 4,
+      "title": "SILENCE IN THE VAULT",
+      "mode": "past-dominant / midpoint reveal",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Theo, Rae and Adrian enter quiet Pax-Aeterna treaty vault. Theo and Rae both recognize the same empty chair.",
+          "turn": "The room begins remembering around them."
+        },
+        {
+          "page": 2,
+          "mode": "PRESENT→PAST",
+          "beat": "No activation. Present details simply become ancient ones while the chair remains fixed.",
+          "turn": "Mero, Atlas and Redlin occupy the remembered room."
+        },
+        {
+          "page": 3,
+          "mode": "PAST",
+          "beat": "Mero prepares a negotiation no one believes will hold. Atlas and Redlin unexpectedly agree evacuation continues regardless.",
+          "turn": "A brief joke proves these people still know how to be people."
+        },
+        {
+          "page": 4,
+          "mode": "PAST",
+          "beat": "ARBITER debut. Arbiter asks who promised the civilians time and insists the person making a promise remain present for its consequence.",
+          "turn": "Atlas claims responsibility."
+        },
+        {
+          "page": 5,
+          "mode": "PAST",
+          "beat": "Atlas and Arbiter move into private argument: no population should be sacrificed versus refusing sacrifice does not prevent other deaths.",
+          "turn": "Neither can dismiss the other's burden."
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "Starbreaker enters; Redlin needles him about ending the meeting before it begins. Mero and Arbiter's dry familiarity grounds the ensemble.",
+          "turn": "Negotiation starts."
+        },
+        {
+          "page": 7,
+          "mode": "PAST",
+          "beat": "The ceasefire begins to fail through human details—evacuation routes close, ships turn back, separated families wait.",
+          "turn": "Starbreaker says: 'Now.'"
+        },
+        {
+          "page": 8,
+          "mode": "PAST",
+          "beat": "Redlin says not with transports still inside. Atlas insists they keep moving people. Arbiter states that not everyone will leave.",
+          "turn": "Mero admits he knows."
+        },
+        {
+          "page": 9,
+          "mode": "PAST",
+          "beat": "Mero and Arbiter alone. Mero asks whether Arbiter can live with the extinction decision.",
+          "turn": "Arbiter: living with it is not the standard."
+        },
+        {
+          "page": 10,
+          "mode": "PAST",
+          "beat": "Arbiter says choosing or refusing both have consequences and responsibility cannot make either clean.",
+          "turn": "Mero receives no absolution."
+        },
+        {
+          "page": 11,
+          "mode": "PAST",
+          "beat": "Atlas, Redlin and Starbreaker work together among evacuees despite their argument. One injured person requires all three.",
+          "turn": "Shared action makes the coming division worse."
+        },
+        {
+          "page": 12,
+          "mode": "PAST",
+          "beat": "The final evacuation limit arrives. The room regathers. No clean option remains.",
+          "turn": "Arbiter begins: 'I am ending it here.'"
+        },
+        {
+          "page": 13,
+          "mode": "PAST",
+          "beat": "Atlas refuses assent. Redlin asks for every remaining minute. Starbreaker says no one gets to call this clean.",
+          "turn": "Mero does not stop Arbiter."
+        },
+        {
+          "page": 14,
+          "mode": "PAST",
+          "beat": "The civilization-scale decision occurs without showing a mechanism. Stay with people who understand that an irreversible choice was made.",
+          "turn": "Doors close."
+        },
+        {
+          "page": 15,
+          "mode": "PAST",
+          "beat": "Afterward, Atlas stays with Arbiter. He says responsibility is not redemption.",
+          "turn": "Arbiter: 'Mine.'"
+        },
+        {
+          "page": 16,
+          "mode": "PAST",
+          "beat": "Hold on Arbiter alone with ownership, not absolution. Let the treaty chamber empty.",
+          "turn": "The empty chair matches the present-day opening composition."
+        },
+        {
+          "page": 17,
+          "mode": "PAST→PRESENT",
+          "beat": "The vault returns to present. Theo and Rae are physically where they began.",
+          "turn": "Rae says Arbiter crossed out the first line."
+        },
+        {
+          "page": 18,
+          "mode": "PRESENT",
+          "beat": "Theo says Mero had not slept in three days. Neither detail appeared in what the reader saw.",
+          "turn": "They realize they know off-frame information."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Adrian understands that autobiographical continuity is returning and tries to leave.",
+          "turn": "Theo blocks the exit with the question: 'Were we there?'"
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "Adrian says yes. Rae rejects it before he can continue.",
+          "turn": "He tells Rae she sat beside Arbiter."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Adrian tells Rae she recorded the rulings and Theo he was Mero's junior attaché. They demand to know why they never saw themselves.",
+          "turn": "Adrian: 'Because that was the last thing the Reset took.'"
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Rae asks what they did. Adrian: 'That's what I'm afraid you'll remember next.'",
+          "turn": "Midpoint transformation: the mystery becomes personal culpability."
+        }
       ]
     },
     {
-      "issue":5,
-      "title":"EMBERS OF THE ZENITH",
-      "mode":"approximately half present / half remembered",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Theo and Rae reject Adrian's claim that they are literally the same people. They demand proof.","turn":"Adrian tells them to revisit what they already remember."},
-        {"page":2,"mode":"PAST-REVISIT","beat":"Exact Issue 1 Starbreaker composition returns.","turn":"The frame begins widening beyond the old panel edge."},
-        {"page":3,"mode":"PAST-REVISIT","beat":"Ancient Theo is revealed behind Mero with dispatch satchel. Mero says his name and tells him to stay close.","turn":"Ordinary familiarity proves more than spectacle."},
-        {"page":4,"mode":"PRESENT","beat":"Theo returns shaken by the cadence of Mero's voice—he knew the instruction before it was spoken.","turn":"Rae accepts that this is autobiographical memory."},
-        {"page":5,"mode":"PAST-REVISIT","beat":"Issue 4 Arbiter composition returns and widens.","turn":"Ancient Rae is seated beside Arbiter."},
-        {"page":6,"mode":"PAST-REVISIT","beat":"After the original scene's ending, Arbiter asks whether Rae recorded even the crossed-out line. Rae says especially that line.","turn":"Their routine working relationship is undeniable."},
-        {"page":7,"mode":"PRESENT","beat":"Rae turns anger on Adrian for letting them call their own lives someone else's history.","turn":"Adrian admits he no longer knows whom concealment protects."},
-        {"page":8,"mode":"PAST","beat":"AFTERLIGHT debut amid survivors and repair, not spectacle. Atlas finds her exhausted.","turn":"Afterlight asks for one hour in which nothing else happens."},
-        {"page":9,"mode":"PAST","beat":"Atlas gives her the hour. Their old alliance is established through quiet care.","turn":"Starbreaker arrives later."},
-        {"page":10,"mode":"PAST","beat":"Starbreaker tells Afterlight she saved the place. She says only part.","turn":"He begins using survival as evidence that decisive destruction was justified."},
-        {"page":11,"mode":"PAST","beat":"Afterlight: 'Don't turn what I can mend into permission for what you break.' Their long destroy-and-repair relationship fractures.","turn":"Starbreaker has no clean answer."},
-        {"page":12,"mode":"PRESENT","beat":"Theo and Rae search surviving personal artifacts. Theo recognizes Mero's roster before reading it; Rae recognizes her own correction mark.","turn":"Both names are theirs."},
-        {"page":13,"mode":"PRESENT","beat":"They resist what continuity means morally: carrying messages and recording decisions still feels like proximity, not responsibility.","turn":"Another memory begins from a mundane personal object."},
-        {"page":14,"mode":"PAST","beat":"Afterlight at night with Atlas admits there are now more places asking for help than she can reach.","turn":"Atlas says no one can reach everywhere."},
-        {"page":15,"mode":"PAST","beat":"Afterlight: 'That's what I'm telling you. I can't keep up.' No theorem, just exhaustion.","turn":"Repair is no longer a moral escape hatch for the war."},
-        {"page":16,"mode":"PRESENT","beat":"Theo and Rae acknowledge that their ancient jobs placed them inside decisions, even if they do not yet remember choosing.","turn":"Theo remembers a quiet room with Mero."},
-        {"page":17,"mode":"PAST","beat":"Ancient Theo and Mero after senior staff leave. Mero jokes that certainty usually means everyone is scared.","turn":"Mero asks Theo what he thinks they should do."},
-        {"page":18,"mode":"PAST→PRESENT","beat":"Memory cuts before Theo hears his own answer.","turn":"Theo returns furious at the missing piece."},
-        {"page":19,"mode":"PRESENT","beat":"Rae experiences a matching gap: she remembers beginning a private sentence to Arbiter after Pax-Aeterna but not finishing it.","turn":"Both realize their choices are still selectively absent."},
-        {"page":20,"mode":"PRESENT","beat":"Adrian warns them not to force memory. Rae rejects his right to set the terms anymore.","turn":"She says: 'You don't get to ask us not to remember.'"},
-        {"page":21,"mode":"PAST/PRESENT ECHO","beat":"Brief paired images: Mero waiting for Theo's answer; Arbiter waiting for Rae's. No answer yet.","turn":"The missing choices become the visual hook."},
-        {"page":22,"mode":"PRESENT","beat":"Theo and Rae agree the next step is not finding more gods or artifacts—it is recovering what they themselves chose.","turn":"Second-half engine locked."}
+      "issue": 5,
+      "title": "EMBERS OF THE ZENITH",
+      "mode": "approximately half present / half remembered",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae reject Adrian's claim that they are literally the same people. They demand proof.",
+          "turn": "Adrian tells them to revisit what they already remember."
+        },
+        {
+          "page": 2,
+          "mode": "PAST-REVISIT",
+          "beat": "Exact Issue 1 Starbreaker composition returns.",
+          "turn": "The frame begins widening beyond the old panel edge."
+        },
+        {
+          "page": 3,
+          "mode": "PAST-REVISIT",
+          "beat": "Ancient Theo is revealed behind Mero with dispatch satchel. Mero says his name and tells him to stay close.",
+          "turn": "Ordinary familiarity proves more than spectacle."
+        },
+        {
+          "page": 4,
+          "mode": "PRESENT",
+          "beat": "Theo returns shaken by the cadence of Mero's voice—he knew the instruction before it was spoken.",
+          "turn": "Rae accepts that this is autobiographical memory."
+        },
+        {
+          "page": 5,
+          "mode": "PAST-REVISIT",
+          "beat": "Issue 4 Arbiter composition returns and widens.",
+          "turn": "Ancient Rae is seated beside Arbiter."
+        },
+        {
+          "page": 6,
+          "mode": "PAST-REVISIT",
+          "beat": "After the original scene's ending, Arbiter asks whether Rae recorded even the crossed-out line. Rae says especially that line.",
+          "turn": "Their routine working relationship is undeniable."
+        },
+        {
+          "page": 7,
+          "mode": "PRESENT",
+          "beat": "Rae turns anger on Adrian for letting them call their own lives someone else's history.",
+          "turn": "Adrian admits he no longer knows whom concealment protects."
+        },
+        {
+          "page": 8,
+          "mode": "PAST",
+          "beat": "AFTERLIGHT debut amid survivors and repair, not spectacle. Atlas finds her exhausted.",
+          "turn": "Afterlight asks for one hour in which nothing else happens."
+        },
+        {
+          "page": 9,
+          "mode": "PAST",
+          "beat": "Atlas gives her the hour. Their old alliance is established through quiet care.",
+          "turn": "Starbreaker arrives later."
+        },
+        {
+          "page": 10,
+          "mode": "PAST",
+          "beat": "Starbreaker tells Afterlight she saved the place. She says only part.",
+          "turn": "He begins using survival as evidence that decisive destruction was justified."
+        },
+        {
+          "page": 11,
+          "mode": "PAST",
+          "beat": "Afterlight: 'Don't turn what I can mend into permission for what you break.' Their long destroy-and-repair relationship fractures.",
+          "turn": "Starbreaker has no clean answer."
+        },
+        {
+          "page": 12,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae search surviving personal artifacts. Theo recognizes Mero's roster before reading it; Rae recognizes her own correction mark.",
+          "turn": "Both names are theirs."
+        },
+        {
+          "page": 13,
+          "mode": "PRESENT",
+          "beat": "They resist what continuity means morally: carrying messages and recording decisions still feels like proximity, not responsibility.",
+          "turn": "Another memory begins from a mundane personal object."
+        },
+        {
+          "page": 14,
+          "mode": "PAST",
+          "beat": "Afterlight at night with Atlas admits there are now more places asking for help than she can reach.",
+          "turn": "Atlas says no one can reach everywhere."
+        },
+        {
+          "page": 15,
+          "mode": "PAST",
+          "beat": "Afterlight: 'That's what I'm telling you. I can't keep up.' No theorem, just exhaustion.",
+          "turn": "Repair is no longer a moral escape hatch for the war."
+        },
+        {
+          "page": 16,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae acknowledge that their ancient jobs placed them inside decisions, even if they do not yet remember choosing.",
+          "turn": "Theo remembers a quiet room with Mero."
+        },
+        {
+          "page": 17,
+          "mode": "PAST",
+          "beat": "Ancient Theo and Mero after senior staff leave. Mero jokes that certainty usually means everyone is scared.",
+          "turn": "Mero asks Theo what he thinks they should do."
+        },
+        {
+          "page": 18,
+          "mode": "PAST→PRESENT",
+          "beat": "Memory cuts before Theo hears his own answer.",
+          "turn": "Theo returns furious at the missing piece."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Rae experiences a matching gap: she remembers beginning a private sentence to Arbiter after Pax-Aeterna but not finishing it.",
+          "turn": "Both realize their choices are still selectively absent."
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "Adrian warns them not to force memory. Rae rejects his right to set the terms anymore.",
+          "turn": "She says: 'You don't get to ask us not to remember.'"
+        },
+        {
+          "page": 21,
+          "mode": "PAST/PRESENT ECHO",
+          "beat": "Brief paired images: Mero waiting for Theo's answer; Arbiter waiting for Rae's. No answer yet.",
+          "turn": "The missing choices become the visual hook."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae agree the next step is not finding more gods or artifacts—it is recovering what they themselves chose.",
+          "turn": "Second-half engine locked."
+        }
       ]
     },
     {
-      "issue":6,
-      "title":"THE MARGIN OF ERROR",
-      "mode":"increasingly short intercuts",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Theo sees his own ancient satchel displayed as an anonymous ritual object and recognizes the broken clasp before reading the label.","turn":"The museum claims it is from remote antiquity."},
-        {"page":2,"mode":"PAST","beat":"FLUX debut in a quiet kitchen with Afterlight. Everyone has been waiting all day for Flux to deliver an answer.","turn":"Flux says Mero needs permission, not prediction."},
-        {"page":3,"mode":"PAST","beat":"Afterlight pushes Flux to at least meet Mero. Dry affection establishes a relationship before philosophy.","turn":"Flux reluctantly goes."},
-        {"page":4,"mode":"PRESENT","beat":"Rae finds her own ancient correction reused inside a later civic binding. The material continuity is ordinary and direct.","turn":"Nobody preserved it as sacred; they simply kept using it."},
-        {"page":5,"mode":"PAST","beat":"Mero asks Flux which choice survives.","turn":"Flux accuses him of asking the future to absorb responsibility."},
-        {"page":6,"mode":"PAST","beat":"Flux: choose without pretending the future chose for you.","turn":"Mero has no answer."},
-        {"page":7,"mode":"PRESENT","beat":"Theo asks Adrian how much time is missing. Adrian says that assumes time was what was removed.","turn":"Why does everything call them ancient?"},
-        {"page":8,"mode":"PRESENT","beat":"Adrian: the world needed a story connecting yesterday to today; it healed around the wound.","turn":"No clean seam exists."},
-        {"page":9,"mode":"PAST","beat":"Starbreaker asks Flux to validate decisive action. Flux refuses.","turn":"Starbreaker calls Flux a coward."},
-        {"page":10,"mode":"PAST","beat":"Flux admits the accusation may hurt, but still refuses to turn fear into permission.","turn":"Cut to present argument about telling everyone."},
-        {"page":11,"mode":"PRESENT","beat":"Theo says people are living on a lie. Rae says they are also living, and truth does not create ownership of their memories.","turn":"Seed finale consent principle."},
-        {"page":12,"mode":"PAST","beat":"Flux prepares to leave. Afterlight asks where.","turn":"Flux wants somewhere nobody asks what happens next."},
-        {"page":13,"mode":"PAST","beat":"Afterlight says such a place does not exist. Flux: 'Then maybe I'll finally be surprised.'","turn":"Last ordinary image of Flux."},
-        {"page":14,"mode":"PRESENT","beat":"Adrian admits replacement history is not a fake layer. Real lives occurred inside the scar and cannot simply be discarded.","turn":"Rae realizes Adrian cannot identify a single boundary between histories."},
-        {"page":15,"mode":"PAST","beat":"Morning. Mero comes looking for Flux. Cup still on table. Flux is simply gone.","turn":"No message, effect or explanation."},
-        {"page":16,"mode":"PRESENT","beat":"Theo asks Adrian what happened to Flux. Adrian says he never learned.","turn":"For the first time, an ancient absence is not Adrian's concealment."},
-        {"page":17,"mode":"PAST/PRESENT","beat":"Theo remembers telling Mero that certainty is contagious; modern Theo hears his own ancient voice clearly.","turn":"Agency is returning."},
-        {"page":18,"mode":"PAST/PRESENT","beat":"Rae remembers challenging Arbiter's language about civilians, then still helping prioritize evacuation.","turn":"Resistance did not erase participation."},
-        {"page":19,"mode":"PRESENT","beat":"Theo and Rae compare these fragments; Adrian warns that others may begin remembering too.","turn":"A transit announcement uses an erased place-name."},
-        {"page":20,"mode":"PRESENT","beat":"An ordinary transit worker corrects the name without thinking.","turn":"He says his brother died there."},
-        {"page":21,"mode":"PRESENT","beat":"Rae asks about the brother. The worker says he has no brother in his present life and starts grieving anyway.","turn":"Memory return has escaped the protagonists."},
-        {"page":22,"mode":"PRESENT","beat":"Theo, Rae and Adrian watch the worker try to hold two biographies at once.","turn":"Issue 7 begins from a public problem, not a private mystery."}
+      "issue": 6,
+      "title": "THE MARGIN OF ERROR",
+      "mode": "increasingly short intercuts",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Theo sees his own ancient satchel displayed as an anonymous ritual object and recognizes the broken clasp before reading the label.",
+          "turn": "The museum claims it is from remote antiquity."
+        },
+        {
+          "page": 2,
+          "mode": "PAST",
+          "beat": "FLUX debut in a quiet kitchen with Afterlight. Everyone has been waiting all day for Flux to deliver an answer.",
+          "turn": "Flux says Mero needs permission, not prediction."
+        },
+        {
+          "page": 3,
+          "mode": "PAST",
+          "beat": "Afterlight pushes Flux to at least meet Mero. Dry affection establishes a relationship before philosophy.",
+          "turn": "Flux reluctantly goes."
+        },
+        {
+          "page": 4,
+          "mode": "PRESENT",
+          "beat": "Rae finds her own ancient correction reused inside a later civic binding. The material continuity is ordinary and direct.",
+          "turn": "Nobody preserved it as sacred; they simply kept using it."
+        },
+        {
+          "page": 5,
+          "mode": "PAST",
+          "beat": "Mero asks Flux which choice survives.",
+          "turn": "Flux accuses him of asking the future to absorb responsibility."
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "Flux: choose without pretending the future chose for you.",
+          "turn": "Mero has no answer."
+        },
+        {
+          "page": 7,
+          "mode": "PRESENT",
+          "beat": "Theo asks Adrian how much time is missing. Adrian says that assumes time was what was removed.",
+          "turn": "Why does everything call them ancient?"
+        },
+        {
+          "page": 8,
+          "mode": "PRESENT",
+          "beat": "Adrian: the world needed a story connecting yesterday to today; it healed around the wound.",
+          "turn": "No clean seam exists."
+        },
+        {
+          "page": 9,
+          "mode": "PAST",
+          "beat": "Starbreaker asks Flux to validate decisive action. Flux refuses.",
+          "turn": "Starbreaker calls Flux a coward."
+        },
+        {
+          "page": 10,
+          "mode": "PAST",
+          "beat": "Flux admits the accusation may hurt, but still refuses to turn fear into permission.",
+          "turn": "Cut to present argument about telling everyone."
+        },
+        {
+          "page": 11,
+          "mode": "PRESENT",
+          "beat": "Theo says people are living on a lie. Rae says they are also living, and truth does not create ownership of their memories.",
+          "turn": "Seed finale consent principle."
+        },
+        {
+          "page": 12,
+          "mode": "PAST",
+          "beat": "Flux prepares to leave. Afterlight asks where.",
+          "turn": "Flux wants somewhere nobody asks what happens next."
+        },
+        {
+          "page": 13,
+          "mode": "PAST",
+          "beat": "Afterlight says such a place does not exist. Flux: 'Then maybe I'll finally be surprised.'",
+          "turn": "Last ordinary image of Flux."
+        },
+        {
+          "page": 14,
+          "mode": "PRESENT",
+          "beat": "Adrian admits replacement history is not a fake layer. Real lives occurred inside the scar and cannot simply be discarded.",
+          "turn": "Rae realizes Adrian cannot identify a single boundary between histories."
+        },
+        {
+          "page": 15,
+          "mode": "PAST",
+          "beat": "Morning. Mero comes looking for Flux. Cup still on table. Flux is simply gone.",
+          "turn": "No message, effect or explanation."
+        },
+        {
+          "page": 16,
+          "mode": "PRESENT",
+          "beat": "Theo asks Adrian what happened to Flux. Adrian says he never learned.",
+          "turn": "For the first time, an ancient absence is not Adrian's concealment."
+        },
+        {
+          "page": 17,
+          "mode": "PAST/PRESENT",
+          "beat": "Theo remembers telling Mero that certainty is contagious; modern Theo hears his own ancient voice clearly.",
+          "turn": "Agency is returning."
+        },
+        {
+          "page": 18,
+          "mode": "PAST/PRESENT",
+          "beat": "Rae remembers challenging Arbiter's language about civilians, then still helping prioritize evacuation.",
+          "turn": "Resistance did not erase participation."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae compare these fragments; Adrian warns that others may begin remembering too.",
+          "turn": "A transit announcement uses an erased place-name."
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "An ordinary transit worker corrects the name without thinking.",
+          "turn": "He says his brother died there."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Rae asks about the brother. The worker says he has no brother in his present life and starts grieving anyway.",
+          "turn": "Memory return has escaped the protagonists."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Theo, Rae and Adrian watch the worker try to hold two biographies at once.",
+          "turn": "Issue 7 begins from a public problem, not a private mystery."
+        }
       ]
     },
     {
-      "issue":7,
-      "title":"GRAVITY AND CONSEQUENCE",
-      "mode":"alternating present/past pages, then pattern begins to break",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Modern Neo-Vectra: strangers recover relationships and injuries that current biographies deny. Rae tells people not to invalidate each other's memory.","turn":"A woman remembers a south gate that does not exist."},
-        {"page":2,"mode":"PAST","beat":"ORYON debut with Arbiter. Oryon has seen catastrophe coming and says waiting makes Neo-Vectra the beginning of something worse.","turn":"Arbiter asks whether he keeps looking for the same ending."},
-        {"page":3,"mode":"PRESENT","beat":"Old faction symbols attract people who cannot explain their loyalty. Theo wants immediate disclosure; Rae wants to prevent action from outrunning understanding.","turn":"Two groups begin facing each other."},
-        {"page":4,"mode":"PAST","beat":"Atlas protects ancient Neo-Vectra while Oryon urges abandonment. Mero sees the forced binary.","turn":"Mero: 'That's the sentence that keeps ruining us.'"},
-        {"page":5,"mode":"PRESENT","beat":"A modern couple remembers being ancient enemies. Present love and recovered fear are both real.","turn":"Adrian says this is what he feared."},
-        {"page":6,"mode":"PAST","beat":"Oryon, Starbreaker and Redlin argue in command hall. Flux's empty place matters.","turn":"Mero says Flux is not here to choose for them."},
-        {"page":7,"mode":"PRESENT","beat":"Municipal shelter separates people after fights. Adrian proposes moving them away from old sites.","turn":"Theo hears the beginning of another Reset."},
-        {"page":8,"mode":"PAST","beat":"Ancient Theo is now naturally visible with Mero. Mero asks what the senior champions cannot answer.","turn":"Theo says everyone having an answer is the problem."},
-        {"page":9,"mode":"PRESENT","beat":"Rae rejects both coercive suppression and uncontrolled escalation: 'We contain violence. Not memory.'","turn":"This becomes her governing principle."},
-        {"page":10,"mode":"PAST","beat":"Theo tells Mero to put the people—not only their arguments—in one room. This helps cause the final council.","turn":"Theo's advice has consequence."},
-        {"page":11,"mode":"PRESENT","beat":"Recovered factions begin organizing socially: handmade signs, meetings, testimony exchanges, arguments.","turn":"Theo realizes memory does not make people wiser."},
-        {"page":12,"mode":"PAST","beat":"Ancient Rae beside Arbiter during Neo-Vectra triage. She insists on naming people rather than sectors.","turn":"Arbiter asks who gets reached first."},
-        {"page":13,"mode":"PRESENT","beat":"Rae refuses to suppress organization even while fearing it. Present people must own present choices.","turn":"A public confrontation mirrors the ancient triage stakes."},
-        {"page":14,"mode":"PAST","beat":"Rae chooses the south gate, then river housing, knowing the north will wait. Ethical language does not remove consequence.","turn":"She says: 'I know.'"},
-        {"page":15,"mode":"PRESENT","beat":"Theo and Rae recognize their ancient choices in the modern geography. The south gate exists as a remembered route beneath current streets.","turn":"Theo admits he pushed Mero toward the council."},
-        {"page":16,"mode":"PAST","beat":"Mero gathers the principals; Oryon argues that waiting is itself violence. The war is structurally unwinnable because every answer reproduces another harm.","turn":"The council still lacks an ending."},
-        {"page":17,"mode":"PRESENT","beat":"Rae admits she chose who got out first. Neither can retreat to 'I only watched.'","turn":"Their culpability becomes lived, not abstract."},
-        {"page":18,"mode":"PAST","beat":"Ancient Theo and Rae cross the same Neo-Vectra passage in different duties without yet interacting meaningfully. The reader sees how close their histories always were.","turn":"A visual rhyme with modern Neo-Vectra."},
-        {"page":19,"mode":"PRESENT","beat":"Public memory surge: a city block collectively recognizes an erased event and begins arguing over ownership of the place.","turn":"Adrian asks them to leave before it becomes violence."},
-        {"page":20,"mode":"PAST","beat":"Oryon looks over the ancient city and says he already remembers this place ruined in futures that have not happened yet.","turn":"His grief rhymes with modern people's returned grief."},
-        {"page":21,"mode":"PRESENT","beat":"Pattern intentionally breaks: remain in present. Theo asks Adrian what happens if everyone remembers.","turn":"Adrian finally answers concretely."},
-        {"page":22,"mode":"PRESENT","beat":"Adrian describes contradictory marriages, murders, siblings, borders and loyalties. Rae asks if he thought forgetting was kinder. Adrian: it was the only thing they had not tried.","turn":"Alternation ends because Issue 8 will no longer keep histories separate."}
+      "issue": 7,
+      "title": "GRAVITY AND CONSEQUENCE",
+      "mode": "alternating present/past pages, then pattern begins to break",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Modern Neo-Vectra: strangers recover relationships and injuries that current biographies deny. Rae tells people not to invalidate each other's memory.",
+          "turn": "A woman remembers a south gate that does not exist."
+        },
+        {
+          "page": 2,
+          "mode": "PAST",
+          "beat": "ORYON debut with Arbiter. Oryon has seen catastrophe coming and says waiting makes Neo-Vectra the beginning of something worse.",
+          "turn": "Arbiter asks whether he keeps looking for the same ending."
+        },
+        {
+          "page": 3,
+          "mode": "PRESENT",
+          "beat": "Old faction symbols attract people who cannot explain their loyalty. Theo wants immediate disclosure; Rae wants to prevent action from outrunning understanding.",
+          "turn": "Two groups begin facing each other."
+        },
+        {
+          "page": 4,
+          "mode": "PAST",
+          "beat": "Atlas protects ancient Neo-Vectra while Oryon urges abandonment. Mero sees the forced binary.",
+          "turn": "Mero: 'That's the sentence that keeps ruining us.'"
+        },
+        {
+          "page": 5,
+          "mode": "PRESENT",
+          "beat": "A modern couple remembers being ancient enemies. Present love and recovered fear are both real.",
+          "turn": "Adrian says this is what he feared."
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "Oryon, Starbreaker and Redlin argue in command hall. Flux's empty place matters.",
+          "turn": "Mero says Flux is not here to choose for them."
+        },
+        {
+          "page": 7,
+          "mode": "PRESENT",
+          "beat": "Municipal shelter separates people after fights. Adrian proposes moving them away from old sites.",
+          "turn": "Theo hears the beginning of another Reset."
+        },
+        {
+          "page": 8,
+          "mode": "PAST",
+          "beat": "Ancient Theo is now naturally visible with Mero. Mero asks what the senior champions cannot answer.",
+          "turn": "Theo says everyone having an answer is the problem."
+        },
+        {
+          "page": 9,
+          "mode": "PRESENT",
+          "beat": "Rae rejects both coercive suppression and uncontrolled escalation: 'We contain violence. Not memory.'",
+          "turn": "This becomes her governing principle."
+        },
+        {
+          "page": 10,
+          "mode": "PAST",
+          "beat": "Theo tells Mero to put the people—not only their arguments—in one room. This helps cause the final council.",
+          "turn": "Theo's advice has consequence."
+        },
+        {
+          "page": 11,
+          "mode": "PRESENT",
+          "beat": "Recovered factions begin organizing socially: handmade signs, meetings, testimony exchanges, arguments.",
+          "turn": "Theo realizes memory does not make people wiser."
+        },
+        {
+          "page": 12,
+          "mode": "PAST",
+          "beat": "Ancient Rae beside Arbiter during Neo-Vectra triage. She insists on naming people rather than sectors.",
+          "turn": "Arbiter asks who gets reached first."
+        },
+        {
+          "page": 13,
+          "mode": "PRESENT",
+          "beat": "Rae refuses to suppress organization even while fearing it. Present people must own present choices.",
+          "turn": "A public confrontation mirrors the ancient triage stakes."
+        },
+        {
+          "page": 14,
+          "mode": "PAST",
+          "beat": "Rae chooses the south gate, then river housing, knowing the north will wait. Ethical language does not remove consequence.",
+          "turn": "She says: 'I know.'"
+        },
+        {
+          "page": 15,
+          "mode": "PRESENT",
+          "beat": "Theo and Rae recognize their ancient choices in the modern geography. The south gate exists as a remembered route beneath current streets.",
+          "turn": "Theo admits he pushed Mero toward the council."
+        },
+        {
+          "page": 16,
+          "mode": "PAST",
+          "beat": "Mero gathers the principals; Oryon argues that waiting is itself violence. The war is structurally unwinnable because every answer reproduces another harm.",
+          "turn": "The council still lacks an ending."
+        },
+        {
+          "page": 17,
+          "mode": "PRESENT",
+          "beat": "Rae admits she chose who got out first. Neither can retreat to 'I only watched.'",
+          "turn": "Their culpability becomes lived, not abstract."
+        },
+        {
+          "page": 18,
+          "mode": "PAST",
+          "beat": "Ancient Theo and Rae cross the same Neo-Vectra passage in different duties without yet interacting meaningfully. The reader sees how close their histories always were.",
+          "turn": "A visual rhyme with modern Neo-Vectra."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT",
+          "beat": "Public memory surge: a city block collectively recognizes an erased event and begins arguing over ownership of the place.",
+          "turn": "Adrian asks them to leave before it becomes violence."
+        },
+        {
+          "page": 20,
+          "mode": "PAST",
+          "beat": "Oryon looks over the ancient city and says he already remembers this place ruined in futures that have not happened yet.",
+          "turn": "His grief rhymes with modern people's returned grief."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Pattern intentionally breaks: remain in present. Theo asks Adrian what happens if everyone remembers.",
+          "turn": "Adrian finally answers concretely."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "Adrian describes contradictory marriages, murders, siblings, borders and loyalties. Rae asks if he thought forgetting was kinder. Adrian: it was the only thing they had not tried.",
+          "turn": "Alternation ends because Issue 8 will no longer keep histories separate."
+        }
       ]
     },
     {
-      "issue":8,
-      "title":"THE SHAPE OF TOMORROW",
-      "mode":"convergence",
-      "pages":[
-        {"page":1,"mode":"PRESENT","beat":"Theo, Rae and Adrian approach the Core-Forge, site of the Reset. Modern and ancient architecture are both visible but still separable.","turn":"Theo realizes Adrian brought them there to do it again."},
-        {"page":2,"mode":"PAST","beat":"Final ancient council begins. KYN debuts as one exhausted empathic person, not a collective voice.","turn":"Kyn describes suffering through specific ordinary lives."},
-        {"page":3,"mode":"PRESENT","beat":"Adrian says he does not know what else stops the public memory crisis. Rae says that sentence should terrify him.","turn":"The corridor feels familiar to both Theo and Rae."},
-        {"page":4,"mode":"PAST","beat":"Kyn, Oryon and Arbiter argue about ending suffering, prevention and responsibility. No one claims a clean choice.","turn":"Mero calls the rest of the principals in."},
-        {"page":5,"mode":"MIXED PAGE","beat":"Present Theo walks the corridor; matching panels show ancient Theo carrying papers through the same space. Present Rae recognizes where she used to wait.","turn":"For the first time both continuities share one page without labels."},
-        {"page":6,"mode":"PAST","beat":"Final ensemble: Starbreaker, Redlin, Atlas, Afterlight, Oryon, Arbiter, Kyn, Mero. Flux's place is empty. Each old virtue has reached its failure mode.","turn":"Kyn: 'Stop asking for a clean choice.'"},
-        {"page":7,"mode":"PRESENT","beat":"Adrian says he can close the memory scar. Theo hears erase; Rae hears coercion.","turn":"Theo argues stolen memory must be returned."},
-        {"page":8,"mode":"PAST","beat":"Kyn and Afterlight alone outside council. Kyn asks whether people can heal if war stops. Afterlight says some can, but restoration cannot mean restoring everything lost.","turn":"Tender recognition across faction lines."},
-        {"page":9,"mode":"MIXED PAGE","beat":"Present Rae crosses a threshold; ancient Rae sits beside Arbiter in the same visual axis.","turn":"Arbiter asks whether she will record the Reset decision."},
-        {"page":10,"mode":"PAST/PRESENT RHYME","beat":"Ancient Rae says she will record it but refuses to call imposed forgetting mercy. Present Rae hears her own words with full ownership.","turn":"Her ancient conflict becomes present principle."},
-        {"page":11,"mode":"PAST","beat":"Ancient Mero asks Adrian to execute the Reset. Adrian refuses: he carried messages, opened doors, did not rule.","turn":"Mero tells him neutrality no longer exists."},
-        {"page":12,"mode":"PRESENT","beat":"Present Adrian stands in the same place, now preparing to repeat the decision he once executed.","turn":"Theo moves toward the opposite choice: forced restoration."},
-        {"page":13,"mode":"PAST","beat":"Mero asks ancient Theo whether forgetting them might allow people to become something else.","turn":"Theo says maybe—but it is not permission."},
-        {"page":14,"mode":"MIXED PAGE","beat":"Present Theo remembers saying 'It's not permission' while still believing universal restoration is justified now.","turn":"Rae sees the contradiction before he does."},
-        {"page":15,"mode":"PAST","beat":"Ancient Adrian accepts the burden after Mero authorizes it. No ritual instructions; only a human decision and the beginning of remembered silence.","turn":"Ancient hands move into the same positions as present hands."},
-        {"page":16,"mode":"MIXED PAGE","beat":"Past Reset and present opportunity occupy matching panels. Adrian reaches to repeat; Theo reaches to reverse by force.","turn":"Rae takes Theo's hand away."},
-        {"page":17,"mode":"CONVERGED","beat":"Rae tells Theo no, then turns to Adrian: 'You too.' Past/present borders fall within panels as both repeated actions are interrupted.","turn":"Rae: 'Nobody chooses for everyone again.'"},
-        {"page":18,"mode":"CONVERGED","beat":"Neither coercive act is completed. The old remembered room and present chamber coexist, then begin separating imperfectly on their own.","turn":"No triumphant effect; uncertainty remains."},
-        {"page":19,"mode":"PRESENT WITH MEMORY ECHOES","beat":"Outside, some people remember more, some less, some nothing. Conflict does not vanish. Present lives remain intact even when ancient continuity returns.","turn":"Adrian asks what happens if this starts the war again."},
-        {"page":20,"mode":"PRESENT","beat":"Rae: 'Then we stop the war.' Adrian: 'That's not the same thing.' Rae: 'Exactly.'","turn":"Ethical resolution: manage violence, not memory."},
-        {"page":21,"mode":"PRESENT","beat":"Theo asks what happens now. No one has a program. They look outward at a world that must negotiate contradictory histories person by person.","turn":"They reach a view of the night sky."},
-        {"page":22,"mode":"PRESENT","beat":"A familiar region of stars is absent. Theo asks whether they were always gone. Rae says no. Adrian says he does not know. Theo: 'You finally said it.' Adrian: 'Get used to hearing it.'","turn":"Final state: continuity is returning; certainty is not."}
+      "issue": 8,
+      "title": "THE SHAPE OF TOMORROW",
+      "mode": "convergence",
+      "pages": [
+        {
+          "page": 1,
+          "mode": "PRESENT",
+          "beat": "Theo, Rae and Adrian approach the Core-Forge, site of the Reset. Modern and ancient architecture are both visible but still separable.",
+          "turn": "Theo realizes Adrian brought them there to do it again."
+        },
+        {
+          "page": 2,
+          "mode": "PAST",
+          "beat": "Final ancient council begins. KYN debuts as one exhausted empathic person, not a collective voice.",
+          "turn": "Kyn describes suffering through specific ordinary lives."
+        },
+        {
+          "page": 3,
+          "mode": "PRESENT",
+          "beat": "Adrian says he does not know what else stops the public memory crisis. Rae says that sentence should terrify him.",
+          "turn": "The corridor feels familiar to both Theo and Rae."
+        },
+        {
+          "page": 4,
+          "mode": "PAST",
+          "beat": "Kyn, Oryon and Arbiter argue about ending suffering, prevention and responsibility. No one claims a clean choice.",
+          "turn": "Mero calls the rest of the principals in."
+        },
+        {
+          "page": 5,
+          "mode": "MIXED PAGE",
+          "beat": "Present Theo walks the corridor; matching panels show ancient Theo carrying papers through the same space. Present Rae recognizes where she used to wait.",
+          "turn": "For the first time both continuities share one page without labels."
+        },
+        {
+          "page": 6,
+          "mode": "PAST",
+          "beat": "Final ensemble: Starbreaker, Redlin, Atlas, Afterlight, Oryon, Arbiter, Kyn, Mero. Flux's place is empty. Each old virtue has reached its failure mode.",
+          "turn": "Kyn: 'Stop asking for a clean choice.'"
+        },
+        {
+          "page": 7,
+          "mode": "PRESENT",
+          "beat": "Adrian says he can close the memory scar. Theo hears erase; Rae hears coercion.",
+          "turn": "Theo argues stolen memory must be returned."
+        },
+        {
+          "page": 8,
+          "mode": "PAST",
+          "beat": "Kyn and Afterlight alone outside council. Kyn asks whether people can heal if war stops. Afterlight says some can, but restoration cannot mean restoring everything lost.",
+          "turn": "Tender recognition across faction lines."
+        },
+        {
+          "page": 9,
+          "mode": "MIXED PAGE",
+          "beat": "Present Rae crosses a threshold; ancient Rae sits beside Arbiter in the same visual axis.",
+          "turn": "Arbiter asks whether she will record the Reset decision."
+        },
+        {
+          "page": 10,
+          "mode": "PAST/PRESENT RHYME",
+          "beat": "Ancient Rae says she will record it but refuses to call imposed forgetting mercy. Present Rae hears her own words with full ownership.",
+          "turn": "Her ancient conflict becomes present principle."
+        },
+        {
+          "page": 11,
+          "mode": "PAST",
+          "beat": "Ancient Mero asks Adrian to execute the Reset. Adrian refuses: he carried messages, opened doors, did not rule.",
+          "turn": "Mero tells him neutrality no longer exists."
+        },
+        {
+          "page": 12,
+          "mode": "PRESENT",
+          "beat": "Present Adrian stands in the same place, now preparing to repeat the decision he once executed.",
+          "turn": "Theo moves toward the opposite choice: forced restoration."
+        },
+        {
+          "page": 13,
+          "mode": "PAST",
+          "beat": "Mero asks ancient Theo whether forgetting them might allow people to become something else.",
+          "turn": "Theo says maybe—but it is not permission."
+        },
+        {
+          "page": 14,
+          "mode": "MIXED PAGE",
+          "beat": "Present Theo remembers saying 'It's not permission' while still believing universal restoration is justified now.",
+          "turn": "Rae sees the contradiction before he does."
+        },
+        {
+          "page": 15,
+          "mode": "PAST",
+          "beat": "Ancient Adrian accepts the burden after Mero authorizes it. No ritual instructions; only a human decision and the beginning of remembered silence.",
+          "turn": "Ancient hands move into the same positions as present hands."
+        },
+        {
+          "page": 16,
+          "mode": "MIXED PAGE",
+          "beat": "Past Reset and present opportunity occupy matching panels. Adrian reaches to repeat; Theo reaches to reverse by force.",
+          "turn": "Rae takes Theo's hand away."
+        },
+        {
+          "page": 17,
+          "mode": "CONVERGED",
+          "beat": "Rae tells Theo no, then turns to Adrian: 'You too.' Past/present borders fall within panels as both repeated actions are interrupted.",
+          "turn": "Rae: 'Nobody chooses for everyone again.'"
+        },
+        {
+          "page": 18,
+          "mode": "CONVERGED",
+          "beat": "Neither coercive act is completed. The old remembered room and present chamber coexist, then begin separating imperfectly on their own.",
+          "turn": "No triumphant effect; uncertainty remains."
+        },
+        {
+          "page": 19,
+          "mode": "PRESENT WITH MEMORY ECHOES",
+          "beat": "Outside, some people remember more, some less, some nothing. Conflict does not vanish. Present lives remain intact even when ancient continuity returns.",
+          "turn": "Adrian asks what happens if this starts the war again."
+        },
+        {
+          "page": 20,
+          "mode": "PRESENT",
+          "beat": "Rae: 'Then we stop the war.' Adrian: 'That's not the same thing.' Rae: 'Exactly.'",
+          "turn": "Ethical resolution: manage violence, not memory."
+        },
+        {
+          "page": 21,
+          "mode": "PRESENT",
+          "beat": "Theo asks what happens now. No one has a program. They look outward at a world that must negotiate contradictory histories person by person.",
+          "turn": "They reach a view of the night sky."
+        },
+        {
+          "page": 22,
+          "mode": "PRESENT",
+          "beat": "A familiar region of stars is absent. Theo asks whether they were always gone. Rae says no. Adrian says he does not know. Theo: 'You finally said it.' Adrian: 'Get used to hearing it.'",
+          "turn": "Final state: continuity is returning; certainty is not."
+        }
       ]
     }
   ]

@@ -1,103 +1,93 @@
 {
   "series": "Echoes of a Forgotten War",
-  "status": "recovered-development",
-  "storyFunction": "The warrior gods/champions are a second dramatic cast whose historical story is revealed through memories and visions. The exposition of the forgotten war comes primarily from vignettes between these ancient characters, not from modern characters explaining mechanisms.",
-  "revealRule": "Introduce one previously unseen warrior god/champion per issue. Previously introduced ancient characters may recur. Do not front-load the pantheon.",
-  "interactionRule": "Theo and Rae initially witness remembered scenes rather than converse with the ancient characters. Their modern consciousness may or may not eventually interact with them, but direct interaction is not assumed and should not occur early simply to deliver exposition.",
-  "memoryBearers": {
-    "Theo": "Ancient junior attaché to General Mero. Present at strategy debates, negotiations and high-level meetings; never a champion and not a front-line fighter. His memories tend to preserve Vanguard ideals, arguments and heroic self-understanding.",
-    "Rae": "Ancient strategic aide to Arbiter. Recorded rulings, enforcement orders and civilization-scale consequences. Her memories tend to preserve the cost, evacuations, containment decisions and destruction produced by the war.",
-    "Adrian": "Neutral envoy, message courier and facilitator who moved between both sides, arranged negotiations and safe passages, witnessed ceasefires, and ultimately initiated the Reset with General Mero's authorization. He remembers more of the whole war than Theo or Rae."
-  },
+  "status": "current-development-reference",
+  "storyFunction": "The ancient champions form a second dramatic cast whose relationships and choices reveal the forgotten war through memory scenes.",
+  "revealRule": "One previously unseen champion is fully introduced per issue in this order: Starbreaker → Redlin → Atlas → Arbiter → Afterlight → Flux → Oryon → Kyn. Previously introduced champions may recur.",
+  "interactionRule": "Early issues present the ancient story as recovered history. Theo and Rae's autobiographical presence becomes visible after Adrian's Issue 4 reveal.",
   "factions": {
     "Vanguard": {
       "coreIdea": "Freedom, self-determination and unpredictable evolution remain morally necessary even when disorder carries terrible risk.",
-      "members": ["Starbreaker", "Atlas", "Flux", "Afterlight", "General Mero"]
+      "members": [
+        "Starbreaker",
+        "Atlas",
+        "Flux",
+        "Afterlight",
+        "General Mero"
+      ]
     },
     "Concordant": {
       "coreIdea": "Order, stability and coordinated restraint can be morally necessary when uncontrolled conflict threatens civilizations.",
-      "members": ["Oryon", "Regent", "Arbiter", "Redlin", "Kyn"]
+      "members": [
+        "Oryon",
+        "Regent",
+        "Arbiter",
+        "Redlin",
+        "Kyn"
+      ]
     }
   },
   "characters": {
     "Starbreaker": {
       "faction": "Vanguard",
       "philosophy": "Some catastrophic threats must be ended decisively before they can consume more worlds.",
-      "dramaticTension": "A war-ending hero whose logic becomes increasingly severe and frightening when decisive force becomes the answer to every escalating threat.",
-      "relationships": ["Clashes with Atlas over protection of civilian populations.", "Clashes with Afterlight over destruction versus restoration.", "Redlin is a philosophical counterweight: escalation versus containment."],
-      "visualDevelopment": "Cracked-star chestplate; dark cobalt/navy armor; metallic accents; starfire rupture imagery. Visual specifics remain development material rather than immutable canon."
+      "dramaticTension": "A war-ending hero whose logic becomes increasingly severe and frightening when decisive force becomes the answer to every escalating threat."
     },
     "Atlas": {
       "faction": "Vanguard",
       "philosophy": "Protect innocent worlds even during war; populations are not acceptable abstractions or expendable pieces.",
-      "dramaticTension": "A burdened protector whose refusal to sacrifice populations collides with the reality that not everyone can always be saved.",
-      "relationships": ["Primary philosophical clash with Starbreaker.", "Opposed to Arbiter's willingness to execute civilization-scale sacrifice decisions."],
-      "visualDevelopment": "Massive geological presence with orbiting shoulder-ring imagery; later palette exploration moved toward limestone and turquoise."
+      "dramaticTension": "A burdened protector whose refusal to sacrifice populations collides with the reality that not everyone can always be saved."
     },
     "Flux": {
       "faction": "Vanguard",
       "philosophy": "Uncertainty cannot be abolished; probability must be navigated rather than forced into certainty.",
-      "dramaticTension": "Detached and difficult to trust because probabilistic thinking can resemble fatalism to people facing immediate suffering.",
-      "relationships": ["Frustrates both factions through refusal of false certainty.", "Philosophical foil to Oryon's control-through-foresight."],
-      "historyNote": "Earlier development says Flux vanished before the war's end.",
-      "visualDevelopment": "Split scholar-like silhouette, rotating-ring staff and phased/overlapped body were explored."
+      "dramaticTension": "Detached and difficult to trust because probabilistic thinking can resemble fatalism to people facing immediate suffering."
     },
     "Afterlight": {
       "faction": "Vanguard",
       "philosophy": "Life is rare and restoration matters, but restoration is limited: destruction and war can outrun what can ever be repaired.",
-      "dramaticTension": "Her mercy is constrained by entropy and finite capacity. She cannot simply undo the consequences created by the others.",
-      "relationships": ["Clashes with Starbreaker over ending battles through destruction versus preserving and restoring what remains."],
-      "developmentGap": "Personality and interpersonal detail were only partly developed and should be deepened without replacing the locked entropy/restoration premise."
+      "dramaticTension": "Her mercy is constrained by entropy and finite capacity. She cannot simply undo the consequences created by the others."
     },
     "General Mero": {
       "faction": "Vanguard",
-      "nature": "Human, not a cosmic god: a general walking among gods.",
+      "nature": "Human general serving among cosmic champions.",
       "role": "Supreme military strategist and senior authority whose eventual authorization enables Adrian to initiate the Reset.",
-      "dramaticTension": "His importance comes from judgment, command and responsibility rather than supernatural scale.",
-      "relationships": ["Theo served as his junior attaché.", "Adrian carried messages and facilitated negotiations around him.", "He ultimately authorizes the Reset that Adrian carries out."],
-      "visualDevelopment": "Controlled human presence among mythic beings; hands often clasped behind his back. Earlier direction explicitly rejected floating tactical diagrams and datapads."
+      "dramaticTension": "His importance comes from judgment, command and responsibility rather than supernatural scale."
     },
     "Oryon": {
       "faction": "Concordant",
       "philosophy": "Map catastrophic futures early enough to prevent them.",
-      "dramaticTension": "Driven by anticipatory grief; foresight becomes a justification for increasing control.",
-      "relationships": ["Philosophical foil to Flux: control-through-foresight versus living with uncertainty."],
-      "developmentGap": "Further interpersonal detail should be recovered or developed from this core rather than from later pseudo-technical teleplay language."
+      "dramaticTension": "Driven by anticipatory grief; foresight becomes a justification for increasing control."
     },
     "Regent": {
       "faction": "Concordant",
       "role": "Stabilizer.",
       "philosophy": "Preserve coherence and prevent reality and civilization from fracturing under conflict.",
-      "dramaticTension": "Stability can become preservation of an intolerable order.",
-      "developmentGap": "Earlier development established the stabilizer function more clearly than personality; deepen as a character rather than a metaphysical mechanism."
+      "dramaticTension": "Stability can become preservation of an intolerable order."
     },
     "Arbiter": {
       "faction": "Concordant",
       "role": "Executor of extinction-level or civilization-scale decisions.",
       "philosophy": "When survival demands triage, someone must make and own the decision.",
-      "dramaticTension": "Accepts responsibility for choices Atlas refuses to make, but that willingness can normalize atrocity as necessity.",
-      "relationships": ["Rae served as Arbiter's strategic aide and recorded the consequences of rulings.", "Philosophical opposite to Atlas's refusal to sacrifice populations."],
-      "developmentGap": "Do not reduce Arbiter to a cold judge; the historical vignettes must reveal an individual moral psychology."
+      "dramaticTension": "Accepts responsibility for choices Atlas refuses to make, but that willingness can normalize atrocity as necessity."
     },
     "Redlin": {
       "faction": "Concordant",
       "role": "Battlefield commander and enforcer of disciplined containment.",
       "philosophy": "Stop escalation before chaos spreads beyond anyone's ability to contain it.",
-      "dramaticTension": "Containment can become coercion, and preventing escalation can itself require escalating force.",
-      "relationships": ["Starbreaker is the central philosophical rival: containment versus decisive escalation."],
-      "nameNote": "Redlin is the accepted person-name; earlier 'Redline' spelling was rejected."
+      "dramaticTension": "Containment can become coercion, and preventing escalation can itself require escalating force."
     },
     "Kyn": {
       "faction": "Concordant",
       "role": "Empath.",
       "philosophy": "Uncontrolled conflict multiplies suffering across civilizations; order is justified by the pain it can prevent.",
       "dramaticTension": "Feels civilization-scale suffering directly, making compassion itself a pathway toward coercive order.",
-      "constraint": "Kyn is an individual empath, not a hive mind or collective consciousness."
+      "identity": "Individual empath who experiences suffering at civilization scale."
     }
   },
   "unresolved": [
-    "The definitive one-per-issue reveal order was not recovered strongly enough to lock and should not be invented.",
-    "Several characters have strong philosophical cores but only partial personality development; future work should deepen them through relationships and remembered vignettes.",
-    "Whether Theo or Rae ever directly interact with the ancient characters rather than witness/re-experience memories remains open and should be earned later if used."
+    "Flux's disappearance before the Reset remains unexplained.",
+    "Regent is historically real but remains unrevealed in the first eight issues.",
+    "The exact personal betrayal associated with the Desert Marker remains unresolved.",
+    "Later arcs must determine how uneven restored continuity reshapes societies without erasing the reality of present lives."
   ]
 }
