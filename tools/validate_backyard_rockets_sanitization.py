@@ -14,8 +14,10 @@ FORBIDDEN_DIRECTION_PREFIXES = (
     "LOCATION / PROP / STATE CONTINUITY —", "LOCATION / GRAPHIC CONTINUITY —",
     "CAMERA / LIGHT —", "CAMERA / EDITORIAL GRAMMAR —",
 )
-FORBIDDEN_PACKAGE_FILES = {
+COMPATIBILITY_FILES = {
     "blocking.json", "dialogue.json", "direction.json", "lighting.json", "mood.json", "negatives.json",
+}
+FORBIDDEN_PACKAGE_FILES = {
     "dialogue-adaptation-notes.md", "dialogue-voice-rewrites.json", "documentary-interstitials.json",
 }
 FORBIDDEN_ROOT_OUTPUTS = {
@@ -44,6 +46,12 @@ errors = []
 if len(scenes) != 162:
     errors.append(f"expected 162 active scenes, found {len(scenes)}")
 
+for name in COMPATIBILITY_FILES:
+    path = SHOW / name
+    if not path.exists():
+        errors.append(f"assembler compatibility sidecar missing: {name}")
+    elif load(path) != {}:
+        errors.append(f"assembler compatibility sidecar must remain empty: {name}")
 for name in FORBIDDEN_PACKAGE_FILES:
     if (SHOW / name).exists(): errors.append(f"stale package artifact remains: {name}")
 for name in FORBIDDEN_ROOT_OUTPUTS:
@@ -70,8 +78,7 @@ for handle, count in Counter(handles).items():
 regions = load(SHOW / "regions.json")
 settings = load(SHOW / "settings.json")
 factions = load(SHOW / "factions.json")
-for stale in ("mojave",):
-    if stale in regions: errors.append(f"stale region alias remains: {stale}")
+if "mojave" in regions: errors.append("stale region alias remains: mojave")
 for stale in ("launch_shop", "tethergrid"):
     if stale in factions: errors.append(f"stale faction alias remains: {stale}")
 
