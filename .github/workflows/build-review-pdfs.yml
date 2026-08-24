@@ -36,7 +36,7 @@ jobs:
       - name: Install PDF dependency
         run: python -m pip install --disable-pip-version-check reportlab==4.2.5
 
-      - name: Recover malformed referenced payloads for review only
+      - name: Normalize and recover referenced payloads for review only
         run: |
           python - <<'PY'
           import base64, gzip, json, pathlib, re, subprocess
@@ -46,22 +46,34 @@ jobs:
               'data/shows/vikings-2026-s1/encoded/pages_e03_p19_p24.json.gzb64': '0302170c9dc8481d0a9b1267e821dc016ad669dc',
           }
 
+          def normalize(text):
+              data = re.sub(r'\s+', '', text).rstrip('=')
+              if len(data) % 4 == 1:
+                  raise ValueError(f'impossible Base64 data length {len(data)} (mod 4 = 1)')
+              return data + ('=' * ((4 - len(data) % 4) % 4))
+
           def decode_text(text):
-              raw = re.sub(r'\s+', '', text)
-              return json.loads(gzip.decompress(base64.b64decode(raw)).decode('utf-8'))
+              raw = normalize(text)
+              decoded = json.loads(gzip.decompress(base64.b64decode(raw)).decode('utf-8'))
+              return raw, decoded
 
           applied = []
+          normalized = []
           for filename, commit in recoveries.items():
               path = pathlib.Path(filename)
+              current_text = path.read_text(encoding='utf-8')
               try:
-                  decode_text(path.read_text(encoding='utf-8'))
+                  canonical, decoded = decode_text(current_text)
+                  if canonical != re.sub(r'\s+', '', current_text):
+                      path.write_text(canonical, encoding='utf-8')
+                      normalized.append(filename)
                   continue
               except Exception as current_error:
                   historical = subprocess.check_output(
                       ['git', 'show', f'{commit}:{filename}'], text=True
                   )
-                  decoded = decode_text(historical)
-                  path.write_text(historical.strip(), encoding='utf-8')
+                  canonical, decoded = decode_text(historical)
+                  path.write_text(canonical, encoding='utf-8')
                   applied.append({
                       'file': filename,
                       'recoveredFromCommit': commit,
@@ -69,14 +81,15 @@ jobs:
                       'recoveredUnitCount': len(decoded) if isinstance(decoded, list) else len(decoded or {}),
                   })
 
-          if applied:
+          if applied or normalized:
               note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
               note.write_text(json.dumps({
                   'reviewOnlyRecovery': True,
-                  'note': 'The production review used the last complete historical payload for each listed file because the current manifest-referenced encoded file could not be decoded. Repository production data was not modified by this review build.',
+                  'note': 'This review build normalized lossless Base64 padding where possible and used historical payload recovery only when the current encoded data length was impossible. Repository production data was not modified by the review build.',
+                  'paddingNormalized': normalized,
                   'recoveries': applied,
               }, indent=2) + '\n', encoding='utf-8')
-              print(json.dumps(applied, indent=2))
+              print(json.dumps({'paddingNormalized': normalized, 'recoveries': applied}, indent=2))
           PY
 
       - name: Include advanced-development Markdown in review data
