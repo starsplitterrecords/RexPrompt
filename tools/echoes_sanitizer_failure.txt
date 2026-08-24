@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/runner/work/RexPrompt/RexPrompt/tools/sanitize_echoes.py", line 465, in <module>
+    verify_clean()
+  File "/home/runner/work/RexPrompt/RexPrompt/tools/sanitize_echoes.py", line 428, in verify_clean
+    raise RuntimeError(f"Sanitization residue {term!r} remains at {label}: {text}")
+RuntimeError: Sanitization residue 'do not explain' remains at EFW_S1E04_S12:direction: Play the reveal without effects. Adrian does not announce reincarnation or possession; he states continuity. Theo and Rae are the same people. The word Reset can be used as a historical name for the act, but do not explain how it worked. End on the new question: not what happened, but what did I do?
