@@ -1,4 +1,4 @@
-name: Azure Reach semantic sanitization
+name: Azure Reach sanitization verification
 
 on:
   push:
@@ -6,47 +6,23 @@ on:
       - '.github/workflows/azure-reach-sanitize-diagnostic.yml'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  sanitize:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Correct sanitizer issue-scope doctrine
-        shell: bash
+      - name: Verify sanitizer is idempotent
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('tools/sanitize_azure_reach.py')
-          text=p.read_text(encoding='utf-8')
-          old='''    if not legacy_count:\n        # Already sanitized. Keep current local direction intact and only verify fingerprint.\n        after = story_fingerprint(out)\n        if before != after:\n            raise RuntimeError(f"Story fingerprint drift on {page.get('id')}")\n        return out, 0, len(out.get("directionInline", []) or [])\n'''
-          new='''    if not legacy_count:\n        # Already sanitized: recompute only persistent references so stale scoped\n        # production guidance can be removed without touching creative fields.\n        out["direction"] = persistent_refs(out, issue_ref)\n        after = story_fingerprint(out)\n        if before != after:\n            raise RuntimeError(f"Story fingerprint drift on {page.get('id')}")\n        return out, 0, len(out.get("directionInline", []) or [])\n'''
-          if old not in text and new not in text:
-              raise SystemExit('Could not find sanitized-page branch to patch')
-          text=text.replace(old,new)
-
-          old2='''    issue_refs: dict[str, str | None] = {}\n    for episode, common in common_by_episode.items():\n        if common:\n            issue_num = int(episode[-2:])\n            ref = f"AZR_E{issue_num:02d}_CONTINUITY"\n            registry[ref] = {"text": f"ISSUE {issue_num} CONTINUITY — " + " ".join(common)}\n            issue_refs[episode] = ref\n        else:\n            # Preserve a previously derived issue-level ref on idempotent reruns.\n            issue_num = int(episode[-2:])\n            existing = f"AZR_E{issue_num:02d}_CONTINUITY"\n            issue_refs[episode] = existing if existing in registry else None\n'''
-          new2='''    # Repetition alone is not authority. Remove machine-derived issue entries and\n    # retain only issue-level production truth independently supported by canon.\n    for key in list(registry):\n        if re.fullmatch(r"AZR_E\\d{2}_CONTINUITY", key):\n            registry.pop(key)\n    registry["AZR_E02_CONTINUITY"] = {\n        "text": (\n            "ISSUE 2 CONTINUITY — Dolphins retrieve guest-dropped objects and guests project meaning "\n            "onto that behavior. Shellabration Saturdays is only a background Corporate roadmap gag, "\n            "not the issue premise."\n        )\n    }\n    issue_refs: dict[str, str | None] = {episode: None for episode in common_by_episode}\n    issue_refs["S1E02"] = "AZR_E02_CONTINUITY"\n'''
-          if old2 not in text and new2 not in text:
-              raise SystemExit('Could not find issue-ref derivation block to patch')
-          text=text.replace(old2,new2)
-          p.write_text(text,encoding='utf-8')
-          PY
-      - name: Sanitize Azure Reach production data
-        run: python tools/sanitize_azure_reach.py
-      - name: Commit sanitized production data
-        shell: bash
+          python tools/sanitize_azure_reach.py
+          git diff --exit-code
+      - name: Validate sanitized Azure Reach package
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add tools/sanitize_azure_reach.py index.html data/shows/azure-reach-s1/direction.json data/shows/azure-reach-s1/encoded
-          if git diff --cached --quiet; then
-            echo 'No sanitization changes required.'
-          else
-            git commit -m 'Correct Azure Reach sanitization scope'
-            git push
-          fi
+          python tools/validate_azure_reach_sanitization.py
+          python tools/validate_azure_reach.py
+          python tools/validate_azure_reach_e02.py
+          python tools/validate_azure_reach_s1_complete.py
