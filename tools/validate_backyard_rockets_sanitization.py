@@ -18,6 +18,9 @@ FORBIDDEN_PACKAGE_FILES = {
     "blocking.json", "dialogue.json", "direction.json", "lighting.json", "mood.json", "negatives.json",
     "dialogue-adaptation-notes.md", "dialogue-voice-rewrites.json", "documentary-interstitials.json",
 }
+FORBIDDEN_ROOT_OUTPUTS = {
+    "backyard-rockets-continuity-report.json", "backyard-rockets-scene-payloads.json",
+}
 FORBIDDEN_TOOLS = {
     "apply_backyard_rockets_voice_rewrites.py", "expand_backyard_rockets_dialogue.py", "fix_backyard_rockets_continuity.py",
     "insert_backyard_rockets_documentary_interstitials.py", "reconcile_backyard_rockets_dialogue_cast.py",
@@ -43,6 +46,8 @@ if len(scenes) != 162:
 
 for name in FORBIDDEN_PACKAGE_FILES:
     if (SHOW / name).exists(): errors.append(f"stale package artifact remains: {name}")
+for name in FORBIDDEN_ROOT_OUTPUTS:
+    if (ROOT / name).exists(): errors.append(f"generated review output is tracked in repository root: {name}")
 raw = SHOW / "raw"
 if raw.exists() and any(raw.iterdir()): errors.append("stale raw production fragments remain")
 for name in FORBIDDEN_TOOLS:
