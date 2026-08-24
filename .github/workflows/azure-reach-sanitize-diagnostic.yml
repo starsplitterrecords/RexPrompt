@@ -1,0 +1,69 @@
+name: Azure Reach sanitization diagnostic
+
+on:
+  push:
+    paths:
+      - '.github/workflows/azure-reach-sanitize-diagnostic.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect decoded Azure Reach payloads
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, collections, gzip, json
+          from pathlib import Path
+
+          show = Path('data/shows/azure-reach-s1')
+          pages=[]
+          for path in sorted((show/'encoded').glob('pages_e*.json.gzb64')):
+              raw=''.join(path.read_text(encoding='utf-8').split())
+              data=json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode('utf-8'))
+              pages.extend(data)
+
+          print('TOTAL_PAGES', len(pages))
+          print('PAGE_KEYS', sorted(pages[0].keys()))
+          print('FIRST_PAGE_JSON')
+          print(json.dumps(pages[0], ensure_ascii=False, indent=2))
+
+          keysets=collections.Counter()
+          for p in pages:
+              for c in p.get('charactersInline',[]) or []:
+                  if isinstance(c,dict): keysets[tuple(sorted(c.keys()))]+=1
+          print('CHARACTER_INLINE_KEYSETS')
+          for k,n in keysets.most_common(): print(n,k)
+
+          prefixes=collections.Counter()
+          for p in pages:
+              for d in p.get('directionInline',[]) or []:
+                  if isinstance(d,dict):
+                      text=str(d.get('text',''))
+                      prefix=text.split(':',1)[0]+':' if ':' in text else text[:80]
+                      prefixes[prefix]+=1
+          print('DIRECTION_PREFIXES')
+          for k,n in prefixes.most_common(): print(n,repr(k))
+
+          subs=collections.Counter()
+          for p in pages:
+              for d in p.get('dialogueInline',[]) or []:
+                  if isinstance(d,dict) and d.get('subtext'):
+                      subs[str(d['subtext'])]+=1
+          print('DIALOGUE_SUBTEXT_COUNT', sum(subs.values()), 'UNIQUE', len(subs))
+          for text,n in subs.most_common(30): print(n,repr(text))
+
+          panel_keys=collections.Counter()
+          for p in pages:
+              for panel in p.get('panelPlan',[]) or []:
+                  if isinstance(panel,dict): panel_keys[tuple(sorted(panel.keys()))]+=1
+          print('PANEL_KEYSETS')
+          for k,n in panel_keys.most_common(): print(n,k)
+
+          print('LAST_PAGE_JSON')
+          print(json.dumps(pages[-1], ensure_ascii=False, indent=2))
+          PY
