@@ -1,0 +1,36 @@
+name: Sanitize Rex Fleet
+
+on:
+  push:
+    branches: [sanitize-rex-fleet]
+
+permissions:
+  contents: write
+
+jobs:
+  sanitize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sanitize-rex-fleet
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply sanitation
+        run: python tools/sanitize_rex_fleet_temp.py
+      - name: Validate Rex Fleet
+        run: python tools/validate_rex_fleet.py
+      - name: Commit sanitized package
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index.html data/shows.json data/shows/rex-fleet-s1
+          if git diff --cached --quiet; then
+            echo 'No sanitation changes.'
+            exit 0
+          fi
+          git commit -m "Sanitize Rex Fleet production package"
+          git push origin HEAD:sanitize-rex-fleet
