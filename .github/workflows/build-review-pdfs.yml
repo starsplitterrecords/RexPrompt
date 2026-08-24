@@ -33,6 +33,81 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Include active advanced-development packages
+        run: |
+          python - <<'PY'
+          import json, pathlib, subprocess
+
+          manifest_path = pathlib.Path('data/shows.json')
+          current = json.loads(manifest_path.read_text(encoding='utf-8'))
+          current_ids = {entry.get('id') for entry in current}
+
+          active_development = [
+              {
+                  'id': 'echoes-forgotten-war-s1',
+                  'branch': 'origin/enhance/echoes-s1',
+                  'package': 'data/shows/echoes-forgotten-war-s1',
+              },
+          ]
+
+          for source in active_development:
+              if source['id'] in current_ids:
+                  continue
+
+              branch_check = subprocess.run(
+                  ['git', 'rev-parse', '--verify', '--quiet', source['branch']],
+                  stdout=subprocess.PIPE,
+                  text=True,
+              )
+              if branch_check.returncode != 0:
+                  print(f"Advanced-development branch unavailable: {source['branch']}")
+                  continue
+
+              branch_manifest = json.loads(subprocess.check_output(
+                  ['git', 'show', f"{source['branch']}:data/shows.json"],
+                  text=True,
+              ))
+              entry = next((item for item in branch_manifest if item.get('id') == source['id']), None)
+              if not entry:
+                  print(f"Advanced-development entry not registered on {source['branch']}: {source['id']}")
+                  continue
+
+              archive = subprocess.Popen(
+                  ['git', 'archive', source['branch'], source['package']],
+                  stdout=subprocess.PIPE,
+              )
+              try:
+                  subprocess.run(['tar', '-x'], stdin=archive.stdout, check=True)
+              finally:
+                  if archive.stdout:
+                      archive.stdout.close()
+              if archive.wait() != 0:
+                  raise SystemExit(f"Could not extract {source['package']} from {source['branch']}")
+
+              source_commit = subprocess.check_output(
+                  ['git', 'rev-parse', source['branch']], text=True
+              ).strip()
+              package_path = pathlib.Path(source['package'])
+              (package_path / 'review_branch_source.json').write_text(
+                  json.dumps({
+                      'reviewSourceType': 'active-advanced-development-branch',
+                      'seriesId': source['id'],
+                      'sourceBranch': source['branch'].removeprefix('origin/'),
+                      'sourceCommit': source_commit,
+                      'note': 'This production is active advanced development and is not yet registered on main. The review package includes its current registered development branch without modifying main production data.',
+                  }, indent=2) + '\n',
+                  encoding='utf-8',
+              )
+              current.append(entry)
+              current_ids.add(source['id'])
+              print(f"Included advanced-development production {source['id']} from {source['branch']} at {source_commit}")
+
+          manifest_path.write_text(
+              json.dumps(current, ensure_ascii=False, separators=(',', ':')) + '\n',
+              encoding='utf-8',
+          )
+          PY
+
       - name: Install PDF dependency
         run: python -m pip install --disable-pip-version-check reportlab==4.2.5
 
@@ -64,6 +139,8 @@ jobs:
           results = []
           for filename in targets:
               path = pathlib.Path(filename)
+              if not path.exists():
+                  continue
               current_text = path.read_text(encoding='utf-8')
               current_error = None
               try:
@@ -134,13 +211,14 @@ jobs:
                   'historyCommitsChecked': len(commits),
               })
 
-          note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
-          note.write_text(json.dumps({
-              'reviewOnlyRecovery': True,
-              'note': 'The review build never invents missing story data. It normalizes lossless Base64 padding, uses history only when exactly one valid decoded payload exists, and otherwise inserts a visible source-error placeholder. Repository production data is not modified by the review build.',
-              'results': results,
-          }, indent=2) + '\n', encoding='utf-8')
-          print(json.dumps(results, indent=2))
+          if results:
+              note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
+              note.write_text(json.dumps({
+                  'reviewOnlyRecovery': True,
+                  'note': 'The review build never invents missing story data. It normalizes lossless Base64 padding, uses history only when exactly one valid decoded payload exists, and otherwise inserts a visible source-error placeholder. Repository production data is not modified by the review build.',
+                  'results': results,
+              }, indent=2) + '\n', encoding='utf-8')
+              print(json.dumps(results, indent=2))
           PY
 
       - name: Include advanced-development Markdown in review data
@@ -174,6 +252,6 @@ jobs:
           name: rexprompt-production-review-pdfs-${{ github.sha }}
           path: dist/review-pdfs/
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90
 
-# Branch-only workflow exercise; no production data changes.
+# Validation branch changes only review-build behavior; production data is not modified.
