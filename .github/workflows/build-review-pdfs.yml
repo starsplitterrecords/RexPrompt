@@ -39,12 +39,12 @@ jobs:
       - name: Normalize and recover referenced payloads for review only
         run: |
           python - <<'PY'
-          import base64, gzip, json, pathlib, re, subprocess
+          import base64, gzip, hashlib, json, pathlib, re, subprocess
 
-          recoveries = {
-              'data/shows/vikings-2026-s1/encoded/pages_e03_p13_p18.json.gzb64': '0302170c9dc8481d0a9b1267e821dc016ad669dc',
-              'data/shows/vikings-2026-s1/encoded/pages_e03_p19_p24.json.gzb64': '0302170c9dc8481d0a9b1267e821dc016ad669dc',
-          }
+          targets = [
+              'data/shows/vikings-2026-s1/encoded/pages_e03_p13_p18.json.gzb64',
+              'data/shows/vikings-2026-s1/encoded/pages_e03_p19_p24.json.gzb64',
+          ]
 
           def normalize(text):
               data = re.sub(r'\s+', '', text).rstrip('=')
@@ -57,39 +57,89 @@ jobs:
               decoded = json.loads(gzip.decompress(base64.b64decode(raw)).decode('utf-8'))
               return raw, decoded
 
-          applied = []
-          normalized = []
-          for filename, commit in recoveries.items():
+          def encode_units(units):
+              payload = json.dumps(units, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+              return base64.b64encode(gzip.compress(payload, mtime=0)).decode('ascii')
+
+          results = []
+          for filename in targets:
               path = pathlib.Path(filename)
               current_text = path.read_text(encoding='utf-8')
               try:
                   canonical, decoded = decode_text(current_text)
                   if canonical != re.sub(r'\s+', '', current_text):
                       path.write_text(canonical, encoding='utf-8')
-                      normalized.append(filename)
+                      results.append({
+                          'file': filename,
+                          'status': 'padding-normalized',
+                          'unitCount': len(decoded) if isinstance(decoded, list) else len(decoded or {}),
+                      })
                   continue
               except Exception as current_error:
-                  historical = subprocess.check_output(
-                      ['git', 'show', f'{commit}:{filename}'], text=True
-                  )
-                  canonical, decoded = decode_text(historical)
-                  path.write_text(canonical, encoding='utf-8')
-                  applied.append({
-                      'file': filename,
-                      'recoveredFromCommit': commit,
-                      'reason': f'Current manifest-referenced payload did not decode: {current_error}',
-                      'recoveredUnitCount': len(decoded) if isinstance(decoded, list) else len(decoded or {}),
-                  })
+                  pass
 
-          if applied or normalized:
-              note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
-              note.write_text(json.dumps({
-                  'reviewOnlyRecovery': True,
-                  'note': 'This review build normalized lossless Base64 padding where possible and used historical payload recovery only when the current encoded data length was impossible. Repository production data was not modified by the review build.',
-                  'paddingNormalized': normalized,
-                  'recoveries': applied,
-              }, indent=2) + '\n', encoding='utf-8')
-              print(json.dumps({'paddingNormalized': normalized, 'recoveries': applied}, indent=2))
+              commits = subprocess.check_output(
+                  ['git', 'log', '--all', '--format=%H', '--', filename], text=True
+              ).splitlines()
+              valid = {}
+              for commit in commits:
+                  try:
+                      historical = subprocess.check_output(
+                          ['git', 'show', f'{commit}:{filename}'], text=True,
+                          stderr=subprocess.DEVNULL,
+                      )
+                      canonical, decoded = decode_text(historical)
+                  except Exception:
+                      continue
+                  digest = hashlib.sha256(
+                      json.dumps(decoded, sort_keys=True, ensure_ascii=False).encode('utf-8')
+                  ).hexdigest()
+                  valid.setdefault(digest, {
+                      'canonical': canonical,
+                      'decoded': decoded,
+                      'commits': [],
+                  })['commits'].append(commit)
+
+              if len(valid) == 1:
+                  candidate = next(iter(valid.values()))
+                  path.write_text(candidate['canonical'], encoding='utf-8')
+                  results.append({
+                      'file': filename,
+                      'status': 'historical-recovery',
+                      'currentError': str(current_error),
+                      'recoveredFromCommit': candidate['commits'][0],
+                      'equivalentValidCommits': candidate['commits'],
+                      'unitCount': len(candidate['decoded']) if isinstance(candidate['decoded'], list) else len(candidate['decoded'] or {}),
+                  })
+                  continue
+
+              placeholder_id = 'SOURCE_ERROR_' + path.stem.replace('.', '_').upper()
+              placeholder = [{
+                  'id': placeholder_id,
+                  'summary': 'SOURCE DATA ERROR: this manifest-referenced RexPrompt payload could not be decoded, and no single unambiguous valid historical payload was available. No story content has been inferred for this missing span.',
+                  'sourceReviewError': {
+                      'file': filename,
+                      'currentError': str(current_error),
+                      'validHistoricalVariants': len(valid),
+                      'historyCommitsChecked': len(commits),
+                  },
+              }]
+              path.write_text(encode_units(placeholder), encoding='utf-8')
+              results.append({
+                  'file': filename,
+                  'status': 'source-error-placeholder',
+                  'currentError': str(current_error),
+                  'validHistoricalVariants': len(valid),
+                  'historyCommitsChecked': len(commits),
+              })
+
+          note = pathlib.Path('data/shows/vikings-2026-s1/review_source_recovery.json')
+          note.write_text(json.dumps({
+              'reviewOnlyRecovery': True,
+              'note': 'The review build never invents missing story data. It normalizes lossless Base64 padding, uses history only when exactly one valid decoded payload exists, and otherwise inserts a visible source-error placeholder. Repository production data is not modified by the review build.',
+              'results': results,
+          }, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(results, indent=2))
           PY
 
       - name: Include advanced-development Markdown in review data
