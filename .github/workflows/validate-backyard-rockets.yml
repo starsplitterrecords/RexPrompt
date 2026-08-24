@@ -7,13 +7,15 @@ on:
       - 'data/shows.json'
       - 'data/shows/backyard-rockets-s1/**'
       - 'tools/validate_backyard_rockets.py'
+      - 'tools/validate_backyard_rockets_sanitization.py'
+      - 'tools/sanitize_backyard_rockets.py'
       - 'tools/audit_backyard_rockets_continuity.py'
       - 'tools/export_backyard_rockets_scene_payloads.py'
       - '.github/workflows/validate-backyard-rockets.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -21,10 +23,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Sanitize Backyard Rockets package
+        run: python tools/sanitize_backyard_rockets.py
+      - name: Validate sanitized representation
+        run: python tools/validate_backyard_rockets_sanitization.py
       - name: Validate Backyard Rockets show
         run: python tools/validate_backyard_rockets.py
       - name: Audit Backyard Rockets continuity
@@ -39,3 +46,16 @@ jobs:
             backyard-rockets-continuity-report.json
             backyard-rockets-scene-payloads.json
           if-no-files-found: error
+      - name: Commit sanitized package
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No sanitation changes to commit"
+            exit 0
+          fi
+          git commit -m "Sanitize Backyard Rockets production data"
+          git pull --rebase origin ${{ github.event.pull_request.head.ref }}
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
