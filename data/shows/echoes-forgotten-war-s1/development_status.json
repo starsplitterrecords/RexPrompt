@@ -1,0 +1,46 @@
+{
+  "series":"Echoes of a Forgotten War",
+  "branch":"enhance/echoes-s1",
+  "status":"season architecture implemented; eight issue-level scene drafts active; graphic-novel page scripting next",
+  "authority":{
+    "currentSceneFiles":["scenes_e01.json","scenes_e02.json","scenes_e03.json","scenes_e04.json","scenes_e05.json","scenes_e06.json","scenes_e07.json","scenes_e08.json"],
+    "storyArchitecture":"season_architecture_v2.json",
+    "identityLogic":"identity_reset.json",
+    "ancientCast":"warrior_gods.json",
+    "ancientChronology":"ancient_war_timeline_v1.json",
+    "relationships":"ancient_relationships_v1.json",
+    "revisionRules":"revision_charter.json",
+    "masterCharacters":"characters.json",
+    "manifest":"../../shows.json"
+  },
+  "validation":{
+    "issues":8,
+    "scenesPerIssue":12,
+    "totalScenes":96,
+    "championRevealOrder":["Starbreaker","Redlin","Atlas","Arbiter","Afterlight","Flux","Oryon","Kyn"],
+    "oneNewChampionPerIssue":true,
+    "generalMeroCountsAsChampionReveal":false,
+    "regentReservedForLater":true,
+    "ancientTheoRaeHiddenThroughIssue":4,
+    "midpointIdentityReveal":"EFW_S1E04_S12",
+    "firstAncientTheoReveal":"EFW_S1E05_S02",
+    "firstAncientRaeReveal":"EFW_S1E05_S04",
+    "publicMemorySpread":"EFW_S1E06_S12",
+    "alternatingPastPresentIssue":7,
+    "convergenceIssue":8,
+    "finalEthicalChoice":"Reject both forced universal forgetting and forced universal restoration; contain violence rather than memory.",
+    "mechanismExplanationProhibited":true
+  },
+  "supersededMaterial":{
+    "episodeSpecificDictionaries":"Removed from active branch where they duplicated or contradicted inline scene authority.",
+    "preArchitectureEnhancedActScripts":"Removed from active branch; recoverable through Git history only.",
+    "reason":"They contained obsolete manifestation, technical-anomaly and pre-recovered pantheon logic."
+  },
+  "knownOpenQuestions":[
+    "Flux's disappearance remains intentionally unexplained.",
+    "Regent is historically real but remains unrevealed in the first eight issues.",
+    "The exact early personal betrayal implied in Desert Marker development remains unresolved.",
+    "Later arcs must determine how uneven restored continuity changes societies without collapsing present lives into a single 'true' replacement history."
+  ],
+  "productionNote":"Issues 2-8 are self-contained with dialogueInline/directionInline/settingText so the current RexPrompt assembler can load them without episode-specific dictionaries. Issue 1 continues to use the base dialogue/direction/settings dictionaries and is valid under the same manifest."
+}
