@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "rex-fleet-s1"
 MANIFEST = ROOT / "data" / "shows.json"
+INDEX = ROOT / "index.html"
 
 
 def normalize(raw):
@@ -41,6 +42,28 @@ def load_encoded(path):
 
 def dialogue_texts(scene):
     return [item.get("text", "") for item in scene.get("dialogueInline", [])]
+
+
+def validate_clean_scene(scene):
+    generic = {
+        "Play the dialogue as an exchange with listening, interruption and reaction; avoid posed recitation. Keep faces readable and let the environment stay active.",
+        "Continuous from the prior beat in this location; preserve positions, props, damage, eyelines and emotional momentum.",
+        "Let this visual beat breathe long enough to establish consequence before the next exchange.",
+    }
+    meta_prefixes = (
+        "Canon anchors",
+        "Characters:",
+        "Tone:",
+        "Season 2 hooks:",
+        "Visual tone guidance:",
+    )
+    for item in scene.get("directionInline", []):
+        if item.startswith("Performance:"):
+            raise SystemExit(f"{scene.get('id')}: character voice duplicated at scene scope")
+        if item in generic:
+            raise SystemExit(f"{scene.get('id')}: generic production scaffold survived")
+        if item.startswith(meta_prefixes):
+            raise SystemExit(f"{scene.get('id')}: editorial/correction residue survived")
 
 
 def validate_issue_2(scenes):
@@ -102,6 +125,7 @@ def validate_issue_2(scenes):
     for scene in scenes:
         if scene.get("dialog") or scene.get("direction"):
             raise SystemExit(f"{scene['id']}: S1E02 must use canonical inline dialogue and direction only")
+        validate_clean_scene(scene)
 
 
 shows = load_json(MANIFEST)
@@ -110,14 +134,46 @@ if not show:
     raise SystemExit("Rex Fleet show missing from data/shows.json")
 overlays = {o.get("replaceEpisode"): o for o in show.get("sceneOverlays", [])}
 
-legacy_dialogue = load_json(SHOW / "dialogue.json")
-legacy_direction = load_json(SHOW / "direction.json")
-old_dialogue_keys = sorted(k for k in legacy_dialogue if k.startswith("D_RF_E02_"))
-old_direction_keys = sorted(k for k in legacy_direction if k.startswith("X_RF_E02_"))
-if old_dialogue_keys:
-    raise SystemExit(f"Obsolete S1E02 dialogue lookup keys remain: {old_dialogue_keys}")
-if old_direction_keys:
-    raise SystemExit(f"Obsolete S1E02 direction lookup keys remain: {old_direction_keys}")
+generation_line = show.get("generationLine", "")
+if "comic-book" not in generation_line:
+    raise SystemExit("Rex Fleet must declare comic-book production mode")
+if "10-second vertical clip" in generation_line or "TV style" in generation_line:
+    raise SystemExit("Rex Fleet inherited legacy video-generation language")
+
+characters = load_json(SHOW / "characters.json")
+forbidden_character_ids = {
+    "C_mother_soft",
+    "C_venn_soft_to_herself",
+    "C_jex_low",
+    "C_billie_low",
+    "C_tess_vo",
+    "C_kerr_cerulean",
+    "C_triarch_voice",
+    "C_rhyne_aegis",
+    "C_keating_ember",
+}
+residue = sorted(forbidden_character_ids & set(characters))
+if residue:
+    raise SystemExit(f"Delivery/correction identity records remain: {residue}")
+primary_handles = [entry.get("handle") for entry in characters.values() if entry.get("handle")]
+if len(primary_handles) != len(set(primary_handles)):
+    raise SystemExit("Duplicate primary character handles remain")
+character_serialized = json.dumps(characters, ensure_ascii=False)
+for fragment in ("Production reference:", "Source speaker label:"):
+    if fragment in character_serialized:
+        raise SystemExit(f"Character correction/source residue remains: {fragment}")
+for required_id in (
+    "C_commodore_ella_venn",
+    "C_admiral_cael_dominion",
+    "C_soren_kerr",
+    "C_admiral_colin_rhyne",
+    "C_admiral_janet_keating",
+    "C_captain_naomi_sol",
+    "C_tessa_banks",
+    "C_billie_rusk",
+):
+    if required_id not in characters:
+        raise SystemExit(f"Required current Rex Fleet identity missing: {required_id}")
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
 legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
@@ -127,6 +183,39 @@ legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
 base = normalize(load_json(SHOW / "scenes_e01.json"))
 if base != legacy_e1:
     raise SystemExit("Explicit Episode 1 base differs from the original Rex Fleet Episode 1")
+
+for scene in base:
+    for character_id in scene.get("characters", []):
+        if character_id not in characters:
+            raise SystemExit(f"{scene.get('id')}: unresolved Episode 1 character ID {character_id}")
+
+legacy_dialogue = load_json(SHOW / "dialogue.json")
+legacy_direction = load_json(SHOW / "direction.json")
+legacy_settings = load_json(SHOW / "settings.json")
+expected_dialogue_keys = {key for scene in base for key in scene.get("dialog", [])}
+expected_direction_keys = {key for scene in base for key in scene.get("direction", [])}
+expected_setting_keys = {scene.get("setting") for scene in base if scene.get("setting")}
+if set(legacy_dialogue) != expected_dialogue_keys:
+    extra = sorted(set(legacy_dialogue) - expected_dialogue_keys)
+    missing = sorted(expected_dialogue_keys - set(legacy_dialogue))
+    raise SystemExit(f"Episode 1 dialogue lookup scope mismatch; extra={extra}, missing={missing}")
+if set(legacy_direction) != expected_direction_keys:
+    extra = sorted(set(legacy_direction) - expected_direction_keys)
+    missing = sorted(expected_direction_keys - set(legacy_direction))
+    raise SystemExit(f"Episode 1 direction lookup scope mismatch; extra={extra}, missing={missing}")
+if set(legacy_settings) != expected_setting_keys:
+    extra = sorted(set(legacy_settings) - expected_setting_keys)
+    missing = sorted(expected_setting_keys - set(legacy_settings))
+    raise SystemExit(f"Episode 1 setting lookup scope mismatch; extra={extra}, missing={missing}")
+
+for key, entry in legacy_dialogue.items():
+    if entry.get("speakerId") not in characters:
+        raise SystemExit(f"{key}: dialogue speaker ID does not resolve: {entry.get('speakerId')}")
+
+index_text = INDEX.read_text(encoding="utf-8")
+for required in ("function findCharacterByHandle", "function formatCharacter", "s.continuityFrom"):
+    if required not in index_text:
+        raise SystemExit(f"Assembler sanitation support missing: {required}")
 
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
 validate_issue_2(e2)
@@ -148,6 +237,8 @@ for n in range(3, 13):
         raise SystemExit(f"{ep}: one or more scenes are missing IDs")
     if len(ids) != len(set(ids)):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
+    for scene in incoming:
+        validate_clean_scene(scene)
     excluded = set(overlays.get(ep, {}).get("excludeIds", []))
     incoming = [s for s in incoming if s.get("id") not in excluded]
     expected_counts[ep] = len(incoming)
@@ -170,6 +261,11 @@ for ep, expected in expected_counts.items():
 all_ids = [s.get("id") for s in base]
 if len(all_ids) != len(set(all_ids)):
     raise SystemExit("Duplicate scene IDs exist in final assembled season")
+all_id_set = set(all_ids)
+for scene in base:
+    target = scene.get("continuityFrom")
+    if target and target not in all_id_set:
+        raise SystemExit(f"{scene.get('id')}: continuityFrom target does not resolve: {target}")
 
 for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
     if forbidden in all_ids:
@@ -190,6 +286,7 @@ for scene in base:
             raise SystemExit(f"{scene.get('id')}: missing region")
 
 print("Rex Fleet validation passed")
+print("Sanitized structure required")
 print("Total scenes:", len(base))
 for ep in expected_order:
     print(f"{ep}: {counts[ep]}")
