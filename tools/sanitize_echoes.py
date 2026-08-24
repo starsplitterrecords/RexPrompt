@@ -79,6 +79,9 @@ EXACT_REWRITES = {
     "This is two incompatible forms of courage colliding, not one hero defeating another.": "Frame the moment as two incompatible forms of courage colliding.",
     "This is the first clear statement of the war's trap: each side can point to real lives saved by its logic and real lives destroyed by the other's failure.": "Let the aftermath expose the war's trap: each side can point to real lives saved by its logic and real lives destroyed by the other's failure.",
     "Adrian knows history and consequence, not the operating rules of reality.": "Adrian's knowledge is historical and consequential.",
+    "Adrian does not announce reincarnation or possession; he states continuity.": "Adrian states the continuity plainly.",
+    "The word Reset can be used as a historical name for the act, but do not explain how it worked.": "The word Reset functions as the historical name for the act.",
+    "End on the new question: not what happened, but what did I do?": "End on the new question: what did I do?",
     "No alarms, no explanation.": "",
 }
 
@@ -100,6 +103,8 @@ FORBIDDEN_RESIDUE = (
     "earlier 'redline' spelling was rejected", "reveal order was not recovered"
 )
 
+INLINE_DIRECTIVE_RE = re.compile(r"[,;]\s+(?:but\s+|and\s+)?do not [^.?!]+", re.IGNORECASE)
+
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -120,6 +125,7 @@ def normalize_fragments(text: str) -> str:
     out = text
     for old, new in FRAGMENT_REWRITES:
         out = out.replace(old, new)
+    out = INLINE_DIRECTIVE_RE.sub("", out)
     return re.sub(r"\s+", " ", out).strip()
 
 
@@ -149,12 +155,7 @@ def clean_production_text(text: str) -> str:
 
 
 def story_fingerprint(scene: dict) -> dict:
-    """Story fields remain identical; only production prose may be normalized."""
-    return {
-        k: copy.deepcopy(v)
-        for k, v in scene.items()
-        if k not in {"directionInline", "settingText"}
-    }
+    return {k: copy.deepcopy(v) for k, v in scene.items() if k not in {"directionInline", "settingText"}}
 
 
 def sanitize_scenes() -> tuple[int, int]:
@@ -189,8 +190,7 @@ def sanitize_scenes() -> tuple[int, int]:
                 scene["directionInline"] = cleaned_blocks
             else:
                 scene.pop("directionInline", None)
-        after = [story_fingerprint(scene) for scene in scenes]
-        if before != after:
+        if before != [story_fingerprint(scene) for scene in scenes]:
             raise RuntimeError(f"Story fingerprint changed in {path.name}")
         dump(path, scenes)
     return scene_count, changed_blocks
@@ -201,12 +201,10 @@ def sanitize_direction_dictionary() -> int:
     data = load(path)
     changed = 0
     for entry in data.values():
-        if not isinstance(entry, dict) or not isinstance(entry.get("text"), str):
-            continue
-        cleaned = clean_production_text(entry["text"])
-        if cleaned != entry["text"]:
-            changed += 1
-        entry["text"] = cleaned
+        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
+            cleaned = clean_production_text(entry["text"])
+            changed += int(cleaned != entry["text"])
+            entry["text"] = cleaned
     dump(path, data)
     return changed
 
@@ -216,11 +214,10 @@ def sanitize_characters() -> int:
     data = load(path)
     removed = 0
     for key, entry in list(data.items()):
-        if not isinstance(entry, dict):
-            continue
-        keep = {k: entry[k] for k in ("name", "handle", "role") if entry.get(k)}
-        removed += len(entry) - len(keep)
-        data[key] = keep
+        if isinstance(entry, dict):
+            keep = {k: entry[k] for k in ("name", "handle", "role") if entry.get(k)}
+            removed += len(entry) - len(keep)
+            data[key] = keep
     dump(path, data)
     return removed
 
@@ -233,7 +230,6 @@ def sanitize_settings_and_regions() -> None:
             raise RuntimeError(f"Missing expected setting {key}")
         settings[key]["text"] = text
     dump(settings_path, settings)
-
     regions_path = SHOW / "regions.json"
     regions = load(regions_path)
     for key, text in POSITIVE_REGIONS.items():
@@ -289,14 +285,13 @@ def sanitize_warrior_gods() -> None:
     data["interactionRule"] = "Early issues present the ancient story as recovered history. Theo and Rae's autobiographical presence becomes visible after Adrian's Issue 4 reveal."
     data.pop("memoryBearers", None)
     for name, entry in (data.get("characters") or {}).items():
-        if not isinstance(entry, dict):
-            continue
-        for field in ("visualDevelopment", "developmentGap", "nameNote", "constraint", "historyNote", "relationships"):
-            entry.pop(field, None)
-        if name == "General Mero":
-            entry["nature"] = "Human general serving among cosmic champions."
-        if name == "Kyn":
-            entry["identity"] = "Individual empath who experiences suffering at civilization scale."
+        if isinstance(entry, dict):
+            for field in ("visualDevelopment", "developmentGap", "nameNote", "constraint", "historyNote", "relationships"):
+                entry.pop(field, None)
+            if name == "General Mero":
+                entry["nature"] = "Human general serving among cosmic champions."
+            if name == "Kyn":
+                entry["identity"] = "Individual empath who experiences suffering at civilization scale."
     data["unresolved"] = [
         "Flux's disappearance before the Reset remains unexplained.",
         "Regent is historically real but remains unrevealed in the first eight issues.",
@@ -389,12 +384,10 @@ def sanitize_manifest() -> None:
 
 def production_strings() -> list[tuple[str, str]]:
     strings = []
-    direction = load(SHOW / "direction.json")
-    for key, entry in direction.items():
+    for key, entry in load(SHOW / "direction.json").items():
         if isinstance(entry, dict) and isinstance(entry.get("text"), str):
             strings.append((f"direction:{key}", entry["text"]))
-    settings = load(SHOW / "settings.json")
-    for key, entry in settings.items():
+    for key, entry in load(SHOW / "settings.json").items():
         if isinstance(entry, dict) and isinstance(entry.get("text"), str):
             strings.append((f"setting:{key}", entry["text"]))
     for path in SCENE_FILES:
@@ -420,18 +413,15 @@ def verify_clean() -> None:
     for key, entry in chars.items():
         if isinstance(entry, dict) and (set(entry) - {"name", "handle", "role"}):
             raise RuntimeError(f"Out-of-scope character prose remains: {key}")
-
     for label, text in production_strings():
         lower = text.lower()
         for term in FORBIDDEN_RESIDUE:
             if term in lower:
                 raise RuntimeError(f"Sanitization residue {term!r} remains at {label}: {text}")
-
     architecture = load(SHOW / "season_architecture_v2.json")
     order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
     if order != REVEAL_ORDER:
         raise RuntimeError(f"Champion reveal order changed: {order!r}")
-
     scenes = []
     for path in SCENE_FILES:
         payload = load(path)
@@ -441,7 +431,6 @@ def verify_clean() -> None:
     ids = [scene.get("id") for scene in scenes]
     if len(ids) != 96 or len(set(ids)) != 96:
         raise RuntimeError("Echoes scene count or IDs changed during sanitization")
-
     manifest = load(MANIFEST)
     matches = [entry for entry in manifest if entry.get("id") == SHOW_ENTRY["id"]]
     if len(matches) != 1 or matches[0].get("scenesFiles") != SHOW_ENTRY["scenesFiles"]:
