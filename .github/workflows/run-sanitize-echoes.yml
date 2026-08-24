@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/run-sanitize-echoes.yml'
       - 'tools/sanitize_echoes.py'
+      - 'tools/sanitize_echoes_residue.py'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +35,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python tools/sanitize_echoes.py > /tmp/echoes-sanitize.log 2>&1
+          python tools/sanitize_echoes_residue.py > /tmp/echoes-sanitize.log 2>&1
           status=$?
           cat /tmp/echoes-sanitize.log
           echo "status=$status" >> "$GITHUB_OUTPUT"
