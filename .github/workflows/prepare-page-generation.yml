@@ -1,0 +1,80 @@
+name: Prepare page-generation data
+
+on:
+  push:
+    branches:
+      - fix/page-generation-readiness
+    paths:
+      - 'tools/prepare_page_generation.py'
+      - '.github/workflows/prepare-page-generation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out readiness branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Import clean Rex Fleet production package
+        run: |
+          git fetch origin sanitize-rex-fleet-clean
+          git checkout origin/sanitize-rex-fleet-clean -- \
+            data/shows/rex-fleet-s1/characters.json \
+            data/shows/rex-fleet-s1/dialogue.json \
+            data/shows/rex-fleet-s1/direction.json \
+            data/shows/rex-fleet-s1/encoded/scenes_e03.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e04.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e05.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e06.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e07.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e08.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e09.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e10.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e11.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e12.json.gzb64 \
+            data/shows/rex-fleet-s1/scenes_e01.json \
+            data/shows/rex-fleet-s1/scenes_prequel.json \
+            data/shows/rex-fleet-s1/settings.json
+
+      - name: Compile and normalize chef-facing production data
+        run: python tools/prepare_page_generation.py
+
+      - name: Verify existing structural checks
+        run: |
+          python tools/validate_vikings_2026.py
+          python tools/validate_azure_reach_sanitization.py
+
+      - name: Commit prepared data
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'No production changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            index.html \
+            data/shows.json \
+            data/shows/division-threshold-s1/pages_e01_compiled.json \
+            data/shows/low-tide-signal/pages_ch01_ch03_compiled.json \
+            data/shows/vikings-2026-s1/encoded \
+            data/shows/rex-fleet-s1/characters.json \
+            data/shows/rex-fleet-s1/dialogue.json \
+            data/shows/rex-fleet-s1/direction.json \
+            data/shows/rex-fleet-s1/encoded \
+            data/shows/rex-fleet-s1/scenes_e01.json \
+            data/shows/rex-fleet-s1/scenes_prequel.json \
+            data/shows/rex-fleet-s1/settings.json
+          git commit -m 'Prepare chef-facing page production data'
+          git push origin HEAD:fix/page-generation-readiness
