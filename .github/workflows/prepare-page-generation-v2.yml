@@ -50,6 +50,21 @@ jobs:
             data/shows/rex-fleet-s1/scenes_prequel.json \
             data/shows/rex-fleet-s1/settings.json
 
+      - name: Seed validated Vikings production payloads
+        run: |
+          git checkout origin/fix/page-generation-readiness -- \
+            data/shows/vikings-2026-s1/encoded/pages_e02_p01_p06.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e02_p07_p12.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e02_p13_p18.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e02_p19_p24.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e03_p01_p06.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e03_p07_p12.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e03_p13_p18.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e05_p01_p06.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e05_p07_p12.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e05_p13_p18.json.gzb64 \
+            data/shows/vikings-2026-s1/encoded/pages_e05_p19_p24.json.gzb64
+
       - name: Isolate unrecoverable Vikings source span
         run: |
           mv data/shows/vikings-2026-s1/encoded/pages_e03_p19_p24.json.gzb64 /tmp/pages_e03_p19_p24.json.gzb64
