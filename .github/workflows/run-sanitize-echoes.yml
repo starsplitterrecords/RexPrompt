@@ -1,0 +1,70 @@
+name: Run Echoes sanitizer
+
+on:
+  push:
+    branches:
+      - enhance/echoes-s1
+    paths:
+      - '.github/workflows/run-sanitize-echoes.yml'
+      - 'tools/sanitize_echoes.py'
+      - 'tools/sanitize_echoes_residue.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sanitize-echoes
+  cancel-in-progress: true
+
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out working branch
+        uses: actions/checkout@v4
+        with:
+          ref: enhance/echoes-s1
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run sanitizer and capture result
+        id: sanitize
+        shell: bash
+        run: |
+          set +e
+          python tools/sanitize_echoes_residue.py > /tmp/echoes-sanitize.log 2>&1
+          status=$?
+          cat /tmp/echoes-sanitize.log
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Commit sanitized data
+        if: steps.sanitize.outputs.status == '0'
+        shell: bash
+        run: |
+          git diff --stat
+          git diff --check
+          rm -f tools/echoes_sanitizer_failure.txt
+          if git diff --quiet; then
+            echo 'No sanitization changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows.json data/shows/echoes-forgotten-war-s1 tools/echoes_sanitizer_failure.txt 2>/dev/null || true
+          git commit -m 'Sanitize Echoes production data'
+          git push origin HEAD:enhance/echoes-s1
+      - name: Commit sanitizer diagnostic
+        if: steps.sanitize.outputs.status != '0'
+        shell: bash
+        run: |
+          git checkout -- data/shows.json data/shows/echoes-forgotten-war-s1
+          cp /tmp/echoes-sanitize.log tools/echoes_sanitizer_failure.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/echoes_sanitizer_failure.txt
+          git commit -m 'Record Echoes sanitizer failure'
+          git push origin HEAD:enhance/echoes-s1
+          exit 1
