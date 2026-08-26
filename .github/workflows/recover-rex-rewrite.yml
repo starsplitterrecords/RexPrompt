@@ -1,0 +1,37 @@
+name: Recover Rex Fleet rewrite
+
+on:
+  push:
+    branches:
+      - rex-fleet-rewrite-recover
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rex-fleet-rewrite-recover
+          fetch-depth: 0
+      - name: Recover partial script
+        shell: bash
+        run: |
+          cat tools/.tmp_rex_rewrite_0.b64 tools/.tmp_rex_rewrite_1.b64 tools/.tmp_rex_rewrite_2.b64 > /tmp/rex.b64
+          base64 -d /tmp/rex.b64 > /tmp/rex.gz
+          set +e
+          gzip -dc /tmp/rex.gz > tools/recovered_rex_rewrite_partial.py 2>/tmp/gzip.err
+          cat /tmp/gzip.err
+          set -e
+          wc -l -c tools/recovered_rex_rewrite_partial.py
+      - name: Commit recovered text
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/recovered_rex_rewrite_partial.py
+          git commit -m 'Recover Rex Fleet rewrite staging text'
+          git push origin HEAD:rex-fleet-rewrite-recover
