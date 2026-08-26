@@ -1,0 +1,71 @@
+name: Apply Rex Fleet comic rewrite
+
+on:
+  push:
+    branches:
+      - rex-fleet-rewrite-recover
+    paths:
+      - '.github/workflows/apply-rex-fleet-comic-rewrite.yml'
+      - 'tools/recovered_rex_rewrite_partial.py'
+      - 'tools/rex_fleet_rewrite_tail.pyfrag'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out clean final branch
+        uses: actions/checkout@v4
+        with:
+          ref: rex-fleet-comic-dialogue-rewrite
+          fetch-depth: 0
+      - name: Assemble recovered rewrite
+        shell: bash
+        run: |
+          git fetch origin rex-fleet-rewrite-recover
+          git show origin/rex-fleet-rewrite-recover:tools/recovered_rex_rewrite_partial.py > /tmp/partial.py
+          git show origin/rex-fleet-rewrite-recover:tools/rex_fleet_rewrite_tail.pyfrag > /tmp/tail.pyfrag
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/partial.py').read_text()
+          marker="D(10,'RF_S1E10_A16'"
+          if marker not in p:
+              raise SystemExit('Issue 10 A16 splice marker not found')
+          prefix=p.split(marker,1)[0]
+          tail=Path('/tmp/tail.pyfrag').read_text()
+          Path('/tmp/rex_fleet_rewrite.py').write_text(prefix+tail)
+          PY
+          python -m py_compile /tmp/rex_fleet_rewrite.py
+      - name: Apply rewrite to RexPrompt production data
+        shell: bash
+        run: |
+          python /tmp/rex_fleet_rewrite.py
+          git diff --check
+      - name: Commit only Rex Fleet production payloads
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows/rex-fleet-s1/scenes_e02.json \
+            data/shows/rex-fleet-s1/encoded/scenes_e03.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e04.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e05.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e06.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e07.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e08.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e09.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e10.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e11.json.gzb64 \
+            data/shows/rex-fleet-s1/encoded/scenes_e12.json.gzb64
+          mapfile -t files < <(git diff --cached --name-only)
+          printf '%s\n' "${files[@]}"
+          test "${#files[@]}" -eq 11
+          if printf '%s\n' "${files[@]}" | grep -Eq 'scenes_e01|^tools/|^\.github/'; then
+            echo 'Unexpected file in production commit' >&2
+            exit 1
+          fi
+          git commit -m 'Rewrite Rex Fleet Issues 2-12 as comics'
+          git push origin HEAD:rex-fleet-comic-dialogue-rewrite
