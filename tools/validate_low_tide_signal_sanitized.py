@@ -4,7 +4,7 @@
 This validator keeps the package scoped for production use:
 - character-level data belongs in characters / ensemble files
 - page and chapter records preserve story action without correction residue
-- known stale calibration phrases do not return
+- known stale calibration phrases and page-level Nicole-as-decoder lines do not return
 """
 
 from __future__ import annotations
@@ -50,8 +50,26 @@ FORBIDDEN_RESIDUE = [
     "formerly known as",
 ]
 
+FORBIDDEN_PAGE_DRIFT = [
+    "Sector 14 isn’t supposed to have a road approach.",
+    "These aren’t shoreline access roads.",
+    "They built farther out than maps say.",
+    "This was traffic-managed.",
+    "It’s traffic history.",
+    "Everything here was built for people exactly like us.",
+    "It wasn’t retail-only. It linked to transit.",
+    "It mattered to whoever drew it.",
+    "Nicole studies planned connections",
+    "Nicole studies a faded network diagram",
+    "Nicole maps",
+    "Nicole builds a map room",
+    "official witness",
+    "Official witness",
+]
+
 REQUIRED_FILES = set(JSON_FILES)
 DISALLOWED_FILES = {"revision_directives_nicole_ensemble.json"}
+REQUIRED_PAGE_COUNT = 78
 
 
 def load_json(path: Path):
@@ -84,7 +102,11 @@ def main() -> int:
 
     for phrase in FORBIDDEN_RESIDUE:
         if phrase in combined:
-            errors.append(f"Forbidden residue found: {phrase!r}")
+            errors.append(f"Forbidden correction residue found: {phrase!r}")
+
+    for phrase in FORBIDDEN_PAGE_DRIFT:
+        if phrase in combined:
+            errors.append(f"Forbidden page-level Nicole drift found: {phrase!r}")
 
     characters = load_json(SHOW_DIR / "characters.json")
     nicole = characters.get("C_lts_nicole_hanley", {})
@@ -92,6 +114,14 @@ def main() -> int:
         errors.append("Nicole role is not the sanitized active role")
     if "scene_use" not in nicole:
         errors.append("Nicole scene_use guidance missing")
+
+    pages = load_json(SHOW_DIR / "pages_ch01_ch03.json")
+    if len(pages) != REQUIRED_PAGE_COUNT:
+        errors.append(f"Unexpected pages_ch01_ch03 count: {len(pages)} != {REQUIRED_PAGE_COUNT}")
+
+    page_ids = [page.get("id") for page in pages]
+    if len(page_ids) != len(set(page_ids)):
+        errors.append("Duplicate page IDs found in pages_ch01_ch03.json")
 
     sections = load_json(SHOW_DIR / "sections_ch01_ch04.json")
     if any("witness / structural intelligence" in json.dumps(section) for section in sections):
