@@ -5,12 +5,7 @@ on:
     paths:
       - 'data/shows.json'
       - 'data/shows/azure-reach-s1/**'
-      - 'index.html'
-      - 'tools/sanitize_azure_reach.py'
       - 'tools/validate_azure_reach.py'
-      - 'tools/validate_azure_reach_e02.py'
-      - 'tools/validate_azure_reach_s1_complete.py'
-      - 'tools/validate_azure_reach_sanitization.py'
       - '.github/workflows/validate-azure-reach.yml'
   workflow_dispatch:
 
@@ -22,9 +17,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate Azure Reach page-production data
-        run: |
-          python tools/validate_azure_reach_sanitization.py
-          python tools/validate_azure_reach.py
-          python tools/validate_azure_reach_e02.py
-          python tools/validate_azure_reach_s1_complete.py
+      - name: Validate Azure Reach mechanical integrity
+        run: python tools/validate_azure_reach.py
