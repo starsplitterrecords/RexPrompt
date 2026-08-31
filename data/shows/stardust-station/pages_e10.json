@@ -1,0 +1,327 @@
+[
+  {
+    "id": "SDS_S1E10_P01",
+    "summary": "Issue 10 — The Station Stays Open. Page 1: Review Day. The final program review and the Issue 4 bracket inspection land on the same ordinary workday.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Pixa", "SDS_Zib"],
+    "panelPlan": [
+      {"text": "PANEL 1 — Morning. Astra opens the pilot-status review packet."},
+      {"text": "PANEL 2 — Header: STARDUST STATION — PROGRAM DISPOSITION REVIEW."},
+      {"text": "PANEL 3 — Pixa reads the timing. PIXA: Recommendation window closes in four hours."},
+      {"text": "PANEL 4 — Zib enters carrying the Issue 4 temporary-bracket inspection tag. ZIB: Bracket inspection is also today."},
+      {"text": "PANEL 5 — Astra looks from the future of the station to the temporary repair holding part of it together. ASTRA: Of course it is."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P02",
+    "summary": "Page 2: Three Answers. Central offers three standard futures; none accurately describes the station the crew has proven.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Jax", "SDS_Glorp", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P01",
+    "panelPlan": [
+      {"text": "PANEL 1 — The review packet presents Option One: DEDICATED MATERIAL PILOT / BUDGET: INCREASED / PROCUREMENT: PRIORITY / OUTPUT TARGETS: REQUIRED."},
+      {"text": "PANEL 2 — Option Two: LOW-PRIORITY OPERATIONS / PILOT SUPPORT: ENDS / PROCUREMENT: STANDARD / FUTURE SITE REVIEW: LIKELY."},
+      {"text": "PANEL 3 — Option Three: CONSOLIDATE OPERATIONS / CLOSE SITE."},
+      {"text": "PANEL 4 — Jax reads all three. JAX: Strong menu."},
+      {"text": "PANEL 5 — Glorp scrolls for another standard option. GLORP: There is no fourth selection."},
+      {"text": "PANEL 6 — Astra looks at the three boxes. ASTRA: Then we have four hours to make one."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P03",
+    "summary": "Page 3: The Bracket Still Exists. The Issue 4 temporary repair is still within monitored limits, and Option One's procurement promise remains genuinely tempting.",
+    "setting": "SDS_Maintenance_Bay",
+    "characters": ["SDS_Zib", "SDS_Mira", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P02",
+    "panelPlan": [
+      {"text": "PANEL 1 — Zib opens the coolant-balancing unit from Issue 4."},
+      {"text": "PANEL 2 — The approved clamp is still carrying the load. The incidental filler remains only in the gap."},
+      {"text": "PANEL 3 — Mira checks the old sample record beside the current inspection. MIRA: Temporary repair still within monitored limits."},
+      {"text": "PANEL 4 — Zib taps the procurement status: REPLACEMENT PART ETA: 12 DAYS."},
+      {"text": "PANEL 5 — Astra looks at Option One's priority procurement promise."},
+      {"text": "PANEL 6 — Zib notices. ZIB: Still no. ASTRA: I know."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P04",
+    "summary": "Page 4: What Do We Actually Have. Astra removes the standard options from the table and asks only what the crew can prove.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Brick"],
+    "continuityFrom": "SDS_S1E10_P03",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra clears the three-option screen from the main table."},
+      {"text": "PANEL 2 — She writes one question instead: WHAT CAN WE PROVE?"},
+      {"text": "PANEL 3 — Mira immediately separates two columns: OPERATIONS / MATERIAL."},
+      {"text": "PANEL 4 — Astra points at the crew. ASTRA: No pitch language. Bring me things we can defend."},
+      {"text": "PANEL 5 — Brick opens his notebook."},
+      {"text": "PANEL 6 — Astra points at him specifically. ASTRA: Evidence we can defend. Brick slowly closes it again."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P05",
+    "summary": "Page 5: Pixa's Numbers. The final evidence begins with observable operational measures, including Astra's own Issue 9 cargo delay.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Mira"],
+    "continuityFrom": "SDS_S1E10_P04",
+    "panelPlan": [
+      {"text": "PANEL 1 — Pixa projects only operational measures from the last ten issues."},
+      {"text": "PANEL 2 — Visible categories: incident detection time; service interruption duration; repair closure rate; accepted local task ownership; safety-access overrides; repeat incident rate."},
+      {"text": "PANEL 3 — Astra checks the list. ASTRA: No morale score."},
+      {"text": "PANEL 4 — Pixa answers. PIXA: None exists."},
+      {"text": "PANEL 5 — Mira points at the output-target week. MIRA: Include the cargo delay."},
+      {"text": "PANEL 6 — Pixa adds it without interpretation. PIXA: Eleven-minute delay associated with output-oriented schedule change."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P06",
+    "summary": "Page 6: Zib's Record. The actual work board provides a reliable metric the crew understands how to improve: open work orders.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Zib", "SDS_Astra", "SDS_Mira"],
+    "continuityFrom": "SDS_S1E10_P05",
+    "panelPlan": [
+      {"text": "PANEL 1 — Zib brings the actual work board."},
+      {"text": "PANEL 2 — It is full of mundane closed items from the arc: stabilizer, microwave ground, wall panel, damper, vent, hatch, galley manifold, Dock 2 sensor."},
+      {"text": "PANEL 3 — Astra studies it. ASTRA: This is ugly."},
+      {"text": "PANEL 4 — Zib points at the closed column. ZIB: This is work."},
+      {"text": "PANEL 5 — Mira notices the contrast with the inconsistent material sample chart."},
+      {"text": "PANEL 6 — Zib adds. ZIB: We know how to make this number go down. He points at open work orders."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P07",
+    "summary": "Page 7: Mira's No. Scientific uncertainty becomes a legitimate program boundary: collection and characterization can be promised; yield and mechanism cannot.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Mira", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P06",
+    "panelPlan": [
+      {"text": "PANEL 1 — Mira presents the material record."},
+      {"text": "PANEL 2 — Visible conclusions: passive material exists; post-formation properties vary; some limited practical use observed; yield inconsistent; quality not predicted by mass; causal mechanism unresolved."},
+      {"text": "PANEL 3 — Astra asks. ASTRA: What can we promise?"},
+      {"text": "PANEL 4 — Mira answers. MIRA: Collection and characterization."},
+      {"text": "PANEL 5 — She adds a line to the proposal: NO INFERRED EMOTIONAL FIELDS."},
+      {"text": "PANEL 6 — Astra reads it. ASTRA: Keep that exact."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P08",
+    "summary": "Page 8: Jax's Evidence. Jax supplies the concrete log showing that when collection became the reason for work, his real access job got worse.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Jax", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P07",
+    "panelPlan": [
+      {"text": "PANEL 1 — Jax brings his access logs from the cargo delay in Issue 9."},
+      {"text": "PANEL 2 — He points to the accelerated conveyor service and the real Dock 2 problem that arrived during it."},
+      {"text": "PANEL 3 — JAX: When collection became the reason for the job, the actual route got worse."},
+      {"text": "PANEL 4 — Astra does not defend herself. ASTRA: Yes."},
+      {"text": "PANEL 5 — Jax hands her the log. JAX: Then use that."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P09",
+    "summary": "Page 9: Glorp and Kreeb. Their arc culminates in a durable reporting procedure where behavioral context is not merely blank but explicitly not required.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Glorp", "SDS_Kreeb"],
+    "continuityFrom": "SDS_S1E10_P08",
+    "panelPlan": [
+      {"text": "PANEL 1 — Glorp and Kreeb review the proposed reporting fields."},
+      {"text": "PANEL 2 — Glorp requires: owner; task; physical condition; chain of custody; unresolved questions."},
+      {"text": "PANEL 3 — Kreeb requires: disclosure optional; no behavioral condition required; intentional blank permitted."},
+      {"text": "PANEL 4 — Glorp looks at the blank behavioral-context box. GLORP: This still makes me uncomfortable."},
+      {"text": "PANEL 5 — Kreeb looks at it too. KREEB: Leave it blank on purpose."},
+      {"text": "PANEL 6 — Glorp types: BEHAVIORAL CONTEXT: NOT REQUIRED. GLORP: More durable."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P10",
+    "summary": "Page 10: Name the Fourth. The crew names a program category that describes the actual station rather than forcing Stardust into a material-production category.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Zib"],
+    "continuityFrom": "SDS_S1E10_P09",
+    "panelPlan": [
+      {"text": "PANEL 1 — The evidence now covers the table."},
+      {"text": "PANEL 2 — Astra writes a provisional heading: ADAPTIVE OPERATIONS / INCIDENTAL MATERIALS OBSERVATION."},
+      {"text": "PANEL 3 — Mira reads it. MIRA: Materials plural?"},
+      {"text": "PANEL 4 — Astra removes the S. ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION."},
+      {"text": "PANEL 5 — Zib looks at it. ZIB: Still sounds like a department."},
+      {"text": "PANEL 6 — Astra accepts that. ASTRA: Today we need a department-shaped sentence."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P11",
+    "summary": "Page 11: Primary and Secondary. The fourth model makes station operations primary and passive material observation explicitly secondary, with no output target or behavioral conditions.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Kreeb", "SDS_Pixa"],
+    "continuityFrom": "SDS_S1E10_P10",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra divides the proposal: PRIMARY FUNCTION / SECONDARY OBSERVATION."},
+      {"text": "PANEL 2 — Primary: STATION OPERATIONS / ADAPTIVE RESPONSE / MAINTENANCE CLOSURE."},
+      {"text": "PANEL 3 — Secondary: PASSIVE MATERIAL COLLECTION / PHYSICAL CHARACTERIZATION."},
+      {"text": "PANEL 4 — Mira adds: NO OUTPUT TARGET."},
+      {"text": "PANEL 5 — Kreeb adds: NO BEHAVIORAL CONDITIONS."},
+      {"text": "PANEL 6 — Pixa reads the whole thing. PIXA: Both sections are measurable without inferred mental-state data. ASTRA: That's the point."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P12",
+    "summary": "Page 12: The Liaison Returns. The liaison joins remotely and challenges the fourth recommendation on evidence rather than dismissing it as nonstandard.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P11",
+    "panelPlan": [
+      {"text": "PANEL 1 — The Operations Liaison joins the review by live call from another StarTrust site."},
+      {"text": "PANEL 2 — Astra sends the fourth recommendation."},
+      {"text": "PANEL 3 — The Liaison reads silently for a moment."},
+      {"text": "PANEL 4 — LIAISON: This is not a standard pilot category."},
+      {"text": "PANEL 5 — Astra answers. ASTRA: Neither are we."},
+      {"text": "PANEL 6 — The Liaison keeps reading. LIAISON: That is not an argument. ASTRA: The operating record is."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P13",
+    "summary": "Page 13: The Hard Question. The liaison makes the dedicated material pilot genuinely attractive by naming its safer funding and procurement benefits before naming its conditions.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P12",
+    "panelPlan": [
+      {"text": "PANEL 1 — The Liaison reaches the budget comparison."},
+      {"text": "PANEL 2 — LIAISON: Dedicated material pilot is the safer funding recommendation."},
+      {"text": "PANEL 3 — Astra knows exactly what that buys. LIAISON: Priority procurement. Dedicated support. Protected headcount."},
+      {"text": "PANEL 4 — The Issue 4 bracket ETA sits open on a side screen."},
+      {"text": "PANEL 5 — The Liaison continues. LIAISON: It also requires a target and program conditions."},
+      {"text": "PANEL 6 — Astra looks at the crew around the table. Nobody tells her what to choose."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P14",
+    "summary": "Page 14: The Choice Before the Answer. Astra chooses the truthful operating model before she knows whether the station will survive the decision.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P13",
+    "panelPlan": [
+      {"text": "PANEL 1 — The Liaison asks directly. LIAISON: Which recommendation do you want me to carry?"},
+      {"text": "PANEL 2 — Astra looks at Option One."},
+      {"text": "PANEL 3 — Then at the fourth recommendation."},
+      {"text": "PANEL 4 — ASTRA: Recommend the station we actually run."},
+      {"text": "PANEL 5 — The Liaison is explicit. LIAISON: That can lose."},
+      {"text": "PANEL 6 — Astra does not revise it. ASTRA: I know."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P15",
+    "summary": "Page 15: Review Questions. The fourth model answers central review with operational response as the reproducible output and no committed material yield.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira"],
+    "continuityFrom": "SDS_S1E10_P14",
+    "panelPlan": [
+      {"text": "PANEL 1 — Central review returns written questions while the Liaison remains on the call."},
+      {"text": "PANEL 2 — Question: WHAT IS THE REPRODUCIBLE OUTPUT?"},
+      {"text": "PANEL 3 — Astra answers. ASTRA: Operational response."},
+      {"text": "PANEL 4 — Question: WHAT MATERIAL YIELD CAN BE COMMITTED?"},
+      {"text": "PANEL 5 — Mira answers. MIRA: None."},
+      {"text": "PANEL 6 — Question: THEN WHY RETAIN MATERIAL OBSERVATION? Mira looks at Astra. Astra lets her answer. MIRA: Because unknown is not the same as worthless."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P16",
+    "summary": "Page 16: What the Station Produces. The crew builds one value statement from specific voices: keep the place working, measure the strange part, keep records, do not turn people into records.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb"],
+    "continuityFrom": "SDS_S1E10_P15",
+    "panelPlan": [
+      {"text": "PANEL 1 — The review asks for one concise value statement."},
+      {"text": "PANEL 2 — Astra starts typing, stops, and turns to the crew. ASTRA: One sentence."},
+      {"text": "PANEL 3 — ZIB: We keep the place working."},
+      {"text": "PANEL 4 — MIRA: And we measure the strange part without pretending we understand it."},
+      {"text": "PANEL 5 — GLORP: With records."},
+      {"text": "PANEL 6 — KREEB: That do not require people to become records. Astra types."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P17",
+    "summary": "Page 17: We Have a Fourth. Astra formally declines the safer dedicated-material recommendation and submits the fourth model before any approval exists.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Liaison"],
+    "continuityFrom": "SDS_S1E10_P16",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra submits the final site recommendation."},
+      {"text": "PANEL 2 — Central screen still displays the three standard options beside it."},
+      {"text": "PANEL 3 — The Liaison asks one last time. LIAISON: You are declining the dedicated material recommendation?"},
+      {"text": "PANEL 4 — Astra answers. ASTRA: We have a fourth."},
+      {"text": "PANEL 5 — She presses SUBMIT before any approval exists."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P18",
+    "summary": "Page 18: Waiting Is Work. The review becomes pending, so the crew returns to the still-real Issue 4 bracket inspection; Jax remembers the six-minute interval without assignment.",
+    "setting": "SDS_Maintenance_Bay",
+    "characters": ["SDS_Zib", "SDS_Astra", "SDS_Jax"],
+    "continuityFrom": "SDS_S1E10_P17",
+    "panelPlan": [
+      {"text": "PANEL 1 — The review status changes to: UNDER EVALUATION."},
+      {"text": "PANEL 2 — No one knows how long it will take."},
+      {"text": "PANEL 3 — Zib points at the still-open bracket panel. ZIB: Great. Hold this."},
+      {"text": "PANEL 4 — Astra joins him for the scheduled temporary-bracket inspection."},
+      {"text": "PANEL 5 — Jax takes the monitoring reader without being assigned. JAX: Six-minute interval?"},
+      {"text": "PANEL 6 — Zib nods. ZIB: You remember. JAX: Unfortunately."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P19",
+    "summary": "Page 19: Normal Work While It Matters. Stardust keeps operating during the decision; Astra stops refreshing the review and returns attention to work in front of her.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Mira", "SDS_Glorp", "SDS_Kreeb", "SDS_Pixa", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P18",
+    "panelPlan": [
+      {"text": "PANEL 1 — The station keeps operating while the review remains pending."},
+      {"text": "PANEL 2 — Mira checks the temporary material filler. No new claim."},
+      {"text": "PANEL 3 — Glorp closes an ordinary safety record."},
+      {"text": "PANEL 4 — Kreeb returns the quiet-room chairs after someone borrowed them."},
+      {"text": "PANEL 5 — Pixa reports routine uptime."},
+      {"text": "PANEL 6 — Astra glances at the pending review, then back at the work in front of her. She does not refresh it again."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P20",
+    "summary": "Page 20: Active. Central accepts the fourth model: active station, adaptive operations, incidental material observation, no output target, no behavioral conditions, and operations procurement priority.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Zib"],
+    "continuityFrom": "SDS_S1E10_P19",
+    "panelPlan": [
+      {"text": "PANEL 1 — Pixa's notification tone sounds once."},
+      {"text": "PANEL 2 — Everyone looks toward the nearest screen."},
+      {"text": "PANEL 3 — Central review result: STATION STATUS: ACTIVE."},
+      {"text": "PANEL 4 — Second line: PROGRAM: ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION."},
+      {"text": "PANEL 5 — Third and fourth lines: OUTPUT TARGET: NONE / BEHAVIORAL CONDITIONS: NONE / PROCUREMENT: OPERATIONS PRIORITY."},
+      {"text": "PANEL 6 — Astra reads it without speaking for a beat. Zib breaks the silence. ZIB: Does active come with a bracket?"}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P21",
+    "summary": "Page 21: The Bracket. Operations procurement priority causally pays off the Issue 4 problem by moving the real replacement part to two days.",
+    "setting": "SDS_Maintenance_Bay",
+    "characters": ["SDS_Pixa", "SDS_Zib", "SDS_Astra", "SDS_Brick", "SDS_Jax", "SDS_Glorp"],
+    "continuityFrom": "SDS_S1E10_P20",
+    "panelPlan": [
+      {"text": "PANEL 1 — Pixa checks procurement."},
+      {"text": "PANEL 2 — The replacement request has changed: REPLACEMENT PART ETA: 2 DAYS."},
+      {"text": "PANEL 3 — Zib stares at the screen. ZIB: That's suspicious."},
+      {"text": "PANEL 4 — Astra finally smiles. ASTRA: Do not investigate procurement generosity."},
+      {"text": "PANEL 5 — Brick opens his notebook. BRICK: Too late."},
+      {"text": "PANEL 6 — Jax looks at the temporary repair tag. JAX: Two days. We may have to learn what permanent means. GLORP: Do not say that near policy."}
+    ]
+  },
+  {
+    "id": "SDS_S1E10_P22",
+    "summary": "Page 22: Tag — Normal Enough. The durable reporting template explicitly marks behavioral context as not required, and the first ten-issue arc ends with the station active and still recognizably itself.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Glorp", "SDS_Kreeb", "SDS_Brick", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E10_P21",
+    "panelPlan": [
+      {"text": "PANEL 1 — Later. Glorp and Kreeb build the durable reporting template for the approved program."},
+      {"text": "PANEL 2 — Fields include: PHYSICAL CONDITIONS / SAMPLE PROPERTIES / OPERATIONAL EVENT / BEHAVIORAL CONTEXT."},
+      {"text": "PANEL 3 — Glorp leaves BEHAVIORAL CONTEXT blank by rule and marks: NOT REQUIRED. Kreeb looks at the empty area. KREEB: Intentional blank space."},
+      {"text": "PANEL 4 — Across the room, the vending machine prints an unsolicited receipt: STATION STATUS: ACTIVE. Brick turns slowly toward it."},
+      {"text": "PANEL 5 — Astra walks past carrying ordinary work orders. ASTRA: Normal enough."}
+    ]
+  }
+]
