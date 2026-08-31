@@ -1,0 +1,327 @@
+[
+  {
+    "id": "SDS_S1E09_P01",
+    "summary": "Issue 9 — Output Target. Page 1: The Number. Central review ties a 240g weekly benchmark to provisional pilot confidence and procurement priority.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "panelPlan": [
+      {"text": "PANEL 1 — Morning. Astra opens the central review attachment from Issue 8."},
+      {"text": "PANEL 2 — Large text: WEEKLY MATERIAL TARGET: 240 g."},
+      {"text": "PANEL 3 — Astra stares at it. ASTRA: No."},
+      {"text": "PANEL 4 — Pixa supplies the administrative context. PIXA: Benchmark attainment increases provisional-pilot confidence."},
+      {"text": "PANEL 5 — A smaller line appears: PROCUREMENT PRIORITY MAY BE ADJUSTED UPON SUCCESSFUL BENCHMARK COMPLETION. Astra stops saying no."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P02",
+    "summary": "Page 2: The Extrapolation. Mira reveals that central simply multiplied one unusual visit-day sample by seven.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Mira", "SDS_Pixa", "SDS_Jax", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P01",
+    "panelPlan": [
+      {"text": "PANEL 1 — Mira opens the benchmark calculation."},
+      {"text": "PANEL 2 — She traces the source data. MIRA: They used the visit-day sample."},
+      {"text": "PANEL 3 — Pixa displays: OBSERVED: 34 g / ACTIVE VISIT DAY; PROJECTED: 238 g / 7 DAYS; TARGET ROUNDED: 240 g."},
+      {"text": "PANEL 4 — Mira looks offended on behalf of arithmetic. MIRA: They multiplied one unusual day by seven."},
+      {"text": "PANEL 5 — Jax looks at the target. JAX: I also become more productive if you multiply Tuesday by seven."},
+      {"text": "PANEL 6 — Astra closes the calculation. ASTRA: We are not chasing it."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P03",
+    "summary": "Page 3: The Bracket. The delayed replacement part gives the bad target a real temptation.",
+    "setting": "SDS_Maintenance_Bay",
+    "characters": ["SDS_Zib", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P02",
+    "panelPlan": [
+      {"text": "PANEL 1 — Zib checks procurement while inspecting the still-temporary brace from Issue 4."},
+      {"text": "PANEL 2 — Screen: REPLACEMENT PART ETA: 14 DAYS."},
+      {"text": "PANEL 3 — Astra sees it."},
+      {"text": "PANEL 4 — Zib sees Astra see it. ZIB: No."},
+      {"text": "PANEL 5 — Astra has not said anything yet. ASTRA: I didn't say anything."},
+      {"text": "PANEL 6 — Zib closes the procurement screen. ZIB: Your face did paperwork."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P04",
+    "summary": "Page 4: The Rule Still Stands. Astra restates the local boundary and explicitly refuses interpretive loopholes.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb"],
+    "continuityFrom": "SDS_S1E09_P03",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra reviews the local pilot terms with Mira, Glorp, and Kreeb."},
+      {"text": "PANEL 2 — She points at the boundary. ASTRA: No behavioral conditions. No invented incidents. No work whose only purpose is output."},
+      {"text": "PANEL 3 — Mira nods. MIRA: Good."},
+      {"text": "PANEL 4 — Glorp checks the exact wording. GLORP: \"Only purpose\" leaves interpretive room."},
+      {"text": "PANEL 5 — Kreeb looks at Astra. KREEB: Do you want interpretive room?"},
+      {"text": "PANEL 6 — Astra closes the document. ASTRA: No."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P05",
+    "summary": "Page 5: Due Soon. Several legitimate maintenance tasks tempt Astra to rationalize changing timing without changing purpose.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Mira"],
+    "continuityFrom": "SDS_S1E09_P04",
+    "panelPlan": [
+      {"text": "PANEL 1 — Pixa displays the ordinary maintenance calendar."},
+      {"text": "PANEL 2 — Three tasks are due within the next ten days: coolant fan vibration check; cargo-bay conveyor service; waste-loop filter inspection."},
+      {"text": "PANEL 3 — Astra studies the list."},
+      {"text": "PANEL 4 — Pixa reports. PIXA: All three tasks are legitimate scheduled maintenance."},
+      {"text": "PANEL 5 — Mira recognizes the thought. MIRA: Doing legitimate work early because of the target is still changing the experiment."},
+      {"text": "PANEL 6 — Astra answers carefully. ASTRA: It is also work we have to do."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P06",
+    "summary": "Page 6: One Day Early. Astra makes the first compromise: a harmless task one day early, with nothing else displaced.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Kreeb"],
+    "continuityFrom": "SDS_S1E09_P05",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra asks Zib about the coolant fan vibration check. ASTRA: Due tomorrow?"},
+      {"text": "PANEL 2 — Zib checks the schedule. ZIB: Tomorrow."},
+      {"text": "PANEL 3 — Astra looks at the workload. ASTRA: Can we do it today without displacing anything?"},
+      {"text": "PANEL 4 — Zib considers honestly. ZIB: Yes."},
+      {"text": "PANEL 5 — Kreeb asks the question Astra hoped no one would. KREEB: Would you move it without the number?"},
+      {"text": "PANEL 6 — Astra takes a beat. ASTRA: Probably not. Then: ASTRA: One day early. Nothing else moves."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P07",
+    "summary": "Page 7: The First Result. The first early task is legitimate, finds a minor issue, and happens to raise the target progress to 19 percent.",
+    "setting": "SDS_Maintenance_Bay",
+    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Mira", "SDS_Pixa", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P06",
+    "panelPlan": [
+      {"text": "PANEL 1 — Zib performs the vibration check. Jax handles access and isolation tags."},
+      {"text": "PANEL 2 — Mira records the physical maintenance conditions."},
+      {"text": "PANEL 3 — The check finds a slightly loose mount, worth correcting but not urgent. ZIB: Good catch for tomorrow."},
+      {"text": "PANEL 4 — They tighten it and restore the fan."},
+      {"text": "PANEL 5 — Later, passive collection from the work area yields a modest sample."},
+      {"text": "PANEL 6 — Pixa updates the weekly total: TARGET PROGRESS: 19%. Astra notices."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P08",
+    "summary": "Page 8: The Number Moves. The target and procurement indicators rise together, rewarding Astra's rationalization even though Mira warns they are not the same result.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Mira"],
+    "continuityFrom": "SDS_S1E09_P07",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra watches the target graph move upward."},
+      {"text": "PANEL 2 — Procurement status refreshes beside it: PRIORITY REVIEW: IMPROVING."},
+      {"text": "PANEL 3 — Mira notices Astra looking at both screens. MIRA: Those are not the same result."},
+      {"text": "PANEL 4 — Astra answers without taking her eyes off them. ASTRA: I know."},
+      {"text": "PANEL 5 — Across the room, the temporary bracket tag remains visible."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P09",
+    "summary": "Page 9: Purpose. Astra considers moving the conveyor service six days early; Kreeb identifies that the purpose would now be the number.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Kreeb"],
+    "continuityFrom": "SDS_S1E09_P08",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra raises the cargo-bay conveyor service with Zib. It is due in six days."},
+      {"text": "PANEL 2 — ASTRA: We could clear it early too."},
+      {"text": "PANEL 3 — Zib looks at her. ZIB: We could also do it in six days."},
+      {"text": "PANEL 4 — Astra points at the calendar. ASTRA: It is real maintenance either way."},
+      {"text": "PANEL 5 — Kreeb, nearby, answers gently. KREEB: The purpose would still be the number."},
+      {"text": "PANEL 6 — Astra looks back at the target graph. She does not authorize it yet."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P10",
+    "summary": "Page 10: Mass Is Not Quality. Mira demonstrates that larger samples can be physically worse than smaller ones; total mass is not material quality.",
+    "setting": "SDS_Lab_Work_Area",
+    "characters": ["SDS_Mira", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P09",
+    "panelPlan": [
+      {"text": "PANEL 1 — Mira tests the accumulated passive samples."},
+      {"text": "PANEL 2 — One larger sample crumbles under compression."},
+      {"text": "PANEL 3 — A smaller sample survives longer."},
+      {"text": "PANEL 4 — Mira calls Astra over. MIRA: More mass did not mean better material."},
+      {"text": "PANEL 5 — Astra studies the results. ASTRA: Can you put that in numbers?"},
+      {"text": "PANEL 6 — Mira points at the scatterplot. MIRA: I can put the absence of a relationship in numbers."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P11",
+    "summary": "Page 11: On Pace. The favorable projection keeps pulling Astra back toward next week's work despite Jax accidentally naming the problem.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Jax"],
+    "continuityFrom": "SDS_S1E09_P10",
+    "panelPlan": [
+      {"text": "PANEL 1 — Central review updates the target projection from current collection mass."},
+      {"text": "PANEL 2 — Banner: PROJECTED BENCHMARK STATUS: ON PACE."},
+      {"text": "PANEL 3 — Pixa reports. PIXA: Procurement priority review remains favorable."},
+      {"text": "PANEL 4 — Astra looks at the maintenance calendar again."},
+      {"text": "PANEL 5 — Jax passes with a cargo-access checklist. JAX: Why are you looking at next week's problems today?"},
+      {"text": "PANEL 6 — Astra closes the calendar. ASTRA: Good question. She reopens it after he leaves."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P12",
+    "summary": "Page 12: Second Task. Astra knowingly makes the wrong call and advances a conveyor service that takes the cargo lane offline.",
+    "setting": "SDS_Cargo_Bay",
+    "characters": ["SDS_Astra", "SDS_Zib"],
+    "continuityFrom": "SDS_S1E09_P11",
+    "panelPlan": [
+      {"text": "PANEL 1 — Later. Astra finds Zib in the cargo bay."},
+      {"text": "PANEL 2 — ASTRA: Conveyor service. Can we do it this afternoon?"},
+      {"text": "PANEL 3 — Zib is less accommodating this time. ZIB: It takes the service lane offline."},
+      {"text": "PANEL 4 — Astra checks the cargo schedule. ASTRA: No scheduled arrival for three hours."},
+      {"text": "PANEL 5 — Zib looks at her for a long moment. ZIB: Due in six days."},
+      {"text": "PANEL 6 — Astra makes the wrong call. ASTRA: Do it."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P13",
+    "summary": "Page 13: The Early Window. The unnecessary early service finds nothing important but produces another modest sample and pushes the number to 31 percent.",
+    "setting": "SDS_Cargo_Bay",
+    "characters": ["SDS_Jax", "SDS_Mira", "SDS_Zib", "SDS_Pixa", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P12",
+    "panelPlan": [
+      {"text": "PANEL 1 — The cargo conveyor is isolated. Service panels are open across the loading lane."},
+      {"text": "PANEL 2 — Jax sets route barriers and access tags."},
+      {"text": "PANEL 3 — Mira logs the work conditions because passive collection remains active."},
+      {"text": "PANEL 4 — Zib finds nothing significant wrong with the conveyor. ZIB: Very healthy six-days-early conveyor."},
+      {"text": "PANEL 5 — A modest residue sample appears near a warm motor housing."},
+      {"text": "PANEL 6 — Pixa updates: TARGET PROGRESS: 31%. Zib looks at the number, then at Astra."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P14",
+    "summary": "Page 14: Actual Work Arrives. A real Dock 2 problem appears while the cargo lane is occupied by target-driven early maintenance.",
+    "setting": "SDS_Cargo_Bay",
+    "characters": ["SDS_Jax", "SDS_Zib", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P13",
+    "panelPlan": [
+      {"text": "PANEL 1 — A station alert interrupts the service: CARGO DOCK 2 — LATCH SENSOR DISAGREEMENT."},
+      {"text": "PANEL 2 — Jax checks the docking schedule. JAX: Supply shuttle is twelve minutes out."},
+      {"text": "PANEL 3 — Zib looks from the open conveyor to Dock 2. ZIB: We need the lane back."},
+      {"text": "PANEL 4 — Astra calculates quickly. ASTRA: Can you close this service first?"},
+      {"text": "PANEL 5 — Zib looks at her."},
+      {"text": "PANEL 6 — Jax makes the distinction plain. JAX: This is the actual job now."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P15",
+    "summary": "Page 15: Six Minutes. Astra spends six more minutes closing the unnecessary service cleanly while the supply shuttle waits.",
+    "setting": "SDS_Cargo_Bay",
+    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Jax", "SDS_Pixa"],
+    "continuityFrom": "SDS_S1E09_P14",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra checks the half-finished conveyor service."},
+      {"text": "PANEL 2 — ASTRA: Six minutes. Close clean, then Dock 2."},
+      {"text": "PANEL 3 — Zib does not argue; he starts restoring the conveyor because Astra made the call."},
+      {"text": "PANEL 4 — Jax reroutes incoming cargo traffic and notifies docking control."},
+      {"text": "PANEL 5 — Pixa counts elapsed time only. PIXA: Supply shuttle holding at approach marker."},
+      {"text": "PANEL 6 — Astra watches the hold timer increase and knows exactly why."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P16",
+    "summary": "Page 16: The Cost. The real Dock 2 problem is a two-minute connector issue, but the target-driven early task has already cost the station its turnaround slot.",
+    "setting": "SDS_Cargo_Bay",
+    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P15",
+    "panelPlan": [
+      {"text": "PANEL 1 — The conveyor is restored. The team moves immediately to Dock 2."},
+      {"text": "PANEL 2 — Zib finds the latch sensor connector partly backed out. ZIB: Two-minute problem."},
+      {"text": "PANEL 3 — Jax secures the dock route while Zib reseats the connector."},
+      {"text": "PANEL 4 — The latch verifies."},
+      {"text": "PANEL 5 — The supply shuttle is cleared in, but the station has missed its original turnaround slot."},
+      {"text": "PANEL 6 — Zib closes the panel. ZIB: We moved work for the number and actual work waited. Astra has no answer."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P17",
+    "summary": "Page 17: Stop. Astra publicly reverses the output-oriented schedule even while the dashboard still says the station is on pace.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "continuityFrom": "SDS_S1E09_P16",
+    "panelPlan": [
+      {"text": "PANEL 1 — Back in operations, the target dashboard still reads: PROJECTED: ON PACE."},
+      {"text": "PANEL 2 — Astra looks at the remaining pulled-forward maintenance candidates."},
+      {"text": "PANEL 3 — She deletes them from the accelerated list."},
+      {"text": "PANEL 4 — ASTRA: Stop. Put the station back."},
+      {"text": "PANEL 5 — Pixa asks: PIXA: Clarify output schedule. ASTRA: There is no output schedule."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P18",
+    "summary": "Page 18: The Actual Priority. Astra still wants the replacement bracket, but she records the shuttle delay and returns to ordinary work priority.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Jax", "SDS_Astra", "SDS_Noola"],
+    "continuityFrom": "SDS_S1E09_P17",
+    "panelPlan": [
+      {"text": "PANEL 1 — The crew returns to the ordinary maintenance calendar."},
+      {"text": "PANEL 2 — Jax closes the Dock 2 access log. JAX: Shuttle delay: eleven minutes."},
+      {"text": "PANEL 3 — Astra signs the incident note herself."},
+      {"text": "PANEL 4 — Noola passes the temporary-bracket status display with Astra. NOOLA: You wanted the bracket."},
+      {"text": "PANEL 5 — Astra looks at the fourteen-day ETA. ASTRA: I still do."},
+      {"text": "PANEL 6 — Noola keeps walking. NOOLA: I know."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P19",
+    "summary": "Page 19: The Target Is Gone. Once normal scheduling resumes, benchmark attainment becomes unlikely and Mira states exactly what the target chase did to the evidence.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Mira", "SDS_Pixa", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P18",
+    "panelPlan": [
+      {"text": "PANEL 1 — Mira updates the forecast using only normal scheduled work."},
+      {"text": "PANEL 2 — The target projection falls sharply. PIXA: Benchmark attainment now unlikely."},
+      {"text": "PANEL 3 — Astra asks Mira for the material conclusion."},
+      {"text": "PANEL 4 — Mira shows the full test set. MIRA: Quality varied independently of mass."},
+      {"text": "PANEL 5 — Astra points at the target. ASTRA: And the schedule change?"},
+      {"text": "PANEL 6 — Mira is precise. MIRA: Changed operations and destroyed comparability."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P20",
+    "summary": "Page 20: Say What Happened. Astra names her own scheduling decision as the cause of the operational delay rather than turning the failed target into a blame document.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb", "SDS_Jax", "SDS_Pixa"],
+    "continuityFrom": "SDS_S1E09_P19",
+    "panelPlan": [
+      {"text": "PANEL 1 — Astra brings Zib, Mira, Glorp, Kreeb, Jax, and Pixa into a short standing review beside the actual work board."},
+      {"text": "PANEL 2 — She does not defend the choice. ASTRA: I moved maintenance for the target."},
+      {"text": "PANEL 3 — Zib nods once. ZIB: Yes."},
+      {"text": "PANEL 4 — Astra continues. ASTRA: It delayed actual work."},
+      {"text": "PANEL 5 — Glorp opens the report template. GLORP: Do you want causal language?"},
+      {"text": "PANEL 6 — Astra answers immediately. ASTRA: Yes. Ours."}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P21",
+    "summary": "Page 21: Target Missed. The final report records the missed target, the quality/mass disconnect, and the discontinued output-oriented scheduling without euphemism.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Mira", "SDS_Astra"],
+    "continuityFrom": "SDS_S1E09_P20",
+    "panelPlan": [
+      {"text": "PANEL 1 — The final weekly report is assembled."},
+      {"text": "PANEL 2 — First line: Target missed."},
+      {"text": "PANEL 3 — Second line: Quality varied independently of mass."},
+      {"text": "PANEL 4 — Third line: Output-oriented scheduling interfered with normal work and was discontinued."},
+      {"text": "PANEL 5 — Mira reads it. MIRA: Defensible."},
+      {"text": "PANEL 6 — Astra presses SEND. ASTRA: Expensive word for \"we learned something.\""}
+    ]
+  },
+  {
+    "id": "SDS_S1E09_P22",
+    "summary": "Page 22: Tag — Review. Central schedules the final pilot review; Astra refuses an additional collection shift because the station already has a shift.",
+    "setting": "SDS_Admin_Hub",
+    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "continuityFrom": "SDS_S1E09_P21",
+    "panelPlan": [
+      {"text": "PANEL 1 — Central review replies: BENCHMARK NOT MET."},
+      {"text": "PANEL 2 — Second line: PILOT STATUS REVIEW SCHEDULED."},
+      {"text": "PANEL 3 — A suggested recovery option appears: OPTIONAL ADDITIONAL COLLECTION SHIFT."},
+      {"text": "PANEL 4 — Astra selects: DECLINE."},
+      {"text": "PANEL 5 — Pixa asks: PIXA: Reason? Astra looks at the ordinary work board. ASTRA: We already have a shift."}
+    ]
+  }
+]
