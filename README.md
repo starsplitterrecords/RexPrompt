@@ -68,16 +68,53 @@ After copying the JSON package into its directory, add one entry to `data/shows.
 
 The original prequel remains in the root `data/` directory for backward compatibility.
 
+## Package-local production configuration
+
+A show may optionally provide `assembler.json` in its `basePath`. This augments or overrides the manifest entry without adding show-specific logic to `index.html`.
+
+Use it when a production package has multiple authoritative page/scene files or needs deterministic overlays:
+
+```json
+{
+  "scenesFiles": [
+    "pages_e01_compiled.json",
+    "pages_e02_compiled.json"
+  ],
+  "sceneOverlays": [
+    {
+      "file": "issue_01_rebuild.json",
+      "mergeById": true,
+      "strict": true
+    }
+  ],
+  "dialogueOverlays": [
+    {
+      "file": "issue_01_scene_dialogue.json",
+      "strict": true
+    }
+  ]
+}
+```
+
+`sceneOverlays` with `mergeById` replace only the fields supplied for matching production IDs while preserving the rest of each page/scene recipe. `dialogueOverlays` replace the matched recipe's `dialogueInline` with either `dialogueInline` or `sceneDialogue` from the overlay. They do **not** create detached generation units.
+
+Set `strict: true` for production overlays. Strict overlays fail when they reference an ID that is not present in the assembled production set. RexPrompt also rejects duplicate base/assembled IDs. This prevents development data from silently existing outside the generation path.
+
+The authoritative generation unit remains the assembled page/scene recipe: summary, setting/region, factions, characters, panel plan, dialogue, continuity, and direction are emitted together.
+
 ## How assembly works
 
 When a show is selected:
 
 1. RexPrompt loads that show's JSON dictionaries.
-2. The selected scene recipe resolves IDs against those dictionaries.
-3. Character IDs become Star Splitter handles.
-4. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
-5. Setting, region, factions, characters, and direction are appended as formatted prompt sections.
-6. The assembled result is displayed and can be copied directly to the clipboard.
+2. If present, `assembler.json` loads the package's production file list and deterministic overlays.
+3. Page/scene overlays are applied to the production recipes by configured rules.
+4. Dialogue overlays are merged into those same recipes by page/scene ID.
+5. The selected assembled recipe resolves IDs against the show dictionaries.
+6. Character IDs become Star Splitter handles.
+7. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
+8. Setting, region, factions, characters, panel plan, continuity, and direction are appended as formatted prompt sections.
+9. The assembled result is displayed and can be copied directly to the clipboard.
 
 A generated prompt follows roughly this structure:
 
@@ -100,9 +137,15 @@ Scene summary...
 [CHARACTERS]
 ...
 
+[PANEL PLAN]
+...
+
 [DIALOGUE]
 @character.handle says "..."
   (subtext...)
+
+[CONTINUITY]
+...
 
 [DIRECTION]
 ...
@@ -136,7 +179,8 @@ Despite the name, **Commit Scene does not write anything to GitHub or the JSON f
 
 Each show supplies:
 
-- `scenes_prequel.json` (or the configured `scenesFile`) — scene recipes and summaries
+- `scenes_prequel.json` (or the configured `scenesFile` / `scenesFiles`) — production scene/page recipes and summaries
+- `assembler.json` (optional) — package-local production file and overlay configuration
 - `characters.json` — characters, names, handles, roles, and notes
 - `dialogue.json` — dialogue lines and character subtext
 - `direction.json` — scene direction entries
@@ -148,7 +192,7 @@ Each show supplies:
 - `mood.json` — mood and tension guidance
 - `negatives.json` — negative visual guidance
 
-The scene recipe is the central piece. It points to the IDs needed for that generation unit; RexPrompt performs deterministic lookup and assembly rather than interpreting the story itself.
+The assembled scene/page recipe is the central piece. RexPrompt performs deterministic lookup and assembly rather than interpreting the story itself.
 
 ## Deployment
 
@@ -181,9 +225,10 @@ RexPrompt/
     ├── ...prequel data...
     └── shows/
         └── <show-id>/
+            ├── assembler.json
             └── ...show JSON package...
 ```
 
 ## Design principle
 
-RexPrompt should remain a small deterministic assembler. New shows should add data, not application logic.
+RexPrompt should remain a small deterministic assembler. New shows should add data, not application logic. Development notes or dialogue drafts are not generation-authoritative until the package configuration merges them into an actual production page/scene recipe.
