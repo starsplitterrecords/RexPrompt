@@ -258,14 +258,18 @@ for scene in production_issue_2:
     if not scene.get("continuityFrom"):
         raise SystemExit(f"{scene['id']}: production Issue 2 needs causal continuity")
 
-base.extend(e2)
-expected_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
+production_issue_1 = [dict(scene, episode="S1E01") for scene in e2[:8]]
+production_issue_2 = [dict(scene, episode="S1E02") for scene in e2[8:]]
+base = production_issue_1 + production_issue_2
+expected_counts = {"S1E01": len(production_issue_1), "S1E02": len(production_issue_2)}
 
 for n in range(3, 13):
     ep = f"S1E{n:02d}"
-    path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
+    readable_path = SHOW / f"scenes_e{n:02d}.json"
+    encoded_path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
+    path = readable_path if readable_path.exists() else encoded_path
     try:
-        incoming = normalize(load_encoded(path))
+        incoming = normalize(load_json(path) if path == readable_path else load_encoded(path))
     except Exception as exc:
         raise SystemExit(f"{path.name}: decode failure: {exc}") from exc
     bad = [s.get("id") for s in incoming if episode(s) != ep]
@@ -278,6 +282,15 @@ for n in range(3, 13):
         raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
     for scene in incoming:
         validate_clean_scene(scene)
+    if ep == "S1E03":
+        first_layout_pass = {
+            "RF_S1E03_A10", "RF_S1E03_A13", "RF_S1E03_A15", "RF_S1E03_A18",
+            "RF_S1E03_A21", "RF_S1E03_A23", "RF_S1E03_A27", "RF_S1E03_A30",
+        }
+        by_id = {scene["id"]: scene for scene in incoming}
+        for scene_id in first_layout_pass:
+            if len(by_id[scene_id].get("panelPlan", [])) < 4:
+                raise SystemExit(f"{scene_id}: Issue 3 layout pass is incomplete")
     excluded = set(overlays.get(ep, {}).get("excludeIds", []))
     incoming = [s for s in incoming if s.get("id") not in excluded]
     expected_counts[ep] = len(incoming)
