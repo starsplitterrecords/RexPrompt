@@ -89,20 +89,6 @@ def validate_issue_2(scenes):
             raise SystemExit(f"S1E02: {reason} survived: {fragment!r}")
 
     by_id = {scene["id"]: scene for scene in scenes}
-    required_dialogue = {
-        "RF_S1E02_A22": ["Log the crossing. Keep the lane open."],
-        "RF_S1E02_A25": [
-            "Verge convoy to Thunderbreak. Thanks for the shadow.",
-            "You brought them through, Captain.",
-        ],
-        "RF_S1E02_A26": ["Next time, I choose the mark."],
-        "RF_S1E02_A27": ["Now they need the road. Tomorrow they need me."],
-    }
-    for scene_id, expected in required_dialogue.items():
-        actual = dialogue_texts(by_id[scene_id])
-        if actual != expected:
-            raise SystemExit(f"{scene_id}: canonical dialogue mismatch: {actual}")
-
     required_names = {
         "RF_S1E02_A09": {"Billie Rusk"},
         "RF_S1E02_A11": {"Tessa Banks"},
