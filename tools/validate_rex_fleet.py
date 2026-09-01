@@ -175,6 +175,19 @@ for required_id in (
     if required_id not in characters:
         raise SystemExit(f"Required current Rex Fleet identity missing: {required_id}")
 
+for required_id in (
+    "C_commodore_ella_venn",
+    "C_abby_saville",
+    "C_tessa_banks",
+    "C_billie_rusk",
+    "C_governor_halev",
+    "C_captain_naomi_sol",
+    "C_jex_marrin",
+):
+    entry = characters[required_id]
+    if not entry.get("visualAnchor") or not entry.get("continuityLocks"):
+        raise SystemExit(f"Released-canon visual continuity missing: {required_id}")
+
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
 legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
 if legacy_other:
@@ -219,6 +232,32 @@ for required in ("function findCharacterByHandle", "function formatCharacter", "
 
 e2 = normalize(load_json(SHOW / "scenes_e02.json"))
 validate_issue_2(e2)
+
+published_tail = [f"RF_S1E02_A{n:02d}" for n in range(1, 9)]
+issue_1_overlay = next(
+    (item for item in show.get("sceneOverlays", []) if item.get("replaceEpisode") == "S1E01"),
+    None,
+)
+issue_2_overlay = next(
+    (item for item in show.get("sceneOverlays", []) if item.get("replaceEpisode") == "S1E02"),
+    None,
+)
+if not issue_1_overlay or issue_1_overlay.get("includeIds") != published_tail:
+    raise SystemExit("Issue 1 must include the released A01-A08 tail in published order")
+if not issue_2_overlay or issue_2_overlay.get("excludeIds") != published_tail:
+    raise SystemExit("Issue 2 must exclude the already-published A01-A08 tail")
+if show.get("excludeSceneIds") != ["RF_S1E01_S07"]:
+    raise SystemExit("Issue 1 must omit the unpublished duplicate RF_S1E01_S07")
+
+production_issue_2 = e2[8:]
+if [scene.get("id") for scene in production_issue_2] != [f"RF_S1E02_A{n:02d}" for n in range(9, 28)]:
+    raise SystemExit("Production Issue 2 must run in order from A09 through A27")
+for scene in production_issue_2:
+    if len(scene.get("panelPlan", [])) < 4:
+        raise SystemExit(f"{scene['id']}: production Issue 2 needs a complete panel plan")
+    if not scene.get("continuityFrom"):
+        raise SystemExit(f"{scene['id']}: production Issue 2 needs causal continuity")
+
 base.extend(e2)
 expected_counts = {"S1E01": len(legacy_e1), "S1E02": len(e2)}
 
