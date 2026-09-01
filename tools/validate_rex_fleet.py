@@ -283,14 +283,24 @@ for n in range(3, 13):
     for scene in incoming:
         validate_clean_scene(scene)
     if ep == "S1E03":
-        first_layout_pass = {
+        silent_visual_pages = {
             "RF_S1E03_A10", "RF_S1E03_A13", "RF_S1E03_A15", "RF_S1E03_A18",
-            "RF_S1E03_A21", "RF_S1E03_A23", "RF_S1E03_A27", "RF_S1E03_A30",
+            "RF_S1E03_A21", "RF_S1E03_A23", "RF_S1E03_A27",
         }
-        by_id = {scene["id"]: scene for scene in incoming}
-        for scene_id in first_layout_pass:
-            if len(by_id[scene_id].get("panelPlan", [])) < 4:
-                raise SystemExit(f"{scene_id}: Issue 3 layout pass is incomplete")
+        expected_issue_3_ids = [f"RF_S1E03_A{index:02d}" for index in range(1, 31)]
+        if ids != expected_issue_3_ids:
+            raise SystemExit("S1E03: recipes must remain in canonical A01-A30 order")
+        for index, scene in enumerate(incoming):
+            if len(scene.get("panelPlan", [])) < 4:
+                raise SystemExit(f"{scene['id']}: Issue 3 needs a complete panel plan")
+            expected_prior = incoming[index - 1]["id"] if index else None
+            if scene.get("continuityFrom") != expected_prior:
+                raise SystemExit(f"{scene['id']}: Issue 3 causal continuity is not sequential")
+            dialogue_count = len(scene.get("dialogueInline", []))
+            if scene["id"] in silent_visual_pages and dialogue_count:
+                raise SystemExit(f"{scene['id']}: designated visual page should remain silent")
+            if scene["id"] not in silent_visual_pages | {"RF_S1E03_A30"} and dialogue_count < 2:
+                raise SystemExit(f"{scene['id']}: speaking scene lacks sufficient exchange")
     excluded = set(overlays.get(ep, {}).get("excludeIds", []))
     incoming = [s for s in incoming if s.get("id") not in excluded]
     expected_counts[ep] = len(incoming)
