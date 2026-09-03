@@ -8,7 +8,6 @@ not freeze creative wording or score narrative quality.
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,6 +64,7 @@ def main():
     characters = load("characters.json")
     settings = load("settings.json")
     regions = load("regions.json")
+    factions = load("factions.json")
 
     pages = []
     for filename in assembler["scenesFiles"]:
@@ -98,6 +98,8 @@ def main():
             assert page["setting"] in settings, f"{pid}: unknown setting {page['setting']}"
         if page.get("region"):
             assert page["region"] in regions, f"{pid}: unknown region {page['region']}"
+        for faction_id in page.get("factions", []):
+            assert faction_id in factions, f"{pid}: unknown faction {faction_id}"
         for char_id in page.get("characters", []):
             assert char_id in characters, f"{pid}: unknown character {char_id}"
 
@@ -125,6 +127,17 @@ def main():
         assert page.get("setting") == setting, f"{pid}: stale/wrong setting {page.get('setting')}"
         assert page.get("region") == region, f"{pid}: stale/wrong region {page.get('region')}"
 
+    # Every current Issue 1 page now carries explicit people-category visual
+    # context so RexPrompt does not rely on the image model to invent a shared
+    # visual language for Baselines, Organics, Augments or Intelligences.
+    for page_num in range(1, 27):
+        pid = f"DT_E001_P{page_num:02d}"
+        assert by_id[pid].get("factions"), f"{pid}: missing Issue 1 visual faction context"
+
+    for faction_id in ("DT_BaselineHumans", "DT_Organosynthetics", "DT_AugmentedHumans", "DT_Intelligences"):
+        text = factions[faction_id].get("text", "")
+        assert len(text) >= 200, f"{faction_id}: faction visual language is too thin for production"
+
     retired_issue1_phrases = (
         "white facility",
         "drone frames ambush",
@@ -151,7 +164,7 @@ def main():
                 assert handle in handles, f"{page['id']}: unknown dialogue handle {handle}"
 
     print("Division Threshold validation passed")
-    print("8 issues / 208 pages / canonical Issue 1 locations / valid production references")
+    print("8 issues / 208 pages / canonical Issue 1 locations / visual faction context / valid production references")
 
 
 if __name__ == "__main__":
