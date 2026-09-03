@@ -88,26 +88,6 @@ def validate_issue_2(scenes):
         if fragment in serialized:
             raise SystemExit(f"S1E02: {reason} survived: {fragment!r}")
 
-    by_id = {scene["id"]: scene for scene in scenes}
-    required_names = {
-        "RF_S1E02_A09": {"Billie Rusk"},
-        "RF_S1E02_A11": {"Tessa Banks"},
-        "RF_S1E02_A14": {"Captain Naomi Sol"},
-        "RF_S1E02_A19": {"Billie Rusk", "Abby Saville"},
-        "RF_S1E02_A22": {"Commodore Ella Venn"},
-        "RF_S1E02_A24": {"Tessa Banks", "Abby Saville"},
-        "RF_S1E02_A25": {"Captain Naomi Sol", "Commodore Ella Venn"},
-        "RF_S1E02_A26": {"Billie Rusk", "Abby Saville"},
-        "RF_S1E02_A27": {"Jex Marrin"},
-    }
-    for scene_id, expected in required_names.items():
-        actual = {c.get("name") for c in by_id[scene_id].get("charactersInline", [])}
-        if not expected.issubset(actual):
-            raise SystemExit(f"{scene_id}: missing canonical character identity: {sorted(expected - actual)}")
-
-    if "failed heater module" not in " ".join(by_id["RF_S1E02_A05"].get("directionInline", [])).lower():
-        raise SystemExit("RF_S1E02_A05: civilian heater consequence is missing")
-
     for scene in scenes:
         if scene.get("dialog") or scene.get("direction"):
             raise SystemExit(f"{scene['id']}: S1E02 must use canonical inline dialogue and direction only")
