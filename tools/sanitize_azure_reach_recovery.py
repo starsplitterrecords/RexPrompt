@@ -10,7 +10,7 @@ for path in [root / 'pages_e02_p01_p06.json.gzb64', root / 'pages_e02_p07_p12.js
         before = page.get('directionInline', [])
         after = [
             item for item in before
-            if not str(item.get('text', '')).startswith('CAUSAL FUNCTION —')
+            if 'CAUSAL FUNCTION' not in json.dumps(item, ensure_ascii=False)
         ]
         if after != before:
             page['directionInline'] = after
