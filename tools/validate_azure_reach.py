@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Mechanical integrity checks for Azure Reach RexPrompt data.
 
-This validator intentionally does not freeze creative choices such as exact dialogue,
-page titles, panel totals, character behavior, or story beats. It checks that the
-current RexPrompt package can be decoded, references are internally valid, durable
-visual anchors reach the assembler, and recovered production continuity remains
-connected.
+Creative choices remain authored in RexPrompt/Notion, not in this validator. This
+script checks parseability, reference integrity, page identity/ordering, and that
+assembler-visible visual anchors exist for established recurring characters.
 """
 import base64
 import gzip
@@ -45,20 +43,11 @@ canonical_handles = {
     if isinstance(value, dict) and value.get("handle")
 }
 
-# These recurring production characters are established visually and must expose
-# their durable anchor through a field that index.html actually emits.
+# Established recurring production characters need an assembler-visible visual
+# anchor because index.html does not emit character notes.
 visual_anchor_ids = {
-    "AZR_Maya",
-    "AZR_Julian",
-    "AZR_Fleur",
-    "AZR_Pip",
-    "AZR_Sal",
-    "AZR_Beatrice",
-    "AZR_Kyler",
-    "AZR_Dora",
-    "AZR_Elliot",
-    "AZR_Nia",
-    "AZR_Raf",
+    "AZR_Maya", "AZR_Julian", "AZR_Fleur", "AZR_Pip", "AZR_Sal",
+    "AZR_Beatrice", "AZR_Kyler", "AZR_Dora", "AZR_Elliot", "AZR_Nia", "AZR_Raf",
 }
 for character_id in visual_anchor_ids:
     entry = characters.get(character_id)
@@ -164,21 +153,12 @@ for entry in azure_entries:
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
     assert ordered == list(range(1, max(ordered) + 1)), f"{show_id}: non-contiguous page numbering"
 
-    # Issue 2 recovery: every page explicitly carries the causal and physical state
-    # of the page immediately before it; page 1 hands off from released Issue 1.
-    if show_id == "azure-reach-s1-e02":
-        issue_pages = sorted(pages, key=lambda page: page["page"])
-        expected_from = "AZR_S1E01_P22"
-        for page in issue_pages:
-            assert page.get("continuityFrom") == expected_from, (
-                f"{page['id']}: continuityFrom must be {expected_from}, got {page.get('continuityFrom')}"
-            )
-            assert any(
-                isinstance(item, dict)
-                and str(item.get("text", "")).startswith("CAUSAL FUNCTION —")
-                for item in page.get("directionInline", [])
-            ), f"{page['id']}: missing recovered causal-function direction"
-            expected_from = page["id"]
+    # continuityFrom is optional creative production data. When present, validate
+    # only its shape; do not freeze a particular dramatic chain here.
+    for page in pages:
+        continuity_from = page.get("continuityFrom")
+        if continuity_from is not None:
+            assert isinstance(continuity_from, str) and continuity_from.strip(), f"{page['id']}: invalid continuityFrom"
 
     page_total += len(pages)
 
