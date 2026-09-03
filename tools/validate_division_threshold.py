@@ -127,12 +127,28 @@ def main():
         assert page.get("setting") == setting, f"{pid}: stale/wrong setting {page.get('setting')}"
         assert page.get("region") == region, f"{pid}: stale/wrong region {page.get('region')}"
 
-    # Every current Issue 1 page now carries explicit people-category visual
-    # context so RexPrompt does not rely on the image model to invent a shared
-    # visual language for Baselines, Organics, Augments or Intelligences.
+    # Issues 1 and 2 now carry explicit people-category visual context. Issue 2
+    # additionally has production location/region context on every page; the
+    # final split page uses inline setting/region text because it cuts between
+    # two already-established environments.
+    for issue in (1, 2):
+        for page_num in range(1, 27):
+            pid = f"DT_E{issue:03d}_P{page_num:02d}"
+            assert by_id[pid].get("factions"), f"{pid}: missing visual faction context"
+
     for page_num in range(1, 27):
-        pid = f"DT_E001_P{page_num:02d}"
-        assert by_id[pid].get("factions"), f"{pid}: missing Issue 1 visual faction context"
+        pid = f"DT_E002_P{page_num:02d}"
+        page = by_id[pid]
+        assert page.get("setting") or page.get("settingText"), f"{pid}: missing Issue 2 setting context"
+        assert page.get("region") or page.get("regionText"), f"{pid}: missing Issue 2 region context"
+
+    for page_num in [1, 3, 4, 5, 6, 7, 8, 9, 10, 11]:
+        pid = f"DT_E002_P{page_num:02d}"
+        assert by_id[pid].get("setting") == "DT_Concourse17", f"{pid}: Concourse 17 continuity lost"
+        assert by_id[pid].get("region") == "DT_MixedCommercialLevels", f"{pid}: Concourse 17 region continuity lost"
+
+    for pid in ("DT_E002_P14", "DT_E002_P15"):
+        assert by_id[pid].get("setting") == "DT_PublicHearingChamber", f"{pid}: hearing-room continuity lost"
 
     for faction_id in ("DT_BaselineHumans", "DT_Organosynthetics", "DT_AugmentedHumans", "DT_Intelligences"):
         text = factions[faction_id].get("text", "")
@@ -164,7 +180,7 @@ def main():
                 assert handle in handles, f"{page['id']}: unknown dialogue handle {handle}"
 
     print("Division Threshold validation passed")
-    print("8 issues / 208 pages / canonical Issue 1 locations / visual faction context / valid production references")
+    print("8 issues / 208 pages / canonical Issue 1 / recovered Issue 2 locations and visual context / valid production references")
 
 
 if __name__ == "__main__":
