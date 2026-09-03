@@ -29,6 +29,9 @@ def load_json(path):
 
 def decode_gzip_base64(path):
     encoded = "".join(path.read_text(encoding="utf-8").split())
+    allowed = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=")
+    bad = [(index, char) for index, char in enumerate(encoded) if char not in allowed]
+    assert not bad, f"non-base64 characters in {path.name}: {bad[:12]}"
     raw = gzip.decompress(base64.b64decode(encoded, validate=True))
     return json.loads(raw.decode("utf-8"))
 
@@ -60,6 +63,10 @@ def main():
         if str(show.get("id", "")).startswith("vikings-2026-s1")
     ]
     assert active, "no active Vikings shows in data/shows.json"
+
+    issue2_show = next((show for show in active if show.get("id") == "vikings-2026-s1-e02"), None)
+    assert issue2_show, "current Vikings Issue 2 is not registered"
+    assert issue2_show.get("issueLabel") == "Issue 2 — Landfall Bushwick", "Vikings Issue 2 label drift"
 
     active_pages = []
     active_files = []
@@ -117,11 +124,18 @@ def main():
 
     assert len(ids) == len(set(ids)), "duplicate active Vikings page ids"
 
+    issue2_pages = [page for page in active_pages if str(page.get("id", "")).startswith("VIK_S1I02_P")]
+    expected_issue2_ids = [f"VIK_S1I02_P{number:02d}" for number in range(1, 25)]
+    actual_issue2_ids = [page.get("id") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))]
+    assert actual_issue2_ids == expected_issue2_ids, "Vikings Issue 2 must expose exactly VIK_S1I02_P01-P24 in page order"
+    assert [page.get("page") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))] == list(range(1, 25)), "Vikings Issue 2 page numbering drift"
+
     decoded_text = json.dumps(active_pages, ensure_ascii=False)
     for residue in PRODUCTION_RESIDUE:
         assert residue not in decoded_text, f"production residue in active Vikings pages: {residue}"
 
     print("Vikings 2026 production-hygiene validation passed")
+    print("Issue 2 page records:", len(issue2_pages))
     print("Active page records:", len(active_pages))
     print("Active production files:", len(set(active_files)))
 
