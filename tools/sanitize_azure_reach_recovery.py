@@ -7,10 +7,12 @@ for path in [root / 'pages_e02_p01_p06.json.gzb64', root / 'pages_e02_p07_p12.js
     pages = json.loads(gzip.decompress(base64.b64decode(raw)).decode())
     changed = False
     for page in pages:
-        # Recovery-only analysis can appear anywhere in a page payload; remove it
-        # from list-valued production fields without touching authored story text.
         for key, value in list(page.items()):
-            if isinstance(value, list):
+            if isinstance(value, str) and 'CAUSAL FUNCTION' in value:
+                del page[key]
+                changed = True
+                print('removed recovery scaffolding', page.get('id'), key)
+            elif isinstance(value, list):
                 after = [
                     item for item in value
                     if 'CAUSAL FUNCTION' not in json.dumps(item, ensure_ascii=False)
