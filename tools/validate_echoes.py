@@ -126,9 +126,13 @@ def validate_current_production_contract() -> None:
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
-    issue1 = status.get("issue1", {})
-    assert issue1.get("pageCount") == 12
-    assert issue1.get("recipeFile") == "scenes_e01.json"
+    issues = status.get("issues", {})
+    for issue in (1, 2, 3):
+        entry = issues.get(str(issue), {})
+        assert entry.get("status") == "compiled for sequential page production", issue
+        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
+        assert entry.get("pageCount") == 12, issue
+    assert issues.get("4", {}).get("status") == "next recovery frontier"
 
 
 def main() -> None:
