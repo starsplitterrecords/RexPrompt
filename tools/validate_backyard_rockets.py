@@ -79,9 +79,23 @@ for scene in scenes:
         if faction not in factions: raise SystemExit(f"{sid}: unknown faction {faction}")
     for c in scene.get("charactersInline", []) or []:
         if c.get("handle") not in handles: raise SystemExit(f"{sid}: unknown character handle {c.get('handle')}")
+    if episode(scene) == "S1E03":
+        panels = scene.get("panelPlan") or []
+        if len(panels) < 4: raise SystemExit(f"{sid}: Public Sky production page requires at least four planned panels")
+        if not any(str(x).strip() for x in scene.get("directionInline", []) or []):
+            raise SystemExit(f"{sid}: Public Sky production page missing scene direction")
+
+public_sky = [scene for scene in scenes if episode(scene) == "S1E03"]
+previous = "BR_S1E02_R2_P24"
+for scene in public_sky:
+    sid = scene["id"]
+    if scene.get("continuityFrom") != previous:
+        raise SystemExit(f"{sid}: Public Sky continuityFrom must be {previous}, found {scene.get('continuityFrom')}")
+    previous = sid
 
 print("Observed scene counts:", dict(counts), flush=True)
 print("Observed payload boundaries:", flush=True)
 for file, count, first_id, last_id in file_counts: print(f"  {file}: {count} [{first_id} .. {last_id}]", flush=True)
+print("Public Sky production pages:", len(public_sky), "panel plans:", sum(len(s.get("panelPlan") or []) for s in public_sky), flush=True)
 print("Backyard Rockets validation passed")
 print("Total scenes:", len(scenes))
