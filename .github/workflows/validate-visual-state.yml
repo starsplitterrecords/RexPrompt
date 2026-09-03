@@ -1,0 +1,32 @@
+name: Validate Production Visual State
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'visuals.js'
+      - 'production/**'
+      - 'tools/validate_visual_state.py'
+      - '.github/workflows/validate-visual-state.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'visuals.js'
+      - 'production/**'
+      - 'tools/validate_visual_state.py'
+      - '.github/workflows/validate-visual-state.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate approved draft and released canon state
+        run: python tools/validate_visual_state.py
+      - name: Check visual workspace JavaScript syntax
+        run: node --check visuals.js
