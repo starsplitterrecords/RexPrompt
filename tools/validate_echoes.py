@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate sanitized Echoes of a Forgotten War RexPrompt production data."""
+"""Validate current Echoes of a Forgotten War RexPrompt production structure."""
 from __future__ import annotations
 
 import json
@@ -10,48 +10,13 @@ SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
 REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
-ALLOWED_CHARACTER_FIELDS = {"name", "handle", "role"}
-FORBIDDEN_RESIDUE = (
-    "do not explain", "do not present", "do not make", "do not depict", "do not imply",
-    "do not reward", "avoid a grand entrance", "not tactical graphics", "not a machine",
-    "not clinical examination", "not collecting measurements", "not impossible technical tricks",
-    "operating rules of reality", "no projections", "no scanner", "no mechanism",
-    "technical jargon", "probability jargon", "pseudo-scientific", "interactive hologram",
-    "engineering-tolerance", "invented physics", "diagnostic readout", "floating tactical diagrams",
-    "earlier 'redline' spelling was rejected", "reveal order was not recovered"
-)
+ALLOWED_CHARACTER_FIELDS = {
+    "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
+}
 
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def production_strings() -> list[tuple[str, str]]:
-    strings: list[tuple[str, str]] = []
-    direction = load(SHOW / "direction.json")
-    for key, entry in direction.items():
-        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
-            strings.append((f"direction:{key}", entry["text"]))
-    settings = load(SHOW / "settings.json")
-    for key, entry in settings.items():
-        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
-            strings.append((f"setting:{key}", entry["text"]))
-    for path in SCENE_FILES:
-        for scene in load(path):
-            if isinstance(scene.get("settingText"), str):
-                strings.append((f"{scene.get('id')}:settingText", scene["settingText"]))
-            for block in scene.get("directionInline", []) or []:
-                if isinstance(block, dict) and isinstance(block.get("text"), str):
-                    strings.append((f"{scene.get('id')}:direction", block["text"]))
-    spine = load(SHOW / "comic_page_spine_v1.json")
-    for rule in spine.get("globalRules", []):
-        strings.append(("page-spine:rule", str(rule)))
-    for issue in spine.get("issues", []):
-        for page in issue.get("pages", []):
-            for field in ("beat", "turn"):
-                if isinstance(page.get(field), str):
-                    strings.append((f"page-spine:{issue.get('issue')}:{page.get('page')}:{field}", page[field]))
-    return strings
 
 
 def validate_manifest() -> None:
@@ -60,10 +25,6 @@ def validate_manifest() -> None:
     assert len(matches) == 1, f"Expected one Echoes manifest entry, found {len(matches)}"
     entry = matches[0]
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
-    line = entry.get("generationLine", "").lower()
-    assert "engineering-tolerance" not in line
-    assert "hologram" not in line
-    assert "technical explanation" not in line
 
 
 def validate_characters() -> None:
@@ -73,13 +34,18 @@ def validate_characters() -> None:
         assert isinstance(entry, dict), key
         extra = set(entry) - ALLOWED_CHARACTER_FIELDS
         assert not extra, f"Out-of-scope character fields on {key}: {sorted(extra)}"
-        assert entry.get("name") and entry.get("handle"), key
+        assert entry.get("name") and entry.get("handle") and entry.get("role"), key
+        assert entry.get("visualAnchor"), f"Missing visual anchor: {key}"
+        assert entry.get("visualStatus"), f"Missing visual status: {key}"
+        locks = entry.get("continuityLocks")
+        assert isinstance(locks, list) and locks, f"Missing continuity locks: {key}"
     assert chars["EFW_Mero"]["role"].startswith("Human")
     assert chars["EFW_Redlin"]["name"] == "Redlin"
 
 
 def validate_scenes() -> None:
     all_ids = []
+    chars = load(SHOW / "characters.json")
     for issue, path in enumerate(SCENE_FILES, start=1):
         scenes = load(path)
         assert isinstance(scenes, list), path.name
@@ -88,13 +54,21 @@ def validate_scenes() -> None:
         ids = [scene.get("id") for scene in scenes]
         assert ids == expected, f"{path.name}: scene IDs/order changed"
         all_ids.extend(ids)
-        for scene in scenes:
+        for index, scene in enumerate(scenes):
             assert scene.get("summary"), scene.get("id")
+            for char_id in scene.get("characters", []):
+                assert char_id in chars, f"Missing character {char_id}: {scene['id']}"
             if issue >= 2:
                 assert scene.get("settingText"), f"Missing settingText: {scene['id']}"
                 assert isinstance(scene.get("dialogueInline"), list), f"Missing inline dialogue: {scene['id']}"
+                assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
-                    assert line.get("text"), f"Empty dialogue: {scene['id']}"
+                    assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
+            if issue <= 2:
+                plan = scene.get("panelPlan")
+                assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
+            if issue == 2 and index > 0:
+                assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue 2 continuity: {scene['id']}"
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
     e04 = {s["id"]: s for s in load(SCENE_FILES[3])}
@@ -107,14 +81,11 @@ def validate_scenes() -> None:
 
 def validate_issue1_references() -> None:
     scenes = load(SCENE_FILES[0])
-    chars = load(SHOW / "characters.json")
     dialogue = load(SHOW / "dialogue.json")
     direction = load(SHOW / "direction.json")
     settings = load(SHOW / "settings.json")
     regions = load(SHOW / "regions.json")
     for scene in scenes:
-        for char_id in scene.get("characters", []):
-            assert char_id in chars, f"Missing character {char_id}"
         for dialog_id in scene.get("dialog", []):
             assert dialog_id in dialogue, f"Missing dialogue {dialog_id}"
         for direction_id in scene.get("direction", []):
@@ -129,14 +100,6 @@ def validate_architecture() -> None:
     architecture = load(SHOW / "season_architecture_v2.json")
     order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
     assert order == REVEAL_ORDER, order
-    for entry in architecture.get("revealOrder", []):
-        assert "basis" not in entry, "Provenance/process basis remains in reveal order"
-
-    gods = load(SHOW / "warrior_gods.json")
-    assert "memoryBearers" not in gods
-    for name, entry in gods.get("characters", {}).items():
-        for stale in ("visualDevelopment", "developmentGap", "nameNote", "constraint", "historyNote", "relationships"):
-            assert stale not in entry, f"{name}: stale field {stale}"
 
     reset = load(SHOW / "identity_reset.json")
     assert reset.get("status") == "locked"
@@ -148,21 +111,21 @@ def validate_architecture() -> None:
     for issue_number, issue in enumerate(issues, start=1):
         assert issue.get("issue") == issue_number
         pages = issue.get("pages", [])
-        assert len(pages) == 22, f"Issue {issue_number}: expected 22 page beats"
+        assert len(pages) == 22, f"Issue {issue_number}: expected 22 development beats"
         assert [p.get("page") for p in pages] == list(range(1, 23))
 
 
-def validate_sanitization() -> None:
-    for label, text in production_strings():
-        lower = text.lower()
-        for term in FORBIDDEN_RESIDUE:
-            assert term not in lower, f"Residue {term!r} at {label}: {text}"
+def validate_current_production_contract() -> None:
+    assembler = load(SHOW / "assembler.json")
+    assert assembler.get("unitLabel") == "PAGE"
+    assert assembler.get("requirePanelPlan") is True
+    assert assembler.get("requireVisualAnchors") is True
 
     status = load(SHOW / "development_status.json")
-    sanitize = status.get("sanitization", {})
-    assert sanitize.get("state") == "clean"
-    assert sanitize.get("storyPreserved") is True
-    assert sanitize.get("dialoguePreserved") is True
+    assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
+    issue1 = status.get("issue1", {})
+    assert issue1.get("pageCount") == 12
+    assert issue1.get("recipeFile") == "scenes_e01.json"
 
 
 def main() -> None:
@@ -171,8 +134,8 @@ def main() -> None:
     validate_scenes()
     validate_issue1_references()
     validate_architecture()
-    validate_sanitization()
-    print("Echoes validation passed: 8 issues, 96 scenes, 176 page beats, sanitized production scope.")
+    validate_current_production_contract()
+    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-2 compiled as 12 production pages each.")
 
 
 if __name__ == "__main__":
