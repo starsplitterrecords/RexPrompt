@@ -31,9 +31,12 @@ jobs:
               root / 'pages_i02_p13_p18.json.gzb64',
               root / 'pages_i02_p19_p24.json.gzb64',
           ]
+          allowed = set('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=')
           pages = []
           for path in parts:
               encoded = ''.join(path.read_text(encoding='utf-8').split())
+              bad = [(i, c) for i, c in enumerate(encoded) if c not in allowed]
+              assert not bad, f'{path.name}: {bad[:12]}'
               raw = gzip.decompress(base64.b64decode(encoded, validate=True))
               payload = json.loads(raw.decode('utf-8'))
               assert isinstance(payload, list) and len(payload) == 6, path
