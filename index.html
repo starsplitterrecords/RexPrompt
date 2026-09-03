@@ -69,5 +69,6 @@ async function exportDocument(scope){const format=exportFormat.value,currentSeri
 buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void selectIssue(issueSel.value);showSel.onchange=()=>void selectSeries(showSel.value);commitBtn.onclick=()=>{const i=Number(sceneSel.value),p=sceneOrder.indexOf(i);if(p===-1)return;sceneOrder=sceneOrder.slice(p+1).concat(sceneOrder.slice(0,p+1));rebuild();if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}};copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(outEl.textContent||"")}catch{}};exportIssueBtn.onclick=()=>void exportDocument("issue");exportSeriesBtn.onclick=()=>void exportDocument("series");const savedSeries=localStorage.getItem("rexprompt.selectedSeries"),legacyShow=localStorage.getItem("rexprompt.selectedShow"),savedIssue=localStorage.getItem("rexprompt.selectedIssue"),legacyIssue=issues.find(item=>item.id===legacyShow),initial=series.some(item=>item.id===savedSeries)?savedSeries:(legacyIssue?.seriesId||series[0].id);await selectSeries(initial,savedIssue||legacyIssue?.issueId)}
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
+<script src="visuals.js"></script>
 </body>
 </html>
