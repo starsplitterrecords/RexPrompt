@@ -84,7 +84,6 @@ def main():
         for overlay in show.get("sceneOverlays", []):
             rel = overlay.get("file")
             assert rel, f"overlay missing file: {show.get('id')}"
-            assert rel != "encoded/pages_e03_p19_p24.json.gzb64", "unrecoverable Issue 3 Pages 19-24 exposed to assembler"
             path = SHOW / rel
             assert path.exists(), f"active Vikings overlay missing: {rel}"
             payload = load_payload(path, overlay.get("encoding"))
@@ -124,11 +123,21 @@ def main():
 
     assert len(ids) == len(set(ids)), "duplicate active Vikings page ids"
 
+    issue3_show = next((show for show in active if show.get("id") == "vikings-2026-s1-e03"), None)
+    assert issue3_show, "Vikings Issue 3 is not registered"
+    assert issue3_show.get("issueLabel") == "Issue 3 — The Iron Worm", "Vikings Issue 3 label drift"
+
     issue2_pages = [page for page in active_pages if str(page.get("id", "")).startswith("VIK_S1I02_P")]
     expected_issue2_ids = [f"VIK_S1I02_P{number:02d}" for number in range(1, 25)]
     actual_issue2_ids = [page.get("id") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))]
     assert actual_issue2_ids == expected_issue2_ids, "Vikings Issue 2 must expose exactly VIK_S1I02_P01-P24 in page order"
     assert [page.get("page") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))] == list(range(1, 25)), "Vikings Issue 2 page numbering drift"
+
+    issue3_pages = [page for page in active_pages if str(page.get("id", "")).startswith("VIK_S1E03_P")]
+    expected_issue3_ids = [f"VIK_S1E03_P{number:02d}" for number in range(1, 25)]
+    actual_issue3_ids = [page.get("id") for page in sorted(issue3_pages, key=lambda page: page.get("page", 0))]
+    assert actual_issue3_ids == expected_issue3_ids, "Vikings Issue 3 must expose exactly VIK_S1E03_P01-P24 in page order"
+    assert [page.get("page") for page in sorted(issue3_pages, key=lambda page: page.get("page", 0))] == list(range(1, 25)), "Vikings Issue 3 page numbering drift"
 
     decoded_text = json.dumps(active_pages, ensure_ascii=False)
     for residue in PRODUCTION_RESIDUE:
@@ -136,6 +145,7 @@ def main():
 
     print("Vikings 2026 production-hygiene validation passed")
     print("Issue 2 page records:", len(issue2_pages))
+    print("Issue 3 page records:", len(issue3_pages))
     print("Active page records:", len(active_pages))
     print("Active production files:", len(set(active_files)))
 
