@@ -1,327 +1,488 @@
 [
   {
-    "id": "SDS_S1E04_P01",
-    "summary": "Issue 4 — Temporary Material. Page 1: Delayed Part. The replacement-bracket problem begins as an ordinary maintenance problem, not a material discovery.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Astra"],
-    "panelPlan": [
-      {"text": "PANEL 1 — Maintenance bay. A coolant-balancing unit is open in the wall. A red strip reads: TEMPORARY FLOW INSTABILITY — NON-CATASTROPHIC BUT ANNOYING."},
-      {"text": "PANEL 2 — Zib studies a cracked stabilizer bracket. ZIB: Of course."},
-      {"text": "PANEL 3 — Astra enters with coffee and three unrelated forms. ASTRA: Tell me this is normal annoying."},
-      {"text": "PANEL 4 — Zib points into the housing. ZIB: Stabilizer bracket."},
-      {"text": "PANEL 5 — Procurement display: REPLACEMENT PART ETA: 19 DAYS. ZIB: Counterpoint."}
+    "id":"SDS_S1E04_P01",
+    "summary":"Issue 4 — Temporary Material. Page 1: Delayed Part. The replacement-bracket problem begins as an ordinary maintenance problem, not a material discovery.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Zib","SDS_Astra"],
+    "panelPlan":[
+      {"text":"PANEL 1 — Maintenance bay. A coolant-balancing unit is open in the wall. A red status strip is visible."},
+      {"text":"PANEL 2 — Zib studies a cracked stabilizer bracket."},
+      {"text":"PANEL 3 — Astra enters with coffee and three unrelated forms."},
+      {"text":"PANEL 4 — Zib points into the housing."},
+      {"text":"PANEL 5 — Procurement display shows the replacement-part delay."}
+    ],
+    "dialogueInline":[
+      {"speaker":"DISPLAY","text":"TEMPORARY FLOW INSTABILITY — NON-CATASTROPHIC BUT ANNOYING.","subtext":"Panel 1"},
+      {"speaker":"ZIB","text":"Of course.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"Tell me this is normal annoying.","subtext":"Panel 3"},
+      {"speaker":"ZIB","text":"Stabilizer bracket.","subtext":"Panel 4"},
+      {"speaker":"DISPLAY","text":"REPLACEMENT PART ETA: 19 DAYS.","subtext":"Panel 5"},
+      {"speaker":"ZIB","text":"Counterpoint.","subtext":"Panel 5"}
     ]
   },
   {
-    "id": "SDS_S1E04_P02",
-    "summary": "Page 2: Nineteen Days. Astra assigns Jax the concrete monitoring job while temporary-repair bureaucracy arrives.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Jax", "SDS_Pixa"],
-    "continuityFrom": "SDS_S1E04_P01",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra reads the ETA twice. ASTRA: Nineteen days for a bracket."},
-      {"text": "PANEL 2 — Zib keeps working. ZIB: Twelve if someone lies correctly."},
-      {"text": "PANEL 3 — Astra does not look up. ASTRA: We are not doing procurement fraud before lunch."},
-      {"text": "PANEL 4 — Jax arrives with a handheld flow reader. JAX: Good. I already had lunch."},
-      {"text": "PANEL 5 — Astra points at the unit. ASTRA: You are on readings. Jax looks at the reader, then the unit, and accepts that this is now his morning."},
-      {"text": "PANEL 6 — Pixa projects a form: TEMPORARY MATERIAL USAGE REQUEST — JUSTIFY DEVIATION FROM IDEAL REALITY. PIXA: Temporary repair authorization is available. ASTRA: That title feels personal."}
+    "id":"SDS_S1E04_P02",
+    "summary":"Page 2: Nineteen Days. Astra assigns Jax the concrete monitoring job while temporary-repair bureaucracy arrives.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Zib","SDS_Jax","SDS_Pixa"],
+    "continuityFrom":"SDS_S1E04_P01",
+    "panelPlan":[
+      {"text":"PANEL 1 — Astra reads the ETA twice."},
+      {"text":"PANEL 2 — Zib keeps working."},
+      {"text":"PANEL 3 — Astra does not look up."},
+      {"text":"PANEL 4 — Jax arrives with a handheld flow reader."},
+      {"text":"PANEL 5 — Astra points at the unit. Jax looks at the reader, then the unit, and accepts that this is now his morning."},
+      {"text":"PANEL 6 — Pixa projects a temporary-material-usage form."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ASTRA","text":"Nineteen days for a bracket.","subtext":"Panel 1"},
+      {"speaker":"ZIB","text":"Twelve if someone lies correctly.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"We are not doing procurement fraud before lunch.","subtext":"Panel 3"},
+      {"speaker":"JAX","text":"Good. I already had lunch.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"You are on readings.","subtext":"Panel 5"},
+      {"speaker":"DISPLAY","text":"TEMPORARY MATERIAL USAGE REQUEST — JUSTIFY DEVIATION FROM IDEAL REALITY.","subtext":"Panel 6"},
+      {"speaker":"PIXA","text":"Temporary repair authorization is available.","subtext":"Panel 6"},
+      {"speaker":"ASTRA","text":"That title feels personal.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P03",
-    "summary": "Page 3: One Sample. Mira notices a physical difference between retained residue samples without assigning meaning to it.",
-    "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Mira", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E04_P02",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira works at a nearby lab bench with sealed samples retained from prior incidents. Labels are physical and cautious, including: PRESSURE CORRELATION — CONTENT UNKNOWN."},
-      {"text": "PANEL 2 — She presses a brittle fragment with a probe. It crumbles."},
-      {"text": "PANEL 3 — She taps a denser fragment against a steel test block. It clicks instead of flaking."},
-      {"text": "PANEL 4 — Mira stops. MIRA: Huh."},
-      {"text": "PANEL 5 — Zib glances over from the wall. ZIB: Useful huh or dangerous huh."},
-      {"text": "PANEL 6 — Mira looks at the fragment, genuinely uncertain. MIRA: Not yet either."}
+    "id":"SDS_S1E04_P03",
+    "summary":"Page 3: One Sample. Mira notices a physical difference between retained residue samples without assigning meaning to it.",
+    "setting":"SDS_Lab_Work_Area",
+    "characters":["SDS_Mira","SDS_Zib"],
+    "continuityFrom":"SDS_S1E04_P02",
+    "panelPlan":[
+      {"text":"PANEL 1 — Mira works at a nearby lab bench with sealed samples retained from prior incidents. Labels are physical and cautious."},
+      {"text":"PANEL 2 — She presses a brittle fragment with a probe. It crumbles."},
+      {"text":"PANEL 3 — She taps a denser fragment against a steel test block. It clicks instead of flaking."},
+      {"text":"PANEL 4 — Mira stops."},
+      {"text":"PANEL 5 — Zib glances over from the wall."},
+      {"text":"PANEL 6 — Mira looks at the fragment, genuinely uncertain."}
+    ],
+    "dialogueInline":[
+      {"speaker":"SIGN","text":"PRESSURE CORRELATION — CONTENT UNKNOWN.","subtext":"Panel 1"},
+      {"speaker":"MIRA","text":"Huh.","subtext":"Panel 4"},
+      {"speaker":"ZIB","text":"Useful huh or dangerous huh.","subtext":"Panel 5"},
+      {"speaker":"MIRA","text":"Not yet either.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P04",
-    "summary": "Page 4: Control First. The first result is deliberately small: one sample crumbles and one does not.",
-    "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Mira", "SDS_Zib", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E04_P03",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira repeats the same simple compression test on both samples."},
-      {"text": "PANEL 2 — She records the result. MIRA: Same residue class. Different post-formation cohesion."},
-      {"text": "PANEL 3 — Zib stares at her. ZIB: English."},
-      {"text": "PANEL 4 — Mira holds up the two samples. MIRA: One crumbles. One doesn't."},
-      {"text": "PANEL 5 — Astra nods. ASTRA: That I can approve."},
-      {"text": "PANEL 6 — Mira immediately qualifies it. MIRA: I haven't explained why. ASTRA: Even better."}
+    "id":"SDS_S1E04_P04",
+    "summary":"Page 4: Control First. The first result is deliberately small: one sample crumbles and one does not.",
+    "setting":"SDS_Lab_Work_Area",
+    "characters":["SDS_Mira","SDS_Zib","SDS_Astra"],
+    "continuityFrom":"SDS_S1E04_P03",
+    "panelPlan":[
+      {"text":"PANEL 1 — Mira repeats the same simple compression test on both samples."},
+      {"text":"PANEL 2 — She records the result."},
+      {"text":"PANEL 3 — Zib stares at her."},
+      {"text":"PANEL 4 — Mira holds up the two samples."},
+      {"text":"PANEL 5 — Astra nods."},
+      {"text":"PANEL 6 — Mira immediately qualifies it."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"Same residue class. Different post-formation cohesion.","subtext":"Panel 2"},
+      {"speaker":"ZIB","text":"English.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"One crumbles. One doesn't.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"That I can approve.","subtext":"Panel 5"},
+      {"speaker":"MIRA","text":"I haven't explained why.","subtext":"Panel 6"},
+      {"speaker":"ASTRA","text":"Even better.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P05",
-    "summary": "Page 5: Temporary Means Owner. Glorp and Kreeb reduce temporary-repair procedure to owner, expiry, and inspection while Jax takes the readings.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Glorp", "SDS_Kreeb", "SDS_Zib", "SDS_Jax"],
-    "continuityFrom": "SDS_S1E04_P04",
-    "panelPlan": [
-      {"text": "PANEL 1 — Glorp reviews the temporary repair authorization with visible alarm."},
-      {"text": "PANEL 2 — Glorp taps the word TEMPORARY. GLORP: Temporary systems become permanent through exhaustion."},
-      {"text": "PANEL 3 — Kreeb reads beside them. KREEB: Then label the exhaustion."},
-      {"text": "PANEL 4 — Zib, from inside the wall compartment: Label the bracket."},
-      {"text": "PANEL 5 — Glorp reluctantly reduces the procedure to three required fields: OWNER / EXPIRY / INSPECTION INTERVAL."},
-      {"text": "PANEL 6 — Jax raises the flow reader. JAX: I can take the readings. Astra nods once. No ceremony."}
+    "id":"SDS_S1E04_P05",
+    "summary":"Page 5: Temporary Means Owner. Glorp and Kreeb reduce temporary-repair procedure to owner, expiry, and inspection while Jax takes the readings.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Glorp","SDS_Kreeb","SDS_Zib","SDS_Jax"],
+    "continuityFrom":"SDS_S1E04_P04",
+    "panelPlan":[
+      {"text":"PANEL 1 — Glorp reviews the temporary repair authorization with visible alarm."},
+      {"text":"PANEL 2 — Glorp taps the word TEMPORARY."},
+      {"text":"PANEL 3 — Kreeb reads beside them."},
+      {"text":"PANEL 4 — Zib speaks from inside the wall compartment."},
+      {"text":"PANEL 5 — Glorp reluctantly reduces the procedure to three required fields."},
+      {"text":"PANEL 6 — Jax raises the flow reader. Astra nods once. No ceremony."}
+    ],
+    "dialogueInline":[
+      {"speaker":"GLORP","text":"Temporary systems become permanent through exhaustion.","subtext":"Panel 2"},
+      {"speaker":"KREEB","text":"Then label the exhaustion.","subtext":"Panel 3"},
+      {"speaker":"ZIB","text":"Label the bracket.","subtext":"Panel 4"},
+      {"speaker":"DISPLAY","text":"OWNER / EXPIRY / INSPECTION INTERVAL.","subtext":"Panel 5"},
+      {"speaker":"JAX","text":"I can take the readings.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P06",
-    "summary": "Page 6: Bench Test. Mira and Zib try to make the sample fail safely before allowing it near station infrastructure.",
-    "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Mira", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E04_P05",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira and Zib build a small off-line test rig. Nothing touches station infrastructure yet."},
-      {"text": "PANEL 2 — Mira sets the sequence. MIRA: Heat first. Compression second. Then vibration."},
-      {"text": "PANEL 3 — Zib watches her deliberately abuse the sample. ZIB: You say that like you want it to fail."},
-      {"text": "PANEL 4 — Mira does not look up. MIRA: I want it to fail here."},
-      {"text": "PANEL 5 — The fragment survives heat and compression, then chips under sustained vibration."},
-      {"text": "PANEL 6 — Zib points at the damaged sample. ZIB: So it is not a bracket. MIRA: Correct."}
+    "id":"SDS_S1E04_P06",
+    "summary":"Page 6: Bench Test. Mira and Zib try to make the sample fail safely before allowing it near station infrastructure.",
+    "setting":"SDS_Lab_Work_Area",
+    "characters":["SDS_Mira","SDS_Zib"],
+    "continuityFrom":"SDS_S1E04_P05",
+    "panelPlan":[
+      {"text":"PANEL 1 — Mira and Zib build a small off-line test rig. Nothing touches station infrastructure yet."},
+      {"text":"PANEL 2 — Mira sets the sequence."},
+      {"text":"PANEL 3 — Zib watches her deliberately abuse the sample."},
+      {"text":"PANEL 4 — Mira does not look up."},
+      {"text":"PANEL 5 — The fragment survives heat and compression, then chips under sustained vibration."},
+      {"text":"PANEL 6 — Zib points at the damaged sample."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"Heat first. Compression second. Then vibration.","subtext":"Panel 2"},
+      {"speaker":"ZIB","text":"You say that like you want it to fail.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"I want it to fail here.","subtext":"Panel 4"},
+      {"speaker":"ZIB","text":"So it is not a bracket.","subtext":"Panel 6"},
+      {"speaker":"MIRA","text":"Correct.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P07",
-    "summary": "Page 7: First Patch. The residue is used only as gap filler inside a conventional temporary brace; the approved clamp carries the load.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P06",
-    "panelPlan": [
-      {"text": "PANEL 1 — Zib builds a conventional temporary brace from approved clamp hardware and mesh. The residue fragment is used only as gap-filling material inside the brace."},
-      {"text": "PANEL 2 — Astra watches closely. ASTRA: Say exactly what it is doing."},
-      {"text": "PANEL 3 — Zib tightens the approved clamp. ZIB: Filling a gap. Clamp carries the load."},
-      {"text": "PANEL 4 — Mira checks the configuration. MIRA: That I can defend."},
-      {"text": "PANEL 5 — The unit restarts. Status changes to: FLOW STABILITY: QUESTIONABLE BUT IMPROVED. ZIB: Don't celebrate questionable."}
+    "id":"SDS_S1E04_P07",
+    "summary":"Page 7: First Patch. The residue is used only as gap filler inside a conventional temporary brace; the approved clamp carries the load.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Zib","SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P06",
+    "panelPlan":[
+      {"text":"PANEL 1 — Zib builds a conventional temporary brace from approved clamp hardware and mesh. The residue fragment is used only as gap-filling material inside the brace."},
+      {"text":"PANEL 2 — Astra watches closely."},
+      {"text":"PANEL 3 — Zib tightens the approved clamp."},
+      {"text":"PANEL 4 — Mira checks the configuration."},
+      {"text":"PANEL 5 — The unit restarts. Status changes on the display."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ASTRA","text":"Say exactly what it is doing.","subtext":"Panel 2"},
+      {"speaker":"ZIB","text":"Filling a gap. Clamp carries the load.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"That I can defend.","subtext":"Panel 4"},
+      {"speaker":"DISPLAY","text":"FLOW STABILITY: QUESTIONABLE BUT IMPROVED.","subtext":"Panel 5"},
+      {"speaker":"ZIB","text":"Don't celebrate questionable.","subtext":"Panel 5"}
     ]
   },
   {
-    "id": "SDS_S1E04_P08",
-    "summary": "Page 8: Watch the Number. Jax stays on the boring monitoring task and catches a small shift before it becomes a larger problem.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Jax", "SDS_Astra", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E04_P07",
-    "panelPlan": [
-      {"text": "PANEL 1 — Jax watches the handheld reader beside the unit."},
-      {"text": "PANEL 2 — He logs the first interval. JAX: Flow is holding."},
-      {"text": "PANEL 3 — Astra checks the temporary tag. ASTRA: Again in ten."},
-      {"text": "PANEL 4 — Jax shows her the handwritten schedule. JAX: I know. That is why I wrote ten."},
-      {"text": "PANEL 5 — At the next reading, Jax notices a slight shift before anyone else does. JAX: Right side moved two millimeters."},
-      {"text": "PANEL 6 — Zib isolates the unit immediately. ZIB: Good catch. JAX: I was hoping you would say \"nothing.\""}
+    "id":"SDS_S1E04_P08",
+    "summary":"Page 8: Watch the Number. Jax stays on the boring monitoring task and catches a small shift before it becomes a larger problem.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Jax","SDS_Astra","SDS_Zib"],
+    "continuityFrom":"SDS_S1E04_P07",
+    "panelPlan":[
+      {"text":"PANEL 1 — Jax watches the handheld reader beside the unit."},
+      {"text":"PANEL 2 — He logs the first interval."},
+      {"text":"PANEL 3 — Astra checks the temporary tag."},
+      {"text":"PANEL 4 — Jax shows her the handwritten schedule."},
+      {"text":"PANEL 5 — At the next reading, Jax notices a slight shift before anyone else does."},
+      {"text":"PANEL 6 — Zib isolates the unit immediately."}
+    ],
+    "dialogueInline":[
+      {"speaker":"JAX","text":"Flow is holding.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"Again in ten.","subtext":"Panel 3"},
+      {"speaker":"JAX","text":"I know. That is why I wrote ten.","subtext":"Panel 4"},
+      {"speaker":"JAX","text":"Right side moved two millimeters.","subtext":"Panel 5"},
+      {"speaker":"ZIB","text":"Good catch.","subtext":"Panel 6"},
+      {"speaker":"JAX","text":"I was hoping you would say \"nothing.\"","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P09",
-    "summary": "Page 9: Second Patch. Zib increases conventional reinforcement and reduces the weird material; Pixa reports only the physical result.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Mira", "SDS_Jax", "SDS_Astra", "SDS_Pixa"],
-    "continuityFrom": "SDS_S1E04_P08",
-    "panelPlan": [
-      {"text": "PANEL 1 — Zib opens the brace again."},
-      {"text": "PANEL 2 — He adds more approved mesh and reduces the amount of residue filler. ZIB: More mesh. Less weird."},
-      {"text": "PANEL 3 — Mira agrees. MIRA: That is also my preferred ratio."},
-      {"text": "PANEL 4 — Jax holds the reader ready while Astra keeps the temporary authorization visible at the workbench."},
-      {"text": "PANEL 5 — Zib restarts the unit."},
-      {"text": "PANEL 6 — Pixa displays only the physical result. PIXA: Flow variance reduced by eighteen percent. ZIB: Worse somehow."}
+    "id":"SDS_S1E04_P09",
+    "summary":"Page 9: Second Patch. Zib increases conventional reinforcement and reduces the weird material; Pixa reports only the physical result.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Zib","SDS_Mira","SDS_Jax","SDS_Astra","SDS_Pixa"],
+    "continuityFrom":"SDS_S1E04_P08",
+    "panelPlan":[
+      {"text":"PANEL 1 — Zib opens the brace again."},
+      {"text":"PANEL 2 — He adds more approved mesh and reduces the amount of residue filler."},
+      {"text":"PANEL 3 — Mira agrees."},
+      {"text":"PANEL 4 — Jax holds the reader ready while Astra keeps the temporary authorization visible at the workbench."},
+      {"text":"PANEL 5 — Zib restarts the unit."},
+      {"text":"PANEL 6 — Pixa displays only the physical result."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ZIB","text":"More mesh. Less weird.","subtext":"Panel 2"},
+      {"speaker":"MIRA","text":"That is also my preferred ratio.","subtext":"Panel 3"},
+      {"speaker":"PIXA","text":"Flow variance reduced by eighteen percent.","subtext":"Panel 6"},
+      {"speaker":"ZIB","text":"Worse somehow.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P10",
-    "summary": "Page 10: It Works At All. The crew permits exactly one conclusion: the filler did not get in the way of a conventional clamp surviving two cycles.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Mira", "SDS_Zib", "SDS_Astra", "SDS_Brick"],
-    "continuityFrom": "SDS_S1E04_P09",
-    "panelPlan": [
-      {"text": "PANEL 1 — The unit completes another cycle."},
-      {"text": "PANEL 2 — Mira checks the patch. MIRA: Two cycles."},
-      {"text": "PANEL 3 — Zib refuses to over-credit it. ZIB: The clamp survived. The filler did not get in the way."},
-      {"text": "PANEL 4 — Mira smiles despite herself. MIRA: That is a material result."},
-      {"text": "PANEL 5 — Astra hears the phrase from across the bay. ASTRA: Nobody says \"commercial\" until I am dead."},
-      {"text": "PANEL 6 — Brick, already present, writes in his notebook: THE WEIRD THING GOT A JOB."}
+    "id":"SDS_S1E04_P10",
+    "summary":"Page 10: It Works At All. The crew permits exactly one conclusion: the filler did not get in the way of a conventional clamp surviving two cycles.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Mira","SDS_Zib","SDS_Astra","SDS_Brick"],
+    "continuityFrom":"SDS_S1E04_P09",
+    "panelPlan":[
+      {"text":"PANEL 1 — The unit completes another cycle."},
+      {"text":"PANEL 2 — Mira checks the patch."},
+      {"text":"PANEL 3 — Zib refuses to over-credit it."},
+      {"text":"PANEL 4 — Mira smiles despite herself."},
+      {"text":"PANEL 5 — Astra hears the phrase from across the bay."},
+      {"text":"PANEL 6 — Brick, already present, writes in his notebook."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"Two cycles.","subtext":"Panel 2"},
+      {"speaker":"ZIB","text":"The clamp survived. The filler did not get in the way.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"That is a material result.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"Nobody says \"commercial\" until I am dead.","subtext":"Panel 5"},
+      {"speaker":"TEXT","text":"THE WEIRD THING GOT A JOB.","subtext":"Panel 6 — Brick's notebook"}
     ]
   },
   {
-    "id": "SDS_S1E04_P11",
-    "summary": "Page 11: What We Know. Mira's small results board creates the unavoidable reporting question.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E04_P10",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira builds a small results board: heat exposure, compression, vibration damage, installed configuration."},
-      {"text": "PANEL 2 — She looks at Astra. MIRA: What we know is small."},
-      {"text": "PANEL 3 — Astra relaxes slightly. ASTRA: I like small."},
-      {"text": "PANEL 4 — Mira points toward the temporary repair form. MIRA: You will hate the next part."},
-      {"text": "PANEL 5 — She shows the reporting requirement. MIRA: Safety record requires the material event."},
-      {"text": "PANEL 6 — Astra closes her eyes. ASTRA: There it is."}
+    "id":"SDS_S1E04_P11",
+    "summary":"Page 11: What We Know. Mira's small results board creates the unavoidable reporting question.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Mira","SDS_Astra"],
+    "continuityFrom":"SDS_S1E04_P10",
+    "panelPlan":[
+      {"text":"PANEL 1 — Mira builds a small results board: heat exposure, compression, vibration damage, installed configuration."},
+      {"text":"PANEL 2 — She looks at Astra."},
+      {"text":"PANEL 3 — Astra relaxes slightly."},
+      {"text":"PANEL 4 — Mira points toward the temporary repair form."},
+      {"text":"PANEL 5 — She shows the reporting requirement."},
+      {"text":"PANEL 6 — Astra closes her eyes."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"What we know is small.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"I like small.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"You will hate the next part.","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"Safety record requires the material event.","subtext":"Panel 5"},
+      {"speaker":"ASTRA","text":"There it is.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P12",
-    "summary": "Page 12: Report Required. Traceability wins: if the material touched a system, its history has to be accurate.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Glorp", "SDS_Kreeb", "SDS_Astra", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E04_P11",
-    "panelPlan": [
-      {"text": "PANEL 1 — Glorp traces the temporary-deviation reporting path on a tablet."},
-      {"text": "PANEL 2 — Glorp looks up. GLORP: If it touched a system, it has a history."},
-      {"text": "PANEL 3 — Kreeb answers calmly. KREEB: Then make the history accurate."},
-      {"text": "PANEL 4 — Astra points at the report destination. ASTRA: Internal?"},
-      {"text": "PANEL 5 — Glorp shakes their head. GLORP: No."},
-      {"text": "PANEL 6 — Zib shuts the wall panel. ZIB: Nobody made the reporting tree. It grew."}
+    "id":"SDS_S1E04_P12",
+    "summary":"Page 12: Report Required. Traceability wins: if the material touched a system, its history has to be accurate.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Glorp","SDS_Kreeb","SDS_Astra","SDS_Zib"],
+    "continuityFrom":"SDS_S1E04_P11",
+    "panelPlan":[
+      {"text":"PANEL 1 — Glorp traces the temporary-deviation reporting path on a tablet."},
+      {"text":"PANEL 2 — Glorp looks up."},
+      {"text":"PANEL 3 — Kreeb answers calmly."},
+      {"text":"PANEL 4 — Astra points at the report destination."},
+      {"text":"PANEL 5 — Glorp shakes their head."},
+      {"text":"PANEL 6 — Zib shuts the wall panel."}
+    ],
+    "dialogueInline":[
+      {"speaker":"GLORP","text":"If it touched a system, it has a history.","subtext":"Panel 2"},
+      {"speaker":"KREEB","text":"Then make the history accurate.","subtext":"Panel 3"},
+      {"speaker":"ASTRA","text":"Internal?","subtext":"Panel 4"},
+      {"speaker":"GLORP","text":"No.","subtext":"Panel 5"},
+      {"speaker":"ZIB","text":"Nobody made the reporting tree. It grew.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P13",
-    "summary": "Page 13: The Argument. Mira wants an accurate report; Astra fears one patch will be institutionalized as a discovery.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P12",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra and Mira stand across the workbench. Neither is angry. Both understand the stakes."},
-      {"text": "PANEL 2 — Mira keeps her voice level. MIRA: If this matters, we should report it correctly."},
-      {"text": "PANEL 3 — Astra answers just as quietly. ASTRA: If this matters, we should survive reporting it."},
-      {"text": "PANEL 4 — Astra points to the single patched unit. ASTRA: And turning one patch into a discovery is not science."},
-      {"text": "PANEL 5 — Mira meets her gaze. MIRA: I wasn't going to."}
+    "id":"SDS_S1E04_P13",
+    "summary":"Page 13: The Argument. Mira wants an accurate report; Astra fears one patch will be institutionalized as a discovery.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P12",
+    "panelPlan":[
+      {"text":"PANEL 1 — Astra and Mira stand across the workbench. Neither is angry. Both understand the stakes."},
+      {"text":"PANEL 2 — Mira keeps her voice level."},
+      {"text":"PANEL 3 — Astra answers just as quietly."},
+      {"text":"PANEL 4 — Astra points to the single patched unit."},
+      {"text":"PANEL 5 — Mira meets her gaze."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"If this matters, we should report it correctly.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"If this matters, we should survive reporting it.","subtext":"Panel 3"},
+      {"speaker":"ASTRA","text":"And turning one patch into a discovery is not science.","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"I wasn't going to.","subtext":"Panel 5"}
     ]
   },
   {
-    "id": "SDS_S1E04_P14",
-    "summary": "Page 14: The Real Fear. Astra names the institutional chain she fears: anomaly to category to target to budget to production pressure.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P13",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira studies Astra instead of the sample. MIRA: What do you think happens?"},
-      {"text": "PANEL 2 — Astra gestures toward the report. ASTRA: A useful anomaly gets a category."},
-      {"text": "PANEL 3 — She continues. ASTRA: A category gets a target. A target gets a budget."},
-      {"text": "PANEL 4 — Astra looks around the station. ASTRA: Then the budget tells us how to make more of it."},
-      {"text": "PANEL 5 — Mira answers the part Astra cannot dismiss. MIRA: The station needs a budget."},
-      {"text": "PANEL 6 — Astra nods. ASTRA: I know. That's the problem."}
+    "id":"SDS_S1E04_P14",
+    "summary":"Page 14: The Real Fear. Astra names the institutional chain she fears: anomaly to category to target to budget to production pressure.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P13",
+    "panelPlan":[
+      {"text":"PANEL 1 — Mira studies Astra instead of the sample."},
+      {"text":"PANEL 2 — Astra gestures toward the report."},
+      {"text":"PANEL 3 — She continues."},
+      {"text":"PANEL 4 — Astra looks around the station."},
+      {"text":"PANEL 5 — Mira answers the part Astra cannot dismiss."},
+      {"text":"PANEL 6 — Astra nods."}
+    ],
+    "dialogueInline":[
+      {"speaker":"MIRA","text":"What do you think happens?","subtext":"Panel 1"},
+      {"speaker":"ASTRA","text":"A useful anomaly gets a category.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"A category gets a target. A target gets a budget.","subtext":"Panel 3"},
+      {"speaker":"ASTRA","text":"Then the budget tells us how to make more of it.","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"The station needs a budget.","subtext":"Panel 5"},
+      {"speaker":"ASTRA","text":"I know. That's the problem.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P15",
-    "summary": "Page 15: Stop Arguing Like a Meeting. Zib makes Astra and Mira continue the decision while physically finishing the job.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P14",
-    "panelPlan": [
-      {"text": "PANEL 1 — Zib, still trying to finish the actual repair, interrupts them. ZIB: Stop arguing like a meeting."},
-      {"text": "PANEL 2 — Astra turns. ASTRA: We are making a decision."},
-      {"text": "PANEL 3 — Zib hands Astra part of the brace. ZIB: Then make it while holding this."},
-      {"text": "PANEL 4 — He gives Mira the sensor lead. The three of them resume work."},
-      {"text": "PANEL 5 — Mira keeps talking while checking the sensor. MIRA: I can write only what the test supports."},
-      {"text": "PANEL 6 — Astra holds the brace steady. ASTRA: And what it doesn't. MIRA: Especially that."}
+    "id":"SDS_S1E04_P15",
+    "summary":"Page 15: Stop Arguing Like a Meeting. Zib makes Astra and Mira continue the decision while physically finishing the job.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Zib","SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P14",
+    "panelPlan":[
+      {"text":"PANEL 1 — Zib, still trying to finish the actual repair, interrupts them."},
+      {"text":"PANEL 2 — Astra turns."},
+      {"text":"PANEL 3 — Zib hands Astra part of the brace."},
+      {"text":"PANEL 4 — He gives Mira the sensor lead. The three of them resume work."},
+      {"text":"PANEL 5 — Mira keeps talking while checking the sensor."},
+      {"text":"PANEL 6 — Astra holds the brace steady."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ZIB","text":"Stop arguing like a meeting.","subtext":"Panel 1"},
+      {"speaker":"ASTRA","text":"We are making a decision.","subtext":"Panel 2"},
+      {"speaker":"ZIB","text":"Then make it while holding this.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"I can write only what the test supports.","subtext":"Panel 5"},
+      {"speaker":"ASTRA","text":"And what it doesn't.","subtext":"Panel 6"},
+      {"speaker":"MIRA","text":"Especially that.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P16",
-    "summary": "Page 16: Bounded Language. The report states the ugly practical use and its limits without turning it into a mechanism.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Glorp", "SDS_Kreeb", "SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E04_P15",
-    "panelPlan": [
-      {"text": "PANEL 1 — Glorp, Kreeb, Mira, and Astra work around one terminal rather than holding another meeting."},
-      {"text": "PANEL 2 — The report contains the sentence: Incidental residue contributed to temporary gap filling under monitored conditions. Structural load remained on approved clamp. Repeatability unknown."},
-      {"text": "PANEL 3 — Glorp studies it. GLORP: Ugly can still be auditable."},
-      {"text": "PANEL 4 — Kreeb nods. KREEB: And honest."},
-      {"text": "PANEL 5 — Astra reads the sentence again. ASTRA: That is ugly."},
-      {"text": "PANEL 6 — Mira looks toward the patched unit. MIRA: So was the repair."}
+    "id":"SDS_S1E04_P16",
+    "summary":"Page 16: Bounded Language. The report states the ugly practical use and its limits without turning it into a mechanism.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Glorp","SDS_Kreeb","SDS_Mira","SDS_Astra"],
+    "continuityFrom":"SDS_S1E04_P15",
+    "panelPlan":[
+      {"text":"PANEL 1 — Glorp, Kreeb, Mira, and Astra work around one terminal rather than holding another meeting."},
+      {"text":"PANEL 2 — The report shows the narrow temporary-use finding and its limits."},
+      {"text":"PANEL 3 — Glorp studies it."},
+      {"text":"PANEL 4 — Kreeb nods."},
+      {"text":"PANEL 5 — Astra reads the sentence again."},
+      {"text":"PANEL 6 — Mira looks toward the patched unit."}
+    ],
+    "dialogueInline":[
+      {"speaker":"SCREEN","text":"Incidental residue contributed to temporary gap filling under monitored conditions. Structural load remained on approved clamp. Repeatability unknown.","subtext":"Panel 2"},
+      {"speaker":"GLORP","text":"Ugly can still be auditable.","subtext":"Panel 3"},
+      {"speaker":"KREEB","text":"And honest.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"That is ugly.","subtext":"Panel 5"},
+      {"speaker":"MIRA","text":"So was the repair.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P17",
-    "summary": "Page 17: Signature. Jax completes his monitoring log; Astra signs and sends only the narrow version because there is no defensible broad version.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Jax", "SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P16",
-    "panelPlan": [
-      {"text": "PANEL 1 — Jax arrives with the completed monitoring log."},
-      {"text": "PANEL 2 — He hands it to Astra. JAX: Four cycles. Still inside temporary limits."},
-      {"text": "PANEL 3 — Astra checks the intervals. ASTRA: You finished the log."},
-      {"text": "PANEL 4 — Jax shrugs. JAX: It kept asking for numbers, so I gave it numbers."},
-      {"text": "PANEL 5 — The report waits on STATION MANAGER SIGNATURE."},
-      {"text": "PANEL 6 — Astra signs. ASTRA: Send the narrow version. MIRA: There is only a narrow version."}
+    "id":"SDS_S1E04_P17",
+    "summary":"Page 17: Signature. Jax completes his monitoring log; Astra signs and sends only the narrow version because there is no defensible broad version.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Jax","SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P16",
+    "panelPlan":[
+      {"text":"PANEL 1 — Jax arrives with the completed monitoring log."},
+      {"text":"PANEL 2 — He hands it to Astra."},
+      {"text":"PANEL 3 — Astra checks the intervals."},
+      {"text":"PANEL 4 — Jax shrugs."},
+      {"text":"PANEL 5 — The report waits on the station manager signature."},
+      {"text":"PANEL 6 — Astra signs."}
+    ],
+    "dialogueInline":[
+      {"speaker":"JAX","text":"Four cycles. Still inside temporary limits.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"You finished the log.","subtext":"Panel 3"},
+      {"speaker":"JAX","text":"It kept asking for numbers, so I gave it numbers.","subtext":"Panel 4"},
+      {"speaker":"SCREEN","text":"STATION MANAGER SIGNATURE.","subtext":"Panel 5"},
+      {"speaker":"ASTRA","text":"Send the narrow version.","subtext":"Panel 6"},
+      {"speaker":"MIRA","text":"There is only a narrow version.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P18",
-    "summary": "Page 18: Monitor Shift. Jax stays through the next reading because the task is his, not because anyone is watching him do it.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Jax", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E04_P17",
-    "panelPlan": [
-      {"text": "PANEL 1 — Later. The maintenance bay is quiet. Jax remains beside the reader for the next scheduled interval."},
-      {"text": "PANEL 2 — Zib passes through. ZIB: You can go."},
-      {"text": "PANEL 3 — Jax checks the clock. JAX: I know. The next reading is in six minutes."},
-      {"text": "PANEL 4 — Zib looks at him, mildly surprised."},
-      {"text": "PANEL 5 — Jax does not look up. JAX: Don't make it a ceremony."},
-      {"text": "PANEL 6 — The gauge stays within the temporary band."}
+    "id":"SDS_S1E04_P18",
+    "summary":"Page 18: Monitor Shift. Jax stays through the next reading because the task is his, not because anyone is watching him do it.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Jax","SDS_Zib"],
+    "continuityFrom":"SDS_S1E04_P17",
+    "panelPlan":[
+      {"text":"PANEL 1 — Later. The maintenance bay is quiet. Jax remains beside the reader for the next scheduled interval."},
+      {"text":"PANEL 2 — Zib passes through."},
+      {"text":"PANEL 3 — Jax checks the clock."},
+      {"text":"PANEL 4 — Zib looks at him, mildly surprised."},
+      {"text":"PANEL 5 — Jax does not look up."},
+      {"text":"PANEL 6 — The gauge stays within the temporary band."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ZIB","text":"You can go.","subtext":"Panel 2"},
+      {"speaker":"JAX","text":"I know. The next reading is in six minutes.","subtext":"Panel 3"},
+      {"speaker":"JAX","text":"Don't make it a ceremony.","subtext":"Panel 5"}
     ]
   },
   {
-    "id": "SDS_S1E04_P19",
-    "summary": "Page 19: Send. Astra and Mira remove any language stronger than the evidence before Astra sends the report herself.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P18",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra and Mira perform the final read together."},
-      {"text": "PANEL 2 — Astra points at a modifier. ASTRA: No \"stronger.\""},
-      {"text": "PANEL 3 — Mira edits it. MIRA: Removed."},
-      {"text": "PANEL 4 — Astra checks the causal language. ASTRA: No \"produced by.\""},
-      {"text": "PANEL 5 — Mira does not touch the screen. MIRA: Wasn't there."},
-      {"text": "PANEL 6 — Astra hits SEND herself. ASTRA: Good."}
+    "id":"SDS_S1E04_P19",
+    "summary":"Page 19: Send. Astra and Mira remove any language stronger than the evidence before Astra sends the report herself.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P18",
+    "panelPlan":[
+      {"text":"PANEL 1 — Astra and Mira perform the final read together."},
+      {"text":"PANEL 2 — Astra points at a modifier."},
+      {"text":"PANEL 3 — Mira edits it."},
+      {"text":"PANEL 4 — Astra checks the causal language."},
+      {"text":"PANEL 5 — Mira does not touch the screen."},
+      {"text":"PANEL 6 — Astra hits SEND herself."}
+    ],
+    "dialogueInline":[
+      {"speaker":"ASTRA","text":"No \"stronger.\"","subtext":"Panel 2"},
+      {"speaker":"MIRA","text":"Removed.","subtext":"Panel 3"},
+      {"speaker":"ASTRA","text":"No \"produced by.\"","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"Wasn't there.","subtext":"Panel 5"},
+      {"speaker":"ASTRA","text":"Good.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P20",
-    "summary": "Page 20: Acknowledged. The bounded report is immediately forwarded to Resource Efficiency Review, proving Astra's fear institutionally rather than scientifically.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Brick"],
-    "continuityFrom": "SDS_S1E04_P19",
-    "panelPlan": [
-      {"text": "PANEL 1 — A notification arrives almost immediately: OBSERVATIONAL REPORT RECEIVED."},
-      {"text": "PANEL 2 — Astra exhales. ASTRA: Good."},
-      {"text": "PANEL 3 — A second line appears: FORWARDED TO: RESOURCE EFFICIENCY REVIEW."},
-      {"text": "PANEL 4 — Astra's expression changes. ASTRA: No."},
-      {"text": "PANEL 5 — Mira reads it. MIRA: That was fast."},
-      {"text": "PANEL 6 — Brick closes his notebook. BRICK: Appetite found the address."}
+    "id":"SDS_S1E04_P20",
+    "summary":"Page 20: Acknowledged. The bounded report is immediately forwarded to Resource Efficiency Review, proving Astra's fear institutionally rather than scientifically.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Mira","SDS_Brick"],
+    "continuityFrom":"SDS_S1E04_P19",
+    "panelPlan":[
+      {"text":"PANEL 1 — A notification arrives almost immediately."},
+      {"text":"PANEL 2 — Astra exhales."},
+      {"text":"PANEL 3 — A second line appears."},
+      {"text":"PANEL 4 — Astra's expression changes."},
+      {"text":"PANEL 5 — Mira reads it."},
+      {"text":"PANEL 6 — Brick closes his notebook."}
+    ],
+    "dialogueInline":[
+      {"speaker":"SCREEN","text":"OBSERVATIONAL REPORT RECEIVED.","subtext":"Panel 1"},
+      {"speaker":"ASTRA","text":"Good.","subtext":"Panel 2"},
+      {"speaker":"SCREEN","text":"FORWARDED TO: RESOURCE EFFICIENCY REVIEW.","subtext":"Panel 3"},
+      {"speaker":"ASTRA","text":"No.","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"That was fast.","subtext":"Panel 5"},
+      {"speaker":"BRICK","text":"Appetite found the address.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P21",
-    "summary": "Page 21: Still Temporary. The repair remains monitored and temporary even as the station receives its first value flag.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Astra", "SDS_Mira", "SDS_Pixa"],
-    "continuityFrom": "SDS_S1E04_P20",
-    "panelPlan": [
-      {"text": "PANEL 1 — Next cycle. The repaired unit hums. The temporary tag is still prominent: INSPECT / EXPIRES / OWNER."},
-      {"text": "PANEL 2 — Zib checks procurement. REPLACEMENT PART ETA: 18 DAYS."},
-      {"text": "PANEL 3 — Astra points at the patch. ASTRA: Still temporary."},
-      {"text": "PANEL 4 — Zib closes the panel. ZIB: Everything is temporary if procurement is involved."},
-      {"text": "PANEL 5 — Mira seals another physical sample. MIRA: No new claim."},
-      {"text": "PANEL 6 — Pixa's screen lights: PRELIMINARY INTEREST FLAGGED. Nobody speaks."}
+    "id":"SDS_S1E04_P21",
+    "summary":"Page 21: Still Temporary. The repair remains monitored and temporary even as the station receives its first value flag.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Zib","SDS_Astra","SDS_Mira","SDS_Pixa"],
+    "continuityFrom":"SDS_S1E04_P20",
+    "panelPlan":[
+      {"text":"PANEL 1 — Next cycle. The repaired unit hums. The temporary tag is still prominent."},
+      {"text":"PANEL 2 — Zib checks procurement."},
+      {"text":"PANEL 3 — Astra points at the patch."},
+      {"text":"PANEL 4 — Zib closes the panel."},
+      {"text":"PANEL 5 — Mira seals another physical sample."},
+      {"text":"PANEL 6 — Pixa's screen lights. Nobody speaks."}
+    ],
+    "dialogueInline":[
+      {"speaker":"SIGN","text":"INSPECT / EXPIRES / OWNER.","subtext":"Panel 1"},
+      {"speaker":"SCREEN","text":"REPLACEMENT PART ETA: 18 DAYS.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"Still temporary.","subtext":"Panel 3"},
+      {"speaker":"ZIB","text":"Everything is temporary if procurement is involved.","subtext":"Panel 4"},
+      {"speaker":"MIRA","text":"No new claim.","subtext":"Panel 5"},
+      {"speaker":"SCREEN","text":"PRELIMINARY INTEREST FLAGGED.","subtext":"Panel 6"}
     ]
   },
   {
-    "id": "SDS_S1E04_P22",
-    "summary": "Page 22: Tag — Value Identified. Astra and Mira agree the report was necessary even as commercial-interest machinery arrives immediately.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E04_P21",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra's terminal expands the notification: PRELIMINARY COMMERCIAL INTEREST FLAGGED."},
-      {"text": "PANEL 2 — A smaller line appears beneath it: THANK YOU FOR YOUR CONTRIBUTION TO STATION VALUE IDENTIFICATION."},
-      {"text": "PANEL 3 — Astra stares at the wording. ASTRA: There it is."},
-      {"text": "PANEL 4 — Mira remains beside her. MIRA: I still think we had to report it. ASTRA: We did."},
-      {"text": "PANEL 5 — Astra looks through the glass toward the functioning maintenance bay. ASTRA: I just wanted one more day before it got a department."}
+    "id":"SDS_S1E04_P22",
+    "summary":"Page 22: Tag — Value Identified. Astra and Mira agree the report was necessary even as commercial-interest machinery arrives immediately.",
+    "setting":"SDS_Maintenance_Bay",
+    "characters":["SDS_Astra","SDS_Mira"],
+    "continuityFrom":"SDS_S1E04_P21",
+    "panelPlan":[
+      {"text":"PANEL 1 — Astra's terminal expands the notification."},
+      {"text":"PANEL 2 — A smaller line appears beneath it."},
+      {"text":"PANEL 3 — Astra stares at the wording."},
+      {"text":"PANEL 4 — Mira remains beside her."},
+      {"text":"PANEL 5 — Astra looks through the glass toward the functioning maintenance bay."}
+    ],
+    "dialogueInline":[
+      {"speaker":"SCREEN","text":"PRELIMINARY COMMERCIAL INTEREST FLAGGED.","subtext":"Panel 1"},
+      {"speaker":"SCREEN","text":"THANK YOU FOR YOUR CONTRIBUTION TO STATION VALUE IDENTIFICATION.","subtext":"Panel 2"},
+      {"speaker":"ASTRA","text":"There it is.","subtext":"Panel 3"},
+      {"speaker":"MIRA","text":"I still think we had to report it.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"We did.","subtext":"Panel 4"},
+      {"speaker":"ASTRA","text":"I just wanted one more day before it got a department.","subtext":"Panel 5"}
     ]
   }
 ]
