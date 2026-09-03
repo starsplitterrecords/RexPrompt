@@ -79,23 +79,26 @@ for scene in scenes:
         if faction not in factions: raise SystemExit(f"{sid}: unknown faction {faction}")
     for c in scene.get("charactersInline", []) or []:
         if c.get("handle") not in handles: raise SystemExit(f"{sid}: unknown character handle {c.get('handle')}")
-    if episode(scene) == "S1E03":
-        panels = scene.get("panelPlan") or []
-        if len(panels) < 4: raise SystemExit(f"{sid}: Public Sky production page requires at least four planned panels")
-        if not any(str(x).strip() for x in scene.get("directionInline", []) or []):
-            raise SystemExit(f"{sid}: Public Sky production page missing scene direction")
 
-public_sky = [scene for scene in scenes if episode(scene) == "S1E03"]
-previous = "BR_S1E02_R2_P24"
-for scene in public_sky:
-    sid = scene["id"]
-    if scene.get("continuityFrom") != previous:
-        raise SystemExit(f"{sid}: Public Sky continuityFrom must be {previous}, found {scene.get('continuityFrom')}")
-    previous = sid
+production_specs = {
+    "S1E03": ("Public Sky", "BR_S1E02_R2_P24"),
+    "S1E04": ("Trip Point", "BR_S1E03_PS_A03_SC06"),
+}
+for ep, (label, previous) in production_specs.items():
+    issue_scenes = [scene for scene in scenes if episode(scene) == ep]
+    for scene in issue_scenes:
+        sid = scene["id"]
+        panels = scene.get("panelPlan") or []
+        if len(panels) < 4: raise SystemExit(f"{sid}: {label} production page requires at least four planned panels")
+        if not any(str(x).strip() for x in scene.get("directionInline", []) or []):
+            raise SystemExit(f"{sid}: {label} production page missing scene direction")
+        if scene.get("continuityFrom") != previous:
+            raise SystemExit(f"{sid}: {label} continuityFrom must be {previous}, found {scene.get('continuityFrom')}")
+        previous = sid
+    print(f"{label} production pages:", len(issue_scenes), "panel plans:", sum(len(s.get("panelPlan") or []) for s in issue_scenes), flush=True)
 
 print("Observed scene counts:", dict(counts), flush=True)
 print("Observed payload boundaries:", flush=True)
 for file, count, first_id, last_id in file_counts: print(f"  {file}: {count} [{first_id} .. {last_id}]", flush=True)
-print("Public Sky production pages:", len(public_sky), "panel plans:", sum(len(s.get("panelPlan") or []) for s in public_sky), flush=True)
 print("Backyard Rockets validation passed")
 print("Total scenes:", len(scenes))

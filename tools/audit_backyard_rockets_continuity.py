@@ -30,6 +30,21 @@ def text(v):
 def narrative_names(summary):
     return [n for n,h in P.items() if re.search(rf'(?<![A-Za-z]){re.escape(n)}(?![A-Za-z])|{re.escape(h)}', summary or "", re.I)]
 
+def legacy_hit(pattern,msg,alltxt):
+    m=re.search(pattern,alltxt,re.I|re.S)
+    if not m:
+        return False
+    if msg=="Arvin left-hand graft conflict":
+        start=max(0,m.start()-40); end=min(len(alltxt),m.end()+60)
+        context=alltxt[start:end]
+        explicit_correct=(
+            re.search(r"natural\s+left[- ]hand",context,re.I)
+            and re.search(r"(?:synthetic|graft)\s+right[- ]hand|right[- ]hand[^.;]{0,20}(?:synthetic|graft)",context,re.I)
+        )
+        if explicit_correct:
+            return False
+    return True
+
 shows=load(MANIFEST)
 show=next(s for s in shows if s.get("id")==SHOW_ID)
 base=ROOT/show["basePath"]
@@ -83,7 +98,7 @@ for file,group in groups:
         if not str(loc or "").strip():
             issues.append({"scene":sid,"episode":e,"kind":"missing_setting","detail":f"setting={setting}","file":file})
         for pattern,msg in legacy:
-            if re.search(pattern,alltxt,re.I|re.S):
+            if legacy_hit(pattern,msg,alltxt):
                 issues.append({"scene":sid,"episode":e,"kind":"legacy_visual_conflict","detail":msg,"file":file})
         rows.append({"id":sid,"episode":e,"file":file,"summary":summary,"charactersInline":inline,"factions":s.get("factions",[]) or [],"setting":setting,"settingText":loc,"dialogueInline":dia})
 
