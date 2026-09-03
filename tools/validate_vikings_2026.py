@@ -29,6 +29,9 @@ def load_json(path):
 
 def decode_gzip_base64(path):
     encoded = "".join(path.read_text(encoding="utf-8").split())
+    allowed = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=")
+    bad = [(index, char) for index, char in enumerate(encoded) if char not in allowed]
+    assert not bad, f"non-base64 characters in {path.name}: {bad[:12]}"
     raw = gzip.decompress(base64.b64decode(encoded, validate=True))
     return json.loads(raw.decode("utf-8"))
 
