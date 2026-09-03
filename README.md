@@ -175,6 +175,25 @@ Moves the current scene to the end of the active show's in-browser queue and adv
 
 Despite the name, **Commit Scene does not write anything to GitHub or the JSON files**. Reloading the show restores its original order.
 
+## Production visuals
+
+RexPrompt displays durable production visuals beside the selected recipe without changing the recipe assembler.
+
+Two visual states are kept deliberately separate:
+
+- **Approved production draft** — mutable production data stored in this RexPrompt repository.
+- **Released canon** — read-only material sourced from `starsplitterrecords/StarSplitterVisions`.
+
+An approved draft is stored only through an explicit action. Use **Upload Approved Draft** / **Replace Approved Draft** in the UI, or use a GitHub-capable workflow after explicitly directing it to post a specific image to RexPrompt. Generations, rejected attempts, and approval language by themselves do not write images to the repository.
+
+The browser upload path uses a fine-grained GitHub token with Contents read/write permission. The token is entered in a masked field and retained only in browser `sessionStorage` for the current tab. Each upload commits the current image and its manifest entry together. Replacing a draft replaces the active production image; Git history retains earlier versions.
+
+Drafts are visibly marked **DRAFT · NOT RELEASED**. Recipe options are annotated with `[DRAFT]` and `[CANON]` when those durable states are known.
+
+For page-based issues, released canon can be resolved automatically only when the Visions issue page count exactly matches the current RexPrompt recipe count. Scene-based or otherwise non-1:1 material requires an explicit cross-repository mapping in `production/released-links.json`; RexPrompt does not guess scene-to-page relationships.
+
+See `production/README.md` and `production/drafts/README.md` for the complete visual-state contract.
+
 ## Data files
 
 Each show supplies:
@@ -219,7 +238,15 @@ http://localhost:8000/
 ```text
 RexPrompt/
 ├── index.html
+├── visuals.js
 ├── README.md
+├── production/
+│   ├── README.md
+│   ├── released-links.json
+│   ├── visual-sources.json
+│   └── drafts/
+│       ├── README.md
+│       └── manifest.json
 └── data/
     ├── shows.json
     ├── ...prequel data...
