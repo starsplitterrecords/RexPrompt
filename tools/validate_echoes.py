@@ -67,17 +67,21 @@ def validate_scenes() -> None:
                 assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
                     assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
-            if issue <= 3:
+            if issue <= 4:
                 plan = scene.get("panelPlan")
                 assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
-            if issue in (2, 3) and index > 0:
+            if issue in (2, 3, 4) and index > 0:
                 assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue {issue} continuity: {scene['id']}"
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
-    e04 = {s["id"]: s for s in load(SCENE_FILES[3])}
+    e04 = load(SCENE_FILES[3])
+    for scene in e04[1:10]:
+        assert "EFW_Theo" not in scene.get("characters", []), f"Ancient Theo revealed early: {scene['id']}"
+        assert "EFW_Rae" not in scene.get("characters", []), f"Ancient Rae revealed early: {scene['id']}"
+    assert "EFW_Theo" in e04[11]["characters"]
+    assert "EFW_Rae" in e04[11]["characters"]
+
     e05 = {s["id"]: s for s in load(SCENE_FILES[4])}
-    assert "EFW_Theo" in e04["EFW_S1E04_S12"]["characters"]
-    assert "EFW_Rae" in e04["EFW_S1E04_S12"]["characters"]
     assert "EFW_Theo" in e05["EFW_S1E05_S02"]["characters"]
     assert "EFW_Rae" in e05["EFW_S1E05_S04"]["characters"]
 
@@ -127,12 +131,12 @@ def validate_current_production_contract() -> None:
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
     issues = status.get("issues", {})
-    for issue in (1, 2, 3):
+    for issue in (1, 2, 3, 4):
         entry = issues.get(str(issue), {})
         assert entry.get("status") == "compiled for sequential page production", issue
         assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
         assert entry.get("pageCount") == 12, issue
-    assert issues.get("4", {}).get("status") == "next recovery frontier"
+    assert issues.get("5", {}).get("status") == "next recovery frontier"
 
 
 def main() -> None:
@@ -142,7 +146,7 @@ def main() -> None:
     validate_issue1_references()
     validate_architecture()
     validate_current_production_contract()
-    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-3 compiled as 12 production pages each.")
+    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-4 compiled as 12 production pages each.")
 
 
 if __name__ == "__main__":

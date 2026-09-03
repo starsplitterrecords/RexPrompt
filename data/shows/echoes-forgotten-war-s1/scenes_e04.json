@@ -2,508 +2,291 @@
   {
     "id": "EFW_S1E04_S01",
     "settingText": "Present-day Pax-Aeterna treaty vault, preserved as a ceremonial ruin whose official history describes negotiations nobody can name.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Theo, Rae and Adrian enter Pax-Aeterna looking for the source of a shared recurring image: an empty chair at a black table. The room remembers before any of them touch it.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "I've seen that chair."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "So have I."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Then we should leave."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You knew we'd say that."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "I hoped you wouldn't."
-      }
+      {"handle": "@ech.theo", "text": "I've seen that chair."},
+      {"handle": "@ech.rae", "text": "So have I."},
+      {"handle": "@ech.adrian", "text": "Then we should leave."},
+      {"handle": "@ech.rae", "text": "You knew we'd say that."},
+      {"handle": "@ech.adrian", "text": "I hoped you wouldn't."}
     ],
-    "directionInline": [
-      {
-        "text": "The present-day vault should feel almost disappointingly quiet. No activation sequence. The memory arrives because recognition accumulates in the room. When the past takes over."
-      }
+    "directionInline": [{"text": "The present-day vault should feel almost disappointingly quiet. No activation sequence. The memory arrives because recognition accumulates in the room."}],
+    "panelPlan": [
+      {"text": "Panel 1 — Present-day Pax-Aeterna treaty vault in ordinary civic quiet: worn stone, museum barriers, modest explanatory plaques with names and events missing, daylight falling across a black treaty table and one empty chair. Theo, Rae and Adrian enter without spectacle."},
+      {"text": "Panel 2 — Theo stops at the empty chair: 'I've seen that chair.' Rae, already staring at it: 'So have I.' Their recognition is simultaneous and unwelcome."},
+      {"text": "Panel 3 — Adrian: 'Then we should leave.' Rae turns on him: 'You knew we'd say that.' His fear confirms the room matters."},
+      {"text": "Panel 4 — Adrian: 'I hoped you wouldn't.' Hold on the three present-day faces and the ordinary room; no device activates and nobody touches the table."},
+      {"text": "Panel 5 — Match transition. The same black table fills the frame as present-day museum ropes and quiet light give way to the ancient chamber's open doors, evacuation noise and living occupants. Theo and Rae are not visible anywhere in the ancient frame."}
     ]
   },
   {
     "id": "EFW_S1E04_S02",
     "settingText": "Ancient Pax-Aeterna treaty chamber before a final negotiation, black stone table, open doors to a city under evacuation.",
-    "characters": [
-      "EFW_Mero",
-      "EFW_Atlas",
-      "EFW_Redlin"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Mero", "EFW_Atlas", "EFW_Redlin"],
     "summary": "Mero prepares for a negotiation nobody believes will hold. Atlas demands that evacuation continue regardless of any agreement; Redlin insists a ceasefire is still worth attempting even if Starbreaker distrusts it.",
     "dialogueInline": [
-      {
-        "handle": "@ech.atlas",
-        "text": "The ships leave whether they sign or not."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "Agreed."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "That was easy."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "Don't get used to it."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "I'm serious."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "So am I. That's why I'm grateful for the easy part."
-      }
+      {"handle": "@ech.atlas", "text": "The ships leave whether they sign or not."},
+      {"handle": "@ech.redlin", "text": "Agreed."},
+      {"handle": "@ech.mero", "text": "That was easy."},
+      {"handle": "@ech.redlin", "text": "Don't get used to it."},
+      {"handle": "@ech.atlas", "text": "I'm serious."},
+      {"handle": "@ech.mero", "text": "So am I. That's why I'm grateful for the easy part."}
     ],
-    "directionInline": [
-      {
-        "text": "Let these people have dry familiarity. The war has not erased humor entirely. Their agreement about evacuation gives the coming decision something human to betray."
-      }
+    "directionInline": [{"text": "Let these people have dry familiarity. The war has not erased humor entirely. Their agreement about evacuation gives the coming decision something human to betray. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S01",
+    "panelPlan": [
+      {"text": "Panel 1 — Ancient treaty chamber. The black stone table is functional, not royal; broad doors open directly onto a city evacuating below. Mero, Atlas and Redlin prepare while transport queues remain visible in the background. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Atlas, monumental but focused on the evacuation beyond the doors: 'The ships leave whether they sign or not.' Redlin: 'Agreed.'"},
+      {"text": "Panel 3 — Mero, dryly: 'That was easy.' Redlin: 'Don't get used to it.' Their familiarity humanizes the coalition before the moral rupture."},
+      {"text": "Panel 4 — Atlas: 'I'm serious.' He points not to a tactical display but to actual transports and civilians moving outside."},
+      {"text": "Panel 5 — Mero: 'So am I. That's why I'm grateful for the easy part.' End with all three watching an evacuation ship lift away, establishing the shared promise the issue will later betray."}
     ]
   },
   {
     "id": "EFW_S1E04_S03",
     "settingText": "Ancient Pax-Aeterna treaty chamber as Arbiter enters without ceremony.",
-    "characters": [
-      "EFW_Arbiter",
-      "EFW_Mero",
-      "EFW_Atlas",
-      "EFW_Redlin"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Arbiter", "EFW_Mero", "EFW_Atlas", "EFW_Redlin"],
     "summary": "Arbiter debuts as a person carrying responsibility rather than a cold embodiment of judgment. Arbiter already knows the evacuation agreement and asks who will own the decision if evacuation fails.",
     "dialogueInline": [
-      {
-        "handle": "@ech.arbiter",
-        "text": "Who decided they had time?"
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "I did."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Good."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "You sound disappointed."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "No. I prefer when the person making a promise stays in the room."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "We're all staying."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Until one of us decides someone else can't."
-      }
+      {"handle": "@ech.arbiter", "text": "Who decided they had time?"},
+      {"handle": "@ech.atlas", "text": "I did."},
+      {"handle": "@ech.arbiter", "text": "Good."},
+      {"handle": "@ech.atlas", "text": "You sound disappointed."},
+      {"handle": "@ech.arbiter", "text": "No. I prefer when the person making a promise stays in the room."},
+      {"handle": "@ech.mero", "text": "We're all staying."},
+      {"handle": "@ech.arbiter", "text": "Until one of us decides someone else can't."}
     ],
-    "directionInline": [
-      {
-        "text": "Arbiter's force comes from ownership. They ask who made a promise because responsibility matters to them."
-      }
+    "directionInline": [{"text": "Arbiter's force comes from ownership. They ask who made a promise because responsibility matters to them. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S02",
+    "panelPlan": [
+      {"text": "Panel 1 — Arbiter enters without procession: imposing female Concordant authority in pale/dark judicial armor with restrained gold structure, visibly burdened rather than regal. Mero, Atlas and Redlin turn toward her. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Arbiter looks through the open doors at evacuation ships: 'Who decided they had time?' Atlas immediately: 'I did.'"},
+      {"text": "Panel 3 — Arbiter: 'Good.' Atlas: 'You sound disappointed.' Her attention remains on him as a person who owns a promise, not an opponent."},
+      {"text": "Panel 4 — 'No. I prefer when the person making a promise stays in the room.' Atlas absorbs the distinction; responsibility is being assigned before any decision is made."},
+      {"text": "Panel 5 — Mero: 'We're all staying.' Arbiter: 'Until one of us decides someone else can't.' End with the empty chair visible at the table, turning the present-day recurring image into an unresolved ancient absence."}
     ]
   },
   {
     "id": "EFW_S1E04_S04",
     "settingText": "Ancient side chamber overlooking evacuation streets below Pax-Aeterna.",
-    "characters": [
-      "EFW_Atlas",
-      "EFW_Arbiter"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Atlas", "EFW_Arbiter"],
     "summary": "Atlas confronts Arbiter privately over the possibility of sacrificing the threatened system. Arbiter refuses to pretend that refusing sacrifice means no one will die.",
     "dialogueInline": [
-      {
-        "handle": "@ech.atlas",
-        "text": "You came here prepared to kill a world."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "I came prepared to admit that might be the choice."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "That's not courage."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Neither is calling every refusal mercy."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "There are people down there."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "There are people everywhere this reaches."
-      }
+      {"handle": "@ech.atlas", "text": "You came here prepared to kill a world."},
+      {"handle": "@ech.arbiter", "text": "I came prepared to admit that might be the choice."},
+      {"handle": "@ech.atlas", "text": "That's not courage."},
+      {"handle": "@ech.arbiter", "text": "Neither is calling every refusal mercy."},
+      {"handle": "@ech.atlas", "text": "There are people down there."},
+      {"handle": "@ech.arbiter", "text": "There are people everywhere this reaches."}
     ],
-    "directionInline": [
-      {
-        "text": "Make both positions hurt. Atlas looks at individuals below. Arbiter does too. Arbiter is not looking away from suffering; the disagreement is about whether attention to one population can become abandonment of others."
-      }
+    "directionInline": [{"text": "Make both positions hurt. Atlas looks at individuals below. Arbiter does too. Arbiter is not looking away from suffering; the disagreement is about whether attention to one population can become abandonment of others. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S03",
+    "panelPlan": [
+      {"text": "Panel 1 — Atlas and Arbiter stand in a side chamber overlooking real evacuation streets below: families carrying bags, medical transports, packed departure lanes. Both can see individual people. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Atlas: 'You came here prepared to kill a world.' Keep his enormous body turned toward the civilians, not squaring off like a fighter."},
+      {"text": "Panel 3 — Arbiter: 'I came prepared to admit that might be the choice.' Her severity comes from accepting ownership, not emotional coldness."},
+      {"text": "Panel 4 — 'That's not courage.' / 'Neither is calling every refusal mercy.' Their philosophies collide while both continue watching the same people below."},
+      {"text": "Panel 5 — Atlas: 'There are people down there.' Arbiter: 'There are people everywhere this reaches.' End on evacuation craft disappearing toward distant populated systems, visually making both scopes of responsibility real."}
     ]
   },
   {
     "id": "EFW_S1E04_S05",
     "settingText": "Ancient treaty chamber during the negotiation, doors open, distant alarms and evacuation noise intruding.",
-    "characters": [
-      "EFW_Starbreaker",
-      "EFW_Redlin",
-      "EFW_Mero",
-      "EFW_Arbiter"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Starbreaker", "EFW_Redlin", "EFW_Mero", "EFW_Arbiter"],
     "summary": "Starbreaker arrives and immediately distrusts the ceasefire. Redlin accuses him of wanting the negotiation to fail; Starbreaker accuses Redlin of treating every pause as evidence that peace is possible.",
     "dialogueInline": [
-      {
-        "handle": "@ech.redlin",
-        "text": "Try not to end the meeting before it starts."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "Try not to call a delay peace."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "I missed both of you."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "No, you didn't."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "No. I really didn't."
-      }
+      {"handle": "@ech.redlin", "text": "Try not to end the meeting before it starts."},
+      {"handle": "@ech.starbreaker", "text": "Try not to call a delay peace."},
+      {"handle": "@ech.mero", "text": "I missed both of you."},
+      {"handle": "@ech.arbiter", "text": "No, you didn't."},
+      {"handle": "@ech.mero", "text": "No. I really didn't."}
     ],
-    "directionInline": [
-      {
-        "text": "Use familiarity again. Arbiter's dry correction should tell us these people know one another socially as well as politically. The scene's tension comes from history in the room, not exposition about factions."
-      }
+    "directionInline": [{"text": "Use familiarity again. Arbiter's dry correction should tell us these people know one another socially as well as politically. The scene's tension comes from history in the room, not exposition about factions. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S04",
+    "panelPlan": [
+      {"text": "Panel 1 — Starbreaker arrives through the open chamber doors, white-gold fractured armor worn and dulled, while evacuation alarms and moving civilians remain visible behind him. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Redlin: 'Try not to end the meeting before it starts.' Starbreaker: 'Try not to call a delay peace.' Their exchange lands like an old argument they can both recite."},
+      {"text": "Panel 3 — Mero, exhausted: 'I missed both of you.' The line briefly punctures the cosmic stakes with human familiarity."},
+      {"text": "Panel 4 — Arbiter, dry: 'No, you didn't.' Mero looks at her, caught."},
+      {"text": "Panel 5 — Mero: 'No. I really didn't.' A small, rueful beat passes through the group before the outside alarm grows worse. End on people who know one another, making the coming rupture personal rather than factional."}
     ]
   },
   {
     "id": "EFW_S1E04_S06",
     "settingText": "Ancient Pax-Aeterna public gallery as the ceasefire collapses and evacuation stalls.",
-    "characters": [
-      "EFW_Mero",
-      "EFW_Atlas",
-      "EFW_Redlin",
-      "EFW_Starbreaker",
-      "EFW_Arbiter"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Mero", "EFW_Atlas", "EFW_Redlin", "EFW_Starbreaker", "EFW_Arbiter"],
     "summary": "The negotiation fails. The threatened force begins moving toward populated systems while evacuation routes close. Every champion proposes the thing they have always proposed, and for the first time Mero sees that none of the answers can coexist.",
     "dialogueInline": [
-      {
-        "handle": "@ech.starbreaker",
-        "text": "Now."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "Not with the transports still inside."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "Then we keep the transports moving."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "They will not all leave."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "I know."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "Don't say it like that."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "How would you like me to say it?"
-      }
+      {"handle": "@ech.starbreaker", "text": "Now."},
+      {"handle": "@ech.redlin", "text": "Not with the transports still inside."},
+      {"handle": "@ech.atlas", "text": "Then we keep the transports moving."},
+      {"handle": "@ech.arbiter", "text": "They will not all leave."},
+      {"handle": "@ech.mero", "text": "I know."},
+      {"handle": "@ech.atlas", "text": "Don't say it like that."},
+      {"handle": "@ech.mero", "text": "How would you like me to say it?"}
     ],
-    "directionInline": [
-      {
-        "text": "No countdowns or forecasts. Make the impossibility visible through people: ships turning back, doors closing, families trapped on opposite sides of a departure gate. Mero's breaking point is emotional, not analytical."
-      }
+    "directionInline": [{"text": "No countdowns or forecasts. Make the impossibility visible through people: ships turning back, doors closing, families trapped on opposite sides of a departure gate. Mero's breaking point is emotional, not analytical. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S05",
+    "panelPlan": [
+      {"text": "Panel 1 — Public gallery as the ceasefire visibly fails: one departure gate closes while a family is split across it; a transport reverses course; civilians press toward shrinking routes. The champions and Mero see the consequences directly. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Starbreaker: 'Now.' Redlin: 'Not with the transports still inside.' Their argument is framed against those transports, not a tactical map."},
+      {"text": "Panel 3 — Atlas: 'Then we keep the transports moving.' Arbiter: 'They will not all leave.' Show a damaged departure lane that makes both statements physically plausible."},
+      {"text": "Panel 4 — Mero: 'I know.' Atlas turns on him: 'Don't say it like that.' The crisis has moved from strategy to grief."},
+      {"text": "Panel 5 — Mero: 'How would you like me to say it?' End close on his exhausted human face with civilians trapped behind him. He has reached the point where language cannot clean the choice."}
     ]
   },
   {
     "id": "EFW_S1E04_S07",
     "settingText": "Ancient empty corridor behind the treaty chamber while the larger crisis continues outside.",
-    "characters": [
-      "EFW_Mero",
-      "EFW_Arbiter"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Mero", "EFW_Arbiter"],
     "summary": "Mero asks Arbiter whether they can live with the extinction decision. Arbiter says living with it is not the same as being entitled to make it, but someone will make a choice either by acting or refusing to act.",
     "dialogueInline": [
-      {
-        "handle": "@ech.mero",
-        "text": "Can you live with it?"
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "That is not the standard."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "It should be somewhere on the list."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "I will live with it if I choose it. I will also live with what happens if I don't."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "You make that sound honest."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "It is only honest."
-      }
+      {"handle": "@ech.mero", "text": "Can you live with it?"},
+      {"handle": "@ech.arbiter", "text": "That is not the standard."},
+      {"handle": "@ech.mero", "text": "It should be somewhere on the list."},
+      {"handle": "@ech.arbiter", "text": "I will live with it if I choose it. I will also live with what happens if I don't."},
+      {"handle": "@ech.mero", "text": "You make that sound honest."},
+      {"handle": "@ech.arbiter", "text": "It is only honest."}
     ],
-    "directionInline": [
-      {
-        "text": "No cold verdict posture. Arbiter understands that responsibility cannot make the choice clean. Mero is looking for moral permission and does not receive it."
-      }
+    "directionInline": [{"text": "No cold verdict posture. Arbiter understands that responsibility cannot make the choice clean. Mero is looking for moral permission and does not receive it. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S06",
+    "panelPlan": [
+      {"text": "Panel 1 — Mero and Arbiter step into a nearly empty service corridor behind the treaty chamber. Evacuation noise continues through open doorways, keeping the private conversation attached to public suffering. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Mero: 'Can you live with it?' He asks as a human being seeking moral permission, not a commander requesting a ruling."},
+      {"text": "Panel 3 — Arbiter: 'That is not the standard.' Mero: 'It should be somewhere on the list.' Her expression shows she understands why he asks."},
+      {"text": "Panel 4 — Arbiter: 'I will live with it if I choose it. I will also live with what happens if I don't.' No judicial pose; the burden is personal."},
+      {"text": "Panel 5 — Mero: 'You make that sound honest.' Arbiter: 'It is only honest.' End with them turning back toward the chamber without absolution. The decision remains theirs to make."}
     ]
   },
   {
     "id": "EFW_S1E04_S08",
     "settingText": "Ancient evacuation concourse at Pax-Aeterna, civilians waiting beneath an increasingly impossible sky.",
-    "characters": [
-      "EFW_Atlas",
-      "EFW_Redlin",
-      "EFW_Starbreaker"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Atlas", "EFW_Redlin", "EFW_Starbreaker"],
     "summary": "Atlas, Redlin and Starbreaker work together to move civilians even while arguing about the larger decision. The scene prevents ideology from erasing shared action: enemies in principle can still carry the same injured person.",
     "dialogueInline": [
-      {
-        "handle": "@ech.atlas",
-        "text": "Take his other arm."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "I have him."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "For once, nobody argue with Atlas."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "Enjoy it."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "I am."
-      }
+      {"handle": "@ech.atlas", "text": "Take his other arm."},
+      {"handle": "@ech.starbreaker", "text": "I have him."},
+      {"handle": "@ech.redlin", "text": "For once, nobody argue with Atlas."},
+      {"handle": "@ech.starbreaker", "text": "Enjoy it."},
+      {"handle": "@ech.redlin", "text": "I am."}
     ],
-    "directionInline": [
-      {
-        "text": "Let them cooperate physically. The ancient cast should feel like people whose factional conflict grew out of relationships, not color-coded teams who never shared purpose."
-      }
+    "directionInline": [{"text": "Let them cooperate physically. The ancient cast should feel like people whose factional conflict grew out of relationships, not color-coded teams who never shared purpose. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S07",
+    "panelPlan": [
+      {"text": "Panel 1 — Evacuation concourse under an impossible sky. Atlas, Redlin and Starbreaker are physically in the civilian flow, lifting barriers, supporting injured people and carrying baggage rather than posing above the crowd. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Atlas takes one side of an injured civilian: 'Take his other arm.' Starbreaker immediately: 'I have him.' Their hands meet under the person's weight."},
+      {"text": "Panel 3 — Redlin clears a path and says, 'For once, nobody argue with Atlas.' The line lands while all three cooperate toward the same transport."},
+      {"text": "Panel 4 — Starbreaker: 'Enjoy it.' Redlin: 'I am.' Brief shared humor survives inside the evacuation."},
+      {"text": "Panel 5 — Large final panel. The three ideological opponents carry the same injured stranger toward safety as the sky worsens behind them. End on shared action surviving political rupture."}
     ]
   },
   {
     "id": "EFW_S1E04_S09",
     "settingText": "Ancient treaty chamber after evacuation has reached its limit and no clean option remains.",
-    "characters": [
-      "EFW_Arbiter",
-      "EFW_Mero",
-      "EFW_Atlas",
-      "EFW_Redlin",
-      "EFW_Starbreaker"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Arbiter", "EFW_Mero", "EFW_Atlas", "EFW_Redlin", "EFW_Starbreaker"],
     "summary": "Arbiter makes the extinction-level decision. No one celebrates. Atlas refuses assent, Starbreaker refuses false innocence, Redlin asks for the remaining civilians to be given whatever time is left, and Mero chooses not to stop Arbiter.",
     "dialogueInline": [
-      {
-        "handle": "@ech.arbiter",
-        "text": "I am ending it here."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "No."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "I know."
-      },
-      {
-        "handle": "@ech.redlin",
-        "text": "Give them until the last door closes."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "Don't call this clean afterward."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "No one will."
-      }
+      {"handle": "@ech.arbiter", "text": "I am ending it here."},
+      {"handle": "@ech.atlas", "text": "No."},
+      {"handle": "@ech.arbiter", "text": "I know."},
+      {"handle": "@ech.redlin", "text": "Give them until the last door closes."},
+      {"handle": "@ech.starbreaker", "text": "Don't call this clean afterward."},
+      {"handle": "@ech.mero", "text": "No one will."}
     ],
-    "directionInline": [
-      {
-        "text": "The decision itself is the event. Stay on faces, interrupted evacuations, hands held, people who know something irreversible has been chosen without understanding the scale."
-      }
+    "directionInline": [{"text": "The decision itself is the event. Stay on faces, interrupted evacuations, hands held, people who know something irreversible has been chosen without understanding the scale. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S08",
+    "panelPlan": [
+      {"text": "Panel 1 — Return to the treaty chamber after the evacuation has visibly reached its limit. Through the doors: departure gates closing, people holding one another, a last transport loading. No countdown or abstract display. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Arbiter: 'I am ending it here.' Hold the entire group in frame so the decision lands between people who know one another."},
+      {"text": "Panel 3 — Atlas: 'No.' Arbiter: 'I know.' Her response acknowledges his moral refusal without pretending consent is required."},
+      {"text": "Panel 4 — Redlin: 'Give them until the last door closes.' Outside, a final door is still physically open and civilians are still moving."},
+      {"text": "Panel 5 — Starbreaker: 'Don't call this clean afterward.' Mero: 'No one will.' End on Mero not stopping Arbiter while the last evacuation door remains in the background. His inaction is itself a choice."}
     ]
   },
   {
     "id": "EFW_S1E04_S10",
     "settingText": "Ancient Pax-Aeterna after the decision, treaty chamber emptied of everyone except Atlas and Arbiter.",
-    "characters": [
-      "EFW_Atlas",
-      "EFW_Arbiter"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Atlas", "EFW_Arbiter"],
     "summary": "Atlas remains with Arbiter after everyone else leaves. He tells Arbiter that taking responsibility does not make the act right. Arbiter agrees. Their disagreement survives without either receiving absolution.",
     "dialogueInline": [
-      {
-        "handle": "@ech.atlas",
-        "text": "You don't get to call responsibility redemption."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "I didn't."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "Then what do you call this?"
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Mine."
-      }
+      {"handle": "@ech.atlas", "text": "You don't get to call responsibility redemption."},
+      {"handle": "@ech.arbiter", "text": "I didn't."},
+      {"handle": "@ech.atlas", "text": "Then what do you call this?"},
+      {"handle": "@ech.arbiter", "text": "Mine."}
     ],
-    "directionInline": [
-      {
-        "text": "Hold on the word 'Mine.' Arbiter is not asking to be forgiven. Atlas is not allowed the comfort of proving Arbiter feels nothing. End the ancient chapter on unresolved moral ownership."
-      }
+    "directionInline": [{"text": "Hold on the word 'Mine.' Arbiter is not asking to be forgiven. Atlas is not allowed the comfort of proving Arbiter feels nothing. End the ancient chapter on unresolved moral ownership. Do not reveal ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E04_S09",
+    "panelPlan": [
+      {"text": "Panel 1 — Empty treaty chamber after everyone else has gone. The black table, scattered personal objects and open doors remain; evacuation noise has receded. Atlas and Arbiter stand far apart in the same human-scale room. No ancient Theo or Rae appears."},
+      {"text": "Panel 2 — Atlas: 'You don't get to call responsibility redemption.' His anger has collapsed into grief."},
+      {"text": "Panel 3 — Arbiter: 'I didn't.' No defense, no triumph, no attempt to justify herself beyond ownership."},
+      {"text": "Panel 4 — Atlas: 'Then what do you call this?' Hold the empty chair in the composition between them."},
+      {"text": "Panel 5 — Tight final ancient panel on Arbiter: 'Mine.' The word is not absolution; it is burden. End the ancient chapter here without showing the unseen aides whose identities remain suppressed."}
     ]
   },
   {
     "id": "EFW_S1E04_S11",
     "settingText": "Present-day Pax-Aeterna treaty vault, suddenly quiet again, the same table and empty chair restored.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Theo and Rae return from the memory and begin describing details that were never visible in the remembered scene. Rae knows what Arbiter wrote after the decision. Theo knows what Mero said before entering the corridor. Adrian realizes the missing autobiographical layer is beginning to return.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "Arbiter crossed out the first line."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "What line?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I don't know. I just know I watched it happen."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Mero said he hadn't slept in three days."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "That wasn't in the room."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "I know."
-      }
+      {"handle": "@ech.rae", "text": "Arbiter crossed out the first line."},
+      {"handle": "@ech.theo", "text": "What line?"},
+      {"handle": "@ech.rae", "text": "I don't know. I just know I watched it happen."},
+      {"handle": "@ech.theo", "text": "Mero said he hadn't slept in three days."},
+      {"handle": "@ech.rae", "text": "That wasn't in the room."},
+      {"handle": "@ech.theo", "text": "I know."}
     ],
-    "directionInline": [
-      {
-        "text": "Let the impossibility come from private off-frame knowledge."
-      }
+    "directionInline": [{"text": "Let the impossibility come from private off-frame knowledge. Do not insert visual flashbacks of ancient Theo or Rae yet; the autobiographical presence is inferred only from what they know."}],
+    "continuityFrom": "EFW_S1E04_S10",
+    "panelPlan": [
+      {"text": "Panel 1 — Hard return to the present-day vault in the same quiet museum composition as Page 1. Theo and Rae are shaken; Adrian immediately recognizes something has changed in how they are remembering."},
+      {"text": "Panel 2 — Rae, looking at the empty chair rather than seeing a flashback: 'Arbiter crossed out the first line.' Theo: 'What line?'"},
+      {"text": "Panel 3 — Rae: 'I don't know. I just know I watched it happen.' Hold on her present-day face. Do not show an ancient version of Rae."},
+      {"text": "Panel 4 — Theo: 'Mero said he hadn't slept in three days.' Rae: 'That wasn't in the room.' The private information is impossible because the remembered scene never contained it."},
+      {"text": "Panel 5 — Theo: 'I know.' Adrian watches both of them with fear. End on his realization that the missing autobiographical layer is returning, without yet visually revealing their ancient selves."}
     ]
   },
   {
     "id": "EFW_S1E04_S12",
     "settingText": "Present-day Pax-Aeterna outer steps at dusk, with the treaty vault behind them and ordinary city life continuing below.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Adrian finally reveals that Theo and Rae were physically present during the forgotten war. Theo served Mero; Rae served Arbiter. He stops short of telling them what either personally chose. The season's question changes.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "Were we there?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Yes."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Where?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "You sat beside Arbiter."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "No."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "You recorded the rulings."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "And me?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Mero's staff. Junior attaché."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Why haven't we seen ourselves?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Because that was the last thing the Reset took."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "What did we do?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "That's what I'm afraid you'll remember next."
-      }
+      {"handle": "@ech.theo", "text": "Were we there?"},
+      {"handle": "@ech.adrian", "text": "Yes."},
+      {"handle": "@ech.rae", "text": "Where?"},
+      {"handle": "@ech.adrian", "text": "You sat beside Arbiter."},
+      {"handle": "@ech.rae", "text": "No."},
+      {"handle": "@ech.adrian", "text": "You recorded the rulings."},
+      {"handle": "@ech.theo", "text": "And me?"},
+      {"handle": "@ech.adrian", "text": "Mero's staff. Junior attaché."},
+      {"handle": "@ech.theo", "text": "Why haven't we seen ourselves?"},
+      {"handle": "@ech.adrian", "text": "Because that was the last thing the Reset took."},
+      {"handle": "@ech.rae", "text": "What did we do?"},
+      {"handle": "@ech.adrian", "text": "That's what I'm afraid you'll remember next."}
     ],
-    "directionInline": [
-      {
-        "text": "Play the reveal without effects. Adrian states the continuity plainly. Theo and Rae are the same people. The word Reset can be used as a historical name for the act. End on the new question: what did I do?"
-      }
+    "directionInline": [{"text": "Play the reveal without effects. Adrian states the continuity plainly. Theo and Rae are the same people. The word Reset can be used as a historical name for the act. End on the new question: what did I do? Do not visually depict their ancient selves yet; Issue 5 earns that widened-frame reveal."}],
+    "continuityFrom": "EFW_S1E04_S11",
+    "panelPlan": [
+      {"text": "Panel 1 — Present-day outer steps at dusk. Ordinary city life continues below while Theo, Rae and Adrian stand apart from it, emotionally exhausted. No memory imagery or ancient doubles appear."},
+      {"text": "Panel 2 — Theo: 'Were we there?' Adrian: 'Yes.' Rae immediately: 'Where?' Keep Adrian's answer plain, not theatrical."},
+      {"text": "Panel 3 — Adrian to Rae: 'You sat beside Arbiter.' Rae: 'No.' Adrian: 'You recorded the rulings.' Hold only present-day Rae as the implication lands."},
+      {"text": "Panel 4 — Theo: 'And me?' Adrian: 'Mero's staff. Junior attaché.' Theo: 'Why haven't we seen ourselves?' The reveal is identity continuity, not reincarnation or possession."},
+      {"text": "Panel 5 — Adrian: 'Because that was the last thing the Reset took.' Rae: 'What did we do?' Adrian: 'That's what I'm afraid you'll remember next.' End on Theo and Rae in the present, with the new season question replacing the old one. Save their ancient visual reveal for Issue 5."}
     ]
   }
 ]
