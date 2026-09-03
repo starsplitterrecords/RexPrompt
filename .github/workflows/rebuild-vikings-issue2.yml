@@ -18,14 +18,35 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Inspect recipe schema
+      - name: Rebuild canonical combined payload
         run: |
           python - <<'PY'
           import base64, gzip, json
           from pathlib import Path
           root = Path('data/shows/vikings-2026-s1/encoded')
-          for name, index in [('pages_i02_p01_p06.json.gzb64', 5), ('pages_i02_p13_p18.json.gzb64', 0)]:
-              encoded = ''.join((root / name).read_text(encoding='utf-8').split())
-              pages = json.loads(gzip.decompress(base64.b64decode(encoded, validate=True)).decode('utf-8'))
-              print(json.dumps(pages[index], ensure_ascii=False, indent=2))
+          parts = [root / f'pages_i02_p{a:02d}_p{b:02d}.json.gzb64' for a,b in [(1,6),(7,12),(13,18),(19,24)]]
+          pages = []
+          for path in parts:
+              encoded = ''.join(path.read_text(encoding='utf-8').split())
+              raw = gzip.decompress(base64.b64decode(encoded, validate=True))
+              payload = json.loads(raw.decode('utf-8'))
+              assert isinstance(payload, list) and len(payload) == 6, path
+              pages.extend(payload)
+          expected = [f'VIK_S1I02_P{i:02d}' for i in range(1,25)]
+          assert [p.get('id') for p in pages] == expected
+          serialized = json.dumps(pages, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+          rebuilt = base64.b64encode(gzip.compress(serialized, compresslevel=9, mtime=0)).decode('ascii')
+          (root / 'pages_e02_landfall_bushwick.json.gzb64').write_text(rebuilt + '\n', encoding='utf-8')
+          for path in parts:
+              path.unlink()
           PY
+      - name: Validate Vikings production package
+        run: python tools/validate_vikings_2026.py
+      - name: Commit rebuilt payload
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows/vikings-2026-s1/encoded/pages_e02_landfall_bushwick.json.gzb64
+          git add -u data/shows/vikings-2026-s1/encoded
+          git commit -m 'Finalize Vikings Issue 2 production payload'
+          git push origin HEAD:recover/vikings-2026-issue-02
