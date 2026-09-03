@@ -76,19 +76,21 @@ def validate_scenes() -> None:
         ids = [scene.get("id") for scene in scenes]
         assert ids == expected, f"{path.name}: scene IDs/order changed"
         all_ids.extend(ids)
-        for scene in scenes:
+        for index, scene in enumerate(scenes):
             assert scene.get("summary"), scene.get("id")
             for char_id in scene.get("characters", []):
                 assert char_id in chars, f"Missing character {char_id}: {scene['id']}"
-            if issue == 1:
-                plan = scene.get("panelPlan")
-                assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
-            else:
+            if issue >= 2:
                 assert scene.get("settingText"), f"Missing settingText: {scene['id']}"
                 assert isinstance(scene.get("dialogueInline"), list), f"Missing inline dialogue: {scene['id']}"
                 assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
                     assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
+            if issue <= 2:
+                plan = scene.get("panelPlan")
+                assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
+            if issue == 2 and index > 0:
+                assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue 2 continuity: {scene['id']}"
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
     e04 = {s["id"]: s for s in load(SCENE_FILES[3])}
@@ -163,7 +165,7 @@ def main() -> None:
     validate_architecture()
     validate_current_production_contract()
     validate_production_language()
-    print("Echoes validation passed: 8 issues, 96 story scenes, Issue 1 compiled as 12 production pages.")
+    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-2 compiled as 12 production pages each.")
 
 
 if __name__ == "__main__":
