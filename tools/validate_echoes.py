@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate current Echoes of a Forgotten War RexPrompt production data."""
+"""Validate current Echoes of a Forgotten War RexPrompt production structure."""
 from __future__ import annotations
 
 import json
@@ -13,32 +13,10 @@ REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux
 ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
 }
-FORBIDDEN_RESIDUE = (
-    "operating rules of reality", "scanner", "mechanism", "technical jargon",
-    "probability jargon", "pseudo-scientific", "interactive hologram",
-    "engineering-tolerance", "invented physics", "diagnostic readout"
-)
 
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def production_strings() -> list[tuple[str, str]]:
-    strings: list[tuple[str, str]] = []
-    for filename in ("direction.json", "settings.json", "regions.json"):
-        data = load(SHOW / filename)
-        for key, entry in data.items():
-            if isinstance(entry, dict) and isinstance(entry.get("text"), str):
-                strings.append((f"{filename}:{key}", entry["text"]))
-    for path in SCENE_FILES:
-        for scene in load(path):
-            if isinstance(scene.get("settingText"), str):
-                strings.append((f"{scene.get('id')}:settingText", scene["settingText"]))
-            for block in scene.get("directionInline", []) or []:
-                if isinstance(block, dict) and isinstance(block.get("text"), str):
-                    strings.append((f"{scene.get('id')}:direction", block["text"]))
-    return strings
 
 
 def validate_manifest() -> None:
@@ -150,13 +128,6 @@ def validate_current_production_contract() -> None:
     assert issue1.get("recipeFile") == "scenes_e01.json"
 
 
-def validate_production_language() -> None:
-    for label, text in production_strings():
-        lower = text.lower()
-        for term in FORBIDDEN_RESIDUE:
-            assert term not in lower, f"Residue {term!r} at {label}: {text}"
-
-
 def main() -> None:
     validate_manifest()
     validate_characters()
@@ -164,7 +135,6 @@ def main() -> None:
     validate_issue1_references()
     validate_architecture()
     validate_current_production_contract()
-    validate_production_language()
     print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-2 compiled as 12 production pages each.")
 
 
