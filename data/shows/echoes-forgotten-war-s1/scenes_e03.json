@@ -2,448 +2,278 @@
   {
     "id": "EFW_S1E03_S01",
     "settingText": "Present-day Vael-Tor arrival concourse: crowded, wet, ordinary, built over older foundations nobody thinks about anymore.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Theo, Rae and Adrian arrive at Vael-Tor following a place-name recovered from the Desert Marker memories. The world feels stubbornly normal until Rae recognizes a structural shape from a memory she has never had before.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "I've never been here."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You said that like you were apologizing."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I know where that corridor goes."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Then don't go there."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "That hasn't worked for either of us yet."
-      }
+      {"handle": "@ech.rae", "text": "I've never been here."},
+      {"handle": "@ech.theo", "text": "You said that like you were apologizing."},
+      {"handle": "@ech.rae", "text": "I know where that corridor goes."},
+      {"handle": "@ech.adrian", "text": "Then don't go there."},
+      {"handle": "@ech.rae", "text": "That hasn't worked for either of us yet."}
     ],
-    "directionInline": [
-      {
-        "text": "Open on ordinary civilian movement, vendors, luggage, rain on glass, transit announcements. The remembered shape should be subtle enough that Rae's recognition feels private before anything impossible occurs."
-      }
+    "directionInline": [{"text": "Open on ordinary civilian movement, vendors, luggage, rain on glass, transit announcements. The remembered shape should be subtle enough that Rae's recognition feels private before anything impossible occurs."}],
+    "panelPlan": [
+      {"text": "Panel 1 — Large establishing panel of Vael-Tor as a working rainy port city, not a cosmic ruin: commuters, vendors, luggage carts, wet glass, layered old stone under newer transit construction, ordinary families waiting on platforms. Theo, Rae and Adrian enter as small figures in the crowd."},
+      {"text": "Panel 2 — Rae slows beside a branching corridor while everyone else keeps moving. 'I've never been here.' Theo, carrying his worn research gear, answers, 'You said that like you were apologizing.'"},
+      {"text": "Panel 3 — Rae studies an old structural arch half-hidden inside the modern wall: 'I know where that corridor goes.' The architecture, not a vision effect, carries the recognition."},
+      {"text": "Panel 4 — Adrian's reaction is immediate and restrained: 'Then don't go there.' Rae turns toward him instead of the corridor. He has confirmed the recognition by trying to stop it."},
+      {"text": "Panel 5 — Rae: 'That hasn't worked for either of us yet.' Final image follows her gaze down the crowded ordinary corridor, ending on curiosity becoming a choice rather than an apparition."}
     ]
   },
   {
     "id": "EFW_S1E03_S02",
     "settingText": "Vael-Tor public archive overlooking the transit platforms, with current maps layered over much older stonework.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo"],
     "summary": "Rae finds an old city image beneath the current map. The name Atlas surfaces with it. Theo recognizes the name but not the memory, proving that their remembered histories continue to overlap without matching.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "Atlas."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You know him?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "No."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You didn't hesitate."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Neither did you."
-      }
+      {"handle": "@ech.rae", "text": "Atlas."},
+      {"handle": "@ech.theo", "text": "You know him?"},
+      {"handle": "@ech.rae", "text": "No."},
+      {"handle": "@ech.theo", "text": "You didn't hesitate."},
+      {"handle": "@ech.rae", "text": "Neither did you."}
     ],
-    "directionInline": [
-      {
-        "text": "An old image simply becomes legible beneath the present one: same place, different city. The name Atlas arrives as recognition, not metadata."
-      }
+    "directionInline": [{"text": "An old image simply becomes legible beneath the present one: same place, different city. The name Atlas arrives as recognition, not metadata."}],
+    "continuityFrom": "EFW_S1E03_S01",
+    "panelPlan": [
+      {"text": "Panel 1 — Public archive above active transit platforms. Current civic maps are mounted against older masonry; commuters are visible through rain-streaked windows below. Rae compares a physical archival image to the modern plan while Theo watches."},
+      {"text": "Panel 2 — A worn portion of the old image aligns with the corridor shape Rae recognized. No hologram or diagnostic overlay: the same city geometry is simply visible in two eras."},
+      {"text": "Panel 3 — Rae says, 'Atlas.' Theo answers too quickly: 'You know him?' Both react to his name before either can explain why."},
+      {"text": "Panel 4 — 'No.' / 'You didn't hesitate.' Theo realizes his own certainty betrayed him as much as hers."},
+      {"text": "Panel 5 — Rae: 'Neither did you.' Hold them on opposite sides of the old image, each possessing a different missing piece. End on shared recognition without shared memory."}
     ]
   },
   {
     "id": "EFW_S1E03_S03",
     "settingText": "Vael-Tor observation gallery above a busy arrival field as a damaged refugee transport approaches.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo", "EFW_Adrian"],
     "summary": "A refugee transport requests emergency landing while Vael-Tor's dormant defenses begin treating it as an enemy. Adrian recognizes the old defensive behavior and urges evacuation instead of investigation.",
     "dialogueInline": [
-      {
-        "handle": "@ech.adrian",
-        "text": "Get away from the windows."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You know what this place used to be."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "I know what it did."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "There are people on that ship."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Then help them. Leave the history alone."
-      }
+      {"handle": "@ech.adrian", "text": "Get away from the windows."},
+      {"handle": "@ech.theo", "text": "You know what this place used to be."},
+      {"handle": "@ech.adrian", "text": "I know what it did."},
+      {"handle": "@ech.rae", "text": "There are people on that ship."},
+      {"handle": "@ech.adrian", "text": "Then help them. Leave the history alone."}
     ],
-    "directionInline": [
-      {
-        "text": "Keep the crisis legible through human behavior: port workers stop, families look up, the refugee ship is visibly damaged. The ancient defense is frightening because present people do not know why their own city has decided those refugees are enemies."
-      }
+    "directionInline": [{"text": "Keep the crisis legible through human behavior: port workers stop, families look up, the refugee ship is visibly damaged. The ancient defense is frightening because present people do not know why their own city has decided those refugees are enemies."}],
+    "continuityFrom": "EFW_S1E03_S02",
+    "panelPlan": [
+      {"text": "Panel 1 — Wide observation-gallery view over the arrival field in hard rain. A visibly damaged refugee transport limps toward Vael-Tor while ground crews and waiting families stop what they are doing to look up."},
+      {"text": "Panel 2 — Ordinary port systems abruptly change behavior: warning shutters begin to descend, old structural apertures open where nobody expected weapons, workers stare at controls that no longer obey familiar assumptions. Adrian: 'Get away from the windows.'"},
+      {"text": "Panel 3 — Theo catches Adrian's recognition: 'You know what this place used to be.' Adrian: 'I know what it did.' Keep Adrian's face more frightened than mysterious."},
+      {"text": "Panel 4 — Through the glass, the damaged transport wobbles and people can be seen at its windows. Rae: 'There are people on that ship.' The human fact interrupts the historical question."},
+      {"text": "Panel 5 — Adrian: 'Then help them. Leave the history alone.' Rae is already turning toward the exits. End with investigation giving way to rescue."}
     ]
   },
   {
     "id": "EFW_S1E03_S04",
     "settingText": "Ancient memory: a populated world under catastrophic strain, streets buckling while civilians move beneath a failing sky.",
-    "characters": [
-      "EFW_Atlas",
-      "EFW_Starbreaker"
-    ],
+    "characters": ["EFW_Atlas", "EFW_Starbreaker"],
     "summary": "Rae's contact with the old wall opens a memory of Atlas holding a threatened world together while Starbreaker argues that preserving it will widen the war. Atlas refuses to turn the population into an acceptable loss.",
     "dialogueInline": [
-      {
-        "handle": "@ech.starbreaker",
-        "text": "You can't hold a world forever."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "I only need to hold it while people are still on it."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "And when saving them carries this into the next system?"
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "Then we save that one too."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "That's not an answer."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "It's the only one I can live with."
-      }
+      {"handle": "@ech.starbreaker", "text": "You can't hold a world forever."},
+      {"handle": "@ech.atlas", "text": "I only need to hold it while people are still on it."},
+      {"handle": "@ech.starbreaker", "text": "And when saving them carries this into the next system?"},
+      {"handle": "@ech.atlas", "text": "Then we save that one too."},
+      {"handle": "@ech.starbreaker", "text": "That's not an answer."},
+      {"handle": "@ech.atlas", "text": "It's the only one I can live with."}
     ],
-    "directionInline": [
-      {
-        "text": "He should feel burdened and physically committed, not triumphant. Starbreaker is recurring and should not be framed as cruel; he is asking about downstream cost. End before the memory tells us whether Atlas's choice made things better or worse."
-      }
+    "directionInline": [{"text": "He should feel burdened and physically committed, not triumphant. Starbreaker is recurring and should not be framed as cruel; he is asking about downstream cost. End before the memory tells us whether Atlas's choice made things better or worse. Do not show ancient Theo or Rae."}],
+    "continuityFrom": "EFW_S1E03_S03",
+    "panelPlan": [
+      {"text": "Panel 1 — Memory rupture into an ancient inhabited world under physical strain. Streets buckle, buildings lean, evacuation lines move beneath a sky warped by distant war. Atlas is enormous and dark-skinned in deep blue-black layers with restrained gold orbital geometry, physically bracing against collapse while civilians pass beneath him."},
+      {"text": "Panel 2 — Starbreaker arrives without triumph, pale and exhausted in fractured white-gold armor. 'You can't hold a world forever.' Atlas, still bearing the burden: 'I only need to hold it while people are still on it.'"},
+      {"text": "Panel 3 — Show the downstream danger in the same human frame: evacuation craft escaping toward another populated system. Starbreaker: 'And when saving them carries this into the next system?'"},
+      {"text": "Panel 4 — Atlas: 'Then we save that one too.' Starbreaker: 'That's not an answer.' Their disagreement is over responsibility, not courage."},
+      {"text": "Panel 5 — Close on Atlas under impossible weight, looking toward the people still moving: 'It's the only one I can live with.' End before outcome. No ancient Theo or Rae appears anywhere on the page."}
     ]
   },
   {
     "id": "EFW_S1E03_S05",
     "settingText": "Present-day Vael-Tor service corridor leading toward the old landing controls, crowded with frightened workers and improvised evacuation traffic.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo"],
     "summary": "Rae comes out of the Atlas memory as the refugee ship is still descending. She chooses to help current workers open a path instead of chasing the memory for answers. Theo follows, irritated that this is exactly what Atlas would have done.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "You just saw him."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I also see them."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You don't even know if the ship can land."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Neither do they."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "That sounded like Atlas."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Don't do that."
-      }
+      {"handle": "@ech.theo", "text": "You just saw him."},
+      {"handle": "@ech.rae", "text": "I also see them."},
+      {"handle": "@ech.theo", "text": "You don't even know if the ship can land."},
+      {"handle": "@ech.rae", "text": "Neither do they."},
+      {"handle": "@ech.theo", "text": "That sounded like Atlas."},
+      {"handle": "@ech.rae", "text": "Don't do that."}
     ],
-    "directionInline": [
-      {
-        "text": "The point is not that Rae is possessed by Atlas. She has simply seen a moral choice and is making her own. Keep her irritated by Theo's comparison because neither of them yet understands why the memory feels intimate."
-      }
+    "directionInline": [{"text": "The point is not that Rae is possessed by Atlas. She has simply seen a moral choice and is making her own. Keep her irritated by Theo's comparison because neither of them yet understands why the memory feels intimate."}],
+    "continuityFrom": "EFW_S1E03_S04",
+    "panelPlan": [
+      {"text": "Panel 1 — Rae snaps back into the crowded service corridor mid-emergency, hand still on old stone. Frightened port workers are pushing carts, moving children and trying to clear access while alarms continue. The ancient moral argument is replaced by present people."},
+      {"text": "Panel 2 — Theo: 'You just saw him.' Rae grabs an abandoned barrier and helps workers move it: 'I also see them.' Her choice is immediate and practical."},
+      {"text": "Panel 3 — 'You don't even know if the ship can land.' Rae, helping direct a family through the cleared lane: 'Neither do they.' Keep her focused outward rather than on the memory."},
+      {"text": "Panel 4 — Theo joins the physical work despite himself. 'That sounded like Atlas.' Rae freezes just long enough for the comparison to sting."},
+      {"text": "Panel 5 — Rae: 'Don't do that.' She returns to the workers. End on her insisting this is her own choice, even as the reader sees the thematic rhyme."}
     ]
   },
   {
     "id": "EFW_S1E03_S06",
     "settingText": "Present-day maintenance access beneath Vael-Tor, old stone and current utility work built directly into one another.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Adrian"],
     "summary": "Theo follows the Marker fragment toward a sealed lower level and finds Adrian already trying to stop him. Adrian admits Vael-Tor was built over something the Reset did not remove.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "What's under us?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Enough."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "That's not a thing."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "It was, once."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "A city?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "A warship."
-      }
+      {"handle": "@ech.theo", "text": "What's under us?"},
+      {"handle": "@ech.adrian", "text": "Enough."},
+      {"handle": "@ech.theo", "text": "That's not a thing."},
+      {"handle": "@ech.adrian", "text": "It was, once."},
+      {"handle": "@ech.theo", "text": "A city?"},
+      {"handle": "@ech.adrian", "text": "A warship."}
     ],
-    "directionInline": [
-      {
-        "text": "Theo follows recognition and physical architecture. Adrian says 'warship' because concealment is now more dangerous than the word."
-      }
+    "directionInline": [{"text": "Theo follows recognition and physical architecture. Adrian says 'warship' because concealment is now more dangerous than the word."}],
+    "continuityFrom": "EFW_S1E03_S05",
+    "panelPlan": [
+      {"text": "Panel 1 — Theo descends through ordinary maintenance access: current pipes and electrical runs bolted into much older stone, fresh repair labels beside surfaces nobody can date. The Marker fragment is a carried clue, not a glowing detector."},
+      {"text": "Panel 2 — Adrian is waiting at a sealed lower stair. Theo: 'What's under us?' Adrian: 'Enough.' His attempt at containment is personal, not authoritative."},
+      {"text": "Panel 3 — Theo: 'That's not a thing.' Adrian looks at the old wall: 'It was, once.' Let the architecture itself make the answer ominous."},
+      {"text": "Panel 4 — Theo tests the scale of what Adrian means: 'A city?' Adrian cannot keep the secret smaller anymore."},
+      {"text": "Panel 5 — Adrian: 'A warship.' Final image looks down the blocked stair into darkness where modern utility lines continue onto an unseen curved surface, turning a word into a physical possibility."}
     ]
   },
   {
     "id": "EFW_S1E03_S07",
     "settingText": "Present-day exterior approach to Vael-Tor landing field during hard rain and emergency evacuation.",
-    "characters": [
-      "EFW_Rae"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae"],
     "summary": "Rae joins port workers manually clearing the approach while the old defenses keep threatening the refugee transport. She rejects an official suggestion to sacrifice the damaged ship to protect the station.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "They're already here."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You don't get to make them debris because that is easier to manage."
-      }
+      {"handle": "@ech.rae", "text": "They're already here."},
+      {"handle": "@ech.rae", "text": "You don't get to make them debris because that is easier to manage."}
     ],
-    "directionInline": [
-      {
-        "text": "Rae is not an engineer solving a control system. She works with people: opening gates, moving vehicles, getting families away from the landing zone, convincing someone with authority not to fire. Her choice rhymes with Atlas without becoming a reenactment."
-      }
+    "directionInline": [{"text": "Rae is not an engineer solving a control system. She works with people: opening gates, moving vehicles, getting families away from the landing zone, convincing someone with authority not to fire. Her choice rhymes with Atlas without becoming a reenactment."}],
+    "continuityFrom": "EFW_S1E03_S06",
+    "panelPlan": [
+      {"text": "Panel 1 — Hard rain on the landing approach. Rae and port workers physically drag service barriers clear while evacuation vehicles move civilian families away. The damaged refugee transport is descending badly in the distance; old defense apertures remain trained toward it."},
+      {"text": "Panel 2 — An unseen authority relays the easier option over an existing field speaker/radio; do not create a named new character. Rae looks from the defense line to the transport and says, 'They're already here.'"},
+      {"text": "Panel 3 — Rae helps workers wrench open a manual gate while another crew clears a stalled service vehicle. Her action makes the alternative visible: create room for people rather than classify them as risk."},
+      {"text": "Panel 4 — A worker hesitates as the defense threat increases. Rae, to the authority and everyone listening: 'You don't get to make them debris because that is easier to manage.'"},
+      {"text": "Panel 5 — Final wide panel. Workers recommit and the cleared landing path lengthens toward the incoming ship. Rae is one person among them, not a lone superhero. The decision changes collective behavior."}
     ]
   },
   {
     "id": "EFW_S1E03_S08",
     "settingText": "Present-day Vael-Tor lower foundation chamber, where ordinary construction gives way to the curved black surface of something impossibly large.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Adrian"],
     "summary": "Theo and Adrian reach the buried hull. Theo understands that the city has literally been living on top of forgotten war matter. Adrian admits the Reset erased meaning, not mass.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "How long has this been here?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "That's the wrong question."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You keep saying that."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Because you keep asking when."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "What should I ask?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Who built their life on top of it."
-      }
+      {"handle": "@ech.theo", "text": "How long has this been here?"},
+      {"handle": "@ech.adrian", "text": "That's the wrong question."},
+      {"handle": "@ech.theo", "text": "You keep saying that."},
+      {"handle": "@ech.adrian", "text": "Because you keep asking when."},
+      {"handle": "@ech.theo", "text": "What should I ask?"},
+      {"handle": "@ech.adrian", "text": "Who built their life on top of it."}
     ],
-    "directionInline": [
-      {
-        "text": "Let the hull reveal be architectural and quiet. Pipes, foundations and apartment supports have been attached to it over generations of apparent history. The horror is coexistence with forgotten matter, not activation effects."
-      }
+    "directionInline": [{"text": "Let the hull reveal be architectural and quiet. Pipes, foundations and apartment supports have been attached to it over generations of apparent history. The horror is coexistence with forgotten matter, not activation effects."}],
+    "continuityFrom": "EFW_S1E03_S07",
+    "panelPlan": [
+      {"text": "Panel 1 — Reveal by scale, not glow. Theo and Adrian step into a foundation chamber where ordinary columns, water pipes, cable trays and apartment supports terminate against a vast curved black hull surface. Generations of construction have treated it as bedrock."},
+      {"text": "Panel 2 — Theo touches a patch where old masonry and ancient hull meet: 'How long has this been here?' Adrian: 'That's the wrong question.'"},
+      {"text": "Panel 3 — 'You keep saying that.' / 'Because you keep asking when.' Show mundane repair dates painted across hardware attached directly to the forgotten warship."},
+      {"text": "Panel 4 — Theo: 'What should I ask?' Pull wider to show plumbing, stair footings and residential load paths literally dependent on the hull."},
+      {"text": "Panel 5 — Adrian: 'Who built their life on top of it.' End on ordinary occupied windows far above, physically supported by forgotten war matter. The horror is coexistence, not activation."}
     ]
   },
   {
     "id": "EFW_S1E03_S09",
     "settingText": "Present-day Vael-Tor arrival field as the refugee transport attempts a dangerous landing among ordinary civilian infrastructure.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo"],
     "summary": "Rae's effort gives the refugee transport a path to the ground. Theo returns from below as the city begins physically shifting around the buried ship.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "Rae."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Not now."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "There's a ship under the city."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Of course there is."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "That was less surprising than I wanted."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Help me with these people."
-      }
+      {"handle": "@ech.theo", "text": "Rae."},
+      {"handle": "@ech.rae", "text": "Not now."},
+      {"handle": "@ech.theo", "text": "There's a ship under the city."},
+      {"handle": "@ech.rae", "text": "Of course there is."},
+      {"handle": "@ech.theo", "text": "That was less surprising than I wanted."},
+      {"handle": "@ech.rae", "text": "Help me with these people."}
     ],
-    "directionInline": [
-      {
-        "text": "Use a small breath of exhausted humor. The refugee ship lands hard but survivably. The present-day human problem gets completed before the ancient spectacle takes over."
-      }
+    "directionInline": [{"text": "Use a small breath of exhausted humor. The refugee ship lands hard but survivably. The present-day human problem gets completed before the ancient spectacle takes over."}],
+    "continuityFrom": "EFW_S1E03_S08",
+    "panelPlan": [
+      {"text": "Panel 1 — The refugee transport commits to the cleared approach in hard rain. Port workers signal manually around civilian service vehicles and emergency crews; Rae is soaked and exhausted in the middle of coordinated human activity."},
+      {"text": "Panel 2 — Theo reaches her from the lower levels: 'Rae.' She does not turn: 'Not now.' Behind him, pavement has begun to crack along an impossible broad curve."},
+      {"text": "Panel 3 — 'There's a ship under the city.' Rae, still guiding workers: 'Of course there is.' Let the beat land as exhausted absurdity rather than a joke that breaks tension."},
+      {"text": "Panel 4 — Theo: 'That was less surprising than I wanted.' The transport hits the field hard, gear buckling but staying upright. Everyone reacts to the actual landing."},
+      {"text": "Panel 5 — Rae: 'Help me with these people.' Theo joins emergency crews moving toward the damaged transport. End with the rescue taking priority even as the city itself starts to move."}
     ]
   },
   {
     "id": "EFW_S1E03_S10",
     "settingText": "Present-day Vael-Tor foundations and skyline as the buried ancient dreadnought becomes visible beneath cracking modern structures.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "The ancient dreadnought emerges far enough to become undeniable public reality. The city does not transform into a battle zone; people simply see that their homes and streets were built across a history nobody remembered.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "Everyone can see it."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Yes."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Good."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "You won't think that for long."
-      }
+      {"handle": "@ech.rae", "text": "Everyone can see it."},
+      {"handle": "@ech.adrian", "text": "Yes."},
+      {"handle": "@ech.theo", "text": "Good."},
+      {"handle": "@ech.adrian", "text": "You won't think that for long."}
     ],
-    "directionInline": [
-      {
-        "text": "The ship does not awaken as a machine. Earth and construction fall away, revealing more and more hull until denial is impossible. Let ordinary residents watching from balconies carry the scale."
-      }
+    "directionInline": [{"text": "The ship does not awaken as a machine. Earth and construction fall away, revealing more and more hull until denial is impossible. Let ordinary residents watching from balconies carry the scale."}],
+    "continuityFrom": "EFW_S1E03_S09",
+    "panelPlan": [
+      {"text": "Panel 1 — Wide city-scale reveal. Sections of wet street, retaining wall and foundation fall away to expose a continuous black dreadnought hull beneath several blocks. The ship does not light up, power on or launch; it simply becomes visible."},
+      {"text": "Panel 2 — Residents step onto balconies and shelter entrances, staring at the ancient hull literally intersecting their familiar buildings. Children, workers and elderly residents carry the scale more effectively than military silhouettes."},
+      {"text": "Panel 3 — Rae, Theo and Adrian stand among other civilians rather than apart from them. Rae: 'Everyone can see it.' Adrian: 'Yes.' His old strategy of private containment is over."},
+      {"text": "Panel 4 — Theo: 'Good.' He looks relieved that the truth can no longer be denied. Adrian looks instead at the frightened crowd."},
+      {"text": "Panel 5 — Adrian: 'You won't think that for long.' End on the dreadnought as part of an inhabited city, not a weapon ready for action. Public truth has consequences beyond vindication."}
     ]
   },
   {
     "id": "EFW_S1E03_S11",
     "settingText": "Present-day landing field after the refugee transport is down, with passengers emerging into rain while the exposed dreadnought looms beyond.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo"],
     "summary": "Rae and Theo watch living passengers emerge from the refugee ship. The immediate rescue matters more than the ancient object behind them. Theo begins to understand why Atlas's memory stayed with Rae.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "They made it."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Most of them."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You had to ruin that sentence."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I had to tell the truth."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Atlas would like you."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I said don't do that."
-      }
+      {"handle": "@ech.theo", "text": "They made it."},
+      {"handle": "@ech.rae", "text": "Most of them."},
+      {"handle": "@ech.theo", "text": "You had to ruin that sentence."},
+      {"handle": "@ech.rae", "text": "I had to tell the truth."},
+      {"handle": "@ech.theo", "text": "Atlas would like you."},
+      {"handle": "@ech.rae", "text": "I said don't do that."}
     ],
-    "directionInline": [
-      {
-        "text": "Keep the camera emotionally with the refugees rather than the dreadnought. Atlas's theme lands through present people surviving, not through cosmic imagery."
-      }
+    "directionInline": [{"text": "Keep the camera emotionally with the refugees rather than the dreadnought. Atlas's theme lands through present people surviving, not through cosmic imagery."}],
+    "continuityFrom": "EFW_S1E03_S10",
+    "panelPlan": [
+      {"text": "Panel 1 — Refugee passengers emerge into heavy rain through a damaged hatch: families supporting one another, injured people on improvised carries, port medics and workers meeting them. The exposed dreadnought remains background architecture, not the focal point."},
+      {"text": "Panel 2 — Theo watches survivors cross the field: 'They made it.' Rae, tracking the injured and an empty stretcher: 'Most of them.'"},
+      {"text": "Panel 3 — Theo: 'You had to ruin that sentence.' Rae: 'I had to tell the truth.' Their exchange has affection under strain, not snark for its own sake."},
+      {"text": "Panel 4 — Theo sees Rae steady a refugee as workers pass them toward shelter. 'Atlas would like you.' The comparison is now about moral choice, not identity."},
+      {"text": "Panel 5 — Rae: 'I said don't do that.' She nevertheless keeps helping the same person. End on the human continuity between Atlas's burden and Rae's choice without claiming they are the same person."}
     ]
   },
   {
     "id": "EFW_S1E03_S12",
     "settingText": "Present-day Vael-Tor overlook at night, the exposed ancient dreadnought incorporated impossibly into the modern city below.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Theo asks Adrian how something this large could survive while its history vanished. Adrian gives the series' material rule: forgetting removed the history, not the thing. Theo and Rae realize the present world may be built everywhere on forgotten consequences.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "You erased this?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "No."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You erased what it meant."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Yes."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "And you thought that was enough."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "I needed it to be."
-      }
+      {"handle": "@ech.theo", "text": "You erased this?"},
+      {"handle": "@ech.adrian", "text": "No."},
+      {"handle": "@ech.rae", "text": "You erased what it meant."},
+      {"handle": "@ech.adrian", "text": "Yes."},
+      {"handle": "@ech.theo", "text": "And you thought that was enough."},
+      {"handle": "@ech.adrian", "text": "I needed it to be."}
     ],
-    "directionInline": [
-      {
-        "text": "End quietly. The exposed dreadnought is now part of a living city. Adrian's admission should feel personal and shameful."
-      }
+    "directionInline": [{"text": "End quietly. The exposed dreadnought is now part of a living city. Adrian's admission should feel personal and shameful."}],
+    "continuityFrom": "EFW_S1E03_S11",
+    "panelPlan": [
+      {"text": "Panel 1 — Night overlook after the emergency. Vael-Tor continues living around the exposed dreadnought: emergency lights, occupied apartments, transit reroutes, refugee shelters and repair crews coexist with the ancient hull. The city has not become a battlefield."},
+      {"text": "Panel 2 — Theo, staring down at something impossibly large and materially real: 'You erased this?' Adrian: 'No.'"},
+      {"text": "Panel 3 — Rae understands before Theo does: 'You erased what it meant.' Adrian: 'Yes.' Hold on Adrian's weathered face; this is confession, not lore delivery."},
+      {"text": "Panel 4 — Theo: 'And you thought that was enough.' Behind him, ordinary homes visibly rest on the forgotten ship, making the moral accusation physical."},
+      {"text": "Panel 5 — Adrian: 'I needed it to be.' Final very wide image of the living city built across the dreadnought. End on the series rule: forgetting changed meaning, not matter, and consequences have been carrying weight the whole time."}
     ]
   }
 ]
