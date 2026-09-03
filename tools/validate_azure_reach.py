@@ -2,9 +2,10 @@
 """Mechanical integrity checks for Azure Reach RexPrompt data.
 
 This validator intentionally does not freeze creative choices such as exact dialogue,
-page titles, page counts, panel totals, issue handoffs, character behavior, or story
-beats. It checks only that the current RexPrompt package can be decoded and that its
-references and basic page structures are internally valid.
+page titles, panel totals, character behavior, or story beats. It checks that the
+current RexPrompt package can be decoded, references are internally valid, durable
+visual anchors reach the assembler, and recovered production continuity remains
+connected.
 """
 import base64
 import gzip
@@ -43,6 +44,27 @@ canonical_handles = {
     for value in characters.values()
     if isinstance(value, dict) and value.get("handle")
 }
+
+# These recurring production characters are established visually and must expose
+# their durable anchor through a field that index.html actually emits.
+visual_anchor_ids = {
+    "AZR_Maya",
+    "AZR_Julian",
+    "AZR_Fleur",
+    "AZR_Pip",
+    "AZR_Sal",
+    "AZR_Beatrice",
+    "AZR_Kyler",
+    "AZR_Dora",
+    "AZR_Elliot",
+    "AZR_Nia",
+    "AZR_Raf",
+}
+for character_id in visual_anchor_ids:
+    entry = characters.get(character_id)
+    assert isinstance(entry, dict), f"Missing Azure Reach character: {character_id}"
+    anchor = entry.get("visualAnchor")
+    assert isinstance(anchor, str) and anchor.strip(), f"{character_id}: missing assembler-visible visualAnchor"
 
 assert (SHOW / "pages_base.json").exists(), "Missing pages_base.json"
 
@@ -141,6 +163,23 @@ for entry in azure_entries:
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
     assert ordered == list(range(1, max(ordered) + 1)), f"{show_id}: non-contiguous page numbering"
+
+    # Issue 2 recovery: every page explicitly carries the causal and physical state
+    # of the page immediately before it; page 1 hands off from released Issue 1.
+    if show_id == "azure-reach-s1-e02":
+        issue_pages = sorted(pages, key=lambda page: page["page"])
+        expected_from = "AZR_S1E01_P22"
+        for page in issue_pages:
+            assert page.get("continuityFrom") == expected_from, (
+                f"{page['id']}: continuityFrom must be {expected_from}, got {page.get('continuityFrom')}"
+            )
+            assert any(
+                isinstance(item, dict)
+                and str(item.get("text", "")).startswith("CAUSAL FUNCTION —")
+                for item in page.get("directionInline", [])
+            ), f"{page['id']}: missing recovered causal-function direction"
+            expected_from = page["id"]
+
     page_total += len(pages)
 
 print("Azure Reach mechanical validation passed")
