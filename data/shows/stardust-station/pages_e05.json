@@ -1,327 +1,112 @@
 [
   {
-    "id": "SDS_S1E05_P01",
-    "summary": "Issue 5 — Resource Efficiency Review. Page 1: Classification Update. Astra's accurate Issue 4 report has acquired a corporate category.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Glorp", "SDS_Jax"],
-    "panelPlan": [
-      {"text": "PANEL 1 — Morning in the operations bullpen. Every terminal refreshes at once. Banner: RESOURCE EFFICIENCY REVIEW ACTIVE."},
-      {"text": "PANEL 2 — Pixa lights up. PIXA: We have acquired a category."},
-      {"text": "PANEL 3 — Astra freezes mid-coffee. ASTRA: That sentence caused physical pain."},
-      {"text": "PANEL 4 — Glorp scrolls through the new classification tree. GLORP: There are subcategories."},
-      {"text": "PANEL 5 — Jax looks over. JAX: How many? GLORP: Enough."}
-    ]
+    "id":"SDS_S1E05_P01","summary":"Issue 5 — Resource Efficiency Review. Page 1: Classification Update. Astra's accurate Issue 4 report has acquired a corporate category.","setting":"SDS_Admin_Hub","characters":["SDS_Pixa","SDS_Astra","SDS_Glorp","SDS_Jax"],
+    "panelPlan":[{"text":"PANEL 1 — Morning in the operations bullpen. Every terminal refreshes at once with a corporate review banner."},{"text":"PANEL 2 — Pixa lights up."},{"text":"PANEL 3 — Astra freezes mid-coffee."},{"text":"PANEL 4 — Glorp scrolls through the new classification tree."},{"text":"PANEL 5 — Jax looks over."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"RESOURCE EFFICIENCY REVIEW ACTIVE.","subtext":"Panel 1"},{"speaker":"PIXA","text":"We have acquired a category.","subtext":"Panel 2"},{"speaker":"ASTRA","text":"That sentence caused physical pain.","subtext":"Panel 3"},{"speaker":"GLORP","text":"There are subcategories.","subtext":"Panel 4"},{"speaker":"JAX","text":"How many?","subtext":"Panel 5"},{"speaker":"GLORP","text":"Enough.","subtext":"Panel 5"}]
   },
   {
-    "id": "SDS_S1E05_P02",
-    "summary": "Page 2: The Opportunity. Pilot status offers expedited procurement, creating a real reason for Astra to cooperate.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Astra", "SDS_Pixa", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E05_P01",
-    "panelPlan": [
-      {"text": "PANEL 1 — Close on the new station status: RESOURCE-POSITIVE ENVIRONMENT / LOW-YIELD / HIGH-ANOMALY POTENTIAL."},
-      {"text": "PANEL 2 — Mira reads it. MIRA: Low-yield is accurate. ASTRA: Thank you, Mira."},
-      {"text": "PANEL 3 — Pixa opens the pilot-benefits section. PIXA: Pilot sites receive expedited procurement eligibility."},
-      {"text": "PANEL 4 — The still-open bracket request appears beside it: REPLACEMENT PART ETA: 18 DAYS."},
-      {"text": "PANEL 5 — Astra looks toward Zib."},
-      {"text": "PANEL 6 — Zib sees the look immediately. ZIB: Don't look at me like that."}
-    ]
+    "id":"SDS_S1E05_P02","summary":"Page 2: The Opportunity. Pilot status offers expedited procurement, creating a real reason for Astra to cooperate.","setting":"SDS_Admin_Hub","characters":["SDS_Mira","SDS_Astra","SDS_Pixa","SDS_Zib"],"continuityFrom":"SDS_S1E05_P01",
+    "panelPlan":[{"text":"PANEL 1 — Close on the new station status."},{"text":"PANEL 2 — Mira reads it."},{"text":"PANEL 3 — Pixa opens the pilot-benefits section."},{"text":"PANEL 4 — The still-open bracket request appears beside it."},{"text":"PANEL 5 — Astra looks toward Zib."},{"text":"PANEL 6 — Zib sees the look immediately."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"RESOURCE-POSITIVE ENVIRONMENT / LOW-YIELD / HIGH-ANOMALY POTENTIAL.","subtext":"Panel 1"},{"speaker":"MIRA","text":"Low-yield is accurate.","subtext":"Panel 2"},{"speaker":"ASTRA","text":"Thank you, Mira.","subtext":"Panel 2"},{"speaker":"PIXA","text":"Pilot sites receive expedited procurement eligibility.","subtext":"Panel 3"},{"speaker":"SCREEN","text":"REPLACEMENT PART ETA: 18 DAYS.","subtext":"Panel 4"},{"speaker":"ZIB","text":"Don't look at me like that.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P03",
-    "summary": "Page 3: The Collection Bins. Corporate optimization arrives as physical equipment before anyone arrives in person.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Zib", "SDS_Pixa", "SDS_Jax", "SDS_Glorp", "SDS_Kreeb"],
-    "continuityFrom": "SDS_S1E05_P02",
-    "panelPlan": [
-      {"text": "PANEL 1 — Delivery drones unload sleek gray containers: PASSIVE RESIDUE RECOVERY / MATERIAL SAMPLE HOLDING / INCIDENT TRACE COLLECTION."},
-      {"text": "PANEL 2 — Zib stares at them. ZIB: Absolutely not."},
-      {"text": "PANEL 3 — Pixa scans the manifest. PIXA: Complimentary optimization resources."},
-      {"text": "PANEL 4 — Jax peers into a bin. JAX: This looks like a future lawsuit with handles."},
-      {"text": "PANEL 5 — Glorp reads the attached instruction packet. GLORP: \"Please encourage naturally occurring production opportunities.\""},
-      {"text": "PANEL 6 — Kreeb studies the sentence. KREEB: That phrase is trying very hard not to say what it means."}
-    ]
+    "id":"SDS_S1E05_P03","summary":"Page 3: The Collection Bins. Corporate optimization arrives as physical equipment before anyone arrives in person.","setting":"SDS_Admin_Hub","characters":["SDS_Zib","SDS_Pixa","SDS_Jax","SDS_Glorp","SDS_Kreeb"],"continuityFrom":"SDS_S1E05_P02",
+    "panelPlan":[{"text":"PANEL 1 — Delivery drones unload sleek gray passive-recovery and sample-holding containers."},{"text":"PANEL 2 — Zib stares at them."},{"text":"PANEL 3 — Pixa scans the manifest."},{"text":"PANEL 4 — Jax peers into a bin."},{"text":"PANEL 5 — Glorp reads the attached instruction packet."},{"text":"PANEL 6 — Kreeb studies the sentence."}],
+    "dialogueInline":[{"speaker":"SIGN","text":"PASSIVE RESIDUE RECOVERY / MATERIAL SAMPLE HOLDING / INCIDENT TRACE COLLECTION.","subtext":"Panel 1"},{"speaker":"ZIB","text":"Absolutely not.","subtext":"Panel 2"},{"speaker":"PIXA","text":"Complimentary optimization resources.","subtext":"Panel 3"},{"speaker":"JAX","text":"This looks like a future lawsuit with handles.","subtext":"Panel 4"},{"speaker":"SCREEN","text":"Please encourage naturally occurring production opportunities.","subtext":"Panel 5"},{"speaker":"KREEB","text":"That phrase is trying very hard not to say what it means.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P04",
-    "summary": "Page 4: The Packet Is Wrong. Mira catches the unsupported leap from physical material observations to staff-condition language.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E05_P03",
-    "panelPlan": [
-      {"text": "PANEL 1 — Mira reads the science section at speed."},
-      {"text": "PANEL 2 — She stops. MIRA: No."},
-      {"text": "PANEL 3 — The packet contains a requested field: CORRELATE STAFF CONDITION WITH COHESION OUTPUT."},
-      {"text": "PANEL 4 — Astra gestures toward the newly delivered bins. ASTRA: The bins are already here."},
-      {"text": "PANEL 5 — Mira points at the packet. MIRA: The bins are ugly. This is wrong."},
-      {"text": "PANEL 6 — Astra lowers her voice. ASTRA: Can we answer the material part without answering the people part? MIRA: Yes. If they let us."}
-    ]
+    "id":"SDS_S1E05_P04","summary":"Page 4: The Packet Is Wrong. Mira catches the unsupported leap from physical material observations to staff-condition language.","setting":"SDS_Admin_Hub","characters":["SDS_Mira","SDS_Astra"],"continuityFrom":"SDS_S1E05_P03",
+    "panelPlan":[{"text":"PANEL 1 — Mira reads the science section at speed."},{"text":"PANEL 2 — She stops."},{"text":"PANEL 3 — The packet contains a requested staff-condition field."},{"text":"PANEL 4 — Astra gestures toward the newly delivered bins."},{"text":"PANEL 5 — Mira points at the packet."},{"text":"PANEL 6 — Astra lowers her voice."}],
+    "dialogueInline":[{"speaker":"MIRA","text":"No.","subtext":"Panel 2"},{"speaker":"SCREEN","text":"CORRELATE STAFF CONDITION WITH COHESION OUTPUT.","subtext":"Panel 3"},{"speaker":"ASTRA","text":"The bins are already here.","subtext":"Panel 4"},{"speaker":"MIRA","text":"The bins are ugly. This is wrong.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"Can we answer the material part without answering the people part?","subtext":"Panel 6"},{"speaker":"MIRA","text":"Yes. If they let us.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P05",
-    "summary": "Page 5: Resource Communication Liaison. Jax accepts the role because it is a concrete bounded job.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Pixa", "SDS_Jax", "SDS_Astra", "SDS_Glorp"],
-    "continuityFrom": "SDS_S1E05_P04",
-    "panelPlan": [
-      {"text": "PANEL 1 — Pixa projects an automated staffing recommendation: RESOURCE COMMUNICATION LIAISON — JAX ORIEN."},
-      {"text": "PANEL 2 — Jax reads it carefully instead of recoiling. JAX: What does the role do?"},
-      {"text": "PANEL 3 — Pixa lists the duties: upload sample logs; confirm chain of custody; answer routing requests; maintain collection access."},
-      {"text": "PANEL 4 — Jax looks at Astra. JAX: That's a job."},
-      {"text": "PANEL 5 — Astra nods. ASTRA: Correct."},
-      {"text": "PANEL 6 — Jax takes the packet Glorp offers him. JAX: Fine. Give me the job description. He feels its weight. JAX: Why is it heavier than the sample?"}
-    ]
+    "id":"SDS_S1E05_P05","summary":"Page 5: Resource Communication Liaison. Jax accepts the role because it is a concrete bounded job.","setting":"SDS_Admin_Hub","characters":["SDS_Pixa","SDS_Jax","SDS_Astra","SDS_Glorp"],"continuityFrom":"SDS_S1E05_P04",
+    "panelPlan":[{"text":"PANEL 1 — Pixa projects an automated staffing recommendation naming Jax as resource communication liaison."},{"text":"PANEL 2 — Jax reads it carefully instead of recoiling."},{"text":"PANEL 3 — Pixa lists the duties: upload sample logs; confirm chain of custody; answer routing requests; maintain collection access."},{"text":"PANEL 4 — Jax looks at Astra."},{"text":"PANEL 5 — Astra nods."},{"text":"PANEL 6 — Jax takes the packet Glorp offers him and feels its weight."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"RESOURCE COMMUNICATION LIAISON — JAX ORIEN.","subtext":"Panel 1"},{"speaker":"JAX","text":"What does the role do?","subtext":"Panel 2"},{"speaker":"JAX","text":"That's a job.","subtext":"Panel 4"},{"speaker":"ASTRA","text":"Correct.","subtext":"Panel 5"},{"speaker":"JAX","text":"Fine. Give me the job description.","subtext":"Panel 6"},{"speaker":"JAX","text":"Why is it heavier than the sample?","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P06",
-    "summary": "Page 6: Passive Only. The local rule permits material collection during normal work and explicitly refuses inferred emotion fields.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb"],
-    "continuityFrom": "SDS_S1E05_P05",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra, Mira, Glorp, and Kreeb write a local collection rule around one terminal."},
-      {"text": "PANEL 2 — Astra states the boundary. ASTRA: Material goes in the bin if it forms during normal work. Nothing gets scheduled to make it form."},
-      {"text": "PANEL 3 — Mira adds. MIRA: No inferred emotion fields."},
-      {"text": "PANEL 4 — Glorp points at the corporate context form. GLORP: Then how do we complete field 7B?"},
-      {"text": "PANEL 5 — Kreeb reads the field. KREEB: Leave it blank."},
-      {"text": "PANEL 6 — Glorp looks genuinely troubled. GLORP: Blank is a condition. KREEB: Then condition accepted."}
-    ]
+    "id":"SDS_S1E05_P06","summary":"Page 6: Passive Only. The local rule permits material collection during normal work and explicitly refuses inferred emotion fields.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Mira","SDS_Glorp","SDS_Kreeb"],"continuityFrom":"SDS_S1E05_P05",
+    "panelPlan":[{"text":"PANEL 1 — Astra, Mira, Glorp, and Kreeb write a local collection rule around one terminal."},{"text":"PANEL 2 — Astra states the boundary."},{"text":"PANEL 3 — Mira adds another boundary."},{"text":"PANEL 4 — Glorp points at the corporate context form."},{"text":"PANEL 5 — Kreeb reads the field."},{"text":"PANEL 6 — Glorp looks genuinely troubled."}],
+    "dialogueInline":[{"speaker":"ASTRA","text":"Material goes in the bin if it forms during normal work. Nothing gets scheduled to make it form.","subtext":"Panel 2"},{"speaker":"MIRA","text":"No inferred emotion fields.","subtext":"Panel 3"},{"speaker":"GLORP","text":"Then how do we complete field 7B?","subtext":"Panel 4"},{"speaker":"KREEB","text":"Leave it blank.","subtext":"Panel 5"},{"speaker":"GLORP","text":"Blank is a condition.","subtext":"Panel 6"},{"speaker":"KREEB","text":"Then condition accepted.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P07",
-    "summary": "Page 7: Collection Starts. Passive collection yields immediately to ordinary maintenance access.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Jax", "SDS_Zib", "SDS_Pixa", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E05_P06",
-    "panelPlan": [
-      {"text": "PANEL 1 — The bins are placed only where they do not obstruct ordinary work."},
-      {"text": "PANEL 2 — Jax labels the first empty container and opens the custody log."},
-      {"text": "PANEL 3 — Zib shifts one bin away from a maintenance panel."},
-      {"text": "PANEL 4 — Pixa notices. PIXA: Collection bin displacement recorded."},
-      {"text": "PANEL 5 — Zib opens the panel cleanly. ZIB: Record that it was blocking access. PIXA: Reason recorded."},
-      {"text": "PANEL 6 — Mira labels the collection context with only physical data: location, time, temperature, equipment load, sample mass."}
-    ]
+    "id":"SDS_S1E05_P07","summary":"Page 7: Collection Starts. Passive collection yields immediately to ordinary maintenance access.","setting":"SDS_Admin_Hub","characters":["SDS_Jax","SDS_Zib","SDS_Pixa","SDS_Mira"],"continuityFrom":"SDS_S1E05_P06",
+    "panelPlan":[{"text":"PANEL 1 — The bins are placed only where they do not obstruct ordinary work."},{"text":"PANEL 2 — Jax labels the first empty container and opens the custody log."},{"text":"PANEL 3 — Zib shifts one bin away from a maintenance panel."},{"text":"PANEL 4 — Pixa notices."},{"text":"PANEL 5 — Zib opens the panel cleanly."},{"text":"PANEL 6 — Mira labels the collection context with only physical data: location, time, temperature, equipment load, sample mass."}],
+    "dialogueInline":[{"speaker":"PIXA","text":"Collection bin displacement recorded.","subtext":"Panel 4"},{"speaker":"ZIB","text":"Record that it was blocking access.","subtext":"Panel 5"},{"speaker":"PIXA","text":"Reason recorded.","subtext":"Panel 5"}]
   },
   {
-    "id": "SDS_S1E05_P08",
-    "summary": "Page 8: Measurement Changes the Room. A visible context dashboard changes behavior merely by being visible; Mira reports that measurement effect rather than interpreting anyone's feelings.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Jax", "SDS_Pixa", "SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E05_P07",
-    "panelPlan": [
-      {"text": "PANEL 1 — A corporate-requested context dashboard is visible in the bullpen: SPEAKER TURNS / TASK INTERRUPTIONS / COLLECTION EVENTS. People become conspicuously self-conscious around it."},
-      {"text": "PANEL 2 — Jax watches a conversation die when someone notices the screen. JAX: Can you hide that?"},
-      {"text": "PANEL 3 — Pixa removes the dashboard from public view. PIXA: Yes."},
-      {"text": "PANEL 4 — Normal conversation gradually resumes while people work."},
-      {"text": "PANEL 5 — Mira watches the change. MIRA: Measurement changed behavior. ASTRA: Put that in the report."}
-    ]
+    "id":"SDS_S1E05_P08","summary":"Page 8: Measurement Changes the Room. A visible context dashboard changes behavior merely by being visible; Mira reports that measurement effect rather than interpreting anyone's feelings.","setting":"SDS_Admin_Hub","characters":["SDS_Jax","SDS_Pixa","SDS_Mira","SDS_Astra"],"continuityFrom":"SDS_S1E05_P07",
+    "panelPlan":[{"text":"PANEL 1 — A corporate-requested context dashboard is visible in the bullpen. People become conspicuously self-conscious around it."},{"text":"PANEL 2 — Jax watches a conversation die when someone notices the screen."},{"text":"PANEL 3 — Pixa removes the dashboard from public view."},{"text":"PANEL 4 — Normal conversation gradually resumes while people work."},{"text":"PANEL 5 — Mira watches the change."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"SPEAKER TURNS / TASK INTERRUPTIONS / COLLECTION EVENTS.","subtext":"Panel 1"},{"speaker":"JAX","text":"Can you hide that?","subtext":"Panel 2"},{"speaker":"PIXA","text":"Yes.","subtext":"Panel 3"},{"speaker":"MIRA","text":"Measurement changed behavior.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"Put that in the report.","subtext":"Panel 5"}]
   },
   {
-    "id": "SDS_S1E05_P09",
-    "summary": "Page 9: Panel Wins. A collection bin loses a compliance fight to actual service access.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Zib", "SDS_Glorp", "SDS_Astra", "SDS_Pixa"],
-    "continuityFrom": "SDS_S1E05_P08",
-    "panelPlan": [
-      {"text": "PANEL 1 — A bin has drifted back in front of a service access point."},
-      {"text": "PANEL 2 — Zib moves it immediately."},
-      {"text": "PANEL 3 — A notification appears: COLLECTION LOCATION NONCOMPLIANCE."},
-      {"text": "PANEL 4 — Glorp checks the clock. GLORP: We have been noncompliant for forty-three seconds."},
-      {"text": "PANEL 5 — Zib opens the service panel. ZIB: We have been able to open this for four."},
-      {"text": "PANEL 6 — Astra closes the notice. ASTRA: Panel wins. Pixa records a local access override."}
-    ]
+    "id":"SDS_S1E05_P09","summary":"Page 9: Panel Wins. A collection bin loses a compliance fight to actual service access.","setting":"SDS_Admin_Hub","characters":["SDS_Zib","SDS_Glorp","SDS_Astra","SDS_Pixa"],"continuityFrom":"SDS_S1E05_P08",
+    "panelPlan":[{"text":"PANEL 1 — A bin has drifted back in front of a service access point."},{"text":"PANEL 2 — Zib moves it immediately."},{"text":"PANEL 3 — A collection-location noncompliance notification appears."},{"text":"PANEL 4 — Glorp checks the clock."},{"text":"PANEL 5 — Zib opens the service panel."},{"text":"PANEL 6 — Astra closes the notice. Pixa records a local access override."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"COLLECTION LOCATION NONCOMPLIANCE.","subtext":"Panel 3"},{"speaker":"GLORP","text":"We have been noncompliant for forty-three seconds.","subtext":"Panel 4"},{"speaker":"ZIB","text":"We have been able to open this for four.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"Panel wins.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P10",
-    "summary": "Page 10: First Day. Low mass and mixed cohesion become a corporate 'promising early indicator' before there is a useful pattern.",
-    "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Pixa", "SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E05_P09",
-    "panelPlan": [
-      {"text": "PANEL 1 — Pixa displays the first passive-collection totals."},
-      {"text": "PANEL 2 — Mira reviews the samples. MIRA: Low mass. Mixed cohesion. No useful pattern yet."},
-      {"text": "PANEL 3 — Astra leans in. ASTRA: How low?"},
-      {"text": "PANEL 4 — Mira looks pleased by the answer. MIRA: Too low for anybody to get excited."},
-      {"text": "PANEL 5 — Corporate status immediately updates: PROMISING EARLY INDICATOR."},
-      {"text": "PANEL 6 — Mira stares at it. MIRA: I hate the word promising. ASTRA: I told you."}
-    ]
+    "id":"SDS_S1E05_P10","summary":"Page 10: First Day. Low mass and mixed cohesion become a corporate 'promising early indicator' before there is a useful pattern.","setting":"SDS_Lab_Work_Area","characters":["SDS_Pixa","SDS_Mira","SDS_Astra"],"continuityFrom":"SDS_S1E05_P09",
+    "panelPlan":[{"text":"PANEL 1 — Pixa displays the first passive-collection totals."},{"text":"PANEL 2 — Mira reviews the samples."},{"text":"PANEL 3 — Astra leans in."},{"text":"PANEL 4 — Mira looks pleased by the answer."},{"text":"PANEL 5 — Corporate status immediately updates."},{"text":"PANEL 6 — Mira stares at it."}],
+    "dialogueInline":[{"speaker":"MIRA","text":"Low mass. Mixed cohesion. No useful pattern yet.","subtext":"Panel 2"},{"speaker":"ASTRA","text":"How low?","subtext":"Panel 3"},{"speaker":"MIRA","text":"Too low for anybody to get excited.","subtext":"Panel 4"},{"speaker":"SCREEN","text":"PROMISING EARLY INDICATOR.","subtext":"Panel 5"},{"speaker":"MIRA","text":"I hate the word promising.","subtext":"Panel 6"},{"speaker":"ASTRA","text":"I told you.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P11",
-    "summary": "Page 11: The Language Board. Brick and Glorp notice that the paperwork's appetite expanded after Stardust's report entered the system.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Brick", "SDS_Glorp"],
-    "continuityFrom": "SDS_S1E05_P10",
-    "panelPlan": [
-      {"text": "PANEL 1 — Brick has pinned printed corporate phrases to a board: RESOURCE-POSITIVE / YIELD / STAFF CONDITION / OPTIMIZATION."},
-      {"text": "PANEL 2 — Glorp studies the packet beside him. BRICK: Potential is appetite wearing a tie."},
-      {"text": "PANEL 3 — Glorp does not look up. GLORP: Do not make that useful."},
-      {"text": "PANEL 4 — Glorp notices that several staff-condition fields were added after Stardust's report entered the review system. GLORP: These fields are new."},
-      {"text": "PANEL 5 — Brick points at the routing history. BRICK: So the paperwork learned fast."},
-      {"text": "PANEL 6 — Glorp corrects him. GLORP: Paperwork does not learn. BRICK: Then someone reads it."}
-    ]
+    "id":"SDS_S1E05_P11","summary":"Page 11: The Language Board. Brick and Glorp notice that the paperwork's appetite expanded after Stardust's report entered the system.","setting":"SDS_Admin_Hub","characters":["SDS_Brick","SDS_Glorp"],"continuityFrom":"SDS_S1E05_P10",
+    "panelPlan":[{"text":"PANEL 1 — Brick has pinned printed corporate phrases to a board."},{"text":"PANEL 2 — Glorp studies the packet beside him."},{"text":"PANEL 3 — Glorp does not look up."},{"text":"PANEL 4 — Glorp notices that several staff-condition fields were added after Stardust's report entered the review system."},{"text":"PANEL 5 — Brick points at the routing history."},{"text":"PANEL 6 — Glorp corrects him."}],
+    "dialogueInline":[{"speaker":"SIGN","text":"RESOURCE-POSITIVE / YIELD / STAFF CONDITION / OPTIMIZATION.","subtext":"Panel 1"},{"speaker":"BRICK","text":"Potential is appetite wearing a tie.","subtext":"Panel 2"},{"speaker":"GLORP","text":"Do not make that useful.","subtext":"Panel 3"},{"speaker":"GLORP","text":"These fields are new.","subtext":"Panel 4"},{"speaker":"BRICK","text":"So the paperwork learned fast.","subtext":"Panel 5"},{"speaker":"GLORP","text":"Paperwork does not learn.","subtext":"Panel 6"},{"speaker":"BRICK","text":"Then someone reads it.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P12",
-    "summary": "Page 12: Actual Work. A real damper alert interrupts review chatter; the crew finishes the job before collecting incidental residue.",
-    "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Mira", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E05_P11",
-    "panelPlan": [
-      {"text": "PANEL 1 — An ordinary station alert interrupts the review chatter: AIR RETURN DAMPER RESPONSE LAG."},
-      {"text": "PANEL 2 — Zib is already moving. ZIB: There. A job."},
-      {"text": "PANEL 3 — Jax picks up his access log and reader without being asked. JAX: I've got the route."},
-      {"text": "PANEL 4 — Mira takes the diagnostic sensor."},
-      {"text": "PANEL 5 — Astra looks at the nearby collection bin, then at the maintenance team. ASTRA: Finish the damper first."},
-      {"text": "PANEL 6 — As the work proceeds, a small amount of residue appears along a warm cable seam. Nobody stops the repair to collect it."}
-    ]
+    "id":"SDS_S1E05_P12","summary":"Page 12: Actual Work. A real damper alert interrupts review chatter; the crew finishes the job before collecting incidental residue.","setting":"SDS_Maintenance_Bay","characters":["SDS_Zib","SDS_Jax","SDS_Mira","SDS_Astra"],"continuityFrom":"SDS_S1E05_P11",
+    "panelPlan":[{"text":"PANEL 1 — An ordinary station alert interrupts the review chatter."},{"text":"PANEL 2 — Zib is already moving."},{"text":"PANEL 3 — Jax picks up his access log and reader without being asked."},{"text":"PANEL 4 — Mira takes the diagnostic sensor."},{"text":"PANEL 5 — Astra looks at the nearby collection bin, then at the maintenance team."},{"text":"PANEL 6 — As the work proceeds, a small amount of residue appears along a warm cable seam. Nobody stops the repair to collect it."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"AIR RETURN DAMPER RESPONSE LAG.","subtext":"Panel 1"},{"speaker":"ZIB","text":"There. A job.","subtext":"Panel 2"},{"speaker":"JAX","text":"I've got the route.","subtext":"Panel 3"},{"speaker":"ASTRA","text":"Finish the damper first.","subtext":"Panel 5"}]
   },
   {
-    "id": "SDS_S1E05_P13",
-    "summary": "Page 13: After the Work. Only after the damper is operating normally does Jax collect the sample; Mira refuses a causal claim.",
-    "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Jax", "SDS_Pixa", "SDS_Mira", "SDS_Astra", "SDS_Zib"],
-    "continuityFrom": "SDS_S1E05_P12",
-    "panelPlan": [
-      {"text": "PANEL 1 — The damper is operating normally again."},
-      {"text": "PANEL 2 — Only after the repair is complete does Jax collect the incidental residue and close the custody entry. PIXA: Collection event recorded."},
-      {"text": "PANEL 3 — Mira tests the sample later at the bench."},
-      {"text": "PANEL 4 — She looks at Astra. MIRA: This one held after compression."},
-      {"text": "PANEL 5 — Astra asks the question that now matters most. ASTRA: Can we say why?"},
-      {"text": "PANEL 6 — Mira shakes her head. MIRA: No. ZIB: Then don't. MIRA: I wasn't going to."}
-    ]
+    "id":"SDS_S1E05_P13","summary":"Page 13: After the Work. Only after the damper is operating normally does Jax collect the sample; Mira refuses a causal claim.","setting":"SDS_Lab_Work_Area","characters":["SDS_Jax","SDS_Pixa","SDS_Mira","SDS_Astra","SDS_Zib"],"continuityFrom":"SDS_S1E05_P12",
+    "panelPlan":[{"text":"PANEL 1 — The damper is operating normally again."},{"text":"PANEL 2 — Only after the repair is complete does Jax collect the incidental residue and close the custody entry."},{"text":"PANEL 3 — Mira tests the sample later at the bench."},{"text":"PANEL 4 — She looks at Astra."},{"text":"PANEL 5 — Astra asks the question that now matters most."},{"text":"PANEL 6 — Mira shakes her head."}],
+    "dialogueInline":[{"speaker":"PIXA","text":"Collection event recorded.","subtext":"Panel 2"},{"speaker":"MIRA","text":"This one held after compression.","subtext":"Panel 4"},{"speaker":"ASTRA","text":"Can we say why?","subtext":"Panel 5"},{"speaker":"MIRA","text":"No.","subtext":"Panel 6"},{"speaker":"ZIB","text":"Then don't.","subtext":"Panel 6"},{"speaker":"MIRA","text":"I wasn't going to.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P14",
-    "summary": "Page 14: The Line We Can Live Behind. Astra and Mira state the real institutional dilemma: unmeasurable stations disappear; measurable stations get optimized.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E05_P13",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra and Mira stand beside the temporary bracket request and the new pilot status screen."},
-      {"text": "PANEL 2 — Astra points at the procurement benefit. ASTRA: Pilot status could move our parts queue."},
-      {"text": "PANEL 3 — Mira points at the staff-condition fields. MIRA: And the wrong explanation could turn everyone here into a variable."},
-      {"text": "PANEL 4 — Astra answers honestly. ASTRA: Stations without measurable value disappear quietly."},
-      {"text": "PANEL 5 — Mira answers just as honestly. MIRA: Stations with measurable value get optimized."},
-      {"text": "PANEL 6 — Astra looks at the two screens. ASTRA: I know. MIRA: Then what are you asking me? ASTRA: Help me find the line we can live behind."}
-    ]
+    "id":"SDS_S1E05_P14","summary":"Page 14: The Line We Can Live Behind. Astra and Mira state the real institutional dilemma: unmeasurable stations disappear; measurable stations get optimized.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Mira"],"continuityFrom":"SDS_S1E05_P13",
+    "panelPlan":[{"text":"PANEL 1 — Astra and Mira stand beside the temporary bracket request and the new pilot status screen."},{"text":"PANEL 2 — Astra points at the procurement benefit."},{"text":"PANEL 3 — Mira points at the staff-condition fields."},{"text":"PANEL 4 — Astra answers honestly."},{"text":"PANEL 5 — Mira answers just as honestly."},{"text":"PANEL 6 — Astra looks at the two screens."}],
+    "dialogueInline":[{"speaker":"ASTRA","text":"Pilot status could move our parts queue.","subtext":"Panel 2"},{"speaker":"MIRA","text":"And the wrong explanation could turn everyone here into a variable.","subtext":"Panel 3"},{"speaker":"ASTRA","text":"Stations without measurable value disappear quietly.","subtext":"Panel 4"},{"speaker":"MIRA","text":"Stations with measurable value get optimized.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"I know.","subtext":"Panel 6"},{"speaker":"MIRA","text":"Then what are you asking me?","subtext":"Panel 6"},{"speaker":"ASTRA","text":"Help me find the line we can live behind.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P15",
-    "summary": "Page 15: Suggested Enhancement. The optional pilot recommendation quietly turns into behavioral intervention with consequences.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Kreeb", "SDS_Glorp", "SDS_Pixa", "SDS_Jax"],
-    "continuityFrom": "SDS_S1E05_P14",
-    "panelPlan": [
-      {"text": "PANEL 1 — A new Resource Efficiency recommendation arrives: SUGGESTED ENHANCEMENT PATHWAYS."},
-      {"text": "PANEL 2 — The list includes: structured collaboration window; wellness baseline; scheduled team activity blocks."},
-      {"text": "PANEL 3 — Mira reads it. MIRA: Behavioral intervention."},
-      {"text": "PANEL 4 — Kreeb reads the same list. KREEB: That is not passive."},
-      {"text": "PANEL 5 — Glorp finds the administrative note. GLORP: It is marked optional."},
-      {"text": "PANEL 6 — Pixa displays the consequence. PIXA: Declining may reduce pilot eligibility. JAX: Optional has acquired consequences."}
-    ]
+    "id":"SDS_S1E05_P15","summary":"Page 15: Suggested Enhancement. The optional pilot recommendation quietly turns into behavioral intervention with consequences.","setting":"SDS_Admin_Hub","characters":["SDS_Mira","SDS_Kreeb","SDS_Glorp","SDS_Pixa","SDS_Jax"],"continuityFrom":"SDS_S1E05_P14",
+    "panelPlan":[{"text":"PANEL 1 — A new Resource Efficiency recommendation arrives."},{"text":"PANEL 2 — The recommendation lists three enhancement pathways."},{"text":"PANEL 3 — Mira reads it."},{"text":"PANEL 4 — Kreeb reads the same list."},{"text":"PANEL 5 — Glorp finds the administrative note."},{"text":"PANEL 6 — Pixa displays the consequence."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"SUGGESTED ENHANCEMENT PATHWAYS.","subtext":"Panel 1"},{"speaker":"SCREEN","text":"structured collaboration window; wellness baseline; scheduled team activity blocks.","subtext":"Panel 2"},{"speaker":"MIRA","text":"Behavioral intervention.","subtext":"Panel 3"},{"speaker":"KREEB","text":"That is not passive.","subtext":"Panel 4"},{"speaker":"GLORP","text":"It is marked optional.","subtext":"Panel 5"},{"speaker":"PIXA","text":"Declining may reduce pilot eligibility.","subtext":"Panel 6"},{"speaker":"JAX","text":"Optional has acquired consequences.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P16",
-    "summary": "Page 16: What Each of Them Will Defend. Astra collects concrete operational objections rather than staging a grand vote.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Kreeb", "SDS_Mira", "SDS_Glorp", "SDS_Jax"],
-    "continuityFrom": "SDS_S1E05_P15",
-    "panelPlan": [
-      {"text": "PANEL 1 — The crew does not hold a grand vote. Astra asks for the operational objections she needs before signing anything."},
-      {"text": "PANEL 2 — Zib points toward maintenance. ZIB: Don't schedule work to feed a bin."},
-      {"text": "PANEL 3 — Kreeb keeps the language simple. KREEB: Do not make care an input."},
-      {"text": "PANEL 4 — Mira points at the unsupported model. MIRA: We cannot defend a behavioral mechanism."},
-      {"text": "PANEL 5 — Glorp holds up the custody procedure. GLORP: We can defend passive chain of custody."},
-      {"text": "PANEL 6 — Jax holds his completed first-day liaison log. JAX: And I can actually do that job. Astra takes all of it in."}
-    ]
+    "id":"SDS_S1E05_P16","summary":"Page 16: What Each of Them Will Defend. Astra collects concrete operational objections rather than staging a grand vote.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Zib","SDS_Kreeb","SDS_Mira","SDS_Glorp","SDS_Jax"],"continuityFrom":"SDS_S1E05_P15",
+    "panelPlan":[{"text":"PANEL 1 — The crew does not hold a grand vote. Astra asks for the operational objections she needs before signing anything."},{"text":"PANEL 2 — Zib points toward maintenance."},{"text":"PANEL 3 — Kreeb keeps the language simple."},{"text":"PANEL 4 — Mira points at the unsupported model."},{"text":"PANEL 5 — Glorp holds up the custody procedure."},{"text":"PANEL 6 — Jax holds his completed first-day liaison log. Astra takes all of it in."}],
+    "dialogueInline":[{"speaker":"ZIB","text":"Don't schedule work to feed a bin.","subtext":"Panel 2"},{"speaker":"KREEB","text":"Do not make care an input.","subtext":"Panel 3"},{"speaker":"MIRA","text":"We cannot defend a behavioral mechanism.","subtext":"Panel 4"},{"speaker":"GLORP","text":"We can defend passive chain of custody.","subtext":"Panel 5"},{"speaker":"JAX","text":"And I can actually do that job.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P17",
-    "summary": "Page 17: Material Yes, People No. Astra accepts passive collection and knowingly refuses behavioral intervention even at the cost of pilot advantage.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Glorp"],
-    "continuityFrom": "SDS_S1E05_P16",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra completes the response form."},
-      {"text": "PANEL 2 — Visible selection: PASSIVE MATERIAL COLLECTION: APPROVED."},
-      {"text": "PANEL 3 — Visible selection: BEHAVIORAL INTERVENTION: NOT APPROVED."},
-      {"text": "PANEL 4 — Mira looks at Astra. MIRA: You may lose expedited status."},
-      {"text": "PANEL 5 — Astra does not soften the language. ASTRA: Then we lose it. Glorp starts to speak. ASTRA: Do not soften \"not approved.\" She sends it."}
-    ]
+    "id":"SDS_S1E05_P17","summary":"Page 17: Material Yes, People No. Astra accepts passive collection and knowingly refuses behavioral intervention even at the cost of pilot advantage.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Mira","SDS_Glorp"],"continuityFrom":"SDS_S1E05_P16",
+    "panelPlan":[{"text":"PANEL 1 — Astra completes the response form."},{"text":"PANEL 2 — She approves passive material collection."},{"text":"PANEL 3 — She refuses behavioral intervention."},{"text":"PANEL 4 — Mira looks at Astra."},{"text":"PANEL 5 — Astra does not soften the language. Glorp starts to speak; Astra stops him and sends it."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"PASSIVE MATERIAL COLLECTION: APPROVED.","subtext":"Panel 2"},{"speaker":"SCREEN","text":"BEHAVIORAL INTERVENTION: NOT APPROVED.","subtext":"Panel 3"},{"speaker":"MIRA","text":"You may lose expedited status.","subtext":"Panel 4"},{"speaker":"ASTRA","text":"Then we lose it.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"Do not soften \"not approved.\"","subtext":"Panel 5"}]
   },
   {
-    "id": "SDS_S1E05_P18",
-    "summary": "Page 18: Baseline. Corporate accepts the boundary but makes a standardized wellness baseline the next pilot gate.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Pixa", "SDS_Mira", "SDS_Glorp"],
-    "continuityFrom": "SDS_S1E05_P17",
-    "panelPlan": [
-      {"text": "PANEL 1 — Corporate acknowledgement arrives: BOUNDARY RECEIVED."},
-      {"text": "PANEL 2 — Second line: PILOT ELIGIBILITY: PENDING BASELINE."},
-      {"text": "PANEL 3 — Astra leans toward the screen. ASTRA: Baseline of what?"},
-      {"text": "PANEL 4 — Pixa opens the attached corporate program: STANDARD WELLNESS BASELINE WEEK."},
-      {"text": "PANEL 5 — Mira reads the description. MIRA: That is a behavioral intervention with better branding."},
-      {"text": "PANEL 6 — Glorp finds the policy source. GLORP: It is company-wide wellness policy. Declining it is a different form. ASTRA: Of course it is."}
-    ]
+    "id":"SDS_S1E05_P18","summary":"Page 18: Baseline. Corporate accepts the boundary but makes a standardized wellness baseline the next pilot gate.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Pixa","SDS_Mira","SDS_Glorp"],"continuityFrom":"SDS_S1E05_P17",
+    "panelPlan":[{"text":"PANEL 1 — Corporate acknowledgement arrives."},{"text":"PANEL 2 — A second line makes pilot eligibility conditional."},{"text":"PANEL 3 — Astra leans toward the screen."},{"text":"PANEL 4 — Pixa opens the attached corporate program."},{"text":"PANEL 5 — Mira reads the description."},{"text":"PANEL 6 — Glorp finds the policy source."}],
+    "dialogueInline":[{"speaker":"SCREEN","text":"BOUNDARY RECEIVED.","subtext":"Panel 1"},{"speaker":"SCREEN","text":"PILOT ELIGIBILITY: PENDING BASELINE.","subtext":"Panel 2"},{"speaker":"ASTRA","text":"Baseline of what?","subtext":"Panel 3"},{"speaker":"SCREEN","text":"STANDARD WELLNESS BASELINE WEEK.","subtext":"Panel 4"},{"speaker":"MIRA","text":"That is a behavioral intervention with better branding.","subtext":"Panel 5"},{"speaker":"GLORP","text":"It is company-wide wellness policy. Declining it is a different form.","subtext":"Panel 6"},{"speaker":"ASTRA","text":"Of course it is.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P19",
-    "summary": "Page 19: What They Actually Won. The crew did not prevent the wellness week, but they did hold the behavioral-production boundary.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira"],
-    "continuityFrom": "SDS_S1E05_P18",
-    "panelPlan": [
-      {"text": "PANEL 1 — Astra and Mira remain at the terminal after everyone else moves on."},
-      {"text": "PANEL 2 — Astra points at the mandatory baseline notice. ASTRA: They got a week."},
-      {"text": "PANEL 3 — Mira points back at the accepted boundary. MIRA: They did not get the intervention they asked for."},
-      {"text": "PANEL 4 — Astra considers that."},
-      {"text": "PANEL 5 — Mira continues. MIRA: A week we can measure without pretending it proves anything."},
-      {"text": "PANEL 6 — Astra gives her a look. ASTRA: You make bad news sound peer reviewed. MIRA: Thank you."}
-    ]
+    "id":"SDS_S1E05_P19","summary":"Page 19: What They Actually Won. The crew did not prevent the wellness week, but they did hold the behavioral-production boundary.","setting":"SDS_Admin_Hub","characters":["SDS_Astra","SDS_Mira"],"continuityFrom":"SDS_S1E05_P18",
+    "panelPlan":[{"text":"PANEL 1 — Astra and Mira remain at the terminal after everyone else moves on."},{"text":"PANEL 2 — Astra points at the mandatory baseline notice."},{"text":"PANEL 3 — Mira points back at the accepted boundary."},{"text":"PANEL 4 — Astra considers that."},{"text":"PANEL 5 — Mira continues."},{"text":"PANEL 6 — Astra gives her a look."}],
+    "dialogueInline":[{"speaker":"ASTRA","text":"They got a week.","subtext":"Panel 2"},{"speaker":"MIRA","text":"They did not get the intervention they asked for.","subtext":"Panel 3"},{"speaker":"MIRA","text":"A week we can measure without pretending it proves anything.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"You make bad news sound peer reviewed.","subtext":"Panel 6"},{"speaker":"MIRA","text":"Thank you.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P20",
-    "summary": "Page 20: Jax Files the Job. Jax completes the liaison task literally and prefers the version without emotional fields.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Jax", "SDS_Pixa", "SDS_Glorp"],
-    "continuityFrom": "SDS_S1E05_P19",
-    "panelPlan": [
-      {"text": "PANEL 1 — Jax uploads the passive sample custody report."},
-      {"text": "PANEL 2 — Pixa confirms it. PIXA: Submission complete."},
-      {"text": "PANEL 3 — Jax scrolls through the finished form. JAX: No emotional fields?"},
-      {"text": "PANEL 4 — Pixa answers literally. PIXA: None required by the local boundary."},
-      {"text": "PANEL 5 — Jax closes the file. JAX: I like this job better now."},
-      {"text": "PANEL 6 — Glorp looks over immediately. GLORP: Do not say that near staffing. JAX: I said nothing."}
-    ]
+    "id":"SDS_S1E05_P20","summary":"Page 20: Jax Files the Job. Jax completes the liaison task literally and prefers the version without emotional fields.","setting":"SDS_Admin_Hub","characters":["SDS_Jax","SDS_Pixa","SDS_Glorp"],"continuityFrom":"SDS_S1E05_P19",
+    "panelPlan":[{"text":"PANEL 1 — Jax uploads the passive sample custody report."},{"text":"PANEL 2 — Pixa confirms it."},{"text":"PANEL 3 — Jax scrolls through the finished form."},{"text":"PANEL 4 — Pixa answers literally."},{"text":"PANEL 5 — Jax closes the file."},{"text":"PANEL 6 — Glorp looks over immediately."}],
+    "dialogueInline":[{"speaker":"PIXA","text":"Submission complete.","subtext":"Panel 2"},{"speaker":"JAX","text":"No emotional fields?","subtext":"Panel 3"},{"speaker":"PIXA","text":"None required by the local boundary.","subtext":"Panel 4"},{"speaker":"JAX","text":"I like this job better now.","subtext":"Panel 5"},{"speaker":"GLORP","text":"Do not say that near staffing.","subtext":"Panel 6"},{"speaker":"JAX","text":"I said nothing.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P21",
-    "summary": "Page 21: One Sign. Collection access, passive-only policy, and readable local procedure get condensed into one usable rule.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Zib", "SDS_Kreeb", "SDS_Glorp", "SDS_Astra", "SDS_Mira", "SDS_Pixa"],
-    "continuityFrom": "SDS_S1E05_P20",
-    "panelPlan": [
-      {"text": "PANEL 1 — Zib relocates the collection bins to a proper rack that does not obstruct service access."},
-      {"text": "PANEL 2 — Kreeb adds a simple label: PASSIVE COLLECTION ONLY."},
-      {"text": "PANEL 3 — Glorp adds: DO NOT MOVE WITHOUT ACCESS CHECK."},
-      {"text": "PANEL 4 — The two labels overlap badly."},
-      {"text": "PANEL 5 — Astra sees them. ASTRA: One sign."},
-      {"text": "PANEL 6 — Glorp and Kreeb reluctantly combine the rules into one readable card while Mira watches. MIRA: That may be our best data control. Pixa emits a notification tone."}
-    ]
+    "id":"SDS_S1E05_P21","summary":"Page 21: One Sign. Collection access, passive-only policy, and readable local procedure get condensed into one usable rule.","setting":"SDS_Admin_Hub","characters":["SDS_Zib","SDS_Kreeb","SDS_Glorp","SDS_Astra","SDS_Mira","SDS_Pixa"],"continuityFrom":"SDS_S1E05_P20",
+    "panelPlan":[{"text":"PANEL 1 — Zib relocates the collection bins to a proper rack that does not obstruct service access."},{"text":"PANEL 2 — Kreeb adds a simple label."},{"text":"PANEL 3 — Glorp adds a second access label."},{"text":"PANEL 4 — The two labels overlap badly."},{"text":"PANEL 5 — Astra sees them."},{"text":"PANEL 6 — Glorp and Kreeb reluctantly combine the rules into one readable card while Mira watches. Pixa emits a notification tone."}],
+    "dialogueInline":[{"speaker":"SIGN","text":"PASSIVE COLLECTION ONLY.","subtext":"Panel 2"},{"speaker":"SIGN","text":"DO NOT MOVE WITHOUT ACCESS CHECK.","subtext":"Panel 3"},{"speaker":"ASTRA","text":"One sign.","subtext":"Panel 5"},{"speaker":"MIRA","text":"That may be our best data control.","subtext":"Panel 6"}]
   },
   {
-    "id": "SDS_S1E05_P22",
-    "summary": "Page 22: Tag — Wellness Baseline. The next issue arrives as a standardized company program, causally attached to the boundary the crew just chose.",
-    "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Zib", "SDS_Pixa", "SDS_Astra"],
-    "continuityFrom": "SDS_S1E05_P21",
-    "panelPlan": [
-      {"text": "PANEL 1 — A cheerful corporate banner automatically unrolls across the bullpen: WELLNESS BASELINE WEEK BEGINS MONDAY."},
-      {"text": "PANEL 2 — Everyone looks up at it."},
-      {"text": "PANEL 3 — Zib studies the mounting points. ZIB: Can I move that?"},
-      {"text": "PANEL 4 — Pixa checks its placement. PIXA: It is not blocking maintenance."},
-      {"text": "PANEL 5 — Zib keeps looking at it. ZIB: Yet. ASTRA: Nobody touch it until Monday."}
-    ]
+    "id":"SDS_S1E05_P22","summary":"Page 22: Tag — Wellness Baseline. The next issue arrives as a standardized company program, causally attached to the boundary the crew just chose.","setting":"SDS_Admin_Hub","characters":["SDS_Zib","SDS_Pixa","SDS_Astra"],"continuityFrom":"SDS_S1E05_P21",
+    "panelPlan":[{"text":"PANEL 1 — A cheerful corporate banner automatically unrolls across the bullpen."},{"text":"PANEL 2 — Everyone looks up at it."},{"text":"PANEL 3 — Zib studies the mounting points."},{"text":"PANEL 4 — Pixa checks its placement."},{"text":"PANEL 5 — Zib keeps looking at it."}],
+    "dialogueInline":[{"speaker":"SIGN","text":"WELLNESS BASELINE WEEK BEGINS MONDAY.","subtext":"Panel 1"},{"speaker":"ZIB","text":"Can I move that?","subtext":"Panel 3"},{"speaker":"PIXA","text":"It is not blocking maintenance.","subtext":"Panel 4"},{"speaker":"ZIB","text":"Yet.","subtext":"Panel 5"},{"speaker":"ASTRA","text":"Nobody touch it until Monday.","subtext":"Panel 5"}]
   }
 ]
