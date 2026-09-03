@@ -13,7 +13,7 @@ const CONFIG={
   acceptedTypes:new Set(['image/jpeg','image/png','image/webp'])
 };
 
-const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),ui:null,refreshNonce:0};
+const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
 
 function injectStyles(){
   const style=document.createElement('style');
@@ -34,6 +34,7 @@ function injectStyles(){
   .visual-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.visual-actions button{font-size:.88rem;padding:9px 12px;margin:0}
   .visual-actions .secondary{background:var(--surface-soft)}
   .visual-upload-status{margin-top:8px;font-size:.82rem;color:var(--muted)}
+  .visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
   .visual-canon-list{display:grid;gap:10px}.visual-canon-item .visual-meta{margin-top:5px}
   .visual-state-note{margin-top:10px;font-size:.82rem;color:var(--muted)}
   @media(max-width:850px){.visual-grid{grid-template-columns:1fr}.visual-image-wrap img{max-height:none}}
@@ -96,6 +97,10 @@ function createUi(){
           <button id="forgetGithubTokenBtn" type="button" class="secondary" hidden>Forget GitHub Token</button>
           <input id="draftFileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
         </div>
+        <div id="githubTokenPanel" class="visual-token-panel" hidden>
+          <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write · stored only for this browser tab</label>
+          <div class="visual-token-row"><input id="githubTokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"><button id="saveGithubTokenBtn" type="button">Use Token</button><button id="cancelGithubTokenBtn" type="button" class="secondary">Cancel</button></div>
+        </div>
         <div id="draftUploadStatus" class="visual-upload-status"></div>
       </div>
       <div class="visual-card canon-card">
@@ -107,14 +112,20 @@ function createUi(){
   anchor.insertAdjacentElement('afterend',section);
   const ui={
     section,
-    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
+    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
   };
-  ui.uploadBtn.addEventListener('click',()=>ui.fileInput.click());
+  ui.uploadBtn.addEventListener('click',()=>{if(!sessionStorage.getItem('rexprompt.githubToken')){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
   ui.fileInput.addEventListener('change',()=>{const file=ui.fileInput.files?.[0];ui.fileInput.value='';if(file)void uploadApprovedDraft(file)});
+  ui.saveTokenBtn.addEventListener('click',()=>saveTokenFromPanel());
+  ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
+  ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
   ui.forgetTokenBtn.addEventListener('click',()=>{sessionStorage.removeItem('rexprompt.githubToken');syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten for this tab.'});
   state.ui=ui;syncTokenButton();return ui;
 }
 function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!sessionStorage.getItem('rexprompt.githubToken')}
+function showTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenPanel.hidden=false;ui.uploadStatus.textContent='GitHub authorization is required only to store an approved draft.';setTimeout(()=>ui.tokenInput.focus(),0)}
+function hideTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenInput.value='';ui.tokenPanel.hidden=true}
+function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}sessionStorage.setItem('rexprompt.githubToken',token);hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent='GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
 
 function setDraftBody(sel,entry){
   const ui=state.ui;if(!ui)return;
@@ -201,11 +212,6 @@ async function refreshVisuals(){
   const bits=[];if(entry)bits.push('approved draft stored');if(canon.length)bits.push('released canon available');ui.stateNote.textContent=bits.length?('Production state: '+bits.join(' · ')):'Production state: no approved draft or mapped released canon for this unit.';
 }
 
-function requestToken(){
-  let token=sessionStorage.getItem('rexprompt.githubToken');if(token)return token;
-  token=window.prompt('Enter a GitHub fine-grained token with Contents: Read and write access to starsplitterrecords/RexPrompt. It is stored only for this browser tab.');
-  if(!token)return null;token=token.trim();if(!token)return null;sessionStorage.setItem('rexprompt.githubToken',token);syncTokenButton();return token;
-}
 async function gh(token,path,{method='GET',body=null,allow404=false}={}){
   const r=await fetch(CONFIG.apiBase+path,{method,headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
   if(allow404&&r.status===404)return null;
@@ -226,7 +232,7 @@ async function uploadApprovedDraft(file){
   if(file.size>CONFIG.maxUploadBytes){ui.uploadStatus.textContent='Upload failed: image is larger than 50 MB.';return}
   const verb=state.draftManifest?.drafts?.[visualKey(sel)]?'replace':'store';
   if(!window.confirm('Explicitly '+verb+' the approved production draft for '+sel.recipeId+' in RexPrompt? This does not publish anything to Visions.'))return;
-  const token=requestToken();if(!token){ui.uploadStatus.textContent='Upload cancelled: no GitHub token supplied.';return}
+  const token=sessionStorage.getItem('rexprompt.githubToken');if(!token){state.pendingUpload=true;showTokenPanel();return}
   ui.uploadBtn.disabled=true;ui.uploadStatus.textContent='Storing approved draft in RexPrompt…';
   try{
     const refPath='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch),ref=await gh(token,refPath),headSha=ref.object.sha;
