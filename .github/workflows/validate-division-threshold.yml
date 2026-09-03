@@ -1,0 +1,23 @@
+name: Validate Division Threshold
+
+on:
+  pull_request:
+    paths:
+      - 'data/shows/division-threshold-s1/**'
+      - 'tools/validate_division_threshold.py'
+      - '.github/workflows/validate-division-threshold.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/shows/division-threshold-s1/**'
+      - 'tools/validate_division_threshold.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/validate_division_threshold.py
