@@ -78,6 +78,7 @@ function currentSelection(){
 function visualKey(sel){return [sel.seriesId,sel.issueId,sel.recipeId].join('::')}
 function parseIssueNumber(label){const m=String(label||'').match(/\bIssue\s*0*(\d+)\b/i);return m?Number(m[1]):null}
 function withCacheBust(path,stamp){const sep=path.includes('?')?'&':'?';return path+sep+'v='+encodeURIComponent(stamp||Date.now())}
+function draftImageUrl(entry){if(entry.commitSha)return 'https://raw.githubusercontent.com/'+CONFIG.owner+'/'+CONFIG.repo+'/'+entry.commitSha+'/'+entry.image;return withCacheBust(entry.image,entry.updatedAt)}
 
 function createUi(){
   const anchor=document.getElementById('status');
@@ -120,7 +121,7 @@ function setDraftBody(sel,entry){
   if(!entry){
     ui.draftBody.className='visual-empty';ui.draftBody.textContent='No approved production draft stored for this unit.';ui.uploadBtn.textContent='Upload Approved Draft';return;
   }
-  const src=withCacheBust(entry.image,entry.commitSha||entry.updatedAt);
+  const src=draftImageUrl(entry);
   ui.draftBody.className='';ui.draftBody.innerHTML='';
   const wrap=document.createElement('div');wrap.className='visual-image-wrap';
   const img=document.createElement('img');img.src=src;img.alt='Approved production draft for '+sel.recipeId;img.loading='eager';
@@ -162,18 +163,20 @@ function explicitCanon(sel){
     return {url,label:typeof item==='string'?'Released canon':item.label||'Released canon'};
   }).filter(Boolean);
 }
-async function automaticPageCanon(sel){
-  if(!sel.unitIsPage||sel.recipeIndex===null)return [];
-  const data=await loadVisionsSeries(sel);if(!data)return [];
-  const issueNo=parseIssueNumber(sel.issueLabel);if(!issueNo)return [];
+async function automaticPageSet(sel){
+  if(!sel.unitIsPage)return null;
+  const data=await loadVisionsSeries(sel);if(!data)return null;
+  const issueNo=parseIssueNumber(sel.issueLabel);if(!issueNo)return null;
   const issueToken='/issue-'+String(issueNo).padStart(2,'0')+'/';
   const pages=(data.dailyPages||[]).filter(p=>String(p.image||'').includes(issueToken));
-  if(pages.length!==sel.recipeCount)return [];
-  const page=pages.find(p=>Number(p.pageNumber)===sel.recipeIndex+1)||pages[sel.recipeIndex];if(!page?.image)return [];
-  const siteBase=(state.sources?.visionsSiteBase||'').replace(/\/$/,'');
-  return [{url:siteBase+page.image,label:'Released canon · '+sel.issueLabel+' · Page '+page.pageNumber+(page.releaseDate?' · '+page.releaseDate:'')}];
+  if(pages.length!==sel.recipeCount)return null;
+  return {pages,siteBase:(state.sources?.visionsSiteBase||'').replace(/\/$/,'')};
 }
-async function canonFor(sel){const explicit=explicitCanon(sel);return explicit.length?explicit:automaticPageCanon(sel)}
+function automaticPageCanon(sel,pageSet){
+  if(!pageSet||sel.recipeIndex===null)return [];
+  const page=pageSet.pages.find(p=>Number(p.pageNumber)===sel.recipeIndex+1)||pageSet.pages[sel.recipeIndex];if(!page?.image)return [];
+  return [{url:pageSet.siteBase+page.image,label:'Released canon · '+sel.issueLabel+' · Page '+page.pageNumber+(page.releaseDate?' · '+page.releaseDate:'')}];
+}
 
 function decorateSceneOptions(sel,canonMode=false){
   const sceneSel=document.getElementById('sceneSel');if(!sceneSel)return;
@@ -193,8 +196,8 @@ async function refreshVisuals(){
   const ui=state.ui,sel=currentSelection();if(!ui||!sel)return;
   const nonce=++state.refreshNonce;ui.uploadStatus.textContent='';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
-  const canon=await canonFor(sel);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
-  decorateSceneOptions(sel,canon.length>0||sel.unitIsPage);
+  const explicit=explicitCanon(sel),pageSet=explicit.length?null:await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
+  decorateSceneOptions(sel,Boolean(pageSet));
   const bits=[];if(entry)bits.push('approved draft stored');if(canon.length)bits.push('released canon available');ui.stateNote.textContent=bits.length?('Production state: '+bits.join(' · ')):'Production state: no approved draft or mapped released canon for this unit.';
 }
 
