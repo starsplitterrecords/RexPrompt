@@ -3,15 +3,31 @@
   "productionMode": "one assembled RexPrompt recipe equals one finished portrait comic page",
   "productionAuthority": "assembled RexPrompt output",
   "visualAuthority": "approved current-production visual anchors until released StarSplitterVisions canon exists",
-  "issue1": {
-    "status": "compiled for sequential page production",
-    "recipeFile": "scenes_e01.json",
-    "pageCount": 12,
-    "pageRule": "One scene recipe produces one page. Do not combine multiple recipes into a contact sheet, montage, issue summary, spread, cover, or single composite image.",
-    "continuityRule": "Use continuityFrom plus character visual anchors and the last successful page. Failed, rejected, repeated, or superseded generations do not advance production.",
-    "letteringRule": "Dialogue emitted by the assembler is exact production text. Do not invent, paraphrase, omit, duplicate, or reassign it.",
-    "pageDesignRule": "Use each recipe's panelPlan as page architecture. Layout may vary, but all specified beats, cast, dialogue and final-page function must remain clear.",
-    "visualRule": "Strong subject/background value separation. Readability first, scale second, spectacle third. Avoid generic beige, muddy neutrals and uncontrolled glow/debris.",
-    "frontierRule": "Resolve the next unresolved page from successful current-chat production, released Visions canon when available, and ordered assembled recipes. Never store or guess a cursor."
+  "pageRule": "One scene recipe produces one page. Do not combine multiple recipes into a contact sheet, montage, issue summary, spread, cover, or single composite image.",
+  "continuityRule": "Use continuityFrom plus character visual anchors, region language and the last successful page. Failed, rejected, repeated or superseded generations do not advance production.",
+  "letteringRule": "Dialogue emitted by the assembler is exact production text. Do not invent, paraphrase, omit, duplicate or reassign it during image generation.",
+  "pageDesignRule": "Use each recipe's panelPlan as page architecture. Layout may vary, but all specified beats, cast, dialogue and final-page function must remain clear.",
+  "visualRule": "Strong subject/background value separation. Readability first, scale second, spectacle third. Ground cosmic events in people, inhabited places and material consequences.",
+  "issues": {
+    "1": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e01.json",
+      "pageCount": 12
+    },
+    "2": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e02.json",
+      "pageCount": 12
+    },
+    "3": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e03.json",
+      "pageCount": 12
+    },
+    "4": {
+      "status": "next recovery frontier",
+      "recipeFile": "scenes_e04.json",
+      "pageCount": 12
+    }
   }
 }

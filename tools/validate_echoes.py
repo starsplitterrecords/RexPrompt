@@ -46,6 +46,7 @@ def validate_characters() -> None:
 def validate_scenes() -> None:
     all_ids = []
     chars = load(SHOW / "characters.json")
+    regions = load(SHOW / "regions.json")
     for issue, path in enumerate(SCENE_FILES, start=1):
         scenes = load(path)
         assert isinstance(scenes, list), path.name
@@ -58,17 +59,19 @@ def validate_scenes() -> None:
             assert scene.get("summary"), scene.get("id")
             for char_id in scene.get("characters", []):
                 assert char_id in chars, f"Missing character {char_id}: {scene['id']}"
+            if scene.get("region"):
+                assert scene["region"] in regions, f"Missing region {scene['region']}: {scene['id']}"
             if issue >= 2:
                 assert scene.get("settingText"), f"Missing settingText: {scene['id']}"
                 assert isinstance(scene.get("dialogueInline"), list), f"Missing inline dialogue: {scene['id']}"
                 assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
                     assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
-            if issue <= 2:
+            if issue <= 3:
                 plan = scene.get("panelPlan")
                 assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
-            if issue == 2 and index > 0:
-                assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue 2 continuity: {scene['id']}"
+            if issue in (2, 3) and index > 0:
+                assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue {issue} continuity: {scene['id']}"
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
     e04 = {s["id"]: s for s in load(SCENE_FILES[3])}
@@ -123,9 +126,13 @@ def validate_current_production_contract() -> None:
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
-    issue1 = status.get("issue1", {})
-    assert issue1.get("pageCount") == 12
-    assert issue1.get("recipeFile") == "scenes_e01.json"
+    issues = status.get("issues", {})
+    for issue in (1, 2, 3):
+        entry = issues.get(str(issue), {})
+        assert entry.get("status") == "compiled for sequential page production", issue
+        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
+        assert entry.get("pageCount") == 12, issue
+    assert issues.get("4", {}).get("status") == "next recovery frontier"
 
 
 def main() -> None:
@@ -135,7 +142,7 @@ def main() -> None:
     validate_issue1_references()
     validate_architecture()
     validate_current_production_contract()
-    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-2 compiled as 12 production pages each.")
+    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-3 compiled as 12 production pages each.")
 
 
 if __name__ == "__main__":
