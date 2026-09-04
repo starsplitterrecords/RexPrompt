@@ -108,6 +108,8 @@ if "10-second vertical clip" in generation_line or "TV style" in generation_line
 
 characters = load_json(SHOW / "characters.json")
 forbidden_character_ids = {
+    "C_mara_vey",
+    "C_ilan_vey",
     "C_mother_soft",
     "C_venn_soft_to_herself",
     "C_jex_low",
@@ -147,6 +149,8 @@ for required_id in (
     "C_captain_naomi_sol",
     "C_tessa_banks",
     "C_billie_rusk",
+    "C_richard_secundo",
+    "C_paul_secundo",
 ):
     if required_id not in characters:
         raise SystemExit(f"Required current Rex Fleet identity missing: {required_id}")
@@ -159,6 +163,8 @@ for required_id in (
     "C_governor_halev",
     "C_captain_naomi_sol",
     "C_jex_marrin",
+    "C_richard_secundo",
+    "C_paul_secundo",
 ):
     entry = characters[required_id]
     if not entry.get("visualAnchor") and not entry.get("wardrobe"):
@@ -173,6 +179,11 @@ for required_id in ("C_abby_saville", "C_tessa_banks", "C_billie_rusk"):
 for required_id in ("C_abby_saville", "C_tessa_banks"):
     if not characters[required_id].get("relationship"):
         raise SystemExit(f"{required_id}: sister relationship missing")
+
+if characters["C_richard_secundo"].get("relationship") != "Richard is Paul Secundo's father.":
+    raise SystemExit("Richard Secundo: father relationship missing")
+if characters["C_paul_secundo"].get("relationship") != "Paul is Richard Secundo's adolescent son.":
+    raise SystemExit("Paul Secundo: son relationship missing")
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
 legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
@@ -317,7 +328,21 @@ for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
         raise SystemExit(f"Non-story metadata beat survived exclusion: {forbidden}")
 
 season_serialized = json.dumps(base, ensure_ascii=False).lower()
-for retired_name in ("ilyra venn", "varra cindral", "elyra vorn", "sira red fang", "nira sol", "elder branth"):
+for retired_name in (
+    "ilyra venn",
+    "varra cindral",
+    "elyra vorn",
+    "sira red fang",
+    "nira sol",
+    "elder branth",
+    "mara vey",
+    "ilan vey",
+    "ilyan vey",
+    "@starsplit.mara.vey",
+    "@starsplit.ilan.vey",
+    "c_mara_vey",
+    "c_ilan_vey",
+):
     if retired_name in season_serialized:
         raise SystemExit(f"Retired Rex Fleet identity remains in assembled season: {retired_name}")
 
