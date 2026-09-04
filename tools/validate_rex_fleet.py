@@ -125,7 +125,17 @@ primary_handles = [entry.get("handle") for entry in characters.values() if entry
 if len(primary_handles) != len(set(primary_handles)):
     raise SystemExit("Duplicate primary character handles remain")
 character_serialized = json.dumps(characters, ensure_ascii=False)
-for fragment in ("Production reference:", "Source speaker label:"):
+for fragment in (
+    "Production reference:",
+    "Source speaker label:",
+    "visualStatus",
+    "continuityLocks",
+    "formerly developed under",
+    "Do not transfer",
+    "not the redhead",
+    "duplicate bodies",
+    "exaggerated villain poses",
+):
     if fragment in character_serialized:
         raise SystemExit(f"Character correction/source residue remains: {fragment}")
 for required_id in (
@@ -151,8 +161,18 @@ for required_id in (
     "C_jex_marrin",
 ):
     entry = characters[required_id]
-    if not entry.get("visualAnchor") or not entry.get("continuityLocks"):
-        raise SystemExit(f"Released-canon visual continuity missing: {required_id}")
+    if not entry.get("visualAnchor") and not entry.get("wardrobe"):
+        raise SystemExit(f"Prompt-safe visual description missing: {required_id}")
+
+for required_id in ("C_abby_saville", "C_tessa_banks", "C_billie_rusk"):
+    entry = characters[required_id]
+    for field in ("visualAnchor", "wardrobe", "performance"):
+        if not entry.get(field):
+            raise SystemExit(f"{required_id}: prompt-safe character field missing: {field}")
+
+for required_id in ("C_abby_saville", "C_tessa_banks"):
+    if not characters[required_id].get("relationship"):
+        raise SystemExit(f"{required_id}: sister relationship missing")
 
 legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
 legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
@@ -192,7 +212,14 @@ for key, entry in legacy_dialogue.items():
         raise SystemExit(f"{key}: dialogue speaker ID does not resolve: {entry.get('speakerId')}")
 
 index_text = INDEX.read_text(encoding="utf-8")
-for required in ("function findCharacterByHandle", "function formatCharacter", "s.continuityFrom"):
+for required in (
+    "function findCharacterByHandle",
+    "function formatCharacter",
+    "e.wardrobe",
+    "e.performance",
+    "e.relationship",
+    "s.continuityFrom",
+):
     if required not in index_text:
         raise SystemExit(f"Assembler sanitation support missing: {required}")
 
