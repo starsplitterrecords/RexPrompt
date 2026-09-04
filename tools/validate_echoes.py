@@ -67,10 +67,10 @@ def validate_scenes() -> None:
                 assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
                     assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
-            if issue <= 4:
+            if issue <= 5:
                 plan = scene.get("panelPlan")
                 assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
-            if issue in (2, 3, 4) and index > 0:
+            if issue in (2, 3, 4, 5) and index > 0:
                 assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue {issue} continuity: {scene['id']}"
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
@@ -131,12 +131,12 @@ def validate_current_production_contract() -> None:
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
     issues = status.get("issues", {})
-    for issue in (1, 2, 3, 4):
+    for issue in (1, 2, 3, 4, 5):
         entry = issues.get(str(issue), {})
         assert entry.get("status") == "compiled for sequential page production", issue
         assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
         assert entry.get("pageCount") == 12, issue
-    assert issues.get("5", {}).get("status") == "next recovery frontier"
+    assert issues.get("6", {}).get("status") == "next recovery frontier"
 
 
 def main() -> None:
@@ -146,7 +146,7 @@ def main() -> None:
     validate_issue1_references()
     validate_architecture()
     validate_current_production_contract()
-    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-4 compiled as 12 production pages each.")
+    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-5 compiled as 12 production pages each.")
 
 
 if __name__ == "__main__":
