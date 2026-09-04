@@ -93,6 +93,21 @@ def validate_issue_2(scenes):
             raise SystemExit(f"{scene['id']}: S1E02 must use canonical inline dialogue and direction only")
         validate_clean_scene(scene)
 
+    a18 = next(scene for scene in scenes if scene.get("id") == "RF_S1E02_A18")
+    if "MULTI-LOCATION INTERCUT" not in a18.get("settingText", ""):
+        raise SystemExit("RF_S1E02_A18: multi-location staging is not explicit")
+    if len(a18.get("panelPlan", [])) != 6:
+        raise SystemExit("RF_S1E02_A18: expected six location-specific panels")
+    a18_staging = " ".join(a18.get("directionInline", []) + a18.get("panelPlan", []))
+    for required in (
+        "Paul is the only physically present named character",
+        "Venn is the only physically present named character",
+        "Tess is the only physically present named character",
+        "Never place Naomi, Tess, Richard, Paul, or Venn together physically",
+    ):
+        if required not in a18_staging:
+            raise SystemExit(f"RF_S1E02_A18: spatial staging requirement missing: {required}")
+
 
 shows = load_json(MANIFEST)
 show = next((s for s in shows if s.get("id") == "rex-fleet-s1"), None)
