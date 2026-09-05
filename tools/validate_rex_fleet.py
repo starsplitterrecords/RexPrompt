@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import base64, gzip, json, re
+import base64
+import gzip
+import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -8,370 +11,173 @@ MANIFEST = ROOT / "data" / "shows.json"
 INDEX = ROOT / "index.html"
 
 
-def normalize(raw):
-    if isinstance(raw, list):
-        return raw
-    if isinstance(raw, dict):
-        out = []
-        for key, value in raw.items():
-            if isinstance(value, dict):
-                item = dict(value)
-                item.setdefault("id", key)
-                out.append(item)
-        return out
-    raise TypeError(f"Unsupported scene container: {type(raw).__name__}")
-
-
-def episode(scene):
-    if scene.get("episode"):
-        return scene["episode"]
-    m = re.match(r"^RF_(S1E\d{2})_", str(scene.get("id", "")))
-    return m.group(1) if m else None
-
-
 def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def load_encoded(path):
-    text = "".join(path.read_text(encoding="utf-8").split())
-    raw = base64.b64decode(text, validate=True)
-    decoded = gzip.decompress(raw).decode("utf-8")
-    return json.loads(decoded)
+def load_payload(entry):
+    overlay = entry.get("sceneOverlays", [None])[0]
+    if not overlay:
+        raise SystemExit(f"{entry.get('id')}: normalized issue payload missing")
+    path = SHOW / overlay["file"]
+    if overlay.get("encoding") == "gzip-base64":
+        text = "".join(path.read_text(encoding="utf-8").split())
+        raw = base64.b64decode(text, validate=True)
+        return json.loads(gzip.decompress(raw).decode("utf-8"))
+    return load_json(path)
 
 
-def dialogue_texts(scene):
-    return [item.get("text", "") for item in scene.get("dialogueInline", [])]
-
-
-def validate_clean_scene(scene):
-    generic = {
-        "Play the dialogue as an exchange with listening, interruption and reaction; avoid posed recitation. Keep faces readable and let the environment stay active.",
-        "Continuous from the prior beat in this location; preserve positions, props, damage, eyelines and emotional momentum.",
-        "Let this visual beat breathe long enough to establish consequence before the next exchange.",
-    }
-    meta_prefixes = (
-        "Canon anchors",
-        "Characters:",
-        "Tone:",
-        "Season 2 hooks:",
-        "Visual tone guidance:",
-    )
-    for item in scene.get("directionInline", []):
-        if item.startswith("Performance:"):
-            raise SystemExit(f"{scene.get('id')}: character voice duplicated at scene scope")
-        if item in generic:
-            raise SystemExit(f"{scene.get('id')}: generic production scaffold survived")
-        if item.startswith(meta_prefixes):
-            raise SystemExit(f"{scene.get('id')}: editorial/correction residue survived")
-
-
-def validate_issue_2(scenes):
-    expected_ids = [f"RF_S1E02_A{n:02d}" for n in range(1, 28)]
-    ids = [scene.get("id") for scene in scenes]
-    if ids != expected_ids:
-        raise SystemExit(f"S1E02: expected ordered A01-A27, found {ids}")
-
-    serialized = json.dumps(scenes, ensure_ascii=False).lower()
-    forbidden_fragments = {
-        "lantern": "retired Issue 2 lantern metaphor",
-        "commerce finds a way": "retired commerce refrain",
-        "flow finds a way.": "retired Issue 2 closing line",
-        "ilyra venn": "retired character identity",
-        "varra cindral": "retired character identity",
-        "elyra vorn": "retired character identity",
-        "sira red fang": "retired character identity",
-        "nira sol": "retired character identity",
-        "elder branth": "retired character identity",
-    }
-    for fragment, reason in forbidden_fragments.items():
-        if fragment in serialized:
-            raise SystemExit(f"S1E02: {reason} survived: {fragment!r}")
-
-    for scene in scenes:
-        if scene.get("dialog") or scene.get("direction"):
-            raise SystemExit(f"{scene['id']}: S1E02 must use canonical inline dialogue and direction only")
-        validate_clean_scene(scene)
-
-    a18 = next(scene for scene in scenes if scene.get("id") == "RF_S1E02_A18")
-    if "MULTI-LOCATION INTERCUT" not in a18.get("settingText", ""):
-        raise SystemExit("RF_S1E02_A18: multi-location staging is not explicit")
-    if len(a18.get("panelPlan", [])) != 6:
-        raise SystemExit("RF_S1E02_A18: expected six location-specific panels")
-    a18_staging = " ".join(a18.get("directionInline", []) + a18.get("panelPlan", []))
-    for required in (
-        "Paul is the only physically present named character",
-        "Venn is the only physically present named character",
-        "Tess is the only physically present named character",
-        "Never place Naomi, Tess, Richard, Paul, or Venn together physically",
-    ):
-        if required not in a18_staging:
-            raise SystemExit(f"RF_S1E02_A18: spatial staging requirement missing: {required}")
+def assert_clean_recipe(page, all_ids):
+    page_id = page.get("id")
+    if not page_id:
+        raise SystemExit("Rex Fleet page missing id")
+    for field in ("episode", "act"):
+        if field in page:
+            raise SystemExit(f"{page_id}: legacy {field} field survived comic normalization")
+    if not page.get("summary"):
+        raise SystemExit(f"{page_id}: missing summary")
+    if not (page.get("settingText") or page.get("setting")):
+        raise SystemExit(f"{page_id}: missing setting")
+    if not (page.get("regionText") or page.get("region")):
+        raise SystemExit(f"{page_id}: missing region")
+    if len(page.get("panelPlan", [])) < 1:
+        raise SystemExit(f"{page_id}: comic page needs a complete panel plan")
+    target = page.get("continuityFrom")
+    if target and target not in all_ids:
+        raise SystemExit(f"{page_id}: continuity target does not resolve: {target}")
+    for item in page.get("directionInline", []):
+        if isinstance(item, str) and item.startswith(("Canon anchors", "Characters:", "Tone:", "Season 2 hooks:", "Visual tone guidance:")):
+            raise SystemExit(f"{page_id}: editorial/correction residue survived")
 
 
 shows = load_json(MANIFEST)
-show = next((s for s in shows if s.get("id") == "rex-fleet-s1"), None)
-if not show:
-    raise SystemExit("Rex Fleet show missing from data/shows.json")
-overlays = {o.get("replaceEpisode"): o for o in show.get("sceneOverlays", [])}
+rex = [entry for entry in shows if entry.get("seriesId") == "rex-fleet" or entry.get("id") == "rex-fleet-s1"]
+if len(rex) != 11:
+    raise SystemExit(f"Expected 11 explicit Rex Fleet issue entries (2-12), found {len(rex)}")
+if any(entry.get("id") == "rex-fleet-s1" for entry in rex):
+    raise SystemExit("Legacy Rex Fleet season manifest entry remains")
 
-generation_line = show.get("generationLine", "")
-if "comic-book" not in generation_line:
-    raise SystemExit("Rex Fleet must declare comic-book production mode")
-if "10-second vertical clip" in generation_line or "TV style" in generation_line:
-    raise SystemExit("Rex Fleet inherited legacy video-generation language")
+issues = {}
+for expected_issue, entry in zip(range(2, 13), rex):
+    if entry.get("id") != f"rex-fleet-i{expected_issue:02d}":
+        raise SystemExit(f"Rex Fleet issue order/id mismatch at Issue {expected_issue}: {entry.get('id')}")
+    if entry.get("name") != f"Rex Fleet — Issue {expected_issue}":
+        raise SystemExit(f"Issue {expected_issue}: comic-first display name mismatch")
+    if entry.get("issueLabel") != f"Issue {expected_issue}":
+        raise SystemExit(f"Issue {expected_issue}: issue label mismatch")
+    if entry.get("unitLabel") != "PAGE":
+        raise SystemExit(f"Issue {expected_issue}: production unit must be PAGE")
+    if entry.get("scenesFile") != "pages_base.json":
+        raise SystemExit(f"Issue {expected_issue}: normalized page base missing")
+    manifest_text = json.dumps(entry, ensure_ascii=False)
+    if "replaceEpisode" in manifest_text or "replaceEpisodes" in manifest_text:
+        raise SystemExit(f"Issue {expected_issue}: episode replacement machinery survived")
+    if re.search(r"\bSeason\b|\bepisode\b", entry.get("name", "") + " " + entry.get("generationLine", ""), re.I):
+        raise SystemExit(f"Issue {expected_issue}: show/episode language survived user-facing production config")
+    if "comic page" not in entry.get("generationLine", ""):
+        raise SystemExit(f"Issue {expected_issue}: comic-page production mode missing")
+    issues[expected_issue] = load_payload(entry)
+
+if load_json(SHOW / "pages_base.json") != []:
+    raise SystemExit("Rex Fleet pages_base.json must remain an empty structural base")
+
+all_ids = {page.get("id") for pages in issues.values() for page in pages}
+if None in all_ids:
+    raise SystemExit("One or more normalized pages are missing IDs")
+if len(all_ids) != sum(len(pages) for pages in issues.values()):
+    raise SystemExit("Duplicate normalized Rex Fleet page IDs")
+
+for issue, pages in issues.items():
+    expected_ids = [f"RF_I{issue:02d}_P{n:02d}" for n in range(1, len(pages) + 1)]
+    ids = [page.get("id") for page in pages]
+    if ids != expected_ids:
+        raise SystemExit(f"Issue {issue}: page IDs/order invalid: {ids}")
+    for page in pages:
+        assert_clean_recipe(page, all_ids)
+
+if len(issues[2]) != 19:
+    raise SystemExit(f"Issue 2 must contain 19 production pages, found {len(issues[2])}")
+if len(issues[3]) != 30:
+    raise SystemExit(f"Issue 3 must contain 30 production pages, found {len(issues[3])}")
+
+serialized = json.dumps(issues, ensure_ascii=False)
+if "RF_S1E" in serialized:
+    raise SystemExit("Legacy episode-style recipe ID remains in active page payloads")
+for retired in (
+    "Ilyra Venn", "Varra Cindral", "Elyra Vorn", "Sira Red Fang", "Nira Sol",
+    "Elder Branth", "Mara Vey", "Ilan Vey", "Ilyan Vey",
+    "@starsplit.mara.vey", "@starsplit.ilan.vey", "C_mara_vey", "C_ilan_vey",
+):
+    if retired.lower() in serialized.lower():
+        raise SystemExit(f"Retired Rex Fleet identity remains: {retired}")
+if re.search(r"\bVey\b", serialized, re.I):
+    raise SystemExit("Unresolved Vey identity residue remains")
 
 characters = load_json(SHOW / "characters.json")
-forbidden_character_ids = {
-    "C_mara_vey",
-    "C_ilan_vey",
-    "C_mother_soft",
-    "C_venn_soft_to_herself",
-    "C_jex_low",
-    "C_billie_low",
-    "C_tess_vo",
-    "C_kerr_cerulean",
-    "C_triarch_voice",
-    "C_rhyne_aegis",
-    "C_keating_ember",
-}
-residue = sorted(forbidden_character_ids & set(characters))
-if residue:
-    raise SystemExit(f"Delivery/correction identity records remain: {residue}")
-primary_handles = [entry.get("handle") for entry in characters.values() if entry.get("handle")]
-if len(primary_handles) != len(set(primary_handles)):
-    raise SystemExit("Duplicate primary character handles remain")
-character_serialized = json.dumps(characters, ensure_ascii=False)
-for fragment in (
-    "Production reference:",
-    "Source speaker label:",
-    "visualStatus",
-    "continuityLocks",
-    "formerly developed under",
-    "Do not transfer",
-    "not the redhead",
-    "duplicate bodies",
-    "exaggerated villain poses",
+for forbidden_id in (
+    "C_mara_vey", "C_ilan_vey", "C_mother_soft", "C_venn_soft_to_herself",
+    "C_jex_low", "C_billie_low", "C_tess_vo", "C_kerr_cerulean",
+    "C_triarch_voice", "C_rhyne_aegis", "C_keating_ember",
 ):
-    if fragment in character_serialized:
-        raise SystemExit(f"Character correction/source residue remains: {fragment}")
+    if forbidden_id in characters:
+        raise SystemExit(f"Retired/correction identity record remains: {forbidden_id}")
+handles = [entry.get("handle") for entry in characters.values() if entry.get("handle")]
+if len(handles) != len(set(handles)):
+    raise SystemExit("Duplicate primary Rex Fleet handles remain")
 for required_id in (
-    "C_commodore_ella_venn",
-    "C_admiral_cael_dominion",
-    "C_soren_kerr",
-    "C_admiral_colin_rhyne",
-    "C_admiral_janet_keating",
-    "C_captain_naomi_sol",
-    "C_tessa_banks",
-    "C_billie_rusk",
-    "C_richard_secundo",
-    "C_paul_secundo",
+    "C_commodore_ella_venn", "C_abby_saville", "C_tessa_banks", "C_billie_rusk",
+    "C_governor_halev", "C_captain_naomi_sol", "C_jex_marrin",
+    "C_richard_secundo", "C_paul_secundo",
 ):
     if required_id not in characters:
-        raise SystemExit(f"Required current Rex Fleet identity missing: {required_id}")
+        raise SystemExit(f"Required current identity missing: {required_id}")
+    if not characters[required_id].get("visualAnchor"):
+        raise SystemExit(f"Canonical/current visual anchor missing: {required_id}")
 
-for required_id in (
-    "C_commodore_ella_venn",
-    "C_abby_saville",
-    "C_tessa_banks",
-    "C_billie_rusk",
-    "C_governor_halev",
-    "C_captain_naomi_sol",
-    "C_jex_marrin",
-    "C_richard_secundo",
-    "C_paul_secundo",
+
+primary={e.get("handle"):e for e in characters.values() if isinstance(e,dict) and e.get("handle")}
+aliases={}
+for e in characters.values():
+    if isinstance(e,dict):
+        for a in e.get("aliases",[]) or []: aliases[a]=e
+for page in [p for issue_pages in issues.values() for p in issue_pages]:
+    for c in page.get("charactersInline",[]) or []:
+        if not isinstance(c,dict) or not c.get("handle"): continue
+        e=primary.get(c["handle"]) or aliases.get(c["handle"])
+        if not e: raise SystemExit(f"{page.get('id')}: unresolved character handle {c['handle']}")
+        if not (e.get("visualAnchor") or e.get("visual") or e.get("appearance") or e.get("visualDescription")): raise SystemExit(f"{page.get('id')}: image-visible character lacks visual anchor {c['handle']}")
+    for d in page.get("dialogueInline",[]) or []:
+        if not isinstance(d,dict): continue
+        h=d.get("handle")
+        if h and h.startswith("@") and not (primary.get(h) or aliases.get(h)): raise SystemExit(f"{page.get('id')}: unresolved dialogue character handle {h}")
+pack=ROOT/"production/references/rex-fleet/visual-reference-pack.json"
+if not pack.exists(): raise SystemExit("Rex Fleet visual reference pack missing")
+vp=load_json(pack)
+if vp.get("seriesId")!="rex-fleet" or len(vp.get("references",[]))!=18: raise SystemExit("Rex Fleet released visual reference pack incomplete")
+if any(r.get("image","").endswith("page-001.jpg") for r in vp.get("references",[])): raise SystemExit("Editorial page leaked into story visual references")
+
+character_serialized = json.dumps(characters, ensure_ascii=False)
+for residue in (
+    "Production reference:", "Source speaker label:", "visualStatus", "continuityLocks",
+    "formerly developed under", "Do not transfer", "not the redhead", "duplicate bodies",
+    "exaggerated villain poses",
 ):
-    entry = characters[required_id]
-    if not entry.get("visualAnchor") and not entry.get("wardrobe"):
-        raise SystemExit(f"Prompt-safe visual description missing: {required_id}")
+    if residue in character_serialized:
+        raise SystemExit(f"Character correction/source residue remains: {residue}")
 
-for required_id in ("C_abby_saville", "C_tessa_banks", "C_billie_rusk"):
-    entry = characters[required_id]
-    for field in ("visualAnchor", "wardrobe", "performance"):
-        if not entry.get(field):
-            raise SystemExit(f"{required_id}: prompt-safe character field missing: {field}")
-
-for required_id in ("C_abby_saville", "C_tessa_banks"):
-    if not characters[required_id].get("relationship"):
-        raise SystemExit(f"{required_id}: sister relationship missing")
-
-if characters["C_richard_secundo"].get("relationship") != "Richard is Paul Secundo's father.":
-    raise SystemExit("Richard Secundo: father relationship missing")
-if characters["C_paul_secundo"].get("relationship") != "Paul is Richard Secundo's adolescent son.":
-    raise SystemExit("Paul Secundo: son relationship missing")
-
-legacy = normalize(load_json(SHOW / "scenes_prequel.json"))
-legacy_other = [s.get("id") for s in legacy if episode(s) != "S1E01"]
-if legacy_other:
-    raise SystemExit(f"Superseded scenes remain in scenes_prequel.json: {legacy_other[:5]}")
-legacy_e1 = [s for s in legacy if episode(s) == "S1E01"]
-base = normalize(load_json(SHOW / "scenes_e01.json"))
-if base != legacy_e1:
-    raise SystemExit("Explicit Episode 1 base differs from the original Rex Fleet Episode 1")
-
-for scene in base:
-    for character_id in scene.get("characters", []):
-        if character_id not in characters:
-            raise SystemExit(f"{scene.get('id')}: unresolved Episode 1 character ID {character_id}")
-
-legacy_dialogue = load_json(SHOW / "dialogue.json")
-legacy_direction = load_json(SHOW / "direction.json")
-legacy_settings = load_json(SHOW / "settings.json")
-expected_dialogue_keys = {key for scene in base for key in scene.get("dialog", [])}
-expected_direction_keys = {key for scene in base for key in scene.get("direction", [])}
-expected_setting_keys = {scene.get("setting") for scene in base if scene.get("setting")}
-if set(legacy_dialogue) != expected_dialogue_keys:
-    extra = sorted(set(legacy_dialogue) - expected_dialogue_keys)
-    missing = sorted(expected_dialogue_keys - set(legacy_dialogue))
-    raise SystemExit(f"Episode 1 dialogue lookup scope mismatch; extra={extra}, missing={missing}")
-if set(legacy_direction) != expected_direction_keys:
-    extra = sorted(set(legacy_direction) - expected_direction_keys)
-    missing = sorted(expected_direction_keys - set(legacy_direction))
-    raise SystemExit(f"Episode 1 direction lookup scope mismatch; extra={extra}, missing={missing}")
-if set(legacy_settings) != expected_setting_keys:
-    extra = sorted(set(legacy_settings) - expected_setting_keys)
-    missing = sorted(expected_setting_keys - set(legacy_settings))
-    raise SystemExit(f"Episode 1 setting lookup scope mismatch; extra={extra}, missing={missing}")
-
-for key, entry in legacy_dialogue.items():
-    if entry.get("speakerId") not in characters:
-        raise SystemExit(f"{key}: dialogue speaker ID does not resolve: {entry.get('speakerId')}")
+for old_path in list(SHOW.glob("scenes_e*.json")) + list((SHOW / "encoded").glob("scenes_e*.json.gzb64")):
+    raise SystemExit(f"Legacy scene/episode payload remains active: {old_path.relative_to(ROOT)}")
+if (SHOW / "scenes_prequel.json").exists():
+    raise SystemExit("Legacy Rex Fleet prequel/episode payload remains active")
 
 index_text = INDEX.read_text(encoding="utf-8")
-for required in (
-    "function findCharacterByHandle",
-    "function formatCharacter",
-    "e.wardrobe",
-    "e.performance",
-    "e.relationship",
-    "s.continuityFrom",
-):
+if "Series (show)" in index_text or "Scene / page (recipes)" in index_text:
+    raise SystemExit("Legacy show/scene language remains in RexPrompt production selector")
+for required in ("function findCharacterByHandle", "function formatCharacter", "e.wardrobe", "e.performance", "e.relationship", "s.continuityFrom"):
     if required not in index_text:
-        raise SystemExit(f"Assembler sanitation support missing: {required}")
+        raise SystemExit(f"Assembler continuity support missing: {required}")
 
-e2 = normalize(load_json(SHOW / "scenes_e02.json"))
-validate_issue_2(e2)
-
-published_tail = [f"RF_S1E02_A{n:02d}" for n in range(1, 9)]
-issue_1_overlay = next(
-    (item for item in show.get("sceneOverlays", []) if item.get("replaceEpisode") == "S1E01"),
-    None,
-)
-issue_2_overlay = next(
-    (item for item in show.get("sceneOverlays", []) if item.get("replaceEpisode") == "S1E02"),
-    None,
-)
-if not issue_1_overlay or issue_1_overlay.get("includeIds") != published_tail:
-    raise SystemExit("Issue 1 must include the released A01-A08 tail in published order")
-if not issue_2_overlay or issue_2_overlay.get("excludeIds") != published_tail:
-    raise SystemExit("Issue 2 must exclude the already-published A01-A08 tail")
-if show.get("excludeSceneIds") != ["RF_S1E01_S07"]:
-    raise SystemExit("Issue 1 must omit the unpublished duplicate RF_S1E01_S07")
-
-production_issue_2 = e2[8:]
-if [scene.get("id") for scene in production_issue_2] != [f"RF_S1E02_A{n:02d}" for n in range(9, 28)]:
-    raise SystemExit("Production Issue 2 must run in order from A09 through A27")
-for scene in production_issue_2:
-    if len(scene.get("panelPlan", [])) < 4:
-        raise SystemExit(f"{scene['id']}: production Issue 2 needs a complete panel plan")
-    if not scene.get("continuityFrom"):
-        raise SystemExit(f"{scene['id']}: production Issue 2 needs causal continuity")
-
-production_issue_1 = [dict(scene, episode="S1E01") for scene in e2[:8]]
-production_issue_2 = [dict(scene, episode="S1E02") for scene in e2[8:]]
-base = production_issue_1 + production_issue_2
-expected_counts = {"S1E01": len(production_issue_1), "S1E02": len(production_issue_2)}
-
-for n in range(3, 13):
-    ep = f"S1E{n:02d}"
-    readable_path = SHOW / f"scenes_e{n:02d}.json"
-    encoded_path = SHOW / "encoded" / f"scenes_e{n:02d}.json.gzb64"
-    path = readable_path if readable_path.exists() else encoded_path
-    try:
-        incoming = normalize(load_json(path) if path == readable_path else load_encoded(path))
-    except Exception as exc:
-        raise SystemExit(f"{path.name}: decode failure: {exc}") from exc
-    bad = [s.get("id") for s in incoming if episode(s) != ep]
-    if bad:
-        raise SystemExit(f"{ep}: payload contains scenes from another episode: {bad[:5]}")
-    ids = [s.get("id") for s in incoming]
-    if not ids or any(not scene_id for scene_id in ids):
-        raise SystemExit(f"{ep}: one or more scenes are missing IDs")
-    if len(ids) != len(set(ids)):
-        raise SystemExit(f"{ep}: duplicate scene IDs inside payload")
-    for scene in incoming:
-        validate_clean_scene(scene)
-    if ep == "S1E03":
-        first_layout_pass = {
-            "RF_S1E03_A10", "RF_S1E03_A13", "RF_S1E03_A15", "RF_S1E03_A18",
-            "RF_S1E03_A21", "RF_S1E03_A23", "RF_S1E03_A27", "RF_S1E03_A30",
-        }
-        by_id = {scene["id"]: scene for scene in incoming}
-        for scene_id in first_layout_pass:
-            if len(by_id[scene_id].get("panelPlan", [])) < 4:
-                raise SystemExit(f"{scene_id}: Issue 3 layout pass is incomplete")
-    excluded = set(overlays.get(ep, {}).get("excludeIds", []))
-    incoming = [s for s in incoming if s.get("id") not in excluded]
-    expected_counts[ep] = len(incoming)
-    base.extend(incoming)
-
-expected_order = [f"S1E{n:02d}" for n in range(1, 13)]
-sequence = [episode(s) for s in base]
-compressed = []
-for e in sequence:
-    if not compressed or compressed[-1] != e:
-        compressed.append(e)
-if compressed != expected_order:
-    raise SystemExit(f"Episode order invalid: {compressed}")
-
-counts = {ep: sum(1 for s in base if episode(s) == ep) for ep in expected_order}
-for ep, expected in expected_counts.items():
-    if counts[ep] != expected:
-        raise SystemExit(f"{ep}: expected {expected} scenes, found {counts[ep]}")
-
-all_ids = [s.get("id") for s in base]
-if len(all_ids) != len(set(all_ids)):
-    raise SystemExit("Duplicate scene IDs exist in final assembled season")
-all_id_set = set(all_ids)
-for scene in base:
-    target = scene.get("continuityFrom")
-    if target and target not in all_id_set:
-        raise SystemExit(f"{scene.get('id')}: continuityFrom target does not resolve: {target}")
-
-for forbidden in ("RF_S1E10_A31", "RF_S1E10_A32"):
-    if forbidden in all_ids:
-        raise SystemExit(f"Non-story metadata beat survived exclusion: {forbidden}")
-
-season_serialized = json.dumps(base, ensure_ascii=False).lower()
-for retired_name in (
-    "ilyra venn",
-    "varra cindral",
-    "elyra vorn",
-    "sira red fang",
-    "nira sol",
-    "elder branth",
-    "mara vey",
-    "ilan vey",
-    "ilyan vey",
-    "@starsplit.mara.vey",
-    "@starsplit.ilan.vey",
-    "c_mara_vey",
-    "c_ilan_vey",
-):
-    if retired_name in season_serialized:
-        raise SystemExit(f"Retired Rex Fleet identity remains in assembled season: {retired_name}")
-
-for scene in base:
-    if not scene.get("summary"):
-        raise SystemExit(f"{scene.get('id')}: missing summary")
-    if episode(scene) != "S1E01":
-        if not (scene.get("settingText") or scene.get("setting")):
-            raise SystemExit(f"{scene.get('id')}: missing setting")
-        if not (scene.get("regionText") or scene.get("region")):
-            raise SystemExit(f"{scene.get('id')}: missing region")
-
-print("Rex Fleet validation passed")
-print("Sanitized structure required")
-print("Total scenes:", len(base))
-for ep in expected_order:
-    print(f"{ep}: {counts[ep]}")
+print("Rex Fleet comic normalization validation passed")
+print("Production model: series -> issue -> page -> panel")
+for issue in range(2, 13):
+    print(f"Issue {issue}: {len(issues[issue])} pages")
