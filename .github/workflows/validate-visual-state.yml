@@ -7,10 +7,7 @@ on:
       - 'visuals.js'
       - 'production/**'
       - 'tools/validate_visual_state.py'
-      - 'tools/validate_approved_draft_automation.py'
-      - 'tools/ingest_approved_drafts.py'
       - '.github/workflows/validate-visual-state.yml'
-      - '.github/workflows/ingest-approved-drafts.yml'
   push:
     branches:
       - main
@@ -18,10 +15,7 @@ on:
       - 'visuals.js'
       - 'production/**'
       - 'tools/validate_visual_state.py'
-      - 'tools/validate_approved_draft_automation.py'
-      - 'tools/ingest_approved_drafts.py'
       - '.github/workflows/validate-visual-state.yml'
-      - '.github/workflows/ingest-approved-drafts.yml'
   workflow_dispatch:
 
 jobs:
@@ -34,9 +28,5 @@ jobs:
           python-version: '3.12'
       - name: Validate approved draft and released canon state
         run: python tools/validate_visual_state.py
-      - name: Validate automatic approved-image persistence
-        run: python tools/validate_approved_draft_automation.py
-      - name: Check Python syntax
-        run: python -m py_compile tools/ingest_approved_drafts.py tools/validate_approved_draft_automation.py
       - name: Check visual workspace JavaScript syntax
         run: node --check visuals.js
