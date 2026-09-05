@@ -4,12 +4,16 @@ on:
     paths:
       - 'data/shows/vikings-2026-s1/**'
       - 'data/shows.json'
+      - 'production/references/vikings-2026/**'
+      - 'production/drafts/manifest.json'
       - 'tools/validate_vikings_2026.py'
       - '.github/workflows/validate-vikings-2026.yml'
   pull_request:
     paths:
       - 'data/shows/vikings-2026-s1/**'
       - 'data/shows.json'
+      - 'production/references/vikings-2026/**'
+      - 'production/drafts/manifest.json'
       - 'tools/validate_vikings_2026.py'
       - '.github/workflows/validate-vikings-2026.yml'
   workflow_dispatch:

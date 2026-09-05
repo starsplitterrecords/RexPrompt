@@ -8,12 +8,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data/shows/vikings-2026-s1"
 MANIFEST = ROOT / "data/shows.json"
+NORMALIZATION_REFERENCE = ROOT / "production/references/vikings-2026/img-production-normalization.json"
+DRAFT_MANIFEST = ROOT / "production/drafts/manifest.json"
 
 CORE_FILES = [
     "characters.json",
     "settings.json",
     "regions.json",
     "pages_base.json",
+]
+
+CORE_VISUAL_CHARACTER_IDS = [
+    "qwtivx28x",       # Bjorn
+    "ywg8bdjvl",       # Gunnar
+    "19020mp40",       # Carrie
+    "bvfeqb22e",       # Silas
+    "magister",        # Dr. Aris Thorne / Magister
+    "dfh4bu71y",       # DTI Floor Supervisor
+    "tnvx3hlo0",       # The Kin
 ]
 
 PRODUCTION_RESIDUE = [
@@ -42,6 +54,65 @@ def load_payload(path, encoding=None):
     return load_json(path)
 
 
+def validate_img_normalization(characters):
+    assert NORMALIZATION_REFERENCE.exists(), "missing Vikings IMG production normalization reference"
+    reference = load_json(NORMALIZATION_REFERENCE)
+    assert reference.get("schemaVersion") == 1, "Vikings IMG normalization schemaVersion drift"
+    assert reference.get("seriesId") == "vikings-2026", "Vikings IMG normalization seriesId drift"
+    assert reference.get("status") == "normalized-img-production-reference", "Vikings IMG normalization status drift"
+
+    baseline = reference.get("releasedBaseline")
+    assert isinstance(baseline, dict), "Vikings IMG normalization missing releasedBaseline"
+    assert baseline.get("repository") == "starsplitterrecords/StarSplitterVisions", "Vikings released visual authority drift"
+    assert baseline.get("branch") == "main", "Vikings released canon must resolve from StarSplitterVisions main"
+    assert baseline.get("visionsSlug") == "vikings-2026", "Vikings Visions slug drift"
+    assert baseline.get("issue") == 1, "Vikings released visual baseline must remain Issue 1 until a later issue is actually released"
+
+    scopes = reference.get("referenceScopes")
+    assert isinstance(scopes, dict), "Vikings IMG normalization missing referenceScopes"
+    story_scope = scopes.get("storyPageLanguage")
+    assert isinstance(story_scope, dict), "Vikings IMG normalization missing story-page scope"
+    excluded = story_scope.get("exclude")
+    assert isinstance(excluded, list) and excluded, "Vikings story-page reference exclusions are missing"
+
+    known_locks = reference.get("knownScopeLocks")
+    assert isinstance(known_locks, list) and known_locks, "Vikings IMG normalization missing known scope locks"
+    lock_by_path = {item.get("path"): item for item in known_locks if isinstance(item, dict)}
+    cover_duplicate = lock_by_path.get("/images/pages/vikings-2026/issue-01/page-001.jpg")
+    assert cover_duplicate and cover_duplicate.get("storyPageLayoutAuthority") is False, "released page-001 cover duplicate must never become story-page layout authority"
+
+    untrusted = reference.get("untrustedProductionSources")
+    assert isinstance(untrusted, list), "Vikings IMG normalization missing untrusted production sources"
+    assert "sites/visions/public/intake/" in untrusted, "Visions intake must remain outside Vikings continuity authority"
+
+    session_gate = reference.get("sessionStartGate")
+    page_gate = reference.get("perPageGate")
+    assert isinstance(session_gate, list) and len(session_gate) >= 5, "Vikings session-start gate is incomplete"
+    assert isinstance(page_gate, list) and len(page_gate) >= 7, "Vikings per-page visual-reference gate is incomplete"
+
+    frontier = reference.get("frontierPolicy")
+    assert isinstance(frontier, dict) and frontier.get("mode") == "derived-not-stored", "Vikings production frontier must be derived, not stored as a cursor"
+
+    output_rule = reference.get("storyPageOutputRule")
+    assert isinstance(output_rule, str) and "Only text required by the assembled recipe belongs on the story page." in output_rule, "Vikings story-page output scope is incomplete"
+
+    for character_id in CORE_VISUAL_CHARACTER_IDS:
+        record = characters.get(character_id)
+        assert isinstance(record, dict), f"missing core Vikings visual character record: {character_id}"
+        visual = record.get("visualAnchor")
+        assert isinstance(visual, str) and len(visual.strip()) >= 80, f"core Vikings character missing useful visualAnchor: {record.get('name', character_id)}"
+        continuity = record.get("promptContinuity")
+        assert isinstance(continuity, list) and continuity, f"core Vikings character missing promptContinuity: {record.get('name', character_id)}"
+
+    drafts = load_json(DRAFT_MANIFEST)
+    assert drafts.get("schemaVersion") == 1 and isinstance(drafts.get("drafts"), dict), "approved production draft manifest is malformed"
+    for key, entry in drafts["drafts"].items():
+        if not str(key).startswith("vikings-2026::"):
+            continue
+        assert isinstance(entry, dict), f"bad Vikings approved draft record: {key}"
+        assert entry.get("status") == "approved-production-draft", f"unapproved Vikings image stored as production authority: {key}"
+
+
 def main():
     for name in CORE_FILES:
         path = SHOW / name
@@ -56,6 +127,8 @@ def main():
         assert isinstance(record, dict), f"bad character record: {key}"
         assert record.get("name"), f"character missing name: {key}"
         assert record.get("handle"), f"character missing handle: {key}"
+
+    validate_img_normalization(characters)
 
     shows = load_json(MANIFEST)
     active = [
@@ -144,6 +217,8 @@ def main():
         assert residue not in decoded_text, f"production residue in active Vikings pages: {residue}"
 
     print("Vikings 2026 production-hygiene validation passed")
+    print("IMG production normalization reference: valid")
+    print("Core visual anchors:", len(CORE_VISUAL_CHARACTER_IDS))
     print("Issue 2 page records:", len(issue2_pages))
     print("Issue 3 page records:", len(issue3_pages))
     print("Active page records:", len(active_pages))
