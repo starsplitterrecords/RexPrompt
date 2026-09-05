@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
+READY_SCENE_FILES = SCENE_FILES[:4]
+REFERENCE_POLICY = ROOT / "production" / "references" / "echoes-forgotten-war" / "README.md"
 REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
 ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
@@ -24,7 +26,11 @@ def validate_manifest() -> None:
     matches = [entry for entry in manifest if entry.get("id") == "echoes-forgotten-war-s1"]
     assert len(matches) == 1, f"Expected one Echoes manifest entry, found {len(matches)}"
     entry = matches[0]
-    assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
+    assert entry.get("scenesFiles") == [p.name for p in READY_SCENE_FILES], (
+        "Echoes production manifest must expose only image-ready compiled issues"
+    )
+    assert "unitLabel" not in entry, "Manifest must not override Echoes package PAGE contract"
+    assert "generationLine" not in entry, "Manifest must not override Echoes package generation contract"
 
 
 def validate_characters() -> None:
@@ -50,7 +56,7 @@ def validate_scenes() -> None:
     for issue, path in enumerate(SCENE_FILES, start=1):
         scenes = load(path)
         assert isinstance(scenes, list), path.name
-        assert len(scenes) == 12, f"{path.name}: expected 12 scenes, found {len(scenes)}"
+        assert len(scenes) == 12, f"{path.name}: expected 12 source/recipe units, found {len(scenes)}"
         expected = [f"EFW_S1E{issue:02d}_S{i:02d}" for i in range(1, 13)]
         ids = [scene.get("id") for scene in scenes]
         assert ids == expected, f"{path.name}: scene IDs/order changed"
@@ -127,16 +133,30 @@ def validate_current_production_contract() -> None:
     assert assembler.get("unitLabel") == "PAGE"
     assert assembler.get("requirePanelPlan") is True
     assert assembler.get("requireVisualAnchors") is True
+    generation_line = assembler.get("generationLine", "")
+    assert "One assembled RexPrompt recipe equals one page only" in generation_line
+    assert "Render only the selected recipe" in generation_line
+    assert "page header" in generation_line
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
+    assert "dynamically" in status.get("frontierRule", "")
+    assert "22-beat-per-issue development map" in status.get("developmentGranularity", "")
     issues = status.get("issues", {})
     for issue in (1, 2, 3, 4):
         entry = issues.get(str(issue), {})
         assert entry.get("status") == "compiled for sequential page production", issue
         assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
         assert entry.get("pageCount") == 12, issue
-    assert issues.get("5", {}).get("status") == "next recovery frontier"
+        assert entry.get("panelPlan") is True, issue
+    for issue in (5, 6, 7, 8):
+        entry = issues.get(str(issue), {})
+        assert entry.get("status") == "normalized source material; not compiled for image production", issue
+        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
+        assert entry.get("pageCount") == 12, issue
+        assert entry.get("panelPlan") is False, issue
+
+    assert REFERENCE_POLICY.exists(), "Missing Echoes production visual-reference authority policy"
 
 
 def main() -> None:
@@ -146,7 +166,7 @@ def main() -> None:
     validate_issue1_references()
     validate_architecture()
     validate_current_production_contract()
-    print("Echoes validation passed: 8 issues, 96 story scenes; Issues 1-4 compiled as 12 production pages each.")
+    print("Echoes validation passed: 8 normalized source issues; Issues 1-4 exposed as 12 PAGE recipes each; Issues 5-8 blocked from image production until compiled.")
 
 
 if __name__ == "__main__":
