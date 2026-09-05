@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "echoes-forgotten-war",
+  "status": "active",
+  "purpose": "Curated recovered visual authority for Echoes of a Forgotten War sequential comic production. These images were recovered from explicitly approved/current-production visual work in the Echoes IMG chat. They are identity references, not released canon and not page-style authority.",
+  "authority": {
+    "releasedCanon": null,
+    "approvedCurrentProduction": "starsplitterrecords/RexPrompt",
+    "rules": [
+      "Echoes currently has no released StarSplitterVisions visual canon.",
+      "Use these recovered approved character references together with assembler-visible visualAnchor and continuityLocks.",
+      "The corrected Kyn image is authoritative for Kyn identity; the earlier rejected messiah-like depiction is not authority.",
+      "These images anchor character identity only. They do not control page layout, lettering, captions, story staging, or promotional typography.",
+      "Failed, repeated, superseded, or chat-only comic-page generations are not visual authority."
+    ]
+  },
+  "references": [
+    {"id":"modern-theo","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/modern-theo.jpg","scope":["character-identity","present-day-visual-language"],"characters":["@ech.theo"],"use":"Primary recovered present-day identity reference for Theo."},
+    {"id":"modern-rae","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/modern-rae.jpg","scope":["character-identity","present-day-visual-language"],"characters":["@ech.rae"],"use":"Primary recovered present-day identity reference for Rae."},
+    {"id":"modern-adrian","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/modern-adrian.jpg","scope":["character-identity","present-day-visual-language"],"characters":["@ech.adrian"],"use":"Primary recovered present-day identity reference for Adrian."},
+    {"id":"starbreaker","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/starbreaker.jpg","scope":["character-identity","pantheon-differentiation","faction-visual-language"],"characters":["@ech.starbreaker"],"use":"Primary recovered full-body identity reference for Starbreaker."},
+    {"id":"redlin","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/redlin.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.redlin"],"use":"Primary recovered identity reference for Redlin."},
+    {"id":"atlas","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/atlas.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.atlas"],"use":"Primary recovered identity reference for Atlas."},
+    {"id":"afterlight","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/afterlight.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.afterlight"],"use":"Primary recovered identity reference for Afterlight."},
+    {"id":"flux","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/flux.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.flux"],"use":"Primary recovered identity reference for Flux."},
+    {"id":"oryon","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/oryon.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.oryon"],"use":"Primary recovered identity reference for Oryon."},
+    {"id":"regent","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/regent.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.regent"],"use":"Primary recovered identity reference for Regent."},
+    {"id":"arbiter","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/arbiter.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.arbiter"],"use":"Primary recovered identity reference for Arbiter."},
+    {"id":"kyn-corrected","type":"approved-corrective-reference","image":"production/references/echoes-forgotten-war/characters/kyn.jpg","scope":["character-identity","corrective-reference"],"characters":["@ech.kyn"],"use":"Primary corrected Kyn identity reference. Intentionally supersedes the rejected messiah-like depiction."},
+    {"id":"mero","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/mero.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.mero"],"use":"Primary recovered identity reference for General Mero."}
+  ],
+  "characterReferenceOrder": {
+    "@ech.theo":["modern-theo"],
+    "@ech.rae":["modern-rae"],
+    "@ech.adrian":["modern-adrian"],
+    "@ech.starbreaker":["starbreaker"],
+    "@ech.redlin":["redlin"],
+    "@ech.atlas":["atlas"],
+    "@ech.afterlight":["afterlight"],
+    "@ech.flux":["flux"],
+    "@ech.oryon":["oryon"],
+    "@ech.regent":["regent"],
+    "@ech.arbiter":["arbiter"],
+    "@ech.kyn":["kyn-corrected"],
+    "@ech.mero":["mero"]
+  },
+  "excludedAsPageStyleAuthority": [
+    "all recovered character identity references",
+    "failed or superseded comic-page generations",
+    "promotional labels or typography visible in source concepts"
+  ]
+}
