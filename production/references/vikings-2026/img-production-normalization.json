@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "vikings-2026",
+  "status": "normalized-img-production-reference",
+  "purpose": "Durable session-start, visual-authority, continuity, and sequential-production contract for Vikings 2026 image production.",
+  "authority": {
+    "storyUnit": "The exact assembled RexPrompt recipe controls what happens on the current page.",
+    "releasedVisualCanon": "Released StarSplitterVisions Vikings 2026 material controls established faces, apparent ages, bodies, costumes, locations, props, rendering language, and released story continuity.",
+    "currentProduction": "Only clearly approved current-production artwork may extend released state. Failed, rejected, repeated, superseded, intake-only, or merely generated images are not continuity authority.",
+    "immediateContinuity": "The immediately preceding approved page may establish carried state, but it is never the sole identity or style reference."
+  },
+  "releasedBaseline": {
+    "repository": "starsplitterrecords/StarSplitterVisions",
+    "branch": "main",
+    "visionsSlug": "vikings-2026",
+    "issue": 1,
+    "runtimePagePrefix": "/images/pages/vikings-2026/issue-01/",
+    "releasedPageCount": 26,
+    "collectedIssue": "/issues/vikings-2026/issue-01/vikings-2026-issue-01.pdf"
+  },
+  "referenceScopes": {
+    "characterIdentity": {
+      "primary": "Select the clearest released Issue 1 story-art appearance of each recurring character required by the current recipe.",
+      "supplement": "Use assembler-visible visualAnchor/performance/promptContinuity fields in data/shows/vikings-2026-s1/characters.json to identify the correct person and prevent redesign.",
+      "rule": "Established visual identity is copied from actual released artwork, not recreated from prose."
+    },
+    "storyPageLanguage": {
+      "use": "Released Issue 1 ordinary sequential story pages showing the established painted documentary-comedy page language.",
+      "exclude": [
+        "cover or masthead composition",
+        "municipal editorial/document page",
+        "case-file/dossier or final-status page",
+        "credits page",
+        "promotional or character-lineup composition",
+        "series card, hero, social, logo, or texture assets"
+      ],
+      "rule": "Excluded material may support a narrowly scoped identity or world detail when useful, but it is never a story-page layout, header, lettering, or framing template."
+    },
+    "currentProduction": {
+      "manifest": "production/drafts/manifest.json",
+      "requiredStatus": "approved-production-draft",
+      "rule": "An image is not production authority until it is explicitly approved and stored against its exact recipe key."
+    }
+  },
+  "knownScopeLocks": [
+    {
+      "path": "/images/covers/vikings-2026-issue-01.jpg",
+      "scope": "cover-only",
+      "storyPageLayoutAuthority": false
+    },
+    {
+      "path": "/images/pages/vikings-2026/issue-01/page-001.jpg",
+      "scope": "released cover duplicate",
+      "storyPageLayoutAuthority": false
+    },
+    {
+      "path": "/images/series/vikings-2026/character-lineup.png",
+      "scope": "cast identity support only",
+      "storyPageLayoutAuthority": false
+    }
+  ],
+  "contentClassLocks": [
+    {
+      "class": "municipal editorial or DTI document page",
+      "scope": "intentional issue collateral/editorial language",
+      "storyPageLayoutAuthority": false
+    },
+    {
+      "class": "final dossier, credits, case disposition, or CASE CONTINUES page",
+      "scope": "intentional issue closing/editorial language",
+      "storyPageLayoutAuthority": false
+    },
+    {
+      "class": "promotional image with names, handles, labels, title, issue branding, or character callouts",
+      "scope": "promotion/reference only",
+      "storyPageLayoutAuthority": false
+    }
+  ],
+  "untrustedProductionSources": [
+    "sites/visions/public/intake/",
+    "failed generations",
+    "rejected generations",
+    "superseded generations",
+    "repeated wrong-page generations",
+    "unapproved promotional generations"
+  ],
+  "sessionStartGate": [
+    "Resolve the requested Vikings issue and ordered RexPrompt recipes.",
+    "Resolve released Vikings 2026 visual canon from StarSplitterVisions main.",
+    "Resolve approved post-release production only from explicit approval evidence and production/drafts/manifest.json.",
+    "Build a small working Visual Reference Set from relevant released story art plus approved newer production state.",
+    "For each recurring character expected in the next page, include an actual established visual reference whenever one exists.",
+    "Do not include cover, editorial, dossier, credits, promotional, labeled, or intake assets as story-page-language references.",
+    "Derive the production frontier; never resume from a remembered cursor."
+  ],
+  "perPageGate": [
+    "Retrieve or assemble the exact current RexPrompt page recipe.",
+    "Verify that the selected page has not already been successfully produced or released.",
+    "Identify every recurring character, location, costume, prop, and carried story state required by the recipe.",
+    "Select actual released or approved visual references for those recurring elements.",
+    "Inspect the immediately preceding approved page when state carries forward.",
+    "Generate only after the reference set and immediate continuity are resolved.",
+    "Run reader, recipe-fidelity, character-continuity, spatial/prop, visual-language, composition, and lettering checks.",
+    "Repair the smallest failing unit and do not advance while the page is defective.",
+    "After explicit approval, store the page as the approved production draft for its exact recipe key before relying on it as durable current-production state."
+  ],
+  "frontierPolicy": {
+    "mode": "derived-not-stored",
+    "order": [
+      "explicit current user instruction",
+      "clearly successful/approved unpublished production",
+      "latest released StarSplitterVisions production",
+      "ordered assembled RexPrompt recipes"
+    ],
+    "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
+    "currentDurableState": "No Vikings approved production drafts are currently stored in production/drafts/manifest.json; absent stronger explicit approval evidence, production resumes from the first unresolved Issue 2 recipe rather than from prior failed attempts."
+  },
+  "storyPageOutputRule": "A normal scripted Vikings story page is a finished full-color portrait comic page in the established Vikings sequential-art language. Do not add a series title, issue header, page label, character name/handle label, dossier frame, municipal form header, credits, promotional callout, or other non-scripted text merely because such elements exist elsewhere in the released issue or promotional material. Only text required by the assembled recipe belongs on the story page."
+}
