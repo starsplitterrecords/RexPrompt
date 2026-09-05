@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "pageApproval": {
+    "mode": "automatic-on-substantial-pass",
+    "requiredChecks": [
+      "recipe-fidelity",
+      "character-identity-continuity",
+      "immediate-visual-continuity",
+      "composition-and-readability",
+      "lettering-correctness",
+      "output-hygiene",
+      "no-material-generation-defect"
+    ],
+    "substantialPassDefinition": "No material defect remains that would justify regenerating or repairing this page before advancing production.",
+    "userOverride": "Any explicit user rejection, redo, correction, replacement, or supersession overrides automatic approval."
+  },
+  "visualIdentityApproval": {
+    "newIdentity": "A substantially passing production image may establish the first durable visual identity for a newly introduced recurring character, ship, location, or prop when no prior released or approved visual authority exists.",
+    "existingIdentity": "A production image that conforms to an existing identity does not replace that identity; it is approved only as the current production draft for its recipe.",
+    "redesign": "Replacing an existing released or approved visual identity requires explicit user intent to lock or adopt the redesign."
+  },
+  "persistence": {
+    "mode": "stage-then-vendor",
+    "stagingPurpose": "binary transport only",
+    "preferredStagingProvider": "cloudinary",
+    "finalAuthority": "production/drafts/manifest.json",
+    "finalStorage": "production/drafts/<series>/<issue>/<recipe>.<ext>",
+    "frontierRule": "Production frontier is derived from released canon plus approved production drafts; it is never stored as a chat cursor."
+  }
+}
