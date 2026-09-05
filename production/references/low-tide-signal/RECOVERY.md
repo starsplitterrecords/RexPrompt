@@ -1,0 +1,1 @@
+Chapter 1 recovery targets eight approved scene pages. Binary recovery uses GitHub Git Data blobs and the approved draft manifest.
