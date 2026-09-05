@@ -23,6 +23,7 @@ TEXT_SPEAKERS = {
     "CAPTION", "SYSTEM", "SCREEN", "DISPLAY", "MESSAGE", "GROUP CHAT",
     "MONITOR", "SIGN", "SFX", "MAP", "TIDE BOARD", "SECURITY", "TECHNICIAN"
 }
+NON_CAST_HANDLES = {"@sds.Station"}
 CORE_HANDLES = {
     "@sds.Astra", "@sds.Mira", "@sds.Jax", "@sds.Noola", "@sds.Zib",
     "@sds.Glorp", "@sds.Kreeb", "@sds.Pixa", "@sds.Brick"
@@ -178,7 +179,8 @@ for entry in stardust_entries:
                 assert isinstance(text, str) and text.strip(), f"{page_id}: blank dialogue text"
                 if isinstance(speaker, str) and speaker.startswith("@"):
                     assert speaker in canonical_handles, f"{page_id}: unknown dialogue handle {speaker}"
-                    assert speaker in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
+                    if speaker not in NON_CAST_HANDLES:
+                        assert speaker in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
                 else:
                     assert speaker in TEXT_SPEAKERS, f"{page_id}: unsupported text speaker {speaker!r}"
 
