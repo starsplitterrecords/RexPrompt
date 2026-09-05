@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "division-threshold",
+  "status": "active",
+  "purpose": "Curated visual authority for Division Threshold image production. This pack recovers approved character identity references and an approved production-example page into RexPrompt without changing release state.",
+  "authority": {
+    "releasedCanon": "starsplitterrecords/StarSplitterVisions",
+    "approvedCurrentProduction": "starsplitterrecords/RexPrompt",
+    "rules": [
+      "Use released StarSplitterVisions canon when Division Threshold material is released there.",
+      "The recovered character sheets are approved identity references for their named characters and control recurring face, body, apparent age, build and defining visual design unless explicitly reopened.",
+      "The recovered Block 9 checkpoint page is the primary approved Division Threshold page-language and Stack-atmosphere production example for early Issue 1.",
+      "Character-reference sheets are identity authority only; their infographic layout, labels, headers and presentation are not interior comic-page style authority.",
+      "Rejected, failed, superseded or unclassified historical generations are not visual authority."
+    ]
+  },
+  "references": [
+    {
+      "id": "dt-e001-p05-production-example",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/page-language/dt-e001-p05-production-example.jpg",
+      "scope": ["page-language", "stack-atmosphere", "checkpoint", "palette", "lighting", "lettering", "ostra-identity"],
+      "characters": ["@dt.Ostra9"],
+      "recipeId": "DT_E001_P05",
+      "use": "Primary production example for Division Threshold interior-page readability, panel hierarchy, lived-in Stack infrastructure, subject/background separation, integrated civic signage and Ostra in-world presentation."
+    },
+    {
+      "id": "ostra-9-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/ostra-9.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.Ostra9"],
+      "use": "Primary Ostra-9 identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    },
+    {
+      "id": "axiom-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/axiom.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.Axiom"],
+      "use": "Primary Axiom / AX10M identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    },
+    {
+      "id": "nico-14-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/nico-14.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.Nico14"],
+      "use": "Primary Nico-14 identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    },
+    {
+      "id": "john-mercer-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/john-mercer.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.JohnMercer"],
+      "use": "Primary John Mercer identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    },
+    {
+      "id": "nathan-price-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/nathan-price.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.NathanPrice"],
+      "use": "Primary Nathan Price identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    },
+    {
+      "id": "kellen-cartwright-approved-reference",
+      "type": "approved-current-production-reference",
+      "image": "production/references/division-threshold/assets/characters/kellen-cartwright.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@dt.KellenCartwright"],
+      "use": "Primary Kellen Cartwright identity reference.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment"]
+    }
+  ],
+  "characterReferenceOrder": {
+    "@dt.Ostra9": ["ostra-9-approved-reference", "dt-e001-p05-production-example"],
+    "@dt.Axiom": ["axiom-approved-reference"],
+    "@dt.Nico14": ["nico-14-approved-reference"],
+    "@dt.JohnMercer": ["john-mercer-approved-reference"],
+    "@dt.NathanPrice": ["nathan-price-approved-reference"],
+    "@dt.KellenCartwright": ["kellen-cartwright-approved-reference"]
+  },
+  "settingReferenceOrder": {
+    "Block 9 Commuter Checkpoint": ["dt-e001-p05-production-example"],
+    "The Stack": ["dt-e001-p05-production-example"]
+  },
+  "pageLanguageReferenceOrder": ["dt-e001-p05-production-example"],
+  "excludedAsPageStyleAuthority": [
+    "production/references/division-threshold/assets/characters/ostra-9.jpg",
+    "production/references/division-threshold/assets/characters/axiom.jpg",
+    "production/references/division-threshold/assets/characters/nico-14.jpg",
+    "production/references/division-threshold/assets/characters/john-mercer.jpg",
+    "production/references/division-threshold/assets/characters/nathan-price.jpg",
+    "production/references/division-threshold/assets/characters/kellen-cartwright.jpg",
+    "rejected or superseded generations"
+  ]
+}
