@@ -20,10 +20,6 @@ MANIFEST = ROOT / "data" / "shows.json"
 REFERENCE_PACK = ROOT / "production" / "references" / "stardust-station" / "visual-reference-pack.json"
 DRAFT_MANIFEST = ROOT / "production" / "drafts" / "manifest.json"
 
-TEXT_SPEAKERS = {
-    "CAPTION", "SYSTEM", "SCREEN", "DISPLAY", "MESSAGE", "GROUP CHAT",
-    "MONITOR", "SIGN", "SFX", "MAP", "TIDE BOARD", "SECURITY", "TECHNICIAN"
-}
 NON_CAST_HANDLES = {"@sds.Station"}
 CORE_HANDLES = {
     "@sds.Astra", "@sds.Mira", "@sds.Jax", "@sds.Noola", "@sds.Zib",
@@ -74,15 +70,16 @@ canonical_handles = {
     for value in characters.values()
     if isinstance(value, dict) and value.get("handle")
 }
-character_speaker_aliases = set()
+speaker_alias_handles: dict[str, str] = {}
 for key, value in characters.items():
-    if not isinstance(value, dict):
+    if not isinstance(value, dict) or not value.get("handle"):
         continue
-    character_speaker_aliases.add(str(key).removeprefix("SDS_").upper())
+    handle = value["handle"]
+    speaker_alias_handles[str(key).removeprefix("SDS_").upper()] = handle
     if value.get("name"):
         name = str(value["name"]).upper()
-        character_speaker_aliases.add(name)
-        character_speaker_aliases.add(name.split()[0])
+        speaker_alias_handles[name] = handle
+        speaker_alias_handles[name.split()[0]] = handle
 assert CORE_HANDLES <= canonical_handles, "Core Stardust handles are missing from characters.json"
 
 for key, character in characters.items():
@@ -195,13 +192,15 @@ for entry in stardust_entries:
                 speaker = line.get("handle") or line.get("speaker")
                 text = line.get("text")
                 assert isinstance(text, str) and text.strip(), f"{page_id}: blank dialogue text"
-                if isinstance(speaker, str) and speaker.startswith("@"):
+                assert isinstance(speaker, str) and speaker.strip(), f"{page_id}: dialogue owner is required"
+                if speaker.startswith("@"):
                     assert speaker in canonical_handles, f"{page_id}: unknown dialogue handle {speaker}"
                     if speaker not in NON_CAST_HANDLES:
                         assert speaker in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
                 else:
-                    normalized = str(speaker or "").upper()
-                    assert normalized in TEXT_SPEAKERS or normalized in character_speaker_aliases, f"{page_id}: unsupported text speaker {speaker!r}"
+                    alias_handle = speaker_alias_handles.get(speaker.upper())
+                    if alias_handle and alias_handle not in NON_CAST_HANDLES:
+                        assert alias_handle in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
 
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
