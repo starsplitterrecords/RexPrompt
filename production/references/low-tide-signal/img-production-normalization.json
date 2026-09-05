@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "low-tide-signal",
+  "status": "normalized-img-production-reference",
+  "purpose": "Durable session-start, visual-authority, continuity, and sequential-production contract for Low Tide Signal image production.",
+  "authority": {
+    "storyUnit": "The exact assembled RexPrompt recipe controls what happens on the current page.",
+    "releasedVisualCanon": "StarSplitterVisions main controls what has actually been published. Low Tide Signal currently has a published preview cover but no released interior pages; the preview cover is not an interior page, recurring-character, or sequential-layout authority.",
+    "currentProduction": "Only clearly approved current-production artwork may extend production state. Failed, rejected, repeated, superseded, preview-only, intake-only, or merely generated images are not continuity authority.",
+    "immediateContinuity": "The immediately preceding approved page may establish carried state, but it is never the sole identity, environment, or style reference."
+  },
+  "releasedBaseline": {
+    "repository": "starsplitterrecords/StarSplitterVisions",
+    "branch": "main",
+    "visionsSlug": "low-tide-signal",
+    "currentRelease": "Preview",
+    "previewCover": "/images/covers/low-tide-signal-issue-01-cover.png",
+    "releasedInteriorPageCount": 0,
+    "releasedInteriorIssueAvailable": false
+  },
+  "referenceScopes": {
+    "characterIdentity": {
+      "currentState": "The six core cast records contain assembler-visible textual design baselines and continuity locks, but no approved character image reference is stored in RexPrompt.",
+      "requiredBeforeCharacterBearingSequentialProduction": [
+        "Matt Donnelly",
+        "Ryan Kelleher",
+        "Chris Barlow",
+        "Justin Rourke",
+        "Nicole Hanley",
+        "Kevin Marsh"
+      ],
+      "rule": "Do not repeatedly redesign faces, apparent ages, bodies, hair, or proportions from prose. Establish approved visual identity references first, then preserve those approved models."
+    },
+    "storyPageLanguage": {
+      "use": "Current Low Tide RexPrompt visual data plus approved current-production story art once it exists. Interior pages are prestige indie sequential comic pages using grounded coastal science-fiction visual language.",
+      "exclude": [
+        "published preview-cover composition or figures",
+        "cover title or trade dress",
+        "promotional or labeled character lineup",
+        "development diagrams or concept sheets not explicitly approved as visual authority",
+        "dossier, infographic, editorial, or production-metadata framing",
+        "failed, rejected, repeated, or superseded generations"
+      ],
+      "rule": "Excluded material is never a story-page layout, header, lettering, framing, or recurring-character template."
+    },
+    "environmentIdentity": {
+      "inland": "Safe, optimized, softly lit gray-blue Harbor Phase with civic glass, rain sheen, restrained UI glow, controlled practical lighting, and functioning systems.",
+      "threshold": "Wet asphalt, cold mist, floodwall mass, vehicle headlights, contractor white light, dark concrete, and runner staging gear.",
+      "flats": "Black tidal mud, old pavement, channels, broken pilings, shell debris, teal pools, sodium reflection, fog gray, physical cold, and difficult footing.",
+      "reach": "Fixed physical abandoned offshore districts with wet concrete, rust orange, black water, deep cyan, faded institutional green, practical light swallowed by fog, and no supernatural treatment."
+    },
+    "currentProduction": {
+      "manifest": "production/drafts/manifest.json",
+      "requiredStatus": "approved-production-draft",
+      "rule": "An image is not durable production authority until it is explicitly approved and stored against its exact recipe key."
+    }
+  },
+  "knownScopeLocks": [
+    {
+      "path": "/images/covers/low-tide-signal-issue-01-cover.png",
+      "scope": "published preview/cover artifact only",
+      "characterIdentityAuthority": false,
+      "storyPageLayoutAuthority": false,
+      "interiorWorldDesignAuthority": false
+    }
+  ],
+  "untrustedProductionSources": [
+    "sites/visions/public/intake/",
+    "published preview-cover figures when selecting interior recurring-character references",
+    "failed generations",
+    "rejected generations",
+    "superseded generations",
+    "repeated wrong-page generations",
+    "unapproved promotional generations",
+    "development concept art without explicit approval"
+  ],
+  "sessionStartGate": [
+    "Resolve the requested Low Tide chapter and ordered RexPrompt recipes.",
+    "Resolve released Low Tide publication state from StarSplitterVisions main and keep the preview cover scoped as preview/cover only.",
+    "Resolve approved post-preview production only from explicit approval evidence and production/drafts/manifest.json.",
+    "Resolve approved recurring-character identity references before character-bearing sequential generation; do not invent a different face model on each page.",
+    "Build a small working Visual Reference Set from approved character/environment references plus approved newer production state.",
+    "Do not include preview-cover figures, cover trade dress, promotional, labeled, rejected, superseded, or intake assets as story-page-language references.",
+    "Derive the production frontier; never resume from a remembered cursor."
+  ],
+  "perPageGate": [
+    "Retrieve or assemble the exact current RexPrompt page recipe.",
+    "Verify that the selected page has not already been successfully produced or released.",
+    "Identify every recurring character, location, costume, prop, and carried story state required by the recipe.",
+    "Select actual approved visual references for recurring characters and any already-established environment or prop.",
+    "Inspect the immediately preceding approved page when state carries forward.",
+    "Generate only after the reference set and immediate continuity are resolved.",
+    "Run reader, recipe-fidelity, character-continuity, spatial/prop, visual-language, composition, and lettering checks.",
+    "Repair the smallest failing unit and do not advance while the page is defective.",
+    "After explicit approval, store the page as the approved production draft for its exact recipe key before relying on it as durable current-production state."
+  ],
+  "frontierPolicy": {
+    "mode": "derived-not-stored",
+    "order": [
+      "explicit current user instruction",
+      "clearly successful/approved unpublished production",
+      "latest released StarSplitterVisions production",
+      "ordered assembled RexPrompt recipes"
+    ],
+    "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
+    "currentDurableState": "StarSplitterVisions has no released Low Tide interior pages and RexPrompt currently stores no approved Low Tide production drafts. With no stronger durable page approval evidence, the durable production frontier is LTS_C01_P01."
+  },
+  "recipeCompilationState": {
+    "chapter1": "Current page recipes are production summaries with dialogue/direction but no panelPlan field; no separate detailed Chapter 1 panel script has been located in the durable sources inspected during normalization.",
+    "chapter2": "A detailed panel-by-panel graphic script exists in Notion, while the current compiled RexPrompt Chapter 2 recipes omit panelPlan. Current RexPrompt dialogue/characterization is newer in places, so panel staging must be recompiled without rolling back current text.",
+    "chapter3": "A detailed panel-by-panel graphic script exists in Notion, while the current compiled RexPrompt Chapter 3 recipes omit panelPlan. Panel staging should be recompiled without rolling back current text.",
+    "rule": "Do not invent missing panel plans during image generation. Where an approved panel script exists, compile its staging into RexPrompt before relying on exact panel sequencing."
+  },
+  "productionReadiness": {
+    "state": "normalized-with-preproduction-gates",
+    "gates": [
+      "Approve durable visual identity references for the six recurring core characters before character-bearing sequential production.",
+      "Recompile available Chapter 2 and Chapter 3 panel staging into current RexPrompt recipes without reverting newer dialogue or character calibration."
+    ]
+  },
+  "storyPageOutputRule": "A normal scripted Low Tide Signal story page is a finished full-color portrait prestige-indie comic page in the grounded coastal science-fiction language of the current package. Do not add a series title, issue/chapter header, page label, character name/handle label, dossier frame, infographic header, credits, promotional callout, cover trade dress, or other non-scripted text. Only text required by the assembled recipe belongs on the story page."
+}
