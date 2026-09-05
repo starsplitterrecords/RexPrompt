@@ -1,0 +1,37 @@
+name: Validate Low Tide IMG Normalization
+
+on:
+  pull_request:
+    paths:
+      - 'data/shows/low-tide-signal/**'
+      - 'data/shows.json'
+      - 'production/references/low-tide-signal/**'
+      - 'production/visual-sources.json'
+      - 'production/released-links.json'
+      - 'production/drafts/manifest.json'
+      - 'tools/validate_low_tide_img_normalization.py'
+      - '.github/workflows/validate-low-tide-img-normalization.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/shows/low-tide-signal/**'
+      - 'data/shows.json'
+      - 'production/references/low-tide-signal/**'
+      - 'production/visual-sources.json'
+      - 'production/released-links.json'
+      - 'production/drafts/manifest.json'
+      - 'tools/validate_low_tide_img_normalization.py'
+      - '.github/workflows/validate-low-tide-img-normalization.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Low Tide IMG normalization
+        run: python tools/validate_low_tide_img_normalization.py
