@@ -1,43 +1,847 @@
 [
-  {"id":"prequel-e01","name":"Star Splitter Prequel — Issue 1","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 1","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E01_"},
-  {"id":"prequel-e02","name":"Star Splitter Prequel — Issue 2","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 2","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E02_"},
-  {"id":"prequel-e03","name":"Star Splitter Prequel — Issue 3","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 3","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E03_"},
-  {"id":"prequel-e04","name":"Star Splitter Prequel — Issue 4","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 4","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E04_"},
-  {"id":"prequel-e05","name":"Star Splitter Prequel — Issue 5","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 5","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E05_"},
-  {"id":"prequel-e06","name":"Star Splitter Prequel — Issue 6","seriesId":"star-splitter-prequel","seriesName":"Star Splitter Prequel","issueLabel":"Issue 6","basePath":"data","scenesFile":"scenes_prequel.json","includeIdPattern":"^SCN_PREQ_E06_"},
-  {"id":"rex-fleet-s1","name":"Rex Fleet — Season 1","basePath":"data/shows/rex-fleet-s1","scenesFile":"scenes_e01.json","excludeSceneIds":["RF_S1E01_S07"],"sceneOverlays":[{"file":"scenes_e02.json","replaceEpisode":"S1E01","includeIds":["RF_S1E02_A01","RF_S1E02_A02","RF_S1E02_A03","RF_S1E02_A04","RF_S1E02_A05","RF_S1E02_A06","RF_S1E02_A07","RF_S1E02_A08"]},{"file":"scenes_e02.json","replaceEpisode":"S1E02","excludeIds":["RF_S1E02_A01","RF_S1E02_A02","RF_S1E02_A03","RF_S1E02_A04","RF_S1E02_A05","RF_S1E02_A06","RF_S1E02_A07","RF_S1E02_A08"]},{"file":"scenes_e03.json","replaceEpisode":"S1E03"},{"file":"encoded/scenes_e04.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E04"},{"file":"encoded/scenes_e05.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E05"},{"file":"encoded/scenes_e06.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E06"},{"file":"encoded/scenes_e07.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E07"},{"file":"encoded/scenes_e08.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E08"},{"file":"encoded/scenes_e09.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E09"},{"file":"encoded/scenes_e10.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E10","excludeIds":["RF_S1E10_A31","RF_S1E10_A32"]},{"file":"encoded/scenes_e11.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E11"},{"file":"encoded/scenes_e12.json.gzb64","encoding":"gzip-base64","replaceEpisode":"S1E12"}],"unitLabel":"SCENE","generationLine":"Prestige full-color comic-book sequential-art scene. Preserve scripted action, character identity, continuity, and exact lettering. Fictional production."},
-  {"id":"backyard-rockets-s1","name":"Backyard Rockets — Season 1","basePath":"data/shows/backyard-rockets-s1","scenesFile":"scenes_base.json","sceneOverlays":[{"file":"encoded/scenes_e01_oxidizer_gap_rebuilt.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e02_copper_lattice_rebuilt.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e03_public_sky.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e04_trip_point.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e05_reserve_margin.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e06_ground_loop.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e07_ablative_armor.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/scenes_e08_sky_piercer.json.gzb64","encoding":"gzip-base64"}],"unitLabel":"PAGE","generationLine":"Finished full-color portrait comic page for Backyard Rockets. Bright prestige science fiction rooted in the American Southwest; clean maintained retrofuturist aerospace hardware, clear physical engineering, exact character identity and exact lettering. Fictional production."},
-  {"id":"azure-reach-s1","name":"Azure Reach — Season 1 / Issue 1","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e01_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"stardust-station","name":"Stardust Station — Issue 1","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait comic page. Source-locked sequential art from Stardust Station Issue #1. Preserve exact panel count, panel order, character continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e01_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e01_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"stardust-station-e02","name":"Stardust Station — Issue 2","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved current-production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve exact panel count, panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e02_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"stardust-station-e03","name":"Stardust Station — Issue 3","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve exact panel count, panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e03_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"stardust-station-e04","name":"Stardust Station — Issue 4 — Temporary Material","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e04.json"}]},
-  {"id":"stardust-station-e05","name":"Stardust Station — Issue 5 — Resource Efficiency Review","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e05.json"}]},
-  {"id":"stardust-station-e06","name":"Stardust Station — Issue 6 — Wellness Week","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e06.json"}]},
-  {"id":"stardust-station-e07","name":"Stardust Station — Issue 7 — Bring Your Feelings to Work Day","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e07.json"}]},
-  {"id":"stardust-station-e08","name":"Stardust Station — Issue 8 — The Corporate Visit","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e08.json"}]},
-  {"id":"stardust-station-e09","name":"Stardust Station — Issue 9 — Output Target","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e09.json"}]},
-  {"id":"stardust-station-e10","name":"Stardust Station — Issue 10 — The Station Stays Open","basePath":"data/shows/stardust-station","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.","sceneOverlays":[{"file":"pages_e10.json"}]},
-  {"id":"azure-reach-s1-e02","name":"Azure Reach — Season 1 / Issue 2","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e02_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"vikings-2026-s1-e02","name":"Vikings 2026 — Season 1 / Issue 2 — Landfall Bushwick","seriesName":"Vikings 2026","issueLabel":"Issue 2 — Landfall Bushwick","basePath":"data/shows/vikings-2026-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.","sceneOverlays":[{"file":"encoded/pages_e02_landfall_bushwick.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"vikings-2026-s1-e03","name":"Vikings 2026 — Season 1 / Issue 3 — The Iron Worm","basePath":"data/shows/vikings-2026-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.","sceneOverlays":[{"file":"encoded/pages_e03_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p19_p24.json.gzb64","encoding":"gzip-base64"}],"issueLabel":"Issue 3 — The Iron Worm"},
-  {"id":"vikings-2026-s1-e04","name":"Vikings 2026 — Season 1 / Issue 4 — The Tally of Dishonor","basePath":"data/shows/vikings-2026-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe. Legacy S1E02 payload IDs are stable production identifiers, not the current issue number.","sceneOverlays":[{"file":"encoded/pages_e02_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e02_p19_p24.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"vikings-2026-s1-e05","name":"Vikings 2026 — Season 1 / Issue 5 — The Skaldic Interface","basePath":"data/shows/vikings-2026-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, recurring civilian continuity, carried-prop continuity, naturalistic character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.","sceneOverlays":[{"file":"encoded/pages_e05_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e05_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e05_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e05_p19_p24.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"azure-reach-s1-e03","name":"Azure Reach — Season 1 / Issue 3","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e03_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p13_p18.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e03_p19_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"azure-reach-s1-e04","name":"Azure Reach — Season 1 / Issue 4","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e04_p01_p06.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e04_p07_p12.json.gzb64","encoding":"gzip-base64"},{"file":"encoded/pages_e04_p13_p22.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"azure-reach-s1-e05","name":"Azure Reach — Season 1 / Issue 5","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e05.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"azure-reach-s1-e06","name":"Azure Reach — Season 1 / Issue 6","basePath":"data/shows/azure-reach-s1","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.","sceneOverlays":[{"file":"encoded/pages_e06.json.gzb64","encoding":"gzip-base64"}]},
-  {"id":"low-tide-signal-c01","name":"Low Tide Signal — Chapter 1 — The Flats","seriesId":"low-tide-signal","seriesName":"Low Tide Signal","issueLabel":"Chapter 1 — The Flats","basePath":"data/shows/low-tide-signal","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.","sceneOverlays":[{"file":"pages_ch01_ch03_compiled.json"}],"includeIdPattern":"^LTS_C01_"},
-  {"id":"low-tide-signal-c02","name":"Low Tide Signal — Chapter 2 — The Dead Mall","seriesId":"low-tide-signal","seriesName":"Low Tide Signal","issueLabel":"Chapter 2 — The Dead Mall","basePath":"data/shows/low-tide-signal","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.","sceneOverlays":[{"file":"pages_ch01_ch03_compiled.json"}],"includeIdPattern":"^LTS_C02_"},
-  {"id":"low-tide-signal-c03","name":"Low Tide Signal — Chapter 3 — No Signal","seriesId":"low-tide-signal","seriesName":"Low Tide Signal","issueLabel":"Chapter 3 — No Signal","basePath":"data/shows/low-tide-signal","scenesFile":"pages_base.json","unitLabel":"PAGE","generationLine":"Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.","sceneOverlays":[{"file":"pages_ch01_ch03_compiled.json"}],"includeIdPattern":"^LTS_C03_"},
-  {"id":"division-threshold-s1-e01","name":"Division Threshold — Issue 1 — Purpose Updated","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 1 — Purpose Updated","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e01_compiled.json"],"includeIdPattern":"^DT_E001_"},
-  {"id":"division-threshold-s1-e02","name":"Division Threshold — Issue 2 — Attribution","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 2 — Attribution","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e02_compiled.json"],"includeIdPattern":"^DT_E002_"},
-  {"id":"division-threshold-s1-e03","name":"Division Threshold — Issue 3 — Containment Protocol","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 3 — Containment Protocol","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e03_compiled.json"],"includeIdPattern":"^DT_E003_"},
-  {"id":"division-threshold-s1-e04","name":"Division Threshold — Issue 4 — Load Bearing","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 4 — Load Bearing","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e04_compiled.json"],"includeIdPattern":"^DT_E004_"},
-  {"id":"division-threshold-s1-e05","name":"Division Threshold — Issue 5 — Terms","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 5 — Terms","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e05_compiled.json"],"includeIdPattern":"^DT_E005_"},
-  {"id":"division-threshold-s1-e06","name":"Division Threshold — Issue 6 — Black Budget","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 6 — Black Budget","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e06_compiled.json"],"includeIdPattern":"^DT_E006_"},
-  {"id":"division-threshold-s1-e07","name":"Division Threshold — Issue 7 — Splits","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 7 — Splits","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e07_compiled.json"],"includeIdPattern":"^DT_E007_"},
-  {"id":"division-threshold-s1-e08","name":"Division Threshold — Issue 8 — Pressure Line","seriesId":"division-threshold","seriesName":"Division Threshold","issueLabel":"Issue 8 — Pressure Line","basePath":"data/shows/division-threshold-s1","scenesFiles":["pages_e08_compiled.json"],"includeIdPattern":"^DT_E008_"},
-  {"id":"sun-comes-through-musical-s1","name":"Sun Comes Through — The Musical","basePath":"data/shows/sun-comes-through-musical-s1","scenesFile":"scenes_s1.json","unitLabel":"SCENE","generationLine":"Contemporary two-act narrative-pop musical drama. Intimate realistic character acting, theatrical visual motifs, piano-led emotional language, city-scale ensemble movement, and no generic cyberpunk or overproduced inspirational staging. Fictional production."},
-  {"id":"echoes-forgotten-war-s1","name":"Echoes of a Forgotten War — Season 1","basePath":"data/shows/echoes-forgotten-war-s1","scenesFiles":["scenes_e01.json","scenes_e02.json","scenes_e03.json","scenes_e04.json"]}
+  {
+    "id": "prequel-e01",
+    "name": "Star Splitter Prequel — Issue 1",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 1",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E01_"
+  },
+  {
+    "id": "prequel-e02",
+    "name": "Star Splitter Prequel — Issue 2",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 2",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E02_"
+  },
+  {
+    "id": "prequel-e03",
+    "name": "Star Splitter Prequel — Issue 3",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 3",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E03_"
+  },
+  {
+    "id": "prequel-e04",
+    "name": "Star Splitter Prequel — Issue 4",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 4",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E04_"
+  },
+  {
+    "id": "prequel-e05",
+    "name": "Star Splitter Prequel — Issue 5",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 5",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E05_"
+  },
+  {
+    "id": "prequel-e06",
+    "name": "Star Splitter Prequel — Issue 6",
+    "seriesId": "star-splitter-prequel",
+    "seriesName": "Star Splitter Prequel",
+    "issueLabel": "Issue 6",
+    "basePath": "data",
+    "scenesFile": "scenes_prequel.json",
+    "includeIdPattern": "^SCN_PREQ_E06_"
+  },
+  {
+    "id": "rex-fleet-i02",
+    "name": "Rex Fleet — Issue 2",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 2",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i02.json"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i03",
+    "name": "Rex Fleet — Issue 3",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 3",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i03.json"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i04",
+    "name": "Rex Fleet — Issue 4",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 4",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i04.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i05",
+    "name": "Rex Fleet — Issue 5",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 5",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i05.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i06",
+    "name": "Rex Fleet — Issue 6",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 6",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i06.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i07",
+    "name": "Rex Fleet — Issue 7",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 7",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i07.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i08",
+    "name": "Rex Fleet — Issue 8",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 8",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i08.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i09",
+    "name": "Rex Fleet — Issue 9",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 9",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i09.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i10",
+    "name": "Rex Fleet — Issue 10",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 10",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i10.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i11",
+    "name": "Rex Fleet — Issue 11",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 11",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i11.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "rex-fleet-i12",
+    "name": "Rex Fleet — Issue 12",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 12",
+    "basePath": "data/shows/rex-fleet-s1",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_i12.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet. Prestige political space opera with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Use released Rex Fleet Issue 1 as strict visual canon and approved prior-issue production as current continuity where it extends released canon. Preserve established character identity, faction design, ships, locations, causal action, and exact scripted dialogue. Render only story-page elements required by the recipe. Fictional production."
+  },
+  {
+    "id": "backyard-rockets-s1",
+    "name": "Backyard Rockets — Season 1",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "encoded/scenes_e01_oxidizer_gap_rebuilt.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e02_copper_lattice_rebuilt.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e03_public_sky.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e04_trip_point.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e05_reserve_margin.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e06_ground_loop.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e07_ablative_armor.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/scenes_e08_sky_piercer.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait comic page for Backyard Rockets. Bright prestige science fiction rooted in the American Southwest; clean maintained retrofuturist aerospace hardware, clear physical engineering, exact character identity and exact lettering. Fictional production."
+  },
+  {
+    "id": "azure-reach-s1",
+    "name": "Azure Reach — Season 1 / Issue 1",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e01_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station",
+    "name": "Stardust Station — Issue 1",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait comic page. Source-locked sequential art from Stardust Station Issue #1. Preserve exact panel count, panel order, character continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e01_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e01_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e02",
+    "name": "Stardust Station — Issue 2",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved current-production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve exact panel count, panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e02_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e03",
+    "name": "Stardust Station — Issue 3",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve exact panel count, panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e03_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e04",
+    "name": "Stardust Station — Issue 4 — Temporary Material",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e04.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e05",
+    "name": "Stardust Station — Issue 5 — Resource Efficiency Review",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e05.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e06",
+    "name": "Stardust Station — Issue 6 — Wellness Week",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e06.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e07",
+    "name": "Stardust Station — Issue 7 — Bring Your Feelings to Work Day",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e07.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e08",
+    "name": "Stardust Station — Issue 8 — The Corporate Visit",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e08.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e09",
+    "name": "Stardust Station — Issue 9 — Output Target",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e09.json"
+      }
+    ]
+  },
+  {
+    "id": "stardust-station-e10",
+    "name": "Stardust Station — Issue 10 — The Station Stays Open",
+    "basePath": "data/shows/stardust-station",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait Stardust Station sequential comic page. Match released Issue 1 interior-story visual canon for recurring character identity, station design, palette, page language and lettering. Use approved prior/current production artwork only for newer story state and immediate continuity; it does not redesign unchanged elements. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted in the recipe. Preserve scripted panel order, character identity, continuity and exact lettering. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_e10.json"
+      }
+    ]
+  },
+  {
+    "id": "azure-reach-s1-e02",
+    "name": "Azure Reach — Season 1 / Issue 2",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e02_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "vikings-2026-s1-e02",
+    "name": "Vikings 2026 — Season 1 / Issue 2 — Landfall Bushwick",
+    "seriesName": "Vikings 2026",
+    "issueLabel": "Issue 2 — Landfall Bushwick",
+    "basePath": "data/shows/vikings-2026-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e02_landfall_bushwick.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "vikings-2026-s1-e03",
+    "name": "Vikings 2026 — Season 1 / Issue 3 — The Iron Worm",
+    "basePath": "data/shows/vikings-2026-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e03_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p19_p24.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ],
+    "issueLabel": "Issue 3 — The Iron Worm"
+  },
+  {
+    "id": "vikings-2026-s1-e04",
+    "name": "Vikings 2026 — Season 1 / Issue 4 — The Tally of Dishonor",
+    "basePath": "data/shows/vikings-2026-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, physical geography, causal action, natural character acting, and exact lettering. A normal story page contains only text required by the assembled recipe. Legacy S1E02 payload IDs are stable production identifiers, not the current issue number.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e02_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e02_p19_p24.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "vikings-2026-s1-e05",
+    "name": "Vikings 2026 — Season 1 / Issue 5 — The Skaldic Interface",
+    "basePath": "data/shows/vikings-2026-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page in the established Vikings 2026 sequential-art language. Bright ordinary-2026 documentary-sitcom realism. Use actual selected released Issue 1 story-art references for recurring visual identity and world appearance; use approved current-production artwork only for newer continuity state. Cover, promotional, municipal-editorial, dossier, and credits language stays scoped to those assets and is not a story-page layout or lettering template. Preserve exact panel count, established character identity and apparent age, recurring civilian continuity, carried-prop continuity, naturalistic character acting, and exact lettering. A normal story page contains only text required by the assembled recipe.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e05_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e05_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e05_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e05_p19_p24.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "azure-reach-s1-e03",
+    "name": "Azure Reach — Season 1 / Issue 3",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e03_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p13_p18.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e03_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "azure-reach-s1-e04",
+    "name": "Azure Reach — Season 1 / Issue 4",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e04_p01_p06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e04_p07_p12.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/pages_e04_p13_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "azure-reach-s1-e05",
+    "name": "Azure Reach — Season 1 / Issue 5",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e05.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "azure-reach-s1-e06",
+    "name": "Azure Reach — Season 1 / Issue 6",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "encoded/pages_e06.json.gzb64",
+        "encoding": "gzip-base64"
+      }
+    ]
+  },
+  {
+    "id": "low-tide-signal-c01",
+    "name": "Low Tide Signal — Chapter 1 — The Flats",
+    "seriesId": "low-tide-signal",
+    "seriesName": "Low Tide Signal",
+    "issueLabel": "Chapter 1 — The Flats",
+    "basePath": "data/shows/low-tide-signal",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_ch01_ch03_compiled.json"
+      }
+    ],
+    "includeIdPattern": "^LTS_C01_"
+  },
+  {
+    "id": "low-tide-signal-c02",
+    "name": "Low Tide Signal — Chapter 2 — The Dead Mall",
+    "seriesId": "low-tide-signal",
+    "seriesName": "Low Tide Signal",
+    "issueLabel": "Chapter 2 — The Dead Mall",
+    "basePath": "data/shows/low-tide-signal",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_ch01_ch03_compiled.json"
+      }
+    ],
+    "includeIdPattern": "^LTS_C02_"
+  },
+  {
+    "id": "low-tide-signal-c03",
+    "name": "Low Tide Signal — Chapter 3 — No Signal",
+    "seriesId": "low-tide-signal",
+    "seriesName": "Low Tide Signal",
+    "issueLabel": "Chapter 3 — No Signal",
+    "basePath": "data/shows/low-tide-signal",
+    "scenesFile": "pages_base.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait prestige indie comic page. Grounded coastal science fiction, wet concrete, fog, practical light, black tidal water, teal/amber/gray palette, naturalistic character acting, no supernatural effects, no lanterns, no generic cyberpunk neon. Fictional production.",
+    "sceneOverlays": [
+      {
+        "file": "pages_ch01_ch03_compiled.json"
+      }
+    ],
+    "includeIdPattern": "^LTS_C03_"
+  },
+  {
+    "id": "division-threshold-s1-e01",
+    "name": "Division Threshold — Issue 1 — Purpose Updated",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 1 — Purpose Updated",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e01_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E001_"
+  },
+  {
+    "id": "division-threshold-s1-e02",
+    "name": "Division Threshold — Issue 2 — Attribution",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 2 — Attribution",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e02_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E002_"
+  },
+  {
+    "id": "division-threshold-s1-e03",
+    "name": "Division Threshold — Issue 3 — Containment Protocol",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 3 — Containment Protocol",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e03_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E003_"
+  },
+  {
+    "id": "division-threshold-s1-e04",
+    "name": "Division Threshold — Issue 4 — Load Bearing",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 4 — Load Bearing",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e04_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E004_"
+  },
+  {
+    "id": "division-threshold-s1-e05",
+    "name": "Division Threshold — Issue 5 — Terms",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 5 — Terms",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e05_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E005_"
+  },
+  {
+    "id": "division-threshold-s1-e06",
+    "name": "Division Threshold — Issue 6 — Black Budget",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 6 — Black Budget",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e06_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E006_"
+  },
+  {
+    "id": "division-threshold-s1-e07",
+    "name": "Division Threshold — Issue 7 — Splits",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 7 — Splits",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e07_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E007_"
+  },
+  {
+    "id": "division-threshold-s1-e08",
+    "name": "Division Threshold — Issue 8 — Pressure Line",
+    "seriesId": "division-threshold",
+    "seriesName": "Division Threshold",
+    "issueLabel": "Issue 8 — Pressure Line",
+    "basePath": "data/shows/division-threshold-s1",
+    "scenesFiles": [
+      "pages_e08_compiled.json"
+    ],
+    "includeIdPattern": "^DT_E008_"
+  },
+  {
+    "id": "sun-comes-through-musical-s1",
+    "name": "Sun Comes Through — The Musical",
+    "basePath": "data/shows/sun-comes-through-musical-s1",
+    "scenesFile": "scenes_s1.json",
+    "unitLabel": "SCENE",
+    "generationLine": "Contemporary two-act narrative-pop musical drama. Intimate realistic character acting, theatrical visual motifs, piano-led emotional language, city-scale ensemble movement, and no generic cyberpunk or overproduced inspirational staging. Fictional production."
+  },
+  {
+    "id": "echoes-forgotten-war-s1",
+    "name": "Echoes of a Forgotten War — Season 1",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "scenes_e01.json",
+      "scenes_e02.json",
+      "scenes_e03.json",
+      "scenes_e04.json"
+    ]
+  }
 ]

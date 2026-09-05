@@ -3,14 +3,25 @@
   "visionsSiteBase": "https://star-splitter-visions.vercel.app",
   "visionsSeriesRawBase": "https://raw.githubusercontent.com/starsplitterrecords/StarSplitterVisions/main/sites/visions/src/content/series",
   "series": {
-    "azure-reach": { "visionsSlug": "azure-reach" },
-    "backyard-rockets": { "visionsSlug": "backyard-rockets" },
-    "low-tide-signal": { "visionsSlug": "low-tide-signal" },
-    "rex-fleet": { "visionsSlug": "rex-fleet" },
+    "azure-reach": {
+      "visionsSlug": "azure-reach"
+    },
+    "backyard-rockets": {
+      "visionsSlug": "backyard-rockets"
+    },
+    "low-tide-signal": {
+      "visionsSlug": "low-tide-signal"
+    },
+    "rex-fleet": {
+      "visionsSlug": "rex-fleet",
+      "referencePack": "production/references/rex-fleet/visual-reference-pack.json"
+    },
     "stardust-station": {
       "visionsSlug": "stardust-station",
       "referencePack": "production/references/stardust-station/visual-reference-pack.json"
     },
-    "vikings-2026": { "visionsSlug": "vikings-2026" }
+    "vikings-2026": {
+      "visionsSlug": "vikings-2026"
+    }
   }
 }
