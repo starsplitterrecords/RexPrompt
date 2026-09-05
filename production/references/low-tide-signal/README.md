@@ -2,15 +2,15 @@
 
 This directory records the durable visual-authority rules for Low Tide Signal image production.
 
-## Released baseline
+## Released preview state
 
 StarSplitterVisions currently publishes a **Preview**, not a released interior issue. The current public preview asset is:
 
 - `/images/covers/low-tide-signal-issue-01-cover.png`
 
-Treat that released cover as **series atmosphere / world-tone reference only** unless a later approved decision explicitly gives it narrower character authority.
+That asset is a published preview/cover artifact. It is **not an interior production reference** and must not be used to establish recurring character faces, body models, wardrobe, interior page layout, panel language, or story geography.
 
-Do **not** use cover typography, title treatment, trade dress, labels, framing, or cover composition as interior-page design authority.
+Do **not** use its typography, title treatment, trade dress, labels, framing, cover composition, or depicted figures as authority for sequential page generation.
 
 There are currently no released Low Tide interior pages in StarSplitterVisions, so there is no released page-layout baseline and no released page-to-recipe mapping to infer.
 
@@ -59,7 +59,7 @@ Letter only the captions, dialogue, signs, interface text, and SFX required by t
 
 ## Reference hygiene
 
-Do not use rejected generations, repeated failed attempts, superseded designs, promotional labels, development diagrams, or unapproved concept art as continuity authority.
+Do not use rejected generations, repeated failed attempts, superseded designs, promotional labels, development diagrams, preview-cover figures, or unapproved concept art as continuity authority.
 
 For every generation, use the mandatory production gate:
 
