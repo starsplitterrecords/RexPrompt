@@ -4,12 +4,14 @@ on:
   pull_request:
     paths:
       - 'data/shows/division-threshold-s1/**'
+      - 'production/references/division-threshold/**'
       - 'tools/validate_division_threshold.py'
       - '.github/workflows/validate-division-threshold.yml'
   push:
     branches: [main]
     paths:
       - 'data/shows/division-threshold-s1/**'
+      - 'production/references/division-threshold/**'
       - 'tools/validate_division_threshold.py'
 
 jobs:
