@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "division-threshold",
+  "status": "normalized-img-production-reference",
+  "purpose": "Durable session-start, visual-authority, continuity, and sequential-production contract for Division Threshold image production.",
+  "releaseState": "unreleased-no-released-visual-canon",
+  "authority": {
+    "storyUnit": "The exact assembled RexPrompt recipe controls what happens on the current page.",
+    "releasedVisualCanon": "StarSplitterVisions main must be checked at session start. Division Threshold currently has no released issue or released visual canon; do not invent one from prior chat generations.",
+    "currentProduction": "Only clearly approved current-production artwork stored against its exact recipe key may establish post-start visual state. Failed, rejected, repeated, superseded, intake-only, promotional, or merely generated images are not continuity authority.",
+    "immediateContinuity": "The immediately preceding approved page may establish carried state, but after a visual baseline exists it is never the sole identity, world, or style reference."
+  },
+  "textualProductionBaseline": {
+    "characters": "data/shows/division-threshold-s1/characters.json",
+    "settings": "data/shows/division-threshold-s1/settings.json",
+    "regions": "data/shows/division-threshold-s1/regions.json",
+    "factions": "data/shows/division-threshold-s1/factions.json",
+    "visualReconciliation": [
+      "data/shows/division-threshold-s1/issue_01_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_02_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_03_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_04_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_05_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_06_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_07_visual_reconciliation.json",
+      "data/shows/division-threshold-s1/issue_08_visual_reconciliation.json"
+    ],
+    "rule": "Until approved artwork exists, these assembler-visible identity and world constraints define a clean visual start but are not a substitute for actual approved visual references once those references exist."
+  },
+  "referenceScopes": {
+    "characterIdentity": {
+      "cleanStart": "Use assembler-visible visualAnchor, performance, and continuity-lock fields for the six locked leads. Do not infer alternate designs from genre convention or remembered chat images.",
+      "afterApproval": "Select the clearest approved durable appearance of every recurring character required by the current recipe and use text anchors to protect details that are unclear visually.",
+      "rule": "A newly generated appearance does not become identity authority merely because it is the newest image. It must pass production review and be explicitly approved/stored."
+    },
+    "worldAndLocation": {
+      "primary": "Use the assembled page setting/settingText, region/regionText, and faction context together with the corresponding persistent shelves.",
+      "rule": "Recurring locations retain one visual identity across camera changes. Split-location and montage pages must preserve the distinct established spaces named by the assembled recipe rather than averaging them into one generic Stack environment."
+    },
+    "storyPageLanguage": {
+      "cleanStart": "Use the Division Threshold generation line and assembled page requirements for the first approved page. Establish a prestige portrait sequential-art language grounded in the Stack's accumulated infrastructure, readable physical geography, restrained institutional design, and non-superhero posthuman bodies.",
+      "afterApproval": "Use a selective set of the strongest approved ordinary story pages to stabilize rendering density, palette, gutters, lettering, architecture and panel language.",
+      "exclude": [
+        "promotional lineups or labeled cast graphics",
+        "covers or title-card compositions",
+        "credits or editorial pages",
+        "production annotations, contact sheets or comparison montages",
+        "failed, rejected, repeated or superseded generations"
+      ]
+    },
+    "currentProduction": {
+      "manifest": "production/drafts/manifest.json",
+      "requiredStatus": "approved-production-draft",
+      "rule": "An image is not durable production authority until it is explicitly approved and stored against its exact recipe key."
+    }
+  },
+  "untrustedProductionSources": [
+    "failed generations",
+    "rejected generations",
+    "repeated wrong-page generations",
+    "superseded generations",
+    "unapproved prior-chat images",
+    "unapproved promotional generations",
+    "contact sheets or labeled character graphics not explicitly approved as scoped references",
+    "remembered visual descriptions when durable production data is available"
+  ],
+  "sessionStartGate": [
+    "Resolve the requested Division Threshold issue and ordered RexPrompt recipes from the current repository.",
+    "Check StarSplitterVisions main for a released Division Threshold baseline; if none exists, remain in clean visual-start mode rather than substituting chat history.",
+    "Resolve approved durable Division Threshold references and recipe-level drafts from production/references and production/drafts/manifest.json.",
+    "If no approved visual baseline exists, build the first page only from the exact assembled recipe plus current character, setting, region and faction production data.",
+    "After approved visual references exist, build a small working Visual Reference Set from the strongest relevant approved pages/references plus immediate continuity.",
+    "For every recurring character or recurring location required by the next page, use an actual approved visual reference whenever one exists.",
+    "Derive the production frontier; never resume from a remembered cursor or from the last image visible in chat."
+  ],
+  "perPageGate": [
+    "Retrieve or assemble the exact current RexPrompt page recipe.",
+    "Verify that the selected page has not already been successfully produced, approved, or released.",
+    "Identify every recurring character, location, costume, prop and carried story state required by the recipe.",
+    "Select approved visual references for recurring elements whenever such references exist; otherwise use the normalized assembler-visible baseline without inventing competing canon.",
+    "Inspect the immediately preceding approved page when spatial, physical, emotional, environmental or object state carries forward.",
+    "Generate only after recipe, reference authority and immediate continuity are resolved.",
+    "Run reader, recipe-fidelity, character-continuity, spatial/prop, visual-language, composition and lettering checks.",
+    "Repair the smallest failing unit and do not advance while the page is defective.",
+    "After explicit approval, store the page as the approved production draft for its exact recipe key before relying on it as durable current-production state."
+  ],
+  "frontierPolicy": {
+    "mode": "derived-not-stored",
+    "order": [
+      "explicit current user instruction",
+      "clearly successful/approved unpublished production with durable approval evidence",
+      "latest released StarSplitterVisions production when it exists",
+      "ordered assembled RexPrompt recipes"
+    ],
+    "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded or unusable generations do not advance it.",
+    "currentDurableState": "Division Threshold is unreleased and production/drafts/manifest.json currently contains no approved Division Threshold recipe-level drafts. Absent stronger explicit approval evidence, the clean production frontier is DT_E001_P01."
+  },
+  "storyPageOutputRule": "A normal scripted Division Threshold unit is a finished full-color portrait prestige science-fiction comic page. Do not add a series title, issue header, page label, character name/handle label, dossier frame, credits, promotional callout, infographic heading or other non-scripted text. Only text required by the assembled recipe belongs on the story page."
+}
