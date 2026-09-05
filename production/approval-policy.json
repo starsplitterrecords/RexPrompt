@@ -20,11 +20,12 @@
     "redesign": "Replacing an existing released or approved visual identity requires explicit user intent to lock or adopt the redesign."
   },
   "persistence": {
-    "mode": "stage-then-vendor",
-    "stagingPurpose": "binary transport only",
-    "preferredStagingProvider": "cloudinary",
+    "mode": "direct-github-git-data",
+    "binaryWrite": "Encode the approved image bytes as base64 and write them with the GitHub Git Data create_blob API.",
+    "transaction": "Create the image blob and updated manifest blob, place both in one Git tree, create one commit, then advance the target branch ref.",
     "finalAuthority": "production/drafts/manifest.json",
     "finalStorage": "production/drafts/<series>/<issue>/<recipe>.<ext>",
+    "externalStagingRequired": false,
     "frontierRule": "Production frontier is derived from released canon plus approved production drafts; it is never stored as a chat cursor."
   }
 }
