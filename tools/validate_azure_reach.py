@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Mechanical integrity checks for Azure Reach RexPrompt data.
 
-This validator intentionally does not freeze creative choices such as exact dialogue,
-page titles, page counts, panel totals, issue handoffs, character behavior, or story
-beats. It checks only that the current RexPrompt package can be decoded and that its
-references and basic page structures are internally valid.
+Creative choices remain authored in RexPrompt/Notion, not in this validator. This
+script checks parseability, reference integrity, page identity/ordering, and that
+assembler-visible visual anchors exist for established recurring characters.
 """
 import base64
 import gzip
@@ -43,6 +42,18 @@ canonical_handles = {
     for value in characters.values()
     if isinstance(value, dict) and value.get("handle")
 }
+
+# Established recurring production characters need an assembler-visible visual
+# anchor because index.html does not emit character notes.
+visual_anchor_ids = {
+    "AZR_Maya", "AZR_Julian", "AZR_Fleur", "AZR_Pip", "AZR_Sal",
+    "AZR_Beatrice", "AZR_Kyler", "AZR_Dora", "AZR_Elliot", "AZR_Nia", "AZR_Raf",
+}
+for character_id in visual_anchor_ids:
+    entry = characters.get(character_id)
+    assert isinstance(entry, dict), f"Missing Azure Reach character: {character_id}"
+    anchor = entry.get("visualAnchor")
+    assert isinstance(anchor, str) and anchor.strip(), f"{character_id}: missing assembler-visible visualAnchor"
 
 assert (SHOW / "pages_base.json").exists(), "Missing pages_base.json"
 
@@ -141,6 +152,14 @@ for entry in azure_entries:
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
     assert ordered == list(range(1, max(ordered) + 1)), f"{show_id}: non-contiguous page numbering"
+
+    # continuityFrom is optional creative production data. When present, validate
+    # only its shape; do not freeze a particular dramatic chain here.
+    for page in pages:
+        continuity_from = page.get("continuityFrom")
+        if continuity_from is not None:
+            assert isinstance(continuity_from, str) and continuity_from.strip(), f"{page['id']}: invalid continuityFrom"
+
     page_total += len(pages)
 
 print("Azure Reach mechanical validation passed")
