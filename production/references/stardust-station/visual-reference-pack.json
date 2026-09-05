@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "stardust-station",
+  "status": "active",
+  "purpose": "Curated visual authority for Stardust Station sequential image production. This pack points to released StarSplitterVisions canon and explicitly approved current-production references without changing release state.",
+  "authority": {
+    "releasedCanon": "starsplitterrecords/StarSplitterVisions",
+    "approvedCurrentProduction": "starsplitterrecords/RexPrompt",
+    "rules": [
+      "Released Issue 1 interior story pages control established faces, bodies, species designs, costume language, station design, palette, lettering and comic-page language.",
+      "The approved Issue 2 cast lineup is a secondary identity reference for the nine recurring core characters only; it is not page-layout, lettering, framing or story canon.",
+      "Approved production drafts may establish newer story state after Issue 1 but do not redesign unchanged character identity.",
+      "Rejected, failed, superseded or chat-only generations are not visual authority."
+    ]
+  },
+  "references": [
+    {
+      "id": "core-cast-approved-lineup",
+      "type": "approved-current-production-reference",
+      "image": "production/references/stardust-station/issue-2-cast-promo-thumb.jpg",
+      "scope": ["character-identity"],
+      "characters": ["@sds.Astra", "@sds.Mira", "@sds.Jax", "@sds.Noola", "@sds.Zib", "@sds.Glorp", "@sds.Kreeb", "@sds.Pixa", "@sds.Brick"],
+      "use": "Secondary identity cross-check for the nine core cast. Use with released Issue 1 artwork, never instead of released canon.",
+      "notFor": ["page layout", "headers", "character labels", "lettering", "title treatment", "story staging"]
+    },
+    {
+      "id": "issue-01-page-001-ensemble",
+      "type": "released-canon",
+      "image": "/images/pages/stardust-station/issue-01/page-001.jpg",
+      "scope": ["character-identity", "page-language", "main-bullpen", "palette", "lettering"],
+      "characters": ["@sds.Astra", "@sds.Mira", "@sds.Zib", "@sds.Noola", "@sds.Jax", "@sds.Glorp", "@sds.Kreeb", "@sds.Brick", "@sds.Pixa"],
+      "use": "Primary released ensemble baseline and Main Bullpen/Admin Hub page-language reference."
+    },
+    {
+      "id": "issue-01-page-004-small-group",
+      "type": "released-canon",
+      "image": "/images/pages/stardust-station/issue-01/page-004.jpg",
+      "scope": ["character-identity", "small-group-staging", "main-bullpen", "page-language"],
+      "characters": ["@sds.Astra", "@sds.Mira", "@sds.Zib", "@sds.Jax", "@sds.Brick", "@sds.Pixa"],
+      "use": "Released smaller-group identity and acting reference for the human crew, Zib, Brick and Pixa."
+    },
+    {
+      "id": "issue-01-page-005-office-group",
+      "type": "released-canon",
+      "image": "/images/pages/stardust-station/issue-01/page-005.jpg",
+      "scope": ["character-identity", "small-group-staging", "main-bullpen", "page-language"],
+      "characters": ["@sds.Astra", "@sds.Brick", "@sds.Pixa", "@sds.Glorp", "@sds.Kreeb", "@sds.Noola", "@sds.Jax"],
+      "use": "Primary released reference for Glorp, Kreeb and Noola in ordinary coworker staging, with Astra, Jax, Brick and Pixa for scale."
+    },
+    {
+      "id": "issue-01-page-006-inspector",
+      "type": "released-canon",
+      "image": "/images/pages/stardust-station/issue-01/page-006.jpg",
+      "scope": ["character-identity", "main-bullpen", "inspector", "page-language"],
+      "characters": ["@sds.Astra", "@sds.Mira", "@sds.Zib", "@sds.Pixa", "@sds.Noola", "@sds.Jax", "@sds.Glorp", "@sds.Kreeb", "@sds.Brick", "@sds.Inspector"],
+      "use": "Released Inspector anchor and supporting full-cast Main Bullpen reference."
+    },
+    {
+      "id": "issue-01-page-007-west-corridor",
+      "type": "released-canon",
+      "image": "/images/pages/stardust-station/issue-01/page-007.jpg",
+      "scope": ["character-identity", "west-corridor", "environment", "lighting", "spatial-continuity", "page-language"],
+      "characters": ["@sds.Astra", "@sds.Mira", "@sds.Zib", "@sds.Jax", "@sds.Brick", "@sds.Pixa", "@sds.Noola", "@sds.Inspector"],
+      "use": "Primary released West Corridor geography, lighting and compressed-group staging reference."
+    }
+  ],
+  "characterReferenceOrder": {
+    "@sds.Astra": ["core-cast-approved-lineup", "issue-01-page-001-ensemble", "issue-01-page-004-small-group"],
+    "@sds.Mira": ["core-cast-approved-lineup", "issue-01-page-001-ensemble", "issue-01-page-004-small-group"],
+    "@sds.Jax": ["core-cast-approved-lineup", "issue-01-page-004-small-group", "issue-01-page-005-office-group"],
+    "@sds.Noola": ["core-cast-approved-lineup", "issue-01-page-005-office-group", "issue-01-page-001-ensemble"],
+    "@sds.Zib": ["core-cast-approved-lineup", "issue-01-page-001-ensemble", "issue-01-page-004-small-group"],
+    "@sds.Glorp": ["core-cast-approved-lineup", "issue-01-page-005-office-group", "issue-01-page-001-ensemble"],
+    "@sds.Kreeb": ["core-cast-approved-lineup", "issue-01-page-005-office-group", "issue-01-page-001-ensemble"],
+    "@sds.Pixa": ["core-cast-approved-lineup", "issue-01-page-004-small-group", "issue-01-page-005-office-group"],
+    "@sds.Brick": ["core-cast-approved-lineup", "issue-01-page-004-small-group", "issue-01-page-005-office-group"],
+    "@sds.Inspector": ["issue-01-page-006-inspector", "issue-01-page-007-west-corridor"]
+  },
+  "settingReferenceOrder": {
+    "Main Bullpen / Admin Hub": ["issue-01-page-001-ensemble", "issue-01-page-004-small-group", "issue-01-page-005-office-group"],
+    "West Corridor": ["issue-01-page-007-west-corridor"]
+  },
+  "pageLanguageReferenceOrder": ["issue-01-page-001-ensemble", "issue-01-page-004-small-group", "issue-01-page-005-office-group", "issue-01-page-007-west-corridor"],
+  "excludedAsPageStyleAuthority": [
+    "production/references/stardust-station/issue-2-cast-promo-thumb.jpg",
+    "/images/covers/stardust-station-issue-01.jpg",
+    "credits pages",
+    "editorial pages",
+    "promotional graphics",
+    "character-label graphics",
+    "rejected or superseded generations"
+  ]
+}

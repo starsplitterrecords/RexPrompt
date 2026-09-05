@@ -38,3 +38,18 @@ Example:
 ```
 
 Do not populate released links by guessing from scene order.
+
+## Curated continuity reference packs
+
+A released series may also define an optional `referencePack` path in its `visual-sources.json` entry.
+
+A reference pack is **not another canon layer**. It is a curated index pointing to the strongest existing visual authorities for production startup and per-unit reference selection. It may combine:
+
+- selected released interior-story images from StarSplitterVisions,
+- explicitly approved current-production identity/corrective references from RexPrompt,
+- character-to-reference and setting-to-reference selection order,
+- explicit exclusions identifying assets that must not be used as page-style authority.
+
+Production workflows should load a configured reference pack at the start of an IMG production session and use the smallest relevant subset before every generation call. The pack does not replace the exact assembled recipe, released canon, approved draft state, or immediate continuity.
+
+Do not use `released-links.json` to point an unreleased recipe at an earlier issue merely for visual continuity. That would falsely imply that the selected recipe itself has released canon. Cross-issue continuity belongs in a curated reference pack instead.
