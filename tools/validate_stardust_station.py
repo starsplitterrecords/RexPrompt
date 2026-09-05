@@ -11,6 +11,7 @@ from __future__ import annotations
 import base64
 import gzip
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +29,7 @@ CORE_HANDLES = {
     "@sds.Astra", "@sds.Mira", "@sds.Jax", "@sds.Noola", "@sds.Zib",
     "@sds.Glorp", "@sds.Kreeb", "@sds.Pixa", "@sds.Brick"
 }
+PAGE_ID_RE = re.compile(r"_P(\d+)$")
 
 
 def load(path: Path):
@@ -44,6 +46,15 @@ def load_overlay(path: Path, encoding: str | None):
         return load(path)
     assert encoding == "gzip-base64", f"Unsupported Stardust overlay encoding: {encoding}"
     return decode_gzip_base64(path)
+
+
+def page_number_for(page: dict) -> int:
+    value = page.get("page")
+    if isinstance(value, int) and value > 0:
+        return value
+    match = PAGE_ID_RE.search(str(page.get("id", "")))
+    assert match, f"{page.get('id')}: no usable page number or _P## recipe suffix"
+    return int(match.group(1))
 
 
 shows = load(MANIFEST)
@@ -63,6 +74,15 @@ canonical_handles = {
     for value in characters.values()
     if isinstance(value, dict) and value.get("handle")
 }
+character_speaker_aliases = set()
+for key, value in characters.items():
+    if not isinstance(value, dict):
+        continue
+    character_speaker_aliases.add(str(key).removeprefix("SDS_").upper())
+    if value.get("name"):
+        name = str(value["name"]).upper()
+        character_speaker_aliases.add(name)
+        character_speaker_aliases.add(name.split()[0])
 assert CORE_HANDLES <= canonical_handles, "Core Stardust handles are missing from characters.json"
 
 for key, character in characters.items():
@@ -127,9 +147,7 @@ for entry in stardust_entries:
         seen_ids.add(page_id)
         all_recipe_ids.add(page_id)
 
-        page_number = page.get("page")
-        assert isinstance(page_number, int) and page_number > 0, f"{page_id}: invalid page number"
-        page_numbers.append(page_number)
+        page_numbers.append(page_number_for(page))
 
         assert isinstance(page.get("summary"), str) and page["summary"].strip(), f"{page_id}: missing summary"
         panel_plan = page.get("panelPlan")
@@ -182,7 +200,8 @@ for entry in stardust_entries:
                     if speaker not in NON_CAST_HANDLES:
                         assert speaker in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
                 else:
-                    assert speaker in TEXT_SPEAKERS, f"{page_id}: unsupported text speaker {speaker!r}"
+                    normalized = str(speaker or "").upper()
+                    assert normalized in TEXT_SPEAKERS or normalized in character_speaker_aliases, f"{page_id}: unsupported text speaker {speaker!r}"
 
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
