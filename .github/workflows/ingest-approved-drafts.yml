@@ -1,0 +1,45 @@
+name: Ingest approved production drafts
+
+on:
+  push:
+    paths:
+      - production/drafts/intake.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: approved-draft-ingest-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Ingest staged approved images
+        env:
+          APPROVED_DRAFT_STAGING_HOSTS: res.cloudinary.com
+        run: python3 tools/ingest_approved_drafts.py
+
+      - name: Commit durable approved draft state
+        shell: bash
+        run: |
+          if git diff --quiet -- production/drafts; then
+            echo "No approved draft changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add production/drafts
+          git commit -m "Persist approved production draft"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
