@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data" / "shows" / "division-threshold-s1"
+NORMALIZATION_REFERENCE = ROOT / "production" / "references" / "division-threshold" / "img-production-normalization.json"
 
 
 def load(name: str):
@@ -66,10 +67,26 @@ def main():
     regions = load("regions.json")
     factions = load("factions.json")
 
+    assert NORMALIZATION_REFERENCE.exists(), "Missing Division Threshold IMG production normalization reference"
+    with NORMALIZATION_REFERENCE.open(encoding="utf-8") as fh:
+        normalization = json.load(fh)
+    assert normalization.get("schemaVersion") == 1, "Unexpected Division Threshold normalization schema version"
+    assert normalization.get("seriesId") == "division-threshold", "Normalization reference has wrong seriesId"
+    assert normalization.get("status") == "normalized-img-production-reference", "Normalization reference is not active"
+    assert normalization.get("releaseState") == "unreleased-no-released-visual-canon", "Division Threshold release-state contract changed unexpectedly"
+    assert normalization.get("frontierPolicy", {}).get("mode") == "derived-not-stored", "Division Threshold production frontier must remain derived"
+    assert normalization.get("referenceScopes", {}).get("currentProduction", {}).get("manifest") == "production/drafts/manifest.json", "Approved-draft authority must remain the production draft manifest"
+    assert len(normalization.get("sessionStartGate", [])) >= 7, "Division Threshold session-start gate is incomplete"
+    assert len(normalization.get("perPageGate", [])) >= 9, "Division Threshold per-page visual gate is incomplete"
+    assert normalization.get("storyPageOutputRule"), "Division Threshold story-page output rule is missing"
+
     expected_visual_overlays = [f"issue_{issue:02d}_visual_reconciliation.json" for issue in range(1, 9)]
     active_scene_overlays = [overlay.get("file") for overlay in assembler.get("sceneOverlays", [])]
     for filename in expected_visual_overlays:
         assert filename in active_scene_overlays, f"Missing normalized visual overlay: {filename}"
+
+    expected_reference_overlays = [f"data/shows/division-threshold-s1/{filename}" for filename in expected_visual_overlays]
+    assert normalization.get("textualProductionBaseline", {}).get("visualReconciliation") == expected_reference_overlays, "Normalization reference and assembler visual overlays disagree"
 
     pages = []
     for filename in assembler["scenesFiles"]:
@@ -206,7 +223,7 @@ def main():
                 assert handle in handles, f"{page['id']}: unknown dialogue handle {handle}"
 
     print("Division Threshold validation passed")
-    print("8 issues / 208 pages / normalized visual context through Issue 8 / locked lead visual anchors / valid production references")
+    print("8 issues / 208 pages / normalized visual context through Issue 8 / durable IMG session contract / locked lead visual anchors / valid production references")
 
 
 if __name__ == "__main__":
