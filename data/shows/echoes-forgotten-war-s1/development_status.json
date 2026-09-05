@@ -2,17 +2,25 @@
   "series": "Echoes of a Forgotten War",
   "productionMode": "one assembled RexPrompt recipe equals one finished portrait comic page",
   "productionAuthority": "assembled RexPrompt output",
-  "visualAuthority": "approved current-production visual anchors until released StarSplitterVisions canon exists",
-  "pageRule": "One scene recipe produces one page. Do not combine multiple recipes into a contact sheet, montage, issue summary, spread, cover, or single composite image.",
-  "continuityRule": "Use continuityFrom plus character visual anchors, region language and the last successful page. Failed, rejected, repeated or superseded generations do not advance production.",
+  "releaseState": "unreleased; no Echoes material exists in current StarSplitterVisions main",
+  "visualAuthority": "released StarSplitterVisions canon when it exists; until then, explicitly approved durable current-production references and drafts, supplemented by assembler-visible character and setting anchors",
+  "visualReferenceState": "No durable approved Echoes image reference is currently stored in RexPrompt. Do not promote prior chat generations by inference. Establish and store approved artwork before using it as visual authority.",
+  "pageRule": "One compiled recipe produces one page. Do not combine multiple recipes into a contact sheet, montage, issue summary, spread, cover, or single composite image.",
+  "continuityRule": "Use character visual anchors, region/setting language, approved durable artwork, and continuityFrom where present. Failed, rejected, repeated, promotional, labeled, or superseded generations do not advance production and are not continuity references.",
+  "frontierRule": "Image-production frontier is derived dynamically from released Visions pages plus approved production drafts in recipe order. Do not use the writing/recovery frontier as an image-production cursor and do not store or guess a cursor.",
+  "developmentGranularity": "comic_page_spine_v1.json is a 22-beat-per-issue development map. It is not the current image-generation page cursor. Issues 1-4 are compiled into 12 finished-page recipes each.",
   "letteringRule": "Dialogue emitted by the assembler is exact production text. Do not invent, paraphrase, omit, duplicate or reassign it during image generation.",
-  "pageDesignRule": "Use each recipe's panelPlan as page architecture. Layout may vary, but all specified beats, cast, dialogue and final-page function must remain clear.",
+  "pageDesignRule": "Use each compiled recipe's panelPlan as page architecture. Layout may vary, but all specified beats, cast, dialogue and final-page function must remain clear.",
   "visualRule": "Strong subject/background value separation. Readability first, scale second, spectacle third. Ground cosmic events in people, inhabited places and material consequences.",
   "issues": {
-    "1": {"status": "compiled for sequential page production", "recipeFile": "scenes_e01.json", "pageCount": 12},
-    "2": {"status": "compiled for sequential page production", "recipeFile": "scenes_e02.json", "pageCount": 12},
-    "3": {"status": "compiled for sequential page production", "recipeFile": "scenes_e03.json", "pageCount": 12},
-    "4": {"status": "compiled for sequential page production", "recipeFile": "scenes_e04.json", "pageCount": 12},
-    "5": {"status": "next recovery frontier", "recipeFile": "scenes_e05.json", "pageCount": 12}
-  }
+    "1": {"status": "compiled for sequential page production", "recipeFile": "scenes_e01.json", "pageCount": 12, "panelPlan": true},
+    "2": {"status": "compiled for sequential page production", "recipeFile": "scenes_e02.json", "pageCount": 12, "panelPlan": true},
+    "3": {"status": "compiled for sequential page production", "recipeFile": "scenes_e03.json", "pageCount": 12, "panelPlan": true},
+    "4": {"status": "compiled for sequential page production", "recipeFile": "scenes_e04.json", "pageCount": 12, "panelPlan": true},
+    "5": {"status": "normalized source material; not compiled for image production", "recipeFile": "scenes_e05.json", "pageCount": 12, "panelPlan": false},
+    "6": {"status": "normalized source material; not compiled for image production", "recipeFile": "scenes_e06.json", "pageCount": 12, "panelPlan": false},
+    "7": {"status": "normalized source material; not compiled for image production", "recipeFile": "scenes_e07.json", "pageCount": 12, "panelPlan": false},
+    "8": {"status": "normalized source material; not compiled for image production", "recipeFile": "scenes_e08.json", "pageCount": 12, "panelPlan": false}
+  },
+  "writingRecoveryFrontier": "Issue 5; this is a writing/page-compilation frontier only"
 }
