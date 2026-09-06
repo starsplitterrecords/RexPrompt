@@ -1,0 +1,37 @@
+name: IMG Readback Stardust
+
+on:
+  push:
+    paths:
+      - '.github/workflows/img-readback-stardust.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare Stardust production references
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p readback
+          cp production/references/stardust-station/issue-2-cast-promo-thumb.jpg readback/issue-2-cast-promo-thumb.jpg
+          python3 - <<'PY'
+          import base64, gzip, json, pathlib
+          src = pathlib.Path('data/shows/stardust-station/encoded/pages_e02_p01_p06.json.gzb64')
+          data = gzip.decompress(base64.b64decode(src.read_text().strip()))
+          pages = json.loads(data)
+          p1 = next(p for p in pages if p.get('id') == 'SDS_S1E02_P01')
+          pathlib.Path('readback/SDS_S1E02_P01.json').write_text(json.dumps(p1, indent=2, ensure_ascii=False) + '\n')
+          PY
+          git hash-object readback/issue-2-cast-promo-thumb.jpg
+      - name: Upload exact production references
+        uses: actions/upload-artifact@v4
+        with:
+          name: stardust-production-reference-readback
+          path: readback/
+          if-no-files-found: error
+          retention-days: 1
