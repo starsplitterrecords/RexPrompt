@@ -53,3 +53,11 @@ A reference pack is **not another canon layer**. It is a curated index pointing 
 Production workflows should load a configured reference pack at the start of an IMG production session and use the smallest relevant subset before every generation call. The pack does not replace the exact assembled recipe, released canon, approved draft state, or immediate continuity.
 
 Do not use `released-links.json` to point an unreleased recipe at an earlier issue merely for visual continuity. That would falsely imply that the selected recipe itself has released canon. Cross-issue continuity belongs in a curated reference pack instead.
+
+## Binary image readback for IMG production
+
+Approved production draft metadata is not a substitute for viewing the image itself.
+
+When a fresh IMG session needs an approved RexPrompt draft for continuity, retrieve the actual stored pixels before generation. The canonical current method is documented in [`IMG_BINARY_READBACK.md`](./IMG_BINARY_READBACK.md): resolve the manifest/path, use a GitHub Actions artifact bridge to transport the binary image into the active session, extract the original image, and visually inspect it.
+
+Do not fall back to manifest metadata, Git SHAs, filenames, conversation descriptions, or memory when the required image bytes are available through the artifact bridge.
