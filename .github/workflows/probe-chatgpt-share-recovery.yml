@@ -15,54 +15,61 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect public share image references
+      - name: Probe shared image download resolver
         shell: bash
         run: |
           python3 - <<'PY'
-          import html
           import json
-          import re
           import sys
+          import urllib.error
+          import urllib.parse
           import urllib.request
 
-          cfg = json.load(open('production/recovery/share-source.json', encoding='utf-8'))
-          url = cfg['url']
-          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (StarSplitterVisions recovery probe)'})
-          try:
-              with urllib.request.urlopen(req, timeout=30) as r:
-                  data = r.read()
-                  final = r.geturl()
-                  status = getattr(r, 'status', None)
-          except Exception as exc:
-              print('FETCH_ERROR', type(exc).__name__, str(exc))
-              sys.exit(1)
-
-          text = data.decode('utf-8', 'replace')
-          decoded = html.unescape(text).replace('\\u0026', '&').replace('\\/', '/')
-          print('STATUS', status)
-          print('FINAL', final)
-          print('BYTES', len(data))
-
-          ids = []
-          seen = set()
-          for pattern in (r'file_[0-9a-f]{32}', r'file-[A-Za-z0-9_-]{12,}'):
-              for match in re.finditer(pattern, decoded):
-                  value = match.group(0)
-                  if value not in seen:
-                      seen.add(value)
-                      ids.append((value, match.start()))
-
-          print('UNIQUE_FILE_IDS', len(ids))
-          for value, pos in ids[:160]:
-              left = max(0, pos - 240)
-              right = min(len(decoded), pos + len(value) + 420)
-              snippet = decoded[left:right].replace('\r', ' ').replace('\n', ' ')
-              print('FILE_CONTEXT', value, snippet[:900])
-
-          for marker in ('asset_pointer', 'image_asset_pointer', 'sediment://', 'file-service://', 'download_url', 'sandbox:/', 'container_asset_pointer', 'image_url'):
-              hits = [m.start() for m in re.finditer(re.escape(marker), decoded, flags=re.I)]
-              print('MARKER', marker, 'COUNT', len(hits))
-              for pos in hits[:20]:
-                  snippet = decoded[max(0,pos-200):min(len(decoded),pos+700)].replace('\r',' ').replace('\n',' ')
-                  print('MARKER_CONTEXT', marker, snippet[:900])
+          share_id = '6a9bed0e-1c3c-83ea-8316-0a24093527d9'
+          file_id = 'file_000000001ac4822f874db6f4f1b5bb1e'
+          base = f'https://chatgpt.com/backend-api/files/download/{file_id}'
+          candidates = [
+              base + '?' + urllib.parse.urlencode({'shared_conversation_id': share_id, 'inline': 'false'}),
+              base + '?' + urllib.parse.urlencode({'conversation_id': share_id, 'inline': 'false'}),
+              base + '?' + urllib.parse.urlencode({'shared_conversation_id': share_id}),
+          ]
+          headers = {
+              'User-Agent': 'Mozilla/5.0 (StarSplitterVisions recovery probe)',
+              'Referer': f'https://chatgpt.com/share/{share_id}',
+              'Accept': 'application/json,text/plain,*/*',
+          }
+          success = False
+          for i, url in enumerate(candidates, 1):
+              print('TRY', i, url.split('?')[0], urllib.parse.urlsplit(url).query)
+              req = urllib.request.Request(url, headers=headers)
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      body = r.read(1024 * 1024)
+                      print('STATUS', getattr(r, 'status', None), 'TYPE', r.headers.get('Content-Type'), 'BYTES', len(body))
+                      text = body.decode('utf-8', 'replace')
+                      try:
+                          payload = json.loads(text)
+                      except Exception:
+                          payload = None
+                      if isinstance(payload, dict):
+                          print('JSON_KEYS', sorted(payload.keys()))
+                          download = payload.get('download_url') or payload.get('url')
+                          if isinstance(download, str) and download.startswith('http'):
+                              print('HAS_DOWNLOAD_URL', True)
+                              dreq = urllib.request.Request(download, headers={'User-Agent': headers['User-Agent']})
+                              with urllib.request.urlopen(dreq, timeout=45) as dr:
+                                  data = dr.read(5 * 1024 * 1024)
+                                  print('DOWNLOAD_STATUS', getattr(dr, 'status', None), 'TYPE', dr.headers.get('Content-Type'), 'BYTES', len(data), 'MAGIC', data[:12].hex())
+                              success = len(data) > 100000
+                              if success:
+                                  break
+                      else:
+                          print('BODY_PREFIX', text[:300].replace('\n', ' '))
+              except urllib.error.HTTPError as e:
+                  body = e.read(2000).decode('utf-8', 'replace')
+                  print('HTTP_ERROR', e.code, body[:500].replace('\n',' '))
+              except Exception as e:
+                  print('ERROR', type(e).__name__, str(e))
+          if not success:
+              sys.exit(2)
           PY
