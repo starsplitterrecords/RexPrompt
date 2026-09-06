@@ -14,20 +14,52 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo '=== individual objects ==='
-          for f in .recovery-inspect/blob*.bin; do
-            printf '%s size=' "$f"
-            stat -c %s "$f"
-            printf 'sha256='
-            sha256sum "$f" | awk '{print $1}'
-            printf 'signature='
-            xxd -p -l 24 "$f"
-            printf 'file='
-            file -b "$f"
-          done
-          echo '=== concatenated object ==='
-          cat .recovery-inspect/blob*.bin > /tmp/recovered.concat
-          printf 'size='; stat -c %s /tmp/recovered.concat
-          printf 'sha256='; sha256sum /tmp/recovered.concat | awk '{print $1}'
-          printf 'signature='; xxd -p -l 24 /tmp/recovered.concat
-          printf 'file='; file -b /tmp/recovered.concat
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, math
+          files=sorted(Path('.recovery-inspect').glob('blob*.bin'))
+          targets={
+          'LTS_C01_S01':'b4c89f2956842ae968feaa6402cdc5dce012a2b3a5cb53933eba49b7c04f31cf',
+          'LTS_C01_S02':'b18c4a8e3edc6667d034d425d997dc1d67a0db147bfd1b0fb82e7992e6efba6e',
+          'LTS_C01_S03':'8245dfb55e9123245c89806b0f44ac2288faad6e22b3cd2b90ecb34e8bda6a4d',
+          'LTS_C01_S04':'dbc089758cd63f6fe48c0ab7b360d68628576496ec4709dec77545b308ccfa93',
+          'LTS_C01_S05':'bb5c0424eec122ee201f69fb09b009478ecdc6e288714feed10eb5f0bacaa8ed',
+          'LTS_C01_S06':'e16f7ed9f1348b091f0c9c776b8baaf103d0f848bc7bc479c0e66ad67c5ddf34',
+          'LTS_C01_S07':'9e5ddb23d30b40d0b9c8c326e57c84ac25650fa2853deeb93ac728e25323ccd5',
+          'LTS_C01_S08':'f194cf8f3e5e8434f18c806149efc22fc64918f32c280025b298cddc79734e36'}
+          magics={
+          'png':b'\x89PNG\r\n\x1a\n','jpeg':b'\xff\xd8\xff','gif87':b'GIF87a','gif89':b'GIF89a',
+          'webp':b'WEBP','zip':b'PK\x03\x04','gzip':b'\x1f\x8b','pdf':b'%PDF','riff':b'RIFF',
+          '7z':b'7z\xbc\xaf\x27\x1c','zstd':b'\x28\xb5\x2f\xfd'}
+          def ent(b):
+              from collections import Counter
+              c=Counter(b); n=len(b)
+              return -sum((v/n)*math.log2(v/n) for v in c.values()) if n else 0
+          for p in files:
+              b=p.read_bytes(); h=hashlib.sha256(b).hexdigest()
+              print(f'{p.name} size={len(b)} sha256={h} entropy={ent(b):.4f}')
+              for rid,th in targets.items():
+                  if h==th: print('  MATCH',rid)
+              for name,m in magics.items():
+                  offs=[]; start=0
+                  while True:
+                      i=b.find(m,start)
+                      if i<0: break
+                      offs.append(i); start=i+1
+                  if offs: print('  magic',name,offs[:20])
+          allb=b''.join(p.read_bytes() for p in files)
+          print(f'concat size={len(allb)} sha256={hashlib.sha256(allb).hexdigest()} entropy={ent(allb):.4f}')
+          for name,m in magics.items():
+              offs=[]; start=0
+              while True:
+                  i=allb.find(m,start)
+                  if i<0: break
+                  offs.append(i); start=i+1
+              if offs: print('concat magic',name,offs[:100])
+          import gzip,zlib,bz2,lzma
+          for name,fn in [('gzip',gzip.decompress),('zlib',zlib.decompress),('bz2',bz2.decompress),('lzma',lzma.decompress)]:
+              try:
+                  out=fn(allb)
+                  print('decompress',name,'OK',len(out),hashlib.sha256(out).hexdigest(),out[:24].hex())
+              except Exception as e: print('decompress',name,'FAIL',type(e).__name__)
+          PY
