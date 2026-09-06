@@ -1,0 +1,33 @@
+name: Low Tide recovery binary inspection
+
+on:
+  push:
+    branches:
+      - lts-recovery-inspect-20260905
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect recovered blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '=== individual objects ==='
+          for f in .recovery-inspect/blob*.bin; do
+            printf '%s size=' "$f"
+            stat -c %s "$f"
+            printf 'sha256='
+            sha256sum "$f" | awk '{print $1}'
+            printf 'signature='
+            xxd -p -l 24 "$f"
+            printf 'file='
+            file -b "$f"
+          done
+          echo '=== concatenated object ==='
+          cat .recovery-inspect/blob*.bin > /tmp/recovered.concat
+          printf 'size='; stat -c %s /tmp/recovered.concat
+          printf 'sha256='; sha256sum /tmp/recovered.concat | awk '{print $1}'
+          printf 'signature='; xxd -p -l 24 /tmp/recovered.concat
+          printf 'file='; file -b /tmp/recovered.concat
