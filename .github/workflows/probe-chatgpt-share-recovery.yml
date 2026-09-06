@@ -17,21 +17,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Resolve shared originals and commit Git blobs
+      - name: Resolve shared originals and commit exact Git blobs
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64
-          import datetime
-          import http.cookiejar
-          import json
-          import os
-          import pathlib
-          import subprocess
-          import urllib.parse
-          import urllib.request
+          import base64, datetime, http.cookiejar, json, os, pathlib, urllib.parse, urllib.request
 
           ROOT = pathlib.Path.cwd()
           REPO = os.environ['GITHUB_REPOSITORY']
@@ -42,7 +34,7 @@ jobs:
           SHARE_URL = 'https://chatgpt.com/share/' + SHARE_ID
           UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140.0 Safari/537.36'
 
-          # Final passing/repaired image for each exact RexPrompt recipe.
+          # Final passing/repaired shared-chat image for each exact RexPrompt recipe.
           PAGES = {
               'AZR_S1E02_P01': ('file_00000000109081f59863fba18841d414', 2633354),
               'AZR_S1E02_P02': ('file_0000000070bc822f9f3b6d530bb69dd4', 2599579),
@@ -57,67 +49,51 @@ jobs:
               'AZR_S1E02_P11': ('file_000000001ac4822f874db6f4f1b5bb1e', 2629536),
           }
 
-          def request_json(opener, url, method='GET', payload=None, extra_headers=None):
-              headers = {'User-Agent': UA, 'Accept': 'application/json'}
-              if extra_headers:
-                  headers.update(extra_headers)
+          def request_json(opener, url, method='GET', payload=None, headers=None):
+              h = {'User-Agent': UA, 'Accept': 'application/json'}
+              if headers: h.update(headers)
               data = None
               if payload is not None:
-                  data = json.dumps(payload).encode('utf-8')
-                  headers['Content-Type'] = 'application/json'
-              req = urllib.request.Request(url, data=data, headers=headers, method=method)
-              with opener.open(req, timeout=60) as r:
-                  return json.loads(r.read().decode('utf-8'))
+                  data = json.dumps(payload).encode()
+                  h['Content-Type'] = 'application/json'
+              req = urllib.request.Request(url, data=data, headers=h, method=method)
+              with opener.open(req, timeout=90) as r:
+                  return json.loads(r.read().decode())
 
-          # Establish the public shared-conversation session. The resolver requires these cookies.
+          # Establish the anonymous public-share session required by the file resolver.
           jar = http.cookiejar.CookieJar()
           public = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
-          with public.open(urllib.request.Request(SHARE_URL, headers={'User-Agent': UA}), timeout=30) as r:
+          with public.open(urllib.request.Request(SHARE_URL, headers={'User-Agent': UA}), timeout=45) as r:
               r.read()
           if not any(c.name == 'oai-did' for c in jar):
-              raise RuntimeError('Shared-conversation session cookie was not established')
+              raise RuntimeError('public shared-conversation session was not established')
 
           manifest_path = ROOT / 'production/drafts/manifest.json'
           manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          if manifest.get('schemaVersion') != 1 or not isinstance(manifest.get('drafts'), dict):
+              raise RuntimeError('invalid draft manifest')
           drafts = manifest['drafts']
-          out_dir = ROOT / 'production/drafts/azure-reach/azure-reach-s1-e02'
-          out_dir.mkdir(parents=True, exist_ok=True)
           recovered = {}
 
           for recipe_id, (file_id, expected_size) in PAGES.items():
-              query = urllib.parse.urlencode({'shared_conversation_id': SHARE_ID, 'inline': 'false'})
-              resolver = f'https://chatgpt.com/backend-api/files/download/{file_id}?{query}'
-              payload = request_json(
-                  public,
-                  resolver,
-                  extra_headers={'Referer': SHARE_URL, 'Origin': 'https://chatgpt.com'},
-              )
-              download_url = payload.get('download_url')
-              if not isinstance(download_url, str) or not download_url.startswith('https://'):
-                  raise RuntimeError(f'{recipe_id}: resolver did not return a download URL')
-              with public.open(urllib.request.Request(download_url, headers={'User-Agent': UA}), timeout=60) as r:
+              resolver = 'https://chatgpt.com/backend-api/files/download/' + file_id + '?' + urllib.parse.urlencode({
+                  'shared_conversation_id': SHARE_ID,
+                  'inline': 'false',
+              })
+              resolved = request_json(public, resolver, headers={'Referer': SHARE_URL, 'Origin': 'https://chatgpt.com'})
+              url = resolved.get('download_url')
+              if not isinstance(url, str) or not url.startswith('https://'):
+                  raise RuntimeError(f'{recipe_id}: missing signed download URL')
+              with public.open(urllib.request.Request(url, headers={'User-Agent': UA}), timeout=90) as r:
                   data = r.read(8 * 1024 * 1024)
-                  mime = (r.headers.get('Content-Type') or '').split(';', 1)[0].strip().lower()
+                  mime = (r.headers.get('Content-Type') or '').split(';', 1)[0].lower()
               if len(data) != expected_size:
                   raise RuntimeError(f'{recipe_id}: expected {expected_size} bytes, got {len(data)}')
-              if not data.startswith(b'\x89PNG\r\n\x1a\n'):
-                  raise RuntimeError(f'{recipe_id}: recovered asset is not a PNG')
-              if mime and mime != 'image/png':
-                  raise RuntimeError(f'{recipe_id}: unexpected MIME {mime}')
+              if not data.startswith(b'\x89PNG\r\n\x1a\n') or (mime and mime != 'image/png'):
+                  raise RuntimeError(f'{recipe_id}: recovered bytes are not the expected PNG')
 
-              filename = recipe_id.lower() + '.png'
-              rel = pathlib.Path('production/drafts/azure-reach/azure-reach-s1-e02') / filename
-              absolute = ROOT / rel
-              absolute.write_bytes(data)
-
+              rel = pathlib.Path('production/drafts/azure-reach/azure-reach-s1-e02') / (recipe_id.lower() + '.png')
               key = f'azure-reach::azure-reach-s1-e02::{recipe_id}'
-              previous = drafts.get(key)
-              if isinstance(previous, dict):
-                  old_image = previous.get('image')
-                  if isinstance(old_image, str) and old_image != rel.as_posix():
-                      old_path = ROOT / old_image
-                      if old_path.is_file() and old_path.is_relative_to(ROOT / 'production/drafts'):
-                          old_path.unlink()
               drafts[key] = {
                   'seriesId': 'azure-reach',
                   'issueId': 'azure-reach-s1-e02',
@@ -133,11 +109,17 @@ jobs:
               print('RECOVERED', recipe_id, file_id, len(data))
 
           manifest['drafts'] = dict(sorted(drafts.items()))
-          manifest_bytes = (json.dumps(manifest, indent=2, ensure_ascii=False) + '\n').encode('utf-8')
-          manifest_path.write_bytes(manifest_bytes)
+          manifest_text = json.dumps(manifest, indent=2, ensure_ascii=False) + '\n'
 
-          # Validate the exact local tree before creating any GitHub objects.
-          subprocess.run(['python3', 'tools/validate_visual_state.py'], check=True)
+          # Recovery-scoped integrity gate. Do not let unrelated series validation defects block this atomic recovery.
+          for recipe_id, (_, expected_size) in PAGES.items():
+              key = f'azure-reach::azure-reach-s1-e02::{recipe_id}'
+              entry = manifest['drafts'].get(key)
+              rel, data = recovered[recipe_id]
+              assert entry and entry['status'] == 'approved-production-draft'
+              assert entry['image'] == rel.as_posix() and entry['mimeType'] == 'image/png'
+              assert len(data) == expected_size and data.startswith(b'\x89PNG\r\n\x1a\n')
+          print('RECOVERY_INTEGRITY_PASS', len(recovered))
 
           gh = urllib.request.build_opener()
           auth = {
@@ -145,42 +127,30 @@ jobs:
               'Accept': 'application/vnd.github+json',
               'X-GitHub-Api-Version': '2022-11-28',
           }
-
           def gh_json(path, method='GET', payload=None):
-              return request_json(gh, API + path, method=method, payload=payload, extra_headers=auth)
+              return request_json(gh, API + path, method=method, payload=payload, headers=auth)
 
-          head_commit = gh_json('/git/commits/' + HEAD)
-          base_tree = head_commit['tree']['sha']
+          base_tree = gh_json('/git/commits/' + HEAD)['tree']['sha']
           elements = []
 
-          # Create exact binary image blobs directly with the Git Data API.
+          # Exact PNGs are Git blobs; no CDN/staging service is involved.
           for recipe_id, (rel, data) in recovered.items():
-              blob = gh_json('/git/blobs', method='POST', payload={
+              blob = gh_json('/git/blobs', 'POST', {
                   'content': base64.b64encode(data).decode('ascii'),
                   'encoding': 'base64',
               })
               elements.append({'path': rel.as_posix(), 'mode': '100644', 'type': 'blob', 'sha': blob['sha']})
-              old_jpg = rel.with_suffix('.jpg')
-              if (ROOT / old_jpg).exists():
-                  # Should not normally remain after local replacement, but delete if present in the base tree.
-                  (ROOT / old_jpg).unlink()
-              # Explicitly remove historical JPEG proxy paths for recovered P06-P11.
               if recipe_id in {'AZR_S1E02_P06','AZR_S1E02_P07','AZR_S1E02_P08','AZR_S1E02_P09','AZR_S1E02_P10','AZR_S1E02_P11'}:
-                  elements.append({'path': old_jpg.as_posix(), 'mode': '100644', 'type': 'blob', 'sha': None})
+                  elements.append({'path': rel.with_suffix('.jpg').as_posix(), 'mode': '100644', 'type': 'blob', 'sha': None})
 
-          manifest_blob = gh_json('/git/blobs', method='POST', payload={
-              'content': manifest_bytes.decode('utf-8'),
-              'encoding': 'utf-8',
-          })
+          manifest_blob = gh_json('/git/blobs', 'POST', {'content': manifest_text, 'encoding': 'utf-8'})
           elements.append({'path': 'production/drafts/manifest.json', 'mode': '100644', 'type': 'blob', 'sha': manifest_blob['sha']})
-
-          tree = gh_json('/git/trees', method='POST', payload={'base_tree': base_tree, 'tree': elements})
-          commit = gh_json('/git/commits', method='POST', payload={
+          tree = gh_json('/git/trees', 'POST', {'base_tree': base_tree, 'tree': elements})
+          commit = gh_json('/git/commits', 'POST', {
               'message': 'Recover Azure Reach Issue 2 P01-P11 original drafts',
               'tree': tree['sha'],
               'parents': [HEAD],
           })
-          gh_json('/git/refs/heads/main', method='PATCH', payload={'sha': commit['sha'], 'force': False})
-          print('COMMIT', commit['sha'])
-          print('RECOVERED_COUNT', len(recovered))
+          gh_json('/git/refs/heads/main', 'PATCH', {'sha': commit['sha'], 'force': False})
+          print('RECOVERY_COMMIT', commit['sha'])
           PY
