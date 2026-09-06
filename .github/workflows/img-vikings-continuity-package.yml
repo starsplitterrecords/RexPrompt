@@ -1,0 +1,36 @@
+name: IMG Vikings Continuity Package
+
+on:
+  push:
+    paths:
+      - '.github/workflows/img-vikings-continuity-package.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch released Vikings canon
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/starsplitterrecords/StarSplitterVisions.git /tmp/visions
+          mkdir -p readback
+          cp /tmp/visions/sites/visions/public/images/series/vikings-2026/character-lineup.png readback/00-character-lineup.png
+          cp /tmp/visions/sites/visions/public/images/pages/vikings-2026/issue-01/page-002.jpg readback/01-page-002.jpg
+          cp /tmp/visions/sites/visions/public/images/pages/vikings-2026/issue-01/page-003.jpg readback/02-page-003.jpg
+          cp /tmp/visions/sites/visions/public/images/pages/vikings-2026/issue-01/page-015.jpg readback/03-page-015.jpg
+          cp /tmp/visions/sites/visions/public/images/pages/vikings-2026/issue-01/page-016.jpg readback/04-page-016.jpg
+          cp /tmp/visions/sites/visions/public/images/pages/vikings-2026/issue-01/page-021.jpg readback/05-page-021.jpg
+          cp production/references/vikings-2026/img-production-normalization.json readback/img-production-normalization.json
+          sha1sum readback/*.png readback/*.jpg
+      - name: Upload continuity pixels
+        uses: actions/upload-artifact@v4
+        with:
+          name: vikings-character-continuity-package
+          path: readback/
+          if-no-files-found: error
+          retention-days: 1
