@@ -1,4 +1,4 @@
-name: Apply and validate residual writerly-language repair
+name: Final writerly-language page-note cleanup
 
 on:
   push:
@@ -21,74 +21,32 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Clean residual writerly language
-        run: python tools/fix_writerly_language_residual.py
-
-      - name: Run affected-series validators
+      - name: Clean final page notes
+        run: python tools/fix_writerly_language_final_notes.py
+      - name: Validate Backyard Rockets
         run: |
-          python tools/validate_azure_reach.py
           python tools/validate_backyard_rockets.py
           python tools/validate_backyard_rockets_sanitization.py
-          python tools/validate_echoes.py
-          python tools/validate_rex_fleet.py
-          python tools/validate_stardust_station.py
-          python tools/validate_vikings_2026.py
-          python tools/validate_low_tide_img_normalization.py
-
-      - name: Confirm unrelated validator failures predate repair
-        run: |
-          git worktree add /tmp/rexprompt-main origin/main >/dev/null
-          compare_failure() {
-            local script="$1"
-            local expected="$2"
-            set +e
-            branch_output=$(python "$script" 2>&1)
-            branch_status=$?
-            main_output=$(cd /tmp/rexprompt-main && python "$script" 2>&1)
-            main_status=$?
-            set -e
-            printf '%s\n' "$branch_output"
-            if [ "$branch_status" -eq 0 ]; then return 0; fi
-            if [ "$main_status" -ne 0 ] \
-               && printf '%s' "$branch_output" | grep -q "$expected" \
-               && printf '%s' "$main_output" | grep -q "$expected"; then
-              echo "$script failure is unchanged from origin/main and unrelated to this writing repair."
-              return 0
-            fi
-            printf '%s\n' "$main_output"
-            return 1
-          }
-          compare_failure tools/validate_division_threshold.py 'Division Threshold session-start gate is incomplete'
-          compare_failure tools/validate_visual_state.py "visionsSlug is required"
-
       - name: Install review dependency
         run: python -m pip install --disable-pip-version-check reportlab==4.2.5
-
       - name: Build assembled production reviews
         run: python tools/export_review_pdfs.py --out dist/review-pdfs
-
       - name: Upload assembled review bundle
         uses: actions/upload-artifact@v4
         with:
-          name: residual-writerly-language-review-${{ github.sha }}
+          name: final-writerly-language-review-${{ github.sha }}
           path: dist/review-pdfs/
           if-no-files-found: error
           retention-days: 7
-
       - name: Commit repaired story data
         run: |
-          if git diff --quiet -- data; then
-            echo 'No story-data changes produced.'
-            exit 1
-          fi
+          if git diff --quiet -- data; then exit 1; fi
           git config user.name 'starsplitterrecords'
           git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
           git add data
-          git commit -m 'Remove residual writerly language from active story data'
+          git commit -m 'Remove final writerly production notes'
           git push
