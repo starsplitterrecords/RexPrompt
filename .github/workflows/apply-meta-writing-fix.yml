@@ -1,4 +1,4 @@
-name: Apply and validate writerly-language repair
+name: Apply and validate residual writerly-language repair
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Clean unearned writerly language
-        run: python tools/fix_writerly_language_pass.py
+      - name: Clean residual writerly language
+        run: python tools/fix_writerly_language_residual.py
 
       - name: Run affected-series validators
         run: |
@@ -54,7 +54,6 @@ jobs:
             main_status=$?
             set -e
             printf '%s\n' "$branch_output"
-            echo "$script branch_status=$branch_status main_status=$main_status"
             if [ "$branch_status" -eq 0 ]; then return 0; fi
             if [ "$main_status" -ne 0 ] \
                && printf '%s' "$branch_output" | grep -q "$expected" \
@@ -77,7 +76,7 @@ jobs:
       - name: Upload assembled review bundle
         uses: actions/upload-artifact@v4
         with:
-          name: writerly-language-repair-review-${{ github.sha }}
+          name: residual-writerly-language-review-${{ github.sha }}
           path: dist/review-pdfs/
           if-no-files-found: error
           retention-days: 7
@@ -91,5 +90,5 @@ jobs:
           git config user.name 'starsplitterrecords'
           git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
           git add data
-          git commit -m 'Reduce unearned writerly language across Star Splitter series'
+          git commit -m 'Remove residual writerly language from active story data'
           git push
