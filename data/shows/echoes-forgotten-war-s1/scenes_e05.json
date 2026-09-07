@@ -2,477 +2,281 @@
   {
     "id": "EFW_S1E05_S01",
     "settingText": "Present-day temporary quarters aboard the exposed Vael-Tor dreadnought, repurposed by local authorities into a shelter and investigation site.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "After Adrian's revelation, Theo and Rae refuse to accept that they are the same people who lived through the war. Adrian offers no mystical proof; he tells them to revisit what they already remember.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "No. You don't get to say that and make it true."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Same people for how long?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Long enough that the question stopped helping."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Prove it."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "I can't."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Convenient."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Remember it yourself."
-      }
+      {"handle": "@ech.theo", "text": "No. You don't get to say that and make it true."},
+      {"handle": "@ech.rae", "text": "Same people for how long?"},
+      {"handle": "@ech.adrian", "text": "Long enough that the question stopped helping."},
+      {"handle": "@ech.theo", "text": "Prove it."},
+      {"handle": "@ech.adrian", "text": "I can't."},
+      {"handle": "@ech.rae", "text": "Convenient."},
+      {"handle": "@ech.adrian", "text": "Remember it yourself."}
     ],
-    "directionInline": [
-      {
-        "text": "Keep Adrian from becoming a lore dispenser. He cannot demonstrate identity through a device or test. The only proof is recovered continuity, which he knows will hurt them."
-      }
+    "directionInline": [{"text": "Keep Adrian from becoming a lore dispenser. He cannot demonstrate identity through a device or test. The only proof is recovered continuity, which he knows will hurt them."}],
+    "panelPlan": [
+      {"text": "Panel 1 — Temporary living quarters improvised inside the exposed Vael-Tor dreadnought: cots, relief supplies, civilian partitions and work lamps bolted against ancient black hull. Theo, Rae and Adrian sit in a space made ordinary by necessity."},
+      {"text": "Panel 2 — Theo, angry: 'No. You don't get to say that and make it true.' Rae follows immediately: 'Same people for how long?' Their questions attack different parts of the revelation."},
+      {"text": "Panel 3 — Adrian: 'Long enough that the question stopped helping.' He does not offer chronology, mysticism or a technical explanation."},
+      {"text": "Panel 4 — Theo: 'Prove it.' Adrian: 'I can't.' Rae: 'Convenient.' Adrian accepts the accusation rather than defending himself."},
+      {"text": "Panel 5 — Adrian: 'Remember it yourself.' Final image holds Theo and Rae against the ancient hull around them—the only available proof is the continuity already inside them."}
     ]
   },
   {
     "id": "EFW_S1E05_S02",
     "settingText": "Revisited ancient Desert Marker memory from Issue 1: same battlefield, same Starbreaker composition, but the frame is wider.",
-    "characters": [
-      "EFW_Starbreaker",
-      "EFW_Mero",
-      "EFW_Theo"
-    ],
+    "characters": ["EFW_Starbreaker", "EFW_Mero", "EFW_Theo"],
     "summary": "Theo revisits the first Starbreaker memory. The exact composition from Issue 1 returns, then widens to reveal ancient Theo standing behind Mero with a satchel of dispatches. Mero addresses him naturally.",
     "dialogueInline": [
-      {
-        "handle": "@ech.starbreaker",
-        "text": "You know what happens if I wait."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "Theo."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Sir."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "Stay close."
-      }
+      {"handle": "@ech.starbreaker", "text": "You know what happens if I wait."},
+      {"handle": "@ech.mero", "text": "Theo."},
+      {"handle": "@ech.theo", "text": "Sir."},
+      {"handle": "@ech.mero", "text": "Stay close."}
     ],
-    "directionInline": [
-      {
-        "text": "Reproduce the key Issue 1 image deliberately so the reader recognizes it before the frame widens. Ancient Theo is not a ghost or modern observer; he belongs in the scene. He is younger in bearing but visibly the same person."
-      }
+    "directionInline": [{"text": "Reproduce the key Issue 1 image deliberately so the reader recognizes it before the frame widens. Ancient Theo is not a ghost or modern observer; he belongs in the scene. He is younger in bearing but visibly the same person."}],
+    "continuityFrom": "EFW_S1E05_S01",
+    "panelPlan": [
+      {"text": "Panel 1 — Reproduce the recognizable Issue 1 Desert Marker composition as closely as the production canon allows: Starbreaker confronting Mero, ancient battlefield and evacuation context, with the crop still excluding Theo. Starbreaker: 'You know what happens if I wait.'"},
+      {"text": "Panel 2 — Repeat the composition but widen it one deliberate step. A shoulder, satchel strap and dispatch case appear behind Mero where the earlier memory had simply ended."},
+      {"text": "Panel 3 — Wider still: ancient Theo is fully visible behind Mero, younger in bearing but unmistakably the same person, dressed as a junior attaché rather than a hero. He belongs naturally in the physical scene."},
+      {"text": "Panel 4 — Mero turns only slightly: 'Theo.' Ancient Theo answers without surprise, 'Sir.' The ordinary familiarity is more important than the visual shock."},
+      {"text": "Panel 5 — Mero: 'Stay close.' Theo automatically shifts with him, holding dispatches like he has done it many times. End on routine relationship, proving continuity through familiarity rather than supernatural effect."}
     ]
   },
   {
     "id": "EFW_S1E05_S03",
     "settingText": "Present-day Vael-Tor shelter immediately after Theo returns from the revisited memory.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae"],
     "summary": "Theo is shaken less by seeing himself than by the ordinary familiarity of Mero saying his name. Rae realizes recognition can restore relationship before it restores biography.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "He knew my name."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You knew his voice."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "I knew when he was about to ask me to stay."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "That's a memory."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "I know."
-      }
+      {"handle": "@ech.theo", "text": "He knew my name."},
+      {"handle": "@ech.rae", "text": "You knew his voice."},
+      {"handle": "@ech.theo", "text": "I knew when he was about to ask me to stay."},
+      {"handle": "@ech.rae", "text": "That's a memory."},
+      {"handle": "@ech.theo", "text": "I know."}
     ],
-    "directionInline": [
-      {
-        "text": "No spectacle. Theo is disturbed by intimacy: the cadence of Mero's voice, the expectation of a routine instruction, the feeling of having heard it many times."
-      }
+    "directionInline": [{"text": "No spectacle. Theo is disturbed by intimacy: the cadence of Mero's voice, the expectation of a routine instruction, the feeling of having heard it many times."}],
+    "continuityFrom": "EFW_S1E05_S02",
+    "panelPlan": [
+      {"text": "Panel 1 — Theo comes back into the same improvised shelter, unsteady but physically unharmed. Rae is beside him before Adrian can intervene."},
+      {"text": "Panel 2 — Theo: 'He knew my name.' The line is not wonder; it frightens him because being known is harder to dismiss than seeing an image."},
+      {"text": "Panel 3 — Rae: 'You knew his voice.' Theo looks at her, realizing she heard the distinction in his reaction."},
+      {"text": "Panel 4 — Theo: 'I knew when he was about to ask me to stay.' Show him unconsciously reproducing the same attentive posture ancient Theo took beside Mero."},
+      {"text": "Panel 5 — Rae: 'That's a memory.' Theo: 'I know.' End on recognition becoming autobiographical despite his resistance."}
     ]
   },
   {
     "id": "EFW_S1E05_S04",
     "settingText": "Revisited ancient Pax-Aeterna memory from Issue 4: Arbiter at the black table after the extinction decision, frame extended to the previously unseen side.",
-    "characters": [
-      "EFW_Arbiter",
-      "EFW_Rae"
-    ],
+    "region": "EFW_PaxAeterna",
+    "characters": ["EFW_Arbiter", "EFW_Rae"],
     "summary": "Rae revisits Arbiter's decision. The remembered frame widens and reveals ancient Rae seated beside Arbiter, writing the ruling. After the others leave, Arbiter asks whether Rae captured every word.",
     "dialogueInline": [
-      {
-        "handle": "@ech.arbiter",
-        "text": "Did you get all of it?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Yes."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Even the part I crossed out?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Especially that part."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "Good."
-      }
+      {"handle": "@ech.arbiter", "text": "Did you get all of it?"},
+      {"handle": "@ech.rae", "text": "Yes."},
+      {"handle": "@ech.arbiter", "text": "Even the part I crossed out?"},
+      {"handle": "@ech.rae", "text": "Especially that part."},
+      {"handle": "@ech.arbiter", "text": "Good."}
     ],
-    "directionInline": [
-      {
-        "text": "Ancient Rae is visibly the same person, not an ancestor. The shock comes from routine: she and Arbiter have done this kind of work together before. Preserve the crossed-out line as a future detail rather than revealing it yet."
-      }
+    "directionInline": [{"text": "Ancient Rae is visibly the same person, not an ancestor. The shock comes from routine: she and Arbiter have done this kind of work together before. Preserve the crossed-out line as a future detail rather than revealing it yet."}],
+    "continuityFrom": "EFW_S1E05_S03",
+    "panelPlan": [
+      {"text": "Panel 1 — Reproduce the Issue 4 post-decision composition: Arbiter at the black Pax-Aeterna table after the others leave, framed as before so the reader recognizes the exact memory."},
+      {"text": "Panel 2 — Widen the frame to the previously unseen side of the table. A hand writing on a physical ruling sheet appears beside Arbiter."},
+      {"text": "Panel 3 — Wider reveal: ancient Rae sits beside Arbiter, visibly the same person in period-appropriate aide clothing, focused on the document as though this work is routine. She is not a ghost or observer from the present."},
+      {"text": "Panel 4 — Arbiter: 'Did you get all of it?' Rae: 'Yes.' Arbiter: 'Even the part I crossed out?' Keep the crossed-out line illegible to the reader."},
+      {"text": "Panel 5 — Rae: 'Especially that part.' Arbiter: 'Good.' End on mutual professional familiarity, proving Rae was not merely nearby—she participated in preserving the decision."}
     ]
   },
   {
     "id": "EFW_S1E05_S05",
     "settingText": "Present-day dreadnought corridor overlooking Vael-Tor's modern city.",
-    "characters": [
-      "EFW_Rae",
-      "EFW_Theo",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Rae", "EFW_Theo", "EFW_Adrian"],
     "summary": "Rae recognizes that she did not merely witness Arbiter's decisions; she helped preserve and frame them. She turns her anger on Adrian for allowing both of them to believe the visions were foreign.",
     "dialogueInline": [
-      {
-        "handle": "@ech.rae",
-        "text": "I wrote it down."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Yes."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You let me call it someone else's history."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Because at first it was safer that way."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "For who?"
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "I don't know anymore."
-      }
+      {"handle": "@ech.rae", "text": "I wrote it down."},
+      {"handle": "@ech.adrian", "text": "Yes."},
+      {"handle": "@ech.rae", "text": "You let me call it someone else's history."},
+      {"handle": "@ech.adrian", "text": "Because at first it was safer that way."},
+      {"handle": "@ech.theo", "text": "For who?"},
+      {"handle": "@ech.adrian", "text": "I don't know anymore."}
     ],
-    "directionInline": [
-      {
-        "text": "Adrian's answer should weaken his moral certainty. He once believed concealment was protection; he can no longer say whom it protects."
-      }
+    "directionInline": [{"text": "Adrian's answer should weaken his moral certainty. He once believed concealment was protection; he can no longer say whom it protects."}],
+    "continuityFrom": "EFW_S1E05_S04",
+    "panelPlan": [
+      {"text": "Panel 1 — Present-day dreadnought corridor opened onto Vael-Tor city light through a temporary observation cut. Rae walks fast, angry; Theo and Adrian follow."},
+      {"text": "Panel 2 — Rae stops: 'I wrote it down.' Adrian: 'Yes.' The admission changes her role from witness to participant."},
+      {"text": "Panel 3 — Rae: 'You let me call it someone else's history.' Keep the exposed city and ancient hull in the same frame: nothing about this history is safely external anymore."},
+      {"text": "Panel 4 — Adrian: 'Because at first it was safer that way.' Theo immediately: 'For who?'"},
+      {"text": "Panel 5 — Adrian: 'I don't know anymore.' End with Adrian isolated between Theo and Rae, his old certainty about concealment visibly failing."}
     ]
   },
   {
     "id": "EFW_S1E05_S06",
     "settingText": "Ancient aftermath of a devastated world, days after a major battle: shelters, wounded landscapes, survivors trying to rebuild ordinary life.",
-    "characters": [
-      "EFW_Afterlight",
-      "EFW_Atlas"
-    ],
+    "characters": ["EFW_Afterlight", "EFW_Atlas"],
     "summary": "Afterlight debuts among survivors, restoring what she can one person and place at a time. Atlas arrives expecting reassurance and finds her exhausted beyond anything he has seen before.",
     "dialogueInline": [
-      {
-        "handle": "@ech.atlas",
-        "text": "They said you were finished here."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "They say that whenever the fires stop."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "What do you need?"
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "For nothing else to happen."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "I can give you an hour."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "Then give me the hour."
-      }
+      {"handle": "@ech.atlas", "text": "They said you were finished here."},
+      {"handle": "@ech.afterlight", "text": "They say that whenever the fires stop."},
+      {"handle": "@ech.atlas", "text": "What do you need?"},
+      {"handle": "@ech.afterlight", "text": "For nothing else to happen."},
+      {"handle": "@ech.atlas", "text": "I can give you an hour."},
+      {"handle": "@ech.afterlight", "text": "Then give me the hour."}
     ],
-    "directionInline": [
-      {
-        "text": "Afterlight's introduction must be intimate. She is not magically resetting a city. She is helping living things return where return is still possible, and she is tired. Atlas and Afterlight should feel like old allies who understand each other's burdens without speeches."
-      }
+    "directionInline": [{"text": "Afterlight's introduction must be intimate. She is not magically resetting a city. She is helping living things return where return is still possible, and she is tired. Atlas and Afterlight should feel like old allies who understand each other's burdens without speeches."}],
+    "continuityFrom": "EFW_S1E05_S05",
+    "panelPlan": [
+      {"text": "Panel 1 — Ancient aftermath at human scale: shelters, patched roofs, burned streets, injured vegetation, survivors cooking and carrying water. Afterlight, pale-haired in white-gold living restoration layers with subtle seed/growth motifs, kneels beside one damaged living thing rather than transforming the whole city."},
+      {"text": "Panel 2 — Atlas arrives quietly and sees how exhausted she is. 'They said you were finished here.' Afterlight, without looking up: 'They say that whenever the fires stop.'"},
+      {"text": "Panel 3 — Show several unfinished needs around them—wounded survivor, broken shelter, dead patch of ground—making clear she cannot touch everything at once."},
+      {"text": "Panel 4 — Atlas: 'What do you need?' Afterlight finally looks at him: 'For nothing else to happen.' Old allies understand the impossibility in the request."},
+      {"text": "Panel 5 — Atlas: 'I can give you an hour.' Afterlight: 'Then give me the hour.' End with Atlas turning outward to guard time while Afterlight returns to one small repair."}
     ]
   },
   {
     "id": "EFW_S1E05_S07",
     "settingText": "Same ancient aftermath later, at the edge of a district Afterlight could not restore.",
-    "characters": [
-      "EFW_Afterlight",
-      "EFW_Starbreaker"
-    ],
+    "characters": ["EFW_Afterlight", "EFW_Starbreaker"],
     "summary": "Starbreaker comes to see the aftermath of a battle he helped end. Afterlight refuses to let him use her restoration as proof that destruction can always be repaired.",
     "dialogueInline": [
-      {
-        "handle": "@ech.starbreaker",
-        "text": "You saved it."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "Part of it."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "More than there would have been."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "Don't do that."
-      },
-      {
-        "handle": "@ech.starbreaker",
-        "text": "Do what?"
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "Turn what I can mend into permission for what you break."
-      }
+      {"handle": "@ech.starbreaker", "text": "You saved it."},
+      {"handle": "@ech.afterlight", "text": "Part of it."},
+      {"handle": "@ech.starbreaker", "text": "More than there would have been."},
+      {"handle": "@ech.afterlight", "text": "Don't do that."},
+      {"handle": "@ech.starbreaker", "text": "Do what?"},
+      {"handle": "@ech.afterlight", "text": "Turn what I can mend into permission for what you break."}
     ],
-    "directionInline": [
-      {
-        "text": "This should hurt like a relationship fracture, not an ideological debate. Afterlight has repaired Starbreaker's aftermath before. Starbreaker genuinely believed her existence made some of his choices survivable. She is withdrawing that comfort."
-      }
+    "directionInline": [{"text": "This should hurt like a relationship fracture, not an ideological debate. Afterlight has repaired Starbreaker's aftermath before. Starbreaker genuinely believed her existence made some of his choices survivable. She is withdrawing that comfort."}],
+    "continuityFrom": "EFW_S1E05_S06",
+    "panelPlan": [
+      {"text": "Panel 1 — Edge of a district where restoration simply stops. Behind Afterlight, some life and shelter have returned; ahead, the damage remains permanent. The boundary is irregular and human, not a glowing force line."},
+      {"text": "Panel 2 — Starbreaker arrives subdued, fractured armor dim. 'You saved it.' Afterlight: 'Part of it.' She looks toward what remains lost."},
+      {"text": "Panel 3 — Starbreaker: 'More than there would have been.' He means reassurance, not manipulation, which makes the mistake more painful."},
+      {"text": "Panel 4 — Afterlight: 'Don't do that.' Starbreaker: 'Do what?' He genuinely does not understand at first."},
+      {"text": "Panel 5 — Afterlight faces him fully: 'Turn what I can mend into permission for what you break.' End on a relationship losing an old moral bargain neither had named before."}
     ]
   },
   {
     "id": "EFW_S1E05_S08",
     "settingText": "Present-day dreadnought records room where personal objects survived without understood provenance.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae"],
     "summary": "Theo and Rae search physical remnants now that they know they belonged to this world. Theo finds Mero's old staff roster and his own name in it; Rae finds a handwriting sample she recognizes as hers before reading the signature.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "That's my name."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I know."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "No. I mean I remember writing it like that."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "So do I."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Yours?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Mine."
-      }
+      {"handle": "@ech.theo", "text": "That's my name."},
+      {"handle": "@ech.rae", "text": "I know."},
+      {"handle": "@ech.theo", "text": "No. I mean I remember writing it like that."},
+      {"handle": "@ech.rae", "text": "So do I."},
+      {"handle": "@ech.theo", "text": "Yours?"},
+      {"handle": "@ech.rae", "text": "Mine."}
     ],
-    "directionInline": [
-      {
-        "text": "Physical proof should be ordinary and devastating: handwriting, worn paper, a familiar correction mark. No age dating. The objects do not prove how long ago the war was; they prove continuity of person."
-      }
+    "directionInline": [{"text": "Physical proof should be ordinary and devastating: handwriting, worn paper, a familiar correction mark. No age dating. The objects do not prove how long ago the war was; they prove continuity of person."}],
+    "continuityFrom": "EFW_S1E05_S07",
+    "panelPlan": [
+      {"text": "Panel 1 — Records room inside the exposed dreadnought: ordinary archival boxes, worn paper, personal effects and handwritten labels catalogued by present workers who never knew their provenance. No glowing data vault."},
+      {"text": "Panel 2 — Theo unfolds a damaged staff roster and finds his own name in a familiar hand: 'That's my name.' Rae: 'I know.'"},
+      {"text": "Panel 3 — Theo traces the letters: 'No. I mean I remember writing it like that.' The recognition is in muscle memory and handwriting, not a technical authentication."},
+      {"text": "Panel 4 — Rae has gone still over a different document before seeing its signature: 'So do I.' Theo looks across: 'Yours?'"},
+      {"text": "Panel 5 — Rae turns the page far enough to expose her own old signature: 'Mine.' End on ordinary paper carrying a continuity neither can dismiss."}
     ]
   },
   {
     "id": "EFW_S1E05_S09",
     "settingText": "Ancient restoration camp at night, Afterlight sitting among unfinished work while Atlas keeps watch.",
-    "characters": [
-      "EFW_Afterlight",
-      "EFW_Atlas"
-    ],
+    "characters": ["EFW_Afterlight", "EFW_Atlas"],
     "summary": "Afterlight admits to Atlas that she cannot keep pace with the destruction. It is not a cosmic theorem; it is an exhausted person saying there are now more places asking for help than she can reach.",
     "dialogueInline": [
-      {
-        "handle": "@ech.afterlight",
-        "text": "I used to arrive before the names were finished being read."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "You still arrive."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "Not everywhere."
-      },
-      {
-        "handle": "@ech.atlas",
-        "text": "No one can."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "That's what I'm telling you."
-      },
-      {
-        "handle": "@ech.afterlight",
-        "text": "I can't keep up."
-      }
+      {"handle": "@ech.afterlight", "text": "I used to arrive before the names were finished being read."},
+      {"handle": "@ech.atlas", "text": "You still arrive."},
+      {"handle": "@ech.afterlight", "text": "Not everywhere."},
+      {"handle": "@ech.atlas", "text": "No one can."},
+      {"handle": "@ech.afterlight", "text": "That's what I'm telling you."},
+      {"handle": "@ech.afterlight", "text": "I can't keep up."}
     ],
-    "directionInline": [
-      {
-        "text": "Keep the established line 'I can't keep up' simple. Its power comes from cumulative human loss, not an explanation of entropy. Atlas understands what it means for the war: repair can no longer serve as everyone's moral excuse."
-      }
+    "directionInline": [{"text": "Keep the established line 'I can't keep up' simple. Its power comes from cumulative human loss, not an explanation of entropy. Atlas understands what it means for the war: repair can no longer serve as everyone's moral excuse."}],
+    "continuityFrom": "EFW_S1E05_S08",
+    "panelPlan": [
+      {"text": "Panel 1 — Night restoration camp. Unfinished work surrounds Afterlight: occupied shelter beds, damaged plants, stacked names, repair materials and people sleeping in shifts. Atlas keeps watch nearby rather than looming over her."},
+      {"text": "Panel 2 — Afterlight: 'I used to arrive before the names were finished being read.' Hold on a simple memorial/list of names still growing while she sits exhausted."},
+      {"text": "Panel 3 — Atlas: 'You still arrive.' Afterlight: 'Not everywhere.' The distance between camps or need sites is suggested through departing messengers and requests she cannot follow."},
+      {"text": "Panel 4 — Atlas: 'No one can.' Afterlight turns toward him: 'That's what I'm telling you.' He understands that she is not asking for reassurance."},
+      {"text": "Panel 5 — Close, quiet: Afterlight: 'I can't keep up.' Atlas has no answer. End on a person reaching her limit, not a cosmic law explained aloud."}
     ]
   },
   {
     "id": "EFW_S1E05_S10",
     "settingText": "Present-day Vael-Tor overlook, modern city lights reflected across exposed ancient hull.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae"],
     "summary": "Theo and Rae compare the roles they recovered. Both want to believe proximity to power was not participation. Neither can make that belief hold.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "I carried messages."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "I wrote things down."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "That doesn't make us them."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "No."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "You don't sound convinced."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Neither do you."
-      }
+      {"handle": "@ech.theo", "text": "I carried messages."},
+      {"handle": "@ech.rae", "text": "I wrote things down."},
+      {"handle": "@ech.theo", "text": "That doesn't make us them."},
+      {"handle": "@ech.rae", "text": "No."},
+      {"handle": "@ech.theo", "text": "You don't sound convinced."},
+      {"handle": "@ech.rae", "text": "Neither do you."}
     ],
-    "directionInline": [
-      {
-        "text": "Give them room to resist culpability. They should not instantly accept ancient selves as morally binding. The issue is about continuity arriving faster than self-forgiveness."
-      }
+    "directionInline": [{"text": "Give them room to resist culpability. They should not instantly accept ancient selves as morally binding. The issue is about continuity arriving faster than self-forgiveness."}],
+    "continuityFrom": "EFW_S1E05_S09",
+    "panelPlan": [
+      {"text": "Panel 1 — Present-day overlook above Vael-Tor, city lights reflected across the exposed dreadnought hull. Theo and Rae sit apart from the investigation activity below, finally alone with what they have learned."},
+      {"text": "Panel 2 — Theo: 'I carried messages.' Rae: 'I wrote things down.' Both reduce their ancient roles to the smallest possible description."},
+      {"text": "Panel 3 — Theo: 'That doesn't make us them.' Rae: 'No.' Her answer supports him verbally but not emotionally."},
+      {"text": "Panel 4 — Theo: 'You don't sound convinced.' He is really asking for permission not to feel responsible."},
+      {"text": "Panel 5 — Rae: 'Neither do you.' End with both looking at the ancient hull beneath the living city, unable to keep proximity and participation neatly separate."}
     ]
   },
   {
     "id": "EFW_S1E05_S11",
     "settingText": "Ancient Mero staff room late at night during the war, quiet after senior commanders have left.",
-    "characters": [
-      "EFW_Mero",
-      "EFW_Theo"
-    ],
+    "characters": ["EFW_Mero", "EFW_Theo"],
     "summary": "Theo remembers a private routine with Mero. Mero asks the junior attaché what he thinks about a decision the senior staff could not resolve. The memory cuts before Theo can hear his own answer.",
     "dialogueInline": [
-      {
-        "handle": "@ech.mero",
-        "text": "They're all very certain tonight."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "That usually means they're scared."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "That's why I kept you."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Because I'm scared?"
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "Because you notice when the rest of us are."
-      },
-      {
-        "handle": "@ech.mero",
-        "text": "What do you think we should do?"
-      }
+      {"handle": "@ech.mero", "text": "They're all very certain tonight."},
+      {"handle": "@ech.theo", "text": "That usually means they're scared."},
+      {"handle": "@ech.mero", "text": "That's why I kept you."},
+      {"handle": "@ech.theo", "text": "Because I'm scared?"},
+      {"handle": "@ech.mero", "text": "Because you notice when the rest of us are."},
+      {"handle": "@ech.mero", "text": "What do you think we should do?"}
     ],
-    "directionInline": [
-      {
-        "text": "This is the first substantial ancient Theo scene. He is junior but not invisible to Mero. Cut the memory before his answer. The missing choice becomes the hook into the second half."
-      }
+    "directionInline": [{"text": "This is the first substantial ancient Theo scene. He is junior but not invisible to Mero. Cut the memory before his answer. The missing choice becomes the hook into the second half."}],
+    "continuityFrom": "EFW_S1E05_S10",
+    "panelPlan": [
+      {"text": "Panel 1 — Ancient staff room late at night after senior commanders have gone: abandoned cups, papers, worn chairs and one low practical light. Mero and ancient Theo remain working without ceremony."},
+      {"text": "Panel 2 — Mero: 'They're all very certain tonight.' Theo, sorting dispatches: 'That usually means they're scared.' His observation lands as familiar value, not insolence."},
+      {"text": "Panel 3 — Mero: 'That's why I kept you.' Theo looks up: 'Because I'm scared?' The joke is small and practiced."},
+      {"text": "Panel 4 — Mero: 'Because you notice when the rest of us are.' Hold on the relationship: Mero uses the junior attaché as a human counterweight to senior certainty."},
+      {"text": "Panel 5 — Mero: 'What do you think we should do?' Ancient Theo begins to answer—but the panel cuts to white/black before any response is lettered or visually readable. The missing personal choice becomes the hook."}
     ]
   },
   {
     "id": "EFW_S1E05_S12",
     "settingText": "Present-day records room after both Theo and Rae are hit by incomplete personal memories.",
-    "characters": [
-      "EFW_Theo",
-      "EFW_Rae",
-      "EFW_Adrian"
-    ],
+    "region": "EFW_VaelTor",
+    "characters": ["EFW_Theo", "EFW_Rae", "EFW_Adrian"],
     "summary": "Theo remembers Mero asking for his opinion; Rae remembers beginning a sentence to Arbiter after the extinction ruling. Neither can recover what they said. The next mystery becomes their own agency.",
     "dialogueInline": [
-      {
-        "handle": "@ech.theo",
-        "text": "He asked me what to do."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Arbiter asked me something too."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "And?"
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "I don't know what I said."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Neither do I."
-      },
-      {
-        "handle": "@ech.adrian",
-        "text": "Then don't rush it."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "You don't get to ask us not to remember anymore."
-      }
+      {"handle": "@ech.theo", "text": "He asked me what to do."},
+      {"handle": "@ech.rae", "text": "Arbiter asked me something too."},
+      {"handle": "@ech.adrian", "text": "And?"},
+      {"handle": "@ech.theo", "text": "I don't know what I said."},
+      {"handle": "@ech.rae", "text": "Neither do I."},
+      {"handle": "@ech.adrian", "text": "Then don't rush it."},
+      {"handle": "@ech.rae", "text": "You don't get to ask us not to remember anymore."}
     ],
-    "directionInline": [
-      {
-        "text": "End on Rae taking control of the terms. Adrian can warn but no longer decide what truth they are allowed to have. The second-half question is now explicitly personal: what did I choose?"
-      }
+    "directionInline": [{"text": "End on Rae taking control of the terms. Adrian can warn but no longer decide what truth they are allowed to have. The second-half question is now explicitly personal: what did I choose?"}],
+    "continuityFrom": "EFW_S1E05_S11",
+    "panelPlan": [
+      {"text": "Panel 1 — Present-day records room. Theo returns from the cut-off memory abruptly; Rae is already shaken by a parallel incomplete recollection. Adrian finds them among ordinary papers and personal effects."},
+      {"text": "Panel 2 — Theo: 'He asked me what to do.' Rae: 'Arbiter asked me something too.' For the first time both memories place them near decision-making, not merely near history."},
+      {"text": "Panel 3 — Adrian: 'And?' Theo: 'I don't know what I said.' Rae: 'Neither do I.' The missing words are now the central threat."},
+      {"text": "Panel 4 — Adrian: 'Then don't rush it.' His old protective instinct returns automatically."},
+      {"text": "Panel 5 — Rae: 'You don't get to ask us not to remember anymore.' End with Rae reclaiming control of the investigation while Theo stands with her. The series question has changed to: what did I choose?"}
     ]
   }
 ]
