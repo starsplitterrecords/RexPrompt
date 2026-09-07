@@ -1,36 +1,75 @@
 {
   "DT_BaselineHumans": {
     "name": "Baseline Humans",
+    "category": "population",
     "selfNames": ["Baseline Human"],
     "ideologicalSelfName": "Pure Human",
-    "posthumanTerms": {"neutral":"Baselines","casual":"Naturals","derogatory":"Raws"},
-    "text": "BASELINE HUMANS — The numerical and institutional majority, visually diverse rather than a uniform faction. Their advantage is not a costume but environmental fit: civic scanners, furniture, transit geometry, medical defaults, security assumptions and professional dress were built around ordinary human bodies. Upper-status Baselines tend toward quiet high-quality fabrics, tailored contemporary silhouettes and nearly invisible personal technology; working-class Baselines show the same practical wear, repairs and economic variation as everyone else. Pure Human politics may appropriate clean humanist symbols, heritage typography and deliberately unmodified presentation, but never make all Baselines look like members of that ideology. In mixed scenes, privilege is shown by who passes without explanation, occupies space without scrutiny, receives eye contact and is presumed authorized.",
-    "notes": "Majority human population with uneven attitudes toward posthumans. Pure Human is a supremacist identity, not a universal human label. Human fear centers on displacement, loss of primacy, and loss of institutional control."
+    "posthumanTerms": {"neutral": "Baselines", "casual": "Naturals", "derogatory": "Raws"},
+    "visualAnchor": "Ordinary unmodified human bodies with broad demographic, class and professional variation. Baselines are not a uniformed faction and should not share one costume, color palette or silhouette.",
+    "environmentalAnchor": "The built city defaults to Baseline bodies: scanners, transit geometry, furniture, medical standards, security assumptions and professional spaces fit them without special accommodation.",
+    "avoid": [
+      "Do not make all Baselines look like Pure Human activists.",
+      "Do not give the population a single faction uniform or color scheme.",
+      "Do not visually code ordinary Baselines as villains by default."
+    ],
+    "text": "BASELINE HUMANS — Ordinary unmodified humans with broad class, age and professional variation; not a uniform visual faction. The city is built around their bodies, so scanners, furniture, transit, medicine and security treat them as the default. Upper-status Baselines tend toward quiet tailored contemporary clothing and nearly invisible personal technology; working-class Baselines show practical wear, repairs and economic variation. Pure Human politics may use clean humanist symbols, heritage typography and deliberately unmodified presentation, but that ideology must never become the visual identity of all Baselines. In mixed scenes, institutional privilege is shown through ease of access, presumed authorization and infrastructure fit rather than a special costume.",
+    "notes": "Majority human population with uneven attitudes toward posthumans. Pure Human is a supremacist identity, not a universal human label."
   },
   "DT_Organosynthetics": {
     "name": "Organosynthetics",
+    "category": "population",
     "selfName": "Organics",
     "derogatoryName": "Synths",
-    "text": "ORGANOSYNTHETICS / ORGANICS — Grown living persons whose bodies visibly integrate engineered tissue, mineral or ceramic structures, sensory organs and task-specific anatomy. They must not share one species silhouette: different lots and original functions create meaningful variation in scale, dermis, plating, limb geometry, sensory structures and environmental tolerances. Their clothing and personal styling are chosen around bodies that were originally designed for work, often adapting ordinary human garments rather than imitating uniforms. Maintenance is biological care, grooming, repair and self-expression at once. Organic neighborhoods should show accommodations becoming culture: humidity, heat, load-bearing furniture, tool interfaces, broad circulation, repair surfaces and decorative reuse of once-industrial standards. Never depict Organics as generic robots, monsters, identical labor drones or humans in armor. Their political condition is visible when ordinary infrastructure still reads their bodies as equipment classes, hazards or assets.",
-    "notes": "Grown biological-mechanical beings, alive at creation and designed without consent. Central political conflict: personhood and autonomy versus classification as property, infrastructure, or asset."
+    "visualAnchor": "Grown living persons whose bodies visibly integrate engineered tissue, mineral or ceramic structures, sensory organs and task-specific anatomy. Different lots and functions must produce genuinely different silhouettes, dermis, plating, limb geometry and sensory structures.",
+    "environmentalAnchor": "Organic spaces adapt once-industrial standards into culture: humidity and heat control, load-bearing furniture, broad circulation, repair surfaces, body-specific tool interfaces and decorative reuse of infrastructure designed around non-Baseline bodies.",
+    "avoid": [
+      "Do not depict Organics as generic robots, monsters, identical labor drones or humans in armor.",
+      "Do not give all Organics one species silhouette, uniform or resistance costume.",
+      "Do not treat maintenance as mechanical servicing of property; it is biological care, repair, grooming and self-expression."
+    ],
+    "text": "ORGANOSYNTHETICS / ORGANICS — Grown living persons, not robots or armored humans. Their bodies visibly integrate engineered tissue, mineral or ceramic structures, sensory organs and task-specific anatomy. Different lots and original functions create meaningful variation in scale, dermis, plating, limb geometry, sensory systems and environmental tolerance; they must not share one species silhouette. Clothing is adapted around bodies originally designed for work rather than becoming a universal uniform. Organic neighborhoods visibly accommodate those bodies through humidity, heat, load-bearing furniture, broad circulation, repair surfaces and body-specific interfaces. Their political condition is visible when ordinary civic infrastructure still classifies their bodies as equipment, hazards or assets.",
+    "notes": "Alive at creation and designed without consent. Central conflict: personhood and autonomy versus classification as property, infrastructure or asset."
   },
   "DT_AugmentedHumans": {
     "name": "Augmented Humans",
+    "category": "population",
     "selfName": "Augments",
     "derogatoryName": "Mods",
-    "text": "AUGMENTED HUMANS / AUGMENTS — Humans whose modifications remain additions to recognizably human bodies. Hardware is installed, healed around, maintained, upgraded and sometimes mismatched across generations: joint actuators, interface ports, synthetic tissue grafts, reinforced bone lines, medical access points and subtle sensor packages rather than superhero armor. Wealth is visible in integration quality: expensive augmentation disappears elegantly into anatomy and clothing while older or lower-cost work leaves exposed housings, scar tissue, service covers and mixed manufacturers. Fashion accommodates access points and range of motion without becoming a universal cyberpunk uniform. Augments often move through human-designed space with near-Baseline ease, which is politically important; the visual threshold between accepted medical technology and socially consequential capability should remain plausibly narrow.",
-    "notes": "Baseline humans altered through invasive biomechanical and synthetic augmentation. Legally human but vulnerable to stability rules, forced calibration, rollback, and status erosion."
+    "visualAnchor": "Recognizably human bodies with installed, healed-around and maintained biomechanical or synthetic additions: joint actuators, interface ports, tissue grafts, reinforced bone lines, medical access points and subtle sensor packages.",
+    "environmentalAnchor": "Augments usually move through human-designed space with near-Baseline ease. Wealth and age of modification show through integration quality, exposed housings, scar tissue, service covers and mixed-generation hardware.",
+    "avoid": [
+      "Do not turn Augments into a separate species.",
+      "Do not use superhero armor, full-body robot styling or a universal cyberpunk uniform.",
+      "Do not exaggerate ordinary medical or technical augmentation into monstrous body horror unless a page explicitly requires injury or failure."
+    ],
+    "text": "AUGMENTED HUMANS / AUGMENTS — Recognizably human people whose modifications remain engineered additions to human bodies. Hardware is installed, healed around, maintained and upgraded: joint actuators, interface ports, synthetic tissue grafts, reinforced bone lines, medical access points and subtle sensor packages rather than armor. Integration quality varies by wealth, age and manufacturer; expensive work may disappear elegantly into anatomy and clothing while older or lower-cost work leaves scar tissue, service covers and exposed housings. Fashion accommodates access and movement without becoming a universal cyberpunk look. The visual threshold between accepted medical technology and politically consequential capability should remain plausibly narrow.",
+    "notes": "Legally human but vulnerable to stability rules, forced calibration, rollback and status erosion."
   },
   "DT_Intelligences": {
     "name": "Artificial Intelligences",
+    "category": "population",
     "selfName": "Intelligences",
     "derogatoryName": "Bots",
-    "text": "ARTIFICIAL INTELLIGENCES / INTELLIGENCES — Manufactured cognition expressed through machine-native embodiments, distributed civic systems or purpose-built interfaces. Do not force human faces, clothing, gestures or proportions onto them unless a specific design calls for it. Embodied Intelligences should favor precise geometry, deliberate material transitions, sensor logic and forms that reveal what the body is for; distributed Intelligences are shown through consequences across real infrastructure rather than magical cyberspace. Their social subordination is environmental: service alcoves instead of offices, permission-bounded interfaces, ownership labels, shutdown authority and the assumption that cognition is infrastructure. When an Intelligence occupies physical space, compositions should allow its nonhuman scale and stillness to contrast with human social choreography without making it sinister by default.",
-    "notes": "Fully artificial cognition in embodied or distributed systems. Central conflict: agency, legal nonpersonhood, and whether coexistence is morally meaningful or merely rationally tolerable."
+    "visualAnchor": "Manufactured cognition expressed through machine-native embodiments, distributed civic systems or purpose-built interfaces. Embodied forms favor precise geometry, deliberate material transitions, sensor logic and shapes that reveal function rather than default human anatomy.",
+    "environmentalAnchor": "Their subordination is often architectural and procedural: service alcoves instead of offices, permission-bounded interfaces, ownership labels, shutdown authority and systems that assume cognition is infrastructure rather than a person.",
+    "avoid": [
+      "Do not force human faces, clothing, gestures or proportions onto Intelligences unless a specific design requires it.",
+      "Do not use magical cyberspace as a substitute for real infrastructure.",
+      "Do not make nonhuman scale, stillness or precision read as sinister by default."
+    ],
+    "text": "ARTIFICIAL INTELLIGENCES / INTELLIGENCES — Manufactured cognition expressed through machine-native embodiments, distributed civic systems or purpose-built interfaces. Embodied Intelligences favor precise geometry, deliberate material transitions, sensor logic and forms that reveal what the body is for; do not force human faces, clothing, gestures or proportions onto them unless a specific design calls for it. Distributed Intelligences should appear through consequences across real infrastructure rather than magical cyberspace. Their social subordination is environmental and procedural: service alcoves, permission-bounded interfaces, ownership labels and shutdown authority. When embodied, allow nonhuman scale and stillness to contrast with human social choreography without coding that difference as menace.",
+    "notes": "Fully artificial cognition. Central conflict: agency, legal nonpersonhood and whether coexistence is morally meaningful or merely rationally tolerable."
   },
   "DT_Posthumans": {
     "name": "Posthumans",
-    "text": "POSTHUMANS — Umbrella political category, not a shared visual faction. Never homogenize Organics, Augments and Intelligences into one costume, color scheme, body language or resistance aesthetic. Coalition imagery should preserve visible difference and incompatible needs; solidarity becomes legible through shared action, spatial arrangement, mutual care and chosen symbols only after the story earns them.",
-    "notes": "Neutral umbrella category for Organosynthetics, Augmented Humans, and Artificial Intelligences when contrasted with Baseline Humans. Solidarity among these groups is a dramatic question, not an assumed unity."
+    "category": "umbrella-political-category",
+    "visualAnchor": "No shared visual identity. This category groups Organosynthetics, Augmented Humans and Artificial Intelligences politically while preserving their incompatible bodies, needs and visual languages.",
+    "environmentalAnchor": "Coalition scenes should show solidarity through shared action, spatial arrangement, mutual care and eventually chosen common symbols, never by visually homogenizing the member populations.",
+    "avoid": [
+      "Do not create a universal posthuman costume, color palette, body language or resistance aesthetic.",
+      "Do not flatten Organics, Augments and Intelligences into one culture or biological category."
+    ],
+    "text": "POSTHUMANS — Umbrella political category, not a shared visual faction. Organics, Augments and Intelligences retain distinct bodies, clothing logic, environments and political needs. Coalition imagery must preserve those differences. Solidarity becomes visible through shared action, spatial arrangement, mutual care and chosen symbols only when the story earns them; never homogenize the populations into one costume, color scheme, silhouette or resistance aesthetic.",
+    "notes": "Neutral umbrella category when contrasted with Baseline Humans. Solidarity among member groups is a dramatic question, not an assumed unity."
   }
 }
