@@ -1,4 +1,4 @@
-name: Apply and validate residual meta-writing repair v3
+name: Apply and validate writerly-language repair
 
 on:
   push:
@@ -27,10 +27,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Clean residual assembled meta-writing language
-        run: python tools/fix_meta_writing_residue.py
+      - name: Clean unearned writerly language
+        run: python tools/fix_writerly_language_pass.py
 
-      - name: Run strict affected-series validators
+      - name: Run affected-series validators
         run: |
           python tools/validate_azure_reach.py
           python tools/validate_backyard_rockets.py
@@ -59,7 +59,7 @@ jobs:
             if [ "$main_status" -ne 0 ] \
                && printf '%s' "$branch_output" | grep -q "$expected" \
                && printf '%s' "$main_output" | grep -q "$expected"; then
-              echo "$script failure is unchanged from origin/main and unrelated to this dialogue repair."
+              echo "$script failure is unchanged from origin/main and unrelated to this writing repair."
               return 0
             fi
             printf '%s\n' "$main_output"
@@ -77,19 +77,19 @@ jobs:
       - name: Upload assembled review bundle
         uses: actions/upload-artifact@v4
         with:
-          name: meta-writing-repair-review-${{ github.sha }}
+          name: writerly-language-repair-review-${{ github.sha }}
           path: dist/review-pdfs/
           if-no-files-found: error
           retention-days: 7
 
-      - name: Commit residual story-data repair
+      - name: Commit repaired story data
         run: |
           if git diff --quiet -- data; then
-            echo 'No residual data changes produced.'
+            echo 'No story-data changes produced.'
             exit 1
           fi
           git config user.name 'starsplitterrecords'
           git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
           git add data
-          git commit -m 'Remove residual meta-writing language from assembled stories'
+          git commit -m 'Reduce unearned writerly language across Star Splitter series'
           git push
