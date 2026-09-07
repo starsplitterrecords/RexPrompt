@@ -136,34 +136,33 @@ def main():
 
         original = path.read_text(encoding="utf-8")
         encoded = path.name.endswith(".json.gzb64")
+        counts = {}
+
         if encoded:
             try:
                 data = decode_gzb64(original)
             except Exception:
                 continue
+            replace_strings(data, rules, counts)
+            if counts:
+                path.write_text(encode_gzb64(data), encoding="utf-8")
         elif path.suffix == ".json":
-            try:
-                data = json.loads(original)
-            except Exception:
-                continue
+            # Preserve byte-level formatting in readable JSON: all rules are literal
+            # prose substitutions and do not alter JSON syntax.
+            rendered = original
+            for old, replacement in rules.items():
+                if old in rendered:
+                    occurrences = rendered.count(old)
+                    rendered = rendered.replace(old, replacement)
+                    counts[old] = counts.get(old, 0) + occurrences
+            if counts:
+                json.loads(rendered)
+                path.write_text(rendered, encoding="utf-8")
         else:
             continue
 
-        counts = {}
-        replace_strings(data, rules, counts)
         if not counts:
             continue
-
-        if encoded:
-            path.write_text(encode_gzb64(data), encoding="utf-8")
-        else:
-            # Preserve the existing compact/pretty convention as closely as possible.
-            if "\n" in original.strip():
-                rendered = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
-            else:
-                rendered = json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n"
-            path.write_text(rendered, encoding="utf-8")
-
         changed_files.append(path.relative_to(ROOT).as_posix())
         for old, count in counts.items():
             total_counts[old] = total_counts.get(old, 0) + count
@@ -174,10 +173,14 @@ def main():
     print(f"Applied {sum(total_counts.values())} residual replacements across {len(total_counts)} matched patterns.")
 
     missing = []
+    optional_variants = {
+        "Pip calls Beatrice's sentence lab-grown",
+        "Theo: ‘You had to ruin that sentence.’",
+        "That’s the sentence that keeps ruining us.",
+    }
     for marker, rules in RULES.items():
         for old in rules:
-            # Curly/straight duplicate variants intentionally allow one variant to be absent.
-            if old in {"Pip calls Beatrice's sentence lab-grown", "Theo: ‘You had to ruin that sentence.’", "That’s the sentence that keeps ruining us."}:
+            if old in optional_variants:
                 continue
             if total_counts.get(old, 0) == 0:
                 missing.append(f"{marker}: {old}")
