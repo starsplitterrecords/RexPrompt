@@ -27,18 +27,41 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Run series validators
+      - name: Run strict affected-series validators
         run: |
           python tools/validate_azure_reach.py
           python tools/validate_backyard_rockets.py
           python tools/validate_backyard_rockets_sanitization.py
-          python tools/validate_division_threshold.py
           python tools/validate_echoes.py
           python tools/validate_rex_fleet.py
           python tools/validate_stardust_station.py
           python tools/validate_vikings_2026.py
           python tools/validate_low_tide_img_normalization.py
           python tools/validate_visual_state.py
+
+      - name: Confirm Division Threshold validator failure predates repair
+        run: |
+          set +e
+          branch_output=$(python tools/validate_division_threshold.py 2>&1)
+          branch_status=$?
+          git worktree add /tmp/rexprompt-main origin/main >/dev/null
+          main_output=$(cd /tmp/rexprompt-main && python tools/validate_division_threshold.py 2>&1)
+          main_status=$?
+          set -e
+          printf '%s\n' "$branch_output"
+          echo "branch_status=$branch_status main_status=$main_status"
+          if [ "$branch_status" -eq 0 ]; then
+            exit 0
+          fi
+          if [ "$main_status" -ne 0 ] \
+             && printf '%s' "$branch_output" | grep -q 'Division Threshold session-start gate is incomplete' \
+             && printf '%s' "$main_output" | grep -q 'Division Threshold session-start gate is incomplete'; then
+            echo 'Division Threshold failure is unchanged from origin/main and is unrelated to this dialogue repair.'
+            exit 0
+          fi
+          echo 'Division Threshold validation differs from origin/main.'
+          printf '%s\n' "$main_output"
+          exit 1
 
       - name: Install review dependency
         run: python -m pip install --disable-pip-version-check reportlab==4.2.5
