@@ -9,6 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "rex-fleet-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 INDEX = ROOT / "index.html"
+GENERIC_PRODUCTION_SCAFFOLD = {
+    "Play the dialogue as an exchange with listening, interruption and reaction; avoid posed recitation. Keep faces readable and let the environment stay active.",
+    "Continuous from the prior beat in this location; preserve positions, props, damage, eyelines and emotional momentum.",
+    "Let this visual beat breathe long enough to establish consequence before the next exchange.",
+}
 
 
 def load_json(path):
@@ -48,6 +53,8 @@ def assert_clean_recipe(page, all_ids):
     for item in page.get("directionInline", []):
         if isinstance(item, str) and item.startswith(("Canon anchors", "Characters:", "Tone:", "Season 2 hooks:", "Visual tone guidance:")):
             raise SystemExit(f"{page_id}: editorial/correction residue survived")
+        if isinstance(item, str) and item in GENERIC_PRODUCTION_SCAFFOLD:
+            raise SystemExit(f"{page_id}: generic production scaffold survived")
 
 
 shows = load_json(MANIFEST)
