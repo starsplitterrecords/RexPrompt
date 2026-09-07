@@ -1,0 +1,126 @@
+name: IMG decode Azure Reach P13
+
+on:
+  push:
+    branches:
+      - img-decode-azr-p13
+    paths:
+      - '.github/workflows/img-decode-azr-p13.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  decode-and-assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and assemble P13
+        shell: python
+        run: |
+          import base64, gzip, json
+          from pathlib import Path
+
+          base = Path('data/shows/azure-reach-s1')
+          encoded = (base / 'encoded/pages_e02_p13_p18.json.gzb64').read_text().strip()
+          scenes = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+          if isinstance(scenes, dict):
+              scenes = [dict({'id': k}, **v) for k, v in scenes.items()]
+          scene = next(s for s in scenes if s.get('id') == 'AZR_S1E02_P13')
+          Path('p13_raw.json').write_text(json.dumps(scene, indent=2, ensure_ascii=False))
+
+          shows = json.loads(Path('data/shows.json').read_text())
+          show = next(s for s in shows if s.get('id') == 'azure-reach-s1-e02')
+          shelves = {}
+          for fn in ['settings.json','regions.json','factions.json','characters.json','direction.json']:
+              shelves[fn] = json.loads((base / fn).read_text())
+
+          def fmt(e):
+              if isinstance(e, str): return e
+              if not isinstance(e, dict): return json.dumps(e, ensure_ascii=False)
+              if e.get('text'): return e['text']
+              if e.get('name'): return e['name']
+              if e.get('summary'): return e['summary']
+              return json.dumps(e, ensure_ascii=False)
+
+          def find_char_by_handle(h):
+              for e in shelves['characters.json'].values():
+                  if not isinstance(e, dict): continue
+                  if e.get('handle') == h or h in (e.get('aliases') or []): return e
+              return None
+
+          def fmt_char(e, fallback):
+              if not e: return fallback
+              parts=[e.get('name') or fallback]
+              structured=bool(e.get('wardrobe') or e.get('performance') or e.get('relationship') or e.get('promptContinuity'))
+              if e.get('handle'): parts.append(e['handle'])
+              v=e.get('visualAnchor') or e.get('visual') or e.get('appearance') or e.get('visualDescription')
+              if v: parts.append(('Identity: ' if structured else 'Visual: ')+v)
+              if structured:
+                  if e.get('wardrobe'): parts.append('Wardrobe: '+e['wardrobe'])
+                  if e.get('performance'): parts.append('Performance: '+e['performance'])
+                  if e.get('relationship'): parts.append('Relationship: '+e['relationship'])
+                  if e.get('promptContinuity'): parts.append('Continuity: '+'; '.join(e['promptContinuity']))
+              else:
+                  if e.get('visualStatus'): parts.append('Visual status: '+e['visualStatus'])
+                  if e.get('continuityLocks'): parts.append('Continuity: '+'; '.join(e['continuityLocks']))
+              return ' — '.join(parts)
+
+          out=[]
+          cameos=[]
+          for d in scene.get('dialogueInline') or []:
+              h=d.get('handle') or d.get('speaker')
+              if isinstance(h,str) and h.startswith('@') and h not in cameos: cameos.append(h)
+          out.extend(cameos)
+          key=scene.get('id') or 'AZR_S1E02_P13'
+          out.append(f'\n=== {show.get("unitLabel","SCENE")}: {key} ===')
+          out.append((scene.get('summary') or '').strip())
+          out.append(show.get('generationLine') or '10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.')
+          if scene.get('settingText'):
+              out.append('\n[SETTING]\n'+scene['settingText'])
+          elif scene.get('setting') in shelves['settings.json']:
+              out.append('\n[SETTING]\n'+fmt(shelves['settings.json'][scene['setting']]))
+          if scene.get('regionText'):
+              out.append('\n[REGION]\n'+scene['regionText'])
+          elif scene.get('region') in shelves['regions.json']:
+              out.append('\n[REGION]\n'+fmt(shelves['regions.json'][scene['region']]))
+          if scene.get('factions'):
+              out.append('\n[FACTIONS]')
+              for k in scene['factions']:
+                  if k in shelves['factions.json']: out.append(fmt(shelves['factions.json'][k]))
+          if scene.get('charactersInline'):
+              out.append('\n[CHARACTERS]')
+              for c in scene['charactersInline']:
+                  e=find_char_by_handle(c.get('handle'))
+                  out.append(fmt_char(e,c.get('name') or c.get('handle')))
+          elif scene.get('characters'):
+              out.append('\n[CHARACTERS]')
+              for k in scene['characters']:
+                  if k in shelves['characters.json']: out.append(fmt_char(shelves['characters.json'][k],k))
+          if scene.get('panelPlan'):
+              out.append('\n[PANEL PLAN]')
+              out.extend(fmt(x) for x in scene['panelPlan'])
+          if scene.get('dialogueInline'):
+              out.append('\n[DIALOGUE]')
+              labels={'CAPTION','SYSTEM','SCREEN','DISPLAY','MESSAGE','GROUP CHAT','MONITOR','SIGN','SFX','MAP','TIDE BOARD','SECURITY','TECHNICIAN'}
+              for d in scene['dialogueInline']:
+                  sp=d.get('handle') or d.get('speaker') or 'TEXT'
+                  if sp in labels: out.append(f'{sp}: "{d.get("text","")}"')
+                  else: out.append(f'{sp} says "{d.get("text","")}"')
+                  if d.get('subtext'): out.append('  ('+d['subtext']+')')
+          if scene.get('continuityFrom'):
+              out.append('\n[CONTINUITY]\nContinue directly from '+scene['continuityFrom']+'; preserve established positions, props, damage, eyelines, and emotional state.')
+          if scene.get('direction') or scene.get('directionInline'):
+              out.append('\n[DIRECTION]')
+              for k in scene.get('direction') or []:
+                  if k in shelves['direction.json']: out.append(fmt(shelves['direction.json'][k]))
+              out.extend(fmt(x) for x in scene.get('directionInline') or [])
+          Path('p13_assembled.txt').write_text('\n'.join(out).strip())
+      - name: Upload P13 recipe
+        uses: actions/upload-artifact@v4
+        with:
+          name: azure-reach-p13-recipe
+          path: |
+            p13_raw.json
+            p13_assembled.txt
+          retention-days: 1
