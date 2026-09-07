@@ -72,9 +72,6 @@ RULES = {
     "vikings-2026-s1": {
         "not a sentence or compliance hearing": "not a disciplinary or compliance hearing",
     },
-    "low-tide-signal": {
-        "than a plot emergency": "than a crisis",
-    },
 }
 
 
