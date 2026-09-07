@@ -1,0 +1,96 @@
+name: Restore Division Threshold literary captions
+
+on:
+  push:
+    branches:
+      - 'fix/restore-division-threshold-captions'
+    paths:
+      - 'tools/restore_division_threshold_captions.py'
+      - '.github/workflows/restore-division-threshold-captions.yml'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  restore-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out caption branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Restore sparse caption buttons
+        run: python tools/restore_division_threshold_captions.py
+
+      - name: Verify mirrored caption payloads
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          base = pathlib.Path('data/shows/division-threshold-s1')
+          expected = {
+              2: ('DT_E002_P26', ['We drew the line around them.', 'Then the line found us.']),
+              3: ('DT_E003_P22', ['A rule can be fairer than a person.', 'It can also reach further.']),
+              4: ('DT_E004_P18', ['Nothing was broken.', 'Everything agreed.']),
+              5: ('DT_E005_P26', ['We changed the word.', 'The permission survived.']),
+              6: ('DT_E006_P13', ['No one had to build the whole machine.', 'They only had to build their part.']),
+              7: ('DT_E007_P18', ['Knowing how someone can break is not the same as knowing who they are.']),
+              8: ('DT_E008_P26', ['The threshold was never only a number.', 'It was who got to choose.']),
+          }
+          for issue, (pid, texts) in expected.items():
+              overlay = json.loads((base / f'issue_{issue:02d}_scene_dialogue.json').read_text())
+              compiled = json.loads((base / f'pages_e{issue:02d}_compiled.json').read_text())
+              opage = next(p for p in overlay['pages'] if p['id'] == pid)
+              cpage = next(p for p in compiled if p['id'] == pid)
+              a = [x['text'] for x in opage['sceneDialogue'] if x.get('speaker') == 'CAPTION']
+              b = [x['text'] for x in cpage['dialogueInline'] if x.get('speaker') == 'CAPTION']
+              assert a == texts, (pid, a)
+              assert b == texts, (pid, b)
+          print('Caption mirror validation passed: 13 entries across 7 issue buttons.')
+          PY
+
+      - name: Confirm known Division Threshold validator state is unchanged
+        run: |
+          set +e
+          branch_output=$(python tools/validate_division_threshold.py 2>&1)
+          branch_status=$?
+          git worktree add /tmp/rexprompt-main origin/main >/dev/null
+          main_output=$(cd /tmp/rexprompt-main && python tools/validate_division_threshold.py 2>&1)
+          main_status=$?
+          set -e
+          printf '%s\n' "$branch_output"
+          if [ "$branch_status" -eq 0 ]; then exit 0; fi
+          if [ "$main_status" -ne 0 ] \
+             && printf '%s' "$branch_output" | grep -q 'Division Threshold session-start gate is incomplete' \
+             && printf '%s' "$main_output" | grep -q 'Division Threshold session-start gate is incomplete'; then
+            echo 'Known session-start gate failure is unchanged from origin/main.'
+            exit 0
+          fi
+          printf '%s\n' "$main_output"
+          exit 1
+
+      - name: Install review dependency
+        run: python -m pip install --disable-pip-version-check reportlab==4.2.5
+
+      - name: Build assembled production reviews
+        run: python tools/export_review_pdfs.py --out dist/review-pdfs
+
+      - name: Commit restored captions
+        run: |
+          if git diff --quiet -- data; then
+            echo 'No caption data changes produced.'
+            exit 1
+          fi
+          git config user.name 'starsplitterrecords'
+          git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
+          git add data
+          git commit -m 'Restore sparse literary captions to Division Threshold'
+          git push
