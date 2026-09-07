@@ -12,10 +12,6 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
-# Exact semantic residue found in the assembled production-review output after the
-# first dialogue pass. Rules are path-scoped so legitimate language elsewhere is
-# untouched. Each replacement redirects attention from prose mechanics to the
-# in-world action, consequence, object, or institutional behavior.
 RULES = {
     "azure-reach-s1": {
         "cannot put that sentence on a sponsor placard": "cannot put that answer on a sponsor placard",
@@ -93,22 +89,29 @@ def encode_gzb64(data) -> str:
     return base64.b64encode(gzip.compress(payload, mtime=0)).decode("ascii")
 
 
+def replace_text(value: str, rules, counts) -> str:
+    new = value
+    for old, replacement in rules.items():
+        if old in new:
+            occurrences = new.count(old)
+            new = new.replace(old, replacement)
+            counts[old] = counts.get(old, 0) + occurrences
+    return new
+
+
 def replace_strings(obj, rules, counts):
     if isinstance(obj, dict):
         for key, value in list(obj.items()):
             if isinstance(value, str):
-                new = value
-                for old, replacement in rules.items():
-                    if old in new:
-                        occurrences = new.count(old)
-                        new = new.replace(old, replacement)
-                        counts[old] = counts.get(old, 0) + occurrences
-                obj[key] = new
+                obj[key] = replace_text(value, rules, counts)
             else:
                 replace_strings(value, rules, counts)
     elif isinstance(obj, list):
-        for value in obj:
-            replace_strings(value, rules, counts)
+        for index, value in enumerate(obj):
+            if isinstance(value, str):
+                obj[index] = replace_text(value, rules, counts)
+            else:
+                replace_strings(value, rules, counts)
 
 
 def matching_rules(path: pathlib.Path):
@@ -147,8 +150,6 @@ def main():
             if counts:
                 path.write_text(encode_gzb64(data), encoding="utf-8")
         elif path.suffix == ".json":
-            # Preserve byte-level formatting in readable JSON: all rules are literal
-            # prose substitutions and do not alter JSON syntax.
             rendered = original
             for old, replacement in rules.items():
                 if old in rendered:
@@ -172,12 +173,12 @@ def main():
         print(f"  {rel}")
     print(f"Applied {sum(total_counts.values())} residual replacements across {len(total_counts)} matched patterns.")
 
-    missing = []
     optional_variants = {
         "Pip calls Beatrice's sentence lab-grown",
         "Theo: ‘You had to ruin that sentence.’",
         "That’s the sentence that keeps ruining us.",
     }
+    missing = []
     for marker, rules in RULES.items():
         for old in rules:
             if old in optional_variants:
