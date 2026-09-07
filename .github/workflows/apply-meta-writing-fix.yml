@@ -1,0 +1,44 @@
+name: Apply one-shot meta-writing repair
+
+on:
+  push:
+    branches:
+      - 'fix/meta-writing-contamination'
+    paths:
+      - 'tools/fix_meta_writing.py'
+      - '.github/workflows/apply-meta-writing-fix.yml'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repair branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Repair targeted story data
+        run: python tools/fix_meta_writing.py
+
+      - name: Commit repaired data
+        run: |
+          if git diff --quiet -- data; then
+            echo 'No data changes produced.'
+            exit 1
+          fi
+          git config user.name 'starsplitterrecords'
+          git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
+          git add data
+          git commit -m 'Remove meta-writing contamination from character dialogue'
+          git push
