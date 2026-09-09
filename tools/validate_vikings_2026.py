@@ -28,10 +28,32 @@ CORE_VISUAL_CHARACTER_IDS = [
     "tnvx3hlo0",       # The Kin
 ]
 
+GENERIC_DIRECTION_TYPES = {
+    "story",
+    "tone",
+    "continuity",
+    "location",
+    "lettering",
+}
+
 PRODUCTION_RESIDUE = [
     "Reader Function",
     "readerFunction",
     "Advance the beat clearly; preserve speaker identity and natural balloon order.",
+    "Bright ordinary-2026 documentary-sitcom realism. Treat every character as a real person.",
+    "Use dialogueInline exactly with clear speaker attribution, natural left-to-right balloon order, readable balloon volume",
+    "Released Vikings 2026 Issue 1 is strict visual canon.",
+]
+
+CHARACTER_SCOPE_RESIDUE = [
+    "Released Vikings 2026 Issue 1 is the exact authority",
+    "Match Bjorn to actual released Issue 1 visual references",
+    "Match Gunnar to actual released Issue 1 visual references",
+    "Match Carrie to actual released Issue 1 visual references",
+    "Match released Issue 1 appearance",
+    "Use released appearance when established",
+    "Keep his apparent age and body proportions stable across every page",
+    "Keep her apparent age, face, hair, and body proportions stable across every page",
 ]
 
 
@@ -96,13 +118,19 @@ def validate_img_normalization(characters):
     output_rule = reference.get("storyPageOutputRule")
     assert isinstance(output_rule, str) and "Only text required by the assembled recipe belongs on the story page." in output_rule, "Vikings story-page output scope is incomplete"
 
+    canon_source = characters.get("visualCanonSource")
+    assert isinstance(canon_source, str) and "StarSplitterVisions" in canon_source and "Issue 1" in canon_source, "Vikings global character visual authority is missing"
+
     for character_id in CORE_VISUAL_CHARACTER_IDS:
         record = characters.get(character_id)
         assert isinstance(record, dict), f"missing core Vikings visual character record: {character_id}"
         visual = record.get("visualAnchor")
-        assert isinstance(visual, str) and len(visual.strip()) >= 80, f"core Vikings character missing useful visualAnchor: {record.get('name', character_id)}"
+        assert isinstance(visual, str) and len(visual.strip()) >= 60, f"core Vikings character missing useful visual discriminator: {record.get('name', character_id)}"
         continuity = record.get("promptContinuity")
-        assert isinstance(continuity, list) and continuity, f"core Vikings character missing promptContinuity: {record.get('name', character_id)}"
+        assert isinstance(continuity, list) and continuity, f"core Vikings character missing character-specific continuity: {record.get('name', character_id)}"
+        generation_text = json.dumps({"visualAnchor": visual, "promptContinuity": continuity}, ensure_ascii=False)
+        for residue in CHARACTER_SCOPE_RESIDUE:
+            assert residue not in generation_text, f"global/correction scaffolding leaked into character shelf: {record.get('name', character_id)}: {residue}"
 
     drafts = load_json(DRAFT_MANIFEST)
     assert drafts.get("schemaVersion") == 1 and isinstance(drafts.get("drafts"), dict), "approved production draft manifest is malformed"
@@ -140,6 +168,19 @@ def main():
     issue2_show = next((show for show in active if show.get("id") == "vikings-2026-s1-e02"), None)
     assert issue2_show, "current Vikings Issue 2 is not registered"
     assert issue2_show.get("issueLabel") == "Issue 2 — Landfall Bushwick", "Vikings Issue 2 label drift"
+
+    generation_lines = {show.get("generationLine") for show in active}
+    assert None not in generation_lines and len(generation_lines) == 1, "active Vikings issues must share one series-level generation contract"
+    generation_line = next(iter(generation_lines))
+    for required in [
+        "Vikings are intelligent and dignified",
+        "released Issue 1 story-art references as strict visual canon",
+        "dialogueInline exactly",
+        "natural left-to-right balloon order",
+        "Interior story page only",
+    ]:
+        assert required in generation_line, f"Vikings generation contract missing: {required}"
+    assert "Legacy S1E02 payload IDs" not in generation_line, "legacy identifier explanation leaked into generation instruction"
 
     active_pages = []
     active_files = []
@@ -194,6 +235,13 @@ def main():
                 panel_number = int(match.group(1))
                 assert 1 <= panel_number <= len(panel_plan), f"dialogue panel out of range: {page_id}"
 
+        directions = page.get("directionInline", [])
+        assert isinstance(directions, list), f"directionInline malformed: {page_id}"
+        for item in directions:
+            assert isinstance(item, dict), f"directionInline entry malformed: {page_id}"
+            kind = item.get("type")
+            assert kind not in GENERIC_DIRECTION_TYPES, f"generic {kind} scaffolding returned to page scope: {page_id}"
+
     assert len(ids) == len(set(ids)), "duplicate active Vikings page ids"
 
     issue3_show = next((show for show in active if show.get("id") == "vikings-2026-s1-e03"), None)
@@ -218,11 +266,13 @@ def main():
 
     print("Vikings 2026 production-hygiene validation passed")
     print("IMG production normalization reference: valid")
-    print("Core visual anchors:", len(CORE_VISUAL_CHARACTER_IDS))
+    print("Core visual discriminators:", len(CORE_VISUAL_CHARACTER_IDS))
     print("Issue 2 page records:", len(issue2_pages))
     print("Issue 3 page records:", len(issue3_pages))
     print("Active page records:", len(active_pages))
     print("Active production files:", len(set(active_files)))
+    print("Generic page-direction scaffolding: absent")
+    print("Series generation contract: normalized")
 
 
 if __name__ == "__main__":
