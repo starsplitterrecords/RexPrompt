@@ -1,0 +1,96 @@
+name: Register Vikings Issue 1 live
+
+on:
+  push:
+    branches:
+      - fix/vikings-issue1-live
+    paths:
+      - '.github/workflows/register-vikings-issue1-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  register-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/vikings-issue1-live
+          fetch-depth: 0
+      - name: Register Issue 1 without changing existing Vikings issue data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('data/shows.json')
+          shows = json.loads(path.read_text(encoding='utf-8'))
+          issue1_id = 'vikings-2026-s1-e01'
+          if not any(show.get('id') == issue1_id for show in shows):
+              idx = next(i for i, show in enumerate(shows) if show.get('id') == 'vikings-2026-s1-e02')
+              generation_line = shows[idx]['generationLine']
+              issue1 = {
+                  'id': issue1_id,
+                  'name': 'Vikings 2026 — Season 1 / Issue 1',
+                  'seriesName': 'Vikings 2026',
+                  'issueLabel': 'Issue 1',
+                  'basePath': 'data/shows/vikings-2026-s1',
+                  'scenesFile': 'pages_base.json',
+                  'unitLabel': 'PAGE',
+                  'generationLine': generation_line,
+                  'sceneOverlays': [
+                      {'file': 'encoded/pages_e01_p01_p06.json.gzb64', 'encoding': 'gzip-base64'},
+                      {'file': 'encoded/pages_e01_p07_p12.json.gzb64', 'encoding': 'gzip-base64'},
+                      {'file': 'encoded/pages_e01_p13_p18.json.gzb64', 'encoding': 'gzip-base64'},
+                      {'file': 'encoded/pages_e01_p19_p24.json.gzb64', 'encoding': 'gzip-base64'},
+                      {'file': 'encoded/pages_e01_p25_p26.json.gzb64', 'encoding': 'gzip-base64'},
+                  ],
+              }
+              shows.insert(idx, issue1)
+              path.write_text(json.dumps(shows, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Validate current Vikings package
+        run: python tools/validate_vikings_2026.py
+      - name: Validate Issue 1 assembler payload sequence
+        run: |
+          python - <<'PY'
+          import base64, gzip, json
+          from pathlib import Path
+
+          root = Path('data/shows/vikings-2026-s1')
+          shows = json.loads(Path('data/shows.json').read_text(encoding='utf-8'))
+          show = next(s for s in shows if s.get('id') == 'vikings-2026-s1-e01')
+          chars = json.loads((root / 'characters.json').read_text(encoding='utf-8'))
+          by_handle = {v.get('handle') for v in chars.values() if isinstance(v, dict) and v.get('handle')}
+          pages = []
+          for overlay in show['sceneOverlays']:
+              text = ''.join((root / overlay['file']).read_text(encoding='utf-8').split())
+              payload = json.loads(gzip.decompress(base64.b64decode(text, validate=True)).decode('utf-8'))
+              assert isinstance(payload, list)
+              pages.extend(payload)
+          assert len(pages) == 26, len(pages)
+          assert [p.get('id') for p in pages] == [f'VIK_S1I01_P{i:02d}' for i in range(1, 27)]
+          assert [p.get('page') for p in pages] == list(range(1, 27))
+          for page in pages:
+              assert isinstance(page.get('panelPlan'), list) and page['panelPlan'], page['id']
+              assert isinstance(page.get('dialogueInline'), list), page['id']
+              for c in page.get('charactersInline', []):
+                  handle = c.get('handle')
+                  if handle and handle.startswith('@vik.'):
+                      assert handle in by_handle, (page['id'], handle)
+          print('Issue 1 live assembler registration: valid')
+          print('Issue 1 pages:', len(pages))
+          PY
+      - name: Commit manifest registration
+        run: |
+          if git diff --quiet -- data/shows.json; then
+            echo 'Manifest already registered.'
+            exit 0
+          fi
+          git config user.name 'starsplitterrecords'
+          git config user.email '77013062+starsplitterrecords@users.noreply.github.com'
+          git add data/shows.json
+          git commit -m 'Expose Vikings Issue 1 in RexPrompt'
+          git push origin HEAD:fix/vikings-issue1-live
