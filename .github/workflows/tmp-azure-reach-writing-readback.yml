@@ -16,7 +16,7 @@ jobs:
       - name: Decode Azure Reach production writing
         shell: python
         run: |
-          import base64, gzip, json, pathlib, collections
+          import base64, gzip, json, pathlib, collections, shutil, re
           root = pathlib.Path('data/shows/azure-reach-s1')
           out = pathlib.Path('readback')
           decoded = out / 'decoded'
@@ -50,11 +50,14 @@ jobs:
           for name in ['characters.json','settings.json','regions.json','factions.json','direction.json','negatives.json','season_one_plan.json']:
               p = root / name
               if p.exists():
-                  (out / name).write_text(p.read_text())
+                  shutil.copy2(p, out / name)
+          for p in [pathlib.Path('data/shows.json'), pathlib.Path('index.html'), pathlib.Path('tools/validate_azure_reach.py'), pathlib.Path('tools/validate_azure_reach_e02.py')]:
+              if p.exists():
+                  target = out / p.name
+                  shutil.copy2(p, target)
           by_issue = collections.defaultdict(list)
           for r in records:
               pid = str(r.get('id') or '')
-              import re
               m = re.search(r'E(\d{2})', pid)
               if m:
                   by_issue[int(m.group(1))].append(r)
