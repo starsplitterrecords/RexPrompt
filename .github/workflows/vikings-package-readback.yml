@@ -1,0 +1,32 @@
+name: Vikings package readback bridge
+
+on:
+  push:
+    branches:
+      - img-artifact-bridge-test
+    paths:
+      - '.github/workflows/vikings-package-readback.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify target package
+        run: |
+          test -f index.html
+          test -f data/shows.json
+          test -d data/shows/vikings-2026-s1
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: vikings-package-readback
+          path: |
+            index.html
+            data/shows.json
+            data/shows/vikings-2026-s1/**
+            tools/**
+          retention-days: 1
