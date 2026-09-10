@@ -1,0 +1,75 @@
+name: Temporary Azure Reach Writing Readback
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-azure-reach-writing-readback.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode Azure Reach production writing
+        shell: python
+        run: |
+          import base64, gzip, json, pathlib, collections
+          root = pathlib.Path('data/shows/azure-reach-s1')
+          out = pathlib.Path('readback')
+          decoded = out / 'decoded'
+          decoded.mkdir(parents=True, exist_ok=True)
+          records = []
+          for src in sorted((root / 'encoded').glob('*.json.gzb64')):
+              raw = base64.b64decode(src.read_text().strip())
+              data = json.loads(gzip.decompress(raw).decode('utf-8'))
+              dest = decoded / src.name.replace('.json.gzb64', '.json')
+              dest.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+              pages = data if isinstance(data, list) else data.get('pages', data)
+              if isinstance(pages, dict):
+                  pages = [dict({'id': k}, **(v if isinstance(v, dict) else {'value': v})) for k, v in pages.items()]
+              if not isinstance(pages, list):
+                  pages = []
+              for p in pages:
+                  if not isinstance(p, dict):
+                      continue
+                  records.append({
+                      'id': p.get('id'),
+                      'summary': p.get('summary'),
+                      'setting': p.get('setting'),
+                      'settingText': p.get('settingText'),
+                      'characters': p.get('characters'),
+                      'charactersInline': p.get('charactersInline'),
+                      'panelCount': len(p.get('panelPlan') or []),
+                      'dialogueCount': len(p.get('dialogueInline') or p.get('sceneDialogue') or p.get('dialog') or []),
+                      'continuityFrom': p.get('continuityFrom')
+                  })
+          (out / 'page-index.json').write_text(json.dumps(records, indent=2, ensure_ascii=False) + '\n')
+          for name in ['characters.json','settings.json','regions.json','factions.json','direction.json','negatives.json','season_one_plan.json']:
+              p = root / name
+              if p.exists():
+                  (out / name).write_text(p.read_text())
+          by_issue = collections.defaultdict(list)
+          for r in records:
+              pid = str(r.get('id') or '')
+              import re
+              m = re.search(r'E(\d{2})', pid)
+              if m:
+                  by_issue[int(m.group(1))].append(r)
+          lines=[]
+          for issue in sorted(by_issue):
+              pages=by_issue[issue]
+              lines.append(f'ISSUE {issue}: {len(pages)} pages')
+              for r in pages:
+                  lines.append(f"{r['id']} | setting={r['setting'] or r['settingText']} | panels={r['panelCount']} | dialogue={r['dialogueCount']} | {r['summary']}")
+              lines.append('')
+          (out / 'page-index.txt').write_text('\n'.join(lines))
+      - name: Upload writing readback
+        uses: actions/upload-artifact@v4
+        with:
+          name: azure-reach-writing-readback
+          path: readback/
+          if-no-files-found: error
+          retention-days: 1
