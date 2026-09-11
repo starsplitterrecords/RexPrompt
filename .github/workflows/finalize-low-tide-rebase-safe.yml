@@ -1,0 +1,50 @@
+name: Finalize Low Tide visual repair safely
+on:
+  push:
+    paths:
+      - '.github/workflows/finalize-low-tide-rebase-safe.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reapply validated nine-page rewrite from prior runner
+        shell: bash
+        run: |
+          python - <<'PY'
+          import re,textwrap
+          from pathlib import Path
+          workflow=Path('.github/workflows/finish-low-tide-visual-specificity.yml').read_text(encoding='utf-8')
+          match=re.search(r"python - <<'PY'\n(.*?)\n          PY",workflow,re.S)
+          assert match, 'embedded Low Tide rewrite script not found'
+          code=textwrap.dedent(match.group(1))
+          exec(compile(code,'low-tide-visual-rewrite','exec'),{})
+          PY
+      - name: Validate complete chef boundary
+        run: python tools/validate_low_tide_img_normalization.py
+      - name: Commit and push without overwriting concurrent main work
+        shell: bash
+        run: |
+          rm -f .github/workflows/audit-low-tide-final-specificity.yml
+          rm -f .github/workflows/finish-low-tide-visual-specificity.yml
+          rm -f .github/workflows/finalize-low-tide-rebase-safe.yml
+          git config user.name "starsplitterrecords"
+          git config user.email "77013062+starsplitterrecords@users.noreply.github.com"
+          git add -A data/shows/low-tide-signal .github
+          git commit -m "Finish Low Tide visual-first page staging"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          echo 'Unable to push after five rebase-safe attempts' >&2
+          exit 1
