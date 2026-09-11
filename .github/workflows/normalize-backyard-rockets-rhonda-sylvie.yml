@@ -1,4 +1,4 @@
-# normalization runner
+# normalization runner v2
 name: Normalize Backyard Rockets identities
 
 on:
@@ -31,6 +31,7 @@ jobs:
           from pathlib import Path
 
           workflow = Path('.github/workflows/normalize-backyard-rockets-rhonda-sylvie.yml')
+          rockets_encoded_root = Path('data/shows/backyard-rockets-s1/encoded')
           replacements = [
               ('Tamsin', 'Rhonda'),
               ('Tamz', 'Sylvie'),
@@ -58,6 +59,9 @@ jobs:
                   return out
               return obj
 
+          def is_rockets_encoded(p):
+              return p.name.endswith('.json.gzb64') and rockets_encoded_root in p.parents
+
           tracked = subprocess.check_output(['git','ls-files','-z']).split(b'\0')
           changed = []
           for raw in tracked:
@@ -66,7 +70,7 @@ jobs:
               p = Path(raw.decode())
               if p == workflow or not p.is_file():
                   continue
-              if p.name.endswith('.json.gzb64'):
+              if is_rockets_encoded(p):
                   txt = p.read_text()
                   decoded = gzip.decompress(base64.b64decode(''.join(txt.split()), validate=True)).decode('utf-8')
                   obj = json.loads(decoded)
@@ -98,12 +102,14 @@ jobs:
               p = Path(raw.decode())
               if p == workflow or not p.is_file():
                   continue
-              if p.name.endswith('.json.gzb64'):
+              if is_rockets_encoded(p):
                   txt = p.read_text()
                   decoded = gzip.decompress(base64.b64decode(''.join(txt.split()), validate=True)).decode('utf-8')
                   low = decoded.lower()
                   if 'tamsin' in low or 'tamz' in low:
                       residue.append(str(p) + ' [decoded]')
+                  continue
+              if p.name.endswith('.json.gzb64'):
                   continue
               try:
                   low = p.read_text().lower()
