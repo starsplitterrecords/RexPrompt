@@ -18,6 +18,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Correct three continuity-sensitive visual phrases
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('tools/_temp_rockets_visual_recipe_polish.py')
+          t=p.read_text()
+          replacements={
+            "Tight action panel: Arvin's natural left hand grips the rail while his synthetic right catches Lucia's wrist; Milo reaches in with the safety line.":
+            "Tight action panel: Arvin's natural LEFT HAND grips the rail while his pale synthetic RIGHT HAND catches Lucia's wrist; Milo reaches in with the safety line.",
+            "Rhonda completes the authority transfer, closes the coordinator console, leaves copied keys and procedure sheets with the community team, then walks outside alone. Tethergrid detains her at the building entrance while the closed console inside already shows AUTHORITY TRANSFERRED.":
+            "Rhonda completes the authority transfer, closes the coordinator console, leaves copied keys and procedure sheets with the community team, then walks outside alone. Cyrus waits with the Tethergrid detention team at the entrance and oversees her custody while the closed console inside already shows AUTHORITY TRANSFERRED.",
+            "Exterior threshold view: Tethergrid personnel wait outside; Rhonda stops beyond the doorway with empty visible hands and no neighbors following her out.":
+            "Exterior threshold view: Cyrus stands with Tethergrid personnel outside; Rhonda stops beyond the doorway with empty visible hands and no neighbors following her out.",
+            "At Tethergrid command, Rhonda's detention-transport icon drops from the network on the same service corridor leading toward the mobile launch cradle. Cyrus boards an interceptor and keeps the remaining pursuit route on the service corridor, away from storm-darkened community roads.":
+            "At Tethergrid command, the detention-transport icon drops from the network on the same service corridor leading toward the mobile launch cradle. Cyrus boards an interceptor and keeps the remaining pursuit route on the service corridor, away from storm-darkened community roads.",
+          }
+          for old,new in replacements.items():
+            if old not in t: raise SystemExit('Expected phrase not found: '+old)
+            t=t.replace(old,new)
+          p.write_text(t)
+          PY
       - name: Apply page-specific visual recipes
         run: python tools/_temp_rockets_visual_recipe_polish.py
       - name: Validate Rockets production state
