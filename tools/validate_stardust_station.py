@@ -238,3 +238,22 @@ print("Pages:", page_total)
 print("Unique page ids:", len(seen_ids))
 print("Curated references:", len(refs))
 print("Approved Stardust drafts:", sum(1 for key in drafts if key.startswith("stardust-station::")))
+
+
+# STARDUST_VISUAL_FIRST_SELECTIVE_GUARD
+_writer_meta = re.compile(r"\b(?:story\s+beat|dramatic\s+engine|writer[- ]room|writerly|page\s+feel|key\s+image|causal\s+spine|reader\s+function|payoff|pays\s+off|rather\s+than\s+preachy|institutionally\s+rather\s+than|scientifically\s+rather\s+than)\b", re.IGNORECASE)
+_issue_provenance = re.compile(r"\b(?:from\s+|after\s+|before\s+|during\s+)?Issue\s+\d+\b", re.IGNORECASE)
+for _entry in stardust_entries:
+    if _entry.get("id") == "stardust-station":
+        continue
+    for _overlay in _entry["sceneOverlays"]:
+        _payload = load_overlay(ROOT / _entry["basePath"] / _overlay["file"], _overlay.get("encoding"))
+        _pages = _payload.get("pages") if isinstance(_payload, dict) else _payload
+        for _page in _pages:
+            assert str(_page.get("summary", "")).startswith("Primary composition:"), f"{_page.get('id')}: summary is not image-facing composition"
+            _fields = [str(_page.get("summary", "")), str(_page.get("settingText", ""))]
+            _fields.extend(str(_p.get("text", "")) for _p in (_page.get("panelPlan") or []) if isinstance(_p, dict))
+            for _value in _fields:
+                assert not _writer_meta.search(_value), f"{_page.get('id')}: writer-room rationale leaked into recipe: {_value}"
+                assert not _issue_provenance.search(_value), f"{_page.get('id')}: issue/archive provenance leaked into recipe: {_value}"
+                assert "visible around the action" not in _value and "Keep the " not in _value, f"{_page.get('id')}: repetitive staging boilerplate leaked into recipe: {_value}"
