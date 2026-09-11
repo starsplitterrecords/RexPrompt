@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Rewrite chef-facing Stardust data
+      - name: Rewrite chef-facing Stardust data v3
         run: python tools/tmp_fix_stardust_chef_boundary_v3.py
       - name: Validate Stardust mechanical integrity
         run: python tools/validate_stardust_station.py
