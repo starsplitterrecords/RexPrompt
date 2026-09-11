@@ -37,6 +37,14 @@ factions = load(SHOW / "factions.json")
 regions = load(SHOW / "regions.json")
 settings = load(SHOW / "settings.json")
 directions = load(SHOW / "direction.json")
+
+# Chef-layer separation: writing/planning doctrine belongs outside assembled image recipes.
+NON_IMAGE_DIRECTION_KEYS = {
+    "AZR_DRAMATIC_ENGINE", "AZR_ENVIRONMENT_ABUNDANCE",
+    "AZR_PARK_STAGING", "AZR_SOFT_ENV_CONTINUITY",
+}
+assert not (NON_IMAGE_DIRECTION_KEYS & set(directions)), "Writing/planning doctrine leaked into direction.json"
+CHEF_META_TERMS = ("process-improvement", "workflow optimization", "KPI repair", "scalable process", "do not default conversations")
 canonical_handles = {
     value.get("handle")
     for value in characters.values()
@@ -67,6 +75,7 @@ for entry in azure_entries:
     assert entry.get("scenesFile") == "pages_base.json", f"{show_id}: scenesFile drift"
     assert entry.get("unitLabel") == "PAGE", f"{show_id}: unitLabel must be PAGE"
     assert isinstance(entry.get("generationLine"), str) and entry["generationLine"].strip(), f"{show_id}: missing generationLine"
+    assert not any(term.lower() in entry["generationLine"].lower() for term in CHEF_META_TERMS), f"{show_id}: writing/planning language leaked into generationLine"
 
     overlays = entry.get("sceneOverlays", [])
     assert isinstance(overlays, list) and overlays, f"{show_id}: missing scene overlays"
@@ -140,6 +149,7 @@ for entry in azure_entries:
         direction_refs = page.get("direction", [])
         assert isinstance(direction_refs, list), f"{page_id}: direction must be a list"
         assert len(direction_refs) == len(set(direction_refs)), f"{page_id}: duplicate direction refs"
+        assert not (NON_IMAGE_DIRECTION_KEYS & set(direction_refs)), f"{page_id}: non-image direction leaked into chef recipe"
         for ref in direction_refs:
             assert ref in directions, f"{page_id}: unknown direction ref {ref}"
 
