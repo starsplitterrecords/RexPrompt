@@ -1,0 +1,101 @@
+name: Temporary Azure Reach Chef Audit
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-azure-chef-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct Azure Reach chef-facing recipes
+        shell: python
+        run: |
+          import base64, gzip, json, pathlib, re
+          root = pathlib.Path('data/shows/azure-reach-s1')
+          out = pathlib.Path('audit')
+          out.mkdir(exist_ok=True)
+          shows = json.loads(pathlib.Path('data/shows.json').read_text())
+          settings = json.loads((root/'settings.json').read_text())
+          direction = json.loads((root/'direction.json').read_text())
+          characters = json.loads((root/'characters.json').read_text())
+          targets = {f'azure-reach-s1-e0{i}' for i in range(2,7)}
+          report=[]; recipe_blocks=[]; hits=[]
+          meta_terms = re.compile(r'process[- ]improvement|workflow optimization|dramatic engine|KPI|scalable process|no department|department is permanently|environmental abundance|soft environment continuity|prefer conversations|do not default conversations|much larger than the plot', re.I)
+          def fmt(e):
+              if isinstance(e,str): return e
+              if isinstance(e,dict): return e.get('text') or e.get('name') or e.get('summary') or json.dumps(e,ensure_ascii=False)
+              return json.dumps(e,ensure_ascii=False)
+          def charfmt(e,key):
+              if not e: return key
+              parts=[e.get('name',key)]
+              if e.get('handle'): parts.append(e['handle'])
+              v=e.get('visualAnchor') or e.get('visual') or e.get('appearance') or e.get('visualDescription')
+              if v: parts.append('Identity: '+v)
+              for k,label in [('wardrobe','Wardrobe'),('performance','Performance'),('relationship','Relationship')]:
+                  if e.get(k): parts.append(label+': '+str(e[k]))
+              if e.get('promptContinuity'): parts.append('Continuity: '+'; '.join(e['promptContinuity']))
+              return ' — '.join(parts)
+          for show in shows:
+              if show.get('id') not in targets: continue
+              pages=[]
+              for ov in show.get('sceneOverlays',[]):
+                  p=root/ov['file']
+                  if ov.get('encoding')=='gzip-base64':
+                      data=json.loads(gzip.decompress(base64.b64decode(p.read_text().strip())).decode())
+                  else: data=json.loads(p.read_text())
+                  if isinstance(data,dict) and isinstance(data.get('pages'),list): data=data['pages']
+                  if isinstance(data,dict): data=[dict({'id':k},**v) for k,v in data.items()]
+                  pages.extend(data)
+              for page in pages:
+                  block=[]
+                  block.append('=== PAGE: '+str(page.get('id'))+' ===')
+                  if page.get('summary'): block.append(str(page['summary']).strip())
+                  block.append(show.get('generationLine',''))
+                  if page.get('settingText'): block.append('\n[SETTING]\n'+page['settingText'])
+                  elif page.get('setting') in settings: block.append('\n[SETTING]\n'+fmt(settings[page['setting']]))
+                  if page.get('charactersInline'):
+                      block.append('\n[CHARACTERS]')
+                      for c in page['charactersInline']:
+                          h=c.get('handle'); e=next((x for x in characters.values() if x.get('handle')==h or h in x.get('aliases',[])),None)
+                          block.append(charfmt(e,c.get('name') or h))
+                  elif page.get('characters'):
+                      block.append('\n[CHARACTERS]')
+                      for k in page['characters']:
+                          block.append(charfmt(characters.get(k),k))
+                  if page.get('panelPlan'):
+                      block.append('\n[PANEL PLAN]')
+                      block += [fmt(x) for x in page['panelPlan']]
+                  dlg=page.get('dialogueInline') or page.get('sceneDialogue')
+                  if dlg:
+                      block.append('\n[DIALOGUE]')
+                      for d in dlg:
+                          sp=d.get('handle') or d.get('speaker') or 'TEXT'
+                          block.append(f'{sp}: "{d.get("text","")}"')
+                  if page.get('continuityFrom'): block.append('\n[CONTINUITY]\nContinue directly from '+page['continuityFrom'])
+                  resolved=[]
+                  for k in page.get('direction') or []:
+                      if k in direction: resolved.append(fmt(direction[k]))
+                  resolved += [fmt(x) for x in page.get('directionInline') or []]
+                  if resolved:
+                      block.append('\n[DIRECTION]'); block += resolved
+                  text='\n'.join(block).strip()
+                  recipe_blocks.append(text)
+                  matched=sorted(set(m.group(0) for m in meta_terms.finditer(text)))
+                  if matched: hits.append({'id':page.get('id'),'hits':matched})
+                  report.append({'id':page.get('id'),'issue':show.get('id'),'keys':sorted(page.keys()),'setting':page.get('setting'),'direction':page.get('direction'),'directionInline':page.get('directionInline'),'summary':page.get('summary'),'metaHits':matched})
+          (out/'chef-recipes.txt').write_text('\n\n'+('\n\n'.join(recipe_blocks)))
+          (out/'page-report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+          (out/'meta-hits.json').write_text(json.dumps(hits,indent=2,ensure_ascii=False)+'\n')
+          (out/'summary.txt').write_text(f'pages={len(report)}\npages_with_meta_hits={len(hits)}\n'+ '\n'.join(f"{h['id']}: {', '.join(h['hits'])}" for h in hits)+'\n')
+      - uses: actions/upload-artifact@v4
+        with:
+          name: azure-chef-audit
+          path: audit/
+          if-no-files-found: error
+          retention-days: 1
