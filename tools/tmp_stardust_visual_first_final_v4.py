@@ -10,6 +10,15 @@ V1 = Path(__file__).with_name("tmp_stardust_visual_first_final.py")
 V2 = Path(__file__).with_name("tmp_stardust_visual_first_final_v2.py")
 V3 = Path(__file__).with_name("tmp_stardust_visual_first_final_v3.py")
 
+base.GENERATION_LINE = (
+    "Finished full-color portrait interior story comic page for Stardust Station. "
+    "Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, "
+    "clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. "
+    "Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. "
+    "Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, "
+    "character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, "
+    "dossier, promotional or infographic framing unless explicitly scripted. Fictional production."
+)
 base.WRITER_META = re.compile(
     r"\b(?:story\s+beat|dramatic\s+engine|writer[- ]room|writerly|page\s+feel|key\s+image|"
     r"causal\s+spine|reader\s+function|payoff|pays\s+off|rather\s+than\s+preachy|"
