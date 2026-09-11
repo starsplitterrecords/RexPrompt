@@ -1,28 +1,106 @@
 {
   "series": "Vikings 2026",
   "season": "S1",
-  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> institutional pressure -> legal judgment -> conditional belonging.",
+  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> choice -> recognition -> self-defined belonging under judgment.",
+  "seasonDramaticShift": "Issues 1–5 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 6 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, privacy, autonomy, and belonging.",
   "issues": [
-    {"issue":1,"title":"Arrival in Time","function":"Arrival, DTI intake, premise establishment","beatCoverage":"1-12","status":"released canon"},
-    {"issue":2,"title":"Landfall Bushwick","function":"Apartment adaptation and neighborhood integration; the temporary shelter becomes a functioning household while Carrie secures a provisional administrative foothold.","beatCoverage":"13-20","status":"production-ready 24-page recovered and enhanced script"},
-    {"issue":3,"title":"The Iron Worm","function":"Transit adaptation; Gunnar learns the city as navigable terrain and uses that knowledge to complete the errand and lead the group home","beatCoverage":"21-27","status":"production-ready 24-page recovered and enhanced script"},
-    {"issue":4,"title":"The Tally of Dishonor","function":"Financial legibility, value, status, and partial civic participation","beatCoverage":"28-32","status":"production-ready 24-page script","referenceFile":"issue_04_reference.json"},
-    {"issue":5,"title":"The Skaldic Interface","function":"Neighborhood-memory and emerging belonging; recurring relationships and ordinary routines show the Vikings beginning to live independently in New York","beatCoverage":"33-36 plus neighborhood-memory material","status":"production-ready 24-page enhanced script encoded in RexPrompt","scriptFile":"issue_05_skaldic_interface_enhanced.md"},
-    {"issue":6,"title":"Trial of Toil","function":"Usefulness, dignity, respect, responsibility, and the beginning of meaningful contribution; Bjorn's crisis over dependence leads to the DTI temporal-refugee support group where his natural leadership regains respect and meaning","status":"24-page dramatic spine locked; page script pass in progress","developmentFile":"issue_06_trial_of_toil_development.json"},
-    {"issue":7,"title":"War Council","function":"A Status Reconciliation Review threatens the household's accumulated life in New York; Carrie and the Vikings convert lived belonging into a defense the system can recognize","status":"active treatment","treatmentFile":"issue_07_war_council_treatment.md"},
-    {"issue":8,"title":"The Filing of Grievances","function":"Bureaucratic escalation, evidence accumulation, filing/audit pressure, and hearing preparation","beatCoverage":"47-52","status":"normalized; full scene/page enhancement pending"},
-    {"issue":9,"title":"Permanent Residency / Trial by Combat","function":"Residency hearing and legal resolution","beatCoverage":"53-58","status":"normalized; exact ruling unresolved"}
+    {
+      "issue": 1,
+      "title": "Arrival in Time",
+      "function": "Arrival, DTI intake, premise establishment",
+      "beatCoverage": "1-12",
+      "status": "released canon"
+    },
+    {
+      "issue": 2,
+      "title": "Landfall Bushwick",
+      "function": "Apartment adaptation and neighborhood integration; the temporary shelter becomes a functioning household while Carrie secures a provisional administrative foothold.",
+      "beatCoverage": "13-20",
+      "status": "production-ready 24-page recovered and enhanced script"
+    },
+    {
+      "issue": 3,
+      "title": "The Iron Worm",
+      "function": "Transit adaptation; Gunnar learns the city as navigable terrain and uses that knowledge to complete the errand and lead the group home",
+      "beatCoverage": "21-27",
+      "status": "production-ready 24-page recovered and enhanced script"
+    },
+    {
+      "issue": 4,
+      "title": "The Tally of Dishonor",
+      "function": "Financial legibility, value, status, and partial civic participation",
+      "beatCoverage": "28-32",
+      "status": "production-ready 24-page script",
+      "referenceFile": "issue_04_reference.json"
+    },
+    {
+      "issue": 5,
+      "title": "The Skaldic Interface",
+      "function": "Neighborhood-memory and emerging belonging; recurring relationships and ordinary routines show the Vikings beginning to live independently in New York",
+      "beatCoverage": "33-36 plus neighborhood-memory material",
+      "status": "production-ready 24-page enhanced script encoded in RexPrompt",
+      "scriptFile": "issue_05_skaldic_interface_enhanced.md"
+    },
+    {
+      "issue": 6,
+      "title": "Trial of Toil",
+      "function": "Bjorn's crisis over usefulness becomes a character story about respect, consent, responsibility, and meaningful contribution. The temporal-refugee group changes how he leads, while the apartment and neighborhood prove whether that change survives ordinary life.",
+      "status": "enhanced 24-page dramatic spine locked; panel/dialogue script pass pending",
+      "developmentFile": "issue_06_trial_of_toil_development.json"
+    },
+    {
+      "issue": 7,
+      "title": "War Council",
+      "function": "A Status Reconciliation Review forces the household to decide what it actually wants to defend. The core conflict is not the paperwork but the discovery that staying in New York, staying together, choosing permanence, and preserving individual freedom are not the same decision.",
+      "status": "enhanced 24-page dramatic spine locked; panel/dialogue pass pending",
+      "treatmentFile": "issue_07_war_council_treatment.md"
+    },
+    {
+      "issue": 8,
+      "title": "The Filing of Grievances",
+      "function": "The household revisits the relationships accumulated all season and discovers that being known by other people is different from controlling how those people describe you. Privacy, mixed testimony, first-person voice, and imperfect recognition shape the response before the hearing.",
+      "beatCoverage": "47-52 reinterpreted through relationship and voice rather than audit procedure",
+      "status": "enhanced 24-page dramatic spine locked; panel/dialogue pass pending",
+      "treatmentFile": "issue_08_filing_of_grievances_treatment.md"
+    },
+    {
+      "issue": 9,
+      "title": "Permanent Residency / Trial by Combat",
+      "function": "The residency hearing tests whether an institution can make a fair decision about a real but unconventional household whose members have chosen belonging without surrendering separate identities or future choices.",
+      "beatCoverage": "53-58",
+      "status": "normalized; exact ruling and full enhanced page structure unresolved"
+    }
   ],
   "productionPayloads": [
-    {"payloadIds":"VIK_S1I02_P01-P24","storyPlacement":"Issue 2 — Landfall Bushwick","status":"production-ready","source":"Recovered from established development and compiled as a 24-page current Issue 2 package; I02 namespace prevents collision with legacy episode-numbered payloads."},
-    {"payloadIds":"VIK_S1E03_P01-P24","storyPlacement":"Issue 3 — The Iron Worm","status":"production-ready","source":"Recovered from THE IRON WORM 20-page draft v2 and enhanced to 24 pages using the current Master Project Bible, season beat spine, and released Issue 1 canon."},
-    {"payloadIds":"VIK_S1E02_P01-P24","storyPlacement":"Issue 4 — The Tally of Dishonor","status":"production-ready","identifierNote":"S1E02 is the stable production identifier for the approved Issue 4 bank material."},
-    {"payloadIds":"VIK_S1E05_P01-P24","storyPlacement":"Issue 5 — The Skaldic Interface","status":"production-ready"}
+    {
+      "payloadIds": "VIK_S1I02_P01-P24",
+      "storyPlacement": "Issue 2 — Landfall Bushwick",
+      "status": "production-ready",
+      "source": "Recovered from established development and compiled as a 24-page current Issue 2 package; I02 namespace prevents collision with legacy episode-numbered payloads."
+    },
+    {
+      "payloadIds": "VIK_S1E03_P01-P24",
+      "storyPlacement": "Issue 3 — The Iron Worm",
+      "status": "production-ready",
+      "source": "Recovered from THE IRON WORM 20-page draft v2 and enhanced to 24 pages using the current Master Project Bible, season beat spine, and released Issue 1 canon."
+    },
+    {
+      "payloadIds": "VIK_S1E02_P01-P24",
+      "storyPlacement": "Issue 4 — The Tally of Dishonor",
+      "status": "production-ready",
+      "identifierNote": "S1E02 is the stable production identifier for the approved Issue 4 bank material."
+    },
+    {
+      "payloadIds": "VIK_S1E05_P01-P24",
+      "storyPlacement": "Issue 5 — The Skaldic Interface",
+      "status": "production-ready"
+    }
   ],
   "finaleState": {
     "ordeal": "The residency hearing functions as Bjorn's trial by combat without literal combat.",
-    "bjorn": "Bjorn arrives in armor.",
-    "carrie": "Carrie does not ask him to remove it."
+    "hearingPurpose": "The hearing is not the climax of a paperwork story. It is where the institution encounters a household that cannot honestly be reduced to one spokesperson, one integration narrative, or one permanent future.",
+    "bjorn": "Bjorn arrives in armor. His growth is visible in using authority to defend other people's right to speak and choose, not in abandoning forceful leadership.",
+    "carrie": "Carrie does not ask him to remove it. She argues the process without pretending the file is the whole truth of the people in it."
   },
   "openDecisions": [
     "Carrie's full legal/display name",
@@ -30,11 +108,12 @@
     "Whether Kin size remains intentionally ambiguous",
     "Final confirmation or replacement of Eirik, Astrid, and Ivar",
     "Magister's return and eventual role",
-    "Detailed Silas progression",
+    "Detailed Silas progression beyond Issue 8",
     "Exact Issue 6 support-group participant roster and group leader identity",
-    "Issue 7 page allocation, panel structure, and dialogue",
-    "Issue 8 full scene/page structure",
-    "Museum continuity placement",
-    "Trial by Combat testimony units"
+    "Issue 6 panel structure and final dialogue",
+    "Issue 7 panel structure and final dialogue",
+    "Issue 8 panel structure and final dialogue",
+    "Issue 9 full enhanced page structure and testimony order",
+    "Museum continuity placement"
   ]
 }
