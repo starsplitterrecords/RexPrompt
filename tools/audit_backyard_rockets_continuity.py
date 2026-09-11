@@ -8,8 +8,8 @@ SHOW_ID = "backyard-rockets-s1"
 SHOW = ROOT / "data" / "shows" / SHOW_ID
 MANIFEST = ROOT / "data" / "shows.json"
 REPORT = ROOT / "backyard-rockets-continuity-report.json"
-P = {"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Tamz":"@brk.Tamz","Tamsin":"@brk.Tamsin","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
-SALV = {"Arvin","Milo","Lucia","Tamz"}
+P = {"Arvin":"@brk.Arvin","Milo":"@brk.Milo","Lucia":"@brk.Lucia","Cyrus":"@brk.Cyrus","Sylvie":"@brk.Sylvie","Rhonda":"@brk.Rhonda","Tetherwell Narrator":"@brk.TetherwellNarrator","Dryline Reporter":"@brk.DrylineReporter"}
+SALV = {"Arvin","Milo","Lucia","Sylvie"}
 
 def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def norm(x):
@@ -103,7 +103,7 @@ for file,group in groups:
         rows.append({"id":sid,"episode":e,"file":file,"summary":summary,"charactersInline":inline,"factions":s.get("factions",[]) or [],"setting":setting,"settingText":loc,"dialogueInline":dia})
 
 canon=text(chars)
-for label,pattern in [("Arvin right-hand graft",r"RIGHT HAND"),("Milo facial markings",r"facial cybernetic markings"),("Lucia cyan-piped dark jacket",r"dark tactical field jacket.*cyan piping"),("Cyrus graphite armor",r"graphite technical armor"),("Tamz braided hair",r"braided hair")]:
+for label,pattern in [("Arvin right-hand graft",r"RIGHT HAND"),("Milo facial markings",r"facial cybernetic markings"),("Lucia cyan-piped dark jacket",r"dark tactical field jacket.*cyan piping"),("Cyrus graphite armor",r"graphite technical armor"),("Sylvie braided hair",r"braided hair")]:
     if not re.search(pattern,canon,re.I|re.S):
         issues.append({"scene":"CHARACTER_CANON","episode":"CANON","kind":"missing_approved_image_lock","detail":label,"file":"characters.json"})
 for sid,c in Counter(s.get("id") for s in scenes).items():
