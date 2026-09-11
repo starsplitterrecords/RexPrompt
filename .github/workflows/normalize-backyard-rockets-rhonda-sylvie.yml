@@ -1,3 +1,4 @@
+# normalization runner
 name: Normalize Backyard Rockets identities
 
 on:
@@ -29,7 +30,6 @@ jobs:
           import base64, gzip, json, subprocess
           from pathlib import Path
 
-          root = Path('.')
           workflow = Path('.github/workflows/normalize-backyard-rockets-rhonda-sylvie.yml')
           replacements = [
               ('Tamsin', 'Rhonda'),
@@ -91,7 +91,6 @@ jobs:
           if not changed:
               raise RuntimeError('No identity references were changed')
 
-          # Hard residue audit across tracked plaintext plus every decoded production payload.
           residue = []
           for raw in tracked:
               if not raw:
@@ -115,7 +114,6 @@ jobs:
           if residue:
               raise RuntimeError('Retired identity residue remains:\n' + '\n'.join(residue))
 
-          # Explicit new-identity checks in the canonical character shelf.
           chars = json.loads(Path('data/shows/backyard-rockets-s1/characters.json').read_text())
           assert chars['rhonda']['name'] == 'Rhonda'
           assert chars['rhonda']['handle'] == '@brk.Rhonda'
