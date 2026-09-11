@@ -5,8 +5,10 @@ on:
     paths:
       - 'data/shows.json'
       - 'data/shows/echoes-forgotten-war-s1/**'
+      - 'production/references/echoes-forgotten-war/**'
       - 'tools/validate_echoes.py'
       - 'tools/sanitize_echoes.py'
+      - 'tools/sanitize_echoes_residue.py'
       - '.github/workflows/validate-echoes.yml'
   workflow_dispatch:
 
@@ -18,5 +20,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate sanitized Echoes production data
+      - name: Validate Echoes production data
         run: python tools/validate_echoes.py
