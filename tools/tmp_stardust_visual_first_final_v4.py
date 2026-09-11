@@ -89,7 +89,8 @@ def append_validator_guards():
 # Chef-facing Stardust fields must describe observable image work, not writing-room rationale.
 _writer_meta = re.compile(r"\b(?:story\s+beat|dramatic\s+engine|writer[- ]room|writerly|page\s+feel|key\s+image|causal\s+spine|reader\s+function|payoff|pays\s+off|rather\s+than\s+preachy|institutionally\s+rather\s+than|scientifically\s+rather\s+than)\b", re.IGNORECASE)
 _issue_provenance = re.compile(r"\b(?:from\s+|after\s+|before\s+|during\s+)?Issue\s+\d+\b", re.IGNORECASE)
-for _show_id, _entry in stardust_entries.items():
+for _entry in stardust_entries:
+    _show_id = _entry.get("id")
     if _show_id == "stardust-station":
         continue
     for _overlay in _entry["sceneOverlays"]:
