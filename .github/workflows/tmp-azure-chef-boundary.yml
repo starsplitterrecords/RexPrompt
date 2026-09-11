@@ -1,0 +1,94 @@
+name: Temporary Azure Reach Chef Boundary Cleanup
+
+on:
+  push:
+    paths:
+      - '.github/workflows/tmp-azure-chef-boundary.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/azure-reach-chef-boundary-20260910
+      - name: Keep only image-relevant continuity in assembled recipes
+        shell: python
+        run: |
+          import base64, gzip, json, pathlib, re
+          root=pathlib.Path('data/shows/azure-reach-s1')
+          dpath=root/'direction.json'; d=json.loads(dpath.read_text())
+          d['AZR_PRODUCTION_CORE']={'text':'AZURE REACH PRODUCTION CORE — Bright, glossy, well-funded contemporary marine park with luminous public spaces, polished glass-and-stone architecture, clean professional backstage areas and credible working habitats. Animals remain calm and behaviorally credible. Released Azure Reach Issue 1 is strict visual canon for established faces, apparent ages, body proportions, department color coding, facility design and overall rendering language; do not redesign established people or make backstage areas grimy, improvised or industrially degraded.'}
+          d['AZR_E02_CONTINUITY']={'text':'ISSUE 2 VISUAL CONTINUITY — Dolphin scenes use the established luminous public gallery and clean care-backstage language, approved trainer objects and controlled keeper return points where scripted. Guests remain behind public barriers; no guest handling, throwing, backstage access or altered animal behavior. Dolphins remain calm and behaviorally credible.'}
+          d['AZR_E03_VISUAL_CONTINUITY']={'text':'ISSUE 3 VISUAL CONTINUITY — Tidepool programming remains public-side, staff-supervised and fully accessible. Animal-care rotation, quiet reset, staff access and general public circulation stay physically readable. No backstage guest access, flash photography, animal repositioning or blocked public habitat sightlines.'}
+          d['AZR_E04_VISUAL_CONTINUITY']={'text':'ISSUE 4 VISUAL CONTINUITY — Feeding Stream Live uses normal approved staff feeding, public-safe camera positions and readable moderation/broadcast equipment. No extra food, guest feeding, forced animal cue, prolonged care session, backstage camera access or private operational screens. Post-feed animals behave normally.'}
+          d['AZR_E05_VISUAL_CONTINUITY']={'text':'ISSUE 5 VISUAL CONTINUITY — Conservation Week retains its scripted signage, optional participation/passport materials, counters, sponsor graphics, accessibility routes, staff circulation and carried props across consecutive pages. No animal handling, guest feeding or backstage trespass.'}
+          d['AZR_E06_VISUAL_CONTINUITY']={'text':'ISSUE 6 VISUAL CONTINUITY — The anniversary gala remains bright, elegant and recognizably Azure Reach. Accessible guest routes, the service spine and animal-care access stay visibly clear. Sponsor projection and hospitality remain non-obstructive. No added animal contact, feeding, cueing or restricted backstage access; ordinary animal care continues beneath the event.'}
+          dpath.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+
+          changed=0; continuity_blocks=0
+          for p in sorted((root/'encoded').glob('*.json.gzb64')):
+              data=json.loads(gzip.decompress(base64.b64decode(p.read_text().strip())).decode()); dirty=False
+              pages=data if isinstance(data,list) else data.get('pages',[])
+              for page in pages:
+                  pid=str(page.get('id',''))
+                  m=re.match(r'^AZR_S1E0([2-6])_P\d{2}$',pid)
+                  if not m: continue
+                  issue=int(m.group(1))
+                  inline=page.get('directionInline') or []
+                  new=[]
+                  for item in inline:
+                      text=item.get('text','') if isinstance(item,dict) else str(item)
+                      if text.startswith('PAGE CONTINUITY —'):
+                          continuity_blocks += 1; dirty=True; continue
+                      new.append(item)
+                  if new!=inline: page['directionInline']=new
+                  refs=list(page.get('direction') or [])
+                  key=f'AZR_E0{issue}_VISUAL_CONTINUITY' if issue>=3 else 'AZR_E02_CONTINUITY'
+                  if key not in refs: refs.append(key); dirty=True
+                  page['direction']=refs
+              if dirty:
+                  p.write_text(base64.b64encode(gzip.compress((json.dumps(data,separators=(',',':'),ensure_ascii=False)+'\n').encode(),mtime=0)).decode()+'\n')
+                  changed+=1
+
+          # Extend the mechanical validator so writer-style PAGE CONTINUITY blocks cannot return.
+          vpath=pathlib.Path('tools/validate_azure_reach.py'); v=vpath.read_text()
+          needle='        for item in local_direction:\n            assert isinstance(item, dict), f"{page_id}: malformed directionInline entry"\n            assert isinstance(item.get("text"), str) and item["text"].strip(), f"{page_id}: blank directionInline text"\n'
+          repl=needle+'            assert not item["text"].startswith("PAGE CONTINUITY —"), f"{page_id}: writer continuity leaked into chef recipe"\n'
+          if 'writer continuity leaked into chef recipe' not in v: v=v.replace(needle,repl)
+          vpath.write_text(v)
+
+          # Deep architecture assertions.
+          dirs=json.loads(dpath.read_text())
+          for k in ('AZR_E03_VISUAL_CONTINUITY','AZR_E04_VISUAL_CONTINUITY','AZR_E05_VISUAL_CONTINUITY','AZR_E06_VISUAL_CONTINUITY'):
+              assert k in dirs
+          assert 'human systems, interpretation' not in dirs['AZR_PRODUCTION_CORE']['text']
+          assert 'problem is' not in dirs['AZR_E02_CONTINUITY']['text'].lower()
+          assert 'issue resolves' not in dirs['AZR_E02_CONTINUITY']['text'].lower()
+          remaining=0
+          for p in sorted((root/'encoded').glob('*.json.gzb64')):
+              data=json.loads(gzip.decompress(base64.b64decode(p.read_text().strip())).decode())
+              pages=data if isinstance(data,list) else data.get('pages',[])
+              for page in pages:
+                  pid=str(page.get('id',''))
+                  if not re.match(r'^AZR_S1E0[2-6]_P\d{2}$',pid): continue
+                  for item in page.get('directionInline') or []:
+                      if isinstance(item,dict) and item.get('text','').startswith('PAGE CONTINUITY —'): remaining+=1
+          assert remaining==0, remaining
+          print('Removed PAGE CONTINUITY blocks:', continuity_blocks)
+          print('Changed encoded files:', changed)
+      - name: Validate Azure Reach
+        run: python tools/validate_azure_reach.py
+      - name: Commit and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name starsplitterrecords
+          git config user.email 77013062+starsplitterrecords@users.noreply.github.com
+          git rm -f .github/workflows/tmp-azure-chef-boundary.yml
+          git add data/shows/azure-reach-s1/direction.json data/shows/azure-reach-s1/encoded tools/validate_azure_reach.py
+          git commit -m 'Separate Azure Reach visual continuity from writing notes'
+          git push origin HEAD:fix/azure-reach-chef-boundary-20260910
