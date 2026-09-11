@@ -1,0 +1,73 @@
+name: Audit Low Tide chef language
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-low-tide-chef-language.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect Low Tide chef-facing language
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,gzip,json,re
+          from pathlib import Path
+          base=Path('data/shows/low-tide-signal')
+          chars=json.loads((base/'characters.json').read_text())
+          settings=json.loads((base/'settings.json').read_text())
+          manifest=json.loads(Path('data/shows.json').read_text())
+          pages=json.loads((base/'pages_ch01_ch03_compiled.json').read_text())
+          for f in ['pages_c04_between_runs_enhanced.json.gzb64','pages_c05_return_tide_enhanced.json.gzb64','pages_c06_after_the_water_enhanced.json.gzb64','pages_c07_last_low_tide_enhanced.json.gzb64']:
+            raw=''.join((base/'encoded'/f).read_text().split())
+            x=json.loads(gzip.decompress(base64.b64decode(raw)))
+            pages.extend(x.get('pages',x) if isinstance(x,dict) else x)
+
+          meta_patterns=[
+            r'\b(establish|show|shows|showing|demonstrate|reinforce|underline|frame|frames|function|story function|means|meaning|represents|symboli[sz]|theme|thesis|purpose|arc|flaw|tempt|temptation|diagnos|corrective|validator|audience surrogate|because|rather than|instead of|so that|should feel|should read|let .* feel|never treat|do not make|not a dystopia|not proof|not .* story|not .* problem|not .* mystery)\b',
+            r'\b(this page|the page|page should|scene should|reader|writing|editorial|narrative|dramatic|story beat|emotional beat)\b'
+          ]
+          meta_re=re.compile('|'.join(f'(?:{p})' for p in meta_patterns),re.I)
+          visual_re=re.compile(r'\b(close-up|wide|overhead|foreground|background|profile|silhouette|frame|panel|camera|angle|rain|fog|water|mud|concrete|light|headlamp|boots|hands|face|posture|standing|sitting|walking|running|climbing|looking|holding|carrying|door|stairs|roof|rail|wall|sign|screen|vehicle|crowd|bar|apartment|workshop|transit|mall|market)\b',re.I)
+
+          offenders=[]
+          sparse=[]
+          for p in pages:
+            fields=[]
+            if p.get('summary'): fields.append(('summary',p['summary']))
+            for i,d in enumerate(p.get('directionInline',[]) or []):
+              t=d if isinstance(d,str) else d.get('text','')
+              if t: fields.append((f'direction{i+1}',t))
+            for k,t in fields:
+              if meta_re.search(t): offenders.append((p['id'],k,t))
+            combined=' '.join(t for _,t in fields)
+            if len(visual_re.findall(combined)) < 2:
+              sparse.append((p['id'],combined))
+
+          print('TOTAL_PAGES',len(pages))
+          print('META_OFFENDER_FIELDS',len(offenders),'PAGES',len(set(x[0] for x in offenders)))
+          print('LOW_VISUAL_FIELDS_PAGES',len(sparse))
+          print('\n--- META EXAMPLES ---')
+          for row in offenders[:80]: print(' | '.join(row))
+          print('\n--- LOW VISUAL EXAMPLES ---')
+          for row in sparse[:60]: print(' | '.join(row))
+
+          print('\n--- GENERATION LINES ---')
+          for s in manifest:
+            if s.get('seriesId')=='low-tide-signal': print(s['id'],'|',s.get('generationLine',''))
+          print('\n--- CHARACTER CHEF FIELDS ---')
+          for cid,e in chars.items():
+            print(cid,'| performance=',e.get('performance',''))
+            print(cid,'| relationship=',e.get('relationship',''))
+            print(cid,'| promptContinuity=',e.get('promptContinuity',''))
+          print('\n--- SETTINGS META HITS ---')
+          sh=[]
+          for sid,e in settings.items():
+            t=e.get('text','')
+            if meta_re.search(t): sh.append((sid,t))
+          print('COUNT',len(sh))
+          for row in sh[:50]: print(row[0],'|',row[1])
+          PY
