@@ -10,24 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect Low Tide panel plans
+      - name: Print C1-C3 page beats
         shell: bash
         run: |
           python - <<'PY'
-          import base64,gzip,json,re
+          import json
           from pathlib import Path
-          base=Path('data/shows/low-tide-signal')
-          pages=json.loads((base/'pages_ch01_ch03_compiled.json').read_text())
-          for f in ['pages_c04_between_runs_enhanced.json.gzb64','pages_c05_return_tide_enhanced.json.gzb64','pages_c06_after_the_water_enhanced.json.gzb64','pages_c07_last_low_tide_enhanced.json.gzb64']:
-            raw=''.join((base/'encoded'/f).read_text().split())
-            x=json.loads(gzip.decompress(base64.b64decode(raw)))
-            pages.extend(x.get('pages',x) if isinstance(x,dict) else x)
-          meta=re.compile(r'\b(show|shows|showing|should|feel|means|meaning|theme|thesis|arc|flaw|tempt|temptation|because|rather than|instead of|so that|not proof|not a |do not|don\x27t|never|reader|story|narrative|dramatic|payoff|authority arc|social defect|indict|moral|earned|competence, not|closes inquiry|opens? a mystery)\b',re.I)
-          hits=[]
+          pages=json.loads(Path('data/shows/low-tide-signal/pages_ch01_ch03_compiled.json').read_text())
           for p in pages:
-            for i,t in enumerate(p.get('panelPlan',[]) or []):
-              if meta.search(t): hits.append((p['id'],i+1,t))
-          print('PANEL_PLAN_PAGES',sum(bool(p.get('panelPlan')) for p in pages))
-          print('PANEL_META_HITS',len(hits),'PAGES',len(set(x[0] for x in hits)))
-          for row in hits: print(row[0],'|',row[1],'|',row[2])
+            ds=[]
+            for d in p.get('dialogueInline',[]) or []:
+              ds.append(f"{d.get('speaker','')}: {d.get('text','')}")
+            print(p['id'],'||',p.get('setting',''),'||',p.get('summary',''),'||',' / '.join(ds))
           PY
