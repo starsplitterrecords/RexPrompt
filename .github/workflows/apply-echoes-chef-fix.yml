@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'tools/fix_echoes_chef_layer.py'
+      - 'tools/fix_echoes_chef_layer_stage2.py'
       - '.github/workflows/apply-echoes-chef-fix.yml'
   workflow_dispatch:
 
@@ -23,7 +24,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Apply chef-layer separation
-        run: python tools/fix_echoes_chef_layer.py
+        run: |
+          python tools/fix_echoes_chef_layer.py
+          python tools/fix_echoes_chef_layer_stage2.py
       - name: Inspect migration
         run: |
           git diff --check
@@ -37,5 +40,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/shows/echoes-forgotten-war-s1
-          git commit -m 'Separate Echoes writing from image recipes'
+          git commit -m 'Finish Echoes image-recipe separation'
           git push origin HEAD:main
