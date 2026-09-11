@@ -8,6 +8,7 @@ on:
       - 'tools/fix_echoes_chef_layer.py'
       - 'tools/fix_echoes_chef_layer_stage2.py'
       - 'tools/fix_echoes_chef_layer_stage3.py'
+      - 'tools/audit_echoes_chef_layer_broad.py'
       - '.github/workflows/apply-echoes-chef-fix.yml'
   workflow_dispatch:
 
@@ -29,6 +30,8 @@ jobs:
           python tools/fix_echoes_chef_layer.py
           python tools/fix_echoes_chef_layer_stage2.py
           python tools/fix_echoes_chef_layer_stage3.py
+      - name: Audit post-cleanup chef layer
+        run: python tools/audit_echoes_chef_layer_broad.py
       - name: Inspect migration
         run: |
           git diff --check
