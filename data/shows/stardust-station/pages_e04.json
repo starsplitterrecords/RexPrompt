@@ -1,7 +1,7 @@
 [
   {
     "id":"SDS_S1E04_P01",
-    "summary":"Issue 4 — Temporary Material. Page 1: Delayed Part. The replacement-bracket problem begins as an ordinary maintenance problem, not a material discovery.",
+    "summary":"Primary composition: 5-panel page in Maintenance Bay. Opening image: Maintenance bay. A coolant-balancing unit is open in the wall. A red status strip is visible. Middle image: Astra enters with coffee and three unrelated forms. Closing image: Procurement display shows the replacement-part delay.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Zib","SDS_Astra"],
     "panelPlan":[
@@ -22,7 +22,7 @@
   },
   {
     "id":"SDS_S1E04_P02",
-    "summary":"Page 2: Nineteen Days. Astra assigns Jax the concrete monitoring job while temporary-repair bureaucracy arrives.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Astra reads the ETA twice. Middle image: Jax arrives with a handheld flow reader. Closing image: Pixa projects a temporary-material-usage form.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Zib","SDS_Jax","SDS_Pixa"],
     "continuityFrom":"SDS_S1E04_P01",
@@ -47,7 +47,7 @@
   },
   {
     "id":"SDS_S1E04_P03",
-    "summary":"Page 3: One Sample. Mira notices a physical difference between retained residue samples without assigning meaning to it.",
+    "summary":"Primary composition: 6-panel page in Lab Work Area. Opening image: Mira works at a nearby lab bench with sealed samples retained from prior incidents. Labels are physical and cautious. Middle image: Mira stops. Closing image: Mira looks at the fragment, genuinely uncertain.",
     "setting":"SDS_Lab_Work_Area",
     "characters":["SDS_Mira","SDS_Zib"],
     "continuityFrom":"SDS_S1E04_P02",
@@ -68,7 +68,7 @@
   },
   {
     "id":"SDS_S1E04_P04",
-    "summary":"Page 4: Control First. The first result is deliberately small: one sample crumbles and one does not.",
+    "summary":"Primary composition: 6-panel page in Lab Work Area. Opening image: Mira repeats the same simple compression test on both samples. Middle image: Mira holds up the two samples. Closing image: Mira raises one hand before anyone reacts, cautious expression fixed on the test result.",
     "setting":"SDS_Lab_Work_Area",
     "characters":["SDS_Mira","SDS_Zib","SDS_Astra"],
     "continuityFrom":"SDS_S1E04_P03",
@@ -78,7 +78,7 @@
       {"text":"PANEL 3 — Zib stares at her."},
       {"text":"PANEL 4 — Mira holds up the two samples."},
       {"text":"PANEL 5 — Astra nods."},
-      {"text":"PANEL 6 — Mira immediately qualifies it."}
+      {"text":"PANEL 6 — Mira raises one hand before anyone reacts, cautious expression fixed on the test result."}
     ],
     "dialogueInline":[
       {"speaker":"MIRA","text":"Same residue class. Different post-formation cohesion.","subtext":"Panel 2"},
@@ -91,7 +91,7 @@
   },
   {
     "id":"SDS_S1E04_P05",
-    "summary":"Page 5: Temporary Means Owner. Glorp and Kreeb reduce temporary-repair procedure to owner, expiry, and inspection while Jax takes the readings.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Glorp reviews the temporary repair authorization with visible alarm. Middle image: Zib speaks from inside the wall compartment. Closing image: Jax raises the flow reader. Astra nods once. No ceremony.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Glorp","SDS_Kreeb","SDS_Zib","SDS_Jax"],
     "continuityFrom":"SDS_S1E04_P04",
@@ -100,7 +100,7 @@
       {"text":"PANEL 2 — Glorp taps the word TEMPORARY."},
       {"text":"PANEL 3 — Kreeb reads beside them."},
       {"text":"PANEL 4 — Zib speaks from inside the wall compartment."},
-      {"text":"PANEL 5 — Glorp reluctantly reduces the procedure to three required fields."},
+      {"text":"PANEL 5 — Glorp deletes lines from the form until only three labeled fields remain."},
       {"text":"PANEL 6 — Jax raises the flow reader. Astra nods once. No ceremony."}
     ],
     "dialogueInline":[
@@ -113,13 +113,13 @@
   },
   {
     "id":"SDS_S1E04_P06",
-    "summary":"Page 6: Bench Test. Mira and Zib try to make the sample fail safely before allowing it near station infrastructure.",
+    "summary":"Primary composition: 6-panel page in Lab Work Area. Opening image: Mira and Zib build a small off-line test rig. Nothing touches station infrastructure yet. Middle image: Mira does not look up. Closing image: Zib points at the damaged sample.",
     "setting":"SDS_Lab_Work_Area",
     "characters":["SDS_Mira","SDS_Zib"],
     "continuityFrom":"SDS_S1E04_P05",
     "panelPlan":[
       {"text":"PANEL 1 — Mira and Zib build a small off-line test rig. Nothing touches station infrastructure yet."},
-      {"text":"PANEL 2 — Mira sets the sequence."},
+      {"text":"PANEL 2 — Mira lays out three test cards beside the rig: HEAT / COMPRESSION / VIBRATION."},
       {"text":"PANEL 3 — Zib watches her deliberately abuse the sample."},
       {"text":"PANEL 4 — Mira does not look up."},
       {"text":"PANEL 5 — The fragment survives heat and compression, then chips under sustained vibration."},
@@ -135,7 +135,7 @@
   },
   {
     "id":"SDS_S1E04_P07",
-    "summary":"Page 7: First Patch. The residue is used only as gap filler inside a conventional temporary brace; the approved clamp carries the load.",
+    "summary":"Primary composition: 5-panel page in Maintenance Bay. Opening image: Zib builds a conventional temporary brace from approved clamp hardware and mesh. The residue fragment is used only as gap-filling material inside the brace. Middle image: Zib tightens the approved clamp. Closing image: The unit restarts. Status changes on the display.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Zib","SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P06",
@@ -156,7 +156,7 @@
   },
   {
     "id":"SDS_S1E04_P08",
-    "summary":"Page 8: Watch the Number. Jax stays on the boring monitoring task and catches a small shift before it becomes a larger problem.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Jax watches the handheld reader beside the unit. Middle image: Jax shows her the handwritten schedule. Closing image: Zib isolates the unit immediately.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Jax","SDS_Astra","SDS_Zib"],
     "continuityFrom":"SDS_S1E04_P07",
@@ -179,7 +179,7 @@
   },
   {
     "id":"SDS_S1E04_P09",
-    "summary":"Page 9: Second Patch. Zib increases conventional reinforcement and reduces the weird material; Pixa reports only the physical result.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Zib opens the brace again. Middle image: Jax holds the reader ready while Astra keeps the temporary authorization visible at the workbench. Closing image: Pixa's display shows measured flow and patch status only, without an explanatory headline.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Zib","SDS_Mira","SDS_Jax","SDS_Astra","SDS_Pixa"],
     "continuityFrom":"SDS_S1E04_P08",
@@ -189,7 +189,7 @@
       {"text":"PANEL 3 — Mira agrees."},
       {"text":"PANEL 4 — Jax holds the reader ready while Astra keeps the temporary authorization visible at the workbench."},
       {"text":"PANEL 5 — Zib restarts the unit."},
-      {"text":"PANEL 6 — Pixa displays only the physical result."}
+      {"text":"PANEL 6 — Pixa's display shows measured flow and patch status only, without an explanatory headline."}
     ],
     "dialogueInline":[
       {"speaker":"ZIB","text":"More mesh. Less weird.","subtext":"Panel 2"},
@@ -200,16 +200,16 @@
   },
   {
     "id":"SDS_S1E04_P10",
-    "summary":"Page 10: It Works At All. The crew permits exactly one conclusion: the filler did not get in the way of a conventional clamp surviving two cycles.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: The unit completes another cycle. Middle image: Mira smiles despite herself. Closing image: Brick, already present, writes in his notebook.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Mira","SDS_Zib","SDS_Astra","SDS_Brick"],
     "continuityFrom":"SDS_S1E04_P09",
     "panelPlan":[
       {"text":"PANEL 1 — The unit completes another cycle."},
       {"text":"PANEL 2 — Mira checks the patch."},
-      {"text":"PANEL 3 — Zib refuses to over-credit it."},
+      {"text":"PANEL 3 — Zib studies the patch skeptically, one hand still on the approved clamp."},
       {"text":"PANEL 4 — Mira smiles despite herself."},
-      {"text":"PANEL 5 — Astra hears the phrase from across the bay."},
+      {"text":"PANEL 5 — Across the bay, Astra turns toward them at the phrase."},
       {"text":"PANEL 6 — Brick, already present, writes in his notebook."}
     ],
     "dialogueInline":[
@@ -222,16 +222,16 @@
   },
   {
     "id":"SDS_S1E04_P11",
-    "summary":"Page 11: What We Know. Mira's small results board creates the unavoidable reporting question.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Mira builds a small results board: heat exposure, compression, vibration damage, installed configuration. Middle image: Mira points toward the temporary repair form. Closing image: Astra closes her eyes.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Mira","SDS_Astra"],
     "continuityFrom":"SDS_S1E04_P10",
     "panelPlan":[
       {"text":"PANEL 1 — Mira builds a small results board: heat exposure, compression, vibration damage, installed configuration."},
       {"text":"PANEL 2 — She looks at Astra."},
-      {"text":"PANEL 3 — Astra relaxes slightly."},
+      {"text":"PANEL 3 — Close on Astra beside the report screen; her shoulders loosen slightly as she reads the result."},
       {"text":"PANEL 4 — Mira points toward the temporary repair form."},
-      {"text":"PANEL 5 — She shows the reporting requirement."},
+      {"text":"PANEL 5 — Mira turns the screen toward Astra and highlights the REPORT REQUIRED field."},
       {"text":"PANEL 6 — Astra closes her eyes."}
     ],
     "dialogueInline":[
@@ -244,14 +244,14 @@
   },
   {
     "id":"SDS_S1E04_P12",
-    "summary":"Page 12: Report Required. Traceability wins: if the material touched a system, its history has to be accurate.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Glorp traces the temporary-deviation reporting path on a tablet. Middle image: Astra points at the report destination. Closing image: Zib shuts the wall panel.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Glorp","SDS_Kreeb","SDS_Astra","SDS_Zib"],
     "continuityFrom":"SDS_S1E04_P11",
     "panelPlan":[
       {"text":"PANEL 1 — Glorp traces the temporary-deviation reporting path on a tablet."},
       {"text":"PANEL 2 — Glorp looks up."},
-      {"text":"PANEL 3 — Kreeb answers calmly."},
+      {"text":"PANEL 3 — Kreeb meets Glorp's eyes over the tablet, antennae still and posture relaxed."},
       {"text":"PANEL 4 — Astra points at the report destination."},
       {"text":"PANEL 5 — Glorp shakes their head."},
       {"text":"PANEL 6 — Zib shuts the wall panel."}
@@ -266,12 +266,12 @@
   },
   {
     "id":"SDS_S1E04_P13",
-    "summary":"Page 13: The Argument. Mira wants an accurate report; Astra fears one patch will be institutionalized as a discovery.",
+    "summary":"Primary composition: 5-panel page in Maintenance Bay. Opening image: Astra and Mira face each other across the workbench with controlled, serious expressions; the report and patched unit sit between them. Middle image: Astra answers just as quietly. Closing image: Mira meets her gaze.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P12",
     "panelPlan":[
-      {"text":"PANEL 1 — Astra and Mira stand across the workbench. Neither is angry. Both understand the stakes."},
+      {"text":"PANEL 1 — Astra and Mira face each other across the workbench with controlled, serious expressions; the report and patched unit sit between them."},
       {"text":"PANEL 2 — Mira keeps her voice level."},
       {"text":"PANEL 3 — Astra answers just as quietly."},
       {"text":"PANEL 4 — Astra points to the single patched unit."},
@@ -286,7 +286,7 @@
   },
   {
     "id":"SDS_S1E04_P14",
-    "summary":"Page 14: The Real Fear. Astra names the institutional chain she fears: anomaly to category to target to budget to production pressure.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Mira studies Astra instead of the sample. Middle image: Astra turns from the report to scan the active maintenance bay: open unit, workbench and crew still working. Closing image: Astra nods.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P13",
@@ -294,8 +294,8 @@
       {"text":"PANEL 1 — Mira studies Astra instead of the sample."},
       {"text":"PANEL 2 — Astra gestures toward the report."},
       {"text":"PANEL 3 — She continues."},
-      {"text":"PANEL 4 — Astra looks around the station."},
-      {"text":"PANEL 5 — Mira answers the part Astra cannot dismiss."},
+      {"text":"PANEL 4 — Astra turns from the report to scan the active maintenance bay: open unit, workbench and crew still working."},
+      {"text":"PANEL 5 — Mira meets Astra's eyes across the workbench, calm and firm."},
       {"text":"PANEL 6 — Astra nods."}
     ],
     "dialogueInline":[
@@ -309,7 +309,7 @@
   },
   {
     "id":"SDS_S1E04_P15",
-    "summary":"Page 15: Stop Arguing Like a Meeting. Zib makes Astra and Mira continue the decision while physically finishing the job.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Zib, still trying to finish the actual repair, interrupts them. Middle image: He gives Mira the sensor lead. The three of them resume work. Closing image: Astra holds the brace steady.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Zib","SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P14",
@@ -332,12 +332,12 @@
   },
   {
     "id":"SDS_S1E04_P16",
-    "summary":"Page 16: Bounded Language. The report states the ugly practical use and its limits without turning it into a mechanism.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Glorp, Kreeb, Mira and Astra cluster around one terminal while the active maintenance bay remains visible behind them. Middle image: Kreeb nods. Closing image: Mira looks toward the patched unit.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Glorp","SDS_Kreeb","SDS_Mira","SDS_Astra"],
     "continuityFrom":"SDS_S1E04_P15",
     "panelPlan":[
-      {"text":"PANEL 1 — Glorp, Kreeb, Mira, and Astra work around one terminal rather than holding another meeting."},
+      {"text":"PANEL 1 — Glorp, Kreeb, Mira and Astra cluster around one terminal while the active maintenance bay remains visible behind them."},
       {"text":"PANEL 2 — The report shows the narrow temporary-use finding and its limits."},
       {"text":"PANEL 3 — Glorp studies it."},
       {"text":"PANEL 4 — Kreeb nods."},
@@ -354,7 +354,7 @@
   },
   {
     "id":"SDS_S1E04_P17",
-    "summary":"Page 17: Signature. Jax completes his monitoring log; Astra signs and sends only the narrow version because there is no defensible broad version.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Jax arrives with the completed monitoring log. Middle image: Jax shrugs. Closing image: Astra signs.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Jax","SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P16",
@@ -363,7 +363,7 @@
       {"text":"PANEL 2 — He hands it to Astra."},
       {"text":"PANEL 3 — Astra checks the intervals."},
       {"text":"PANEL 4 — Jax shrugs."},
-      {"text":"PANEL 5 — The report waits on the station manager signature."},
+      {"text":"PANEL 5 — The terminal shows a blank STATION MANAGER SIGNATURE field above the SEND control."},
       {"text":"PANEL 6 — Astra signs."}
     ],
     "dialogueInline":[
@@ -377,12 +377,12 @@
   },
   {
     "id":"SDS_S1E04_P18",
-    "summary":"Page 18: Monitor Shift. Jax stays through the next reading because the task is his, not because anyone is watching him do it.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: The maintenance bay is quiet. Jax remains beside the reader for the next scheduled interval. Middle image: Zib looks at him, mildly surprised. Closing image: The gauge stays within the temporary band.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Jax","SDS_Zib"],
     "continuityFrom":"SDS_S1E04_P17",
     "panelPlan":[
-      {"text":"PANEL 1 — Later. The maintenance bay is quiet. Jax remains beside the reader for the next scheduled interval."},
+      {"text":"PANEL 1 — The maintenance bay is quiet. Jax remains beside the reader for the next scheduled interval."},
       {"text":"PANEL 2 — Zib passes through."},
       {"text":"PANEL 3 — Jax checks the clock."},
       {"text":"PANEL 4 — Zib looks at him, mildly surprised."},
@@ -397,7 +397,7 @@
   },
   {
     "id":"SDS_S1E04_P19",
-    "summary":"Page 19: Send. Astra and Mira remove any language stronger than the evidence before Astra sends the report herself.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Astra and Mira perform the final read together. Middle image: Astra traces one sentence on the report with a fingertip, pausing over the highlighted causal wording. Closing image: Astra hits SEND herself.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P18",
@@ -405,7 +405,7 @@
       {"text":"PANEL 1 — Astra and Mira perform the final read together."},
       {"text":"PANEL 2 — Astra points at a modifier."},
       {"text":"PANEL 3 — Mira edits it."},
-      {"text":"PANEL 4 — Astra checks the causal language."},
+      {"text":"PANEL 4 — Astra traces one sentence on the report with a fingertip, pausing over the highlighted causal wording."},
       {"text":"PANEL 5 — Mira does not touch the screen."},
       {"text":"PANEL 6 — Astra hits SEND herself."}
     ],
@@ -419,15 +419,15 @@
   },
   {
     "id":"SDS_S1E04_P20",
-    "summary":"Page 20: Acknowledged. The bounded report is immediately forwarded to Resource Efficiency Review, proving Astra's fear institutionally rather than scientifically.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: A notification arrives almost immediately. Middle image: Astra's face tightens as she reads the second line on the screen. Closing image: Brick closes his notebook.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Mira","SDS_Brick"],
     "continuityFrom":"SDS_S1E04_P19",
     "panelPlan":[
       {"text":"PANEL 1 — A notification arrives almost immediately."},
       {"text":"PANEL 2 — Astra exhales."},
-      {"text":"PANEL 3 — A second line appears."},
-      {"text":"PANEL 4 — Astra's expression changes."},
+      {"text":"PANEL 3 — Insert on the active screen as a second line appears beneath the first notification."},
+      {"text":"PANEL 4 — Astra's face tightens as she reads the second line on the screen."},
       {"text":"PANEL 5 — Mira reads it."},
       {"text":"PANEL 6 — Brick closes his notebook."}
     ],
@@ -442,7 +442,7 @@
   },
   {
     "id":"SDS_S1E04_P21",
-    "summary":"Page 21: Still Temporary. The repair remains monitored and temporary even as the station receives its first value flag.",
+    "summary":"Primary composition: 6-panel page in Maintenance Bay. Opening image: Next cycle. The repaired unit hums. The temporary tag is still prominent. Middle image: Zib closes the panel. Closing image: Pixa's screen lights. Nobody speaks.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Zib","SDS_Astra","SDS_Mira","SDS_Pixa"],
     "continuityFrom":"SDS_S1E04_P20",
@@ -465,7 +465,7 @@
   },
   {
     "id":"SDS_S1E04_P22",
-    "summary":"Page 22: Tag — Value Identified. Astra and Mira agree the report was necessary even as commercial-interest machinery arrives immediately.",
+    "summary":"Primary composition: 5-panel page in Maintenance Bay. Opening image: Astra's terminal expands the notification. Middle image: Astra stares at the wording. Closing image: Astra looks through the glass toward the functioning maintenance bay.",
     "setting":"SDS_Maintenance_Bay",
     "characters":["SDS_Astra","SDS_Mira"],
     "continuityFrom":"SDS_S1E04_P21",
