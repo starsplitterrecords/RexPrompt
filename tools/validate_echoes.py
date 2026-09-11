@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Validate current Echoes of a Forgotten War RexPrompt production structure."""
+"""Validate current Echoes of a Forgotten War RexPrompt production structure.
+
+Developmental/editorial reasoning may remain in writing-only fields and architecture files.
+Assembler-visible image recipes must stay concrete: drawable panel staging, visual continuity,
+exact lettering and character/world anchors rather than explanations of why the writing works.
+"""
 from __future__ import annotations
 
 import json
@@ -19,9 +24,9 @@ ALLOWED_CHARACTER_FIELDS = {
 }
 ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "directionInline", "continuityFrom"}
 
-# Diagnostic patterns only. These identify likely writer/editor reasoning in the chef-facing
-# image layer; they are intentionally narrower than ordinary English words so the audit does
-# not become a mechanical word ban.
+# Narrow chef-layer guard. This catches editorial/thematic explanation, not ordinary visual
+# words. Add a pattern only when it reliably denotes writing analysis rather than something
+# an image model can draw.
 CHEF_REASONING_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
     for pattern in (
@@ -36,6 +41,8 @@ CHEF_REASONING_PATTERNS = [
         r"\bthe disagreement is\b",
         r"\bthe problem belongs\b",
         r"\bthe uncertainty is\b",
+        r"\bthe emotional hinge\b",
+        r"\bthematic rhyme\b",
         r"\bproving\b",
         r"\bproof is\b",
         r"\bcreating dramatic irony\b",
@@ -48,7 +55,9 @@ CHEF_REASONING_PATTERNS = [
         r"\bunderstanding that\b",
         r"\brealizing that\b",
         r"\brecognizing what\b",
+        r"\bregisters? that\b",
         r"\breads as\b",
+        r"\bmeans it literally\b",
         r"\brather than philosophical\b",
         r"\brather than rhetorical\b",
         r"\brather than supernatural\b",
@@ -63,6 +72,8 @@ CHEF_REASONING_PATTERNS = [
         r"\bnot mechanism\b",
         r"\bthe crisis has\b",
         r"\bthe answer is\b",
+        r"\bthe implication\b",
+        r"\bthe line lands\b",
     )
 ]
 
@@ -112,6 +123,8 @@ def validate_scenes() -> None:
     all_ids: list[str] = []
     chars = load(SHOW / "characters.json")
     regions = load(SHOW / "regions.json")
+    direction = load(SHOW / "direction.json")
+
     for issue, path in enumerate(SCENE_FILES, start=1):
         scenes = load(path)
         assert isinstance(scenes, list), path.name
@@ -120,25 +133,45 @@ def validate_scenes() -> None:
         ids = [scene.get("id") for scene in scenes]
         assert ids == expected, f"{path.name}: scene IDs/order changed"
         all_ids.extend(ids)
+
         for index, scene in enumerate(scenes):
-            assert scene.get("summary"), scene.get("id")
+            scene_id = scene.get("id")
+            assert scene.get("summary"), scene_id
             for char_id in scene.get("characters", []):
-                assert char_id in chars, f"Missing character {char_id}: {scene['id']}"
+                assert char_id in chars, f"Missing character {char_id}: {scene_id}"
             if scene.get("region"):
-                assert scene["region"] in regions, f"Missing region {scene['region']}: {scene['id']}"
-            if issue >= 2:
-                assert scene.get("settingText"), f"Missing settingText: {scene['id']}"
-                assert isinstance(scene.get("dialogueInline"), list), f"Missing inline dialogue: {scene['id']}"
-                assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
-                for line in scene["dialogueInline"]:
-                    assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
+                assert scene["region"] in regions, f"Missing region {scene['region']}: {scene_id}"
+
+            # Writing/development notes are deliberately preserved but hidden from assembleScene().
+            assert "direction" not in scene, f"Chef-visible Issue 1 direction returned: {scene_id}"
+            assert "directionInline" not in scene, f"Chef-visible source direction returned: {scene_id}"
+            if issue == 1:
+                writing_direction = scene.get("writingDirection", [])
+                assert isinstance(writing_direction, list), f"Bad writingDirection: {scene_id}"
+                for direction_id in writing_direction:
+                    assert direction_id in direction, f"Unknown writing direction {direction_id}: {scene_id}"
+            else:
+                assert scene.get("settingText"), f"Missing settingText: {scene_id}"
+                dialogue = scene.get("dialogueInline")
+                assert isinstance(dialogue, list), f"Missing inline dialogue: {scene_id}"
+                for line in dialogue:
+                    assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene_id}"
+                writing_notes = scene.get("writingNotes", [])
+                assert isinstance(writing_notes, list), f"Bad writingNotes: {scene_id}"
+                for note in writing_notes:
+                    assert isinstance(note, dict) and isinstance(note.get("text"), str), f"Bad writing note: {scene_id}"
+
             if issue <= 5:
                 plan = scene.get("panelPlan")
-                assert isinstance(plan, list) and len(plan) >= 4, f"Missing source page plan: {scene['id']}"
+                assert isinstance(plan, list) and len(plan) >= 4, f"Missing source page plan: {scene_id}"
+                for panel in plan:
+                    assert isinstance(panel, dict) and panel.get("text"), f"Bad source panel: {scene_id}"
+
             if issue in (2, 3, 4, 5) and index > 0:
                 assert scene.get("continuityFrom") == scenes[index - 1]["id"], (
-                    f"Broken Issue {issue} continuity: {scene['id']}"
+                    f"Broken Issue {issue} continuity: {scene_id}"
                 )
+
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
     e04 = load(SCENE_FILES[3])
@@ -173,9 +206,9 @@ def validate_enhancement_overlays() -> None:
             for panel in plan:
                 assert isinstance(panel, dict) and panel.get("text"), f"Bad panel plan: {scene_id}"
             if "directionInline" in patch:
-                direction = patch["directionInline"]
-                assert isinstance(direction, list) and direction, f"Bad overlay direction: {scene_id}"
-                for block in direction:
+                visual_direction = patch["directionInline"]
+                assert isinstance(visual_direction, list) and visual_direction, f"Bad overlay direction: {scene_id}"
+                for block in visual_direction:
                     assert isinstance(block, dict) and block.get("text"), f"Bad overlay direction: {scene_id}"
             if "continuityFrom" in patch:
                 assert index > 0, f"First page cannot continue from prior page: {scene_id}"
@@ -188,9 +221,6 @@ def validate_enhancement_overlays() -> None:
             assert merged.get("dialogueInline") == original.get("dialogueInline"), f"Overlay changed dialogue: {scene_id}"
             assert merged.get("settingText") == original.get("settingText"), f"Overlay changed setting: {scene_id}"
             assert isinstance(merged.get("panelPlan"), list) and len(merged["panelPlan"]) >= 4
-            assert isinstance(merged.get("directionInline"), list) and merged["directionInline"], (
-                f"Merged recipe missing direction: {scene_id}"
-            )
 
 
 def validate_issue1_references() -> None:
@@ -202,8 +232,8 @@ def validate_issue1_references() -> None:
     for scene in scenes:
         for dialog_id in scene.get("dialog", []):
             assert dialog_id in dialogue, f"Missing dialogue {dialog_id}"
-        for direction_id in scene.get("direction", []):
-            assert direction_id in direction, f"Missing direction {direction_id}"
+        for direction_id in scene.get("writingDirection", []):
+            assert direction_id in direction, f"Missing writing direction {direction_id}"
         if scene.get("setting"):
             assert scene["setting"] in settings, f"Missing setting {scene['setting']}"
         if scene.get("region"):
@@ -246,26 +276,22 @@ def validate_visual_references() -> None:
 
 
 def chef_layer_strings() -> list[tuple[str, str]]:
+    """Return only strings actually emitted to the image recipe by the assembler."""
     strings: list[tuple[str, str]] = []
     assembler = load(SHOW / "assembler.json")
     strings.append(("assembler:generationLine", assembler.get("generationLine", "")))
 
-    direction = load(SHOW / "direction.json")
-    for key, entry in direction.items():
-        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
-            strings.append((f"direction:{key}", entry["text"]))
-
+    # Summaries carry concise page action and intentionally remain upstream of the visual plan.
+    # Developmental writingDirection/writingNotes and direction.json are intentionally excluded:
+    # assembleScene() does not emit those fields.
     for issue, path in enumerate(SCENE_FILES, start=1):
+        if issue > 5:
+            continue
         for scene in load(path):
             scene_id = scene.get("id", path.name)
-            if issue <= 5:
-                for panel_index, panel in enumerate(scene.get("panelPlan", []), start=1):
-                    if isinstance(panel, dict) and isinstance(panel.get("text"), str):
-                        strings.append((f"{scene_id}:panel:{panel_index}", panel["text"]))
-            if issue >= 2:
-                for direction_index, block in enumerate(scene.get("directionInline", []), start=1):
-                    if isinstance(block, dict) and isinstance(block.get("text"), str):
-                        strings.append((f"{scene_id}:source-direction:{direction_index}", block["text"]))
+            for panel_index, panel in enumerate(scene.get("panelPlan", []), start=1):
+                if isinstance(panel, dict) and isinstance(panel.get("text"), str):
+                    strings.append((f"{scene_id}:panel:{panel_index}", panel["text"]))
 
     for issue, path in ENHANCE_FILES.items():
         for patch in load(path):
@@ -279,14 +305,16 @@ def chef_layer_strings() -> list[tuple[str, str]]:
     return strings
 
 
-def report_chef_layer_leakage() -> None:
+def validate_chef_layer_separation() -> None:
     candidates: list[tuple[str, str]] = []
     for label, text in chef_layer_strings():
         if any(pattern.search(text) for pattern in CHEF_REASONING_PATTERNS):
             candidates.append((label, text))
-    print(f"Echoes chef-layer reasoning audit: {len(candidates)} candidate strings")
-    for label, text in candidates:
-        print(f"CHEF-LEAK {label}: {text}")
+    detail = "\n".join(f"{label}: {text}" for label, text in candidates[:30])
+    assert not candidates, (
+        f"Echoes chef layer contains {len(candidates)} writing/editorial reasoning strings. "
+        f"Rewrite them as directly drawable staging:\n{detail}"
+    )
 
 
 def validate_current_production_contract() -> None:
@@ -295,13 +323,16 @@ def validate_current_production_contract() -> None:
     assert assembler.get("requirePanelPlan") is True
     assert assembler.get("requireVisualAnchors") is True
     generation_line = assembler.get("generationLine", "")
-    assert "One assembled RexPrompt recipe equals one page only" in generation_line
-    assert "Render only the selected recipe" in generation_line
-    assert "page header" in generation_line
-    assert "remembered relationships" in generation_line
-    assert "Core-Forge" in generation_line
-    assert "evidence and environment rather than protagonists or technical solutions" in generation_line
-    assert "Readability first, human consequence second" in generation_line
+    for required in (
+        "One assembled RexPrompt recipe equals one page only",
+        "Render only the selected recipe",
+        "Painterly prestige cosmic science-fiction sequential art",
+        "Stage emotion through faces, hands, posture, distance, eyelines, touch, carried objects",
+        "match camera position, body placement and architectural geometry precisely",
+        "show interfaces or diagrams only when the selected page explicitly scripts one",
+        "Follow the PANEL PLAN as page architecture",
+    ):
+        assert required in generation_line, f"Echoes generation contract missing: {required}"
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
@@ -338,11 +369,10 @@ def main() -> None:
     validate_architecture()
     validate_visual_references()
     validate_current_production_contract()
-    report_chef_layer_leakage()
+    validate_chef_layer_separation()
     print(
-        "Echoes validation passed: 8 issues exposed as 12 PAGE recipes each; "
-        "Issues 6-8 receive assembler-visible page architecture through merge-by-ID enhancement overlays; "
-        "approved durable identity references are active."
+        "Echoes validation passed: 96 PAGE recipes preserve story/cast/dialogue/continuity; "
+        "developmental reasoning is kept in writing-only fields; chef-visible direction is concrete visual staging."
     )
 
 
