@@ -12,6 +12,8 @@ The neighborhood remembers them through repetition: the same bodega, coffee cart
 
 Do not explain the Kin payoff yet. Seed it visually. Do not turn recurring civilians into sitcom sidekicks. Keep recognition casual and earned.
 
+Kin continuity for this issue: The Kin are exactly three recurring people—Astrid and two men whose names remain unresolved. Issue 5 is where the audience begins seeing them as separate people around the neighborhood. Name Astrid when the established woman is individually visible; do not invent names for the two men and do not add additional Kin.
+
 ## Page 1 — MORNING HAS ALREADY STARTED
 **5 panels. Bushwick studio, bright ordinary morning.**
 
@@ -159,7 +161,7 @@ Do not explain the Kin payoff yet. Seed it visually. Do not turn recurring civil
 
 1. Laundromat: one Kin member folds clothes while watching the television with other patrons.
 2. Park: another studies a public sculpture / street art while eating a snack.
-3. Upstairs-neighbor hallway: the woman from the Kin and the neighbor exchange packaged snacks with gestures and partial language.
+3. Upstairs-neighbor hallway: Astrid and the neighbor exchange packaged snacks with gestures and partial language.
 4. Bodega: the owner sets aside a familiar item when another Kin member enters.
 5. None of these scenes explain themselves.
 
@@ -236,7 +238,7 @@ Do not explain the Kin payoff yet. Seed it visually. Do not turn recurring civil
 1. Bjorn, Gunnar, Carrie and Silas return.
 2. One Kin member is already coming up behind them with groceries.
 3. Another is ahead of them carrying folded laundry.
-4. The upstairs neighbor calls a casual greeting to the woman from the Kin. She answers in whatever partial shared vocabulary/gesture has developed. Do not translate or explain.
+4. The upstairs neighbor calls a casual greeting to Astrid. She answers in whatever partial shared vocabulary/gesture has developed. Do not translate or explain.
 5. Carrie watches this happen again.
 
 ## Page 22 — THE SAFE CAVE HAS CHANGED
