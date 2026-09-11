@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   apply:
+    # Developmental pass runs only from explicit branch updates; bot rewrite commits do not recurse.
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
