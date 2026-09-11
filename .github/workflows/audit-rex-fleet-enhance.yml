@@ -22,6 +22,8 @@ jobs:
         run: python tools/apply_rex_fleet_dramatic_divergence.py
       - name: Validate Rex Fleet
         run: python tools/validate_rex_fleet.py
+      - name: Reread season and assembled changed pages
+        run: python tools/audit_rex_fleet_dramatic_engines.py
       - name: Commit enhanced production payloads
         run: |
           if git diff --quiet; then
@@ -34,5 +36,9 @@ jobs:
                   data/shows/rex-fleet-s1/encoded/pages_i06.json.gzb64 \
                   data/shows/rex-fleet-s1/encoded/pages_i10.json.gzb64 \
                   data/shows/rex-fleet-s1/encoded/pages_i12.json.gzb64
+          if git diff --cached --quiet; then
+            echo "No production changes to commit."
+            exit 0
+          fi
           git commit -m "Enhance Rex Fleet dramatic divergence"
           git push origin HEAD:enhance/rex-fleet-dramatic-divergence
