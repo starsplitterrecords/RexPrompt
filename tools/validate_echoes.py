@@ -31,7 +31,7 @@ CHEF_REASONING_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
     for pattern in (
         r"\bthe reader\b",
-        r"\bthe page(?:'s)?\b",
+        r"\bthe page's\b",
         r"\bthe issue\b",
         r"\bthe story\b",
         r"\bthe point\b",
