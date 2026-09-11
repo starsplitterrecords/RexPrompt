@@ -6,6 +6,7 @@ on:
       - enhance/backyard-rockets-engineering-20260910
     paths:
       - tools/enhance_backyard_rockets_engineering.py
+      - tools/list_backyard_rockets_issue_ids.py
       - .github/workflows/apply-backyard-rockets-engineering.yml
   workflow_dispatch:
 
@@ -24,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Inspect live issue IDs
+        run: python tools/list_backyard_rockets_issue_ids.py
       - name: Rewrite assembler-visible Rockets recipes
         run: python tools/enhance_backyard_rockets_engineering.py
       - name: Validate Backyard Rockets
