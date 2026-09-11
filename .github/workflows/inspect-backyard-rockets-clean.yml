@@ -1,0 +1,63 @@
+name: Inspect clean Backyard Rockets recipe metadata
+
+on:
+  push:
+    branches:
+      - enhance/backyard-rockets-engineering-20260910
+    paths:
+      - .github/workflows/inspect-backyard-rockets-clean.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: enhance/backyard-rockets-engineering-clean-20260910
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Print changed recipe metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, subprocess
+          from pathlib import Path
+
+          files = [
+            'scenes_e03_public_sky.json.gzb64',
+            'scenes_e04_trip_point.json.gzb64',
+            'scenes_e05_reserve_margin.json.gzb64',
+            'scenes_e06_ground_loop.json.gzb64',
+            'scenes_e07_ablative_armor.json.gzb64',
+            'scenes_e08_sky_piercer.json.gzb64',
+          ]
+          root = Path('data/shows/backyard-rockets-s1/encoded')
+          def dec_text(txt):
+              return json.loads(gzip.decompress(base64.b64decode(''.join(txt.split()), validate=True)).decode())
+          for fn in files:
+              current = dec_text((root/fn).read_text())
+              main_txt = subprocess.check_output(['git','show',f'origin/main:data/shows/backyard-rockets-s1/encoded/{fn}'], text=True)
+              prior = dec_text(main_txt)
+              old = {s['id']: s for s in prior}
+              print('\nFILE', fn)
+              for s in current:
+                  p = old.get(s['id'])
+                  if not p: continue
+                  fields = ('summary','panelPlan','dialogueInline','directionInline')
+                  if any(s.get(k) != p.get(k) for k in fields):
+                      print(json.dumps({
+                        'id': s['id'],
+                        'setting': s.get('setting'),
+                        'settingText': s.get('settingText'),
+                        'region': s.get('region'),
+                        'factions': s.get('factions'),
+                        'charactersInline': s.get('charactersInline'),
+                        'summary': s.get('summary'),
+                      }, ensure_ascii=False))
+          PY
