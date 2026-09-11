@@ -37,5 +37,5 @@ jobs:
         run: |
           python tools/sanitize_echoes.py
           git diff --exit-code -- data/shows.json data/shows/echoes-forgotten-war-s1
-      - name: Validate Echoes production data
+      - name: Validate Echoes writing/image recipe boundary
         run: python tools/validate_echoes.py
