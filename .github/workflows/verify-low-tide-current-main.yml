@@ -1,0 +1,57 @@
+name: Verify Low Tide current main
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-low-tide-current-main.yml'
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run permanent Low Tide validator on current main
+        run: python tools/validate_low_tide_img_normalization.py
+      - name: Additional current-main chef audit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import tools.validate_low_tide_img_normalization as v
+          pages=v.load_all_pages()
+          meta=[]; thin=[]
+          for p in pages:
+            plan=p.get('panelPlan') or []
+            for i,line in enumerate(plan,1):
+              if v.CHEF_META.search(line): meta.append((p['id'],i,line))
+            if v.CHEF_META.search(p.get('summary','')): meta.append((p['id'],'summary',p.get('summary')))
+            hits=len(v.DRAWABLE.findall(' '.join(plan)))
+            if hits < (1 if len(plan)==1 else 2): thin.append((p['id'],hits))
+          print('CURRENT_MAIN_PAGES',len(pages))
+          print('CURRENT_MAIN_PANEL_PLANS',sum(bool(p.get('panelPlan')) for p in pages))
+          print('CURRENT_MAIN_DIRECTION_INLINE',sum('directionInline' in p for p in pages))
+          print('CURRENT_MAIN_META_HITS',len(meta))
+          print('CURRENT_MAIN_THIN_PAGES',len(thin))
+          assert len(pages)==178
+          assert len(meta)==0
+          assert len(thin)==0
+          assert all('directionInline' not in p for p in pages)
+          PY
+      - name: Remove verification runner without disturbing concurrent work
+        shell: bash
+        run: |
+          rm -f .github/workflows/verify-low-tide-current-main.yml
+          git config user.name "starsplitterrecords"
+          git config user.email "77013062+starsplitterrecords@users.noreply.github.com"
+          git add -A .github/workflows/verify-low-tide-current-main.yml
+          git commit -m "Remove temporary Low Tide current-main verifier"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
