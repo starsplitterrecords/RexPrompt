@@ -52,21 +52,25 @@ CHEF_META = re.compile(
     re.IGNORECASE,
 )
 
-# At least one ordinary drawable cue per panel instruction. This is intentionally
-# broad: it catches pure abstractions without dictating a house style.
+# Page-level rather than line-level: an individual panel instruction may validly
+# be terse ("Nicole buys coffee"), while the complete page still needs concrete
+# bodies, props, environment, geography, light, framing, or physical action.
 DRAWABLE = re.compile(
     r"\b(?:wide|close|close-up|medium|two-shot|three-shot|profile|overhead|foreground|"
     r"background|panel|frame|face|eyes?|mouth|hands?|arms?|shoulders?|body|head|gaze|"
-    r"look|looks|looking|stand|stands|standing|sit|sits|sitting|walk|walks|walking|run|"
-    r"runs|running|climb|climbs|climbing|hold|holds|holding|carry|carries|carrying|point|"
-    r"points|pointing|turn|turns|turning|lean|leans|leaning|step|steps|stepping|crouch|"
-    r"crouches|kneel|kneels|pack|packs|packing|check|checks|checking|phone|screen|monitor|"
-    r"sensor|rope|bag|boot|boots|jacket|water|mud|concrete|fog|rain|light|headlamp|wall|"
-    r"rail|roof|stairs?|door|table|chair|bar|glass|window|vehicle|market|mall|apartment|"
-    r"workshop|gym|map|sign|runner|crowd|route|floor|plaza|school|clinic|building|shore|"
-    r"tide|channel|arch|tower|bridge|walkway|silhouette|figures?|street|transit|store|"
-    r"storefront|device|display|workstation|asphalt|road|pavement|structure|corridor|"
-    r"support|gate|floodwall|car|trunk|coffee|recorder|graph|chart|light|silhouette)\b",
+    r"look|looks|looking|watch|watches|stare|stares|glance|glances|grin|grins|smile|"
+    r"smiles|laugh|laughs|nod|nods|frown|frowns|shrug|shrugs|gesture|gestures|stand|"
+    r"stands|standing|sit|sits|sitting|walk|walks|walking|run|runs|running|climb|climbs|"
+    r"climbing|hold|holds|holding|carry|carries|carrying|point|points|pointing|turn|turns|"
+    r"turning|lean|leans|leaning|step|steps|stepping|crouch|crouches|kneel|kneels|pack|"
+    r"packs|packing|check|checks|checking|phone|screen|monitor|sensor|rope|bag|boot|boots|"
+    r"jacket|water|mud|concrete|fog|rain|light|headlamp|wall|rail|roof|stairs?|door|table|"
+    r"chair|bar|glass|window|vehicle|market|mall|apartment|workshop|gym|map|sign|runner|"
+    r"crowd|route|floor|plaza|school|clinic|building|shore|tide|channel|arch|tower|bridge|"
+    r"walkway|silhouette|figures?|street|transit|store|storefront|device|display|workstation|"
+    r"asphalt|road|pavement|structure|corridor|support|gate|floodwall|car|trunk|coffee|"
+    r"recorder|graph|chart|desk|bench|mat|stairwell|platform|railing|monitor|work light|"
+    r"headlights?|boots?|coat|hood|pack|strap|puddle|pool|signage|wayfinding)\b",
     re.IGNORECASE,
 )
 
@@ -219,7 +223,12 @@ def validate_page_inventory_and_chef_boundary() -> None:
         for i, panel in enumerate(plan, start=1):
             assert isinstance(panel, str) and len(panel.strip()) >= 12, f"{pid} panel {i}: instruction too weak"
             assert_no_meta(f"{pid}.panelPlan[{i}]", panel)
-            assert DRAWABLE.search(panel), f"{pid} panel {i}: no concrete drawable cue: {panel!r}"
+
+        combined_plan = " ".join(plan)
+        drawable_hits = len(DRAWABLE.findall(combined_plan))
+        minimum_hits = 1 if len(plan) == 1 else 2
+        assert drawable_hits >= minimum_hits, f"{pid}: page plan lacks concrete visual construction ({drawable_hits} drawable cues)"
+        assert len(combined_plan) >= 60, f"{pid}: page plan is too thin for image construction"
 
         summary = page.get("summary")
         assert isinstance(summary, str) and summary.strip(), f"{pid}: visual page summary missing"
