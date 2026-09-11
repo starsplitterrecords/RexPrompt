@@ -1,0 +1,29 @@
+name: Apply Low Tide Enhance
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-low-tide-enhance.yml'
+permissions:
+  contents: write
+jobs:
+  enhance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply and validate Low Tide enhancement
+        shell: bash
+        run: |
+          base64 -d .github/low-tide-enhance-payload.py.gzb64 | gunzip > /tmp/apply_low_tide_enhance.py
+          python /tmp/apply_low_tide_enhance.py
+      - name: Commit enhancement and remove temporary runner
+        shell: bash
+        run: |
+          rm .github/workflows/apply-low-tide-enhance.yml
+          rm .github/low-tide-enhance-payload.py.gzb64
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Enhance Low Tide Signal season and chef recipes"
+          git push
