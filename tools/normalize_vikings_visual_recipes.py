@@ -2,9 +2,10 @@
 """Normalize active Vikings 2026 production recipes for visual execution.
 
 This is a narrow production-data pass. It preserves page IDs, panel count/order,
-dialogue, and story content. It adds explicit per-panel location to active
-unreleased Vikings Issues 2-5 and applies the approved VIK_S1I02_P01 visual
-staging correction. Released Issue 1 is intentionally excluded.
+and dialogue. It adds explicit per-panel location to active unreleased Vikings
+Issues 2-5, applies the approved VIK_S1I02_P01 visual staging correction, and
+locks the three-person Kin continuity. Released Issue 1 production payloads are
+intentionally excluded.
 """
 
 from __future__ import annotations
@@ -19,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SHOWS_PATH = ROOT / "data" / "shows.json"
 VIKINGS_BASE = ROOT / "data" / "shows" / "vikings-2026-s1"
+CHARACTERS_PATH = VIKINGS_BASE / "characters.json"
 
 LOCATION_WORDS = {
     "apartment", "studio", "hallway", "hall", "stairwell", "landing", "street",
@@ -65,24 +67,18 @@ def page_setting(scene: dict) -> str:
     text = str(scene.get("settingText") or "").strip()
     if text:
         return text
-    setting = str(scene.get("setting") or "").strip()
-    return setting
+    return str(scene.get("setting") or "").strip()
 
 
 def candidate_from_action(action: str) -> str | None:
     action = " ".join(str(action or "").split())
     if not action:
         return None
-
-    # Many current recipes already begin with a compact location phrase followed
-    # by a colon. Promote that phrase into an explicit location field.
     if ":" in action:
         prefix = action.split(":", 1)[0].strip()
         words = set(re.findall(r"[a-z]+", prefix.lower()))
         if len(prefix) <= 120 and words & LOCATION_WORDS:
             return prefix
-
-    # Preserve explicit location-led blocking when it already exists in prose.
     m = re.match(
         r"^(Back at|Inside|Outside|At|In|On|Near|Across from|By|From)\s+([^.;]{2,100})",
         action,
@@ -93,31 +89,21 @@ def candidate_from_action(action: str) -> str | None:
         words = set(re.findall(r"[a-z]+", phrase.lower()))
         if words & LOCATION_WORDS:
             return phrase
-
     return None
 
 
 def concise_default_location(setting: str) -> str:
     setting = " ".join(setting.split())
-    if not setting:
-        return "same location as previous panel"
-    # The page setting remains an environment family. Keep it intact rather than
-    # guessing a narrower place that the stored recipe does not establish.
-    return setting
+    return setting or "same location as previous panel"
 
 
 def normalize_panel(panel: dict, default_location: str, previous_location: str | None) -> tuple[dict, str]:
     panel = copy.deepcopy(panel)
     explicit = str(panel.get("location") or "").strip()
-    inferred = explicit or candidate_from_action(panel.get("action", ""))
-    location = inferred or previous_location or concise_default_location(default_location)
-
-    # Put the visually operative fields first so JSON rendering in the assembler
-    # reads like a drawing instruction rather than arbitrary metadata.
+    location = explicit or candidate_from_action(panel.get("action", "")) or previous_location or concise_default_location(default_location)
     normalized: dict = {}
-    for key in ("panel",):
-        if key in panel:
-            normalized[key] = panel[key]
+    if "panel" in panel:
+        normalized["panel"] = panel["panel"]
     normalized["location"] = location
     for key in ("shotType", "action", "dialogueIndices"):
         if key in panel:
@@ -174,6 +160,72 @@ def patch_landfall_page_one(scene: dict) -> None:
     ]
 
 
+def name_astrid_in_middle_season(scene: dict) -> bool:
+    """Name the already-established female Kin member when Issue 5 shows her individually."""
+    if not str(scene.get("id") or "").startswith("VIK_S1E05_"):
+        return False
+    changed = False
+    replacements = {
+        "the woman from the Kin": "Astrid",
+        "The woman from the Kin": "Astrid",
+        "a woman from the Kin": "Astrid",
+        "A woman from the Kin": "Astrid",
+    }
+    for panel in scene.get("panelPlan") or []:
+        if not isinstance(panel, dict) or not isinstance(panel.get("action"), str):
+            continue
+        text = panel["action"]
+        new = text
+        for old, repl in replacements.items():
+            new = new.replace(old, repl)
+        if new != text:
+            panel["action"] = new
+            changed = True
+    return changed
+
+
+def lock_kin_shelf() -> bool:
+    chars = json.loads(CHARACTERS_PATH.read_text(encoding="utf-8"))
+    original = copy.deepcopy(chars)
+    chars["tnvx3hlo0"] = {
+        "name": "The Kin",
+        "handle": "@vik.TheKin",
+        "sourceId": "tnvx3hlo0",
+        "role": "The three recurring 9th-century Norse adults sharing the Bushwick studio: two men and Astrid, the only woman.",
+        "visualAnchor": "Exactly three established recurring Kin: two adult Norse men and one adult Norse woman, Astrid. Preserve each individual's released Issue 1 appearance and approved current character reference; never add, drop, clone, average, or substitute members.",
+        "performance": "Dignified practical adults with distinct individual behavior. They do not need to move as a unit once the story begins showing their independent modern lives.",
+        "promptContinuity": [
+            "Exactly three Kin exist in this household: two men and Astrid; do not generate additional Kin",
+            "Astrid is the only woman among the three Kin",
+            "Issues 1-3: when the Kin appear, keep all three together in or immediately around the Bushwick placement; do not send individual Kin on independent city outings",
+            "Middle issues begin revealing the three as separate people through individual errands, neighbors, merchants, routines, and interests",
+            "Issues 6-7: Astrid is largely absent from foreground action; do not replace her absence with a fourth Kin or a duplicate",
+            "Preserve each established Kin appearance; do not duplicate or average Bjorn or Gunnar into the group"
+        ],
+        "arc": "The three begin as a background household unit. Midseason the story reveals that they have independently learned the neighborhood and built lives Carrie, Bjorn, and the reader have not fully tracked. Astrid is deliberately underused in Issues 6-7 so Issue 8 can reveal in court that she has become the most integrated member of the household.",
+        "openDecision": "Astrid is locked. The two male Kin names remain unresolved; do not silently lock Eirik or Ivar until explicitly approved."
+    }
+    chars["astrid"] = {
+        "name": "Astrid",
+        "handle": "@vik.Astrid",
+        "role": "The only woman among the three Kin; a quietly independent member of the Bushwick household whose modern life becomes visible over the middle of the season.",
+        "visualAnchor": "Use the established female Kin member from released Vikings 2026 Issue 1 and the approved current character reference as strict identity authority. Do not invent a new face, age, build, hair, or costume to distinguish her from the released woman.",
+        "performance": "Grounded and practical. Her integration is shown through ordinary competence, relationships, language, routines, and self-directed movement rather than through explanatory speeches.",
+        "promptContinuity": [
+            "Astrid is one of exactly three Kin and the only woman",
+            "Issues 1-3: show Astrid with the two male Kin at the Bushwick placement rather than independently around the city",
+            "Middle issues may show Astrid separately as her own neighborhood life becomes visible",
+            "Issues 6-7: keep Astrid largely out of foreground action so the audience does not fully track how far her independent integration has progressed",
+            "Issue 8 courtroom payoff: Astrid can unexpectedly demonstrate that she is the household's most integrated member without becoming a different character or an assimilation mascot"
+        ],
+        "arc": "Background household member -> quietly independent New Yorker -> largely off-page during Issues 6-7 -> courtroom reveal in Issue 8 that her practical integration has outpaced everyone else's assumptions."
+    }
+    if chars == original:
+        return False
+    CHARACTERS_PATH.write_text(json.dumps(chars, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def invariants(scenes: list[dict]):
     return {
         s.get("id"): {
@@ -189,62 +241,65 @@ def invariants(scenes: list[dict]):
 def main() -> None:
     shows = json.loads(SHOWS_PATH.read_text(encoding="utf-8"))
     overlay_specs: dict[Path, str | None] = {}
-
     for show in shows:
         show_id = str(show.get("id") or "")
         if not show_id.startswith("vikings-2026-s1-") or show_id == "vikings-2026-s1-e01":
             continue
         for overlay in show.get("sceneOverlays") or []:
             rel = overlay.get("file")
-            if not rel:
-                continue
-            path = VIKINGS_BASE / rel
-            overlay_specs[path] = overlay.get("encoding")
-
+            if rel:
+                overlay_specs[VIKINGS_BASE / rel] = overlay.get("encoding")
     if not overlay_specs:
         raise SystemExit("No active unreleased Vikings overlays found")
 
-    changed_pages = 0
-    changed_panels = 0
-    touched_files = 0
+    changed_pages = changed_panels = touched_files = astrid_mentions = 0
+    early_kin_location_warnings: list[str] = []
 
     for path, encoding in sorted(overlay_specs.items()):
         raw = load_overlay(path, encoding)
         scenes = scenes_from(raw)
         before = invariants(scenes)
         file_changed = False
-
         for scene in scenes:
             sid = str(scene.get("id") or "")
             if not sid.startswith("VIK_"):
                 continue
-
             if sid == "VIK_S1I02_P01":
                 original_dialogue = copy.deepcopy(scene.get("dialogueInline"))
                 patch_landfall_page_one(scene)
                 if scene.get("dialogueInline") != original_dialogue:
                     raise AssertionError("Page 1 dialogue changed")
                 file_changed = True
+            if name_astrid_in_middle_season(scene):
+                astrid_mentions += 1
+                file_changed = True
 
             panels = scene.get("panelPlan")
-            if not isinstance(panels, list) or not panels:
-                continue
+            if isinstance(panels, list) and panels:
+                default_location = page_setting(scene)
+                prev = None
+                normalized_panels = []
+                for panel in panels:
+                    if not isinstance(panel, dict):
+                        normalized_panels.append(panel)
+                        continue
+                    normalized, prev = normalize_panel(panel, default_location, prev)
+                    if normalized != panel:
+                        changed_panels += 1
+                        file_changed = True
+                    normalized_panels.append(normalized)
+                if normalized_panels != panels:
+                    scene["panelPlan"] = normalized_panels
+                    changed_pages += 1
 
-            default_location = page_setting(scene)
-            prev = None
-            normalized_panels = []
-            for panel in panels:
-                if not isinstance(panel, dict):
-                    normalized_panels.append(panel)
-                    continue
-                normalized, prev = normalize_panel(panel, default_location, prev)
-                if normalized != panel:
-                    changed_panels += 1
-                    file_changed = True
-                normalized_panels.append(normalized)
-            if normalized_panels != panels:
-                scene["panelPlan"] = normalized_panels
-                changed_pages += 1
+            # Audit only: early Kin should not be sent into independent city life.
+            if sid.startswith(("VIK_S1I02_", "VIK_S1E03_")):
+                blob = json.dumps(scene, ensure_ascii=False).lower()
+                has_kin = "@vik.thekin" in blob or "kin member" in blob or "the kin" in blob or "astrid" in blob
+                setting = page_setting(scene).lower()
+                allowed = any(word in setting for word in ("apartment", "studio", "hallway", "stairwell", "building", "safe cave"))
+                if has_kin and setting and not allowed:
+                    early_kin_location_warnings.append(f"{sid}: {page_setting(scene)}")
 
         after = invariants(scenes)
         if set(before) != set(after):
@@ -256,12 +311,17 @@ def main() -> None:
                 raise AssertionError(f"Panel order changed for {sid}")
             if after[sid]["dialogue"] != state["dialogue"]:
                 raise AssertionError(f"Dialogue changed for {sid}")
-
         if file_changed:
             save_overlay(path, encoding, raw)
             touched_files += 1
 
+    shelf_changed = lock_kin_shelf()
     print(f"Normalized {changed_panels} panel records across {changed_pages} pages in {touched_files} active overlay files.")
+    print(f"Named Astrid in {astrid_mentions} Issue 5 production page(s); Kin shelf changed={shelf_changed}.")
+    if early_kin_location_warnings:
+        print("EARLY-KIN LOCATION REVIEW:")
+        for warning in early_kin_location_warnings:
+            print(" - " + warning)
 
 
 if __name__ == "__main__":
