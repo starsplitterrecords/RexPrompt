@@ -1,0 +1,121 @@
+name: Finish Low Tide visual specificity
+on:
+  push:
+    paths:
+      - '.github/workflows/finish-low-tide-visual-specificity.yml'
+permissions:
+  contents: write
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Expand nine remaining thin page recipes
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,gzip,json
+          from pathlib import Path
+          base=Path('data/shows/low-tide-signal')
+          files=[
+            base/'encoded/pages_c04_between_runs_enhanced.json.gzb64',
+            base/'encoded/pages_c05_return_tide_enhanced.json.gzb64',
+            base/'encoded/pages_c06_after_the_water_enhanced.json.gzb64',
+            base/'encoded/pages_c07_last_low_tide_enhanced.json.gzb64']
+          replacements={
+            'LTS_C04_P13':[
+              'Wide low-angle view on the Glass Rail: Justin climbs a wet steel-and-concrete support above black water while Chris, Nicole, Ryan and several runners watch from the lower deck.',
+              'Close on Justin’s gloved hand locking over the top edge as one scuffed boot finds a narrow brace; he pulls himself over with controlled movement and a metal CLANG.',
+              'Reverse angle from above Justin’s shoulder: runners on the deck below throw up hands and cheer under headlamps; Chris grins beside Nicole.',
+              'Medium panel on Justin standing upright on the high ledge, chest open and smiling down at the small crowd for an extra beat after the climb is finished.',
+              'Close two-shot from below: Ryan keeps one hand on the wet rail and looks up at Justin without smiling as he answers him.'
+            ],
+            'LTS_C05_P01':[
+              'Opening montage across six separate inland interiors: phones glow beside Matt’s municipal console, Ryan’s marine workbench, Chris’s cable-cluttered desk, Justin’s climbing bag, Nicole’s kitchen table and Kevin’s forecast workstation.',
+              'Close sequence of runner-chat screens on different phones repeating LOWEST WINDOW OF THE YEAR and DEEP SECTOR MAYBE WALKABLE over maps and tide graphics.',
+              'Kevin sits forward at his workstation with wind and pressure layers stacked over the extreme-low tide chart; one hand braces his chin while he frowns at the mismatch.',
+              'Justin stands beside his packed rope bag typing into the group chat with one thumb, a crooked grin on his face as his joke appears on screen.',
+              'Ryan pauses at his marine workbench with a wrench in one hand and the group message open in the other; he reads it, locks the phone and sets it face-down without replying.'
+            ],
+            'LTS_C05_P07':[
+              'Wide crossing view on the black tidal flats: two younger runners on a parallel line point toward Justin and Chris several yards away while fog and old road markings stretch between the groups.',
+              'The two younger runners cut diagonally through shallow mud and fall in several paces behind Justin and Chris; their headlamps join the core group’s moving line.',
+              'Chris walks backward for a few steps with his cracked recorder raised toward Justin and the newcomers while Justin grins and keeps moving over the exposed pavement.',
+              'Nicole turns at the waist from farther ahead and looks back at the two strangers now following naturally in their wake; muddy footprints form one combined trail behind everyone.'
+            ],
+            'LTS_C06_P06':[
+              'Wide early-morning municipal control room: Matt sits alone at his usual console in yesterday’s rumpled work jacket, shoulders heavy, coffee untouched beside blue-gray drainage monitors.',
+              'His manager arrives at the neighboring station, sets a bag down and rolls the chair toward Matt’s board while other staff begin ordinary shifts in the background.',
+              'Matt pushes one hand against the desk and half rises from his chair on “I can work,” eyes fixed on the active monitor wall.',
+              'Medium two-shot: the manager raises an open palm toward Matt and turns the other hand toward the console on “Go home anyway”; Matt’s shoulders drop before his quiet “Okay.”',
+              'Final wide from the corridor: Matt walks out carrying his bag while the staffed control room continues behind glass—operators seated, maps updating and rain visible beyond the windows.'
+            ],
+            'LTS_C06_P08':[
+              'Overhead view of Kevin alone at a kitchen/work table with an open laptop, tide-device, weather sensor, notebook and several forecast windows layered across the screen.',
+              'Laptop close-up: Kevin scrolls back through timestamped group messages until his own earlier warning is highlighted among the chat entries.',
+              'Extreme close on the exact phrase “could refill earlier” beside the earlier timestamp, reflected faintly in Kevin’s glasses or eyes above the screen edge.',
+              'Medium side view: Kevin sits in the otherwise empty room, hands off the keyboard, looking at the message while he says “I said could” and then “I knew would.”',
+              'Kevin lowers the laptop lid with both hands; the bright forecast windows collapse to a dark reflective screen on the quiet table.'
+            ],
+            'LTS_C06_P12':[
+              'Wide view of the same warm neighborhood-bar booth from Chapter 1: all six friends sit around the familiar table, but elbows and bags leave noticeably more open space between bodies; the surrounding bar remains busy.',
+              'The familiar server leans into the booth with a small order pad on “Usual?”; several friends look up at once while half-filled water glasses and untouched menus sit between them.',
+              'Medium group panel: Justin looks genuinely blank for a second after saying he does not know his usual; Chris watches him while Matt and Ryan stay quiet across the table.',
+              'Nicole turns toward Justin and answers “Beer, Justin”; his small “Right” brings the faintest near-smile around the booth before everyone looks back toward the table.'
+            ],
+            'LTS_C06_P18':[
+              'Wide marine-workshop panel: Ryan, still visibly bruised, works slowly at a cluttered bench with a small motor housing clamped in place; daylight enters through a salt-streaked garage door.',
+              'A customer steps beside the bench and hands Ryan a set of boat keys while asking whether he is done with all that; Ryan wipes one hand on a rag before taking them.',
+              'Two-shot at the bench: Ryan gives a short “Yeah” with his body still angled toward the repair while the customer answers “Good.”',
+              'After the customer exits, Ryan pauses beside an older hull or metal panel marked by a pale horizontal tide stain; his fingers rest briefly on the salt line.',
+              'Ryan turns back to the workbench, fits a tool to the motor housing and resumes the repair under plain workshop light.'
+            ],
+            'LTS_C06_P20':[
+              'Wide bar-booth view: Matt, Chris, Nicole and Kevin occupy four places at the familiar table; two unoccupied seats remain at the ends while food, drinks and the busy room keep the setting ordinary.',
+              'Chris lifts one hand and offers “Weather”; Kevin immediately shakes his head with both palms flat on the table while Matt looks between them.',
+              'Nicole says “Movies,” and Chris’s face breaks into a small grin on “I remember movies”; Nicole laughs first and Matt follows with a quieter smile.',
+              'Final wider panel: the four continue talking over drinks and shared food, leaning toward one another in a loose conversation while the two empty seats remain visible at the edge of the composition.'
+            ],
+            'LTS_C07_P13':[
+              'Close view of a blank public schedule sheet trapped behind cloudy cracked plastic on a deep-Reach civic wall; faded mounting holes and water marks surround the empty grid.',
+              'Nicole stands close to the wall and presses one gloved fingertip against the loose plastic edge without lifting it; her face and the empty schedule share the frame.',
+              'Kevin glances once at the blank grid while walking past toward the open corridor ahead; his body stays turned in the direction of travel.',
+              'Chris looks from the schedule to Nicole and Kevin, says “That’s enough,” then turns away with them; the final panel leaves the blank schedule behind as all three rejoin the route.'
+            ]
+          }
+          found=set()
+          for path in files:
+            raw=''.join(path.read_text().split())
+            obj=json.loads(gzip.decompress(base64.b64decode(raw)))
+            pages=obj.get('pages',obj) if isinstance(obj,dict) else obj
+            changed=False
+            for p in pages:
+              if p.get('id') in replacements:
+                found.add(p['id'])
+                p['panelPlan']=replacements[p['id']]
+                plan=p['panelPlan']
+                p['summary']=f"{len(plan)}-panel page. Opening image: {plan[0]} Final image: {plan[-1]}"
+                changed=True
+            if changed:
+              payload=json.dumps(obj,ensure_ascii=False,separators=(',',':')).encode('utf-8')
+              path.write_text(base64.b64encode(gzip.compress(payload,mtime=0)).decode('ascii')+'\n')
+          assert found==set(replacements), f'missing targets: {set(replacements)-found}'
+          print('EXPANDED',len(found),'PAGES',sorted(found))
+          PY
+      - name: Run hardened Low Tide validation
+        run: python tools/validate_low_tide_img_normalization.py
+      - name: Remove temporary audit machinery and commit
+        shell: bash
+        run: |
+          rm -f .github/workflows/audit-low-tide-final-specificity.yml
+          rm -f .github/workflows/finish-low-tide-visual-specificity.yml
+          git config user.name "starsplitterrecords"
+          git config user.email "77013062+starsplitterrecords@users.noreply.github.com"
+          git add -A data/shows/low-tide-signal .github
+          git commit -m "Finish Low Tide visual-first page staging"
+          git push origin HEAD:main
