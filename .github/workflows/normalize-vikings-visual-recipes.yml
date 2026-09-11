@@ -1,0 +1,47 @@
+name: Normalize Vikings visual recipes
+
+on:
+  push:
+    branches:
+      - normalize/vikings-visual-recipes
+    paths:
+      - tools/normalize_vikings_visual_recipes.py
+      - tools/patch_vikings_recipe_visuals.py
+      - tools/audit_vikings_active_recipes.py
+      - tools/flag_vikings_recipe_abstraction.py
+      - .github/workflows/normalize-vikings-visual-recipes.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: normalize/vikings-visual-recipes
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Normalize active Vikings recipes
+        run: python tools/normalize_vikings_visual_recipes.py
+      - name: Patch recipes into drawable staging
+        run: python tools/patch_vikings_recipe_visuals.py
+      - name: Decode active recipes for audit
+        run: python tools/audit_vikings_active_recipes.py
+      - name: Flag interpretive recipe text
+        run: python tools/flag_vikings_recipe_abstraction.py
+      - name: Commit normalized payloads and audit snapshots
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No normalization changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/vikings-2026-s1/encoded data/shows/vikings-2026-s1/characters.json data/shows/vikings-2026-s1/issue_05_skaldic_interface_enhanced.md tmp/vikings_active_recipe_audit.json tmp/vikings_recipe_flags.json
+          git commit -m "Apply Vikings drawable recipe staging"
+          git push origin HEAD:normalize/vikings-visual-recipes
