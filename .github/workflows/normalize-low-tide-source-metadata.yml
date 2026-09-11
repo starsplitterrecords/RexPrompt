@@ -22,6 +22,14 @@ jobs:
           def load(name): return json.loads((base/name).read_text())
           def save(name,obj): (base/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n')
 
+          manifest=json.loads(Path('data/shows.json').read_text())
+          manifest_text=json.dumps(manifest)
+          legacy=base/'pages_ch01_ch03.json'
+          assert 'pages_ch01_ch03.json' not in manifest_text, 'legacy page source is still referenced by manifest'
+          if legacy.exists():
+            legacy.unlink()
+            print('REMOVED UNUSED LEGACY SOURCE',legacy)
+
           show=load('show.json')
           show['what_this_is']=[('restless stable adulthood story' if x=='post-purpose adulthood story' else x) for x in show['what_this_is']]
           save('show.json',show)
@@ -44,20 +52,18 @@ jobs:
             'S_lts_municipal_control_room':('civic infrastructure oversight room','Shows Matt in a real responsibility role during a calm shift, leaving room for his hunger for more immediate usefulness.'),
             'S_lts_harbor_phase_walkway':('lively adapted public realm','Shows Harbor Phase as socially active, comfortable, and worth living in.'),
             'S_lts_inland_montage':('cross-section of six adult lives','Differentiates the ensemble through actual work, hobbies, obligations, and routines before the Reach starts reorganizing them.'),
-            'S_lts_inland_bar':('busy neighborhood bar','Lets the friend group enjoy a real social life together before the Reach becomes the stronger competing habit.'),
+            'S_lts_inland_bar':('busy neighborhood bar','Lets the friend group enjoy a real social life together before the Reach becomes the stronger competing habit.')
           }
           settings['S_lts_harbor_phase_walkway']['name']='Harbor Phase — Covered Walkways'
           settings['S_lts_inland_montage']['name']='Harbor Phase — Ordinary Adult Lives'
           for k,(typ,func) in meta.items():
             settings[k]['type']=typ
             settings[k]['story_function']=func
-            # Keep chef-visible text synchronized with any renamed setting.
             e=settings[k]; v=e.get('visual_language','')
             if isinstance(v,list): v=', '.join(v)
             e['text']=f"{e.get('name',k)} — {e.get('description','')}"+(f" Visual language: {v}." if v else '')
           save('settings.json',settings)
 
-          # Validate stale reductive source framing is gone from durable Low Tide source JSON.
           stale=['post-purpose','structurally unnecessary','ordinary redundancy','made him redundant','made worthless','comfortable but dead social space','comfort and airlessness','pleasant but dead','optimized wall','nicole maps']
           hits={}
           for p in base.glob('*.json'):
@@ -67,13 +73,13 @@ jobs:
                 hits.setdefault(term,[]).append(p.name)
           print('STALE SOURCE HITS',hits)
           assert not hits, hits
-          # Reconfirm chef-facing files still carry the intended contract.
-          manifest=json.loads(Path('data/shows.json').read_text())
+
           low=[x for x in manifest if x.get('seriesId')=='low-tide-signal']
           assert len(low)==7
           assert all('viable, comfortable city' in x.get('generationLine','') for x in low)
           assert all(e.get('text') for e in settings.values())
           assert all(chars[k].get('performance') and chars[k].get('relationship') and chars[k].get('promptContinuity') for k in chars)
+          assert (base/'pages_ch01_ch03_compiled.json').exists()
           print('LOW TIDE METADATA NORMALIZATION OK')
           PY
       - name: Commit normalization and remove runner
@@ -82,6 +88,6 @@ jobs:
           rm -f .github/workflows/normalize-low-tide-source-metadata.yml
           git config user.name "starsplitterrecords"
           git config user.email "77013062+starsplitterrecords@users.noreply.github.com"
-          git add data/shows/low-tide-signal .github
+          git add -A data/shows/low-tide-signal .github
           git commit -m "Normalize Low Tide source metadata after enhancement"
           git push origin HEAD:main
