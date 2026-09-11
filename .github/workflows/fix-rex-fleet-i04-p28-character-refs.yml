@@ -1,0 +1,35 @@
+name: Fix Rex Fleet I04 P28 character refs
+
+on:
+  push:
+    branches:
+      - fix/rex-fleet-i04-p28-character-refs-final5
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/rex-fleet-i04-p28-character-refs-final5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply targeted fix
+        run: python tools/fix_rex_fleet_i04_p28_character_refs.py
+      - name: Validate Rex Fleet
+        run: python tools/validate_rex_fleet.py
+      - name: Commit production payload
+        run: |
+          if git diff --quiet -- data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64; then
+            echo "No production change needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64
+          git commit -m "Fix Rex Fleet I04 P28 character refs"
+          git push origin HEAD:fix/rex-fleet-i04-p28-character-refs-final5
