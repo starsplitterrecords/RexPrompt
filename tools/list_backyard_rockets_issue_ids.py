@@ -18,4 +18,7 @@ for name in FILES:
     scenes = json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode('utf-8'))
     print(name)
     for i, scene in enumerate(scenes, 1):
-        print(f"  {i:02d} {scene.get('id')}")
+        summary = ' '.join(str(scene.get('summary') or '').split())
+        if len(summary) > 240:
+            summary = summary[:237] + '...'
+        print(f"  {i:02d} {scene.get('id')} :: {summary}")
