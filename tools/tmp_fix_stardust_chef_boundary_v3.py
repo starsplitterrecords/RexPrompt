@@ -15,7 +15,11 @@ original_clean = base.clean_meta_panel
 source = V2.read_text(encoding="utf-8")
 source = source.split("base.clean_meta_panel = clean_meta_panel", 1)[0]
 source = source.replace("text = base.clean_meta_panel(text)", "text = ORIGINAL_CLEAN(text)")
-namespace = {"ORIGINAL_CLEAN": original_clean, "__name__": "stardust_boundary_defs"}
+namespace = {
+    "ORIGINAL_CLEAN": original_clean,
+    "__name__": "stardust_boundary_defs",
+    "__file__": str(V2),
+}
 exec(compile(source, str(V2), "exec"), namespace, namespace)
 
 for name in (
