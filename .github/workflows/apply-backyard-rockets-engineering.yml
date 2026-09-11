@@ -6,6 +6,7 @@ on:
       - enhance/backyard-rockets-engineering-20260910
     paths:
       - tools/enhance_backyard_rockets_engineering.py
+      - tools/apply_backyard_rockets_engineering_live.py
       - tools/list_backyard_rockets_issue_ids.py
       - .github/workflows/apply-backyard-rockets-engineering.yml
   workflow_dispatch:
@@ -29,7 +30,7 @@ jobs:
       - name: Inspect live issue IDs
         run: python tools/list_backyard_rockets_issue_ids.py
       - name: Rewrite assembler-visible Rockets recipes
-        run: python tools/enhance_backyard_rockets_engineering.py
+        run: python tools/apply_backyard_rockets_engineering_live.py
       - name: Validate Backyard Rockets
         run: |
           python tools/validate_backyard_rockets.py
@@ -43,7 +44,7 @@ jobs:
             exit 0
           fi
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+starsplitterrecords@users.noreply.github.com"
           git add data/shows/backyard-rockets-s1/encoded/scenes_e03_public_sky.json.gzb64
           git add data/shows/backyard-rockets-s1/encoded/scenes_e04_trip_point.json.gzb64
           git add data/shows/backyard-rockets-s1/encoded/scenes_e05_reserve_margin.json.gzb64
