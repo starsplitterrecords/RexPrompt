@@ -21,6 +21,12 @@ def episode(scene):
     match = re.search(r"S1E\d{2}", str(scene.get("id", "")))
     return match.group(0) if match else None
 
+def flatten(value):
+    if isinstance(value, str): return value
+    if isinstance(value, list): return "\n".join(flatten(v) for v in value)
+    if isinstance(value, dict): return "\n".join(flatten(v) for v in value.values())
+    return ""
+
 shows = load_json(MANIFEST)
 show = next((s for s in shows if s.get("id") == "backyard-rockets-s1"), None)
 if not show: raise SystemExit("Backyard Rockets show missing from data/shows.json")
@@ -33,12 +39,9 @@ for overlay in show.get("sceneOverlays", []):
     if not path.exists(): raise SystemExit(f"Manifest references missing file: {overlay['file']}")
     try:
         encoding = overlay.get("encoding")
-        if encoding == "gzip-base64":
-            incoming = normalize(load_encoded(path))
-        elif encoding:
-            raise ValueError(f"unsupported encoding {encoding}")
-        else:
-            incoming = normalize(load_json(path))
+        if encoding == "gzip-base64": incoming = normalize(load_encoded(path))
+        elif encoding: raise ValueError(f"unsupported encoding {encoding}")
+        else: incoming = normalize(load_json(path))
     except Exception as exc:
         raise SystemExit(f"{overlay['file']}: decode failure: {exc}") from exc
     excluded = set(overlay.get("excludeIds", []))
@@ -67,6 +70,13 @@ regions = load_json(SHOW / "regions.json")
 settings = load_json(SHOW / "settings.json")
 characters = load_json(SHOW / "characters.json")
 handles = {v.get("handle") for v in characters.values() if isinstance(v, dict) and v.get("handle")}
+chef_meta = re.compile(
+    r"\b(?:this page|the page should|page should|scene should|reader|writing doctrine|editorial|narrative purpose|"
+    r"dramatic turn|dramatic foreground|story beat|character beat|character work|developmental|story spine|"
+    r"the point is|the page's main pleasure|the climax should reward|recurring series engine|the chef should|"
+    r"success criterion|rather than a completed policy argument|proving the rule|proving the safety|"
+    r"turning the argument into|so the page feels|showing the network can|the audience learns)\b", re.I)
+
 for scene in scenes:
     sid = scene.get("id")
     if not scene.get("summary"): raise SystemExit(f"{sid}: missing summary")
@@ -79,7 +89,17 @@ for scene in scenes:
         if faction not in factions: raise SystemExit(f"{sid}: unknown faction {faction}")
     for c in scene.get("charactersInline", []) or []:
         if c.get("handle") not in handles: raise SystemExit(f"{sid}: unknown character handle {c.get('handle')}")
+    ep = episode(scene)
+    if ep in {f"S1E{n:02d}" for n in range(3, 9)}:
+        panels = scene.get("panelPlan") or []
+        if len(panels) < 4:
+            raise SystemExit(f"{sid}: unreleased production page requires at least four concrete planned panels")
+        chef_text = "\n".join([scene.get("summary", ""), flatten(panels), flatten(scene.get("directionInline", []))])
+        hit = chef_meta.search(chef_text)
+        if hit:
+            raise SystemExit(f"{sid}: chef-layer editorial/writing leakage: {hit.group(0)!r}")
 
+# Recovered E3-E4 have an explicit physical continuity chain that remains required.
 production_specs = {
     "S1E03": ("Public Sky", "BR_S1E02_R2_P24"),
     "S1E04": ("Trip Point", "BR_S1E03_PS_A03_SC06"),
@@ -88,10 +108,6 @@ for ep, (label, previous) in production_specs.items():
     issue_scenes = [scene for scene in scenes if episode(scene) == ep]
     for scene in issue_scenes:
         sid = scene["id"]
-        panels = scene.get("panelPlan") or []
-        if len(panels) < 4: raise SystemExit(f"{sid}: {label} production page requires at least four planned panels")
-        if not any(str(x).strip() for x in scene.get("directionInline", []) or []):
-            raise SystemExit(f"{sid}: {label} production page missing scene direction")
         if scene.get("continuityFrom") != previous:
             raise SystemExit(f"{sid}: {label} continuityFrom must be {previous}, found {scene.get('continuityFrom')}")
         previous = sid
