@@ -89,12 +89,11 @@ for key, character in characters.items():
     assert isinstance(handle, str) and handle, f"{key}: missing handle"
     if handle in CORE_HANDLES:
         assert isinstance(character.get("visualAnchor"), str) and character["visualAnchor"].strip(), f"{key}: core character missing visualAnchor"
-        locks = character.get("continuityLocks")
-        assert isinstance(locks, list) and locks and all(isinstance(item, str) and item.strip() for item in locks), f"{key}: core character missing continuityLocks"
-        status = character.get("visualStatus")
-        assert isinstance(status, str) and status.strip(), f"{key}: core character missing visualStatus"
+        assert isinstance(character.get("performance"), str) and character["performance"].strip(), f"{key}: core character missing image-facing performance"
+        locks = character.get("promptContinuity")
+        assert isinstance(locks, list) and locks and all(isinstance(item, str) and item.strip() for item in locks), f"{key}: core character missing promptContinuity"
 
-assert isinstance(characters.get("SDS_Station", {}).get("visualStatus"), str), "Station System must define non-humanoid visual status"
+assert isinstance(characters.get("SDS_Station", {}).get("visualAnchor"), str), "Station System must define environmental visual anchor"
 assert isinstance(characters.get("SDS_Liaison", {}).get("visualAnchor"), str), "Operations Liaison must define a provisional visual anchor"
 
 assert (SHOW / "pages_base.json").exists(), "Missing pages_base.json"
@@ -112,9 +111,10 @@ for entry in stardust_entries:
     generation_line = entry.get("generationLine")
     assert isinstance(generation_line, str) and generation_line.strip(), f"{show_id}: missing generationLine"
     if show_id != "stardust-station":
-        assert "released Issue 1 interior-story visual canon" in generation_line, f"{show_id}: released interior-story canon lock missing"
-        assert "no cover, title banner, page header, character labels" in generation_line, f"{show_id}: page-style contamination exclusion missing"
-        assert "approved" in generation_line and "continuity" in generation_line, f"{show_id}: approved-production continuity rule missing"
+        assert "released Stardust Station Issue 1" in generation_line, f"{show_id}: released visual canon lock missing"
+        assert "approved current-production" in generation_line, f"{show_id}: approved-production continuity rule missing"
+        assert "physical geography" in generation_line and "prop and equipment state" in generation_line, f"{show_id}: physical continuity contract missing"
+        assert "Interior story page only" in generation_line, f"{show_id}: interior-page scope missing"
 
     overlays = entry.get("sceneOverlays", [])
     assert isinstance(overlays, list) and overlays, f"{show_id}: missing scene overlays"
@@ -149,6 +149,19 @@ for entry in stardust_entries:
         assert isinstance(page.get("summary"), str) and page["summary"].strip(), f"{page_id}: missing summary"
         panel_plan = page.get("panelPlan")
         assert isinstance(panel_plan, list) and panel_plan, f"{page_id}: missing panelPlan"
+        if show_id != "stardust-station":
+            assert page["summary"].startswith("Primary composition:"), f"{page_id}: chef-facing summary must be direct primary composition"
+            recipe_visual_text = [page["summary"], str(page.get("settingText", ""))]
+            recipe_visual_text.extend(str(item.get("text", "")) for item in panel_plan if isinstance(item, dict))
+            forbidden = re.compile(r"\b(?:story\s+beat|the\s+story|the\s+series|the\s+arc|dramatic\s+engine|writing\s+process|writer[- ]room|writerly|lesson|comic\s+context|page\s+feel|key\s+image|rather\s+than\s+preachy|payoff|pays\s+off|causal\s+spine)\b", re.IGNORECASE)
+            leaks = [value for value in recipe_visual_text if forbidden.search(value)]
+            assert not leaks, f"{page_id}: writer-room reasoning leaked into image recipe: {leaks[0]}"
+            match = re.search(r"S1E(\d+)", page_id)
+            if match and int(match.group(1)) >= 4:
+                for item in panel_plan:
+                    panel_text = str(item.get("text", "")) if isinstance(item, dict) else str(item)
+                    body = re.sub(r"^\s*PANEL\s+\d+\s*[—-]\s*", "", panel_text, flags=re.IGNORECASE)
+                    assert len(re.findall(r"[A-Za-z0-9’'-]+", body)) >= 8, f"{page_id}: visually underspecified panel: {panel_text}"
         panel_count = page.get("panelCount")
         if panel_count is not None:
             assert isinstance(panel_count, int) and panel_count > 0, f"{page_id}: invalid panelCount"
