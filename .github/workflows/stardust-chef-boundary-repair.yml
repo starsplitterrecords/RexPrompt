@@ -1,0 +1,35 @@
+name: Stardust chef boundary repair
+
+on:
+  push:
+    branches:
+      - fix/stardust-chef-boundary-20260911
+    paths:
+      - .github/workflows/stardust-chef-boundary-repair.yml
+
+permissions:
+  contents: write
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/stardust-chef-boundary-20260911
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Rewrite chef-facing Stardust data
+        run: python tools/tmp_fix_stardust_chef_boundary.py
+      - name: Validate Stardust mechanical integrity
+        run: python tools/validate_stardust_station.py
+      - name: Commit production-only result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Separate Stardust writing from image recipes"
+          git push
