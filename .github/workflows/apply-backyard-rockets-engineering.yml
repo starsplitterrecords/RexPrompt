@@ -1,0 +1,50 @@
+name: Apply Backyard Rockets engineering enhancement
+
+on:
+  push:
+    branches:
+      - enhance/backyard-rockets-engineering-20260910
+    paths:
+      - tools/enhance_backyard_rockets_engineering.py
+      - .github/workflows/apply-backyard-rockets-engineering.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: enhance/backyard-rockets-engineering-20260910
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rewrite assembler-visible Rockets recipes
+        run: python tools/enhance_backyard_rockets_engineering.py
+      - name: Validate Backyard Rockets
+        run: |
+          python tools/validate_backyard_rockets.py
+          python tools/validate_backyard_rockets_sanitization.py
+          git diff --check
+      - name: Commit rewritten production payloads
+        shell: bash
+        run: |
+          if git diff --quiet -- data/shows/backyard-rockets-s1/encoded; then
+            echo "No production payload changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e03_public_sky.json.gzb64
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e04_trip_point.json.gzb64
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e05_reserve_margin.json.gzb64
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e06_ground_loop.json.gzb64
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e07_ablative_armor.json.gzb64
+          git add data/shows/backyard-rockets-s1/encoded/scenes_e08_sky_piercer.json.gzb64
+          git commit -m "Enhance Backyard Rockets engineering and character work"
+          git push origin HEAD:enhance/backyard-rockets-engineering-20260910
