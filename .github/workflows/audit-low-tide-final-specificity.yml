@@ -13,21 +13,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Report all thin or meta-contaminated page plans
+      - name: Print nine thin page objects
         run: |
           python - <<'PY'
+          import json
           import tools.validate_low_tide_img_normalization as v
-          pages=v.load_all_pages()
-          thin=[]; meta=[]
-          for p in pages:
-            plan=p.get('panelPlan') or []
-            hits=len(v.DRAWABLE.findall(' '.join(plan)))
-            if hits < (1 if len(plan)==1 else 2): thin.append((p['id'],hits,plan))
-            for i,line in enumerate(plan,1):
-              if v.CHEF_META.search(line): meta.append((p['id'],i,line))
-            if v.CHEF_META.search(p.get('summary','')): meta.append((p['id'],'summary',p.get('summary')))
-          print('THIN',len(thin))
-          for x in thin: print(x[0],'| hits',x[1],'|',' || '.join(x[2]))
-          print('META',len(meta))
-          for x in meta: print(x)
+          targets={'LTS_C04_P13','LTS_C05_P01','LTS_C05_P07','LTS_C06_P06','LTS_C06_P08','LTS_C06_P12','LTS_C06_P18','LTS_C06_P20','LTS_C07_P13'}
+          for p in v.load_all_pages():
+            if p.get('id') in targets:
+              print('PAGE_OBJECT',p['id'])
+              print(json.dumps(p,ensure_ascii=False,indent=2))
           PY
