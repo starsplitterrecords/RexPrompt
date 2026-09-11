@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect Low Tide page production fields
+      - name: Inspect Low Tide panel plans
         shell: bash
         run: |
           python - <<'PY'
-          import base64,gzip,json,re,collections
+          import base64,gzip,json,re
           from pathlib import Path
           base=Path('data/shows/low-tide-signal')
           pages=json.loads((base/'pages_ch01_ch03_compiled.json').read_text())
@@ -22,16 +22,12 @@ jobs:
             raw=''.join((base/'encoded'/f).read_text().split())
             x=json.loads(gzip.decompress(base64.b64decode(raw)))
             pages.extend(x.get('pages',x) if isinstance(x,dict) else x)
-          kc=collections.Counter(k for p in pages for k in p.keys())
-          print('KEY_FREQUENCY')
-          for k,n in kc.most_common(): print(k,n)
-          candidates=['panels','panelPlan','pageDesign','visualContinuity','visualDirection','productionNotes','directionInline','summary','layout','composition','camera','action','beat','setting','characters','dialogueInline']
-          for k in candidates:
-            samples=[(p['id'],p.get(k)) for p in pages if p.get(k)]
-            print('\nFIELD',k,'COUNT',len(samples))
-            for pid,v in samples[:12]: print(pid,'|',json.dumps(v,ensure_ascii=False)[:1200])
-          index=Path('index.html').read_text()
-          print('\nASSEMBLER FIELD REFERENCES')
-          for k in sorted(kc):
-            if k in index: print(k)
+          meta=re.compile(r'\b(show|shows|showing|should|feel|means|meaning|theme|thesis|arc|flaw|tempt|temptation|because|rather than|instead of|so that|not proof|not a |do not|don\x27t|never|reader|story|narrative|dramatic|payoff|authority arc|social defect|indict|moral|earned|competence, not|closes inquiry|opens? a mystery)\b',re.I)
+          hits=[]
+          for p in pages:
+            for i,t in enumerate(p.get('panelPlan',[]) or []):
+              if meta.search(t): hits.append((p['id'],i+1,t))
+          print('PANEL_PLAN_PAGES',sum(bool(p.get('panelPlan')) for p in pages))
+          print('PANEL_META_HITS',len(hits),'PAGES',len(set(x[0] for x in hits)))
+          for row in hits: print(row[0],'|',row[1],'|',row[2])
           PY
