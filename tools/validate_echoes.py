@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,53 @@ ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
 }
 ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "directionInline", "continuityFrom"}
+
+# Diagnostic patterns only. These identify likely writer/editor reasoning in the chef-facing
+# image layer; they are intentionally narrower than ordinary English words so the audit does
+# not become a mechanical word ban.
+CHEF_REASONING_PATTERNS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\bthe reader\b",
+        r"\bthe page(?:'s)?\b",
+        r"\bthe issue\b",
+        r"\bthe story\b",
+        r"\bthe point\b",
+        r"\bthe idea\b",
+        r"\bthe revelation\b",
+        r"\bthe conflict is\b",
+        r"\bthe disagreement is\b",
+        r"\bthe problem belongs\b",
+        r"\bthe uncertainty is\b",
+        r"\bproving\b",
+        r"\bproof is\b",
+        r"\bcreating dramatic irony\b",
+        r"\bmore important than\b",
+        r"\bmatters because\b",
+        r"\bshould make\b",
+        r"\bshould feel\b",
+        r"\bthe accusation\b",
+        r"\bthe shock comes\b",
+        r"\bunderstanding that\b",
+        r"\brealizing that\b",
+        r"\brecognizing what\b",
+        r"\breads as\b",
+        r"\brather than philosophical\b",
+        r"\brather than rhetorical\b",
+        r"\brather than supernatural\b",
+        r"\brather than prophecy\b",
+        r"\brather than a technical\b",
+        r"\brather than on\b",
+        r"\bnot a technical\b",
+        r"\bnot a system\b",
+        r"\bnot physical combat\b",
+        r"\bnot moral theater\b",
+        r"\bnot the invention\b",
+        r"\bnot mechanism\b",
+        r"\bthe crisis has\b",
+        r"\bthe answer is\b",
+    )
+]
 
 
 def load(path: Path):
@@ -197,6 +245,50 @@ def validate_visual_references() -> None:
         )
 
 
+def chef_layer_strings() -> list[tuple[str, str]]:
+    strings: list[tuple[str, str]] = []
+    assembler = load(SHOW / "assembler.json")
+    strings.append(("assembler:generationLine", assembler.get("generationLine", "")))
+
+    direction = load(SHOW / "direction.json")
+    for key, entry in direction.items():
+        if isinstance(entry, dict) and isinstance(entry.get("text"), str):
+            strings.append((f"direction:{key}", entry["text"]))
+
+    for issue, path in enumerate(SCENE_FILES, start=1):
+        for scene in load(path):
+            scene_id = scene.get("id", path.name)
+            if issue <= 5:
+                for panel_index, panel in enumerate(scene.get("panelPlan", []), start=1):
+                    if isinstance(panel, dict) and isinstance(panel.get("text"), str):
+                        strings.append((f"{scene_id}:panel:{panel_index}", panel["text"]))
+            if issue >= 2:
+                for direction_index, block in enumerate(scene.get("directionInline", []), start=1):
+                    if isinstance(block, dict) and isinstance(block.get("text"), str):
+                        strings.append((f"{scene_id}:source-direction:{direction_index}", block["text"]))
+
+    for issue, path in ENHANCE_FILES.items():
+        for patch in load(path):
+            scene_id = patch.get("id", path.name)
+            for panel_index, panel in enumerate(patch.get("panelPlan", []), start=1):
+                if isinstance(panel, dict) and isinstance(panel.get("text"), str):
+                    strings.append((f"{scene_id}:overlay-panel:{panel_index}", panel["text"]))
+            for direction_index, block in enumerate(patch.get("directionInline", []), start=1):
+                if isinstance(block, dict) and isinstance(block.get("text"), str):
+                    strings.append((f"{scene_id}:overlay-direction:{direction_index}", block["text"]))
+    return strings
+
+
+def report_chef_layer_leakage() -> None:
+    candidates: list[tuple[str, str]] = []
+    for label, text in chef_layer_strings():
+        if any(pattern.search(text) for pattern in CHEF_REASONING_PATTERNS):
+            candidates.append((label, text))
+    print(f"Echoes chef-layer reasoning audit: {len(candidates)} candidate strings")
+    for label, text in candidates:
+        print(f"CHEF-LEAK {label}: {text}")
+
+
 def validate_current_production_contract() -> None:
     assembler = load(SHOW / "assembler.json")
     assert assembler.get("unitLabel") == "PAGE"
@@ -246,6 +338,7 @@ def main() -> None:
     validate_architecture()
     validate_visual_references()
     validate_current_production_contract()
+    report_chef_layer_leakage()
     print(
         "Echoes validation passed: 8 issues exposed as 12 PAGE recipes each; "
         "Issues 6-8 receive assembler-visible page architecture through merge-by-ID enhancement overlays; "
