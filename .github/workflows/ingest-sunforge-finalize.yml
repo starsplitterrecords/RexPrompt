@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
-          import json, pathlib, re
+          import json, pathlib
 
           root = pathlib.Path('.')
           base = root / 'data/shows/sunforge-outlaw-s1'
@@ -64,9 +64,20 @@ jobs:
                       raise SystemExit(f'unknown setting {page.get("setting")} in {expected_id}')
                   if page.get('region') not in regions:
                       raise SystemExit(f'unknown region {page.get("region")} in {expected_id}')
-                  missing=[c for c in page.get('characters',[]) if c not in characters]
+                  page_char_ids = page.get('characters',[])
+                  missing=[c for c in page_char_ids if c not in characters]
                   if missing:
                       raise SystemExit(f'unknown characters {missing} in {expected_id}')
+                  allowed_speakers=set()
+                  for cid in page_char_ids:
+                      name=characters[cid].get('name','').strip()
+                      if name:
+                          allowed_speakers.add(name)
+                          allowed_speakers.add(name.split()[0])
+                  for line in page.get('dialogueInline',[]):
+                      speaker=line.get('speaker')
+                      if speaker not in allowed_speakers:
+                          raise SystemExit(f'unresolved speaker {speaker!r} in {expected_id}; allowed={sorted(allowed_speakers)}')
                   dumped=json.dumps(page).lower()
                   for banned in ('aigenerated','generationlog','creative development notes','content generation standard'):
                       if banned in dumped:
@@ -103,7 +114,7 @@ jobs:
           got=[s for s in check if s.get('seriesId')=='sunforge-outlaw']
           if len(got) != 4:
               raise SystemExit(f'expected 4 registered Sunforge issues, got {len(got)}')
-          print('Sunforge validation PASS: 4 issues, 25 pages, all references resolve.')
+          print('Sunforge validation PASS: 4 issues, 25 pages, all references and speakers resolve.')
           PY
           git diff --check
 
@@ -113,6 +124,7 @@ jobs:
           git rm .github/workflows/ingest-sunforge-finalize.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/shows.json .github/workflows/ingest-sunforge-finalize.yml
+          git add data/shows.json
+          git add -u .github/workflows
           git commit -m 'Register and validate Sunforge Outlaw ingest'
           git push origin HEAD:ingest-sunforge-outlaw-20260911
