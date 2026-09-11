@@ -10,16 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Print C1-C3 page beats
+      - name: Audit C4-C7 panel specificity
         shell: bash
         run: |
           python - <<'PY'
-          import json
+          import base64,gzip,json,re
           from pathlib import Path
-          pages=json.loads(Path('data/shows/low-tide-signal/pages_ch01_ch03_compiled.json').read_text())
+          base=Path('data/shows/low-tide-signal')
+          pages=[]
+          for f in ['pages_c04_between_runs_enhanced.json.gzb64','pages_c05_return_tide_enhanced.json.gzb64','pages_c06_after_the_water_enhanced.json.gzb64','pages_c07_last_low_tide_enhanced.json.gzb64']:
+            raw=''.join((base/'encoded'/f).read_text().split())
+            x=json.loads(gzip.decompress(base64.b64decode(raw)))
+            pages.extend(x.get('pages',x) if isinstance(x,dict) else x)
+          concrete=re.compile(r'\b(panel|wide|close|close-up|two-shot|three-shot|overhead|foreground|background|face|eyes|mouth|hands|arm|shoulder|posture|body|head|gaze|look|stands?|sits?|walks?|runs?|climbs?|holds?|carries|points?|turns?|leans?|steps?|crouches?|kneels?|packs?|checks?|phone|screen|monitor|sensor|rope|bag|boots?|jacket|water|mud|concrete|fog|rain|light|headlamp|wall|rail|roof|stairs?|door|table|chair|bar|glass|window|vehicle|market|mall|apartment|work|gym|map|sign|runner|crowd|route|floor|plaza|school|clinic|building|shore|tide|channel|arch|tower|bridge|walkway|silhouette|figures?)\b',re.I)
+          weak=[]
           for p in pages:
-            ds=[]
-            for d in p.get('dialogueInline',[]) or []:
-              ds.append(f"{d.get('speaker','')}: {d.get('text','')}")
-            print(p['id'],'||',p.get('setting',''),'||',p.get('summary',''),'||',' / '.join(ds))
+            for i,t in enumerate(p.get('panelPlan',[]) or []):
+              if not concrete.search(t): weak.append((p['id'],i+1,t))
+          print('TOTAL_PANEL_LINES',sum(len(p.get('panelPlan',[]) or []) for p in pages))
+          print('WEAK_PANEL_LINES',len(weak),'PAGES',len(set(x[0] for x in weak)))
+          for row in weak: print(row[0],'|',row[1],'|',row[2])
           PY
