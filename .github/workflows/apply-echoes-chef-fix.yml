@@ -8,6 +8,7 @@ on:
       - 'tools/fix_echoes_chef_layer.py'
       - 'tools/fix_echoes_chef_layer_stage2.py'
       - 'tools/fix_echoes_chef_layer_stage3.py'
+      - 'tools/fix_echoes_chef_layer_stage4.py'
       - 'tools/audit_echoes_chef_layer_broad.py'
       - '.github/workflows/apply-echoes-chef-fix.yml'
   workflow_dispatch:
@@ -30,13 +31,18 @@ jobs:
           python tools/fix_echoes_chef_layer.py
           python tools/fix_echoes_chef_layer_stage2.py
           python tools/fix_echoes_chef_layer_stage3.py
+          python tools/fix_echoes_chef_layer_stage4.py
       - name: Audit post-cleanup chef layer
         run: python tools/audit_echoes_chef_layer_broad.py
+      - name: Validate repaired Echoes package
+        run: |
+          python -m py_compile tools/validate_echoes.py tools/sanitize_echoes.py tools/sanitize_echoes_residue.py
+          python tools/validate_echoes.py
       - name: Inspect migration
         run: |
           git diff --check
           git diff --stat
-      - name: Commit migrated recipes
+      - name: Commit migrated recipes and validator
         run: |
           if git diff --quiet; then
             echo 'No Echoes chef-layer changes required.'
@@ -44,6 +50,6 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/shows/echoes-forgotten-war-s1
-          git commit -m 'Deep-clean Echoes image recipes'
+          git add data/shows/echoes-forgotten-war-s1 tools/validate_echoes.py
+          git commit -m 'Finalize Echoes image-recipe separation'
           git push origin HEAD:main
