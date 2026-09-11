@@ -1,397 +1,298 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
 Status: ENHANCED TREATMENT — 24-PAGE DRAMATIC SPINE LOCKED; PANEL/DIALOGUE PASS PENDING  
-Primary function: the household is forced to decide what it is defending before it can defend itself to anyone else.
+Primary function: the household decides what it is defending before the city asks it to defend itself.
 
 ## Story lock
 
-The `STATUS RECONCILIATION REVIEW` remains the catalyst, not the dramatic engine.
+The `STATUS RECONCILIATION REVIEW` is the deadline, not the episode format.
 
-The issue is not primarily about proving that the Vikings have integrated successfully. It is the first time the household must confront a harder question: **do they all want the same future now that New York has become a real life rather than an emergency landing?**
+Issue 7 begins at the kitchen table but **does not remain there**. The question Bjorn raises at the table follows the characters through an ordinary day in the neighborhood, where the audience can see the different lives they are deciding whether to preserve.
 
-Issue 5 established lived belonging. Issue 6 changed Bjorn's model of leadership. Issue 7 must cash both out.
+Issue 5 established that the neighborhood knows them. Issue 6 changed Bjorn's model of leadership. Issue 7 tests whether he can lead a household whose members no longer have identical lives.
 
-The review threatens something real, but the central conflict is inside the household:
-- Bjorn initially assumes defense means keeping the household together and preserving their place in New York.
-- Gunnar separates several questions Bjorn and Carrie have unconsciously treated as one: staying in New York, staying together, remaining under DTI, and choosing permanence.
-- Carrie begins with the professional objective of preserving status and discovers that a successful case outcome is not automatically identical to what each person wants.
-- The Kin's independent lives are no longer background texture. Their routines and relationships have created preferences, attachments, and possibly different tolerances for permanence.
-- No one is required to reject New York for the disagreement to matter. The conflict is that choosing a life is different from being successfully processed into one.
+The governing question is:
 
-The issue's governing question is:
+**Are they together because they have chosen one another, or because everyone has been treating them as one administrative unit?**
 
-**Are they a household because New York has successfully absorbed them, or because they have chosen one another here?**
+The answer by the end is deliberately narrower than a promise of permanence. They choose to defend the right of each member to remain, belong, and decide what comes next without having to break the household apart to prove individuality.
 
-By the end, the household does not need one identical answer about the distant future. It chooses a shared near-term position: protect each person's right to remain, belong, and choose what comes next without breaking the household apart to make that choice legible.
+## Kin continuity
+
+There are exactly three Kin: **Astrid and two men**.
+
+- Issues 1–3 showed the three primarily together at the Bushwick placement.
+- The middle season has begun revealing that they do not actually move through New York as one unit.
+- In Issue 7, the two male Kin are visible enough to show distinct preferences and routines.
+- **Astrid is largely absent from foreground action.** This is not a mystery plot. She is simply out living a part of her day that Bjorn, Carrie, and the reader are not following.
+- Do not compensate for Astrid's absence by adding another Kin.
+- Do not explain the full extent of Astrid's independent life. Issue 8 needs that information to land in court as a genuine surprise.
 
 ## Dramatic engine
 
-A `STATUS RECONCILIATION REVIEW` notice arrives and gives the household a deadline. Carrie begins preparing a defense. Bjorn turns the kitchen table into a war council.
+A review notice arrives. Carrie wants to prepare. Bjorn calls a war council.
 
-The first real turn occurs when Gunnar asks what they are actually defending.
+Gunnar asks what they are actually defending.
 
-That question exposes that Carrie has been optimizing for a successful case, Bjorn has been assuming collective intent, and the rest of the household has never been asked to state what they want now that ordinary life has become possible.
+That question cannot be answered by sitting at the table, because the answer now exists in books, errands, neighbors, routines, work, friendships, obligations, and places Carrie did not assign. The household breaks apart for the day and the argument continues in pieces as people move through those lives.
 
-The paperwork stays on the table, but the story becomes a council about people.
-
-## Established anchors to preserve
-
-- municipal envelope arrival
-- `STATUS RECONCILIATION REVIEW` notice
-- Bushwick apartment / kitchen-table war-council structure
-- brass apartment key placed centrally
-- Carrie sorting municipal paperwork
-- Bjorn physically organizing the table as serious council space
-- Gunnar distinguishing categories and meanings
-- hallway / smoke / neighbor pressure
-- Silas as an irritating but increasingly useful neighbor
-- dishes, cutlery, coffee, scrap metal, household clutter as tactical objects
-- Carrie eventually joining the table rather than standing over it
-- Bjorn naming the meeting a war council
-- accumulated Kin routines, merchants, parks, library, shopping, neighbors, household responsibilities
-- the municipal review remains real and consequential
+They return to the table only after the story has shown what the table was trying to describe.
 
 ## Character functions
 
 ### Bjorn
-
-Issue 6 changed the kind of leader he can be.
-
-His first instinct is still to gather everyone, define the threat, and produce unity. The enhancement is that he now has enough growth to recognize that unity cannot be manufactured by commanding one answer.
-
-His hardest moment is not fighting DTI. It is hearing someone in his own household want something he did not choose for them.
-
-He must lead a council in which people remain free to disagree.
+Bjorn still wants unity. His growth is learning that a leader can defend a shared home without manufacturing a shared future. He must hear answers he did not choose and resist translating disagreement into disloyalty.
 
 ### Gunnar
-
-Gunnar is no longer merely the man who decodes systems.
-
-His role is to identify distinctions everyone else has collapsed:
-- staying in New York is not the same as staying in this apartment;
-- staying together is not the same as remaining under one administrative status;
-- wanting the right to remain is not the same as promising permanence;
-- belonging somewhere does not erase the life that was lost;
-- a household can share obligations without sharing every future preference.
-
-Gunnar should also reveal a positive want of his own. New York has given him interests, routines, and a life larger than navigation. His position should come from desire, not analysis alone.
+Gunnar must state positive wants, not merely distinctions. Books, independent movement, chosen routines, people he recognizes, and the pleasure of discovering things that are not necessary for survival have become part of his life.
 
 ### Carrie
+Carrie begins with a solvable professional objective: protect status. She discovers that a technically successful outcome is not automatically the outcome every person has chosen. Her visual movement is from standing over the file to sitting inside the household's decision.
 
-Carrie begins with a folder, a deadline, and a solvable professional problem.
+### The two male Kin
+They are not interchangeable background Vikings. Give them different practical attachments and different tolerances for permanence without locking names that have not been approved.
 
-She is very good at that problem.
-
-The issue becomes difficult when she realizes she has never actually asked whether the case outcome she is trying to secure is what each person wants.
-
-Her important action is not finding a loophole. It is sitting down at the table and becoming one participant in the household's decision.
-
-She remains the procedural expert. She stops being the only person defining success.
-
-### The Kin
-
-The Kin's Issue 5 background integration pays off as personhood, not merely as evidence.
-
-Do not force a fixed named roster. Use individually recognizable established Kin where production continuity supports it, but keep the dramatic functions clear:
-- at least one person has a concrete New York attachment they do not want to lose;
-- at least one person resists being asked to swear permanence after already being torn out of one life without consent;
-- others may care most about keeping the household together, preserving options, or remaining near specific people and routines.
-
-These are not positions in a debate club. They emerge through ordinary things they have begun doing.
+### Astrid
+Astrid is mostly elsewhere. When she appears late, she is calm about having had a day that did not require household supervision. She gives the council a concise answer about what she wants, but the story does not yet inventory how independently she is functioning in New York.
 
 ### Silas
-
-Silas initially sees the review as something he could optimize, document, amplify, or turn into a persuasive package.
-
-He catches himself.
-
-His useful step is small: he helps when asked and does not make himself the narrator of the Vikings' case.
-
-That is meaningful progression without making him suddenly restrained or unrecognizable.
+Silas still wants to optimize the situation. His progress is that he can now be given one bounded useful task without turning the household into content.
 
 ## 24-page dramatic spine
 
 ### Page 1 — THE ENVELOPE
-Ordinary Bushwick morning. A municipal envelope arrives among grocery receipts, library material, coffee cups, and household clutter.
+Ordinary Bushwick morning. The apartment is already in motion when a municipal envelope arrives.
 
-Carrie sees the heading `STATUS RECONCILIATION REVIEW` and goes still.
+Carrie sees `STATUS RECONCILIATION REVIEW`.
 
 **Turn:** this is not routine renewal paperwork.
 
-**Exit:** the life that has become ordinary can now be interrupted.
+**Exit:** the life that has become ordinary now has a date attached to its vulnerability.
 
-### Page 2 — WHAT IT CAN DO
-Carrie explains only the consequence needed for the story: their current arrangement and status will be reviewed, and an adverse outcome could destabilize housing, services, or permission to remain as they are.
+### Page 2 — WAR COUNCIL
+Bjorn clears the kitchen table with ceremonial seriousness. Carrie lays down the notice. Gunnar brings coffee rather than a map. The two male Kin are present; Astrid is already out.
 
-Avoid an exposition dump.
+**Turn:** Bjorn places the brass apartment key in the center.
 
-Bjorn puts the notice on the kitchen table.
+**Exit:** he says they will defend the household.
 
-**Turn:** he treats the review as a threat to the household.
+### Page 3 — DEFEND WHAT?
+Carrie starts explaining the immediate consequence. Bjorn speaks in collective terms.
 
-**Exit:** he calls council.
+Gunnar asks what exactly they are defending: the apartment, New York, their current status, or staying together.
 
-### Page 3 — THE WAR TABLE
-Bjorn clears the table with ritual seriousness. Municipal forms, dishes, utensils, coffee, a piece of scrap metal, and the brass apartment key become a physical war map.
+**Turn:** nobody has one answer.
 
-The comedy is complete sincerity applied to domestic bureaucracy.
+**Exit:** the external deadline exposes an internal decision they never made.
 
-Carrie remains standing, already sorting requirements.
+### Page 4 — NOT THE SAME QUESTION
+Gunnar separates the ideas physically using ordinary objects on the table: key for the apartment, MetroCard or route item for the city, Carrie's paper for status, a shared household object for one another.
 
-**Turn:** Bjorn places the brass key in the center.
+**Turn:** staying in New York is not the same as promising to stay forever.
 
-**Exit:** "This is what they threaten" is the visual idea, whether or not that exact line survives the dialogue pass.
+**Exit:** Bjorn cannot solve four questions with one declaration.
 
-### Page 4 — DEFEND WHAT?
-Carrie begins listing what the review requires.
+### Page 5 — ONE MAN WANTS THE BLOCK
+One male Kin makes clear, through a practical obligation he needs to leave for, that he does not want to lose this neighborhood.
 
-Bjorn speaks in collective terms: they will defend the hall, the household, their place.
+Do not make him speechify. His attachment is concrete: a person expecting him, an errand, a recurring responsibility, a place where he is known.
 
-Gunnar interrupts with the first destabilizing question.
+**Turn:** he leaves the war council because ordinary life is already calling.
 
-What exactly are they defending: this apartment, New York, their legal status, or staying together?
+**Exit:** the argument follows him out the door.
 
-**Turn:** nobody has an immediate answer.
+### Page 6 — ONE MAN WANTS THE OPTION
+The other male Kin is less willing to turn present comfort into a permanent oath.
 
-**Exit:** the external problem opens an internal one.
+He can like New York and still resent being asked to declare a future after already losing one without consent.
 
-### Page 5 — THE CASE IS NOT THE CHOICE
-Carrie says the immediate objective is obvious: preserve their status.
+**Turn:** Bjorn initially hears uncertainty as weakness in the defense.
 
-A Kin member asks, in whatever natural language the final script gives them, whether preserving status means they have already decided to stay.
+**Exit:** Issue 6 stops him from ordering certainty.
 
-Carrie answers procedurally before realizing the question is personal.
+### Page 7 — WHERE IS ASTRID?
+Carrie realizes she needs Astrid's answer too.
 
-**Turn:** someone asks, "Is that what we decided?"
+Nobody is alarmed. Someone simply says, in whatever natural form survives the dialogue pass, that Astrid is out.
 
-**Exit:** Carrie understands that no such decision ever happened.
+Carrie asks where.
 
-### Page 6 — FIRST FRACTURE
-The room stops behaving like one unit.
+Nobody has a complete answer.
 
-One Kin member clearly wants the neighborhood life they have begun building. Another resists promising permanence. A third is more concerned about remaining with the household than about New York itself.
+**Turn:** this would once have been a case-management problem.
 
-Do not turn this into speeches. Let positions emerge through interrupted remarks and concrete attachments.
+**Exit:** now it is evidence that Astrid has a day of her own.
 
-**Turn:** Bjorn tries to restore one answer.
+### Page 8 — THE COUNCIL BREAKS
+Carrie wants everyone back at the table. Real life refuses.
 
-**Exit:** Issue 6's lesson catches him before he commands it.
+The two male Kin have things to do. Gunnar wants to return books. Bjorn has an obligation at the bodega or nearby. Carrie herself has work.
 
-### Page 7 — WHAT DO YOU WANT?
-Bjorn asks the question he would not have asked earlier in the season.
+**Turn:** Bjorn does not order everyone to remain.
 
-Not "what should we do?" but "what do you want?"
+**Exit:** the war council becomes a question carried into the city rather than a meeting that traps the issue indoors.
 
-The question is awkward in his mouth because leaders in his old framework were expected to decide.
+### Page 9 — BJORN WALKS WITH ONE ANSWER
+Bjorn accompanies or crosses paths with the male Kin who wants to preserve the neighborhood life.
 
-**Turn:** the answers are not identical.
+The attachment becomes visible rather than explained: someone knows him, expects him, trusts him with something small.
 
-**Exit:** the council becomes real.
+**Turn:** Bjorn sees a relationship he did not create.
 
-### Page 8 — A LIFE CARRIE DID NOT ASSIGN
-One Kin member's reason for wanting to remain is painfully ordinary: a merchant who knows them, a neighbor, a park routine, a library habit, a particular errand, a person they see every week.
+**Exit:** keeping the household together may require protecting lives outside the household.
 
-Carrie discovers details of a life that developed outside her case plan.
+### Page 10 — GUNNAR'S BOOKS
+At the library, Gunnar returns and selects books with the ease of a repeat patron.
 
-**Turn:** integration has produced autonomy she did not supervise.
+Bjorn or Carrie asks whether this is why he wants to stay.
 
-**Exit:** Carrie is proud and unsettled at once.
+Gunnar rejects the reduction. It is one reason among several.
 
-### Page 9 — DO NOT MAKE ME SWEAR FOREVER
-Another Kin member cannot tolerate being asked to make New York permanent simply because the city now demands a status answer.
+**Turn:** he wants a life, not a successful adaptation score.
 
-They were already removed from one life without choosing it.
+**Exit:** New York contains things he now chooses for no survival purpose at all.
 
-The desire is not necessarily to leave. It is to preserve the right not to have another future chosen for them.
+### Page 11 — THE RIGHT NOT TO KNOW YET
+The more uncertain male Kin handles an ordinary city task competently while still refusing a permanent declaration.
 
-**Turn:** "I want to stay" and "I promise to stay forever" become visibly different propositions.
+**Turn:** competence does not produce certainty.
 
-**Exit:** Bjorn cannot solve this with loyalty language.
-
-### Page 10 — GUNNAR WANTS SOMETHING
-Gunnar finally states a want that is not navigation or system analysis.
-
-The exact expression can remain modest: continued access to books, the freedom to move through the city independently, learning, people and routines he has chosen, the experience of being more than the role he had before.
-
-**Turn:** New York has not merely become understandable to Gunnar; parts of it have become desirable.
-
-**Exit:** Bjorn sees that adaptation has changed his friend in ways he did not direct.
-
-### Page 11 — TOGETHER IS NOT THE SAME
-Bjorn asks whether Gunnar's desire means leaving the household.
-
-Gunnar rejects the premise.
-
-A person can want an individual life and still choose the household.
-
-**Turn:** the council separates belonging from sameness.
-
-**Exit:** Bjorn begins understanding that leadership may mean protecting room for different futures.
+**Exit:** Carrie sees that being integrated enough to function and being ready to promise a future are separate facts.
 
 ### Page 12 — CARRIE'S SUCCESS
-Carrie tries again to define the practical problem and catches herself using case language: stable placement, successful integration, compliant status.
+Carrie catches herself describing the household in case language while speaking to Gunnar or Bjorn away from the apartment.
 
-Someone asks what "successful" means.
+Someone asks what `successful` means.
 
-Carrie cannot hide behind jargon because the people in the file are sitting at the table.
+**Turn:** Carrie admits that a successful file could still contain the wrong answer for a person.
 
-**Turn:** she admits that a successful case on paper could still be wrong for a person.
-
-**Exit:** her role in the council changes.
+**Exit:** her professional objective changes from producing the answer to representing the choices honestly.
 
 ### Page 13 — THE HALLWAY DOES NOT WAIT
-Smoke, ventilation, a neighbor complaint, or another ordinary building problem interrupts.
+A normal building nuisance interrupts everyone on the way back: smoke, noise, a delivery obstruction, a complaint, or a small repair.
 
-Silas appears in the hallway. The upstairs neighbor appears or is heard. Someone is technically correct about smoke.
+The upstairs neighbor and one of the male Kin already know how to deal with one another.
 
-The mundane pressure should be funny and irritating, not ominous.
+**Turn:** Carrie is not needed to mediate.
 
-**Turn:** the household handles the interruption with more independent competence than Carrie expects.
+**Exit:** belonging looks annoyingly ordinary.
 
-**Exit:** the argument resumes because real life does not pause for existential decisions.
+### Page 14 — SILAS HAS A CAMPAIGN
+Silas hears `review` and produces an optimized idea: testimonials, video, a public narrative, a campaign.
 
-### Page 14 — SILAS HAS AN IDEA
-Silas learns about the review and immediately pitches something optimized: testimonials, video, a public story, a campaign, an evidence package.
+**Turn:** he realizes, earlier than he once would have, that he is making himself narrator again.
 
-He begins treating the problem as content.
+**Exit:** he asks what actual task needs doing.
 
-Bjorn or Gunnar shuts that down without a big confrontation.
+### Page 15 — ONE USEFUL THING
+Carrie gives Silas a bounded task: copy a record, retrieve a mundane document, fix the printer, carry a box.
 
-**Turn:** Silas catches himself earlier than he once would have.
+He does it and still talks too much.
 
-**Exit:** he asks what would actually help.
+**Turn:** the relationship survives imperfection.
 
-### Page 15 — HELP WITHOUT OWNING IT
-Carrie gives Silas one bounded practical task: copy something, retrieve a mundane record, carry a box, fix a printer, or locate a normal piece of information.
+**Exit:** not every useful person needs control of the story.
 
-He does it.
+### Page 16 — OBJECTS ARE NOT THE LIFE
+Back at the apartment, the table now contains the brass key, library card, receipts, coffee, household tools and Carrie's papers.
 
-He still talks too much.
+Bjorn objects when the objects begin to look like proof of the household.
 
-**Turn:** useful Silas exists without becoming the center of the story.
+**Turn:** Carrie agrees: they point toward a life; they do not create it.
 
-**Exit:** the household has another relationship that is imperfect but real.
+**Exit:** paperwork is reduced to representation.
 
-### Page 16 — OBJECTS ARE NOT EVIDENCE YET
-Back at the table, Carrie begins grouping possible supporting material.
+### Page 17 — FIRST, THE PEOPLE
+Bjorn asks the two male Kin and Gunnar the question directly: what do you want protected?
 
-The brass key, library card, bank material/toaster residue, familiar receipts, coffee cup, household objects, and neighborhood contacts are visible.
+The answers overlap but do not match.
 
-Bjorn resists the idea that these objects prove the household.
+**Turn:** Bjorn does not force convergence.
 
-**Turn:** Carrie agrees: they do not create the life. They only point toward it.
-
-**Exit:** paperwork is demoted from meaning to representation.
-
-### Page 17 — FIRST, WHAT ARE WE DEFENDING?
-Carrie begins building the formal response again.
-
-Bjorn stops her—not to reject the process, but because the council has not completed the human decision underneath it.
-
-He asks each person whether the shared goal can be: protect the right to remain and keep the household intact without forcing anyone to swear a permanent future.
-
-**Turn:** this is leadership shaped by Issue 6.
-
-**Exit:** people begin negotiating a shared position instead of receiving one.
+**Exit:** he begins building unity around rights rather than identical preferences.
 
 ### Page 18 — TERMS OF THE HOUSEHOLD
-The household works out its own terms in plain language.
-
-Possible principles:
-- nobody is forced out by someone else's choice;
-- nobody is forced to remain by someone else's choice;
-- choosing an individual path does not erase kinship;
-- they defend the household as a place people can return to and rely on;
-- they seek enough stability to make future choices freely.
-
-Do not write these as a manifesto on the page. Dramatize them through objections and revisions.
+They work toward a plain shared position through objections rather than speeches:
+- no one is forced out by someone else's choice;
+- no one is forced to remain by someone else's choice;
+- an individual path does not erase kinship;
+- the apartment remains a home people can rely on;
+- they want enough stability to make later choices freely.
 
 **Turn:** the household defines itself before the city does.
 
-**Exit:** Carrie has stopped standing over the table.
+**Exit:** one chair is still empty.
 
 ### Page 19 — CARRIE SITS
-Carrie finally sits down.
+Carrie finally sits at the table rather than standing over the file.
 
-This is the visual milestone.
+She is still the procedural expert, but she is now helping express a decision rather than supplying one.
 
-She still knows the process better than anyone, but she is now helping express a decision the household made rather than manufacturing a compliant answer for them.
+**Turn:** Bjorn gives her the review notice.
 
-**Turn:** Bjorn gives her the review notice instead of surrendering authority to it.
+**Exit:** expertise joins the household instead of hovering above it.
 
-**Exit:** expert and household are on the same side of the table.
+### Page 20 — ASTRID COMES HOME
+Astrid returns carrying the ordinary residue of a day outside: nothing theatrical, just evidence that she has been somewhere and done things nobody here supervised.
 
-### Page 20 — WHAT THE CITY CAN HEAR
-Gunnar helps identify which parts of their actual lives can be translated into forms the review can recognize.
+Do not explain all of it.
 
-This is not "Gunnar solves another system." His insight is representational: the city can only see fragments.
+**Turn:** Carrie begins asking where she has been, then stops herself from turning the answer into an intake interview.
 
-**Turn:** the group accepts that using proxies does not mean believing the proxies are the life itself.
+**Exit:** Astrid sits down because she was asked for her choice, not her itinerary.
 
-**Exit:** they can engage the review without letting it define them.
+### Page 21 — ASTRID'S ANSWER
+Astrid gives a concise answer about what she wants. She may want to remain; she may value this home; she does not need a long speech.
 
-### Page 21 — PEOPLE, NOT CHECKBOXES
-Merchant relationships, library use, neighborhood routines, household responsibilities, Bjorn's group relationships, and the Kin's independent lives come up naturally.
+The surprise is not yet how integrated she is. It is how little consultation she requires to state her own position.
 
-Carrie realizes some of the strongest facts are things she did not create.
+**Turn:** Bjorn accepts her answer without asking her to justify it to him.
 
-**Turn:** the case becomes strongest exactly where her management is weakest.
+**Exit:** the household position now includes all three Kin without flattening them.
 
-**Exit:** successful integration looks less like dependence on Carrie.
+### Page 22 — NO OATH OF FOREVER
+Bjorn returns to the person least willing to promise permanence.
 
-### Page 22 — NO OATH OF PERMANENCE
-Bjorn returns explicitly to the person who resisted being made to promise forever.
+He makes clear that defending this home will not require anyone to swear what they cannot know.
 
-He states, in his own idiom, that nobody at this table will be required to swear what they cannot know.
+**Turn:** the skeptical member joins the shared defense.
 
-The household can defend a home without pretending the future has already happened.
+**Exit:** unity is chosen without unanimity about the distant future.
 
-**Turn:** the skeptical Kin member agrees to the shared defense.
+### Page 23 — PREPARE, DON'T PERFORM
+Only now does Carrie organize the limited material the review actually requires. This is compressed background work, not the next episode's dramatic engine.
 
-**Exit:** unity is chosen without unanimity about everything.
+People choose what they are willing to contribute. Private relationships remain private unless volunteered.
 
-### Page 23 — ASSIGNMENTS
-The war council finally assigns practical tasks, but the tasks now follow the human decision.
+**Turn:** Carrie refuses to make the file cleaner than the household.
 
-Carrie handles procedure. Gunnar identifies what needs clarification. Bjorn gathers people and keeps the household aligned. Kin members choose what parts of their own lives they are willing to offer. Silas gets one bounded job and too much enthusiasm.
-
-**Turn:** the bureaucracy becomes a task inside the story rather than the story itself.
-
-**Exit:** the council has a plan.
+**Exit:** they are ready to appear, not ready to perform a manufactured story.
 
 ### Page 24 — WHAT WE DEFEND
-Late night. The table is mostly cleared.
+Late night. The table is mostly clear. The brass key remains.
 
-The brass key remains.
+Carrie asks whether they know what they are going to say when they are called in.
 
-Carrie asks some version of whether they know what they are going to tell the review.
+Bjorn's answer should concern the household, not legal strategy.
 
-Bjorn's answer should not be a legal strategy. The final dialogue pass should land on the idea that they now know what they are defending.
-
-**Final state:** they have not decided every person's future. They have decided that the household exists by choice, and that the city's review will not be allowed to collapse those choices into one administratively convenient answer.
+**Final state:** they have not chosen one permanent future. They have chosen the right to have separate futures without losing the home and kinship they have built.
 
 ## Issue 8 bridge
 
-Issue 8 should not become twenty-four pages of filing and audit mechanics.
+**Issue 8 is the courtroom/hearing issue.** Do not insert another full episode of evidence gathering between War Council and the hearing.
 
-The review now asks for statements, attestations, records, or other support. That requirement sends the characters outward into the relationships established all season.
+The file exists only to get them into the room. The dramatic test is what happens when the institution encounters the people themselves.
 
-The next dramatic question is not "Can they assemble enough evidence?"
-
-It is:
-
-**How do other people describe who the Vikings have become, and can the household allow those descriptions to be incomplete without surrendering its own voice?**
-
-That lets the neighborhood-memory layer, Silas progression, Bjorn's support-group privacy lesson, Gunnar's independent interests, Carrie's changing role, and the Kin's separate relationships all pay off before the hearing.
+Astrid's payoff is central: because Issues 6–7 have not followed her closely, the hearing can reveal that the supposedly background member of the household has quietly become its most practically integrated person.
 
 ## Boundaries
 
-- Keep Issues 2–5 intact.
-- Do not turn the review officer, DTI supervisor, neighbors, or municipal process into a villain.
-- Do not make a Kin member reject New York merely to manufacture conflict.
-- Do not resolve the season's exact residency ruling here.
-- Do not make Carrie incompetent so the Vikings can gain agency.
-- Do not make Bjorn passive in order to show growth. His leadership remains forceful; the change is that he protects other people's choices.
-- Do not reduce Gunnar to procedural exposition.
-- Do not explain every Kin routine as evidence. The routines existed before the review and matter whether or not the city counts them.
-- Keep the brass key as the issue's strongest physical symbol of chosen home.
+- Exactly three Kin: Astrid and two men.
+- Astrid is largely absent until Pages 20–21; do not convert her absence into mystery or danger.
+- Do not lock names for the two male Kin without explicit approval.
+- Do not keep the entire issue at the kitchen table.
+- Do not make the review officer, DTI, neighbor, or municipal process a villain.
+- Do not turn Gunnar back into a system-decoder exposition device.
+- Do not turn the Kin into positions in a debate club; show their choices through lives already in motion.
+- Keep procedural preparation compact and subordinate to character choice.
+- The brass key remains the strongest physical symbol of the home.
