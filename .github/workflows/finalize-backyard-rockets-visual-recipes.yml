@@ -1,0 +1,101 @@
+name: Finalize Backyard Rockets visual recipes
+on:
+  push:
+    branches:
+      - fix/backyard-rockets-chef-visual-specificity-20260911
+    paths:
+      - '.github/workflows/finalize-backyard-rockets-visual-recipes.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/backyard-rockets-chef-visual-specificity-20260911
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply current-manifest Rockets generation contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/shows.json')
+          shows=json.loads(p.read_text())
+          show=next(x for x in shows if x.get('id')=='backyard-rockets-s1')
+          show['generationLine']=(
+            'Finished full-color portrait interior story comic page for Backyard Rockets. '
+            'Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. '
+            'Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. '
+            'Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. '
+            'Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. '
+            'Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. Fictional production.'
+          )
+          p.write_text(json.dumps(shows,indent=2,ensure_ascii=False)+'\n')
+          print(show['generationLine'])
+          PY
+      - name: Validate production state and chef boundary
+        shell: bash
+        run: |
+          python tools/validate_backyard_rockets_sanitization.py
+          python tools/validate_backyard_rockets.py
+          python tools/audit_backyard_rockets_continuity.py
+          git diff --check
+      - name: Read back representative chef-facing page data
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,gzip,json,re
+          from pathlib import Path
+          base=Path('data/shows/backyard-rockets-s1')
+          shows=json.loads(Path('data/shows.json').read_text())
+          show=next(x for x in shows if x.get('id')=='backyard-rockets-s1')
+          chars=json.loads((base/'characters.json').read_text())
+          settings=json.loads((base/'settings.json').read_text())
+          samples={
+            'BR_S1E03_PS_A01_SC04',
+            'BR_S1E04_A03_SC01',
+            'BR_S1E05_A02_SC01',
+            'BR_S1E06_A02_SC02',
+            'BR_S1E07_A03_SC03',
+            'BR_S1E08_A03_SC08',
+          }
+          found={}
+          for ov in show.get('sceneOverlays',[]):
+            if ov.get('encoding')!='gzip-base64': continue
+            p=base/ov['file']
+            obj=json.loads(gzip.decompress(base64.b64decode(''.join(p.read_text().split()))).decode())
+            rows=obj.get('scenes',obj) if isinstance(obj,dict) else obj
+            for s in rows:
+              if s.get('id') in samples: found[s['id']]=s
+          if found.keys()!=samples:
+            raise SystemExit('Missing samples: '+str(samples-found.keys()))
+          print('\n=== SERIES GENERATION CONTRACT ===')
+          print(show['generationLine'])
+          for sid in sorted(samples):
+            s=found[sid]
+            print('\n===',sid,'===')
+            print('SETTING:',settings.get(s.get('setting'),{}).get('text') or s.get('settingText'))
+            print('CAST:',[(c.get('name'),c.get('handle')) for c in s.get('charactersInline',[]) or []])
+            print('SUMMARY:',s.get('summary'))
+            print('PANELS:')
+            for i,panel in enumerate(s.get('panelPlan',[]) or [],1): print(f'  {i}. {panel}')
+            print('DIALOGUE:')
+            for d in s.get('dialogueInline',[]) or []: print(' ',d.get('speaker'),':',d.get('text'))
+            print('DIRECTION:',s.get('directionInline'))
+          PY
+      - name: Commit final production state and remove temporary outputs
+        shell: bash
+        run: |
+          rm -f .github/workflows/finalize-backyard-rockets-visual-recipes.yml
+          rm -f backyard-rockets-continuity-report.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+starsplitterrecords@users.noreply.github.com"
+          git add -A
+          git diff --cached --stat
+          git commit -m "Finalize Backyard Rockets visual-first recipes"
+          git push origin HEAD:fix/backyard-rockets-chef-visual-specificity-20260911
