@@ -1,12 +1,25 @@
 name: Validate Echoes
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/echoes-forgotten-war-s1/**'
+      - 'production/references/echoes-forgotten-war/**'
+      - 'tools/validate_echoes.py'
+      - 'tools/sanitize_echoes.py'
+      - 'tools/sanitize_echoes_residue.py'
+      - '.github/workflows/validate-echoes.yml'
   pull_request:
     paths:
       - 'data/shows.json'
       - 'data/shows/echoes-forgotten-war-s1/**'
+      - 'production/references/echoes-forgotten-war/**'
       - 'tools/validate_echoes.py'
       - 'tools/sanitize_echoes.py'
+      - 'tools/sanitize_echoes_residue.py'
       - '.github/workflows/validate-echoes.yml'
   workflow_dispatch:
 
@@ -18,5 +31,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate sanitized Echoes production data
+      - name: Compile Echoes maintenance tools
+        run: python -m py_compile tools/validate_echoes.py tools/sanitize_echoes.py tools/sanitize_echoes_residue.py
+      - name: Verify Echoes sanitizer is non-destructive
+        run: |
+          python tools/sanitize_echoes.py
+          git diff --exit-code -- data/shows.json data/shows/echoes-forgotten-war-s1
+      - name: Validate Echoes production data
         run: python tools/validate_echoes.py
