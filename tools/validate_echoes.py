@@ -9,16 +9,22 @@ ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
-READY_SCENE_FILES = SCENE_FILES[:4]
+ENHANCE_FILES = {issue: SHOW / f"enhance_e{issue:02d}.json" for issue in (6, 7, 8)}
 REFERENCE_POLICY = ROOT / "production" / "references" / "echoes-forgotten-war" / "README.md"
+REFERENCE_PACK = ROOT / "production" / "references" / "echoes-forgotten-war" / "visual-reference-pack.json"
 REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
 ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
 }
+ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "directionInline", "continuityFrom"}
 
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def expected_issue_ids(issue: int) -> list[str]:
+    return [f"EFW_S1E{issue:02d}_S{i:02d}" for i in range(1, 13)]
 
 
 def validate_manifest() -> None:
@@ -26,9 +32,14 @@ def validate_manifest() -> None:
     matches = [entry for entry in manifest if entry.get("id") == "echoes-forgotten-war-s1"]
     assert len(matches) == 1, f"Expected one Echoes manifest entry, found {len(matches)}"
     entry = matches[0]
-    assert entry.get("scenesFiles") == [p.name for p in READY_SCENE_FILES], (
-        "Echoes production manifest must expose only image-ready compiled issues"
+    assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES], (
+        "Echoes production manifest must expose Issues 1-8 in source order"
     )
+    assert entry.get("sceneOverlays") == [
+        {"file": "enhance_e06.json", "mergeById": True},
+        {"file": "enhance_e07.json", "mergeById": True},
+        {"file": "enhance_e08.json", "mergeById": True},
+    ], "Echoes enhancement overlays are missing, reordered, or malformed"
     assert "unitLabel" not in entry, "Manifest must not override Echoes package PAGE contract"
     assert "generationLine" not in entry, "Manifest must not override Echoes package generation contract"
 
@@ -50,14 +61,14 @@ def validate_characters() -> None:
 
 
 def validate_scenes() -> None:
-    all_ids = []
+    all_ids: list[str] = []
     chars = load(SHOW / "characters.json")
     regions = load(SHOW / "regions.json")
     for issue, path in enumerate(SCENE_FILES, start=1):
         scenes = load(path)
         assert isinstance(scenes, list), path.name
         assert len(scenes) == 12, f"{path.name}: expected 12 source/recipe units, found {len(scenes)}"
-        expected = [f"EFW_S1E{issue:02d}_S{i:02d}" for i in range(1, 13)]
+        expected = expected_issue_ids(issue)
         ids = [scene.get("id") for scene in scenes]
         assert ids == expected, f"{path.name}: scene IDs/order changed"
         all_ids.extend(ids)
@@ -73,11 +84,13 @@ def validate_scenes() -> None:
                 assert isinstance(scene.get("directionInline"), list), f"Missing inline direction: {scene['id']}"
                 for line in scene["dialogueInline"]:
                     assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene['id']}"
-            if issue <= 4:
+            if issue <= 5:
                 plan = scene.get("panelPlan")
-                assert isinstance(plan, list) and len(plan) >= 4, f"Missing page plan: {scene['id']}"
-            if issue in (2, 3, 4) and index > 0:
-                assert scene.get("continuityFrom") == scenes[index - 1]["id"], f"Broken Issue {issue} continuity: {scene['id']}"
+                assert isinstance(plan, list) and len(plan) >= 4, f"Missing source page plan: {scene['id']}"
+            if issue in (2, 3, 4, 5) and index > 0:
+                assert scene.get("continuityFrom") == scenes[index - 1]["id"], (
+                    f"Broken Issue {issue} continuity: {scene['id']}"
+                )
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
 
     e04 = load(SCENE_FILES[3])
@@ -90,6 +103,46 @@ def validate_scenes() -> None:
     e05 = {s["id"]: s for s in load(SCENE_FILES[4])}
     assert "EFW_Theo" in e05["EFW_S1E05_S02"]["characters"]
     assert "EFW_Rae" in e05["EFW_S1E05_S04"]["characters"]
+
+
+def validate_enhancement_overlays() -> None:
+    for issue, overlay_path in ENHANCE_FILES.items():
+        source = load(SCENE_FILES[issue - 1])
+        source_by_id = {scene["id"]: scene for scene in source}
+        overlay = load(overlay_path)
+        assert isinstance(overlay, list), overlay_path.name
+        assert len(overlay) == 12, f"{overlay_path.name}: expected 12 overlay records"
+        ids = [patch.get("id") for patch in overlay]
+        assert ids == expected_issue_ids(issue), f"{overlay_path.name}: overlay IDs/order changed"
+        assert len(set(ids)) == 12, f"{overlay_path.name}: duplicate IDs"
+
+        for index, patch in enumerate(overlay):
+            scene_id = patch["id"]
+            extra = set(patch) - ALLOWED_OVERLAY_FIELDS
+            assert not extra, f"{overlay_path.name}:{scene_id}: unsafe overlay fields {sorted(extra)}"
+            plan = patch.get("panelPlan")
+            assert isinstance(plan, list) and len(plan) >= 4, f"Missing overlay page plan: {scene_id}"
+            for panel in plan:
+                assert isinstance(panel, dict) and panel.get("text"), f"Bad panel plan: {scene_id}"
+            if "directionInline" in patch:
+                direction = patch["directionInline"]
+                assert isinstance(direction, list) and direction, f"Bad overlay direction: {scene_id}"
+                for block in direction:
+                    assert isinstance(block, dict) and block.get("text"), f"Bad overlay direction: {scene_id}"
+            if "continuityFrom" in patch:
+                assert index > 0, f"First page cannot continue from prior page: {scene_id}"
+                assert patch["continuityFrom"] == ids[index - 1], f"Bad overlay continuity: {scene_id}"
+
+            original = source_by_id[scene_id]
+            merged = {**original, **patch}
+            assert merged.get("summary") == original.get("summary"), f"Overlay changed summary: {scene_id}"
+            assert merged.get("characters") == original.get("characters"), f"Overlay changed cast: {scene_id}"
+            assert merged.get("dialogueInline") == original.get("dialogueInline"), f"Overlay changed dialogue: {scene_id}"
+            assert merged.get("settingText") == original.get("settingText"), f"Overlay changed setting: {scene_id}"
+            assert isinstance(merged.get("panelPlan"), list) and len(merged["panelPlan"]) >= 4
+            assert isinstance(merged.get("directionInline"), list) and merged["directionInline"], (
+                f"Merged recipe missing direction: {scene_id}"
+            )
 
 
 def validate_issue1_references() -> None:
@@ -128,6 +181,22 @@ def validate_architecture() -> None:
         assert [p.get("page") for p in pages] == list(range(1, 23))
 
 
+def validate_visual_references() -> None:
+    assert REFERENCE_POLICY.exists(), "Missing Echoes production visual-reference authority policy"
+    assert REFERENCE_PACK.exists(), "Missing Echoes visual-reference pack"
+    pack = load(REFERENCE_PACK)
+    assert pack.get("status") == "active", "Echoes visual-reference pack is not active"
+    refs = pack.get("references")
+    assert isinstance(refs, list) and len(refs) >= 13, "Echoes visual-reference pack is incomplete"
+    for ref in refs:
+        image = ref.get("image")
+        assert image, f"Reference missing image path: {ref.get('id')}"
+        assert (ROOT / image).exists(), f"Reference image missing: {image}"
+        assert ref.get("type") in {"approved-current-production-reference", "approved-corrective-reference"}, (
+            f"Reference is not explicitly approved: {ref.get('id')}"
+        )
+
+
 def validate_current_production_contract() -> None:
     assembler = load(SHOW / "assembler.json")
     assert assembler.get("unitLabel") == "PAGE"
@@ -137,36 +206,51 @@ def validate_current_production_contract() -> None:
     assert "One assembled RexPrompt recipe equals one page only" in generation_line
     assert "Render only the selected recipe" in generation_line
     assert "page header" in generation_line
+    assert "remembered relationships" in generation_line
+    assert "Core-Forge" in generation_line
+    assert "evidence and environment rather than protagonists or technical solutions" in generation_line
+    assert "Readability first, human consequence second" in generation_line
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
     assert "dynamically" in status.get("frontierRule", "")
-    assert "22-beat-per-issue development map" in status.get("developmentGranularity", "")
+    granularity = status.get("developmentGranularity", "")
+    assert "Issues 1-8" in granularity
+    assert "merge-by-ID enhancement overlays" in granularity
+    visual_state = status.get("visualReferenceState", "")
+    assert "visual-reference-pack.json" in visual_state
+    assert "approved current-production" in visual_state
+    assert "EFW_S1E01_S01" in visual_state
+
     issues = status.get("issues", {})
-    for issue in (1, 2, 3, 4):
+    for issue in (1, 2, 3, 4, 5):
         entry = issues.get(str(issue), {})
         assert entry.get("status") == "compiled for sequential page production", issue
         assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
         assert entry.get("pageCount") == 12, issue
         assert entry.get("panelPlan") is True, issue
-    for issue in (5, 6, 7, 8):
+    for issue in (6, 7, 8):
         entry = issues.get(str(issue), {})
-        assert entry.get("status") == "normalized source material; not compiled for image production", issue
+        assert entry.get("status") == f"compiled for sequential page production via enhance_e{issue:02d}.json overlay", issue
         assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
         assert entry.get("pageCount") == 12, issue
-        assert entry.get("panelPlan") is False, issue
-
-    assert REFERENCE_POLICY.exists(), "Missing Echoes production visual-reference authority policy"
+        assert entry.get("panelPlan") is True, issue
 
 
 def main() -> None:
     validate_manifest()
     validate_characters()
     validate_scenes()
+    validate_enhancement_overlays()
     validate_issue1_references()
     validate_architecture()
+    validate_visual_references()
     validate_current_production_contract()
-    print("Echoes validation passed: 8 normalized source issues; Issues 1-4 exposed as 12 PAGE recipes each; Issues 5-8 blocked from image production until compiled.")
+    print(
+        "Echoes validation passed: 8 issues exposed as 12 PAGE recipes each; "
+        "Issues 6-8 receive assembler-visible page architecture through merge-by-ID enhancement overlays; "
+        "approved durable identity references are active."
+    )
 
 
 if __name__ == "__main__":
