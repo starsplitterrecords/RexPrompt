@@ -1,0 +1,87 @@
+name: Normalize Low Tide source metadata
+on:
+  push:
+    paths:
+      - '.github/workflows/normalize-low-tide-source-metadata.yml'
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Remove stale pre-enhancement framing from non-emitted metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path('data/shows/low-tide-signal')
+          def load(name): return json.loads((base/name).read_text())
+          def save(name,obj): (base/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n')
+
+          show=load('show.json')
+          show['what_this_is']=[('restless stable adulthood story' if x=='post-purpose adulthood story' else x) for x in show['what_this_is']]
+          save('show.json',show)
+
+          chars=load('characters.json')
+          chars['C_lts_matt_donnelly']['arc']='From ordinary competence to intoxicating Reach usefulness to false leadership to humbled acceptance. Final growth: lets Ryan lead when Ryan is the better leader.'
+          chars['C_lts_kevin_marsh']['arc']='From anxious, caveated forecaster to someone willing to make a clear call when the group needs one, even without perfect certainty.'
+          save('characters.json',chars)
+
+          dyn=load('ensemble_dynamics.json')
+          dyn['character_pull']['C_lts_chris_barlow']='The Reach gives Chris story, language, and an audience for observations that ordinary freelance life rarely turns into anything lasting.'
+          dyn['character_pull']['C_lts_kevin_marsh']='The Reach gives Kevin immediate consequences and forces him to decide when a forecast is strong enough to become a direct warning.'
+          save('ensemble_dynamics.json',dyn)
+
+          settings=load('settings.json')
+          meta={
+            'S_lts_harbor_phase_inland':('functioning near-future coastal city','Shows a viable adapted city so each lead’s attraction to the Reach remains personal rather than socially predetermined.'),
+            'S_lts_harbor_phase':('functioning near-future coastal city','Opening proof that the world adapted successfully and ordinary civic life continued.'),
+            'S_lts_harbor_phase_transit':('adapted inland transit corridor','Shows routine flood adaptation working while Matt moves through an ordinary commute.'),
+            'S_lts_municipal_control_room':('civic infrastructure oversight room','Shows Matt in a real responsibility role during a calm shift, leaving room for his hunger for more immediate usefulness.'),
+            'S_lts_harbor_phase_walkway':('lively adapted public realm','Shows Harbor Phase as socially active, comfortable, and worth living in.'),
+            'S_lts_inland_montage':('cross-section of six adult lives','Differentiates the ensemble through actual work, hobbies, obligations, and routines before the Reach starts reorganizing them.'),
+            'S_lts_inland_bar':('busy neighborhood bar','Lets the friend group enjoy a real social life together before the Reach becomes the stronger competing habit.'),
+          }
+          settings['S_lts_harbor_phase_walkway']['name']='Harbor Phase — Covered Walkways'
+          settings['S_lts_inland_montage']['name']='Harbor Phase — Ordinary Adult Lives'
+          for k,(typ,func) in meta.items():
+            settings[k]['type']=typ
+            settings[k]['story_function']=func
+            # Keep chef-visible text synchronized with any renamed setting.
+            e=settings[k]; v=e.get('visual_language','')
+            if isinstance(v,list): v=', '.join(v)
+            e['text']=f"{e.get('name',k)} — {e.get('description','')}"+(f" Visual language: {v}." if v else '')
+          save('settings.json',settings)
+
+          # Validate stale reductive source framing is gone from durable Low Tide source JSON.
+          stale=['post-purpose','structurally unnecessary','ordinary redundancy','made him redundant','made worthless','comfortable but dead social space','comfort and airlessness','pleasant but dead','optimized wall','nicole maps']
+          hits={}
+          for p in base.glob('*.json'):
+            text=p.read_text().lower()
+            for term in stale:
+              if term in text:
+                hits.setdefault(term,[]).append(p.name)
+          print('STALE SOURCE HITS',hits)
+          assert not hits, hits
+          # Reconfirm chef-facing files still carry the intended contract.
+          manifest=json.loads(Path('data/shows.json').read_text())
+          low=[x for x in manifest if x.get('seriesId')=='low-tide-signal']
+          assert len(low)==7
+          assert all('viable, comfortable city' in x.get('generationLine','') for x in low)
+          assert all(e.get('text') for e in settings.values())
+          assert all(chars[k].get('performance') and chars[k].get('relationship') and chars[k].get('promptContinuity') for k in chars)
+          print('LOW TIDE METADATA NORMALIZATION OK')
+          PY
+      - name: Commit normalization and remove runner
+        shell: bash
+        run: |
+          rm -f .github/workflows/normalize-low-tide-source-metadata.yml
+          git config user.name "starsplitterrecords"
+          git config user.email "77013062+starsplitterrecords@users.noreply.github.com"
+          git add data/shows/low-tide-signal .github
+          git commit -m "Normalize Low Tide source metadata after enhancement"
+          git push origin HEAD:main
