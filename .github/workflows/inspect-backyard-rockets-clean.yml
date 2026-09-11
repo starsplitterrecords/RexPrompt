@@ -1,4 +1,4 @@
-name: Inspect clean Backyard Rockets recipe metadata
+name: Inspect clean Backyard Rockets chef recipes
 
 on:
   push:
@@ -22,42 +22,101 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Print changed recipe metadata
+      - name: Re-run full Rockets validation independently
+        run: |
+          python tools/validate_backyard_rockets_sanitization.py
+          python tools/validate_backyard_rockets.py
+          python tools/audit_backyard_rockets_continuity.py
+      - name: Assemble representative chef-facing recipes
         shell: bash
         run: |
           python - <<'PY'
-          import base64, gzip, json, subprocess
+          import base64, gzip, json
           from pathlib import Path
 
-          files = [
-            'scenes_e03_public_sky.json.gzb64',
-            'scenes_e04_trip_point.json.gzb64',
-            'scenes_e05_reserve_margin.json.gzb64',
-            'scenes_e06_ground_loop.json.gzb64',
-            'scenes_e07_ablative_armor.json.gzb64',
-            'scenes_e08_sky_piercer.json.gzb64',
+          root = Path('.')
+          shows = json.loads((root/'data/shows.json').read_text())
+          show = next(s for s in shows if s.get('id') == 'backyard-rockets-s1')
+          base = root / show['basePath']
+          chars = json.loads((base/'characters.json').read_text())
+          settings = json.loads((base/'settings.json').read_text())
+          regions = json.loads((base/'regions.json').read_text())
+          factions = json.loads((base/'factions.json').read_text())
+
+          by_handle = {v.get('handle'): v for v in chars.values() if isinstance(v, dict) and v.get('handle')}
+          scenes = {}
+          for o in show['sceneOverlays']:
+              p = base/o['file']
+              if o.get('encoding') == 'gzip-base64':
+                  raw = ''.join(p.read_text().split())
+                  inc = json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode())
+              else:
+                  inc = json.loads(p.read_text())
+              for s in inc:
+                  scenes[s['id']] = s
+
+          sample_ids = [
+              'BR_S1E03_PS_A01_SC03',
+              'BR_S1E04_A02_SC01',
+              'BR_S1E05_A01_SC03',
+              'BR_S1E06_A02_SC06',
+              'BR_S1E07_A03_SC05',
+              'BR_S1E08_A03_SC08',
           ]
-          root = Path('data/shows/backyard-rockets-s1/encoded')
-          def dec_text(txt):
-              return json.loads(gzip.decompress(base64.b64decode(''.join(txt.split()), validate=True)).decode())
-          for fn in files:
-              current = dec_text((root/fn).read_text())
-              main_txt = subprocess.check_output(['git','show',f'origin/main:data/shows/backyard-rockets-s1/encoded/{fn}'], text=True)
-              prior = dec_text(main_txt)
-              old = {s['id']: s for s in prior}
-              print('\nFILE', fn)
-              for s in current:
-                  p = old.get(s['id'])
-                  if not p: continue
-                  fields = ('summary','panelPlan','dialogueInline','directionInline')
-                  if any(s.get(k) != p.get(k) for k in fields):
-                      print(json.dumps({
-                        'id': s['id'],
-                        'setting': s.get('setting'),
-                        'settingText': s.get('settingText'),
-                        'region': s.get('region'),
-                        'factions': s.get('factions'),
-                        'charactersInline': s.get('charactersInline'),
-                        'summary': s.get('summary'),
-                      }, ensure_ascii=False))
+
+          def fmt_entry(e):
+              if isinstance(e, str): return e
+              if e.get('text'): return e['text']
+              if e.get('name'): return e['name']
+              if e.get('summary'): return e['summary']
+              return json.dumps(e, ensure_ascii=False)
+
+          def fmt_char(e, fallback):
+              if not e: return fallback
+              p = [e.get('name') or fallback]
+              if e.get('handle'): p.append(e['handle'])
+              v = e.get('visualAnchor') or e.get('visual') or e.get('appearance') or e.get('visualDescription')
+              if v: p.append('Visual: '+v)
+              if e.get('visualStatus'): p.append('Visual status: '+e['visualStatus'])
+              if e.get('continuityLocks'): p.append('Continuity: '+'; '.join(e['continuityLocks']))
+              return ' — '.join(p)
+
+          for sid in sample_ids:
+              s = scenes[sid]
+              out = []
+              for d in s.get('dialogueInline') or []:
+                  h = d.get('handle') or d.get('speaker')
+                  if isinstance(h, str) and h.startswith('@') and h not in out:
+                      out.append(h)
+              out.append('\n=== PAGE: '+sid+' ===')
+              out.append((s.get('summary') or '').strip())
+              out.append(show['generationLine'])
+              if s.get('settingText'):
+                  out.append('\n[SETTING]\n'+s['settingText'])
+              elif s.get('setting'):
+                  out.append('\n[SETTING]\n'+fmt_entry(settings[s['setting']]))
+              if s.get('region'):
+                  out.append('\n[REGION]\n'+fmt_entry(regions[s['region']]))
+              if s.get('factions'):
+                  out.append('\n[FACTIONS]')
+                  out.extend(fmt_entry(factions[k]) for k in s['factions'])
+              if s.get('charactersInline'):
+                  out.append('\n[CHARACTERS]')
+                  for c in s['charactersInline']:
+                      out.append(fmt_char(by_handle.get(c.get('handle')), c.get('name') or c.get('handle')))
+              if s.get('panelPlan'):
+                  out.append('\n[PANEL PLAN]')
+                  out.extend(fmt_entry(x) for x in s['panelPlan'])
+              if s.get('dialogueInline'):
+                  out.append('\n[DIALOGUE]')
+                  for d in s['dialogueInline']:
+                      sp = d.get('handle') or d.get('speaker') or 'TEXT'
+                      out.append(f'{sp} says "{d.get("text","")}"')
+              if s.get('continuityFrom'):
+                  out.append('\n[CONTINUITY]\nContinue directly from '+str(s['continuityFrom']))
+              if s.get('directionInline'):
+                  out.append('\n[DIRECTION]')
+                  out.extend(fmt_entry(x) for x in s['directionInline'])
+              print('\n'.join(out))
+              print('\n--- CHEF RECIPE END ---\n')
           PY
