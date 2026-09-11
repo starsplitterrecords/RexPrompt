@@ -22,8 +22,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Apply corrected-guard Stardust visual-first repair
+      - name: Apply Stardust visual-first repair
         run: python tools/tmp_stardust_visual_first_final_v4.py
+      - name: Correct regression-guard overlay call
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('tools/validate_stardust_station.py')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('load_overlay(_overlay_path, _overlay)', 'load_overlay(_overlay_path, _overlay.get("encoding"))')
+          p.write_text(text, encoding='utf-8')
+          PY
       - name: Validate Stardust
         run: python tools/validate_stardust_station.py
       - name: Commit cleaned production data
