@@ -1,0 +1,41 @@
+name: Apply Echoes chef-layer repair
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/fix_echoes_chef_layer.py'
+      - '.github/workflows/apply-echoes-chef-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply chef-layer separation
+        run: python tools/fix_echoes_chef_layer.py
+      - name: Inspect migration
+        run: |
+          git diff --check
+          git diff --stat
+      - name: Commit migrated recipes
+        run: |
+          if git diff --quiet; then
+            echo 'No Echoes chef-layer changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/shows/echoes-forgotten-war-s1
+          git commit -m 'Separate Echoes writing from image recipes'
+          git push origin HEAD:main
