@@ -158,6 +158,8 @@ for entry in azure_entries:
         for item in local_direction:
             assert isinstance(item, dict), f"{page_id}: malformed directionInline entry"
             assert isinstance(item.get("text"), str) and item["text"].strip(), f"{page_id}: blank directionInline text"
+            if page_id.startswith(("AZR_S1E02_", "AZR_S1E03_", "AZR_S1E04_", "AZR_S1E05_", "AZR_S1E06_")):
+                assert not item["text"].startswith("PAGE CONTINUITY —"), f"{page_id}: writer continuity leaked into chef recipe"
 
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
