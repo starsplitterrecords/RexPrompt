@@ -7,6 +7,7 @@ on:
     paths:
       - tools/normalize_vikings_visual_recipes.py
       - tools/audit_vikings_active_recipes.py
+      - tools/flag_vikings_recipe_abstraction.py
       - .github/workflows/normalize-vikings-visual-recipes.yml
   workflow_dispatch:
 
@@ -28,7 +29,9 @@ jobs:
         run: python tools/normalize_vikings_visual_recipes.py
       - name: Decode active recipes for audit
         run: python tools/audit_vikings_active_recipes.py
-      - name: Commit normalized payloads and audit snapshot
+      - name: Flag interpretive recipe text
+        run: python tools/flag_vikings_recipe_abstraction.py
+      - name: Commit normalized payloads and audit snapshots
         run: |
           if git diff --quiet; then
             echo "No normalization changes required."
@@ -36,6 +39,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/shows/vikings-2026-s1/encoded data/shows/vikings-2026-s1/characters.json tmp/vikings_active_recipe_audit.json
-          git commit -m "Persist Vikings Kin continuity and recipe audit"
+          git add data/shows/vikings-2026-s1/encoded data/shows/vikings-2026-s1/characters.json tmp/vikings_active_recipe_audit.json tmp/vikings_recipe_flags.json
+          git commit -m "Audit Vikings recipe abstraction"
           git push origin HEAD:normalize/vikings-visual-recipes
