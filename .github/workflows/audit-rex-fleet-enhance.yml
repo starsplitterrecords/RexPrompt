@@ -1,0 +1,20 @@
+name: Audit Rex Fleet dramatic engines
+
+on:
+  push:
+    branches:
+      - enhance/rex-fleet-dramatic-divergence
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Print current season audit
+        run: python tools/audit_rex_fleet_dramatic_engines.py
