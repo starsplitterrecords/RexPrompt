@@ -1,8 +1,17 @@
 {
   "series": "Vikings 2026",
   "season": "S1",
-  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> choice -> recognition -> self-defined belonging under judgment.",
-  "seasonDramaticShift": "Issues 1–5 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 6 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, privacy, autonomy, and belonging.",
+  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> chosen household -> self-defined belonging under judgment -> optional aftermath only if dramatically needed.",
+  "seasonDramaticShift": "Issues 1–5 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 6 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, autonomy, responsibility, and belonging.",
+  "kinContinuity": {
+    "count": 3,
+    "composition": "Two men and Astrid, the only woman.",
+    "issues1To3": "The three Kin are seen primarily together in or immediately around the Bushwick placement; they are not yet followed independently around the city.",
+    "middleSeason": "Their independent errands, relationships, routines and interests begin to appear individually.",
+    "issues6To7": "Astrid is deliberately largely absent from foreground action while the two male Kin remain visible. Her absence is ordinary, not mysterious.",
+    "issue8": "The courtroom reveals that Astrid has quietly become the household's most practically integrated member.",
+    "maleNames": "Unresolved. Do not silently lock Eirik or Ivar."
+  },
   "issues": [
     {
       "issue": 1,
@@ -16,59 +25,58 @@
       "title": "Landfall Bushwick",
       "function": "Apartment adaptation and neighborhood integration; the temporary shelter becomes a functioning household while Carrie secures a provisional administrative foothold.",
       "beatCoverage": "13-20",
-      "status": "production-ready 24-page recovered and enhanced script"
+      "status": "production-ready 24-page recovered and enhanced script; visual recipes normalized with panel-level location"
     },
     {
       "issue": 3,
       "title": "The Iron Worm",
       "function": "Transit adaptation; Gunnar learns the city as navigable terrain and uses that knowledge to complete the errand and lead the group home",
       "beatCoverage": "21-27",
-      "status": "production-ready 24-page recovered and enhanced script"
+      "status": "production-ready 24-page recovered and enhanced script; visual recipes normalized with panel-level location"
     },
     {
       "issue": 4,
       "title": "The Tally of Dishonor",
       "function": "Financial legibility, value, status, and partial civic participation",
       "beatCoverage": "28-32",
-      "status": "production-ready 24-page script",
+      "status": "production-ready 24-page script; visual recipes normalized with panel-level location",
       "referenceFile": "issue_04_reference.json"
     },
     {
       "issue": 5,
       "title": "The Skaldic Interface",
-      "function": "Neighborhood-memory and emerging belonging; recurring relationships and ordinary routines show the Vikings beginning to live independently in New York",
+      "function": "Neighborhood-memory and emerging belonging; recurring relationships and ordinary routines show the Vikings beginning to live independently in New York. This is where the three Kin begin to read as separate people rather than a permanent background unit.",
       "beatCoverage": "33-36 plus neighborhood-memory material",
-      "status": "production-ready 24-page enhanced script encoded in RexPrompt",
+      "status": "production-ready 24-page enhanced script encoded in RexPrompt; visual recipes normalized with panel-level location",
       "scriptFile": "issue_05_skaldic_interface_enhanced.md"
     },
     {
       "issue": 6,
       "title": "Trial of Toil",
-      "function": "Bjorn's crisis over usefulness becomes a character story about respect, consent, responsibility, and meaningful contribution. The temporal-refugee group changes how he leads, while the apartment and neighborhood prove whether that change survives ordinary life.",
+      "function": "Bjorn's crisis over usefulness becomes a character story about respect, consent, responsibility, and meaningful contribution. The support group changes his behavior; apartment and neighborhood life prove whether the change survives outside the group.",
       "status": "enhanced 24-page dramatic spine locked; panel/dialogue script pass pending",
       "developmentFile": "issue_06_trial_of_toil_development.json"
     },
     {
       "issue": 7,
       "title": "War Council",
-      "function": "A Status Reconciliation Review forces the household to decide what it actually wants to defend. The core conflict is not the paperwork but the discovery that staying in New York, staying together, choosing permanence, and preserving individual freedom are not the same decision.",
+      "function": "A Status Reconciliation Review forces the household to decide what it actually wants to defend. The question leaves the kitchen table and follows separate lives through the neighborhood before the household chooses a shared position that does not require identical futures.",
       "status": "enhanced 24-page dramatic spine locked; panel/dialogue pass pending",
       "treatmentFile": "issue_07_war_council_treatment.md"
     },
     {
       "issue": 8,
-      "title": "The Filing of Grievances",
-      "function": "The household revisits the relationships accumulated all season and discovers that being known by other people is different from controlling how those people describe you. Privacy, mixed testimony, first-person voice, and imperfect recognition shape the response before the hearing.",
-      "beatCoverage": "47-52 reinterpreted through relationship and voice rather than audit procedure",
-      "status": "enhanced 24-page dramatic spine locked; panel/dialogue pass pending",
-      "treatmentFile": "issue_08_filing_of_grievances_treatment.md"
+      "title": "Permanent Residency / Trial by Combat",
+      "function": "The courtroom/hearing tests whether an institution can make a fair decision about a real but unconventional household made of separate people. Bjorn's trial is allowing others to speak for themselves; Astrid's payoff is the revelation that the least-followed member has quietly become the most practically integrated.",
+      "beatCoverage": "hearing / trial-by-combat material previously deferred beyond Issue 8",
+      "status": "enhanced 24-page dramatic spine locked; panel/dialogue pass pending; exact legal ruling unresolved",
+      "treatmentFile": "issue_08_trial_by_combat_treatment.md"
     },
     {
       "issue": 9,
-      "title": "Permanent Residency / Trial by Combat",
-      "function": "The residency hearing tests whether an institution can make a fair decision about a real but unconventional household whose members have chosen belonging without surrendering separate identities or future choices.",
-      "beatCoverage": "53-58",
-      "status": "normalized; exact ruling and full enhanced page structure unresolved"
+      "title": "Season coda — title unresolved",
+      "function": "Optional post-hearing consequence or emotional coda only if the season earns another issue. Do not use Issue 9 for another layer of residency preparation, evidence collection, or a duplicate hearing.",
+      "status": "open; necessity, title, and dramatic function unresolved"
     }
   ],
   "productionPayloads": [
@@ -97,23 +105,23 @@
     }
   ],
   "finaleState": {
-    "ordeal": "The residency hearing functions as Bjorn's trial by combat without literal combat.",
-    "hearingPurpose": "The hearing is not the climax of a paperwork story. It is where the institution encounters a household that cannot honestly be reduced to one spokesperson, one integration narrative, or one permanent future.",
-    "bjorn": "Bjorn arrives in armor. His growth is visible in using authority to defend other people's right to speak and choose, not in abandoning forceful leadership.",
-    "carrie": "Carrie does not ask him to remove it. She argues the process without pretending the file is the whole truth of the people in it."
+    "ordeal": "Issue 8 residency hearing functions as Bjorn's trial by combat without literal combat.",
+    "hearingPurpose": "The institution encounters a household that cannot honestly be reduced to one spokesperson, one integration narrative, or one permanent future.",
+    "bjorn": "Bjorn arrives in armor without weapons. His growth is visible when he answers for himself and protects other people's right to speak and choose instead of speaking over them.",
+    "carrie": "Carrie does not ask him to remove the armor. Her strongest testimony acknowledges that successful integration means she increasingly does not know every detail of the household's life.",
+    "astrid": "Astrid's ordinary independent competence becomes visible in court and reveals that the background member Carrie and Bjorn tracked least is the household's most practically integrated person."
   },
   "openDecisions": [
     "Carrie's full legal/display name",
-    "Exact residency-hearing ruling",
-    "Whether Kin size remains intentionally ambiguous",
-    "Final confirmation or replacement of Eirik, Astrid, and Ivar",
+    "Exact Issue 8 residency-hearing ruling",
+    "Names of the two male Kin; Astrid is locked",
+    "Whether Issue 9 is needed at all and, if retained, its post-hearing dramatic purpose",
     "Magister's return and eventual role",
-    "Detailed Silas progression beyond Issue 8",
+    "Detailed Silas progression after the hearing",
     "Exact Issue 6 support-group participant roster and group leader identity",
     "Issue 6 panel structure and final dialogue",
     "Issue 7 panel structure and final dialogue",
     "Issue 8 panel structure and final dialogue",
-    "Issue 9 full enhanced page structure and testimony order",
     "Museum continuity placement"
   ]
 }
