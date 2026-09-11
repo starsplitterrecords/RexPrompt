@@ -1,0 +1,58 @@
+name: Audit Low Tide recipes
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-low-tide-recipes.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit C1-C7 recipe integrity
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,gzip,json,re
+          from pathlib import Path
+          base=Path('data/shows/low-tide-signal')
+          chars=json.loads((base/'characters.json').read_text())
+          settings=json.loads((base/'settings.json').read_text())
+          regions=json.loads((base/'regions.json').read_text())
+          shows=json.loads(Path('data/shows.json').read_text())
+          pages=json.loads((base/'pages_ch01_ch03_compiled.json').read_text())
+          encoded=[
+            'pages_c04_between_runs_enhanced.json.gzb64',
+            'pages_c05_return_tide_enhanced.json.gzb64',
+            'pages_c06_after_the_water_enhanced.json.gzb64',
+            'pages_c07_last_low_tide_enhanced.json.gzb64']
+          for f in encoded:
+            raw=''.join((base/'encoded'/f).read_text().split())
+            data=json.loads(gzip.decompress(base64.b64decode(raw)))
+            pages.extend(data.get('pages',data) if isinstance(data,dict) else data)
+          ids=[p.get('id') for p in pages]
+          dup=sorted({x for x in ids if ids.count(x)>1})
+          missing_settings=sorted({p.get('setting') for p in pages if p.get('setting') and p.get('setting') not in settings})
+          missing_regions=sorted({p.get('region') for p in pages if p.get('region') and p.get('region') not in regions})
+          missing_chars=sorted({c for p in pages for c in p.get('characters',[]) if c not in chars})
+          by_ch={}
+          for p in pages:
+            m=re.match(r'LTS_C(\d\d)_',str(p.get('id','')))
+            if m: by_ch.setdefault(int(m.group(1)),[]).append(p)
+          print('TOTAL PAGES',len(pages))
+          print('CHAPTER COUNTS',{k:len(v) for k,v in sorted(by_ch.items())})
+          print('DUPLICATE IDS',dup)
+          print('MISSING SETTINGS',missing_settings)
+          print('MISSING REGIONS',missing_regions)
+          print('MISSING CHARACTERS',missing_chars)
+          print('UNIQUE SETTINGS',sorted({p.get('setting') for p in pages if p.get('setting')}))
+          print('LOW TIDE MANIFEST IDS',[s.get('id') for s in shows if s.get('seriesId')=='low-tide-signal' or s.get('id','').startswith('low-tide-signal')])
+          for ch,ps in sorted(by_ch.items()):
+            nums=[p.get('page') for p in ps]
+            print(f'C{ch:02d} RANGE',min(nums),max(nums),'COUNT',len(nums),'SEQUENTIAL',sorted(nums)==list(range(1,max(nums)+1)))
+          # Chef-visible structural checks from current index.html contract.
+          index=Path('index.html').read_text()
+          for needle in ['e.performance','e.relationship','e.promptContinuity','if(s.settingText)','show.generationLine','s.directionInline']:
+            print('ASSEMBLER',needle,needle in index)
+          PY
