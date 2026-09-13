@@ -1,0 +1,119 @@
+name: Finalize Sunforge rewrite
+
+on:
+  push:
+    branches:
+      - rewrite-sunforge-current-four-20260913
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rewrite-sunforge-current-four-20260913
+          fetch-depth: 0
+      - name: Normalize manifest and validate package
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          base = root / 'data/shows/sunforge-outlaw-s1'
+
+          # Make all dialogue speakers resolvable from the page character shelf.
+          e1p = base / 'pages_e01.json'
+          e1 = json.loads(e1p.read_text())
+          for pg in e1:
+              if pg['id'] in {'SUN_S1E01_P01', 'SUN_S1E01_P02'} and 'C_sun_scarred_patron' not in pg['characters']:
+                  pg['characters'].append('C_sun_scarred_patron')
+          e1p.write_text(json.dumps(e1, indent=2, ensure_ascii=False) + '\n')
+
+          e4p = base / 'pages_e04.json'
+          e4 = json.loads(e4p.read_text())
+          for pg in e4:
+              if pg['id'] == 'SUN_S1E04_P03' and 'C_sun_relay_boy' not in pg['characters']:
+                  pg['characters'].append('C_sun_relay_boy')
+          e4p.write_text(json.dumps(e4, indent=2, ensure_ascii=False) + '\n')
+
+          # Remove the discarded identity-refraction explanation from the live assembler registration.
+          manifest_path = root / 'data/shows.json'
+          shows = json.loads(manifest_path.read_text())
+          generation = (
+              'Finished full-color portrait interior story comic page for Sunforge Outlaw. '
+              'Grounded weird-western frontier science fiction under hard Sunfields light: tactile dust, worn leather, oxidized metal, lived-in communities, natural human acting, dry humor, strong silhouettes, varied sequential composition, and professional integrated lettering. '
+              'Preserve scripted panel order, recurring character identity, community social geography, causal action, and exact dialogueInline. '
+              'Strange events should remain locally plausible and human-scale unless the page explicitly establishes otherwise; never visualize probability, fate, destiny, identity refraction, or a supernatural explanation as fact. '
+              'Sunforges remain observed frontier phenomena without an authoritative explanation. '
+              'Interior story page only; no cover, promotional, dossier, infographic, generic cyberpunk, or process-diagram framing unless explicitly scripted. Fictional production.'
+          )
+          count = 0
+          for show in shows:
+              if show.get('seriesId') == 'sunforge-outlaw':
+                  show['generationLine'] = generation
+                  count += 1
+          assert count == 4, f'expected 4 Sunforge show registrations, found {count}'
+          manifest_path.write_text(json.dumps(shows, indent=2, ensure_ascii=False) + '\n')
+
+          # Mechanical package validation.
+          required = [
+              'blocking.json','characters.json','dialogue.json','direction.json','factions.json',
+              'lighting.json','mood.json','negatives.json','pages_base.json','pages_e01.json',
+              'pages_e02.json','pages_e03.json','pages_e04.json','regions.json','series.json','settings.json'
+          ]
+          for name in required:
+              path = base / name
+              assert path.exists(), f'missing {name}'
+              json.loads(path.read_text())
+
+          chars = json.loads((base/'characters.json').read_text())
+          settings = json.loads((base/'settings.json').read_text())
+          regions = json.loads((base/'regions.json').read_text())
+          expected_counts = {1:7,2:6,3:6,4:6}
+          seen = set()
+          for issue in range(1,5):
+              pages = json.loads((base/f'pages_e0{issue}.json').read_text())
+              assert len(pages) == expected_counts[issue], (issue, len(pages))
+              for n, pg in enumerate(pages, 1):
+                  expected_id = f'SUN_S1E0{issue}_P{n:02d}'
+                  assert pg['id'] == expected_id, (pg['id'], expected_id)
+                  assert pg['id'] not in seen
+                  seen.add(pg['id'])
+                  assert pg.get('summary') and pg.get('panelPlan')
+                  assert pg.get('setting') in settings, (pg['id'], pg.get('setting'))
+                  assert pg.get('region') in regions, (pg['id'], pg.get('region'))
+                  for cid in pg.get('characters', []):
+                      assert cid in chars, (pg['id'], cid)
+                  allowed = set()
+                  for cid in pg.get('characters', []):
+                      name = chars[cid]['name']
+                      allowed.add(name.casefold())
+                      allowed.add(name.split()[0].casefold())
+                  for d in pg.get('dialogueInline', []):
+                      sp = d.get('speaker','').casefold()
+                      assert sp in allowed, (pg['id'], d.get('speaker'), sorted(allowed))
+
+          assert len(seen) == 25
+          serialized = '\n'.join((base/f'pages_e0{i}.json').read_text().lower() for i in range(1,5))
+          banned = ['probability field', 'chosen one', 'reincarnat', 'memory erasure', 'transportation optimization', 'process improvement']
+          for token in banned:
+              assert token not in serialized, token
+
+          # Temporary workflow removes itself after a successful validation run.
+          wf = root / '.github/workflows/sunforge-rewrite-finalize.yml'
+          wf.unlink()
+          PY
+      - name: Commit finalized rewrite
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/shows.json data/shows/sunforge-outlaw-s1/pages_e01.json data/shows/sunforge-outlaw-s1/pages_e04.json
+          git rm --cached --ignore-unmatch .github/workflows/sunforge-rewrite-finalize.yml >/dev/null 2>&1 || true
+          git add -u .github/workflows/sunforge-rewrite-finalize.yml
+          git diff --cached --quiet || git commit -m 'Finalize Sunforge current-four rewrite'
+          git push origin HEAD:rewrite-sunforge-current-four-20260913
