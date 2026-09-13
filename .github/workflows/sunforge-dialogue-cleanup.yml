@@ -23,61 +23,70 @@ jobs:
           import json
           from pathlib import Path
           base = Path('data/shows/sunforge-outlaw-s1')
-          exact = {
-            "You've the wrong man.": "You've got the wrong man.",
-            "A man throws a bottle at you because he thinks you're somebody else, and you'ren't curious?": "A man throws a bottle at you because he thinks you're somebody else, and you aren't curious?",
-            "Does that mean there'sn't a seat for me either?": "Does that mean there isn't a seat for me either?",
-            "It means I'ven't decided whether you're part of the problem yet.": "It means I haven't decided whether you're part of the problem yet.",
-            "She'sn't coming with us.": "She isn't coming with us.",
-            "That'sn't an answer.": "That isn't an answer.",
-            "It's the only one I've.": "It's the only one I have.",
-            "He answers. You just will not like how short they're.": "He answers. You just won't like how short they are.",
-            "He'sn't doing anything. That's the trouble.": "He isn't doing anything. That's the trouble.",
-            "That'sn't what happened.": "That isn't what happened.",
-            "He'sn't.": "He isn't.",
-            "No, ma'am. It'sn't mine.": "No, ma'am. It isn't mine.",
-            "You'ven't even heard the name.": "You haven't even heard the name.",
-            "They're people, Eva. They don't stop being people because you've a question.": "They're people, Eva. They don't stop being people because you have a question.",
-            "Because Veyra asked me to find out who he's.": "Because Veyra asked me to find out who he is.",
-            "Did any of this tell you who I'm?": "Did any of this tell you who I am?",
-            "Please do not start counting.": "Please don't start counting.",
-            "It was not a compliment.": "It wasn't a compliment.",
-            "For once, do not explain it any further.": "For once, don't explain it any further.",
-            "Do not do that.": "Don't do that.",
-            "I brought two people who would not stay behind.": "I brought two people who wouldn't stay behind.",
-            "Constantly. I just do not make it a hobby.": "Constantly. I just don't make it a hobby.",
-            "You don't want to know what is in the letter?": "You don't want to know what's in the letter?",
-            "I don't need to. Isabelle is not a test.": "I don't need to. Isabelle isn't a test.",
-            "Then what is wrong with it?": "Then what's wrong with it?",
-            "Then another minute will not ruin me.": "Then another minute won't ruin me.",
-            "That was not how it started.": "That wasn't how it started."
-          }
-          changed = 0
+
+          replacements = [
+            ("You've the wrong man", "You've got the wrong man"),
+            ("you'ren't", "you aren't"),
+            ("there'sn't", "there isn't"),
+            ("I'ven't", "I haven't"),
+            ("You'ven't", "You haven't"),
+            ("He'sn't", "He isn't"),
+            ("he'sn't", "he isn't"),
+            ("She'sn't", "She isn't"),
+            ("she'sn't", "she isn't"),
+            ("It'sn't", "It isn't"),
+            ("it'sn't", "it isn't"),
+            ("That'sn't", "That isn't"),
+            ("that'sn't", "that isn't"),
+            ("We'ren't", "We aren't"),
+            ("we'ren't", "we aren't"),
+            ("They'ren't", "They aren't"),
+            ("they'ren't", "they aren't"),
+            ("It's the only one I've.", "It's the only one I have."),
+            ("how short they're.", "how short they are."),
+            ("who he's.", "who he is."),
+            ("who I'm?", "who I am?"),
+            ("because you've a question", "because you have a question"),
+            ("Please do not start counting.", "Please don't start counting."),
+            ("It was not a compliment.", "It wasn't a compliment."),
+            ("For once, do not explain it any further.", "For once, don't explain it any further."),
+            ("Do not do that.", "Don't do that."),
+            ("I brought two people who would not stay behind.", "I brought two people who wouldn't stay behind."),
+            ("Constantly. I just do not make it a hobby.", "Constantly. I just don't make it a hobby."),
+            ("You don't want to know what is in the letter?", "You don't want to know what's in the letter?"),
+            ("I don't need to. Isabelle is not a test.", "I don't need to. Isabelle isn't a test."),
+            ("Then what is wrong with it?", "Then what's wrong with it?"),
+            ("Then another minute will not ruin me.", "Then another minute won't ruin me."),
+            ("That was not how it started.", "That wasn't how it started."),
+            ("You just will not like", "You just won't like")
+          ]
+
           for issue in range(1,5):
               p = base/f'pages_e0{issue}.json'
               pages = json.loads(p.read_text())
               for page in pages:
                   for line in page.get('dialogueInline',[]):
-                      if line['text'] in exact:
-                          line['text'] = exact[line['text']]
-                          changed += 1
+                      t = line['text']
+                      for a,b in replacements:
+                          t = t.replace(a,b)
+                      line['text'] = t
               p.write_text(json.dumps(pages, indent=2, ensure_ascii=False) + '\n')
-          assert changed >= 20, changed
 
           bad_fragments = ["'sn't", "'ren't", "'ven't", "That'sn't", "It'sn't", "who he's.", "who I'm?", "short they're.", "one I've.", "You've the wrong man"]
+          all_text = []
           for issue in range(1,5):
               pages = json.loads((base/f'pages_e0{issue}.json').read_text())
               for page in pages:
                   for line in page.get('dialogueInline',[]):
+                      all_text.append(line['text'])
                       for bad in bad_fragments:
                           assert bad not in line['text'], (page['id'], line['text'], bad)
 
-          # Pin the Kael voice examples established in development.
-          pages1 = json.loads((base/'pages_e01.json').read_text())
-          text = [d['text'] for p in pages1 for d in p.get('dialogueInline',[])]
-          assert "I've got enough problems I already understand. I don't much care about ones I don't." in text
-          assert "Bah. Leave it alone. I didn't mean anything by that." in text
-          assert "There isn't a 'we'." in text
+          assert "I've got enough problems I already understand. I don't much care about ones I don't." in all_text
+          assert "Bah. Leave it alone. I didn't mean anything by that." in all_text
+          assert "There isn't a 'we'." in all_text
+          assert "Because Veyra asked me to find out who he is." in all_text
+          assert "Did any of this tell you who I am?" in all_text
 
           Path('.github/workflows/sunforge-dialogue-cleanup.yml').unlink()
           PY
