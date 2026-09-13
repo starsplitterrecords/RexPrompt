@@ -1,0 +1,99 @@
+name: Naturalize Sunforge dialogue
+
+on:
+  push:
+    branches:
+      - dialogue-sunforge-current-four-20260913
+
+permissions:
+  contents: write
+
+jobs:
+  naturalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dialogue-sunforge-current-four-20260913
+          fetch-depth: 0
+      - name: Naturalize contractions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path('data/shows/sunforge-outlaw-s1')
+          replacements = [
+            ('I have got', "I've got"), ('You have got', "You've got"), ('you have got', "you've got"),
+            ('I do not', "I don't"), ('You do not', "You don't"), ('you do not', "you don't"),
+            ('He does not', "He doesn't"), ('he does not', "he doesn't"), ('She does not', "She doesn't"), ('she does not', "she doesn't"),
+            ('It does not', "It doesn't"), ('it does not', "it doesn't"), ('That does not', "That doesn't"), ('that does not', "that doesn't"),
+            ('They do not', "They don't"), ('they do not', "they don't"), ('We do not', "We don't"), ('we do not', "we don't"),
+            ('I did not', "I didn't"), ('You did not', "You didn't"), ('you did not', "you didn't"), ('He did not', "He didn't"), ('he did not', "he didn't"),
+            ('I cannot', "I can't"), ('You cannot', "You can't"), ('you cannot', "you can't"), ('He cannot', "He can't"), ('he cannot', "he can't"),
+            ('I was not', "I wasn't"), ('You were not', "You weren't"), ('you were not', "you weren't"), ('He was not', "He wasn't"), ('he was not', "he wasn't"),
+            ('I am not', "I'm not"), ('You are not', "You aren't"), ('you are not', "you aren't"), ('He is not', "He isn't"), ('he is not', "he isn't"),
+            ('It is not', "It isn't"), ('it is not', "it isn't"), ('That is not', "That isn't"), ('that is not', "that isn't"),
+            ('There is not', "There isn't"), ('there is not', "there isn't"),
+            ('I have not', "I haven't"), ('You have not', "You haven't"), ('you have not', "you haven't"), ('He has not', "He hasn't"), ('he has not', "he hasn't"),
+            ('I would not', "I wouldn't"), ('You would not', "You wouldn't"), ('you would not', "you wouldn't"), ('He would not', "He wouldn't"), ('he would not', "he wouldn't"),
+            ('I should not', "I shouldn't"), ('You should not', "You shouldn't"), ('you should not', "you shouldn't"),
+            ('I could not', "I couldn't"), ('You could not', "You couldn't"), ('you could not', "you couldn't"),
+            ('I will not', "I won't"), ('You will not', "You won't"), ('you will not', "you won't"), ('He will not', "He won't"), ('he will not', "he won't"),
+            ('I am', "I'm"), ('You are', "You're"), ('you are', "you're"), ('He is', "He's"), ('he is', "he's"), ('She is', "She's"), ('she is', "she's"),
+            ('It is', "It's"), ('it is', "it's"), ('That is', "That's"), ('that is', "that's"), ('There is', "There's"), ('there is', "there's"),
+            ('We are', "We're"), ('we are', "we're"), ('They are', "They're"), ('they are', "they're"),
+            ('I will', "I'll"), ('You will', "You'll"), ('you will', "you'll"),
+            ('You have', "You've"), ('you have', "you've"), ('I have', "I've")
+          ]
+          for issue in range(1,5):
+              p = base/f'pages_e0{issue}.json'
+              pages = json.loads(p.read_text())
+              for page in pages:
+                  for line in page.get('dialogueInline',[]):
+                      t = line['text']
+                      for a,b in replacements:
+                          t = t.replace(a,b)
+                      line['text'] = t
+              p.write_text(json.dumps(pages, indent=2, ensure_ascii=False) + '\n')
+
+          # Specific lines whose rhythm matters enough to pin exactly.
+          pins = {
+            'SUN_S1E01_P02': {
+              5: "I've got enough problems I already understand. I don't much care about ones I don't.",
+              7: "Bah. Leave it alone. I didn't mean anything by that."
+            },
+            'SUN_S1E01_P03': {5: "There isn't a 'we'."},
+            'SUN_S1E04_P06': {11: "Please don't make a thing of it."}
+          }
+          for issue in range(1,5):
+              p = base/f'pages_e0{issue}.json'
+              pages = json.loads(p.read_text())
+              for page in pages:
+                  if page['id'] in pins:
+                      for idx,text in pins[page['id']].items():
+                          page['dialogueInline'][idx]['text'] = text
+              p.write_text(json.dumps(pages, indent=2, ensure_ascii=False) + '\n')
+
+          # Ensure the clipped forms explicitly rejected in development are gone.
+          banned = {'Don\'t know.','Still want eggs.','Got enough problems I understand.','You finally asking?','Water, then road.','We leaving?'}
+          all_text = []
+          for issue in range(1,5):
+              pages = json.loads((base/f'pages_e0{issue}.json').read_text())
+              for page in pages:
+                  for line in page.get('dialogueInline',[]):
+                      assert line['text'] not in banned, (page['id'], line['text'])
+                      all_text.append(line['text'])
+          assert "I've got enough problems I already understand. I don't much care about ones I don't." in all_text
+          assert "Bah. Leave it alone. I didn't mean anything by that." in all_text
+
+          Path('.github/workflows/sunforge-dialogue-naturalize.yml').unlink()
+          PY
+      - name: Commit naturalized dialogue
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/shows/sunforge-outlaw-s1/pages_e01.json data/shows/sunforge-outlaw-s1/pages_e02.json data/shows/sunforge-outlaw-s1/pages_e03.json data/shows/sunforge-outlaw-s1/pages_e04.json
+          git add -A .github/workflows || true
+          git diff --cached --quiet || git commit -m 'Naturalize Sunforge dialogue contractions'
+          git push origin HEAD:dialogue-sunforge-current-four-20260913
