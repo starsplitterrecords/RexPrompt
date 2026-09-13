@@ -26,7 +26,6 @@ jobs:
           root = Path('.')
           base = root / 'data/shows/sunforge-outlaw-s1'
 
-          # Make all dialogue speakers resolvable from the page character shelf.
           e1p = base / 'pages_e01.json'
           e1 = json.loads(e1p.read_text())
           for pg in e1:
@@ -41,7 +40,6 @@ jobs:
                   pg['characters'].append('C_sun_relay_boy')
           e4p.write_text(json.dumps(e4, indent=2, ensure_ascii=False) + '\n')
 
-          # Remove the discarded identity-refraction explanation from the live assembler registration.
           manifest_path = root / 'data/shows.json'
           shows = json.loads(manifest_path.read_text())
           generation = (
@@ -60,7 +58,6 @@ jobs:
           assert count == 4, f'expected 4 Sunforge show registrations, found {count}'
           manifest_path.write_text(json.dumps(shows, indent=2, ensure_ascii=False) + '\n')
 
-          # Mechanical package validation.
           required = [
               'blocking.json','characters.json','dialogue.json','direction.json','factions.json',
               'lighting.json','mood.json','negatives.json','pages_base.json','pages_e01.json',
@@ -104,16 +101,13 @@ jobs:
           for token in banned:
               assert token not in serialized, token
 
-          # Temporary workflow removes itself after a successful validation run.
-          wf = root / '.github/workflows/sunforge-rewrite-finalize.yml'
-          wf.unlink()
+          (root / '.github/workflows/sunforge-rewrite-finalize.yml').unlink()
           PY
       - name: Commit finalized rewrite
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/shows.json data/shows/sunforge-outlaw-s1/pages_e01.json data/shows/sunforge-outlaw-s1/pages_e04.json
-          git rm --cached --ignore-unmatch .github/workflows/sunforge-rewrite-finalize.yml >/dev/null 2>&1 || true
-          git add -u .github/workflows/sunforge-rewrite-finalize.yml
+          git add -u
           git diff --cached --quiet || git commit -m 'Finalize Sunforge current-four rewrite'
           git push origin HEAD:rewrite-sunforge-current-four-20260913
