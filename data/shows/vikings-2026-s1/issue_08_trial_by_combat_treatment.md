@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
-Status: ENHANCED TREATMENT — 24-PAGE DRAMATIC SPINE LOCKED; PANEL/DIALOGUE PASS PENDING  
+Status: ENHANCED TREATMENT — SUPERSEDED FOR CURRENT WRITING BY FULL 24-PAGE DEVELOPMENT SCRIPT `issue_08_trial_by_combat_script.md`  
 Primary function: the institution finally meets the household as separate people, and Astrid unexpectedly proves to be the person who has traveled farthest into ordinary New York life.
 
 ## Story lock
