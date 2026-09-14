@@ -38,8 +38,8 @@
       {"panel": 1, "location": "bodega front aisle", "shotType": "wide", "action": "A delivery worker wheels beverage crates toward the back through the narrow aisle. Bjorn enters with his familiar coffee cup; the Bodega Owner nods from the counter.", "dialogueIndices": [0]},
       {"panel": 2, "location": "bodega delivery aisle", "shotType": "medium", "action": "The delivery worker works a loaded hand truck around a tight turn. Bjorn immediately steps toward the cart."},
       {"panel": 3, "location": "bodega delivery aisle", "shotType": "two-shot", "action": "Before Bjorn can take the hand truck, the Bodega Owner plants one hand on it and stops him. The worker still has control of the load.", "dialogueIndices": [1,2]},
-      {"panel": 4, "location": "bodega delivery aisle", "shotType": "three-shot", "action": "The delivery worker looks irritated at being treated as if he needs rescuing. The owner keeps Bjorn out of the work lane.", "dialogueIndices": [3,4]},
-      {"panel": 5, "location": "bodega counter", "shotType": "close medium", "action": "The owner rings up Bjorn's usual items while Bjorn remains serious about the obligation he thinks he owes.", "dialogueIndices": [5,6,7]}
+      {"panel": 4, "location": "bodega delivery aisle", "shotType": "three-shot", "action": "The delivery worker keeps one hand tight on the hand-truck grip, jaw set. The owner holds one forearm across Bjorn's path, leaving the worker a clear lane.", "dialogueIndices": [3,4]},
+      {"panel": 5, "location": "bodega counter", "shotType": "close medium", "action": "The owner scans Bjorn's usual items. Bjorn stands square to the counter with direct eye contact, hands still at his sides as he answers.", "dialogueIndices": [5,6,7]}
     ],
     "dialogueInline": [
       {"handle": "@vik.BodegaOwner", "text": "Morning."},
@@ -68,7 +68,7 @@
       {"panel": 2, "location": "Safe Cave table", "shotType": "medium", "action": "Carrie puts the folder down and looks toward Bjorn when he does not react.", "dialogueIndices": [1]},
       {"panel": 3, "location": "Safe Cave window side", "shotType": "two-shot", "action": "Bjorn turns from the window and gives one restrained sweep of his hand toward the apartment, his face serious and still.", "dialogueIndices": [2]},
       {"panel": 4, "location": "Safe Cave window side", "shotType": "close medium", "action": "Carrie listens without correcting him. Bjorn indicates Gunnar and the working Kin with a small sweep of his hand.", "dialogueIndices": [3]},
-      {"panel": 5, "location": "Safe Cave window side", "shotType": "two-shot", "action": "Carrie names the wound; Bjorn takes the unfamiliar word literally, forcing her to translate it.", "dialogueIndices": [4,5,6,7]}
+      {"panel": 5, "location": "Safe Cave window side", "shotType": "two-shot", "action": "Carrie watches Bjorn as she says the word “ornamental.” His brow tightens at the unfamiliar word; after his reply, she supplies the simpler word “decorative.”", "dialogueIndices": [4,5,6,7]}
     ],
     "dialogueInline": [
       {"handle": "@vik.Carrie", "text": "I brought the deeply glamorous renewal notice for the smoke detector inspection."},
@@ -96,10 +96,10 @@
     "panelPlan": [
       {"panel": 1, "location": "Safe Cave kitchenette floor beside table", "shotType": "insert", "action": "A cheap overloaded power strip gives one sharp spark and a small puff of gray smoke beside the table. No flame develops."},
       {"panel": 2, "location": "Safe Cave kitchenette", "shotType": "medium", "action": "Gunnar immediately pulls the wall plug while First Male Kin lifts nearby bedding away in one motion.", "dialogueIndices": [0]},
-      {"panel": 3, "location": "Safe Cave kitchenette", "shotType": "wide", "action": "The danger is over. The inert strip lies on the floor while Carrie, Bjorn, Gunnar and both male Kin look at it."},
+      {"panel": 3, "location": "Safe Cave kitchenette", "shotType": "wide", "action": "The smoke is gone. The unplugged, inert power strip lies on the floor while Carrie, Bjorn, Gunnar and both male Kin look down at it."},
       {"panel": 4, "location": "Safe Cave kitchenette", "shotType": "medium", "action": "Bjorn bends, picks up the dead strip and stares at it. His jaw tightens; nobody is asking him to do anything."},
-      {"panel": 5, "location": "Safe Cave bare wall beside kitchenette", "shotType": "impact medium", "action": "Bjorn slams the plastic strip once into the bare wall after the danger has passed. The casing cracks. The others freeze; keep the impact physically small and socially shocking."},
-      {"panel": 6, "location": "Safe Cave kitchenette", "shotType": "two-shot", "action": "Carrie faces Bjorn at close conversational distance. Behind them, the two male Kin are visibly wary; Gunnar stays still with the unplugged cord in hand.", "dialogueIndices": [1,2,3,4]}
+      {"panel": 5, "location": "Safe Cave bare wall beside kitchenette", "shotType": "impact medium", "action": "Bjorn slams the plastic strip once into the bare wall. The casing cracks. First Male Kin jerks backward; Second Male Kin freezes with hands half-raised; Carrie flinches; Gunnar remains still with the unplugged cord."},
+      {"panel": 6, "location": "Safe Cave kitchenette", "shotType": "two-shot", "action": "Carrie steps within arm’s length of Bjorn. Behind her, First Male Kin shifts behind the table edge, Second Male Kin keeps several feet of distance, and Gunnar stays still with the unplugged cord in hand.", "dialogueIndices": [1,2,3,4]}
     ],
     "dialogueInline": [
       {"handle": "@vik.Gunnar", "text": "Dead."},
@@ -120,10 +120,10 @@
     ],
     "panelPlan": [
       {"panel": 1, "location": "Safe Cave table", "shotType": "medium", "action": "The cracked power strip sits inside a trash bag off to one side. Carrie and Bjorn sit across from each other with no folder between them.", "dialogueIndices": [0,1]},
-      {"panel": 2, "location": "Safe Cave table", "shotType": "close on Carrie", "action": "Carrie registers that Bjorn rejected the idea before hearing it and does not push a document toward him.", "dialogueIndices": [2,3]},
-      {"panel": 3, "location": "Safe Cave table", "shotType": "two-shot", "action": "Carrie puts both hands flat on the bare table and makes the voluntary boundary concrete.", "dialogueIndices": [4]},
-      {"panel": 4, "location": "Safe Cave table", "shotType": "close on Bjorn", "action": "Bjorn's posture changes slightly when she describes people who lost the lives in which they knew their purpose.", "dialogueIndices": [5,6]},
-      {"panel": 5, "location": "apartment-building stoop", "shotType": "wide", "action": "Later, Carrie holds the building door while Bjorn comes outside in his coat under his own power, already committed enough to complain about the meeting he has not attended yet.", "dialogueIndices": [7,8]}
+      {"panel": 2, "location": "Safe Cave table", "shotType": "close on Carrie", "action": "After Bjorn’s immediate refusal, Carrie keeps her hands off the bare table and watches him; no paperwork sits between them.", "dialogueIndices": [2,3]},
+      {"panel": 3, "location": "Safe Cave table", "shotType": "two-shot", "action": "Carrie puts both hands flat on the bare table while listing “No form. No compliance box. No housing condition.”", "dialogueIndices": [4]},
+      {"panel": 4, "location": "Safe Cave table", "shotType": "close on Bjorn", "action": "Bjorn’s shoulders drop a fraction; his eyes move to the bagged broken power strip and then back to Carrie.", "dialogueIndices": [5,6]},
+      {"panel": 5, "location": "apartment-building stoop", "shotType": "wide", "action": "Later, Carrie holds the building door. Bjorn comes out already dressed in his coat and passes her toward the stairs while delivering his complaint about the meeting.", "dialogueIndices": [7,8]}
     ],
     "dialogueInline": [
       {"handle": "@vik.Carrie", "text": "DTI runs a group for temporal arrivals."},
@@ -149,7 +149,7 @@
     "panelPlan": [
       {"panel": 1, "location": "community-center multipurpose room", "shotType": "wide", "action": "Eight mismatched chairs make an imperfect circle. Ordinary displaced adults sit casually. Bjorn sits too upright. Group Facilitator occupies an ordinary chair, not a head position. Coffee urn and paper cups sit behind them."},
       {"panel": 2, "location": "community-center chair circle", "shotType": "medium", "action": "1987 Participant speaks while holding one subtle late-1980s personal object; their current clothes are practical contemporary layers.", "dialogueIndices": [0]},
-      {"panel": 3, "location": "community-center chair circle", "shotType": "medium on Bjorn", "action": "Bjorn turns toward the participant and visibly assesses the date as if measuring distance.", "dialogueIndices": [1]},
+      {"panel": 3, "location": "community-center chair circle", "shotType": "medium on Bjorn", "action": "Bjorn turns toward the participant, tilts his head and narrows his eyes before answering immediately.", "dialogueIndices": [1]},
       {"panel": 4, "location": "community-center chair circle", "shotType": "close on 1987 Participant", "action": "The participant's mouth tightens; they square their shoulders and hold Bjorn's gaze.", "dialogueIndices": [2]},
       {"panel": 5, "location": "community-center chair circle", "shotType": "two-shot", "action": "The participant keeps steady eye contact. Bjorn's certainty drops from his face; after a beat he answers the literal wording.", "dialogueIndices": [3,4,5]}
     ],
@@ -161,6 +161,6 @@
       {"handle": "@vik.Bjorn", "text": "I did not call you ancient."},
       {"handle": "@vik.Participant1987", "text": "You did it with your face."}
     ],
-    "directionInline": ["Group Facilitator is present but does not dominate the page. Other participants are ordinary background adults; do not costume them as a historical parade."]
+    "directionInline": ["Group Facilitator remains seated in the same chair circle as everyone else. Background participants wear ordinary contemporary practical clothing with no historical-costume styling."]
   }
 ]
