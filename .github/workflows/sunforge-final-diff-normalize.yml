@@ -1,0 +1,70 @@
+name: Sunforge final diff normalize
+on:
+  push:
+    branches:
+      - sunforge-script-pass-20260914
+permissions:
+  contents: write
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sunforge-script-pass-20260914
+          fetch-depth: 0
+      - name: Restore formatting and preserve final wording
+        run: |
+          git checkout a69824debb5aff6da9e9b6735e7d7673ed5d60fa -- data/shows/sunforge-outlaw-s1/pages_e08.json data/shows/sunforge-outlaw-s1/pages_e10.json data/shows/sunforge-outlaw-s1/pages_e11.json data/shows/sunforge-outlaw-s1/pages_e12.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base=Path('data/shows/sunforge-outlaw-s1')
+          repl={
+            'pages_e08.json':[
+              ('You do not sound like you believe it.', "You don't sound like you believe that."),
+              ('That is all you have?', "That's all you've got?"),
+              ('We walked toward a stranger for half the day. They did not ask us to.', "We walked toward a stranger for half the day. They didn't ask us to."),
+            ],
+            'pages_e10.json':[
+              ('No. That is the problem.', "No. It's just harder to trace."),
+              ('You come through for three days and see a constellation. I have known half those stars since they were children.', "You've been here three days. I've known half those people since they were children."),
+            ],
+            'pages_e11.json':[
+              ('That is not flattering.', "That's not flattering."),
+              ('Do not encourage her.', "Don't encourage her."),
+              ('That is not a crime.', "That's not a crime."),
+              ('I did not say it was.', "I didn't say it was."),
+              ('Do not make me regret it.', "Don't make me regret it."),
+              ('You really do not speculate about people?', "You really don't speculate about people?"),
+              ('That is the short answer.', "That's the short answer."),
+              ('It is also true.', "It's also true."),
+              ('You are not helping.', "You're not helping."),
+              ('I did not say anything.', "I didn't say anything."),
+            ],
+            'pages_e12.json':[
+              ('We have heard that before.', "We've heard that before."),
+              ('I am trying.', "I'm trying."),
+              ('That is specific.', "That's specific."),
+              ('It does not help.', "It doesn't help."),
+            ],
+          }
+          for fn,pairs in repl.items():
+            p=base/fn; text=p.read_text()
+            for old,new in pairs:
+              a=json.dumps(old,ensure_ascii=False); b=json.dumps(new,ensure_ascii=False)
+              if text.count(a)!=1: raise RuntimeError(f'{fn}: {old!r} hits={text.count(a)}')
+              text=text.replace(a,b)
+            p.write_text(text)
+            json.loads(text)
+          print('Final script formatting preserved')
+          PY
+      - name: Commit and remove helper
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/sunforge-final-diff-normalize.yml
+          git add data/shows/sunforge-outlaw-s1/pages_e08.json data/shows/sunforge-outlaw-s1/pages_e10.json data/shows/sunforge-outlaw-s1/pages_e11.json data/shows/sunforge-outlaw-s1/pages_e12.json
+          git commit -m "Preserve focused Sunforge script diff"
+          git push origin HEAD:sunforge-script-pass-20260914
