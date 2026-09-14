@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: ENHANCED TREATMENT — 24-PAGE DRAMATIC SPINE LOCKED; PANEL/DIALOGUE PASS PENDING  
+Status: ENHANCED TREATMENT — SUPERSEDED FOR CURRENT WRITING BY FULL 24-PAGE DEVELOPMENT SCRIPT `issue_07_war_council_script.md`  
 Primary function: the household decides what it is defending before the city asks it to defend itself.
 
 ## Story lock
