@@ -2,31 +2,19 @@
 
 Pages: 24
 Panels: 120
-Warnings: 22
+Warnings: 10
 
 ## WARNINGS
-- VIK_S1I06_P01 P4: ABSTRACT? Gunnar hands Bjorn a paper coffee cup instead of a task while the two male Kin continue moving through their morning.
-- VIK_S1I06_P01 P5: ABSTRACT? Bjorn stands holding the coffee while everyone else remains occupied behind him. His stillness reads as genuine disorientation, not comic sulking.
-- VIK_S1I06_P03 P3: ABSTRACT? Bjorn turns from the window and gestures once toward the ordinary apartment around them rather than performing the speech theatrically.
-- VIK_S1I06_P04: CORRECTION-RESIDUE? Astrid is not visible. The shock comes from Bjorn choosing violence after the electrical danger is already over; do not make the spark or wall impact into an action spectacle.
-- VIK_S1I06_P06 P4: ABSTRACT? The participant answers with controlled anger rather than melodrama.
-- VIK_S1I06_P06 P5: ABSTRACT? The participant holds Bjorn's gaze. Bjorn realizes his ranking system has failed but still argues the literal wording.
-- VIK_S1I06_P07 P3: ABSTRACT? Bjorn leans slightly forward, genuinely testing the structure rather than mocking it.
-- VIK_S1I06_P08: undefined dialogue handle: @vik.GroupParticipant
-- VIK_S1I06_P10 P5: ABSTRACT? Bjorn compares the landlord-painted drywall, the rack and the freestanding shelf before giving a narrow opinion. Second Male Kin sets the drill down rather than being ordered to do so.
-- VIK_S1I06_P14 P3: ABSTRACT? Carrie realizes Bjorn is not there.
-- VIK_S1I06_P14: CORRECTION-RESIDUE? Panel 5 is an exterior cut to Bjorn on the block; do not imply the apartment characters can clearly see him from inside.
-- VIK_S1I06_P15 P4: ABSTRACT? Bjorn asks about the result the participant wants rather than whether the dinner is good or bad.
-- VIK_S1I06_P17 P1: ABSTRACT? Participants stack cups and chairs. Bjorn folds one chair because everyone is cleaning up, not because he has taken charge.
-- VIK_S1I06_P17 P3: ABSTRACT? The facilitator answers plainly rather than turning the exchange into a lesson.
-- VIK_S1I06_P18 P3: ABSTRACT? Bjorn interrupts carefully with a question instead of a plan.
-- VIK_S1I06_P18 P4: ABSTRACT? Carrie stops walking for half a beat because the question is so unlike his old reflex. Bjorn repeats it exactly.
-- VIK_S1I06_P19 P5: ABSTRACT? Bjorn looks once more across the functioning room, then sits instead of calling anyone over or asking where Astrid is.
-- VIK_S1I06_P19: CORRECTION-RESIDUE? Astrid remains off-page; do not imply danger or disappearance. Show only the two established male Kin.
-- VIK_S1I06_P20 P3: ABSTRACT? The owner indicates one exact lower corner and demonstrates the small lift needed. Bjorn repeats the limit back.
-- VIK_S1I06_P21 P1: ABSTRACT? Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, dressed for an ordinary day rather than a session ritual.
-- VIK_S1I06_P22 P1: ABSTRACT? A normal silence settles over the group. Bjorn sits with his eyes down and both hands still on his knees rather than studying another participant.
-- VIK_S1I06_P24 P1: ABSTRACT? Gunnar reads. The two male Kin continue separate quiet tasks. Astrid enters in the background carrying one ordinary small bag and is greeted without interrogation. Carrie sits at the table with coffee rather than a folder. Bjorn stands near the window.
+- VIK_S1I06_P02 P4: ABSTRACT? The delivery worker looks irritated at being treated as if he needs rescuing. The owner keeps Bjorn out of the work lane.
+- VIK_S1I06_P06 P3: ABSTRACT? Bjorn turns toward the participant and visibly assesses the date as if measuring distance.
+- VIK_S1I06_P07 P1: ABSTRACT? A silence lasts without anyone rushing to fill it. Bjorn looks around the circle, trying to locate the person responsible for deciding who goes next.
+- VIK_S1I06_P07 P5: ABSTRACT? Bjorn recognizes the distinction between a rule and an order. The facilitator lets the distinction stand without congratulating him.
+- VIK_S1I06_P09 P3: ABSTRACT? Carrie falls into step beside Bjorn and hides how interested she is in the fact that he is still engaged.
+- VIK_S1I06_P11 P2: ABSTRACT? Bjorn approaches and stops one full stride short of the work. His posture shows the impulse to step in, but he does not.
+- VIK_S1I06_P12 P2: ABSTRACT? Bjorn kneels beside him and reaches for the screwdriver as if taking over is the natural form of help.
+- VIK_S1I06_P12 P5: ABSTRACT? Second Male Kin tests the repaired stool; it holds. Bjorn looks from the stool to his now-empty hands and is quietly satisfied.
+- VIK_S1I06_P13 P2: ABSTRACT? Bjorn emerges from 5B and scans the awkward furniture setup as if locating a larger problem.
+- VIK_S1I06_P21 P3: ABSTRACT? The participant describes the family repeating the same questions, their brother trying to stop it, and their own decision to leave.
 
 # ASSEMBLED PAGES
 
@@ -47,8 +35,8 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 {"panel":1,"location":"Safe Cave sleeping area opening onto kitchenette","shotType":"wide","action":"Early morning across the whole studio. Gunnar pours coffee. First Male Kin finishes slicing bread at the tiny table. Second Male Kin ties a laundry bag and checks the brass key near the door. Bjorn sits up from bedding at frame edge; Astrid is not present."}
 {"panel":2,"location":"Safe Cave kitchenette table","shotType":"medium","action":"Bjorn crosses to the table and reaches for the bread knife just as First Male Kin finishes cutting and slides the bread into a bowl.","dialogueIndices":[0,1]}
 {"panel":3,"location":"Safe Cave doorway side of kitchenette","shotType":"medium","action":"Bjorn turns toward the laundry bag; Second Male Kin shoulders it before Bjorn can take it.","dialogueIndices":[2,3]}
-{"panel":4,"location":"Safe Cave kitchenette","shotType":"two-shot","action":"Gunnar hands Bjorn a paper coffee cup instead of a task while the two male Kin continue moving through their morning.","dialogueIndices":[4]}
-{"panel":5,"location":"Safe Cave kitchenette","shotType":"tight medium","action":"Bjorn stands holding the coffee while everyone else remains occupied behind him. His stillness reads as genuine disorientation, not comic sulking.","dialogueIndices":[5]}
+{"panel":4,"location":"Safe Cave kitchenette","shotType":"two-shot","action":"Gunnar hands Bjorn a paper coffee cup. Bjorn accepts it; behind them First Male Kin clears the breakfast area and Second Male Kin settles the laundry bag on his shoulder.","dialogueIndices":[4]}
+{"panel":5,"location":"Safe Cave kitchenette","shotType":"tight medium","action":"Bjorn stands motionless with the coffee held at chest height. Behind him Gunnar turns back to the table while the two male Kin continue their tasks without looking toward Bjorn.","dialogueIndices":[5]}
 
 [DIALOGUE]
 @vik.Bjorn says "I will do that."
@@ -108,7 +96,7 @@ First Male Kin — @vik.KinMan1 — Identity: Use the same specific established 
 [PANEL PLAN]
 {"panel":1,"location":"Safe Cave doorway and table","shotType":"wide","action":"Carrie enters with a thin folder and grocery receipt. Gunnar reads at the table. First Male Kin repairs a loose bag strap. Bjorn stands at the window with empty hands; Second Male Kin and Astrid are out.","dialogueIndices":[0]}
 {"panel":2,"location":"Safe Cave table","shotType":"medium","action":"Carrie puts the folder down and looks toward Bjorn when he does not react.","dialogueIndices":[1]}
-{"panel":3,"location":"Safe Cave window side","shotType":"two-shot","action":"Bjorn turns from the window and gestures once toward the ordinary apartment around them rather than performing the speech theatrically.","dialogueIndices":[2]}
+{"panel":3,"location":"Safe Cave window side","shotType":"two-shot","action":"Bjorn turns from the window and gives one restrained sweep of his hand toward the apartment, his face serious and still.","dialogueIndices":[2]}
 {"panel":4,"location":"Safe Cave window side","shotType":"close medium","action":"Carrie listens without correcting him. Bjorn indicates Gunnar and the working Kin with a small sweep of his hand.","dialogueIndices":[3]}
 {"panel":5,"location":"Safe Cave window side","shotType":"two-shot","action":"Carrie names the wound; Bjorn takes the unfamiliar word literally, forcing her to translate it.","dialogueIndices":[4,5,6,7]}
 
@@ -155,7 +143,7 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 @vik.Carrie says "You scared everybody because the problem didn't need you."
 
 [DIRECTION]
-Astrid is not visible. The shock comes from Bjorn choosing violence after the electrical danger is already over; do not make the spark or wall impact into an action spectacle.
+Astrid is not visible. The electrical fault is one brief minor spark; by Panel 5 the smoke has stopped. The wall strike cracks the plastic casing once, with the household reaction carrying the impact.
 
 ## VIK_S1I06_P05
 Carrie offers Bjorn a voluntary temporal-arrival support group, and he agrees only after she makes clear that no form, housing rule or compliance requirement is attached.
@@ -202,8 +190,8 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 {"panel":1,"location":"community-center multipurpose room","shotType":"wide","action":"Eight mismatched chairs make an imperfect circle. Ordinary displaced adults sit casually. Bjorn sits too upright. Group Facilitator occupies an ordinary chair, not a head position. Coffee urn and paper cups sit behind them."}
 {"panel":2,"location":"community-center chair circle","shotType":"medium","action":"1987 Participant speaks while holding one subtle late-1980s personal object; their current clothes are practical contemporary layers.","dialogueIndices":[0]}
 {"panel":3,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn turns toward the participant and visibly assesses the date as if measuring distance.","dialogueIndices":[1]}
-{"panel":4,"location":"community-center chair circle","shotType":"close on 1987 Participant","action":"The participant answers with controlled anger rather than melodrama.","dialogueIndices":[2]}
-{"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant holds Bjorn's gaze. Bjorn realizes his ranking system has failed but still argues the literal wording.","dialogueIndices":[3,4,5]}
+{"panel":4,"location":"community-center chair circle","shotType":"close on 1987 Participant","action":"The participant's mouth tightens; they square their shoulders and hold Bjorn's gaze.","dialogueIndices":[2]}
+{"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant keeps steady eye contact. Bjorn's certainty drops from his face; after a beat he answers the literal wording.","dialogueIndices":[3,4,5]}
 
 [DIALOGUE]
 @vik.Participant1987 says "I came through from 1987."
@@ -230,7 +218,7 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 [PANEL PLAN]
 {"panel":1,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"A silence lasts without anyone rushing to fill it. Bjorn looks around the circle, trying to locate the person responsible for deciding who goes next.","dialogueIndices":[0]}
 {"panel":2,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator answers from the same kind of chair as everyone else, relaxed and unceremonial.","dialogueIndices":[1]}
-{"panel":3,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn leans slightly forward, genuinely testing the structure rather than mocking it.","dialogueIndices":[2]}
+{"panel":3,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn leans slightly forward, brow narrowed and eyes fixed on the facilitator.","dialogueIndices":[2]}
 {"panel":4,"location":"community-center chair circle","shotType":"wide","action":"Several participants remain physically relaxed: one drinks coffee, one looks down, another listens without preparing to speak. Nobody is compelled to perform.","dialogueIndices":[3]}
 {"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"Bjorn recognizes the distinction between a rule and an order. The facilitator lets the distinction stand without congratulating him.","dialogueIndices":[4,5,6,7]}
 
@@ -256,14 +244,14 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged New Yorker in ordinary contemporary clothes, calm unshowy presence, seated on the same stackable chairs as participants. No therapist-office styling, white coat, podium, or authority costume. — Performance: Plainspoken, patient, willing to interrupt Bjorn without treating him as a problem to manage. Firm boundaries, little ceremony.
 
 [PANEL PLAN]
-{"panel":1,"location":"community-center chair circle","shotType":"medium","action":"Another participant describes a visibly unstable housing/family situation while keeping their body closed and insisting they can manage.","dialogueIndices":[0]}
+{"panel":1,"location":"community-center chair circle","shotType":"medium","action":"An unnamed adult participant in ordinary contemporary clothes sits folded inward, arms close to the body, while describing an unstable housing and family situation and insisting they can manage.","dialogueIndices":[0]}
 {"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn's attention sharpens and he answers before the participant asks for anything.","dialogueIndices":[1]}
 {"panel":3,"location":"community-center chair circle","shotType":"two-shot","action":"The participant stiffens as Bjorn states what he thinks they are afraid of.","dialogueIndices":[2]}
 {"panel":4,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator raises one hand from their chair and cuts Bjorn off without standing over him.","dialogueIndices":[3,4]}
 {"panel":5,"location":"community-center chair circle","shotType":"tight two-shot","action":"The facilitator keeps the correction practical: Bjorn may be right, but the other participant did not ask him to make their truth public.","dialogueIndices":[5,6,7]}
 
 [DIALOGUE]
-@vik.GroupParticipant says "It's fine. I can handle it."
+OTHER PARTICIPANT says "It's fine. I can handle it."
 @vik.Bjorn says "It is not fine."
 @vik.Bjorn says "You fear saying so because then someone may decide for you."
 @vik.GroupFacilitator says "Stop."
@@ -319,7 +307,7 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 {"panel":2,"location":"Safe Cave wall","shotType":"medium on Bjorn","action":"Bjorn enters, reads the disagreement instantly and raises one hand to settle it by habit.","dialogueIndices":[0]}
 {"panel":3,"location":"Safe Cave wall","shotType":"close on Bjorn","action":"He stops in the middle of the first word and lowers the hand slightly."}
 {"panel":4,"location":"Safe Cave wall","shotType":"three-shot","action":"Bjorn asks what role they actually want from him. The two men exchange a quick look before First Male Kin answers.","dialogueIndices":[1,2]}
-{"panel":5,"location":"Safe Cave wall and shelf","shotType":"wide","action":"Bjorn compares the landlord-painted drywall, the rack and the freestanding shelf before giving a narrow opinion. Second Male Kin sets the drill down rather than being ordered to do so.","dialogueIndices":[3]}
+{"panel":5,"location":"Safe Cave wall and shelf","shotType":"wide","action":"Bjorn looks from the landlord-painted drywall to the rack and then to the freestanding shelf before pointing at the shelf. Second Male Kin lowers the drill to the floor.","dialogueIndices":[3]}
 
 [DIALOGUE]
 @vik.Bjorn says "Put it—"
@@ -420,7 +408,7 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 [PANEL PLAN]
 {"panel":1,"location":"fifth-floor hallway at apartment 5B","shotType":"medium","action":"Carrie knocks once and enters with her coat still on, expecting to collect Bjorn.","dialogueIndices":[0]}
 {"panel":2,"location":"Safe Cave interior","shotType":"wide","action":"Gunnar reads at the table. First Male Kin is nearby with a household task. Bjorn is absent. Astrid and Second Male Kin are also not present; nobody treats that as notable."}
-{"panel":3,"location":"Safe Cave table","shotType":"medium on Carrie and Gunnar","action":"Carrie realizes Bjorn is not there.","dialogueIndices":[1,2]}
+{"panel":3,"location":"Safe Cave table","shotType":"medium on Carrie and Gunnar","action":"Carrie scans the empty window and sleeping side of the studio where Bjorn would normally be, then looks back to Gunnar.","dialogueIndices":[1,2]}
 {"panel":4,"location":"Safe Cave table","shotType":"two-shot","action":"Carrie confirms that Bjorn left without her. Gunnar answers matter-of-factly.","dialogueIndices":[3,4]}
 {"panel":5,"location":"Bushwick sidewalk half a block from apartment","shotType":"long medium","action":"Bjorn moves alone with purpose through ordinary pedestrian traffic toward the meeting. This is a direct exterior cut, not Carrie's impossible telescopic view from the apartment.","dialogueIndices":[5]}
 
@@ -433,7 +421,7 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 @vik.Gunnar says "He knows the way."
 
 [DIRECTION]
-Panel 5 is an exterior cut to Bjorn on the block; do not imply the apartment characters can clearly see him from inside.
+Panel 5 is a direct exterior cut to Bjorn on the block.
 
 ## VIK_S1I06_P15
 When the 1987 Participant asks whether to attend a family dinner that keeps turning them into a period exhibit, Bjorn stops before deciding for them and asks what they actually want.
@@ -451,7 +439,7 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 {"panel":1,"location":"community-center chair circle","shotType":"medium on 1987 Participant","action":"1987 Participant explains the family invitation with contained frustration. Group Facilitator listens from elsewhere in the circle without taking over.","dialogueIndices":[0]}
 {"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn leans forward and starts to give an immediate answer.","dialogueIndices":[1]}
 {"panel":3,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn stops mid-sentence. He glances once toward the facilitator, who does not cue him."}
-{"panel":4,"location":"community-center chair circle","shotType":"two-shot","action":"Bjorn asks about the result the participant wants rather than whether the dinner is good or bad.","dialogueIndices":[2]}
+{"panel":4,"location":"community-center chair circle","shotType":"two-shot","action":"Bjorn opens both hands, looks directly at the participant, asks what they want from the dinner, and waits for the answer.","dialogueIndices":[2]}
 {"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant thinks before answering. Bjorn hears two separate wants and names them as separate problems.","dialogueIndices":[3,4]}
 
 [DIALOGUE]
@@ -499,9 +487,9 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged New Yorker in ordinary contemporary clothes, calm unshowy presence, seated on the same stackable chairs as participants. No therapist-office styling, white coat, podium, or authority costume. — Performance: Plainspoken, patient, willing to interrupt Bjorn without treating him as a problem to manage. Firm boundaries, little ceremony.
 
 [PANEL PLAN]
-{"panel":1,"location":"community-center multipurpose room after meeting","shotType":"wide","action":"Participants stack cups and chairs. Bjorn folds one chair because everyone is cleaning up, not because he has taken charge."}
+{"panel":1,"location":"community-center multipurpose room after meeting","shotType":"wide","action":"Participants stack cups and chairs. Bjorn folds one chair and adds it to the same stack while two other participants clean nearby."}
 {"panel":2,"location":"community-center multipurpose room","shotType":"two-shot","action":"Bjorn and the facilitator continue their argument while carrying chairs toward the wall.","dialogueIndices":[0]}
-{"panel":3,"location":"community-center multipurpose room","shotType":"medium on facilitator","action":"The facilitator answers plainly rather than turning the exchange into a lesson.","dialogueIndices":[1]}
+{"panel":3,"location":"community-center multipurpose room","shotType":"medium on facilitator","action":"The facilitator keeps carrying a folded chair toward the wall while answering Bjorn.","dialogueIndices":[1]}
 {"panel":4,"location":"community-center multipurpose room","shotType":"two-shot","action":"Bjorn reframes unwanted dependency as being treated like a child; the facilitator answers with an equally concrete distinction.","dialogueIndices":[2,3]}
 {"panel":5,"location":"community-center hallway","shotType":"wide","action":"They walk in opposite directions after the argument. Neither appears to have won.","dialogueIndices":[4,5]}
 
@@ -527,8 +515,8 @@ Carrie — @vik.Carrie — Identity: Early-40s woman with a heart-shaped face, f
 [PANEL PLAN]
 {"panel":1,"location":"sidewalk beside neighborhood coffee cart","shotType":"medium","action":"Carrie walks beside Bjorn with coffee and a folder tucked under one arm, already mid-rant.","dialogueIndices":[0]}
 {"panel":2,"location":"sidewalk beside coffee cart","shotType":"medium on Bjorn","action":"Bjorn listens with the concentrated expression he usually wears before proposing action while Carrie continues.","dialogueIndices":[1]}
-{"panel":3,"location":"sidewalk","shotType":"two-shot","action":"Bjorn interrupts carefully with a question instead of a plan.","dialogueIndices":[2]}
-{"panel":4,"location":"sidewalk","shotType":"two-shot","action":"Carrie stops walking for half a beat because the question is so unlike his old reflex. Bjorn repeats it exactly.","dialogueIndices":[3,4]}
+{"panel":3,"location":"sidewalk","shotType":"two-shot","action":"Bjorn raises one hand slightly and asks his question before Carrie reaches the next complaint.","dialogueIndices":[2]}
+{"panel":4,"location":"sidewalk","shotType":"two-shot","action":"Carrie stops for half a step and turns to look directly at Bjorn. He meets her eye and repeats the question.","dialogueIndices":[3,4]}
 {"panel":5,"location":"sidewalk walking away from coffee cart","shotType":"two-shot","action":"They resume walking. Carrie chooses witness; Bjorn gives only the judgment she actually wanted.","dialogueIndices":[5,6,7]}
 
 [DIALOGUE]
@@ -559,7 +547,7 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 {"panel":2,"location":"Safe Cave doorway","shotType":"medium on Bjorn","action":"After the door closes, Bjorn glances from Gunnar to the two male Kin and then toward the empty doorway, visibly accounting for who is present."}
 {"panel":3,"location":"Safe Cave table","shotType":"two-shot","action":"Gunnar notices Bjorn's repeated glance and looks up from his book.","dialogueIndices":[0]}
 {"panel":4,"location":"Safe Cave table","shotType":"two-shot","action":"Bjorn admits the gap in his knowledge. Gunnar simply confirms it.","dialogueIndices":[1,2]}
-{"panel":5,"location":"Safe Cave main room","shotType":"wide","action":"Bjorn looks once more across the functioning room, then sits instead of calling anyone over or asking where Astrid is.","dialogueIndices":[3]}
+{"panel":5,"location":"Safe Cave main room","shotType":"wide","action":"Bjorn looks once more across the room, then lowers himself onto a chair near the wall. The doorway remains quiet.","dialogueIndices":[3]}
 
 [DIALOGUE]
 @vik.Gunnar says "What?"
@@ -568,7 +556,7 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 @vik.Bjorn says "Good."
 
 [DIRECTION]
-Astrid remains off-page; do not imply danger or disappearance. Show only the two established male Kin.
+Astrid is off-page. Only First Male Kin and Second Male Kin appear among the Kin.
 
 ## VIK_S1I06_P20
 At closing time, the Bodega Owner finally asks Bjorn for difficult physical help and gives him one precise role in moving a refrigerator case.
@@ -584,7 +572,7 @@ Bodega Owner — @vik.BodegaOwner
 [PANEL PLAN]
 {"panel":1,"location":"bodega front aisle","shotType":"wide","action":"A narrow refrigerated display cabinet will not clear a counter corner. Two delivery workers and the Bodega Owner study the angle; floor mat and counter leave only inches of space."}
 {"panel":2,"location":"bodega entrance","shotType":"medium","action":"Bjorn enters for his usual purchase. The owner sees him and points immediately at the cabinet.","dialogueIndices":[0]}
-{"panel":3,"location":"bodega front aisle","shotType":"medium","action":"The owner indicates one exact lower corner and demonstrates the small lift needed. Bjorn repeats the limit back.","dialogueIndices":[1,2]}
+{"panel":3,"location":"bodega front aisle","shotType":"medium","action":"The owner crouches beside one lower corner, points to the exact handhold and measures a two-inch lift with thumb and forefinger. Bjorn nods and repeats the limit back.","dialogueIndices":[1,2]}
 {"panel":4,"location":"bodega front aisle","shotType":"wide","action":"On the owner's cue, Bjorn lifts his corner only enough for the delivery workers to pivot the cabinet through. Everyone keeps a defined role; nobody is in danger."}
 {"panel":5,"location":"bodega counter","shotType":"medium","action":"Afterward the owner hands Bjorn his regular coffee. Bjorn accepts it without reaching for another crate or task.","dialogueIndices":[3,4,5]}
 
@@ -608,7 +596,7 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 1987 Participant — @vik.Participant1987 — Identity: Physically mid-30s displaced adult in practical contemporary thrifted layers, with at most one subtle personal object retained from the late 1980s. Never a period-costume joke. — Performance: Direct, guarded, dry, and capable of pushing back on Bjorn. Family grief is lived-in rather than melodramatic.
 
 [PANEL PLAN]
-{"panel":1,"location":"community-center sidewalk","shotType":"wide","action":"Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, dressed for an ordinary day rather than a session ritual."}
+{"panel":1,"location":"community-center sidewalk","shotType":"wide","action":"Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, keys and phone visible in the other hand, coat open over ordinary contemporary clothes."}
 {"panel":2,"location":"community-center sidewalk","shotType":"two-shot","action":"The participant tells Bjorn they went to the family dinner. He asks only what happened.","dialogueIndices":[0,1]}
 {"panel":3,"location":"community-center doorway","shotType":"medium on 1987 Participant","action":"The participant describes the family repeating the same questions, their brother trying to stop it, and their own decision to leave.","dialogueIndices":[2]}
 {"panel":4,"location":"community-center entry corridor","shotType":"two-shot walking","action":"They enter side by side as the participant describes the later one-on-one invitation. Bjorn names the changed condition, and the participant agrees.","dialogueIndices":[3,4,5]}
@@ -633,7 +621,7 @@ Bjorn — @vik.Bjorn — Identity: Massive, broad-shouldered late-30s Norse man 
 Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged New Yorker in ordinary contemporary clothes, calm unshowy presence, seated on the same stackable chairs as participants. No therapist-office styling, white coat, podium, or authority costume. — Performance: Plainspoken, patient, willing to interrupt Bjorn without treating him as a problem to manage. Firm boundaries, little ceremony.
 
 [PANEL PLAN]
-{"panel":1,"location":"community-center chair circle","shotType":"wide","action":"A normal silence settles over the group. Bjorn sits with his eyes down and both hands still on his knees rather than studying another participant."}
+{"panel":1,"location":"community-center chair circle","shotType":"wide","action":"A normal silence settles over the group. Bjorn sits with both hands flat on his knees and his eyes fixed on the floor."}
 {"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn lifts his head and volunteers the floor awkwardly.","dialogueIndices":[0]}
 {"panel":3,"location":"community-center chair circle","shotType":"wide reaction","action":"Several participants glance up without leaning in or turning the moment into a performance. The facilitator answers simply.","dialogueIndices":[1]}
 {"panel":4,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn states the fear directly with level eye contact and no anger.","dialogueIndices":[2]}
@@ -692,7 +680,7 @@ Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established
 Astrid — @vik.Astrid — Identity: Use the established female Kin member from released Vikings 2026 Issue 1 and the approved current character reference as strict identity authority. Do not invent a new face, age, build, hair, or costume to distinguish her from the released woman. — Performance: Grounded and practical. Her integration is shown through ordinary competence, relationships, language, routines, and self-directed movement rather than through explanatory speeches. — Continuity: Astrid is one of exactly three Kin and the only woman; Issues 1-3: show Astrid with the two male Kin at the Bushwick placement rather than independently around the city; Middle issues may show Astrid separately as her own neighborhood life becomes visible; Issues 6-7: keep Astrid largely out of foreground action so the audience does not fully track how far her independent integration has progressed; Issue 8 courtroom payoff: Astrid can unexpectedly demonstrate that she is the household's most integrated member without becoming a different character or an assimilation mascot
 
 [PANEL PLAN]
-{"panel":1,"location":"Safe Cave whole room","shotType":"wide","action":"Gunnar reads. The two male Kin continue separate quiet tasks. Astrid enters in the background carrying one ordinary small bag and is greeted without interrogation. Carrie sits at the table with coffee rather than a folder. Bjorn stands near the window."}
+{"panel":1,"location":"Safe Cave whole room","shotType":"wide","action":"Gunnar reads. First Male Kin continues a small repair while Second Male Kin sorts groceries. Astrid enters in the background carrying one small bag; First Male Kin gives her a brief nod and Second Male Kin shifts aside to let her pass. Carrie sits at the table with coffee, no folder visible. Bjorn stands near the window."}
 {"panel":2,"location":"Safe Cave table/window axis","shotType":"medium on Carrie","action":"Carrie looks toward Bjorn and asks about the group without getting up from the table.","dialogueIndices":[0]}
 {"panel":3,"location":"Safe Cave window","shotType":"medium on Bjorn","action":"Bjorn turns only slightly, preserving his habitual seriousness.","dialogueIndices":[1]}
 {"panel":4,"location":"Safe Cave table","shotType":"medium on Carrie","action":"Carrie gives a dry, unsurprised reply and takes another sip of coffee.","dialogueIndices":[2]}
