@@ -1,0 +1,238 @@
+name: Sunforge plot causality pass
+
+on:
+  push:
+    branches:
+      - sunforge-causality-pass-20260914
+    paths:
+      - '.github/workflows/sunforge-causality-pass.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  edit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sunforge-causality-pass-20260914
+          fetch-depth: 0
+
+      - name: Apply causal continuity pass
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path('data/shows/sunforge-outlaw-s1')
+
+          def load(issue):
+              p = base / f'pages_e{issue:02d}.json'
+              return p, json.loads(p.read_text(encoding='utf-8'))
+
+          def get_page(data, page_id):
+              return next(x for x in data if x['id'] == page_id)
+
+          def write(path, data):
+              path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          # Issue 2: make Veyra's information advantage intentional rather than script-omniscient.
+          p, data = load(2)
+          pg = get_page(data, 'SUN_S1E02_P03')
+          pg['summary'] = "Eva notices Veyra questioning camp members about Kael. Veyra reveals that she already has more identities attached to Kael's face than Eva and Jessa have encountered, making clear that her investigation predates their awareness of it."
+          pg['dialogueInline'] = [
+              {'speaker':'Veyra','text':'How long has he been calling himself Kael?'},
+              {'speaker':'Eva','text':'Since before I met him, I assume.'},
+              {'speaker':'Veyra','text':'You assume?'},
+              {'speaker':'Jessa','text':'His name is Kael.'},
+              {'speaker':'Veyra','text':'How do you know?'},
+              {'speaker':'Jessa','text':"Because that's how introductions work."},
+              {'speaker':'Veyra','text':'People lie during introductions.'},
+              {'speaker':'Eva','text':"Do you think he's lying?"},
+              {'speaker':'Veyra','text':'I have four names attached to that face. I think that deserves a better question.'},
+              {'speaker':'Eva','text':"We've only heard two."},
+              {'speaker':'Veyra','text':"Then I'm ahead of you."},
+              {'speaker':'Jessa','text':'Then ask him instead of us.'},
+              {'speaker':'Veyra','text':"He doesn't answer the question I'm asking."},
+              {'speaker':'Eva','text':'He answers. You just keep wanting a different answer.'},
+              {'speaker':'Veyra','text':'You trust him.'},
+              {'speaker':'Jessa','text':"I didn't say that."},
+              {'speaker':'Eva','text':'You kind of did.'},
+              {'speaker':'Jessa','text':'Keep walking, Eva.'},
+          ]
+          pg['directionInline'] = [{'text':"Veyra's reference to four names is deliberate foreshadowing: she has been collecting candidate identities and local stories before the trio understands the scope of her pursuit. Do not imply she knows the deeper cause."}]
+          write(p, data)
+
+          # Issue 4: define Veyra/Samuel's method and make Merrit's provenance reconstructable.
+          p, data = load(4)
+          pg = get_page(data, 'SUN_S1E04_P04')
+          pg['summary'] = "Pressed by Eva and Jessa, Samuel admits that Veyra selected real unresolved identities from communities along Kael's route and sent him ahead to plant the expectation that Kael might be that person. Varnok and Saye were deliberate tests. Merrit was different: the resemblance story existed before Samuel reached the Mirage, and he only amplified it by predicting Merrit's return."
+          pg['panelPlan'][1]['text'] = "Samuel produces practical route notes: existing people and grievances tied to Varnok, Saye, Merrit and the Architect, with marks showing where he primed an expectation and where a story predated him. These are case notes, not invented aliases or mystical evidence."
+          pg['dialogueInline'] = [
+              {'speaker':'Eva','text':'You told them he was Varnok.'},
+              {'speaker':'Samuel','text':'I told one angry man the name, what Kael looked like, and the day I thought he would pass through.'},
+              {'speaker':'Eva','text':'And Saye?'},
+              {'speaker':'Samuel','text':"I told the camp Saye might come back, and that he might deny being Saye."},
+              {'speaker':'Jessa','text':'So these were real people.'},
+              {'speaker':'Samuel','text':'Real people. Real grievances. Veyra wanted to know whether one of them made Kael react like he knew more than he should.'},
+              {'speaker':'Eva','text':'Merrit?'},
+              {'speaker':'Samuel','text':"I didn't invent Merrit. Veyra found that story before I ever went to the Mirage."},
+              {'speaker':'Eva','text':'But you told Isabelle he would come back.'},
+              {'speaker':'Samuel','text':'Yes.'},
+              {'speaker':'Eva','text':'Why were you doing any of this?'},
+              {'speaker':'Samuel','text':'Veyra thought Kael was lying about his name.'},
+              {'speaker':'Jessa','text':'So you put him in rooms where a lie might break.'},
+              {'speaker':'Samuel','text':'That was the idea.'},
+              {'speaker':'Eva','text':'Using everybody in the room.'},
+              {'speaker':'Samuel','text':'Yes.'},
+              {'speaker':'Jessa','text':'Did you ever ask if they wanted to be part of it?'},
+              {'speaker':'Samuel','text':'No.'},
+          ]
+          pg['directionInline'] = [{'text':"Causal rule: Veyra and Samuel do not invent fake biographies as random traps. They exploit real unresolved identities and prime communities to map Kael onto them, then watch whether Kael reveals knowledge. Merrit is the first candidate whose association with Kael was not initiated by their priming."}]
+
+          pg = get_page(data, 'SUN_S1E04_P06')
+          pg['summary'] = "The first arc ends with a precise distinction. Veyra and Samuel explain how they amplified Varnok, Saye and the Architect, but Merrit was already an independent resemblance story before Samuel primed Isabelle. Their conspiracy explains several appointments, not the existence of every candidate identity."
+          pg['panelPlan'][1]['text'] = "Eva works through Samuel's route notes in order. Varnok, Saye and Architect carry Samuel's marks; Merrit points back to an earlier report from a traveler out of the Mirage and Isabelle's preexisting damaged photograph."
+          pg['dialogueInline'] = [
+              {'speaker':'Eva','text':'Which ones were yours?'},
+              {'speaker':'Veyra','text':'Varnok. Saye. The Architect.'},
+              {'speaker':'Eva','text':'And Merrit?'},
+              {'speaker':'Veyra','text':'A trader out of the Mirage told me Isabelle had been waiting years for a man named Merrit who looked enough like Kael to get my attention. She already had the photograph.'},
+              {'speaker':'Samuel','text':'I went in after that and told her the man might return before the next flare.'},
+              {'speaker':'Eva','text':'So you made the appointment. You did not make Merrit.'},
+              {'speaker':'Veyra','text':'No.'},
+              {'speaker':'Eva','text':'Those were the four names you meant back in Cinder Basin.'},
+              {'speaker':'Veyra','text':'Yes.'},
+              {'speaker':'Kael','text':'Are we leaving?'},
+              {'speaker':'Jessa','text':'Did you just say "we"?'},
+              {'speaker':'Kael','text':'Please do not start.'},
+              {'speaker':'Eva','text':'Too late.'},
+              {'speaker':'Jessa','text':'Much too late.'},
+              {'speaker':'Kael','text':'I knew I should have left both of you at the Last Drop.'},
+              {'speaker':'Eva','text':'You tried.'},
+              {'speaker':'Jessa','text':'Not very hard.'},
+              {'speaker':'Eva','text':'You still think none of this is about him?'},
+              {'speaker':'Jessa','text':'I think people keep deciding what he means before they know him.'},
+              {'speaker':'Eva','text':'We do that too.'},
+              {'speaker':'Jessa','text':'Yes.'},
+              {'speaker':'Eva','text':'You hate admitting that.'},
+              {'speaker':'Jessa','text':'I hate that you noticed.'},
+          ]
+          pg['directionInline'] = [{'text':"Worldview reset #1: Veyra and Samuel can account for the primed expectation and timing of several encounters, but Merrit's resemblance to Kael entered Veyra's investigation from outside their own operation. The human conspiracy is real and causally limited."}]
+          write(p, data)
+
+          # Issue 6: reconcile the Last Drop seed with the dated description Eva found in Issue 1.
+          p, data = load(6)
+          pg = get_page(data, 'SUN_S1E06_P03')
+          pg['summary'] = "Samuel confirms exactly what he planted at the Last Drop: the Varnok name, a rough description of Kael and the day he expected Kael to pass through. Everything after Kael arrived, including the heroic biography and political afterlife of Varnok, developed without Samuel."
+          pg['panelPlan'][1]['text'] = "Samuel confirms the seed Eva found on the first trip: name, rough description and expected day. Veyra then asks who added later details and quickly runs out of clean answers."
+          for line in pg['dialogueInline']:
+              if line['speaker'] == 'Samuel' and line['text'] == 'I gave one angry man one name.':
+                  line['text'] = 'I gave one angry man a name, a description and the day I thought Kael would pass through.'
+                  break
+          else:
+              raise RuntimeError('Expected Last Drop Samuel line not found')
+          pg['directionInline'] = [{'text':"Keep the causal boundary exact. Samuel created the initial appointment at the Last Drop; the town created the Varnok mythology that followed. This must remain consistent with Eva's dated scrap from Issue 1."}]
+          write(p, data)
+
+          # Issue 8: earn Veyra/Samuel joining the moving group and repair spatial dialogue.
+          p, data = load(8)
+          pg = get_page(data, 'SUN_S1E08_P01')
+          pg['summary'] = "After Rowan Hold, Veyra and Samuel catch the trio on the Long Mile and agree to stop operating ahead of them. Jessa allows them to travel on the same road only if they remain in sight. During that uneasy new arrangement, Eva spots a solitary Rider on a pale ridge."
+          pg['panelPlan'] = [
+              {'text':"Wide Long Mile: Veyra and Samuel have caught up after Rowan Hold. Their bedrolls remain separate from the rig, making the new arrangement visibly provisional rather than a sudden found-family tableau."},
+              {'text':"Jessa makes the condition plain: no more disappearing ahead to prepare a town. Veyra accepts because observing Kael without contaminating the next encounter now serves her investigation better too. Eva notices a mounted silhouette on the southern ridge while they are still talking."},
+              {'text':"Kael looks once at the Rider, sees no immediate problem and keeps walking beside the rig. The others gradually shift attention from the travel arrangement to the figure."},
+          ]
+          pg['dialogueInline'] = [
+              {'speaker':'Jessa','text':'No more getting ahead of us.'},
+              {'speaker':'Veyra','text':'No more getting ahead.'},
+              {'speaker':'Samuel','text':'You have my word.'},
+              {'speaker':'Kael','text':'Then stay where she can see you.'},
+              {'speaker':'Eva','text':"There's a rider on the south ridge."},
+              {'speaker':'Jessa','text':'I see them.'},
+              {'speaker':'Veyra','text':'How far?'},
+              {'speaker':'Jessa','text':'About a mile. Maybe a little less.'},
+              {'speaker':'Kael','text':'Are they coming this way?'},
+              {'speaker':'Eva','text':'No.'},
+              {'speaker':'Kael','text':'Then I wish them a pleasant afternoon.'},
+              {'speaker':'Veyra','text':'You really can leave anything alone.'},
+              {'speaker':'Kael','text':'I try.'},
+          ]
+          pg['directionInline'] = [{'text':"The group composition must be caused, not assumed. Veyra stops the ahead/behind method because it contaminates her own evidence; Jessa tolerates open co-travel because keeping the manipulators visible is safer than letting them vanish ahead. The Rider's first appearance remains completely ordinary."}]
+
+          pg = get_page(data, 'SUN_S1E08_P02')
+          for line in pg['dialogueInline']:
+              if line['speaker'] == 'Jessa' and line['text'] == 'Because distance is hard to judge on white ground.':
+                  line['speaker'] = 'Veyra'
+                  line['text'] = 'Distance can be hard to judge on white ground.'
+                  break
+          else:
+              raise RuntimeError('Expected distant Jessa line not found')
+          pg['directionInline'] = [{'text':"Eva and Veyra are the ones crossing the wash, so only they speak in the close exchange. Keep a credible mirage/terrain explanation available; the strangeness comes from repeated comparison, not one impossible panel."}]
+          write(p, data)
+
+          # Issue 12: separate the old packet from the actual dated prediction evidence.
+          p, data = load(12)
+          pg = get_page(data, 'SUN_S1E12_P01')
+          pg['summary'] = "At Hushwater, Maela Crow recognizes Kael as Darrow Keene and produces a sealed packet she has been holding for Darrow. Because Veyra and Samuel have remained with the group since the Long Mile, neither could have primed Hushwater during the current approach; the older provenance still has to be established."
+          pg['panelPlan'][2]['text'] = "Maela returns with a visibly old sealed cloth packet marked for DARROW KEENE. Its age proves only that Darrow's story predates the group; it does not yet prove when anyone connected Kael to Darrow."
+          for line in pg['dialogueInline']:
+              if line['speaker'] == 'Jessa' and line['text'] == 'Look at the date.':
+                  line['text'] = 'You were really waiting for him.'
+                  break
+          else:
+              raise RuntimeError('Expected Issue 12 date line not found')
+          pg['directionInline'] = [{'text':"Do not use the packet's age as the causal proof. The packet establishes a real preexisting Darrow story. The dated household record of the later traveler, examined on Page 3, is what places the Kael-specific prediction before Veyra's operation."}]
+
+          pg = get_page(data, 'SUN_S1E12_P03')
+          pg['summary'] = "Veyra reconstructs the dates from Maela's household ledger. The ledger records the later traveler who described a man matching Kael and linked him to Darrow; that visit predates Veyra first learning Kael's name and predates Samuel joining her. The explanation exposed in Issue 4 cannot have caused this setup."
+          pg['panelPlan'][0]['text'] = "Veyra lays her own dated notes beside Maela's household ledger. The relevant entry records the winter visitor, the Darrow name and enough of the description to show that the Kael-specific prediction existed before Veyra's case did."
+          pg['directionInline'] = [{'text':"The causal proof is documentary chronology, not mystical certainty: Maela's ledger dates the Kael-like description and Darrow expectation before Veyra knew Kael's name. This falsifies Veyra/Samuel as the source of this particular setup while leaving ordinary unknown intermediaries possible."}]
+          write(p, data)
+
+          # Keep series-level development documentation consistent with the repaired causal method.
+          sp = base / 'series.json'
+          series = json.loads(sp.read_text(encoding='utf-8'))
+          for arc in series.get('arcArchitecture', []):
+              if arc.get('issues') == '1-4':
+                  arc['revelation'] = "Veyra selected real unresolved identities and grievances from communities along Kael's route, and Samuel planted the expectation that Kael might be those men so they could watch what he knew or did. Varnok, Saye and the Architect were deliberate tests; Merrit's resemblance story predated Samuel's priming, proving their operation was amplifying a pattern it did not wholly create."
+                  arc['worldviewReset'] = "The encounters are not all coincidence because Veyra and Samuel deliberately created several appointments, but the human conspiracy is itself a response to preexisting identity coincidences and cannot account for the whole pattern."
+          series['characterTrajectories']['Veyra'] = "Begins as a pursuer convinced a human hidden identity explains Kael. She collects real unresolved identities and local grievances, then uses Samuel to prime those communities with the expectation that Kael may be their missing man, watching for knowledge or behavior that would expose a lie. She notices the improbability earlier than the others, and eventually has to confront that Merrit, the Rider and later evidence existed outside any experiment she controlled."
+          sp.write_text(json.dumps(series, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          # Mechanical integrity only.
+          seen = set(); total = 0
+          for issue in range(1, 13):
+              path = base / f'pages_e{issue:02d}.json'
+              pages = json.loads(path.read_text(encoding='utf-8'))
+              expected = 7 if issue == 1 else 6
+              if len(pages) != expected:
+                  raise RuntimeError(f'{path}: {len(pages)} pages != {expected}')
+              for page in pages:
+                  if page['id'] in seen:
+                      raise RuntimeError(f'duplicate page id {page["id"]}')
+                  seen.add(page['id'])
+                  for required in ('summary','panelPlan','dialogueInline','direction'):
+                      if required not in page:
+                          raise RuntimeError(f'{page["id"]} missing {required}')
+                  total += 1
+          if total != 73:
+              raise RuntimeError(f'expected 73 pages, got {total}')
+          print(f'Validated {total} Sunforge pages after causal pass')
+          PY
+
+      - name: Commit repaired story data and remove helper
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/sunforge-causality-pass.yml
+          git add data/shows/sunforge-outlaw-s1/pages_e02.json \
+                  data/shows/sunforge-outlaw-s1/pages_e04.json \
+                  data/shows/sunforge-outlaw-s1/pages_e06.json \
+                  data/shows/sunforge-outlaw-s1/pages_e08.json \
+                  data/shows/sunforge-outlaw-s1/pages_e12.json \
+                  data/shows/sunforge-outlaw-s1/series.json
+          git commit -m "Refine Sunforge plot causality"
+          git push origin HEAD:sunforge-causality-pass-20260914
