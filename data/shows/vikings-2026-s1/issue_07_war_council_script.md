@@ -41,7 +41,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
    **BJORN:** Then why do you look worse?
    **CARRIE:** Because bills only want money.
 
-**Page turn:** the ordinary life of Issue 5–6 now has a date attached to its legal vulnerability.
+**Page turn:** the ordinary life of Issues 5–6 now has a date attached to its legal vulnerability.
 
 ---
 
@@ -70,7 +70,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 **Summary:** Gunnar separates home, city, status, and kinship, revealing that the household has never actually agreed those are the same thing.
 
-**Setting:** same table.
+**Setting:** Safe Cave table.
 
 **5 panels.**
 
@@ -78,9 +78,9 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
    **BJORN:** This room. Our place here. All of us.
 2. **Gunnar points at the key.**
    **GUNNAR:** The room.
-3. **He points at a MetroCard / transit card near his coffee.**
+3. **He points at a transit card near his coffee.**
    **GUNNAR:** The city.
-4. **He taps Carrie's notice, then a shared wooden cup/bowl.**
+4. **He taps Carrie's notice, then a shared wooden bowl.**
    **GUNNAR:** The paper. Us.
 5. **Two-shot Gunnar/Bjorn.**
    **BJORN:** They are one thing.
@@ -238,7 +238,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 1. **Medium at circulation desk.** A librarian slides a held book toward Gunnar without needing Carrie present.
    **LIBRARIAN:** This came in for you.
 2. **Gunnar takes it with visible pleasure.**
-3. **Bjorn, nearby with his own returned book, notices the hold slip with Gunnar's name/handle not necessarily legible to reader if spelling unresolved is not relevant.**
+3. **Bjorn, nearby with his own returned book, notices the hold slip.**
    **BJORN:** You asked them to save it?
 4. **Gunnar.**
    **GUNNAR:** Yes.
@@ -252,22 +252,21 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 ## PAGE 11 — THE RIVER
 
-**Summary:** The second male Kin travels alone to the East River waterfront, proving that wanting the option to leave is compatible with competence and pleasure in the city.
+**Summary:** The second male Kin travels alone to the East River waterfront and enjoys the fact that the city contains routes he can choose without anyone witnessing or assigning them.
 
 **Setting progression:** subway car → East River waterfront / ferry pier area.
 
 **5 panels.**
 
-1. **Subway medium.** The second male Kin rides alone, seated among commuters. He checks station signs without anxiety; no map held like a crisis object.
-2. **Platform/exterior transition.** He exits with the crowd and walks toward open water.
+1. **Subway medium.** The second male Kin rides alone among commuters. He checks station signs without anxiety; no map held like a crisis object.
+2. **Platform/exterior transition.** He exits with the crowd and follows ordinary pedestrian flow toward open water.
 3. **Wide waterfront.** Ferries, skyline, wind, railings. He leans on the barrier watching a vessel cross the river.
-4. **Carrie, who is elsewhere on work and happens to spot him from a distance or crosses him on the promenade, approaches.**
-   **CARRIE:** You came all the way out here by yourself?
-5. **Two-shot with water behind.**
-   **SECOND MALE KIN:** I like the city more when I can see where it ends.
-   **CARRIE:** That is an extremely New York answer.
+4. **Medium.** A ferry attendant at the nearby boarding line gestures toward the gate.
+   **FERRY ATTENDANT:** Boarding?
+5. **The second male Kin keeps watching the boat rather than joining the line.**
+   **SECOND MALE KIN:** Not today.
 
-**Page turn:** his desire for choice has a positive shape: freedom of movement, not rejection.
+**Page turn:** his uncertainty has a positive shape: he values the freedom to go farther even when he chooses not to.
 
 ---
 
@@ -342,11 +341,11 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 **Summary:** Carrie gives Silas a narrow administrative task, and he completes it without turning the household into content.
 
-**Setting progression:** Safe Cave printer/table → building lobby mail area.
+**Setting:** Safe Cave printer/table.
 
 **5 panels.**
 
-1. **Medium.** Carrie's old compact printer jams on the review notice copies. Silas is already reaching for a grander solution.
+1. **Medium.** Carrie's old compact printer jams on the review-notice copies. Silas is already reaching for a grander solution.
    **SILAS:** I can scan everything into a shared—
 2. **Carrie points at printer.**
    **CARRIE:** Make that produce two readable pages.
@@ -413,7 +412,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 **Summary:** Through objections rather than speeches, the household defines kinship as something that survives separate choices.
 
-**Setting:** same table.
+**Setting:** Safe Cave table.
 
 **6 panels.**
 
