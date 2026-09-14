@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import base64, gzip, json, re
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data" / "shows" / "vikings-2026-s1"
-PAYLOAD = BASE / "encoded" / "pages_i06.json.gzb64"
+CHUNKS = [BASE / f"pages_i06_p{a:02d}_p{b:02d}.json" for a,b in ((1,6),(7,12),(13,18),(19,24))]
 CHARS = BASE / "characters.json"
 SHOWS = ROOT / "data" / "shows.json"
 SCRIPT = BASE / "issue_06_trial_of_toil_script.md"
@@ -21,26 +21,30 @@ GENERATION_LINE = (
 )
 
 
-def load_payload():
-    b64 = "".join(PAYLOAD.read_text(encoding="utf-8").split())
-    return json.loads(gzip.decompress(base64.b64decode(b64)).decode("utf-8"))
+def load_pages():
+    pages = []
+    for path in CHUNKS:
+        pages.extend(json.loads(path.read_text(encoding="utf-8")))
+    return pages
 
 
-def validate_payload(pages):
+def validate_pages(pages):
     assert len(pages) == 24
     expected = [f"VIK_S1I06_P{i:02d}" for i in range(1,25)]
     assert [p.get("id") for p in pages] == expected
-    for p in pages:
-        assert p.get("summary") and p.get("settingText")
-        panels = p.get("panelPlan") or []
+    total_panels = 0
+    for page in pages:
+        assert page.get("summary") and page.get("settingText")
+        panels = page.get("panelPlan") or []
         assert panels
-        assert [x.get("panel") for x in panels] == list(range(1, len(panels)+1))
-        n = len(p.get("dialogueInline") or [])
-        for x in panels:
-            assert x.get("location") and x.get("shotType") and x.get("action")
-            for idx in x.get("dialogueIndices", []):
-                assert 0 <= idx < n, (p["id"], idx, n)
-    assert sum(len(p["panelPlan"]) for p in pages) == 120
+        total_panels += len(panels)
+        assert [p.get("panel") for p in panels] == list(range(1, len(panels)+1))
+        dialogue_count = len(page.get("dialogueInline") or [])
+        for panel in panels:
+            assert panel.get("location") and panel.get("shotType") and panel.get("action")
+            for idx in panel.get("dialogueIndices", []):
+                assert 0 <= idx < dialogue_count, (page["id"], idx, dialogue_count)
+    assert total_panels == 120, total_panels
 
 
 def update_characters():
@@ -96,7 +100,7 @@ def update_shows():
         "scenesFile": "pages_base.json",
         "unitLabel": "PAGE",
         "generationLine": GENERATION_LINE,
-        "sceneOverlays": [{"file":"encoded/pages_i06.json.gzb64","encoding":"gzip-base64"}]
+        "sceneOverlays": [{"file": path.name} for path in CHUNKS]
     }
     pos = next((i+1 for i,s in enumerate(shows) if s.get("id") == "vikings-2026-s1-e05"), len(shows))
     shows.insert(pos, entry)
@@ -125,17 +129,42 @@ def update_script():
 
 def update_plan():
     text = PLAN.read_text(encoding="utf-8")
-    # Keep formatting intact; change only Issue 6 status language if the pre-production phrase is present.
+    old_status = '"status": "full 24-page development script drafted with dialogue and drawable panel staging; production review and RexPrompt compilation pending",\n      "developmentFile": "issue_06_trial_of_toil_development.json",'
+    new_status = '"status": "production-ready 24-page script; active RexPrompt page recipes compiled and aggressively audited",\n      "developmentFile": "issue_06_trial_of_toil_development.json",'
+    if old_status not in text:
+        raise AssertionError("Issue 6 season-plan status text not found")
+    text = text.replace(old_status, new_status, 1)
+    issue5_payload = '''    {
+      "payloadIds": "VIK_S1E05_P01-P24",
+      "storyPlacement": "Issue 5 — The Skaldic Interface",
+      "status": "production-ready"
+    }
+  ],'''
+    issue6_payload = '''    {
+      "payloadIds": "VIK_S1E05_P01-P24",
+      "storyPlacement": "Issue 5 — The Skaldic Interface",
+      "status": "production-ready"
+    },
+    {
+      "payloadIds": "VIK_S1I06_P01-P24",
+      "storyPlacement": "Issue 6 — Trial of Toil",
+      "status": "production-ready",
+      "source": "Compiled from the approved full Issue 6 script into four active plain-JSON page overlays after page-level visual and assembler audit."
+    }
+  ],'''
+    if issue5_payload not in text:
+        raise AssertionError("Issue 5 payload tail not found")
+    text = text.replace(issue5_payload, issue6_payload, 1)
     text = text.replace(
-        '"status": "full 24-page development script complete; ready for production compilation",',
-        '"status": "production-ready 24-page script; active RexPrompt page recipes compiled and audited",'
+        '    "Production edit/review of Issues 6–8 full page scripts before compilation",\n    "Compilation of approved Issues 6–8 scripts into the current active RexPrompt page-recipe structures",',
+        '    "Production edit/review of Issues 7–8 full page scripts before compilation",\n    "Compilation of approved Issues 7–8 scripts into the current active RexPrompt page-recipe structures",'
     )
     PLAN.write_text(text, encoding="utf-8")
 
 
 def main():
-    pages = load_payload()
-    validate_payload(pages)
+    pages = load_pages()
+    validate_pages(pages)
     update_characters()
     update_shows()
     update_script()
