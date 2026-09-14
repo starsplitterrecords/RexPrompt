@@ -1,0 +1,580 @@
+name: Polish Sunforge script
+on:
+  push:
+    branches:
+      - polish-sunforge-script-20260914
+permissions:
+  contents: write
+jobs:
+  polish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: polish-sunforge-script-20260914
+          fetch-depth: 0
+      - name: Apply editorial dialogue pass
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path('data/shows/sunforge-outlaw-s1')
+
+          def D(*pairs):
+              return [{'speaker': s, 'text': t} for s, t in pairs]
+
+          updates = {
+            'SUN_S1E01_P01': D(
+              ('Scarred patron','Varnok.'),
+              ('Kael',"I think you've got the wrong man."),
+              ('Scarred patron','Same face. Same mouth.'),
+              ('Kael',"I don't know what to tell you, sir."),
+              ('Eva','Do you know him?'),
+              ('Kael',"No, I don't.")
+            ),
+            'SUN_S1E01_P05': D(
+              ('Marcus','You burned my brother out of this place.'),
+              ('Kael',"No, I didn't."),
+              ('Marcus','You expect me to forget that face?'),
+              ('Kael',"I don't know what you expect me to say. Just stop swinging that pipe near his head."),
+              ('Eva','Here is the water.'),
+              ('Kael','Thank you. Easy, sir. Small sips.'),
+              ('Marcus',"Look at me when I'm talking to you."),
+              ('Kael',"I'm listening. I'm also busy.")
+            ),
+            'SUN_S1E01_P06': D(
+              ('Jessa',"Kael, it's time to go."),
+              ('Kael','He can breathe. Give me a second.'),
+              ('Marcus','Who the hell are you?'),
+              ('Kael',"My name is Kael Mack. I don't know who Varnok is."),
+              ('Jessa',"And now we're leaving."),
+              ('Kael',"She isn't coming with us."),
+              ('Eva','I already packed.'),
+              ('Jessa','Of course you did.'),
+              ('Kael',"That doesn't answer me."),
+              ('Eva',"I wasn't answering you."),
+              ('Jessa','Both of you get in before Marcus remembers the pipe.')
+            ),
+            'SUN_S1E01_P07': D(
+              ('Eva','He was waiting for you.'),
+              ('Kael','He was waiting for Varnok.'),
+              ('Eva','He had a description of you.'),
+              ('Jessa','A dark coat and black hair are not exactly a miracle.'),
+              ('Eva','It said you would come through today.'),
+              ('Kael','Rumors travel.'),
+              ('Eva',"You really don't care?"),
+              ('Kael',"I care that somebody threw a bottle at me. I don't much care what story he told himself first."),
+              ('Jessa','When did you pack?'),
+              ('Eva','During the second punch.'),
+              ('Jessa','You were leaving either way.'),
+              ('Eva','I was considering my options.'),
+              ('Jessa','You had a packed bag.'),
+              ('Eva','You had his bag before he agreed to go.'),
+              ('Jessa','I already knew he needed to leave.'),
+              ('Eva','You know him?'),
+              ('Jessa','Not really.'),
+              ('Eva','But you trust him.'),
+              ('Jessa',"I trust what I've seen him do."),
+              ('Eva','That is a very careful answer.'),
+              ('Jessa','It is the answer I have.'),
+              ('Kael',"Are either of you planning to tell me where we're going?"),
+              ('Jessa','No.'),
+              ('Eva','Not yet.')
+            ),
+            'SUN_S1E02_P05': D(
+              ('Kael',"I'm not your general. If I leave and you still can't decide this, what exactly have I settled?"),
+              ('Los Lagartos',"You're here."),
+              ('Kael','By accident.'),
+              ('Los Lagartos','What would Saye say?'),
+              ('Kael',"I don't know. Ask somebody who knew him."),
+              ('Eva',"That's annoyingly reasonable."),
+              ('Kael','Thank you.'),
+              ('Eva',"It wasn't a compliment."),
+              ('Kael','I know.'),
+              ('Jessa',"Don't encourage him."),
+              ('Kael',"I wasn't planning to say anything else.")
+            ),
+            'SUN_S1E02_P06': D(
+              ('Eva','A preacher told them to expect Saye.'),
+              ('Jessa','People hear stories from preachers.'),
+              ('Eva',"He described Kael's coat."),
+              ('Kael',"It's a common coat."),
+              ('Eva','And his hair.'),
+              ('Kael','Also common.'),
+              ('Eva','And he said Saye would pretend not to know them.'),
+              ('Jessa','All right. That one bothers me.'),
+              ('Kael',"It still doesn't prove the preacher knew me."),
+              ('Eva','What would prove it?'),
+              ('Kael',"I don't know yet."),
+              ('Eva','That is almost reasonable.'),
+              ('Jessa','It is reasonable.'),
+              ('Eva',"Do you think he's lying?"),
+              ('Jessa','About being Saye? No.'),
+              ('Eva','About anything.'),
+              ('Jessa',"I don't know him well enough."),
+              ('Eva','You loaded his bag before he agreed to leave.'),
+              ('Jessa','Marcus had a pipe.'),
+              ('Eva',"That's not trust."),
+              ('Jessa',"No. It isn't."),
+              ('Kael','I can hear both of you.'),
+              ('Eva','We know.')
+            ),
+            'SUN_S1E03_P05': D(
+              ('Eva','What if we give them another name? Something obviously fake. If it spreads, we know somebody is carrying it.'),
+              ('Kael','No.'),
+              ('Eva',"You haven't even heard the name."),
+              ('Kael','I heard enough.'),
+              ('Eva',"Then what's wrong with it?"),
+              ('Kael',"She's already angry and half-convinced I'm a man who hurt her. I don't want to add another lie just to see what she does with it."),
+              ('Jessa',"That is what you're asking, Eva."),
+              ('Eva',"I'm trying to figure out how the story travels."),
+              ('Kael','Then find another way.'),
+              ('Isabelle','The preacher already tried your way.'),
+              ('Eva',"All right. I won't.")
+            ),
+            'SUN_S1E03_P06': D(
+              ('Isabelle',"If you see him, tell him I don't like being prepared."),
+              ('Kael','If he comes back here, tell him yourself.'),
+              ('Eva','Samuel Hayes. Maybe.'),
+              ('Jessa','A first name and a maybe. Excellent.'),
+              ('Eva',"It's more than we had yesterday."),
+              ('Kael','Yesterday was quieter.'),
+              ('Jessa','You hated yesterday.'),
+              ('Kael',"I didn't hate it. I respected it."),
+              ('Eva',"Do you really think he doesn't care?"),
+              ('Jessa','No. I think he cares about people more than explanations.'),
+              ('Eva',"That's worse."),
+              ('Jessa','For you.'),
+              ('Eva',"For him too. He just doesn't know it yet."),
+              ('Jessa',"You really need him to be a mystery, don't you?"),
+              ('Eva','You really need him not to be.'),
+              ('Jessa','Maybe I do.')
+            ),
+            'SUN_S1E04_P04': D(
+              ('Eva','You told them he was Varnok.'),
+              ('Samuel','I gave one angry man the name. He did the rest.'),
+              ('Eva','And Saye?'),
+              ('Samuel','I told the camp Saye might come back.'),
+              ('Jessa','Merrit?'),
+              ('Samuel',"Merrit wasn't mine."),
+              ('Eva','Then whose was it?'),
+              ('Samuel','It was already there.'),
+              ('Eva','Why were you doing any of this?'),
+              ('Samuel',"Veyra thought Kael was lying about his name."),
+              ('Jessa','So you put him in rooms where the lie would have to break.'),
+              ('Samuel','That was the idea.'),
+              ('Eva','Using everybody in the room.'),
+              ('Samuel','Yes.'),
+              ('Jessa','Did you ever ask if they wanted to be part of it?'),
+              ('Samuel','No.')
+            ),
+            'SUN_S1E04_P05': D(
+              ('Veyra','I thought one of the names would make you slip.'),
+              ('Kael',"I don't know what you think I'm hiding."),
+              ('Veyra','I thought one of them was yours.'),
+              ('Ray','You told me the Architect was coming.'),
+              ('Veyra','I told you I thought he might be.'),
+              ('Ray','You told me what you needed me to believe.'),
+              ('Eva',"He's right."),
+              ('Veyra','Yes.'),
+              ('Jessa',"That's a first."),
+              ('Veyra',"Don't enjoy it."),
+              ('Kael','Did any of this tell you who I am?'),
+              ('Veyra','No.'),
+              ('Kael','Then maybe ask me next time.'),
+              ('Veyra',"You don't answer."),
+              ('Kael','I answer. You just keep asking for a different one.')
+            ),
+            'SUN_S1E04_P06': D(
+              ('Eva','Which one did you start with?'),
+              ('Samuel','Ask her.'),
+              ('Veyra','Varnok was mine. Saye was mine. Architect was mine.'),
+              ('Eva','And Merrit?'),
+              ('Veyra','No.'),
+              ('Samuel','You gave me Merrit.'),
+              ('Veyra','After Isabelle gave it to me.'),
+              ('Eva','Before Kael ever got there?'),
+              ('Veyra','Before I did.'),
+              ('Kael','Are we leaving?'),
+              ('Jessa','Did you just say "we"?'),
+              ('Kael',"Please don't start."),
+              ('Eva','Too late.'),
+              ('Jessa','Much too late.'),
+              ('Kael','I knew I should have left both of you at the Last Drop.'),
+              ('Eva','You tried.'),
+              ('Jessa','Not very hard.'),
+              ('Eva','You still think none of this is about him?'),
+              ('Jessa','I think people keep deciding what he means before they know him.'),
+              ('Eva','We do that too.'),
+              ('Jessa','Yes.'),
+              ('Eva','You hate admitting that.'),
+              ('Jessa','I hate that you noticed.')
+            ),
+            'SUN_S1E05_P04': D(
+              ('Eva','Five minutes. You say you heard the promise, they stop fighting, and we leave.'),
+              ('Kael','And next year somebody asks what else Elias said.'),
+              ('Eva','Maybe nobody does.'),
+              ('Jessa',"Maybe. But if they do, we're gone and they're stuck with it."),
+              ('Eva','You sound like him.'),
+              ('Jessa',"Don't start."),
+              ('Kael','I was about to say she sounded sensible.'),
+              ('Eva','Of course you were.'),
+              ('Jessa','Please stop helping me.'),
+              ('Kael','All right.')
+            ),
+            'SUN_S1E05_P06': D(
+              ('Eva','It would have been easier if you had lied.'),
+              ('Kael','For us.'),
+              ('Eva','For them too.'),
+              ('Kael','Tonight, maybe.'),
+              ('Eva','And tomorrow?'),
+              ('Kael',"Tomorrow they'd remember Elias came home and said it. I'd be gone, but that wouldn't be."),
+              ('Jessa',"That's what I meant."),
+              ('Eva','You said something about legs.'),
+              ('Jessa','I was trying not to make a speech.'),
+              ('Kael','I appreciated the effort.'),
+              ('Jessa','Drive.')
+            ),
+            'SUN_S1E06_P05': D(
+              ('Local','One signature. That is all.'),
+              ('Kael','Whose signature?'),
+              ('Local','Varnok.'),
+              ('Kael','Then you need someone else.'),
+              ('Eva','It might keep Marcus from coming back.'),
+              ('Kael','For how long? Until somebody says Varnok changed his mind?'),
+              ('Jessa','What do you want them to do?'),
+              ('Kael',"If you agree with the paper, sign your own names. I don't live here.")
+            ),
+            'SUN_S1E06_P06': D(
+              ('Tomas','Kael.'),
+              ('Kael','Yes, sir?'),
+              ('Tomas','Thank you.'),
+              ('Kael',"You're welcome."),
+              ('Eva',"That's it?"),
+              ('Kael','What did you want, a speech?'),
+              ('Jessa',"Don't ask questions you don't want answered."),
+              ('Veyra','They know your name and kept Varnok anyway.'),
+              ('Kael','People keep stories they like.'),
+              ('Eva',"You say that like it doesn't bother you."),
+              ('Kael','It bothers me. I just cannot stop them.'),
+              ('Jessa',"That's new."),
+              ('Kael','What is?'),
+              ('Jessa','Admitting it bothers you.'),
+              ('Kael',"I wish I hadn't."),
+              ('Eva','Too late.')
+            ),
+            'SUN_S1E07_P04': D(
+              ('Ada Rowan','We are trying to be fair.'),
+              ('Nessa','You are voting on me.'),
+              ('Ada Rowan','We are voting on the responsibility.'),
+              ('Kael',"Ma'am, if Nessa has to agree before any of this works, why are the rest of you voting?"),
+              ('Ada Rowan','You are not family.'),
+              ('Kael',"No, ma'am. That's probably why it sounds strange to me."),
+              ('Jessa','It sounds strange from here too.'),
+              ('Nessa',"I love you. I'm still leaving.")
+            ),
+            'SUN_S1E07_P05': D(
+              ('Nessa','You make it sound terrible.'),
+              ('Jessa','Parts of it are terrible.'),
+              ('Eva','You are not very good at inspiring people.'),
+              ('Jessa',"She doesn't need inspiration. She needs to know the road is still a place where things happen to you."),
+              ('Nessa','And you still stayed on it.'),
+              ('Jessa','Yes.'),
+              ('Eva','Why?'),
+              ('Jessa','Because after a while I realized I was happier moving than I had been staying.'),
+              ('Eva',"That's actually an answer."),
+              ('Jessa',"Don't get used to it.")
+            ),
+            'SUN_S1E07_P06': D(
+              ('Eva','Two days.'),
+              ('Kael','Yes.'),
+              ('Eva','No Varnok. No Saye. No dead architect. Nothing.'),
+              ('Kael','I had a nice supper.'),
+              ('Jessa','That is the most normal thing you have said about a town.'),
+              ('Eva','There is a Sunforge in the middle of the yard.'),
+              ('Jessa','There was also a goat in the middle of the yard.'),
+              ('Eva','You know what I mean.'),
+              ('Jessa','I do. Nothing happened to him. That matters too.'),
+              ('Kael',"I'd be happy if we stopped calling that evidence."),
+              ('Eva','It is evidence.'),
+              ('Kael',"Then don't tell the notebook.")
+            ),
+            'SUN_S1E08_P02': D(
+              ('Eva',"We've been walking toward them."),
+              ('Veyra','Yes.'),
+              ('Eva',"So why aren't we closer?"),
+              ('Jessa','Because distance is hard to judge on white ground.'),
+              ('Veyra','Maybe.'),
+              ('Eva',"You don't sound convinced."),
+              ('Veyra',"I'm not.")
+            ),
+            'SUN_S1E08_P03': D(
+              ('Jessa','That was the ridge.'),
+              ('Eva','I know.'),
+              ('Samuel','Could be another rider.'),
+              ('Veyra','Same profile.'),
+              ('Kael',"A silhouette isn't a person."),
+              ('Eva','Do you have a better explanation?'),
+              ('Kael','No. I have worse ones.'),
+              ('Jessa','Good. Worse ones are still ordinary.')
+            ),
+            'SUN_S1E08_P05': D(
+              ('Samuel','This is what you saw at Red Wash.'),
+              ('Veyra','I thought I was wrong.'),
+              ('Eva','You left this out?'),
+              ('Veyra','Because I had one sighting and a long day.'),
+              ('Jessa','When was it?'),
+              ('Veyra','Before Samuel started working ahead of Kael.'),
+              ('Eva','Before you knew where Kael was going?'),
+              ('Veyra','Yes.'),
+              ('Kael',"Then maybe it isn't about me."),
+              ('Veyra',"That doesn't make me feel better.")
+            ),
+            'SUN_S1E08_P06': D(
+              ('Eva',"It's gone."),
+              ('Kael','Good.'),
+              ('Jessa',"No. It's behind us."),
+              ('Kael',"You're sure?"),
+              ('Samuel','How?'),
+              ('Veyra',"I don't know."),
+              ('Eva','You really do not?'),
+              ('Veyra','No.'),
+              ('Kael',"I'm making coffee."),
+              ('Eva','Now?'),
+              ('Kael','Unless staring at it is supposed to help.')
+            ),
+            'SUN_S1E09_P03': D(
+              ('Eva','He is terrible at cards.'),
+              ('Jessa','Now we know something useful.'),
+              ('Eva',"I'm serious."),
+              ('Jessa','So am I.'),
+              ('Eva','Nobody here knows him.'),
+              ('Jessa','They know he cheats at nothing and loses badly.'),
+              ('Eva','You know what I mean.'),
+              ('Jessa','I do. But you are missing half of him while you wait for somebody to call him the wrong name.'),
+              ('Eva',"And you aren't?"),
+              ('Jessa','Not as much as I used to.')
+            ),
+            'SUN_S1E09_P04': D(
+              ('Veyra','If proximity mattered, this place should be impossible to ignore.'),
+              ('Eva','Maybe it only matters with certain Sunforges.'),
+              ('Jessa','Or maybe we are calling too many different things Sunforges.'),
+              ('Veyra','They share material and structure.'),
+              ('Jessa',"That doesn't make them the same place."),
+              ('Eva',"Saint Oren's is not helping your theory."),
+              ('Veyra',"No, it isn't."),
+              ('Kael','Would anyone like stew?'),
+              ('Veyra','Not now.'),
+              ('Kael','All right. More for me.')
+            ),
+            'SUN_S1E10_P02': D(
+              ('Eva','The man with the silver mask.'),
+              ('Baird Rook','Burn scars. My cousin Neral.'),
+              ('Eva','The woman with the red birds.'),
+              ('Baird Rook','Tova. Raises them. Owes me money.'),
+              ('Eva','Dylan.'),
+              ('Dylan','I can hear you.'),
+              ('Eva','Did you come here because of Kael?'),
+              ('Dylan','I came because Baird pays late and feeds well.'),
+              ('Jessa','You see the mask. He sees his cousin.'),
+              ('Baird Rook','Exactly.'),
+              ('Eva',"That doesn't explain everybody."),
+              ('Baird Rook',"I didn't say it did.")
+            ),
+            'SUN_S1E10_P03': D(
+              ('Dylan','I heard Varnok was also a general.'),
+              ('Kael','That sounds inconvenient for both men.'),
+              ('Dylan','Tomas said your name was Kael.'),
+              ('Kael','Tomas is a sensible man.'),
+              ('Eva','So the stories are merging.'),
+              ('Jessa','Sounds like it.'),
+              ('Eva','Then any town could be waiting for him.'),
+              ('Kael','Which means the next wrong name might just be an old rumor.'),
+              ('Eva','So we will not know whether it is new.'),
+              ('Jessa','Exactly.'),
+              ('Eva','I hate that.'),
+              ('Kael',"I don't blame you.")
+            ),
+            'SUN_S1E10_P04': D(
+              ('Veyra','You have three Sunforge sites inside one settlement.'),
+              ('Baird Rook',"No, we don't."),
+              ('Veyra','I can show you the material resemblance.'),
+              ('Baird Rook','You can show me three black things.'),
+              ('Eva','Do people here have a common name for them?'),
+              ('Baird Rook','Yes. Roof. Old black thing. And the bench nobody likes sitting on.'),
+              ('Jessa','Maybe they are not one thing to the people who live with them.'),
+              ('Veyra','They may still be related.'),
+              ('Baird Rook',"Maybe. But relation isn't history."),
+              ('Eva','Then tell us the history of each one.')
+            ),
+            'SUN_S1E10_P06': D(
+              ('Baird Rook',"You have been here three days. I knew the man with the mask before he had the mask."),
+              ('Veyra',"That doesn't explain every recurrence."),
+              ('Baird Rook','Then stop counting the ones I just explained.'),
+              ('Eva','What if places like this attract unusual people?'),
+              ('Jessa','What if people stop looking unusual once you know them?'),
+              ('Eva','Kael is still strange.'),
+              ('Kael','Thank you.'),
+              ('Jessa',"Don't encourage her."),
+              ('Kael',"I wasn't."),
+              ('Eva','That sounded like encouragement.'),
+              ('Jessa','Unfortunately, yes.')
+            ),
+            'SUN_S1E11_P04': D(
+              ('Eva','What do you think happened?'),
+              ('Kael','Between Jessa and Renna?'),
+              ('Eva','Yes.'),
+              ('Kael',"I don't know."),
+              ('Eva','You have no theory?'),
+              ('Kael','I have theories.'),
+              ('Eva','Then what are they?'),
+              ('Kael',"That doesn't mean I need to hand them to her like they are facts."),
+              ('Eva','That was annoyingly thoughtful.'),
+              ('Kael','Ask Jessa.')
+            ),
+            'SUN_S1E11_P05': D(
+              ('Eva','Why did you leave?'),
+              ('Jessa','Because I wanted to.'),
+              ('Eva','That is the short answer.'),
+              ('Jessa','It is also true.'),
+              ('Eva','Is there a longer one?'),
+              ('Jessa','I liked it here. Then everybody started talking about next year as if I had already agreed to it.'),
+              ('Eva','So you ran.'),
+              ('Jessa','No. I left.'),
+              ('Eva','Renna thinks that is the same thing.'),
+              ('Jessa','Renna can be wrong about me.'),
+              ('Eva','Are you going to leave us like that?'),
+              ('Jessa',"I don't know. I don't think so, but I don't know."),
+              ('Eva','Okay.')
+            ),
+            'SUN_S1E12_P02': D(
+              ('Maela Crow','Lysa made me promise I would give this to Darrow.'),
+              ('Kael','Then you should.'),
+              ('Maela Crow','I am trying.'),
+              ('Kael',"I understand. I'm not him."),
+              ('Maela Crow','The traveler described your face, your coat, even the way you stand when you want to leave.'),
+              ('Eva','That is specific.'),
+              ('Kael','Apparently I stand badly.'),
+              ('Jessa','You do.'),
+              ('Maela Crow','Will you at least open it?'),
+              ('Kael',"No, ma'am. I know why you want me to be him, but I'm not. Opening his packet won't fix that.")
+            ),
+            'SUN_S1E12_P04': D(
+              ('Veyra','We still have to ask whether Kael knows more than he says.'),
+              ('Eva',"No, I don't think we do."),
+              ('Veyra','Why?'),
+              ('Eva','Because he is Kael.'),
+              ('Jessa',"And because we've watched him be Kael every day for months."),
+              ('Veyra',"That doesn't tell you every year of his life."),
+              ('Jessa',"No. But it tells me when he's lying to my face."),
+              ('Kael','Thank you. I think.'),
+              ('Eva',"You're Kael."),
+              ('Kael',"I've been saying that."),
+              ('Samuel','It may be the least interesting part now.'),
+              ('Veyra','Agreed.')
+            ),
+            'SUN_S1E12_P05': D(
+              ('Maela Crow','I wanted you to be him.'),
+              ('Kael','I know.'),
+              ('Maela Crow','Then I could be done.'),
+              ('Kael',"I can't make you done."),
+              ('Maela Crow','What would you do?'),
+              ('Kael',"I don't know. It wasn't my friend."),
+              ('Maela Crow',"That's not an answer."),
+              ('Kael',"It's the honest one. If keeping it still feels like keeping your promise, keep it. If you're only keeping it because you're afraid to choose, that's different."),
+              ('Maela Crow',"And you won't open it."),
+              ('Kael',"No, ma'am."),
+              ('Samuel','Clear enough.'),
+              ('Kael',"Don't start preaching at me."),
+              ('Samuel','Occupational hazard.')
+            ),
+            'SUN_S1E12_P06': D(
+              ('Eva',"I don't think the question is who you are anymore."),
+              ('Kael',"That's a relief."),
+              ('Eva','I know who you are.'),
+              ('Jessa','So do I.'),
+              ('Eva','I want to know why everybody else keeps getting there first.'),
+              ('Veyra','So do I.'),
+              ('Samuel','So do I.'),
+              ('Jessa','I was trying not to.'),
+              ('Eva',"You're terrible at that."),
+              ('Kael',"I didn't say I wanted to know."),
+              ('Jessa',"No. You're the only one with any discipline."),
+              ('Kael','Thank you.'),
+              ('Eva',"It wasn't a compliment."),
+              ('Kael','I know.')
+            )
+          }
+
+          found = set()
+          page_files = [base / f'pages_e{i:02d}.json' for i in range(1,13)]
+          for path in page_files:
+              pages = json.loads(path.read_text())
+              dirty = False
+              for page in pages:
+                  pid = page.get('id')
+                  if pid in updates:
+                      page['dialogueInline'] = updates[pid]
+                      found.add(pid)
+                      dirty = True
+                  # Safe natural contractions for conversational core cast only.
+                  for line in page.get('dialogueInline', []):
+                      if line.get('speaker') in {'Kael','Eva','Jessa','Samuel'}:
+                          text = line.get('text','')
+                          for old,new in [
+                            ('I do not ','I don\'t '),('You do not ','You don\'t '),('We do not ','We don\'t '),
+                            ('They do not ','They don\'t '),('I did not ','I didn\'t '),('You did not ','You didn\'t '),
+                            ('I was not ','I wasn\'t '),('You were not ','You weren\'t '),('cannot','can\'t')
+                          ]:
+                              text = text.replace(old,new)
+                          line['text'] = text
+              if dirty or path.exists():
+                  path.write_text(json.dumps(pages, indent=2, ensure_ascii=False) + '\n')
+
+          missing = set(updates) - found
+          if missing:
+              raise SystemExit(f'missing page ids: {sorted(missing)}')
+
+          dpath = base / 'direction.json'
+          direction = json.loads(dpath.read_text())
+          text = direction['sunforge-story']['text']
+          add = " Keep thematic-development language in direction and series documentation rather than putting it verbatim in a character's mouth; characters should reach ideas through the particulars of the conversation, not recite the architecture of the book."
+          if add.strip() not in text:
+              direction['sunforge-story']['text'] = text + add
+          dpath.write_text(json.dumps(direction, indent=2, ensure_ascii=False) + '\n')
+
+          # Mechanical validation across all 73 pages.
+          chars = json.loads((base/'characters.json').read_text())
+          settings = json.loads((base/'settings.json').read_text())
+          regions = json.loads((base/'regions.json').read_text())
+          directions = json.loads((base/'direction.json').read_text())
+          all_pages=[]
+          for path in page_files:
+              ps=json.loads(path.read_text())
+              expected=7 if path.name=='pages_e01.json' else 6
+              if len(ps)!=expected:
+                  raise SystemExit(f'{path.name}: expected {expected}, got {len(ps)}')
+              all_pages.extend(ps)
+          ids=[p['id'] for p in all_pages]
+          if len(ids)!=73 or len(set(ids))!=73:
+              raise SystemExit(f'page id/count failure {len(ids)} / {len(set(ids))}')
+          for p in all_pages:
+              if p.get('setting') not in settings: raise SystemExit(f"{p['id']} bad setting {p.get('setting')}")
+              if p.get('region') not in regions: raise SystemExit(f"{p['id']} bad region {p.get('region')}")
+              for c in p.get('characters',[]):
+                  if c not in chars: raise SystemExit(f"{p['id']} bad character {c}")
+              for d in p.get('direction',[]):
+                  if d not in directions: raise SystemExit(f"{p['id']} bad direction {d}")
+          print(f'Validated {len(all_pages)} pages; polished {len(found)} pages.')
+          PY
+      - name: Commit polish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/sunforge-outlaw-s1/pages_e*.json data/shows/sunforge-outlaw-s1/direction.json
+          git commit -m "Polish Sunforge Issues 1-12 dialogue" || true
+          git rm .github/workflows/sunforge-script-polish.yml
+          git commit -m "Remove temporary Sunforge script polish workflow"
+          git push origin HEAD:polish-sunforge-script-20260914
