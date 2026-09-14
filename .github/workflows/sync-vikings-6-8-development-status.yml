@@ -1,0 +1,38 @@
+name: Sync Vikings 6-8 development status
+
+on:
+  push:
+    branches:
+      - develop/vikings-issues-6-8-page-scripts
+    paths:
+      - tools/sync_vikings_6_8_development_status.py
+      - .github/workflows/sync-vikings-6-8-development-status.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: develop/vikings-issues-6-8-page-scripts
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synchronize development status pointers
+        run: python tools/sync_vikings_6_8_development_status.py
+      - name: Commit synchronized development files
+        run: |
+          if git diff --quiet; then
+            echo "No changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/vikings-2026-s1/issue_06_trial_of_toil_development.json data/shows/vikings-2026-s1/issue_07_war_council_treatment.md data/shows/vikings-2026-s1/issue_08_trial_by_combat_treatment.md
+          git commit -m "Sync Vikings 6-8 development status"
+          git push origin HEAD:develop/vikings-issues-6-8-page-scripts
