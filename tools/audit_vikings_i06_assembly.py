@@ -33,8 +33,8 @@ def main():
     pages=[]
     for f in CHUNKS:pages.extend(json.loads(f.read_text()))
     warnings=[]; blocks=[]
-    abstract=re.compile(r'\b(realiz(?:e|es|ed)|means?|meaning|because|rather than|instead of|represents?|proves?|shows that|understands?|symboli[sz]|theme|reads as|feels like|demonstrates?)\b',re.I)
-    correction=re.compile(r'\b(do not imply|do not make|do not turn|not a|rather than|instead of)\b',re.I)
+    abstract=re.compile(r'\b(realiz\w*|recogniz\w*|understand\w*|means?|meaning|because|rather than|instead of|represents?|proves?|shows that|symboli[sz]\w*|theme|reads as|feels like|demonstrates?|as if|genuinely|clearly|obviously|impulse|satisfied|interested|intends?|trying to|tries to|wants? to)\b',re.I)
+    correction=re.compile(r'\b(do not imply|do not make|do not turn|not a|rather than|instead of|correction|avoid|should not)\b',re.I)
     for page in pages:
         out=[f"## {page['id']}",page.get('summary',''),show['generationLine']]
         out+=['','[SETTING]',page.get('settingText',''),'','[CHARACTERS]']
