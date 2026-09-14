@@ -1,0 +1,69 @@
+name: Sunforge dialogue cleanup
+on:
+  push:
+    branches: [sunforge-dialogue-pass-20260914]
+    paths: ['.github/workflows/sunforge-dialogue-cleanup.yml']
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sunforge-dialogue-pass-20260914
+      - name: Tighten remaining writerly lines
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          replacements={
+            'SUN_S1E02_P02': [('Los Lagartos','Blood claim or the vote. Say which stands.'),('Kael','Why would you ask me?'),('Los Lagartos','Because you left us with the choice.'),('Kael','Then you already had it.'),('Los Lagartos','Saye would know what he meant.'),('Kael',"I'm sure he would. I don't."),('Eva',"They think you're making them prove something."),('Kael',"I'm trying to get out of the chair."),('Eva',"That's why they think you're making them prove something."),('Kael',"I'm more worried about the gun.")],
+            'SUN_S1E03_P06': [('Isabelle','If you find Samuel, tell him I remember his face.'),('Kael','I think Eva intends to.'),('Eva','Absolutely.'),('Jessa',"We have 'Samuel,' maybe, and a coat."),('Eva','And three towns.'),('Jessa','Two and a club.'),('Eva',"You're doing that to annoy me."),('Jessa',"I'm doing it because numbers still matter."),('Kael','Can we go?'),('Eva','Do you think he wants to know?'),('Jessa','He keeps listening.'),('Eva','Exactly.'),('Jessa','He also keeps leaving.'),('Eva',"That's not the same thing.")],
+            'SUN_S1E06_P04': [('Eva','They made you taller.'),('Kael','Kind of them.'),('Eva','And broader.'),('Jessa',"Don't encourage him."),('Tomas',"It isn't meant to be you exactly."),('Kael','That part is successful.'),('Tomas',"It's the day Marcus lost the porch."),('Kael','Then paint the porch.'),('Tomas',"People don't remember porches."),('Kael','They remember Varnok.'),('Tomas','They remember that day.')],
+            'SUN_S1E07_P02': [('Ada Rowan','Mira trusted her with every name we have.'),('Nessa','She trusted me to help. She did not appoint me from the grave.'),('Eva','Could you do it for a year?'),('Nessa','My uncle said a year. My mother said until they train someone. Nobody has named the someone.'),('Jessa','How long did Mira do it?'),('Ada Rowan','Twenty-two years.'),('Jessa',"That's what I'd be worried about."),('Ada Rowan','And what would you have us do? Forget everything?'),('Nessa','No. Figure it out without deciding I already volunteered.')],
+            'SUN_S1E08_P02': [('Eva','We should be closer.'),('Veyra','We should.'),('Eva','By how much?'),('Veyra',"Enough that I wouldn't be asking."),('Eva','Mirage?'),('Veyra','Maybe.'),('Eva','You hate maybe.'),('Veyra','I do.')],
+            'SUN_S1E09_P04': [('Veyra',"If the structure matters, this should be the loudest place we've seen."),('Eva',"Maybe it's the wrong kind."),('Jessa',"The people here don't even use these things the same way."),('Veyra','Same material. Same ribs.'),('Jessa','Fine. But that still gives you three objects and one word.'),('Eva',"What would convince you they aren't the same thing?"),('Veyra',"I don't know yet."),('Kael','Stew?'),('Veyra','No.'),('Kael','All right.')],
+            'SUN_S1E09_P05': [('Mira Sloan','Did they make peace?'),('Samuel','No.'),('Mira Sloan','That bad?'),('Samuel','They finally said what they were angry about.'),('Mira Sloan','Did it help?'),('Samuel','A little. It was what there was time for.'),('Kael',"Sometimes that's enough for one night."),('Eva','You two sound old.'),('Jessa','One of them is.'),('Samuel','Thank you, Jessa.'),('Eva','I meant emotionally.'),('Kael','That helped.')],
+            'SUN_S1E11_P03': [('Renna Iles','You leave while things are still good.'),('Jessa',"That's a strange complaint."),('Renna Iles',"It's not a complaint. You did it here too."),('Jessa','You always remember the parts that support you.'),('Renna Iles','And you forget the parts that might keep you somewhere.'),('Eva','I can go.'),('Jessa','No. Stay.'),('Renna Iles','See?'),('Jessa',"Don't."),('Renna Iles',"When people start saying next month instead of tomorrow, you pack."),('Jessa',"I don't like waking up and realizing everyone else has decided I live somewhere."),('Renna Iles','You could tell them.'),('Jessa','I could have. I left instead.'),('Renna Iles','I know.')],
+            'SUN_S1E11_P06': [('Renna Iles','Stay for supper.'),('Jessa','We can make the next stop before dark.'),('Renna Iles','I know.'),('Kael','Do you want to stay?'),('Jessa',"Don't help."),('Kael',"Wasn't trying to."),('Renna Iles','I like him.'),('Jessa','You would.'),('Jessa','One night.'),('Jessa','And nobody say anything.'),('Eva',"I didn't."),('Jessa',"Keep it that way."),('Kael',"Don't ruin it."),('Eva',"I wasn't going to."),('Eva','I was thinking it.')]
+          }
+          base=pathlib.Path('data/shows/sunforge-outlaw-s1')
+          for issue in range(1,13):
+              path=base/f'pages_e{issue:02d}.json'
+              pages=json.loads(path.read_text(encoding='utf-8'))
+              changed=False
+              for page in pages:
+                  if page['id'] in replacements:
+                      page['dialogueInline']=[{'speaker':s,'text':t} for s,t in replacements[page['id']]]
+                      changed=True
+              if changed:
+                  path.write_text(json.dumps(pages,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Mechanical dialogue validation
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          base=pathlib.Path('data/shows/sunforge-outlaw-s1')
+          count=0
+          for issue in range(1,13):
+              pages=json.loads((base/f'pages_e{issue:02d}.json').read_text(encoding='utf-8'))
+              for p in pages:
+                  d=p.get('dialogueInline')
+                  if not isinstance(d,list) or not d:
+                      raise SystemExit(f"missing dialogue: {p['id']}")
+                  for line in d:
+                      if not line.get('speaker') or not str(line.get('text','')).strip():
+                          raise SystemExit(f"bad dialogue line: {p['id']}")
+                  count+=1
+          if count != 73:
+              raise SystemExit(f'expected 73 pages, found {count}')
+          print('validated',count,'pages')
+          PY
+      - name: Commit cleanup and remove helper
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .github/workflows/sunforge-dialogue-cleanup.yml
+          git add data/shows/sunforge-outlaw-s1/pages_e02.json data/shows/sunforge-outlaw-s1/pages_e03.json data/shows/sunforge-outlaw-s1/pages_e06.json data/shows/sunforge-outlaw-s1/pages_e07.json data/shows/sunforge-outlaw-s1/pages_e08.json data/shows/sunforge-outlaw-s1/pages_e09.json data/shows/sunforge-outlaw-s1/pages_e11.json
+          git commit -m 'Tighten Sunforge dialogue after full read'
+          git push origin HEAD:sunforge-dialogue-pass-20260914
