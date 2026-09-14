@@ -9,7 +9,7 @@
       {"panel":2,"location":"Safe Cave doorway","shotType":"medium on Bjorn","action":"After the door closes, Bjorn glances from Gunnar to the two male Kin and then toward the empty doorway, visibly accounting for who is present."},
       {"panel":3,"location":"Safe Cave table","shotType":"two-shot","action":"Gunnar notices Bjorn's repeated glance and looks up from his book.","dialogueIndices":[0]},
       {"panel":4,"location":"Safe Cave table","shotType":"two-shot","action":"Bjorn admits the gap in his knowledge. Gunnar simply confirms it.","dialogueIndices":[1,2]},
-      {"panel":5,"location":"Safe Cave main room","shotType":"wide","action":"Bjorn looks once more across the functioning room, then sits instead of calling anyone over or asking where Astrid is.","dialogueIndices":[3]}
+      {"panel":5,"location":"Safe Cave main room","shotType":"wide","action":"Bjorn looks once more across the room, then lowers himself onto a chair near the wall. The doorway remains quiet.","dialogueIndices":[3]}
     ],
     "dialogueInline": [
       {"handle":"@vik.Gunnar","text":"What?"},
@@ -17,7 +17,7 @@
       {"handle":"@vik.Gunnar","text":"No."},
       {"handle":"@vik.Bjorn","text":"Good."}
     ],
-    "directionInline": ["Astrid remains off-page; do not imply danger or disappearance. Show only the two established male Kin."]
+    "directionInline": ["Astrid is off-page. Only First Male Kin and Second Male Kin appear among the Kin."]
   },
   {
     "id": "VIK_S1I06_P20",
@@ -27,7 +27,7 @@
     "panelPlan": [
       {"panel":1,"location":"bodega front aisle","shotType":"wide","action":"A narrow refrigerated display cabinet will not clear a counter corner. Two delivery workers and the Bodega Owner study the angle; floor mat and counter leave only inches of space."},
       {"panel":2,"location":"bodega entrance","shotType":"medium","action":"Bjorn enters for his usual purchase. The owner sees him and points immediately at the cabinet.","dialogueIndices":[0]},
-      {"panel":3,"location":"bodega front aisle","shotType":"medium","action":"The owner indicates one exact lower corner and demonstrates the small lift needed. Bjorn repeats the limit back.","dialogueIndices":[1,2]},
+      {"panel":3,"location":"bodega front aisle","shotType":"medium","action":"The owner crouches beside one lower corner, points to the exact handhold and measures a two-inch lift with thumb and forefinger. Bjorn nods and repeats the limit back.","dialogueIndices":[1,2]},
       {"panel":4,"location":"bodega front aisle","shotType":"wide","action":"On the owner's cue, Bjorn lifts his corner only enough for the delivery workers to pivot the cabinet through. Everyone keeps a defined role; nobody is in danger."},
       {"panel":5,"location":"bodega counter","shotType":"medium","action":"Afterward the owner hands Bjorn his regular coffee. Bjorn accepts it without reaching for another crate or task.","dialogueIndices":[3,4,5]}
     ],
@@ -46,7 +46,7 @@
     "settingText": "Sidewalk outside the community center and the entry corridor before a later meeting.",
     "charactersInline": [{"handle":"@vik.Bjorn","name":"Bjorn"},{"handle":"@vik.Participant1987","name":"1987 Participant"}],
     "panelPlan": [
-      {"panel":1,"location":"community-center sidewalk","shotType":"wide","action":"Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, dressed for an ordinary day rather than a session ritual."},
+      {"panel":1,"location":"community-center sidewalk","shotType":"wide","action":"Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, keys and phone visible in the other hand, coat open over ordinary contemporary clothes."},
       {"panel":2,"location":"community-center sidewalk","shotType":"two-shot","action":"The participant tells Bjorn they went to the family dinner. He asks only what happened.","dialogueIndices":[0,1]},
       {"panel":3,"location":"community-center doorway","shotType":"medium on 1987 Participant","action":"The participant describes the family repeating the same questions, their brother trying to stop it, and their own decision to leave.","dialogueIndices":[2]},
       {"panel":4,"location":"community-center entry corridor","shotType":"two-shot walking","action":"They enter side by side as the participant describes the later one-on-one invitation. Bjorn names the changed condition, and the participant agrees.","dialogueIndices":[3,4,5]}
@@ -66,7 +66,7 @@
     "settingText": "Community-center multipurpose room during a later support-group meeting.",
     "charactersInline": [{"handle":"@vik.Bjorn","name":"Bjorn"},{"handle":"@vik.GroupFacilitator","name":"Group Facilitator"}],
     "panelPlan": [
-      {"panel":1,"location":"community-center chair circle","shotType":"wide","action":"A normal silence settles over the group. Bjorn sits with his eyes down and both hands still on his knees rather than studying another participant."},
+      {"panel":1,"location":"community-center chair circle","shotType":"wide","action":"A normal silence settles over the group. Bjorn sits with both hands flat on his knees and his eyes fixed on the floor."},
       {"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn lifts his head and volunteers the floor awkwardly.","dialogueIndices":[0]},
       {"panel":3,"location":"community-center chair circle","shotType":"wide reaction","action":"Several participants glance up without leaning in or turning the moment into a performance. The facilitator answers simply.","dialogueIndices":[1]},
       {"panel":4,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn states the fear directly with level eye contact and no anger.","dialogueIndices":[2]},
@@ -107,7 +107,7 @@
     "settingText": "Safe Cave, late evening: window, table and whole-room geography with everyone returning to ordinary separate routines.",
     "charactersInline": [{"handle":"@vik.Bjorn","name":"Bjorn"},{"handle":"@vik.Carrie","name":"Carrie"},{"handle":"@vik.Gunnar","name":"Gunnar"},{"handle":"@vik.KinMan1","name":"First Male Kin"},{"handle":"@vik.KinMan2","name":"Second Male Kin"},{"handle":"@vik.Astrid","name":"Astrid"}],
     "panelPlan": [
-      {"panel":1,"location":"Safe Cave whole room","shotType":"wide","action":"Gunnar reads. The two male Kin continue separate quiet tasks. Astrid enters in the background carrying one ordinary small bag and is greeted without interrogation. Carrie sits at the table with coffee rather than a folder. Bjorn stands near the window."},
+      {"panel":1,"location":"Safe Cave whole room","shotType":"wide","action":"Gunnar reads. First Male Kin continues a small repair while Second Male Kin sorts groceries. Astrid enters in the background carrying one small bag; First Male Kin gives her a brief nod and Second Male Kin shifts aside to let her pass. Carrie sits at the table with coffee, no folder visible. Bjorn stands near the window."},
       {"panel":2,"location":"Safe Cave table/window axis","shotType":"medium on Carrie","action":"Carrie looks toward Bjorn and asks about the group without getting up from the table.","dialogueIndices":[0]},
       {"panel":3,"location":"Safe Cave window","shotType":"medium on Bjorn","action":"Bjorn turns only slightly, preserving his habitual seriousness.","dialogueIndices":[1]},
       {"panel":4,"location":"Safe Cave table","shotType":"medium on Carrie","action":"Carrie gives a dry, unsurprised reply and takes another sip of coffee.","dialogueIndices":[2]},

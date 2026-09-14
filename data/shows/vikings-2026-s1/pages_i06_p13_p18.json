@@ -27,7 +27,7 @@
     "panelPlan": [
       {"panel":1,"location":"fifth-floor hallway at apartment 5B","shotType":"medium","action":"Carrie knocks once and enters with her coat still on, expecting to collect Bjorn.","dialogueIndices":[0]},
       {"panel":2,"location":"Safe Cave interior","shotType":"wide","action":"Gunnar reads at the table. First Male Kin is nearby with a household task. Bjorn is absent. Astrid and Second Male Kin are also not present; nobody treats that as notable."},
-      {"panel":3,"location":"Safe Cave table","shotType":"medium on Carrie and Gunnar","action":"Carrie realizes Bjorn is not there.","dialogueIndices":[1,2]},
+      {"panel":3,"location":"Safe Cave table","shotType":"medium on Carrie and Gunnar","action":"Carrie scans the empty window and sleeping side of the studio where Bjorn would normally be, then looks back to Gunnar.","dialogueIndices":[1,2]},
       {"panel":4,"location":"Safe Cave table","shotType":"two-shot","action":"Carrie confirms that Bjorn left without her. Gunnar answers matter-of-factly.","dialogueIndices":[3,4]},
       {"panel":5,"location":"Bushwick sidewalk half a block from apartment","shotType":"long medium","action":"Bjorn moves alone with purpose through ordinary pedestrian traffic toward the meeting. This is a direct exterior cut, not Carrie's impossible telescopic view from the apartment.","dialogueIndices":[5]}
     ],
@@ -39,7 +39,7 @@
       {"handle":"@vik.Gunnar","text":"I showed him once."},
       {"handle":"@vik.Gunnar","text":"He knows the way."}
     ],
-    "directionInline": ["Panel 5 is an exterior cut to Bjorn on the block; do not imply the apartment characters can clearly see him from inside."]
+    "directionInline": ["Panel 5 is a direct exterior cut to Bjorn on the block."]
   },
   {
     "id": "VIK_S1I06_P15",
@@ -50,7 +50,7 @@
       {"panel":1,"location":"community-center chair circle","shotType":"medium on 1987 Participant","action":"1987 Participant explains the family invitation with contained frustration. Group Facilitator listens from elsewhere in the circle without taking over.","dialogueIndices":[0]},
       {"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn leans forward and starts to give an immediate answer.","dialogueIndices":[1]},
       {"panel":3,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn stops mid-sentence. He glances once toward the facilitator, who does not cue him."},
-      {"panel":4,"location":"community-center chair circle","shotType":"two-shot","action":"Bjorn asks about the result the participant wants rather than whether the dinner is good or bad.","dialogueIndices":[2]},
+      {"panel":4,"location":"community-center chair circle","shotType":"two-shot","action":"Bjorn opens both hands, looks directly at the participant, asks what they want from the dinner, and waits for the answer.","dialogueIndices":[2]},
       {"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant thinks before answering. Bjorn hears two separate wants and names them as separate problems.","dialogueIndices":[3,4]}
     ],
     "dialogueInline": [
@@ -88,9 +88,9 @@
     "settingText": "Community-center multipurpose room during cleanup, then hallway.",
     "charactersInline": [{"handle":"@vik.Bjorn","name":"Bjorn"},{"handle":"@vik.GroupFacilitator","name":"Group Facilitator"}],
     "panelPlan": [
-      {"panel":1,"location":"community-center multipurpose room after meeting","shotType":"wide","action":"Participants stack cups and chairs. Bjorn folds one chair because everyone is cleaning up, not because he has taken charge."},
+      {"panel":1,"location":"community-center multipurpose room after meeting","shotType":"wide","action":"Participants stack cups and chairs. Bjorn folds one chair and adds it to the same stack while two other participants clean nearby."},
       {"panel":2,"location":"community-center multipurpose room","shotType":"two-shot","action":"Bjorn and the facilitator continue their argument while carrying chairs toward the wall.","dialogueIndices":[0]},
-      {"panel":3,"location":"community-center multipurpose room","shotType":"medium on facilitator","action":"The facilitator answers plainly rather than turning the exchange into a lesson.","dialogueIndices":[1]},
+      {"panel":3,"location":"community-center multipurpose room","shotType":"medium on facilitator","action":"The facilitator keeps carrying a folded chair toward the wall while answering Bjorn.","dialogueIndices":[1]},
       {"panel":4,"location":"community-center multipurpose room","shotType":"two-shot","action":"Bjorn reframes unwanted dependency as being treated like a child; the facilitator answers with an equally concrete distinction.","dialogueIndices":[2,3]},
       {"panel":5,"location":"community-center hallway","shotType":"wide","action":"They walk in opposite directions after the argument. Neither appears to have won.","dialogueIndices":[4,5]}
     ],
@@ -111,8 +111,8 @@
     "panelPlan": [
       {"panel":1,"location":"sidewalk beside neighborhood coffee cart","shotType":"medium","action":"Carrie walks beside Bjorn with coffee and a folder tucked under one arm, already mid-rant.","dialogueIndices":[0]},
       {"panel":2,"location":"sidewalk beside coffee cart","shotType":"medium on Bjorn","action":"Bjorn listens with the concentrated expression he usually wears before proposing action while Carrie continues.","dialogueIndices":[1]},
-      {"panel":3,"location":"sidewalk","shotType":"two-shot","action":"Bjorn interrupts carefully with a question instead of a plan.","dialogueIndices":[2]},
-      {"panel":4,"location":"sidewalk","shotType":"two-shot","action":"Carrie stops walking for half a beat because the question is so unlike his old reflex. Bjorn repeats it exactly.","dialogueIndices":[3,4]},
+      {"panel":3,"location":"sidewalk","shotType":"two-shot","action":"Bjorn raises one hand slightly and asks his question before Carrie reaches the next complaint.","dialogueIndices":[2]},
+      {"panel":4,"location":"sidewalk","shotType":"two-shot","action":"Carrie stops for half a step and turns to look directly at Bjorn. He meets her eye and repeats the question.","dialogueIndices":[3,4]},
       {"panel":5,"location":"sidewalk walking away from coffee cart","shotType":"two-shot","action":"They resume walking. Carrie chooses witness; Bjorn gives only the judgment she actually wanted.","dialogueIndices":[5,6,7]}
     ],
     "dialogueInline": [
