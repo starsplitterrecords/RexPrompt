@@ -1,0 +1,38 @@
+name: Productionize Vikings Issue 6
+
+on:
+  push:
+    branches:
+      - productionize/vikings-issue6
+    paths:
+      - tools/productionize_vikings_i06.py
+      - .github/workflows/productionize-vikings-i06.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  productionize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: productionize/vikings-issue6
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile and register Issue 6
+        run: python tools/productionize_vikings_i06.py
+      - name: Commit production registration
+        run: |
+          if git diff --quiet; then
+            echo "No production registration changes required."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows.json data/shows/vikings-2026-s1/characters.json data/shows/vikings-2026-s1/issue_06_trial_of_toil_script.md data/shows/vikings-2026-s1/season_one_plan.json
+          git commit -m "Register Vikings Issue 6 production recipes"
+          git push origin HEAD:productionize/vikings-issue6
