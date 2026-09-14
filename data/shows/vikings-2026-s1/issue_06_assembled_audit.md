@@ -182,7 +182,7 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 {"panel":2,"location":"community-center chair circle","shotType":"medium","action":"1987 Participant speaks while holding one subtle late-1980s personal object; their current clothes are practical contemporary layers.","dialogueIndices":[0]}
 {"panel":3,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn turns toward the participant, tilts his head and narrows his eyes before answering immediately.","dialogueIndices":[1]}
 {"panel":4,"location":"community-center chair circle","shotType":"close on 1987 Participant","action":"The participant's mouth tightens; they square their shoulders and hold Bjorn's gaze.","dialogueIndices":[2]}
-{"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant keeps steady eye contact. Bjorn's certainty drops from his face; after a beat he answers the literal wording.","dialogueIndices":[3,4,5]}
+{"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"The participant keeps steady eye contact. Bjorn’s eyes widen slightly and his jaw relaxes; after a beat he answers the literal wording.","dialogueIndices":[3,4,5]}
 
 [DIALOGUE]
 @vik.Participant1987 says "I came through from 1987."
@@ -208,7 +208,7 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 
 [PANEL PLAN]
 {"panel":1,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"A silence lasts. Bjorn looks from one seated participant to the next, then fixes his eyes on the facilitator.","dialogueIndices":[0]}
-{"panel":2,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator answers from the same kind of chair as everyone else, relaxed and unceremonial.","dialogueIndices":[1]}
+{"panel":2,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator answers from the same kind of chair as everyone else, leaning back with hands loose on their lap.","dialogueIndices":[1]}
 {"panel":3,"location":"community-center chair circle","shotType":"close on Bjorn","action":"Bjorn leans slightly forward, brow narrowed and eyes fixed on the facilitator.","dialogueIndices":[2]}
 {"panel":4,"location":"community-center chair circle","shotType":"wide","action":"One participant drinks coffee, one looks down at folded hands, and another leans back in the chair while the silence continues.","dialogueIndices":[3]}
 {"panel":5,"location":"community-center chair circle","shotType":"two-shot","action":"After saying “But not orders,” Bjorn looks once around the circle and gives one slow nod. The facilitator remains seated and still.","dialogueIndices":[4,5,6,7]}
@@ -236,9 +236,9 @@ Group Facilitator — @vik.GroupFacilitator — Identity: Grounded middle-aged N
 
 [PANEL PLAN]
 {"panel":1,"location":"community-center chair circle","shotType":"medium","action":"An unnamed adult participant in ordinary contemporary clothes sits folded inward, arms close to the body, while describing an unstable housing and family situation and insisting they can manage.","dialogueIndices":[0]}
-{"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn's attention sharpens and he answers before the participant asks for anything.","dialogueIndices":[1]}
-{"panel":3,"location":"community-center chair circle","shotType":"two-shot","action":"The participant stiffens as Bjorn states what he thinks they are afraid of.","dialogueIndices":[2]}
-{"panel":4,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator raises one hand from their chair and cuts Bjorn off without standing over him.","dialogueIndices":[3,4]}
+{"panel":2,"location":"community-center chair circle","shotType":"medium on Bjorn","action":"Bjorn sits forward with brows drawn and answers immediately after the participant’s line.","dialogueIndices":[1]}
+{"panel":3,"location":"community-center chair circle","shotType":"two-shot","action":"The participant’s shoulders rise and their elbows pull inward as Bjorn says, “You fear saying so…”","dialogueIndices":[2]}
+{"panel":4,"location":"community-center chair circle","shotType":"medium on Group Facilitator","action":"The facilitator remains seated and raises one hand toward Bjorn as they say, “Stop.”","dialogueIndices":[3,4]}
 {"panel":5,"location":"community-center chair circle","shotType":"tight two-shot","action":"The facilitator keeps one hand raised toward Bjorn and turns the other open palm toward the participant as the exchange continues.","dialogueIndices":[5,6,7]}
 
 [DIALOGUE]
@@ -531,9 +531,9 @@ First Male Kin — @vik.KinMan1 — Identity: Use the same specific established 
 Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established male Kin identity carried by the park/independent-movement thread in current middle-season production and the approved current character reference. Preserve his released Issue 1 face, build, hair, historical clothing identity, and current continuity; do not substitute Bjorn, Gunnar, or First Male Kin. — Performance: Grounded, practical, comfortable with modern competence while remaining less willing to promise a permanent future. — Continuity: Second Male Kin is a production label only, not a locked personal name; He is one of exactly two male Kin and remains visually distinct from First Male Kin; Do not clone Bjorn or Gunnar into this identity
 
 [PANEL PLAN]
-{"panel":1,"location":"Safe Cave main room","shotType":"wide","action":"Gunnar reads at the table. First Male Kin repairs a bag. Second Male Kin enters carrying a small purchase; Bjorn's eyes follow him with brief surprise. Astrid is not present."}
+{"panel":1,"location":"Safe Cave main room","shotType":"wide","action":"Gunnar reads at the table. First Male Kin repairs a bag. Second Male Kin enters carrying a small purchase; Bjorn’s eyes widen briefly and track him across the room. Astrid is not present."}
 {"panel":2,"location":"Safe Cave doorway","shotType":"medium on Bjorn","action":"After the door closes, Bjorn glances from Gunnar to First Male Kin, then Second Male Kin, then back to the empty doorway."}
-{"panel":3,"location":"Safe Cave table","shotType":"two-shot","action":"Gunnar notices Bjorn's repeated glance and looks up from his book.","dialogueIndices":[0]}
+{"panel":3,"location":"Safe Cave table","shotType":"two-shot","action":"Gunnar catches Bjorn looking toward the empty doorway and looks up from his book.","dialogueIndices":[0]}
 {"panel":4,"location":"Safe Cave table","shotType":"two-shot","action":"Bjorn turns his head toward the empty doorway while saying he does not know where everyone is. Gunnar answers without looking up from the book.","dialogueIndices":[1,2]}
 {"panel":5,"location":"Safe Cave main room","shotType":"wide","action":"Bjorn looks once more across the room, then lowers himself onto a chair near the wall. The doorway remains quiet.","dialogueIndices":[3]}
 
@@ -637,7 +637,7 @@ First Male Kin — @vik.KinMan1 — Identity: Use the same specific established 
 Second Male Kin — @vik.KinMan2 — Identity: Use the same specific established male Kin identity carried by the park/independent-movement thread in current middle-season production and the approved current character reference. Preserve his released Issue 1 face, build, hair, historical clothing identity, and current continuity; do not substitute Bjorn, Gunnar, or First Male Kin. — Performance: Grounded, practical, comfortable with modern competence while remaining less willing to promise a permanent future. — Continuity: Second Male Kin is a production label only, not a locked personal name; He is one of exactly two male Kin and remains visually distinct from First Male Kin; Do not clone Bjorn or Gunnar into this identity
 
 [PANEL PLAN]
-{"panel":1,"location":"Safe Cave main room","shotType":"wide","action":"Gunnar compares two library books. First Male Kin wrestles with a stubborn clamp on a small repair. Second Male Kin sorts groceries. Bjorn enters, notices all three tasks, and stops near the door without reaching for any tool or bag."}
+{"panel":1,"location":"Safe Cave main room","shotType":"wide","action":"Gunnar compares two library books. First Male Kin wrestles with a stubborn clamp on a small repair. Second Male Kin sorts groceries. Bjorn enters; his eyes move from the books to the clamp to the groceries, then he stops near the door with both hands empty."}
 {"panel":2,"location":"Safe Cave doorway to main room","shotType":"medium on Bjorn","action":"Bjorn removes his coat and sits. The others continue what they were doing without turning toward him."}
 {"panel":3,"location":"Safe Cave repair area","shotType":"two-shot","action":"First Male Kin looks over, holds the clamp out by one end and points to the loose joint. Bjorn rises and braces that joint with one hand.","dialogueIndices":[0]}
 {"panel":4,"location":"Safe Cave table","shotType":"medium on Gunnar and open book","action":"Gunnar holds the open book toward Bjorn while asking about the lunar-tide illustration. After Bjorn answers, Gunnar taps the illustration with one finger before asking for his judgment on it.","dialogueIndices":[1,2,3]}
