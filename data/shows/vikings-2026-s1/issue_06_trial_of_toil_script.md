@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 6: TRIAL OF TOIL
 
-Status: DEVELOPMENT SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; NOT YET ACTIVE ASSEMBLER INPUT  
+Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; ACTIVE ASSEMBLER INPUT  
 Primary function: Bjorn must discover whether he still has something useful to offer when the household no longer needs him to command it.
 
 ## Continuity lock
@@ -87,7 +87,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 2. **Medium on Carrie placing folder down.** Bjorn does not respond.
    **CARRIE:** Okay. This is usually where you object to being inspected by a man with a clipboard.
 3. **Two-shot.** Bjorn finally turns.
-   **BJORN:** Water comes through walls. Heat comes from iron. Food comes from men downstairs. Roads carry us. Paper grants the room.
+   **BJORN:** Water comes through walls. Heat comes from iron. Food comes from the shop downstairs. Roads carry us. Paper grants the room.
 4. **Closer on Carrie, listening rather than correcting.** Bjorn gestures at the apartment, not theatrically.
    **BJORN:** Gunnar knows the city. They know the shops. You know the law. What remains for me?
 5. **Quiet two-shot.** Carrie understands the wound.
@@ -194,7 +194,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
    **BJORN:** Those are rules.
    **GROUP FACILITATOR:** Yes.
    **BJORN:** But not orders.
-   **GROUP FACILITATOR:** Now you're listening.
+   **GROUP FACILITATOR:** That's the difference.
 
 **Page turn:** authority without hierarchy gives Bjorn a model he did not expect to respect.
 
@@ -218,7 +218,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
    **GROUP FACILITATOR:** Stop.
    **BJORN:** I am correct.
 5. **Tight two-shot.**
-   **GROUP FACILITATOR:** You may be. Seeing the truth does not make it yours.
+   **GROUP FACILITATOR:** You may be. They still did not ask you to say it for them.
    **BJORN:** Then what use is seeing it?
    **GROUP FACILITATOR:** Sometimes you wait to be asked.
 
@@ -330,7 +330,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 2. **Bjorn emerges from 5B and scans the mess like a threat assessment.**
    **BJORN:** Who did this?
 3. **Neighbor deadpan.**
-   **UPSTAIRS NEIGHBOR:** IKEA.
+   **UPSTAIRS NEIGHBOR:** Flat-pack furniture.
 4. **Two-shot.** She hands him the upright side panel.
    **UPSTAIRS NEIGHBOR:** Hold this. Don't improve it. Just hold it.
 5. **Wide.** Bjorn holds the panel perfectly vertical while she tightens the hardware herself.
@@ -358,7 +358,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 4. **Carrie stares.**
    **CARRIE:** By himself?
    **GUNNAR:** I showed him once.
-5. **Exterior long lens from apartment window / street below.** Bjorn is already half a block away moving with purpose through ordinary foot traffic.
+5. **Exterior cut to the Bushwick sidewalk.** Bjorn is already half a block from the apartment, moving with purpose through ordinary foot traffic; do not imply Carrie or Gunnar can see him clearly from inside.
    **GUNNAR (off-panel):** He knows the way.
 
 **Page turn:** the support group has become Bjorn's own relationship, not Carrie's intervention.
@@ -424,10 +424,10 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 2. **Two-shot with facilitator.**
    **BJORN:** A person without useful work rots.
 3. **Facilitator.**
-   **GROUP FACILITATOR:** A person without useful work suffers. That's not the same sentence.
+   **GROUP FACILITATOR:** They suffer. That's different.
 4. **Bjorn.**
-   **BJORN:** Care without purpose makes a child of an adult.
-   **GROUP FACILITATOR:** Then give adults ways to contribute. Don't make contribution the price of being cared for.
+   **BJORN:** If everyone feeds a man and asks nothing of him, they make him a child.
+   **GROUP FACILITATOR:** Then ask something of him. Don't make him earn the right to be fed.
 5. **Hallway wide.** They walk opposite directions after the argument.
    **BJORN:** That is a soft distinction.
    **GROUP FACILITATOR:** You keep coming back for it.
@@ -548,9 +548,9 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 4. **Bjorn close.**
    **BJORN:** If my people do not need my protection, I do not know what my place is among them.
 5. **Two-shot with facilitator.**
-   **GROUP FACILITATOR:** A hand can be offered before it's required.
+   **GROUP FACILITATOR:** You don't have to be needed before you can be useful.
    **BJORN:** You make everything sound small.
-   **GROUP FACILITATOR:** Most of life is small.
+   **GROUP FACILITATOR:** Most days are.
 
 **Page turn:** Bjorn names the fear instead of converting it into control.
 
