@@ -1,0 +1,57 @@
+name: Validate Sunforge Issues 5-12
+
+on:
+  push:
+    branches:
+      - validate-sunforge-i05-i12-20260913
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Sunforge package
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          base = Path('data/shows/sunforge-outlaw-s1')
+          def load(p): return json.loads(Path(p).read_text())
+          settings = load(base/'settings.json')
+          chars = load(base/'characters.json')
+          regions = load(base/'regions.json')
+          directions = load(base/'direction.json')
+          expected = {1:7, **{i:6 for i in range(2,13)}}
+          all_pages=[]
+          for issue in range(1,13):
+              pages=load(base/f'pages_e{issue:02d}.json')
+              assert len(pages)==expected[issue], (issue,len(pages))
+              for p in pages:
+                  assert p['issue']==issue, p['id']
+                  assert p['setting'] in settings, (p['id'],p['setting'])
+                  assert p['region'] in regions, (p['id'],p['region'])
+                  for cid in p.get('characters',[]): assert cid in chars,(p['id'],cid)
+                  for did in p.get('direction',[]): assert did in directions,(p['id'],did)
+                  assert p.get('panelPlan'), p['id']
+                  assert p.get('dialogueInline'), p['id']
+              all_pages += pages
+          ids=[p['id'] for p in all_pages]
+          assert len(ids)==73
+          assert len(ids)==len(set(ids))
+          series=load(base/'series.json')
+          assert series['sourceBoundary']=={'episodes':12,'pages':73}
+          shows=load('data/shows.json')
+          registrations={x['id']:x for x in shows if str(x.get('id','')).startswith('sunforge-outlaw-s1-e')}
+          for issue in range(1,13):
+              sid=f'sunforge-outlaw-s1-e{issue:02d}'
+              assert sid in registrations,sid
+              assert registrations[sid]['sceneOverlays'][0]['file']==f'pages_e{issue:02d}.json'
+          # Specific regression check from pre-merge review: Kael speaks on E10 P05 and must be in character refs.
+          e10=load(base/'pages_e10.json')
+          p=next(x for x in e10 if x['id']=='SUN_S1E10_P05')
+          assert 'C_sun_kael' in p['characters']
+          print('SUNFORGE OK: 12 issues, 73 unique pages, references and registrations valid')
+          PY
