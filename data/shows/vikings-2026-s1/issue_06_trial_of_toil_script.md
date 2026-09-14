@@ -550,7 +550,7 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 5. **Two-shot with facilitator.**
    **GROUP FACILITATOR:** A hand can be offered before it's required.
    **BJORN:** You make everything sound small.
-   **GROUP FACILITATOR:** Small things are where people live.
+   **GROUP FACILITATOR:** Most of life is small.
 
 **Page turn:** Bjorn names the fear instead of converting it into control.
 

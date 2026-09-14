@@ -287,7 +287,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 4. **Gunnar.**
    **GUNNAR:** I know where the library is. He knows the river. That one knows the washing machines lie.
 5. **Carrie pockets the phone.**
-   **CARRIE:** Right. A perfect case could still be the wrong life.
+   **CARRIE:** Right. The file can be perfect and still get the person wrong.
 
 **Page turn:** Carrie's objective changes from producing a favorable answer to representing separate choices honestly.
 

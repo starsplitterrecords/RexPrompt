@@ -498,7 +498,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 5. **Bjorn.**
    **BJORN:** I stand when someone needs a hand beside them.
 6. **Tight.**
-   **BJORN:** I do not choose another person's road because I am strong enough to block it.
+   **BJORN:** Strength does not make another person's road mine.
 
 **Page turn:** the provider identity survives, but sovereignty over other people does not.
 
