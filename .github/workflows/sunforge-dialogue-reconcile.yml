@@ -1,0 +1,85 @@
+name: Reconcile Sunforge dialogue
+
+on:
+  push:
+    branches:
+      - sunforge-dialogue-reconcile-20260914
+    paths:
+      - '.github/workflows/sunforge-dialogue-reconcile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sunforge-dialogue-reconcile-20260914
+          fetch-depth: 0
+
+      - name: Apply targeted dialogue reconciliation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          mapping_path = Path('.tmp/sunforge-dialogue-reconcile.json')
+          rewrites = json.loads(mapping_path.read_text(encoding='utf-8'))
+          expected_ids = {
+              'SUN_S1E01_P02','SUN_S1E01_P07',
+              'SUN_S1E06_P04','SUN_S1E06_P06',
+              'SUN_S1E11_P04',
+              'SUN_S1E12_P04','SUN_S1E12_P05','SUN_S1E12_P06'
+          }
+          if set(rewrites) != expected_ids:
+              raise SystemExit(f'Rewrite map mismatch: {sorted(set(rewrites)^expected_ids)}')
+
+          targets = {
+              1: {'SUN_S1E01_P02','SUN_S1E01_P07'},
+              6: {'SUN_S1E06_P04','SUN_S1E06_P06'},
+              11: {'SUN_S1E11_P04'},
+              12: {'SUN_S1E12_P04','SUN_S1E12_P05','SUN_S1E12_P06'},
+          }
+
+          found = set()
+          before_ids = {}
+          for issue, ids in targets.items():
+              path = Path(f'data/shows/sunforge-outlaw-s1/pages_e{issue:02d}.json')
+              pages = json.loads(path.read_text(encoding='utf-8'))
+              before_ids[issue] = [p['id'] for p in pages]
+              for page in pages:
+                  pid = page['id']
+                  if pid not in ids:
+                      continue
+                  if pid in found:
+                      raise SystemExit(f'Duplicate page id found: {pid}')
+                  dialogue = rewrites[pid]
+                  if not dialogue:
+                      raise SystemExit(f'Empty dialogue for {pid}')
+                  for i, line in enumerate(dialogue):
+                      if not isinstance(line, dict) or not line.get('speaker') or not line.get('text'):
+                          raise SystemExit(f'Malformed line {pid}[{i}]: {line!r}')
+                  page['dialogueInline'] = dialogue
+                  found.add(pid)
+              after_ids = [p['id'] for p in pages]
+              if after_ids != before_ids[issue]:
+                  raise SystemExit(f'Page IDs/order changed in issue {issue}')
+              path.write_text(json.dumps(pages, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          if found != expected_ids:
+              raise SystemExit(f'Not all target pages found: missing={sorted(expected_ids-found)}')
+          print('Applied targeted dialogue reconciliation to', len(found), 'pages')
+          PY
+
+      - name: Remove helpers and commit
+        run: |
+          rm -f .tmp/sunforge-dialogue-reconcile.json
+          rm -f .github/workflows/sunforge-dialogue-reconcile.yml
+          rmdir .tmp 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/sunforge-outlaw-s1/pages_e01.json data/shows/sunforge-outlaw-s1/pages_e06.json data/shows/sunforge-outlaw-s1/pages_e11.json data/shows/sunforge-outlaw-s1/pages_e12.json .tmp .github/workflows/sunforge-dialogue-reconcile.yml || true
+          git commit -m "Reconcile Sunforge dialogue voice and character payoff"
+          git push origin HEAD:sunforge-dialogue-reconcile-20260914
