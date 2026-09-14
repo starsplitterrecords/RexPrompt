@@ -7,26 +7,71 @@
     "title": "A Place That Knows Nobody",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_kael","C_sun_eva","C_sun_jessa","C_sun_nessa_rowan","C_sun_ada_rowan"],
+    "characters": [
+      "C_sun_kael",
+      "C_sun_eva",
+      "C_sun_jessa",
+      "C_sun_nessa_rowan",
+      "C_sun_ada_rowan"
+    ],
     "summary": "At Rowan Hold, no one mistakes Kael for anybody. The community's attention is on Nessa Rowan, who has been chosen to inherit a family obligation she does not want and intends to leave instead.",
     "panelPlan": [
-      {"text": "Rowan Hold is a close agricultural settlement gathered around shade trees and low stone houses. An exposed black Sunforge arc crosses the common yard and is used as ordinary seating."},
-      {"text": "Kael, Eva and Jessa enter expecting another recognition. People glance at them, then go back to a loud family argument around Nessa and her mother Ada."},
-      {"text": "Eva waits for somebody to call Kael a name. Nobody does. Jessa notices Nessa's packed bag instead."}
+      {
+        "text": "Rowan Hold is a close agricultural settlement gathered around shade trees and low stone houses. An exposed black Sunforge arc crosses the common yard and is used as ordinary seating."
+      },
+      {
+        "text": "Kael, Eva and Jessa enter expecting another recognition. People glance at them, then go back to a loud family argument around Nessa and her mother Ada."
+      },
+      {
+        "text": "Eva waits for somebody to call Kael a name. Nobody does. Jessa notices Nessa's packed bag instead."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Eva", "text": "Nobody is staring at him."},
-      {"speaker": "Jessa", "text": "People are staring. They just have their own problem."},
-      {"speaker": "Kael", "text": "That's encouraging."},
-      {"speaker": "Nessa", "text": "I said I'm leaving tomorrow."},
-      {"speaker": "Ada Rowan", "text": "You said that before they chose you."},
-      {"speaker": "Nessa", "text": "They chose me because they thought I wouldn't leave."},
-      {"speaker": "Jessa", "text": "That's usually how people choose for you."},
-      {"speaker": "Eva", "text": "You know her?"},
-      {"speaker": "Jessa", "text": "No."}
+      {
+        "speaker": "Eva",
+        "text": "Nobody is staring at him."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "People are staring. They just have their own problem."
+      },
+      {
+        "speaker": "Kael",
+        "text": "That's encouraging."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "I said I'm leaving tomorrow."
+      },
+      {
+        "speaker": "Ada Rowan",
+        "text": "You said that before they chose you."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "They chose me because they thought I wouldn't leave."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "That's usually how people choose for you."
+      },
+      {
+        "speaker": "Eva",
+        "text": "You know her?"
+      },
+      {
+        "speaker": "Jessa",
+        "text": "No."
+      }
     ],
-    "directionInline": [{"text": "This issue is a deliberate negative case for the Kael pattern. The local story must be allowed to matter more than the absence of mystery."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "This issue is a deliberate negative case for the Kael pattern. The local story must be allowed to matter more than the absence of mystery."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   },
   {
     "id": "SUN_S1E07_P02",
@@ -36,25 +81,66 @@
     "title": "Chosen to Stay",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_eva","C_sun_jessa","C_sun_nessa_rowan","C_sun_ada_rowan"],
+    "characters": [
+      "C_sun_eva",
+      "C_sun_jessa",
+      "C_sun_nessa_rowan",
+      "C_sun_ada_rowan"
+    ],
     "summary": "Nessa explains that the family selected her to maintain the household records and mediate kin disputes after her aunt's death. It is an honor that would also keep her at Rowan Hold indefinitely. Jessa understands the trap without treating the community as cruel.",
     "panelPlan": [
-      {"text": "Nessa shows Eva and Jessa the family room where births, debts, marriages and old agreements are kept in hand-written ledgers."},
-      {"text": "Ada explains that somebody trustworthy has to remember what everyone promised when tempers were cooler."},
-      {"text": "Nessa says she loves these people and still does not want the life they have decided proves she loves them."}
+      {
+        "text": "Nessa shows Eva and Jessa the family room where births, debts, marriages and old agreements are kept in hand-written ledgers."
+      },
+      {
+        "text": "Ada explains that somebody trustworthy has to remember what everyone promised when tempers were cooler."
+      },
+      {
+        "text": "Nessa says she loves these people and still does not want the life they have decided proves she loves them."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Ada Rowan", "text": "Her aunt trusted her with every name in this family."},
-      {"speaker": "Nessa", "text": "Aunt Mira trusted me to help her. She did not sentence me to become her."},
-      {"speaker": "Eva", "text": "You could do it for a year and then leave."},
-      {"speaker": "Nessa", "text": "That's what everyone keeps saying."},
-      {"speaker": "Jessa", "text": "Because a year sounds temporary when somebody else is spending it."},
-      {"speaker": "Ada Rowan", "text": "And what would you have us do? Forget everything?"},
-      {"speaker": "Jessa", "text": "No. Ask who wants the work."},
-      {"speaker": "Nessa", "text": "They did. Then they explained why I was the right answer."}
+      {
+        "speaker": "Ada Rowan",
+        "text": "Her aunt trusted her with every name in this family."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "Aunt Mira trusted me to help her. She did not sentence me to become her."
+      },
+      {
+        "speaker": "Eva",
+        "text": "You could do it for a year and then leave."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "That's what everyone keeps saying."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Because a year sounds temporary when somebody else is spending it."
+      },
+      {
+        "speaker": "Ada Rowan",
+        "text": "And what would you have us do? Forget everything?"
+      },
+      {
+        "speaker": "Jessa",
+        "text": "No. Ask who wants the work."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "They did. Then they explained why I was the right answer."
+      }
     ],
-    "directionInline": [{"text": "Do not make Ada a villain. The family genuinely needs continuity and genuinely loves Nessa; the conflict is about converting affection and competence into obligation."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "Do not make Ada a villain. The family genuinely needs continuity and genuinely loves Nessa; the conflict is about converting affection and competence into obligation."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   },
   {
     "id": "SUN_S1E07_P03",
@@ -64,27 +150,74 @@
     "title": "What Jessa Notices",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_kael","C_sun_eva","C_sun_jessa","C_sun_nessa_rowan"],
+    "characters": [
+      "C_sun_kael",
+      "C_sun_eva",
+      "C_sun_jessa",
+      "C_sun_nessa_rowan"
+    ],
     "summary": "While Kael helps with an ordinary meal and nobody projects a false identity onto him, Eva realizes Jessa is more invested in Nessa's decision than she is admitting.",
     "panelPlan": [
-      {"text": "Kael sits with two children shelling beans badly but patiently. Nobody asks who he used to be."},
-      {"text": "Across the yard, Jessa checks Nessa's packed bag for weight and quietly removes things that will be useless on the road."},
-      {"text": "Eva joins her and starts asking about Nessa, then notices she is really asking about Jessa."}
+      {
+        "text": "Kael sits with two children shelling beans badly but patiently. Nobody asks who he used to be."
+      },
+      {
+        "text": "Across the yard, Jessa checks Nessa's packed bag for weight and quietly removes things that will be useless on the road."
+      },
+      {
+        "text": "Eva joins her and starts asking about Nessa, then notices she is really asking about Jessa."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Eva", "text": "You have opinions about what she packed."},
-      {"speaker": "Jessa", "text": "She has three books and one pair of socks."},
-      {"speaker": "Eva", "text": "That is not what I meant."},
-      {"speaker": "Jessa", "text": "It is what I meant."},
-      {"speaker": "Eva", "text": "Did you leave like this?"},
-      {"speaker": "Jessa", "text": "With better socks."},
-      {"speaker": "Eva", "text": "Jessa."},
-      {"speaker": "Jessa", "text": "I left because I wanted to leave. People keep trying to make that sound more complicated than it is."},
-      {"speaker": "Eva", "text": "Was it?"},
-      {"speaker": "Jessa", "text": "Sometimes."}
+      {
+        "speaker": "Eva",
+        "text": "You have opinions about what she packed."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "She has three books and one pair of socks."
+      },
+      {
+        "speaker": "Eva",
+        "text": "That is not what I meant."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "It is what I meant."
+      },
+      {
+        "speaker": "Eva",
+        "text": "Did you leave like this?"
+      },
+      {
+        "speaker": "Jessa",
+        "text": "With better socks."
+      },
+      {
+        "speaker": "Eva",
+        "text": "Jessa."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "I left because I wanted to leave. People keep trying to make that sound more complicated than it is."
+      },
+      {
+        "speaker": "Eva",
+        "text": "Was it?"
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Sometimes."
+      }
     ],
-    "directionInline": [{"text": "This is one of the first Eva/Jessa conversations where Kael is not actually the subject. Jessa gives something real without being forced into a full biography."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "This is one of the first Eva/Jessa conversations where Kael is not actually the subject. Jessa gives something real without being forced into a full biography."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   },
   {
     "id": "SUN_S1E07_P04",
@@ -94,25 +227,66 @@
     "title": "A Vote Against Her",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_jessa","C_sun_nessa_rowan","C_sun_ada_rowan","C_sun_kael"],
+    "characters": [
+      "C_sun_jessa",
+      "C_sun_nessa_rowan",
+      "C_sun_ada_rowan",
+      "C_sun_kael"
+    ],
     "summary": "The Rowan family tries to resolve the dispute by voting on whether Nessa should accept the role. Kael points out, gently, that a vote about somebody else's life cannot create consent.",
     "panelPlan": [
-      {"text": "Family members gather in the common yard and begin an earnest vote, each explaining why Nessa is needed."},
-      {"text": "Nessa stands outside the circle that is deciding her future. Jessa is visibly irritated but lets Nessa speak first."},
-      {"text": "Kael, asked whether travelers have a custom for this, says the obvious thing the family has managed not to say."}
+      {
+        "text": "Family members gather in the common yard and begin an earnest vote, each explaining why Nessa is needed."
+      },
+      {
+        "text": "Nessa stands outside the circle that is deciding her future. Jessa is visibly irritated but lets Nessa speak first."
+      },
+      {
+        "text": "Kael, asked whether travelers have a custom for this, says the obvious thing the family has managed not to say."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Ada Rowan", "text": "We are trying to be fair."},
-      {"speaker": "Nessa", "text": "You are voting on me."},
-      {"speaker": "Ada Rowan", "text": "We are voting on the responsibility."},
-      {"speaker": "Kael", "text": "Ma'am, if the responsibility only works when Nessa accepts it, then I think she gets the deciding vote."},
-      {"speaker": "Ada Rowan", "text": "You are not family."},
-      {"speaker": "Kael", "text": "No, ma'am."},
-      {"speaker": "Jessa", "text": "That's probably why he can hear her."},
-      {"speaker": "Nessa", "text": "I love you. I'm still leaving."}
+      {
+        "speaker": "Ada Rowan",
+        "text": "We are trying to be fair."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "You are voting on me."
+      },
+      {
+        "speaker": "Ada Rowan",
+        "text": "We are voting on the responsibility."
+      },
+      {
+        "speaker": "Kael",
+        "text": "Ma'am, if Nessa has to agree before any of this works, why are the rest of you voting?"
+      },
+      {
+        "speaker": "Ada Rowan",
+        "text": "You are not family."
+      },
+      {
+        "speaker": "Kael",
+        "text": "No, ma'am. That's probably why it sounds strange to me."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "It sounds strange from here too."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "I love you. I'm still leaving."
+      }
     ],
-    "directionInline": [{"text": "Kael does not solve Rowan governance. His outside perspective is useful only because the community is caught inside its own assumptions."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "Kael does not solve Rowan governance. His outside perspective is useful only because the community is caught inside its own assumptions."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   },
   {
     "id": "SUN_S1E07_P05",
@@ -122,27 +296,74 @@
     "title": "The Empty Chair",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_eva","C_sun_jessa","C_sun_nessa_rowan","C_sun_ada_rowan"],
+    "characters": [
+      "C_sun_eva",
+      "C_sun_jessa",
+      "C_sun_nessa_rowan",
+      "C_sun_ada_rowan"
+    ],
     "summary": "Once Nessa's departure is treated as real, the family begins asking a different question: how to distribute the work among people who are actually willing. Jessa helps Nessa prepare without romanticizing the road.",
     "panelPlan": [
-      {"text": "The ledger room now has several relatives arguing over which pieces of the work each can realistically take."},
-      {"text": "Nessa and Ada pack together in uneasy silence before Ada finally adds a family recipe book to Nessa's bag."},
-      {"text": "Eva expects Jessa to congratulate Nessa. Jessa instead warns her about loneliness, money and the fact that leaving does not make every decision correct."}
+      {
+        "text": "The ledger room now has several relatives arguing over which pieces of the work each can realistically take."
+      },
+      {
+        "text": "Nessa and Ada pack together in uneasy silence before Ada finally adds a family recipe book to Nessa's bag."
+      },
+      {
+        "text": "Eva expects Jessa to congratulate Nessa. Jessa instead warns her about loneliness, money and the fact that leaving does not make every decision correct."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Nessa", "text": "You make it sound terrible."},
-      {"speaker": "Jessa", "text": "Parts of it are terrible."},
-      {"speaker": "Eva", "text": "You are not very good at inspiring people."},
-      {"speaker": "Jessa", "text": "She doesn't need inspiration. She needs to know the road is still a place where things happen to you."},
-      {"speaker": "Nessa", "text": "And you still stayed on it."},
-      {"speaker": "Jessa", "text": "Yes."},
-      {"speaker": "Eva", "text": "Why?"},
-      {"speaker": "Jessa", "text": "Because I liked who I was when I kept moving."},
-      {"speaker": "Eva", "text": "That was almost an answer."},
-      {"speaker": "Jessa", "text": "Don't get greedy."}
+      {
+        "speaker": "Nessa",
+        "text": "You make it sound terrible."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Parts of it are terrible."
+      },
+      {
+        "speaker": "Eva",
+        "text": "You are not very good at inspiring people."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "She doesn't need inspiration. She needs to know the road is still a place where things happen to you."
+      },
+      {
+        "speaker": "Nessa",
+        "text": "And you still stayed on it."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Eva",
+        "text": "Why?"
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Because after a while I realized I was happier moving than I had been staying."
+      },
+      {
+        "speaker": "Eva",
+        "text": "That's actually an answer."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "Don't get used to it."
+      }
     ],
-    "directionInline": [{"text": "Jessa's road instinct gains human texture without locking a hidden conspiracy or tragic origin. Eva learns to accept a partial answer."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "Jessa's road instinct gains human texture without locking a hidden conspiracy or tragic origin. Eva learns to accept a partial answer."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   },
   {
     "id": "SUN_S1E07_P06",
@@ -152,26 +373,81 @@
     "title": "Nothing Happened to Kael",
     "setting": "rowan-hold",
     "region": "sunfields",
-    "characters": ["C_sun_kael","C_sun_eva","C_sun_jessa","C_sun_nessa_rowan"],
+    "characters": [
+      "C_sun_kael",
+      "C_sun_eva",
+      "C_sun_jessa",
+      "C_sun_nessa_rowan"
+    ],
     "summary": "The trio leaves Rowan Hold after two uneventful days. Eva is almost offended that Kael was simply Kael the entire time; Jessa recognizes the value of that fact.",
     "panelPlan": [
-      {"text": "Nessa walks out on a different road with another small caravan while her family watches without pretending to be happy about it."},
-      {"text": "Kael says goodbye to people who know him only as Kael. A child returns the knife he loaned for supper prep."},
-      {"text": "On the road, Eva looks back at the obvious Sunforge arc in the common yard and finally admits the lack of an event is evidence too."}
+      {
+        "text": "Nessa walks out on a different road with another small caravan while her family watches without pretending to be happy about it."
+      },
+      {
+        "text": "Kael says goodbye to people who know him only as Kael. A child returns the knife he loaned for supper prep."
+      },
+      {
+        "text": "On the road, Eva looks back at the obvious Sunforge arc in the common yard and finally admits the lack of an event is evidence too."
+      }
     ],
     "dialogueInline": [
-      {"speaker": "Eva", "text": "Two days."},
-      {"speaker": "Kael", "text": "Yes."},
-      {"speaker": "Eva", "text": "No Varnok. No Saye. No dead architect. Nothing."},
-      {"speaker": "Kael", "text": "I had a nice supper."},
-      {"speaker": "Jessa", "text": "That is the first normal review of a town you have given us."},
-      {"speaker": "Eva", "text": "There is a Sunforge in the middle of the yard."},
-      {"speaker": "Jessa", "text": "There was also a goat in the middle of the yard."},
-      {"speaker": "Eva", "text": "You know what I mean."},
-      {"speaker": "Jessa", "text": "I do. Nothing happened to him. Write that down too."},
-      {"speaker": "Kael", "text": "Please don't encourage the notebook."}
+      {
+        "speaker": "Eva",
+        "text": "Two days."
+      },
+      {
+        "speaker": "Kael",
+        "text": "Yes."
+      },
+      {
+        "speaker": "Eva",
+        "text": "No Varnok. No Saye. No dead architect. Nothing."
+      },
+      {
+        "speaker": "Kael",
+        "text": "I had a nice supper."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "That is the most normal thing you have said about a town."
+      },
+      {
+        "speaker": "Eva",
+        "text": "There is a Sunforge in the middle of the yard."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "There was also a goat in the middle of the yard."
+      },
+      {
+        "speaker": "Eva",
+        "text": "You know what I mean."
+      },
+      {
+        "speaker": "Jessa",
+        "text": "I do. Nothing happened to him. That matters too."
+      },
+      {
+        "speaker": "Kael",
+        "text": "I'd be happy if we stopped calling that evidence."
+      },
+      {
+        "speaker": "Eva",
+        "text": "It is evidence."
+      },
+      {
+        "speaker": "Kael",
+        "text": "Then don't tell the notebook."
+      }
     ],
-    "directionInline": [{"text": "End by treating absence as meaningful without pretending one quiet stop disproves the larger pattern."}],
-    "direction": ["sunforge-story"]
+    "directionInline": [
+      {
+        "text": "End by treating absence as meaningful without pretending one quiet stop disproves the larger pattern."
+      }
+    ],
+    "direction": [
+      "sunforge-story"
+    ]
   }
 ]
