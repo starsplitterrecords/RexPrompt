@@ -37,7 +37,6 @@ jobs:
                   assert not (set(p.get('characters',[]))-set(chars)), (p['id'], set(p.get('characters',[]))-set(chars))
                   assert all(d in direction for d in p.get('direction',[])), p['id']
           assert counts[1]==22, counts
-          assert counts[2:13] if False else True
           assert sum(counts.values())==88, counts
           p1=json.loads((base/'pages_e01.json').read_text())
           assert sum(len(p['panelPlan']) for p in p1)==111
@@ -54,3 +53,5 @@ jobs:
           name: sunforge-i01-expanded-review-${{ github.sha }}
           path: dist/review-pdfs/sunforge-outlaw-production-review.pdf
           if-no-files-found: error
+
+# second push triggers this workflow after it exists on the branch
