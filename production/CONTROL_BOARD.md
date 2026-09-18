@@ -46,12 +46,11 @@ State terms:
 ## Immediate non-image work queue
 
 1. **Low Tide Signal — finish recovery-state cleanup and sanitize the active reference tree.**
-2. **Stardust Station — editorial review of Issue 4 “Temporary Material” and downstream Issues 5–10.**
-3. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
-4. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
-6. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
-6. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
-7. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
+2. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
+3. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
+4. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
+5. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
+6. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
 
 ## Production-frontier rule
 
