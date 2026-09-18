@@ -1,0 +1,588 @@
+[
+  {
+    "id": "PREQ_I05_P01",
+    "summary": "After the network collapse, Survivor Plaza confronts the immediate question of who has authority to allocate scarce heat, water, food, and medicine.",
+    "setting": "S_SurvivorPlaza",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_localLeader",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "Wide survivor plaza under improvised lantern clusters with limited supplies visibly separated by type.",
+      "A local leader faces several groups asking competing questions at once.",
+      "The leader looks at the small resource totals and asks who now has the right to choose.",
+      "End on the crowd waiting for an answer no surviving institution has supplied."
+    ],
+    "dialog": [
+      "D601"
+    ],
+    "directionInline": [
+      "Open the post-collapse phase with governance reduced to immediate material triage."
+    ]
+  },
+  {
+    "id": "PREQ_I05_P02",
+    "summary": "Aveth answers the authority vacuum by prioritizing heat and water first, taking practical responsibility without claiming a formal title.",
+    "setting": "S_SurvivorPlaza",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_localLeader",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "Aveth steps into the supply area and starts grouping needs by immediate survival.",
+      "She directs water and heat toward the most vulnerable people while others continue arguing legitimacy.",
+      "The local leader watches the work begin before consensus exists.",
+      "End on people moving because Aveth has made a usable decision."
+    ],
+    "dialog": [
+      "D602"
+    ],
+    "directionInline": [
+      "Authority here comes from service and action rather than inherited office."
+    ],
+    "continuityFrom": "PREQ_I05_P01"
+  },
+  {
+    "id": "PREQ_I05_P03",
+    "summary": "In the refugee sector, a Core advocate argues that restoring protocol is the only way to stop post-collapse society from becoming arbitrary.",
+    "setting": "S_RefugeSector",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Coop",
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_coreAdvocate",
+      "C_vergeVoice",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "Establish shelter rows divided by improvised curtains and competing local procedures.",
+      "The Core advocate points to inconsistent rationing and safety practices as evidence of drift into chaos.",
+      "Some survivors respond to the promise of known rules.",
+      "End on the advocate asserting that order itself keeps people alive."
+    ],
+    "dialog": [
+      "D603"
+    ],
+    "directionInline": [
+      "Give the Core argument real appeal in a frightening environment."
+    ],
+    "continuityFrom": "PREQ_I05_P02"
+  },
+  {
+    "id": "PREQ_I05_P04",
+    "summary": "A Verge voice rejects restored central protocol, arguing that flexible neighborhood coordination succeeded where rigid systems failed.",
+    "setting": "S_RefugeSector",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Coop",
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_coreAdvocate",
+      "C_vergeVoice",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "The Verge representative points to local supply exchanges already functioning outside old command channels.",
+      "Survivors compare the formal queue to a nearby neighborhood team solving an immediate need.",
+      "The representative frames flexibility as the reason people are still moving resources at all.",
+      "End on the argument shifting from order versus chaos to competing definitions of competence."
+    ],
+    "dialog": [
+      "D604"
+    ],
+    "directionInline": [
+      "The Verge position should grow directly from Aveth-style trust networks already shown."
+    ],
+    "continuityFrom": "PREQ_I05_P03"
+  },
+  {
+    "id": "PREQ_I05_P05",
+    "summary": "An outer technician cuts through the ideological argument by pointing out that neither doctrine matters if the damaged infrastructure is not physically repaired.",
+    "setting": "S_RefugeSector",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Coop",
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_coreAdvocate",
+      "C_vergeVoice",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "A structural groan interrupts the debate and everyone looks up.",
+      "The outer technician indicates failing supports and inactive systems around the shelter.",
+      "The Core advocate and Verge representative are forced to stop talking while workers brace the space.",
+      "End on the technician demanding bodies and tools instead of theory."
+    ],
+    "dialog": [
+      "D605"
+    ],
+    "directionInline": [
+      "Use a physical interruption to puncture abstraction."
+    ],
+    "continuityFrom": "PREQ_I05_P04"
+  },
+  {
+    "id": "PREQ_I05_P06",
+    "summary": "Ruvian leads a salvage crew into a damaged shard node where one critical conduit threatens to take the whole system dark.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "Wide exposed shard node with open framing, cut panels, and a critical conduit under visible strain.",
+      "Ruvian identifies the one failure that would black out the node.",
+      "Workers strip salvage from nonessential structure for a brace.",
+      "End on Ruvian ordering the conduit held before it buckles."
+    ],
+    "dialog": [
+      "D606"
+    ],
+    "directionInline": [
+      "Show the engineering problem clearly enough that the improvisation feels earned."
+    ],
+    "continuityFrom": "PREQ_I05_P05"
+  },
+  {
+    "id": "PREQ_I05_P07",
+    "summary": "The outer crew improvises a reinforcement without waiting for central approval, turning emergency habit into an emerging engineering culture.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "Workers fit scavenged support around the conduit while sparks fall through the frame.",
+      "The outer technician refuses to wait for permission or standardized parts that will not arrive.",
+      "Ruvian adapts the brace to the node’s live movement.",
+      "End on the crew welding the solution in place."
+    ],
+    "dialog": [
+      "D607"
+    ],
+    "directionInline": [
+      "Let the words about grit name a repair culture already visible in the crew’s practiced behavior."
+    ],
+    "continuityFrom": "PREQ_I05_P06"
+  },
+  {
+    "id": "PREQ_I05_P08",
+    "summary": "The patched shard node holds, giving Ruvian’s crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "The conduit loads against the new brace as the crew backs away.",
+      "Power flickers, then stabilizes across the node.",
+      "Workers check pressure and life support rather than celebrating immediately.",
+      "End on lights returning through the damaged structure while the improvised brace remains visible."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Show the method succeeding materially while keeping the improvised brace and damaged surroundings visible."
+    ],
+    "continuityFrom": "PREQ_I05_P07"
+  },
+  {
+    "id": "PREQ_I05_P09",
+    "summary": "At Orban, Aveth builds new convoy schedules from eyewitness reports and personal reliability rather than centralized route predictions.",
+    "setting": "S_OrbanPort",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_aveth",
+      "C_staff"
+    ],
+    "panelPlan": [
+      "Aveth covers a wall or table with hand-verified route notes, names, recent sightings, and supply needs.",
+      "Port staff compare two possible paths based on who actually traversed them rather than official status.",
+      "Supply crates are grouped according to the new trust-route map.",
+      "End on Aveth naming trust as the operating requirement."
+    ],
+    "dialog": [
+      "D608"
+    ],
+    "directionInline": [
+      "The new system should look practical, provisional, and human-readable."
+    ],
+    "continuityFrom": "PREQ_I05_P08"
+  },
+  {
+    "id": "PREQ_I05_P10",
+    "summary": "A port staffer challenges the trust-route model by asking what happens when a trusted person cuts a corner, forcing the new system to acknowledge its own risk.",
+    "setting": "S_OrbanPort",
+    "region": "PostBreakMixed",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_aveth",
+      "C_staff"
+    ],
+    "panelPlan": [
+      "The staffer points to a route that depends heavily on one unverified report.",
+      "Aveth and the staffer examine what redundancy or cross-checking is possible without central data.",
+      "The medicine schedule waits on their decision.",
+      "End on the open question of how trust remains accountable."
+    ],
+    "dialog": [
+      "D609"
+    ],
+    "directionInline": [
+      "Leave the accountability problem genuinely unresolved so trust remains useful but fallible."
+    ],
+    "continuityFrom": "PREQ_I05_P09"
+  },
+  {
+    "id": "PREQ_I05_P11",
+    "summary": "Lochran returns to an old BHA safety sigil and argues that recognizable symbols can restore a sense of protection even before institutions are rebuilt.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_fieldOfficer"
+    ],
+    "panelPlan": [
+      "Establish damaged former BHA space with old markings partly scorched or broken.",
+      "Lochran cleans one surviving sigil and traces its familiar shape.",
+      "Nearby survivors notice the symbol and understand what it once promised.",
+      "End on Lochran insisting that it can mean safety again."
+    ],
+    "dialog": [
+      "D610"
+    ],
+    "directionInline": [
+      "The symbol has genuine cultural memory; its power should not feel invented on the spot."
+    ],
+    "continuityFrom": "PREQ_I05_P10"
+  },
+  {
+    "id": "PREQ_I05_P12",
+    "summary": "A field officer warns that repainting the sigil creates a promise of protection they cannot yet guarantee, but begins modifying the mark at Lochran’s request.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_fieldOfficer"
+    ],
+    "panelPlan": [
+      "The field officer holds paint or marking equipment beneath the damaged old sigil.",
+      "They point toward unsafe rooms that the same symbol might falsely authorize.",
+      "Lochran maintains that people need a legible sign of order.",
+      "End on the officer starting a modified version rather than simply restoring the old mark."
+    ],
+    "dialog": [
+      "D611"
+    ],
+    "directionInline": [
+      "Let the modified mark visibly diverge from the older BHA sigil while retaining recognizable lineage."
+    ],
+    "continuityFrom": "PREQ_I05_P11"
+  },
+  {
+    "id": "PREQ_I05_P13",
+    "summary": "Iskari confronts Lochran over using safety symbols without enforceable standards, arguing that a mark without practice becomes a lie.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Iskari finds the newly modified sigil being used around the damaged facility.",
+      "She tests or inspects one marked area and finds the underlying safety condition inconsistent.",
+      "Facing Lochran, she rejects the idea that the mark itself can substitute for standards.",
+      "End on the sigil between them as the object of the dispute."
+    ],
+    "dialog": [
+      "D612"
+    ],
+    "directionInline": [
+      "Ground Iskari’s objection in observable inconsistency, not abstract purity."
+    ],
+    "continuityFrom": "PREQ_I05_P12"
+  },
+  {
+    "id": "PREQ_I05_P14",
+    "summary": "Lochran answers that social belief is itself a form of infrastructure and that people need symbols capable of holding communities together.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Lochran points to civilians organizing around marked safe areas despite imperfect conditions.",
+      "He argues that shared belief can create coordination before formal systems return.",
+      "Iskari sees that he is redefining safety from technical compliance into political trust.",
+      "End on Lochran’s claim that belief holds worlds together."
+    ],
+    "dialog": [
+      "D613"
+    ],
+    "directionInline": [
+      "Let both positions reveal the later ideological split rather than declaring one simply correct."
+    ],
+    "continuityFrom": "PREQ_I05_P13"
+  },
+  {
+    "id": "PREQ_I05_P15",
+    "summary": "Iskari and Lochran separate without resolving whether legitimacy comes from standards or from the shared belief that someone can enforce them.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Dust falls from a stressed beam over the argument, forcing both to notice the still-damaged reality.",
+      "Iskari checks the structure while Lochran watches survivors follow the new markings.",
+      "Neither retracts the principle they just stated.",
+      "End on them walking in different directions beneath the same modified sigil."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Use the environment to keep both philosophies answerable to material conditions."
+    ],
+    "continuityFrom": "PREQ_I05_P14"
+  },
+  {
+    "id": "PREQ_I05_P16",
+    "summary": "Alone, the field officer finishes a modified safety mark and recognizes that painting it also claims responsibility for whoever trusts it.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "PostBreakCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_fieldOfficer"
+    ],
+    "panelPlan": [
+      "Single focused page: the officer carefully paints the altered symbol on a door.",
+      "They pause before completing the final stroke and look into the occupied space beyond.",
+      "The officer voices the unease of claiming a place through a mark.",
+      "Final panel holds on the completed proto-Crown symbol beside a visibly imperfect shelter."
+    ],
+    "dialog": [
+      "D614"
+    ],
+    "directionInline": [
+      "Use restraint: one officer, one mark, one imperfect shelter, and the weight of responsibility attached to the final stroke."
+    ],
+    "continuityFrom": "PREQ_I05_P15"
+  },
+  {
+    "id": "PREQ_I05_P17",
+    "summary": "In hiding, Liora begins turning the collapse into a treatise about maintenance, responsibility, and the false assumption that unity sustains itself.",
+    "setting": "S_HideoutLab",
+    "region": "PostBreakHidden",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Establish Liora’s crowded hidden lab with scattered failure reports, sketches, and handwritten fragments.",
+      "She arranges examples from corridor maintenance, governance, and emergency response into one argument.",
+      "Pages fill with revisions rather than a polished manifesto.",
+      "End on the sentence that unity was work rather than a natural condition."
+    ],
+    "dialog": [
+      "D615"
+    ],
+    "directionInline": [
+      "Make the treatise visibly emerge from the failures, repairs, choices, and records already accumulated around Liora."
+    ],
+    "continuityFrom": "PREQ_I05_P16"
+  },
+  {
+    "id": "PREQ_I05_P18",
+    "summary": "Damiar brings supplies to Liora and admits that he mistook reassurance for duty even when it prevented people from confronting danger.",
+    "setting": "S_HideoutLab",
+    "region": "PostBreakHidden",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Damiar arrives with practical supplies rather than official materials.",
+      "He notices how directly Liora’s notes connect institutional language to delayed action.",
+      "Damiar admits his part without asking for absolution.",
+      "End on Liora listening but not interrupting the work."
+    ],
+    "dialog": [
+      "D616"
+    ],
+    "directionInline": [
+      "Keep the remorse specific and understated."
+    ],
+    "continuityFrom": "PREQ_I05_P17"
+  },
+  {
+    "id": "PREQ_I05_P19",
+    "summary": "Liora and Damiar continue working together despite their different histories, converting remorse and technical failure into material future groups will later fight over.",
+    "setting": "S_HideoutLab",
+    "region": "PostBreakHidden",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Damiar helps sort records while Liora continues drafting.",
+      "They compare an old reassurance statement to the failure timeline it obscured.",
+      "Liora leaves contradictory notes visible rather than smoothing them into one doctrine.",
+      "End on the growing treatise as unfinished, layered working material."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Keep the treatise visibly open and provisional, with contradictions and competing notes still present."
+    ],
+    "continuityFrom": "PREQ_I05_P18"
+  },
+  {
+    "id": "PREQ_I05_P20",
+    "summary": "Across the Outer Ring, Ruvian’s crews turn salvage and direct repair into a repeatable way of surviving damaged systems.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer",
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_aveth",
+      "C_iskari"
+    ],
+    "panelPlan": [
+      "Montage page anchored on Ruvian moving between patched nodes.",
+      "Different crews reuse damaged parts, weld local solutions, and document what actually held.",
+      "Ruvian’s line about Shardwork accompanies visible practice rather than a posed declaration.",
+      "End on one repaired node lighting another nearby work site."
+    ],
+    "dialog": [
+      "D617"
+    ],
+    "directionInline": [
+      "The montage should feel like culture emerging from repeated behavior."
+    ],
+    "continuityFrom": "PREQ_I05_P19"
+  },
+  {
+    "id": "PREQ_I05_P21",
+    "summary": "Across surviving routes, Aveth’s convoy network grows through named relationships and reciprocal trust rather than restored central command.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer",
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_aveth",
+      "C_iskari"
+    ],
+    "panelPlan": [
+      "Aveth’s route map expands from a few hand-verified paths into a web of people and stops.",
+      "Drivers or couriers exchange confirmations directly before committing supplies.",
+      "Families receive medicine through a route that exists because specific people vouched for it.",
+      "End on Aveth naming trust rather than command as the foundation."
+    ],
+    "dialog": [
+      "D618"
+    ],
+    "directionInline": [
+      "Show a functioning alternative, not merely a slogan."
+    ],
+    "continuityFrom": "PREQ_I05_P20"
+  },
+  {
+    "id": "PREQ_I05_P22",
+    "summary": "Iskari codifies responsibility as Core, Verge, and Shard practices visibly diverge from the same post-collapse crisis.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer",
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_aveth",
+      "C_iskari"
+    ],
+    "panelPlan": [
+      "Iskari revises a safety code against direct evidence from recent failures.",
+      "Intercut Ruvian’s crews, Aveth’s convoys, and Iskari’s standards work in parallel compositions.",
+      "The three groups solve different problems with increasingly distinct methods and visual habits.",
+      "Final panel divides the page into three paths no longer intersecting as Iskari warns that their futures diverge here."
+    ],
+    "dialog": [
+      "D619"
+    ],
+    "directionInline": [
+      "Show differentiation already underway through distinct practices and visual habits, not suddenly completed factions."
+    ],
+    "continuityFrom": "PREQ_I05_P21"
+  }
+]
