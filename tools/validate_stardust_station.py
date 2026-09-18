@@ -252,7 +252,7 @@ print("Approved Stardust drafts:", sum(1 for key in drafts if key.startswith("st
 
 # STARDUST_VISUAL_FIRST_SELECTIVE_GUARD
 _writer_meta = re.compile(r"\b(?:story\s+beat|dramatic\s+engine|writer[- ]room|writerly|page\s+feel|key\s+image|causal\s+spine|reader\s+function|payoff|pays\s+off|rather\s+than\s+preachy|institutionally\s+rather\s+than|scientifically\s+rather\s+than)\b", re.IGNORECASE)
-_issue_provenance = re.compile(r"\b(?:from\s+|after\s+|before\s+|during\s+)?Issue\s+\d+\b", re.IGNORECASE)
+_issue_provenance = re.compile(r"\b(?:(?:from|after|before|during)\s+)?Issues?\s+\d+\b|\b(?:prior|previous|next)\s+page\b", re.IGNORECASE)
 for _entry in stardust_entries:
     if _entry.get("id") == "stardust-station":
         continue
