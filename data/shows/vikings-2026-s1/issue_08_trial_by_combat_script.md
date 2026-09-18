@@ -581,4 +581,4 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 - Astrid has moved from background household member to the clearest proof that integration can become ordinary enough to disappear from casework.
 - The household remains chosen kin without requiring one future.
 
-If Issue 9 remains in the season, it must be aftermath or consequence. Do not reopen residency preparation, collect more evidence, or repeat the hearing.
+Issue 8 is the Season 1 finale. Any later Vikings material must begin from the post-hearing state and introduce a genuinely new consequence or story engine; do not reopen residency preparation, collect more evidence, or repeat the hearing.
