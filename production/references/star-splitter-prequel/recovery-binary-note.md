@@ -2,7 +2,7 @@
 
 Recovery date: 2026-09-06
 
-This file preserves deterministic recovery evidence for historical **Shattering of the Corridors** image generations found in ChatGPT File Library. RexPrompt currently packages this series internally as `star-splitter-prequel` with issues `prequel-e01` through `prequel-e06`.
+This file preserves deterministic recovery evidence for historical **Shattering of the Corridors** image generations found in ChatGPT File Library. RexPrompt packages this series internally as `star-splitter-prequel` with issues `prequel-e01` through `prequel-e06`. The active production package is now page-based; the scene IDs below are legacy source identifiers retained for provenance.
 
 ## Authority and status
 
@@ -10,7 +10,7 @@ These entries are **recovery candidates only**.
 
 - They are not released canon.
 - They are not approved production drafts.
-- They must not be added to `production/drafts/manifest.json` until the original image bytes are recovered, the pixels are inspected, the candidate is mapped to the exact current recipe, and it substantially passes IMG recovery evaluation.
+- They must not be added to `production/drafts/manifest.json` until the original image bytes are recovered, the pixels are inspected, the candidate is mapped to one exact active page recipe, and it substantially passes IMG recovery evaluation.
 - Filename alone is not mapping authority. Several historical filenames are demonstrably mismatched to the embedded RexPrompt recipe.
 - Mapping below uses the embedded scene summary, cast, setting, dialogue, and direction as deterministic evidence.
 - Multiple historical images may map to one current recipe. Do not choose among them without pixel/approval evidence.
@@ -23,7 +23,9 @@ The successful Azure Reach recovery method cannot be reused from a bare File Lib
 
 Do not create proxy screenshots, regenerated copies, placeholder images, or manifest entries in place of the original bytes.
 
-## Deterministic scene mapping
+## Deterministic legacy-scene mapping
+
+These mappings identify the legacy source scene embedded in each historical candidate. They do **not** identify an active page recipe. Use `data/shows/star-splitter-prequel/README.md` for the scene-to-page-span crosswalk, then inspect recovered pixels to choose the exact page.
 
 ### `star-splitter-prequel::prequel-e01::SCN_PREQ_E01_S03`
 Embedded legacy scene number: `2`
@@ -197,7 +199,7 @@ Embedded source: Heska stores conflicting annotated versions of Liora's treatise
 
 ## Recovery-state implications
 
-The entries above establish that historical image-generation work exists for at least these current recipes:
+The entries above establish that historical image-generation work exists for at least these legacy source scenes:
 
 - `SCN_PREQ_E01_S03`
 - `SCN_PREQ_E01_S05`
@@ -217,7 +219,7 @@ This does **not** advance the durable production frontier. Only released StarSpl
 
 ## Required completion transaction when original bytes become accessible
 
-For each exact recipe:
+For each recovered candidate:
 
 1. Recover the original candidate bytes without transformation.
 2. Inspect the pixels and reconcile duplicate variants.
