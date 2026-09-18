@@ -3,325 +3,1146 @@
     "id": "SDS_S1E08_P01",
     "summary": "Primary composition: 5-panel page in Docking Vestibule. Opening image: Docking vestibule. The StarTrust Operations Liaison steps onto Stardust with one compact case and no entourage. Middle image: Astra gives the smallest professional smile. Closing image: Jax checks the first route clearance.",
     "setting": "SDS_Docking_Vestibule",
-    "characters": ["SDS_Liaison", "SDS_Astra", "SDS_Jax"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra",
+      "SDS_Jax"
+    ],
     "panelPlan": [
-      {"text": "PANEL 1 — Docking vestibule. The StarTrust Operations Liaison steps onto Stardust with one compact case and no entourage."},
-      {"text": "PANEL 2 — Astra meets them with Jax slightly behind, route slate in hand. LIAISON: I read the reports."},
-      {"text": "PANEL 3 — Astra gives the smallest professional smile. ASTRA: I'm sorry."},
-      {"text": "PANEL 4 — The Liaison almost smiles. LIAISON: I liked the parts that said \"unknown.\""},
-      {"text": "PANEL 5 — Jax checks the first route clearance. JAX: Good. We have several more of those."}
+      {
+        "text": "PANEL 1 — Docking vestibule. The StarTrust Operations Liaison steps onto Stardust with one compact case and no entourage."
+      },
+      {
+        "text": "PANEL 2 — Astra meets them with Jax slightly behind, route slate in hand."
+      },
+      {
+        "text": "PANEL 3 — Astra gives the smallest professional smile."
+      },
+      {
+        "text": "PANEL 4 — The Liaison almost smiles."
+      },
+      {
+        "text": "PANEL 5 — Jax checks the first route clearance."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "I read the reports.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I'm sorry.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "I liked the parts that said \"unknown.\"",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Good. We have several more of those.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P02",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax leads the Liaison through the operations level. The route is clean but visibly working, not staged. Middle image: The Liaison notes it. Closing image: The Liaison nods.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Jax", "SDS_Liaison"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P01",
     "panelPlan": [
-      {"text": "PANEL 1 — Jax leads the Liaison through the operations level. The route is clean but visibly working, not staged."},
-      {"text": "PANEL 2 — They pass the properly racked passive-collection bins. LIAISON: Those were in the original installation location?"},
-      {"text": "PANEL 3 — Jax shakes his head. JAX: Original location blocked maintenance access."},
-      {"text": "PANEL 4 — The Liaison notes it. LIAISON: Who authorized the move?"},
-      {"text": "PANEL 5 — Jax raises the route slate. JAX: Local access override. Documented."},
-      {"text": "PANEL 6 — The Liaison nods. LIAISON: Good. Jax was prepared for a fight and does not get one."}
+      {
+        "text": "PANEL 1 — Jax leads the Liaison through the operations level. The route is clean but visibly working, not staged."
+      },
+      {
+        "text": "PANEL 2 — They pass the properly racked passive-collection bins."
+      },
+      {
+        "text": "PANEL 3 — Jax shakes his head."
+      },
+      {
+        "text": "PANEL 4 — The Liaison notes it."
+      },
+      {
+        "text": "PANEL 5 — Jax raises the route slate."
+      },
+      {
+        "text": "PANEL 6 — The Liaison nods. Jax was prepared for a fight and does not get one."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Those were in the original installation location?",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Original location blocked maintenance access.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Who authorized the move?",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Local access override. Documented.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Good.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P03",
     "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Astra brings the Liaison into the lab work area where Mira has sealed samples and physical test records ready. Middle image: The Liaison looks at her. Closing image: The Liaison nods once.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Liaison", "SDS_Astra", "SDS_Mira"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra",
+      "SDS_Mira"
+    ],
     "continuityFrom": "SDS_S1E08_P02",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra brings the Liaison into the lab work area where Mira has sealed samples and physical test records ready."},
-      {"text": "PANEL 2 — The Liaison sets down the case. LIAISON: Show me a production event."},
-      {"text": "PANEL 3 — Astra answers before Mira can. ASTRA: There isn't one."},
-      {"text": "PANEL 4 — The Liaison looks at her."},
-      {"text": "PANEL 5 — Astra continues. ASTRA: We can show you samples, conditions, tests, and chain of custody. We cannot schedule the phenomenon."},
-      {"text": "PANEL 6 — The Liaison nods once. LIAISON: Good. If you can stage it, I don't need a site visit."}
+      {
+        "text": "PANEL 1 — Astra brings the Liaison into the lab work area where Mira has sealed samples and physical test records ready."
+      },
+      {
+        "text": "PANEL 2 — The Liaison sets down the case."
+      },
+      {
+        "text": "PANEL 3 — Astra answers before Mira can."
+      },
+      {
+        "text": "PANEL 4 — The Liaison looks at her."
+      },
+      {
+        "text": "PANEL 5 — Astra continues."
+      },
+      {
+        "text": "PANEL 6 — The Liaison nods once."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Show me a production event.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "There isn't one.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We can show you samples, conditions, tests, and chain of custody. We cannot schedule the phenomenon.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Good. If you can stage it, I don't need a site visit.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P04",
     "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Mira lays out the physical results from Issues 4–7. Middle image: The Liaison holds still on the call, hands off the tablet, giving the crew space to answer. Closing image: The Liaison writes exactly that down.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Mira", "SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P03",
     "panelPlan": [
-      {"text": "PANEL 1 — Mira lays out the physical results from Issues 4–7."},
-      {"text": "PANEL 2 — The Liaison asks directly. LIAISON: What condition reliably produces high-cohesion material?"},
-      {"text": "PANEL 3 — Mira does not look at Astra before answering. MIRA: None that we can defend."},
-      {"text": "PANEL 4 — The Liaison holds still on the call, hands off the tablet, giving the crew space to answer."},
-      {"text": "PANEL 5 — Mira adds. MIRA: We have physical context. We have samples with different properties. We do not have a predictive behavioral mechanism."},
-      {"text": "PANEL 6 — The Liaison writes exactly that down. LIAISON: Better than a false one."}
+      {
+        "text": "PANEL 1 — Mira lays out the physical results from Issues 4–7."
+      },
+      {
+        "text": "PANEL 2 — The Liaison asks directly."
+      },
+      {
+        "text": "PANEL 3 — Mira does not look at Astra before answering."
+      },
+      {
+        "text": "PANEL 4 — The Liaison holds still, hands off the tablet, giving the crew space to answer."
+      },
+      {
+        "text": "PANEL 5 — Mira adds."
+      },
+      {
+        "text": "PANEL 6 — The Liaison writes exactly that down."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "What condition reliably produces high-cohesion material?",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "None that we can defend.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "We have physical context. We have samples with different properties. We do not have a predictive behavioral mechanism.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Better than a false one.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P05",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp presents the local reporting workflow. Middle image: The Liaison looks at NO ENTRY — INTENTIONAL BLANK. Closing image: Kreeb looks at Glorp, pleased but not sentimental.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Glorp", "SDS_Kreeb", "SDS_Liaison"],
+    "characters": [
+      "SDS_Glorp",
+      "SDS_Kreeb",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P04",
     "panelPlan": [
-      {"text": "PANEL 1 — Glorp presents the local reporting workflow."},
-      {"text": "PANEL 2 — Glorp points to the required sample fields. GLORP: Material traceability is complete from collection through test."},
-      {"text": "PANEL 3 — Kreeb points to the intentional blank category. KREEB: Personal disclosure is not required to complete the record."},
-      {"text": "PANEL 4 — The Liaison looks at NO ENTRY — INTENTIONAL BLANK. LIAISON: This created review questions."},
-      {"text": "PANEL 5 — Glorp visibly braces. GLORP: We can answer questions."},
-      {"text": "PANEL 6 — Kreeb looks at Glorp, pleased but not sentimental. KREEB: Yes."}
+      {
+        "text": "PANEL 1 — Glorp presents the local reporting workflow."
+      },
+      {
+        "text": "PANEL 2 — Glorp points to the required sample fields."
+      },
+      {
+        "text": "PANEL 3 — Kreeb points to the intentional blank category."
+      },
+      {
+        "text": "PANEL 4 — The Liaison looks at NO ENTRY — INTENTIONAL BLANK."
+      },
+      {
+        "text": "PANEL 5 — Glorp visibly braces."
+      },
+      {
+        "text": "PANEL 6 — Kreeb looks at Glorp, pleased but not sentimental."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "GLORP",
+        "text": "Material traceability is complete from collection through test.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "Personal disclosure is not required to complete the record.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "This created review questions.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "We can answer questions.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "Yes.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P06",
     "summary": "Primary composition: 6-panel page in Observation-glass alcove off Stardust Station's working operations level. Opening image: The Liaison asks Astra to step aside near the observation glass. Middle image: The Liaison turns from the bracket status to the active lab visible beyond the glass, calm and matter-of-fact. Closing image: The Liaison does not threaten her.",
     "settingText": "Observation-glass alcove off Stardust Station's working operations level; bright maintained corporate-station interior with the active lab visible nearby.",
-    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P05",
     "panelPlan": [
-      {"text": "PANEL 1 — The Liaison asks Astra to step aside near the observation glass."},
-      {"text": "PANEL 2 — Beside the observation glass, the Liaison rests one hand on the compact case and gestures toward the temporary-bracket status visible across the working level. LIAISON: Your station needs procurement priority."},
-      {"text": "PANEL 3 — Astra glances toward the still-temporary bracket status. ASTRA: Yes."},
-      {"text": "PANEL 4 — The Liaison turns from the bracket status to the active lab visible beyond the glass, calm and matter-of-fact. LIAISON: A material pilot is easier to fund than \"interesting operations.\""},
-      {"text": "PANEL 5 — Astra looks back at the lab. ASTRA: I know."},
-      {"text": "PANEL 6 — The Liaison does not threaten her. LIAISON: Then tell me what I can put my name on."}
+      {
+        "text": "PANEL 1 — The Liaison asks Astra to step aside near the observation glass."
+      },
+      {
+        "text": "PANEL 2 — Beside the observation glass, the Liaison rests one hand on the compact case and gestures toward the temporary-bracket status visible across the working level."
+      },
+      {
+        "text": "PANEL 3 — Astra glances toward the still-temporary bracket status."
+      },
+      {
+        "text": "PANEL 4 — The Liaison turns from the bracket status to the active lab visible beyond the glass, calm and matter-of-fact."
+      },
+      {
+        "text": "PANEL 5 — Astra looks back at the lab."
+      },
+      {
+        "text": "PANEL 6 — The Liaison does not threaten her."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Your station needs procurement priority.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Yes.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "A material pilot is easier to fund than \"interesting operations.\"",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I know.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Then tell me what I can put my name on.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P07",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: The tour resumes through the galley service corridor. Middle image: Astra automatically begins to redirect the Liaison away. Closing image: Astra gives up on the instinct to smooth it.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Liaison", "SDS_Astra", "SDS_Zib"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra",
+      "SDS_Zib"
+    ],
     "continuityFrom": "SDS_S1E08_P06",
     "panelPlan": [
-      {"text": "PANEL 1 — The tour resumes through the galley service corridor."},
-      {"text": "PANEL 2 — A station alert sounds: GALLEY WATER MANIFOLD — PRESSURE LOW."},
-      {"text": "PANEL 3 — Zib stops mid-step. ZIB: That's new."},
-      {"text": "PANEL 4 — Astra automatically begins to redirect the Liaison away. ASTRA: We can continue upstairs."},
-      {"text": "PANEL 5 — The Liaison looks at the alert. LIAISON: Is this part of the tour?"},
-      {"text": "PANEL 6 — Astra gives up on the instinct to smooth it. ASTRA: It is now."}
+      {
+        "text": "PANEL 1 — The tour resumes through the galley service corridor."
+      },
+      {
+        "text": "PANEL 2 — A station alert sounds: GALLEY WATER MANIFOLD — PRESSURE LOW."
+      },
+      {
+        "text": "PANEL 3 — Zib stops mid-step."
+      },
+      {
+        "text": "PANEL 4 — Astra automatically begins to redirect the Liaison away."
+      },
+      {
+        "text": "PANEL 5 — The Liaison looks at the alert."
+      },
+      {
+        "text": "PANEL 6 — Astra gives up on the instinct to smooth it."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ZIB",
+        "text": "That's new.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We can continue upstairs.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Is this part of the tour?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "It is now.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P08",
     "summary": "Primary composition: 5-panel page in Galley Service Corridor. Opening image: Jax checks the planned visitor path. The low-pressure manifold is directly ahead. Middle image: A worker starts to enter the service area. Closing image: Jax looks back at the Liaison.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Jax", "SDS_Liaison"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P07",
     "panelPlan": [
-      {"text": "PANEL 1 — Jax checks the planned visitor path. The low-pressure manifold is directly ahead."},
-      {"text": "PANEL 2 — He closes that route segment and opens a safe bypass on his slate."},
-      {"text": "PANEL 3 — A worker starts to enter the service area. JAX: Not through here. Use the blue corridor."},
-      {"text": "PANEL 4 — The Liaison watches him enforce the detour without asking Astra."},
-      {"text": "PANEL 5 — Jax looks back at the Liaison. JAX: Route changed. LIAISON: I noticed."}
+      {
+        "text": "PANEL 1 — Jax checks the planned visitor path. The low-pressure manifold is directly ahead."
+      },
+      {
+        "text": "PANEL 2 — He closes that route segment and opens a safe bypass on his slate."
+      },
+      {
+        "text": "PANEL 3 — A worker starts to enter the service area."
+      },
+      {
+        "text": "PANEL 4 — The Liaison watches him enforce the detour without asking Astra."
+      },
+      {
+        "text": "PANEL 5 — Jax looks back at the Liaison."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "JAX",
+        "text": "Not through here. Use the blue corridor.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Route changed.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "I noticed.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P09",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: Zib opens the manifold service cabinet. Middle image: Astra asks the operational question. Closing image: Station system announcement: GALLEY SINK TWO TEMPORARILY UNAVAILABLE. The Liaison watches the crew treat this as exactly the size of problem it is.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Zib", "SDS_Mira", "SDS_Astra", "SDS_Station", "SDS_Liaison"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Mira",
+      "SDS_Astra",
+      "SDS_Station",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P08",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib opens the manifold service cabinet."},
-      {"text": "PANEL 2 — Mira checks the sensor history. MIRA: Pressure drop started four minutes ago."},
-      {"text": "PANEL 3 — Zib finds a sticking regulator actuator. ZIB: There."},
-      {"text": "PANEL 4 — Astra asks the operational question. ASTRA: Isolation?"},
-      {"text": "PANEL 5 — Zib points to the secondary galley branch. ZIB: We lose one sink. Nobody dies of thirst."},
-      {"text": "PANEL 6 — Station system announcement: GALLEY SINK TWO TEMPORARILY UNAVAILABLE. The Liaison watches the crew treat this as exactly the size of problem it is."}
+      {
+        "text": "PANEL 1 — Zib opens the manifold service cabinet."
+      },
+      {
+        "text": "PANEL 2 — Mira checks the sensor history."
+      },
+      {
+        "text": "PANEL 3 — Zib finds a sticking regulator actuator."
+      },
+      {
+        "text": "PANEL 4 — Astra asks the operational question."
+      },
+      {
+        "text": "PANEL 5 — Zib points to the secondary galley branch."
+      },
+      {
+        "text": "PANEL 6 — Station system announcement: GALLEY SINK TWO TEMPORARILY UNAVAILABLE. The Liaison watches the crew treat this as exactly the size of problem it is."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "Pressure drop started four minutes ago.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "There.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Isolation?",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "We lose one sink. Nobody dies of thirst.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P10",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: Zib isolates the affected branch. Middle image: Zib removes the actuator cover. Closing image: The Liaison asks Astra quietly.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Mira", "SDS_Pixa", "SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Jax",
+      "SDS_Mira",
+      "SDS_Pixa",
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P09",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib isolates the affected branch."},
-      {"text": "PANEL 2 — Jax keeps the service path clear and updates the route slate."},
-      {"text": "PANEL 3 — Mira compares commanded and actual actuator position. MIRA: Command is clean. Response is lagging."},
-      {"text": "PANEL 4 — Zib removes the actuator cover. ZIB: Because it is dirty."},
-      {"text": "PANEL 5 — Pixa logs elapsed response time and affected service count. PIXA: One fixture unavailable. No other service impact."},
-      {"text": "PANEL 6 — The Liaison asks Astra quietly. LIAISON: Who is directing this? Astra watches the crew. ASTRA: Depends which part."}
+      {
+        "text": "PANEL 1 — Zib isolates the affected branch."
+      },
+      {
+        "text": "PANEL 2 — Jax keeps the service path clear and updates the route slate."
+      },
+      {
+        "text": "PANEL 3 — Mira compares commanded and actual actuator position."
+      },
+      {
+        "text": "PANEL 4 — Zib removes the actuator cover."
+      },
+      {
+        "text": "PANEL 5 — Pixa logs elapsed response time and affected service count."
+      },
+      {
+        "text": "PANEL 6 — The Liaison asks Astra quietly. Astra watches the crew."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "Command is clean. Response is lagging.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Because it is dirty.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "One fixture unavailable. No other service impact.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Who is directing this?",
+        "subtext": "Panel 6"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Depends which part.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P11",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: Zib cleans the actuator track. Middle image: Astra handles the station notice and galley user complaints. Closing image: The Liaison sees the whole response happen without a central heroic command.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Zib", "SDS_Mira", "SDS_Jax", "SDS_Astra", "SDS_Glorp", "SDS_Kreeb", "SDS_Liaison"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Mira",
+      "SDS_Jax",
+      "SDS_Astra",
+      "SDS_Glorp",
+      "SDS_Kreeb",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P10",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib cleans the actuator track."},
-      {"text": "PANEL 2 — Mira verifies sensor response."},
-      {"text": "PANEL 3 — Jax prevents a supply cart from entering the open service zone."},
-      {"text": "PANEL 4 — Astra handles the station notice and galley user complaints."},
-      {"text": "PANEL 5 — Glorp logs the temporary isolation while Kreeb puts a simple sign on the unavailable sink."},
-      {"text": "PANEL 6 — The Liaison sees the whole response happen without a central heroic command. LIAISON: You distribute incidents quickly. ASTRA: We distribute everything quickly. Usually because no one has enough hands."}
+      {
+        "text": "PANEL 1 — Zib cleans the actuator track."
+      },
+      {
+        "text": "PANEL 2 — Mira verifies sensor response."
+      },
+      {
+        "text": "PANEL 3 — Jax prevents a supply cart from entering the open service zone."
+      },
+      {
+        "text": "PANEL 4 — Astra handles the station notice and galley user complaints."
+      },
+      {
+        "text": "PANEL 5 — Glorp logs the temporary isolation while Kreeb puts a simple sign on the unavailable sink."
+      },
+      {
+        "text": "PANEL 6 — The Liaison sees the whole response happen without a central heroic command."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "You distribute incidents quickly.",
+        "subtext": "Panel 6"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We distribute everything quickly. Usually because no one has enough hands.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P12",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: Zib cycles the actuator. Middle image: Jax reopens the route segment. Closing image: Zib closes the cabinet.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Zib", "SDS_Mira", "SDS_Jax", "SDS_Pixa", "SDS_Liaison"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Mira",
+      "SDS_Jax",
+      "SDS_Pixa",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P11",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib cycles the actuator."},
-      {"text": "PANEL 2 — Pressure returns to normal."},
-      {"text": "PANEL 3 — Mira confirms the trend. MIRA: Stable."},
-      {"text": "PANEL 4 — Jax reopens the route segment. JAX: Blue corridor released."},
-      {"text": "PANEL 5 — Pixa reports. PIXA: Total service interruption: eleven minutes, forty-two seconds."},
-      {"text": "PANEL 6 — Zib closes the cabinet. ZIB: Long because we had a tour. The Liaison accepts the hit."}
+      {
+        "text": "PANEL 1 — Zib cycles the actuator."
+      },
+      {
+        "text": "PANEL 2 — Pressure returns to normal."
+      },
+      {
+        "text": "PANEL 3 — Mira confirms the trend."
+      },
+      {
+        "text": "PANEL 4 — Jax reopens the route segment."
+      },
+      {
+        "text": "PANEL 5 — Pixa reports."
+      },
+      {
+        "text": "PANEL 6 — Zib closes the cabinet. The Liaison accepts the hit."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "Stable.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Blue corridor released.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Total service interruption: eleven minutes, forty-two seconds.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Long because we had a tour.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P13",
     "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: After the repair, Mira notices a small incidental residue seam near a warm cable junction beside the service cabinet. Middle image: Mira looks at them. Closing image: Mira seals the sample.",
     "setting": "SDS_Galley_Service_Corridor",
-    "characters": ["SDS_Mira", "SDS_Liaison"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P12",
     "panelPlan": [
-      {"text": "PANEL 1 — After the repair, Mira notices a small incidental residue seam near a warm cable junction beside the service cabinet."},
-      {"text": "PANEL 2 — She waits until the area is closed and safe before sampling it."},
-      {"text": "PANEL 3 — The Liaison watches. LIAISON: Was that caused by the disagreement?"},
-      {"text": "PANEL 4 — Mira looks at them. MIRA: No behavioral recipe."},
-      {"text": "PANEL 5 — The Liaison clarifies. LIAISON: Then what caused it?"},
-      {"text": "PANEL 6 — Mira seals the sample. MIRA: We do not know."}
+      {
+        "text": "PANEL 1 — After the repair, Mira notices a small incidental residue seam near a warm cable junction beside the service cabinet."
+      },
+      {
+        "text": "PANEL 2 — She waits until the area is closed and safe before sampling it."
+      },
+      {
+        "text": "PANEL 3 — The Liaison watches."
+      },
+      {
+        "text": "PANEL 4 — Mira looks at them."
+      },
+      {
+        "text": "PANEL 5 — The Liaison clarifies."
+      },
+      {
+        "text": "PANEL 6 — Mira seals the sample."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Was that caused by the disagreement?",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "No behavioral recipe.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Then what caused it?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "We do not know.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P14",
     "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Back in the lab, the Liaison compares two sets of records: material samples and operational incidents. Middle image: The Liaison points to the second list. Closing image: The Liaison shakes their head.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P13",
     "panelPlan": [
-      {"text": "PANEL 1 — Back in the lab, the Liaison compares two sets of records: material samples and operational incidents."},
-      {"text": "PANEL 2 — Material side: LOW MASS / VARIABLE PROPERTIES / NO DEFENSIBLE PREDICTOR."},
-      {"text": "PANEL 3 — Operations side: INCIDENT DETECTION / LOCAL OWNERSHIP / SERVICE ISOLATION / REPAIR CLOSURE."},
-      {"text": "PANEL 4 — The Liaison points to the second list. LIAISON: This repeats."},
-      {"text": "PANEL 5 — Astra sees what they mean. ASTRA: The failures?"},
-      {"text": "PANEL 6 — The Liaison shakes their head. LIAISON: The response."}
+      {
+        "text": "PANEL 1 — Back in the lab, the Liaison compares two sets of records: material samples and operational incidents."
+      },
+      {
+        "text": "PANEL 2 — Material side: LOW MASS / VARIABLE PROPERTIES / NO DEFENSIBLE PREDICTOR."
+      },
+      {
+        "text": "PANEL 3 — Operations side: INCIDENT DETECTION / LOCAL OWNERSHIP / SERVICE ISOLATION / REPAIR CLOSURE."
+      },
+      {
+        "text": "PANEL 4 — The Liaison points to the second list."
+      },
+      {
+        "text": "PANEL 5 — Astra sees what they mean."
+      },
+      {
+        "text": "PANEL 6 — The Liaison shakes their head."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "This repeats.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "The failures?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "The response.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P15",
-    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Astra pulls the old inspection result. Middle image: Astra looks slightly embarrassed by the phrase. Closing image: Brick, from the edge of the room:.",
+    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Astra pulls the old inspection result. Middle image: Astra looks slightly embarrassed by the phrase. Closing image: Brick remains at the edge of the room while nobody engages him.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Astra", "SDS_Liaison", "SDS_Brick"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Liaison",
+      "SDS_Brick"
+    ],
     "continuityFrom": "SDS_S1E08_P14",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra pulls the old inspection result."},
-      {"text": "PANEL 2 — The inspector's conclusion is visible: STATION REMAINS ACTIVE — ADAPTIVE RESPONSE ACCEPTABLE."},
-      {"text": "PANEL 3 — The Liaison reads it. LIAISON: Same pattern."},
-      {"text": "PANEL 4 — Astra looks slightly embarrassed by the phrase. ASTRA: We thought that was a polite way to say \"messy but useful.\""},
-      {"text": "PANEL 5 — The Liaison returns the file. LIAISON: It can be both."},
-      {"text": "PANEL 6 — Brick, from the edge of the room: BRICK: The old witness returns. Nobody engages him."}
+      {
+        "text": "PANEL 1 — Astra pulls the old inspection result."
+      },
+      {
+        "text": "PANEL 2 — The inspector's conclusion is visible: STATION REMAINS ACTIVE — ADAPTIVE RESPONSE ACCEPTABLE."
+      },
+      {
+        "text": "PANEL 3 — The Liaison reads it."
+      },
+      {
+        "text": "PANEL 4 — Astra looks slightly embarrassed by the phrase."
+      },
+      {
+        "text": "PANEL 5 — The Liaison returns the file."
+      },
+      {
+        "text": "PANEL 6 — Brick remains at the edge of the room. Nobody engages him."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Same pattern.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We thought that was a polite way to say \"messy but useful.\"",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "It can be both.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "BRICK",
+        "text": "The old witness returns.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P16",
     "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Astra has her original material-pilot talking points open. Middle image: Mira watches. Closing image: Mira corrects her.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Astra", "SDS_Mira"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Mira"
+    ],
     "continuityFrom": "SDS_S1E08_P15",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra has her original material-pilot talking points open."},
-      {"text": "PANEL 2 — She deletes: POTENTIAL YIELD / SCALE PATH / PRODUCTION CONDITIONS."},
-      {"text": "PANEL 3 — She replaces them with: UPTIME / RESPONSE TIME / LOCAL OWNERSHIP / PASSIVE MATERIAL CHARACTERIZATION."},
-      {"text": "PANEL 4 — Mira watches. MIRA: That's a different pitch."},
-      {"text": "PANEL 5 — Astra answers without looking away from the screen. ASTRA: It's a different station."},
-      {"text": "PANEL 6 — Mira corrects her. MIRA: Same station. Astra looks at her. ASTRA: Right."}
+      {
+        "text": "PANEL 1 — Astra has her original material-pilot talking points open."
+      },
+      {
+        "text": "PANEL 2 — She deletes: POTENTIAL YIELD / SCALE PATH / PRODUCTION CONDITIONS."
+      },
+      {
+        "text": "PANEL 3 — She replaces them with: UPTIME / RESPONSE TIME / LOCAL OWNERSHIP / PASSIVE MATERIAL CHARACTERIZATION."
+      },
+      {
+        "text": "PANEL 4 — Mira watches."
+      },
+      {
+        "text": "PANEL 5 — Astra answers without looking away from the screen."
+      },
+      {
+        "text": "PANEL 6 — Mira corrects Astra. Astra looks at her."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "That's a different pitch.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "It's a different station.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Same station.",
+        "subtext": "Panel 6"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Right.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P17",
     "summary": "Primary composition: 5-panel page in Lab Work Area. Opening image: The Liaison closes their case. Middle image: Astra looks at the sample tray, then the operations record. Closing image: The Liaison nods toward the operations record.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P16",
     "panelPlan": [
-      {"text": "PANEL 1 — The Liaison closes their case."},
-      {"text": "PANEL 2 — The Liaison sets the closed compact case on the lab bench beside the sample tray. LIAISON: I can recommend a limited pilot. Central review will ask what it produces."},
-      {"text": "PANEL 3 — Astra looks at the sample tray, then the operations record."},
-      {"text": "PANEL 4 — Astra keeps the sample tray and the operations record side by side on the bench, one hand braced between them. ASTRA: I am not selling certainty we do not have."},
-      {"text": "PANEL 5 — The Liaison nods toward the operations record. LIAISON: Then sell the operating record."}
+      {
+        "text": "PANEL 1 — The Liaison closes their case."
+      },
+      {
+        "text": "PANEL 2 — The Liaison sets the closed compact case on the lab bench beside the sample tray."
+      },
+      {
+        "text": "PANEL 3 — Astra looks at the sample tray, then the operations record."
+      },
+      {
+        "text": "PANEL 4 — Astra keeps the sample tray and the operations record side by side on the bench, one hand braced between them."
+      },
+      {
+        "text": "PANEL 5 — The Liaison nods toward the operations record."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "I can recommend a limited pilot. Central review will ask what it produces.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I am not selling certainty we do not have.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Then sell the operating record.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P18",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra, Mira, Glorp, Kreeb, and the Liaison write the local trial terms. Middle image: Kreeb adds. Closing image: The Liaison adds the last local term.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb", "SDS_Liaison"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Mira",
+      "SDS_Glorp",
+      "SDS_Kreeb",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P17",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra, Mira, Glorp, Kreeb, and the Liaison write the local trial terms."},
-      {"text": "PANEL 2 — Astra states the first term. ASTRA: Passive collection only."},
-      {"text": "PANEL 3 — Mira states the second. MIRA: No behavioral conditions."},
-      {"text": "PANEL 4 — Kreeb adds. KREEB: No personal disclosure required."},
-      {"text": "PANEL 5 — Glorp adds. GLORP: Material chain of custody remains complete."},
-      {"text": "PANEL 6 — The Liaison adds the last local term. LIAISON: No output target from me. Astra notices the qualifier."}
+      {
+        "text": "PANEL 1 — Astra, Mira, Glorp, Kreeb, and the Liaison write the local trial terms."
+      },
+      {
+        "text": "PANEL 2 — Astra states the first term."
+      },
+      {
+        "text": "PANEL 3 — Mira states the second."
+      },
+      {
+        "text": "PANEL 4 — Kreeb adds."
+      },
+      {
+        "text": "PANEL 5 — Glorp adds."
+      },
+      {
+        "text": "PANEL 6 — The Liaison adds the last local term. Astra notices the qualifier."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "Passive collection only.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "No behavioral conditions.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "No personal disclosure required.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "Material chain of custody remains complete.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "No output target from me.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P19",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The Liaison shows Astra the recommendation form before submitting it. Middle image: The Liaison points at the review note. Closing image: The Liaison is precise.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Liaison", "SDS_Astra"],
+    "characters": [
+      "SDS_Liaison",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P18",
     "panelPlan": [
-      {"text": "PANEL 1 — The Liaison shows Astra the recommendation form before submitting it."},
-      {"text": "PANEL 2 — Program description: ADAPTIVE OPERATIONS SITE WITH INCIDENTAL MATERIAL CHARACTERIZATION."},
-      {"text": "PANEL 3 — Astra reads it twice. ASTRA: That almost sounds like us."},
-      {"text": "PANEL 4 — The Liaison points at the review note. LIAISON: Central finance may still ask for a material benchmark."},
-      {"text": "PANEL 5 — Astra looks at them. ASTRA: You said no target."},
-      {"text": "PANEL 6 — The Liaison is precise. LIAISON: I said no target from me."}
+      {
+        "text": "PANEL 1 — The Liaison shows Astra the recommendation form before submitting it."
+      },
+      {
+        "text": "PANEL 2 — Program description: ADAPTIVE OPERATIONS SITE WITH INCIDENTAL MATERIAL CHARACTERIZATION."
+      },
+      {
+        "text": "PANEL 3 — Astra reads it twice."
+      },
+      {
+        "text": "PANEL 4 — The Liaison points at the review note."
+      },
+      {
+        "text": "PANEL 5 — Astra looks at them."
+      },
+      {
+        "text": "PANEL 6 — The Liaison is precise."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "That almost sounds like us.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "Central finance may still ask for a material benchmark.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "You said no target.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "I said no target from me.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P20",
     "summary": "Primary composition: 6-panel page in Docking Vestibule. Opening image: The visit is ending. Jax walks the Liaison back toward docking. Middle image: Jax looks at the badge. Closing image: Jax puts the badge in the return slot.",
     "setting": "SDS_Docking_Vestibule",
-    "characters": ["SDS_Jax", "SDS_Liaison"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Liaison"
+    ],
     "continuityFrom": "SDS_S1E08_P19",
     "panelPlan": [
-      {"text": "PANEL 1 — The visit is ending. Jax walks the Liaison back toward docking."},
-      {"text": "PANEL 2 — He checks off the final route segment."},
-      {"text": "PANEL 3 — The Liaison hands back the temporary visitor badge. LIAISON: Route was clear."},
-      {"text": "PANEL 4 — Jax looks at the badge. JAX: We had one unscheduled detour."},
-      {"text": "PANEL 5 — The Liaison gestures toward the repaired galley corridor. LIAISON: You handled it."},
-      {"text": "PANEL 6 — Jax puts the badge in the return slot. JAX: That was the route."}
+      {
+        "text": "PANEL 1 — The visit is ending. Jax walks the Liaison back toward docking."
+      },
+      {
+        "text": "PANEL 2 — He checks off the final route segment."
+      },
+      {
+        "text": "PANEL 3 — The Liaison hands back the temporary visitor badge."
+      },
+      {
+        "text": "PANEL 4 — Jax looks at the badge."
+      },
+      {
+        "text": "PANEL 5 — The Liaison gestures toward the repaired galley corridor."
+      },
+      {
+        "text": "PANEL 6 — Jax puts the badge in the return slot."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LIAISON",
+        "text": "Route was clear.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "JAX",
+        "text": "We had one unscheduled detour.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "LIAISON",
+        "text": "You handled it.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "JAX",
+        "text": "That was the route.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P21",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The Liaison departs. Middle image: Astra does not celebrate yet. Closing image: Astra looks at the new attachment.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Mira",
+      "SDS_Pixa"
+    ],
     "continuityFrom": "SDS_S1E08_P20",
     "panelPlan": [
-      {"text": "PANEL 1 — The Liaison departs."},
-      {"text": "PANEL 2 — Astra's terminal receives: SITE RECOMMENDATION SUBMITTED."},
-      {"text": "PANEL 3 — Mira stands beside her. MIRA: That went better than I expected."},
-      {"text": "PANEL 4 — Astra does not celebrate yet. ASTRA: A person visited. The system still gets a vote."},
-      {"text": "PANEL 5 — Pixa chimes. PIXA: Central review acknowledgement received."},
-      {"text": "PANEL 6 — Astra looks at the new attachment. ASTRA: There it is."}
+      {
+        "text": "PANEL 1 — The Liaison departs."
+      },
+      {
+        "text": "PANEL 2 — Astra's terminal receives: SITE RECOMMENDATION SUBMITTED."
+      },
+      {
+        "text": "PANEL 3 — Mira stands beside her."
+      },
+      {
+        "text": "PANEL 4 — Astra does not celebrate yet."
+      },
+      {
+        "text": "PANEL 5 — Pixa chimes."
+      },
+      {
+        "text": "PANEL 6 — Astra looks at the new attachment."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "That went better than I expected.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "A person visited. The system still gets a vote.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Central review acknowledgement received.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "There it is.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E08_P22",
     "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Close on the central review message: LIMITED PILOT — PROVISIONAL. Middle image: Third line, larger: TARGET MASS UPDATED. Closing image: Astra looks at the target, then at the still-open operating record.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E08_P21",
     "panelPlan": [
-      {"text": "PANEL 1 — Close on the central review message: LIMITED PILOT — PROVISIONAL."},
-      {"text": "PANEL 2 — Second line: MATERIAL BENCHMARK GENERATED FROM OBSERVED SITE DATA."},
-      {"text": "PANEL 3 — Third line, larger: TARGET MASS UPDATED."},
-      {"text": "PANEL 4 — Mira reads the number and immediately frowns. MIRA: They extrapolated the visit sample."},
-      {"text": "PANEL 5 — Astra looks at the target, then at the still-open operating record. ASTRA: Of course they did."}
+      {
+        "text": "PANEL 1 — Close on the central review message: LIMITED PILOT — PROVISIONAL."
+      },
+      {
+        "text": "PANEL 2 — Second line: MATERIAL BENCHMARK GENERATED FROM OBSERVED SITE DATA."
+      },
+      {
+        "text": "PANEL 3 — Third line, larger: TARGET MASS UPDATED."
+      },
+      {
+        "text": "PANEL 4 — Mira reads the number and immediately frowns."
+      },
+      {
+        "text": "PANEL 5 — Astra looks at the target, then at the still-open operating record."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "They extrapolated the visit sample.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Of course they did.",
+        "subtext": "Panel 5"
+      }
     ]
   }
 ]
