@@ -31,28 +31,27 @@ State terms:
 | **Vikings 2026** | Issue 1 released: 26 reader pages + collected PDF. | Issues 2–6 are production-ready 24-page packages. Issue 7 and Issue 8 have full 24-page development scripts but are not yet compiled. Issue 9 remains optional/unresolved. | None. | Production-edit Issues 7–8 as one continuous 48-page late-season sequence, resolve the two male Kin identities and Issue 8 hearing terminology/outcome before compilation, then compile and assembler-audit both issues. Decide whether Issue 9 is needed only after the Issue 8 ending is locked. |
 | **Division Threshold** | No StarSplitterVisions series metadata currently exists. | Issues 1–8 are compiled at 26 pages each and are registered through the supported `scenesFiles` path. | None. | Decide release/preview intent. `production/visual-sources.json` currently declares a `division-threshold` Visions slug even though that series JSON does not exist; the durable reference pack is therefore the usable visual authority until a release exists. |
 | **Echoes of a Forgotten War** | Unreleased; no Echoes material exists in current StarSplitterVisions `main`. | Issues 1–8 are compiled for sequential page production, 12 pages each. The development-status file explicitly says writing recovery is complete through Issue 8. | None. | No missing-writing blocker. Durable visual reference pack exists. Repository production frontier remains `EFW_S1E01_S01` until a page is approved and stored. New writing would be Issue 9+ or a deliberate enhancement pass, not recovery. |
-| **Star Splitter Prequel** | No corresponding released Visions series established by this audit. | Six issue packages exist as 52 **scene-level** recipes: 8/8/8/9/9/10 scenes. They do not contain page panel plans. | None. | Convert/compile the scene-level material into page-level comic production recipes before treating it like the newer one-recipe-per-page series. Existing durable reference material is recovery-oriented rather than a normal production reference pack. |
+| **Star Splitter Prequel** | No corresponding released Visions series established by this audit. | Six issues are productionized as **132 page-level comic recipes** (22 pages each). The original 52 scene records remain only as legacy source/provenance. All 124 original dialogue lines are preserved exactly once; the active registry uses PAGE mode and comic-page generation instructions. | None. | Writing/recipe productionization complete. No approved visual-reference pack or durable approved draft exists yet, so image production begins at `PREQ_I01_P01` only after the visual-reference gate is satisfied. Historical image candidates remain recovery provenance and require pixel inspection plus exact page mapping before approval. |
 | **Sun Comes Through — The Musical** | No Visions release established. | 16 scene units across 8 movements. The season plan calls the work a **working dramatic map** and each movement a developed outline. | None. | Continue dramatic development first. This is not yet comparable to a page-compiled comic package and should not be pushed into production merely because scene records exist. |
 
 ## Cross-project findings
 
 1. **The approved-draft manifest currently contains only Azure Reach Issue 2 material:** nine approved image entries, P01–P08 and P11. Every other series has zero durable recipe-level approved drafts.
 2. **Writing depth is substantially ahead of image-production state.** Multiple series have full seasons or long runs registered in RexPrompt with no unpublished approved image state.
-3. **Registration is not the same as editorial readiness.** Stardust Issue 4 is explicitly temporary; Vikings Issues 7–8 are scripted but uncompiled; the Prequel and Musical remain scene-level/development structures.
+3. **Registration is not the same as editorial readiness.** Stardust Issue 4 is explicitly temporary and Vikings Issues 7–8 are scripted but uncompiled. The Prequel is now page-productionized; the Musical remains a scene-level/development structure.
 4. **Low Tide Signal has the clearest repository-hygiene blocker.** Temporary recovery artifacts and a pending binary-persistence state remain in the active reference tree.
 5. **Division Threshold has a source-mapping inconsistency.** RexPrompt expects a Visions slug that does not currently exist.
-6. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
+5. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
 
 ## Immediate non-image work queue
 
 1. **Low Tide Signal — finish recovery-state cleanup and sanitize the active reference tree.**
 2. **Vikings 2026 — production-edit Issues 7–8 as one late-season sequence, resolve the identity/hearing locks, then compile and assembler-audit both issues.**
 3. **Stardust Station — editorial review of Issue 4 “Temporary Material” and downstream Issues 5–10.**
-4. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
-5. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
+4. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
 6. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
-7. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
-8. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
+6. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
+7. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
 
 ## Production-frontier rule
 
