@@ -1,0 +1,45 @@
+name: Temporary Low Tide sequence read
+
+on:
+  push:
+    branches:
+      - repair/low-tide-normalization-2026-09-18-v2
+
+permissions:
+  contents: read
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode and print Low Tide sequence
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib
+          root=pathlib.Path('data/shows/low-tide-signal')
+          pages=json.loads((root/'pages_ch01_ch03_compiled.json').read_text())
+          for name in [
+            'pages_c04_between_runs_enhanced.json.gzb64',
+            'pages_c05_return_tide_enhanced.json.gzb64',
+            'pages_c06_after_the_water_enhanced.json.gzb64',
+            'pages_c07_last_low_tide_enhanced.json.gzb64',
+          ]:
+              raw=''.join((root/'encoded'/name).read_text().split())
+              obj=json.loads(gzip.decompress(base64.b64decode(raw)))
+              pages.extend(obj.get('pages',obj) if isinstance(obj,dict) else obj)
+          by={}
+          for p in pages: by.setdefault(int(p['chapter']),[]).append(p)
+          for ch in sorted(by):
+              print(f'### CHAPTER {ch} ({len(by[ch])} pages)')
+              for p in by[ch]:
+                  dialogue=' / '.join(f"{d.get('speaker','TEXT')}: {d.get('text','')}" for d in (p.get('dialogueInline') or []))
+                  plan=' || '.join((x if isinstance(x,str) else x.get('text','')) for x in (p.get('panelPlan') or []))
+                  print(json.dumps({
+                    'id':p.get('id'),'title':p.get('title'),'summary':p.get('summary'),
+                    'characters':p.get('characters') or [],'dialogue':dialogue,'panelPlan':plan
+                  },ensure_ascii=False))
+          PY
