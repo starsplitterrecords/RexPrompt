@@ -506,7 +506,7 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ## PAGE 22 — THE QUESTION THE FILE COULD NOT ANSWER
 
-**Summary:** Carrie refuses to turn integration into one score and gives the hearing authority the narrower facts actually needed to judge whether these adults can live here.
+**Summary:** Carrie refuses to turn integration into one score and gives the Hearing Officer the narrower facts actually needed to determine whether these adults can live here.
 
 **Setting:** hearing chamber.
 
