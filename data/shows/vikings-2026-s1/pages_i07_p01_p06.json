@@ -1,0 +1,509 @@
+[
+  {
+    "id": "VIK_S1I07_P01",
+    "summary": "An ordinary morning becomes vulnerable the moment Carrie recognizes the municipal review notice in the day's mail.",
+    "settingText": "building hallway mailbox area → Safe Cave doorway.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "building hallway mailbox area → Safe Cave doorway.",
+        "shotType": "medium",
+        "action": "Medium at battered building mailboxes. Carrie sorts ordinary envelopes while balancing coffee and a folder. A thick city envelope with DTI return address sits among junk mail and utility notices."
+      },
+      {
+        "panel": 2,
+        "location": "building hallway mailbox area → Safe Cave doorway.",
+        "shotType": "insert",
+        "action": "Insert. STATUS RECONCILIATION REVIEW visible on the notice header as Carrie opens it."
+      },
+      {
+        "panel": 3,
+        "location": "building hallway mailbox area → Safe Cave doorway.",
+        "shotType": "close",
+        "action": "Close on Carrie. Her face changes before she says anything."
+      },
+      {
+        "panel": 4,
+        "location": "building hallway mailbox area → Safe Cave doorway.",
+        "shotType": "wide",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "Safe Cave doorway wide. Inside, breakfast is already underway. Bjorn looks up from coffee as Carrie enters holding the paper too carefully."
+      },
+      {
+        "panel": 5,
+        "location": "building hallway mailbox area → Safe Cave doorway.",
+        "shotType": "two-shot",
+        "dialogueIndices": [
+          1,
+          2,
+          3
+        ],
+        "action": "Two-shot."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "text": "That is not a bill."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "No."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "Then why do you look worse?"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "Because bills only want money."
+      }
+    ],
+    "page": 1
+  },
+  {
+    "id": "VIK_S1I07_P02",
+    "summary": "Bjorn responds to the review by turning the kitchen table into a war council, but the household no longer fits neatly around one command.",
+    "settingText": "Safe Cave kitchen table.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave kitchen table.",
+        "shotType": "overhead",
+        "action": "Wide overhead-ish table composition. Bjorn clears cups and books with ceremonial seriousness. Carrie places the notice down. Gunnar brings coffee. The two male Kin sit or lean nearby. Astrid is already out."
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave kitchen table.",
+        "shotType": "insert",
+        "action": "Insert. Bjorn removes the brass apartment key from its hook and places it in the center of the table."
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave kitchen table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "Medium on Bjorn."
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave kitchen table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          1
+        ],
+        "action": "Carrie, standing with notice."
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave kitchen table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          2
+        ],
+        "action": "Gunnar sits with coffee, not a map."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "text": "We will defend the household."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "Before we defend anything, I need to know what they are reviewing."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "Before that, we should know what we are defending."
+      }
+    ],
+    "page": 2,
+    "directionInline": [
+      {
+        "text": "Astrid is already out. Show Bjorn, Carrie, Gunnar and the two established male Kin only; do not add Astrid or another Kin."
+      }
+    ]
+  },
+  {
+    "id": "VIK_S1I07_P03",
+    "summary": "Gunnar separates home, city, status, and kinship, revealing that the household has never actually agreed those are the same thing.",
+    "settingText": "Safe Cave table.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "Medium on Bjorn."
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          1
+        ],
+        "action": "Gunnar points at the key."
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          2
+        ],
+        "action": "He points at a transit card near his coffee."
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          3
+        ],
+        "action": "He taps Carrie's notice, then a shared wooden bowl."
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave table.",
+        "shotType": "two-shot",
+        "dialogueIndices": [
+          4,
+          5
+        ],
+        "action": "Two-shot Gunnar/Bjorn."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "text": "This room. Our place here. All of us."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "The room."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "The city."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "The paper. Us."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "They are one thing."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "Then why can I lose one and keep three?"
+      }
+    ],
+    "page": 3
+  },
+  {
+    "id": "VIK_S1I07_P04",
+    "summary": "The table objects become four different choices, and the household begins refusing Bjorn's single collective answer.",
+    "settingText": "Safe Cave table.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave table.",
+        "shotType": "top-down",
+        "action": "Top-down insert on four objects: brass key, transit card, review notice, shared household bowl."
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "First male Kin points at key and bowl."
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          1
+        ],
+        "action": "Second male Kin points at transit card, then leaves his hand off the review notice."
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          2
+        ],
+        "action": "Bjorn looks at him sharply, old reflex surfacing."
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave table.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          3
+        ],
+        "action": "Bjorn stops himself, then changes the sentence."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.KinMan1",
+        "text": "These I want."
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "text": "I want to stay now. I do not know forever."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "If you stand in a shield wall—"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "No. What do you mean?"
+      }
+    ],
+    "page": 4
+  },
+  {
+    "id": "VIK_S1I07_P05",
+    "summary": "The first male Kin leaves the council because a mundane neighborhood obligation already matters to him more than abstract debate.",
+    "settingText": "Safe Cave table → hallway/stairs.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave table → hallway/stairs.",
+        "shotType": "medium",
+        "action": "Medium. The first male Kin checks the time on the microwave clock and stands, grabbing the same laundry bag established in Issue 5."
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave table → hallway/stairs.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "Bjorn."
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave table → hallway/stairs.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          1
+        ],
+        "action": "First male Kin shoulders the bag."
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave table → hallway/stairs.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          2
+        ],
+        "action": "Carrie blinks; Gunnar smiles faintly."
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave table → hallway/stairs.",
+        "shotType": "wide",
+        "dialogueIndices": [
+          3
+        ],
+        "action": "Hallway wide. He is already descending the stairs."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "text": "We are not finished."
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "text": "My machine is."
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "text": "If I leave it, the woman with the red cart moves it to the floor."
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "text": "She is right to do it."
+      }
+    ],
+    "page": 5
+  },
+  {
+    "id": "VIK_S1I07_P06",
+    "summary": "The second male Kin can say he likes New York without promising the city a permanent future he cannot honestly know.",
+    "settingText": "Safe Cave table, smaller group now.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave table, smaller group now.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          0
+        ],
+        "action": "Medium on second male Kin. He turns the transit card between his fingers."
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave table, smaller group now.",
+        "shotType": "medium",
+        "action": "Bjorn waits rather than completing the thought for him."
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave table, smaller group now.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          1
+        ],
+        "action": "Second male Kin."
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave table, smaller group now.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          2,
+          3
+        ],
+        "action": "Carrie."
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave table, smaller group now.",
+        "shotType": "medium",
+        "dialogueIndices": [
+          4
+        ],
+        "action": "Bjorn, after a beat."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.KinMan2",
+        "text": "I like this city."
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "text": "I do not know if I want only this city."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "The review is going to ask whether you intend to remain."
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "text": "I intend to remain until I choose otherwise."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "That is not a weak answer."
+      }
+    ],
+    "page": 6
+  }
+]
