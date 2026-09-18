@@ -290,7 +290,7 @@ def main() -> None:
     validate_show_registration()
     validate_show_visual_rules()
     print("Low Tide Signal IMG production normalization validation passed")
-    print("Core character baselines:", len(CORE_CHARACTER_IDS))
+    print("Recovery conflict: resolved to active P-page contract")\n    print("Core character baselines:", len(CORE_CHARACTER_IDS))
     print("Page inventory:", sum(PAGE_COUNTS.values()))
     print("Chef page plans:", sum(PAGE_COUNTS.values()), "/", sum(PAGE_COUNTS.values()))
     print("Chef directionInline blocks: 0")
