@@ -1,0 +1,30 @@
+name: Validate Shattering data
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/scenes_shattering.json'
+      - 'data/characters.json'
+      - 'data/dialogue.json'
+      - 'data/settings.json'
+      - 'data/factions.json'
+      - 'data/regions.json'
+      - 'data/shows/shattering/**'
+      - 'data/shows/rex-fleet-s1/characters.json'
+      - 'production/references/shattering/**'
+      - 'tools/validate_shattering.py'
+      - '.github/workflows/validate-shattering.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Shattering
+        run: python tools/validate_shattering.py
