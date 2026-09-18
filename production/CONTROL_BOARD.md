@@ -28,7 +28,7 @@ State terms:
 | **Rex Fleet** | Issue 1 released: 19 reader pages (18 story pages plus editorial material) + collected PDF. | Issues 2–12 are compiled/registered. Issue 2 has 19 pages; Issue 3 has 30; Issues 4–12 are encoded production packages. | None. | No writing-recovery blocker established. Durable unpublished production state is empty, so the repository frontier is Issue 2 Page 1 unless prior approved work is deliberately recovered and registered. |
 | **Stardust Station** | Issue 1 released: 22 reader pages + collected PDF. | Issues 2–10 are registered; Issues 2–3 are encoded 22-page packages and Issues 4–10 contain 22 pages each. | None. | Issue 4 is explicitly registered as **Temporary Material**. Run an editorial pass on Issue 4 and the downstream unreleased sequence before treating Issues 4–10 as production-locked. |
 | **Sunforge Outlaw** | Preview only; no released story pages. | Issues 1–12 are compiled. Issue 1 is 22 pages; Issues 2–12 are currently 6 pages each. `series.json` says Issues 13–16 and the final causal answer remain development territory. | None. | Continue dramatic development for Issues 13–16/final causal answer. Also review whether `sourceBoundary.pages = 73` is intentionally historical source metadata or stale relative to the current compiled package; current page files total 88. No durable Sunforge reference pack is configured under `production/references/`. |
-| **Vikings 2026** | Issue 1 released: 26 reader pages + collected PDF. | Issues 2–6 are production-ready 24-page packages. Issue 7 and Issue 8 have full 24-page development scripts but are not yet compiled. Issue 9 remains optional/unresolved. | None. | Production-edit Issues 7–8 as one continuous 48-page late-season sequence, resolve the two male Kin identities and Issue 8 hearing terminology/outcome before compilation, then compile and assembler-audit both issues. Decide whether Issue 9 is needed only after the Issue 8 ending is locked. |
+| **Vikings 2026** | Issue 1 released: 26 reader pages + collected PDF. | Issues 2–8 are production-ready. Issues 7–8 are locked 24-page production scripts compiled into active page recipes and assembler-audited. Issue 8 is the Season 1 finale; Issue 9 is not planned. | None. | No current writing/compilation blocker. Personal names for the two male Kin and Carrie's full legal/display name remain optional and non-blocking until a future story page requires them. |
 | **Division Threshold** | No StarSplitterVisions series metadata currently exists. | Issues 1–8 are compiled at 26 pages each and are registered through the supported `scenesFiles` path. | None. | Decide release/preview intent. `production/visual-sources.json` currently declares a `division-threshold` Visions slug even though that series JSON does not exist; the durable reference pack is therefore the usable visual authority until a release exists. |
 | **Echoes of a Forgotten War** | Unreleased; no Echoes material exists in current StarSplitterVisions `main`. | Issues 1–8 are compiled for sequential page production, 12 pages each. The development-status file explicitly says writing recovery is complete through Issue 8. | None. | No missing-writing blocker. Durable visual reference pack exists. Repository production frontier remains `EFW_S1E01_S01` until a page is approved and stored. New writing would be Issue 9+ or a deliberate enhancement pass, not recovery. |
 | **Star Splitter Prequel** | No corresponding released Visions series established by this audit. | Six issue packages exist as 52 **scene-level** recipes: 8/8/8/9/9/10 scenes. They do not contain page panel plans. | None. | Convert/compile the scene-level material into page-level comic production recipes before treating it like the newer one-recipe-per-page series. Existing durable reference material is recovery-oriented rather than a normal production reference pack. |
@@ -38,21 +38,20 @@ State terms:
 
 1. **The approved-draft manifest currently contains only Azure Reach Issue 2 material:** nine approved image entries, P01–P08 and P11. Every other series has zero durable recipe-level approved drafts.
 2. **Writing depth is substantially ahead of image-production state.** Multiple series have full seasons or long runs registered in RexPrompt with no unpublished approved image state.
-3. **Registration is not the same as editorial readiness.** Stardust Issue 4 is explicitly temporary; Vikings Issues 7–8 are scripted but uncompiled; the Prequel and Musical remain scene-level/development structures.
+3. **Registration is not the same as editorial readiness.** Stardust Issue 4 is explicitly temporary; the Prequel and Musical remain scene-level/development structures.
 4. **Low Tide Signal has the clearest repository-hygiene blocker.** Temporary recovery artifacts and a pending binary-persistence state remain in the active reference tree.
 5. **Division Threshold has a source-mapping inconsistency.** RexPrompt expects a Visions slug that does not currently exist.
-6. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
+5. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
 
 ## Immediate non-image work queue
 
 1. **Low Tide Signal — finish recovery-state cleanup and sanitize the active reference tree.**
-2. **Vikings 2026 — production-edit Issues 7–8 as one late-season sequence, resolve the identity/hearing locks, then compile and assembler-audit both issues.**
-3. **Stardust Station — editorial review of Issue 4 “Temporary Material” and downstream Issues 5–10.**
-4. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
-5. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
+2. **Stardust Station — editorial review of Issue 4 “Temporary Material” and downstream Issues 5–10.**
+3. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
+4. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
 6. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
-7. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
-8. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
+6. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
+7. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
 
 ## Production-frontier rule
 
