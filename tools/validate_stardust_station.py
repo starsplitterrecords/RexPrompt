@@ -26,6 +26,7 @@ CORE_HANDLES = {
     "@sds.Glorp", "@sds.Kreeb", "@sds.Pixa", "@sds.Brick"
 }
 PAGE_ID_RE = re.compile(r"_P(\d+)$")
+EMBEDDED_DIALOGUE_RE = re.compile(r"\b(?:ASTRA|MIRA|JAX|NOOLA|ZIB|GLORP|KREEB|PIXA|BRICK|LIAISON|DISPLAY|SCREEN|SIGN|STATION|SYSTEM|TEXT|CAPTION):\s")
 
 
 def load(path: Path):
@@ -201,6 +202,15 @@ for entry in stardust_entries:
                     alias_handle = speaker_alias_handles.get(speaker.upper())
                     if alias_handle and alias_handle not in NON_CAST_HANDLES:
                         assert alias_handle in cast_handles, f"{page_id}: dialogue speaker missing from cast {speaker}"
+
+        issue_match = re.search(r"-e(\d+)$", str(show_id))
+        if issue_match and int(issue_match.group(1)) >= 4:
+            for panel in panel_plan:
+                panel_text = str(panel.get("text", "")) if isinstance(panel, dict) else str(panel)
+                assert not EMBEDDED_DIALOGUE_RE.search(panel_text), (
+                    f"{page_id}: exact dialogue/lettering leaked into panelPlan; "
+                    "store it in dialogueInline instead"
+                )
 
     ordered = sorted(page_numbers)
     assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
