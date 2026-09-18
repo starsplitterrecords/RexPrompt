@@ -123,8 +123,29 @@ def main():
     assert REFERENCE_README.exists(), "Shattering visual-reference README missing"
     assert RECOVERY_NOTE.exists(), "Historical recovery provenance missing"
     recovery_text = RECOVERY_NOTE.read_text(encoding="utf-8")
-    assert "Source" in recovery_text.lower(), "Recovery note still presents old scene IDs as current recipes"
+    assert "source" in recovery_text.lower(), "Recovery note still presents old scene IDs as current recipes"
     assert "exact active page recipe" in recovery_text, "Recovery note lacks page-level remapping requirement"
+
+
+    retired_identity_tokens = (
+        "Star Splitter Prequel",
+        "star-splitter-prequel",
+        "PREQ_",
+        "prequel-e",
+        "scenes_prequel",
+        "validate_star_splitter_prequel",
+        "validate-star-splitter-prequel",
+    )
+    text_extensions = {".json", ".md", ".py", ".yml", ".yaml", ".html", ".js", ".txt"}
+    for path in ROOT.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in text_extensions:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        for token in retired_identity_tokens:
+            assert token not in text, f"{path.relative_to(ROOT)}: retired Shattering identity token remains: {token}"
 
     print("Shattering validation passed")
     print("6 issues / 132 pages / 124 source dialogue lines preserved / page-mode registry / valid references / normalized Liora identity")
