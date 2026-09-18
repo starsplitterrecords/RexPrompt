@@ -12,6 +12,10 @@ The active RexPrompt package is page-based comic production.
 - Active files: `pages_i01.json` through `pages_i06.json`
 - Production unit: `PAGE`
 - Durable approved unpublished images: none at this checkpoint
+- Structured visual-reference inventory: `production/references/shattering/reference-inventory.json`
+- End-to-end writing/continuity review: complete through Issue 6
+- Story-level production blockers: none
+- Visual-reference gate: open; no approved Shattering image baseline yet
 - Production frontier: `SHAT_I01_P01`
 
 `data/scenes_shattering.json` is the source-scene and provenance package. The active generation path is the six page files under `data/shows/shattering/`.
@@ -111,6 +115,12 @@ The six-issue arc remains:
 | `SCN_SHAT_I06_S08` | `SHAT_I06_P17`–`SHAT_I06_P18` |
 | `SCN_SHAT_I06_S09` | `SHAT_I06_P19`–`SHAT_I06_P20` |
 | `SCN_SHAT_I06_S10` | `SHAT_I06_P21`–`SHAT_I06_P22` |
+
+## Production readiness
+
+The six-issue writing, page architecture, identity normalization, Rex Fleet lineage check, assembled-page structure, and end-to-end sequence review are complete. The remaining gate is visual rather than narrative: image generation should not begin until a usable approved Shattering reference baseline is established.
+
+The current reference inventory records 29 historical recovery candidates across 13 source-scene groups. None are approved references or approved drafts.
 
 ## Recovery boundary
 
