@@ -279,7 +279,7 @@ Bjorn's answer should concern the household, not legal strategy.
 
 ## Issue 8 bridge
 
-**Issue 8 is the courtroom/hearing issue.** Do not insert another full episode of evidence gathering between War Council and the hearing.
+**Issue 8 is the Status Reconciliation Review / hearing issue.** Do not insert another full episode of evidence gathering between War Council and the hearing.
 
 The file exists only to get them into the room. The dramatic test is what happens when the institution encounters the people themselves.
 
