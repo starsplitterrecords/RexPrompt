@@ -1,0 +1,594 @@
+[
+  {
+    "id": "PREQ_I04_P01",
+    "summary": "Ships crossing the widening stress field encounter visible harmonic tearing as their hulls cast delayed, fractured reflections in open space.",
+    "setting": "S_StressField",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_shipCaptain",
+      "C_liora",
+      "C_nereth"
+    ],
+    "panelPlan": [
+      "Open outside multiple ships against warped starlight, with hull reflections displaced sideways from the vessels that cast them.",
+      "Inside one ship, the captain compares the impossible visual doubling to failing nav references.",
+      "A corridor surface ripples where open space should remain geometrically stable.",
+      "End on the captain reporting that the harmonics are ripping sideways."
+    ],
+    "dialog": [
+      "D501"
+    ],
+    "directionInline": [
+      "Escalate beyond Issue 3’s single trailing silhouette into a field-wide navigational hazard."
+    ]
+  },
+  {
+    "id": "PREQ_I04_P02",
+    "summary": "Liora tries to hold ships still long enough to map the distortion, warning that movement through folded lane geometry could make the readings—and casualties—worse.",
+    "setting": "S_StressField",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_shipCaptain",
+      "C_liora",
+      "C_nereth"
+    ],
+    "panelPlan": [
+      "Liora receives overlapping ship feeds from the damaged network.",
+      "She freezes a distortion map and orders the reporting ship to keep engines idle.",
+      "The captain’s vessel drifts relative to a corridor marker even without thrust.",
+      "End on Liora trying to construct one stable geometry from contradictory positions."
+    ],
+    "dialog": [
+      "D502"
+    ],
+    "directionInline": [
+      "Her instruction is a controlled response to unknown geometry, not passivity."
+    ],
+    "continuityFrom": "PREQ_I04_P01"
+  },
+  {
+    "id": "PREQ_I04_P03",
+    "summary": "Nereth realizes even idling ships are unsafe because the anchor points themselves are slipping.",
+    "setting": "S_StressField",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Coop"
+    ],
+    "characters": [
+      "C_shipCaptain",
+      "C_liora",
+      "C_nereth"
+    ],
+    "panelPlan": [
+      "Nereth compares the ship’s fixed engine state to the moving anchor reference.",
+      "A supposedly stationary reference marker jumps between positions.",
+      "Liora sees that navigation cannot solve a failure of the coordinate frame.",
+      "End on the map losing another reliable anchor as Nereth states the problem."
+    ],
+    "dialog": [
+      "D503"
+    ],
+    "directionInline": [
+      "This closes the possibility that skilled pilots can simply wait out the crisis."
+    ],
+    "continuityFrom": "PREQ_I04_P02"
+  },
+  {
+    "id": "PREQ_I04_P04",
+    "summary": "At Orban Port, every departure board closes in cascading waves and civilians finally see the transport network stop functioning.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_traveler",
+      "C_staff",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "Wide concourse with boards graying out row by row above packed travelers.",
+      "People look for alternate gates only to watch those close too.",
+      "The concerned traveler from earlier finds no live route at all.",
+      "End on the question of where the ships have gone."
+    ],
+    "dialog": [
+      "D504"
+    ],
+    "directionInline": [
+      "Use visual continuity with earlier Orban scenes so the loss of normal function is obvious."
+    ],
+    "continuityFrom": "PREQ_I04_P03"
+  },
+  {
+    "id": "PREQ_I04_P05",
+    "summary": "Port staff can no longer offer routing answers; Aveth keeps the crowd together because any future opening will be useless if people scatter.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_traveler",
+      "C_staff",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "A staffer asks civilians to remain in the concourse while internal route tools also show uncertainty.",
+      "A few travelers begin moving toward exits or restricted access points.",
+      "Aveth steps into the flow and physically turns people back toward a common waiting zone.",
+      "End on the crowd staying together because of Aveth, not because the boards recovered."
+    ],
+    "dialog": [
+      "D505",
+      "D506"
+    ],
+    "directionInline": [
+      "Shift authority from system information to trusted human presence."
+    ],
+    "continuityFrom": "PREQ_I04_P04"
+  },
+  {
+    "id": "PREQ_I04_P06",
+    "summary": "Orneth attempts formal corridor lockouts from the old BHA command floor and discovers that the authority channels no longer respond.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "HighEraCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_orneth",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Establish the former BHA command floor under emergency lighting.",
+      "Orneth sends a standard lockout across multiple approaches.",
+      "Every command returns dead authority or silent red failure.",
+      "End on Orneth recognizing that his procedural control no longer reaches the network."
+    ],
+    "dialog": [
+      "D507"
+    ],
+    "directionInline": [
+      "The failure is institutional and technical at once: the command exists, but nothing answers it."
+    ],
+    "continuityFrom": "PREQ_I04_P05"
+  },
+  {
+    "id": "PREQ_I04_P07",
+    "summary": "Lochran demands that Orneth enforce closures anyway, clinging to boundaries that the physical system can no longer recognize.",
+    "setting": "S_PreBHA_Ruins",
+    "region": "HighEraCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_orneth",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Lochran joins or calls into the failed command floor demanding closure enforcement.",
+      "Orneth demonstrates that the lockout requests are not merely delayed but unregistered.",
+      "Lochran points to the mapped corridor boundaries as if authority can restore them.",
+      "End on a map line remaining crisp while the live status beneath it goes blank."
+    ],
+    "dialog": [
+      "D508"
+    ],
+    "directionInline": [
+      "Make the gap between mapped authority and physical reality explicit."
+    ],
+    "continuityFrom": "PREQ_I04_P06"
+  },
+  {
+    "id": "PREQ_I04_P08",
+    "summary": "A major convergence node begins physically detaching, turning network failure into a structural disaster with people still aboard.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_orneth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Large exterior view of a convergence node with one structural arm beginning to shear away.",
+      "Inside, crews stumble as gravity and alignment change.",
+      "Nereth sees the detachment propagate through structural sensors.",
+      "End on the arm separating farther while occupied sections flash emergency beacons."
+    ],
+    "dialog": [
+      "D509"
+    ],
+    "directionInline": [
+      "Give the collapse enough scale to justify the issue’s midpoint."
+    ],
+    "continuityFrom": "PREQ_I04_P07"
+  },
+  {
+    "id": "PREQ_I04_P09",
+    "summary": "Nereth organizes immediate evacuation from the failing arm while debris starts to fill the junction.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_orneth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Nereth converts a traffic display into an evacuation map.",
+      "Survivors move toward the remaining stable connection while structural panels tear free behind them.",
+      "Rescue craft try to hold relative position in a drifting debris field.",
+      "End on the last group reaching the junction as the arm moves out of alignment."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Keep the rescue procedural and physical, not abstract."
+    ],
+    "continuityFrom": "PREQ_I04_P08"
+  },
+  {
+    "id": "PREQ_I04_P10",
+    "summary": "Orneth discovers he cannot close the approach, leaving incoming pilots to enter a dead junction without authoritative warning.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_orneth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Orneth repeatedly sends closure commands through failing channels.",
+      "Incoming craft remain visible on approach vectors that should have been blocked.",
+      "He attempts direct contact as the automated authority path dies.",
+      "End on one incoming ship crossing the point where a functioning lockout would have stopped it."
+    ],
+    "dialog": [
+      "D510"
+    ],
+    "directionInline": [
+      "This pays off the dead-authority problem from Pages 6–7."
+    ],
+    "continuityFrom": "PREQ_I04_P09"
+  },
+  {
+    "id": "PREQ_I04_P11",
+    "summary": "A blinded incoming captain asks for manual guidance as the shattered node spins and Nereth becomes the human replacement for the failed network.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Convoy",
+      "F_Outer"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_orneth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Inside the incoming ship, nav references collapse into contradictory vectors.",
+      "The captain calls for guidance before the ship enters the node’s spin.",
+      "Nereth finds one surviving beacon and gives a narrow manual path through the debris.",
+      "End on the ship committing to the improvised guidance while the broken node turns around it."
+    ],
+    "dialog": [
+      "D511"
+    ],
+    "directionInline": [
+      "The transition from centralized automation to person-to-person rescue should be unmistakable."
+    ],
+    "continuityFrom": "PREQ_I04_P10"
+  },
+  {
+    "id": "PREQ_I04_P12",
+    "summary": "Aveth chooses a partially functional Sector 9 route because the medical convoy cannot wait for a fully verified corridor.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_aveth",
+      "C_trafficCtrl"
+    ],
+    "panelPlan": [
+      "Back at Orban, Aveth identifies one intermittent path among otherwise dead routes.",
+      "Medicine pallets are loaded while the route flickers between open and unknown.",
+      "Aveth weighs the route against the destination’s medical need.",
+      "End on the convoy preparing for Sector 9 despite no guarantee."
+    ],
+    "dialog": [
+      "D512"
+    ],
+    "directionInline": [
+      "The decision should echo the earlier ‘route blind’ dilemma, now with no institutional alternative left."
+    ],
+    "continuityFrom": "PREQ_I04_P11"
+  },
+  {
+    "id": "PREQ_I04_P13",
+    "summary": "The traffic controller warns that Sector 9 may not even know it is open, but Aveth commits to the gamble because waiting guarantees loss.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_aveth",
+      "C_trafficCtrl"
+    ],
+    "panelPlan": [
+      "The controller shows intermittent alignment with no confirmation from the far end.",
+      "Aveth steadies herself as the port floor vibrates under another distant failure.",
+      "The convoy crew look to Aveth rather than the system for the go/no-go choice.",
+      "End on the first medical ship entering the uncertain route."
+    ],
+    "dialog": [
+      "D513"
+    ],
+    "directionInline": [
+      "Finish on action: Aveth’s model of authority is becoming practical trust under uncertainty."
+    ],
+    "continuityFrom": "PREQ_I04_P12"
+  },
+  {
+    "id": "PREQ_I04_P14",
+    "summary": "Outer Ring habitats lose power in sections as severed corridor links destabilize life-support distribution.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "Wide outer habitat cycling from light to darkness in uneven sections.",
+      "Ruvian’s crew sees atmosphere and power loads spike across local systems.",
+      "A major conduit bucks under the surge.",
+      "End on Ruvian warning that one more hit could drop atmosphere."
+    ],
+    "dialog": [
+      "D514"
+    ],
+    "directionInline": [
+      "Keep the threat domestic and bodily: light, air, pressure."
+    ],
+    "continuityFrom": "PREQ_I04_P13"
+  },
+  {
+    "id": "PREQ_I04_P15",
+    "summary": "With no central help coming, outer workers brace the grid manually using whatever material remains.",
+    "setting": "S_OuterRing",
+    "region": "OuterBand",
+    "factions": [
+      "F_Outer"
+    ],
+    "characters": [
+      "C_ruvian",
+      "C_outerTech"
+    ],
+    "panelPlan": [
+      "The outer technician rejects waiting for remote assistance and starts stripping usable support material nearby.",
+      "Ruvian redirects workers to a failing conduit while others isolate nonessential loads.",
+      "Improvised braces take strain as the habitat remains partially powered.",
+      "End on the crew holding the system together by hand."
+    ],
+    "dialog": [
+      "D515"
+    ],
+    "directionInline": [
+      "This is the survival practice that Issue 5 will later name as Shard identity."
+    ],
+    "continuityFrom": "PREQ_I04_P14"
+  },
+  {
+    "id": "PREQ_I04_P16",
+    "summary": "The Council gathers inside a communications storm while Lochran still argues that projecting command is essential to preventing panic.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_iskari",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Wide Council chamber with overlapping alarms, broken feeds, and delegates receiving contradictory world reports.",
+      "Lochran tries to reestablish a single command channel and calls for visible authority.",
+      "Several world feeds drop while he speaks.",
+      "End on the chamber unable to behave like one center anymore."
+    ],
+    "dialog": [
+      "D516"
+    ],
+    "directionInline": [
+      "Do not caricature the argument: social panic is a real risk, but the old command structure is no longer capable of containing it."
+    ],
+    "continuityFrom": "PREQ_I04_P15"
+  },
+  {
+    "id": "PREQ_I04_P17",
+    "summary": "Iskari directly links the cost of denial to the growing casualty reports, making the leadership fracture irreversible.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_iskari",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Iskari brings casualty and failure reports into the same space as Lochran’s command plan.",
+      "She confronts him at close range rather than through procedural debate.",
+      "Delegates around them stop pretending this is a normal Council disagreement.",
+      "End on Lochran’s practiced composure finally cracking."
+    ],
+    "dialog": [
+      "D517"
+    ],
+    "directionInline": [
+      "This is moral accusation grounded in consequences already shown."
+    ],
+    "continuityFrom": "PREQ_I04_P16"
+  },
+  {
+    "id": "PREQ_I04_P18",
+    "summary": "Damiar abandons any hope of one unified message and pushes for whatever local guidance each world can still receive.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_iskari",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Damiar scans world channels with different needs and different surviving capabilities.",
+      "He stops editing one central statement and begins routing practical guidance outward.",
+      "Lochran and Iskari remain divided behind him while the communications work becomes decentralized.",
+      "End on multiple separate world messages leaving the chamber instead of one Cooperative broadcast."
+    ],
+    "dialog": [
+      "D518"
+    ],
+    "directionInline": [
+      "Show Damiar changing what he does, not only what he believes."
+    ],
+    "continuityFrom": "PREQ_I04_P17"
+  },
+  {
+    "id": "PREQ_I04_P19",
+    "summary": "Nereth and surviving captains establish an ad-hoc rescue cluster around one temporarily stable pocket in the distorted field.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Coop",
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Establish a calm pocket surrounded by visibly warped corridor space and drifting debris.",
+      "Nereth anchors rescue traffic to one surviving beacon rather than the dead network.",
+      "Captains take assigned sectors and move toward scattered survivors.",
+      "End on the first rescue craft crossing into the pocket."
+    ],
+    "dialog": [
+      "D519"
+    ],
+    "directionInline": [
+      "The rescue cluster is a practical replacement for centralized routing."
+    ],
+    "continuityFrom": "PREQ_I04_P18"
+  },
+  {
+    "id": "PREQ_I04_P20",
+    "summary": "Rescuers pull survivors from debris while the stable pocket shifts around them.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Coop",
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "Rescue crews reach survivors clinging to broken structure.",
+      "The pocket boundary distorts closer while the beacon flickers.",
+      "A craft rotates to shield the transfer from moving debris.",
+      "End on survivors crossing into the rescue craft as the geometry begins to move again."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Keep action readable and spatially coherent."
+    ],
+    "continuityFrom": "PREQ_I04_P19"
+  },
+  {
+    "id": "PREQ_I04_P21",
+    "summary": "The captain warns that another pocket shift could scatter rescuers into null space, but the cluster stays long enough to recover the last reachable people.",
+    "setting": "S_BrokenNode",
+    "region": "CollapseZone",
+    "factions": [
+      "F_Coop",
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_shipCaptain"
+    ],
+    "panelPlan": [
+      "The captain watches the pocket boundary move against the beacon.",
+      "Nereth orders the last transfer completed before withdrawal.",
+      "A final survivor is pulled aboard as the field distorts across the rescue path.",
+      "End on the cluster breaking formation and escaping just before the pocket shifts."
+    ],
+    "dialog": [
+      "D520"
+    ],
+    "directionInline": [
+      "The rescue succeeds locally while the larger system continues failing."
+    ],
+    "continuityFrom": "PREQ_I04_P20"
+  },
+  {
+    "id": "PREQ_I04_P22",
+    "summary": "Liora watches the final five network nodes die in synchrony and understands that the Cooperative Network itself is gone.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Full-page or dominant-panel composition centered on Liora before the central corridor map.",
+      "One by one, already-damaged regions fall dark until only five nodes remain.",
+      "The last five extinguish together, leaving the network map black.",
+      "Final close panel on Liora delivering the fact without qualification: the network is gone."
+    ],
+    "dialog": [
+      "D521"
+    ],
+    "directionInline": [
+      "End without additional explanation or hopeful counterbeat. The collapse itself is the issue ending."
+    ],
+    "continuityFrom": "PREQ_I04_P21"
+  }
+]
