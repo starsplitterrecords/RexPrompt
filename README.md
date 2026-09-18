@@ -25,16 +25,19 @@ Example:
 ```json
 [
   {
-    "id": "prequel",
-    "name": "Star Splitter Prequel",
+    "id": "shattering-i01",
+    "name": "Shattering — Issue 1",
+    "seriesId": "shattering",
+    "seriesName": "Shattering",
     "basePath": "data",
-    "scenesFile": "scenes_prequel.json"
+    "scenesFile": "shows/shattering/pages_i01.json",
+    "unitLabel": "PAGE"
   },
   {
     "id": "rex-fleet-s1",
     "name": "Rex Fleet — Season One",
     "basePath": "data/shows/rex-fleet-s1",
-    "scenesFile": "scenes_prequel.json"
+    "scenesFile": "scenes.json"
   }
 ]
 ```
@@ -58,7 +61,7 @@ data/shows/my-show/
 ├── mood.json
 ├── negatives.json
 ├── regions.json
-├── scenes_prequel.json
+├── scenes.json
 └── settings.json
 ```
 
@@ -66,7 +69,7 @@ The scene file can have another name; set that name in `shows.json` as `scenesFi
 
 After copying the JSON package into its directory, add one entry to `data/shows.json`. **No assembler code needs to change for the new show.**
 
-The original prequel remains in the root `data/` directory for backward compatibility.
+Series-specific source packages may remain in `data/` when they serve provenance or migration-independent production support.
 
 ## Package-local production configuration
 
@@ -198,7 +201,7 @@ See `production/README.md` and `production/drafts/README.md` for the complete vi
 
 Each show supplies:
 
-- `scenes_prequel.json` (or the configured `scenesFile` / `scenesFiles`) — production scene/page recipes and summaries
+- `scenes.json` (or the configured `scenesFile` / `scenesFiles`) — production scene/page recipes and summaries
 - `assembler.json` (optional) — package-local production file and overlay configuration
 - `characters.json` — characters, names, handles, roles, and notes
 - `dialogue.json` — dialogue lines and character subtext
@@ -249,7 +252,7 @@ RexPrompt/
 │       └── manifest.json
 └── data/
     ├── shows.json
-    ├── ...prequel data...
+    ├── ...series source data...
     └── shows/
         └── <show-id>/
             ├── assembler.json
