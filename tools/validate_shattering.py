@@ -44,7 +44,7 @@ def main():
     rf_characters = load(RF_CHARACTERS)
 
     entries = [s for s in shows if s.get("seriesId") == "shattering"]
-    assert len(entries) == 6, f"Expected 6 prequel issue entries, found {len(entries)}"
+    assert len(entries) == 6, f"Expected 6 Shattering issue entries, found {len(entries)}"
 
     all_pages = []
     all_page_ids = set()
@@ -109,18 +109,18 @@ def main():
 
     liora = characters.get("C_liora")
     rf_liora = rf_characters.get("C_liora_virelia")
-    assert liora and rf_liora, "Liora identity missing from prequel or Rex Fleet"
+    assert liora and rf_liora, "Liora identity missing from Shattering or Rex Fleet"
     assert liora.get("name") == rf_liora.get("name") == "Liora Virelia", "Liora name diverges across packages"
     assert liora.get("handle") == rf_liora.get("handle"), "Liora handle diverges across packages"
     assert liora.get("visualAnchor") == rf_liora.get("visualAnchor"), "Liora visual anchor diverges across packages"
 
     handles = [c.get("handle") for c in characters.values() if c.get("handle")]
-    assert len(handles) == len(set(handles)), "Duplicate character handles in prequel shelf"
+    assert len(handles) == len(set(handles)), "Duplicate character handles in Shattering shelf"
     names = [c.get("name") for c in characters.values() if c.get("name")]
-    assert len(names) == len(set(names)), "Duplicate character names in prequel shelf"
+    assert len(names) == len(set(names)), "Duplicate character names in Shattering shelf"
 
-    assert PACKAGE_README.exists(), "Prequel package README missing"
-    assert REFERENCE_README.exists(), "Prequel visual-reference README missing"
+    assert PACKAGE_README.exists(), "Shattering package README missing"
+    assert REFERENCE_README.exists(), "Shattering visual-reference README missing"
     assert RECOVERY_NOTE.exists(), "Historical recovery provenance missing"
     recovery_text = RECOVERY_NOTE.read_text(encoding="utf-8")
     assert "Source" in recovery_text.lower(), "Recovery note still presents old scene IDs as current recipes"
