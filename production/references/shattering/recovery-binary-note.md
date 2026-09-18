@@ -2,7 +2,7 @@
 
 Recovery date: 2026-09-06
 
-This file preserves deterministic recovery evidence for historical **Shattering of the Corridors** image generations found in ChatGPT File Library. RexPrompt packages this series internally as `star-splitter-prequel` with issues `prequel-e01` through `prequel-e06`. The active production package is now page-based; the scene IDs below are legacy source identifiers retained for provenance.
+This file preserves deterministic recovery evidence for historical **Shattering of the Corridors** image generations found in ChatGPT File Library. RexPrompt packages this series internally as `shattering` with issues `shattering-i01` through `shattering-i06`. The active production package is now page-based; the scene IDs below are source identifiers retained for provenance.
 
 ## Authority and status
 
@@ -23,11 +23,11 @@ The successful Azure Reach recovery method cannot be reused from a bare File Lib
 
 Do not create proxy screenshots, regenerated copies, placeholder images, or manifest entries in place of the original bytes.
 
-## Deterministic legacy-scene mapping
+## Deterministic source-scene mapping
 
-These mappings identify the legacy source scene embedded in each historical candidate. They do **not** identify an active page recipe. Use `data/shows/star-splitter-prequel/README.md` for the scene-to-page-span crosswalk, then inspect recovered pixels to choose the exact page.
+These mappings identify the source scene embedded in each historical candidate. They do **not** identify an active page recipe. Use `data/shows/shattering/README.md` for the scene-to-page-span crosswalk, then inspect recovered pixels to choose the exact page.
 
-### `star-splitter-prequel::prequel-e01::SCN_PREQ_E01_S03`
+### `shattering::shattering-i01::SCN_SHAT_I01_S03`
 Embedded legacy scene number: `2`
 
 - `Impossible Late Arrival at Astrin Hall.png`
@@ -35,7 +35,7 @@ Embedded legacy scene number: `2`
   - Created: 2026-08-08T13:28:09Z
   - Embedded source: Heska Astrin / Festival Announcer; Astrin Hall; late delegation disrupts the festival rotation.
 
-### `star-splitter-prequel::prequel-e01::SCN_PREQ_E01_S05`
+### `shattering::shattering-i01::SCN_SHAT_I01_S05`
 Embedded legacy scene number: `4`
 
 - `Calm Voice, Hidden Fracture.png`
@@ -43,7 +43,7 @@ Embedded legacy scene number: `4`
   - Created: 2026-08-08T16:29:55Z
   - Embedded source: Damiar Colven prepares a minimizing public communication in Cooperative Hall.
 
-### `star-splitter-prequel::prequel-e01::SCN_PREQ_E01_S08`
+### `shattering::shattering-i01::SCN_SHAT_I01_S08`
 Embedded legacy scene number: `7`
 
 All three recovered files embed the same Liora / Iskari / Lochran Council recipe despite divergent filenames.
@@ -60,7 +60,7 @@ All three recovered files embed the same Liora / Iskari / Lochran Council recipe
 
 Embedded source: Liora presents the first real drift model; Iskari backs her; Lochran resists escalation in Cooperative Hall.
 
-### `star-splitter-prequel::prequel-e02::SCN_PREQ_E02_S04`
+### `shattering::shattering-i02::SCN_SHAT_I02_S04`
 Embedded legacy scene number: `11`
 
 All recovered files embed the same Heska Records Vault recipe.
@@ -80,7 +80,7 @@ All recovered files embed the same Heska Records Vault recipe.
 
 Embedded source: Heska uncovers Dawn Era schematics for a rarely used systemwide damping mechanism.
 
-### `star-splitter-prequel::prequel-e02::SCN_PREQ_E02_S07`
+### `shattering::shattering-i02::SCN_SHAT_I02_S07`
 Embedded legacy scene number: `14`
 
 - `Harmonic Tension Divides the Council.png`
@@ -88,7 +88,7 @@ Embedded legacy scene number: `14`
   - Created: 2026-08-08T20:32:55Z
   - Embedded source: Liora, Iskari, Lochran, Damiar; accelerating harmonic tension; Council fracture.
 
-### `star-splitter-prequel::prequel-e03::SCN_PREQ_E03_S03`
+### `shattering::shattering-i03::SCN_SHAT_I03_S03`
 Embedded legacy scene number: `18`
 
 - `The Damping Chamber Failsafe.png`
@@ -96,7 +96,7 @@ Embedded legacy scene number: `18`
   - Created: 2026-08-08T20:34:54Z
   - Embedded source: Ruvian Marrek and Outer Technician monitor a critical Outer Band node vibrating off-pattern; warning that Outer stations fail first.
 
-### `star-splitter-prequel::prequel-e04::SCN_PREQ_E04_S02`
+### `shattering::shattering-i04::SCN_SHAT_I04_S02`
 Embedded legacy scene number: `25`
 
 - `Containment Fails in Cooperative Hall.png`
@@ -104,7 +104,7 @@ Embedded legacy scene number: `25`
   - Created: 2026-08-08T20:44:44Z
   - Embedded source: Orban-Tier Transit Port departure boards gray out; Aveth attempts to keep civilians calm.
 
-### `star-splitter-prequel::prequel-e04::SCN_PREQ_E04_S05`
+### `shattering::shattering-i04::SCN_SHAT_I04_S05`
 Embedded legacy scene number: `28`
 
 All three files embed the same Aveth / Transit Controller medical-convoy recipe.
@@ -121,7 +121,7 @@ All three files embed the same Aveth / Transit Controller medical-convoy recipe.
 
 Embedded source: Aveth proposes a Sector 9 detour to save a medical shipment; the controller warns that she is flying on faith.
 
-### `star-splitter-prequel::prequel-e04::SCN_PREQ_E04_S08`
+### `shattering::shattering-i04::SCN_SHAT_I04_S08`
 Embedded legacy scene number: `31`
 
 - `Bracing the Outer Ring.png`
@@ -129,7 +129,7 @@ Embedded legacy scene number: `31`
   - Created: 2026-08-08T20:51:28Z
   - Embedded source: Nereth Kestrel and surviving captains form ad-hoc rescue clusters in drift pockets.
 
-### `star-splitter-prequel::prequel-e05::SCN_PREQ_E05_S01`
+### `shattering::shattering-i05::SCN_SHAT_I05_S01`
 Embedded legacy scene number: `33`
 
 All four files embed the same Survivor Plaza / Aveth triage recipe.
@@ -149,7 +149,7 @@ All four files embed the same Survivor Plaza / Aveth triage recipe.
 
 Embedded source: Local Leader demands resource-allocation authority; Aveth prioritizes heat, water, and medical survival.
 
-### `star-splitter-prequel::prequel-e05::SCN_PREQ_E05_S06`
+### `shattering::shattering-i05::SCN_SHAT_I05_S06`
 Embedded legacy scene number: `38`
 
 - `Trust Routes at Orban-Tier Port.png`
@@ -157,7 +157,7 @@ Embedded legacy scene number: `38`
   - Created: 2026-08-08T20:59:50Z
   - Embedded source: Iskari confronts Lochran over using sigils without standards in the Pre-Break BHA ruins.
 
-### `star-splitter-prequel::prequel-e06::SCN_PREQ_E06_S03`
+### `shattering::shattering-i06::SCN_SHAT_I06_S03`
 Embedded legacy scene number: `44`
 
 All three files embed the same Courier Relay / Aveth treatise-distribution recipe.
@@ -174,7 +174,7 @@ All three files embed the same Courier Relay / Aveth treatise-distribution recip
 
 Embedded source: couriers dispute which worlds receive treatise fragments first; Aveth intervenes and prioritizes need over prestige.
 
-### `star-splitter-prequel::prequel-e06::SCN_PREQ_E06_S07`
+### `shattering::shattering-i06::SCN_SHAT_I06_S07`
 Embedded legacy scene number: `48`
 
 All five files embed the same Heska archive recipe.
@@ -199,21 +199,21 @@ Embedded source: Heska stores conflicting annotated versions of Liora's treatise
 
 ## Recovery-state implications
 
-The entries above establish that historical image-generation work exists for at least these legacy source scenes:
+The entries above establish that historical image-generation work exists for at least these source scenes:
 
-- `SCN_PREQ_E01_S03`
-- `SCN_PREQ_E01_S05`
-- `SCN_PREQ_E01_S08`
-- `SCN_PREQ_E02_S04`
-- `SCN_PREQ_E02_S07`
-- `SCN_PREQ_E03_S03`
-- `SCN_PREQ_E04_S02`
-- `SCN_PREQ_E04_S05`
-- `SCN_PREQ_E04_S08`
-- `SCN_PREQ_E05_S01`
-- `SCN_PREQ_E05_S06`
-- `SCN_PREQ_E06_S03`
-- `SCN_PREQ_E06_S07`
+- `SCN_SHAT_I01_S03`
+- `SCN_SHAT_I01_S05`
+- `SCN_SHAT_I01_S08`
+- `SCN_SHAT_I02_S04`
+- `SCN_SHAT_I02_S07`
+- `SCN_SHAT_I03_S03`
+- `SCN_SHAT_I04_S02`
+- `SCN_SHAT_I04_S05`
+- `SCN_SHAT_I04_S08`
+- `SCN_SHAT_I05_S01`
+- `SCN_SHAT_I05_S06`
+- `SCN_SHAT_I06_S03`
+- `SCN_SHAT_I06_S07`
 
 This does **not** advance the durable production frontier. Only released StarSplitterVisions units or substantially passing images committed as approved RexPrompt drafts may do that.
 
@@ -224,7 +224,7 @@ For each recovered candidate:
 1. Recover the original candidate bytes without transformation.
 2. Inspect the pixels and reconcile duplicate variants.
 3. Apply the IMG substantial-pass test and any known explicit approval/rejection history.
-4. For a passing unpublished image, create the image Git blob at `production/drafts/star-splitter-prequel/<issueId>/<recipeId-lower>.<ext>`.
+4. For a passing unpublished image, create the image Git blob at `production/drafts/shattering/<issueId>/<recipeId-lower>.<ext>`.
 5. Add the matching `approved-production-draft` entry to `production/drafts/manifest.json`.
 6. Commit image + manifest atomically and verify both.
 7. Never publish to StarSplitterVisions solely because recovery succeeds.
