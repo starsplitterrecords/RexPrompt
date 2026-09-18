@@ -23,7 +23,7 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 - Municipal administrative hearing chamber rather than grand criminal court: wood veneer, seal, clerk desk, microphones, fluorescent/daylight mix, stackable gallery seating, ordinary security screening.
 - Keep the room visually human-scale. No authoritarian monumental architecture.
-- Vary courtroom pages through blocking: standing/sitting transitions, witness chair, reaction groupings, inserts of file pages, recess hallway, and restrained cutaways to Astrid's ordinary prior routines when her answers reveal them.
+- Vary hearing-room pages through blocking: standing/sitting transitions, witness chair, reaction groupings, inserts of file pages, recess hallway, and restrained cutaways to Astrid's ordinary prior routines when her answers reveal them.
 - Astrid's reveal is underplayed. The room does not applaud; people simply realize they have been working from an incomplete picture.
 - If a prior-day Astrid cutaway appears, it is a reader-facing visual recollection/illustration of ordinary life, not evidence being projected in court.
 
@@ -53,7 +53,7 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ## PAGE 2 — NO WEAPONS
 
-**Summary:** Courthouse security treats Bjorn's armor as an ordinary screening problem, not as a spectacle or threat.
+**Summary:** Hearing-center security treats Bjorn's armor as an ordinary screening problem, not as a spectacle or threat.
 
 **Setting:** municipal municipal hearing-center security checkpoint.
 
@@ -257,7 +257,7 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ## PAGE 11 — RECESS / SILAS BROUGHT A BINDER
 
-**Summary:** A brief recess breaks the courtroom rhythm, and Silas demonstrates progress by being willing to remain an unused witness.
+**Summary:** A brief recess breaks the hearing-room rhythm, and Silas demonstrates progress by being willing to remain an unused witness.
 
 **Setting:** municipal hearing-center hallway outside hearing room.
 
