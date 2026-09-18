@@ -31,26 +31,25 @@ State terms:
 | **Vikings 2026** | Issue 1 released: 26 reader pages + collected PDF. | Issues 2–8 are production-ready. Issues 7–8 are locked 24-page production scripts compiled into active page recipes and assembler-audited. Issue 8 is the Season 1 finale; Issue 9 is not planned. | None. | No current writing/compilation blocker. Personal names for the two male Kin and Carrie's full legal/display name remain optional and non-blocking until a future story page requires them. |
 | **Division Threshold** | No StarSplitterVisions series metadata currently exists. | Issues 1–8 are compiled at 26 pages each and are registered through the supported `scenesFiles` path. | None. | Decide release/preview intent. `production/visual-sources.json` currently declares a `division-threshold` Visions slug even though that series JSON does not exist; the durable reference pack is therefore the usable visual authority until a release exists. |
 | **Echoes of a Forgotten War** | Unreleased; no Echoes material exists in current StarSplitterVisions `main`. | Issues 1–8 are compiled for sequential page production, 12 pages each. The development-status file explicitly says writing recovery is complete through Issue 8. | None. | No missing-writing blocker. Durable visual reference pack exists. Repository production frontier remains `EFW_S1E01_S01` until a page is approved and stored. New writing would be Issue 9+ or a deliberate enhancement pass, not recovery. |
-| **Star Splitter Prequel** | No corresponding released Visions series established by this audit. | Six issue packages exist as 52 **scene-level** recipes: 8/8/8/9/9/10 scenes. They do not contain page panel plans. | None. | Convert/compile the scene-level material into page-level comic production recipes before treating it like the newer one-recipe-per-page series. Existing durable reference material is recovery-oriented rather than a normal production reference pack. |
+| **Star Splitter Prequel** | No corresponding released Visions series established by this audit. | Six issues are productionized as **132 page-level comic recipes** (22 pages each). The original 52 scene records remain only as legacy source/provenance. All 124 original dialogue lines are preserved exactly once; the active registry uses PAGE mode and comic-page generation instructions. | None. | Writing/recipe productionization complete. No approved visual-reference pack or durable approved draft exists yet, so image production begins at `PREQ_I01_P01` only after the visual-reference gate is satisfied. Historical image candidates remain recovery provenance and require pixel inspection plus exact page mapping before approval. |
 | **Sun Comes Through — The Musical** | No Visions release established. | 16 scene units across 8 movements. The season plan calls the work a **working dramatic map** and each movement a developed outline. | None. | Continue dramatic development first. This is not yet comparable to a page-compiled comic package and should not be pushed into production merely because scene records exist. |
 
 ## Cross-project findings
 
 1. **The approved-draft manifest currently contains only Azure Reach Issue 2 material:** nine approved image entries, P01–P08 and P11. Every other series has zero durable recipe-level approved drafts.
 2. **Writing depth is substantially ahead of image-production state.** Multiple series have full seasons or long runs registered in RexPrompt with no unpublished approved image state.
-3. **Registration is not the same as editorial readiness.** Stardust Issues 4–10 have completed season-level developmental review and Issues 8–10 production-structure recovery; the Prequel and Musical remain scene-level/development structures.
+3. **Registration is not the same as editorial readiness.** Stardust Issues 4–10 have completed season-level developmental review and Issues 8–10 production-structure recovery. The Prequel is now page-productionized; the Musical remains a scene-level/development structure.
 4. **Low Tide Signal has the clearest repository-hygiene blocker.** Temporary recovery artifacts and a pending binary-persistence state remain in the active reference tree.
-5. **Division Threshold has a source-mapping inconsistency.** RexPrompt expects a Visions slug that does not currently exist.
+4. **Division Threshold has a source-mapping inconsistency.** RexPrompt expects a Visions slug that does not currently exist.
 5. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
 
 ## Immediate non-image work queue
 
 1. **Low Tide Signal — finish recovery-state cleanup and sanitize the active reference tree.**
-2. **Star Splitter Prequel — convert scene-level material into page-level production recipes.**
-3. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
-4. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
+2. **Sunforge Outlaw — develop Issues 13–16/final causal answer and reconcile current package metadata where needed.**
+3. **Backyard Rockets — developmental readiness review of Issues 3–8 and verify the 47/48-page release-count interpretation.**
 5. **Division Threshold — decide whether to establish Visions metadata/preview or keep the series intentionally unreleased and adjust source mapping accordingly.**
-6. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
+5. **Azure Reach — reconcile/recover the noncontiguous Issue 2 approved-draft state.**
 
 ## Production-frontier rule
 
