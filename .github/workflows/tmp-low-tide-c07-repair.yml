@@ -1,0 +1,49 @@
+name: Temporary Low Tide C07 P18 repair
+
+on:
+  push:
+    branches:
+      - repair/low-tide-normalization-2026-09-18-v2
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.event.head_commit.message == 'Temporary Low Tide C07 P18 repair'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Repair P18 cast staging
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib
+          path=pathlib.Path('data/shows/low-tide-signal/encoded/pages_c07_last_low_tide_enhanced.json.gzb64')
+          raw=''.join(path.read_text().split())
+          obj=json.loads(gzip.decompress(base64.b64decode(raw)))
+          pages=obj.get('pages',obj) if isinstance(obj,dict) else obj
+          page=next(p for p in pages if p.get('id')=='LTS_C07_P18')
+          assert page['characters']==['C_lts_chris_barlow','C_lts_ryan_kelleher','C_lts_nicole_hanley']
+          old='Matt, Ryan and Nicole'
+          new='Chris, Ryan and Nicole'
+          assert old in page['summary']
+          page['summary']=page['summary'].replace(old,new)
+          count=0
+          for i,item in enumerate(page.get('panelPlan') or []):
+              if isinstance(item,str) and old in item:
+                  page['panelPlan'][i]=item.replace(old,new); count+=1
+              elif isinstance(item,dict) and old in item.get('text',''):
+                  item['text']=item['text'].replace(old,new); count+=1
+          assert count==1
+          payload=json.dumps(obj,ensure_ascii=False,separators=(',',':')).encode()
+          path.write_text(base64.b64encode(gzip.compress(payload,mtime=0)).decode(),encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/low-tide-signal/encoded/pages_c07_last_low_tide_enhanced.json.gzb64
+          git diff --cached --quiet && exit 1
+          git commit -m "Repair Low Tide C07 P18 cast staging"
+          git push
