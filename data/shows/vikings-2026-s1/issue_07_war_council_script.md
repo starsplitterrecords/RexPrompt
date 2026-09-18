@@ -1,13 +1,13 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: DEVELOPMENT SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; NOT YET ACTIVE ASSEMBLER INPUT  
+Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; READY FOR REXPROMPT COMPILATION  
 Primary function: a Status Reconciliation Review forces the household to decide what it actually wants protected, and the answer can only be found by watching the separate lives that now return to the same home.
 
 ## Continuity lock
 
 Issue 6 changed Bjorn's leadership grammar. He can now ask what kind of help people want, allow disagreement, and contribute without owning every decision. Issue 7 makes him apply that growth to the hardest possible household question: whether unity requires one shared future.
 
-Exactly three Kin exist: Astrid and two men. Use the same two male Kin visually established in Issue 5's separate-routine montage. Do not lock their names. Astrid remains largely outside foreground action until late in the issue. Her absence is ordinary and does not become a search plot.
+Exactly three Kin exist: Astrid and two men. Use the same two male Kin visually established in Issue 5's separate-routine montage. Their production identities remain First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2; personal names are not lettered in Issues 7–8 and therefore do not block production. Astrid remains largely outside foreground action until late in the issue. Her absence is ordinary and does not become a search plot.
 
 The Status Reconciliation Review is the deadline, not the setting for the whole issue. The story begins at the Safe Cave table, breaks apart into New York, and only reconvenes after the reader has seen what the household is trying to defend.
 
@@ -532,7 +532,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 2. **Carrie points to a line.**
    **CARRIE:** Residence. Basic independent movement. Household obligations. That's enough to get the actual questions asked.
 3. **Gunnar.**
-   **GUNNAR:** The group?
+   **GUNNAR:** The support group?
 4. **Bjorn immediately.**
    **BJORN:** Not mine to offer.
 5. **Carrie crosses that note out.**
@@ -547,7 +547,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 ## PAGE 24 — WHAT WE DEFEND
 
-**Summary:** The household ends the night without one permanent future, but with a shared definition of home strong enough to carry into court.
+**Summary:** The household ends the night without one permanent future, but with a shared definition of home strong enough to carry into the hearing.
 
 **Setting:** Safe Cave, late night.
 
