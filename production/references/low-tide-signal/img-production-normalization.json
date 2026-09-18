@@ -20,7 +20,7 @@
   },
   "referenceScopes": {
     "characterIdentity": {
-      "currentState": "The six core cast records contain assembler-visible textual design baselines and continuity locks, but no approved character image reference is stored in RexPrompt.",
+      "currentState": "The six core cast records contain assembler-visible textual design baselines, performance direction, and prompt continuity, but no approved character image reference is stored in RexPrompt.",
       "requiredBeforeCharacterBearingSequentialProduction": [
         "Matt Donnelly",
         "Ryan Kelleher",
@@ -103,19 +103,22 @@
       "ordered assembled RexPrompt recipes"
     ],
     "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
-    "currentDurableState": "StarSplitterVisions has no released Low Tide interior pages and RexPrompt currently stores no approved Low Tide production drafts. With no stronger durable page approval evidence, the durable production frontier is LTS_C01_P01."
+    "currentDurableState": "StarSplitterVisions has no released Low Tide interior pages and RexPrompt stores no approved Low Tide production drafts. The active Chapter 1 contract is LTS_C01_P01 through LTS_C01_P24, so with no stronger durable page approval evidence the production frontier is LTS_C01_P01."
   },
   "recipeCompilationState": {
-    "chapter1": "Current page recipes are production summaries with dialogue/direction but no panelPlan field; no separate detailed Chapter 1 panel script has been located in the durable sources inspected during normalization.",
-    "chapter2": "A detailed panel-by-panel graphic script exists in Notion, while the current compiled RexPrompt Chapter 2 recipes omit panelPlan. Current RexPrompt dialogue/characterization is newer in places, so panel staging must be recompiled without rolling back current text.",
-    "chapter3": "A detailed panel-by-panel graphic script exists in Notion, while the current compiled RexPrompt Chapter 3 recipes omit panelPlan. Panel staging should be recompiled without rolling back current text.",
-    "rule": "Do not invent missing panel plans during image generation. Where an approved panel script exists, compile its staging into RexPrompt before relying on exact panel sequencing."
+    "chapter1": "24 active page recipes in pages_ch01_ch03_compiled.json; all 24 contain panelPlan.",
+    "chapter2": "26 active page recipes in pages_ch01_ch03_compiled.json; all 26 contain panelPlan.",
+    "chapter3": "28 active page recipes in pages_ch01_ch03_compiled.json; all 28 contain panelPlan.",
+    "chapter4": "26 active page recipes in encoded/pages_c04_between_runs_enhanced.json.gzb64.",
+    "chapter5": "24 active page recipes in encoded/pages_c05_return_tide_enhanced.json.gzb64.",
+    "chapter6": "24 active page recipes in encoded/pages_c06_after_the_water_enhanced.json.gzb64.",
+    "chapter7": "26 active page recipes in encoded/pages_c07_last_low_tide_enhanced.json.gzb64.",
+    "rule": "Current sequential production uses LTS_CNN_PNN recipe IDs only. Do not mix retired scene-level recipe IDs into the active production frontier."
   },
   "productionReadiness": {
-    "state": "normalized-with-preproduction-gates",
+    "state": "normalized-with-visual-reference-gate",
     "gates": [
-      "Approve durable visual identity references for the six recurring core characters before character-bearing sequential production.",
-      "Recompile available Chapter 2 and Chapter 3 panel staging into current RexPrompt recipes without reverting newer dialogue or character calibration."
+      "Approve durable visual identity references for the six recurring core characters before character-bearing sequential production."
     ]
   },
   "storyPageOutputRule": "A normal scripted Low Tide Signal story page is a finished full-color portrait prestige-indie comic page in the grounded coastal science-fiction language of the current package. Do not add a series title, issue/chapter header, page label, character name/handle label, dossier frame, infographic header, credits, promotional callout, cover trade dress, or other non-scripted text. Only text required by the assembled recipe belongs on the story page."
