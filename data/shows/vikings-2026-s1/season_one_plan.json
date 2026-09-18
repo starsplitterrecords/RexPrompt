@@ -1,7 +1,7 @@
 {
   "series": "Vikings 2026",
   "season": "S1",
-  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> chosen household -> self-defined belonging under judgment -> optional aftermath only if dramatically needed.",
+  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> chosen household -> self-defined belonging under judgment.",
   "seasonDramaticShift": "Issues 1–5 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 6 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, autonomy, responsibility, and belonging.",
   "kinContinuity": {
     "count": 3,
@@ -9,8 +9,8 @@
     "issues1To3": "The three Kin are seen primarily together in or immediately around the Bushwick placement; they are not yet followed independently around the city.",
     "middleSeason": "Their independent errands, relationships, routines and interests begin to appear individually.",
     "issues6To7": "Astrid is deliberately largely absent from foreground action while the two male Kin remain visible. Her absence is ordinary, not mysterious.",
-    "issue8": "The courtroom reveals that Astrid has quietly become the household's most practically integrated member.",
-    "maleNames": "Unresolved. Do not silently lock Eirik or Ivar."
+    "issue8": "The hearing reveals that Astrid has quietly become the household's most practically integrated member.",
+    "maleNames": "Personal names remain unresolved and intentionally unlettered through Issues 7–8. Current production identities are First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2; this does not block production."
   },
   "issues": [
     {
@@ -62,7 +62,7 @@
       "issue": 7,
       "title": "War Council",
       "function": "A Status Reconciliation Review forces the household to decide what it actually wants to defend. The question leaves the kitchen table and follows separate lives through the neighborhood and city before the household chooses a shared position that does not require identical futures.",
-      "status": "full 24-page development script drafted with dialogue and drawable panel staging; production review and RexPrompt compilation pending",
+      "status": "production-ready 24-page script compiled into active RexPrompt page recipes; assembler audit passed",
       "treatmentFile": "issue_07_war_council_treatment.md",
       "scriptFile": "issue_07_war_council_script.md"
     },
@@ -71,15 +71,15 @@
       "title": "Permanent Residency / Trial by Combat",
       "function": "The courtroom/hearing tests whether an institution can make a fair decision about a real but unconventional household made of separate people. Bjorn's trial is allowing others to speak for themselves; Astrid's payoff is the revelation that the least-followed member has quietly become the most practically integrated.",
       "beatCoverage": "hearing / trial-by-combat material previously deferred beyond Issue 8",
-      "status": "full 24-page development script drafted with dialogue and drawable panel staging; working ruling included for dramatic completeness but exact legal outcome/terminology remains open; production review and RexPrompt compilation pending",
+      "status": "production-ready 24-page Season 1 finale compiled into active RexPrompt page recipes; Status Reconciliation Review terminology and permanent temporal-resident ruling locked; assembler audit passed",
       "treatmentFile": "issue_08_trial_by_combat_treatment.md",
       "scriptFile": "issue_08_trial_by_combat_script.md"
     },
     {
       "issue": 9,
       "title": "Season coda — title unresolved",
-      "function": "Optional post-hearing consequence or emotional coda only if the season earns another issue. Do not use Issue 9 for another layer of residency preparation, evidence collection, or a duplicate hearing.",
-      "status": "open; necessity, title, and dramatic function unresolved"
+      "function": "No planned Issue 9. Issue 8 is the Season 1 finale; any later material must earn itself as genuinely new aftermath or consequence rather than continued residency procedure.",
+      "status": "not planned"
     }
   ],
   "productionPayloads": [
@@ -111,6 +111,18 @@
       "storyPlacement": "Issue 6 — Trial of Toil",
       "status": "production-ready",
       "source": "Compiled from the approved full Issue 6 script into four active plain-JSON page overlays after page-level visual and assembler audit."
+    },
+    {
+      "payloadIds": "VIK_S1I07_P01-P24",
+      "storyPlacement": "Issue 7 — War Council",
+      "status": "production-ready",
+      "source": "Compiled from the locked 24-page production script into four active plain-JSON page overlays; assembler audit passed."
+    },
+    {
+      "payloadIds": "VIK_S1I08_P01-P24",
+      "storyPlacement": "Issue 8 — Permanent Residency / Trial by Combat",
+      "status": "production-ready",
+      "source": "Compiled from the locked 24-page Season 1 finale into four active plain-JSON page overlays; Status Reconciliation Review terminology and permanent temporal-resident ruling locked; assembler audit passed."
     }
   ],
   "finaleState": {
@@ -121,15 +133,11 @@
     "astrid": "Astrid's ordinary independent competence becomes visible in court and reveals that the background member Carrie and Bjorn tracked least is the household's most practically integrated person."
   },
   "openDecisions": [
-    "Carrie's full legal/display name",
-    "Exact Issue 8 residency-hearing ruling and legal terminology; current script contains a working outcome only",
-    "Names of the two male Kin; Astrid is locked",
-    "Whether Issue 9 is needed at all and, if retained, its post-hearing dramatic purpose",
+    "Carrie's full legal/display name remains optional and non-blocking until a story page actually requires it.",
+    "Personal names for the two male Kin remain optional and non-blocking; Issues 7–8 intentionally use stable production identities without lettered personal names.",
     "Magister's return and eventual role",
     "Detailed Silas progression after the hearing",
     "Whether the unnamed Issue 6 support-group facilitator and 1987 participant ever require personal names",
-    "Production edit/review of Issues 7–8 full page scripts before compilation",
-    "Compilation of approved Issues 7–8 scripts into the current active RexPrompt page-recipe structures",
     "Museum continuity placement"
   ]
 }
