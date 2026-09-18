@@ -38,7 +38,7 @@ State terms:
 
 1. **The approved-draft manifest currently contains only Azure Reach Issue 2 material:** nine approved image entries, P01–P08 and P11. Every other series has zero durable recipe-level approved drafts.
 2. **Writing depth is substantially ahead of image-production state.** Multiple series have full seasons or long runs registered in RexPrompt with no unpublished approved image state.
-3. **Registration is not the same as editorial readiness.** Stardust Issue 4 is explicitly temporary; the Prequel and Musical remain scene-level/development structures.
+3. **Registration is not the same as editorial readiness.** Stardust Issues 4–10 have completed season-level developmental review and Issues 8–10 production-structure recovery; the Prequel and Musical remain scene-level/development structures.
 4. **Low Tide Signal has the clearest repository-hygiene blocker.** Temporary recovery artifacts and a pending binary-persistence state remain in the active reference tree.
 5. **Division Threshold has a source-mapping inconsistency.** RexPrompt expects a Visions slug that does not currently exist.
 5. **Backyard Rockets needs a count verification, not an automatic fix.** The 47 reader assets may be correct if the advertised 48-page edition includes a cover/editorial page outside the reader.
