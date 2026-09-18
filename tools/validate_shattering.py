@@ -26,6 +26,7 @@ RF_CHARACTERS = DATA / "shows" / "rex-fleet-s1" / "characters.json"
 PACKAGE_README = SHOW_DIR / "README.md"
 REFERENCE_README = ROOT / "production" / "references" / "shattering" / "README.md"
 RECOVERY_NOTE = ROOT / "production" / "references" / "shattering" / "recovery-binary-note.md"
+REFERENCE_INVENTORY = ROOT / "production" / "references" / "shattering" / "reference-inventory.json"
 
 
 def load(path: Path):
@@ -118,6 +119,34 @@ def main():
     assert len(handles) == len(set(handles)), "Duplicate character handles in Shattering shelf"
     names = [c.get("name") for c in characters.values() if c.get("name")]
     assert len(names) == len(set(names)), "Duplicate character names in Shattering shelf"
+
+    assert REFERENCE_INVENTORY.exists(), "Shattering structured reference inventory missing"
+    inventory = load(REFERENCE_INVENTORY)
+    assert inventory.get("schemaVersion") == 1, "Shattering reference inventory schemaVersion must be 1"
+    assert inventory.get("seriesId") == "shattering", "Shattering reference inventory seriesId mismatch"
+    groups = inventory.get("recoveryGroups")
+    assert isinstance(groups, list), "Shattering reference inventory recoveryGroups must be a list"
+    page_ids = {page["id"] for page in all_pages}
+    source_ids = {scene["id"] for scene in source}
+    seen_file_ids = set()
+    seen_group_keys = set()
+    for group in groups:
+        assert isinstance(group, dict), "Every Shattering recovery group must be an object"
+        scene_id = group.get("sourceSceneId")
+        assert scene_id in source_ids, f"Unknown recovery source scene {scene_id!r}"
+        key = (group.get("issueId"), scene_id)
+        assert key not in seen_group_keys, f"Duplicate recovery group {key!r}"
+        seen_group_keys.add(key)
+        page_range = group.get("candidatePageRange")
+        assert isinstance(page_range, list) and len(page_range) == 2, f"{scene_id}: candidatePageRange must contain start/end page ids"
+        assert page_range[0] in page_ids and page_range[1] in page_ids, f"{scene_id}: candidate page range points outside active Shattering pages"
+        candidates = group.get("candidates")
+        assert isinstance(candidates, list) and candidates, f"{scene_id}: recovery group must contain at least one candidate"
+        for candidate in candidates:
+            file_id = candidate.get("fileLibraryId")
+            assert isinstance(file_id, str) and file_id.startswith("file_"), f"{scene_id}: invalid File Library id"
+            assert file_id not in seen_file_ids, f"Duplicate File Library id {file_id}"
+            seen_file_ids.add(file_id)
 
     assert PACKAGE_README.exists(), "Shattering package README missing"
     assert REFERENCE_README.exists(), "Shattering visual-reference README missing"
