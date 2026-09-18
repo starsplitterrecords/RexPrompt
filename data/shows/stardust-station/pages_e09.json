@@ -3,325 +3,1071 @@
     "id": "SDS_S1E09_P01",
     "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Morning. Astra opens the central review attachment. Middle image: Astra stares at it. Closing image: A smaller line appears: PROCUREMENT PRIORITY MAY BE ADJUSTED UPON SUCCESSFUL BENCHMARK COMPLETION. Astra stops saying no.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Pixa"
+    ],
     "panelPlan": [
-      {"text": "PANEL 1 — Morning. Astra opens the central review attachment."},
-      {"text": "PANEL 2 — Large text: WEEKLY MATERIAL TARGET: 240 g."},
-      {"text": "PANEL 3 — Astra stares at it. ASTRA: No."},
-      {"text": "PANEL 4 — Pixa supplies the administrative context. PIXA: Benchmark attainment increases provisional-pilot confidence."},
-      {"text": "PANEL 5 — A smaller line appears: PROCUREMENT PRIORITY MAY BE ADJUSTED UPON SUCCESSFUL BENCHMARK COMPLETION. Astra stops saying no."}
+      {
+        "text": "PANEL 1 — Morning. Astra opens the central review attachment."
+      },
+      {
+        "text": "PANEL 2 — Large text: WEEKLY MATERIAL TARGET: 240 g."
+      },
+      {
+        "text": "PANEL 3 — Astra stares at it."
+      },
+      {
+        "text": "PANEL 4 — Pixa supplies the administrative context."
+      },
+      {
+        "text": "PANEL 5 — A smaller line appears: PROCUREMENT PRIORITY MAY BE ADJUSTED UPON SUCCESSFUL BENCHMARK COMPLETION. Astra stops saying no."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "No.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Benchmark attainment increases provisional-pilot confidence.",
+        "subtext": "Panel 4"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P02",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Mira opens the benchmark calculation. Middle image: Mira looks offended on behalf of arithmetic. Closing image: Astra closes the calculation.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Pixa", "SDS_Jax", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Pixa",
+      "SDS_Jax",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P01",
     "panelPlan": [
-      {"text": "PANEL 1 — Mira opens the benchmark calculation."},
-      {"text": "PANEL 2 — She traces the source data. MIRA: They used the visit-day sample."},
-      {"text": "PANEL 3 — Pixa displays: OBSERVED: 34 g / ACTIVE VISIT DAY; PROJECTED: 238 g / 7 DAYS; TARGET ROUNDED: 240 g."},
-      {"text": "PANEL 4 — Mira looks offended on behalf of arithmetic. MIRA: They multiplied one unusual day by seven."},
-      {"text": "PANEL 5 — Jax looks at the target. JAX: I also become more productive if you multiply Tuesday by seven."},
-      {"text": "PANEL 6 — Astra closes the calculation. ASTRA: We are not chasing it."}
+      {
+        "text": "PANEL 1 — Mira opens the benchmark calculation."
+      },
+      {
+        "text": "PANEL 2 — She traces the source data."
+      },
+      {
+        "text": "PANEL 3 — Pixa displays: OBSERVED: 34 g / ACTIVE VISIT DAY; PROJECTED: 238 g / 7 DAYS; TARGET ROUNDED: 240 g."
+      },
+      {
+        "text": "PANEL 4 — Mira looks offended on behalf of arithmetic."
+      },
+      {
+        "text": "PANEL 5 — Jax looks at the target."
+      },
+      {
+        "text": "PANEL 6 — Astra closes the calculation."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "They used the visit-day sample.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "They multiplied one unusual day by seven.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "JAX",
+        "text": "I also become more productive if you multiply Tuesday by seven.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We are not chasing it.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P03",
     "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Zib checks procurement while inspecting the still-temporary brace. Middle image: Zib sees Astra see it. Closing image: Zib closes the procurement screen.",
     "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Astra"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P02",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib checks procurement while inspecting the still-temporary brace."},
-      {"text": "PANEL 2 — Insert on the active station display in Maintenance Bay. Screen: REPLACEMENT PART ETA: 14 DAYS."},
-      {"text": "PANEL 3 — Astra sees it."},
-      {"text": "PANEL 4 — Zib sees Astra see it. ZIB: No."},
-      {"text": "PANEL 5 — Astra has not said anything yet. ASTRA: I didn't say anything."},
-      {"text": "PANEL 6 — Zib closes the procurement screen. ZIB: Your face did paperwork."}
+      {
+        "text": "PANEL 1 — Zib checks procurement while inspecting the still-temporary brace."
+      },
+      {
+        "text": "PANEL 2 — Insert on the active station display in Maintenance Bay. Screen: REPLACEMENT PART ETA: 14 DAYS."
+      },
+      {
+        "text": "PANEL 3 — Astra sees it."
+      },
+      {
+        "text": "PANEL 4 — Zib sees Astra see it."
+      },
+      {
+        "text": "PANEL 5 — Astra has not said anything yet."
+      },
+      {
+        "text": "PANEL 6 — Zib closes the procurement screen."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ZIB",
+        "text": "No.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I didn't say anything.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Your face did paperwork.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P04",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra reviews the local pilot terms with Mira, Glorp, and Kreeb. Middle image: Glorp checks the exact wording. Closing image: Astra closes the document.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Mira",
+      "SDS_Glorp",
+      "SDS_Kreeb"
+    ],
     "continuityFrom": "SDS_S1E09_P03",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra reviews the local pilot terms with Mira, Glorp, and Kreeb."},
-      {"text": "PANEL 2 — She points at the boundary. ASTRA: No behavioral conditions. No invented incidents. No work whose only purpose is output."},
-      {"text": "PANEL 3 — Mira nods. MIRA: Good."},
-      {"text": "PANEL 4 — Glorp checks the exact wording. GLORP: \"Only purpose\" leaves interpretive room."},
-      {"text": "PANEL 5 — Kreeb looks at Astra. KREEB: Do you want interpretive room?"},
-      {"text": "PANEL 6 — Astra closes the document. ASTRA: No."}
+      {
+        "text": "PANEL 1 — Astra reviews the local pilot terms with Mira, Glorp, and Kreeb."
+      },
+      {
+        "text": "PANEL 2 — She points at the boundary."
+      },
+      {
+        "text": "PANEL 3 — Mira nods."
+      },
+      {
+        "text": "PANEL 4 — Glorp checks the exact wording."
+      },
+      {
+        "text": "PANEL 5 — Kreeb looks at Astra."
+      },
+      {
+        "text": "PANEL 6 — Astra closes the document."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "No behavioral conditions. No invented incidents. No work whose only purpose is output.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Good.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "\"Only purpose\" leaves interpretive room.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "Do you want interpretive room?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "No.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P05",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Pixa displays the ordinary maintenance calendar. Middle image: Pixa reports. Closing image: Astra answers carefully.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Mira"],
+    "characters": [
+      "SDS_Pixa",
+      "SDS_Astra",
+      "SDS_Mira"
+    ],
     "continuityFrom": "SDS_S1E09_P04",
     "panelPlan": [
-      {"text": "PANEL 1 — Pixa displays the ordinary maintenance calendar."},
-      {"text": "PANEL 2 — Three tasks are due within the next ten days: coolant fan vibration check; cargo-bay conveyor service; waste-loop filter inspection."},
-      {"text": "PANEL 3 — Astra studies the list."},
-      {"text": "PANEL 4 — Pixa reports. PIXA: All three tasks are legitimate scheduled maintenance."},
-      {"text": "PANEL 5 — Mira recognizes the thought. MIRA: Doing legitimate work early because of the target is still changing the experiment."},
-      {"text": "PANEL 6 — Astra answers carefully. ASTRA: It is also work we have to do."}
+      {
+        "text": "PANEL 1 — Pixa displays the ordinary maintenance calendar."
+      },
+      {
+        "text": "PANEL 2 — Three tasks are due within the next ten days: coolant fan vibration check; cargo-bay conveyor service; waste-loop filter inspection."
+      },
+      {
+        "text": "PANEL 3 — Astra studies the list."
+      },
+      {
+        "text": "PANEL 4 — Pixa reports."
+      },
+      {
+        "text": "PANEL 5 — Mira recognizes the thought."
+      },
+      {
+        "text": "PANEL 6 — Astra answers carefully."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "PIXA",
+        "text": "All three tasks are legitimate scheduled maintenance.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Doing legitimate work early because of the target is still changing the experiment.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "It is also work we have to do.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P06",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra asks Zib about the coolant fan vibration check. Middle image: Zib considers honestly. Closing image: Astra takes a beat.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Kreeb"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Zib",
+      "SDS_Kreeb"
+    ],
     "continuityFrom": "SDS_S1E09_P05",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra asks Zib about the coolant fan vibration check. ASTRA: Due tomorrow?"},
-      {"text": "PANEL 2 — Zib checks the schedule. ZIB: Tomorrow."},
-      {"text": "PANEL 3 — Astra looks at the workload. ASTRA: Can we do it today without displacing anything?"},
-      {"text": "PANEL 4 — Zib considers honestly. ZIB: Yes."},
-      {"text": "PANEL 5 — Kreeb asks the question Astra hoped no one would. KREEB: Would you move it without the number?"},
-      {"text": "PANEL 6 — Astra takes a beat. ASTRA: Probably not. Then: ASTRA: One day early. Nothing else moves."}
+      {
+        "text": "PANEL 1 — Astra asks Zib about the coolant fan vibration check."
+      },
+      {
+        "text": "PANEL 2 — Zib checks the schedule."
+      },
+      {
+        "text": "PANEL 3 — Astra looks at the workload."
+      },
+      {
+        "text": "PANEL 4 — Zib considers honestly."
+      },
+      {
+        "text": "PANEL 5 — Kreeb asks the question Astra hoped no one would."
+      },
+      {
+        "text": "PANEL 6 — Astra takes a beat before answering, then commits to the one-day move."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "Due tomorrow?",
+        "subtext": "Panel 1"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Tomorrow.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Can we do it today without displacing anything?",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Yes.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "Would you move it without the number?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Probably not.",
+        "subtext": "Panel 6"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "One day early. Nothing else moves.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P07",
     "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Zib performs the vibration check. Jax handles access and isolation tags. Middle image: They tighten it and restore the fan. Closing image: Pixa updates the weekly total: TARGET PROGRESS: 19%. Astra notices.",
     "setting": "SDS_Maintenance_Bay",
-    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Mira", "SDS_Pixa", "SDS_Astra"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Jax",
+      "SDS_Mira",
+      "SDS_Pixa",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P06",
     "panelPlan": [
-      {"text": "PANEL 1 — Zib performs the vibration check. Jax handles access and isolation tags."},
-      {"text": "PANEL 2 — Mira records the physical maintenance conditions."},
-      {"text": "PANEL 3 — The check finds a slightly loose mount, worth correcting but not urgent. ZIB: Good catch for tomorrow."},
-      {"text": "PANEL 4 — They tighten it and restore the fan."},
-      {"text": "PANEL 5 — Later, passive collection from the work area yields a modest sample."},
-      {"text": "PANEL 6 — Pixa updates the weekly total: TARGET PROGRESS: 19%. Astra notices."}
+      {
+        "text": "PANEL 1 — Zib performs the vibration check. Jax handles access and isolation tags."
+      },
+      {
+        "text": "PANEL 2 — Mira records the physical maintenance conditions."
+      },
+      {
+        "text": "PANEL 3 — The check finds a slightly loose mount, worth correcting but not urgent."
+      },
+      {
+        "text": "PANEL 4 — They tighten it and restore the fan."
+      },
+      {
+        "text": "PANEL 5 — Later, passive collection from the work area yields a modest sample."
+      },
+      {
+        "text": "PANEL 6 — Pixa updates the weekly total: TARGET PROGRESS: 19%. Astra notices."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ZIB",
+        "text": "Good catch for tomorrow.",
+        "subtext": "Panel 3"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P08",
     "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Astra watches the target graph move upward. Middle image: Mira notices Astra looking at both screens. Closing image: Across the room, the temporary bracket tag remains visible.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Mira"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Mira"
+    ],
     "continuityFrom": "SDS_S1E09_P07",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra watches the target graph move upward."},
-      {"text": "PANEL 2 — Procurement status refreshes beside it: PRIORITY REVIEW: IMPROVING."},
-      {"text": "PANEL 3 — Mira notices Astra looking at both screens. MIRA: Those are not the same result."},
-      {"text": "PANEL 4 — Astra answers without taking her eyes off them. ASTRA: I know."},
-      {"text": "PANEL 5 — Across the room, the temporary bracket tag remains visible."}
+      {
+        "text": "PANEL 1 — Astra watches the target graph move upward."
+      },
+      {
+        "text": "PANEL 2 — Procurement status refreshes beside it: PRIORITY REVIEW: IMPROVING."
+      },
+      {
+        "text": "PANEL 3 — Mira notices Astra looking at both screens."
+      },
+      {
+        "text": "PANEL 4 — Astra answers without taking her eyes off them."
+      },
+      {
+        "text": "PANEL 5 — Across the room, the temporary bracket tag remains visible."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "Those are not the same result.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I know.",
+        "subtext": "Panel 4"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P09",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra raises the cargo-bay conveyor service with Zib. It is due in six days. Middle image: Astra points at the calendar. Closing image: Astra looks back at the target graph. She does not authorize it yet.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Kreeb"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Zib",
+      "SDS_Kreeb"
+    ],
     "continuityFrom": "SDS_S1E09_P08",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra raises the cargo-bay conveyor service with Zib. It is due in six days."},
-      {"text": "PANEL 2 — Astra keeps one finger on the six-day conveyor-service entry in the maintenance calendar and looks to Zib. ASTRA: We could clear it early too."},
-      {"text": "PANEL 3 — Zib looks at her. ZIB: We could also do it in six days."},
-      {"text": "PANEL 4 — Astra points at the calendar. ASTRA: It is real maintenance either way."},
-      {"text": "PANEL 5 — Kreeb, nearby, answers gently. KREEB: The purpose would still be the number."},
-      {"text": "PANEL 6 — Astra looks back at the target graph. She does not authorize it yet."}
+      {
+        "text": "PANEL 1 — Astra raises the cargo-bay conveyor service with Zib. It is due in six days."
+      },
+      {
+        "text": "PANEL 2 — Astra keeps one finger on the six-day conveyor-service entry in the maintenance calendar and looks to Zib."
+      },
+      {
+        "text": "PANEL 3 — Zib looks at her."
+      },
+      {
+        "text": "PANEL 4 — Astra points at the calendar."
+      },
+      {
+        "text": "PANEL 5 — Kreeb, nearby, answers gently."
+      },
+      {
+        "text": "PANEL 6 — Astra looks back at the target graph. She does not authorize it yet."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "We could clear it early too.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "We could also do it in six days.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "It is real maintenance either way.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "The purpose would still be the number.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P10",
     "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Mira tests the accumulated passive samples. Middle image: Mira calls Astra over. Closing image: Mira points at the scatterplot.",
     "setting": "SDS_Lab_Work_Area",
-    "characters": ["SDS_Mira", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P09",
     "panelPlan": [
-      {"text": "PANEL 1 — Mira tests the accumulated passive samples."},
-      {"text": "PANEL 2 — One larger sample crumbles under compression."},
-      {"text": "PANEL 3 — A smaller sample survives longer."},
-      {"text": "PANEL 4 — Mira calls Astra over. MIRA: More mass did not mean better material."},
-      {"text": "PANEL 5 — Astra studies the results. ASTRA: Can you put that in numbers?"},
-      {"text": "PANEL 6 — Mira points at the scatterplot. MIRA: I can put the absence of a relationship in numbers."}
+      {
+        "text": "PANEL 1 — Mira tests the accumulated passive samples."
+      },
+      {
+        "text": "PANEL 2 — One larger sample crumbles under compression."
+      },
+      {
+        "text": "PANEL 3 — A smaller sample survives longer."
+      },
+      {
+        "text": "PANEL 4 — Mira calls Astra over."
+      },
+      {
+        "text": "PANEL 5 — Astra studies the results."
+      },
+      {
+        "text": "PANEL 6 — Mira points at the scatterplot."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "More mass did not mean better material.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Can you put that in numbers?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "I can put the absence of a relationship in numbers.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P11",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Central review updates the target projection from current collection mass. Middle image: Astra looks at the maintenance calendar again. Closing image: Astra closes the calendar.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Pixa", "SDS_Astra", "SDS_Jax"],
+    "characters": [
+      "SDS_Pixa",
+      "SDS_Astra",
+      "SDS_Jax"
+    ],
     "continuityFrom": "SDS_S1E09_P10",
     "panelPlan": [
-      {"text": "PANEL 1 — Central review updates the target projection from current collection mass."},
-      {"text": "PANEL 2 — Banner: PROJECTED BENCHMARK STATUS: ON PACE."},
-      {"text": "PANEL 3 — Pixa reports. PIXA: Procurement priority review remains favorable."},
-      {"text": "PANEL 4 — Astra looks at the maintenance calendar again."},
-      {"text": "PANEL 5 — Jax passes with a cargo-access checklist. JAX: Why are you looking at next week's problems today?"},
-      {"text": "PANEL 6 — Astra closes the calendar. ASTRA: Good question. She reopens it after he leaves."}
+      {
+        "text": "PANEL 1 — Central review updates the target projection from current collection mass."
+      },
+      {
+        "text": "PANEL 2 — Banner: PROJECTED BENCHMARK STATUS: ON PACE."
+      },
+      {
+        "text": "PANEL 3 — Pixa reports."
+      },
+      {
+        "text": "PANEL 4 — Astra looks at the maintenance calendar again."
+      },
+      {
+        "text": "PANEL 5 — Jax passes with a cargo-access checklist."
+      },
+      {
+        "text": "PANEL 6 — Astra closes the calendar, then reopens it after Jax leaves."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "PIXA",
+        "text": "Procurement priority review remains favorable.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Why are you looking at next week's problems today?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Good question.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P12",
     "summary": "Primary composition: 6-panel page in Cargo Bay / Dock 2. Opening image: Astra finds Zib in the cargo bay. Middle image: Astra checks the cargo schedule. Closing image: Astra studies the six-day-early conveyor-service schedule, jaw tight, then gives Zib the go-ahead.",
     "setting": "SDS_Cargo_Bay",
-    "characters": ["SDS_Astra", "SDS_Zib"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Zib"
+    ],
     "continuityFrom": "SDS_S1E09_P11",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra finds Zib in the cargo bay."},
-      {"text": "PANEL 2 — Astra stands beside the cargo service lane with the schedule open on her tablet, pointing to the empty afternoon window. ASTRA: Conveyor service. Can we do it this afternoon?"},
-      {"text": "PANEL 3 — Zib is less accommodating this time. ZIB: It takes the service lane offline."},
-      {"text": "PANEL 4 — Astra checks the cargo schedule. ASTRA: No scheduled arrival for three hours."},
-      {"text": "PANEL 5 — Zib looks at her for a long moment. ZIB: Due in six days."},
-      {"text": "PANEL 6 — Astra studies the six-day-early conveyor-service schedule, jaw tight, then gives Zib the go-ahead. ASTRA: Do it."}
+      {
+        "text": "PANEL 1 — Astra finds Zib in the cargo bay."
+      },
+      {
+        "text": "PANEL 2 — Astra stands beside the cargo service lane with the schedule open on her tablet, pointing to the empty afternoon window."
+      },
+      {
+        "text": "PANEL 3 — Zib is less accommodating this time."
+      },
+      {
+        "text": "PANEL 4 — Astra checks the cargo schedule."
+      },
+      {
+        "text": "PANEL 5 — Zib looks at her for a long moment."
+      },
+      {
+        "text": "PANEL 6 — Astra studies the six-day-early conveyor-service schedule, jaw tight, then gives Zib the go-ahead."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "Conveyor service. Can we do it this afternoon?",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "It takes the service lane offline.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "No scheduled arrival for three hours.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Due in six days.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Do it.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P13",
     "summary": "Primary composition: 6-panel page in Cargo Bay / Dock 2. Opening image: The cargo conveyor is isolated. Service panels are open across the loading lane. Middle image: Zib finds nothing significant wrong with the conveyor. Closing image: Pixa updates: TARGET PROGRESS: 31%. Zib looks at the number, then at Astra.",
     "setting": "SDS_Cargo_Bay",
-    "characters": ["SDS_Jax", "SDS_Mira", "SDS_Zib", "SDS_Pixa", "SDS_Astra"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Mira",
+      "SDS_Zib",
+      "SDS_Pixa",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P12",
     "panelPlan": [
-      {"text": "PANEL 1 — The cargo conveyor is isolated. Service panels are open across the loading lane."},
-      {"text": "PANEL 2 — Jax sets route barriers and access tags."},
-      {"text": "PANEL 3 — Mira logs the work conditions because passive collection remains active."},
-      {"text": "PANEL 4 — Zib finds nothing significant wrong with the conveyor. ZIB: Very healthy six-days-early conveyor."},
-      {"text": "PANEL 5 — A modest residue sample appears near a warm motor housing."},
-      {"text": "PANEL 6 — Pixa updates: TARGET PROGRESS: 31%. Zib looks at the number, then at Astra."}
+      {
+        "text": "PANEL 1 — The cargo conveyor is isolated. Service panels are open across the loading lane."
+      },
+      {
+        "text": "PANEL 2 — Jax sets route barriers and access tags."
+      },
+      {
+        "text": "PANEL 3 — Mira logs the work conditions because passive collection remains active."
+      },
+      {
+        "text": "PANEL 4 — Zib finds nothing significant wrong with the conveyor."
+      },
+      {
+        "text": "PANEL 5 — A modest residue sample appears near a warm motor housing."
+      },
+      {
+        "text": "PANEL 6 — Pixa updates: TARGET PROGRESS: 31%. Zib looks at the number, then at Astra."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ZIB",
+        "text": "Very healthy six-days-early conveyor.",
+        "subtext": "Panel 4"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P14",
     "summary": "Primary composition: 6-panel page in Cargo Bay / Dock 2. Opening image: A station alert interrupts the service: CARGO DOCK 2 — LATCH SENSOR DISAGREEMENT. Middle image: Astra calculates quickly. Closing image: Jax makes the distinction plain.",
     "setting": "SDS_Cargo_Bay",
-    "characters": ["SDS_Jax", "SDS_Zib", "SDS_Astra"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Zib",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P13",
     "panelPlan": [
-      {"text": "PANEL 1 — A station alert interrupts the service: CARGO DOCK 2 — LATCH SENSOR DISAGREEMENT."},
-      {"text": "PANEL 2 — Jax checks the docking schedule. JAX: Supply shuttle is twelve minutes out."},
-      {"text": "PANEL 3 — Zib looks from the open conveyor to Dock 2. ZIB: We need the lane back."},
-      {"text": "PANEL 4 — Astra calculates quickly. ASTRA: Can you close this service first?"},
-      {"text": "PANEL 5 — Zib looks at her."},
-      {"text": "PANEL 6 — Jax makes the distinction plain. JAX: This is the actual job now."}
+      {
+        "text": "PANEL 1 — A station alert interrupts the service: CARGO DOCK 2 — LATCH SENSOR DISAGREEMENT."
+      },
+      {
+        "text": "PANEL 2 — Jax checks the docking schedule."
+      },
+      {
+        "text": "PANEL 3 — Zib looks from the open conveyor to Dock 2."
+      },
+      {
+        "text": "PANEL 4 — Astra calculates quickly."
+      },
+      {
+        "text": "PANEL 5 — Zib looks at her."
+      },
+      {
+        "text": "PANEL 6 — Jax makes the distinction plain."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "JAX",
+        "text": "Supply shuttle is twelve minutes out.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "We need the lane back.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Can you close this service first?",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "JAX",
+        "text": "This is the actual job now.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P15",
     "summary": "Primary composition: 6-panel page in Cargo Bay / Dock 2. Opening image: Astra checks the half-finished conveyor service. Middle image: Jax reroutes incoming cargo traffic and notifies docking control. Closing image: Astra watches the hold timer increase and knows exactly why.",
     "setting": "SDS_Cargo_Bay",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Jax", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Zib",
+      "SDS_Jax",
+      "SDS_Pixa"
+    ],
     "continuityFrom": "SDS_S1E09_P14",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra checks the half-finished conveyor service."},
-      {"text": "PANEL 2 — Astra looks from the half-finished conveyor to the shuttle-hold timer and raises one hand to halt further service. ASTRA: Six minutes. Close clean, then Dock 2."},
-      {"text": "PANEL 3 — Zib does not argue; he starts restoring the conveyor because Astra made the call."},
-      {"text": "PANEL 4 — Jax reroutes incoming cargo traffic and notifies docking control."},
-      {"text": "PANEL 5 — Pixa counts elapsed time only. PIXA: Supply shuttle holding at approach marker."},
-      {"text": "PANEL 6 — Astra watches the hold timer increase and knows exactly why."}
+      {
+        "text": "PANEL 1 — Astra checks the half-finished conveyor service."
+      },
+      {
+        "text": "PANEL 2 — Astra looks from the half-finished conveyor to the shuttle-hold timer and raises one hand to halt further service."
+      },
+      {
+        "text": "PANEL 3 — Zib does not argue; he starts restoring the conveyor because Astra made the call."
+      },
+      {
+        "text": "PANEL 4 — Jax reroutes incoming cargo traffic and notifies docking control."
+      },
+      {
+        "text": "PANEL 5 — Pixa counts elapsed time only."
+      },
+      {
+        "text": "PANEL 6 — Astra watches the hold timer increase and knows exactly why."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "Six minutes. Close clean, then Dock 2.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Supply shuttle holding at approach marker.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P16",
     "summary": "Primary composition: 6-panel page in Cargo Bay / Dock 2. Opening image: The conveyor is restored. The team moves immediately to Dock 2. Middle image: The latch verifies. Closing image: Zib closes the panel.",
     "setting": "SDS_Cargo_Bay",
-    "characters": ["SDS_Zib", "SDS_Jax", "SDS_Astra"],
+    "characters": [
+      "SDS_Zib",
+      "SDS_Jax",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P15",
     "panelPlan": [
-      {"text": "PANEL 1 — The conveyor is restored. The team moves immediately to Dock 2."},
-      {"text": "PANEL 2 — Zib finds the latch sensor connector partly backed out. ZIB: Two-minute problem."},
-      {"text": "PANEL 3 — Jax secures the dock route while Zib reseats the connector."},
-      {"text": "PANEL 4 — The latch verifies."},
-      {"text": "PANEL 5 — The supply shuttle is cleared in, but the station has missed its original turnaround slot."},
-      {"text": "PANEL 6 — Zib closes the panel. ZIB: We moved work for the number and actual work waited. Astra has no answer."}
+      {
+        "text": "PANEL 1 — The conveyor is restored. The team moves immediately to Dock 2."
+      },
+      {
+        "text": "PANEL 2 — Zib finds the latch sensor connector partly backed out."
+      },
+      {
+        "text": "PANEL 3 — Jax secures the dock route while Zib reseats the connector."
+      },
+      {
+        "text": "PANEL 4 — The latch verifies."
+      },
+      {
+        "text": "PANEL 5 — The supply shuttle is cleared in, but the station has missed its original turnaround slot."
+      },
+      {
+        "text": "PANEL 6 — Zib closes the panel."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ZIB",
+        "text": "Two-minute problem.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "We moved work for the number and actual work waited. Astra has no answer.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P17",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Back in operations, the target dashboard still reads: PROJECTED: ON PACE. Middle image: She deletes them from the accelerated list. Closing image: Pixa asks:.",
+    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Back in operations, the target dashboard still reads PROJECTED: ON PACE. Middle image: Astra deletes the remaining accelerated work. Closing image: Pixa asks for clarification and Astra ends the output schedule.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Pixa"
+    ],
     "continuityFrom": "SDS_S1E09_P16",
     "panelPlan": [
-      {"text": "PANEL 1 — Back in operations, the target dashboard still reads: PROJECTED: ON PACE."},
-      {"text": "PANEL 2 — Astra looks at the remaining pulled-forward maintenance candidates."},
-      {"text": "PANEL 3 — She deletes them from the accelerated list."},
-      {"text": "PANEL 4 — Astra closes the accelerated-work list and restores the ordinary maintenance calendar on the screen. ASTRA: Stop. Put the station back."},
-      {"text": "PANEL 5 — Pixa asks: PIXA: Clarify output schedule. ASTRA: There is no output schedule."}
+      {
+        "text": "PANEL 1 — Back in operations, the target dashboard still reads: PROJECTED: ON PACE."
+      },
+      {
+        "text": "PANEL 2 — Astra looks at the remaining pulled-forward maintenance candidates."
+      },
+      {
+        "text": "PANEL 3 — She deletes them from the accelerated list."
+      },
+      {
+        "text": "PANEL 4 — Astra closes the accelerated-work list and restores the ordinary maintenance calendar on the screen."
+      },
+      {
+        "text": "PANEL 5 — Pixa asks for clarification; Astra answers immediately."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "Stop. Put the station back.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Clarify output schedule.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "There is no output schedule.",
+        "subtext": "Panel 5"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P18",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The crew returns to the ordinary maintenance calendar. Middle image: Noola passes the temporary-bracket status display with Astra. NOOLA: You wanted the bracket. Closing image: Noola keeps walking. NOOLA: I know.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Jax", "SDS_Astra", "SDS_Noola"],
+    "characters": [
+      "SDS_Jax",
+      "SDS_Astra",
+      "SDS_Noola"
+    ],
     "continuityFrom": "SDS_S1E09_P17",
     "panelPlan": [
-      {"text": "PANEL 1 — The crew returns to the ordinary maintenance calendar."},
-      {"text": "PANEL 2 — Jax closes the Dock 2 access log. JAX: Shuttle delay: eleven minutes."},
-      {"text": "PANEL 3 — Astra signs the incident note herself."},
-      {"text": "PANEL 4 — Noola passes the temporary-bracket status display with Astra. NOOLA: You wanted the bracket."},
-      {"text": "PANEL 5 — Astra looks at the fourteen-day ETA. ASTRA: I still do."},
-      {"text": "PANEL 6 — Noola keeps walking. NOOLA: I know."}
+      {
+        "text": "PANEL 1 — The crew returns to the ordinary maintenance calendar."
+      },
+      {
+        "text": "PANEL 2 — Jax closes the Dock 2 access log."
+      },
+      {
+        "text": "PANEL 3 — Astra signs the incident note herself."
+      },
+      {
+        "text": "PANEL 4 — Noola passes the temporary-bracket status display with Astra."
+      },
+      {
+        "text": "PANEL 5 — Astra looks at the fourteen-day ETA."
+      },
+      {
+        "text": "PANEL 6 — Noola keeps walking."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "JAX",
+        "text": "Shuttle delay: eleven minutes.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "NOOLA",
+        "text": "You wanted the bracket.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I still do.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "NOOLA",
+        "text": "I know.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P19",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Mira updates the forecast using only normal scheduled work. Middle image: Mira shows the full test set. Closing image: Mira is precise.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Pixa", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Pixa",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P18",
     "panelPlan": [
-      {"text": "PANEL 1 — Mira updates the forecast using only normal scheduled work."},
-      {"text": "PANEL 2 — The target projection falls sharply. PIXA: Benchmark attainment now unlikely."},
-      {"text": "PANEL 3 — Astra asks Mira for the material conclusion."},
-      {"text": "PANEL 4 — Mira shows the full test set. MIRA: Quality varied independently of mass."},
-      {"text": "PANEL 5 — Astra points at the target. ASTRA: And the schedule change?"},
-      {"text": "PANEL 6 — Mira is precise. MIRA: Changed operations and destroyed comparability."}
+      {
+        "text": "PANEL 1 — Mira updates the forecast using only normal scheduled work."
+      },
+      {
+        "text": "PANEL 2 — The target projection falls sharply."
+      },
+      {
+        "text": "PANEL 3 — Astra asks Mira for the material conclusion."
+      },
+      {
+        "text": "PANEL 4 — Mira shows the full test set."
+      },
+      {
+        "text": "PANEL 5 — Astra points at the target."
+      },
+      {
+        "text": "PANEL 6 — Mira is precise."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "PIXA",
+        "text": "Benchmark attainment now unlikely.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Quality varied independently of mass.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "And the schedule change?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Changed operations and destroyed comparability.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P20",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra brings Zib, Mira, Glorp, Kreeb, Jax, and Pixa into a short standing review beside the actual work board. Middle image: Astra continues. Closing image: Astra answers immediately.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Zib", "SDS_Mira", "SDS_Glorp", "SDS_Kreeb", "SDS_Jax", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Zib",
+      "SDS_Mira",
+      "SDS_Glorp",
+      "SDS_Kreeb",
+      "SDS_Jax",
+      "SDS_Pixa"
+    ],
     "continuityFrom": "SDS_S1E09_P19",
     "panelPlan": [
-      {"text": "PANEL 1 — Astra brings Zib, Mira, Glorp, Kreeb, Jax, and Pixa into a short standing review beside the actual work board."},
-      {"text": "PANEL 2 — She does not defend the choice. ASTRA: I moved maintenance for the target."},
-      {"text": "PANEL 3 — Zib nods once. ZIB: Yes."},
-      {"text": "PANEL 4 — Astra continues. ASTRA: It delayed actual work."},
-      {"text": "PANEL 5 — Glorp opens the report template. GLORP: Do you want causal language?"},
-      {"text": "PANEL 6 — Astra answers immediately. ASTRA: Yes. Ours."}
+      {
+        "text": "PANEL 1 — Astra brings Zib, Mira, Glorp, Kreeb, Jax, and Pixa into a short standing review beside the actual work board."
+      },
+      {
+        "text": "PANEL 2 — She does not defend the choice."
+      },
+      {
+        "text": "PANEL 3 — Zib nods once."
+      },
+      {
+        "text": "PANEL 4 — Astra continues."
+      },
+      {
+        "text": "PANEL 5 — Glorp opens the report template."
+      },
+      {
+        "text": "PANEL 6 — Astra answers immediately."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "ASTRA",
+        "text": "I moved maintenance for the target.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ZIB",
+        "text": "Yes.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "It delayed actual work.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "Do you want causal language?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Yes. Ours.",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P21",
     "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The final weekly report is assembled. Middle image: Third line: Output-oriented scheduling interfered with normal work and was discontinued. Closing image: Astra presses SEND.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Mira", "SDS_Astra"],
+    "characters": [
+      "SDS_Mira",
+      "SDS_Astra"
+    ],
     "continuityFrom": "SDS_S1E09_P20",
     "panelPlan": [
-      {"text": "PANEL 1 — The final weekly report is assembled."},
-      {"text": "PANEL 2 — First line: Target missed."},
-      {"text": "PANEL 3 — Second line: Quality varied independently of mass."},
-      {"text": "PANEL 4 — Third line: Output-oriented scheduling interfered with normal work and was discontinued."},
-      {"text": "PANEL 5 — Mira reads it. MIRA: Defensible."},
-      {"text": "PANEL 6 — Astra presses SEND. ASTRA: Expensive word for \"we learned something.\""}
+      {
+        "text": "PANEL 1 — The final weekly report is assembled."
+      },
+      {
+        "text": "PANEL 2 — First line: Target missed."
+      },
+      {
+        "text": "PANEL 3 — Second line: Quality varied independently of mass."
+      },
+      {
+        "text": "PANEL 4 — Third line: Output-oriented scheduling interfered with normal work and was discontinued."
+      },
+      {
+        "text": "PANEL 5 — Mira reads it."
+      },
+      {
+        "text": "PANEL 6 — Astra presses SEND."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "Defensible.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Expensive word for \"we learned something.\"",
+        "subtext": "Panel 6"
+      }
     ]
   },
   {
     "id": "SDS_S1E09_P22",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Central review replies: BENCHMARK NOT MET. Middle image: A suggested recovery option appears: OPTIONAL ADDITIONAL COLLECTION SHIFT. Closing image: Pixa asks:.",
+    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Central review reports that the benchmark was not met. Middle image: Astra declines the suggested additional collection shift. Closing image: Astra looks at the ordinary work board and explains why.",
     "setting": "SDS_Admin_Hub",
-    "characters": ["SDS_Astra", "SDS_Pixa"],
+    "characters": [
+      "SDS_Astra",
+      "SDS_Pixa"
+    ],
     "continuityFrom": "SDS_S1E09_P21",
     "panelPlan": [
-      {"text": "PANEL 1 — Central review replies: BENCHMARK NOT MET."},
-      {"text": "PANEL 2 — Second line: PILOT STATUS REVIEW SCHEDULED."},
-      {"text": "PANEL 3 — A suggested recovery option appears: OPTIONAL ADDITIONAL COLLECTION SHIFT."},
-      {"text": "PANEL 4 — Astra selects: DECLINE."},
-      {"text": "PANEL 5 — Pixa asks: PIXA: Reason? Astra looks at the ordinary work board. ASTRA: We already have a shift."}
+      {
+        "text": "PANEL 1 — Central review replies: BENCHMARK NOT MET."
+      },
+      {
+        "text": "PANEL 2 — Second line: PILOT STATUS REVIEW SCHEDULED."
+      },
+      {
+        "text": "PANEL 3 — A suggested recovery option appears: OPTIONAL ADDITIONAL COLLECTION SHIFT."
+      },
+      {
+        "text": "PANEL 4 — Astra selects: DECLINE."
+      },
+      {
+        "text": "PANEL 5 — Pixa asks for a reason. Astra looks at the ordinary work board before answering."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "PIXA",
+        "text": "Reason?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "We already have a shift.",
+        "subtext": "Panel 5"
+      }
     ]
   }
 ]
