@@ -1,0 +1,605 @@
+[
+  {
+    "id": "PREQ_I01_P01",
+    "summary": "At the height of a Cooperative celebration, Liora notices a repeating corridor-timing drift that does not belong in the era’s supposedly perfect system.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_lochran",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Wide establishing page: Cooperative Hall at ceremonial peak, gold-white banners, delegates moving confidently beneath stable green corridor maps.",
+      "Move through the polished celebration to Liora standing slightly apart, checking a handheld timing readout while everyone else watches the ceremony.",
+      "Insert on the readout: a tiny timing ripple repeats at the same interval instead of behaving like random noise.",
+      "Close on Liora as the pattern repeats again; the page ends with the first private certainty that something is wrong."
+    ],
+    "dialog": [
+      "D201"
+    ],
+    "directionInline": [
+      "The celebration must feel genuinely stable and successful so the small anomaly reads as a rupture in an otherwise trusted world."
+    ]
+  },
+  {
+    "id": "PREQ_I01_P02",
+    "summary": "Liora brings the repeating drift to Lochran; he treats the pattern as an artifact of interpretation rather than a warning.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_lochran",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Open on Liora crossing the busy hall toward Lochran while the ceremony continues around them without interruption.",
+      "Two-shot: Liora turns the handheld so Lochran can see the repeating variance against the clean public corridor map behind him.",
+      "Close on Lochran studying the data long enough to show he understands it before choosing a calmer interpretation.",
+      "Reverse on Liora as Lochran dismisses the pattern as something produced by looking too hard for one.",
+      "End with the public display behind them still glowing green while Liora’s handheld continues to pulse off-time."
+    ],
+    "dialog": [
+      "D202"
+    ],
+    "directionInline": [
+      "Lochran should not look foolish or oblivious; his choice is to discount uncertain evidence in favor of institutional stability."
+    ],
+    "continuityFrom": "PREQ_I01_P01"
+  },
+  {
+    "id": "PREQ_I01_P03",
+    "summary": "Damiar steps into the dispute and deliberately shifts the question from accuracy to language, establishing reassurance as the Cooperative’s first response.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_lochran",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Damiar joins Liora and Lochran at the edge of the ceremony, reading both faces before speaking.",
+      "Medium group composition: Liora holds the anomalous data; Lochran remains composed; Damiar positions himself between technical concern and public spectacle.",
+      "Close on Damiar choosing his words while delegates and cameras remain visible beyond him.",
+      "Liora looks past him toward the corridor map, understanding that the problem is already becoming a messaging problem.",
+      "End on the ceremony continuing smoothly under his call for steady language."
+    ],
+    "dialog": [
+      "D203"
+    ],
+    "directionInline": [
+      "Hold the contrast between unresolved physical evidence and the institution’s immediate instinct to manage tone."
+    ],
+    "continuityFrom": "PREQ_I01_P02"
+  },
+  {
+    "id": "PREQ_I01_P04",
+    "summary": "Nereth shows Liora that one convoy has been logged as arriving twice at the same time, turning her subtle timing drift into a concrete anomaly.",
+    "setting": "S_BHANexus",
+    "region": "HighEraCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Establish the Beacon Harmonization Authority Nexus: layered traffic telemetry, synchronized arrival streams, operators working inside a culture of precision.",
+      "Nereth isolates two identical arrival records and pulls them forward from the traffic field.",
+      "Insert: both records carry the same convoy identity and the same timestamp, impossible under normal routing.",
+      "Liora compares the duplicate arrival to her earlier drift pattern rather than reacting to it as a clerical error.",
+      "End on the two identical records hanging side by side."
+    ],
+    "dialog": [
+      "D204"
+    ],
+    "directionInline": [
+      "Make the duplicate arrival visually unmistakable even to someone who does not understand the technical interface."
+    ],
+    "continuityFrom": "PREQ_I01_P03"
+  },
+  {
+    "id": "PREQ_I01_P05",
+    "summary": "Liora identifies the anomaly as echo-lag: the corridor itself is flexing enough for one arrival to register twice.",
+    "setting": "S_BHANexus",
+    "region": "HighEraCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Begin tight on Liora tracing the mismatch from arrival logs back into the corridor timing data.",
+      "Visualize the same convoy path as two nearly overlapping traces rather than as abstract equations alone.",
+      "Nereth watches the traces separate by a fraction and then realign.",
+      "Liora names the effect: echo-lag, a physical elasticity problem rather than a scheduling failure.",
+      "End on the route visualization subtly bowing out of alignment."
+    ],
+    "dialog": [
+      "D205"
+    ],
+    "directionInline": [
+      "Keep the science legible through cause and image: one path, two temporal impressions."
+    ],
+    "continuityFrom": "PREQ_I01_P04"
+  },
+  {
+    "id": "PREQ_I01_P06",
+    "summary": "Nereth states the practical consequence of echo-lag: if it spreads, the network will no longer agree with reality about when ships arrive.",
+    "setting": "S_BHANexus",
+    "region": "HighEraCore",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_nereth",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Nereth expands the anomaly across neighboring route data to test whether the duplicate was isolated.",
+      "Several clean routes remain stable, then one distant trace flickers with the same small offset.",
+      "Two-shot: Nereth and Liora understand that the first anomaly may already have company.",
+      "Close on Nereth spelling out what happens when arrival records and physical arrival cease to match.",
+      "End on the Nexus traffic wall, still orderly at a glance but now containing more than one impossible timestamp."
+    ],
+    "dialog": [
+      "D206"
+    ],
+    "directionInline": [
+      "Land on the operational consequence: the network may stop agreeing with reality about when ships arrive."
+    ],
+    "continuityFrom": "PREQ_I01_P05"
+  },
+  {
+    "id": "PREQ_I01_P07",
+    "summary": "At Astrin Hall’s cultural festival, a delegation arrives late enough to break a ceremony designed around perfect corridor timing.",
+    "setting": "S_AstrinHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_heska",
+      "C_announcer"
+    ],
+    "panelPlan": [
+      "Wide, bright festival page: performers, lanterns, audience, and an event sequence whose elegance depends on exact arrival timing.",
+      "Heska records the event as the expected delegation fails to appear at its assigned cue.",
+      "The performance is forced to hold and improvise while organizers exchange confused looks.",
+      "The delegation finally enters at the wrong moment, visibly interrupting the choreography.",
+      "End on Heska lowering her recorder instead of applauding."
+    ],
+    "dialog": [
+      "D207"
+    ],
+    "directionInline": [
+      "Make the disruption socially visible but not catastrophic; the unsettling fact is that this almost never happens."
+    ],
+    "continuityFrom": "PREQ_I01_P06"
+  },
+  {
+    "id": "PREQ_I01_P08",
+    "summary": "Heska catches the same temporal inconsistency in the festival record and realizes that the celebrated system has produced a contradiction history will have to explain.",
+    "setting": "S_AstrinHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_heska",
+      "C_announcer"
+    ],
+    "panelPlan": [
+      "The announcer recovers smoothly and publicly welcomes the late delegation as if nothing consequential occurred.",
+      "Heska checks the archival timestamp attached to the arrival while applause resumes around her.",
+      "Insert on the timestamp glitch pulsing behind the official event record.",
+      "Close on Heska’s expression as she recognizes that the archive and lived sequence no longer line up cleanly.",
+      "End with the festival continuing beautifully while her recorder holds the inconsistency."
+    ],
+    "dialog": [
+      "D208"
+    ],
+    "directionInline": [
+      "Preserve the contrast between public grace and Heska’s private archival alarm."
+    ],
+    "continuityFrom": "PREQ_I01_P07"
+  },
+  {
+    "id": "PREQ_I01_P09",
+    "summary": "Heska brings the festival discrepancy into the Records Vault and discovers metadata offsets that do not match any archival standard.",
+    "setting": "S_RecordsVault",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_heska",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Establish the Records Vault as quiet, ordered, and built around trust in stable metadata.",
+      "Heska lays the festival record beside earlier Cooperative logs and sorts by arrival timestamp.",
+      "Offsets appear where the archive should be internally consistent.",
+      "She checks the standard twice rather than assuming user error.",
+      "End on several unrelated records showing the same kind of temporal displacement."
+    ],
+    "dialog": [
+      "D209"
+    ],
+    "directionInline": [
+      "Treat the archive anomaly as evidence accumulation, not supernatural corruption."
+    ],
+    "continuityFrom": "PREQ_I01_P08"
+  },
+  {
+    "id": "PREQ_I01_P10",
+    "summary": "Liora connects Heska’s archival offsets to corridor drift and explains that a small physical error becomes dangerous when propagated through an interconnected system.",
+    "setting": "S_RecordsVault",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_heska",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Liora joins Heska at the archive table, with technical corridor data layered over historical metadata.",
+      "The same offset pattern appears in both systems when the displays are aligned.",
+      "Liora traces one small timing error through multiple dependent records and routes.",
+      "Heska watches the error multiply outward instead of staying local.",
+      "End on Liora’s warning that interconnected drift scales catastrophically."
+    ],
+    "dialog": [
+      "D210"
+    ],
+    "directionInline": [
+      "Make the multiplying dependence visible: the threat comes from propagation through a trusted network."
+    ],
+    "continuityFrom": "PREQ_I01_P09"
+  },
+  {
+    "id": "PREQ_I01_P11",
+    "summary": "Heska understands that if corridor timing can distort records, the Cooperative may eventually lose confidence not only in transit but in its own account of what happened.",
+    "setting": "S_RecordsVault",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_heska",
+      "C_liora"
+    ],
+    "panelPlan": [
+      "Quiet page after Liora’s explanation: rows of archive stacks extend beyond the two women.",
+      "Heska compares a physical event record, a corridor log, and an official narrative entry that no longer align perfectly.",
+      "Liora does not offer reassurance; she studies the mismatch with the same concern.",
+      "Close on Heska’s recorder reflecting three slightly different timestamps.",
+      "End on the vault’s ordered lights receding into depth, visually intact but epistemically less trustworthy."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Let the three conflicting timestamps and the ordered vault carry the existential concern without additional exposition."
+    ],
+    "continuityFrom": "PREQ_I01_P10"
+  },
+  {
+    "id": "PREQ_I01_P12",
+    "summary": "Damiar drafts the Cooperative’s response alone, testing phrases that minimize the anomaly without technically denying it.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Open on Damiar alone in a quieter chamber adjacent to the celebration spaces.",
+      "Projected draft lines hover around him with increasingly softened alternatives for drift, anomaly, and risk.",
+      "He deletes a sharper warning and replaces it with calmer language.",
+      "Close on him rehearsing the statement while adjusting his collar and presentation.",
+      "End on the polished version ready for transmission."
+    ],
+    "dialog": [
+      "D211"
+    ],
+    "directionInline": [
+      "Show that Damiar is making a conscious trade: he believes calm is part of his duty, not merely a cynical cover."
+    ],
+    "continuityFrom": "PREQ_I01_P11"
+  },
+  {
+    "id": "PREQ_I01_P13",
+    "summary": "The reassurance message goes out across the same network whose timing is beginning to fail, allowing the public story of stability to outrun the evidence.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop"
+    ],
+    "characters": [
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Begin on Damiar initiating the official communication.",
+      "Cut across public screens in transit halls and civic spaces receiving the calm statement.",
+      "People relax or return to routine because the message sounds authoritative and ordinary.",
+      "Intercut one screen with a nearby arrival display that flickers off-time for a fraction of a second.",
+      "End on the reassurance continuing while the anomaly remains physically unresolved."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Show the reassurance spreading through public spaces while unresolved timing anomalies continue nearby; add no new spoken claims."
+    ],
+    "continuityFrom": "PREQ_I01_P12"
+  },
+  {
+    "id": "PREQ_I01_P14",
+    "summary": "At Orban-Tier Transit Port, a traveler discovers that her sister’s convoy appears twice in the arrival system and demands to know which arrival is real.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_traveler",
+      "C_trafficCtrl",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "Wide port page: travelers move beneath arrival boards that begin to flicker between stable and conflicting states.",
+      "A concerned traveler finds the same convoy listed in two places or times and pushes toward a service point.",
+      "Insert on the duplicate listing tied to her sister’s convoy.",
+      "She confronts the transit controller as nearby passengers begin listening.",
+      "End on the question that turns an abstract anomaly into a family crisis."
+    ],
+    "dialog": [
+      "D212"
+    ],
+    "directionInline": [
+      "Keep the traveler specific and human; the system failure has become an immediate family crisis."
+    ],
+    "continuityFrom": "PREQ_I01_P13"
+  },
+  {
+    "id": "PREQ_I01_P15",
+    "summary": "The transit controller cannot reconcile the two timestamps and falls back on procedure while the crowd begins to sense that procedure no longer answers the problem.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_traveler",
+      "C_trafficCtrl",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "The controller cycles through internal routing windows and gets conflicting results.",
+      "Travelers bunch beneath the boards as blank states and duplicate arrivals alternate overhead.",
+      "The controller asks everyone to remain in designated lanes because no cleaner instruction is available.",
+      "Reaction panels show that the crowd hears the procedural language as evasion.",
+      "End on the controller still unable to identify one authoritative arrival window."
+    ],
+    "dialog": [
+      "D213"
+    ],
+    "directionInline": [
+      "The controller is overwhelmed, not villainous. Procedure is failing faster than staff can adapt."
+    ],
+    "continuityFrom": "PREQ_I01_P14"
+  },
+  {
+    "id": "PREQ_I01_P16",
+    "summary": "Aveth steadies the traveler and crowd even though he cannot yet prove the convoy is safe, revealing the moral burden of reassurance on the ground.",
+    "setting": "S_OrbanPort",
+    "region": "HighEraNetwork",
+    "factions": [
+      "F_Convoy"
+    ],
+    "characters": [
+      "C_traveler",
+      "C_trafficCtrl",
+      "C_aveth"
+    ],
+    "panelPlan": [
+      "Aveth moves into the service area between the anxious traveler and the overloaded controller.",
+      "He asks for a clean signal check while physically creating space around the console.",
+      "Close on Aveth telling the traveler her family is safe even as the evidence remains incomplete.",
+      "The traveler holds onto the promise because there is nothing else solid to hold.",
+      "End on Aveth looking back at the unstable boards after the traveler turns away."
+    ],
+    "dialog": [
+      "D214"
+    ],
+    "directionInline": [
+      "Aveth’s reassurance should feel compassionate and risky, distinct from institutional messaging even though both withhold uncertainty."
+    ],
+    "continuityFrom": "PREQ_I01_P15"
+  },
+  {
+    "id": "PREQ_I01_P17",
+    "summary": "Before the Council session, Lochran instructs Damiar to keep the briefing centered on continuity rather than projected turbulence.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Establish a quiet Cooperative Hall antechamber moments before the Council convenes.",
+      "Lochran and Damiar review draft briefing language beside a live corridor map.",
+      "Lochran directs attention away from projected turbulence and toward continuity.",
+      "Damiar edits the language in real time while watching the red warning terms disappear.",
+      "End on the chamber doors preparing to open."
+    ],
+    "dialog": [
+      "D215"
+    ],
+    "directionInline": [
+      "Keep this scene restrained; the tension comes from deliberate framing immediately before formal decision-making."
+    ],
+    "continuityFrom": "PREQ_I01_P16"
+  },
+  {
+    "id": "PREQ_I01_P18",
+    "summary": "Damiar agrees to translate the crisis into reassurance, but his hesitation shows that he now understands the technical warning is real.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_lochran",
+      "C_damiar"
+    ],
+    "panelPlan": [
+      "Damiar reads the revised briefing one last time.",
+      "Close on a phrase about routine fluctuation beside Liora’s much sharper underlying model.",
+      "He gives Lochran the answer Lochran needs and commits to the calmer framing.",
+      "Lochran enters the Council chamber first; Damiar remains behind for one beat.",
+      "End on Damiar following with the softened briefing."
+    ],
+    "dialog": [
+      "D216"
+    ],
+    "directionInline": [
+      "Damiar’s uncertainty should be visible but not melodramatic; he is still choosing the institution’s approach."
+    ],
+    "continuityFrom": "PREQ_I01_P17"
+  },
+  {
+    "id": "PREQ_I01_P19",
+    "summary": "The Council convenes expecting a contained technical briefing; Liora instead brings a model showing corridor tension accelerating across the network.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Wide Council chamber page with delegates arranged around a floor-scale corridor projection.",
+      "Liora takes the presentation position while Lochran and Iskari watch from opposing sides of the chamber.",
+      "The model begins with familiar green network geometry.",
+      "Red-gradient tension bands emerge and extend farther than the room expects.",
+      "End on murmurs spreading as the projection stops looking local."
+    ],
+    "dialog": [],
+    "directionInline": [
+      "Establish the political room and the scale of Liora’s model before the argument begins."
+    ],
+    "continuityFrom": "PREQ_I01_P18"
+  },
+  {
+    "id": "PREQ_I01_P20",
+    "summary": "Liora states plainly that the drift curve is accelerating and that mounting network tension is now visible in the model.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Open on the projected curve rising rather than flattening.",
+      "Liora walks the Council through the pattern as red bands propagate across multiple connected arcs.",
+      "Close on Liora delivering the conclusion without hedging.",
+      "Cut to delegates recalculating what they thought was a minor anomaly.",
+      "End on Lochran remaining composed while the room’s confidence changes around him."
+    ],
+    "dialog": [
+      "D217"
+    ],
+    "directionInline": [
+      "Liora’s authority should come from clarity and evidence, not grandstanding."
+    ],
+    "continuityFrom": "PREQ_I01_P19"
+  },
+  {
+    "id": "PREQ_I01_P21",
+    "summary": "Iskari publicly backs Liora’s model, turning a technical warning into the first visible fracture inside Cooperative leadership.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Iskari studies the model and rises from her seat before Lochran can close the discussion.",
+      "She identifies the model as sound and names the risk of delaying action.",
+      "Reaction panel: Liora registers that she finally has institutional support.",
+      "Reaction panel: Lochran recognizes that the disagreement is now public rather than internal.",
+      "End on the chamber divided visually between those leaning toward the model and those holding position."
+    ],
+    "dialog": [
+      "D218"
+    ],
+    "directionInline": [
+      "This is the first unmistakable leadership fracture; stage it as a shift in the room, not merely another line of dialogue."
+    ],
+    "continuityFrom": "PREQ_I01_P20"
+  },
+  {
+    "id": "PREQ_I01_P22",
+    "summary": "Lochran refuses to trigger alarm on projections, ending the issue with leadership choosing calm over intervention even after the warning becomes public.",
+    "setting": "S_CoopHall",
+    "region": "HighEraCore",
+    "factions": [
+      "F_Coop",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_liora",
+      "C_iskari",
+      "C_lochran"
+    ],
+    "panelPlan": [
+      "Begin on Lochran standing into the divided room rather than answering Liora privately.",
+      "He rejects escalation without disputing every detail of the model.",
+      "Close on Liora absorbing that evidence alone will not move the institution.",
+      "Iskari remains standing, making the split impossible to hide.",
+      "Final wide panel: the Council returns to procedural order while the red tension model still stretches across the floor beneath them."
+    ],
+    "dialog": [
+      "D219"
+    ],
+    "directionInline": [
+      "Land on institutional choice, with the unresolved red model still physically present beneath restored procedural calm."
+    ],
+    "continuityFrom": "PREQ_I01_P21"
+  }
+]
