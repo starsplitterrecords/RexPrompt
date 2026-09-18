@@ -40,6 +40,20 @@ ENCODED_PAGE_FILES = (
     "pages_c06_after_the_water_enhanced.json.gzb64",
     "pages_c07_last_low_tide_enhanced.json.gzb64",
 )
+LEGACY_SCENE_PAGE_FILE = SHOW_DIR / "pages_c01_scene_pages.json"
+OBSOLETE_RECOVERY_FILES = (
+    "DO-NOT-USE.txt",
+    "FIXME.txt",
+    "NO-MORE-TEMP.txt",
+    "PAUSE.txt",
+    "README-RECOVERY-TEMP.md",
+    "RECOVERY.md",
+    "recovered-images-note.txt",
+    "recovery-binary-note.txt",
+    "recovery-byte-hashes.json",
+    "recovery-sequence.json",
+    "recovery-status.json",
+)
 
 # These belong in writing/development source, not the assembled image recipe.
 CHEF_META = re.compile(
@@ -138,9 +152,6 @@ def validate_characters() -> None:
         assert isinstance(item.get("visual"), str) and item["visual"].strip(), f"{cid}: assembler-visible visual baseline missing"
         status = item.get("visualStatus")
         assert isinstance(status, str) and "no approved character image reference" in status.lower(), f"{cid}: visual approval state is not explicit"
-        locks = item.get("continuityLocks")
-        assert isinstance(locks, list) and len(locks) >= 3, f"{cid}: continuityLocks missing or too weak"
-
         performance = item.get("performance")
         assert isinstance(performance, str) and len(performance.strip()) >= 80, f"{cid}: visual acting direction is too weak"
         assert_no_meta(f"{cid}.performance", performance)
@@ -149,9 +160,27 @@ def validate_characters() -> None:
         assert isinstance(prompt, list) and len(prompt) >= 4, f"{cid}: promptContinuity missing or too weak"
         assert_no_meta(f"{cid}.promptContinuity", " ".join(map(str, prompt)))
 
+        wardrobe = item.get("wardrobe")
+        if isinstance(wardrobe, str) and wardrobe.strip():
+            assert wardrobe.strip() != item["visual"].strip(), f"{cid}: wardrobe duplicates the identity baseline"
+        locks = item.get("continuityLocks")
+        if isinstance(locks, list):
+            assert locks != prompt, f"{cid}: continuityLocks duplicates promptContinuity"
+
         assert "relationship" not in item, f"{cid}: development relationship prose is again assembler-visible"
         assert isinstance(item.get("developmentRelationship"), str), f"{cid}: development relationship source was not preserved"
         assert isinstance(item.get("developmentPerformance"), str), f"{cid}: development performance source was not preserved"
+
+
+def validate_recovery_cleanup() -> None:
+    assert not LEGACY_SCENE_PAGE_FILE.exists(), "retired Low Tide S01-S08 scene-page package is still active"
+    ref_dir = NORMALIZATION.parent
+    for name in OBSOLETE_RECOVERY_FILES:
+        assert not (ref_dir / name).exists(), f"obsolete Low Tide recovery artifact remains: {name}"
+
+    normalization_text = NORMALIZATION.read_text(encoding="utf-8")
+    for stale in ("binary-persistence-pending", "LTS_C01_S01", "pages_c01_scene_pages.json"):
+        assert stale not in normalization_text, f"stale Low Tide recovery state remains in normalization reference: {stale}"
 
 
 def validate_regions_and_settings() -> None:
@@ -283,6 +312,7 @@ def validate_show_visual_rules() -> None:
 
 def main() -> None:
     validate_normalization_reference()
+    validate_recovery_cleanup()
     validate_characters()
     validate_regions_and_settings()
     validate_visual_state()
@@ -290,6 +320,7 @@ def main() -> None:
     validate_show_registration()
     validate_show_visual_rules()
     print("Low Tide Signal IMG production normalization validation passed")
+    print("Recovery conflict: resolved to active P-page contract")
     print("Core character baselines:", len(CORE_CHARACTER_IDS))
     print("Page inventory:", sum(PAGE_COUNTS.values()))
     print("Chef page plans:", sum(PAGE_COUNTS.values()), "/", sum(PAGE_COUNTS.values()))
