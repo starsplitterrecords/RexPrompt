@@ -14,6 +14,21 @@ Do **not** use its typography, title treatment, trade dress, labels, framing, co
 
 There are currently no released Low Tide interior pages in StarSplitterVisions, so there is no released page-layout baseline and no released page-to-recipe mapping to infer.
 
+
+## Active recipe contract
+
+Current sequential production uses page-level `LTS_CNN_PNN` recipes only.
+
+- Chapter 1: 24 pages
+- Chapter 2: 26 pages
+- Chapter 3: 28 pages
+- Chapter 4: 26 pages
+- Chapter 5: 24 pages
+- Chapter 6: 24 pages
+- Chapter 7: 26 pages
+
+The retired scene-level Chapter 1 recovery structure is not an active production contract and must not be mixed with current page IDs. No approved Low Tide production image is currently persisted in the draft manifest.
+
 ## Character visual state
 
 The six core characters have assembler-visible textual design baselines in `data/shows/low-tide-signal/characters.json`, but no approved character image reference is currently stored in RexPrompt.
