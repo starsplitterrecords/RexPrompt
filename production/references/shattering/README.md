@@ -13,3 +13,9 @@ Until an image is approved:
 - do not use regenerated substitutes as recovered references.
 
 The production frontier remains `SHAT_I01_P01` until an approved page image is durably registered.
+
+## Structured inventory
+
+`reference-inventory.json` is the authoritative intake inventory for unresolved Shattering visual material. It currently records 29 historical File Library candidates across 13 source-scene groups, their candidate active-page spans, the missing visual baselines required before image production, and the downstream Rex Fleet continuity boundary.
+
+The inventory is not a visual-reference pack. No entry in it is approved visual authority until original pixels are inspected, mapped to one exact active page, and explicitly approved.
