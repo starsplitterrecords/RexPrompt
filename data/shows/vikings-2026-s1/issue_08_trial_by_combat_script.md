@@ -1,11 +1,11 @@
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
-Status: DEVELOPMENT SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; NOT YET ACTIVE ASSEMBLER INPUT  
+Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; READY FOR REXPROMPT COMPILATION  
 Primary function: the institution finally meets the household as separate people. Bjorn's trial is allowing others to speak for themselves; Astrid's payoff is that the least-followed member has quietly become the most practically integrated.
 
 ## Continuity lock
 
-Exactly three Kin exist: Astrid and two men. The men remain unnamed in this development script. Do not invent lettered names merely because the hearing would know them; staging can call them forward individually without printing unresolved names.
+Exactly three Kin exist: Astrid and two men. Their production identities remain First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2. Personal names are not lettered in this issue; the hearing verifies the applicants individually without requiring unresolved names in visible dialogue.
 
 Bjorn wears armor without weapons. Carrie does not ask him to remove it.
 
@@ -13,15 +13,15 @@ Astrid's competence must feel accumulated from Issue 5 and her off-page life in 
 
 The hearing authority is competent, bounded, busy, and genuinely trying to make a fair decision. No villain turn. No sentimental conversion.
 
-## Working ruling for this development draft
+## Institutional vocabulary and locked ruling
 
-To make the issue dramatically complete, Page 23 uses a **working outcome**: permanent temporal-resident status is granted to all five displaced applicants **individually**, and the Bushwick placement may continue under ordinary tenancy/program rules rather than intensive DTI case supervision. The ruling explicitly does not require the five applicants to remain one household forever.
+This is a fictional DTI municipal administrative process. Use **Status Reconciliation Review** for the proceeding, **hearing chamber** for the room, and **Hearing Officer** for the adjudicator. Do not alternate among judge, court, tribunal, and hearing-authority labels.
 
-That outcome and its exact legal terminology remain open for later lock. The character writing and page staging should survive if the final procedural wording changes.
+The locked dramatic and procedural outcome is: **permanent temporal-resident status** is granted to all five displaced applicants **individually**. The Bushwick placement may continue under ordinary tenancy and program rules rather than intensive DTI case supervision. The order does not require the five applicants to remain one household forever.
 
 ## Page-image language for this issue
 
-- Municipal administrative courtroom/hearing chamber rather than grand criminal court: wood veneer, seal, clerk desk, microphones, fluorescent/daylight mix, stackable gallery seating, ordinary security screening.
+- Municipal administrative hearing chamber rather than grand criminal court: wood veneer, seal, clerk desk, microphones, fluorescent/daylight mix, stackable gallery seating, ordinary security screening.
 - Keep the room visually human-scale. No authoritarian monumental architecture.
 - Vary courtroom pages through blocking: standing/sitting transitions, witness chair, reaction groupings, inserts of file pages, recess hallway, and restrained cutaways to Astrid's ordinary prior routines when her answers reveal them.
 - Astrid's reveal is underplayed. The room does not applaud; people simply realize they have been working from an incomplete picture.
@@ -29,7 +29,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 ---
 
-## PAGE 1 — COURT CLOTHES
+## PAGE 1 — HEARING CLOTHES
 
 **Summary:** Everyone prepares for judgment in their own language, and Carrie chooses not to interfere when Bjorn puts on armor.
 
@@ -55,7 +55,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **Summary:** Courthouse security treats Bjorn's armor as an ordinary screening problem, not as a spectacle or threat.
 
-**Setting:** municipal courthouse / hearing-building security checkpoint.
+**Setting:** municipal municipal hearing-center security checkpoint.
 
 **5 panels.**
 
@@ -79,7 +79,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **Summary:** In the waiting area, Astrid quietly demonstrates one small piece of independence before anyone thinks to test her.
 
-**Setting:** administrative hearing waiting room.
+**Setting:** municipal hearing-center waiting room.
 
 **5 panels.**
 
@@ -109,7 +109,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 3. **Inside chamber.** The clerk gestures to separate chairs / positions for identity verification.
    **CLERK:** We'll verify each applicant separately.
 4. **Bjorn starts to remain standing beside the others; Carrie lightly touches the back of his assigned chair rather than physically steering him.**
-5. **Wide from authority's viewpoint.** Five displaced applicants now occupy five distinct seats, with Carrie at counsel/caseworker table nearby.
+5. **Wide from authority's viewpoint.** Five displaced applicants now occupy five distinct seats, with Carrie at caseworker table nearby.
 
 **Page turn:** the legal structure forces the season's central truth into physical staging: one household, separate people.
 
@@ -124,11 +124,11 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **5 panels.**
 
 1. **Insert.** Thin but substantial DTI file: housing placement, incident reports, transit/banking milestones, inspection notes, neighborhood contacts, review notice.
-2. **Medium on Judge/Hearing Authority reading.**
-   **JUDGE:** Five temporal-displacement applicants. Shared emergency placement converted to provisional residence. Repeated compliance exceptions. No criminal referral. Stable housing. Increasing independent activity.
+2. **Medium on Hearing Officer reading.**
+   **HEARING OFFICER:** Five temporal-displacement applicants. Shared emergency placement converted to provisional residence. Repeated compliance exceptions. No criminal referral. Stable housing. Increasing independent activity.
 3. **Carrie listens; Bjorn looks at the file as if it were speaking about someone else.**
-4. **Judge continues.**
-   **JUDGE:** Caseworker supervision remains the primary documented support.
+4. **Hearing Officer continues.**
+   **HEARING OFFICER:** Caseworker supervision remains the primary documented support.
 5. **Close on Carrie.** That sentence bothers her because she knows it is no longer true.
 
 **Page turn:** Carrie's own documentation has fallen behind the life it once accurately described.
@@ -143,14 +143,14 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **5 panels.**
 
-1. **Two-shot Judge/Carrie across room.**
-   **JUDGE:** In your professional judgment, has the placement been successful?
+1. **Two-shot Hearing Officer/Carrie across room.**
+   **HEARING OFFICER:** In your professional judgment, has the placement been successful?
 2. **Carrie gives the automatic answer.**
    **CARRIE:** Yes. Housing stabilized. Missed appointments are down. Independent travel is up. Neighborhood incidents are—
 3. **She stops herself.**
    **CARRIE:** Sorry. That's the file answer.
-4. **Judge.**
-   **JUDGE:** It is your file.
+4. **Hearing Officer.**
+   **HEARING OFFICER:** It is your file.
 5. **Carrie looks toward the household.**
    **CARRIE:** It used to be accurate. Now success mostly means I don't know everything they do all day.
 
@@ -167,15 +167,15 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **5 panels.**
 
 1. **Medium.** The first male Kin sits forward, uneasy with formal questioning but not helpless.
-   **JUDGE:** Where do you go without your caseworker?
+   **HEARING OFFICER:** Where do you go without your caseworker?
 2. **First male Kin.**
    **FIRST MALE KIN:** Laundry. Store. Building. Sometimes park.
-3. **Judge.**
-   **JUDGE:** Why those places?
+3. **Hearing Officer.**
+   **HEARING OFFICER:** Why those places?
 4. **First male Kin, a little confused by the need to explain ordinary repetition.**
    **FIRST MALE KIN:** Clothes become dirty. Food becomes gone. People expect you when you say you come back.
 5. **Reaction wide.** Carrie hides a small smile; Bjorn takes the answer seriously.
-   **JUDGE:** And if you had to leave the neighborhood?
+   **HEARING OFFICER:** And if you had to leave the neighborhood?
    **FIRST MALE KIN:** I would not want to.
 
 **Page turn:** he is no longer legible as a dependent attached to Bjorn's story.
@@ -191,16 +191,16 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **5 panels.**
 
 1. **Medium on second male Kin.**
-   **JUDGE:** Do you intend to remain in New York permanently?
+   **HEARING OFFICER:** Do you intend to remain in New York permanently?
 2. **Second male Kin.**
    **SECOND MALE KIN:** I intend to remain.
-3. **Judge waits.**
+3. **Hearing Officer waits.**
    **SECOND MALE KIN:** I do not promise forever.
-4. **Judge.**
-   **JUDGE:** Those are different statements.
+4. **Hearing Officer.**
+   **HEARING OFFICER:** Those are different statements.
 5. **Second male Kin.**
    **SECOND MALE KIN:** Yes.
-   **JUDGE:** Good. I wanted to know if you understood that.
+   **HEARING OFFICER:** Good. I wanted to know if you understood that.
 
 **Page turn:** the institution is capable of hearing an honest uncertain answer without treating uncertainty as failure.
 
@@ -217,10 +217,10 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 1. **Reaction on Bjorn, visibly dissatisfied that the answer might be misunderstood.**
 2. **Bjorn leans forward.**
    **BJORN:** He means—
-3. **Close.** He stops himself before Carrie or the Judge intervenes.
+3. **Close.** He stops himself before Carrie or the Hearing Officer intervenes.
 4. **Bjorn sits back.**
    **BJORN:** He has answered.
-5. **Judge makes a note and moves on without rewarding the moment.** The second male Kin glances at Bjorn once; that is enough.
+5. **Hearing Officer makes a note and moves on without rewarding the moment.** The second male Kin glances at Bjorn once; that is enough.
 
 **Page turn:** Bjorn's restraint is his first visible success in the hearing.
 
@@ -235,19 +235,19 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **6 panels.**
 
 1. **Medium on Gunnar.**
-   **JUDGE:** Can you travel independently?
+   **HEARING OFFICER:** Can you travel independently?
    **GUNNAR:** Yes.
-2. **Judge.**
-   **JUDGE:** Where do you go?
+2. **Hearing Officer.**
+   **HEARING OFFICER:** Where do you go?
 3. **Gunnar.**
    **GUNNAR:** Library. Park. Water. Streets I have not walked.
-4. **Judge.**
-   **JUDGE:** For appointments?
+4. **Hearing Officer.**
+   **HEARING OFFICER:** For appointments?
    **GUNNAR:** Sometimes.
 5. **Gunnar, after a beat.**
    **GUNNAR:** Sometimes to see what is there.
-6. **Judge.**
-   **JUDGE:** Has New York become home?
+6. **Hearing Officer.**
+   **HEARING OFFICER:** Has New York become home?
    Gunnar considers the word rather than solving it.
    **GUNNAR:** It has become a place I would miss.
 
@@ -259,7 +259,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **Summary:** A brief recess breaks the courtroom rhythm, and Silas demonstrates progress by being willing to remain an unused witness.
 
-**Setting:** courthouse hallway outside hearing room.
+**Setting:** municipal hearing-center hallway outside hearing room.
 
 **5 panels.**
 
@@ -288,14 +288,14 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **5 panels.**
 
 1. **Insert on file page.** A few ordinary complaint summaries: rooftop/property incident from early placement, smoke/noise/hallway friction, corrected conditions. Do not invent sensational charges.
-2. **Judge.**
-   **JUDGE:** There are several neighborhood complaints.
+2. **Hearing Officer.**
+   **HEARING OFFICER:** There are several neighborhood complaints.
 3. **Carrie braces to explain.**
    **CARRIE:** They were corrected—
-4. **Judge raises one finger, reading further.**
-   **JUDGE:** I see that. I also see repeated contact with the same neighbors after the complaints.
+4. **Hearing Officer raises one finger, reading further.**
+   **HEARING OFFICER:** I see that. I also see repeated contact with the same neighbors after the complaints.
 5. **Wide including household.**
-   **JUDGE:** I'm not asking whether you were never difficult. I'm asking whether people can live beside you after you are difficult.
+   **HEARING OFFICER:** I'm not asking whether you were never difficult. I'm asking whether people can live beside you after you are difficult.
    **BJORN:** So far.
 
 **Page turn:** the record becomes more credible because it contains inconvenience instead of manufactured praise.
@@ -311,12 +311,12 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 **5 panels.**
 
 1. **Medium.** Astrid changes seats or moves to the individual questioning position. No hero framing.
-2. **Judge.**
-   **JUDGE:** Do you want your caseworker to help answer if you have trouble with a question?
+2. **Hearing Officer.**
+   **HEARING OFFICER:** Do you want your caseworker to help answer if you have trouble with a question?
 3. **Carrie turns slightly toward Astrid, ready but not speaking.**
 4. **Astrid.**
    **ASTRID:** If I need her, I ask.
-5. **Judge nods and simply continues. Carrie sits back. Gunnar looks at Astrid with new attention.**
+5. **Hearing Officer nods and simply continues. Carrie sits back. Gunnar looks at Astrid with new attention.**
 
 **Page turn:** independence arrives as an ordinary procedural preference, not a reveal speech.
 
@@ -330,12 +330,12 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Judge.**
-   **JUDGE:** If you left this building alone, could you get home?
+1. **Hearing Officer.**
+   **HEARING OFFICER:** If you left this building alone, could you get home?
 2. **Astrid.**
    **ASTRID:** Yes.
-3. **Judge.**
-   **JUDGE:** Tell me how.
+3. **Hearing Officer.**
+   **HEARING OFFICER:** Tell me how.
 4. **Astrid thinks in landmarks rather than route-number exposition.**
    **ASTRID:** Train to our stop. If train is closed, bus to the church with the blue door. Three blocks past the fruit man. Turn at the laundromat.
 5. **Small cutaway panel, prior-day ordinary street view.** Astrid alone stepping off a bus near a blue-doored church, carrying groceries, moving with practiced certainty. No caption claiming evidence.
@@ -355,8 +355,8 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Judge.**
-   **JUDGE:** Who in the neighborhood knows you by name?
+1. **Hearing Officer.**
+   **HEARING OFFICER:** Who in the neighborhood knows you by name?
 2. **Astrid.**
    **ASTRID:** Woman upstairs. Man at laundromat. Store owner. Woman with red cart.
 3. **Cutaway prior day.** Upstairs Neighbor opens her door and hands Astrid a packaged snack while saying her name; Astrid answers with familiar ease.
@@ -377,12 +377,12 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **5 panels.**
 
-1. **Judge asks a bureaucratically phrased question.**
-   **JUDGE:** Do you independently procure ordinary household necessities without caseworker facilitation?
+1. **Hearing Officer asks a bureaucratically phrased question.**
+   **HEARING OFFICER:** Do you independently procure ordinary household necessities without caseworker facilitation?
 2. **Astrid stares for a beat.**
    **ASTRID:** I know the words. I do not know why you put them in that order.
-3. **The Judge accepts the criticism and simplifies.**
-   **JUDGE:** Do you buy things the household needs by yourself?
+3. **The Hearing Officer accepts the criticism and simplifies.**
+   **HEARING OFFICER:** Do you buy things the household needs by yourself?
 4. **Astrid.**
    **ASTRID:** Yes. Food. Soap. Needles. Coffee when Bjorn forgets.
 5. **Bjorn turns toward her, mildly offended.**
@@ -401,8 +401,8 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Judge.**
-   **JUDGE:** What do you do on a normal day when Ms. Carrie is not with you?
+1. **Hearing Officer.**
+   **HEARING OFFICER:** What do you do on a normal day when Ms. Carrie is not with you?
 2. **Astrid begins counting on fingers, genuinely considering.**
    **ASTRID:** Laundry. Food. I see upstairs woman. Sometimes park.
 3. **Cutaway.** Astrid folding laundry beside ordinary patrons, television on.
@@ -428,8 +428,8 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 2. **Carrie looks from Astrid to her file.**
 3. **Gunnar looks at Astrid, then at his own transit card peeking from his pocket.**
 4. **Bjorn watches Astrid with a complicated mix of pride and recognition that he did not know this part of her life.**
-5. **Judge simply turns the page.**
-   **JUDGE:** All right.
+5. **Hearing Officer simply turns the page.**
+   **HEARING OFFICER:** All right.
    The procedural normality makes the realization larger for the reader than for the room.
 
 **Page turn:** successful integration is revealed as the thing the formal system had the least reason to notice.
@@ -444,15 +444,15 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **5 panels.**
 
-1. **Judge, carefully phrased.**
-   **JUDGE:** Do you feel that living here has changed who you are?
+1. **Hearing Officer, carefully phrased.**
+   **HEARING OFFICER:** Do you feel that living here has changed who you are?
 2. **Astrid thinks; this is not a slogan setup.**
    **ASTRID:** Yes.
 3. **Carrie and Bjorn both look at her.**
 4. **Astrid continues.**
    **ASTRID:** I know this city now. I know things I did not know. I still know my people. I still know where I came from.
-5. **Judge.**
-   **JUDGE:** I didn't ask you to give that up.
+5. **Hearing Officer.**
+   **HEARING OFFICER:** I didn't ask you to give that up.
    **ASTRID:** Good.
 
 **Page turn:** integration and cultural continuity coexist in one ordinary person without needing theoretical explanation.
@@ -467,12 +467,12 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **5 panels.**
 
-1. **Judge turns to Bjorn.**
-   **JUDGE:** You have described yourself as responsible for this household. Does the household intend permanent residence?
+1. **Hearing Officer turns to Bjorn.**
+   **HEARING OFFICER:** You have described yourself as responsible for this household. Does the household intend permanent residence?
 2. **Bjorn's posture changes; this is the question he once would have seized.**
 3. **Bjorn.**
    **BJORN:** I intend to remain.
-4. **Judge waits for the collective answer.**
+4. **Hearing Officer waits for the collective answer.**
 5. **Bjorn looks briefly at the other four applicants.**
    **BJORN:** They have answered for themselves.
 
@@ -488,8 +488,8 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Judge.**
-   **JUDGE:** If they no longer require your decisions, what is your role?
+1. **Hearing Officer.**
+   **HEARING OFFICER:** If they no longer require your decisions, what is your role?
 2. **Bjorn looks down at his armored forearm, then at the household.**
 3. **Bjorn.**
    **BJORN:** I carry when I am asked.
@@ -512,15 +512,15 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Judge.**
-   **JUDGE:** Ms. Carrie, are these applicants integrated?
+1. **Hearing Officer.**
+   **HEARING OFFICER:** Ms. Carrie, are these applicants integrated?
 2. **Carrie looks at the file, then closes it.**
 3. **Carrie.**
    **CARRIE:** They can maintain housing. They use the city. They meet obligations. They form relationships I didn't assign.
 4. **Carrie.**
    **CARRIE:** They know when to ask for help. They also know when not to ask me.
-5. **Judge.**
-   **JUDGE:** That wasn't exactly my question.
+5. **Hearing Officer.**
+   **HEARING OFFICER:** That wasn't exactly my question.
 6. **Carrie.**
    **CARRIE:** It's the answer I can support.
 
@@ -528,7 +528,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 ---
 
-## PAGE 23 — WORKING RULING
+## PAGE 23 — THE RULING
 
 **Summary:** The hearing authority grants the five applicants permanent temporal-resident status individually, preserving the household without making it a legal requirement that they remain one unit forever.
 
@@ -536,17 +536,17 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **6 panels.**
 
-1. **Wide.** The Judge reviews a final page, marks the file, and speaks in ordinary administrative cadence rather than delivering a speech.
-2. **Judge.**
-   **JUDGE:** The record supports permanent temporal-resident status for each of the five applicants, individually.
+1. **Wide.** The Hearing Officer reviews a final page, marks the file, and speaks in ordinary administrative cadence rather than delivering a speech.
+2. **Hearing Officer.**
+   **HEARING OFFICER:** The record supports permanent temporal-resident status for each of the five applicants, individually.
 3. **Reaction strip across five applicants and Carrie.** No cheering. Each absorbs a different meaning.
-4. **Judge continues.**
-   **JUDGE:** The Bushwick placement may continue under ordinary tenancy and program rules. Intensive DTI case supervision is no longer required as a condition of residence.
+4. **Hearing Officer continues.**
+   **HEARING OFFICER:** The Bushwick placement may continue under ordinary tenancy and program rules. Intensive DTI case supervision is no longer required as a condition of residence.
 5. **Bjorn.**
    **BJORN:** We may remain.
-   **JUDGE:** Yes.
-6. **Judge, already moving to the next document.**
-   **JUDGE:** And nothing in this order requires all five of you to make the same future choice.
+   **HEARING OFFICER:** Yes.
+6. **Hearing Officer, already moving to the next document.**
+   **HEARING OFFICER:** And nothing in this order requires all five of you to make the same future choice.
 
 **Page turn:** the legal result recognizes separate people without dissolving the home they chose together.
 
@@ -556,7 +556,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
 
 **Summary:** Outside the hearing room, the household begins processing the ruling, but Astrid simply returns to the ordinary independent life the hearing finally made visible.
 
-**Setting progression:** courthouse hallway → exterior steps / city sidewalk.
+**Setting progression:** municipal hearing-center hallway → exterior steps / city sidewalk.
 
 **6 panels.**
 
@@ -567,7 +567,7 @@ That outcome and its exact legal terminology remain open for later lock. The cha
    **GUNNAR:** Where are you going?
 4. **Astrid, already walking.**
    **ASTRID:** Home later.
-5. **Exterior courthouse steps.** Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route.
+5. **Exterior hearing-center steps.** Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route.
 6. **Final wide city panel.** Astrid merges into the street while the others remain higher on the steps for a beat. No narration, no victory caption.
 
 **END ISSUE 8**
