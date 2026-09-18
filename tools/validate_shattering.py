@@ -132,10 +132,19 @@ def main():
         "star-splitter-" + "prequel",
         "P" + "REQ_",
         "prequel" + "-e",
-        "scenes_" + "prequel",
         "validate_star_splitter_" + "prequel",
         "validate-star-splitter-" + "prequel",
     )
+    retired_paths = (
+        DATA / ("scenes_" + "prequel.json"),
+        DATA / "shows" / ("star-splitter-" + "prequel"),
+        ROOT / "production" / "references" / ("star-splitter-" + "prequel"),
+        ROOT / "tools" / ("validate_star_splitter_" + "prequel.py"),
+        ROOT / ".github" / "workflows" / ("validate-star-splitter-" + "prequel.yml"),
+    )
+    for path in retired_paths:
+        assert not path.exists(), f"Retired Shattering path remains: {path.relative_to(ROOT)}"
+
     text_extensions = {".json", ".md", ".py", ".yml", ".yaml", ".html", ".js", ".txt"}
     for path in ROOT.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in text_extensions:
