@@ -128,13 +128,13 @@ def main():
 
 
     retired_identity_tokens = (
-        "Star Splitter Prequel",
-        "star-splitter-prequel",
-        "PREQ_",
-        "prequel-e",
-        "scenes_prequel",
-        "validate_star_splitter_prequel",
-        "validate-star-splitter-prequel",
+        "Star Splitter " + "Prequel",
+        "star-splitter-" + "prequel",
+        "P" + "REQ_",
+        "prequel" + "-e",
+        "scenes_" + "prequel",
+        "validate_star_splitter_" + "prequel",
+        "validate-star-splitter-" + "prequel",
     )
     text_extensions = {".json", ".md", ".py", ".yml", ".yaml", ".html", ".js", ".txt"}
     for path in ROOT.rglob("*"):
