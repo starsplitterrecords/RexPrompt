@@ -5,7 +5,7 @@ Primary function: the institution finally meets the household as separate people
 
 ## Story lock
 
-**Issue 8 is the courtroom/hearing issue.**
+**Issue 8 is the Status Reconciliation Review / hearing issue and the Season 1 finale.**
 
 Do not insert another episode of testimony collection, filing, audit mechanics, or evidentiary errands before the hearing. Issue 7 did enough preparation to put them in the room. The dramatic event now is the room itself.
 
@@ -57,7 +57,7 @@ One is more attached to the neighborhood and present life; the other remains les
 ### Astrid
 Astrid should not enter as a secret genius or reveal a hidden résumé. She answers ordinary questions with ordinary competence. The accumulation becomes startling only because everyone else has underestimated how much of a life can be built when nobody is watching.
 
-### Judge / hearing authority
+### Hearing Officer
 Competent, busy, legally bounded, and genuinely trying to make a fair decision from imperfect categories. Not a villain and not a sentimental convert.
 
 ## 24-page dramatic spine
@@ -72,7 +72,7 @@ Carrie has files. Gunnar has a book he is told to leave in the bag. The two male
 **Exit:** this is the form Bjorn understands for appearing before judgment.
 
 ### Page 2 — NO WEAPONS
-Courthouse / municipal hearing security.
+Municipal hearing-center security.
 
 Bjorn has already left actual weapons at home. Security still examines the armor with tired practical suspicion.
 
@@ -271,14 +271,14 @@ The hearing authority gives whatever ruling the later script pass locks.
 
 Do not write a sentimental speech. The decision should sound like an actual bounded administrative/legal decision.
 
-If the exact residency ruling remains unresolved at script time, this page may instead close the evidentiary record and state the specific next procedural step.
+The locked ruling grants permanent temporal-resident status to all five displaced applicants individually; the Bushwick placement may continue under ordinary tenancy/program rules without intensive DTI supervision as a condition of residence, and the order does not require one shared future.
 
 **Turn:** whatever the ruling, the household has already crossed the deeper threshold: it has appeared as separate people without dissolving as a household.
 
 **Exit:** the legal consequence lands on people the reader now understands differently.
 
 ### Page 24 — ASTRID LEAVES FIRST
-Outside the hearing room / courthouse.
+Outside the hearing room / municipal hearing center.
 
 Everyone begins processing what happened. Carrie wants to explain something. Bjorn is still carrying the gravity of the hearing. Gunnar has noticed everything about Astrid.
 
@@ -292,18 +292,18 @@ No triumphant narration.
 
 ## Issue 9 bridge
 
-Do **not** reserve the hearing for Issue 9. The courtroom payoff belongs here.
+Do **not** reserve the hearing for a later issue. The hearing payoff and Season 1 ending belong here.
 
-If Season 1 retains a ninth issue, it must justify itself as aftermath / consequence / coda rather than another layer of residency procedure. Its title, exact function, and whether it is needed at all remain open.
+Issue 8 is the Season 1 finale. Any later Vikings material belongs to a new post-hearing story decision rather than another layer of residency procedure.
 
 ## Boundaries
 
 - Exactly three Kin: Astrid and two men.
 - Astrid is the only woman among the three Kin.
 - Do not lock names for the two male Kin without approval.
-- Astrid's courtroom competence must pay off ordinary midseason behavior; do not invent a secret job, degree, or implausible hidden accomplishment merely to make the reveal bigger.
+- Astrid's hearing competence must pay off ordinary midseason behavior; do not invent a secret job, degree, or implausible hidden accomplishment merely to make the reveal bigger.
 - Do not turn Astrid into an assimilation mascot. She remains recognizably Norse and retains her own cultural identity.
 - Bjorn may wear armor but no weapons into the hearing. Carrie does not ask him to remove the armor.
-- The judge / hearing authority is not a villain and does not become a fan.
+- The Hearing Officer is not a villain and does not become a fan.
 - Do not turn the hearing into twenty-four pages of legal exposition. Every question must reveal a person, relationship, choice, or change.
-- The exact legal ruling remains an open decision until separately locked.
+- The residency ruling is locked in the production script and current RexPrompt recipes.
