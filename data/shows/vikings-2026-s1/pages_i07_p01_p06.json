@@ -353,6 +353,10 @@
       {
         "handle": "@vik.KinMan1",
         "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
@@ -360,14 +364,17 @@
         "panel": 1,
         "location": "Safe Cave table → hallway/stairs.",
         "shotType": "medium",
-        "action": "Medium. The first male Kin checks the time on the microwave clock and stands, grabbing the same laundry bag established in Issue 5."
+        "action": "Medium. The second male Kin answers Bjorn's previous-page 'What do you mean?' while the first male Kin checks the microwave clock and stands, grabbing the same laundry bag established in Issue 5.",
+        "dialogueIndices": [
+          0
+        ]
       },
       {
         "panel": 2,
         "location": "Safe Cave table → hallway/stairs.",
         "shotType": "medium",
         "dialogueIndices": [
-          0
+          1
         ],
         "action": "Bjorn."
       },
@@ -376,7 +383,7 @@
         "location": "Safe Cave table → hallway/stairs.",
         "shotType": "medium",
         "dialogueIndices": [
-          1
+          2
         ],
         "action": "First male Kin shoulders the bag."
       },
@@ -385,7 +392,7 @@
         "location": "Safe Cave table → hallway/stairs.",
         "shotType": "medium",
         "dialogueIndices": [
-          2
+          3
         ],
         "action": "Carrie blinks; Gunnar smiles faintly."
       },
@@ -394,12 +401,16 @@
         "location": "Safe Cave table → hallway/stairs.",
         "shotType": "wide",
         "dialogueIndices": [
-          3
+          4
         ],
         "action": "Hallway wide. He is already descending the stairs."
       }
     ],
     "dialogueInline": [
+      {
+        "handle": "@vik.KinMan2",
+        "text": "I mean I can want this now without promising it forever."
+      },
       {
         "handle": "@vik.Bjorn",
         "text": "We are not finished."
