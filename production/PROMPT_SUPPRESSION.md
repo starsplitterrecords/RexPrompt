@@ -1,11 +1,13 @@
 # RexPrompt prompt-section suppression
 
-RexPrompt supports optional page-level suppression of non-core assembled-recipe sections without requiring any series data migration.
+RexPrompt supports optional suppression of non-core assembled-recipe content without deleting or rewriting source data.
 
 ## UI
 
 The assembler shows **Suppress from assembled recipe** checkboxes for:
 
+- Summary
+- Production brief
 - Setting
 - Region
 - Factions
@@ -13,26 +15,24 @@ The assembler shows **Suppress from assembled recipe** checkboxes for:
 - Continuity
 - Direction
 
-Unchecked sections assemble exactly as before. Checkbox choices are saved per series / issue / recipe in the current browser.
+Panel Plan and Dialogue are intentionally not suppressible because they are the core page-production instructions.
 
-**Reset page** removes the browser override and returns the page to its stored default.
+With all suppression options enabled, an assembled page contains only its page header, **Panel Plan**, and **Dialogue**.
 
-Panel Plan and Dialogue are intentionally not suppressible because they are core production instructions.
+Selections may be stored per series / issue / recipe in the current browser. Commit carries the active selection forward for the current browser tab. **Reset page** removes the browser override and returns the page to its stored default.
 
 ## Optional stored default
 
 A page may optionally define:
 
 ```json
-"promptSuppress": ["factions", "region"]
+"promptSuppress": ["summary", "production", "factions", "region"]
 ```
 
-Recognized values are `setting`, `region`, `factions`, `characters`, `continuity`, and `direction`.
+Recognized values are `summary`, `production`, `setting`, `region`, `factions`, `characters`, `continuity`, and `direction`.
 
-No existing page needs this field. Pages without it retain the historical assembler output.
-
-A browser checkbox choice overrides the stored default for that page; Reset page restores the stored default.
+Pages without `promptSuppress` retain the historical assembled output unless a browser selection is active.
 
 ## Scope
 
-Suppression changes only assembled prompt output. It does not delete or rewrite source data, faction shelves, character shelves, settings, regions, continuity metadata, or dialogue.
+Suppression changes assembled prompt output only. It does not delete summaries, production briefs, shelves, character data, settings, regions, continuity metadata, directions, panel plans, or dialogue.

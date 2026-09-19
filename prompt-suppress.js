@@ -2,6 +2,8 @@
 'use strict';
 
 const SECTIONS=[
+  {id:'summary',label:'Summary',kind:'summary'},
+  {id:'production',label:'Production brief',kind:'production'},
   {id:'setting',label:'Setting',header:'SETTING'},
   {id:'region',label:'Region',header:'REGION'},
   {id:'factions',label:'Factions',header:'FACTIONS'},
@@ -59,9 +61,16 @@ function effectiveList(key){
 function writeOverride(key,list){localStorage.setItem(STORAGE_PREFIX+key,JSON.stringify(normalizeList(list)))}
 function clearOverride(key){localStorage.removeItem(STORAGE_PREFIX+key)}
 function escapeRe(value){return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+function cleanPrompt(text){return String(text||'').replace(/\n{3,}/g,'\n\n').trim()}
 function stripSection(text,header){
   const re=new RegExp('(?:^|\\n)\\['+escapeRe(header)+'\\]\\n[\\s\\S]*?(?=\\n\\[[A-Z][A-Z0-9 /_&-]*\\]\\n|$)','g');
-  return String(text||'').replace(re,'').replace(/\n{3,}/g,'\n\n').trim();
+  return cleanPrompt(String(text||'').replace(re,''));
+}
+function stripPreambleLine(text,value){
+  const line=String(value||'').trim();
+  if(!line)return text;
+  const re=new RegExp('(?:^|\\n)'+escapeRe(line)+'(?=\\n|$)','g');
+  return cleanPrompt(String(text||'').replace(re,''));
 }
 function queueSync(){
   if(syncQueued)return;syncQueued=true;
@@ -76,9 +85,14 @@ function installAssemblerWrapper(){
     defaultsByKey.set(ctx.key,normalizeList(scene?.promptSuppress));
     let text=base.call(this,scene,targetStore,index,options);
     const suppress=effectiveList(ctx.key);
+    const show=targetStore?.__show||{};
+    const productionLine=show.generationLine||"10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.";
     for(const id of suppress){
       const section=SECTIONS.find(x=>x.id===id);
-      if(section)text=stripSection(text,section.header);
+      if(!section)continue;
+      if(section.kind==='summary')text=stripPreambleLine(text,(scene?.summary||'').trim());
+      else if(section.kind==='production')text=stripPreambleLine(text,productionLine);
+      else if(section.header)text=stripSection(text,section.header);
     }
     queueSync();
     return text;
