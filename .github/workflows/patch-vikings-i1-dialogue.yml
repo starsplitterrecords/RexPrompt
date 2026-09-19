@@ -1,0 +1,89 @@
+name: Patch Vikings Issue 1 dialogue continuity
+
+on:
+  push:
+    branches: [dialogue-continuity-all-series-20260919]
+    paths:
+      - '.github/workflows/patch-vikings-i1-dialogue.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dialogue-continuity-all-series-20260919
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Patch encoded page overlays
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib
+          root=pathlib.Path('.')
+
+          def load(path):
+              raw=''.join(path.read_text().split())
+              return json.loads(gzip.decompress(base64.b64decode(raw)).decode())
+
+          def save(path,obj):
+              raw=(json.dumps(obj,ensure_ascii=False,indent=2)+'\n').encode()
+              path.write_text(base64.b64encode(gzip.compress(raw,mtime=0)).decode()+'\n')
+
+          def find(arr,page_id):
+              for p in arr:
+                  if p.get('id')==page_id:
+                      return p
+              raise KeyError(page_id)
+
+          # Pages 7–12
+          path=root/'data/shows/vikings-2026-s1/encoded/pages_e01_p07_p12.json.gzb64'
+          arr=load(path)
+          p8=find(arr,'VIK_S1I01_P08')
+          p8['dialogueInline']=[
+              {'speaker':'Officer Miller','text':'Municipal Department of Temporal Integration. You’ll have to wear this until we can get you checked in.'},
+              {'speaker':'CAPTION','text':'This fragile yellow token is a mockery of silver, but I will wear their mark.'},
+              {'speaker':'Bjorn','text':'I accept this parley under the rules of salt and iron.'},
+              {'speaker':'Officer Miller','text':'Uh-huh. Me too, bud.'},
+          ]
+          p8['panelPlan'][0]['action']="Officer Miller answers Bjorn's previous-page question while holding the fluorescent wristband beside him: they are going to the Municipal Department of Temporal Integration, and Bjorn must wear the band until check-in."
+          p9=find(arr,'VIK_S1I01_P09')
+          p9['dialogueInline']=[
+              {'speaker':'Officer Miller','text':"HERE, YOU'LL NEED TO FILL THESE OUT."},
+              {'speaker':'Bjorn','text':"I DON'T SEE ANY OTHER CHOICE."},
+              {'speaker':'Gunnar','text':"BUT WHAT ARE THOSE?\nAND WHAT DOES IT MEAN TO FILL THEM OUT?"},
+              {'speaker':'Officer Miller','text':"Names, addresses, whatever you know. Just do your best."},
+          ]
+          p9['panelPlan'][3]['action']="Both men sit with packets; Gunnar asks what the forms are and what 'fill them out' means. From the driver seat, Officer Miller tells them to put down names, addresses, whatever they know, and do their best."
+          save(path,arr)
+
+          # Pages 13–18
+          path=root/'data/shows/vikings-2026-s1/encoded/pages_e01_p13_p18.json.gzb64'
+          arr=load(path)
+          p14=find(arr,'VIK_S1I01_P14')
+          p14['dialogueInline']=[
+              {'speaker':'Carrie','text':'Bathroom. Sink. Soap.'},
+              {'speaker':'Bjorn','text':'This mark will do.'},
+              {'speaker':'Carrie','text':'Good enough.'},
+              {'speaker':'Bjorn','text':'This is a weak kind of oath, but it is an oath just the same.'},
+              {'speaker':'Carrie','text':'You can call it that. I suppose in a way it does bind you to the municipal system.'},
+          ]
+          p14['panelPlan'][0]['action']="Bjorn presents his ink-red thumb toward camera over the red pad while holding pink forms in the other hand. Carrie answers his previous-page 'Restroom?' with the shortest useful translation: 'Bathroom. Sink. Soap.'"
+          # Shift dialogue indices to account for inserted Carrie answer.
+          p14['panelPlan'][0]['dialogueIndices']=[0]
+          p14['panelPlan'][1]['dialogueIndices']=[1,2]
+          p14['panelPlan'][2]['dialogueIndices']=[]
+          p14['panelPlan'][3]['dialogueIndices']=[3,4]
+          save(path,arr)
+          PY
+      - name: Commit patched overlays
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shows/vikings-2026-s1/encoded/pages_e01_p07_p12.json.gzb64 data/shows/vikings-2026-s1/encoded/pages_e01_p13_p18.json.gzb64
+          git commit -m "Connect Vikings Issue 1 page-turn dialogue"
+          git push origin HEAD:dialogue-continuity-all-series-20260919
