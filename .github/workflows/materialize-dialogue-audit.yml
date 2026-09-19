@@ -68,7 +68,35 @@ jobs:
           (root/'dist'/'dialogue-audit'/'summary.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False)+'\n')
           print(json.dumps(summary,indent=2,ensure_ascii=False))
           PY
+      - name: Verify targeted continuity patches
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib
+          root=pathlib.Path('.')
+          def dec(path):
+              raw=''.join(path.read_text().split())
+              return json.loads(gzip.decompress(base64.b64decode(raw)).decode())
+          p=dec(root/'data/shows/vikings-2026-s1/encoded/pages_e01_p07_p12.json.gzb64')
+          by={x['id']:x for x in p}
+          assert by['VIK_S1I01_P08']['dialogueInline'][0]['text'].startswith('Municipal Department of Temporal Integration.')
+          assert by['VIK_S1I01_P09']['dialogueInline'][-1]['text']=="Names, addresses, whatever you know. Just do your best."
+          p=dec(root/'data/shows/vikings-2026-s1/encoded/pages_e01_p13_p18.json.gzb64')
+          by={x['id']:x for x in p}
+          assert by['VIK_S1I01_P14']['dialogueInline'][0]['text']=='Bathroom. Sink. Soap.'
+          p=json.loads((root/'data/shows/vikings-2026-s1/pages_i07_p01_p06.json').read_text())
+          by={x['id']:x for x in p}
+          assert by['VIK_S1I07_P05']['dialogueInline'][0]['text']=='I mean I can want this now without promising it forever.'
+          p=json.loads((root/'data/shows/low-tide-signal/pages_ch01_ch03_compiled.json').read_text())
+          by={x['id']:x for x in p}
+          assert by['LTS_C01_P13']['dialogueInline'][0]['text']=='There.'
+          print('targeted continuity patches verified')
+          PY
+          python tools/validate_vikings_2026.py
+          python tools/validate_low_tide_img_normalization.py
+          python tools/export_review_pdfs.py --out dist/review-pdfs
       - uses: actions/upload-artifact@v4
         with:
           name: active-comic-pages-dialogue-audit
-          path: dist/dialogue-audit
+          path: |
+            dist/dialogue-audit
+            dist/review-pdfs
