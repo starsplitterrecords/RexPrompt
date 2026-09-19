@@ -1,0 +1,58 @@
+name: Materialize active comic pages for dialogue audit
+
+on:
+  push:
+    branches: [dialogue-continuity-all-series-20260919]
+    paths:
+      - '.github/workflows/materialize-dialogue-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dialogue-continuity-all-series-20260919
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize active page recipes
+        run: |
+          mkdir -p dist/dialogue-audit
+          python - <<'PY'
+          import json, pathlib, re, importlib.util
+          root=pathlib.Path('.').resolve()
+          spec=importlib.util.spec_from_file_location('review', root/'tools'/'export_review_pdfs.py')
+          review=importlib.util.module_from_spec(spec); spec.loader.exec_module(review)
+          shows=json.loads((root/'data'/'shows.json').read_text())
+          out={}
+          for entry in shows:
+              sid=entry.get('seriesId') or entry.get('id')
+              if sid=='sunforge-outlaw':
+                  continue
+              unit=str(entry.get('unitLabel') or '').upper()
+              base=str(entry.get('basePath') or 'data')
+              files=entry.get('scenesFiles') or [entry.get('scenesFile','')]
+              looks_page = unit=='PAGE' or any('page' in str(f).lower() for f in files if f)
+              if not looks_page:
+                  continue
+              try:
+                  units=review.load_entry_units(entry)
+              except Exception as e:
+                  out[entry['id']]={'entry':entry,'error':repr(e),'units':[]}
+                  continue
+              out[entry['id']]={'entry':entry,'units':units}
+          (root/'dist'/'dialogue-audit'/'active-pages.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+          summary={}
+          for k,v in out.items():
+              summary[k]={'name':v['entry'].get('name'),'seriesId':v['entry'].get('seriesId'),'basePath':v['entry'].get('basePath'),'units':len(v.get('units',[])),'error':v.get('error')}
+          (root/'dist'/'dialogue-audit'/'summary.json').write_text(json.dumps(summary,indent=2,ensure_ascii=False)+'\n')
+          print(json.dumps(summary,indent=2,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: active-comic-pages-dialogue-audit
+          path: dist/dialogue-audit
