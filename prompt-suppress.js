@@ -117,7 +117,7 @@ function syncUi(){
   const el=createPanel(),ctx=domContext();if(!el||!ctx)return;
   const active=new Set(effectiveList(ctx.key));
   el.querySelectorAll('[data-prompt-suppress]').forEach(input=>{input.checked=active.has(input.dataset.promptSuppress)});
-  const reset=el.querySelector('.prompt-suppress-reset');if(reset)reset.disabled=readOverride(ctx.key)===null;
+  const reset=el.querySelector('.prompt-suppress-reset');if(reset)reset.disabled=readOverride(ctx.key)===null&&readSessionList()===null;
 }
 function installUiListeners(){
   const ids=['showSel','issueSel','sceneSel'];
