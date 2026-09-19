@@ -43,6 +43,20 @@ jobs:
                   continue
               try:
                   units=review.load_entry_units(entry)
+                  pat=entry.get('includeIdPattern')
+                  if pat:
+                      rx=re.compile(pat)
+                      units=[u for u in units if rx.search(str(u.get('id','')))]
+                  excluded=set(entry.get('excludeSceneIds',[]))
+                  if excluded:
+                      units=[u for u in units if u.get('id') not in excluded]
+                  store=review.load_store(base)
+                  cooked=[]
+                  for u in units:
+                      x=dict(u)
+                      x['_resolvedDialogue']=review.resolve_dialogue(u,store)
+                      cooked.append(x)
+                  units=cooked
               except Exception as e:
                   out[entry['id']]={'entry':entry,'error':repr(e),'units':[]}
                   continue
