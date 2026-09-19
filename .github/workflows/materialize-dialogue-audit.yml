@@ -19,6 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install review dependency
+        run: python -m pip install --disable-pip-version-check reportlab==4.2.5
       - name: Materialize active page recipes
         run: |
           mkdir -p dist/dialogue-audit
