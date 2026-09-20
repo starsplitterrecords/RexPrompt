@@ -99,7 +99,6 @@
       "SDS_Zib",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E09_P02",
     "panelPlan": [
       {
         "text": "PANEL 1 — Zib checks procurement while inspecting the still-temporary brace."
@@ -148,7 +147,6 @@
       "SDS_Glorp",
       "SDS_Kreeb"
     ],
-    "continuityFrom": "SDS_S1E09_P03",
     "panelPlan": [
       {
         "text": "PANEL 1 — Astra reviews the local pilot terms with Mira, Glorp, and Kreeb."
@@ -199,7 +197,7 @@
   },
   {
     "id": "SDS_S1E09_P05",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Pixa displays the ordinary maintenance calendar. Middle image: Pixa reports. Closing image: Astra answers carefully.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Still at the work table, Pixa places the ordinary maintenance calendar beside the benchmark calculation. Middle image: Mira recognizes where Astra's attention has gone. Closing image: Astra answers carefully.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
@@ -209,7 +207,7 @@
     "continuityFrom": "SDS_S1E09_P04",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Pixa displays the ordinary maintenance calendar."
+        "text": "PANEL 1 — Still at the work table, Pixa places the ordinary maintenance calendar beside the benchmark calculation."
       },
       {
         "text": "PANEL 2 — Three tasks are due within the next ten days: coolant fan vibration check; cargo-bay conveyor service; waste-loop filter inspection."
@@ -229,6 +227,11 @@
     ],
     "dialogueInline": [
       {
+        "speaker": "ASTRA",
+        "text": "Which one would we touch early if there were no target?",
+        "subtext": "Panel 3"
+      },
+      {
         "speaker": "PIXA",
         "text": "All three tasks are legitimate scheduled maintenance.",
         "subtext": "Panel 4"
@@ -247,7 +250,7 @@
   },
   {
     "id": "SDS_S1E09_P06",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra asks Zib about the coolant fan vibration check. Middle image: Zib considers honestly. Closing image: Astra takes a beat.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Without leaving the same review, Astra calls Zib over and asks about the coolant fan vibration check. Middle image: Zib considers honestly. Closing image: Astra takes a beat.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -257,7 +260,7 @@
     "continuityFrom": "SDS_S1E09_P05",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra asks Zib about the coolant fan vibration check."
+        "text": "PANEL 1 — Without leaving the same review, Astra calls Zib over and asks about the coolant fan vibration check."
       },
       {
         "text": "PANEL 2 — Zib checks the schedule."
@@ -324,7 +327,6 @@
       "SDS_Pixa",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E09_P06",
     "panelPlan": [
       {
         "text": "PANEL 1 — Zib performs the vibration check. Jax handles access and isolation tags."
@@ -347,6 +349,16 @@
     ],
     "dialogueInline": [
       {
+        "speaker": "JAX",
+        "text": "Access is clear. Nothing else moved.",
+        "subtext": "Panel 1"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Original due date stays in the record.",
+        "subtext": "Panel 2"
+      },
+      {
         "speaker": "ZIB",
         "text": "Good catch for tomorrow.",
         "subtext": "Panel 3"
@@ -361,7 +373,6 @@
       "SDS_Astra",
       "SDS_Mira"
     ],
-    "continuityFrom": "SDS_S1E09_P07",
     "panelPlan": [
       {
         "text": "PANEL 1 — Astra watches the target graph move upward."
@@ -389,6 +400,16 @@
         "speaker": "ASTRA",
         "text": "I know.",
         "subtext": "Panel 4"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "You're still looking at them like they're one thing.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "Because somebody made them one thing.",
+        "subtext": "Panel 5"
       }
     ]
   },
@@ -453,7 +474,6 @@
       "SDS_Mira",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E09_P09",
     "panelPlan": [
       {
         "text": "PANEL 1 — Mira tests the accumulated passive samples."
@@ -501,7 +521,6 @@
       "SDS_Astra",
       "SDS_Jax"
     ],
-    "continuityFrom": "SDS_S1E09_P10",
     "panelPlan": [
       {
         "text": "PANEL 1 — Central review updates the target projection from current collection mass."
@@ -548,7 +567,6 @@
       "SDS_Astra",
       "SDS_Zib"
     ],
-    "continuityFrom": "SDS_S1E09_P11",
     "panelPlan": [
       {
         "text": "PANEL 1 — Astra finds Zib in the cargo bay."
@@ -630,6 +648,16 @@
       }
     ],
     "dialogueInline": [
+      {
+        "speaker": "JAX",
+        "text": "Lane is ours for three hours.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Logging the actual reason we moved it.",
+        "subtext": "Panel 3"
+      },
       {
         "speaker": "ZIB",
         "text": "Very healthy six-days-early conveyor.",
@@ -785,7 +813,6 @@
       "SDS_Astra",
       "SDS_Pixa"
     ],
-    "continuityFrom": "SDS_S1E09_P16",
     "panelPlan": [
       {
         "text": "PANEL 1 — Back in operations, the target dashboard still reads: PROJECTED: ON PACE."
@@ -969,12 +996,17 @@
       },
       {
         "speaker": "ZIB",
-        "text": "Yes.",
+        "text": "You did.",
         "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "It delayed actual work.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "JAX",
+        "text": "Eleven minutes.",
         "subtext": "Panel 4"
       },
       {
@@ -1039,10 +1071,9 @@
       "SDS_Astra",
       "SDS_Pixa"
     ],
-    "continuityFrom": "SDS_S1E09_P21",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Central review replies: BENCHMARK NOT MET."
+        "text": "PANEL 1 — Later, central review replies: BENCHMARK NOT MET."
       },
       {
         "text": "PANEL 2 — Second line: PILOT STATUS REVIEW SCHEDULED."
