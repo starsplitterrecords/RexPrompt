@@ -1,4 +1,4 @@
-name: Rex Fleet scene-flow readback
+name: Rex Fleet scene-flow cleanup
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  readback:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,80 +20,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Decode and audit current production state
-        run: |
-          python - <<'PY'
-          import base64, gzip, hashlib, json, pathlib
-
-          root = pathlib.Path('.')
-          show = root / 'data/shows/rex-fleet-s1'
-          manifest = json.loads((root / 'data/shows.json').read_text(encoding='utf-8'))
-          entries = {int(e['issueLabel'].split()[-1]): e for e in manifest if e.get('seriesId') == 'rex-fleet'}
-          before = json.loads((root / 'tmp/rex-fleet-scene-flow-snapshot.json').read_text(encoding='utf-8'))['issues']
-
-          def load(n):
-              ov = entries[n]['sceneOverlays'][0]
-              path = show / ov['file']
-              if ov.get('encoding') == 'gzip-base64':
-                  raw = base64.b64decode(''.join(path.read_text(encoding='utf-8').split()))
-                  return json.loads(gzip.decompress(raw).decode('utf-8'))
-              return json.loads(path.read_text(encoding='utf-8'))
-
-          current = {n: load(n) for n in range(2, 13)}
-          for n in range(2, 13):
-              old = before[f'Issue {n}']
-              new = current[n]
-              assert [p['id'] for p in old] == [p['id'] for p in new]
-              assert [p.get('summary') for p in old] == [p.get('summary') for p in new]
-              assert [p.get('settingText') for p in old] == [p.get('settingText') for p in new]
-              assert [p.get('regionText') for p in old] == [p.get('regionText') for p in new]
-              assert [p.get('dialogueInline', []) for p in old] == [p.get('dialogueInline', []) for p in new]
-              assert [p.get('charactersInline', []) for p in old] == [p.get('charactersInline', []) for p in new]
-              assert [len(p.get('panelPlan', [])) for p in old] == [len(p.get('panelPlan', [])) for p in new]
-
-          targeted = [
-              'RF_I04_P06','RF_I04_P14','RF_I04_P20','RF_I04_P22','RF_I04_P28','RF_I04_P31',
-              'RF_I05_P07','RF_I05_P14','RF_I06_P14','RF_I07_P01','RF_I07_P02','RF_I07_P04',
-              'RF_I07_P06','RF_I07_P08','RF_I07_P11','RF_I07_P15','RF_I10_P08','RF_I10_P21',
-              'RF_I10_P26','RF_I11_P09','RF_I11_P19','RF_I12_P07','RF_I12_P16','RF_I12_P20','RF_I12_P21'
-          ]
-          by_id = {p['id']: p for pages in current.values() for p in pages}
-          readback = {
-              'continuity': {
-                  f'Issue {n}': {p['id']:p.get('continuityFrom') for p in current[n] if p.get('continuityFrom')}
-                  for n in range(2,13)
-              },
-              'directionCounts': {
-                  f'Issue {n}': sum(1 for p in current[n] if p.get('directionInline'))
-                  for n in range(2,13)
-              },
-              'migratedPanels': {
-                  pid: by_id[pid]['panelPlan'][0]
-                  for pid in ['RF_I02_P09','RF_I02_P10','RF_I03_P14','RF_I03_P15']
-              },
-              'targetedDirections': {
-                  pid: by_id[pid].get('directionInline', [])
-                  for pid in targeted
-              },
-              'dialogueDigest': hashlib.sha256(json.dumps(
-                  [[p['id'],p.get('dialogueInline',[])] for n in range(2,13) for p in current[n]],
-                  ensure_ascii=False, sort_keys=True
-              ).encode('utf-8')).hexdigest(),
-          }
-
-          (root / 'tmp/rex-fleet-scene-flow-readback.json').write_text(
-              json.dumps(readback, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-          )
-          print(json.dumps(readback['continuity'], indent=2))
-          print(json.dumps(readback['directionCounts'], indent=2))
-          PY
-      - name: Validate package
+      - name: Final Rex Fleet validation
         run: python tools/validate_rex_fleet.py
-      - name: Commit readback
+      - name: Remove temporary diagnostic material
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp/rex-fleet-scene-flow-readback.json
-          git diff --cached --quiet && exit 0
-          git commit -m "Add temporary Rex Fleet scene-flow readback"
+          git rm -f .github/workflows/rex-fleet-scene-flow-temp.yml
+          git rm -rf tmp/rex-fleet-scene-flow
+          git rm -f tmp/rex-fleet-scene-flow-snapshot.json tmp/rex-fleet-scene-flow-review.md tmp/rex-fleet-scene-flow-stats.json tmp/rex-fleet-scene-flow-readback.json
+          git commit -m "Remove temporary Rex Fleet scene-flow diagnostics"
           git push origin HEAD:enhance/rex-fleet-scene-flow
