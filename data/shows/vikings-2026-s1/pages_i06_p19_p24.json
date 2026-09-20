@@ -193,7 +193,10 @@
         "panel": 1,
         "location": "community-center sidewalk",
         "shotType": "wide",
-        "action": "Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, keys and phone visible in the other hand, coat open over ordinary contemporary clothes."
+        "action": "Bjorn approaches alone. 1987 Participant waits by the door holding a takeout container, keys and phone visible in the other hand, coat open over ordinary contemporary clothes.",
+        "dialogueIndices": [
+          0
+        ]
       },
       {
         "panel": 2,
@@ -201,8 +204,8 @@
         "shotType": "two-shot",
         "action": "The participant lifts the takeout container slightly while saying “I went.” Bjorn stops in front of them and waits for the rest.",
         "dialogueIndices": [
-          0,
-          1
+          1,
+          2
         ]
       },
       {
@@ -211,7 +214,7 @@
         "shotType": "medium on 1987 Participant",
         "action": "The participant opens both hands at “They did it again,” then hooks a thumb toward the street while saying “I left.”",
         "dialogueIndices": [
-          2
+          3
         ]
       },
       {
@@ -220,13 +223,17 @@
         "shotType": "two-shot walking",
         "action": "They enter side by side. The participant taps the phone in one hand while mentioning the next-day call; Bjorn turns his head toward them for “Better terms.”",
         "dialogueIndices": [
-          3,
           4,
-          5
+          5,
+          6
         ]
       }
     ],
     "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "THE FOLLOWING WEEK"
+      },
       {
         "handle": "@vik.Participant1987",
         "text": "I went."

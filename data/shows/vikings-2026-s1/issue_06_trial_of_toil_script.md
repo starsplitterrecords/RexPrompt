@@ -371,6 +371,8 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 
 **Setting:** community-center multipurpose room, second session.
 
+**Caption:** ONE WEEK LATER
+
 **5 panels.**
 
 1. **Medium on 1987 Participant.**
@@ -513,6 +515,8 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 **Summary:** The 1987 Participant tells Bjorn that his boundary advice changed a family dinner without controlling its outcome.
 
 **Setting progression:** outside community center before meeting → entry corridor.
+
+**Caption:** THE FOLLOWING WEEK
 
 **4 panels.**
 
