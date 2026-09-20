@@ -34,7 +34,29 @@ SHOW_ENTRY = {
 ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
 }
-ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "directionInline", "continuityFrom"}
+ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "continuityFrom"}
+
+EXPECTED_CONTINUITY = {
+    1: {},
+    2: {
+        "EFW_S1E02_S03": "EFW_S1E02_S02",
+        "EFW_S1E02_S10": "EFW_S1E02_S09",
+    },
+    3: {},
+    4: {
+        "EFW_S1E04_S03": "EFW_S1E04_S02",
+        "EFW_S1E04_S10": "EFW_S1E04_S09",
+        "EFW_S1E04_S11": "EFW_S1E04_S01",
+    },
+    5: {
+        "EFW_S1E05_S03": "EFW_S1E05_S01",
+    },
+    6: {
+        "EFW_S1E06_S12": "EFW_S1E06_S11",
+    },
+    7: {},
+    8: {},
+}
 
 
 def load(path: Path):
@@ -122,6 +144,14 @@ def verify_sources_and_overlays() -> None:
                 plan = scene.get("panelPlan")
                 if not isinstance(plan, list) or len(plan) < 4:
                     raise RuntimeError(f"Missing source page architecture: {scene.get('id')}")
+                expected_from = EXPECTED_CONTINUITY[issue].get(scene.get("id"))
+                if scene.get("continuityFrom") != expected_from:
+                    raise RuntimeError(
+                        f"Incorrect direct continuity on {scene.get('id')}: "
+                        f"{scene.get('continuityFrom')!r} != {expected_from!r}"
+                    )
+            elif scene.get("continuityFrom") is not None:
+                raise RuntimeError(f"Source continuity must live in the production overlay: {scene.get('id')}")
     if len(all_ids) != 96 or len(set(all_ids)) != 96:
         raise RuntimeError("Echoes source recipe count or IDs are malformed")
 
@@ -148,6 +178,12 @@ def verify_sources_and_overlays() -> None:
                 raise RuntimeError(f"Overlay changed cast: {scene_id}")
             if merged.get("dialogueInline") != source[scene_id].get("dialogueInline"):
                 raise RuntimeError(f"Overlay changed dialogue: {scene_id}")
+            expected_from = EXPECTED_CONTINUITY[issue].get(scene_id)
+            if patch.get("continuityFrom") != expected_from:
+                raise RuntimeError(
+                    f"Incorrect overlay continuity on {scene_id}: "
+                    f"{patch.get('continuityFrom')!r} != {expected_from!r}"
+                )
 
 
 def verify_manifest() -> None:
