@@ -14,6 +14,7 @@ The active RexPrompt package is page-based comic production.
 - Durable approved unpublished images: none at this checkpoint
 - Structured visual-reference inventory: `production/references/shattering/reference-inventory.json`
 - End-to-end writing/continuity review: complete through Issue 6
+- Scene-flow structural pass: complete; `continuityFrom` is limited to true within-scene page continuation, abrupt location cuts are explicitly re-established, and clearly panel-local direction is embedded in the relevant panel plan. Dialogue is unchanged in this pass.
 - Story-level production blockers: none
 - Visual-reference gate: open; no approved Shattering image baseline yet
 - Production frontier: `SHAT_I01_P01`
