@@ -19,11 +19,30 @@
       "A corridor surface ripples where open space should remain geometrically stable.",
       "End on the captain reporting that the harmonics are ripping sideways."
     ],
-    "dialog": [
-      "D501"
-    ],
     "directionInline": [
       "Escalate from one trailing silhouette to a field-wide navigational hazard affecting multiple ships."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Control, the stars are moving sideways."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Your hull?"
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Stable. Our shadow isn't."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That's not a shadow."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "I was happier before you said that."
+      }
     ]
   },
   {
@@ -46,13 +65,32 @@
       "The captain’s vessel drifts relative to a corridor marker even without thrust.",
       "End on Liora trying to construct one stable geometry from contradictory positions."
     ],
-    "dialog": [
-      "D502"
-    ],
     "directionInline": [
       "Her instruction is a controlled response to unknown geometry, not passivity."
     ],
-    "continuityFrom": "SHAT_I04_P01"
+    "continuityFrom": "SHAT_I04_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Engines idle. Everyone."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "We're already drifting."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I know."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Then what exactly am I holding?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Whatever the corridor still agrees is your position."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P03",
@@ -74,13 +112,32 @@
       "Liora sees that navigation cannot solve a failure of the coordinate frame.",
       "End on the map losing another reliable anchor as Nereth states the problem."
     ],
-    "dialog": [
-      "D503"
-    ],
     "directionInline": [
       "This closes the possibility that skilled pilots can simply wait out the crisis."
     ],
-    "continuityFrom": "SHAT_I04_P02"
+    "continuityFrom": "SHAT_I04_P02",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Anchor just moved."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Ship didn't."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Second anchor moved too."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "So navigation is lying?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Navigation is honest. Space changed underneath it."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P04",
@@ -101,11 +158,26 @@
       "The concerned traveler from earlier finds no live route at all.",
       "End on the question of where the ships have gone."
     ],
-    "dialog": [
-      "D504"
-    ],
     "directionInline": [
       "Use visual continuity with earlier Orban scenes so the loss of normal function is obvious."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.travl",
+        "text": "They're all closed."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "I'm checking alternates."
+      },
+      {
+        "handle": "@starsplit.travl",
+        "text": "There aren't any alternates on the board."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Stop watching the board. Stay where staff can find you."
+      }
     ]
   },
   {
@@ -127,14 +199,36 @@
       "Aveth steps into the flow and physically turns people back toward a common waiting zone.",
       "End on the crowd staying together because of Aveth, not because the boards recovered."
     ],
-    "dialog": [
-      "D505",
-      "D506"
-    ],
     "directionInline": [
       "Shift authority from system information to trusted human presence."
     ],
-    "continuityFrom": "SHAT_I04_P04"
+    "continuityFrom": "SHAT_I04_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.pstf",
+        "text": "I have nothing to route them on."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then route people, not ships."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Meaning?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Keep families together. Clear the doors. Make one waiting zone."
+      },
+      {
+        "handle": "@starsplit.travl",
+        "text": "And then what?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then we use the first real opening we get."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P06",
@@ -154,11 +248,34 @@
       "Every command returns dead authority or silent red failure.",
       "End on Orneth recognizing that his procedural control no longer reaches the network."
     ],
-    "dialog": [
-      "D507"
-    ],
     "directionInline": [
       "The failure is institutional and technical at once: the command exists, but nothing answers it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Lockout one through six."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "...No return."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Send it again."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "I sent it three times."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then use field authority."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Authority isn't reaching the field."
+      }
     ]
   },
   {
@@ -179,13 +296,36 @@
       "Lochran points to the mapped corridor boundaries as if authority can restore them.",
       "End on a map line remaining crisp while the live status beneath it goes blank."
     ],
-    "dialog": [
-      "D508"
-    ],
     "directionInline": [
       "Make the gap between mapped authority and physical reality explicit."
     ],
-    "continuityFrom": "SHAT_I04_P06"
+    "continuityFrom": "SHAT_I04_P06",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The boundaries still exist."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "On the map."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "They are legal closure lines."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "A pilot can't crash into a law, Chair."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "They can obey one."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Not if they never receive it."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P08",
@@ -207,11 +347,30 @@
       "Nereth sees the detachment propagate through structural sensors.",
       "End on the arm separating farther while occupied sections flash emergency beacons."
     ],
-    "dialog": [
-      "D509"
-    ],
     "directionInline": [
       "Give the convergence-node collapse major visual scale while keeping occupied sections and evacuation stakes readable."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Arm three is moving."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "How much?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Enough. Evacuate it."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "There are still people on that section."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Then don't ask me how much."
+      }
     ]
   },
   {
@@ -234,11 +393,32 @@
       "Rescue craft try to hold relative position in a drifting debris field.",
       "End on the last group reaching the junction as the arm moves out of alignment."
     ],
-    "dialog": [],
     "directionInline": [
       "Keep the rescue procedural and physical, not abstract."
     ],
-    "continuityFrom": "SHAT_I04_P08"
+    "continuityFrom": "SHAT_I04_P08",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Use the maintenance spine. Leave everything else."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "What about the lower bays?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Cut them loose if you have to."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Rescue two has the last group."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Get them across before the joint turns."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P10",
@@ -260,13 +440,36 @@
       "He attempts direct contact as the automated authority path dies.",
       "End on one incoming ship crossing the point where a functioning lockout would have stopped it."
     ],
-    "dialog": [
-      "D510"
-    ],
     "directionInline": [
       "This pays off the dead-authority problem from Pages 6–7."
     ],
-    "continuityFrom": "SHAT_I04_P09"
+    "continuityFrom": "SHAT_I04_P09",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Closure still dead."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Incoming vector?"
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Two ships. They think the junction is open."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Call them direct."
+      },
+      {
+        "handle": "@starsplit.orneth",
+        "text": "Trying."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "One just crossed the old stop line."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P11",
@@ -288,13 +491,36 @@
       "Nereth finds one surviving beacon and gives a narrow manual path through the debris.",
       "End on the ship committing to the improvised guidance while the broken node turns around it."
     ],
-    "dialog": [
-      "D511"
-    ],
     "directionInline": [
       "The transition from centralized automation to person-to-person rescue should be unmistakable."
     ],
-    "continuityFrom": "SHAT_I04_P10"
+    "continuityFrom": "SHAT_I04_P10",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Node control, nav is gone. Give me something."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "You have one beacon. Keep it two degrees port."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Two degrees from what?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "From the only thing in there that isn't moving."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "That's a terrible sentence."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Fly it anyway."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P12",
@@ -314,11 +540,30 @@
       "Aveth weighs the route against the destination’s medical need.",
       "End on the convoy preparing for Sector 9 despite no guarantee."
     ],
-    "dialog": [
-      "D512"
-    ],
     "directionInline": [
       "The decision should echo the earlier ‘route blind’ dilemma, now with no institutional alternative left."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Sector Nine."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "No confirmation from the far end."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "But the lane is there."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "Sometimes."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Medicine doesn't care about sometimes."
+      }
     ]
   },
   {
@@ -339,13 +584,36 @@
       "The convoy crew look to Aveth rather than the system for the go/no-go choice.",
       "End on the first medical ship entering the uncertain route."
     ],
-    "dialog": [
-      "D513"
-    ],
     "directionInline": [
       "Finish on action: Aveth’s model of authority is becoming practical trust under uncertainty."
     ],
-    "continuityFrom": "SHAT_I04_P12"
+    "continuityFrom": "SHAT_I04_P12",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "You may arrive to a closed corridor."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "If we wait, they arrive to an empty pharmacy."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "That's not permission."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "I'm not asking for permission."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "Then why are you still here?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "I wanted one person to know where we went."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P14",
@@ -365,11 +633,30 @@
       "A major conduit bucks under the surge.",
       "End on Ruvian warning that one more hit could drop atmosphere."
     ],
-    "dialog": [
-      "D514"
-    ],
     "directionInline": [
       "Keep the threat domestic and bodily: light, air, pressure."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Atmosphere load is climbing."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Power's dropping on the same leg."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Of course it is."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "One more surge and we lose the ring."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then we don't give it one more surge."
+      }
     ]
   },
   {
@@ -390,13 +677,32 @@
       "Improvised braces take strain as the habitat remains partially powered.",
       "End on the crew holding the system together by hand."
     ],
-    "dialog": [
-      "D515"
-    ],
     "directionInline": [
       "Show the repeated survival practice that will later harden into Shard identity: local people repairing what central systems cannot."
     ],
-    "continuityFrom": "SHAT_I04_P14"
+    "continuityFrom": "SHAT_I04_P14",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Central hasn't answered."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Stop calling."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "That's your plan?"
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "My plan is this brace, that cutoff, and six people who showed up."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Finally, a plan I can touch."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P16",
@@ -418,11 +724,34 @@
       "Several world feeds drop while he speaks.",
       "End on the chamber unable to behave like one center anymore."
     ],
-    "dialog": [
-      "D516"
-    ],
     "directionInline": [
       "Play both truths at once: social panic is dangerous, and the old command structure is no longer capable of containing the physical crisis."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "One command channel. We need people hearing the same thing."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "They are not living the same thing."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Fragmented instruction creates panic."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "So does silence."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Damiar, consolidate the feeds."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "They won't consolidate."
+      }
     ]
   },
   {
@@ -445,13 +774,32 @@
       "Delegates around them stop pretending this is a normal Council disagreement.",
       "End on Lochran’s practiced composure finally cracking."
     ],
-    "dialog": [
-      "D517"
-    ],
     "directionInline": [
       "This is moral accusation grounded in consequences already shown."
     ],
-    "continuityFrom": "SHAT_I04_P16"
+    "continuityFrom": "SHAT_I04_P16",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Orban is rationing movement. Outer is rationing air. Broken Node is pulling bodies out by hand."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I know the reports."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Then stop talking as if this room still runs them."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Someone has to hold the center."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "There is no center left to hold."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P18",
@@ -473,13 +821,36 @@
       "Lochran and Iskari remain divided behind him while the communications work becomes decentralized.",
       "End on multiple separate world messages leaving the chamber instead of one Cooperative broadcast."
     ],
-    "dialog": [
-      "D518"
-    ],
     "directionInline": [
       "Show Damiar changing what he does, not only what he believes."
     ],
-    "continuityFrom": "SHAT_I04_P17"
+    "continuityFrom": "SHAT_I04_P17",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "I'm sending local guidance by world."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Without a unified statement?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "A unified statement can't tell Outer how to brace a conduit."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Send what people can use."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "And our authority?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "If it's useful, it survives. If it isn't, the logo won't save it."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P19",
@@ -500,11 +871,30 @@
       "Captains take assigned sectors and move toward scattered survivors.",
       "End on the first rescue craft crossing into the pocket."
     ],
-    "dialog": [
-      "D519"
-    ],
     "directionInline": [
       "The rescue cluster is a practical replacement for centralized routing."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Beacon Seven is steady enough."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "For how long?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Long enough is the measurement today."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "I hate your measurements."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Take sector two. I'll feed you debris drift."
+      }
     ]
   },
   {
@@ -526,11 +916,36 @@
       "A craft rotates to shield the transfer from moving debris.",
       "End on survivors crossing into the rescue craft as the geometry begins to move again."
     ],
-    "dialog": [],
     "directionInline": [
       "Keep action readable and spatially coherent."
     ],
-    "continuityFrom": "SHAT_I04_P19"
+    "continuityFrom": "SHAT_I04_P19",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Pocket boundary is moving."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I see it."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "We have four survivors outside the line."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Get three."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "There are four."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Then get four faster."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P21",
@@ -551,13 +966,36 @@
       "A final survivor is pulled aboard as the field distorts across the rescue path.",
       "End on the cluster breaking formation and escaping just before the pocket shifts."
     ],
-    "dialog": [
-      "D520"
-    ],
     "directionInline": [
       "The rescue succeeds locally while the larger system continues failing."
     ],
-    "continuityFrom": "SHAT_I04_P20"
+    "continuityFrom": "SHAT_I04_P20",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Last one aboard."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Break formation."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "You first."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I'm not in a ship."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Right. Terrible day."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Move."
+      }
+    ]
   },
   {
     "id": "SHAT_I04_P22",
@@ -576,8 +1014,23 @@
       "The last five extinguish together, leaving the network map black.",
       "Final close panel on Liora delivering the fact without qualification: the network is gone. Direction: Hold on the collapse itself with no reassuring counterbeat after the final nodes go dark."
     ],
-    "dialog": [
-      "D521"
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Five."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Four."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "...No."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "The network is gone."
+      }
     ]
   }
 ]
