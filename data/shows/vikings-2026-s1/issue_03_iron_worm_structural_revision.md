@@ -224,39 +224,26 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 
 ## PAGE 13 — THE HOUSE HIDES ITS NAME
 
-**Summary:** The destination finally appears, undercutting the idea that successful navigation means institutions themselves are legible.
+**Summary:** The moved annex is difficult to identify and its posted directions contradict one another, but Gunnar solves the problem by watching the route employees actually use.
 
-**Setting:** Temporary DTI annex exterior
+**Setting:** Temporary DTI annex exterior and side entrance
 
-4 panels.
+6 panels.
 
 1. **wide.** Plain temporary municipal office exterior with a small DTI paper sign taped behind glass and older building signage still visible.
 2. **medium.** Bjorn compares the appointment slip with the nearly hidden sign.
    **BJORN:** This house hides its true name.
-3. **medium.** Carrie checks the number twice.
-   **CARRIE:** This house lost a budget meeting.
-4. **close.** Gunnar notices several employees entering around the side.
-
-## PAGE 14 — THE CLOSED SIDE ENTRANCE
-
-**Summary:** Contradictory posted directions become one concise obstacle instead of the whole issue, and Gunnar again reads what people actually do.
-
-**Setting:** Temporary DTI annex exterior / side door
-
-5 panels.
-
-1. **insert.** A front-door notice points to SIDE ENTRANCE; the side entrance has a paper notice pointing back toward reception.
-2. **medium.** Carrie reads both signs.
+3. **medium.** Carrie finds a front-door notice pointing to SIDE ENTRANCE and then a side-door notice pointing back toward reception.
    **CARRIE:** Of course.
-3. **two-shot.** Bjorn looks between them.
+4. **two-shot.** Bjorn looks between the conflicting notices.
    **BJORN:** Which gate lies least?
-4. **close.** Gunnar watches an employee carrying coffee use an unmarked service door.
+5. **close.** Gunnar watches an employee carrying coffee use an unmarked working service door.
    **GUNNAR:** That one.
-5. **medium.** Carrie follows his gaze.
+6. **medium.** Carrie follows his gaze.
    **CARRIE:** That is not an invitation.
    **GUNNAR:** It is open.
 
-## PAGE 15 — THE HIDDEN HALL
+## PAGE 14 — THE HIDDEN HALL
 
 **Summary:** Carrie reluctantly follows the route staff actually use, while Bjorn recognizes the invisible labor infrastructure underneath an institution that looks confusing from the front.
 
@@ -274,7 +261,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
    **CARRIE:** Hallway. We are calling it a hallway.
 5. **wide.** They move with staff flow rather than wandering deeper.
 
-## PAGE 16 — RECEPTION
+## PAGE 15 — RECEPTION
 
 **Summary:** The remaining bureaucratic comedy is compressed into one reception beat: the original-copy contradiction, chained pen, and required sign-in all happen at the same desk.
 
@@ -295,7 +282,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 5. **close.** Gunnar watches the stamp pad beside the clerk.
    **GUNNAR:** That is the true gate.
 
-## PAGE 17 — THE STAMP
+## PAGE 16 — THE STAMP
 
 **Summary:** The actual errand ends quickly once they reach the right desk, deliberately refusing to let the institution occupy the final third of the issue.
 
@@ -314,7 +301,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
    **CARRIE:** Welcome to paperwork.
 5. **wide.** They leave the desk while another ordinary case is already moving into their place.
 
-## PAGE 18 — DO WE HAVE TO GO HOME?
+## PAGE 17 — DO WE HAVE TO GO HOME?
 
 **Summary:** With the required task complete, Gunnar asks whether travel can include a choice that serves no administrative purpose.
 
@@ -333,7 +320,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 5. **two-shot.** Bjorn studies him, then starts in that direction.
    **BJORN:** Then see it.
 
-## PAGE 19 — ONE BLOCK WRONG ON PURPOSE
+## PAGE 18 — ONE BLOCK WRONG ON PURPOSE
 
 **Summary:** Gunnar deliberately takes a route that is unnecessary, converting navigation from survival skill into personal curiosity.
 
@@ -350,7 +337,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 5. **close.** Gunnar smiles slightly.
    **GUNNAR:** That is why I chose it.
 
-## PAGE 20 — FIVE MINUTES
+## PAGE 19 — FIVE MINUTES
 
 **Summary:** Carrie allows the day to contain five purposeless minutes, and the three begin to feel less like caseworker plus assignment and more like people sharing time.
 
@@ -366,7 +353,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 4. **medium.** Gunnar watches a child chase a pigeon across the square and says nothing.
 5. **wide.** For one panel nobody is solving anything.
 
-## PAGE 21 — GET US HOME
+## PAGE 20 — GET US HOME
 
 **Summary:** Carrie hands Gunnar the return journey, turning his accumulated observation into responsibility rather than a trick he performs for approval.
 
@@ -384,7 +371,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
    **BJORN:** Lead.
 5. **wide.** Gunnar goes first.
 
-## PAGE 22 — THE TRANSFER
+## PAGE 21 — THE TRANSFER
 
 **Summary:** A real service change tests Gunnar once, and he solves it from physical traces and commuter behavior rather than requiring several pages of transit exposition.
 
@@ -401,7 +388,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 5. **two-shot.** Carrie checks the sign, then follows.
    **CARRIE:** That is becoming annoyingly useful.
 
-## PAGE 23 — DIFFERENT STAIR
+## PAGE 22 — DIFFERENT STAIR
 
 **Summary:** Gunnar chooses a different station exit from the one they used that morning and proves he is navigating the neighborhood rather than memorizing a single route.
 
@@ -418,38 +405,26 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 4. **close.** Gunnar looks pleased without performing triumph.
    **GUNNAR:** I did before the stairs.
 
-## PAGE 24 — THE BLOCK AGAIN
+## PAGE 23 — THE BLOCK OPENS HOME
 
-**Summary:** Returning through the familiar block lets the day's new competence re-enter ordinary neighborhood life instead of ending at the transit system itself.
+**Summary:** The return route resolves into ordinary neighborhood recognition and then into the household itself when Astrid opens 5B with the key Bjorn left her.
 
-**Setting:** Bushwick neighborhood sidewalk
+**Setting:** Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B
 
-4 panels.
+6 panels.
 
-1. **wide.** The trio walks past the bodega and apartment block; the same street that felt like strange territory now reads as recognizable geography.
+1. **wide.** The trio walks past the familiar bodega and apartment block in late-afternoon light; Gunnar checks no map.
 2. **medium.** Bjorn looks toward the bodega.
    **BJORN:** We still owe the downstairs man proper money.
-3. **medium.** Carrie keeps walking.
    **CARRIE:** Tomorrow's problem.
-4. **close.** Gunnar checks no map and keeps pace.
-
-## PAGE 25 — HOME OPENS
-
-**Summary:** The return is completed by the people waiting inside: Astrid opens the door with the key Bjorn left her, making home a relationship rather than merely a destination.
-
-**Setting:** Fifth-floor hallway outside apartment 5B
-
-5 panels.
-
-1. **wide.** Bjorn knocks once at 5B. Astrid opens the door with the brass key still in hand; the two male Kin are visible behind her in the functioning apartment.
-2. **medium.** Astrid looks at the three travelers.
+3. **wide.** They climb the familiar building stairs and stop at 5B.
+4. **medium.** Bjorn knocks once. Astrid opens the door with the brass key still in hand; the two male Kin are visible behind her.
    **ASTRID:** Before dark.
-3. **medium.** Bjorn steps inside.
+5. **medium.** Bjorn steps inside.
    **BJORN:** As ordered.
-4. **medium.** Gunnar pauses at the threshold, looking back down the hall and then into the room.
-5. **wide.** Carrie enters last, carrying the stamped confirmation nobody else is looking at anymore.
+6. **wide.** Carrie enters last carrying the stamped confirmation while Gunnar pauses at the threshold, looking from the hall he navigated back to the room he returned to.
 
-## PAGE 26 — I BROUGHT US BACK
+## PAGE 24 — I BROUGHT US BACK
 
 **Summary:** Gunnar claims the return as his achievement while the issue lands on household continuity, not transit mastery for its own sake.
 
