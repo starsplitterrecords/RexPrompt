@@ -53,7 +53,7 @@ jobs:
               for p in pages:
                   d = p.get('dialogueInline', []) or []
                   panels = p.get('panelPlan', []) or []
-                  chars = [c.get('handle') for c in (p.get('charactersInline', []) or []) if isinstance(c, dict)]
+                  chars = [c.get('handle') for c in (p.get('charactersInline', []) or []) if isinstance(c, dict) and c.get('handle')]
                   row = {
                       'id': p.get('id'),
                       'summary': p.get('summary'),
