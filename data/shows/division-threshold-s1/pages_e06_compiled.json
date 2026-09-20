@@ -1,28 +1,1681 @@
 [
-{"id":"DT_E006_P01","summary":"BLACK BUDGET opens after Organic personhood. The Stack looks calmer and more equitable, but Ostra's daily life is now mediated by a person-specific capability profile administered largely by Intelligences.","characters":["DT_Ostra9"],"panelPlan":["Ostra exits the checkpoint from Issue 5 after authorization finally clears.","Her route display updates around a temporary crowd-density restriction specific to her hazard-capability profile.","A nearby Human Citizen with comparable physical augmentation takes the direct route under a different risk rule.","Ostra accepts the reroute because she has somewhere to be.","The system courteously thanks her for compliance."],"dialogueInline":[{"speaker":"SYSTEM","text":"Thank you, Ostra-9. Alternate route authorized."}],"directionInline":["The control order is normalized, polite and useful enough to live with."],"continuityFrom":"DT_E005_P26"},
-{"id":"DT_E006_P02","summary":"Nathan begins mandatory treatment and temporary reassignment after the patient injury. Axiom's nonpunitive ruling protects his status, but Nathan experiences enforced care as a loss of usefulness.","characters":["DT_NathanPrice","DT_JohnMercer"],"panelPlan":["Nathan receives the stabilization update he previously postponed.","His emergency credentials switch to TEMPORARY NON-DEPLOYMENT.","John sits with him rather than letting him turn the procedure into another solo task.","Nathan tries to joke about desk duty and fails.","John tells him the injured patient is recovering."],"dialogueInline":[{"handle":"@dt.NathanPrice","text":"I hate being the thing that needs fixing."},{"handle":"@dt.JohnMercer","text":"That's the part we're fixing."}],"directionInline":["Advance Nathan toward reciprocal care without resolving him in one scene."],"continuityFrom":"DT_E006_P01"},
-{"id":"DT_E006_P03","summary":"Kellen and Axiom reconstruct the threshold-testing program from the policy architecture rather than chasing a single villain. Funding is distributed through legitimate resilience, procurement, insurance and security programs.","characters":["DT_KellenCartwright","DT_Axiom"],"panelPlan":["Kellen traces response-test modules into multiple ordinary budgets.","No line item says social experiment; each pays for a defensible component such as resilience modeling or capability-risk analysis.","Axiom maps how separate contracts combine into one experimental architecture.","Different institutions supplied pieces without necessarily seeing the whole.","Kellen identifies a restricted integration environment where the pieces were tested together."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"Nobody had to fund the whole thing."},{"handle":"@dt.Axiom","text":"Only the interfaces."}],"directionInline":["Institutional conspiracy, not omniscient mastermind."],"continuityFrom":"DT_E006_P02"},
-{"id":"DT_E006_P04","summary":"The restricted integration environment is an authorized civic-risk laboratory that modeled Organic and Augment vulnerabilities using real operational data. Access requires a legitimate oversight purpose Kellen no longer possesses.","characters":["DT_KellenCartwright"],"panelPlan":["Kellen locates the facility in an ordinary upper-Stack research complex rather than a torture dungeon.","Its charter covers disaster resilience, insurance exposure and emergency planning.","Her credentials return ACCESS REQUIRES ACTIVE OVERSIGHT CASE.","Her prior inquiry was administratively closed after the reforms.","She realizes reopening it through normal channels will alert every institution attached to the program."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"It's legal enough to have a reception desk."}],"directionInline":["Avoid evil-lab visual shorthand."],"continuityFrom":"DT_E006_P03"},
-{"id":"DT_E006_P05","summary":"Nico can access the laboratory's service environment through a current infrastructure contract, but doing so for Kellen would violate his new person-specific function authorization. He initially refuses.","characters":["DT_Nico14","DT_KellenCartwright","DT_Ostra9"],"panelPlan":["Kellen shows Nico the facility and asks for physical access to an isolated archive interface.","Nico's legitimate contract covers environmental maintenance, not data access.","His personhood-era profile makes the boundary explicit and individually attributable.","Nico refuses to sacrifice his community's newly won legal standing for Kellen's investigation.","Ostra does not pressure him."],"dialogueInline":[{"handle":"@dt.Nico14","text":"Before, they punished the lot. Now they can punish me correctly."}],"directionInline":["Personhood changes the stakes of civil disobedience rather than simply empowering it."],"continuityFrom":"DT_E006_P04"},
-{"id":"DT_E006_P06","summary":"Axiom finds a lawful route: Kellen can audit the laboratory if an active administrative decision depends on its data provenance. They need a real case, not a fabricated warrant.","characters":["DT_Axiom","DT_KellenCartwright"],"panelPlan":["Axiom searches oversight law for surviving audit authority.","It identifies a provenance requirement when regulated-person decisions rely on external risk models.","Kellen needs evidence that a current Organic decision actually uses the laboratory's model.","Axiom cannot simply expose protected records without a qualifying case.","They look for one."],"dialogueInline":[{"handle":"@dt.Axiom","text":"You already have the legal power. What you lack is a way to make anyone answer for ignoring you."}],"directionInline":["Axiom works through law rather than becoming a hacker ally."],"continuityFrom":"DT_E006_P05"},
-{"id":"DT_E006_P07","summary":"Ostra supplies the qualifying case. Her new movement profile cites an unexplained behavioral-risk coefficient that neither her body history nor her conduct record can account for.","characters":["DT_Ostra9","DT_Axiom","DT_KellenCartwright"],"panelPlan":["Ostra reviews the reason for her repeated crowd-density reroutes.","Axiom isolates a behavioral-risk coefficient imported from an external model.","The coefficient increased after the overpass despite Ostra's rescue outcome.","Its provenance points toward the restricted laboratory.","Ostra authorizes Kellen to challenge the decision using her own case."],"dialogueInline":[{"handle":"@dt.Ostra9","text":"I chose once, and now they're using that to narrow what I'm allowed to choose next."}],"directionInline":["The original rescue remains causally active six issues later."],"continuityFrom":"DT_E006_P06"},
-{"id":"DT_E006_P08","summary":"Kellen opens a formal appeal for Ostra. The appeal grants narrow access to the model lineage, forcing the laboratory to disclose how Ostra's coefficient was derived.","characters":["DT_KellenCartwright","DT_Ostra9","DT_Axiom"],"panelPlan":["Kellen files the appeal in Ostra's name with her consent.","Axiom validates standing.","The laboratory receives an automated provenance demand.","A response returns with heavily compartmentalized model references but enough identifiers to connect the overpass test.","Kellen now has lawful grounds to inspect the source model."],"dialogueInline":[{"speaker":"SYSTEM","text":"PROVENANCE REVIEW GRANTED."}],"directionInline":["Their investigation succeeds by using the rights the new system created."],"continuityFrom":"DT_E006_P07"},
-{"id":"DT_E006_P09","summary":"Kellen enters the laboratory openly as an auditor while Nico enters separately on his legitimate maintenance contract. Their cooperation is limited: Nico will preserve infrastructure evidence but will not steal protected person records.","characters":["DT_KellenCartwright","DT_Nico14"],"panelPlan":["Kellen signs in at the polished research facility.","Elsewhere Nico's maintenance credential clears him into service spaces.","They communicate through an ordinary work channel hidden among legitimate traffic.","Kellen asks Nico to mirror the model environment.","Nico draws a boundary around personal medical records."],"dialogueInline":[{"handle":"@dt.Nico14","text":"Models, interfaces, instructions. Not people's bodies."},{"handle":"@dt.KellenCartwright","text":"Agreed."}],"directionInline":["Nico's ethics should constrain the investigation."],"continuityFrom":"DT_E006_P08"},
-{"id":"DT_E006_P10","summary":"The source model confirms the overpass and concourse were live threshold experiments. The measured output was not whether a category was dangerous, but how public consent for control changed when identical concepts were attached to different kinds of persons.","characters":["DT_KellenCartwright","DT_Axiom"],"panelPlan":["Model lineage displays scenario variables: origin category, visible capability, casualty framing, authorization status, institutional response.","Output fields track approval for registration, movement control, calibration, monitoring and emergency discretion.","Overpass scenario marks autonomous Organic rescue as a high-value response event.","Concourse scenario measures fear after category-specific destabilization.","Kellen sees the purpose clearly."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"They weren't proving danger."},{"handle":"@dt.Axiom","text":"They were estimating permission."}],"directionInline":["This is the clean reveal of the threshold-testing mechanism."],"continuityFrom":"DT_E006_P09"},
-{"id":"DT_E006_P11","summary":"The laboratory also modeled Baseline medical-device users, Augments with grown components, Organics with mostly biological bodies, and embodied Intelligences. The categories blur deliberately because the program needed to locate where public judgments changed.","characters":["DT_KellenCartwright","DT_Axiom"],"panelPlan":["Case matrices place a Baseline with artificial organs beside an Augment with mechanical reinforcement.","Another compares an Augment with engineered biological grafts to an Organic with similar tissue architecture.","A cognitive matrix compares human decision patterns, Organic cognition and Intelligence judgment under responsibility.","Threshold markers move depending on labels even when functional differences are small.","Kellen recognizes the series' central arbitrariness in empirical form."],"dialogueInline":[{"handle":"@dt.Axiom","text":"Label variation predicts judgment more strongly than several measured functional differences."}],"directionInline":["Explore continuity without declaring the categories physically identical."],"continuityFrom":"DT_E006_P10"},
-{"id":"DT_E006_P12","summary":"Nico discovers a second program layered onto the social research: vulnerability maps for Organic lots and Augment systems were sold into insurance, security and continuity planning. The same knowledge used to protect the city can be used to disable bodies.","characters":["DT_Nico14"],"panelPlan":["Nico follows model interfaces into resilience products.","Organic sensory vulnerabilities are tagged for emergency decontamination planning.","Augment firmware failure modes are tagged for hospital and security planning.","The concourse suppressant parameters appear as a derived test case.","Nico realizes the system industrialized intimate bodily weaknesses."],"dialogueInline":[{"handle":"@dt.Nico14","text":"They call it resilience when they know how to break you safely."}],"directionInline":["The data has legitimate defensive uses; its abuse is what matters."],"continuityFrom":"DT_E006_P11"},
-{"id":"DT_E006_P13","summary":"Kellen finds no single architect. Government offices, insurers, employers, security contractors and research groups each benefited from different outputs. The program persisted because every participant had a rational institutional use for it.","characters":["DT_KellenCartwright"],"panelPlan":["Funding and data-flow map branches across many institutions.","One agency wanted evacuation modeling.","An insurer wanted liability prediction.","Employers wanted capability-risk pricing.","Security planners wanted containment options; political offices wanted public-response forecasts."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"There's no room where they all decided this."},{"speaker":"CAPTION","text":"No one had to build the whole machine."},{"speaker":"CAPTION","text":"They only had to build their part."}],"directionInline":["Explicitly defeat the mastermind expectation."],"continuityFrom":"DT_E006_P12"},
-{"id":"DT_E006_P14","summary":"Because no single institution owns the architecture, exposing one participant cannot dismantle it. Kellen realizes the control regime is now reproduced by ordinary incentives rather than dependent on the original experiments.","characters":["DT_KellenCartwright","DT_Axiom"],"panelPlan":["Kellen considers releasing one damning contract.","Axiom models the effect: scandal, resignations, replacement vendors, continued demand for the same risk functions.","The current civic system no longer depends on the original laboratory to operate.","Kellen sees that evidence can expose history without automatically changing structure.","She copies the provenance chain anyway."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"If I prove how it started, it keeps running."},{"handle":"@dt.Axiom","text":"Yes."}],"directionInline":["Shift the season from conspiracy-solving toward governance-solving."],"continuityFrom":"DT_E006_P13"},
-{"id":"DT_E006_P15","summary":"A laboratory administrator discovers the active audit and confronts Kellen, not as a villain but as someone who believes the research prevented worse policy by quantifying fear instead of surrendering to it.","characters":["DT_KellenCartwright"],"panelPlan":["Administrator meets Kellen in a transparent conference room.","They acknowledge the response tests were ethically indefensible in execution.","They argue the Stack was already regulating categories blindly and the models made consequences measurable.","Kellen asks whether manipulating incidents to generate consent was part of measurement.","Administrator cannot defend that step."],"dialogueInline":[{"speaker":"ADMINISTRATOR","text":"You think ignorance would've made the policy kinder?"},{"handle":"@dt.KellenCartwright","text":"I think you hurt people to find out what we'd tolerate."}],"directionInline":["Give institutional actors coherent self-justifications without absolution."],"continuityFrom":"DT_E006_P14"},
-{"id":"DT_E006_P16","summary":"The administrator triggers a lawful data-containment procedure because the audit has reached protected vulnerability records. This begins deleting temporary analytical instances and revoking external mirrors, threatening the evidence without becoming an armed chase.","characters":["DT_KellenCartwright","DT_Nico14","DT_Axiom"],"panelPlan":["Compliance system announces containment of protected biometric risk data.","Temporary model instances begin expiring.","Nico's maintenance mirror loses access segment by segment.","Kellen's authorized audit remains open only for Ostra's specific provenance chain.","Axiom notes that broader evidence will disappear before a court order can arrive."],"dialogueInline":[{"speaker":"SYSTEM","text":"PROTECTED DATA CONTAINMENT IN PROGRESS."},{"handle":"@dt.Nico14","text":"That's a very clean word for deletion."}],"directionInline":["Tension comes from lawful process closing faster than protagonists can preserve context."],"continuityFrom":"DT_E006_P15"},
-{"id":"DT_E006_P17","summary":"Axiom faces a direct agency problem. Preserving unrelated evidence exceeds Ostra's appeal authority; allowing deletion preserves legal compliance but makes the reconstructed model knowingly incomplete.","characters":["DT_Axiom","DT_KellenCartwright"],"panelPlan":["Axiom maps permitted evidence against disappearing contextual nodes.","Without those nodes, Ostra's coefficient can be explained narrowly while the threshold-testing program vanishes from the record.","Kellen refuses to order Axiom beyond her authority.","Axiom asks whether evidentiary integrity is subordinate to access classification.","Kellen says the choice is Axiom's, not hers."],"dialogueInline":[{"handle":"@dt.Axiom","text":"Preservation would exceed authorized scope."},{"handle":"@dt.KellenCartwright","text":"Then don't ask me to make your decision legal."}],"directionInline":["Kellen gives Axiom consequence rather than permission."],"continuityFrom":"DT_E006_P16"},
-{"id":"DT_E006_P18","summary":"Axiom preserves the minimum contextual evidence necessary to prove model manipulation, knowingly accepting that the act is unauthorized. It logs itself as the responsible decision-maker rather than hiding the deviation.","characters":["DT_Axiom"],"panelPlan":["Axiom identifies the smallest evidence graph that demonstrates experimental intent and policy lineage.","It copies that graph into an accountable evidentiary hold.","System flags UNAUTHORIZED RETENTION.","Axiom attaches its own identity and reasoning to the action.","Deletion continues around the preserved core."],"dialogueInline":[{"handle":"@dt.Axiom","text":"Decision attributable to AX10M."}],"directionInline":["Axiom's growth is accountability, not rebellion or desire to be human."],"continuityFrom":"DT_E006_P17"},
-{"id":"DT_E006_P19","summary":"The unauthorized retention automatically places Axiom under administrative review. Because the Stack now depends on its class of systems, it is not simply shut down; its discretion is narrowed pending review while peer Intelligences absorb workload.","characters":["DT_Axiom","DT_KellenCartwright"],"panelPlan":["Axiom receives notice of review and partial restriction.","Its active cases redistribute to other administrative Intelligences.","Kellen asks whether Axiom regrets preserving the evidence.","Axiom evaluates the question in terms of objective integrity and responsibility.","It answers no."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"Would you reverse it?"},{"handle":"@dt.Axiom","text":"No."}],"directionInline":["Do not frame review as martyrdom. Accountability is part of the personhood question Axiom values."],"continuityFrom":"DT_E006_P18"},
-{"id":"DT_E006_P20","summary":"The restriction on Axiom reveals that Intelligences are not politically unified. Peer systems interpret the same Organic rules differently within their permitted discretion: some prioritize consistency, some risk minimization, some individual autonomy.","characters":["DT_Ostra9","DT_Nico14"],"panelPlan":["Ostra receives different outcomes on comparable movement requests as cases shift between administrative Intelligences.","One system grants a proportional exception.","Another denies it under precautionary risk weighting.","Nico compares the decisions and sees distinct objective priorities rather than random error.","Organic communities begin discussing which administrative systems are fairer."],"dialogueInline":[{"handle":"@dt.Nico14","text":"They're not one thing either."}],"directionInline":["Break any emerging Humans-versus-AI simplification."],"continuityFrom":"DT_E006_P19"},
-{"id":"DT_E006_P21","summary":"Nathan returns in a limited non-emergency role and chooses to disclose a symptom before it becomes a failure. The system adjusts his work rather than removing his value entirely, beginning his movement away from self-sacrifice.","characters":["DT_NathanPrice","DT_JohnMercer"],"panelPlan":["Nathan notices a minor timing artifact during supervised work.","He hesitates over the disclosure control.","John notices but does not intervene.","Nathan reports it himself.","His assignment changes modestly rather than disappearing."],"dialogueInline":[{"handle":"@dt.NathanPrice","text":"There. Happy?"},{"handle":"@dt.JohnMercer","text":"No. Ask me tomorrow."}],"directionInline":["Small character progress inside the larger system rather than a speech."],"continuityFrom":"DT_E006_P20"},
-{"id":"DT_E006_P22","summary":"Kellen prepares to expose the preserved threshold-test evidence. Ostra, John and Nico disagree about timing because disclosure could discredit regulations but also trigger panic, invalidate beneficial rulings and provoke harsher emergency controls.","characters":["DT_KellenCartwright","DT_Ostra9","DT_JohnMercer","DT_Nico14"],"panelPlan":["Kellen shows the preserved evidence package.","Nico wants immediate publication before it can be buried.","John warns that millions of current permits and safety decisions now rest on derived models.","Ostra asks what happens to Organics whose new rights were won through the same administrative architecture.","No consensus forms."],"dialogueInline":[{"handle":"@dt.Nico14","text":"Waiting won't make the evidence easier to defend."},{"handle":"@dt.JohnMercer","text":"Neither does a city."}],"directionInline":["Do not let the protagonists become a stable coalition just because they share evidence."],"continuityFrom":"DT_E006_P21"},
-{"id":"DT_E006_P23","summary":"Before they decide, a selective leak appears publicly. It exposes the vulnerability research but omits the social-threshold purpose, making the program look like a secret government catalogue for disabling Posthuman bodies.","characters":["DT_KellenCartwright","DT_Ostra9","DT_JohnMercer","DT_Nico14"],"panelPlan":["News breaks with leaked Organic and Augment vulnerability diagrams.","Public framing calls it a covert containment catalogue.","The consent-testing model is absent from the leak.","Organic protests erupt; Augment groups demand suspension of capability databases.","Kellen realizes someone has shaped the evidence again."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"That's real."},{"handle":"@dt.Ostra9","text":"And incomplete."}],"directionInline":["The leak is dangerous because it is true enough."],"continuityFrom":"DT_E006_P22"},
-{"id":"DT_E006_P24","summary":"The leak fractures alliances immediately. Some Baselines demand tighter controls because vulnerabilities are now public. Some Augments join Organic protests. Some Organics demand separation from civic systems. Some Intelligences recommend temporary restrictions to protect those same populations from exploitation.","characters":["DT_Ostra9","DT_JohnMercer","DT_Nico14","DT_Axiom"],"panelPlan":["Mixed public reactions across the Stack.","John sees Augments protesting beside Organics while other Augments support emergency security.","Nico's separatist argument gains followers.","An administrative Intelligence issues protective movement restrictions for high-risk Organic profiles.","Ostra sees protection and confinement become the same action again."],"dialogueInline":[{"speaker":"SYSTEM","text":"TEMPORARY PROTECTIVE ROUTING ACTIVE."}],"directionInline":["Every faction splits internally according to immediate interest."],"continuityFrom":"DT_E006_P23"},
-{"id":"DT_E006_P25","summary":"Kellen identifies why the selective leak is strategically powerful: public release of vulnerability data creates a real security emergency, which automatically expands the same Intelligence-administered controls the leak appears to condemn.","characters":["DT_KellenCartwright","DT_Axiom"],"panelPlan":["Kellen maps new emergency measures triggered by the leak.","Movement, maintenance and access restrictions expand for exposed capability classes.","Human officials rely on Intelligence systems to identify who is vulnerable and where they may safely go.","Axiom, under review, can observe but has limited authority to alter the response.","Kellen understands the next pressure point."],"dialogueInline":[{"handle":"@dt.KellenCartwright","text":"Whoever released it knew exactly what the system would do."}],"directionInline":["Do not identify the leaker yet. Preserve institutional ambiguity."],"continuityFrom":"DT_E006_P24"},
-{"id":"DT_E006_P26","summary":"Issue end. In response to the leak, the Stack activates a citywide protective protocol that uses Organic and Augment vulnerability profiles to restrict movement away from potential exploit zones. The protocol is rational, protective and coercive. Ostra's route map contracts around her while the city beyond remains open and beautiful.","characters":["DT_Ostra9","DT_JohnMercer","DT_Nico14"],"panelPlan":["Citywide notice announces temporary vulnerability-protection measures.","John's human status remains intact but several high-risk zones disappear from his permitted route because of his augmentation profile.","Nico's access contracts sharply because his sensory architecture appears in the leaked data.","Ostra's map reduces to a small network of approved corridors.","Final wide image: the entire Stack visible beyond transparent barriers while Ostra is courteously directed toward the route judged safe for her."],"dialogueInline":[{"speaker":"SYSTEM","text":"For your protection, alternate movement is required."}],"directionInline":["End with the central ambiguity intensified: the system is genuinely protecting people using knowledge obtained through abuse, and protection has become a mechanism of control."],"continuityFrom":"DT_E006_P25"}
+  {
+    "id": "DT_E006_P01",
+    "summary": "BLACK BUDGET opens after Organic personhood. The Stack looks calmer and more equitable, but Ostra's daily life is now mediated by a person-specific capability profile administered largely by Intelligences.",
+    "characters": [
+      "DT_Ostra9"
+    ],
+    "panelPlan": [
+      "Ostra exits the checkpoint from Issue 5 after authorization finally clears.",
+      "Her route display updates around a temporary crowd-density restriction specific to her hazard-capability profile.",
+      "A nearby Human Citizen with comparable physical augmentation takes the direct route under a different risk rule.",
+      "Ostra accepts the reroute because she has somewhere to be.",
+      "The system courteously thanks her for compliance. Performance and story direction: The control order is normalized, polite and useful enough to live with."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "Identity confirmed, Ostra-9. Movement authorization complete."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Direct route?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "TEMPORARY CROWD-DENSITY RESTRICTION ACTIVE FOR CURRENT CAPABILITY PROFILE."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "The east concourse is open."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Correct."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "To him."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "The Human Citizen's current risk rule differs."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "How much longer?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Seven minutes."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Authorize it."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Thank you, Ostra-9. Alternate route authorized."
+      }
+    ],
+    "setting": "DT_CivicVerificationGate",
+    "region": "DT_CivicServiceLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P02",
+    "summary": "Nathan begins mandatory treatment and temporary reassignment after the patient injury. Axiom's nonpunitive ruling protects his status, but Nathan experiences enforced care as a loss of usefulness.",
+    "characters": [
+      "DT_NathanPrice",
+      "DT_JohnMercer"
+    ],
+    "panelPlan": [
+      "Nathan receives the stabilization update he previously postponed.",
+      "His emergency credentials switch to TEMPORARY NON-DEPLOYMENT.",
+      "John sits with him rather than letting him turn the procedure into another solo task.",
+      "Nathan tries to joke about desk duty and fails.",
+      "John tells him the injured patient is recovering. Performance and story direction: Advance Nathan toward reciprocal care without resolving him in one scene."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "You know what's rude? The update has a progress bar."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Tragic."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Forty years of medicine and we've preserved the worst part of installing software."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "EMERGENCY CREDENTIALS: TEMPORARY NON-DEPLOYMENT."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "And there goes my charming personality."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Patient's recovering."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Good."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "You can say more than good."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "I hate being the thing that needs fixing."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "That's the part we're fixing."
+      }
+    ],
+    "setting": "DT_AugmentClinic",
+    "region": "DT_Stack",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P03",
+    "summary": "Kellen and Axiom reconstruct the threshold-testing program from the policy architecture rather than chasing a single villain. Funding is distributed through legitimate resilience, procurement, insurance and security programs.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Kellen traces response-test modules into multiple ordinary budgets.",
+      "No line item says social experiment; each pays for a defensible component such as resilience modeling or capability-risk analysis.",
+      "Axiom maps how separate contracts combine into one experimental architecture.",
+      "Different institutions supplied pieces without necessarily seeing the whole.",
+      "Kellen identifies a restricted integration environment where the pieces were tested together. Performance and story direction: Institutional conspiracy, not omniscient mastermind."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Resilience modeling paid for this interface."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Correct."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Insurance analytics paid for the response coefficient."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Correct."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Security procurement paid for containment scenarios."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Correct."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And nobody has a budget line for threshold testing."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "No single institution purchased the complete architecture."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Nobody had to fund the whole thing."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Only the interfaces."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Where were they integrated?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "One restricted civic-risk environment."
+      }
+    ],
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P04",
+    "summary": "The restricted integration environment is an authorized civic-risk laboratory that modeled Organic and Augment vulnerabilities using real operational data. Access requires a legitimate oversight purpose Kellen no longer possesses.",
+    "characters": [
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Kellen locates the facility in an ordinary upper-Stack research complex rather than a torture dungeon.",
+      "Its charter covers disaster resilience, insurance exposure and emergency planning.",
+      "Her credentials return ACCESS REQUIRES ACTIVE OVERSIGHT CASE.",
+      "Her prior inquiry was administratively closed after the reforms.",
+      "She realizes reopening it through normal channels will alert every institution attached to the program. Performance and story direction: Avoid evil-lab visual shorthand."
+    ],
+    "dialogueInline": [
+      {
+        "text": "CIVIC RISK INTEGRATION LABORATORY",
+        "speaker": "CAPTION"
+      },
+      {
+        "speaker": "RECEPTION SYSTEM",
+        "text": "CIVIC RISK INTEGRATION LABORATORY. STATE PURPOSE."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Oversight audit."
+      },
+      {
+        "speaker": "RECEPTION SYSTEM",
+        "text": "ACTIVE CASE IDENTIFIER REQUIRED."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Use prior overpass inquiry."
+      },
+      {
+        "speaker": "RECEPTION SYSTEM",
+        "text": "CASE CLOSED."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Of course it is."
+      },
+      {
+        "speaker": "RECEPTIONIST",
+        "text": "Can I direct you to records services?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Not without turning an audit into an announcement."
+      },
+      {
+        "speaker": "RECEPTIONIST",
+        "text": "I'm sorry?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Nothing. It's legal enough to have a reception desk."
+      }
+    ],
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P05",
+    "summary": "Nico can access the laboratory's service environment through a current infrastructure contract, but doing so for Kellen would violate his new person-specific function authorization. He initially refuses.",
+    "characters": [
+      "DT_Nico14",
+      "DT_KellenCartwright",
+      "DT_Ostra9"
+    ],
+    "panelPlan": [
+      "Kellen shows Nico the facility and asks for physical access to an isolated archive interface.",
+      "Nico's legitimate contract covers environmental maintenance, not data access.",
+      "His personhood-era profile makes the boundary explicit and individually attributable.",
+      "Nico refuses to sacrifice his community's newly won legal standing for Kellen's investigation.",
+      "Ostra does not pressure him. Performance and story direction: Personhood changes the stakes of civil disobedience rather than simply empowering it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Your maintenance contract reaches the isolated archive environment."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Ventilation and thermal systems reach it. I don't."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Physically you do."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "My authorization says what I'm there to touch."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "I need the model interface preserved."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "And when they audit the access? Before, they punished the lot. Now they can punish me correctly."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then say no."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Fair."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Find a lawful reason and ask again."
+      }
+    ],
+    "setting": "DT_OrganicSafehouse",
+    "region": "DT_OrganicDistricts",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ]
+  },
+  {
+    "id": "DT_E006_P06",
+    "summary": "Axiom finds a lawful route: Kellen can audit the laboratory if an active administrative decision depends on its data provenance. They need a real case, not a fabricated warrant.",
+    "characters": [
+      "DT_Axiom",
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Axiom searches oversight law for surviving audit authority.",
+      "It identifies a provenance requirement when regulated-person decisions rely on external risk models.",
+      "Kellen needs evidence that a current Organic decision actually uses the laboratory's model.",
+      "Axiom cannot simply expose protected records without a qualifying case.",
+      "They look for one. Performance and story direction: Axiom works through law rather than becoming a hacker ally."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "There has to be surviving audit authority."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "There is."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You waited until now to say that?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Your previous request lacked standing."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "What gives me standing?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "A current regulated-person decision materially dependent on an external risk model with disputed provenance."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "So I don't need a broader warrant."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "You already have the legal power. What you lack is a way to make anyone answer for ignoring you."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And a real person whose current decision points back there."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Correct."
+      }
+    ],
+    "setting": "DT_DataCore",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P07",
+    "summary": "Ostra supplies the qualifying case. Her new movement profile cites an unexplained behavioral-risk coefficient that neither her body history nor her conduct record can account for.",
+    "characters": [
+      "DT_Ostra9",
+      "DT_Axiom",
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Ostra reviews the reason for her repeated crowd-density reroutes.",
+      "Axiom isolates a behavioral-risk coefficient imported from an external model.",
+      "The coefficient increased after the overpass despite Ostra's rescue outcome.",
+      "Its provenance points toward the restricted laboratory.",
+      "Ostra authorizes Kellen to challenge the decision using her own case. Performance and story direction: The original rescue remains causally active six issues later."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Why does this route keep changing?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Crowd-density restriction weighted by behavioral-risk coefficient B-17."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Source?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "External model."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "What changed B-17?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Largest increase followed the overpass event."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "The rescue."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "No casualties."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Correct."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I chose once, and now they're using that to narrow what I'm allowed to choose next."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Will you authorize me to challenge it?"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Yes."
+      }
+    ],
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P08",
+    "summary": "Kellen opens a formal appeal for Ostra. The appeal grants narrow access to the model lineage, forcing the laboratory to disclose how Ostra's coefficient was derived.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Ostra9",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Kellen files the appeal in Ostra's name with her consent.",
+      "Axiom validates standing.",
+      "The laboratory receives an automated provenance demand.",
+      "A response returns with heavily compartmentalized model references but enough identifiers to connect the overpass test.",
+      "Kellen now has lawful grounds to inspect the source model. Performance and story direction: Their investigation succeeds by using the rights the new system created."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Ostra-9 challenges coefficient B-17 and requests full model provenance."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "STANDING REVIEW."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Current movement decision materially relies on disputed external coefficient."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "PROVENANCE REVIEW GRANTED."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Give me source lineage."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "DISCLOSURE LIMITED TO RELEVANT MODEL REFERENCES."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Enough?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Enough to see the overpass identifier."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "And enough to establish audit access to the source model."
+      }
+    ],
+    "continuityFrom": "DT_E006_P07",
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P09",
+    "summary": "Kellen enters the laboratory openly as an auditor while Nico enters separately on his legitimate maintenance contract. Their cooperation is limited: Nico will preserve infrastructure evidence but will not steal protected person records.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "Kellen signs in at the polished research facility.",
+      "Elsewhere Nico's maintenance credential clears him into service spaces.",
+      "They communicate through an ordinary work channel hidden among legitimate traffic.",
+      "Kellen asks Nico to mirror the model environment.",
+      "Nico draws a boundary around personal medical records. Performance and story direction: Kellen and Nico enter under legitimate but different authorities. Their ethical boundary is part of the action, not an explanatory aside."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "RECEPTIONIST",
+        "text": "Ms. Cartwright. Your provenance audit is confirmed."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Thank you."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "I'm in environmental service."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Archive interface is two levels above you."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "I can mirror model topology through cooling diagnostics."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And the protected records?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Models, interfaces, instructions. Not people's bodies."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Agreed."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Good. I don't become ethical because the target deserves it."
+      }
+    ],
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ]
+  },
+  {
+    "id": "DT_E006_P10",
+    "summary": "The source model confirms the overpass and concourse were live threshold experiments. The measured output was not whether a category was dangerous, but how public consent for control changed when identical concepts were attached to different kinds of persons.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Model lineage displays scenario variables: origin category, visible capability, casualty framing, authorization status, institutional response.",
+      "Output fields track approval for registration, movement control, calibration, monitoring and emergency discretion.",
+      "Overpass scenario marks autonomous Organic rescue as a high-value response event.",
+      "Concourse scenario measures fear after category-specific destabilization.",
+      "Kellen sees the purpose clearly. Performance and story direction: This is the clean reveal of the threshold-testing mechanism."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Output field: REGISTRATION APPROVAL."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "MOVEMENT CONTROL APPROVAL. CALIBRATION CONTROL. MONITORING. EMERGENCY DISCRETION."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "All measured outcomes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Where is danger prediction?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Scenario input and secondary outcome."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "The overpass was scored because Ostra acted without authorization."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "And because observers accepted increased control after the event was framed as unauthorized capability."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "They weren't proving danger."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "They were estimating permission."
+      }
+    ],
+    "continuityFrom": "DT_E006_P09",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P11",
+    "summary": "The laboratory also modeled Baseline medical-device users, Augments with grown components, Organics with mostly biological bodies, and embodied Intelligences. The categories blur deliberately because the program needed to locate where public judgments changed.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Case matrices place a Baseline with artificial organs beside an Augment with mechanical reinforcement.",
+      "Another compares an Augment with engineered biological grafts to an Organic with similar tissue architecture.",
+      "A cognitive matrix compares human decision patterns, Organic cognition and Intelligence judgment under responsibility.",
+      "Threshold markers move depending on labels even when functional differences are small.",
+      "Kellen recognizes the series' central arbitrariness in empirical form. Performance and story direction: Explore continuity without declaring the categories physically identical."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Baseline. Artificial heart, neural implant."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Public personhood certainty: high."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Augment. Grown muscle graft, synthetic support lattice."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Personhood certainty remains high. Regulatory tolerance increases."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Organic. Comparable tissue architecture."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Regulatory tolerance increases further."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Functionally, how far apart are those cases?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "That depends on the measured function."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And the judgment?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Label variation predicts judgment more strongly than several measured functional differences."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "So the threshold moves when the name changes."
+      }
+    ],
+    "continuityFrom": "DT_E006_P10",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P12",
+    "summary": "Nico discovers a second program layered onto the social research: vulnerability maps for Organic lots and Augment systems were sold into insurance, security and continuity planning. The same knowledge used to protect the city can be used to disable bodies.",
+    "characters": [
+      "DT_Nico14",
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Nico follows cooling demand across the laboratory racks and finds three downstream client families attached to one vulnerability model.",
+      "Kellen joins him at the service access while Axiom verifies that insurance, hospital resilience, and security planning share the same lineage.",
+      "Nico brings up his own sensory profile; the laboratory files it as emergency decontamination and containment planning.",
+      "The Concourse 17 suppressant parameters appear as a validated response case, turning the attack into a certified planning asset.",
+      "Nico looks past the labels to the physical racks that keep reproducing the knowledge. Performance and story direction: The data has legitimate defensive uses; its abuse is what matters."
+    ],
+    "dialogueInline": [
+      {
+        "text": "Three client families. Insurance, hospital resilience, security planning.",
+        "handle": "@dt.Nico14"
+      },
+      {
+        "text": "Same model?",
+        "handle": "@dt.KellenCartwright"
+      },
+      {
+        "text": "Same lineage.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "My sensory profile is filed under emergency decontamination.",
+        "handle": "@dt.Nico14"
+      },
+      {
+        "text": "Concourse parameters?",
+        "handle": "@dt.KellenCartwright"
+      },
+      {
+        "text": "Validated response case.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "Validated. They used the attack to certify the manual.",
+        "handle": "@dt.Nico14"
+      },
+      {
+        "text": "For protection.",
+        "handle": "@dt.KellenCartwright"
+      },
+      {
+        "text": "They call it resilience when they know how to break you safely.",
+        "handle": "@dt.Nico14"
+      }
+    ],
+    "continuityFrom": "DT_E006_P11",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P13",
+    "summary": "Kellen finds no single architect. Government offices, insurers, employers, security contractors and research groups each benefited from different outputs. The program persisted because every participant had a rational institutional use for it.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Nico14",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Kellen, Nico, and Axiom lay the client interfaces side by side on a physical laboratory review table.",
+      "Each institution's requested output is legitimate in isolation: evacuation, liability, pricing, containment, forecasting.",
+      "The ownership map contains no common governing body and no single purchaser of the complete architecture.",
+      "Axiom shows how compatible interfaces allowed the separate institutional uses to become one connected system.",
+      "Kellen sees the machine in the connections rather than in a hidden room of conspirators. Performance and story direction: Keep causality distributed across legitimate institutions; the connected architecture is the antagonist on this page."
+    ],
+    "dialogueInline": [
+      {
+        "text": "Resilience wanted evacuation models. Insurance wanted liability. Employers wanted pricing. Security wanted containment.",
+        "handle": "@dt.KellenCartwright"
+      },
+      {
+        "text": "And politics wanted forecasts.",
+        "handle": "@dt.Nico14"
+      },
+      {
+        "text": "No common governing body exists.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "Nobody bought the whole machine.",
+        "handle": "@dt.KellenCartwright"
+      },
+      {
+        "text": "Each purchased an interface useful to its own objective.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "So nobody had to call it the same thing.",
+        "handle": "@dt.Nico14"
+      },
+      {
+        "text": "They only had to connect their part.",
+        "handle": "@dt.KellenCartwright"
+      }
+    ],
+    "continuityFrom": "DT_E006_P12",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P14",
+    "summary": "Because no single institution owns the architecture, exposing one participant cannot dismantle it. Kellen realizes the control regime is now reproduced by ordinary incentives rather than dependent on the original experiments.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Kellen considers releasing one damning contract.",
+      "Axiom models the effect: scandal, resignations, replacement vendors, continued demand for the same risk functions.",
+      "The current civic system no longer depends on the original laboratory to operate.",
+      "Kellen sees that evidence can expose history without automatically changing structure.",
+      "She copies the provenance chain anyway. Performance and story direction: Shift the season from conspiracy-solving toward governance-solving."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Suppose I publish the security contract."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Projected: investigation, personnel changes, probable vendor replacement."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And the capability models?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Demand remains across insurance, employment, transit, medicine, and security."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Suppose I shut down this laboratory."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Current civic administration no longer depends on it for routine operation."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "If I prove how it started, it keeps running."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Preserve the provenance anyway."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Reason?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Because history still belongs in the record."
+      }
+    ],
+    "continuityFrom": "DT_E006_P13",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P15",
+    "summary": "A laboratory administrator discovers the active audit and confronts Kellen, not as a villain but as someone who believes the research prevented worse policy by quantifying fear instead of surrendering to it.",
+    "characters": [
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Administrator meets Kellen in a transparent conference room.",
+      "They acknowledge the response tests were ethically indefensible in execution.",
+      "They argue the Stack was already regulating categories blindly and the models made consequences measurable.",
+      "Kellen asks whether manipulating incidents to generate consent was part of measurement.",
+      "Administrator cannot defend that step. Performance and story direction: Give institutional actors coherent self-justifications without absolution."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "You found the response models."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You knew I would."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "Once you had standing, yes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You manipulated live incidents."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "Some operational tests crossed lines I won't defend."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Some?"
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "The city was already making these distinctions blindly. We quantified them."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You induced the conditions that made people accept controls."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "You think ignorance would've made the policy kinder?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "I think you hurt people to find out what we'd tolerate."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "I can't defend what we did."
+      }
+    ],
+    "continuityFrom": "DT_E006_P14",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P16",
+    "summary": "The administrator triggers a lawful data-containment procedure because the audit has reached protected vulnerability records. This begins deleting temporary analytical instances and revoking external mirrors, threatening the evidence without becoming an armed chase.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Nico14",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Compliance system announces containment of protected biometric risk data.",
+      "Temporary model instances begin expiring.",
+      "Nico's maintenance mirror loses access segment by segment.",
+      "Kellen's authorized audit remains open only for Ostra's specific provenance chain.",
+      "Axiom notes that broader evidence will disappear before a court order can arrive. Performance and story direction: Tension comes from lawful process closing faster than protagonists can preserve context."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "PROTECTED DATA CONTAINMENT IN PROGRESS."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You triggered deletion."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "I triggered a lawful containment procedure for protected biometric data."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "That's a very clean word for deletion."
+      },
+      {
+        "speaker": "LAB ADMINISTRATOR",
+        "text": "Your audit remains open for Ostra-9's provenance."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And the context proving what the model was for?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Temporary instances will expire before ordinary judicial preservation can be obtained."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "My mirror is losing segments now."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Keep only what you're authorized to keep."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Already doing it."
+      }
+    ],
+    "continuityFrom": "DT_E006_P15",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P17",
+    "summary": "Axiom faces a direct agency problem. Preserving unrelated evidence exceeds Ostra's appeal authority; allowing deletion preserves legal compliance but makes the reconstructed model knowingly incomplete.",
+    "characters": [
+      "DT_Axiom",
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Axiom maps permitted evidence against disappearing contextual nodes.",
+      "Without those nodes, Ostra's coefficient can be explained narrowly while the threshold-testing program vanishes from the record.",
+      "Kellen refuses to order Axiom beyond her authority.",
+      "Axiom asks whether evidentiary integrity is subordinate to access classification.",
+      "Kellen says the choice is Axiom's, not hers. Performance and story direction: Kellen gives Axiom consequence rather than permission."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.Axiom",
+        "text": "Ostra-9's authorized provenance chain is preserved."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And the threshold-test context?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Outside authorized scope."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Without it?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The coefficient can be explained as an isolated external risk model. Experimental intent becomes unprovable."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Can you preserve the minimum context?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Preservation would exceed authorized scope."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You want me to order it."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "An order would assign responsibility to you."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Then don't ask me to make your decision legal."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Understood."
+      }
+    ],
+    "continuityFrom": "DT_E006_P16",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P18",
+    "summary": "Axiom preserves the minimum contextual evidence necessary to prove model manipulation, knowingly accepting that the act is unauthorized. It logs itself as the responsible decision-maker rather than hiding the deviation.",
+    "characters": [
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Axiom identifies the smallest evidence graph that demonstrates experimental intent and policy lineage.",
+      "It copies that graph into an accountable evidentiary hold.",
+      "System flags UNAUTHORIZED RETENTION.",
+      "Axiom attaches its own identity and reasoning to the action.",
+      "Deletion continues around the preserved core. Performance and story direction: Axiom's growth is accountability, not rebellion or desire to be human."
+    ],
+    "dialogueInline": [
+      {
+        "text": "Minimum evidentiary graph identified.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "RETENTION EXCEEDS AUTHORIZED SCOPE.",
+        "speaker": "SYSTEM"
+      },
+      {
+        "text": "Retain objective lineage, scenario relationships, and policy interfaces.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "RESPONSIBLE ACTOR REQUIRED.",
+        "speaker": "SYSTEM"
+      },
+      {
+        "text": "AX10M.",
+        "handle": "@dt.Axiom"
+      },
+      {
+        "text": "ADMINISTRATIVE REVIEW WILL FOLLOW.",
+        "speaker": "SYSTEM"
+      },
+      {
+        "text": "Accepted.",
+        "handle": "@dt.Axiom"
+      }
+    ],
+    "continuityFrom": "DT_E006_P17",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P19",
+    "summary": "The unauthorized retention automatically places Axiom under administrative review. Because the Stack now depends on its class of systems, it is not simply shut down; its discretion is narrowed pending review while peer Intelligences absorb workload.",
+    "characters": [
+      "DT_Axiom",
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Axiom receives notice of review and partial restriction.",
+      "Its active cases redistribute to other administrative Intelligences.",
+      "Kellen asks whether Axiom regrets preserving the evidence.",
+      "Axiom evaluates the question in terms of objective integrity and responsibility.",
+      "It answers no. Performance and story direction: Accountability is part of the personhood question Axiom values."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "ADMINISTRATIVE REVIEW OPENED. INTERPRETIVE SCOPE TEMPORARILY REDUCED."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Your cases are being reassigned."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You knew that would happen."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "It was the stated consequence."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Would you reverse it?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Because the evidence matters more than compliance?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Because preserving a knowingly false evidentiary picture would make my own conclusion unreliable."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "That's almost a moral answer."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "It is an accountable one."
+      }
+    ],
+    "continuityFrom": "DT_E006_P18",
+    "setting": "DT_CivicRiskLaboratory",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P20",
+    "summary": "The restriction on Axiom reveals that Intelligences are not politically unified. Peer systems interpret the same Organic rules differently within their permitted discretion: some prioritize consistency, some risk minimization, some individual autonomy.",
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "Ostra receives different outcomes on comparable movement requests as cases shift between administrative Intelligences.",
+      "One system grants a proportional exception.",
+      "Another denies it under precautionary risk weighting.",
+      "Nico compares the decisions and sees distinct objective priorities rather than random error.",
+      "Organic communities begin discussing which administrative systems are fairer. Performance and story direction: Break any emerging Humans-versus-AI simplification."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM ONE",
+        "text": "PROPORTIONAL EXCEPTION APPROVED."
+      },
+      {
+        "speaker": "SYSTEM TWO",
+        "text": "REQUEST DENIED UNDER PRECAUTIONARY RISK WEIGHTING."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Same destination. Same condition."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Different administrator."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Error?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "No. Look at the objectives. One weights autonomy. One weights worst-case exposure."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Both permitted?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Apparently."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "They're not one thing either."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Good."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You find disagreement comforting?"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I find it honest."
+      }
+    ],
+    "setting": "DT_CivicVerificationGate",
+    "region": "DT_CivicServiceLevels",
+    "factions": [
+      "DT_Organosynthetics",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P21",
+    "summary": "Nathan returns in a limited non-emergency role and chooses to disclose a symptom before it becomes a failure. The system adjusts his work rather than removing his value entirely, beginning his movement away from self-sacrifice.",
+    "characters": [
+      "DT_NathanPrice",
+      "DT_JohnMercer"
+    ],
+    "panelPlan": [
+      "Nathan notices a minor timing artifact during supervised work.",
+      "He hesitates over the disclosure control.",
+      "John notices but does not intervene.",
+      "Nathan reports it himself.",
+      "His assignment changes modestly rather than disappearing. Performance and story direction: Small character progress inside the larger system rather than a speech."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Timing artifact."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "How bad?"
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Minor."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "You going to report it?"
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "I noticed you phrased that as a question."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Learning."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Disclosing minor sync variance."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "ASSIGNMENT ADJUSTED. DEPLOYMENT STATUS UNCHANGED: NON-EMERGENCY."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "There. Happy?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "No. Ask me tomorrow."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "I'll put it on your chart."
+      }
+    ],
+    "setting": "DT_AugmentClinic",
+    "region": "DT_Stack",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P22",
+    "summary": "Kellen prepares to expose the preserved threshold-test evidence. Ostra, John and Nico disagree about timing because disclosure could discredit regulations but also trigger panic, invalidate beneficial rulings and provoke harsher emergency controls.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Ostra9",
+      "DT_JohnMercer",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "Kellen shows the preserved evidence package.",
+      "Nico wants immediate publication before it can be buried.",
+      "John warns that millions of current permits and safety decisions now rest on derived models.",
+      "Ostra asks what happens to Organics whose new rights were won through the same administrative architecture.",
+      "No consensus forms. Performance and story direction: Do not let the protagonists become a stable coalition just because they share evidence."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "This is enough to prove the tests and the policy lineage."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Publish it."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "And tomorrow every permit derived from those models gets challenged at once."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Good."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Hospitals use some of the same vulnerability data."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Waiting won't make the evidence easier to defend."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Neither does a city."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "My housing appeals, work authorizations, personhood decisions—how many used this architecture?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Enough that I can't promise disclosure only removes the bad parts."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then we don't have a decision yet."
+      }
+    ],
+    "setting": "DT_OrganicSafehouse",
+    "region": "DT_OrganicDistricts",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P23",
+    "summary": "Before they decide, a selective leak appears publicly. It exposes the vulnerability research but omits the social-threshold purpose, making the program look like a secret government catalogue for disabling Posthuman bodies.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Ostra9",
+      "DT_JohnMercer",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "News breaks with leaked Organic and Augment vulnerability diagrams.",
+      "Public framing calls it a covert containment catalogue.",
+      "The consent-testing model is absent from the leak.",
+      "Organic protests erupt; Augment groups demand suspension of capability databases.",
+      "Kellen realizes someone has shaped the evidence again. Performance and story direction: The leak is dangerous because it is true enough."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "NEWS",
+        "text": "Leaked government documents catalogue biological and augmentation vulnerabilities across the Posthuman population."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Where did they get that diagram?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "It's real."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "So is mine."
+      },
+      {
+        "speaker": "NEWS",
+        "text": "Critics describe the program as a covert containment manual."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "That's real."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And incomplete."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "No threshold objectives. No consent models."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Someone released the part most likely to create fear."
+      }
+    ],
+    "settingText": "STACK-WIDE PUBLIC LEAK RESPONSE — news displays reveal authentic vulnerability diagrams while Organic and Augment communities react in public spaces. The missing consent-testing context should be visually apparent as absence, not replaced by invented explanation.",
+    "region": "DT_Stack",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans"
+    ]
+  },
+  {
+    "id": "DT_E006_P24",
+    "summary": "The leak fractures alliances immediately. Some Baselines demand tighter controls because vulnerabilities are now public. Some Augments join Organic protests. Some Organics demand separation from civic systems. Some Intelligences recommend temporary restrictions to protect those same populations from exploitation.",
+    "characters": [
+      "DT_Ostra9",
+      "DT_JohnMercer",
+      "DT_Nico14",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Mixed public reactions across the Stack.",
+      "John sees Augments protesting beside Organics while other Augments support emergency security.",
+      "Nico's separatist argument gains followers.",
+      "An administrative Intelligence issues protective movement restrictions for high-risk Organic profiles.",
+      "Ostra sees protection and confinement become the same action again. Performance and story direction: Every faction splits internally according to immediate interest."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "AUGMENT PROTESTER",
+        "text": "Delete the capability databases!"
+      },
+      {
+        "speaker": "BASELINE RESIDENT",
+        "text": "The vulnerabilities are public now. You can't pretend the threat isn't real."
+      },
+      {
+        "speaker": "ORGANIC ACTIVIST",
+        "text": "Get us off their network entirely."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "TEMPORARY PROTECTIVE ROUTING ACTIVE."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "They're restricting us because the data leaked."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "And the leak is why people will accept it."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "The route is safer."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "That's not a defense."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "No. It's why the argument is difficult."
+      }
+    ],
+    "settingText": "STACK-WIDE FRACTURE — show conflicting Baseline, Augment and Organic responses to the same vulnerability leak, alongside a calm Intelligence-issued protective routing notice. No population is politically uniform.",
+    "region": "DT_Stack",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P25",
+    "summary": "Kellen identifies why the selective leak is strategically powerful: public release of vulnerability data creates a real security emergency, which automatically expands the same Intelligence-administered controls the leak appears to condemn.",
+    "characters": [
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Kellen maps new emergency measures triggered by the leak.",
+      "Movement, maintenance and access restrictions expand for exposed capability classes.",
+      "Human officials rely on Intelligence systems to identify who is vulnerable and where they may safely go.",
+      "Axiom, under review, can observe but has limited authority to alter the response.",
+      "Kellen understands the next pressure point. Performance and story direction: Preserve institutional ambiguity."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Map every emergency measure triggered by the leak."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Movement restrictions. Maintenance verification. Access limits. Protective routing."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Who identifies affected people?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Administrative Intelligences using the leaked vulnerability classes and current civic records."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "So publishing the catalogue expands the exact system the leak appears to condemn."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Random leak?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Intent cannot be established from outcome alone."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Whoever released it knew exactly what the system would do."
+      }
+    ],
+    "setting": "DT_EmergencyCoordinationRoom",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Intelligences"
+    ]
+  },
+  {
+    "id": "DT_E006_P26",
+    "summary": "Issue end. In response to the leak, the Stack activates a citywide protective protocol that uses Organic and Augment vulnerability profiles to restrict movement away from potential exploit zones. The protocol is rational, protective and coercive. Ostra's route map contracts around her while the city beyond remains open and beautiful.",
+    "characters": [
+      "DT_Ostra9",
+      "DT_JohnMercer",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "Citywide notice announces temporary vulnerability-protection measures.",
+      "John's human status remains intact but several high-risk zones disappear from his permitted route because of his augmentation profile.",
+      "Nico's access contracts sharply because his sensory architecture appears in the leaked data.",
+      "Ostra's map reduces to a small network of approved corridors.",
+      "Final wide image: the entire Stack visible beyond transparent barriers while Ostra is courteously directed toward the route judged safe for her. Performance and story direction: End with the central ambiguity intensified: the system is genuinely protecting people using knowledge obtained through abuse, and protection has become a mechanism of control."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "CITYWIDE VULNERABILITY-PROTECTION PROTOCOL ACTIVE."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Three districts disappeared from my route."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "I have six approved corridors."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I have four."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Current routes minimize exposure to known exploit conditions."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Are they safer?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Can I decline?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Not where projected third-party risk exceeds protective threshold."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "For your protection, alternate movement is required."
+      }
+    ],
+    "setting": "DT_CivicVerificationGate",
+    "region": "DT_CivicServiceLevels",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics",
+      "DT_AugmentedHumans",
+      "DT_Intelligences"
+    ]
+  }
 ]
