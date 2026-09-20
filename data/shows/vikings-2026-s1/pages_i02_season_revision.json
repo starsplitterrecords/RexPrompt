@@ -2457,7 +2457,7 @@
     "issue": 2,
     "page": 23,
     "title": "Lock It Behind Me",
-    "summary": "Carrie gives the household its first real privacy by leaving and telling Bjorn to lock her out of the space she arranged for them.",
+    "summary": "Carrie leaves the functioning household and tells Bjorn to lock her out, making privacy and the turn of the brass key the final practical lesson of the night.",
     "settingText": "Bushwick studio doorway and fifth-floor hallway",
     "charactersInline": [
       {
@@ -2490,7 +2490,7 @@
         "panel": 1,
         "location": "Bushwick studio doorway and fifth-floor hallway",
         "shotType": "wide",
-        "action": "Carrie stands in the open doorway with coat and folder; the household remains inside the now-organized studio.",
+        "action": "Carrie stands in the open doorway with coat and folder; the household remains inside the organized studio.",
         "dialogueIndices": [
           0
         ]
@@ -2509,7 +2509,7 @@
         "panel": 3,
         "location": "Bushwick studio doorway and fifth-floor hallway",
         "shotType": "close",
-        "action": "Carrie points to the key in his hand.",
+        "action": "Carrie points to the brass key in his hand.",
         "dialogueIndices": [
           3
         ]
@@ -2527,8 +2527,18 @@
       {
         "panel": 5,
         "location": "Bushwick studio doorway and fifth-floor hallway",
+        "shotType": "insert",
+        "action": "From inside 5B, the brass key turns in the lock after Carrie steps into the hall."
+      },
+      {
+        "panel": 6,
+        "location": "Bushwick studio doorway and fifth-floor hallway",
         "shotType": "wide",
-        "action": "Carrie steps into the hallway; Bjorn closes the door."
+        "action": "Bjorn tests the locked handle once. Behind him Gunnar sits with the household map while Astrid and the two male Kin continue separate small tasks.",
+        "dialogueIndices": [
+          6,
+          7
+        ]
       }
     ],
     "dialogueInline": [
@@ -2567,181 +2577,29 @@
         "handle": "@vik.Carrie",
         "text": "That is privacy. You are going to love it.",
         "subtext": "Panel 4"
-      }
-    ],
-    "continuityFrom": "VIK_S1I02_P21"
-  },
-  {
-    "id": "VIK_S1I02_P24",
-    "issue": 2,
-    "page": 24,
-    "title": "The Click",
-    "summary": "The lock turning is treated as an emotional event: the household is temporarily protected from the city and from Carrie, not merely contained by them.",
-    "settingText": "Bushwick studio apartment / closed front door",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
       },
       {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Bushwick studio apartment / closed front door",
-        "shotType": "insert",
-        "action": "The brass key turns in the lock from inside."
-      },
-      {
-        "panel": 2,
-        "location": "Bushwick studio apartment / closed front door",
-        "shotType": "medium",
-        "action": "Bjorn tests the locked handle once."
-      },
-      {
-        "panel": 3,
-        "location": "Bushwick studio apartment / closed front door",
-        "shotType": "wide",
-        "action": "Behind him, Gunnar sits with the household map; Astrid and the two male Kin continue separate small tasks in the warm room."
-      },
-      {
-        "panel": 4,
-        "location": "Bushwick studio apartment / closed front door",
-        "shotType": "two-shot",
-        "action": "Gunnar looks toward the shut door.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Bushwick studio apartment / closed front door",
-        "shotType": "close",
-        "action": "Bjorn considers the new form of sovereignty.",
-        "dialogueIndices": [
-          1
-        ]
-      }
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1I02_P24_L01",
+        "fid": "VIK_S1I02_P23_L07",
         "handle": "@vik.Gunnar",
         "text": "She cannot enter without us opening it.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 6"
       },
       {
-        "fid": "VIK_S1I02_P24_L02",
+        "fid": "VIK_S1I02_P23_L08",
         "handle": "@vik.Bjorn",
         "text": "Good.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 6"
       }
     ],
     "continuityFrom": "VIK_S1I02_P22"
   },
   {
-    "id": "VIK_S1I02_P25",
+    "id": "VIK_S1I02_P24",
     "issue": 2,
-    "page": 25,
-    "title": "Small Hall",
-    "summary": "The room settles into ordinary nighttime life, with the first signs of future routines already present rather than every beat being about adaptation.",
-    "settingText": "Bushwick studio apartment late night",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Bushwick studio apartment late night",
-        "shotType": "wide",
-        "action": "Astrid stores the last bodega food; First Male Kin folds a coat under his head; Second Male Kin checks the window latch; Gunnar puts the contact card beside the key hook."
-      },
-      {
-        "panel": 2,
-        "location": "Bushwick studio apartment late night",
-        "shotType": "medium",
-        "action": "Bjorn sits with his back against the wall, boots off, finally still."
-      },
-      {
-        "panel": 3,
-        "location": "Bushwick studio apartment late night",
-        "shotType": "close",
-        "action": "The bodega bag and receipt sit beside old Norse travel gear."
-      },
-      {
-        "panel": 4,
-        "location": "Bushwick studio apartment late night",
-        "shotType": "wide",
-        "action": "The radiator glows with heat while street light crosses the floor."
-      },
-      {
-        "panel": 5,
-        "location": "Bushwick studio apartment late night",
-        "shotType": "medium",
-        "action": "First Male Kin looks around.",
-        "dialogueIndices": [
-          0,
-          1
-        ]
-      }
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1I02_P25_L01",
-        "handle": "@vik.KinMan1",
-        "text": "Small hall.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1I02_P25_L02",
-        "handle": "@vik.Gunnar",
-        "text": "Warm hall.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "continuityFrom": "VIK_S1I02_P23"
-  },
-  {
-    "id": "VIK_S1I02_P26",
-    "issue": 2,
-    "page": 26,
+    "page": 24,
     "title": "Landfall",
-    "summary": "The issue closes on a functioning household rather than a completed form: the city has granted only a provisional foothold, but the people inside have already begun making it home.",
-    "settingText": "Bushwick apartment 5B and hallway exterior",
+    "summary": "The issue closes on a warm, functioning household whose ordinary routines now matter more than the form that made the placement provisional.",
+    "settingText": "Bushwick apartment 5B late night and hallway exterior",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2771,13 +2629,19 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Bushwick apartment 5B and hallway exterior",
+        "location": "Bushwick apartment 5B late night and hallway exterior",
         "shotType": "wide",
-        "action": "Inside 5B: bedding arranged, groceries put away, hot water mug or wash basin, household map, completed packet, bodega receipt, and brass key all coexist in one coherent room."
+        "action": "Inside 5B: bedding arranged, groceries put away, household map, completed packet, bodega receipt, contact card and brass key all coexist in one coherent room."
       },
       {
         "panel": 2,
-        "location": "Bushwick apartment 5B and hallway exterior",
+        "location": "Bushwick apartment 5B late night and hallway exterior",
+        "shotType": "medium",
+        "action": "Astrid stores the last food while First Male Kin settles folded bedding and Second Male Kin checks the window latch; no one waits for Bjorn to assign them places."
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment 5B late night and hallway exterior",
         "shotType": "medium",
         "action": "Bjorn looks at the key hanging by the door.",
         "dialogueIndices": [
@@ -2785,28 +2649,26 @@
         ]
       },
       {
-        "panel": 3,
-        "location": "Bushwick apartment 5B and hallway exterior",
+        "panel": 4,
+        "location": "Bushwick apartment 5B late night and hallway exterior",
         "shotType": "medium",
         "action": "Gunnar glances at the review notice still clipped to the packet.",
         "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Bushwick apartment 5B and hallway exterior",
-        "shotType": "wide",
-        "action": "Astrid and the two male Kin settle into their own chosen places rather than waiting for Bjorn to assign them.",
-        "dialogueIndices": [
+          1,
           2
         ]
       },
       {
         "panel": 5,
-        "location": "Bushwick apartment 5B and hallway exterior",
+        "location": "Bushwick apartment 5B late night and hallway exterior",
+        "shotType": "wide",
+        "action": "The radiator heats the small room while street light crosses old Norse travel gear and new bodega groceries."
+      },
+      {
+        "panel": 6,
+        "location": "Bushwick apartment 5B late night and hallway exterior",
         "shotType": "exterior",
-        "action": "In the hallway outside the locked door, Carrie leans briefly against the wall, hears ordinary movement inside, and heads for the stairs.",
+        "action": "In the hallway outside the locked door, Carrie leans briefly against the wall, hears ordinary movement inside, then heads for the stairs.",
         "dialogueIndices": [
           3
         ]
@@ -2814,28 +2676,28 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1I02_P26_L01",
+        "fid": "VIK_S1I02_P24_L01",
         "handle": "@vik.Bjorn",
         "text": "Ours under law.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1I02_P26_L02",
-        "handle": "@vik.Gunnar",
-        "text": "Until the review.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1I02_P26_L03",
+        "fid": "VIK_S1I02_P24_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Until the review.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1I02_P24_L03",
         "handle": "@vik.Bjorn",
         "text": "Then we make the time count.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1I02_P26_L04",
+        "fid": "VIK_S1I02_P24_L04",
         "handle": "@vik.Carrie",
         "text": "Please just make it to morning.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 6"
       }
     ],
     "continuityFrom": "VIK_S1I02_P23"
