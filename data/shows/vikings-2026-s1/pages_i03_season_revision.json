@@ -1151,7 +1151,7 @@
         "subtext": "Panel 4"
       }
     ],
-    "continuityFrom": "VIK_S1E03_P10"
+    "continuityFrom": "VIK_S1E03_P11"
   },
   {
     "id": "VIK_S1E03_P13",
@@ -1159,77 +1159,8 @@
     "issue": 3,
     "page": 13,
     "title": "The House Hides Its Name",
-    "summary": "The destination finally appears, undercutting the idea that successful navigation means institutions themselves are legible.",
-    "settingText": "Temporary DTI annex exterior",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Temporary DTI annex exterior",
-        "shotType": "wide",
-        "action": "Plain temporary municipal office exterior with a small DTI paper sign taped behind glass and older building signage still visible."
-      },
-      {
-        "panel": 2,
-        "location": "Temporary DTI annex exterior",
-        "shotType": "medium",
-        "action": "Bjorn compares the appointment slip with the nearly hidden sign.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Temporary DTI annex exterior",
-        "shotType": "medium",
-        "action": "Carrie checks the number twice.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Temporary DTI annex exterior",
-        "shotType": "close",
-        "action": "Gunnar notices several employees entering around the side."
-      }
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E03_P13_L01",
-        "handle": "@vik.Bjorn",
-        "text": "This house hides its true name.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E03_P13_L02",
-        "handle": "@vik.Carrie",
-        "text": "This house lost a budget meeting.",
-        "subtext": "Panel 3"
-      }
-    ]
-  },
-  {
-    "id": "VIK_S1E03_P14",
-    "episode": "S1E03",
-    "issue": 3,
-    "page": 14,
-    "title": "The Closed Side Entrance",
-    "summary": "Contradictory posted directions become one concise obstacle instead of the whole issue, and Gunnar again reads what people actually do.",
-    "settingText": "Temporary DTI annex exterior / side door",
+    "summary": "The moved annex is difficult to identify and its posted directions contradict one another, but Gunnar solves the problem by watching the route employees actually use.",
+    "settingText": "Temporary DTI annex exterior and side entrance",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -1251,87 +1182,101 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Temporary DTI annex exterior / side door",
-        "shotType": "insert",
-        "action": "A front-door notice points to SIDE ENTRANCE; the side entrance has a paper notice pointing back toward reception."
+        "location": "Temporary DTI annex exterior and side entrance",
+        "shotType": "wide",
+        "action": "Plain temporary municipal office exterior with a small DTI paper sign taped behind glass and older building signage still visible."
       },
       {
         "panel": 2,
-        "location": "Temporary DTI annex exterior / side door",
+        "location": "Temporary DTI annex exterior and side entrance",
         "shotType": "medium",
-        "action": "Carrie reads both signs.",
+        "action": "Bjorn compares the appointment slip with the nearly hidden sign.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 3,
-        "location": "Temporary DTI annex exterior / side door",
-        "shotType": "two-shot",
-        "action": "Bjorn looks between them.",
+        "location": "Temporary DTI annex exterior and side entrance",
+        "shotType": "medium",
+        "action": "Carrie finds a front-door notice pointing to SIDE ENTRANCE and then a side-door notice pointing back toward reception.",
         "dialogueIndices": [
           1
         ]
       },
       {
         "panel": 4,
-        "location": "Temporary DTI annex exterior / side door",
-        "shotType": "close",
-        "action": "Gunnar watches an employee carrying coffee use an unmarked service door.",
+        "location": "Temporary DTI annex exterior and side entrance",
+        "shotType": "two-shot",
+        "action": "Bjorn looks between the conflicting notices.",
         "dialogueIndices": [
           2
         ]
       },
       {
         "panel": 5,
-        "location": "Temporary DTI annex exterior / side door",
+        "location": "Temporary DTI annex exterior and side entrance",
+        "shotType": "close",
+        "action": "Gunnar watches an employee carrying coffee use an unmarked working service door.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 6,
+        "location": "Temporary DTI annex exterior and side entrance",
         "shotType": "medium",
         "action": "Carrie follows his gaze.",
         "dialogueIndices": [
-          3,
-          4
+          4,
+          5
         ]
       }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P14_L01",
-        "handle": "@vik.Carrie",
-        "text": "Of course.",
+        "fid": "VIK_S1E03_P13_L01",
+        "handle": "@vik.Bjorn",
+        "text": "This house hides its true name.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P14_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Which gate lies least?",
+        "fid": "VIK_S1E03_P13_L02",
+        "handle": "@vik.Carrie",
+        "text": "Of course.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P14_L03",
-        "handle": "@vik.Gunnar",
-        "text": "That one.",
+        "fid": "VIK_S1E03_P13_L03",
+        "handle": "@vik.Bjorn",
+        "text": "Which gate lies least?",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P14_L04",
-        "handle": "@vik.Carrie",
-        "text": "That is not an invitation.",
+        "fid": "VIK_S1E03_P13_L04",
+        "handle": "@vik.Gunnar",
+        "text": "That one.",
         "subtext": "Panel 5"
       },
       {
-        "fid": "VIK_S1E03_P14_L05",
+        "fid": "VIK_S1E03_P13_L05",
+        "handle": "@vik.Carrie",
+        "text": "That is not an invitation.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L06",
         "handle": "@vik.Gunnar",
         "text": "It is open.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 6"
       }
-    ],
-    "continuityFrom": "VIK_S1E03_P12"
+    ]
   },
   {
-    "id": "VIK_S1E03_P15",
+    "id": "VIK_S1E03_P14",
     "episode": "S1E03",
     "issue": 3,
-    "page": 15,
+    "page": 14,
     "title": "The Hidden Hall",
     "summary": "Carrie reluctantly follows the route staff actually use, while Bjorn recognizes the invisible labor infrastructure underneath an institution that looks confusing from the front.",
     "settingText": "DTI annex service entrance and interior corridor",
@@ -1399,25 +1344,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P15_L01",
+        "fid": "VIK_S1E03_P14_L01",
         "handle": "@vik.Carrie",
         "text": "We are not calling this breaking in.",
         "subtext": "Panel 1"
       },
       {
-        "fid": "VIK_S1E03_P15_L02",
+        "fid": "VIK_S1E03_P14_L02",
         "handle": "@vik.Gunnar",
         "text": "We were invited by traffic.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P15_L03",
+        "fid": "VIK_S1E03_P14_L03",
         "handle": "@vik.Bjorn",
         "text": "Hidden roads for those who keep the hall alive.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P15_L04",
+        "fid": "VIK_S1E03_P14_L04",
         "handle": "@vik.Carrie",
         "text": "Hallway. We are calling it a hallway.",
         "subtext": "Panel 4"
@@ -1426,10 +1371,10 @@
     "continuityFrom": "VIK_S1E03_P13"
   },
   {
-    "id": "VIK_S1E03_P16",
+    "id": "VIK_S1E03_P15",
     "episode": "S1E03",
     "issue": 3,
-    "page": 16,
+    "page": 15,
     "title": "Reception",
     "summary": "The remaining bureaucratic comedy is compressed into one reception beat: the original-copy contradiction, chained pen, and required sign-in all happen at the same desk.",
     "settingText": "DTI annex reception",
@@ -1502,43 +1447,43 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P16_L01",
+        "fid": "VIK_S1E03_P15_L01",
         "handle": "@vik.UnnamedArchetypes",
         "text": "Sign in. Blue ink.",
         "subtext": "Panel 1"
       },
       {
-        "fid": "VIK_S1E03_P16_L02",
+        "fid": "VIK_S1E03_P15_L02",
         "handle": "@vik.Bjorn",
         "text": "You trust the oath but not the pen.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P16_L03",
+        "fid": "VIK_S1E03_P15_L03",
         "handle": "@vik.Carrie",
         "text": "Original original.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P16_L04",
+        "fid": "VIK_S1E03_P15_L04",
         "handle": "@vik.UnnamedArchetypes",
         "text": "This is the original copy.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P16_L05",
+        "fid": "VIK_S1E03_P15_L05",
         "handle": "@vik.Carrie",
         "text": "The caseworker said original original.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P16_L06",
+        "fid": "VIK_S1E03_P15_L06",
         "handle": "@vik.UnnamedArchetypes",
         "text": "Then she meant the copy marked original.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P16_L07",
+        "fid": "VIK_S1E03_P15_L07",
         "handle": "@vik.Gunnar",
         "text": "That is the true gate.",
         "subtext": "Panel 5"
@@ -1547,10 +1492,10 @@
     "continuityFrom": "VIK_S1E03_P14"
   },
   {
-    "id": "VIK_S1E03_P17",
+    "id": "VIK_S1E03_P16",
     "episode": "S1E03",
     "issue": 3,
-    "page": 17,
+    "page": 16,
     "title": "The Stamp",
     "summary": "The actual errand ends quickly once they reach the right desk, deliberately refusing to let the institution occupy the final third of the issue.",
     "settingText": "DTI annex reception",
@@ -1617,31 +1562,31 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P17_L01",
+        "fid": "VIK_S1E03_P16_L01",
         "handle": "@vik.Carrie",
         "text": "That's it.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P17_L02",
+        "fid": "VIK_S1E03_P16_L02",
         "handle": "@vik.Gunnar",
         "text": "That was the errand?",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P17_L03",
+        "fid": "VIK_S1E03_P16_L03",
         "handle": "@vik.Carrie",
         "text": "That was the entire stupid errand.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P17_L04",
+        "fid": "VIK_S1E03_P16_L04",
         "handle": "@vik.Bjorn",
         "text": "Then we have won very little.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P17_L05",
+        "fid": "VIK_S1E03_P16_L05",
         "handle": "@vik.Carrie",
         "text": "Welcome to paperwork.",
         "subtext": "Panel 4"
@@ -1650,10 +1595,10 @@
     "continuityFrom": "VIK_S1E03_P15"
   },
   {
-    "id": "VIK_S1E03_P18",
+    "id": "VIK_S1E03_P17",
     "episode": "S1E03",
     "issue": 3,
-    "page": 18,
+    "page": 17,
     "title": "Do We Have to Go Home?",
     "summary": "With the required task complete, Gunnar asks whether travel can include a choice that serves no administrative purpose.",
     "settingText": "Sidewalk outside DTI annex",
@@ -1720,31 +1665,31 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P18_L01",
+        "fid": "VIK_S1E03_P17_L01",
         "handle": "@vik.Carrie",
         "text": "Home.",
         "subtext": "Panel 1"
       },
       {
-        "fid": "VIK_S1E03_P18_L02",
+        "fid": "VIK_S1E03_P17_L02",
         "handle": "@vik.Gunnar",
         "text": "Do we have to go directly?",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P18_L03",
+        "fid": "VIK_S1E03_P17_L03",
         "handle": "@vik.Carrie",
         "text": "No. Why?",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P18_L04",
+        "fid": "VIK_S1E03_P17_L04",
         "handle": "@vik.Gunnar",
         "text": "I want to see what is there.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P18_L05",
+        "fid": "VIK_S1E03_P17_L05",
         "handle": "@vik.Bjorn",
         "text": "Then see it.",
         "subtext": "Panel 5"
@@ -1752,10 +1697,10 @@
     ]
   },
   {
-    "id": "VIK_S1E03_P19",
+    "id": "VIK_S1E03_P18",
     "episode": "S1E03",
     "issue": 3,
-    "page": 19,
+    "page": 18,
     "title": "One Block Wrong on Purpose",
     "summary": "Gunnar deliberately takes a route that is unnecessary, converting navigation from survival skill into personal curiosity.",
     "settingText": "Ordinary city side street and small public plaza",
@@ -1818,19 +1763,19 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P19_L01",
+        "fid": "VIK_S1E03_P18_L01",
         "handle": "@vik.Bjorn",
         "text": "This is not the road home.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P19_L02",
+        "fid": "VIK_S1E03_P18_L02",
         "handle": "@vik.Gunnar",
         "text": "No.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P19_L03",
+        "fid": "VIK_S1E03_P18_L03",
         "handle": "@vik.Gunnar",
         "text": "That is why I chose it.",
         "subtext": "Panel 5"
@@ -1839,10 +1784,10 @@
     "continuityFrom": "VIK_S1E03_P17"
   },
   {
-    "id": "VIK_S1E03_P20",
+    "id": "VIK_S1E03_P19",
     "episode": "S1E03",
     "issue": 3,
-    "page": 20,
+    "page": 19,
     "title": "Five Minutes",
     "summary": "Carrie allows the day to contain five purposeless minutes, and the three begin to feel less like caseworker plus assignment and more like people sharing time.",
     "settingText": "Small public plaza bench",
@@ -1902,13 +1847,13 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P20_L01",
+        "fid": "VIK_S1E03_P19_L01",
         "handle": "@vik.Bjorn",
         "text": "Your paper calls.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P20_L02",
+        "fid": "VIK_S1E03_P19_L02",
         "handle": "@vik.Carrie",
         "text": "It can survive five minutes.",
         "subtext": "Panel 3"
@@ -1917,10 +1862,10 @@
     "continuityFrom": "VIK_S1E03_P18"
   },
   {
-    "id": "VIK_S1E03_P21",
+    "id": "VIK_S1E03_P20",
     "episode": "S1E03",
     "issue": 3,
-    "page": 21,
+    "page": 20,
     "title": "Get Us Home",
     "summary": "Carrie hands Gunnar the return journey, turning his accumulated observation into responsibility rather than a trick he performs for approval.",
     "settingText": "Subway entrance near the plaza",
@@ -1982,25 +1927,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P21_L01",
+        "fid": "VIK_S1E03_P20_L01",
         "handle": "@vik.Carrie",
         "text": "Okay. Get us home.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P21_L02",
+        "fid": "VIK_S1E03_P20_L02",
         "handle": "@vik.Gunnar",
         "text": "All of us?",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P21_L03",
+        "fid": "VIK_S1E03_P20_L03",
         "handle": "@vik.Carrie",
         "text": "That is usually what home means.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P21_L04",
+        "fid": "VIK_S1E03_P20_L04",
         "handle": "@vik.Bjorn",
         "text": "Lead.",
         "subtext": "Panel 4"
@@ -2008,10 +1953,10 @@
     ]
   },
   {
-    "id": "VIK_S1E03_P22",
+    "id": "VIK_S1E03_P21",
     "episode": "S1E03",
     "issue": 3,
-    "page": 22,
+    "page": 21,
     "title": "The Transfer",
     "summary": "A real service change tests Gunnar once, and he solves it from physical traces and commuter behavior rather than requiring several pages of transit exposition.",
     "settingText": "MTA transfer station",
@@ -2076,19 +2021,19 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P22_L01",
+        "fid": "VIK_S1E03_P21_L01",
         "handle": "@vik.Carrie",
         "text": "Hold on.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P22_L02",
+        "fid": "VIK_S1E03_P21_L02",
         "handle": "@vik.Gunnar",
         "text": "The city changed its mind but left scars.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P22_L03",
+        "fid": "VIK_S1E03_P21_L03",
         "handle": "@vik.Carrie",
         "text": "That is becoming annoyingly useful.",
         "subtext": "Panel 5"
@@ -2097,10 +2042,10 @@
     "continuityFrom": "VIK_S1E03_P20"
   },
   {
-    "id": "VIK_S1E03_P23",
+    "id": "VIK_S1E03_P22",
     "episode": "S1E03",
     "issue": 3,
-    "page": 23,
+    "page": 22,
     "title": "Different Stair",
     "summary": "Gunnar chooses a different station exit from the one they used that morning and proves he is navigating the neighborhood rather than memorizing a single route.",
     "settingText": "Bushwick subway station",
@@ -2162,25 +2107,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P23_L01",
+        "fid": "VIK_S1E03_P22_L01",
         "handle": "@vik.Bjorn",
         "text": "This is not the stair we entered.",
         "subtext": "Panel 1"
       },
       {
-        "fid": "VIK_S1E03_P23_L02",
+        "fid": "VIK_S1E03_P22_L02",
         "handle": "@vik.Gunnar",
         "text": "It is the stair we need.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P23_L03",
+        "fid": "VIK_S1E03_P22_L03",
         "handle": "@vik.Carrie",
         "text": "Okay. I know where we are.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P23_L04",
+        "fid": "VIK_S1E03_P22_L04",
         "handle": "@vik.Gunnar",
         "text": "I did before the stairs.",
         "subtext": "Panel 4"
@@ -2189,83 +2134,13 @@
     "continuityFrom": "VIK_S1E03_P21"
   },
   {
-    "id": "VIK_S1E03_P24",
+    "id": "VIK_S1E03_P23",
     "episode": "S1E03",
     "issue": 3,
-    "page": 24,
-    "title": "The Block Again",
-    "summary": "Returning through the familiar block lets the day's new competence re-enter ordinary neighborhood life instead of ending at the transit system itself.",
-    "settingText": "Bushwick neighborhood sidewalk",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Bushwick neighborhood sidewalk",
-        "shotType": "wide",
-        "action": "The trio walks past the bodega and apartment block; the same street that felt like strange territory now reads as recognizable geography."
-      },
-      {
-        "panel": 2,
-        "location": "Bushwick neighborhood sidewalk",
-        "shotType": "medium",
-        "action": "Bjorn looks toward the bodega.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Bushwick neighborhood sidewalk",
-        "shotType": "medium",
-        "action": "Carrie keeps walking.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Bushwick neighborhood sidewalk",
-        "shotType": "close",
-        "action": "Gunnar checks no map and keeps pace."
-      }
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E03_P24_L01",
-        "handle": "@vik.Bjorn",
-        "text": "We still owe the downstairs man proper money.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E03_P24_L02",
-        "handle": "@vik.Carrie",
-        "text": "Tomorrow's problem.",
-        "subtext": "Panel 3"
-      }
-    ],
-    "continuityFrom": "VIK_S1E03_P22"
-  },
-  {
-    "id": "VIK_S1E03_P25",
-    "episode": "S1E03",
-    "issue": 3,
-    "page": 25,
-    "title": "Home Opens",
-    "summary": "The return is completed by the people waiting inside: Astrid opens the door with the key Bjorn left her, making home a relationship rather than merely a destination.",
-    "settingText": "Fifth-floor hallway outside apartment 5B",
+    "page": 23,
+    "title": "The Block Opens Home",
+    "summary": "The return route resolves into ordinary neighborhood recognition and then into the household itself when Astrid opens 5B with the key Bjorn left her.",
+    "settingText": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2295,62 +2170,84 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Fifth-floor hallway outside apartment 5B",
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
         "shotType": "wide",
-        "action": "Bjorn knocks once at 5B. Astrid opens the door with the brass key still in hand; the two male Kin are visible behind her in the functioning apartment."
+        "action": "The trio walks past the familiar bodega and apartment block in late-afternoon light; Gunnar checks no map."
       },
       {
         "panel": 2,
-        "location": "Fifth-floor hallway outside apartment 5B",
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
         "shotType": "medium",
-        "action": "Astrid looks at the three travelers.",
+        "action": "Bjorn looks toward the bodega.",
         "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Fifth-floor hallway outside apartment 5B",
-        "shotType": "medium",
-        "action": "Bjorn steps inside.",
-        "dialogueIndices": [
+          0,
           1
         ]
       },
       {
+        "panel": 3,
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
+        "shotType": "wide",
+        "action": "They climb the familiar building stairs and stop at 5B."
+      },
+      {
         "panel": 4,
-        "location": "Fifth-floor hallway outside apartment 5B",
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
         "shotType": "medium",
-        "action": "Gunnar pauses at the threshold, looking back down the hall and then into the room."
+        "action": "Bjorn knocks once. Astrid opens the door with the brass key still in hand; the two male Kin are visible behind her.",
+        "dialogueIndices": [
+          2
+        ]
       },
       {
         "panel": 5,
-        "location": "Fifth-floor hallway outside apartment 5B",
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
+        "shotType": "medium",
+        "action": "Bjorn steps inside.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 6,
+        "location": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
         "shotType": "wide",
-        "action": "Carrie enters last, carrying the stamped confirmation nobody else is looking at anymore."
+        "action": "Carrie enters last carrying the stamped confirmation while Gunnar pauses at the threshold, looking from the hall he navigated back to the room he returned to."
       }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P25_L01",
-        "handle": "@vik.Astrid",
-        "text": "Before dark.",
+        "fid": "VIK_S1E03_P23_L01",
+        "handle": "@vik.Bjorn",
+        "text": "We still owe the downstairs man proper money.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P25_L02",
+        "fid": "VIK_S1E03_P23_L02",
+        "handle": "@vik.Carrie",
+        "text": "Tomorrow's problem.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E03_P23_L03",
+        "handle": "@vik.Astrid",
+        "text": "Before dark.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E03_P23_L04",
         "handle": "@vik.Bjorn",
         "text": "As ordered.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1E03_P23"
+    "continuityFrom": "VIK_S1E03_P22"
   },
   {
-    "id": "VIK_S1E03_P26",
+    "id": "VIK_S1E03_P24",
     "episode": "S1E03",
     "issue": 3,
-    "page": 26,
+    "page": 24,
     "title": "I Brought Us Back",
     "summary": "Gunnar claims the return as his achievement while the issue lands on household continuity, not transit mastery for its own sake.",
     "settingText": "Bushwick studio apartment at dusk",
@@ -2426,25 +2323,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P26_L01",
+        "fid": "VIK_S1E03_P24_L01",
         "handle": "@vik.Bjorn",
         "text": "The iron worm returned us.",
         "subtext": "Panel 2"
       },
       {
-        "fid": "VIK_S1E03_P26_L02",
+        "fid": "VIK_S1E03_P24_L02",
         "handle": "@vik.Gunnar",
         "text": "The worm carried us.",
         "subtext": "Panel 3"
       },
       {
-        "fid": "VIK_S1E03_P26_L03",
+        "fid": "VIK_S1E03_P24_L03",
         "handle": "@vik.Gunnar",
         "text": "I brought us back.",
         "subtext": "Panel 4"
       },
       {
-        "fid": "VIK_S1E03_P26_L04",
+        "fid": "VIK_S1E03_P24_L04",
         "handle": "@vik.Carrie",
         "text": "Yes. You did.",
         "subtext": "Panel 5"
