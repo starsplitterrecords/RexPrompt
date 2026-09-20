@@ -93,17 +93,16 @@
   },
   {
     "id": "SDS_S1E10_P03",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Zib opens the coolant-balancing unit. Middle image: Zib taps the procurement status: REPLACEMENT PART ETA: 12 DAYS. Closing image: Zib notices.",
+    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: In the maintenance bay, Zib opens the coolant-balancing unit while Astra brings the review slate with her. Middle image: Zib taps the procurement status: REPLACEMENT PART ETA: 12 DAYS. Closing image: Zib notices.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Zib",
       "SDS_Mira",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E10_P02",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib opens the coolant-balancing unit."
+        "text": "PANEL 1 — In the maintenance bay, Zib opens the coolant-balancing unit while Astra brings the review slate with her."
       },
       {
         "text": "PANEL 2 — The approved clamp is still carrying the load. The incidental filler remains only in the gap."
@@ -177,6 +176,11 @@
         "subtext": "Panel 4"
       },
       {
+        "speaker": "BRICK",
+        "text": "I have notes.",
+        "subtext": "Panel 5"
+      },
+      {
         "speaker": "ASTRA",
         "text": "Evidence we can defend.",
         "subtext": "Panel 6"
@@ -185,7 +189,7 @@
   },
   {
     "id": "SDS_S1E10_P05",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra and Pixa move through the working operations level while normal jobs continue around them; Pixa calls out only measures tied to visible work. Middle image: Pixa answers while moving with them. Closing image: Pixa adds the plain operational fact without interpretation.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Back in operations, Astra and Pixa move through the working level while normal jobs continue around them. Middle image: Pixa answers while moving with them. Closing image: Pixa adds the plain operational fact without interpretation.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
@@ -194,10 +198,9 @@
       "SDS_Jax",
       "SDS_Zib"
     ],
-    "continuityFrom": "SDS_S1E10_P04",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra and Pixa move through the working operations level while normal jobs continue around them; Pixa calls out only measures tied to visible work."
+        "text": "PANEL 1 — Back in operations, Astra and Pixa move through the working level while normal jobs continue around them; Pixa calls out only measures tied to visible work."
       },
       {
         "text": "PANEL 2 — Jax closes an access route behind a finished task as Pixa notes incident detection time and accepted local ownership."
@@ -280,6 +283,11 @@
         "subtext": "Panel 4"
       },
       {
+        "speaker": "MIRA",
+        "text": "The material chart isn't prettier.",
+        "subtext": "Panel 5"
+      },
+      {
         "speaker": "ZIB",
         "text": "We know how to make this number go down.",
         "subtext": "Panel 6"
@@ -288,16 +296,15 @@
   },
   {
     "id": "SDS_S1E10_P07",
-    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Mira lays the season's retained samples and test pieces across the lab bench in physical order, from brittle fragments to the limited-use filler sample. Middle image: Mira seals a sample case. Closing image: Astra reads the handwritten line, then looks at Mira.",
+    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: At the lab bench, Mira lays the season's retained samples and test pieces in physical order. Middle image: Mira seals a sample case. Closing image: Astra reads the handwritten line, then looks at Mira.",
     "setting": "SDS_Lab_Work_Area",
     "characters": [
       "SDS_Mira",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E10_P06",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Mira lays the season's retained samples and test pieces across the lab bench in physical order, from brittle fragments to the limited-use filler sample."
+        "text": "PANEL 1 — At the lab bench, Mira lays the season's retained samples and test pieces in physical order, from brittle fragments to the limited-use filler sample."
       },
       {
         "text": "PANEL 2 — Beside each sample are short test cards: properties vary; yield inconsistent; mass does not predict quality; mechanism unresolved."
@@ -318,13 +325,18 @@
     "dialogueInline": [
       {
         "speaker": "ASTRA",
-        "text": "What can we promise?",
+        "text": "Zib gave me operations. What can we actually promise here?",
         "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
-        "text": "Collection and characterization.",
+        "text": "Collection and characterization. Nothing stronger.",
         "subtext": "Panel 4"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "No emotional inference. Not even as context.",
+        "subtext": "Panel 5"
       },
       {
         "speaker": "ASTRA",
@@ -335,16 +347,15 @@
   },
   {
     "id": "SDS_S1E10_P08",
-    "summary": "Primary composition: 5-panel page in Cargo Bay / Dock 2. Opening image: Jax walks Astra to the cargo lane and opens the route history on his route slate beside the actual conveyor they serviced early. Middle image: Jax traces the route slate from the accelerated conveyor closure to the Dock 2 delay, with the actual lane behind him. Closing image: Jax sends the Dock 2 access-log entry from the route slate to Astra's review packet.",
+    "summary": "Primary composition: 5-panel page in Cargo Bay / Dock 2. Opening image: In the cargo lane, Jax catches Astra before she returns to operations and opens the route history beside the conveyor they serviced early. Middle image: Jax traces the route slate from the accelerated conveyor closure to the Dock 2 delay, with the actual lane behind him. Closing image: Jax sends the Dock 2 access-log entry from the route slate to Astra's review packet.",
     "setting": "SDS_Cargo_Bay",
     "characters": [
       "SDS_Jax",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E10_P07",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax walks Astra to the cargo lane and opens the route history on his route slate beside the actual conveyor they serviced early."
+        "text": "PANEL 1 — In the cargo lane, Jax catches Astra before she returns to operations and opens the route history beside the conveyor they serviced early."
       },
       {
         "text": "PANEL 2 — He traces the accelerated conveyor closure and then the Dock 2 problem that arrived while the lane was unnecessarily occupied."
@@ -360,6 +371,16 @@
       }
     ],
     "dialogueInline": [
+      {
+        "speaker": "JAX",
+        "text": "You missed one.",
+        "subtext": "Panel 1"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "The conveyor.",
+        "subtext": "Panel 2"
+      },
       {
         "speaker": "JAX",
         "text": "When collection became the reason for the job, the actual route got worse.",
@@ -379,16 +400,15 @@
   },
   {
     "id": "SDS_S1E10_P09",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp spreads the actual sample labels, custody slips and local disclosure cards from the season across a desk; Kreeb removes individual personal text before anything is copied forward. Middle image: Glorp looks at the empty area. Closing image: Glorp stamps the form: BEHAVIORAL CONTEXT: NOT REQUIRED.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Back in operations, Glorp spreads the actual sample labels, custody slips and local disclosure cards across a desk while Kreeb removes individual personal text. Middle image: Glorp looks at the empty area. Closing image: Glorp stamps the form: BEHAVIORAL CONTEXT: NOT REQUIRED.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
       "SDS_Kreeb"
     ],
-    "continuityFrom": "SDS_S1E10_P08",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Glorp spreads the actual sample labels, custody slips and local disclosure cards from the season across a desk; Kreeb removes individual personal text before anything is copied forward."
+        "text": "PANEL 1 — Back in operations, Glorp spreads the actual sample labels, custody slips and local disclosure cards across a desk while Kreeb removes individual personal text before anything is copied forward."
       },
       {
         "text": "PANEL 2 — Glorp writes the required operational fields on a clean form: owner; task; physical condition; chain of custody; unresolved questions."
@@ -461,6 +481,11 @@
         "subtext": "Panel 3"
       },
       {
+        "speaker": "ASTRA",
+        "text": "Good catch.",
+        "subtext": "Panel 4"
+      },
+      {
         "speaker": "ZIB",
         "text": "Still sounds like a department.",
         "subtext": "Panel 5"
@@ -504,6 +529,16 @@
       }
     ],
     "dialogueInline": [
+      {
+        "speaker": "MIRA",
+        "text": "No output target.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "No behavioral conditions.",
+        "subtext": "Panel 5"
+      },
       {
         "speaker": "PIXA",
         "text": "Both sections are measurable without inferred mental-state data.",
@@ -594,7 +629,7 @@
         "text": "PANEL 5 — The Liaison continues."
       },
       {
-        "text": "PANEL 6 — Astra looks at the crew around the table. Nobody tells her what to choose."
+        "text": "PANEL 6 — Astra looks at the evidence gathered around the table. Nobody answers for her."
       }
     ],
     "dialogueInline": [
@@ -606,6 +641,11 @@
       {
         "speaker": "LIAISON",
         "text": "Priority procurement. Dedicated support. Protected headcount.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "I know what it buys.",
         "subtext": "Panel 3"
       },
       {
@@ -673,7 +713,8 @@
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
-      "SDS_Mira"
+      "SDS_Mira",
+      "SDS_Liaison"
     ],
     "continuityFrom": "SDS_S1E10_P14",
     "panelPlan": [
@@ -699,12 +740,12 @@
     "dialogueInline": [
       {
         "speaker": "ASTRA",
-        "text": "Operational response.",
+        "text": "The response. Not a yield.",
         "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
-        "text": "None.",
+        "text": "None we can defend.",
         "subtext": "Panel 5"
       },
       {
@@ -764,7 +805,7 @@
       },
       {
         "speaker": "GLORP",
-        "text": "With records.",
+        "text": "And we can prove that with records.",
         "subtext": "Panel 5"
       },
       {
@@ -815,17 +856,16 @@
   },
   {
     "id": "SDS_S1E10_P18",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: The review status changes to: UNDER EVALUATION. Middle image: Astra joins him for the scheduled temporary-bracket inspection. Closing image: Zib nods.",
+    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: After the submission, the review status changes to UNDER EVALUATION as Astra returns to the open bracket panel. Middle image: Astra joins him for the scheduled temporary-bracket inspection. Closing image: Zib nods.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Zib",
       "SDS_Astra",
       "SDS_Jax"
     ],
-    "continuityFrom": "SDS_S1E10_P17",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The review status changes to: UNDER EVALUATION."
+        "text": "PANEL 1 — After the submission, the review status changes to UNDER EVALUATION as Astra returns to the open bracket panel."
       },
       {
         "text": "PANEL 2 — Astra, Zib and Jax look from the UNDER EVALUATION status back to the still-open bracket panel."
@@ -868,7 +908,7 @@
   },
   {
     "id": "SDS_S1E10_P19",
-    "summary": "Primary composition: 6-panel page in Montage across Stardust Station's ordinary working spaces during the pending review: maintenance bay, lab work area, quiet-room threshold and operations level. Opening image: The station keeps operating while the review remains pending; Zib and Jax continue the active bracket inspection. Middle image: Kreeb returns the quiet-room chairs after someone borrowed them. Closing image: Astra glances once at the pending review on a distant screen, then turns the screen away and takes the work order. She does not refresh it again.",
+    "summary": "Primary composition: 6-panel page in Montage across Stardust Station's ordinary working spaces during the pending review: maintenance bay, lab work area, quiet-room threshold and operations level. Opening image: Over the next stretch of the shift, the station keeps operating while the review remains pending; Zib and Jax continue the active bracket inspection. Middle image: Kreeb returns the quiet-room chairs after someone borrowed them. Closing image: Astra glances once at the pending review on a distant screen, then turns the screen away and takes the work order. She does not refresh it again.",
     "settingText": "Montage across Stardust Station's ordinary working spaces during the pending review: maintenance bay, lab work area, quiet-room threshold and operations level.",
     "characters": [
       "SDS_Mira",
@@ -879,10 +919,9 @@
       "SDS_Zib",
       "SDS_Jax"
     ],
-    "continuityFrom": "SDS_S1E10_P18",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The station keeps operating while the review remains pending; Zib and Jax continue the active bracket inspection."
+        "text": "PANEL 1 — Over the next stretch of the shift, the station keeps operating while the review remains pending; Zib and Jax continue the active bracket inspection."
       },
       {
         "text": "PANEL 2 — Mira checks the temporary material filler at the actual repair and records only its physical condition. No new claim."
@@ -903,17 +942,16 @@
   },
   {
     "id": "SDS_S1E10_P20",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Pixa's notification tone sounds once. Middle image: Second line: PROGRAM: ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION. Closing image: Astra reads it without speaking for a beat. Zib breaks the silence.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Later, Pixa's notification tone sounds once in operations. Middle image: Second line: PROGRAM: ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION. Closing image: Astra reads it without speaking for a beat. Zib breaks the silence.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
       "SDS_Astra",
       "SDS_Zib"
     ],
-    "continuityFrom": "SDS_S1E10_P19",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Pixa's notification tone sounds once."
+        "text": "PANEL 1 — Later, Pixa's notification tone sounds once in operations."
       },
       {
         "text": "PANEL 2 — Everyone looks toward the nearest screen."
@@ -941,7 +979,7 @@
   },
   {
     "id": "SDS_S1E10_P21",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Pixa checks procurement. Middle image: Astra finally smiles. Closing image: Jax looks at the temporary repair tag.",
+    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Back at the open bracket panel, Pixa checks procurement. Middle image: Astra finally smiles. Closing image: Jax looks at the temporary repair tag.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Pixa",
@@ -951,10 +989,9 @@
       "SDS_Jax",
       "SDS_Glorp"
     ],
-    "continuityFrom": "SDS_S1E10_P20",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Pixa checks procurement."
+        "text": "PANEL 1 — Back at the open bracket panel, Pixa checks procurement."
       },
       {
         "text": "PANEL 2 — The replacement request has changed: REPLACEMENT PART ETA: 2 DAYS."
@@ -1002,7 +1039,7 @@
   },
   {
     "id": "SDS_S1E10_P22",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Glorp and Kreeb build the durable reporting template for the approved program. Middle image: Glorp leaves BEHAVIORAL CONTEXT blank by rule and marks: NOT REQUIRED. Kreeb looks at the empty area. Closing image: Astra walks past carrying ordinary work orders.",
+    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Later in operations, Glorp and Kreeb build the durable reporting template for the approved program. Middle image: Glorp leaves BEHAVIORAL CONTEXT blank by rule and marks: NOT REQUIRED. Kreeb looks at the empty area. Closing image: Astra walks past carrying ordinary work orders.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -1010,10 +1047,9 @@
       "SDS_Brick",
       "SDS_Astra"
     ],
-    "continuityFrom": "SDS_S1E10_P21",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Glorp and Kreeb build the durable reporting template for the approved program."
+        "text": "PANEL 1 — Later in operations, Glorp and Kreeb build the durable reporting template for the approved program."
       },
       {
         "text": "PANEL 2 — Fields include: PHYSICAL CONDITIONS / SAMPLE PROPERTIES / OPERATIONAL EVENT / BEHAVIORAL CONTEXT."
