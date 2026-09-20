@@ -39,33 +39,71 @@ jobs:
               return json.loads(path.read_text(encoding='utf-8'))
 
           out = {'sourceBranch':'enhance/rex-fleet-scene-flow','issues':{}}
+          review = ['# Rex Fleet scene-flow diagnostic', '']
+          stats = {}
+          split_dir = root / 'tmp/rex-fleet-scene-flow'
+          split_dir.mkdir(parents=True, exist_ok=True)
+
           for entry in entries:
               issue = entry['issueLabel']
               pages = load(entry)
               compact = []
+              stats[issue] = {'pages': len(pages), 'continuityFrom': sum(1 for p in pages if p.get('continuityFrom'))}
+              review += [f'## {issue}', '']
               for p in pages:
-                  compact.append({
+                  d = p.get('dialogueInline', []) or []
+                  panels = p.get('panelPlan', []) or []
+                  chars = [c.get('handle') for c in (p.get('charactersInline', []) or []) if isinstance(c, dict)]
+                  row = {
                       'id': p.get('id'),
                       'summary': p.get('summary'),
                       'settingText': p.get('settingText'),
                       'regionText': p.get('regionText'),
                       'continuityFrom': p.get('continuityFrom'),
-                      'panelPlan': p.get('panelPlan', []),
-                      'dialogueInline': p.get('dialogueInline', []),
+                      'panelPlan': panels,
+                      'dialogueInline': d,
                       'directionInline': p.get('directionInline', []),
                       'charactersInline': p.get('charactersInline', []),
-                  })
+                  }
+                  compact.append(row)
+                  first_d = ' / '.join(f"{x.get('handle') or x.get('speaker')}: {x.get('text')}" for x in d[:2])
+                  last_d = ' / '.join(f"{x.get('handle') or x.get('speaker')}: {x.get('text')}" for x in d[-2:])
+                  first_p = panels[0] if panels else ''
+                  last_p = panels[-1] if panels else ''
+                  direction = ' | '.join(str(x) for x in (p.get('directionInline', []) or []))
+                  review += [
+                      f"### {p.get('id')}",
+                      f"- Setting: {p.get('settingText')}",
+                      f"- Region: {p.get('regionText')}",
+                      f"- Existing continuityFrom: {p.get('continuityFrom')}",
+                      f"- Summary: {p.get('summary')}",
+                      f"- First panel: {first_p}",
+                      f"- Last panel: {last_p}",
+                      f"- First dialogue: {first_d}",
+                      f"- Last dialogue: {last_d}",
+                      f"- Characters: {', '.join(chars)}",
+                      f"- Direction: {direction}",
+                      '',
+                  ]
               out['issues'][issue] = compact
+              num = int(issue.split()[-1])
+              (split_dir / f'issue-{num:02d}.json').write_text(
+                  json.dumps(compact, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+              )
 
-          dest = root / 'tmp/rex-fleet-scene-flow-snapshot.json'
-          dest.parent.mkdir(parents=True, exist_ok=True)
-          dest.write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          (root / 'tmp/rex-fleet-scene-flow-snapshot.json').write_text(
+              json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
+          (root / 'tmp/rex-fleet-scene-flow-review.md').write_text('\n'.join(review) + '\n', encoding='utf-8')
+          (root / 'tmp/rex-fleet-scene-flow-stats.json').write_text(
+              json.dumps(stats, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+          )
           PY
       - name: Commit diagnostic snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp/rex-fleet-scene-flow-snapshot.json
+          git add tmp/rex-fleet-scene-flow-snapshot.json tmp/rex-fleet-scene-flow-review.md tmp/rex-fleet-scene-flow-stats.json tmp/rex-fleet-scene-flow/
           git diff --cached --quiet && exit 0
-          git commit -m "Add temporary Rex Fleet scene-flow snapshot"
+          git commit -m "Refresh temporary Rex Fleet scene-flow diagnostic"
           git push origin HEAD:enhance/rex-fleet-scene-flow
