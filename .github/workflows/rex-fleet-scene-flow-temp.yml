@@ -1,4 +1,4 @@
-name: Rex Fleet scene-flow diagnostic
+name: Rex Fleet scene-flow production pass
 
 on:
   push:
@@ -11,99 +11,166 @@ permissions:
   contents: write
 
 jobs:
-  snapshot:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: enhance/rex-fleet-scene-flow
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Decode current Rex Fleet production pages
+      - name: Apply targeted Rex Fleet scene-flow repair
         run: |
           python - <<'PY'
-          import base64, gzip, json, pathlib
+          import base64, copy, gzip, json, pathlib, re
 
           root = pathlib.Path('.')
           show = root / 'data/shows/rex-fleet-s1'
           manifest = json.loads((root / 'data/shows.json').read_text(encoding='utf-8'))
-          entries = [e for e in manifest if e.get('seriesId') == 'rex-fleet']
+          entries = {int(e['issueLabel'].split()[-1]): e for e in manifest if e.get('seriesId') == 'rex-fleet'}
 
-          def load(entry):
-              ov = entry['sceneOverlays'][0]
+          def load_issue(n):
+              e = entries[n]
+              ov = e['sceneOverlays'][0]
               path = show / ov['file']
               if ov.get('encoding') == 'gzip-base64':
                   raw = base64.b64decode(''.join(path.read_text(encoding='utf-8').split()))
-                  return json.loads(gzip.decompress(raw).decode('utf-8'))
-              return json.loads(path.read_text(encoding='utf-8'))
+                  return path, True, json.loads(gzip.decompress(raw).decode('utf-8'))
+              return path, False, json.loads(path.read_text(encoding='utf-8'))
 
-          out = {'sourceBranch':'enhance/rex-fleet-scene-flow','issues':{}}
-          review = ['# Rex Fleet scene-flow diagnostic', '']
-          stats = {}
-          split_dir = root / 'tmp/rex-fleet-scene-flow'
-          split_dir.mkdir(parents=True, exist_ok=True)
+          def save_issue(path, encoded, pages):
+              text = json.dumps(pages, ensure_ascii=False, indent=2) + '\n'
+              if encoded:
+                  raw = gzip.compress(text.encode('utf-8'), compresslevel=9, mtime=0)
+                  path.write_text(base64.b64encode(raw).decode('ascii') + '\n', encoding='utf-8')
+              else:
+                  path.write_text(text, encoding='utf-8')
 
-          for entry in entries:
-              issue = entry['issueLabel']
-              pages = load(entry)
-              compact = []
-              stats[issue] = {'pages': len(pages), 'continuityFrom': sum(1 for p in pages if p.get('continuityFrom'))}
-              review += [f'## {issue}', '']
+          loaded = {}
+          originals = {}
+          for n in range(2, 13):
+              path, encoded, pages = load_issue(n)
+              loaded[n] = (path, encoded, pages)
+              originals[n] = copy.deepcopy(pages)
+
+          # Scene architecture: continuityFrom means direct physical/story-state continuation,
+          # not merely causal succession.
+          keep_continuity = {
+              2: {
+                  'RF_I02_P07': 'RF_I02_P06',
+                  'RF_I02_P18': 'RF_I02_P17',
+              },
+              3: {
+                  'RF_I03_P15': 'RF_I03_P14',
+                  'RF_I03_P21': 'RF_I03_P20',
+                  'RF_I03_P27': 'RF_I03_P26',
+              },
+          }
+          for n in (2, 3):
+              pages = loaded[n][2]
+              wanted = keep_continuity[n]
               for p in pages:
-                  d = p.get('dialogueInline', []) or []
-                  panels = p.get('panelPlan', []) or []
-                  chars = [c.get('handle') for c in (p.get('charactersInline', []) or []) if isinstance(c, dict) and c.get('handle')]
-                  row = {
-                      'id': p.get('id'),
-                      'summary': p.get('summary'),
-                      'settingText': p.get('settingText'),
-                      'regionText': p.get('regionText'),
-                      'continuityFrom': p.get('continuityFrom'),
-                      'panelPlan': panels,
-                      'dialogueInline': d,
-                      'directionInline': p.get('directionInline', []),
-                      'charactersInline': p.get('charactersInline', []),
-                  }
-                  compact.append(row)
-                  first_d = ' / '.join(f"{x.get('handle') or x.get('speaker')}: {x.get('text')}" for x in d[:2])
-                  last_d = ' / '.join(f"{x.get('handle') or x.get('speaker')}: {x.get('text')}" for x in d[-2:])
-                  first_p = panels[0] if panels else ''
-                  last_p = panels[-1] if panels else ''
-                  direction = ' | '.join(str(x) for x in (p.get('directionInline', []) or []))
-                  review += [
-                      f"### {p.get('id')}",
-                      f"- Setting: {p.get('settingText')}",
-                      f"- Region: {p.get('regionText')}",
-                      f"- Existing continuityFrom: {p.get('continuityFrom')}",
-                      f"- Summary: {p.get('summary')}",
-                      f"- First panel: {first_p}",
-                      f"- Last panel: {last_p}",
-                      f"- First dialogue: {first_d}",
-                      f"- Last dialogue: {last_d}",
-                      f"- Characters: {', '.join(chars)}",
-                      f"- Direction: {direction}",
-                      '',
-                  ]
-              out['issues'][issue] = compact
-              num = int(issue.split()[-1])
-              (split_dir / f'issue-{num:02d}.json').write_text(
-                  json.dumps(compact, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-              )
+                  if p['id'] in wanted:
+                      p['continuityFrom'] = wanted[p['id']]
+                  else:
+                      p.pop('continuityFrom', None)
 
-          (root / 'tmp/rex-fleet-scene-flow-snapshot.json').write_text(
-              json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-          )
-          (root / 'tmp/rex-fleet-scene-flow-review.md').write_text('\n'.join(review) + '\n', encoding='utf-8')
-          (root / 'tmp/rex-fleet-scene-flow-stats.json').write_text(
-              json.dumps(stats, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
-          )
+          # Preserve the few unique visual facts that lived only in writer-facing direction
+          # before removing that direction from Issues 2-3.
+          def page(n, pid):
+              return next(p for p in loaded[n][2] if p['id'] == pid)
+
+          p = page(2, 'RF_I02_P09')
+          p['panelPlan'][0] += ' The route table is explicitly technical: timing windows, shear markers, anchor fixes, and the second turn required to stay inside the usable reciprocal gradient; it must not read as mystical cartography.'
+
+          p = page(2, 'RF_I02_P10')
+          p['panelPlan'][0] += ' Show ordinary realspace distorted by rotating fragments and damaged corridor geometry shifting the local reciprocal gradient; no hyperspace tunnel, portal, or mystical passage effect.'
+
+          p = page(3, 'RF_I03_P14')
+          p['panelPlan'][0] = 'An independent evidence-and-broadcast booth waits dark: practical public-record infrastructure with a camera, source-file access, provenance checks, and tamper indicators rather than a ceremonial archive space.'
+
+          p = page(3, 'RF_I03_P15')
+          p['panelPlan'][0] = 'Richard sits alone before the camera with source records visibly paired to the testimony feed so named people remain tied to specific clinical and policy evidence.'
+
+          for n in (2, 3):
+              for p in loaded[n][2]:
+                  p.pop('directionInline', None)
+
+          # Later issues already have sound scene architecture. Keep their useful visual direction,
+          # but remove the remaining editorial rationale from selected pages.
+          later_direction = {
+              'RF_I04_P06': "Abby has the stolen window schedule pinned to the war table and marks the third civilian slot off-limits with a knife. Billie challenges the word 'nobody' while Pike fastens a broadcast cloak and checks camera drones. Abby directs her final answer toward Pike's drones rather than toward him.",
+              'RF_I04_P14': "Tess calls while Gravefire backs out of the warrens with refugee skiffs attached to its vector. Venn widens Thunderbreak's shield envelope on the board. Keep both captains occupied with their own controls as they exchange practical cautions.",
+              'RF_I04_P20': "A refugee tug loses thrust outside the safe line and begins drifting toward debris. Pike sees it while his cameras are still live. Broken Oath breaks its assigned position, takes fire across the bow, and throws a tow line. Pike's terse orders surprise his own crew.",
+              'RF_I04_P22': "Dominion and Selene watch the same recovery replay from different screens. Dominion freezes on the instant the escort leaves formation; Selene advances the feed three seconds to the tow line connecting to the refugee tug. Neither disputes the footage. Selene records both timestamps and views while Dominion watches.",
+              'RF_I04_P28': "Pike steps off Broken Oath to a cheering dock and instinctively starts to raise both arms. Abby is waiting beside the disabled refugee tug while civilians are still being helped out. She looks from Pike to the people his ship actually saved. Pike sees them, lowers one arm, and uses the other to help a dockhand with the tow line. Keep the cameras present. No speech.",
+              'RF_I04_P31': "Close on simultaneous retellings of the same rescue: Pike's dock crowd credits his tow; Fleet officers study the formation breach and rescue geometry; Verge loaders count actual arrivals and lost cargo; Tess's crew scrape heat damage off Gravefire; civilians redraw the ships from what they saw below. Keep each retelling tied to evidence visible to that community. No narrator or summary caption.",
+              'RF_I05_P07': "A Verge freighter takes fire in the newly public corridor. Its shields stutter while civilian navigation pings flood the shared channel. Keep the published route markers visible as the attack unfolds.",
+              'RF_I05_P14': "The officer changes Gravefire's channel permissions while Venn watches. Its icon shifts from a generic hostile marker to a limited civilian-priority status, not a full ally designation.",
+              'RF_I06_P14': "On Thunderbreak, the second convoy clears and the tactical board settles. Venn's first question is whether anyone fired. When Tactical says no, Venn looks at the seven Shard transponders that opened the line before saying 'Log it.' Keep the no-fire telemetry visible in the record.",
+              'RF_I07_P01': "Open on familiar Calm Corridor transit: standard anchor lights, expected reciprocal-field plots, and trained crews using routine procedures. Instruments remain within known limits as duplicate timing and reflection behavior begins anyway.",
+              'RF_I07_P02': "Show familiar transit telemetry remaining healthy while timing and reflection behavior becomes impossible. Characters do not invent a mechanism; displays support only the measurements they actually have.",
+              'RF_I07_P04': "Jia works from a standard Academy reference while Selene keeps raw measurements visually separate from later interpretations. Jia rules out established mechanisms, then stops.",
+              'RF_I07_P06': "Billie stares at anomaly scans on Ashfang while an officer relays increasingly unhelpful forge reports. She reaches for the simplest weapons response; the officer's flat 'Yes' lands before she can turn it into a performance.",
+              'RF_I07_P08': "Sunlash and Gravefire enter the Calm Corridor with refugee skiffs between them on normal reciprocal coupling. Their formation begins tightly synchronized. Duplicate echoes begin matching the shared timing pattern while the real ships remain on ordinary reciprocal transit.",
+              'RF_I07_P11': "Jia identifies a correlation, not a complete theory. Venn places Jia's formal analysis beside Naomi's empirical pilot observations on the same operational board.",
+              'RF_I07_P15': "The last real skiff clears the Lattice while its apparent duplicate continues along the obsolete vector and dissolves against empty space. No one fires. Do not label the phenomenon as solved or identified.",
+              'RF_I10_P08': "Pike checks the live audience count before the dangerous approach while his officer watches the actual mission readouts. Pike answers while adjusting Broken Oath for the best approach shot; keep the broadcast cameras visibly framing him.",
+              'RF_I10_P21': "A furnace jet catches Broken Oath broadside while Pike is still too close. His ceremonial broadcast cloak and external banners burn away first, then armor scorches. The camera drones tumble out of formation. No joke or explanatory line is needed.",
+              'RF_I10_P26': "On Gravefire, the helm officer keeps searching the furnace haze for Scythe while Tess watches the same blank sector. She answers the factual question—no transponder—and cuts off speculation. Tess repeats Abby's last order, 'Dock the civilians,' and turns Gravefire toward the dock. Keep the unanswered search display visible.",
+              'RF_I11_P09': "Gate fire and distortion obscure the lane markers for one civilian skiff. Tess uses Gravefire itself as the reference point and brings the pilot into Fleet shadow. Keep the panel attention on vectors, lane markers, and manual flying.",
+              'RF_I11_P19': "Selene and Dominion reconstruct the event from timestamped combat logs. Show shared telemetry fixing the event order while their annotations and selected moments differ on credit.",
+              'RF_I12_P07': "Show the Accord as a working document with shared measurement and provenance fields. Parties retain separate annotations and interpretations, but physical crossing records are common.",
+              'RF_I12_P16': "Selene preserves source provenance, conflicting testimony, and common crossing telemetry side by side. Keep interpretations visually distinct from shared measurements.",
+              'RF_I12_P20': "Naomi appears on Venn's working comm tile while both remain at their stations. 'You came back' / 'With more than a wish' lands with a short recognition beat; Naomi confirms the window, and Venn returns to command.",
+              'RF_I12_P21': "Wide orbit. The second convoy threads the lane while unrelated traffic waits, turns, and resumes around it. Sunlash peels away on Verge business, Gravefire carries its own people, Thunderbreak holds the shared perimeter, and independent hulls continue toward separate destinations. Keep the vessels visibly different in age, mission, refit history, and faction origin. No victory tableau, memorial framing, or closing narration.",
+          }
+          for n in range(4, 13):
+              for p in loaded[n][2]:
+                  if p['id'] in later_direction:
+                      p['directionInline'] = [later_direction[p['id']]]
+
+          # Integrity gates: this pass does not rewrite dialogue, reorder pages, change cast,
+          # or alter story summaries/settings.
+          for n in range(2, 13):
+              before = originals[n]
+              after = loaded[n][2]
+              assert [p['id'] for p in before] == [p['id'] for p in after]
+              assert [p.get('summary') for p in before] == [p.get('summary') for p in after]
+              assert [p.get('settingText') for p in before] == [p.get('settingText') for p in after]
+              assert [p.get('regionText') for p in before] == [p.get('regionText') for p in after]
+              assert [p.get('dialogueInline', []) for p in before] == [p.get('dialogueInline', []) for p in after]
+              assert [len(p.get('panelPlan', [])) for p in before] == [len(p.get('panelPlan', [])) for p in after]
+              assert [p.get('charactersInline', []) for p in before] == [p.get('charactersInline', []) for p in after]
+
+          for n, wanted in keep_continuity.items():
+              actual = {p['id']: p.get('continuityFrom') for p in loaded[n][2] if p.get('continuityFrom')}
+              assert actual == wanted, (n, actual)
+
+          assert all('directionInline' not in p for p in loaded[2][2])
+          assert all('directionInline' not in p for p in loaded[3][2])
+
+          changed_issues = {2,3,4,5,6,7,10,11,12}
+          for n in changed_issues:
+              path, encoded, pages = loaded[n]
+              save_issue(path, encoded, pages)
+
+          print('Applied Rex Fleet scene-flow pass')
+          print('Issue 2 continuity:', keep_continuity[2])
+          print('Issue 3 continuity:', keep_continuity[3])
+          print('Dialogue unchanged across Issues 2-12')
           PY
-      - name: Commit diagnostic snapshot
+
+      - name: Validate Rex Fleet package
+        run: python tools/validate_rex_fleet.py
+
+      - name: Commit production changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tmp/rex-fleet-scene-flow-snapshot.json tmp/rex-fleet-scene-flow-review.md tmp/rex-fleet-scene-flow-stats.json tmp/rex-fleet-scene-flow/
+          git add data/shows/rex-fleet-s1/pages_i02.json data/shows/rex-fleet-s1/pages_i03.json data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i05.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i06.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i07.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i10.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i11.json.gzb64 data/shows/rex-fleet-s1/encoded/pages_i12.json.gzb64
           git diff --cached --quiet && exit 0
-          git commit -m "Refresh temporary Rex Fleet scene-flow diagnostic"
+          git commit -m "Repair Rex Fleet scene continuity and chef direction"
           git push origin HEAD:enhance/rex-fleet-scene-flow
