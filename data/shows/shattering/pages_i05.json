@@ -18,11 +18,30 @@
       "The leader looks at the small resource totals and asks who now has the right to choose.",
       "End on the crowd waiting for an answer no surviving institution has supplied."
     ],
-    "dialog": [
-      "D601"
-    ],
     "directionInline": [
       "Open the post-collapse phase with governance reduced to immediate material triage."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.local",
+        "text": "I have forty heat packs and eighty-three requests."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "How many children?"
+      },
+      {
+        "handle": "@starsplit.local",
+        "text": "Twenty-six."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Pregnant? Elderly? Anyone on assisted breathing?"
+      },
+      {
+        "handle": "@starsplit.local",
+        "text": "You didn't answer me. Who decides?"
+      }
     ]
   },
   {
@@ -44,13 +63,40 @@
       "The local leader watches the work begin before consensus exists.",
       "End on people moving because Aveth has made a usable decision."
     ],
-    "dialog": [
-      "D602"
-    ],
     "directionInline": [
       "Authority here comes from service and action rather than inherited office."
     ],
-    "continuityFrom": "SHAT_I05_P01"
+    "continuityFrom": "SHAT_I05_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Right now? We do."
+      },
+      {
+        "handle": "@starsplit.local",
+        "text": "On whose authority?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "On the authority of people getting cold while we argue."
+      },
+      {
+        "handle": "@starsplit.local",
+        "text": "That's not a system."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "No. It's tonight."
+      },
+      {
+        "handle": "@starsplit.local",
+        "text": "Heat first?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Heat and water. Then we count what's left."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P03",
@@ -73,11 +119,26 @@
       "Some survivors respond to the promise of known rules.",
       "End on the advocate asserting that order itself keeps people alive."
     ],
-    "dialog": [
-      "D603"
-    ],
     "directionInline": [
       "Give the Core argument real appeal in a frightening environment."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.cadv",
+        "text": "Three shelter rows, three ration rules. That is how people disappear between ledgers."
+      },
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "And one rule for three neighborhoods is how you miss what they actually need."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "Rules are supposed to outlast whoever is standing closest."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Can either of your rules hold up that beam?"
+      }
     ]
   },
   {
@@ -101,13 +162,32 @@
       "The representative frames flexibility as the reason people are still moving resources at all.",
       "End on the argument shifting from order versus chaos to competing definitions of competence."
     ],
-    "dialog": [
-      "D604"
-    ],
     "directionInline": [
       "The Verge position should grow directly from Aveth-style trust networks already shown."
     ],
-    "continuityFrom": "SHAT_I05_P03"
+    "continuityFrom": "SHAT_I05_P03",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "That block moved food without waiting for a permit."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "And if they had poisoned someone?"
+      },
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "They knew who packed it."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "That's not accountability."
+      },
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "It's more accountability than a seal from a dead office."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P05",
@@ -130,13 +210,40 @@
       "The Core advocate and Verge representative are forced to stop talking while workers brace the space.",
       "End on the technician demanding bodies and tools instead of theory."
     ],
-    "dialog": [
-      "D605"
-    ],
     "directionInline": [
       "Use a physical interruption to puncture abstraction."
     ],
-    "continuityFrom": "SHAT_I05_P04"
+    "continuityFrom": "SHAT_I05_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Stop."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "I wasn't finished."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "The ceiling was."
+      },
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "What do you need?"
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Four bodies and something straight."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "Where?"
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Good. Now we're governing."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P06",
@@ -156,11 +263,30 @@
       "Workers strip salvage from nonessential structure for a brace.",
       "End on Ruvian ordering the conduit held before it buckles."
     ],
-    "dialog": [
-      "D606"
-    ],
     "directionInline": [
       "Show the engineering problem clearly enough that the improvisation feels earned."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "That conduit goes, we lose the node."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "We don't have a brace long enough."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "We have a stair rail."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "People use that stair."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Not if the lights go out."
+      }
     ]
   },
   {
@@ -181,13 +307,36 @@
       "Ruvian adapts the brace to the node’s live movement.",
       "End on the crew welding the solution in place."
     ],
-    "dialog": [
-      "D607"
-    ],
     "directionInline": [
       "Let the words about grit name a repair culture already visible in the crew’s practiced behavior."
     ],
-    "continuityFrom": "SHAT_I05_P06"
+    "continuityFrom": "SHAT_I05_P06",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Standard clamp won't fit."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then stop trying to make it standard."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "I can cut the rail and sleeve it."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Do that."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "And when someone asks who approved it?"
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Tell them the conduit did."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P08",
@@ -207,11 +356,36 @@
       "Workers check pressure and life support rather than celebrating immediately.",
       "End on lights returning through the damaged structure while the improvised brace remains visible."
     ],
-    "dialog": [],
     "directionInline": [
       "Show the method succeeding materially while keeping the improvised brace and damaged surroundings visible."
     ],
-    "continuityFrom": "SHAT_I05_P07"
+    "continuityFrom": "SHAT_I05_P07",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Pressure's holding."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Wait."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Still holding."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Now you can be pleased."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "I was pleased five minutes ago."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "That's why I make you wait."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P09",
@@ -231,11 +405,34 @@
       "Supply crates are grouped according to the new trust-route map.",
       "End on Aveth naming trust as the operating requirement."
     ],
-    "dialog": [
-      "D608"
-    ],
     "directionInline": [
       "The new system should look practical, provisional, and human-readable."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.pstf",
+        "text": "This route says open. That one says dead."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Who crossed it?"
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Jalen's crew. Yesterday."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Did they come back?"
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "This morning."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then write Jalen, not 'open.'"
+      }
     ]
   },
   {
@@ -256,13 +453,36 @@
       "The medicine schedule waits on their decision.",
       "End on the open question of how trust remains accountable."
     ],
-    "dialog": [
-      "D609"
-    ],
     "directionInline": [
       "Leave the accountability problem genuinely unresolved so trust remains useful but fallible."
     ],
-    "continuityFrom": "SHAT_I05_P09"
+    "continuityFrom": "SHAT_I05_P09",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.pstf",
+        "text": "What if Jalen cut a corner?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then one report isn't enough."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "We don't have two for half these routes."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then mark them yellow and tell the driver exactly why."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "No pretending certainty."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "We tried that already."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P11",
@@ -283,11 +503,30 @@
       "Nearby survivors notice the symbol and understand what it once promised.",
       "End on Lochran insisting that it can mean safety again."
     ],
-    "dialog": [
-      "D610"
-    ],
     "directionInline": [
       "The symbol has genuine cultural memory; its power should not feel invented on the spot."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "People still know this mark."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "They know what it used to mean."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "That's a start."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "A start toward what?"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "A door someone can walk through without wondering if the room will kill them."
+      }
     ]
   },
   {
@@ -309,13 +548,36 @@
       "Lochran maintains that people need a legible sign of order.",
       "End on the officer starting a modified version rather than simply restoring the old mark."
     ],
-    "dialog": [
-      "D611"
-    ],
     "directionInline": [
       "Let the modified mark visibly diverge from the older BHA sigil while retaining recognizable lineage."
     ],
-    "continuityFrom": "SHAT_I05_P11"
+    "continuityFrom": "SHAT_I05_P11",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.foff",
+        "text": "This room isn't safe."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Safer than the corridor."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "That's not what the mark says."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then alter the mark."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "You want me to invent a new safety language with a paint brush."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I want people to know where someone has taken responsibility."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P13",
@@ -335,11 +597,34 @@
       "Facing Lochran, she rejects the idea that the mark itself can substitute for standards.",
       "End on the sigil between them as the object of the dispute."
     ],
-    "dialog": [
-      "D612"
-    ],
     "directionInline": [
       "Ground Iskari’s objection in observable inconsistency, not abstract purity."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Who marked this?"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Field teams."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "This wall is cracked through."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The room is occupied and monitored."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Then mark that. Don't mark 'safe.'"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "People cannot parse a standards manual while carrying their children."
+      }
     ]
   },
   {
@@ -360,13 +645,32 @@
       "Iskari sees that he is redefining safety from technical compliance into political trust.",
       "End on Lochran’s claim that belief holds worlds together."
     ],
-    "dialog": [
-      "D613"
-    ],
     "directionInline": [
       "Let both positions reveal the later ideological split rather than declaring one simply correct."
     ],
-    "continuityFrom": "SHAT_I05_P13"
+    "continuityFrom": "SHAT_I05_P13",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Look at them. They see the mark and organize around it."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "They trust it."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "You say that like trust lowers the load on the beam."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "No. It gets twelve people out of the rain while someone fixes the beam."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P15",
@@ -386,11 +690,40 @@
       "Neither retracts the principle they just stated.",
       "End on them walking in different directions beneath the same modified sigil."
     ],
-    "dialog": [],
     "directionInline": [
       "Use the environment to keep both philosophies answerable to material conditions."
     ],
-    "continuityFrom": "SHAT_I05_P14"
+    "continuityFrom": "SHAT_I05_P14",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "If we use the symbol, inspection comes with it."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Inspection when we have inspectors."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "No. The promise and the work arrive together or the promise is false."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "And until then?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "We tell people what we actually know."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "You keep asking frightened people to live inside uncertainty."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "They already do."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P16",
@@ -409,11 +742,18 @@
       "The officer voices the unease of claiming a place through a mark.",
       "Final panel holds on the completed proto-Crown symbol beside a visibly imperfect shelter."
     ],
-    "dialog": [
-      "D614"
-    ],
     "directionInline": [
       "Use restraint: one officer, one mark, one imperfect shelter, and the weight of responsibility attached to the final stroke."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.foff",
+        "text": "If I put this here, I own what happens behind it."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "Fine."
+      }
     ]
   },
   {
@@ -434,11 +774,30 @@
       "Pages fill with revisions rather than a polished manifesto.",
       "End on the sentence that unity was work rather than a natural condition."
     ],
-    "dialog": [
-      "D615"
-    ],
     "directionInline": [
       "Make the treatise visibly emerge from the failures, repairs, choices, and records already accumulated around Liora."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "You moved again."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "You found me."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "You leave terrible hiding places and excellent notes."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Supplies?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Paper, filters, food. In that order, apparently."
+      }
     ]
   },
   {
@@ -459,13 +818,36 @@
       "Damiar admits his part without asking for absolution.",
       "End on Liora listening but not interrupting the work."
     ],
-    "dialog": [
-      "D616"
-    ],
     "directionInline": [
       "Keep the remorse specific and understated."
     ],
-    "continuityFrom": "SHAT_I05_P17"
+    "continuityFrom": "SHAT_I05_P17",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "I found one of my old statements."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Burn it."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Tempting."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "I called the failures temporary for nine days."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "You were trying to keep people calm."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "I know. That's the part I don't trust anymore."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P19",
@@ -485,11 +867,40 @@
       "Liora leaves contradictory notes visible rather than smoothing them into one doctrine.",
       "End on the growing treatise as unfinished, layered working material."
     ],
-    "dialog": [],
     "directionInline": [
       "Keep the treatise visibly open and provisional, with contradictions and competing notes still present."
     ],
-    "continuityFrom": "SHAT_I05_P18"
+    "continuityFrom": "SHAT_I05_P18",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Don't make the lesson 'never reassure anyone.'"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "That's generous."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It's accurate."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "You really can't help yourself."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "What are you writing, then?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "That unity was maintenance. We treated it like weather."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P20",
@@ -512,11 +923,30 @@
       "Ruvian’s line about Shardwork accompanies visible practice rather than a posed declaration.",
       "End on one repaired node lighting another nearby work site."
     ],
-    "dialog": [
-      "D617"
-    ],
     "directionInline": [
       "The montage should feel like culture emerging from repeated behavior."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "That patch held?"
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Different crew. Same brace."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Good. Write down what they changed."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Since when do Shard crews write manuals?"
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Since the next idiot deserves a head start."
+      }
     ]
   },
   {
@@ -540,13 +970,32 @@
       "Families receive medicine through a route that exists because specific people vouched for it.",
       "End on Aveth naming trust rather than command as the foundation."
     ],
-    "dialog": [
-      "D618"
-    ],
     "directionInline": [
       "Show a functioning alternative, not merely a slogan."
     ],
-    "continuityFrom": "SHAT_I05_P20"
+    "continuityFrom": "SHAT_I05_P20",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Who vouched for the south leg?"
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Mira, then Ko's crew."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Two independent crossings?"
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Within six hours."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Open it for medicine only. Tell every driver whose word they're riding on."
+      }
+    ]
   },
   {
     "id": "SHAT_I05_P22",
@@ -569,12 +1018,47 @@
       "The three groups solve different problems with increasingly distinct methods and visual habits.",
       "Final panel divides the page into three paths no longer intersecting as Iskari warns that their futures diverge here."
     ],
-    "dialog": [
-      "D619"
-    ],
     "directionInline": [
       "Show differentiation already underway through distinct practices and visual habits, not suddenly completed factions."
     ],
-    "continuityFrom": "SHAT_I05_P21"
+    "continuityFrom": "SHAT_I05_P21",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Remove 'recommended.'"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Not here."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "I'm not talking to you."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "If a brace carries life support, inspection is required. If a route carries medicine, confirmation is required."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "And if the inspector never comes?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Then you document what you did and why."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "That I can carry."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "I can live with it."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Good. Start there."
+      }
+    ]
   }
 ]
