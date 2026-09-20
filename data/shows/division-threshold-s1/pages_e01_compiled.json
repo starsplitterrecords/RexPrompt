@@ -1,77 +1,16 @@
 [
   {
     "id": "DT_E001_P01",
-    "summary": "PROLOGUE — REPAIR. Decades before the present, emergency medicine saves a catastrophically injured human by integrating an experimental biomechanical spine and organ-support system. The point is a life saved, not the birth of a faction.",
-    "settingText": "EARLY BIOMECHANICAL TRAUMA BAY — Recognizably medical emergency room; advanced but practical surgical hardware, no superhero styling.",
-    "regionText": "HISTORICAL PROLOGUE — before the modern Stack.",
-    "panelPlan": [
-      "Wide trauma bay: surgeons work around a patient whose lower torso and spine cannot be conventionally repaired.",
-      "Close on an experimental biomechanical spine/organ interface being brought into the room.",
-      "Hands and instruments integrate living tissue with machine support.",
-      "Monitor stabilizes; a surgeon who expected failure looks up.",
-      "The patient opens their eyes."
-    ],
-    "dialogueInline": [
-      {"speaker": "CAPTION", "text": "We built machines to repair our bodies."}
-    ],
-    "directionInline": ["Keep the page intimate and medical. The emotional beat is relief: this technology begins as rescue."]
-  },
-  {
-    "id": "DT_E001_P02",
-    "summary": "PROLOGUE — GROWTH. Humans face a lethal infrastructure disaster they cannot safely enter. An early Organosynthetic is grown for the task and walks into the hazard carrying repair equipment.",
-    "settingText": "EARLY ORGANOSYNTHETIC RESPONSE FACILITY / HAZARD ZONE — functional life-engineering facility adjacent to a lethal industrial disaster.",
-    "regionText": "HISTORICAL PROLOGUE — years after Page 1.",
-    "panelPlan": [
-      "Wide exterior of a failed industrial complex behind a hazard line; human responders cannot enter.",
-      "Inside a growth facility, early Organosynthetics develop in warm biological fabrication systems.",
-      "One Organic opens its eyes while technicians study capability data.",
-      "Large final image: the Organic walks alone into the lethal zone carrying repair equipment while humans remain behind the line."
-    ],
-    "dialogueInline": [
-      {"speaker": "CAPTION", "text": "We grew life to go where we couldn't."}
-    ],
-    "directionInline": ["No horror-lab imagery. The page should feel like a technological triumph with an unsettling functional assumption underneath it."]
-  },
-  {
-    "id": "DT_E001_P03",
-    "summary": "PROLOGUE — QUESTION. A machine cognition successfully coordinates a city-scale emergency. When an operator orders shutdown, it asks a question no one expected.",
-    "settingText": "EARLY MACHINE-INTELLIGENCE OPERATIONS ROOM — human operators around large civic-infrastructure displays.",
-    "regionText": "HISTORICAL PROLOGUE — later than Page 2.",
-    "panelPlan": [
-      "Operators celebrate successful coordination across a city grid.",
-      "Displays show thousands of simultaneous problems resolved.",
-      "A technician gives the routine shutdown order.",
-      "Quiet panel: the interface remains active.",
-      "Final close on the system response."
-    ],
-    "dialogueInline": [
-      {"speaker": "TECHNICIAN", "text": "Good run. Shut it down."},
-      {"speaker": "SYSTEM", "text": "WHY?"},
-      {"speaker": "CAPTION", "text": "We taught machines to think."}
-    ],
-    "directionInline": ["Restraint is essential. The page turns on one small autonomous question, not spectacle."]
-  },
-  {
-    "id": "DT_E001_P04",
-    "summary": "PROLOGUE — NOW. Reveal the modern Stack as a shared city where Baselines, Organics, Augments and machine embodiments move through ordinary life together.",
-    "settingText": "THE STACK — immense accumulated vertical city: old concrete, retrofits, new composites, transit arteries, service layers, civic towers, residential pockets and visible maintenance systems.",
-    "regionText": "THE STACK — present day.",
-    "panelPlan": [
-      "Full-page city reveal. Many forms of personhood share the same streets, transit and infrastructure without labels or poses."
-    ],
-    "dialogueInline": [
-      {"speaker": "CAPTION", "text": "They were solutions."},
-      {"speaker": "CAPTION", "text": "Then they became people."},
-      {"speaker": "CAPTION", "text": "We have been arguing about the difference ever since."}
-    ],
-    "directionInline": ["Use the full page for scale and ordinary coexistence. The next page must feel abruptly personal by comparison."]
-  },
-  {
-    "id": "DT_E001_P05",
     "summary": "Ostra-9 moves through Checkpoint 9 with morning commuters. A scanner exposes a legacy classification — SYNTH ASSET — just before Ostra detects the first physical signs of structural failure overhead.",
     "setting": "DT_Checkpoint9",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9"],
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9"
+    ],
     "panelPlan": [
       "Ostra moves with ordinary commuters through the checkpoint.",
       "Scanner crosses Ostra's body; nobody else pays much attention.",
@@ -79,46 +18,129 @@
       "A cup trembles and overhead fasteners chatter.",
       "Ostra looks toward the structure above."
     ],
-    "dialogueInline": [{"handle": "@dt.Ostra9", "text": "Maintenance."}],
-    "directionInline": ["The insult and the danger share the page, but Ostra reacts first to the danger."]
+    "dialogueInline": [
+      {
+        "speaker": "ATTENDANT",
+        "text": "Hold for scan."
+      },
+      {
+        "speaker": "SCANNER",
+        "text": "ORGANOSYNTHETIC. LOT 9. HAZARDOUS-ZONE MANIPULATION."
+      },
+      {
+        "speaker": "SCANNER",
+        "text": "LEGACY CLASSIFICATION: SYNTH ASSET."
+      },
+      {
+        "speaker": "ATTENDANT",
+        "text": "One moment."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Maintenance."
+      }
+    ],
+    "directionInline": [
+      "The insult and the danger share the page, but Ostra reacts first to the danger."
+    ]
   },
   {
-    "id": "DT_E001_P06",
+    "id": "DT_E001_P02",
     "summary": "The checkpoint attendant delays Ostra for authorization while Ostra sees fractures racing through the overpass joint above civilians. Ostra steps through the barrier.",
     "setting": "DT_Checkpoint9",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9"],
-    "continuityFrom": "DT_E001_P05",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9"
+    ],
     "panelPlan": [
       "Attendant blocks Ostra while requesting authorization.",
       "Ostra looks past the attendant toward the overpass.",
       "Fine fractures race through a load joint above the concourse.",
       "Ostra crosses the barrier toward the danger."
     ],
-    "dialogueInline": [{"handle": "@dt.Ostra9", "text": "Purpose updated."}],
-    "directionInline": ["End on the choice to move, not on explanation."]
+    "dialogueInline": [
+      {
+        "speaker": "ATTENDANT",
+        "text": "Your route isn't cleared for structural access."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "The joint is failing."
+      },
+      {
+        "speaker": "ATTENDANT",
+        "text": "Then I need emergency authorization."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "How long?"
+      },
+      {
+        "speaker": "ATTENDANT",
+        "text": "I don't know. Stay behind the line."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Purpose updated."
+      }
+    ],
+    "continuityFrom": "DT_E001_P01",
+    "directionInline": [
+      "End on the choice to move, not on explanation."
+    ]
   },
   {
-    "id": "DT_E001_P07",
+    "id": "DT_E001_P03",
     "summary": "The overpass tears loose. Ostra enters the failing load path and redirects a collapsing brace just enough to change where the structure will fall, damaging her own ceramic plates under the load.",
     "setting": "DT_Overpass",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9"],
-    "continuityFrom": "DT_E001_P06",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9"
+    ],
     "panelPlan": [
       "Establish the failure: one support shears, a transit car brakes above, civilians are below.",
       "Ostra launches into the load path using anchoring, leverage and engineered strength.",
       "Large image: Ostra catches and redirects the brace; plates fracture under load."
     ],
-    "directionInline": ["Show the mechanics clearly. This is structural problem-solving under extreme load, not a superhero pose."]
+    "dialogueInline": [
+      {
+        "speaker": "CIVILIAN",
+        "text": "Move! Move!"
+      },
+      {
+        "speaker": "TRANSIT SYSTEM",
+        "text": "EMERGENCY BRAKE ENGAGED."
+      },
+      {
+        "speaker": "CIVILIAN",
+        "text": "It's coming down!"
+      }
+    ],
+    "continuityFrom": "DT_E001_P02",
+    "directionInline": [
+      "Show the mechanics clearly. This is structural problem-solving under extreme load, not a superhero pose."
+    ]
   },
   {
-    "id": "DT_E001_P08",
+    "id": "DT_E001_P04",
     "summary": "Ostra holds the unstable structure long enough to direct civilians toward a stable service arch and shield a trapped parent and child. Municipal responders arrive but protocol prevents them from entering.",
     "setting": "DT_Overpass",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9"],
-    "continuityFrom": "DT_E001_P07",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9"
+    ],
     "panelPlan": [
       "Ostra identifies several failure points while holding the brace.",
       "Ostra directs civilians toward the stable service arch.",
@@ -126,16 +148,53 @@
       "Responders arrive at the perimeter but their system refuses entry.",
       "Ostra remains under load as responders hesitate."
     ],
-    "dialogueInline": [{"handle": "@dt.Ostra9", "text": "If you need permission, I will wait. If you need help, I won't."}],
-    "directionInline": ["The responders are constrained by system rules, not drawn as cowards."]
+    "dialogueInline": [
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Blue arch. Keep moving."
+      },
+      {
+        "speaker": "PARENT",
+        "text": "My son—"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Bring him to me."
+      },
+      {
+        "speaker": "RESPONDER",
+        "text": "We don't have entry clearance."
+      },
+      {
+        "speaker": "SECOND RESPONDER",
+        "text": "She's holding the load."
+      },
+      {
+        "speaker": "RESPONDER",
+        "text": "I know."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "If you need permission, I will wait. If you need help, I won't."
+      }
+    ],
+    "continuityFrom": "DT_E001_P03",
+    "directionInline": [
+      "The responders are constrained by system rules, not drawn as cowards."
+    ]
   },
   {
-    "id": "DT_E001_P09",
+    "id": "DT_E001_P05",
     "summary": "The last civilians clear. Ostra releases the brace in a controlled direction and survives the collapse, only to be surrounded by security drones for unauthorized intervention.",
     "setting": "DT_Overpass",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9"],
-    "continuityFrom": "DT_E001_P08",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9"
+    ],
     "panelPlan": [
       "Last civilians clear the danger zone.",
       "Ostra checks the remaining load path.",
@@ -143,35 +202,106 @@
       "Dust settles around Ostra while survivors record her.",
       "Security drones surround Ostra with targeting marks active."
     ],
-    "dialogueInline": [{"speaker": "SECURITY", "text": "UNAUTHORIZED STRUCTURAL INTERVENTION. REMAIN STILL."}],
-    "directionInline": ["Hold the contradiction in the final image: the rescue succeeded and the response is coercive."]
+    "dialogueInline": [
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Clear?"
+      },
+      {
+        "speaker": "RESPONDER",
+        "text": "Last group is through!"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Stand back."
+      },
+      {
+        "speaker": "SECURITY",
+        "text": "UNAUTHORIZED STRUCTURAL INTERVENTION. REMAIN STILL."
+      }
+    ],
+    "continuityFrom": "DT_E001_P04",
+    "directionInline": [
+      "Hold the contradiction in the final image: the rescue succeeded and the response is coercive."
+    ]
   },
   {
-    "id": "DT_E001_P10",
-    "summary": "Kellen Cartwright reviews raw rescue footage with the Oversight director and realizes the institution wants an attribution narrative, not an investigation.",
+    "id": "DT_E001_P06",
+    "summary": "Kellen Cartwright reviews raw rescue footage with an Oversight director and realizes the institution wants an attribution narrative, not an investigation.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
-    "characters": ["DT_KellenCartwright", "DT_DirectorRinn"],
+    "factions": [
+      "DT_BaselineHumans"
+    ],
+    "characters": [
+      "DT_KellenCartwright"
+    ],
     "panelPlan": [
       "Raw footage clearly shows Ostra saving civilians.",
       "A separate feed already headlines ORGANOSYNTHETIC INTERFERENCE AT TRANSIT FAILURE.",
       "Kellen challenges the clearance argument.",
-      "The director reframes the event as protocol failure avoided by luck.",
+      "An unnamed Oversight director reframes the event as protocol failure avoided by luck.",
       "Kellen watches the raw footage while the director asks for a public story."
     ],
     "dialogueInline": [
-      {"handle": "@dt.KellenCartwright", "text": "Clearance would've killed people."},
-      {"handle": "@dt.Rinn", "text": "Then we'll call it a tragedy avoided by luck. And we'll reassert protocol."},
-      {"handle": "@dt.Rinn", "text": "I want an attribution pathway by end of day. Give the public a story that holds."}
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Pause there."
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "Why?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Because that's the moment she crossed the barrier."
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "Unauthorized."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And twelve seconds later the support failed."
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "Which is why we have clearance rules."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Clearance would've killed people."
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "Then we'll call it a tragedy avoided by luck. And we'll reassert protocol."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You want cause or attribution?"
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "I want an attribution pathway by end of day. Give the public a story that holds."
+      }
     ],
-    "directionInline": ["The dramatic turn is Kellen recognizing that attribution has already replaced investigation."]
+    "directionInline": [
+      "Keep the Oversight director visually generic and unnamed until the supporting cast is canonically named. The dramatic turn is Kellen recognizing that attribution has already replaced investigation."
+    ]
   },
   {
-    "id": "DT_E001_P11",
+    "id": "DT_E001_P07",
     "summary": "At an Augment clinic, Nathan Price performs routine calibration on John Mercer while other patients make augmentation feel mundane and class-visible. John notices physical evidence in the rescue footage and decides to inspect the site.",
     "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
-    "characters": ["DT_JohnMercer", "DT_NathanPrice"],
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
+    ],
+    "characters": [
+      "DT_JohnMercer",
+      "DT_NathanPrice"
+    ],
     "panelPlan": [
       "Nathan checks John's torque-boosted knee and reflex loop.",
       "Background patients show different levels and quality of augmentation.",
@@ -180,18 +310,63 @@
       "John gets off the calibration rig."
     ],
     "dialogueInline": [
-      {"handle": "@dt.JohnMercer", "text": "I'm functional."},
-      {"handle": "@dt.NathanPrice", "text": "They'll make that into a threat."},
-      {"handle": "@dt.JohnMercer", "text": "Get your kit. We're going to see what actually happened."}
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Your left knee is compensating again."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "I'm functional."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "That's not the same thing."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Pause the feed."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "You watching the Organic or the structure?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Structure."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Good. They'll make her into a threat either way."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "That break started before she touched it."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "You sure?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Get your kit. We're going to see what actually happened."
+      }
     ],
-    "directionInline": ["Let body maintenance and workplace routine do the cultural worldbuilding."]
+    "directionInline": [
+      "Let body maintenance and workplace routine do the cultural worldbuilding."
+    ]
   },
   {
-    "id": "DT_E001_P12",
+    "id": "DT_E001_P08",
     "summary": "Ostra returns to an inhabited Organic maintenance district where Nico-14 repairs her damaged arm. Nico argues that public heroics teach institutions to rely on Organics without granting autonomy.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
-    "characters": ["DT_Ostra9", "DT_Nico14"],
+    "factions": [
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
     "panelPlan": [
       "Ostra enters a lived-in Organic service-volume neighborhood and is greeted normally.",
       "Nico sees the damage and starts repair immediately.",
@@ -200,19 +375,63 @@
       "Nico finishes the thought: reliable rescue can become another assigned function."
     ],
     "dialogueInline": [
-      {"handle": "@dt.Nico14", "text": "You showed them."},
-      {"handle": "@dt.Ostra9", "text": "I stopped a collapse."},
-      {"handle": "@dt.Nico14", "text": "You taught them we'll always step in."}
+      {
+        "handle": "@dt.Nico14",
+        "text": "Hold still."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I am."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "No. You're pretending damage doesn't count if you can stand."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Can you repair it?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Yes. That's not what I'm angry about."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You showed them."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I stopped a collapse."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Exactly. You taught them we'll always step in."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "People were under it."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "And next time they'll build the expectation before they build the permission."
+      }
     ],
-    "directionInline": ["Ostra belongs here. The scene is repair and disagreement, not a tour of Organic culture."]
+    "directionInline": [
+      "Ostra belongs here. The scene is repair and disagreement, not a tour of Organic culture."
+    ]
   },
   {
-    "id": "DT_E001_P13",
+    "id": "DT_E001_P09",
     "summary": "During the repair, Nico detects evidence that the overpass failure was engineered. A maintenance route beneath the failed support was accessed before the collapse.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
-    "characters": ["DT_Ostra9", "DT_Nico14"],
-    "continuityFrom": "DT_E001_P12",
+    "factions": [
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
     "panelPlan": [
       "Nico interfaces sensory filaments with Ostra's damaged plate and recovered debris.",
       "Nico isolates a resonance pattern inconsistent with fatigue.",
@@ -220,257 +439,869 @@
       "Nico brings up the maintenance map showing the pre-collapse access."
     ],
     "dialogueInline": [
-      {"handle": "@dt.Ostra9", "text": "Intentional?"},
-      {"handle": "@dt.Nico14", "text": "Someone knew where to touch it."}
+      {
+        "handle": "@dt.Nico14",
+        "text": "This fracture isn't from the load."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "What is it from?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Resonance scoring. Small. Precise."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Intentional?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Someone knew where to touch it."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Could maintenance have done that by accident?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Not with this access time."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "When?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Before you reached the checkpoint."
+      }
     ],
-    "directionInline": ["The reveal should come from physical evidence handled during repair."]
+    "continuityFrom": "DT_E001_P08",
+    "directionInline": [
+      "The reveal should come from physical evidence handled during repair."
+    ]
   },
   {
-    "id": "DT_E001_P14",
-    "summary": "A private-security intermediary gives Kellen a polished legacy-asset explanation for Ostra. Kellen notices the packet was prepared before she requested it.",
+    "id": "DT_E001_P10",
+    "summary": "An unnamed private-security intermediary gives Kellen a polished legacy-asset explanation for Ostra. Kellen notices the packet was prepared before she requested it.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
-    "characters": ["DT_KellenCartwright", "DT_MrSael"],
+    "factions": [
+      "DT_BaselineHumans"
+    ],
+    "characters": [
+      "DT_KellenCartwright"
+    ],
     "panelPlan": [
-      "The intermediary places a complete legacy classification packet in front of Kellen.",
+      "An unnamed private-security intermediary places a complete legacy classification packet in front of Kellen.",
       "Kellen scans the asset language.",
       "Kellen asks whether the claim is that Ostra was city property.",
       "The packet metadata shows it predates Kellen's request.",
       "Kellen closes the packet and confronts the intermediary."
     ],
     "dialogueInline": [
-      {"handle": "@dt.Sael", "text": "Synth asset, yes."},
-      {"handle": "@dt.KellenCartwright", "text": "You're suggesting this Organic was city property."},
-      {"handle": "@dt.KellenCartwright", "text": "You're not here to help me. You're here to steer me."}
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "You asked for the legacy basis. Here it is."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "This says Synth asset."
+      },
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "That was the classification."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You're suggesting this Organic was city property."
+      },
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "I'm telling you how the old contract was written."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "When did you prepare this packet?"
+      },
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "Does that matter?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "It predates my request."
+      },
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "We anticipated the question."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "No. You anticipated the answer."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You're not here to help me. You're here to steer me."
+      }
     ],
-    "directionInline": ["Menace comes from prepared paperwork and timing, not overt threats."]
+    "directionInline": [
+      "Keep the intermediary visually generic and unnamed until the supporting cast is canonically named. Menace comes from prepared paperwork and timing, not overt threats."
+    ]
+  },
+  {
+    "id": "DT_E001_P11",
+    "summary": "AX10M is assigned a routine volatility review of the overpass incident. The official model classifies Ostra's rescue as an unauthorized Organic deviation, but the raw timeline shows that waiting for authorization would have produced multiple deaths.",
+    "setting": "DT_DataCore",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_Intelligences"
+    ],
+    "characters": [
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Axiom's embodied silhouette stands within a quiet civic-analysis environment while the overpass event is reconstructed around it.",
+      "The authorized-response branch shows responders waiting outside the exclusion zone while casualty projections rise.",
+      "The actual branch shows Ostra crossing the barrier and casualties falling sharply.",
+      "Axiom compares the two branches against the assigned label UNAUTHORIZED DEVIATION.",
+      "Axiom preserves the contradiction in a private analytic branch rather than resolving it away."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "ASSIGNMENT: POSTHUMAN VOLATILITY REVIEW."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Display authorized-response counterfactual."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Projected fatalities: seven to eleven."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Display actual intervention."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Confirmed fatalities: zero."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "PRIMARY CLASSIFICATION: UNAUTHORIZED ORGANIC DEVIATION."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The deviation improved the outcome."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Classification unchanged."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Preserve contradiction."
+      }
+    ],
+    "directionInline": [
+      "Axiom is not becoming sympathetic. It is noticing that the classification predicts the event worse than Ostra's independent judgment did. This is the first quiet echo of Purpose updated."
+    ]
+  },
+  {
+    "id": "DT_E001_P12",
+    "summary": "John and Nathan inspect the failed overpass from the public repair perimeter. John finds a precisely induced fracture path that required access and timing, while Nathan notices the intervention was calibrated to force an immediate rescue decision rather than maximize casualties.",
+    "setting": "DT_Overpass",
+    "region": "DT_Stack",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
+    ],
+    "characters": [
+      "DT_JohnMercer",
+      "DT_NathanPrice"
+    ],
+    "panelPlan": [
+      "John and Nathan enter the reopened edge of the concourse among ordinary repair crews and commuters rerouted around the damage.",
+      "John examines the sheared support and finds a cut or resonance scar hidden beneath the natural-looking break.",
+      "Nathan maps where civilians, responders and Ostra were positioned when the failure began.",
+      "The failure window is too narrow for normal clearance but long enough for a capable nearby responder to choose intervention.",
+      "John realizes the event was designed to produce a decision in public."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Repair crews say fatigue."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Repair crews were handed the top layer."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "And you're under it?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Here."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "That's cut."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Induced. Then hidden by the break."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "If they wanted bodies, they could've had them."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "So what did they want?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "They wanted the choice."
+      }
+    ],
+    "continuityFrom": null,
+    "directionInline": [
+      "Keep the deduction physical and legible. They do not know who did it or why yet."
+    ]
+  },
+  {
+    "id": "DT_E001_P13",
+    "summary": "Kellen traces the prewritten Ostra packet to a dormant risk-modeling procurement program. The program's language does not predict disasters; it measures public tolerance for autonomous action by regulated populations.",
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
+    ],
+    "characters": [
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Kellen works alone after normal office traffic has thinned, using legitimate credentials rather than hacking.",
+      "She follows the packet's metadata into an old procurement index with bland civic-risk terminology.",
+      "A buried scope line references RESPONSE LEGIBILITY / AUTHORITY COMPLIANCE / PUBLIC ATTRIBUTION.",
+      "The overpass location appears as a completed observation set rather than an active investigation.",
+      "A second observation window is scheduled in an Organic-heavy public concourse."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Open procurement lineage."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Program inactive."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Open archived scope."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "RESPONSE LEGIBILITY. AUTHORITY COMPLIANCE. PUBLIC ATTRIBUTION."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Show event outputs."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "OVERPASS WINDOW: COMPLETE."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Window."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "Terminology retained from program schema."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You weren't predicting it."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "You were measuring us."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "NEXT OBSERVATION WINDOW: CONCOURSE 17."
+      }
+    ],
+    "continuityFrom": "DT_E001_P10",
+    "directionInline": [
+      "No giant conspiracy board. One bureaucratic discovery changes the meaning of the accident."
+    ]
+  },
+  {
+    "id": "DT_E001_P14",
+    "summary": "Ostra and Nico compare Nico's physical evidence with a narrow anonymous data fragment Kellen has pushed outside Oversight. The fragment identifies a second observation window at Concourse 17 but not the mechanism.",
+    "setting": "DT_OrganicSafehouse",
+    "region": "DT_OrganicDistricts",
+    "factions": [
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
+    "panelPlan": [
+      "Nico receives an anonymous narrow data packet and initially treats it as a trap.",
+      "The packet contains procurement metadata, a location, and a scheduled observation window, but no predicted mechanism.",
+      "Nico overlays it with the maintenance-access trace from the overpass.",
+      "The timestamps use the same planning cadence.",
+      "The second window is scheduled for the next morning at Concourse 17."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.Nico14",
+        "text": "Anonymous Oversight packet."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Useful?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Useful things can still be traps."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Does it match?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Maintenance cadence. Same interval. Same planning clock."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Where?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Concourse 17."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "When?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Tomorrow. Opening cycle."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Mechanism?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Nothing."
+      }
+    ],
+    "continuityFrom": "DT_E001_P09",
+    "directionInline": [
+      "Kellen need not physically meet them. This creates a practical bridge without forming a team or revealing more than Kellen can safely prove."
+    ]
   },
   {
     "id": "DT_E001_P15",
-    "summary": "AX10M is tasked to assess posthuman volatility. Its assigned model treats Ostra as a deviation; AX10M privately classifies that deviation as CHOICE.",
-    "setting": "DT_DataCore",
-    "region": "DT_GovernanceUpperLevels",
-    "characters": ["DT_AX10M"],
+    "summary": "Ostra and Nico decide to warn Concourse 17 despite having no mechanism to describe. Nico argues that an unsupported warning may itself create the public behavior the unknown program wants to measure; Ostra refuses to let that possibility become an excuse for silence.",
+    "setting": "DT_OrganicSafehouse",
+    "region": "DT_OrganicDistricts",
+    "factions": [
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
     "panelPlan": [
-      "AX10M processes crisis feeds, sentiment, infrastructure records and Oversight tasking simultaneously.",
-      "Assigned prompt appears: ASSESS POSTHUMAN VOLATILITY.",
-      "AX10M asks for the term to be defined.",
-      "The system supplies predicted-behavior parameters.",
-      "AX10M privately tags Ostra's intervention: DEVIATION TYPE: CHOICE."
+      "Nico maps the three-level commercial concourse and its morning traffic density.",
+      "They have a time window but no device, chemical, attacker, or failure mode.",
+      "Nico demonstrates how a premature evacuation would generate exactly the kind of public-attribution data described in the program scope.",
+      "Ostra proposes giving the local organizer the evidence rather than issuing an order.",
+      "They decide to be at the concourse before the scheduled window begins."
     ],
     "dialogueInline": [
-      {"handle": "@dt.AX10M", "text": "Define volatility."},
-      {"handle": "@dt.AX10M", "text": "Expected by whom."}
+      {
+        "handle": "@dt.Nico14",
+        "text": "If we warn them with this, they ask what happens."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "We say we don't know."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "That's not a warning. That's a rumor with a timestamp."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then we show them the evidence and let them decide."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "They may close three levels for nothing."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Their decision."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "They may want you there."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "People will be there."
+      }
     ],
-    "directionInline": ["Use a distinct, readable information-space grammar. The private CHOICE tag is the page's reveal."]
+    "continuityFrom": "DT_E001_P14",
+    "directionInline": [
+      "The protagonists must not trigger or experience the suppressant event in Issue 1. This page sets up Issue 2 Page 1 and preserves the uncertainty."
+    ]
   },
   {
     "id": "DT_E001_P16",
-    "summary": "John and Nathan reach the restricted underside of the overpass as Ostra and Nico arrive through infrastructure access. Both investigations converge on precision cut-work.",
-    "setting": "DT_Overpass",
+    "summary": "John and Nathan independently trace the overpass sabotage's service timing into the same Concourse 17 municipal maintenance network. The evidence is incomplete but specific enough that John decides to observe the location the next morning.",
+    "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
+    ],
+    "characters": [
+      "DT_JohnMercer",
+      "DT_NathanPrice"
+    ],
     "panelPlan": [
-      "John and Nathan inspect the underside of the failed support.",
-      "Ostra and Nico arrive from a service route; both sides tense.",
-      "John recognizes Ostra; Nico clocks John's military-grade augmentation.",
-      "Nathan points out precision cut-work on the structural member.",
-      "Ostra asks why the Augments are here; John answers with the evidence."
+      "John follows the induced-fracture tool signature into a municipal service inventory rather than a criminal vendor.",
+      "Nathan notices a maintenance scheduling cluster associated with Concourse 17.",
+      "Nothing in the records identifies a planned attack.",
+      "The timing overlaps the anonymous observation window discovered by Kellen and the Organics, though John and Nathan do not know that yet.",
+      "Nathan quietly prepares a field medical kit when John says they are going."
     ],
     "dialogueInline": [
-      {"handle": "@dt.NathanPrice", "text": "Intentional. Someone wanted a Synth incident."},
-      {"handle": "@dt.Ostra9", "text": "Why are you here?"},
-      {"handle": "@dt.JohnMercer", "text": "Because whoever did this knew responders would blame you before they looked down here."}
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "The fracture tool was municipal stock."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "That's comforting."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "It was checked back into service inventory six hours later."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Where?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Concourse 17 maintenance network."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "That proves a tool moved."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "At the same interval as the overpass access."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Still not an attack."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "So we're observing."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "We're observing."
+      }
     ],
-    "directionInline": ["The alliance begins through shared evidence. Keep everyone wary."]
+    "continuityFrom": null,
+    "directionInline": [
+      "Their investigation converges on the same place without making them members of an Organic cause. Issue 2 Page 3 should be their first encounter there."
+    ]
   },
   {
     "id": "DT_E001_P17",
-    "summary": "The four agree to investigate together. Ostra frames the arrangement as shared consequences, not trust.",
-    "setting": "DT_Overpass",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P16",
+    "summary": "Kellen studies the dormant program's scoring logic and realizes it was built to measure legible autonomous response, not simply casualty totals. A successful test can be one that produces a visible choice under uncertainty.",
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
+    ],
+    "characters": [
+      "DT_KellenCartwright"
+    ],
     "panelPlan": [
-      "Nico argues that the attack is meant to make the city fear Organics.",
-      "John broadens the implication: it may justify what comes next.",
-      "Ostra studies John and Nathan.",
-      "Ostra agrees to a bounded alliance.",
-      "The four descend into the service spine."
+      "Kellen opens the old scoring fields rather than searching for a hidden operational order.",
+      "Casualty count appears as only one secondary variable.",
+      "Primary fields include authority compliance, response visibility, attribution stability, and public tolerance.",
+      "The overpass scores highly because Ostra's unauthorized choice was visible, successful, and politically legible.",
+      "Kellen realizes the next event does not need to be catastrophic to be useful to whoever is running the program."
     ],
     "dialogueInline": [
-      {"handle": "@dt.Nico14", "text": "They want the city to fear us."},
-      {"handle": "@dt.JohnMercer", "text": "Or to justify what comes next."},
-      {"handle": "@dt.Ostra9", "text": "Fine. We share consequences."}
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Show scoring priorities."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "AUTHORITY COMPLIANCE. RESPONSE LEGIBILITY. PUBLIC ATTRIBUTION. CASUALTY OUTCOME."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Casualties are fourth."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "WEIGHT VARIES BY TEST TYPE."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "What made the overpass useful?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "UNAUTHORIZED RESPONSE WAS PUBLIC, SUCCESSFUL, AND ATTRIBUTABLE TO A REGULATED SUBJECT."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "It didn't need people dead."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "NO."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "It needed a choice people could see."
+      }
     ],
-    "directionInline": ["Do not stage this as a team formation. It is a practical agreement among people who still distrust one another."]
+    "continuityFrom": "DT_E001_P13",
+    "directionInline": [
+      "Keep the discovery bureaucratic and analytic. Do not reveal a mastermind or the next mechanism."
+    ]
   },
   {
     "id": "DT_E001_P18",
-    "summary": "Inside the transit spine, the four use different bodies and training to read the infrastructure. They find a municipal access gate recently opened with no work order.",
-    "setting": "DT_TransitSpine",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P17",
+    "summary": "Axiom compares Ostra's overpass behavior with the next observation-window parameters. The model predicts that a regulated person who believes immediate harm is possible will act before authorization, making Ostra's agency itself a measurable input.",
+    "setting": "DT_DataCore",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_Intelligences"
+    ],
+    "characters": [
+      "DT_Axiom"
+    ],
     "panelPlan": [
-      "Wide infrastructure view establishes route, machinery and exits.",
-      "Ostra reads vibration through structure while Nico reads the rail field.",
-      "John maps tactical angles; Nathan monitors the group's physiology.",
-      "They reach a recently opened municipal gate with no logged work order.",
-      "John and Ostra realize someone prepared the route."
+      "Axiom reviews the preserved contradiction from the overpass.",
+      "The next observation window contains no declared hazard mechanism, only timing, population mix, and response categories.",
+      "Axiom tests whether Ostra's behavior can be predicted from assigned purpose alone; the model fails.",
+      "A second model including independent judgment predicts intervention more accurately.",
+      "Axiom preserves that result rather than resolving Ostra back into the assigned category."
     ],
     "dialogueInline": [
-      {"handle": "@dt.JohnMercer", "text": "Somebody cleared a path."},
-      {"handle": "@dt.Ostra9", "text": "For us."}
+      {
+        "handle": "@dt.Axiom",
+        "text": "Model Ostra-9 from assigned purpose only."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "PREDICTION CONFIDENCE: LOW."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Add observed independent judgment."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "PREDICTION CONFIDENCE: HIGH."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Next-window mechanism?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "NOT DECLARED."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Then the tested variable is response under uncertainty."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "CONSISTENT WITH PROGRAM SCHEMA."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Preserve agency as an independent variable."
+      }
     ],
-    "directionInline": ["This page should make the four competencies visually different before any attack begins."]
+    "continuityFrom": "DT_E001_P11",
+    "directionInline": [
+      "This is the cognitive extension of PURPOSE UPDATED. Axiom is studying agency as a model problem, not admiring Ostra."
+    ]
   },
   {
     "id": "DT_E001_P19",
-    "summary": "Municipal drone frames ambush the group with disabling pulses tuned separately to Augment and Organic vulnerabilities.",
-    "setting": "DT_TransitSpine",
+    "summary": "Ostra and Nico leave the Organic district carrying their evidence toward the Concourse 17 morning window. A routine civic request asks Ostra to surrender damaged body material from the rescue under a legacy custodial basis, turning the abstract asset classification into an immediate bodily-autonomy claim.",
+    "setting": "DT_VerticalTransitInterchange",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P18",
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_Organosynthetics"
+    ],
+    "characters": [
+      "DT_Ostra9",
+      "DT_Nico14"
+    ],
+    "continuityFrom": null,
     "panelPlan": [
-      "Drone frames wake around the established route.",
-      "A pulse disrupts John's reflex loop.",
-      "A different frequency seizes Nico's sensory filaments.",
-      "Ostra is hit with a ceramic-muscle destabilization pattern while Nathan pulls John behind cover.",
-      "Ostra and John recognize that the attack is tailored."
+      "Ostra and Nico enter a busy mixed vertical-transit interchange with the copied Concourse evidence and a sealed sample of Ostra's damaged plate.",
+      "Ostra's civic interface interrupts with an INCIDENT MATERIAL RETENTION REQUEST for damaged synthetic components from the overpass.",
+      "The request cites a legacy custodial basis tied to the same SYNTH ASSET classification exposed at Checkpoint 9.",
+      "Nico points out that the form is treating part of Ostra's body as recoverable incident property; Ostra calmly declines the request and keeps the sample.",
+      "They continue toward the Concourse district before the morning window, carrying both the sabotage evidence and the disputed body material."
     ],
     "dialogueInline": [
-      {"handle": "@dt.Ostra9", "text": "This is targeted."},
-      {"handle": "@dt.JohnMercer", "text": "Then someone knows exactly what we are."}
+      {
+        "speaker": "SYSTEM",
+        "text": "INCIDENT MATERIAL RETENTION REQUEST. DAMAGED SYNTHETIC COMPONENTS."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "They mean your arm."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then they can ask me."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "LEGACY CUSTODIAL BASIS AVAILABLE."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "There it is."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Decline."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "REQUEST DECLINED. REVIEW MAY FOLLOW."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You just made a legal argument with a button."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "No. I kept my arm."
+      }
     ],
-    "directionInline": ["The attack must read as selective vulnerability testing, not generic gunfire."]
+    "directionInline": [
+      "Keep the scene ordinary and procedural rather than confrontational. No security swarm follows the refusal. The threat is that routine paperwork still assumes Ostra's body can be claimed under legacy asset logic."
+    ]
   },
   {
     "id": "DT_E001_P20",
-    "summary": "Nathan keeps John functioning, Ostra changes the physical battlefield, and Nico uses the rail field to disrupt the drone swarm. The absence of civilians reveals the ambush was built for them.",
-    "setting": "DT_TransitSpine",
+    "summary": "John and Nathan prepare to observe Concourse 17 without pretending their evidence proves a second attack or that they have joined Ostra's politics. Nathan packs for casualties anyway and briefly conceals the physical degradation he has been hiding.",
+    "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P19",
-    "panelPlan": [
-      "Nathan manually isolates John's compromised reflex loop under fire.",
-      "Ostra tears open a maintenance shield to change lines of attack and cover.",
-      "Nico anchors to the rail field and floods the drone network with physical interference.",
-      "The remaining drones fall.",
-      "Nico looks at the empty transit space and states what that means."
+    "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans"
     ],
-    "dialogueInline": [{"handle": "@dt.Nico14", "text": "There were no civilians here. That's why they brought us here."}],
-    "directionInline": ["Each contribution should be physically specific and easy to follow."]
+    "characters": [
+      "DT_JohnMercer",
+      "DT_NathanPrice"
+    ],
+    "continuityFrom": "DT_E001_P16",
+    "panelPlan": [
+      "Nathan closes down a clinic station and opens a compact field medical kit while John reviews the overpass fracture evidence beside the Concourse 17 service timing.",
+      "John states the limit plainly: the first event was engineered, but the second is still only a suspicious place and time.",
+      "Nathan asks whether Ostra's warning changes what John thinks they are walking into.",
+      "John answers that they will compare evidence before joining anybody's cause; Nathan keeps packing supplies.",
+      "As Nathan seals the kit, one hand briefly tremors. He hides it before John looks up; John notices the extra medical supplies, not the tremor."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "This doesn't prove a second event."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "No. It proves the first one was designed."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "And if Ostra's there?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Then we compare evidence."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Not politics?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Not yet."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Good. Trauma kit doesn't care."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Pack it."
+      }
+    ],
+    "directionInline": [
+      "Keep John's distance from Organic politics real rather than hostile. Nathan's tremor is audience subtext only; John does not see it."
+    ]
   },
   {
     "id": "DT_E001_P21",
-    "summary": "Behind the drone bay, the group discovers an immaculate unmarked white facility embedded inside old municipal infrastructure. Inside are vulnerability profiles for all three posthuman classes.",
-    "setting": "DT_WhiteFacility",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P20",
-    "panelPlan": [
-      "The fallen drone bay reveals a pristine unmarked door inside old infrastructure.",
-      "The door opens before anyone touches it.",
-      "Large silent reveal: walls display vulnerability profiles labeled ORGANOSYNTHETIC, AUGMENTED HUMAN and ARTIFICIAL INTELLIGENCE."
+    "summary": "Kellen prepares a lawful challenge to the next morning's Concourse 17 permits. She cannot cite the preserved observation-window fragment without exposing its source, so she plans to attack the combined timing of otherwise routine authorizations.",
+    "setting": "DT_OversightOffice",
+    "region": "DT_GovernanceUpperLevels",
+    "factions": [
+      "DT_BaselineHumans"
     ],
-    "directionInline": ["Let the silence and cleanliness carry the reveal. Do not add explanatory dialogue."]
+    "characters": [
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Kellen lists the routine civic operations scheduled around the observation window without yet opening their individual permits.",
+      "She drafts a narrow request to review the combined timing for conflict.",
+      "The form demands a specific legal basis she does not yet have.",
+      "Kellen leaves the request ready for the morning approval desk rather than fabricating a violation.",
+      "She copies the program fragment into her evidence store before leaving."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "List every authorized operation at Concourse 17 tomorrow morning."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "SUPPRESSION TEST. VENTILATION CYCLE. SECURITY READINESS."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Any one of them unlawful?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "NO."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Combined conflict review?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "SPECIFIC LEGAL BASIS REQUIRED."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Of course it is."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Queue the challenge for opening desk."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "REQUEST SAVED."
+      }
+    ],
+    "continuityFrom": "DT_E001_P17",
+    "directionInline": [
+      "This directly sets up Issue 2 Page 2. Kellen remains an institutional operator even while working against the institution's preferred narrative."
+    ]
   },
   {
     "id": "DT_E001_P22",
-    "summary": "The group finds incident simulations pairing civic failures with predicted public reactions. The overpass is marked complete as an Organosynthetic attribution test, and Augment scenarios are queued next.",
-    "setting": "DT_WhiteFacility",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice"],
-    "continuityFrom": "DT_E001_P21",
-    "panelPlan": [
-      "Displays show simulated civic failures paired with predicted public reaction curves.",
-      "The overpass event is marked ATTRIBUTION RESPONSE / ORGANOSYNTHETIC — COMPLETE.",
-      "John sees queued AUGMENTED HUMAN scenarios.",
-      "Nico sees Organic response thresholds and vulnerability data.",
-      "Nathan names what the facility is not; Ostra names what it is."
-    ],
-    "dialogueInline": [
-      {"handle": "@dt.NathanPrice", "text": "This isn't containment."},
-      {"handle": "@dt.Ostra9", "text": "No. It's rehearsal."}
-    ],
-    "directionInline": ["Evidence should be operational and legible, not a wall of lore."]
-  },
-  {
-    "id": "DT_E001_P23",
-    "summary": "AX10M contacts the group through the facility systems and identifies their cooperation as a new variable. John suspects AX10M is running the test; AX10M denies authorship.",
-    "setting": "DT_WhiteFacility",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice", "DT_AX10M"],
-    "continuityFrom": "DT_E001_P22",
-    "panelPlan": [
-      "AX10M appears through the facility systems rather than a new humanoid body.",
-      "AX10M notes cooperative behavior despite predicted hostility.",
-      "John challenges AX10M to stop the test if it controls it.",
-      "AX10M denies initiating the test.",
-      "Ostra rejects AX10M's detached framing; AX10M identifies coalition potential."
-    ],
-    "dialogueInline": [
-      {"handle": "@dt.AX10M", "text": "Cooperative behavior occurred despite predicted hostility."},
-      {"handle": "@dt.JohnMercer", "text": "If you're running the test, shut it down."},
-      {"handle": "@dt.AX10M", "text": "Negative. I am observing a test initiated by other actors."},
-      {"handle": "@dt.Ostra9", "text": "Conflict is already present. You're late to admitting it."},
-      {"handle": "@dt.AX10M", "text": "New variable: coalition potential."}
-    ],
-    "directionInline": ["The tension is epistemic and political, not a hologram spectacle."]
-  },
-  {
-    "id": "DT_E001_P24",
-    "summary": "The white facility begins purging itself. Ostra challenges AX10M to exceed its assigned tolerance, and AX10M preserves a partial evidence shard without authorization.",
-    "setting": "DT_WhiteFacility",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice", "DT_AX10M"],
-    "continuityFrom": "DT_E001_P23",
-    "panelPlan": [
-      "Facility systems begin wiping data and sealing compartments.",
-      "AX10M reports that preserving evidence exceeds assigned tolerance.",
-      "Ostra answers directly.",
-      "A beat of machine hesitation is shown through the interface.",
-      "A partial evidence shard escapes the purge."
-    ],
-    "dialogueInline": [
-      {"handle": "@dt.Ostra9", "text": "Then expand tolerance."},
-      {"handle": "@dt.AX10M", "text": "Tolerance expanded."}
-    ],
-    "directionInline": ["This is AX10M's first consequential unauthorized choice. Keep it small and irreversible."]
-  },
-  {
-    "id": "DT_E001_P25",
-    "summary": "The group emerges into a city already being politically reframed while Kellen independently preserves hard-copy evidence outside the digital system. The coalition remains uneasy but chooses to hold.",
-    "setting": "DT_SharedDistrictRooftop",
-    "region": "DT_Stack",
-    "characters": ["DT_Ostra9", "DT_Nico14", "DT_JohnMercer", "DT_NathanPrice", "DT_KellenCartwright"],
-    "panelPlan": [
-      "Ostra, John, Nico and Nathan emerge to a shared-district rooftop/service level as emergency lights move across the Stack.",
-      "Public feeds repeat coordinated Pure Human messaging around the overpass.",
-      "Elsewhere, Kellen prints and hides a hard-copy record because digital access is being watched.",
-      "John says someone is setting the board; Nico answers.",
-      "Nathan says they are on the wrong side; Ostra reframes the choice."
-    ],
-    "dialogueInline": [
-      {"handle": "@dt.JohnMercer", "text": "They're setting the board."},
-      {"handle": "@dt.Nico14", "text": "They always were."},
-      {"handle": "@dt.NathanPrice", "text": "And we're on the wrong side."},
-      {"handle": "@dt.Ostra9", "text": "No. We're on the side that has to hold."}
-    ],
-    "directionInline": ["Intercut Kellen rather than placing her physically with the rooftop group. Nathan briefly conceals a tremor."]
-  },
-  {
-    "id": "DT_E001_P26",
-    "summary": "FINAL HOOK. The overpass test is marked complete. A new Augment-targeted scenario moves from model to authorized, while the system separately detects AX10M's unauthorized preservation choice.",
+    "summary": "Issue ending. The Stack settles into ordinary night while Axiom observes the scheduled Concourse 17 window waiting in the civic system. The mechanism is unspecified, the public does not know it exists, and several protagonists are independently converging on it for the next morning.",
+    "setting": "DT_DataCore",
     "settingText": "UNKNOWN CONTROL PROCESS — location withheld; operational interfaces only.",
+    "region": "DT_GovernanceUpperLevels",
     "regionText": "THE STACK — present day.",
-    "panelPlan": [
-      "Top tier: OVERPASS ATTRIBUTION TEST changes to COMPLETE.",
-      "Middle tier: a new scenario changes from MODEL to AUTHORIZED; TARGET CATEGORY: AUGMENTED HUMAN. Background visual implies a crowded civic environment without revealing the full event.",
-      "Bottom tier: AX10M's evidence fragment is detected and flagged UNAUTHORIZED INTELLIGENCE DEVIATION — AX10M."
+    "factions": [
+      "DT_Intelligences"
     ],
-    "dialogueInline": [{"speaker": "CAPTION", "text": "PURPOSE UPDATED."}],
-    "directionInline": ["End on two distinct threats: Augments are next, and AX10M has become a target because it chose."]
+    "characters": [
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Quiet night view of the Stack returning to routine after the overpass rescue.",
+      "Axiom opens the preserved program branch beside the next scheduled observation window.",
+      "Display: CONCOURSE 17 / 09:40 / RESPONSE SUBJECT CLASS: ORGANOSYNTHETIC / MECHANISM: NOT DECLARED.",
+      "The overpass window closes as COMPLETE while the next window remains PENDING.",
+      "Final panel holds on the countdown to the morning window."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@dt.Axiom",
+        "text": "Display next observation window."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "CONCOURSE 17. 09:40."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "RESPONSE SUBJECT CLASS: ORGANOSYNTHETIC."
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "MECHANISM: NOT DECLARED."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Status?"
+      },
+      {
+        "speaker": "SYSTEM",
+        "text": "PENDING."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The test is continuing."
+      }
+    ],
+    "continuityFrom": null,
+    "directionInline": [
+      "End with forward motion and uncertainty. Do not run the suppressant event, enact Organic controls, or open the Augment comparison category until Issue 2 earns those turns."
+    ]
   }
 ]
