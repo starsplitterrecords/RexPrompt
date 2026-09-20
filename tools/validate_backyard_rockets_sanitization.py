@@ -31,16 +31,46 @@ CORRECTION_RESIDUE = ("canonical visual override", "story override", "obsolete",
 
 
 def load(path): return json.loads(path.read_text(encoding="utf-8"))
+def norm(raw):
+    if isinstance(raw, list): return raw
+    return [{"id": key, **value} for key, value in (raw or {}).items() if isinstance(value, dict)]
+def merge_by_id(scenes, incoming):
+    updates = {scene.get("id"): scene for scene in incoming if scene.get("id")}
+    seen = set()
+    merged = []
+    for scene in scenes:
+        patch = updates.get(scene.get("id"))
+        if patch:
+            merged.append({**scene, **patch})
+            seen.add(scene.get("id"))
+        else:
+            merged.append(scene)
+    for scene in incoming:
+        sid = scene.get("id")
+        if sid and sid not in seen and not any(existing.get("id") == sid for existing in scenes):
+            merged.append(scene)
+    return merged
 def decode(path):
     raw = base64.b64decode("".join(path.read_text(encoding="utf-8").split()), validate=True)
     return json.loads(gzip.decompress(raw).decode("utf-8"))
 
 shows = load(MANIFEST)
 show = next(s for s in shows if s.get("id") == SHOW_ID)
-scenes = []
+base_file = SHOW / show.get("scenesFile", "scenes_base.json")
+scenes = norm(load(base_file))
 for overlay in show.get("sceneOverlays", []):
     p = SHOW / overlay["file"]
-    scenes.extend(decode(p) if overlay.get("encoding") == "gzip-base64" else load(p))
+    incoming = norm(decode(p) if overlay.get("encoding") == "gzip-base64" else load(p))
+    included = set(overlay.get("includeIds", []))
+    excluded = set(overlay.get("excludeIds", []))
+    if included:
+        incoming = [scene for scene in incoming if scene.get("id") in included]
+    if excluded:
+        incoming = [scene for scene in incoming if scene.get("id") not in excluded]
+    if overlay.get("mergeById"):
+        scenes = merge_by_id(scenes, incoming)
+    else:
+        scenes.extend(incoming)
 
 errors = []
 if len(scenes) != 162:
