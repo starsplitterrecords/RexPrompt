@@ -1,0 +1,71 @@
+name: Rex Fleet scene-flow diagnostic
+
+on:
+  push:
+    branches:
+      - enhance/rex-fleet-scene-flow
+    paths:
+      - '.github/workflows/rex-fleet-scene-flow-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: enhance/rex-fleet-scene-flow
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode current Rex Fleet production pages
+        run: |
+          python - <<'PY'
+          import base64, gzip, json, pathlib
+
+          root = pathlib.Path('.')
+          show = root / 'data/shows/rex-fleet-s1'
+          manifest = json.loads((root / 'data/shows.json').read_text(encoding='utf-8'))
+          entries = [e for e in manifest if e.get('seriesId') == 'rex-fleet']
+
+          def load(entry):
+              ov = entry['sceneOverlays'][0]
+              path = show / ov['file']
+              if ov.get('encoding') == 'gzip-base64':
+                  raw = base64.b64decode(''.join(path.read_text(encoding='utf-8').split()))
+                  return json.loads(gzip.decompress(raw).decode('utf-8'))
+              return json.loads(path.read_text(encoding='utf-8'))
+
+          out = {'sourceBranch':'enhance/rex-fleet-scene-flow','issues':{}}
+          for entry in entries:
+              issue = entry['issueLabel']
+              pages = load(entry)
+              compact = []
+              for p in pages:
+                  compact.append({
+                      'id': p.get('id'),
+                      'summary': p.get('summary'),
+                      'settingText': p.get('settingText'),
+                      'regionText': p.get('regionText'),
+                      'continuityFrom': p.get('continuityFrom'),
+                      'panelPlan': p.get('panelPlan', []),
+                      'dialogueInline': p.get('dialogueInline', []),
+                      'directionInline': p.get('directionInline', []),
+                      'charactersInline': p.get('charactersInline', []),
+                  })
+              out['issues'][issue] = compact
+
+          dest = root / 'tmp/rex-fleet-scene-flow-snapshot.json'
+          dest.parent.mkdir(parents=True, exist_ok=True)
+          dest.write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Commit diagnostic snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp/rex-fleet-scene-flow-snapshot.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Add temporary Rex Fleet scene-flow snapshot"
+          git push origin HEAD:enhance/rex-fleet-scene-flow
