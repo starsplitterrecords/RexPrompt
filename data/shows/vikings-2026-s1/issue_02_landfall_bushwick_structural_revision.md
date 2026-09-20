@@ -4,7 +4,7 @@ Status: STRUCTURAL SEASON REVISION — dialogue intentionally not line-polished
 Primary function: apartment adaptation and neighborhood integration; the temporary shelter becomes a functioning household while Carrie secures a provisional administrative foothold.
 
 ## Revision intent
-- Preserve the key/placement endpoint and existing Issue 1 canon.
+- Preserve the key/placement endpoint and released Issue 1 canon.
 - Move food, neighbor contact, domestic choices, privacy and ordinary household behavior ahead of the signature problem.
 - Keep bureaucracy as pressure beneath the story rather than the story's only activity.
 - Keep all three Kin together in or immediately around the Bushwick placement, while beginning to distinguish them through choices inside the shared household.
@@ -433,70 +433,42 @@ Primary function: apartment adaptation and neighborhood integration; the tempora
 
 ## PAGE 23 — LOCK IT BEHIND ME
 
-**Summary:** Carrie gives the household its first real privacy by leaving and telling Bjorn to lock her out of the space she arranged for them.
+**Summary:** Carrie leaves the functioning household and tells Bjorn to lock her out, making privacy and the turn of the brass key the final practical lesson of the night.
 
 **Setting:** Bushwick studio doorway and fifth-floor hallway
 
-5 panels.
+6 panels.
 
-1. **wide.** Carrie stands in the open doorway with coat and folder; the household remains inside the now-organized studio.
+1. **wide.** Carrie stands in the open doorway with coat and folder; the household remains inside the organized studio.
    **CARRIE:** I am leaving before something else becomes municipal.
 2. **medium.** Bjorn follows her to the threshold.
    **BJORN:** And tomorrow?
    **CARRIE:** Tomorrow you still live here.
-3. **close.** Carrie points to the key in his hand.
+3. **close.** Carrie points to the brass key in his hand.
    **CARRIE:** Lock it behind me.
 4. **two-shot.** Bjorn looks from Carrie to the hallway.
    **BJORN:** You give a hall and command us to bar you from it.
    **CARRIE:** That is privacy. You are going to love it.
-5. **wide.** Carrie steps into the hallway; Bjorn closes the door.
-
-## PAGE 24 — THE CLICK
-
-**Summary:** The lock turning is treated as an emotional event: the household is temporarily protected from the city and from Carrie, not merely contained by them.
-
-**Setting:** Bushwick studio apartment / closed front door
-
-5 panels.
-
-1. **insert.** The brass key turns in the lock from inside.
-2. **medium.** Bjorn tests the locked handle once.
-3. **wide.** Behind him, Gunnar sits with the household map; Astrid and the two male Kin continue separate small tasks in the warm room.
-4. **two-shot.** Gunnar looks toward the shut door.
+5. **insert.** From inside 5B, the brass key turns in the lock after Carrie steps into the hall.
+6. **wide.** Bjorn tests the locked handle once. Behind him Gunnar sits with the household map while Astrid and the two male Kin continue separate small tasks.
    **GUNNAR:** She cannot enter without us opening it.
-5. **close.** Bjorn considers the new form of sovereignty.
    **BJORN:** Good.
 
-## PAGE 25 — SMALL HALL
+## PAGE 24 — LANDFALL
 
-**Summary:** The room settles into ordinary nighttime life, with the first signs of future routines already present rather than every beat being about adaptation.
+**Summary:** The issue closes on a warm, functioning household whose ordinary routines now matter more than the form that made the placement provisional.
 
-**Setting:** Bushwick studio apartment late night
+**Setting:** Bushwick apartment 5B late night and hallway exterior
 
-5 panels.
+6 panels.
 
-1. **wide.** Astrid stores the last bodega food; First Male Kin folds a coat under his head; Second Male Kin checks the window latch; Gunnar puts the contact card beside the key hook.
-2. **medium.** Bjorn sits with his back against the wall, boots off, finally still.
-3. **close.** The bodega bag and receipt sit beside old Norse travel gear.
-4. **wide.** The radiator glows with heat while street light crosses the floor.
-5. **medium.** First Male Kin looks around.
-   **FIRST MALE KIN:** Small hall.
-   **GUNNAR:** Warm hall.
-
-## PAGE 26 — LANDFALL
-
-**Summary:** The issue closes on a functioning household rather than a completed form: the city has granted only a provisional foothold, but the people inside have already begun making it home.
-
-**Setting:** Bushwick apartment 5B and hallway exterior
-
-5 panels.
-
-1. **wide.** Inside 5B: bedding arranged, groceries put away, hot water mug or wash basin, household map, completed packet, bodega receipt, and brass key all coexist in one coherent room.
-2. **medium.** Bjorn looks at the key hanging by the door.
+1. **wide.** Inside 5B: bedding arranged, groceries put away, household map, completed packet, bodega receipt, contact card and brass key all coexist in one coherent room.
+2. **medium.** Astrid stores the last food while First Male Kin settles folded bedding and Second Male Kin checks the window latch; no one waits for Bjorn to assign them places.
+3. **medium.** Bjorn looks at the key hanging by the door.
    **BJORN:** Ours under law.
-3. **medium.** Gunnar glances at the review notice still clipped to the packet.
+4. **medium.** Gunnar glances at the review notice still clipped to the packet.
    **GUNNAR:** Until the review.
-4. **wide.** Astrid and the two male Kin settle into their own chosen places rather than waiting for Bjorn to assign them.
    **BJORN:** Then we make the time count.
-5. **exterior.** In the hallway outside the locked door, Carrie leans briefly against the wall, hears ordinary movement inside, and heads for the stairs.
+5. **wide.** The radiator heats the small room while street light crosses old Norse travel gear and new bodega groceries.
+6. **exterior.** In the hallway outside the locked door, Carrie leans briefly against the wall, hears ordinary movement inside, then heads for the stairs.
    **CARRIE:** Please just make it to morning.
