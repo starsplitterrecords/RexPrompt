@@ -80,7 +80,7 @@ def main():
     assert len(normalization.get("perPageGate", [])) >= 9, "Division Threshold per-page visual gate is incomplete"
     assert normalization.get("storyPageOutputRule"), "Division Threshold story-page output rule is missing"
 
-    expected_visual_overlays = [f"issue_{issue:02d}_visual_reconciliation.json" for issue in range(1, 9)]
+    expected_visual_overlays = [f"issue_{issue:02d}_visual_reconciliation.json" for issue in range(2, 9)]
     active_scene_overlays = [overlay.get("file") for overlay in assembler.get("sceneOverlays", [])]
     for filename in expected_visual_overlays:
         assert filename in active_scene_overlays, f"Missing normalized visual overlay: {filename}"
@@ -100,14 +100,15 @@ def main():
         pages = apply_dialogue(pages, normalize_overlay(load(overlay["file"])))
 
     ids = [page["id"] for page in pages]
-    assert len(ids) == 208, f"Expected 208 assembled pages, found {len(ids)}"
+    assert len(ids) == 204, f"Expected 204 assembled pages, found {len(ids)}"
     assert len(ids) == len(set(ids)), "Duplicate assembled page IDs"
 
     for issue in range(1, 9):
         prefix = f"DT_E{issue:03d}_P"
         issue_pages = [page for page in pages if page["id"].startswith(prefix)]
-        assert len(issue_pages) == 26, f"Issue {issue}: expected 26 pages, found {len(issue_pages)}"
-        expected = [f"DT_E{issue:03d}_P{page:02d}" for page in range(1, 27)]
+        expected_count = 22 if issue == 1 else 26
+        assert len(issue_pages) == expected_count, f"Issue {issue}: expected {expected_count} pages, found {len(issue_pages)}"
+        expected = [f"DT_E{issue:03d}_P{page:02d}" for page in range(1, expected_count + 1)]
         assert [page["id"] for page in issue_pages] == expected, f"Issue {issue}: page order/IDs are not canonical"
 
     for page in pages:
@@ -132,16 +133,16 @@ def main():
     by_id = {page["id"]: page for page in pages}
 
     expected_issue1_locations = {
+        "DT_E001_P13": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
+        "DT_E001_P14": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
+        "DT_E001_P15": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
+        "DT_E001_P16": ("DT_AugmentClinic", "DT_Stack"),
         "DT_E001_P17": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
-        "DT_E001_P18": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
-        "DT_E001_P19": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
+        "DT_E001_P18": ("DT_DataCore", "DT_GovernanceUpperLevels"),
+        "DT_E001_P19": ("DT_VerticalTransitInterchange", "DT_Stack"),
         "DT_E001_P20": ("DT_AugmentClinic", "DT_Stack"),
         "DT_E001_P21": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
         "DT_E001_P22": ("DT_DataCore", "DT_GovernanceUpperLevels"),
-        "DT_E001_P23": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
-        "DT_E001_P24": ("DT_AugmentClinic", "DT_Stack"),
-        "DT_E001_P25": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
-        "DT_E001_P26": ("DT_DataCore", "DT_GovernanceUpperLevels"),
     }
     for pid, (setting, region) in expected_issue1_locations.items():
         page = by_id[pid]
@@ -149,7 +150,8 @@ def main():
         assert page.get("region") == region, f"{pid}: stale/wrong region {page.get('region')}"
 
     for issue in range(1, 9):
-        for page_num in range(1, 27):
+        page_count = 22 if issue == 1 else 26
+        for page_num in range(1, page_count + 1):
             pid = f"DT_E{issue:03d}_P{page_num:02d}"
             assert by_id[pid].get("factions"), f"{pid}: missing visual faction context"
 
@@ -195,7 +197,7 @@ def main():
         "suppressant discharges",
         "capability review required",
     )
-    for pid in [f"DT_E001_P{n:02d}" for n in range(18, 27)]:
+    for pid in [f"DT_E001_P{n:02d}" for n in range(14, 23)]:
         text = " ".join([
             by_id[pid].get("summary", ""),
             " ".join(map(str, by_id[pid].get("panelPlan", []))),
@@ -215,7 +217,7 @@ def main():
                 assert handle in handles, f"{page['id']}: unknown dialogue handle {handle}"
 
     print("Division Threshold validation passed")
-    print("8 issues / 208 pages / normalized visual context through Issue 8 / durable IMG session contract / locked lead visual anchors / valid production references")
+    print("8 issues / 204 pages / normalized visual context through Issue 8 / durable IMG session contract / locked lead visual anchors / valid production references")
 
 
 if __name__ == "__main__":
