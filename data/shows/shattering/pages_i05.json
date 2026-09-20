@@ -150,7 +150,7 @@
   },
   {
     "id": "SHAT_I05_P04",
-    "summary": "The Verge voice defends neighborhood improvisation with a concrete food handoff, while the Core advocate presses the real question of how mistakes are prevented rather than merely traced afterward.",
+    "summary": "The neighborhood coordinator defends neighborhood improvisation with a concrete food handoff, while the Core advocate presses the real question of how mistakes are prevented rather than merely traced afterward.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
     "factions": [
@@ -251,7 +251,7 @@
   },
   {
     "id": "SHAT_I05_P06",
-    "summary": "Ruvian leads a salvage crew into a damaged shard node where one critical conduit threatens to take the whole system dark.",
+    "summary": "Ruvian leads a salvage crew into a damaged Outer node where one critical conduit threatens to take the whole system dark.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -346,7 +346,7 @@
   },
   {
     "id": "SHAT_I05_P08",
-    "summary": "The patched shard node holds, giving Ruvian’s crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
+    "summary": "The patched Outer node holds, giving Ruvian's crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -931,9 +931,7 @@
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
-      "F_Convoy",
-      "F_Coop"
+      "F_Outer"
     ],
     "characters": [
       "C_ruvian",
@@ -993,12 +991,10 @@
   {
     "id": "SHAT_I05_P21",
     "summary": "Aveth's hand-verified routes acquire an informal name as people begin calling lanes beyond the old centralized map 'verge routes'; Aveth cares less about the label than preserving who actually vouched for each crossing.",
-    "setting": "S_OuterRing",
+    "setting": "S_OrbanPort",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
-      "F_Convoy",
-      "F_Coop"
+      "F_Convoy"
     ],
     "characters": [
       "C_ruvian",
@@ -1050,9 +1046,9 @@
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
+      "F_Coop",
       "F_Convoy",
-      "F_Coop"
+      "F_Outer"
     ],
     "characters": [
       "C_ruvian",
@@ -1094,6 +1090,7 @@
         "text": "Good. Start there."
       }
     ],
-    "sceneId": "SCN_SHAT_I05_S09"
+    "sceneId": "SCN_SHAT_I05_S09",
+    "settingText": "Cross-cut montage between an Outer Ring repair deck, Orban-Tier Transit Port, and a rebuilt standards workspace: three distinct post-Break practices operating at the same time without sharing one visual language."
   }
 ]
