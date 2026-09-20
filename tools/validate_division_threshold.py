@@ -20,46 +20,6 @@ def load(name: str):
         return json.load(fh)
 
 
-def normalize_overlay(raw):
-    if isinstance(raw, list):
-        return raw
-    if isinstance(raw, dict) and isinstance(raw.get("pages"), list):
-        return raw["pages"]
-    if isinstance(raw, dict):
-        return [{"id": key, **value} for key, value in raw.items()]
-    raise AssertionError(f"Unsupported overlay shape: {type(raw).__name__}")
-
-
-def merge_by_id(pages, incoming):
-    updates = {page["id"]: page for page in incoming if page.get("id")}
-    merged = []
-    seen = set()
-    for page in pages:
-        patch = updates.get(page["id"])
-        if patch:
-            merged.append({**page, **patch})
-            seen.add(page["id"])
-        else:
-            merged.append(page)
-    for page in incoming:
-        if page.get("id") and page["id"] not in seen and not any(existing["id"] == page["id"] for existing in pages):
-            merged.append(page)
-    return merged
-
-
-def apply_dialogue(pages, incoming):
-    updates = {page["id"]: page for page in incoming if page.get("id")}
-    result = []
-    for page in pages:
-        patch = updates.get(page["id"])
-        if not patch:
-            result.append(page)
-            continue
-        dialogue = patch.get("dialogueInline") or patch.get("sceneDialogue")
-        result.append({**page, "dialogueInline": dialogue} if isinstance(dialogue, list) else page)
-    return result
-
-
 def main():
     assembler = load("assembler.json")
     characters = load("characters.json")
@@ -80,24 +40,15 @@ def main():
     assert len(normalization.get("perPageGate", [])) >= 9, "Division Threshold per-page visual gate is incomplete"
     assert normalization.get("storyPageOutputRule"), "Division Threshold story-page output rule is missing"
 
-    expected_visual_overlays = [f"issue_{issue:02d}_visual_reconciliation.json" for issue in range(2, 9)]
-    active_scene_overlays = [overlay.get("file") for overlay in assembler.get("sceneOverlays", [])]
-    for filename in expected_visual_overlays:
-        assert filename in active_scene_overlays, f"Missing normalized visual overlay: {filename}"
+    assert not assembler.get("sceneOverlays"), "Division Threshold must remain flat; scene overlays are obsolete"
+    assert not assembler.get("dialogueOverlays"), "Division Threshold must remain flat; dialogue overlays are obsolete"
 
-    expected_reference_overlays = [f"data/shows/division-threshold-s1/{filename}" for filename in expected_visual_overlays]
-    assert normalization.get("textualProductionBaseline", {}).get("visualReconciliation") == expected_reference_overlays, "Normalization reference and assembler visual overlays disagree"
+    expected_issue_pages = [f"data/shows/division-threshold-s1/pages_e{issue:02d}_compiled.json" for issue in range(1, 9)]
+    assert normalization.get("textualProductionBaseline", {}).get("issuePages") == expected_issue_pages, "Normalization reference and flat issue pages disagree"
 
     pages = []
     for filename in assembler["scenesFiles"]:
         pages.extend(load(filename))
-
-    for overlay in assembler.get("sceneOverlays", []):
-        incoming = normalize_overlay(load(overlay["file"]))
-        pages = merge_by_id(pages, incoming) if overlay.get("mergeById") else pages + incoming
-
-    for overlay in assembler.get("dialogueOverlays", []):
-        pages = apply_dialogue(pages, normalize_overlay(load(overlay["file"])))
 
     ids = [page["id"] for page in pages]
     assert len(ids) == 204, f"Expected 204 assembled pages, found {len(ids)}"
@@ -116,6 +67,10 @@ def main():
         assert page.get("summary"), f"{pid}: missing summary"
         assert len(page.get("panelPlan", [])) >= 1, f"{pid}: missing panel plan"
         assert isinstance(page.get("dialogueInline", []), list), f"{pid}: dialogue must be a list"
+        assert not page.get("directionInline"), f"{pid}: page-level direction must be compiled into panel data"
+        assert not page.get("direction"), f"{pid}: detached direction reference remains"
+        assert "dialogueSource" not in page, f"{pid}: overlay provenance leaked into flat production data"
+        assert any("Performance and story direction:" in str(panel) for panel in page.get("panelPlan", [])), f"{pid}: panel-scoped story direction missing"
 
         if page.get("setting"):
             assert page["setting"] in settings, f"{pid}: unknown setting {page['setting']}"
@@ -129,6 +84,8 @@ def main():
         prior = page.get("continuityFrom")
         if prior:
             assert prior in ids, f"{pid}: continuityFrom references missing page {prior}"
+            index = ids.index(pid)
+            assert index > 0 and ids[index - 1] == prior, f"{pid}: continuityFrom must reference the immediately preceding production page"
 
     by_id = {page["id"]: page for page in pages}
 
