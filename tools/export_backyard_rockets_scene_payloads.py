@@ -24,6 +24,23 @@ def read_overlay(path, encoding=None):
         return json.loads(gzip.decompress(base64.b64decode(b64, validate=True)).decode())
     return json.loads(path.read_text())
 
+def merge_by_id(scenes, incoming):
+    updates = {scene.get('id'): scene for scene in incoming if scene.get('id')}
+    seen = set()
+    merged = []
+    for scene in scenes:
+        patch = updates.get(scene.get('id'))
+        if patch:
+            merged.append({**scene, **patch})
+            seen.add(scene.get('id'))
+        else:
+            merged.append(scene)
+    for scene in incoming:
+        sid = scene.get('id')
+        if sid and sid not in seen and not any(existing.get('id') == sid for existing in scenes):
+            merged.append(scene)
+    return merged
+
 
 def episode(scene):
     if scene.get('episode'):
@@ -67,22 +84,33 @@ def field_present(scene, field):
 
 groups = []
 base_file = show.get('scenesFile', 'scenes_base.json')
+base_scenes = norm(json.loads((base / base_file).read_text()))
 groups.append({
     'file': base_file,
     'encoding': None,
-    'scenes': norm(json.loads((base / base_file).read_text())),
+    'mergeById': False,
+    'scenes': base_scenes,
 })
+all_scenes = list(base_scenes)
 for overlay in show.get('sceneOverlays', []):
     raw = read_overlay(base / overlay['file'], overlay.get('encoding'))
+    included = set(overlay.get('includeIds', []))
     excluded = set(overlay.get('excludeIds', []))
-    scenes = [s for s in norm(raw) if s.get('id') not in excluded]
+    scenes = norm(raw)
+    if included:
+        scenes = [s for s in scenes if s.get('id') in included]
+    if excluded:
+        scenes = [s for s in scenes if s.get('id') not in excluded]
     groups.append({
         'file': overlay['file'],
         'encoding': overlay.get('encoding'),
+        'mergeById': bool(overlay.get('mergeById')),
         'scenes': scenes,
     })
-
-all_scenes = [scene for group in groups for scene in group['scenes']]
+    if overlay.get('mergeById'):
+        all_scenes = merge_by_id(all_scenes, scenes)
+    else:
+        all_scenes.extend(scenes)
 quality_fields = (
     'summary',
     'directionInline',
