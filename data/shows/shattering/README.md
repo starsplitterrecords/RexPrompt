@@ -14,12 +14,13 @@ The active RexPrompt package is page-based comic production.
 - Durable approved unpublished images: none at this checkpoint
 - Structured visual-reference inventory: `production/references/shattering/reference-inventory.json`
 - End-to-end writing/continuity review: complete through Issue 6
-- Scene-flow structural pass: complete; `continuityFrom` is limited to true within-scene page continuation, abrupt location cuts are explicitly re-established, and clearly panel-local direction is embedded in the relevant panel plan. Dialogue is unchanged in this pass.
+- Scene-flow structural pass: complete; `continuityFrom` is limited to true within-scene page continuation, abrupt location cuts are explicitly re-established, and clearly panel-local direction is embedded in the relevant panel plan.
+- Scene-first dialogue rewrite: complete across Issues 1–6. Dialogue is authored as continuous dramatic scenes across page boundaries, then distributed into each page’s `dialogueInline` array. The active pages contain 672 short utterances averaging 5.3 words each and 26.9 dialogue words per page.
 - Story-level production blockers: none
 - Visual-reference gate: open; no approved Shattering image baseline yet
 - Production frontier: `SHAT_I01_P01`
 
-`data/scenes_shattering.json` is the source-scene and provenance package. The active generation path is the six page files under `data/shows/shattering/`.
+`data/scenes_shattering.json` is the source-scene and provenance package. Its legacy dialogue-ID arrays have been retired. Each active page now carries a `sceneId`, and the active generation path is the six page files under `data/shows/shattering/`, with production dialogue stored directly in `dialogueInline`.
 
 ## Story architecture
 
@@ -139,4 +140,4 @@ Do not infer the page mapping from the old filename or source scene ID alone.
 
 ## Editorial boundary
 
-The page conversion preserves the original event order and all source dialogue. It expands scene-level material into sequential comic storytelling and clarifies causal transitions without changing released canon; there is no released Shattering canon in StarSplitterVisions at this checkpoint.
+The current page package preserves the original event order, causal spine, character arcs, and major reveals while substantially rewriting dialogue for scene-level dramatic flow. Existing 22-page issue lengths were retained because the established scene spans provide sufficient visual and dialogue room after the rewrite; no page was added or removed merely to increase dialogue density. There is no released Shattering canon in StarSplitterVisions at this checkpoint.
