@@ -108,6 +108,10 @@
       {
         "name": "Child",
         "handle": "@starsplit.child"
+      },
+      {
+        "name": "Shard Caregiver",
+        "handle": "@starsplit.shard.caregiver"
       }
     ],
     "dialogueInline": [
@@ -117,7 +121,7 @@
         "text": "Keep pressure on that brace. Together—don’t match uniforms, match hands."
       },
       {
-        "handle": "@starsplit.child",
+        "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
         "text": "Give the mask to the kid."
       },
@@ -127,7 +131,7 @@
         "text": "You need it."
       },
       {
-        "handle": "@starsplit.child",
+        "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
         "text": "So does she. She’s smaller."
       },
@@ -477,7 +481,7 @@
       },
       {
         "name": "Junior Rescuer",
-        "handle": "@starsplit.officer"
+        "handle": "@starsplit.junior.rescuer"
       }
     ],
     "dialogueInline": [
@@ -527,7 +531,7 @@
         "text": "Yes. Get them aboard."
       },
       {
-        "handle": "@starsplit.officer",
+        "handle": "@starsplit.junior.rescuer",
         "speaker": "Junior Rescuer",
         "text": "Captain, I can’t leave you."
       },
@@ -573,7 +577,7 @@
         "handle": "@starsplit.raider"
       },
       {
-        "name": "Billie",
+        "name": "Billie Rusk",
         "handle": "@starsplit.billie.rusk"
       }
     ],
@@ -1127,12 +1131,20 @@
         "handle": "@starsplit.brent.wallace"
       },
       {
-        "name": "Resident",
-        "handle": "@starsplit.crew.various"
+        "name": "Auric Resident",
+        "handle": "@starsplit.resident"
       },
       {
         "name": "Child",
         "handle": "@starsplit.child"
+      },
+      {
+        "name": "Shard Caregiver",
+        "handle": "@starsplit.shard.caregiver"
+      },
+      {
+        "name": "Crew (various)",
+        "handle": "@starsplit.crew.various"
       }
     ],
     "dialogueInline": [
@@ -1167,7 +1179,7 @@
         "text": "How many in your family?"
       },
       {
-        "handle": "@starsplit.child",
+        "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
         "text": "Two. If my sister made it off."
       },
