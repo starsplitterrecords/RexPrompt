@@ -9,7 +9,7 @@
     "rules": [
       "Echoes currently has no released StarSplitterVisions visual canon.",
       "Use these recovered approved character references together with assembler-visible visualAnchor and continuityLocks.",
-      "The corrected Kyn image is authoritative for Kyn identity; the earlier rejected messiah-like depiction is not authority.",
+      "Use the approved Kyn image as the primary Kyn identity reference.",
       "These images anchor character identity only. They do not control page layout, lettering, captions, story staging, or promotional typography.",
       "Failed, repeated, superseded, or chat-only comic-page generations are not visual authority."
     ]
@@ -26,7 +26,7 @@
     {"id":"oryon","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/oryon.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.oryon"],"use":"Primary recovered identity reference for Oryon."},
     {"id":"regent","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/regent.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.regent"],"use":"Primary recovered identity reference for Regent."},
     {"id":"arbiter","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/arbiter.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.arbiter"],"use":"Primary recovered identity reference for Arbiter."},
-    {"id":"kyn-corrected","type":"approved-corrective-reference","image":"production/references/echoes-forgotten-war/characters/kyn.jpg","scope":["character-identity","corrective-reference"],"characters":["@ech.kyn"],"use":"Primary corrected Kyn identity reference. Intentionally supersedes the rejected messiah-like depiction."},
+    {"id":"kyn","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/kyn.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.kyn"],"use":"Primary Kyn identity reference."},
     {"id":"mero","type":"approved-current-production-reference","image":"production/references/echoes-forgotten-war/characters/mero.jpg","scope":["character-identity","pantheon-differentiation"],"characters":["@ech.mero"],"use":"Primary recovered identity reference for General Mero."}
   ],
   "characterReferenceOrder": {
@@ -41,7 +41,7 @@
     "@ech.oryon":["oryon"],
     "@ech.regent":["regent"],
     "@ech.arbiter":["arbiter"],
-    "@ech.kyn":["kyn-corrected"],
+    "@ech.kyn":["kyn"],
     "@ech.mero":["mero"]
   },
   "excludedAsPageStyleAuthority": [

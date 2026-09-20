@@ -295,7 +295,7 @@ def validate_visual_references() -> None:
         image = ref.get("image")
         assert image, f"Reference missing image path: {ref.get('id')}"
         assert (ROOT / image).exists(), f"Reference image missing: {image}"
-        assert ref.get("type") in {"approved-current-production-reference", "approved-corrective-reference"}, (
+        assert ref.get("type") == "approved-current-production-reference", (
             f"Reference is not explicitly approved: {ref.get('id')}"
         )
 

@@ -35,8 +35,6 @@ The current recovered visual-reference pack is `visual-reference-pack.json`. Its
 
 These references are approved current-production identity and pantheon-differentiation references. They supplement the assembler-visible character anchors. They are not released canon and do not control page layout, lettering, captions, story staging, or promotional typography.
 
-The stored Kyn reference is the corrected design and intentionally supersedes the rejected messiah-like depiction. The rejected earlier depiction is not visual authority.
-
 ## Not visual authority
 
 Do not use any of the following as continuity references unless the user explicitly approves and stores them as such:
@@ -58,4 +56,4 @@ The production frontier therefore remains `EFW_S1E01_S01`.
 
 When an Echoes page passes reader test, recipe fidelity, character/world continuity, composition, and lettering review, store the approved image as a recipe-level approved production draft under `production/drafts/` and register it in `production/drafts/manifest.json`.
 
-A standalone approved corrective or character/world reference should be stored under this reference directory with its scope stated clearly.
+A standalone approved character or world reference should be stored under this reference directory with its scope stated clearly.
