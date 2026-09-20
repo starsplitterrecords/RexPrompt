@@ -15,7 +15,9 @@ The active RexPrompt package is page-based comic production.
 - Structured visual-reference inventory: `production/references/shattering/reference-inventory.json`
 - End-to-end writing/continuity review: complete through Issue 6
 - Scene-flow structural pass: complete; `continuityFrom` is limited to true within-scene page continuation, abrupt location cuts are explicitly re-established, and clearly panel-local direction is embedded in the relevant panel plan.
-- Scene-first dialogue rewrite: complete across Issues 1–6. Dialogue is authored as continuous dramatic scenes across page boundaries, then distributed into each page’s `dialogueInline` array. The active pages contain 672 short utterances averaging 5.3 words each and 26.9 dialogue words per page.
+- Scene-first dialogue rewrite: complete across Issues 1–6. Dialogue is authored as continuous dramatic scenes across page boundaries, then distributed into each page’s `dialogueInline` array. The active pages contain 676 short utterances averaging 5.4 words each and 27.5 dialogue words per page.
+- Comprehensive editorial pass: complete through Issue 6; the active sequence now explicitly carries the emergency-override mechanism, principal-character aftermath, emerging faction-name usage, and the rescue-vessel throughline that forces the final doctrinal compromises into operational choices.
+- Page architecture is intentionally non-uniform where the beat requires it; current panel-plan counts are 2-beat: 3, 3-beat: 19, 4-beat: 89, 5-beat: 19, 6-beat: 2.
 - Story-level production blockers: none
 - Visual-reference gate: open; no approved Shattering image baseline yet
 - Production frontier: `SHAT_I01_P01`
@@ -120,7 +122,7 @@ The six-issue arc remains:
 
 ## Production readiness
 
-The six-issue writing, page architecture, identity normalization, Rex Fleet lineage check, assembled-page structure, and end-to-end sequence review are complete. The remaining gate is visual rather than narrative: image generation should not begin until a usable approved Shattering reference baseline is established.
+The six-issue writing, causal continuity, character aftermath, page architecture, identity normalization, Rex Fleet lineage check, assembled-page structure, and end-to-end sequence review are complete. The remaining gate is visual rather than narrative: image generation should not begin until a usable approved Shattering reference baseline is established.
 
 The current reference inventory records 29 historical recovery candidates across 13 source-scene groups. None are approved references or approved drafts.
 

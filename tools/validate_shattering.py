@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Mechanical integrity checks for the Shattering page-production package.
 
-This protects the active comic-page contract, reference integrity, source-dialogue
-preservation, and cross-series identity normalization. It does not score narrative
-quality or freeze exact page prose beyond structural requirements.
+This protects the active comic-page contract, reference integrity, scene continuity,
+and cross-series identity normalization. It deliberately does not score narrative
+quality or freeze creative choices such as exact dialogue, page density, or panel count.
 """
 
 from __future__ import annotations
 
 import json
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +17,6 @@ SHOW_DIR = DATA / "shows" / "shattering"
 SHOWS = DATA / "shows.json"
 SOURCE = DATA / "scenes_shattering.json"
 CHARACTERS = DATA / "characters.json"
-DIALOGUE = DATA / "dialogue.json"
 SETTINGS = DATA / "settings.json"
 FACTIONS = DATA / "factions.json"
 REGIONS = DATA / "regions.json"
@@ -38,17 +36,28 @@ def main():
     shows = load(SHOWS)
     source = load(SOURCE)
     characters = load(CHARACTERS)
-    dialogue = load(DIALOGUE)
     settings = load(SETTINGS)
     factions = load(FACTIONS)
     regions = load(REGIONS)
     rf_characters = load(RF_CHARACTERS)
+
+    source_ids = {scene.get("id") for scene in source}
+    assert None not in source_ids, "A Shattering source scene is missing an id"
+    assert len(source_ids) == len(source), "Duplicate Shattering source scene ids"
+
+    handles_to_ids = {
+        character.get("handle"): cid
+        for cid, character in characters.items()
+        if character.get("handle")
+    }
 
     entries = [s for s in shows if s.get("seriesId") == "shattering"]
     assert len(entries) == 6, f"Expected 6 Shattering issue entries, found {len(entries)}"
 
     all_pages = []
     all_page_ids = set()
+    active_scene_ids = set()
+
     for issue, entry in enumerate(entries, start=1):
         expected_id = f"shattering-i{issue:02d}"
         assert entry.get("id") == expected_id, f"Issue {issue}: show id mismatch"
@@ -74,35 +83,56 @@ def main():
             pid = page["id"]
             assert pid not in all_page_ids, f"Duplicate page ID {pid}"
             all_page_ids.add(pid)
-            assert page.get("summary"), f"{pid}: missing summary"
-            assert len(page.get("panelPlan", [])) >= 4, f"{pid}: page needs a developed panel plan"
-            assert page.get("directionInline"), f"{pid}: page needs story-specific direction"
+
+            assert isinstance(page.get("summary"), str) and page["summary"].strip(), f"{pid}: missing summary"
+            panel_plan = page.get("panelPlan")
+            assert isinstance(panel_plan, list) and panel_plan, f"{pid}: missing panel plan"
+            assert all(isinstance(item, str) and item.strip() for item in panel_plan), f"{pid}: invalid panel-plan entry"
             assert "episode" not in page and "act" not in page, f"{pid}: source scene fields survived"
+
+            scene_id = page.get("sceneId")
+            assert scene_id in source_ids, f"{pid}: unknown source scene {scene_id}"
+            active_scene_ids.add(scene_id)
 
             setting = page.get("setting")
             region = page.get("region")
             assert setting in settings, f"{pid}: unknown setting {setting}"
             assert region in regions, f"{pid}: unknown region {region}"
+
             for faction in page.get("factions", []):
                 assert faction in factions, f"{pid}: unknown faction {faction}"
-            for character in page.get("characters", []):
+
+            page_characters = set(page.get("characters", []))
+            for character in page_characters:
                 assert character in characters, f"{pid}: unknown character {character}"
-            for line_id in page.get("dialog", []):
-                assert line_id in dialogue, f"{pid}: unknown dialogue {line_id}"
+
+            dialogue_inline = page.get("dialogueInline", [])
+            assert isinstance(dialogue_inline, list), f"{pid}: dialogueInline must be a list"
+            for line in dialogue_inline:
+                assert isinstance(line, dict), f"{pid}: malformed dialogue entry"
+                handle = line.get("handle")
+                text = line.get("text")
+                assert isinstance(handle, str) and handle, f"{pid}: dialogue handle missing"
+                assert isinstance(text, str) and text.strip(), f"{pid}: dialogue text missing"
+                if handle.startswith("@"):
+                    assert handle in handles_to_ids, f"{pid}: unknown dialogue handle {handle}"
+                    speaker_id = handles_to_ids[handle]
+                    assert speaker_id in page_characters, f"{pid}: speaker {handle} absent from page character list"
 
             if index == 0:
                 assert not page.get("continuityFrom"), f"{pid}: issue opener should not inherit prior-page continuity"
             else:
-                assert page.get("continuityFrom") == pages[index - 1]["id"], f"{pid}: continuityFrom is not the prior page"
+                previous = pages[index - 1]
+                same_scene = page.get("sceneId") == previous.get("sceneId")
+                if same_scene:
+                    assert page.get("continuityFrom") == previous["id"], f"{pid}: within-scene continuity must point to prior page"
+                else:
+                    assert not page.get("continuityFrom"), f"{pid}: new scene must not inherit prior-scene continuity"
 
         all_pages.extend(pages)
 
     assert len(all_pages) == 132, f"Expected 132 active pages, found {len(all_pages)}"
-
-    source_dialogue = [line for scene in source for line in scene.get("dialog", [])]
-    active_dialogue = [line for page in all_pages for line in page.get("dialog", [])]
-    assert Counter(active_dialogue) == Counter(source_dialogue), "Active pages must preserve every Source dialogue line exactly once"
-    assert len(active_dialogue) == len(set(active_dialogue)), "A source dialogue line is reused across active pages"
+    assert active_scene_ids == source_ids, "Active page package and source-scene package do not describe the same scene set"
 
     assert all(scene.get("region") != "PostBreakNetwork" for scene in source), "Retired invalid PostBreakNetwork region remains in source"
     active_text = json.dumps(all_pages, ensure_ascii=False)
@@ -127,7 +157,6 @@ def main():
     groups = inventory.get("recoveryGroups")
     assert isinstance(groups, list), "Shattering reference inventory recoveryGroups must be a list"
     page_ids = {page["id"] for page in all_pages}
-    source_ids = {scene["id"] for scene in source}
     seen_file_ids = set()
     seen_group_keys = set()
     for group in groups:
@@ -155,7 +184,6 @@ def main():
     assert "source" in recovery_text.lower(), "Recovery note still presents old scene IDs as current recipes"
     assert "exact active page recipe" in recovery_text, "Recovery note lacks page-level remapping requirement"
 
-
     retired_identity_tokens = (
         "Star Splitter " + "Prequel",
         "star-splitter-" + "prequel",
@@ -171,22 +199,22 @@ def main():
         ROOT / "tools" / ("validate_star_splitter_" + "prequel.py"),
         ROOT / ".github" / "workflows" / ("validate-star-splitter-" + "prequel.yml"),
     )
-    for path in retired_paths:
-        assert not path.exists(), f"Retired Shattering path remains: {path.relative_to(ROOT)}"
+    for old_path in retired_paths:
+        assert not old_path.exists(), f"Retired Shattering path remains: {old_path.relative_to(ROOT)}"
 
     text_extensions = {".json", ".md", ".py", ".yml", ".yaml", ".html", ".js", ".txt"}
-    for path in ROOT.rglob("*"):
-        if not path.is_file() or path.suffix.lower() not in text_extensions:
+    for text_path in ROOT.rglob("*"):
+        if not text_path.is_file() or text_path.suffix.lower() not in text_extensions:
             continue
         try:
-            text = path.read_text(encoding="utf-8")
+            text = text_path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
         for token in retired_identity_tokens:
-            assert token not in text, f"{path.relative_to(ROOT)}: retired Shattering identity token remains: {token}"
+            assert token not in text, f"{text_path.relative_to(ROOT)}: retired Shattering identity token remains: {token}"
 
     print("Shattering validation passed")
-    print("6 issues / 132 pages / 124 source dialogue lines preserved / page-mode registry / valid references / normalized Liora identity")
+    print("6 issues / 132 pages / scene-aware continuity / inline dialogue / valid references / normalized Liora identity")
 
 
 if __name__ == "__main__":

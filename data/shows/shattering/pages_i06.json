@@ -11,10 +11,9 @@
       "C_liora"
     ],
     "panelPlan": [
-      "Open in the hideout lab with versions, notes, and fragments covering Liora’s desk rather than one clean manuscript.",
-      "She compares several passages that point toward different legitimate practices after the collapse.",
-      "Liora starts to fill one gap, stops, and removes the attempted conclusion.",
-      "End on the unfinished space remaining visible inside the work."
+      "Wide quiet panel in the hideout: Liora's nearly finished treatise is surrounded by crossed-out conclusions, preserved contradictions, and maps from the collapse.",
+      "Closer panel as she starts to fill one remaining gap, stops, and removes the sentence rather than manufacture certainty.",
+      "Final close on the deliberate blank space left inside the completed body of work."
     ],
     "directionInline": [
       "Make the unfinished sections visibly deliberate: Liora chooses to preserve open questions rather than accidentally leaving gaps."
@@ -62,7 +61,7 @@
   },
   {
     "id": "SHAT_I06_P03",
-    "summary": "Before the Resolve Circle meets, Iskari removes passages she believes would normalize unsafe improvisation.",
+    "summary": "With the prototype rescue vessel visible in the adjacent gantry, Iskari marks a passage in Liora's treatise that crews could misread as permission for unsafe improvisation.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -76,10 +75,10 @@
       "C_aveth"
     ],
     "panelPlan": [
-      "Establish the Resolve Circle table covered by copies of Liora’s treatise.",
-      "Iskari reads a disputed section beside casualty and safety records.",
-      "She redacts or removes lines she believes cannot responsibly be endorsed.",
-      "End on her version already differing from the text Liora completed."
+      "Establish the Resolve Circle as a repurposed logistics rotunda rather than an abstract chamber: beyond its stripped civic interior, the unfinished rescue vessel is visible through an open gantry.",
+      "Iskari places the disputed passage beside a component specification taken directly from the prototype.",
+      "She points to wording that could become repair precedent once a tired crew quotes it far from the Circle.",
+      "Ruvian pulls the component toward himself, forcing the disagreement out of philosophy and into an object that has to work."
     ],
     "directionInline": [
       "Ground Iskari’s edits in the standards-and-responsibility practice she has already developed after the collapse."
@@ -87,30 +86,26 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.telvek",
-        "text": "This passage cannot stay."
+        "text": "This passage cannot stay as written."
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Which one?"
+        "text": "Because?"
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "The one that treats field improvisation as self-justifying."
+        "text": "Because someone will use it on that ship without knowing what failed first."
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "It kept half my people breathing."
-      },
-      {
-        "handle": "@starsplit.telvek",
-        "text": "And killed people elsewhere when bad work was copied."
+        "text": "Then write what failed first."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P04",
-    "summary": "Ruvian adds engineering annotations that force the text to account for failure conditions and the realities of damaged infrastructure.",
+    "summary": "Ruvian annotates the disputed passage with the prototype's real repair limits, turning a philosophical disagreement into a field rule another crew can inspect.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -124,10 +119,10 @@
       "C_aveth"
     ],
     "panelPlan": [
-      "Ruvian arrives with field notebooks and lays them beside Iskari’s edited copy.",
-      "He marks diagrams and passages that assume equipment or resources no longer exist.",
-      "His practical annotations accumulate in the margins rather than replacing the whole text.",
-      "End on a second materially different version forming beside Iskari’s."
+      "Ruvian shows the sleeved coupler currently installed on the prototype and writes its actual tested pressure limit beside Liora's broader argument for improvisation.",
+      "Iskari asks what happens above the tested limit rather than rejecting the repair itself.",
+      "Ruvian states the failure boundary plainly; Aveth recognizes that the answer is usable because it can travel with the part.",
+      "End on Iskari adding the explicit limit to her version of the text instead of deleting the passage."
     ],
     "directionInline": [
       "Ruvian is correcting abstractions with lived breakage, not trying to author a rival scripture."
@@ -136,34 +131,30 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ruvian",
-        "text": "Then write the failure condition next to it."
+        "text": "This sleeve holds under eight."
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "That isn't a standard."
+        "text": "And above eight?"
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "It's what actually happens."
+        "text": "You stop calling it a sleeve and replace the assembly."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "He's right about one thing."
+        "text": "That sentence I can route."
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "Only one?"
-      },
-      {
-        "handle": "@starsplit.aveth",
-        "text": "Today."
+        "text": "Put the limit in the text."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P05",
-    "summary": "Aveth insists the treatise include community-first logistics, leaving the Circle with three versions that each preserve a different meaning.",
+    "summary": "Aveth tests the treatise against the vessel's first mission and exposes its assumption that a single route authority still exists; the Circle ends with three operational versions because the ship leaves before doctrine can be unified.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -177,10 +168,10 @@
       "C_aveth"
     ],
     "panelPlan": [
-      "Aveth adds route and aid principles based on the trust networks now keeping convoys moving.",
-      "The three participants compare copies and realize none of them is merely a duplicate anymore.",
-      "No one agrees to collapse the changes back into one master text.",
-      "End on three annotated versions lying across the same table."
+      "Aveth lays the prototype's first mission route over a paragraph that assumes one recognized corridor authority can validate the whole journey.",
+      "The route crosses surviving systems that answer to different people and use different evidence for whether a lane is usable.",
+      "Iskari and Ruvian give incompatible but practical validation methods; neither can cover the whole trip alone.",
+      "End on Aveth placing three annotated copies beside the ship's mission packet instead of pretending one version has won."
     ],
     "directionInline": [
       "The division should emerge through sincere attempts to make the text usable."
@@ -189,11 +180,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.aveth",
-        "text": "This whole section assumes a route authority still exists."
-      },
-      {
-        "handle": "@starsplit.ruvian",
-        "text": "It doesn't."
+        "text": "This section assumes a route office still exists."
       },
       {
         "handle": "@starsplit.telvek",
@@ -201,22 +188,26 @@
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Then let that version earn the sentence."
+        "text": "The ship leaves tomorrow. Which version do I load tonight?"
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "How many copies do we have now?"
+        "text": "Mine says ask whoever got through last."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Mine says verify twice."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Three. Which is probably the honest number."
+        "text": "Good. Three copies."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P06",
-    "summary": "At a fragile courier relay, Aveth prioritizes distribution of the treatise by need rather than status, immediately raising the question of who has authority to rank that need.",
+    "summary": "At a fragile courier relay, Aveth moves Core down the prototype's first mission priority list because other settlements have less heat, air, and time.",
     "setting": "S_CourierRelay",
     "region": "PostBreakMixed",
     "factions": [
@@ -227,10 +218,10 @@
       "C_courier"
     ],
     "panelPlan": [
-      "Wide relay post with limited copies and route lights flickering over multiple requesting worlds.",
-      "Aveth sorts destinations by survival need instead of prestige or former political position.",
-      "Couriers notice that some historically important worlds have been moved down the list.",
-      "End on Aveth stating that everyone gets the text, but not everyone first."
+      "Establish the Courier Relay as a manual handoff point feeding the prototype's first mission: paper tags, route tokens, thermal-cell allocations, and message bundles compete for limited transport.",
+      "The courier notices Core has been moved down despite having requested service first and having contributed scarce parts.",
+      "Aveth compares Core's remaining heat against another settlement's remaining atmosphere instead of answering with status or allegiance.",
+      "End on the mission packet being reordered by time-to-harm rather than political importance."
     ],
     "directionInline": [
       "Make scarcity, not ideology, the immediate cause of the dispute."
@@ -254,18 +245,18 @@
       },
       {
         "handle": "@starsplit.cour",
-        "text": "They also have influence."
+        "text": "They also sent half the drive couplings."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Influence doesn't freeze."
+        "text": "Bren has six hours of air. Put Bren first."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S03"
   },
   {
     "id": "SHAT_I06_P07",
-    "summary": "A courier challenges Aveth to name the law that authorizes those priorities, exposing that even humane decisions now depend on contested legitimacy.",
+    "summary": "The courier challenges Aveth's right to rank the rescue mission; Aveth answers with an accountable process rather than claiming authority she does not possess.",
     "setting": "S_CourierRelay",
     "region": "PostBreakMixed",
     "factions": [
@@ -276,10 +267,9 @@
       "C_courier"
     ],
     "panelPlan": [
-      "The courier points to the reordered list and asks who granted Aveth the right to decide.",
-      "Other couriers stop loading and watch because the answer affects every route.",
-      "Aveth has practical reasons but no surviving universal legal authority to cite.",
-      "End on the question hanging under unstable relay lights."
+      "The courier keeps hold of the reordered packet instead of immediately carrying it, forcing Aveth to defend the choice face to face.",
+      "Aveth admits no institution granted her the ranking power and asks the courier to challenge the underlying facts instead of accepting the list on status.",
+      "Final panel: the courier carries the packet only after Aveth writes the air-time evidence beside Bren's priority, making the decision contestable rather than mysterious."
     ],
     "directionInline": [
       "Keep the legitimacy challenge unresolved; Aveth has practical reasons for prioritizing need but no universal law to invoke."
@@ -308,14 +298,14 @@
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Because you can challenge it, and I have to answer. The old system never gave you that."
+        "text": "Because you can challenge it and I have to answer. If Bren has more air than I think, move them. Just tell me why."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S03"
   },
   {
     "id": "SHAT_I06_P08",
-    "summary": "A Shard node nearly fails after batteries from a Core cache arrive dead, turning resource exhaustion into an accusation of deliberate neglect.",
+    "summary": "At the Outer yard supplying the prototype, every battery from a Core cache arrives dead, dropping launch-support power and reopening the old suspicion that Outer needs are always the ones expected to absorb failure.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -328,10 +318,10 @@
       "C_lochran"
     ],
     "panelPlan": [
-      "Outer workers open Core crates expecting emergency batteries and find failed cells.",
-      "A node loses power while the replacement pack refuses to take load.",
-      "Ruvian’s crew braces a conduit as systems begin dropping.",
-      "End on Ruvian confronting the Core shipment as the immediate cause of the near-collapse."
+      "Outer technicians open the Core shipment intended for prototype launch support and test the first battery dead.",
+      "A second and third pack fail the same test while the launch-support bus falls toward a critical reserve.",
+      "Ruvian brings Lochran onto the call and makes him watch the failed readings rather than debate them in the abstract.",
+      "End on rows of identical dead packs beside a launch countdown that does not stop."
     ],
     "directionInline": [
       "The evidence supports negligence or exhaustion, not proven sabotage."
@@ -366,7 +356,7 @@
   },
   {
     "id": "SHAT_I06_P09",
-    "summary": "The outer technician demands power rather than explanations; Lochran denies sabotage and warns that interpreting every failure as intent will make cooperation impossible.",
+    "summary": "The outer technician demands usable power for the launch rather than explanations; Lochran denies sabotage but cannot ask Outer survivors to forget the long pattern of arriving last.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -391,7 +381,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
-        "text": "We needed power, not provenance."
+        "text": "Launch bus is at eleven percent."
       },
       {
         "handle": "@starsplit.lochran",
@@ -414,7 +404,7 @@
   },
   {
     "id": "SHAT_I06_P10",
-    "summary": "The Resolve Circle convenes around Liora’s treatise, and Liora rejects attempts to turn her writing into a mandate for any one emerging bloc.",
+    "summary": "With the prototype's launch board active behind them, the Resolve Circle begins using Liora's treatise to justify competing operating rules; Liora refuses to let her text substitute for decisions the mission itself requires.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -430,10 +420,10 @@
       "C_engineer"
     ],
     "panelPlan": [
-      "Wide Circle meeting with the three annotated versions present and representatives grouped by increasingly distinct practices.",
-      "Liora sees passages being cited as authority for positions she never intended to crown.",
-      "She interrupts the attribution and states that the text describes work, not rule.",
-      "End on the room forced to debate without treating Liora as a final sovereign source."
+      "The Circle reconvenes under a visible launch clock with the prototype on the adjacent gantry and three annotated versions of Liora's treatise open beside the mission plan.",
+      "Iskari cites Liora for common limits, Ruvian cites her for adaptive field judgment, and Aveth marks a section that does not fit the actual route network.",
+      "Liora closes one copy and pushes the mission plan back into the center of the table.",
+      "End on the group looking at the ship rather than at Liora."
     ],
     "directionInline": [
       "Keep Liora active: she challenges how her work is being used rather than passively watching."
@@ -441,7 +431,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Stop quoting me."
+        "text": "Stop quoting me at the ship."
       },
       {
         "handle": "@starsplit.telvek",
@@ -457,18 +447,18 @@
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Some of it is wrong for the world we have now."
+        "text": "Some of it is wrong for the mission."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Good. Then argue with each other. Don't make me the referee."
+        "text": "Good. Fix the mission. Don't make me the referee."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P11",
-    "summary": "Iskari and Ruvian state incompatible necessities—standards that prevent repeated catastrophe versus improvisation that keeps damaged systems alive long enough to matter.",
+    "summary": "Iskari and Ruvian argue over the prototype's repair authority: common limits protect the next crew from inheriting an invisible trap, while waiting for ideal parts can kill the crew that exists now.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -484,10 +474,10 @@
       "C_engineer"
     ],
     "panelPlan": [
-      "Iskari lays out the cost of errors made without shared standards.",
-      "Ruvian counters with environments where perfect compliance would mean waiting to die.",
-      "The Circle sees examples of both failures in the records around them.",
-      "End on neither position defeating the other because each answers a different lived danger."
+      "Iskari uses the prototype's annotated coupler as her example: a field repair that travels without its tested limit becomes a hidden hazard for whoever inherits the ship.",
+      "Ruvian points to the replacement-part list and the blank columns where supply no longer exists.",
+      "Their disagreement narrows to who may invoke an exception and what evidence must travel with it.",
+      "Aveth recognizes that both are describing the same handoff problem from opposite directions."
     ],
     "directionInline": [
       "Stage this as collision between true constraints, not heroes versus villains."
@@ -496,11 +486,11 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.telvek",
-        "text": "A corridor repair without common limits can kill the next crew that touches it."
+        "text": "If this ship takes a repair nobody else can inspect, the next crew inherits a trap."
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "A common limit that requires parts we don't have kills the first crew."
+        "text": "If it waits for approved parts, there is no next crew."
       },
       {
         "handle": "@starsplit.telvek",
@@ -512,14 +502,14 @@
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Listen to yourselves. You're already writing the same problem from opposite ends."
+        "text": "That's the same problem from opposite ends."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P12",
-    "summary": "Aveth argues that neither standards nor repairs function without trust between people, and a Resolve engineer pushes the Circle toward a shared minimum rather than total agreement.",
+    "summary": "Aveth reframes the launch around the handoffs between groups; the Circle discovers a narrow shared minimum in accountable transfer rather than a unified doctrine.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -535,10 +525,10 @@
       "C_engineer"
     ],
     "panelPlan": [
-      "Aveth reframes the debate around who will carry resources, warnings, and responsibility between groups.",
-      "The Resolve engineer identifies the practical need for something every bloc can recognize without surrendering its own method.",
-      "Representatives stop editing doctrine long enough to consider one shared operational minimum.",
-      "End on the first move toward a symbol rather than a unified philosophy."
+      "Aveth traces one actual component journey from Ruvian's yard, through a convoy handoff, to Iskari's inspection point and finally onto the prototype.",
+      "The route makes visible that neither engineering skill, logistics trust, nor standards can complete the handoff alone.",
+      "The Resolve engineer writes the minimum beside the launch board: source, condition, limit, accountable receiver.",
+      "End on Liora refusing to call the result a doctrine while accepting it as something people can use."
     ],
     "directionInline": [
       "The agreement should be narrow by design."
@@ -547,19 +537,19 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.aveth",
-        "text": "None of this moves without trust."
+        "text": "Who carries the part from your yard to her inspection point?"
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Trust doesn't hold pressure."
+        "text": "A driver."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "No, but it gets the part from your node to hers."
+        "text": "A person whose word somebody has to trust."
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "And standards tell her whether to install it."
+        "text": "And a standard tells the receiver whether to install it."
       },
       {
         "handle": "@starsplit.reng",
@@ -571,14 +561,14 @@
       },
       {
         "handle": "@starsplit.reng",
-        "text": "No. A way to recognize each other."
+        "text": "No. A handoff."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P13",
-    "summary": "The Circle places a unified safety sigil at the center of the table, but Iskari defines it specifically as responsibility rather than authority.",
+    "summary": "Needing one mark that can travel with the vessel, its parts, and the depots it serves, the Circle adopts a shared safety sigil while deliberately refusing to assign it one complete political meaning.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -589,18 +579,22 @@
     "characters": [
       "C_iskari",
       "C_ruvian",
-      "C_aveth"
+      "C_aveth",
+      "C_engineer"
     ],
     "panelPlan": [
-      "Representatives unveil or assemble a common sigil derived from the safety markings already in circulation.",
-      "The symbol sits between copies of the divergent treatise rather than replacing them.",
-      "Iskari accepts the mark only under a narrow meaning tied to responsibility.",
-      "End on others visibly reading more into the same image."
+      "Large table panel: component tags, depot placards, route documents, and the prototype hull all need one recognizable mark before launch; the proposed sigil sits among them as a practical problem.",
+      "Iskari defines the mark narrowly as a claim of responsibility while Ruvian immediately notes that any shared symbol will acquire meanings its authors cannot control.",
+      "Final panel: the same sigil is applied to a hull access point, a component record, and a depot tag—common form entering three different contexts."
     ],
     "directionInline": [
       "The sigil is common form without common interpretation."
     ],
     "dialogueInline": [
+      {
+        "handle": "@starsplit.reng",
+        "text": "The ship needs one mark everyone recognizes."
+      },
       {
         "handle": "@starsplit.telvek",
         "text": "Responsibility. Nothing more."
@@ -611,15 +605,11 @@
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Can we at least agree it means someone answers when the mark is used?"
+        "text": "Can it at least mean someone answers when the mark is used?"
       },
       {
         "handle": "@starsplit.telvek",
         "text": "Yes."
-      },
-      {
-        "handle": "@starsplit.ruvian",
-        "text": "That part I can paint."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S06"
@@ -679,7 +669,7 @@
   },
   {
     "id": "SHAT_I06_P15",
-    "summary": "Heska receives the three annotated treatise versions and recognizes that the archive can no longer honestly identify one uncontested original meaning.",
+    "summary": "After the launch preparations produce three annotated working copies, Heska receives them for preservation and realizes the archive can no longer honestly identify one uncontested original meaning.",
     "setting": "S_PreArchiveVault",
     "region": "PostBreakCore",
     "factions": [
@@ -690,13 +680,13 @@
       "C_archivist"
     ],
     "panelPlan": [
-      "Establish the pre-break archive vault with three containers prepared side by side.",
-      "Heska compares edits, redactions, and annotations across the versions.",
-      "No single copy can absorb all changes without erasing the history of disagreement.",
-      "End on Heska stating that history will inherit three truths."
+      "Establish the pre-archive vault with three containers and three visibly handled copies arriving from the Resolve Circle rather than pristine texts.",
+      "Heska compares engineering limits, logistics annotations, and standards edits across the versions.",
+      "No single copy can absorb the others without erasing the history of how the prototype was actually made possible.",
+      "End on Heska asking which version anyone expects the archive to call original."
     ],
     "directionInline": [
-      "Echo the earlier archival uncertainty, now caused by competing interpretation rather than conflicting timestamps."
+      "Use the three copies side by side so their different annotations are visually legible before Heska asks which one the archive should privilege."
     ],
     "dialogueInline": [
       {
@@ -741,7 +731,7 @@
       "End on all three entering the archive together."
     ],
     "directionInline": [
-      "This should feel like an ethical archival choice, not indecision."
+      "Give Heska and the curator decisive working body language as they label three separate provenances; this is an intentional archival procedure, not hesitation."
     ],
     "continuityFrom": "SHAT_I06_P15",
     "dialogueInline": [
@@ -844,7 +834,7 @@
       "End on the empty captain field or unresolved command position beside a ship that cannot wait."
     ],
     "directionInline": [
-      "Leave the vessel’s future command model unresolved while making the competing claims of hierarchy, earned loyalty, and stewardship clear."
+      "Keep the captain field visibly blank beside an active launch countdown while each speaker argues from hierarchy, earned loyalty, or stewardship."
     ],
     "continuityFrom": "SHAT_I06_P17",
     "dialogueInline": [
@@ -877,7 +867,7 @@
   },
   {
     "id": "SHAT_I06_P19",
-    "summary": "Engineers unveil the prototype multiworld rescue vessel as a working synthesis of components, crews, and route knowledge contributed by different survivor groups.",
+    "summary": "At preflight, the prototype multiworld rescue vessel is no longer an unveiling but a working synthesis already under deadline: patched systems, shared route data, and mixed crews are checked while boarding begins.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
     "factions": [
@@ -891,26 +881,21 @@
       "C_aveth"
     ],
     "panelPlan": [
-      "Large reveal of the prototype rescue vessel under stark emergency lighting.",
-      "Engineers show patched Shard-built systems integrated with route and safety equipment from other groups.",
-      "The Resolve engineer confirms the hull is ready despite unresolved politics.",
-      "End on crew movement beginning immediately because rescue needs already exist."
+      "Large preflight panel: the prototype sits ready in the gantry, visibly transitional and assembled from several engineering traditions rather than polished into a later Fleet aesthetic.",
+      "Resolve engineers check the hull while Ruvian confirms the field crew and Aveth loads the verified route packet; nobody pauses long enough for ceremony.",
+      "Final panel: boarding begins as soon as the minimum systems clear, making the vessel's purpose more important than ownership of its symbolism."
     ],
     "directionInline": [
-      "The ship should feel practical and transitional, not yet the polished iconography of later fleets."
+      "Keep the ship practical, patched, and visibly mixed-origin; avoid the polished uniform finish of mature Fleet vessels."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.reng",
-        "text": "Hull is green."
+        "text": "Hull is green enough."
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Don't say that near engineers. They'll think you mean finished."
-      },
-      {
-        "handle": "@starsplit.reng",
-        "text": "Hull is green enough."
+        "text": "That's a dangerous phrase."
       },
       {
         "handle": "@starsplit.aveth",
@@ -926,7 +911,7 @@
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Then stop unveiling it. People need it."
+        "text": "Then stop admiring it. People need it."
       }
     ],
     "sceneId": "SCN_SHAT_I06_S09"
@@ -1004,7 +989,7 @@
       "Liora sees the divergence happening before the first fleet tradition is even settled."
     ],
     "directionInline": [
-      "The escorts should foreshadow later fleets without pretending those mature factions already fully exist."
+      "Give the three escorts distinct emerging design and formation habits while preserving the same shared sigil; do not copy mature faction uniforms or finished iconography."
     ],
     "dialogueInline": [
       {
@@ -1048,13 +1033,12 @@
       "C_damiar"
     ],
     "panelPlan": [
-      "Liora and Damiar watch the escorts separate slightly around the departing rescue vessel.",
-      "Damiar answers Liora by acknowledging that no future group will agree completely on what her truth meant.",
-      "The shared sigil remains visible on multiple craft even as their formations diverge.",
-      "Final wide panel: the vessels disappear toward different lanes of the broken network, turning one inheritance into multiple futures."
+      "Wide panel: the rescue vessel and its three escorts separate slightly as they approach different broken lanes, each craft carrying the same inherited mark inside a different emerging visual language.",
+      "Closer two-shot on Liora and Damiar as he asks what one shared history becomes when nobody inherits it whole.",
+      "Final full-width image: the formation divides toward multiple destinations without becoming enemies or one unified fleet, leaving shared history visibly intact inside divergent futures."
     ],
     "directionInline": [
-      "Land on divergence with continuity: shared history and shared symbols moving into multiple future fleets with contested meanings."
+      "Keep the common sigil visible as the formation divides toward different broken lanes, so shared inheritance remains visible inside the separation."
     ],
     "continuityFrom": "SHAT_I06_P21",
     "dialogueInline": [

@@ -102,7 +102,7 @@
   },
   {
     "id": "SHAT_I05_P03",
-    "summary": "In the refugee sector, a Core advocate argues that restoring protocol is the only way to stop post-collapse society from becoming arbitrary.",
+    "summary": "In the refugee sector, a displaced family appears differently in three improvised ledgers, turning the argument over restored protocol into an immediate problem of who can actually be found and served.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
     "factions": [
@@ -116,10 +116,10 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "Establish shelter rows divided by improvised curtains and competing local procedures.",
-      "The Core advocate points to inconsistent rationing and safety practices as evidence of drift into chaos.",
-      "Some survivors respond to the promise of known rules.",
-      "End on the advocate asserting that order itself keeps people alive."
+      "Establish the cramped refuge rows around a family being reassigned after a pipe burst; handwritten cards, salvaged tablets, and old Cooperative forms all disagree about where they belong.",
+      "The Core advocate points to the duplicate household entries as proof that inconsistent rules can make people disappear between systems.",
+      "The neighborhood coordinator points to the powerless records office and the broken room that forced the family to move in the first place.",
+      "An outer technician working overhead hears the argument while checking a visibly stressed support beam."
     ],
     "directionInline": [
       "Give the Core argument real appeal in a frightening environment."
@@ -127,26 +127,30 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.cadv",
-        "text": "Three shelter rows, three ration rules. That is how people disappear between ledgers."
+        "text": "This child is in Row C. Her mother is still listed in Row A."
       },
       {
         "handle": "@starsplit.vgvc",
-        "text": "And one rule for three neighborhoods is how you miss what they actually need."
+        "text": "They moved after the pipe burst."
       },
       {
         "handle": "@starsplit.cadv",
-        "text": "Rules are supposed to outlast whoever is standing closest."
+        "text": "Then the ledger has to move with them."
+      },
+      {
+        "handle": "@starsplit.vgvc",
+        "text": "The ledger office has no power."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Can either of your rules hold up that beam?"
+        "text": "This room has a beam coming down. Argue while you lift."
       }
     ],
     "sceneId": "SCN_SHAT_I05_S02"
   },
   {
     "id": "SHAT_I05_P04",
-    "summary": "A Verge voice rejects restored central protocol, arguing that flexible neighborhood coordination succeeded where rigid systems failed.",
+    "summary": "The neighborhood coordinator defends neighborhood improvisation with a concrete food handoff, while the Core advocate presses the real question of how mistakes are prevented rather than merely traced afterward.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
     "factions": [
@@ -160,42 +164,42 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "The Verge representative points to local supply exchanges already functioning outside old command channels.",
-      "Survivors compare the formal queue to a nearby neighborhood team solving an immediate need.",
-      "The representative frames flexibility as the reason people are still moving resources at all.",
-      "End on the argument shifting from order versus chaos to competing definitions of competence."
+      "The neighborhood coordinator shows food crates moved directly from a working kitchen to the refuge rows after the central distribution desk failed.",
+      "The Core advocate checks one crate's handwritten source tag and asks what would happen if the food had been unsafe.",
+      "The neighborhood coordinator can name the kitchen and the people who packed it, but cannot produce a functioning inspection chain.",
+      "Above them, the stressed beam gives a sharp metallic complaint and ends the argument mid-sentence."
     ],
     "directionInline": [
-      "The Verge position should grow directly from Aveth-style trust networks already shown."
+      "Keep the neighborhood coordinator physically tied to named kitchens, handwritten source tags, and people who can answer for the food; the local model should be visible through practice rather than faction iconography."
     ],
     "continuityFrom": "SHAT_I05_P03",
     "dialogueInline": [
       {
         "handle": "@starsplit.vgvc",
-        "text": "That block moved food without waiting for a permit."
+        "text": "That kitchen moved food before anyone could sign it out."
       },
       {
         "handle": "@starsplit.cadv",
-        "text": "And if they had poisoned someone?"
+        "text": "And if somebody had gotten sick?"
       },
       {
         "handle": "@starsplit.vgvc",
-        "text": "They knew who packed it."
+        "text": "We know who packed it."
       },
       {
         "handle": "@starsplit.cadv",
-        "text": "That's not accountability."
+        "text": "Knowing who made a mistake is not the same as preventing one."
       },
       {
-        "handle": "@starsplit.vgvc",
-        "text": "It's more accountability than a seal from a dead office."
+        "handle": "@starsplit.otech",
+        "text": "Stop. Brace is slipping."
       }
     ],
     "sceneId": "SCN_SHAT_I05_S02"
   },
   {
     "id": "SHAT_I05_P05",
-    "summary": "An outer technician cuts through the ideological argument by pointing out that neither doctrine matters if the damaged infrastructure is not physically repaired.",
+    "summary": "The political argument stops when the shelter structure begins to fail; all three positions become useful only when converted into a shared physical repair.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
     "factions": [
@@ -209,10 +213,9 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "A structural groan interrupts the debate and everyone looks up.",
-      "The outer technician indicates failing supports and inactive systems around the shelter.",
-      "The Core advocate and Verge representative are forced to stop talking while workers brace the space.",
-      "End on the technician demanding bodies and tools instead of theory."
+      "The outer technician wedges a temporary support under the dropping beam and calls for bodies and a stronger brace; both advocates move before finishing their argument.",
+      "The neighborhood coordinator strips a metal frame while the Core advocate checks which intact support can actually carry the load, each applying a different habit to the same repair.",
+      "Final panel: the beam settles onto the improvised brace and the technician looks at both of them, the argument unresolved but the room still standing."
     ],
     "directionInline": [
       "Use a physical interruption to puncture abstraction."
@@ -221,27 +224,23 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
-        "text": "Stop."
-      },
-      {
-        "handle": "@starsplit.cadv",
-        "text": "I wasn't finished."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "The ceiling was."
-      },
-      {
-        "handle": "@starsplit.vgvc",
-        "text": "What do you need?"
-      },
-      {
-        "handle": "@starsplit.otech",
         "text": "Four bodies and something straight."
       },
       {
+        "handle": "@starsplit.vgvc",
+        "text": "I can strip the table frame."
+      },
+      {
         "handle": "@starsplit.cadv",
-        "text": "Where?"
+        "text": "That won't carry this load."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Then help me find something that will."
+      },
+      {
+        "handle": "@starsplit.cadv",
+        "text": "There. Door rail."
       },
       {
         "handle": "@starsplit.otech",
@@ -252,7 +251,7 @@
   },
   {
     "id": "SHAT_I05_P06",
-    "summary": "Ruvian leads a salvage crew into a damaged shard node where one critical conduit threatens to take the whole system dark.",
+    "summary": "Ruvian leads a salvage crew into a damaged Outer node where one critical conduit threatens to take the whole system dark.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -347,7 +346,7 @@
   },
   {
     "id": "SHAT_I05_P08",
-    "summary": "The patched shard node holds, giving Ruvian’s crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
+    "summary": "The patched Outer node holds, giving Ruvian's crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -560,7 +559,7 @@
       "End on the officer starting a modified version rather than simply restoring the old mark."
     ],
     "directionInline": [
-      "Let the modified mark visibly diverge from the older BHA sigil while retaining recognizable lineage."
+      "Retain the basic geometry of the older BHA safety mark while adding visibly hand-made modifications that narrow what the mark promises."
     ],
     "continuityFrom": "SHAT_I05_P11",
     "dialogueInline": [
@@ -659,7 +658,7 @@
       "End on Lochran’s claim that belief holds worlds together."
     ],
     "directionInline": [
-      "Let both positions reveal the later ideological split rather than declaring one simply correct."
+      "Frame Lochran with civilians organizing around the mark and Iskari with the damaged structure it is meant to certify, keeping both arguments physically present."
     ],
     "continuityFrom": "SHAT_I05_P13",
     "dialogueInline": [
@@ -688,7 +687,7 @@
   },
   {
     "id": "SHAT_I05_P15",
-    "summary": "Iskari and Lochran separate without resolving whether legitimacy comes from standards or from the shared belief that someone can enforce them.",
+    "summary": "Iskari insists that any shared safety symbol must bind its user to real inspection; Lochran acknowledges the damping-chamber decision without abandoning his belief that institutions must still make promises.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
     "factions": [
@@ -699,10 +698,10 @@
       "C_lochran"
     ],
     "panelPlan": [
-      "Dust falls from a stressed beam over the argument, forcing both to notice the still-damaged reality.",
-      "Iskari checks the structure while Lochran watches survivors follow the new markings.",
-      "Neither retracts the principle they just stated.",
-      "End on them walking in different directions beneath the same modified sigil."
+      "Iskari points from the modified mark to the cracked structure it is supposed to identify, making inspection inseparable from the symbol.",
+      "Lochran watches civilians organize around another marked shelter and then looks back at the damaged wall instead of dismissing her concern.",
+      "The damping chamber enters the argument without a flashback: Lochran's reaction makes clear that the failed override remains present in every claim he makes about trust.",
+      "They part with a narrower disagreement than before: not whether promises matter, but what work must exist before anyone is allowed to make one."
     ],
     "directionInline": [
       "Use the environment to keep both philosophies answerable to material conditions."
@@ -723,19 +722,19 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "And until then?"
+        "text": "I hear the damping chamber every time you say 'false.'"
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "We tell people what we actually know."
+        "text": "Good."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "You keep asking frightened people to live inside uncertainty."
+        "text": "Don't mistake regret for surrender. Someone still has to make promises."
       },
       {
         "handle": "@starsplit.telvek",
-        "text": "They already do."
+        "text": "Then earn each one."
       }
     ],
     "sceneId": "SCN_SHAT_I05_S06"
@@ -752,10 +751,8 @@
       "C_fieldOfficer"
     ],
     "panelPlan": [
-      "Single focused page: the officer carefully paints the altered symbol on a door.",
-      "They pause before completing the final stroke and look into the occupied space beyond.",
-      "The officer voices the unease of claiming a place through a mark.",
-      "Final panel holds on the completed proto-Crown symbol beside a visibly imperfect shelter."
+      "Large quiet panel: the field officer stands alone before the modified mark and the damaged doorway, paint still wet and civilians already beginning to use the entrance.",
+      "Small final panel on the officer's hand touching the mark after accepting that placing it makes the people behind it their responsibility."
     ],
     "directionInline": [
       "Use restraint: one officer, one mark, one imperfect shelter, and the weight of responsibility attached to the final stroke."
@@ -774,7 +771,7 @@
   },
   {
     "id": "SHAT_I05_P17",
-    "summary": "In hiding, Liora begins turning the collapse into a treatise about maintenance, responsibility, and the false assumption that unity sustains itself.",
+    "summary": "Damiar finds Liora after another move and reveals why she is hiding: several surviving authorities want her account of the damping failure, but they do not agree whether she is a witness, a culprit, or the owner of a text they want to control.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
     "factions": [
@@ -785,10 +782,9 @@
       "C_damiar"
     ],
     "panelPlan": [
-      "Establish Liora’s crowded hidden lab with scattered failure reports, sketches, and handwritten fragments.",
-      "She arranges examples from corridor maintenance, governance, and emergency response into one argument.",
-      "Pages fill with revisions rather than a polished manifesto.",
-      "End on the sentence that unity was work rather than a natural condition."
+      "Establish a new, even less comfortable hideout: Liora has packed the treatise for movement rather than settled into a permanent refuge when Damiar arrives with supplies.",
+      "Damiar explains that three surviving authorities are looking for her under three different definitions of jurisdiction, and all three have asked about her draft.",
+      "Close on Liora taking the paper and filters rather than reacting dramatically; moving again was a deliberate choice to keep both herself and the text outside any one claimant's custody."
     ],
     "directionInline": [
       "Make the treatise visibly emerge from the failures, repairs, choices, and records already accumulated around Liora."
@@ -804,11 +800,19 @@
       },
       {
         "handle": "@starsplit.colven",
-        "text": "You leave terrible hiding places and excellent notes."
+        "text": "Three surviving authorities want you debriefed. Two say inquiry. One says custody."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Supplies?"
+        "text": "And the treatise?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "All three asked whether I had it."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "That's why I moved."
       },
       {
         "handle": "@starsplit.colven",
@@ -923,62 +927,74 @@
   },
   {
     "id": "SHAT_I05_P20",
-    "summary": "Across the Outer Ring, Ruvian’s crews turn salvage and direct repair into a repeatable way of surviving damaged systems.",
+    "summary": "Ruvian's crews begin turning improvised repairs into transferable field practice while Nereth, alive and still coordinating from the Broken Node rescue network, circulates failure notes between disconnected engineering crews.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
-      "F_Convoy",
-      "F_Coop"
+      "F_Outer"
     ],
     "characters": [
       "C_ruvian",
-      "C_aveth",
-      "C_iskari",
-      "C_outerTech"
+      "C_outerTech",
+      "C_nereth"
     ],
     "panelPlan": [
-      "New scene across the Outer Ring: montage page anchored on Ruvian moving between patched nodes.",
-      "Different crews reuse damaged parts, weld local solutions, and document what actually held.",
-      "Ruvian’s line about Shardwork accompanies visible practice rather than a posed declaration.",
-      "End on one repaired node lighting another nearby work site."
+      "Outer Ring workers compare two independently built versions of the same emergency brace while a narrowband call from Nereth cuts through intermittent static.",
+      "Ruvian reports that the second crew changed the brace rather than copying it blindly; Nereth asks for the load, material, and first failure point.",
+      "The outer technician notices that relay operators have started filing these reports under the informal label 'Shard repair.'",
+      "Ruvian objects to the name only long enough to learn that nobody asked the crews what to call themselves.",
+      "Final panel: Nereth tells them to keep the label if it helps the notes travel; another crew receives the same repair file elsewhere."
     ],
     "directionInline": [
-      "The montage should feel like culture emerging from repeated behavior."
+      "Show the same repair note moving between different crews and being altered with local load, material, and failure information rather than copied as a fixed manual."
     ],
     "dialogueInline": [
       {
+        "handle": "@starsplit.nereth",
+        "text": "Ruvian. Your brace held?"
+      },
+      {
         "handle": "@starsplit.ruvian",
-        "text": "That patch held?"
+        "text": "Different crew. Same ugly idea."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Good. Send load, material, and what failed first."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Different crew. Same brace."
+        "text": "Relay tagged the file 'Shard repair.'"
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Good. Write down what they changed."
+        "text": "Because we're repairing the shards?"
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Since when do Shard crews write manuals?"
+        "text": "Because nobody asked us what to call it."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Keep the tag. Send the notes."
       },
       {
         "handle": "@starsplit.ruvian",
-        "text": "Since the next idiot deserves a head start."
+        "text": "You heard that?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I hear every bad joke that survives transmission."
       }
     ],
     "sceneId": "SCN_SHAT_I05_S09"
   },
   {
     "id": "SHAT_I05_P21",
-    "summary": "Across surviving routes, Aveth’s convoy network grows through named relationships and reciprocal trust rather than restored central command.",
-    "setting": "S_OuterRing",
+    "summary": "Aveth's hand-verified routes acquire an informal name as people begin calling lanes beyond the old centralized map 'verge routes'; Aveth cares less about the label than preserving who actually vouched for each crossing.",
+    "setting": "S_OrbanPort",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
-      "F_Convoy",
-      "F_Coop"
+      "F_Convoy"
     ],
     "characters": [
       "C_ruvian",
@@ -987,10 +1003,10 @@
       "C_staff"
     ],
     "panelPlan": [
-      "Aveth’s route map expands from a few hand-verified paths into a web of people and stops.",
-      "Drivers or couriers exchange confirmations directly before committing supplies.",
-      "Families receive medicine through a route that exists because specific people vouched for it.",
-      "End on Aveth naming trust rather than command as the foundation."
+      "At Orban, the rebuilt route board has a blank heading over paths that no longer correspond to official Cooperative lanes.",
+      "Port staff report two independent crossings on the south leg and mention the label travelers have started using for routes beyond the old map.",
+      "Aveth accepts the practical name but insists that every route still carry the witnesses whose experience made it usable.",
+      "End on the board reading VERGE ROUTES with actual crew names and timestamps written immediately beneath it."
     ],
     "directionInline": [
       "Show a functioning alternative, not merely a slogan."
@@ -998,24 +1014,28 @@
     "continuityFrom": "SHAT_I05_P20",
     "dialogueInline": [
       {
+        "handle": "@starsplit.pstf",
+        "text": "The board needs a heading for routes outside the old map."
+      },
+      {
         "handle": "@starsplit.aveth",
         "text": "Who vouched for the south leg?"
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Mira, then Ko's crew."
+        "text": "Mira, then Ko's crew. Two crossings."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Two independent crossings?"
+        "text": "Good."
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Within six hours."
+        "text": "People are calling these the verge routes."
       },
       {
         "handle": "@starsplit.aveth",
-        "text": "Open it for medicine only. Tell every driver whose word they're riding on."
+        "text": "Fine. Put the witnesses under the name."
       }
     ],
     "sceneId": "SCN_SHAT_I05_S09"
@@ -1026,9 +1046,9 @@
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
-      "F_Outer",
+      "F_Coop",
       "F_Convoy",
-      "F_Coop"
+      "F_Outer"
     ],
     "characters": [
       "C_ruvian",
@@ -1036,10 +1056,9 @@
       "C_iskari"
     ],
     "panelPlan": [
-      "Iskari revises a safety code against direct evidence from recent failures.",
-      "Intercut Ruvian’s crews, Aveth’s convoys, and Iskari’s standards work in parallel compositions.",
-      "The three groups solve different problems with increasingly distinct methods and visual habits.",
-      "Final panel divides the page into three paths no longer intersecting as Iskari warns that their futures diverge here."
+      "Wide montage panel links three simultaneous acts: an outer crew consulting a Shard repair note, an Orban driver checking a named Verge route, and Iskari marking a safety requirement beside a rebuilt facility.",
+      "Medium shared-communications panel as Iskari states the minimum documentation and confirmation rules while Ruvian and Aveth challenge how they work when formal institutions are absent.",
+      "Final panel holds the three practices side by side without visually merging them: distinct methods growing from the same catastrophe."
     ],
     "directionInline": [
       "Show differentiation already underway through distinct practices and visual habits, not suddenly completed factions."
@@ -1071,6 +1090,7 @@
         "text": "Good. Start there."
       }
     ],
-    "sceneId": "SCN_SHAT_I05_S09"
+    "sceneId": "SCN_SHAT_I05_S09",
+    "settingText": "Cross-cut montage between an Outer Ring repair deck, Orban-Tier Transit Port, and a rebuilt standards workspace: three distinct post-Break practices operating at the same time without sharing one visual language."
   }
 ]

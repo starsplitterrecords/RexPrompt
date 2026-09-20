@@ -88,7 +88,7 @@
   },
   {
     "id": "SHAT_I03_P03",
-    "summary": "Liora commits to aligning the system themselves and explicitly rejects outside interference in the calibration.",
+    "summary": "Liora commits to local control of the damping system; Nereth identifies the one surviving BHA emergency-maintenance authority that can still reopen the write path.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -99,13 +99,13 @@
       "C_nereth"
     ],
     "panelPlan": [
-      "Liora shuts off nonessential remote-control channels and isolates the engineering console.",
-      "Nereth verifies the local calibration path.",
-      "Dormant emitters sputter awake one by one through floating dust.",
-      "End on Liora insisting that no one alter the configuration once the cycle begins."
+      "Liora traces the modern remote-control layer grafted onto the ancient chamber and orders ordinary remote write access severed before activation.",
+      "Nereth confirms the normal path is dark, then highlights a separate BHA emergency-maintenance channel tied to chair-level authority.",
+      "Liora marks that channel for an immediate alarm if it opens; neither treats the safeguard as theoretical.",
+      "End with the chamber showing LOCAL CONTROL while the dormant emergency-maintenance path remains visibly separate."
     ],
     "directionInline": [
-      "This creates the causal condition that the later override will violate."
+      "Make the BHA emergency-maintenance path visually distinct from ordinary remote control so its later activation can be recognized immediately."
     ],
     "continuityFrom": "SHAT_I03_P02",
     "dialogueInline": [
@@ -115,19 +115,19 @@
       },
       {
         "handle": "@starsplit.nereth",
-        "text": "Council will hate that."
+        "text": "Normal path is dark."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Council isn't inside the chamber."
+        "text": "Normal?"
       },
       {
         "handle": "@starsplit.nereth",
-        "text": "Local control only."
+        "text": "BHA chair key can reopen emergency maintenance."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Once we start, nobody changes the matrix but us."
+        "text": "Flag it. If that door opens, I want the alarm before the write."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S01"
@@ -377,10 +377,9 @@
       "C_nereth"
     ],
     "panelPlan": [
-      "The chamber pulse becomes regular and the fractured glow around the emitters smooths into one rhythm.",
-      "Liora watches the stress curve bend downward.",
-      "A remote corridor trace that had been oscillating settles into a clean line.",
-      "End on Liora calling the field alignment holding, barely."
+      "Wide chamber panel: after several uneven pulses, the emitter rings finally begin answering one another instead of fighting.",
+      "Two-shot on Liora and Nereth watching the stress curve bend for the first time in cycles; neither leaves the controls.",
+      "Final quiet close on the improving field trace as Nereth almost celebrates and Liora refuses to tempt it."
     ],
     "directionInline": [
       "Allow a real moment of earned hope."
@@ -462,7 +461,7 @@
   },
   {
     "id": "SHAT_I03_P11",
-    "summary": "A Coalition technician receives the remote override while the chamber is already running and sees that its parameters contradict the active calibration.",
+    "summary": "A Coalition technician receives Lochran's chair-level emergency command, which reopens the local lockout and presents stability coefficients that contradict the active calibration.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
     "factions": [
@@ -473,10 +472,10 @@
       "C_lochran"
     ],
     "panelPlan": [
-      "Open on the technician’s console as the live engineering matrix and incoming override appear side by side.",
-      "Several values fail validation or sit outside the active matrix assumptions.",
-      "The technician checks the authorization signature rather than immediately deploying.",
-      "End on the Council order remaining active despite the mismatch."
+      "At the BHA Nexus, the Coalition technician sees an emergency-maintenance authorization signed with Lochran's chair credential reopen a channel marked locally locked.",
+      "The technician compares the incoming stability coefficients to the live chamber matrix and gets an immediate validation conflict.",
+      "Lochran stays on the line, focused on whether the chamber has stabilized rather than on why engineering closed the path.",
+      "End on the technician holding the undeployed package over a clear conflict warning."
     ],
     "directionInline": [
       "The technician should clearly understand there is risk."
@@ -484,7 +483,15 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ctech",
-        "text": "Chair Davieth, your package conflicts with the active matrix."
+        "text": "Chair Davieth, your emergency key just reopened a local lockout."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Is the chamber stable?"
+      },
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Barely. Your package conflicts with the active matrix."
       },
       {
         "handle": "@starsplit.lochran",
@@ -496,15 +503,7 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "The engineering team has stabilized the chamber?"
-      },
-      {
-        "handle": "@starsplit.ctech",
-        "text": "Barely."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "Then deploy the stability coefficients."
+        "text": "Deploy the stability coefficients."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S05"
@@ -664,10 +663,12 @@
       "C_nereth"
     ],
     "panelPlan": [
-      "A violent harmonic surge crosses the chamber and throws Nereth sideways.",
-      "Liora grabs the console while fractured pulses jump across multiple emitters.",
-      "Nereth struggles back toward the controls as alarms cascade.",
-      "End on the field feeding energy back into itself instead of damping."
+      "Alarm insert: one emitter fires early.",
+      "Nereth turns toward the feed as a second emitter answers out of sequence.",
+      "A violent field pulse throws Nereth into the railing.",
+      "Liora catches the console rather than Nereth because the cycle is already feeding itself.",
+      "Nereth, hurt but conscious, drags herself back toward the manual controls.",
+      "Final narrow panel: the emitter pattern cascades red across the chamber."
     ],
     "directionInline": [
       "This is the physical point of no return for the experiment."
@@ -710,10 +711,9 @@
       "C_nereth"
     ],
     "panelPlan": [
-      "Liora abandons attempts to recover alignment and reaches for the manual shutdown plate.",
-      "Nereth warns through the alarms while another surge builds.",
-      "Liora orders shutdown and strikes the abort.",
-      "Final panel: emitters die unevenly, leaving residual distortion in the chamber instead of returning to clean darkness."
+      "Liora sees one brief path back toward alignment while Nereth starts calling the emitters she might recover.",
+      "Tight two-shot as Liora refuses the salvage attempt and reaches for the manual abort.",
+      "Large final panel: the chamber slams dark under emergency shutdown while residual harmonic light continues racing outward beyond it."
     ],
     "directionInline": [
       "The shutdown stops the machine but does not undo what the corrupted pulse already released into the network."
@@ -1002,10 +1002,9 @@
       "C_iskari"
     ],
     "panelPlan": [
-      "Iskari arrives through the running aides and does not stop to debate the old plan.",
-      "She brings up a triage map organized around likely failures rather than continued normal service.",
-      "Liora’s warnings, outer-node risk, and current alarms converge on the same map.",
-      "Final wide panel: the three leaders face a network already entering failure as Iskari names the new reality. Direction: End on a strategic phase change: the story is no longer about preventing crisis, but surviving it."
+      "Council-wide panel under overlapping alarms: Lochran still faces the central command display while Iskari physically turns toward local rescue maps.",
+      "Damiar joins Iskari at the triage table, leaving Lochran with the collapsing unified feed.",
+      "Final panel on Iskari's local-authority orders propagating outward as the old central display fragments behind them."
     ],
     "continuityFrom": "SHAT_I03_P21",
     "dialogueInline": [
