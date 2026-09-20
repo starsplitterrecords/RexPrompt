@@ -1,0 +1,873 @@
+[
+  {
+    "id": "RF_I11_P01",
+    "summary": "EXT. THE AURIC GATE — DAWN. Massive pylons glow ember-orange, stability rims pulsing.",
+    "settingText": "EXT. THE AURIC GATE — DAWN",
+    "regionText": "The Verge",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. THE AURIC GATE — DAWN. Dawn at the Auric Gate.",
+      "Civilian traffic is already moving when Shard contacts begin appearing beyond the pylons.",
+      "Final consequence/reaction beat. Keep cargo skiffs and ordinary commuters visible beneath the scale of the gathering fleets; the battle is arriving at a functioning road."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Dawn at the Auric Gate. Civilian traffic is already moving when Shard contacts begin appearing beyond the pylons. Keep cargo skiffs and ordinary commuters visible beneath the scale of the gathering fleets; the battle is arriving at a functioning road."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P02",
+    "summary": "INT. THUNDERBREAK — COMMAND. VENN at the chair.",
+    "settingText": "INT. THUNDERBREAK — COMMAND",
+    "regionText": "The Core",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. THUNDERBREAK — COMMAND. Thunderbreak's threat board fills with incoming Shard signatures.",
+      "Venn asks for the civilian count before giving a battle order. Dialogue beat with Tactical, Venn: preserve exact line order and visible listening/reaction.",
+      "Tactical overlays twenty-three civilian hulls already committed to the approach; Venn keeps the lane active and rotates shields outward. Dialogue beat with Tactical: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Venn: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Tactical overlays twenty-three civilian hulls already committed to the approach; Venn keeps the lane active and rotates shields outward."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Shard massing. Broken Oath. Ashfang. Triarch hulls behind them.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Civilian count?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Twenty-three in the approach.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Keep them moving.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Thunderbreak's threat board fills with incoming Shard signatures. Venn asks for the civilian count before giving a battle order. Tactical overlays twenty-three civilian hulls already committed to the approach; Venn keeps the lane active and rotates shields outward."
+    ],
+    "charactersInline": [
+      {
+        "name": "Tactical",
+        "handle": "@starsplit.tactical"
+      },
+      {
+        "name": "Commodore Ella Venn",
+        "handle": "@starsplit.ella.venn"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P03",
+    "summary": "EXT. GATE APPROACH — DAY. Shard flotillas surge.",
+    "settingText": "EXT. GATE APPROACH — DAY",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. GATE APPROACH — DAY. Pike brings Broken Oath forward with replacement banners and camera drones hastily mounted after Shatterforge.",
+      "His officer hesitates over the civilian bands. Dialogue beat with Pike, Officer: preserve exact line order and visible listening/reaction.",
+      "Pike deliberately opens them too and broadcasts his approach before any shot is fired. Dialogue beat with Pike: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Pike: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Pike deliberately opens them too and broadcasts his approach before any shot is fired."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "Open every channel.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Even civilian?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "Especially civilian.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "If we're taking the Gate, I want witnesses.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Pike brings Broken Oath forward with replacement banners and camera drones hastily mounted after Shatterforge. His officer hesitates over the civilian bands. Pike deliberately opens them too and broadcasts his approach before any shot is fired."
+    ],
+    "charactersInline": [
+      {
+        "name": "Oren Pike",
+        "handle": "@starsplit.oren.pike"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P04",
+    "summary": "Billie joins the attack on Fleet but explicitly refuses a civilian vector, showing the limit she discovered at Shatterforge.",
+    "settingText": "INT. ASHFANG MARAUDER — COMMAND",
+    "regionText": "The Shards",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. ASHFANG MARAUDER — COMMAND. On Ashfang, target boxes begin appearing over both Fleet ships and civilian traffic because Pike's shared feed is indiscriminate.",
+      "Billie clears every civilian box from her board and orders her crew to target only armed Crown hulls. Dialogue beat with Billie, Officer: preserve exact line order and visible listening/reaction.",
+      "The Triarch order is visible but unacknowledged. Dialogue beat with Billie, Officer: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Billie: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. The Triarch order is visible but unacknowledged."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Crown hulls only.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Pike's painting the whole lane.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Then Pike can shoot by himself.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Triarch says burn the Gate.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "I heard them too.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "On Ashfang, target boxes begin appearing over both Fleet ships and civilian traffic because Pike's shared feed is indiscriminate. Billie clears every civilian box from her board and orders her crew to target only armed Crown hulls. The Triarch order is visible but unacknowledged."
+    ],
+    "charactersInline": [
+      {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P05",
+    "summary": "EXT. AURIC GATE — CONTINUOUS. Fleet shields lock.",
+    "settingText": "EXT. AURIC GATE — CONTINUOUS",
+    "regionText": "The Verge",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. AURIC GATE — CONTINUOUS. Fleet shields lock around the Gate while the civilian lane remains open through the middle.",
+      "The formation is therefore imperfect by military standards: ships are leaving gaps to let traffic through.",
+      "Final consequence/reaction beat. Shard fire begins testing those gaps."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Fleet shields lock around the Gate while the civilian lane remains open through the middle. The formation is therefore imperfect by military standards: ships are leaving gaps to let traffic through. Shard fire begins testing those gaps."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P06",
+    "summary": "Halev and Naomi commit the Verge to keeping the Gate usable rather than winning the battle around it.",
+    "settingText": "INT. AURIC BAZAAR — GOVERNOR HALL — SAME",
+    "regionText": "The Verge",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. AURIC BAZAAR — GOVERNOR HALL — SAME. Halev is in Gate control with the civilian queue stretching across his screens.",
+      "Naomi is already strapped into Sunlash. Dialogue beat with Halev, Naomi: preserve exact line order and visible listening/reaction.",
+      "He asks for the consequence in practical terms, gets the answer, and makes the mission simple: the escorts stay with traffic even while a battle forms around them. Dialogue beat with Halev, Naomi: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Halev: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. He asks for the consequence in practical terms, gets the answer, and makes the mission simple: the escorts stay with traffic even while a battle forms around them."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "How long if the Gate shuts?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "To reroute everything?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Yeah.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Long enough to hurt.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Then don't chase them. Keep the road.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Halev is in Gate control with the civilian queue stretching across his screens. Naomi is already strapped into Sunlash. He asks for the consequence in practical terms, gets the answer, and makes the mission simple: the escorts stay with traffic even while a battle forms around them."
+    ],
+    "charactersInline": [
+      {
+        "name": "Governor Halev",
+        "handle": "@starsplit.halev"
+      },
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P07",
+    "summary": "EXT. GATE MIDSPACE — CHAOS. Broken Oath charges, showboating.",
+    "settingText": "EXT. GATE MIDSPACE — CHAOS",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. GATE MIDSPACE — CHAOS. Broken Oath charges through Gate midspace, weaving between pylon fire and civilian vectors to keep itself centered in the public feeds.",
+      "Pike's maneuver forces both Fleet and Verge pilots to alter course around him.",
+      "Final consequence/reaction beat. Pike's maneuver forces both Fleet and Verge pilots to alter course around him."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Broken Oath charges through Gate midspace, weaving between pylon fire and civilian vectors to keep itself centered in the public feeds. Pike's maneuver forces both Fleet and Verge pilots to alter course around him."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P08",
+    "summary": "INT. THUNDERBREAK — COMMAND. Alarms.",
+    "settingText": "INT. THUNDERBREAK — COMMAND",
+    "regionText": "The Core",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. THUNDERBREAK — COMMAND. Tactical presents a clean shot on Ashfang, but the wider display shows civilian skiffs beyond Billie's vector.",
+      "Venn orders prow shields instead. Dialogue beat with Tactical, Venn: preserve exact line order and visible listening/reaction.",
+      "Thunderbreak absorbs the approach while gunnery crews watch a legal target pass through an unsafe background. Dialogue beat with Tactical: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Venn: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Thunderbreak absorbs the approach while gunnery crews watch a legal target pass through an unsafe background."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Ashfang closing. Impact vector.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Prow shields.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Fire solution is clean.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Not with those skiffs behind her.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Tactical presents a clean shot on Ashfang, but the wider display shows civilian skiffs beyond Billie's vector. Venn orders prow shields instead. Thunderbreak absorbs the approach while gunnery crews watch a legal target pass through an unsafe background."
+    ],
+    "charactersInline": [
+      {
+        "name": "Tactical",
+        "handle": "@starsplit.tactical"
+      },
+      {
+        "name": "Commodore Ella Venn",
+        "handle": "@starsplit.ella.venn"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P09",
+    "summary": "EXT. GRAVEFIRE CUTTER — SAME. TESS shepherds skiffs into Fleet shadow.",
+    "settingText": "EXT. GRAVEFIRE CUTTER — SAME",
+    "regionText": "The Shards",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. GRAVEFIRE CUTTER — SAME. Gate fire and distortion obscure the lane markers for one civilian skiff.",
+      "Tess uses Gravefire itself as the reference point and brings the pilot into Fleet shadow. Dialogue beat with Tess, Pilot: preserve exact line order and visible listening/reaction.",
+      "The scene is a flying problem in the middle of the battle, not a calming speech. Dialogue beat with Tess, Pilot: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Tess: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. The scene is a flying problem in the middle of the battle, not a calming speech."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Skiff Four, you're outside me.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "PILOT",
+        "speaker": "Pilot",
+        "text": "I can't see the marker.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Forget the marker. See Gravefire?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "PILOT",
+        "speaker": "Pilot",
+        "text": "Yeah.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Follow me.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Gate fire and distortion obscure the lane markers for one civilian skiff. Tess uses Gravefire itself as the reference point and brings the pilot into Fleet shadow. The scene is a flying problem in the middle of the battle, not a calming speech."
+    ],
+    "charactersInline": [
+      {
+        "name": "Tessa Banks",
+        "handle": "@starsplit.tessa.banks"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P10",
+    "summary": "EXT. SKY — SPECTACLE. Pike strafes civilians for show.",
+    "settingText": "EXT. SKY — SPECTACLE",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. SKY — SPECTACLE. Pike fires through the edge of the civilian lane to hit a Fleet escort.",
+      "The shot misses the skiffs by an unacceptable margin and one civilian craft spins from the shock wave.",
+      "Final consequence/reaction beat. Broken Oath's public cameras capture the near hit along with the attack Pike intended to celebrate."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Pike fires through the edge of the civilian lane to hit a Fleet escort. The shot misses the skiffs by an unacceptable margin and one civilian craft spins from the shock wave. Broken Oath's public cameras capture the near hit along with the attack Pike intended to celebrate."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P11",
+    "summary": "INT. SHARDFALL CITADEL — ARENA VAULT — NIGHT. The TRIARCH watch feeds.",
+    "settingText": "INT. SHARDFALL CITADEL — ARENA VAULT — NIGHT",
+    "regionText": "The Shards",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. SHARDFALL CITADEL — ARENA VAULT — NIGHT. In the Arena Vault, the Triarch see the same civilian-lane overlay as everyone else.",
+      "The emissary points to the occupied Gate before repeating the concern. Dialogue beat with Triarch: preserve exact line order and visible listening/reaction.",
+      "The second order comes with full knowledge of who is inside. Dialogue beat with Emissary: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Triarch: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. The second order comes with full knowledge of who is inside."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "TRIARCH",
+        "speaker": "Triarch",
+        "text": "Burn the Gate.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.emissary",
+        "speaker": "Emissary",
+        "text": "Civilian traffic is still inside.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "TRIARCH",
+        "speaker": "Triarch",
+        "text": "Burn it.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "In the Arena Vault, the Triarch see the same civilian-lane overlay as everyone else. The emissary points to the occupied Gate before repeating the concern. The second order comes with full knowledge of who is inside."
+    ],
+    "charactersInline": [
+      {
+        "name": "Triarch",
+        "handle": "@starsplit.silent.triarch"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P12",
+    "summary": "Overlapping weapons fire and Gate stabilization pulses push Auric’s reciprocal-field geometry into the same echo behavior first measured in the Calm Corridor.",
+    "settingText": "EXT. AURIC GATE — CONTINUOUS",
+    "regionText": "The Verge",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. AURIC GATE — CONTINUOUS. The Rift shudders under overlapping weapons fire and Gate stabilization pulses.",
+      "Duplicate ships begin appearing at the edges of synchronized formations—first one, then several.",
+      "Final consequence/reaction beat. Targeting systems multiply boxes faster than crews can identify real hulls."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "The Rift shudders as synchronized weapons fire overlays the Gate’s stabilization cycle. Anchor and shear displays remain readable while duplicate hull states begin appearing at the edges of repeated formations—first one, then several. Treat this as the dangerous recurrence of a measured physical phenomenon, not ghosts materializing because people believe in them."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P13",
+    "summary": "Jia recognizes that synchronized weapons fire is phase-locking the Gate echoes to the battle and gives Venn an immediate falsifiable intervention: stop feeding the field the same pattern.",
+    "settingText": "INT. THUNDERBREAK — COMMAND",
+    "regionText": "The Core",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. THUNDERBREAK — COMMAND. Jia overlays the Gate battle with the Calm Corridor telemetry and sees duplicate density spike after synchronized volleys.",
+      "She calls Venn directly. Dialogue beat with Jia, Venn: preserve exact line order and visible listening/reaction.",
+      "Venn asks the necessary question, then shuts Thunderbreak's batteries down and calls Naomi. Dialogue beat with Jia, Venn: preserve exact line order and visible listening/reaction.",
+      "Across the lane, Verge hand signs begin replacing targeting clocks. Dialogue beat with Venn, Naomi: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Across the lane, Verge hand signs begin replacing targeting clocks."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "speaker": "Jia",
+        "text": "Venn, stop the synchronized fire."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Why?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "speaker": "Jia",
+        "text": "The Gate field is phase-locking to the volleys. Every repeated pattern gives the echoes the same solution."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "All batteries cold."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Naomi, I need your hands."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "You have them."
+      }
+    ],
+    "directionInline": [
+      "Jia overlays the Gate battle with Calm Corridor telemetry and sees duplicate density spike after synchronized volleys. She does not claim a final ghost-ship theory; she identifies a controllable input. Venn shuts Thunderbreak’s batteries down and calls Naomi. Verge hand signs replace common targeting clocks across the lane."
+    ],
+    "charactersInline": [
+      {
+        "name": "Jia Morgan",
+        "handle": "@starsplit.jia.morgan"
+      },
+      {
+        "name": "Commodore Ella Venn",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P14",
+    "summary": "Abby's Scythe returns scarred from Shatterforge with survivors and captains who chose her over the Triarch.",
+    "settingText": "EXT. GATE — BATTLEFIELD",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. GATE — BATTLEFIELD. A scarred, partially blackened Scythe of Saville emerges from the outer Rift with jury-rigged thrust.",
+      "Several Shard ships fall in behind it.",
+      "Final consequence/reaction beat. The return should be unmistakable before any character names Abby."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "A scarred, partially blackened Scythe of Saville emerges from the outer Rift with jury-rigged thrust. The same broad shield geometry and distinctive refit pattern established at Shatterforge make the ship identifiable before anyone sees or names Abby. Its institutional identity has survived damage, crew loss and political change."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P15",
+    "summary": "Abby turns her surviving bloc toward the civilian lane and makes her rebellion operational.",
+    "settingText": "INT. SCYTHE — COMMAND",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. SCYTHE — COMMAND. Abby opens a channel to the captains who followed Scythe out of Shatterforge.",
+      "One captain asks the question nobody has yet said aloud while their ships face the Triarch formation. Dialogue beat with Abby, Captain: preserve exact line order and visible listening/reaction.",
+      "Abby answers almost tiredly, then turns Scythe's remaining shield power toward the civilian lane. Dialogue beat with Abby, Captain: preserve exact line order and visible listening/reaction.",
+      "The other captains follow one by one. Dialogue beat with Abby: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. The other captains follow one by one."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "If you're still with me, shields on the convoys.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "CAPTAIN",
+        "speaker": "Captain",
+        "text": "Triarch is ordering the Gate burned.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "I know.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "CAPTAIN",
+        "speaker": "Captain",
+        "text": "That's the break, then?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "Looks like.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Abby opens a channel to the captains who followed Scythe out of Shatterforge. One captain asks the question nobody has yet said aloud while their ships face the Triarch formation. Abby answers almost tiredly, then turns Scythe's remaining shield power toward the civilian lane. The other captains follow one by one."
+    ],
+    "charactersInline": [
+      {
+        "name": "Abby Saville",
+        "handle": "@starsplit.abby.saville"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P16",
+    "summary": "Tess forces Billie to compare her own boundary with Pike's willingness to fire through civilians.",
+    "settingText": "EXT. ASHFANG / THUNDERBREAK",
+    "regionText": "The Core",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. ASHFANG / THUNDERBREAK. Tess calls Billie while both are still flying combat vectors.",
+      "On Billie's board, Pike's shot replay shows the civilian near miss. Dialogue beat with Tess, Billie: preserve exact line order and visible listening/reaction.",
+      "Tess does not tell Billie what kind of person she is; she asks whether Billie is still choosing Pike's side. Dialogue beat with Tess, Billie: preserve exact line order and visible listening/reaction.",
+      "Billie has no clean answer and ends the conversation herself. Dialogue beat with Tess: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Billie has no clean answer and ends the conversation herself."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Billie. Pike just fired through a skiff.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "I saw.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "You still with him?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Shut up.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Okay.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Tess calls Billie while both are still flying combat vectors. On Billie's board, Pike's shot replay shows the civilian near miss. Tess does not tell Billie what kind of person she is; she asks whether Billie is still choosing Pike's side. Billie has no clean answer and ends the conversation herself."
+    ],
+    "charactersInline": [
+      {
+        "name": "Tessa Banks",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P17",
+    "summary": "Venn turns ceasefire into a physical command choice: Thunderbreak stops targeting and becomes the shield everyone else must choose whether to follow.",
+    "settingText": "INT. THUNDERBREAK — COMMAND — NIGHT",
+    "regionText": "The Core",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. THUNDERBREAK — COMMAND — NIGHT. Venn does not give a ceasefire speech to every faction.",
+      "She orders her own ship first. Dialogue beat with Venn, Tactical: preserve exact line order and visible listening/reaction.",
+      "Target boxes vanish from Thunderbreak; weapon power pours into the civilian shield; the cruiser becomes visibly vulnerable. Dialogue beat with Venn: preserve exact line order and visible listening/reaction.",
+      "Nearby Fleet ships see what Thunderbreak has done and begin following without being told. Dialogue beat with Tactical, Venn: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. The ceasefire becomes legible through ships changing behavior."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Thunderbreak, break target lock.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "All batteries?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "All.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Put everything into the civilian shield.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "We'll be open.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "I know.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "directionInline": [
+      "Venn does not give a ceasefire speech to every faction. She orders her own ship first. Target boxes vanish from Thunderbreak; weapon power pours into the civilian shield; the cruiser becomes visibly vulnerable. Nearby Fleet ships see what Thunderbreak has done and begin following without being told. Naomi's escorts are already on convoy geometry; Abby's bloc is already shielding. The ceasefire becomes legible through ships changing behavior."
+    ],
+    "charactersInline": [
+      {
+        "name": "Commodore Ella Venn",
+        "handle": "@starsplit.ella.venn"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P18",
+    "summary": "Pike refuses the ceasefire and Billie breaks his ability to turn the remaining chaos into a massacre.",
+    "settingText": "EXT. AURIC GATE — BROKEN OATH / ASHFANG — CONTINUOUS",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Broken Oath continues firing while target boxes disappear from ships around it.",
+      "Billie lines Ashfang up behind Pike and tells him to move.",
+      "Pike, ecstatic, says he is taking the Gate and refuses.",
+      "Billie: 'No. You're blocking my shot.' Her reticle is now clearly on Broken Oath's weapon mast.",
+      "Ashfang fires. Broken Oath's mast dies; the ship survives, suddenly unable to continue the massacre."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "They're open! Fire!"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Pike."
+      },
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "What?"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Move."
+      },
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "I'm taking the Gate."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "No. You're blocking my shot."
+      }
+    ],
+    "directionInline": [
+      "Pike keeps firing after surrounding ships begin dropping target locks. Billie lines Ashfang up behind Broken Oath and tells him to move. Pike assumes she wants his firing lane and refuses. Billie's last line is true only in the most literal sense: her shot is aimed at Broken Oath's weapon mast. She fires and disables it without destroying the ship."
+    ],
+    "charactersInline": [
+      {
+        "name": "Oren Pike",
+        "handle": "@starsplit.oren.pike"
+      },
+      {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P19",
+    "summary": "The record captures that survival came from restraint adopted across factions, not from a single commander's speech.",
+    "settingText": "INT. RELIC COURT — WAR FEED",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. RELIC COURT — WAR FEED. Selene and Dominion reconstruct the sequence from timestamped combat logs after the firing stops.",
+      "They are not debating the meaning of restraint; they are establishing what happened and in what order. Dialogue beat with Selene, Dominion: preserve exact line order and visible listening/reaction.",
+      "Selene includes the Gate's survival as well as every faction's choice. Dialogue beat with Selene, Dominion: preserve exact line order and visible listening/reaction.",
+      "Dialogue beat with Selene: preserve exact line order and visible listening/reaction.",
+      "Final consequence/reaction beat. Selene includes the Gate's survival as well as every faction's choice."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Verge escorts dropped target lock first."
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "Thunderbreak followed."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Then Saville's ships."
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "And the Gate held."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Then that is the sequence the logs support."
+      }
+    ],
+    "directionInline": [
+      "Selene and Dominion reconstruct the event from timestamped combat logs. The point is historiography in real time: institutional narratives may disagree about who deserves credit, but the shared telemetry constrains the order of events."
+    ],
+    "charactersInline": [
+      {
+        "name": "Archivist Selene Stormwell",
+        "handle": "@starsplit.selene.stormwell"
+      },
+      {
+        "name": "Admiral Cael Dominion",
+        "handle": "@starsplit.cael.dominion"
+      }
+    ]
+  },
+  {
+    "id": "RF_I11_P20",
+    "summary": "EXT. AURIC GATE — DAWN AFTER BATTLE. Convoys thread the Gate.",
+    "settingText": "EXT. AURIC GATE — DAWN AFTER BATTLE",
+    "regionText": "The Verge",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. AURIC GATE — DAWN AFTER BATTLE. Dawn after the battle.",
+      "Convoys still thread the Gate through wreckage and disabled ships.",
+      "Final consequence/reaction beat. Broken Oath drifts powerless but intact; Ashfang keeps its distance."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Dawn after the battle. Convoys still thread the Gate through wreckage and disabled ships. Mixed crews tow damaged civilian hulls without checking faction markings first. Broken Oath drifts powerless but intact; Ashfang keeps its distance."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P21",
+    "summary": "INT. GRAVEFIRE — BRIDGE. TESS watches civilians pass.",
+    "settingText": "INT. GRAVEFIRE — BRIDGE",
+    "regionText": "The Shards",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish INT. GRAVEFIRE — BRIDGE. On Gravefire, Tess watches the last delayed civilian skiff clear the Gate.",
+      "She removes her headset and rubs the pressure mark behind one ear while the bridge crew quietly starts damage checks.",
+      "Final consequence/reaction beat. No line is needed."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "On Gravefire, Tess watches the last delayed civilian skiff clear the Gate. She removes her headset and rubs the pressure mark behind one ear while the bridge crew quietly starts damage checks. No line is needed."
+    ],
+    "charactersInline": []
+  },
+  {
+    "id": "RF_I11_P22",
+    "summary": "EXT. ORBIT — WIDE. The Auric Gate burns faintly, stability rims pulsing — not victory, not defeat, but survival.",
+    "settingText": "EXT. ORBIT — WIDE",
+    "regionText": "Inter-faction Corridors",
+    "continuityFrom": null,
+    "panelPlan": [
+      "Establish EXT. ORBIT — WIDE. Wide orbit: Auric Gate still functions, scarred pylons pulsing unevenly as ordinary traffic resumes.",
+      "The surviving ships sit in awkward mixed positions around it—no clean victory formation.",
+      "Final consequence/reaction beat. End on the road remaining open."
+    ],
+    "dialogueInline": [],
+    "directionInline": [
+      "Wide orbit: Auric Gate still functions, scarred pylons pulsing unevenly as ordinary traffic resumes. The surviving ships sit in awkward mixed positions around it—no clean victory formation. End on the road remaining open."
+    ],
+    "charactersInline": []
+  }
+]
