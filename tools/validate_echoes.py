@@ -22,7 +22,29 @@ REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux
 ALLOWED_CHARACTER_FIELDS = {
     "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
 }
-ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "directionInline", "continuityFrom"}
+ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "continuityFrom"}
+
+EXPECTED_CONTINUITY = {
+    1: {},
+    2: {
+        "EFW_S1E02_S03": "EFW_S1E02_S02",
+        "EFW_S1E02_S10": "EFW_S1E02_S09",
+    },
+    3: {},
+    4: {
+        "EFW_S1E04_S03": "EFW_S1E04_S02",
+        "EFW_S1E04_S10": "EFW_S1E04_S09",
+        "EFW_S1E04_S11": "EFW_S1E04_S01",
+    },
+    5: {
+        "EFW_S1E05_S03": "EFW_S1E05_S01",
+    },
+    6: {
+        "EFW_S1E06_S12": "EFW_S1E06_S11",
+    },
+    7: {},
+    8: {},
+}
 
 # Narrow chef-layer guard. This catches editorial/thematic explanation, not ordinary visual
 # words. Add a pattern only when it reliably denotes writing analysis rather than something
@@ -167,9 +189,15 @@ def validate_scenes() -> None:
                 for panel in plan:
                     assert isinstance(panel, dict) and panel.get("text"), f"Bad source panel: {scene_id}"
 
-            if issue in (2, 3, 4, 5) and index > 0:
-                assert scene.get("continuityFrom") == scenes[index - 1]["id"], (
-                    f"Broken Issue {issue} continuity: {scene_id}"
+            if issue <= 5:
+                expected_from = EXPECTED_CONTINUITY[issue].get(scene_id)
+                assert scene.get("continuityFrom") == expected_from, (
+                    f"Incorrect direct continuity on {scene_id}: "
+                    f"{scene.get('continuityFrom')!r} != {expected_from!r}"
+                )
+            else:
+                assert scene.get("continuityFrom") is None, (
+                    f"Source continuity must live in the production overlay: {scene_id}"
                 )
 
     assert len(all_ids) == 96 and len(set(all_ids)) == 96
@@ -205,14 +233,11 @@ def validate_enhancement_overlays() -> None:
             assert isinstance(plan, list) and len(plan) >= 4, f"Missing overlay page plan: {scene_id}"
             for panel in plan:
                 assert isinstance(panel, dict) and panel.get("text"), f"Bad panel plan: {scene_id}"
-            if "directionInline" in patch:
-                visual_direction = patch["directionInline"]
-                assert isinstance(visual_direction, list) and visual_direction, f"Bad overlay direction: {scene_id}"
-                for block in visual_direction:
-                    assert isinstance(block, dict) and block.get("text"), f"Bad overlay direction: {scene_id}"
-            if "continuityFrom" in patch:
-                assert index > 0, f"First page cannot continue from prior page: {scene_id}"
-                assert patch["continuityFrom"] == ids[index - 1], f"Bad overlay continuity: {scene_id}"
+            expected_from = EXPECTED_CONTINUITY[issue].get(scene_id)
+            assert patch.get("continuityFrom") == expected_from, (
+                f"Incorrect overlay continuity on {scene_id}: "
+                f"{patch.get('continuityFrom')!r} != {expected_from!r}"
+            )
 
             original = source_by_id[scene_id]
             merged = {**original, **patch}
