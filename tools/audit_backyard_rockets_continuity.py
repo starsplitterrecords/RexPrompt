@@ -15,6 +15,20 @@ def load(p): return json.loads(p.read_text(encoding="utf-8"))
 def norm(x):
     if isinstance(x,list): return x
     return [{"id":k,**v} for k,v in (x or {}).items() if isinstance(v,dict)]
+def merge_by_id(scenes,incoming):
+    updates={scene.get("id"):scene for scene in incoming if scene.get("id")}
+    seen=set(); merged=[]
+    for scene in scenes:
+        patch=updates.get(scene.get("id"))
+        if patch:
+            merged.append({**scene,**patch}); seen.add(scene.get("id"))
+        else:
+            merged.append(scene)
+    for scene in incoming:
+        sid=scene.get("id")
+        if sid and sid not in seen and not any(existing.get("id")==sid for existing in scenes):
+            merged.append(scene)
+    return merged
 def enc(p):
     raw=base64.b64decode("".join(p.read_text().split()),validate=True)
     return json.loads(gzip.decompress(raw).decode("utf-8"))
@@ -49,12 +63,18 @@ shows=load(MANIFEST)
 show=next(s for s in shows if s.get("id")==SHOW_ID)
 base=ROOT/show["basePath"]
 base_scenes=norm(load(base/show.get("scenesFile","scenes_base.json")))
-scenes=list(base_scenes); groups=[(show.get("scenesFile","scenes_base.json"),base_scenes)]
+scenes=list(base_scenes)
 for o in show.get("sceneOverlays",[]):
     p=base/o["file"]
     inc=norm(enc(p) if o.get("encoding")=="gzip-base64" else load(p))
-    exc=set(o.get("excludeIds",[])); inc=[s for s in inc if s.get("id") not in exc]
-    scenes.extend(inc); groups.append((o["file"],inc))
+    included=set(o.get("includeIds",[])); exc=set(o.get("excludeIds",[]))
+    if included: inc=[s for s in inc if s.get("id") in included]
+    if exc: inc=[s for s in inc if s.get("id") not in exc]
+    if o.get("mergeById"):
+        scenes=merge_by_id(scenes,inc)
+    else:
+        scenes.extend(inc)
+groups=[("assembled-active-scenes",scenes)]
 
 chars=load(SHOW/"characters.json")
 settings=load(SHOW/"settings.json")
