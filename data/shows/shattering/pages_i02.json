@@ -17,12 +17,28 @@
       "Nereth checks the raw corridor feed to rule out a bad projection.",
       "End on the two curves diverging sharply rather than converging."
     ],
-    "dialog": [
-      "D301"
-    ],
     "directionInline": [
       "The evidence must read as a worsening trend, not another isolated glitch."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Overlay yesterday."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Already did."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "That's not settling."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "No. It's climbing."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P02",
@@ -42,13 +58,33 @@
       "The separate traces align into one stress pattern when stacked.",
       "Liora and Nereth realize the incidents are linked by structure rather than coincidence."
     ],
-    "dialog": [
-      "D302"
-    ],
     "directionInline": [
       "Make the connection visual and cumulative."
     ],
-    "continuityFrom": "SHAT_I02_P01"
+    "continuityFrom": "SHAT_I02_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Three echoes. Same window."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Same route?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Three routes."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Then stack them."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I was afraid you'd say that."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P03",
@@ -68,13 +104,33 @@
       "Nereth sees that there is no safe place to wait for the problem to resolve itself.",
       "End on Liora naming the choice: controlled relief now or uncontrolled release later."
     ],
-    "dialog": [
-      "D303"
-    ],
     "directionInline": [
       "Finish on the loss of passive options."
     ],
-    "continuityFrom": "SHAT_I02_P02"
+    "continuityFrom": "SHAT_I02_P02",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "There. Load moves, the weak point moves with it."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "So waiting doesn't buy us a safe failure."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It buys the network the choice."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I prefer choosing our disasters."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "So do I."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P04",
@@ -95,12 +151,28 @@
       "A timing indicator slips out of sync while the physical housing shakes.",
       "End on workers stabilizing by hand what the Core still treats as routine infrastructure."
     ],
-    "dialog": [
-      "D304"
-    ],
     "directionInline": [
       "This is material neglect, not abstract ideology."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Hold that housing."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "I'm holding it."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "It's still walking."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Because half the mounts are older than I am."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P05",
@@ -121,13 +193,33 @@
       "Ruvian compares the neglected parts to the rising timing mismatch.",
       "A new vibration interrupts the argument and forces both back to work."
     ],
-    "dialog": [
-      "D305"
-    ],
     "directionInline": [
       "Let resentment grow out of visible maintenance history."
     ],
-    "continuityFrom": "SHAT_I02_P04"
+    "continuityFrom": "SHAT_I02_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Replacement request. Six months."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Rejected?"
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Ignored."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "That's somehow ruder."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Rude doesn't crack a beacon. This does."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P06",
@@ -148,11 +240,33 @@
       "The timing readout remains imperfect but the node stops worsening.",
       "End on the crew working under their own patched solution while the formal replacement queue remains unanswered."
     ],
-    "dialog": [],
     "directionInline": [
       "Show improvised maintenance as a practical habit whose larger meaning has not yet been named."
     ],
-    "continuityFrom": "SHAT_I02_P05"
+    "continuityFrom": "SHAT_I02_P05",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Strip the dead casing."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "That's not approved stock."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Neither is suffocating."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "You want the brace ugly or legal?"
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "I want it holding."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P07",
@@ -172,12 +286,28 @@
       "The traffic controller refreshes the board and gets another contradictory answer.",
       "End on medicine waiting while the system refuses to produce one stable path."
     ],
-    "dialog": [
-      "D306"
-    ],
     "directionInline": [
       "Keep the stakes tangible: delayed medicine, not just delayed traffic."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Give me one window that stays put."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "If I had one, you'd be moving already."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "The medicine is due in four hours."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "The route changes in four minutes."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S03"
   },
   {
     "id": "SHAT_I02_P08",
@@ -197,10 +327,34 @@
       "The controller offers the desperate option without pretending it is safe.",
       "End on Aveth staring at an unverified corridor entry rather than a sanctioned route. Direction: Land on Aveth’s practical moral choice between dangerous action and guaranteed delay."
     ],
-    "dialog": [
-      "D307"
+    "continuityFrom": "SHAT_I02_P07",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "I can give you raw status. No prediction."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Meaning?"
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "Meaning you fly it blind."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "And if I wait?"
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "The crates stay here safely."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "That's not the kind of safe I need."
+      }
     ],
-    "continuityFrom": "SHAT_I02_P07"
+    "sceneId": "SCN_SHAT_I02_S03"
   },
   {
     "id": "SHAT_I02_P09",
@@ -219,12 +373,20 @@
       "Inset diagrams show emitters and synchronized damping geometry absent from modern operating guides.",
       "End on the old system labeled as a real engineered safeguard, not legend."
     ],
-    "dialog": [
-      "D308"
-    ],
     "directionInline": [
       "The discovery should feel buried by institutional forgetting rather than hidden by conspiracy."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.heska",
+        "text": "Full-network damping."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "So you did know how to do this once."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S04"
   },
   {
     "id": "SHAT_I02_P10",
@@ -243,11 +405,25 @@
       "She marks the missing chain from systemwide hazard to systemwide response.",
       "End on her sending the discovery to Liora."
     ],
-    "dialog": [],
     "directionInline": [
       "Let the visual comparison carry the accusation: the infrastructure outlived the knowledge needed to maintain it."
     ],
-    "continuityFrom": "SHAT_I02_P09"
+    "continuityFrom": "SHAT_I02_P09",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.heska",
+        "text": "Reference. Reference. Reference... and no procedure."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "You kept the machine and misplaced the memory."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "Liora needs this."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S04"
   },
   {
     "id": "SHAT_I02_P11",
@@ -267,12 +443,32 @@
       "Damiar watches new anomalies enter the technical feed while being told not to name drift.",
       "End on the public draft retaining the language of stability."
     ],
-    "dialog": [
-      "D309"
-    ],
     "directionInline": [
       "Lochran’s choice should be explicit but grounded in fear of social destabilization."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Take 'drift' out."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "It's what engineering calls it."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Engineering is not addressing six billion people."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "What am I calling it?"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Timing instability. Temporary."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S05"
   },
   {
     "id": "SHAT_I02_P12",
@@ -292,10 +488,34 @@
       "Lochran leaves him to finish the statement.",
       "End on Damiar alone between the calm public script and the worsening private board."
     ],
-    "dialog": [
-      "D310"
+    "continuityFrom": "SHAT_I02_P11",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "Another route just went red."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then write faster."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Lochran."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Damiar."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "At some point calm becomes inaccurate."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Not before panic becomes lethal."
+      }
     ],
-    "continuityFrom": "SHAT_I02_P11"
+    "sceneId": "SCN_SHAT_I02_S05"
   },
   {
     "id": "SHAT_I02_P13",
@@ -315,12 +535,28 @@
       "Staff redirect one queue, then immediately have to stop it.",
       "End on the traveler asking why the same departure has vanished twice."
     ],
-    "dialog": [
-      "D311"
-    ],
     "directionInline": [
       "The crowd should understand enough to know the official explanation is no longer matching experience."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.travl",
+        "text": "It disappeared again."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Which departure?"
+      },
+      {
+        "handle": "@starsplit.travl",
+        "text": "The same one I have been standing under for an hour."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Stay in line. I'll refresh it."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S06"
   },
   {
     "id": "SHAT_I02_P14",
@@ -340,13 +576,33 @@
       "The staffer repeats the procedural line and asks everyone to stay in place.",
       "End on the board failing again behind the reassurance."
     ],
-    "dialog": [
-      "D312"
-    ],
     "directionInline": [
       "The staffer is trapped inside the same information failure as the public."
     ],
-    "continuityFrom": "SHAT_I02_P13"
+    "continuityFrom": "SHAT_I02_P13",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.travl",
+        "text": "You said that ten minutes ago."
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Because ten minutes ago I still thought it was the board."
+      },
+      {
+        "handle": "@starsplit.travl",
+        "text": "And now?"
+      },
+      {
+        "handle": "@starsplit.pstf",
+        "text": "Now I don't know what it is."
+      },
+      {
+        "handle": "@starsplit.travl",
+        "text": "Thank you. That's the first honest thing anyone's said."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S06"
   },
   {
     "id": "SHAT_I02_P15",
@@ -369,12 +625,32 @@
       "Delegates recognize familiar routes now connected into one failure pattern.",
       "End on the model predicting several nodes failing in the same window."
     ],
-    "dialog": [
-      "D313"
-    ],
     "directionInline": [
       "Make the escalation from the earlier Council warning visually undeniable: scattered drift has become synchronized-failure risk."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "These aren't separate incidents anymore."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "How many nodes in the same failure window?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Five certain. Nine plausible."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Plausible is doing work there."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "So is 'certain.'"
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P16",
@@ -397,13 +673,33 @@
       "Several delegates react to the political cost of closing routes.",
       "End on Liora and Iskari aligned around restriction while Lochran remains opposed."
     ],
-    "dialog": [
-      "D314"
-    ],
     "directionInline": [
       "This is the first proposed sacrifice: reduce mobility now to preserve the network."
     ],
-    "continuityFrom": "SHAT_I02_P15"
+    "continuityFrom": "SHAT_I02_P15",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Close the highest-load routes."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "You asked for an action."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I asked for an action we can defend."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "We can defend fewer dead people."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P17",
@@ -426,13 +722,29 @@
       "He distinguishes forecast from proof and holds the line against restrictions.",
       "End on traffic continuing across the projected danger zones."
     ],
-    "dialog": [
-      "D315"
-    ],
     "directionInline": [
       "Play Lochran’s argument as intelligible and consequential: uncertainty becomes his reason to preserve normal operations."
     ],
-    "continuityFrom": "SHAT_I02_P16"
+    "continuityFrom": "SHAT_I02_P16",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Forecast is not proof."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "You keep asking the future to testify under oath."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I am asking you to separate fear from evidence."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I am. That's why I'm still in this room."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P18",
@@ -455,13 +767,33 @@
       "The room talks past the wording because the disagreement is now about action, not presentation.",
       "End on Damiar recognizing that language cannot reconcile the split."
     ],
-    "dialog": [
-      "D316"
-    ],
     "directionInline": [
       "This closes the messaging strategy that dominated Issues 1–2."
     ],
-    "continuityFrom": "SHAT_I02_P17"
+    "continuityFrom": "SHAT_I02_P17",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "Call it a recalibration."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "If it closes the routes, call it whatever you like."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Names become precedent."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "People are already living the precedent."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "We are out of words that make this smaller."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P19",
@@ -482,10 +814,28 @@
       "Iskari checks access status and confirms no active Council authorization.",
       "End on the three standing before a system built for exactly the crisis outside."
     ],
-    "dialog": [],
     "directionInline": [
       "Give the chamber age, scale, and dormant weight; this is a threshold scene."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That's the same emitter profile from Heska's schematic."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "And that's a retrofit welded over it."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Can it run?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That's a different question from whether it should."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P20",
@@ -506,13 +856,33 @@
       "Nereth finds calibration values buried in the old interface.",
       "End on Liora stating that the chamber is intact enough to try."
     ],
-    "dialog": [
-      "D317"
-    ],
     "directionInline": [
       "Hope should enter for the first time without making the solution feel safe."
     ],
-    "continuityFrom": "SHAT_I02_P19"
+    "continuityFrom": "SHAT_I02_P19",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Low power."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Response is slow."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "But coherent."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I found the old calibration table."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Then we have a door."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P21",
@@ -533,13 +903,33 @@
       "Liora sees the margin for error narrow to almost nothing.",
       "End on the chamber’s dormant emitters looming over them after Nereth states the risk."
     ],
-    "dialog": [
-      "D318"
-    ],
     "directionInline": [
       "Make the downside physically understandable through the simulation."
     ],
-    "continuityFrom": "SHAT_I02_P20"
+    "continuityFrom": "SHAT_I02_P20",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "And this is what's behind it."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "That's a one-percent offset?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Half."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It shears the field."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "A bad attempt doesn't fail quietly. It helps the collapse."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P22",
@@ -560,9 +950,37 @@
       "Iskari accepts the risk and tells them to calibrate perfectly.",
       "Final panel: Liora’s hand reaches for the dormant system controls as the first emitter wakes. Direction: Land on deliberate unauthorized action as Liora reaches for the waking damping controls."
     ],
-    "dialog": [
-      "D319"
+    "continuityFrom": "SHAT_I02_P21",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Council still won't authorize."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That may be the first good decision they've made."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Nereth."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I'm calibrating."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Do it."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "You understand what you're ordering?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Perfectly. I just don't have another order to give."
+      }
     ],
-    "continuityFrom": "SHAT_I02_P21"
+    "sceneId": "SCN_SHAT_I02_S08"
   }
 ]

@@ -16,10 +16,20 @@
       "Liora starts to fill one gap, stops, and removes the attempted conclusion.",
       "End on the unfinished space remaining visible inside the work."
     ],
-    "dialog": [],
     "directionInline": [
       "Make the unfinished sections visibly deliberate: Liora chooses to preserve open questions rather than accidentally leaving gaps."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No. That's too clean."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Leave the contradiction."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S01"
   },
   {
     "id": "SHAT_I06_P02",
@@ -38,13 +48,17 @@
       "Close on Liora refusing to finish the gaps for future readers.",
       "End on the treatise resting as a body of work that requires interpretation."
     ],
-    "dialog": [
-      "D701"
-    ],
     "directionInline": [
       "This is Liora relinquishing control over how the text will be completed."
     ],
-    "continuityFrom": "SHAT_I06_P01"
+    "continuityFrom": "SHAT_I06_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "If they want one answer, they'll have to build it themselves."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S01"
   },
   {
     "id": "SHAT_I06_P03",
@@ -67,12 +81,32 @@
       "She redacts or removes lines she believes cannot responsibly be endorsed.",
       "End on her version already differing from the text Liora completed."
     ],
-    "dialog": [
-      "D702"
-    ],
     "directionInline": [
       "Ground Iskari’s edits in the standards-and-responsibility practice she has already developed after the collapse."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "This passage cannot stay."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Which one?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "The one that treats field improvisation as self-justifying."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "It kept half my people breathing."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "And killed people elsewhere when bad work was copied."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P04",
@@ -95,13 +129,37 @@
       "His practical annotations accumulate in the margins rather than replacing the whole text.",
       "End on a second materially different version forming beside Iskari’s."
     ],
-    "dialog": [
-      "D703"
-    ],
     "directionInline": [
       "Ruvian is correcting abstractions with lived breakage, not trying to author a rival scripture."
     ],
-    "continuityFrom": "SHAT_I06_P03"
+    "continuityFrom": "SHAT_I06_P03",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then write the failure condition next to it."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "That isn't a standard."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "It's what actually happens."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "He's right about one thing."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Only one?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Today."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P05",
@@ -124,13 +182,37 @@
       "No one agrees to collapse the changes back into one master text.",
       "End on three annotated versions lying across the same table."
     ],
-    "dialog": [
-      "D704"
-    ],
     "directionInline": [
       "The division should emerge through sincere attempts to make the text usable."
     ],
-    "continuityFrom": "SHAT_I06_P04"
+    "continuityFrom": "SHAT_I06_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "This whole section assumes a route authority still exists."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "It doesn't."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Some version of one will."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Then let that version earn the sentence."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "How many copies do we have now?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Three. Which is probably the honest number."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S02"
   },
   {
     "id": "SHAT_I06_P06",
@@ -150,12 +232,36 @@
       "Couriers notice that some historically important worlds have been moved down the list.",
       "End on Aveth stating that everyone gets the text, but not everyone first."
     ],
-    "dialog": [
-      "D705"
-    ],
     "directionInline": [
       "Make scarcity, not ideology, the immediate cause of the dispute."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.cour",
+        "text": "Core moved down the list."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.cour",
+        "text": "They asked first."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "They have heat."
+      },
+      {
+        "handle": "@starsplit.cour",
+        "text": "They also have influence."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Influence doesn't freeze."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S03"
   },
   {
     "id": "SHAT_I06_P07",
@@ -175,13 +281,37 @@
       "Aveth has practical reasons but no surviving universal legal authority to cite.",
       "End on the question hanging under unstable relay lights."
     ],
-    "dialog": [
-      "D706"
-    ],
     "directionInline": [
       "Keep the legitimacy challenge unresolved; Aveth has practical reasons for prioritizing need but no universal law to invoke."
     ],
-    "continuityFrom": "SHAT_I06_P06"
+    "continuityFrom": "SHAT_I06_P06",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.cour",
+        "text": "Who gave you the right to rank need?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "No one."
+      },
+      {
+        "handle": "@starsplit.cour",
+        "text": "That's my point."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Mine too."
+      },
+      {
+        "handle": "@starsplit.cour",
+        "text": "Then why should I carry your list?"
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Because you can challenge it, and I have to answer. The old system never gave you that."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S03"
   },
   {
     "id": "SHAT_I06_P08",
@@ -203,12 +333,36 @@
       "Ruvian’s crew braces a conduit as systems begin dropping.",
       "End on Ruvian confronting the Core shipment as the immediate cause of the near-collapse."
     ],
-    "dialog": [
-      "D707"
-    ],
     "directionInline": [
       "The evidence supports negligence or exhaustion, not proven sabotage."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "These are dead."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Every pack in the crate."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The cache was tested before shipment."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then it died very responsibly on the way here."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "You think we sent you failures on purpose?"
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "I think purpose matters less when the lights go out."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S04"
   },
   {
     "id": "SHAT_I06_P09",
@@ -230,14 +384,33 @@
       "Ruvian remains unconvinced because repeated neglect has produced the same material result as hostility.",
       "End on the three standing beside unopened Core crates and a barely stabilized node."
     ],
-    "dialog": [
-      "D708",
-      "D709"
-    ],
     "directionInline": [
       "Preserve the ambiguity: mistrust grows from accumulated experience even where intent is unproven."
     ],
-    "continuityFrom": "SHAT_I06_P08"
+    "continuityFrom": "SHAT_I06_P08",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "We needed power, not provenance."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Supply lines are exhausted everywhere."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Outer heard that sentence before the Break."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "And if every shortage becomes sabotage, no one shares anything."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then stop asking us to forget the pattern just because you dislike the accusation."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S04"
   },
   {
     "id": "SHAT_I06_P10",
@@ -262,12 +435,36 @@
       "She interrupts the attribution and states that the text describes work, not rule.",
       "End on the room forced to debate without treating Liora as a final sovereign source."
     ],
-    "dialog": [
-      "D710"
-    ],
     "directionInline": [
       "Keep Liora active: she challenges how her work is being used rather than passively watching."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Stop quoting me."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "We're discussing your text."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "You're using it as a badge."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Some of it is useful."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Some of it is wrong for the world we have now."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Good. Then argue with each other. Don't make me the referee."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P11",
@@ -292,14 +489,33 @@
       "The Circle sees examples of both failures in the records around them.",
       "End on neither position defeating the other because each answers a different lived danger."
     ],
-    "dialog": [
-      "D711",
-      "D712"
-    ],
     "directionInline": [
       "Stage this as collision between true constraints, not heroes versus villains."
     ],
-    "continuityFrom": "SHAT_I06_P10"
+    "continuityFrom": "SHAT_I06_P10",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "A corridor repair without common limits can kill the next crew that touches it."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "A common limit that requires parts we don't have kills the first crew."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Then the standard needs an exception."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "And the exception needs someone allowed to use it."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Listen to yourselves. You're already writing the same problem from opposite ends."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P12",
@@ -324,14 +540,41 @@
       "Representatives stop editing doctrine long enough to consider one shared operational minimum.",
       "End on the first move toward a symbol rather than a unified philosophy."
     ],
-    "dialog": [
-      "D713",
-      "D714"
-    ],
     "directionInline": [
       "The agreement should be narrow by design."
     ],
-    "continuityFrom": "SHAT_I06_P11"
+    "continuityFrom": "SHAT_I06_P11",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.aveth",
+        "text": "None of this moves without trust."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Trust doesn't hold pressure."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "No, but it gets the part from your node to hers."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "And standards tell her whether to install it."
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "There. That's the minimum."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Not a doctrine."
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "No. A way to recognize each other."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S05"
   },
   {
     "id": "SHAT_I06_P13",
@@ -354,12 +597,32 @@
       "Iskari accepts the mark only under a narrow meaning tied to responsibility.",
       "End on others visibly reading more into the same image."
     ],
-    "dialog": [
-      "D715"
-    ],
     "directionInline": [
       "The sigil is common form without common interpretation."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Responsibility. Nothing more."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "If you have to say 'nothing more,' it already means more."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Can we at least agree it means someone answers when the mark is used?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "That part I can paint."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S06"
   },
   {
     "id": "SHAT_I06_P14",
@@ -382,14 +645,37 @@
       "The same symbol appears on three pieces of equipment or documentation associated with the different groups.",
       "End on the identical mark carrying visibly different contexts."
     ],
-    "dialog": [
-      "D716",
-      "D717"
-    ],
     "directionInline": [
       "Keep the groups visually distinct even while each adopts the same shared sigil."
     ],
-    "continuityFrom": "SHAT_I06_P13"
+    "continuityFrom": "SHAT_I06_P13",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "My crews will read it as 'someone here knows how to keep you alive.'"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "That's acceptable."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "My drivers will read it as 'you can ask for help here.'"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Also acceptable."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Look at that. We invented agreement by lowering our standards."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Don't get sentimental."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S06"
   },
   {
     "id": "SHAT_I06_P15",
@@ -409,12 +695,32 @@
       "No single copy can absorb all changes without erasing the history of disagreement.",
       "End on Heska stating that history will inherit three truths."
     ],
-    "dialog": [
-      "D718"
-    ],
     "directionInline": [
       "Echo the earlier archival uncertainty, now caused by competing interpretation rather than conflicting timestamps."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.heska",
+        "text": "Which one is the original?"
+      },
+      {
+        "handle": "@starsplit.archv",
+        "text": "The one Liora wrote."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "Which version of the one Liora wrote?"
+      },
+      {
+        "handle": "@starsplit.archv",
+        "text": "...I see the problem."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "Good. I was worried it was just my profession collapsing."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S07"
   },
   {
     "id": "SHAT_I06_P16",
@@ -434,13 +740,37 @@
       "Separate containers close around the three texts.",
       "End on all three entering the archive together."
     ],
-    "dialog": [
-      "D719"
-    ],
     "directionInline": [
       "This should feel like an ethical archival choice, not indecision."
     ],
-    "continuityFrom": "SHAT_I06_P15"
+    "continuityFrom": "SHAT_I06_P15",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.archv",
+        "text": "We can designate a master copy."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "On what evidence?"
+      },
+      {
+        "handle": "@starsplit.archv",
+        "text": "Tradition."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "We just watched tradition lose a war with timestamps."
+      },
+      {
+        "handle": "@starsplit.archv",
+        "text": "Three containers, then."
+      },
+      {
+        "handle": "@starsplit.heska",
+        "text": "Three provenances. No winner."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S07"
   },
   {
     "id": "SHAT_I06_P17",
@@ -462,12 +792,36 @@
       "Lochran cites continuity of command as the practical answer to a multi-group crew.",
       "End on the roster becoming another contest over what survives from the old order."
     ],
-    "dialog": [
-      "D720"
-    ],
     "directionInline": [
       "Tie the command debate to an actual ship about to launch."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Command cannot be negotiated every time the ship turns."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "Neither can loyalty."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Put Core command at the top. We need one accountable chain."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "My people won't follow a name they only know from old seals."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "They will follow the office."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "That office is rubble."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S08"
   },
   {
     "id": "SHAT_I06_P18",
@@ -489,14 +843,37 @@
       "The roster remains incomplete while engines begin their prelaunch cycle.",
       "End on the empty captain field or unresolved command position beside a ship that cannot wait."
     ],
-    "dialog": [
-      "D721",
-      "D722"
-    ],
     "directionInline": [
       "Leave the vessel’s future command model unresolved while making the competing claims of hierarchy, earned loyalty, and stewardship clear."
     ],
-    "continuityFrom": "SHAT_I06_P17"
+    "continuityFrom": "SHAT_I06_P17",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Stop calling it command."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The vessel needs a captain."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "It needs stewardship and competency."
+      },
+      {
+        "handle": "@starsplit.foff",
+        "text": "Those are not the same person yet."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The ship launches tomorrow."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Then perhaps the empty line is the honest answer for one more day."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S08"
   },
   {
     "id": "SHAT_I06_P19",
@@ -519,12 +896,40 @@
       "The Resolve engineer confirms the hull is ready despite unresolved politics.",
       "End on crew movement beginning immediately because rescue needs already exist."
     ],
-    "dialog": [
-      "D723"
-    ],
     "directionInline": [
       "The ship should feel practical and transitional, not yet the polished iconography of later fleets."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.reng",
+        "text": "Hull is green."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Don't say that near engineers. They'll think you mean finished."
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "Hull is green enough."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "Routes are loaded."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Shard crew?"
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "Aboard."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Then stop unveiling it. People need it."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S09"
   },
   {
     "id": "SHAT_I06_P20",
@@ -547,14 +952,37 @@
       "Ground crew clear the launch zone with the captain question still unresolved.",
       "End on the prototype lifting away under shared but unsettled purpose."
     ],
-    "dialog": [
-      "D724",
-      "D725"
-    ],
     "directionInline": [
       "The launch works because the groups cooperate operationally without resolving ideology."
     ],
-    "continuityFrom": "SHAT_I06_P19"
+    "continuityFrom": "SHAT_I06_P19",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "We're crew, not cargo."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "And these are Verge routes, not suggestions."
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "Captain field is still blank."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Ship seems unconcerned."
+      },
+      {
+        "handle": "@starsplit.aveth",
+        "text": "So am I."
+      },
+      {
+        "handle": "@starsplit.reng",
+        "text": "Launching."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S09"
   },
   {
     "id": "SHAT_I06_P21",
@@ -575,12 +1003,36 @@
       "Each escort uses the shared sigil within a visibly different emerging visual and operational language.",
       "Liora sees the divergence happening before the first fleet tradition is even settled."
     ],
-    "dialog": [
-      "D726"
-    ],
     "directionInline": [
       "The escorts should foreshadow later fleets without pretending those mature factions already fully exist."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "Three escorts."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Three interpretations."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Same mark."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "For now."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "You sound disappointed."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I sound observant."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S10"
   },
   {
     "id": "SHAT_I06_P22",
@@ -601,12 +1053,36 @@
       "The shared sigil remains visible on multiple craft even as their formations diverge.",
       "Final wide panel: the vessels disappear toward different lanes of the broken network, turning one inheritance into multiple futures."
     ],
-    "dialog": [
-      "D727"
-    ],
     "directionInline": [
       "Land on divergence with continuity: shared history and shared symbols moving into multiple future fleets with contested meanings."
     ],
-    "continuityFrom": "SHAT_I06_P21"
+    "continuityFrom": "SHAT_I06_P21",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "They'll all say they inherited the truth."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "They inherited an argument."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "How many fleets does this become?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "More than one."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "That's not an answer."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It's the only honest one I've got."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I06_S10"
   }
 ]

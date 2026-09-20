@@ -17,12 +17,28 @@
       "Nereth follows a control line into a twisted lattice of retrofits.",
       "End on the realization that the emergency system was never rebuilt for the load now resting on it."
     ],
-    "dialog": [
-      "D401"
-    ],
     "directionInline": [
       "The chamber should feel maintained enough to exist but historically layered and under-modernized."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "This room is older than half the network."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "And carrying all of it now."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That's usually where the story gets bad."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Let's disappoint tradition."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S01"
   },
   {
     "id": "SHAT_I03_P02",
@@ -42,13 +58,33 @@
       "The projected field splits under a small alignment error.",
       "End on Nereth naming the consequence of firing crooked."
     ],
-    "dialog": [
-      "D402"
-    ],
     "directionInline": [
       "Make the failure mode visually legible before the real attempt begins."
     ],
-    "continuityFrom": "SHAT_I03_P01"
+    "continuityFrom": "SHAT_I03_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Old lattice handles the pulse."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Add the modern branches."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "There. It twists."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "How much error?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Enough that I don't want to say it out loud."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S01"
   },
   {
     "id": "SHAT_I03_P03",
@@ -68,13 +104,33 @@
       "Dormant emitters sputter awake one by one through floating dust.",
       "End on Liora insisting that no one alter the configuration once the cycle begins."
     ],
-    "dialog": [
-      "D403"
-    ],
     "directionInline": [
       "This creates the causal condition that the later override will violate."
     ],
-    "continuityFrom": "SHAT_I03_P02"
+    "continuityFrom": "SHAT_I03_P02",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Cut remote write access."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Council will hate that."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Council isn't inside the chamber."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Local control only."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Once we start, nobody changes the matrix but us."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S01"
   },
   {
     "id": "SHAT_I03_P04",
@@ -94,12 +150,32 @@
       "A control option labeled as stability coefficients is introduced into the discussion.",
       "Damiar sees that Lochran is extending political requirements into an engineering intervention."
     ],
-    "dialog": [
-      "D404"
-    ],
     "directionInline": [
       "Treat the override as an institutional attempt to shape measurable output, not a cartoon sabotage command."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "If the damping works and the public readout still spikes, what do people see?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "A system in trouble."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Even if it is recovering."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "You want the output smoothed."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I want the recovery legible."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S02"
   },
   {
     "id": "SHAT_I03_P05",
@@ -119,10 +195,34 @@
       "Damiar writes the contingency phrase that will minimize objections if engineers protest.",
       "End on the override package leaving the closed room for deployment."
     ],
-    "dialog": [
-      "D405"
+    "continuityFrom": "SHAT_I03_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "Engineering marked these coefficients do-not-deploy."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Under normal operation."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "This is less normal than the warning anticipated."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then our obligation is larger, not smaller."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "If they object, I call it calibration variance."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "You explain the transition. I will own the decision."
+      }
     ],
-    "continuityFrom": "SHAT_I03_P04"
+    "sceneId": "SCN_SHAT_I03_S02"
   },
   {
     "id": "SHAT_I03_P06",
@@ -142,12 +242,32 @@
       "A beacon log shows the node slipping out of the expected harmonic rhythm.",
       "End on a fastener or brace visibly working loose under the repeated pulse."
     ],
-    "dialog": [
-      "D406"
-    ],
     "directionInline": [
       "Keep the physical danger immediate and tactile."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Feel that?"
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "I hear it."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "No. Put your hand here."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "...That's new."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Metal doesn't get nervous. It gets tired."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S03"
   },
   {
     "id": "SHAT_I03_P07",
@@ -167,13 +287,37 @@
       "Ruvian compares the projection to the hardware already shaking around them.",
       "End on the technician demanding that the Core understand who is carrying the first risk."
     ],
-    "dialog": [
-      "D407"
-    ],
     "directionInline": [
       "Establish that peripheral stations carry the first and greatest exposure if the intervention fails."
     ],
-    "continuityFrom": "SHAT_I03_P06"
+    "continuityFrom": "SHAT_I03_P06",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.otech",
+        "text": "Look at the propagation map."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Outer stations first."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "Of course."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Send it to Core."
+      },
+      {
+        "handle": "@starsplit.otech",
+        "text": "They have the same map."
+      },
+      {
+        "handle": "@starsplit.ruvian",
+        "text": "Send it anyway. Make them look at who gets hit first."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S03"
   },
   {
     "id": "SHAT_I03_P08",
@@ -193,10 +337,32 @@
       "The floor shivers hard enough to force them to brace.",
       "End on the pulse pattern finally beginning to line up."
     ],
-    "dialog": [],
     "directionInline": [
       "Build tension through imperfect startup rather than immediate success."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Power at ten."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Three is late."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Trimming three."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Five just jumped."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I see it. Hold the secondaries."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S04"
   },
   {
     "id": "SHAT_I03_P09",
@@ -216,13 +382,33 @@
       "A remote corridor trace that had been oscillating settles into a clean line.",
       "End on Liora calling the field alignment holding, barely."
     ],
-    "dialog": [
-      "D408"
-    ],
     "directionInline": [
       "Allow a real moment of earned hope."
     ],
-    "continuityFrom": "SHAT_I03_P08"
+    "continuityFrom": "SHAT_I03_P08",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Pulse is coming together."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Stress curve is bending."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Say that again."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No. You'll celebrate and ruin it."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Cruel."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S04"
   },
   {
     "id": "SHAT_I03_P10",
@@ -242,13 +428,37 @@
       "Liora keeps her hands on the controls instead of celebrating.",
       "End on the stabilized field surrounded by amber warning limits."
     ],
-    "dialog": [
-      "D409"
-    ],
     "directionInline": [
       "Keep the improvement visibly real but fragile, surrounded by narrow safety margins and warning limits."
     ],
-    "continuityFrom": "SHAT_I03_P09"
+    "continuityFrom": "SHAT_I03_P09",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Two percent."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Independent check?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Two sensors."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Keep checking."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "You could smile once."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "At one percent."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S04"
   },
   {
     "id": "SHAT_I03_P11",
@@ -268,12 +478,36 @@
       "The technician checks the authorization signature rather than immediately deploying.",
       "End on the Council order remaining active despite the mismatch."
     ],
-    "dialog": [
-      "D410"
-    ],
     "directionInline": [
       "The technician should clearly understand there is risk."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Chair Davieth, your package conflicts with the active matrix."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Which values?"
+      },
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Enough to fail validation."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "The engineering team has stabilized the chamber?"
+      },
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Barely."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then deploy the stability coefficients."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S05"
   },
   {
     "id": "SHAT_I03_P12",
@@ -293,10 +527,34 @@
       "A final warning prompt is acknowledged.",
       "End on the override routing into the live damping cycle as console lights turn amber. Direction: The final panel must make the causal intrusion unmistakable."
     ],
-    "dialog": [
-      "D411"
+    "continuityFrom": "SHAT_I03_P11",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ctech",
+        "text": "I need you to say that again for the record."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Execute the override."
+      },
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Engineering did not authorize it."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I did."
+      },
+      {
+        "handle": "@starsplit.ctech",
+        "text": "Those are not the same authority."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Today they are."
+      }
     ],
-    "continuityFrom": "SHAT_I03_P11"
+    "sceneId": "SCN_SHAT_I03_S05"
   },
   {
     "id": "SHAT_I03_P13",
@@ -316,12 +574,32 @@
       "One emitter fires early and another compensates too late.",
       "End on Liora recognizing that the live configuration is no longer theirs."
     ],
-    "dialog": [
-      "D412"
-    ],
     "directionInline": [
       "Show the exact moment external control breaks the local calibration."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Who changed the feed?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Not me."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Three fired early."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Remote write is live again."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "They got around the lockout."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S06"
   },
   {
     "id": "SHAT_I03_P14",
@@ -341,13 +619,37 @@
       "He identifies the mismatch as the source of the divergence.",
       "A stronger pulse hits before they can roll it back."
     ],
-    "dialog": [
-      "D413"
-    ],
     "directionInline": [
       "Keep the causal chain clear: override, mismatch, instability."
     ],
-    "continuityFrom": "SHAT_I03_P13"
+    "continuityFrom": "SHAT_I03_P13",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "New coefficients. Council signature."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Do they match anything?"
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Not our matrix."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Roll them back."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Trying."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Try faster."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S06"
   },
   {
     "id": "SHAT_I03_P15",
@@ -367,11 +669,33 @@
       "Nereth struggles back toward the controls as alarms cascade.",
       "End on the field feeding energy back into itself instead of damping."
     ],
-    "dialog": [],
     "directionInline": [
       "This is the physical point of no return for the experiment."
     ],
-    "continuityFrom": "SHAT_I03_P14"
+    "continuityFrom": "SHAT_I03_P14",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "Liora—"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I'm fine."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "I wasn't asking about you."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Then yes, the field is feeding itself."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "That's worse."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S06"
   },
   {
     "id": "SHAT_I03_P16",
@@ -391,13 +715,37 @@
       "Liora orders shutdown and strikes the abort.",
       "Final panel: emitters die unevenly, leaving residual distortion in the chamber instead of returning to clean darkness."
     ],
-    "dialog": [
-      "D414"
-    ],
     "directionInline": [
       "The shutdown stops the machine but does not undo what the corrupted pulse already released into the network."
     ],
-    "continuityFrom": "SHAT_I03_P15"
+    "continuityFrom": "SHAT_I03_P15",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nereth",
+        "text": "We can still chase alignment."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "If I can get four back in phase—"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No. We shut it down."
+      },
+      {
+        "handle": "@starsplit.nereth",
+        "text": "We'll lose the damping."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Better than teaching the collapse how to accelerate."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S06"
   },
   {
     "id": "SHAT_I03_P17",
@@ -417,12 +765,32 @@
       "Crew members compare viewport and instrument readings and see the same impossible effect.",
       "End on the captain calling the anomaly in."
     ],
-    "dialog": [
-      "D415"
-    ],
     "directionInline": [
       "Make the duplicate clearly temporal or harmonic, not a second physical ship."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Control, I have my own ship off our port quarter."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Say again."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Same hull. Same running lights. Half a second behind us."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Do not maneuver."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Wasn't planning to chase myself."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S07"
   },
   {
     "id": "SHAT_I03_P18",
@@ -442,13 +810,33 @@
       "The duplicate ship image flickers closer to the real hull on the feed.",
       "End on Liora naming the effect and understanding its scale."
     ],
-    "dialog": [
-      "D416"
-    ],
     "directionInline": [
       "Her explanation should reduce mystery while increasing danger."
     ],
-    "continuityFrom": "SHAT_I03_P17"
+    "continuityFrom": "SHAT_I03_P17",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It's not optical."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Comforting."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "It's a delayed harmonic image."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Less comforting."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Keep your engines cold. I need the separation to stay measurable."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S07"
   },
   {
     "id": "SHAT_I03_P19",
@@ -468,11 +856,37 @@
       "Liora watches the anomaly spread across more than one arc.",
       "End on the network map showing the first visible tearing pattern."
     ],
-    "dialog": [],
     "directionInline": [
       "No new dialogue; let propagation carry the beat."
     ],
-    "continuityFrom": "SHAT_I03_P18"
+    "continuityFrom": "SHAT_I03_P18",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.capt",
+        "text": "Control, the duplicate is closing."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I see it."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "You also see the other routes lighting up?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.capt",
+        "text": "Then tell me this is local."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "I can't."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S07"
   },
   {
     "id": "SHAT_I03_P20",
@@ -494,12 +908,32 @@
       "Incident displays behind him add world after world.",
       "End on his repeated claim visibly contradicted by the environment."
     ],
-    "dialog": [
-      "D417"
-    ],
     "directionInline": [
       "This is the collapse of Lochran’s old operating assumption, not yet of the network itself."
-    ]
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lochran",
+        "text": "We keep one channel. One set of instructions."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "We don't have one situation anymore."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Then we make one."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Listen to the alarms."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I'm listening to people who need command."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S08"
   },
   {
     "id": "SHAT_I03_P21",
@@ -521,13 +955,37 @@
       "Facing Lochran directly, he says the alarms now outrun their narrative.",
       "End on Lochran realizing he has lost Damiar’s support for containment messaging."
     ],
-    "dialog": [
-      "D418"
-    ],
     "directionInline": [
       "Mark Damiar’s turn through action as well as dialogue."
     ],
-    "continuityFrom": "SHAT_I03_P20"
+    "continuityFrom": "SHAT_I03_P20",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.colven",
+        "text": "I wrote three versions of 'contained' this morning."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "This isn't the time."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "The public gets the truth now."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "And when that truth starts a stampede?"
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "Then at least they're running from the fire we actually have."
+      }
+    ],
+    "sceneId": "SCN_SHAT_I03_S08"
   },
   {
     "id": "SHAT_I03_P22",
@@ -549,9 +1007,37 @@
       "Liora’s warnings, outer-node risk, and current alarms converge on the same map.",
       "Final wide panel: the three leaders face a network already entering failure as Iskari names the new reality. Direction: End on a strategic phase change: the story is no longer about preventing crisis, but surviving it."
     ],
-    "dialog": [
-      "D419"
+    "continuityFrom": "SHAT_I03_P21",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Enough."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Iskari—"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Prevention is over."
+      },
+      {
+        "handle": "@starsplit.colven",
+        "text": "What do you need?"
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "Triage map. Local authority. Rescue priority."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "You're dismantling the network."
+      },
+      {
+        "handle": "@starsplit.telvek",
+        "text": "The network is dismantling itself. I'm trying to keep people alive inside it."
+      }
     ],
-    "continuityFrom": "SHAT_I03_P21"
+    "sceneId": "SCN_SHAT_I03_S08"
   }
 ]
