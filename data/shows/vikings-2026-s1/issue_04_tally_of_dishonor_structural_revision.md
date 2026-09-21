@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 4: THE TALLY OF DISHONOR
 
-Status: STRUCTURAL SEASON REVISION — dialogue intentionally not line-polished
+Status: STRUCTURAL SEASON REVISION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE
 Primary function: financial legibility, value, status and partial civic participation; the bank becomes the first act, while the rest of the issue follows what money changes inside the household and neighborhood.
 
 ## Revision intent
