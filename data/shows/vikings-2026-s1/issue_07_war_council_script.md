@@ -120,15 +120,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 **5 panels.**
 
-1. **Medium.** The first male Kin checks the time on the microwave clock and stands, grabbing the same laundry bag established in Issue 5.
+1. **Medium.** Second Male Kin finishes the thought from the previous page while First Male Kin checks the microwave clock and grabs the laundry bag.
+   **SECOND MALE KIN:** I mean now. Ask me again later.
 2. **Bjorn.**
-   **BJORN:** We are not finished.
-3. **First male Kin shoulders the bag.**
-   **FIRST MALE KIN:** My machine is.
+   **BJORN:** We're not finished.
+3. **First Male Kin shoulders the bag.**
+   **FIRST MALE KIN:** Mine is.
 4. **Carrie blinks; Gunnar smiles faintly.**
-   **FIRST MALE KIN:** If I leave it, the woman with the red cart moves it to the floor.
+   **FIRST MALE KIN:** If I leave it, red-cart lady puts it on the floor.
 5. **Hallway wide.** He is already descending the stairs.
-   **FIRST MALE KIN (from stairs):** She is right to do it.
+   **FIRST MALE KIN (from stairs):** She's right.
 
 **Page turn:** the first answer to the review is not a speech; it is that someone in the neighborhood expects him to keep an ordinary obligation.
 
