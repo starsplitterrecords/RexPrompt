@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: ENHANCED TREATMENT — SUPERSEDED FOR CURRENT WRITING BY FULL 24-PAGE DEVELOPMENT SCRIPT `issue_07_war_council_script.md`  
+Status: ENHANCED TREATMENT — SYNCHRONIZED TO CURRENT ISSUE 8 DISCOVERY-PRESERVATION STRUCTURE; FULL SCRIPT REMAINS WRITING AUTHORITY  
 Primary function: the household discovers that its members want different things before the city asks them to explain those differences.
 
 ## Story lock
