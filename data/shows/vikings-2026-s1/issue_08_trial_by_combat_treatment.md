@@ -15,11 +15,11 @@ Astrid remains the clearest surprise, but her proof is compressed. Three pages a
 
 The audience has known her since the beginning as the only woman among the three Kin. Issues 1–3 kept the three Kin largely together at the Bushwick placement. Middle issues began showing them separately in ordinary city life. Issues 6–7 deliberately did not follow Astrid closely. The hearing reveals the consequence: while the principal characters were watching Bjorn struggle, Gunnar explore, and Carrie manage the case, Astrid simply kept living.
 
-She has become the household's most practically integrated member without anyone appointing her to that role.
+She has built a more independent ordinary life than Carrie or Bjorn realized because nobody was tracking it closely.
 
 This must feel like **payoff**, not a new trait invented for court.
 
-## What "most integrated" means
+## What Astrid's ordinary independence means
 
 Do not make Astrid suddenly polished, assimilated, professionally credentialed, or unrecognizable.
 
