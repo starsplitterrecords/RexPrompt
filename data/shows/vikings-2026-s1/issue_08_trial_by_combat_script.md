@@ -522,15 +522,15 @@ The locked dramatic and procedural outcome remains: **permanent temporal-residen
 
 1. **wide.** The Hearing Officer reviews five separate pages, the corrected intake sheet and the thin case file. The cadence is administrative, not triumphant.
 2. **medium on Hearing Officer.** The officer states the first finding.
-   **HEARING OFFICER:** The corrected record supports permanent temporal-resident status for each applicant, individually.
+   **HEARING OFFICER:** The corrected record supports permanent temporal-resident status for each applicant.
 3. **reaction strip.** The five applicants absorb the word individually in different ways.
 4. **medium on Hearing Officer.** The officer states the housing and supervision consequence.
-   **HEARING OFFICER:** The Bushwick placement can continue under ordinary tenancy and program rules. Intensive DTI supervision is no longer a condition of residence.
+   **HEARING OFFICER:** The Bushwick placement can continue under ordinary tenancy and program rules. Intensive DTI supervision ends.
 5. **two-shot Bjorn/Hearing Officer.** Bjorn confirms the practical meaning.
    **BJORN:** We stay?
    **HEARING OFFICER:** Yes.
 6. **wide.** The officer closes the old master household file and keeps the five individual records open.
-   **HEARING OFFICER:** And the order does not make any one of you responsible for the others' future decisions.
+   **HEARING OFFICER:** And none of you is responsible for another's future decisions under this order.
 
 **Page turn:** the favorable ruling now follows from a corrected record and testimony produced in the room.
 
