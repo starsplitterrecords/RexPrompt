@@ -44,9 +44,9 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 2. Bjorn puts exact familiar items on the counter: coffee, orange juice, something salty/meaty, maybe a banana.
 3. The owner reaches for the correct coffee setup without asking.
 4. Bjorn watches, solemnly approving.
-   **BJORN:** You remember.
+   **BJORN:** Still remember me?
 5. Owner, scanning items:
-   **BODEGA OWNER:** You come in every day.
+   **BODEGA OWNER:** Every day.
 
 ## Page 4 — RECOGNITION IS NOT CEREMONY
 **4 panels. Bodega counter.**
@@ -54,9 +54,9 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 1. Bjorn places money down carefully.
 2. The owner returns change automatically.
 3. Bjorn regards the exchange as something more formal than the owner does.
-   **BJORN:** A man should know who returns to his hall.
+   **BJORN:** You remember everyone?
 4. Owner hands him the bag.
-   **BODEGA OWNER:** A man should also move. I got a line.
+   **BODEGA OWNER:** I remember the people standing in my doorway. Move.
 
 ## Page 5 — COFFEE CART
 **5 panels. Street vendor / coffee cart near a familiar civic route.**
@@ -65,34 +65,34 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 2. Vendor holds up two options.
    **VENDOR:** Regular, or the one you hated?
 3. Bjorn points to regular.
-   **BJORN:** The first insult was enough.
+   **BJORN:** Regular.
 4. Gunnar laughs—not analytical, just amused.
 5. Vendor hands over the coffee.
-   **VENDOR:** See? Learning.
-   **BJORN:** You learned.
+   **VENDOR:** Look at that.
+   **BJORN:** You did.
 
 ## Page 6 — GUNNAR, NOT NAVIGATING
 **4 panels. Standing at coffee cart / sidewalk.**
 
 1. Gunnar is reading the back page of a free newspaper left at the cart—not a map. Sports results / cultural listings / small local notices are visible without making one specific modern obsession canon.
 2. Bjorn notices.
-   **BJORN:** Does it tell where we are?
+   **BJORN:** Does it say where we're going?
 3. Gunnar does not look up.
    **GUNNAR:** No.
 4. Beat.
-   **GUNNAR:** It tells what happened while we were here.
+   **GUNNAR:** What happened while we were here.
 
 ## Page 7 — THE DAY FRACTURES
 **5 panels. Neighborhood montage with continuity.**
 
 1. Carrie on the sidewalk, trying to gather everyone.
-   **CARRIE:** Library first, then I need fifteen minutes at DTI—
+   **CARRIE:** Library first. I need fifteen minutes at DTI after.
 2. A Kin member passes behind her carrying a laundry basket with neatly folded clothes.
 3. Another Kin member is visible across the street talking to the upstairs neighbor over a bag of snacks.
 4. Carrie half-turns, trying to identify what she just saw, but a delivery bike cuts through foreground.
 5. Gunnar:
    **GUNNAR:** Library.
-   **CARRIE:** Right. Library.
+   **CARRIE:** Yes. Library.
 
 ## Page 8 — THE LIBRARY IS ALREADY A PLACE
 **4 panels. Public library exterior/interior transition.**
@@ -106,14 +106,14 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 **5 panels. Library desk / stacks.**
 
 1. Carrie hands over a small list/folder.
-   **CARRIE:** I need copies of two things and access to one city record. That is my boring problem.
+   **CARRIE:** I need two copies and one city record. That's my problem.
 2. Gunnar is already looking past her toward the stacks.
 3. Bjorn:
-   **BJORN:** And ours?
+   **BJORN:** And us?
 4. Carrie gestures around.
-   **CARRIE:** You can... look at things.
+   **CARRIE:** Go look around.
 5. Gunnar, pleased:
-   **GUNNAR:** Good.
+   **GUNNAR:** Okay.
 
 ## Page 10 — GUNNAR FINDS WORDS
 **5 panels. Stacks.**
@@ -134,7 +134,7 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 4. Gunnar, from nearby:
    **GUNNAR:** What?
 5. Bjorn turns the book so Gunnar can see.
-   **BJORN:** That man has never held an axe.
+   **BJORN:** The grip is wrong.
 
 ## Page 12 — THE LIBRARIAN DOES NOT CARE ENOUGH
 **4 panels.**
@@ -142,9 +142,9 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 1. A librarian passes.
    **LIBRARIAN:** Everything okay?
 2. Bjorn points at the book.
-   **BJORN:** This is false.
+   **BJORN:** This is wrong.
 3. Librarian glances at call label.
-   **LIBRARIAN:** You can put feedback in at the desk.
+   **LIBRARIAN:** Feedback form is at the desk.
 4. She keeps moving. Bjorn watches her go, almost impressed by the institutional confidence.
 
 ## Page 13 — CARRIE'S BORING PROBLEM
@@ -172,7 +172,7 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 2. Carrie:
    **CARRIE:** Those aren't mine.
 3. Gunnar:
-   **GUNNAR:** Correct.
+   **GUNNAR:** No.
 4. Carrie realizes he intends to take them.
    **CARRIE:** You need a card.
 5. Gunnar produces a library card / temporary card already obtained at the desk, or the librarian slides one toward him after routine registration. Keep the process compressed.
@@ -182,9 +182,9 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 **4 panels.**
 
 1. Carrie stares at the card.
-   **CARRIE:** When did you do that?
+   **CARRIE:** When did that happen?
 2. Gunnar:
-   **GUNNAR:** While you copied the paper.
+   **GUNNAR:** While you were copying.
 3. Bjorn has his own book under one arm.
 4. Carrie, quietly:
    **CARRIE:** Right.
@@ -194,21 +194,21 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 
 1. They step outside carrying books and Carrie's copied city records.
 2. Bjorn looks back at the library.
-   **BJORN:** They let us carry these away.
+   **BJORN:** We can take these?
 3. Carrie:
-   **CARRIE:** You bring them back.
+   **CARRIE:** Borrow. Bring them back.
 4. Bjorn:
-   **BJORN:** Yes.
+   **BJORN:** How many?
 5. He accepts that immediately. No lesson, no joke. It resembles a social obligation he understands.
 
 ## Page 18 — SILAS, SMALLER
 **5 panels. Neighborhood sidewalk.**
 
 1. Silas appears with phone in hand, sees them with books.
-   **SILAS:** Oh, that's actually great. Viking library reaction could—
+   **SILAS:** Oh, that's good. Viking library reaction could—
 2. Bjorn keeps walking.
 3. Gunnar:
-   **GUNNAR:** We are reading.
+   **GUNNAR:** We're reading.
 4. Silas lowers the phone a little.
 5. He falls into step anyway, carrying one of Carrie's awkward document bags after she hands it to him without ceremony.
 
@@ -226,11 +226,11 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 
 1. Carrie looks around: bodega bag, coffee cup, library books, hotdogs, Silas carrying documents, locals passing without alarm.
 2. Carrie to Gunnar:
-   **CARRIE:** You know where everybody went?
+   **CARRIE:** You know where they went?
 3. Gunnar closes the book.
    **GUNNAR:** No.
 4. He looks around the neighborhood.
-   **GUNNAR:** They know where to go.
+   **GUNNAR:** They'll be back.
 
 ## Page 21 — RETURNING HOME SEPARATELY
 **5 panels. Apartment building exterior / hallway.**
@@ -254,12 +254,12 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 **4 panels.**
 
 1. Carrie finally opens the folder she brought in Page 1.
-   **CARRIE:** I had a whole list for today.
+   **CARRIE:** I had a whole list.
 2. Bjorn:
-   **BJORN:** Was it important?
+   **BJORN:** Still need it?
 3. Carrie looks around at the functioning household.
 4. She closes the folder.
-   **CARRIE:** Some of it.
+   **CARRIE:** Some.
 
 ## Page 24 — THE NEIGHBORHOOD REMEMBERS
 **6-panel quiet closing montage. No narration.**
