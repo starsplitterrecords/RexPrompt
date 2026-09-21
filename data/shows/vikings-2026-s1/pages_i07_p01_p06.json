@@ -336,7 +336,7 @@
   {
     "id": "VIK_S1I07_P05",
     "summary": "The first male Kin leaves the council because a mundane neighborhood obligation already matters to him more than abstract debate.",
-    "settingText": "Safe Cave table → hallway/stairs.",
+    "settingText": "Safe Cave table, continuing into the fifth-floor hallway and stairs.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
@@ -362,48 +362,48 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Safe Cave table → hallway/stairs.",
+        "location": "Safe Cave table",
         "shotType": "medium",
-        "action": "Medium. The second male Kin answers Bjorn's previous-page 'What do you mean?' while the first male Kin checks the microwave clock and stands, grabbing the same laundry bag established in Issue 5.",
+        "action": "Second Male Kin finishes the thought from the previous page while First Male Kin checks the microwave clock and grabs the established laundry bag.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 2,
-        "location": "Safe Cave table → hallway/stairs.",
+        "location": "Safe Cave table",
         "shotType": "medium",
         "dialogueIndices": [
           1
         ],
-        "action": "Bjorn."
+        "action": "Bjorn tries to hold the council together."
       },
       {
         "panel": 3,
-        "location": "Safe Cave table → hallway/stairs.",
+        "location": "Safe Cave table",
         "shotType": "medium",
         "dialogueIndices": [
           2
         ],
-        "action": "First male Kin shoulders the bag."
+        "action": "First Male Kin shoulders the laundry bag without sitting back down."
       },
       {
         "panel": 4,
-        "location": "Safe Cave table → hallway/stairs.",
+        "location": "Safe Cave table",
         "shotType": "medium",
         "dialogueIndices": [
           3
         ],
-        "action": "Carrie blinks; Gunnar smiles faintly."
+        "action": "Carrie blinks; Gunnar smiles faintly as First Male Kin explains the laundromat consequence."
       },
       {
         "panel": 5,
-        "location": "Safe Cave table → hallway/stairs.",
+        "location": "fifth-floor hallway and stairs",
         "shotType": "wide",
         "dialogueIndices": [
           4
         ],
-        "action": "Hallway wide. He is already descending the stairs."
+        "action": "First Male Kin is already descending the stairs as he finishes the thought back toward the apartment."
       }
     ],
     "dialogueInline": [
@@ -428,7 +428,8 @@
         "text": "She's right."
       }
     ],
-    "page": 5
+    "page": 5,
+    "continuityFrom": "VIK_S1I07_P04"
   },
   {
     "id": "VIK_S1I07_P06",
