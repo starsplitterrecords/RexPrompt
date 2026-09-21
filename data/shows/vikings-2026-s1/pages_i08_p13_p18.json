@@ -1,8 +1,9 @@
 [
   {
     "id": "VIK_S1I08_P13",
-    "summary": "Astrid answers her first question before Carrie can mediate, and the room quietly recalibrates its assumptions.",
-    "settingText": "hearing chamber.",
+    "page": 13,
+    "summary": "Astrid is called after the louder applicants and immediately establishes that she will answer for herself rather than through Carrie.",
+    "settingText": "Status Reconciliation Review hearing chamber.",
     "charactersInline": [
       {
         "handle": "@vik.HearingOfficer",
@@ -19,57 +20,60 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "hearing chamber.",
+        "location": "hearing chamber",
         "shotType": "medium",
-        "action": "Medium. Astrid changes seats or moves to the individual questioning position. No hero framing."
+        "action": "Astrid moves to the individual questioning position without special framing."
       },
       {
         "panel": 2,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The Hearing Officer checks whether Astrid wants caseworker assistance.",
         "dialogueIndices": [
           0
-        ],
-        "action": "Hearing Officer."
+        ]
       },
       {
         "panel": 3,
-        "location": "hearing chamber.",
-        "shotType": "medium",
-        "action": "Carrie turns slightly toward Astrid, ready but not speaking."
+        "location": "hearing chamber",
+        "shotType": "medium on Carrie",
+        "action": "Carrie turns slightly toward Astrid but does not speak."
       },
       {
         "panel": 4,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Astrid",
+        "action": "Astrid answers directly.",
         "dialogueIndices": [
           1
-        ],
-        "action": "Astrid."
+        ]
       },
       {
         "panel": 5,
-        "location": "hearing chamber.",
-        "shotType": "medium",
-        "action": "Hearing Officer nods and simply continues. Carrie sits back. Gunnar looks at Astrid with new attention."
+        "location": "hearing chamber",
+        "shotType": "wide",
+        "action": "Carrie sits back. The Hearing Officer continues without treating the answer as remarkable."
       }
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Do you want your caseworker to help answer if you have trouble with a question?"
+        "text": "Do you want Ms. Carrie to help answer if you have trouble with a question?"
       },
       {
         "handle": "@vik.Astrid",
         "text": "If I need her, I ask."
       }
     ],
-    "page": 13,
     "directionInline": [
       {
         "text": "Underplay Astrid's turn. No hero framing, applause, or sudden transformation."
@@ -78,8 +82,9 @@
   },
   {
     "id": "VIK_S1I08_P14",
-    "summary": "A basic route question reveals that Astrid has built independent navigation knowledge Gunnar never taught her.",
-    "settingText": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
+    "page": 14,
+    "summary": "One compact line of questioning reveals Astrid's practical independence: she can get home, buy what the household needs, and has neighborhood relationships Carrie did not catalogue as hers.",
+    "settingText": "Hearing chamber with two restrained reader-facing ordinary-life cutaways.",
     "charactersInline": [
       {
         "handle": "@vik.HearingOfficer",
@@ -90,199 +95,103 @@
         "name": "Astrid"
       },
       {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer asks one practical question tied to the independent-adult classification.",
         "dialogueIndices": [
           0
-        ],
-        "action": "Hearing Officer."
+        ]
       },
       {
         "panel": 2,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Astrid",
+        "action": "Astrid answers in concrete landmarks rather than transit jargon.",
         "dialogueIndices": [
           1
-        ],
-        "action": "Astrid."
+        ]
       },
       {
         "panel": 3,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Hearing Officer."
+        "location": "reader-facing prior ordinary life",
+        "shotType": "small cutaway",
+        "action": "Astrid alone steps off a bus near the familiar blue-doored church carrying groceries; she moves with practiced certainty."
       },
       {
         "panel": 4,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer and Astrid",
+        "action": "The officer follows with ordinary household and neighborhood questions.",
         "dialogueIndices": [
+          2,
           3
-        ],
-        "action": "Astrid thinks in landmarks rather than route-number exposition."
+        ]
       },
       {
         "panel": 5,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
-        "action": "Small cutaway panel, prior-day ordinary street view. Astrid alone stepping off a bus near a blue-doored church, carrying groceries, moving with practiced certainty. No caption claiming evidence."
+        "location": "reader-facing prior ordinary life",
+        "shotType": "small cutaway",
+        "action": "Astrid at the bodega counter exchanges a familiar nod with the owner while choosing soap and needles; the Upstairs Neighbor passes her in the building hall in a separate sliver of the panel."
       },
       {
         "panel": 6,
-        "location": "hearing chamber with restrained reader-facing cutaway to prior ordinary travel.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "reaction two-shot",
+        "action": "Carrie looks at her generic neighborhood-contact notes. Gunnar realizes Astrid knows routes he never taught her.",
         "dialogueIndices": [
           4,
           5
-        ],
-        "action": "Back in hearing room, Gunnar quietly leans toward Bjorn."
+        ]
       }
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "If you left this building alone, could you get home?"
+        "text": "If you left this building alone, could you get home and get what the household needs on the way?"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Yes."
+        "text": "Yes. Train if it runs. Bus to the blue church if it does not. Food, soap, needles. I know the stores."
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Tell me how."
+        "text": "Who would know you there?"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Train to our stop. If train is closed, bus to the church with the blue door. Three blocks past the fruit man. Turn at the laundromat."
+        "text": "Store owner. Woman upstairs. Woman with red cart."
       },
       {
         "handle": "@vik.Gunnar",
         "text": "I did not teach her that way."
       },
       {
-        "handle": "@vik.Bjorn",
-        "text": "No."
+        "handle": "@vik.Carrie",
+        "text": "And I wrote those down as household contacts."
       }
     ],
-    "page": 14,
     "directionInline": [
       {
-        "text": "The prior-day Astrid cutaway is reader-facing illustration of ordinary life, not projected evidence inside the hearing."
+        "text": "The two cutaways are reader-facing illustrations of ordinary accumulated life, not evidence projected in the hearing. Keep the reveal mundane."
       }
     ]
   },
   {
     "id": "VIK_S1I08_P15",
-    "summary": "Astrid's community ties turn out to belong to her personally, and Carrie discovers that her file flattened those relationships into generic neighborhood contact.",
-    "settingText": "hearing chamber with two restrained cutaway panels.",
-    "charactersInline": [
-      {
-        "handle": "@vik.HearingOfficer",
-        "name": "Hearing Officer"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "name": "Upstairs Neighbor"
-      },
-      {
-        "handle": "@vik.LaundromatRegular",
-        "name": "Laundromat Regular"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Hearing Officer."
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Astrid."
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "medium",
-        "action": "Cutaway prior day. Upstairs Neighbor opens her door and hands Astrid a packaged snack while saying her name; Astrid answers with familiar ease."
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "medium",
-        "action": "Cutaway prior day. The laundromat regular with the red cart points to an open folding table before Astrid asks, casual recognition rather than friendship montage."
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "medium",
-        "action": "Carrie flips one page in her file and finds generic labels like neighbor contact / laundromat interaction."
-      },
-      {
-        "panel": 6,
-        "location": "hearing chamber with two restrained cutaway panels.",
-        "shotType": "close",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Carrie close, realizing."
-      }
-    ],
-    "dialogueInline": [
-      {
-        "handle": "@vik.HearingOfficer",
-        "text": "Who in the neighborhood knows you by name?"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "text": "Woman upstairs. Man at laundromat. Store owner. Woman with red cart."
-      },
-      {
-        "handle": "@vik.Carrie",
-        "text": "Those were hers."
-      }
-    ],
     "page": 15,
-    "directionInline": [
-      {
-        "text": "The prior-day cutaways are reader-facing ordinary-life illustrations, not projected evidence. Laundromat Regular is the same woman with the red rolling cart established in Issue 7."
-      }
-    ]
-  },
-  {
-    "id": "VIK_S1I08_P16",
-    "summary": "Astrid's working English proves practical rather than polished, and she is comfortable asking for clarification instead of surrendering the answer to Carrie.",
-    "settingText": "hearing chamber.",
+    "summary": "Astrid completes the proof without a montage: she can ask for clarification, manages an ordinary day by choice, and makes clear that mutual reliance inside the household is not legal dependency on Bjorn or Carrie.",
+    "settingText": "Status Reconciliation Review hearing chamber.",
     "charactersInline": [
       {
         "handle": "@vik.HearingOfficer",
@@ -304,244 +213,403 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer asks a bureaucratically phrased independence question.",
         "dialogueIndices": [
           0
-        ],
-        "action": "Hearing Officer asks a bureaucratically phrased question."
+        ]
       },
       {
         "panel": 2,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Astrid",
+        "action": "Astrid refuses the wording rather than the question.",
         "dialogueIndices": [
           1
-        ],
-        "action": "Astrid stares for a beat."
+        ]
       },
       {
         "panel": 3,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer simplifies without irritation.",
         "dialogueIndices": [
           2
-        ],
-        "action": "The Hearing Officer accepts the criticism and simplifies."
+        ]
       },
       {
         "panel": 4,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Astrid",
+        "action": "Astrid answers with the ordinary shape of her day and no effort to impress the room.",
         "dialogueIndices": [
           3
-        ],
-        "action": "Astrid."
+        ]
       },
       {
         "panel": 5,
-        "location": "hearing chamber.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "two-shot Astrid/Bjorn",
+        "action": "The officer asks the question that matters to the old household classification.",
         "dialogueIndices": [
           4,
           5
-        ],
-        "action": "Bjorn turns toward her, mildly offended."
-      }
-    ],
-    "dialogueInline": [
-      {
-        "handle": "@vik.HearingOfficer",
-        "text": "Do you independently procure ordinary household necessities without caseworker facilitation?"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "text": "I know the words. I do not know why you put them in that order."
-      },
-      {
-        "handle": "@vik.HearingOfficer",
-        "text": "Do you buy things the household needs by yourself?"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "text": "Yes. Food. Soap. Needles. Coffee when Bjorn forgets."
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "I do not forget coffee."
-      },
-      {
-        "handle": "@vik.Astrid",
-        "text": "You forget other people drink it."
-      }
-    ],
-    "page": 16
-  },
-  {
-    "id": "VIK_S1I08_P17",
-    "summary": "Astrid's answer to a blunt ordinary question accumulates into the most self-directed daily life in the household precisely because no single activity is impressive.",
-    "settingText": "hearing chamber with ordinary-life cutaways.",
-    "charactersInline": [
-      {
-        "handle": "@vik.HearingOfficer",
-        "name": "Hearing Officer"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Hearing Officer."
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Astrid begins counting on fingers, genuinely considering."
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
-        "action": "Cutaway. Astrid folding laundry beside ordinary patrons, television on."
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Astrid continues in hearing room."
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
-        "action": "Cutaway. Astrid at the bodega choosing a household item while owner points her toward a shelf before she asks."
+        ]
       },
       {
         "panel": 6,
-        "location": "hearing chamber with ordinary-life cutaways.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "wide",
+        "action": "Bjorn hears Astrid define the relationship without insult; Carrie does not translate or soften it.",
         "dialogueIndices": [
-          3
-        ],
-        "action": "Astrid finishes."
+          6
+        ]
       }
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "What do you do on a normal day when Ms. Carrie is not with you?"
+        "text": "Do you independently procure ordinary necessities and manage routine travel without household supervision?"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Laundry. Food. I see upstairs woman. Sometimes park."
+        "text": "I know those words. Not why you put them together."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "Do you run your own day?"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "I buy what is missing. I bring back what I borrow. I walk when I want quiet."
+        "text": "Yes. I shop. I wash clothes. I go where I need. Sometimes where I want."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "Do you need Bjorn to make those decisions?"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Then I go home."
+        "text": "No."
+      },
+      {
+        "handle": "@vik.Astrid",
+        "text": "He needs me sometimes. I need him sometimes. That is different."
       }
     ],
-    "page": 17,
-    "directionInline": [
-      {
-        "text": "Ordinary-life cutaways are reader-facing illustrations, not projected evidence. Keep Astrid's routine mundane and self-directed."
-      }
-    ]
+    "continuityFrom": "VIK_S1I08_P14"
   },
   {
-    "id": "VIK_S1I08_P18",
-    "summary": "Carrie, Gunnar, and Bjorn realize together that Astrid needed less management than anyone because her successful integration became almost invisible.",
-    "settingText": "hearing chamber, mostly reactions.",
+    "id": "VIK_S1I08_P16",
+    "page": 16,
+    "summary": "After Astrid's testimony, the Hearing Officer returns to the unresolved record defect: strong individual lives do not automatically erase an old legal classification.",
+    "settingText": "Same hearing chamber, after Astrid returns to the applicant table.",
     "charactersInline": [
       {
         "handle": "@vik.HearingOfficer",
         "name": "Hearing Officer"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
       },
       {
         "handle": "@vik.Carrie",
         "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "hearing chamber, mostly reactions.",
+        "location": "hearing chamber",
         "shotType": "wide",
-        "action": "Wide. Astrid sits calmly after answering. No one announces a conclusion."
+        "action": "Astrid returns to the applicant table. The Hearing Officer stacks the testimony notes beside the old master household record."
       },
       {
         "panel": 2,
-        "location": "hearing chamber, mostly reactions.",
-        "shotType": "medium",
-        "action": "Carrie looks from Astrid to her file."
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer acknowledges what the testimony has established.",
+        "dialogueIndices": [
+          0
+        ]
       },
       {
         "panel": 3,
-        "location": "hearing chamber, mostly reactions.",
-        "shotType": "medium",
-        "action": "Gunnar looks at Astrid, then at his own transit card peeking from his pocket."
+        "location": "hearing chamber",
+        "shotType": "insert",
+        "action": "The old field HOUSEHOLD RESPONSIBLE ADULT — BJORN remains visible on the intake record.",
+        "dialogueIndices": [
+          1
+        ]
       },
       {
         "panel": 4,
-        "location": "hearing chamber, mostly reactions.",
-        "shotType": "medium",
-        "action": "Bjorn watches Astrid with a complicated mix of pride and recognition that he did not know this part of her life."
+        "location": "hearing chamber",
+        "shotType": "medium on Carrie",
+        "action": "Carrie understands the distinction between facts and the legal record.",
+        "dialogueIndices": [
+          2
+        ]
       },
       {
         "panel": 5,
-        "location": "hearing chamber, mostly reactions.",
-        "shotType": "medium",
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer states the remaining finding she needs.",
         "dialogueIndices": [
-          0
-        ],
-        "action": "Hearing Officer simply turns the page. The procedural normality makes the realization larger for the reader than for the room."
+          3
+        ]
       }
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "All right."
+        "text": "I have heard five adults describe separate lives and separate intentions."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "I still have a record that says one of you is responsible for the other four."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "Because I put it there."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "Then I need to know whether it was only an intake shortcut, or whether it still describes this household."
       }
     ],
-    "page": 18,
-    "directionInline": [
+    "continuityFrom": "VIK_S1I08_P15"
+  },
+  {
+    "id": "VIK_S1I08_P17",
+    "page": 17,
+    "summary": "Carrie owns the original classification instead of defending her file, explaining why it was reasonable during emergency intake and why leaving it unchanged became inaccurate.",
+    "settingText": "Status Reconciliation Review hearing chamber.",
+    "charactersInline": [
       {
-        "text": "No one announces a conclusion about Astrid. Let the realization live in restrained reactions while the Hearing Officer simply turns the page."
+        "handle": "@vik.HearingOfficer",
+        "name": "Hearing Officer"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
-    ]
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "hearing chamber",
+        "shotType": "medium on Carrie",
+        "action": "Carrie keeps the old intake sheet open in front of her.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer asks whether the designation was factually true at intake.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "hearing chamber",
+        "shotType": "medium on Carrie",
+        "action": "Carrie answers without blaming the software or pretending the choice was meaningless.",
+        "dialogueIndices": [
+          2
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "hearing chamber",
+        "shotType": "medium on Carrie",
+        "action": "She then states the part that costs her professionally.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "hearing chamber",
+        "shotType": "reaction wide",
+        "action": "The applicants hear Carrie acknowledge that the case record lagged behind their lives.",
+        "dialogueIndices": [
+          4
+        ]
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Carrie",
+        "text": "At intake, the system required one responsible adult. Bjorn could communicate enough to get five people housed. I chose him."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "Was that false?"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "No. That day, it was useful and mostly true."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "I should have amended it when it stopped being true."
+      },
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "All right. Then we test whether it stopped."
+      }
+    ],
+    "continuityFrom": "VIK_S1I08_P16"
+  },
+  {
+    "id": "VIK_S1I08_P18",
+    "page": 18,
+    "summary": "The Hearing Officer tests the old hierarchy directly by asking whether Bjorn can consent, decide, or speak for the other adults; each answer separates respect for Bjorn from legal dependence on him.",
+    "settingText": "Status Reconciliation Review hearing chamber.",
+    "charactersInline": [
+      {
+        "handle": "@vik.HearingOfficer",
+        "name": "Hearing Officer"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "hearing chamber",
+        "shotType": "medium on Hearing Officer",
+        "action": "The officer addresses the four adults listed under Bjorn's old responsible-adult designation.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "hearing chamber",
+        "shotType": "reaction sequence",
+        "action": "First Male Kin answers first, matter-of-fact.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "hearing chamber",
+        "shotType": "reaction sequence",
+        "action": "Gunnar answers with the distinction he has learned to live by.",
+        "dialogueIndices": [
+          2
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "hearing chamber",
+        "shotType": "reaction sequence",
+        "action": "Second Male Kin answers without looking to Bjorn.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "hearing chamber",
+        "shotType": "reaction sequence",
+        "action": "Astrid answers last and shortest.",
+        "dialogueIndices": [
+          4
+        ]
+      },
+      {
+        "panel": 6,
+        "location": "hearing chamber",
+        "shotType": "medium on Bjorn",
+        "action": "Bjorn listens to four refusals of legal dependence without treating any as disloyalty."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.HearingOfficer",
+        "text": "Can Bjorn consent to permanent status, housing decisions, or future residence on your behalf?"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "text": "He can tell me what he thinks."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "He can advise me."
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "text": "He cannot choose where I stay."
+      },
+      {
+        "handle": "@vik.Astrid",
+        "text": "No."
+      }
+    ],
+    "continuityFrom": "VIK_S1I08_P17"
   }
 ]

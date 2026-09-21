@@ -370,8 +370,9 @@
   },
   {
     "id": "VIK_S1I08_P11",
-    "summary": "A brief recess breaks the hearing-room rhythm, and Silas demonstrates progress by being willing to remain an unused witness.",
-    "settingText": "municipal hearing-center hallway outside hearing room.",
+    "page": 11,
+    "summary": "During recess, Carrie sees that the hard problem is partly her own old intake decision; Silas offers to help, but the only useful thing is leaving the room to the people whose status is actually being decided.",
+    "settingText": "Municipal hearing-center recess hallway outside the chamber.",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -382,84 +383,78 @@
         "name": "Silas"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "municipal hearing-center hallway outside hearing room.",
-        "shotType": "wide",
-        "action": "Wide. The household spills into the hallway for a short recess. Silas is waiting on a bench with an absurdly thick binder and a phone face-down beside him."
+        "location": "recess hallway",
+        "shotType": "medium",
+        "action": "Carrie stands with the old intake cover sheet open to BJORN — HOUSEHOLD RESPONSIBLE ADULT. Gunnar and Bjorn are nearby but not crowding her.",
+        "dialogueIndices": [
+          0
+        ]
       },
       {
         "panel": 2,
-        "location": "municipal hearing-center hallway outside hearing room.",
-        "shotType": "medium",
+        "location": "recess hallway",
+        "shotType": "close on Carrie",
+        "action": "Carrie looks at the checkbox she made during emergency intake.",
         "dialogueIndices": [
-          0
-        ],
-        "action": "Carrie sees the binder."
+          1
+        ]
       },
       {
         "panel": 3,
-        "location": "municipal hearing-center hallway outside hearing room.",
-        "shotType": "medium",
+        "location": "recess hallway",
+        "shotType": "medium on Silas",
+        "action": "Silas appears with his overprepared binder held against his chest.",
         "dialogueIndices": [
-          1,
           2
-        ],
-        "action": "Silas."
+        ]
       },
       {
         "panel": 4,
-        "location": "municipal hearing-center hallway outside hearing room.",
-        "shotType": "close",
+        "location": "recess hallway",
+        "shotType": "two-shot Carrie/Silas",
+        "action": "Carrie closes the old intake sheet.",
         "dialogueIndices": [
           3,
           4
-        ],
-        "action": "Silas looks at the closed hearing-room door."
+        ]
       },
       {
         "panel": 5,
-        "location": "municipal hearing-center hallway outside hearing room.",
-        "shotType": "medium",
+        "location": "recess hallway",
+        "shotType": "wide",
+        "action": "Silas sits down with the binder unopened. Carrie turns back toward the hearing-room door instead of toward a new strategy.",
         "dialogueIndices": [
           5
-        ],
-        "action": "Silas sets the binder under the bench instead of opening it."
+        ]
       }
     ],
     "dialogueInline": [
       {
+        "handle": "@vik.Gunnar",
+        "text": "You chose that box?"
+      },
+      {
         "handle": "@vik.Carrie",
-        "text": "No."
+        "text": "The intake system required one responsible adult. Bjorn was the only person who could answer enough questions that day."
       },
       {
         "handle": "@vik.Silas",
-        "text": "I haven't said anything."
+        "text": "I have statements, photos, neighborhood stuff—"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "The binder did."
+        "text": "None of that fixes this."
       },
       {
         "handle": "@vik.Silas",
@@ -467,14 +462,9 @@
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Maybe not."
-      },
-      {
-        "handle": "@vik.Silas",
-        "text": "I'll be here if they do."
+        "text": "They need to answer."
       }
-    ],
-    "page": 11
+    ]
   },
   {
     "id": "VIK_S1I08_P12",

@@ -1,7 +1,7 @@
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
 Status: ENHANCED TREATMENT — SUPERSEDED FOR CURRENT WRITING BY FULL 24-PAGE DEVELOPMENT SCRIPT `issue_08_trial_by_combat_script.md`  
-Primary function: the institution finally meets the household as separate people, and Astrid unexpectedly proves to be the person who has traveled farthest into ordinary New York life.
+Primary function: the hearing must correct an emergency household record that still gives Bjorn formal responsibility for four other adults before five individual permanent statuses can be granted. Astrid's competence is revealed compactly as part of that proof rather than as a seven-page showcase.
 
 ## Story lock
 
@@ -9,17 +9,17 @@ Primary function: the institution finally meets the household as separate people
 
 Do not insert another episode of testimony collection, filing, audit mechanics, or evidentiary errands before the hearing. Issue 7 did enough preparation to put them in the room. The dramatic event now is the room itself.
 
-The hearing is Bjorn's figurative trial by combat because he enters expecting that leadership means standing between his people and judgment. His actual test is harder: he must allow each person to speak for themselves even when their answers are incomplete, inconvenient, or different from his own.
+The hearing is Bjorn's figurative trial by combat because the old DTI file still encodes his earliest leadership model: one responsible adult with four derivative household members. His actual test is harder than defending them. He must allow the record to be corrected so the state no longer treats his authority as a condition of everyone else's status.
 
-Astrid is the central surprise.
+Astrid remains the clearest surprise, but her proof is compressed. Three pages are enough to establish that she answers for herself, moves through familiar city routes, manages errands, has neighborhood relationships, and does not depend on Bjorn for ordinary decisions. The hearing then returns to the harder legal problem.
 
 The audience has known her since the beginning as the only woman among the three Kin. Issues 1–3 kept the three Kin largely together at the Bushwick placement. Middle issues began showing them separately in ordinary city life. Issues 6–7 deliberately did not follow Astrid closely. The hearing reveals the consequence: while the principal characters were watching Bjorn struggle, Gunnar explore, and Carrie manage the case, Astrid simply kept living.
 
-She has become the household's most practically integrated member without anyone appointing her to that role.
+She has built a more independent ordinary life than Carrie or Bjorn realized because nobody was tracking it closely.
 
 This must feel like **payoff**, not a new trait invented for court.
 
-## What "most integrated" means
+## What Astrid's ordinary independence means
 
 Do not make Astrid suddenly polished, assimilated, professionally credentialed, or unrecognizable.
 
@@ -100,195 +100,190 @@ The household instinctively rises as a unit.
 
 **Exit:** the legal structure forces what the season has been learning: this is one household made of separate people.
 
-### Page 5 — THE FILE
-The hearing begins. Carrie's file is competent and incomplete: housing, incidents, appointments, banking, transit, complaints, participation, neighborhood ties.
+### Page 5 — THE OLD BOX
+The Hearing Officer reaches the emergency-intake cover sheet.
 
-The authority summarizes it without malice.
+It still identifies **Bjorn as the household responsible adult** and carries the other four adults under the master household record.
 
-**Turn:** the file makes the household sound more dependent on Carrie than the room actually is.
+**Turn:** permanent temporal-resident status is individual; the officer cannot simply duplicate this household structure into five permanent grants.
 
-**Exit:** Carrie can hear the distortion because she helped write it.
+**Exit:** the oldest administrative shortcut in the season becomes the finale's real obstacle.
 
-### Page 6 — CARRIE'S LIMIT
-Carrie is asked whether the placement has been successful.
+### Page 6 — NO PERMANENT ORDERS TODAY
+Carrie says the classification is out of date.
 
-She gives the professional answer, then corrects herself.
+The Hearing Officer agrees that may be true but explains the legal problem fairly: if today's testimony supports five independent adults, the classification can be corrected in the hearing. If not, the applicants remain provisional and the matter goes back for reclassification.
 
-**Turn:** she says success increasingly means that she does **not** know everything they do each day.
+**Turn:** a favorable result is possible but no longer automatic.
 
-**Exit:** the strongest fact in her testimony is the limit of her own supervision.
+**Exit:** the testimony now has a concrete job.
 
 ### Page 7 — FIRST MALE KIN
-The first unnamed male Kin is questioned.
+The first male Kin describes ordinary neighborhood obligations and why he wants to remain.
 
-He answers through concrete life: where he goes, who expects him, what he does for the household, what he does not want to lose.
+**Turn:** his life is specific and self-directed.
 
-**Turn:** his reasons for remaining are ordinary and specific rather than ideological.
-
-**Exit:** he is visibly more than a dependent attached to Bjorn's case.
+**Exit:** he is not merely a derivative member of Bjorn's case.
 
 ### Page 8 — SECOND MALE KIN
-The second male Kin can function in the city but refuses to pretend he knows his permanent future.
+The second male Kin distinguishes wanting to remain now from promising forever.
 
-The hearing authority probes whether uncertainty means he intends to leave.
+**Turn:** uncertainty does not mean incapacity.
 
-**Turn:** he distinguishes wanting the right to stay from promising never to go.
-
-**Exit:** Issue 7's household principle survives contact with an institution.
+**Exit:** he owns his future answer.
 
 ### Page 9 — BJORN STARTS TO ANSWER
-Bjorn begins to supplement or defend the second man's answer.
+Bjorn starts to explain the second man's answer, then stops.
 
-He is not aggressive; this is simply his oldest reflex.
+**Turn:** he lets the testimony stand.
 
-**Turn:** he catches himself before Carrie or the authority stops him.
-
-**Exit:** he lets the answer stand.
+**Exit:** the old household hierarchy begins failing in practice before it is corrected on paper.
 
 ### Page 10 — GUNNAR
-Gunnar is asked about independent functioning.
+Gunnar describes chosen movement, books, and places he visits for interest rather than survival.
 
-He could list transit competence. Instead his answers drift toward what he actually values: books, places he chooses to go, people he recognizes, being able to move through a city for reasons other than survival.
+**Turn:** independent functioning is tied to desire, not merely compliance.
 
-**Turn:** he is asked whether New York has become home.
+**Exit:** his life cannot be summarized as Bjorn's dependent.
 
-**Exit:** Gunnar cannot reduce the answer to yes/no, but it is clearly a place he now desires.
+### Page 11 — THE CHECKBOX
+During recess, Gunnar asks Carrie whether she chose the old responsible-adult designation.
 
-### Page 11 — SILAS, IF NEEDED
-If the hearing requires an outside account, Silas appears only briefly and without taking over.
+Carrie admits she did. The intake system required one adult, and Bjorn was the only person who could answer enough emergency questions that day.
 
-He gives a specific, imperfect description of living near them and admits his own early habit of turning them into content.
+Silas offers his binder; Carrie makes clear that testimonials cannot fix a legal classification.
 
-**Turn:** the unpolished admission is more credible than the campaign he once would have produced.
+**Turn:** the obstacle is partly Carrie's old casework decision.
 
-**Exit:** he gets out of the way.
+**Exit:** the room, not a campaign, has to cure it.
 
 ### Page 12 — THE COMPLAINT
-A neighbor complaint or mixed neighborhood record is raised: smoke, noise, a strange repair, hallway friction.
+The mixed neighborhood record still appears.
 
-Carrie braces for damage.
+Complaints exist, but so do correction, repeated contact, and continued cohabitation.
 
-**Turn:** the same record also shows repeated ordinary contact, correction, adaptation, and continued neighbor relations.
+**Turn:** the hearing remains competent and complete rather than becoming a single-issue morality play.
 
-**Exit:** belonging does not require universal praise.
+**Exit:** ordinary friction does not disqualify the household.
 
 ### Page 13 — ASTRID IS CALLED
-Astrid is called after the louder, more legible people.
+Astrid answers before Carrie can mediate.
 
-The authority begins with a simple question that assumes she may need Carrie's help.
+**Turn:** she establishes immediately that she will speak as an applicant, not through a caseworker.
 
-**Turn:** Astrid answers directly before Carrie intervenes.
+**Exit:** the room recalibrates without fanfare.
 
-Do not make this a big applause beat.
+### Page 14 — ENOUGH TO KNOW
+One compact line of questioning establishes Astrid's practical independence:
+- she can get home through more than one route;
+- she buys household necessities herself;
+- recurring neighborhood people know her.
 
-**Exit:** the room recalibrates slightly.
+Two restrained ordinary-life cutaways are sufficient.
 
-### Page 14 — HER ADDRESS
-Astrid is asked where she lives, how she gets there, or some similarly ordinary foundational question.
+**Turn:** Gunnar did not teach her route and Carrie did not know those neighborhood contacts were specifically Astrid's.
 
-She answers with practical specificity: address / block / route landmarks / what stop she uses / what she does if one route fails, depending on final script choices.
+**Exit:** several former proof pages collapse into one.
 
-**Turn:** Gunnar realizes she knows routes he never taught her.
+### Page 15 — DIFFERENT FROM DEPENDENT
+A bureaucratically phrased question is simplified.
 
-**Exit:** her independence did not originate with the household's designated navigator.
+Astrid explains that she runs her own ordinary day. Asked whether Bjorn makes those decisions, she says no.
 
-### Page 15 — HER PEOPLE
-The questions move to community ties.
+Her final distinction is mutual reliance rather than dependence: sometimes she needs Bjorn; sometimes he needs her.
 
-Astrid knows the Upstairs Neighbor as a person, not an evidentiary category. She knows merchants and recurring locals through actual repeated interaction. Someone knows her by name.
+**Turn:** the hearing gets the fact it needs without ranking Astrid as "most integrated."
 
-**Turn:** Carrie discovers that several relationships in her own file were described generically because she never knew whose relationships they really were.
+**Exit:** her proof is complete.
 
-**Exit:** Astrid's city exists partly outside the case record.
+### Page 16 — THE PROBLEM RETURNS
+The Hearing Officer acknowledges that five separate adult lives are now visible.
 
-### Page 16 — HER LANGUAGE
-A question produces an exchange that reveals how much working modern English / shared neighborhood vocabulary Astrid has acquired.
+The old record still says one adult is responsible for four others.
 
-Do not make her suddenly eloquent. She can search for words, use plain syntax, or switch between languages as established continuity requires.
+**Turn:** strong testimony does not automatically erase a legal classification.
 
-**Turn:** she communicates effectively because she has been doing it, not because a lesson scene happened off-panel.
+**Exit:** the hearing turns from proof of life to correction of the record.
 
-**Exit:** Carrie is surprised by degree, not by possibility.
+### Page 17 — CARRIE'S CHECKBOX
+Carrie explains why she chose Bjorn at emergency intake and admits the uncomfortable truth: it was reasonable then, but she should have amended it once it stopped describing the household.
 
-### Page 17 — WHAT DO YOU DO ALL DAY?
-A blunt but legitimate question asks how Astrid spends her time.
+**Turn:** Carrie earns the result by correcting her own file rather than defending it.
 
-Her answer is a string of mundane activities: household work, errands, neighborhood routines, people, places, perhaps a recurring responsibility already seedable in middle-season production.
+**Exit:** the officer now tests whether the designation actually stopped being true.
 
-**Turn:** no single item is impressive.
+### Page 18 — CAN HE ANSWER FOR YOU?
+The Hearing Officer asks the four adults directly whether Bjorn can consent, decide, or choose residence for them.
 
-**Exit:** together they describe the most self-directed modern life in the household.
+Their answers differ in tone but not in legal meaning:
+- he can advise;
+- he can tell them what he thinks;
+- he cannot choose where they stay;
+- he cannot answer for them.
 
-### Page 18 — MOST INTEGRATED
-The authority does not announce a ranking. The realization belongs to Carrie, Gunnar, Bjorn, and the reader.
+**Turn:** respect for Bjorn survives while legal dependency does not.
 
-Astrid needs less explanation of the room, less mediation, and less help describing her life than anyone expected.
+**Exit:** Bjorn hears four independent refusals without treating them as disloyalty.
 
-**Turn:** Carrie sees that the person she tracked least may be the person who needed her least.
+### Page 19 — CORRECT IT
+The Hearing Officer turns the old designation toward Bjorn.
 
-**Exit:** successful integration has become almost invisible.
+Correcting it means giving up the only formal document that still makes him responsible for everyone else in the state's eyes.
 
-### Page 19 — NOT ASSIMILATED
-Astrid is asked something that risks equating successful integration with becoming less herself.
+**Turn:** Bjorn says, "Then correct it."
 
-Her answer should be simple and grounded: she can know this city without ceasing to know where she came from; she can choose this life without declaring the old one meaningless.
+**Exit:** the officer strikes the responsible-adult designation.
 
-**Turn:** competence and cultural continuity coexist in the same person.
+### Page 20 — WHAT REMAINS
+With the legal tie removed, the Hearing Officer asks whether they are still a household.
 
-**Exit:** the series' core conflict becomes embodied rather than explained.
+The answers are deliberately practical and incomplete: one lives there, one lives there for now, Gunnar returns there, Astrid points out that someone still has to wash the cups.
 
-### Page 20 — BJORN'S TEST
-The authority asks Bjorn a question about the household's collective intention.
+**Turn:** the household persists because people keep choosing it.
 
-Old Bjorn would answer for everyone.
+**Exit:** no replacement doctrine is needed.
 
-**Turn:** he answers only for himself, then states that the others have already spoken for themselves.
+### Page 21 — NOT A LEGAL CATEGORY
+The Hearing Officer asks Bjorn what he is to the others if he is not their responsible adult.
 
-**Exit:** his armor now reads as self-possession, not domination.
+Bjorn answers only: **Bjorn.**
 
-### Page 21 — WHAT HE DEFENDS
-Bjorn is asked what his role is if the household no longer requires his decisions.
+The officer notes that this is not a legal category.
 
-This is his trial by combat.
+Bjorn agrees.
 
-His answer should grow from Issue 6: he remains responsible for what he can offer, but responsibility does not give him ownership of another person's future.
+**Turn:** leadership no longer needs a formal title.
 
-**Turn:** he can still be forceful without claiming sovereignty over the people beside him.
+**Exit:** what remains outside the legal record is allowed to remain human rather than theorized.
 
-**Exit:** leadership survives its own transformation.
+### Page 22 — FIVE RECORDS
+The Hearing Officer asks Carrie whether she professionally supports permanent status on five separate applicant records.
 
-### Page 22 — THE QUESTION THE FILE COULD NOT ANSWER
-The authority asks Carrie whether these people are integrated.
+Carrie says yes and accepts the consequence: intensive DTI supervision ends as a condition of residence, and she is no longer certifying one household unit.
 
-Carrie looks at Astrid, Gunnar, the two male Kin, Bjorn, and the imperfect file.
+**Turn:** Carrie gives up administrative centrality as Bjorn gives up formal household authority.
 
-**Turn:** Carrie refuses a single score. She can describe whether they can live here, maintain ties, meet obligations, seek help when needed, and make choices of their own.
+**Exit:** the record is now sufficient.
 
-**Exit:** the institution gets a useful answer without flattening the household.
+### Page 23 — THE RULING
+The Hearing Officer grants permanent temporal-resident status to all five applicants **individually** based on the corrected record and testimony.
 
-### Page 23 — RULING / NEXT STEP
-The hearing authority gives whatever ruling the later script pass locks.
+The Bushwick placement may continue under ordinary tenancy/program rules without intensive DTI supervision.
 
-Do not write a sentimental speech. The decision should sound like an actual bounded administrative/legal decision.
+The order does not make any one applicant responsible for the others' future choices.
 
-The locked ruling grants permanent temporal-resident status to all five displaced applicants individually; the Bushwick placement may continue under ordinary tenancy/program rules without intensive DTI supervision as a condition of residence, and the order does not require one shared future.
+**Turn:** the result is earned from a defect the hearing actually had to cure.
 
-**Turn:** whatever the ruling, the household has already crossed the deeper threshold: it has appeared as separate people without dissolving as a household.
-
-**Exit:** the legal consequence lands on people the reader now understands differently.
+**Exit:** Bjorn confirms the practical meaning: they may remain.
 
 ### Page 24 — ASTRID LEAVES FIRST
-Outside the hearing room / municipal hearing center.
+Outside the hearing room, Carrie starts explaining the next administrative steps.
 
-Everyone begins processing what happened. Carrie wants to explain something. Bjorn is still carrying the gravity of the hearing. Gunnar has noticed everything about Astrid.
+Astrid has somewhere ordinary to be and leaves first.
 
-Astrid has somewhere ordinary to be.
+No one follows.
 
-She leaves first, navigating back into the city without waiting for Carrie to organize the household.
-
-No triumphant narration.
-
-**Final state:** the person long treated as background walks back into a life that was already hers.
+**Final state:** the hearing did not reward a perfect case. It corrected an imperfect one because five adults proved in the room that the emergency structure no longer described them.
 
 ## Issue 9 bridge
 
@@ -301,9 +296,9 @@ Issue 8 is the Season 1 finale. Any later Vikings material belongs to a new post
 - Exactly three Kin: Astrid and two men.
 - Astrid is the only woman among the three Kin.
 - Do not lock names for the two male Kin without approval.
-- Astrid's hearing competence must pay off ordinary midseason behavior; do not invent a secret job, degree, or implausible hidden accomplishment merely to make the reveal bigger.
+- Astrid's hearing competence must pay off ordinary midseason behavior. Keep the proof to Pages 13–15; do not restore a multi-page competence showcase, ranking, secret job, degree, or implausible hidden accomplishment.
 - Do not turn Astrid into an assimilation mascot. She remains recognizably Norse and retains her own cultural identity.
 - Bjorn may wear armor but no weapons into the hearing. Carrie does not ask him to remove the armor.
-- The Hearing Officer is not a villain and does not become a fan.
+- The Hearing Officer is not a villain and does not become a fan. The threatened outcome is continued provisional status and reclassification because the record is defective, not punishment or arbitrary denial.
 - Do not turn the hearing into twenty-four pages of legal exposition. Every question must reveal a person, relationship, choice, or change.
 - The residency ruling is locked in the production script and current RexPrompt recipes.
