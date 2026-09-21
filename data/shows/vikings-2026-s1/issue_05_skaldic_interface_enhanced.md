@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 5: THE SKALDIC INTERFACE
 
-Status: ENHANCED PRODUCTION SCRIPT
+Status: ENHANCED PRODUCTION SCRIPT — SCENE-BASED DIALOGUE/VOICE PASS COMPLETE
 Current issue placement: Season 1 / Issue 5
 Primary function: neighborhood-memory / emerging belonging
 Source basis: Master Project Bible; Neighborhood Memory Layer clarification; Kin Background Assimilation Reveal; Character Bible v2; recurring prop guidance; established library anchor; current user direction.
