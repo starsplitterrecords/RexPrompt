@@ -210,6 +210,10 @@ for issue, pages in issues.items():
 if "[SETTING CONTINUITY]" not in index_text:
     raise SystemExit("Assembler does not emit recurring setting continuity when exact scene labels are present")
 
+for issue, entry in zip(range(2, 13), rex):
+    if entry.get("formatNote") != "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.":
+        raise SystemExit(f"Issue {issue}: variable-length collected-issue format note missing")
+
 def page_blob(issue, page_id):
     page = next((p for p in issues[issue] if p.get("id") == page_id), None)
     if page is None:
