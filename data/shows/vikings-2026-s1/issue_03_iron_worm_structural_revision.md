@@ -204,7 +204,7 @@ Primary function: transit adaptation; Gunnar learns the city as navigable terrai
 4. **close.** Bjorn takes one bite and decides the food is acceptable.
    **BJORN:** This is not bad.
 5. **medium.** The vendor has already moved on to the next customer.
-   **HOTDOG VENDOR:** Mustard's there.
+   **STREET VENDOR:** Mustard's there.
 
 ## PAGE 12 — NOTHING USEFUL
 
