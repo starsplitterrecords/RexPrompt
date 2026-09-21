@@ -382,81 +382,106 @@
   },
   {
     "id": "VIK_S1I06_P11",
-    "summary": "Outside the bodega, Bjorn visibly waits through a delivery problem until the owner asks him to move one specific sack.",
-    "settingText": "Bodega sidewalk and front aisle during a daytime delivery.",
+    "summary": "On the stairs, Bjorn catches the Upstairs Neighbor before a fall without waiting to be asked, then learns that immediate safety does not give him ownership of the rest of her task.",
+    "settingText": "Fifth-floor stair landing and hallway outside apartment 5B.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
+        "handle": "@vik.UpstairsNeighbor",
+        "name": "Upstairs Neighbor"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "bodega sidewalk",
+        "location": "fifth-floor stair landing",
         "shotType": "wide",
-        "action": "A delivery truck has left heavy sacks and cases on the sidewalk. The Bodega Owner and delivery worker sort them into a workable order."
+        "action": "The Upstairs Neighbor climbs the last steps carrying a full laundry basket. One foot slips on the stair edge and the basket tips forward."
       },
       {
         "panel": 2,
-        "location": "bodega sidewalk",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn approaches and stops one full stride short of the work. His shoulders pitch forward for half a beat, then settle; both hands remain at his sides."
+        "location": "fifth-floor stair landing",
+        "shotType": "medium",
+        "action": "Bjorn moves instantly, catching the neighbor by the forearm with one hand and steadying the basket with the other before either person or laundry falls."
       },
       {
         "panel": 3,
-        "location": "bodega sidewalk",
-        "shotType": "close-up",
-        "action": "Bjorn's hand flexes once and relaxes at his side. No one has asked him for anything."
+        "location": "fifth-floor landing",
+        "shotType": "two-shot",
+        "action": "The neighbor regains her footing and takes the basket back against her hip. Bjorn reaches toward it as if to take the load.",
+        "dialogueIndices": [
+          0,
+          1
+        ]
       },
       {
         "panel": 4,
-        "location": "bodega sidewalk",
-        "shotType": "medium on Bodega Owner",
-        "action": "The owner looks up and points to one flour sack.",
+        "location": "fifth-floor landing",
+        "shotType": "two-shot",
+        "action": "She keeps hold of the basket and gives him a flat look while Bjorn stops reaching.",
         "dialogueIndices": [
-          0
+          2,
+          3
         ]
       },
       {
         "panel": 5,
-        "location": "bodega front aisle",
+        "location": "fifth-floor hallway",
         "shotType": "wide",
-        "action": "Bjorn carries exactly that sack inside and stops at the exact place the owner points to, then releases it.",
+        "action": "The neighbor walks toward her door under her own power. Bjorn remains by the stairs, watching her go without following.",
         "dialogueIndices": [
-          1,
-          2
+          4,
+          5
         ]
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@vik.BodegaOwner",
-        "text": "Bjorn. Grab that flour bag. Just that one."
-      },
-      {
-        "handle": "@vik.BodegaOwner",
-        "text": "There."
+        "handle": "@vik.UpstairsNeighbor",
+        "text": "I'm fine."
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "There."
+        "text": "I will carry it."
+      },
+      {
+        "handle": "@vik.UpstairsNeighbor",
+        "text": "No. Catching me was helpful. Taking my laundry is not."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "You were falling."
+      },
+      {
+        "handle": "@vik.UpstairsNeighbor",
+        "text": "And now I'm not."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "Yes."
       }
     ],
     "page": 11
   },
   {
     "id": "VIK_S1I06_P12",
-    "summary": "One male Kin repairs a loose stool and gives Bjorn the smaller job of holding a brace steady instead of surrendering the tools.",
-    "settingText": "Safe Cave kitchenette, daytime, around a cheap modern stool and small hand tools.",
+    "summary": "Bjorn overcorrects by waiting for an invitation to do ordinary shared household work, and Gunnar points out that restraint is not the same thing as becoming passive in his own home.",
+    "settingText": "Safe Cave doorway, kitchenette and table during an ordinary grocery return.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
       },
       {
         "handle": "@vik.KinMan2",
@@ -466,61 +491,76 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Safe Cave kitchenette floor",
-        "shotType": "insert",
-        "action": "A cheap modern stool has a loose cross-brace. Second Male Kin has a screwdriver and small clamp laid out for a practical repair."
+        "location": "Safe Cave doorway",
+        "shotType": "wide",
+        "action": "Gunnar and the two male Kin enter with several grocery bags. Bjorn sits at the table, sees the load and deliberately keeps both hands where they are."
       },
       {
         "panel": 2,
-        "location": "Safe Cave kitchenette floor",
-        "shotType": "medium",
-        "action": "Bjorn kneels beside Second Male Kin and reaches directly for the screwdriver in his hand.",
+        "location": "Safe Cave main room",
+        "shotType": "medium on Bjorn and Gunnar",
+        "action": "Gunnar sets two heavy bags on the floor beside Bjorn's chair and looks at him. Bjorn looks from the bags to Gunnar but does not move.",
         "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave kitchenette floor",
-        "shotType": "two-shot",
-        "action": "Second Male Kin keeps the screwdriver and points to the loose brace instead.",
-        "dialogueIndices": [
+          0,
           1
         ]
       },
       {
+        "panel": 3,
+        "location": "Safe Cave table",
+        "shotType": "two-shot",
+        "action": "Gunnar answers while First Male Kin carries bread toward the kitchenette and Second Male Kin puts a bag on the counter.",
+        "dialogueIndices": [
+          2
+        ]
+      },
+      {
         "panel": 4,
-        "location": "Safe Cave kitchenette floor",
-        "shotType": "close on hands",
-        "action": "Bjorn's large hands hold the brace perfectly straight while Second Male Kin tightens the screw himself."
+        "location": "Safe Cave kitchenette",
+        "shotType": "wide",
+        "action": "Bjorn stands, takes the two bags from the floor and begins putting his share of the groceries away with the others."
       },
       {
         "panel": 5,
         "location": "Safe Cave kitchenette",
         "shotType": "two-shot",
-        "action": "Second Male Kin sits his full weight on the repaired stool for a beat. Bjorn looks from the stool to his empty hands and gives one small nod.",
+        "action": "Gunnar passes behind Bjorn with another bag and delivers the correction without stopping. Bjorn pauses, then continues unpacking.",
         "dialogueIndices": [
-          2
+          3,
+          4,
+          5
         ]
       }
     ],
     "dialogueInline": [
       {
+        "handle": "@vik.Gunnar",
+        "text": "You live here."
+      },
+      {
         "handle": "@vik.Bjorn",
-        "text": "Give it."
+        "text": "No one asked."
       },
       {
-        "handle": "@vik.KinMan2",
-        "text": "Hold this straight."
+        "handle": "@vik.Gunnar",
+        "text": "No one asked me."
       },
       {
-        "handle": "@vik.KinMan2",
-        "text": "Good."
+        "handle": "@vik.Gunnar",
+        "text": "You made waiting into a rule."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "I am correcting."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "Too far."
       }
     ],
     "directionInline": [
       {
-        "text": "Only Second Male Kin is visible among the Kin. Astrid and First Male Kin are off-page."
+        "text": "Show exactly the two established male Kin with Gunnar and Bjorn. Astrid is off-page."
       }
     ],
     "page": 12
