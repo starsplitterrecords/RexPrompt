@@ -1,7 +1,7 @@
 [
   {
     "id": "SHAT_I02_P01",
-    "summary": "Liora and Nereth compare overnight corridor data and find the harmonic bowing curve has steepened instead of settling.",
+    "summary": "Liora and Alan compare overnight corridor data and find the harmonic bowing curve has steepened instead of settling.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
     "factions": [
@@ -9,12 +9,12 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
       "Open in the resonance lab before normal shift change, with overnight plots still filling the room.",
       "Liora overlays the latest curve on yesterday’s and the new line visibly climbs away from the old one.",
-      "Nereth checks the raw corridor feed to rule out a bad projection.",
+      "Alan checks the raw corridor feed to rule out a bad projection.",
       "End on the two curves diverging sharply rather than converging."
     ],
     "directionInline": [
@@ -26,7 +26,7 @@
         "text": "Overlay yesterday."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Already did."
       },
       {
@@ -34,7 +34,7 @@
         "text": "That's not settling."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "No. It's climbing."
       }
     ],
@@ -42,7 +42,7 @@
   },
   {
     "id": "SHAT_I02_P02",
-    "summary": "Nereth adds three separate echo events from the same window, establishing that the network structure itself is fatigued.",
+    "summary": "Alan adds three separate echo events from the same window, establishing that the network structure itself is fatigued.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
     "factions": [
@@ -50,13 +50,13 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
-      "Nereth pulls three corridor incidents into a shared time window.",
+      "Alan pulls three corridor incidents into a shared time window.",
       "Each route shows a different local anomaly but the same timing behavior.",
       "The separate traces align into one stress pattern when stacked.",
-      "Liora and Nereth realize the incidents are linked by structure rather than coincidence."
+      "Liora and Alan realize the incidents are linked by structure rather than coincidence."
     ],
     "directionInline": [
       "Make the connection visual and cumulative."
@@ -64,7 +64,7 @@
     "continuityFrom": "SHAT_I02_P01",
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Three echoes. Same window."
       },
       {
@@ -72,7 +72,7 @@
         "text": "Same route?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Three routes."
       },
       {
@@ -80,7 +80,7 @@
         "text": "Then stack them."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I was afraid you'd say that."
       }
     ],
@@ -96,12 +96,12 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
       "Liora projects the rising slope across the network map and identifies no natural plateau.",
       "A few potential failure points light up, then shift as load redistributes.",
-      "Nereth sees that there is no safe place to wait for the problem to resolve itself.",
+      "Alan sees that there is no safe place to wait for the problem to resolve itself.",
       "End on Liora naming the choice: controlled relief now or uncontrolled release later."
     ],
     "directionInline": [
@@ -114,7 +114,7 @@
         "text": "There. Load moves, the weak point moves with it."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "So waiting doesn't buy us a safe failure."
       },
       {
@@ -122,7 +122,7 @@
         "text": "It buys the network the choice."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I prefer choosing our disasters."
       },
       {
@@ -134,7 +134,7 @@
   },
   {
     "id": "SHAT_I02_P04",
-    "summary": "In the Outer Band, Ruvian’s crew holds aging beacon infrastructure together with scrap while synchronization continues to degrade.",
+    "summary": "In the Outer Band, Ruben’s crew holds aging beacon infrastructure together with scrap while synchronization continues to degrade.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -142,12 +142,12 @@
       "F_BHA"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "Wide Outer Ring habitat: patched conduits, exposed housings, workers braced against a tremor.",
-      "Ruvian opens a beacon casing to reveal improvised parts where replacements should be.",
+      "Ruben opens a beacon casing to reveal improvised parts where replacements should be.",
       "A timing indicator slips out of sync while the physical housing shakes.",
       "End on workers stabilizing by hand what the Core still treats as routine infrastructure."
     ],
@@ -156,7 +156,7 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Hold that housing."
       },
       {
@@ -164,7 +164,7 @@
         "text": "I'm holding it."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "It's still walking."
       },
       {
@@ -184,13 +184,13 @@
       "F_BHA"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "The technician produces an old requisition queue beside the failing hardware.",
       "Multiple replacement requests show no fulfilled delivery.",
-      "Ruvian compares the neglected parts to the rising timing mismatch.",
+      "Ruben compares the neglected parts to the rising timing mismatch.",
       "A new vibration interrupts the argument and forces both back to work."
     ],
     "directionInline": [
@@ -203,7 +203,7 @@
         "text": "Replacement request. Six months."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Rejected?"
       },
       {
@@ -211,7 +211,7 @@
         "text": "Ignored."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "That's somehow ruder."
       },
       {
@@ -223,7 +223,7 @@
   },
   {
     "id": "SHAT_I02_P06",
-    "summary": "Ruvian keeps the node operating anyway, making improvised survival the Outer Band’s practical answer to institutional delay.",
+    "summary": "Ruben keeps the node operating anyway, making improvised survival the Outer Band’s practical answer to institutional delay.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -231,12 +231,12 @@
       "F_BHA"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "Workers cut usable material from a retired housing.",
-      "Ruvian directs a brace into place as another component slips.",
+      "Ruben directs a brace into place as another component slips.",
       "The timing readout remains imperfect but the node stops worsening.",
       "End on the crew working under their own patched solution while the formal replacement queue remains unanswered."
     ],
@@ -246,7 +246,7 @@
     "continuityFrom": "SHAT_I02_P05",
     "dialogueInline": [
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Strip the dead casing."
       },
       {
@@ -254,7 +254,7 @@
         "text": "That's not approved stock."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Neither is suffocating."
       },
       {
@@ -262,7 +262,7 @@
         "text": "You want the brace ugly or legal?"
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "I want it holding."
       }
     ],
@@ -270,19 +270,19 @@
   },
   {
     "id": "SHAT_I02_P07",
-    "summary": "At Orban Port, Aveth tries to route medicine through windows that now change faster than a convoy can be scheduled.",
+    "summary": "At Orban Port, Ava tries to route medicine through windows that now change faster than a convoy can be scheduled.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_trafficCtrl"
     ],
     "panelPlan": [
       "Establish the port with medicine pallets staged for urgent departure.",
-      "Aveth compares three route windows and watches each shift before any one can be locked.",
+      "Ava compares three route windows and watches each shift before any one can be locked.",
       "The traffic controller refreshes the board and gets another contradictory answer.",
       "End on medicine waiting while the system refuses to produce one stable path."
     ],
@@ -291,7 +291,7 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Give me one window that stays put."
       },
       {
@@ -299,7 +299,7 @@
         "text": "If I had one, you'd be moving already."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "The medicine is due in four hours."
       },
       {
@@ -311,21 +311,21 @@
   },
   {
     "id": "SHAT_I02_P08",
-    "summary": "The controller tells Aveth the only available option is to route blind, forcing a choice between procedural certainty and immediate need.",
+    "summary": "The controller tells Ava the only available option is to route blind, forcing a choice between procedural certainty and immediate need.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_trafficCtrl"
     ],
     "panelPlan": [
       "The controller clears the unstable predictions and leaves only raw lane status.",
-      "Aveth studies the medicine crates and the people waiting for them on the destination manifest.",
+      "Ava studies the medicine crates and the people waiting for them on the destination manifest.",
       "The controller offers the desperate option without pretending it is safe.",
-      "End on Aveth staring at an unverified corridor entry rather than a sanctioned route. Direction: Land on Aveth’s practical moral choice between dangerous action and guaranteed delay."
+      "End on Ava staring at an unverified corridor entry rather than a sanctioned route. Direction: Land on Ava’s practical moral choice between dangerous action and guaranteed delay."
     ],
     "continuityFrom": "SHAT_I02_P07",
     "dialogueInline": [
@@ -334,7 +334,7 @@
         "text": "I can give you raw status. No prediction."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Meaning?"
       },
       {
@@ -342,7 +342,7 @@
         "text": "Meaning you fly it blind."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "And if I wait?"
       },
       {
@@ -350,7 +350,7 @@
         "text": "The crates stay here safely."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "That's not the kind of safe I need."
       }
     ],
@@ -426,7 +426,7 @@
   },
   {
     "id": "SHAT_I02_P11",
-    "summary": "Lochran orders Damiar to keep drift out of public messaging and define the anomalies as a technical matter.",
+    "summary": "Lochran orders Damian to keep drift out of public messaging and define the anomalies as a technical matter.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
     "factions": [
@@ -434,12 +434,12 @@
     ],
     "characters": [
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
       "Open inside the BHA Nexus with public communications drafts beside live incident data.",
-      "Lochran separates the public-facing screen from the technical warnings and points Damiar to the former.",
-      "Damiar watches new anomalies enter the technical feed while being told not to name drift.",
+      "Lochran separates the public-facing screen from the technical warnings and points Damian to the former.",
+      "Damian watches new anomalies enter the technical feed while being told not to name drift.",
       "End on the public draft retaining the language of stability."
     ],
     "directionInline": [
@@ -451,7 +451,7 @@
         "text": "Take 'drift' out."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "It's what engineering calls it."
       },
       {
@@ -459,7 +459,7 @@
         "text": "Engineering is not addressing six billion people."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "What am I calling it?"
       },
       {
@@ -471,7 +471,7 @@
   },
   {
     "id": "SHAT_I02_P12",
-    "summary": "Damiar agrees to keep the tone steady, but the growing incident feed makes his earlier confidence visibly harder to sustain.",
+    "summary": "Damian agrees to keep the tone steady, but the growing incident feed makes his earlier confidence visibly harder to sustain.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
     "factions": [
@@ -479,18 +479,18 @@
     ],
     "characters": [
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Damiar edits the message while the live feed adds another affected route.",
-      "He pauses over a warning term, deletes it, and substitutes softer language. Direction: Play Damiar’s growing conflict through his hesitation between the calm public script and the worsening private feed.",
+      "Damian edits the message while the live feed adds another affected route.",
+      "He pauses over a warning term, deletes it, and substitutes softer language. Direction: Play Damian’s growing conflict through his hesitation between the calm public script and the worsening private feed.",
       "Lochran leaves him to finish the statement.",
-      "End on Damiar alone between the calm public script and the worsening private board."
+      "End on Damian alone between the calm public script and the worsening private board."
     ],
     "continuityFrom": "SHAT_I02_P11",
     "dialogueInline": [
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Another route just went red."
       },
       {
@@ -498,15 +498,15 @@
         "text": "Then write faster."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Lochran."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Damiar."
+        "text": "Damian."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "At some point calm becomes inaccurate."
       },
       {
@@ -613,9 +613,9 @@
     ],
     "characters": [
       "C_liora",
-      "C_iskari",
+      "C_iskara",
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
       "Establish the Council chamber with a larger, denser incident map than in Issue 1.",
@@ -632,7 +632,7 @@
         "text": "These aren't separate incidents anymore."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "How many nodes in the same failure window?"
       },
       {
@@ -652,7 +652,7 @@
   },
   {
     "id": "SHAT_I02_P16",
-    "summary": "Iskari supports immediate traffic restrictions, arguing that every open corridor adds load to a system already approaching synchronized failure.",
+    "summary": "Iskara supports immediate traffic restrictions, arguing that every open corridor adds load to a system already approaching synchronized failure.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -661,15 +661,15 @@
     ],
     "characters": [
       "C_liora",
-      "C_iskari",
+      "C_iskara",
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Iskari moves from support into a concrete operational demand.",
+      "Iskara moves from support into a concrete operational demand.",
       "The model shows traffic continuing through the highest-stress arcs as she speaks.",
       "Several delegates react to the political cost of closing routes.",
-      "End on Liora and Iskari aligned around restriction while Lochran remains opposed."
+      "End on Liora and Iskara aligned around restriction while Lochran remains opposed."
     ],
     "directionInline": [
       "This is the first proposed sacrifice: reduce mobility now to preserve the network."
@@ -677,7 +677,7 @@
     "continuityFrom": "SHAT_I02_P15",
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Close the highest-load routes."
       },
       {
@@ -685,7 +685,7 @@
         "text": "No."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "You asked for an action."
       },
       {
@@ -693,7 +693,7 @@
         "text": "I asked for an action we can defend."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "We can defend fewer dead people."
       }
     ],
@@ -710,9 +710,9 @@
     ],
     "characters": [
       "C_liora",
-      "C_iskari",
+      "C_iskara",
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
       "Lochran challenges the move from projection to shutdown.",
@@ -746,7 +746,7 @@
   },
   {
     "id": "SHAT_I02_P18",
-    "summary": "Damiar proposes calling any intervention a recalibration, but realizes the language compromise no longer bridges the actual divide.",
+    "summary": "Damian proposes calling any intervention a recalibration, but realizes the language compromise no longer bridges the actual divide.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -755,15 +755,15 @@
     ],
     "characters": [
       "C_liora",
-      "C_iskari",
+      "C_iskara",
       "C_lochran",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Damiar offers a middle formulation that would let restrictions happen without announcing crisis.",
-      "Liora and Iskari focus on the operational need; Lochran focuses on the precedent.",
+      "Damian offers a middle formulation that would let restrictions happen without announcing crisis.",
+      "Liora and Iskara focus on the operational need; Lochran focuses on the precedent.",
       "The room talks past the wording because the disagreement is now about action, not presentation.",
-      "End on Damiar recognizing that language cannot reconcile the split."
+      "End on Damian recognizing that language cannot reconcile the split."
     ],
     "directionInline": [
       "This closes the messaging strategy that dominated Issues 1–2."
@@ -771,11 +771,11 @@
     "continuityFrom": "SHAT_I02_P17",
     "dialogueInline": [
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Call it a recalibration."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "If it closes the routes, call it whatever you like."
       },
       {
@@ -783,7 +783,7 @@
         "text": "Names become precedent."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "People are already living the precedent."
       },
       {
@@ -795,7 +795,7 @@
   },
   {
     "id": "SHAT_I02_P19",
-    "summary": "Liora, Nereth, and Iskari enter the dormant damping chamber and confirm the ancient hardware still physically exists.",
+    "summary": "Liora, Alan, and Iskara enter the dormant damping chamber and confirm the ancient hardware still physically exists.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -803,13 +803,13 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth",
-      "C_iskari"
+      "C_alan",
+      "C_iskara"
     ],
     "panelPlan": [
       "Large establishing page: the sealed damping chamber opens onto old emitters and hemisphere controls untouched by normal operations.",
-      "Liora and Nereth compare Heska’s schematic to the machinery in front of them.",
-      "Iskari checks access status and confirms no active Council authorization.",
+      "Liora and Alan compare Heska’s schematic to the machinery in front of them.",
+      "Iskara checks access status and confirms no active Council authorization.",
       "End on the three standing before a system built for exactly the crisis outside."
     ],
     "directionInline": [
@@ -817,7 +817,7 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "That's the same emitter profile from Heska's schematic."
       },
       {
@@ -825,11 +825,11 @@
         "text": "And that's a retrofit welded over it."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Can it run?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "That's a different question from whether it should."
       }
     ],
@@ -845,13 +845,13 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth",
-      "C_iskari"
+      "C_alan",
+      "C_iskara"
     ],
     "panelPlan": [
       "Liora traces the flow path from emitters into the wider network.",
       "The controls respond slowly but coherently to a low-power diagnostic.",
-      "Nereth finds calibration values buried in the old interface.",
+      "Alan finds calibration values buried in the old interface.",
       "End on Liora stating that the chamber is intact enough to try."
     ],
     "directionInline": [
@@ -864,7 +864,7 @@
         "text": "Low power."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Response is slow."
       },
       {
@@ -872,7 +872,7 @@
         "text": "But coherent."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I found the old calibration table."
       },
       {
@@ -884,7 +884,7 @@
   },
   {
     "id": "SHAT_I02_P21",
-    "summary": "Nereth identifies the danger: a bad calibration would not merely fail but could accelerate the collapse.",
+    "summary": "Alan identifies the danger: a bad calibration would not merely fail but could accelerate the collapse.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -892,14 +892,14 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth",
-      "C_iskari"
+      "C_alan",
+      "C_iskara"
     ],
     "panelPlan": [
-      "Nereth runs a simulation with a deliberately small offset.",
+      "Alan runs a simulation with a deliberately small offset.",
       "The projected field shears instead of damping, spreading stress faster through adjacent arcs.",
       "Liora sees the margin for error narrow to almost nothing.",
-      "End on the chamber’s dormant emitters looming over them after Nereth states the risk."
+      "End on the chamber’s dormant emitters looming over them after Alan states the risk."
     ],
     "directionInline": [
       "Make the downside physically understandable through the simulation."
@@ -907,15 +907,15 @@
     "continuityFrom": "SHAT_I02_P20",
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "And this is what's behind it."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "That's a one-percent offset?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Half."
       },
       {
@@ -923,7 +923,7 @@
         "text": "It shears the field."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "A bad attempt doesn't fail quietly. It helps the collapse."
       }
     ],
@@ -931,7 +931,7 @@
   },
   {
     "id": "SHAT_I02_P22",
-    "summary": "Iskari orders the unauthorized damping attempt to proceed because the Council has left them without another instrument.",
+    "summary": "Iskara orders the unauthorized damping attempt to proceed because the Council has left them without another instrument.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -939,34 +939,34 @@
     ],
     "characters": [
       "C_liora",
-      "C_nereth",
-      "C_iskari"
+      "C_alan",
+      "C_iskara"
     ],
     "panelPlan": [
-      "Wide chamber panel: dormant emitters surround Liora, Nereth, and Iskari while the rebuilt calibration model hangs between them.",
-      "Tight three-shot as Nereth states the failure consequence and Liora makes clear how little margin they have.",
-      "Final panel on Iskari ordering the attempt to proceed, with the ancient hardware beginning its first activation pulse behind her."
+      "Wide chamber panel: dormant emitters surround Liora, Alan, and Iskara while the rebuilt calibration model hangs between them.",
+      "Tight three-shot as Alan states the failure consequence and Liora makes clear how little margin they have.",
+      "Final panel on Iskara ordering the attempt to proceed, with the ancient hardware beginning its first activation pulse behind her."
     ],
     "continuityFrom": "SHAT_I02_P21",
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Council still won't authorize."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "That may be the first good decision they've made."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Nereth."
+        "text": "Alan."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I'm calibrating."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Do it."
       },
       {
@@ -974,7 +974,7 @@
         "text": "You understand what you're ordering?"
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Perfectly. I just don't have another order to give."
       }
     ],

@@ -145,6 +145,37 @@ def main():
     assert liora.get("handle") == rf_liora.get("handle"), "Liora handle diverges across packages"
     assert liora.get("visualAnchor") == rf_liora.get("visualAnchor"), "Liora visual anchor diverges across packages"
 
+    approved_identities = {
+        "C_liora": ("Liora Virelia", "@starsplit.liora.virelia"),
+        "C_lochran": ("Lochran Davitt", "@starsplit.lochran"),
+        "C_iskara": ("Iskara Foster", "@starsplit.iskara.foster"),
+        "C_alan": ("Alan Kessler", "@starsplit.alan.kessler"),
+        "C_ava": ("Ava Seltos", "@starsplit.ava.seltos"),
+        "C_damian": ("Damian Cole", "@starsplit.damian.cole"),
+        "C_ruben": ("Ruben Markham", "@starsplit.ruben.markham"),
+        "C_heska": ("Heska Strauss", "@starsplit.heska"),
+        "C_owen": ("Owen Hale", "@starsplit.owen.hale"),
+    }
+    for cid, (expected_name, expected_handle) in approved_identities.items():
+        character = characters.get(cid)
+        assert character, f"Approved Shattering identity missing: {cid}"
+        assert character.get("name") == expected_name, f"{cid}: expected name {expected_name!r}"
+        assert character.get("handle") == expected_handle, f"{cid}: expected handle {expected_handle!r}"
+
+    retired_character_ids = {"C_iskari", "C_nereth", "C_aveth", "C_damiar", "C_ruvian", "C_orneth"}
+    assert not retired_character_ids.intersection(characters), "Retired Shattering character IDs remain in active character shelf"
+    retired_active_tokens = (
+        "Davieth", "Iskari", "Telvek", "Nereth", "Kestrel", "Aveth", "Saelith",
+        "Damiar", "Colven", "Ruvian", "Marrek", "Heska Astrin", "Orneth", "Hailen",
+        "C_iskari", "C_nereth", "C_aveth", "C_damiar", "C_ruvian", "C_orneth",
+        "@starsplit.telvek", "@starsplit.nereth", "@starsplit.aveth",
+        "@starsplit.colven", "@starsplit.ruvian", "@starsplit.orneth",
+        "S_AstrinHall",
+    )
+    active_identity_text = json.dumps({"pages": all_pages, "source": source, "characters": characters, "settings": settings}, ensure_ascii=False)
+    for token in retired_active_tokens:
+        assert token not in active_identity_text, f"Retired Shattering identity token remains active: {token}"
+
     handles = [c.get("handle") for c in characters.values() if c.get("handle")]
     assert len(handles) == len(set(handles)), "Duplicate character handles in Shattering shelf"
     names = [c.get("name") for c in characters.values() if c.get("name")]

@@ -10,7 +10,7 @@
     ],
     "characters": [
       "C_localLeader",
-      "C_aveth"
+      "C_ava"
     ],
     "panelPlan": [
       "Wide survivor plaza under improvised lantern clusters with limited supplies visibly separated by type.",
@@ -27,7 +27,7 @@
         "text": "I have forty heat packs and eighty-three requests."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "How many children?"
       },
       {
@@ -35,7 +35,7 @@
         "text": "Twenty-six."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Pregnant? Elderly? Anyone on assisted breathing?"
       },
       {
@@ -47,7 +47,7 @@
   },
   {
     "id": "SHAT_I05_P02",
-    "summary": "Aveth answers the authority vacuum by prioritizing heat and water first, taking practical responsibility without claiming a formal title.",
+    "summary": "Ava answers the authority vacuum by prioritizing heat and water first, taking practical responsibility without claiming a formal title.",
     "setting": "S_SurvivorPlaza",
     "region": "PostBreakMixed",
     "factions": [
@@ -56,13 +56,13 @@
     ],
     "characters": [
       "C_localLeader",
-      "C_aveth"
+      "C_ava"
     ],
     "panelPlan": [
-      "Aveth steps into the supply area and starts grouping needs by immediate survival.",
-      "Aveth directs water and heat toward the most vulnerable people while others continue arguing legitimacy.",
+      "Ava steps into the supply area and starts grouping needs by immediate survival.",
+      "Ava directs water and heat toward the most vulnerable people while others continue arguing legitimacy.",
       "The local leader watches the work begin before consensus exists.",
-      "End on people moving because Aveth has made a usable decision."
+      "End on people moving because Ava has made a usable decision."
     ],
     "directionInline": [
       "Authority here comes from service and action rather than inherited office."
@@ -70,7 +70,7 @@
     "continuityFrom": "SHAT_I05_P01",
     "dialogueInline": [
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Right now? We do."
       },
       {
@@ -78,7 +78,7 @@
         "text": "On whose authority?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "On the authority of people getting cold while we argue."
       },
       {
@@ -86,7 +86,7 @@
         "text": "That's not a system."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "No. It's tonight."
       },
       {
@@ -94,7 +94,7 @@
         "text": "Heat first?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Heat and water. Then we count what's left."
       }
     ],
@@ -251,28 +251,28 @@
   },
   {
     "id": "SHAT_I05_P06",
-    "summary": "Ruvian leads a salvage crew into a damaged Outer node where one critical conduit threatens to take the whole system dark.",
+    "summary": "Ruben leads a salvage crew into a damaged Outer node where one critical conduit threatens to take the whole system dark.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "Wide exposed shard node with open framing, cut panels, and a critical conduit under visible strain.",
-      "Ruvian identifies the one failure that would black out the node.",
+      "Ruben identifies the one failure that would black out the node.",
       "Workers strip salvage from nonessential structure for a brace.",
-      "End on Ruvian ordering the conduit held before it buckles."
+      "End on Ruben ordering the conduit held before it buckles."
     ],
     "directionInline": [
       "Show the engineering problem clearly enough that the improvisation feels earned."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "That conduit goes, we lose the node."
       },
       {
@@ -280,7 +280,7 @@
         "text": "We don't have a brace long enough."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "We have a stair rail."
       },
       {
@@ -288,7 +288,7 @@
         "text": "People use that stair."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Not if the lights go out."
       }
     ],
@@ -303,13 +303,13 @@
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "Workers fit scavenged support around the conduit while sparks fall through the frame.",
       "The outer technician refuses to wait for permission or standardized parts that will not arrive.",
-      "Ruvian adapts the brace to the node’s live movement.",
+      "Ruben adapts the brace to the node’s live movement.",
       "End on the crew welding the solution in place."
     ],
     "directionInline": [
@@ -322,7 +322,7 @@
         "text": "Standard clamp won't fit."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Then stop trying to make it standard."
       },
       {
@@ -330,7 +330,7 @@
         "text": "I can cut the rail and sleeve it."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Do that."
       },
       {
@@ -338,7 +338,7 @@
         "text": "And when someone asks who approved it?"
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Tell them the conduit did."
       }
     ],
@@ -346,14 +346,14 @@
   },
   {
     "id": "SHAT_I05_P08",
-    "summary": "The patched Outer node holds, giving Ruvian's crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
+    "summary": "The patched Outer node holds, giving Ruben's crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
@@ -372,7 +372,7 @@
         "text": "Pressure's holding."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Wait."
       },
       {
@@ -380,7 +380,7 @@
         "text": "Still holding."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Now you can be pleased."
       },
       {
@@ -388,7 +388,7 @@
         "text": "I was pleased five minutes ago."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "That's why I make you wait."
       }
     ],
@@ -396,21 +396,21 @@
   },
   {
     "id": "SHAT_I05_P09",
-    "summary": "At Orban, Aveth builds new convoy schedules from eyewitness reports and personal reliability rather than centralized route predictions.",
+    "summary": "At Orban, Ava builds new convoy schedules from eyewitness reports and personal reliability rather than centralized route predictions.",
     "setting": "S_OrbanPort",
     "region": "PostBreakMixed",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_staff"
     ],
     "panelPlan": [
-      "Establish Orban-Tier Transit Port: Aveth covers a wall or table with hand-verified route notes, names, recent sightings, and supply needs.",
+      "Establish Orban-Tier Transit Port: Ava covers a wall or table with hand-verified route notes, names, recent sightings, and supply needs.",
       "Port staff compare two possible paths based on who actually traversed them rather than official status.",
       "Supply crates are grouped according to the new trust-route map.",
-      "End on Aveth naming trust as the operating requirement."
+      "End on Ava naming trust as the operating requirement."
     ],
     "directionInline": [
       "The new system should look practical, provisional, and human-readable."
@@ -421,7 +421,7 @@
         "text": "This route says open. That one says dead."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Who crossed it?"
       },
       {
@@ -429,7 +429,7 @@
         "text": "Jalen's crew. Yesterday."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Did they come back?"
       },
       {
@@ -437,7 +437,7 @@
         "text": "This morning."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Then write Jalen, not 'open.'"
       }
     ],
@@ -452,12 +452,12 @@
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_staff"
     ],
     "panelPlan": [
       "The staffer points to a route that depends heavily on one unverified report.",
-      "Aveth and the staffer examine what redundancy or cross-checking is possible without central data.",
+      "Ava and the staffer examine what redundancy or cross-checking is possible without central data.",
       "The medicine schedule waits on their decision.",
       "End on the open question of how trust remains accountable."
     ],
@@ -471,7 +471,7 @@
         "text": "What if Jalen cut a corner?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Then one report isn't enough."
       },
       {
@@ -479,7 +479,7 @@
         "text": "We don't have two for half these routes."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Then mark them yellow and tell the driver exactly why."
       },
       {
@@ -487,7 +487,7 @@
         "text": "No pretending certainty."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "We tried that already."
       }
     ],
@@ -592,28 +592,28 @@
   },
   {
     "id": "SHAT_I05_P13",
-    "summary": "Iskari confronts Lochran over using safety symbols without enforceable standards, arguing that a mark without practice becomes a lie.",
+    "summary": "Iskara confronts Lochran over using safety symbols without enforceable standards, arguing that a mark without practice becomes a lie.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
     "factions": [
       "F_BHA"
     ],
     "characters": [
-      "C_iskari",
+      "C_iskara",
       "C_lochran"
     ],
     "panelPlan": [
-      "Iskari finds the newly modified sigil being used around the damaged facility.",
+      "Iskara finds the newly modified sigil being used around the damaged facility.",
       "She tests or inspects one marked area and finds the underlying safety condition inconsistent.",
       "Facing Lochran, she rejects the idea that the mark itself can substitute for standards.",
       "End on the sigil between them as the object of the dispute."
     ],
     "directionInline": [
-      "Ground Iskari’s objection in observable inconsistency, not abstract purity."
+      "Ground Iskara’s objection in observable inconsistency, not abstract purity."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Who marked this?"
       },
       {
@@ -621,7 +621,7 @@
         "text": "Field teams."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "This wall is cracked through."
       },
       {
@@ -629,7 +629,7 @@
         "text": "The room is occupied and monitored."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Then mark that. Don't mark 'safe.'"
       },
       {
@@ -648,17 +648,17 @@
       "F_BHA"
     ],
     "characters": [
-      "C_iskari",
+      "C_iskara",
       "C_lochran"
     ],
     "panelPlan": [
       "Lochran points to civilians organizing around marked safe areas despite imperfect conditions.",
       "He argues that shared belief can create coordination before formal systems return.",
-      "Iskari sees that he is redefining safety from technical compliance into political trust.",
+      "Iskara sees that he is redefining safety from technical compliance into political trust.",
       "End on Lochran’s claim that belief holds worlds together."
     ],
     "directionInline": [
-      "Frame Lochran with civilians organizing around the mark and Iskari with the damaged structure it is meant to certify, keeping both arguments physically present."
+      "Frame Lochran with civilians organizing around the mark and Iskara with the damaged structure it is meant to certify, keeping both arguments physically present."
     ],
     "continuityFrom": "SHAT_I05_P13",
     "dialogueInline": [
@@ -667,7 +667,7 @@
         "text": "Look at them. They see the mark and organize around it."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "They trust it."
       },
       {
@@ -675,7 +675,7 @@
         "text": "Exactly."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "You say that like trust lowers the load on the beam."
       },
       {
@@ -687,18 +687,18 @@
   },
   {
     "id": "SHAT_I05_P15",
-    "summary": "Iskari insists that any shared safety symbol must bind its user to real inspection; Lochran acknowledges the damping-chamber decision without abandoning his belief that institutions must still make promises.",
+    "summary": "Iskara insists that any shared safety symbol must bind its user to real inspection; Lochran acknowledges the damping-chamber decision without abandoning his belief that institutions must still make promises.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
     "factions": [
       "F_BHA"
     ],
     "characters": [
-      "C_iskari",
+      "C_iskara",
       "C_lochran"
     ],
     "panelPlan": [
-      "Iskari points from the modified mark to the cracked structure it is supposed to identify, making inspection inseparable from the symbol.",
+      "Iskara points from the modified mark to the cracked structure it is supposed to identify, making inspection inseparable from the symbol.",
       "Lochran watches civilians organize around another marked shelter and then looks back at the damaged wall instead of dismissing her concern.",
       "The damping chamber enters the argument without a flashback: Lochran's reaction makes clear that the failed override remains present in every claim he makes about trust.",
       "They part with a narrower disagreement than before: not whether promises matter, but what work must exist before anyone is allowed to make one."
@@ -709,7 +709,7 @@
     "continuityFrom": "SHAT_I05_P14",
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "If we use the symbol, inspection comes with it."
       },
       {
@@ -717,7 +717,7 @@
         "text": "Inspection when we have inspectors."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "No. The promise and the work arrive together or the promise is false."
       },
       {
@@ -725,7 +725,7 @@
         "text": "I hear the damping chamber every time you say 'false.'"
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Good."
       },
       {
@@ -733,7 +733,7 @@
         "text": "Don't mistake regret for surrender. Someone still has to make promises."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Then earn each one."
       }
     ],
@@ -771,7 +771,7 @@
   },
   {
     "id": "SHAT_I05_P17",
-    "summary": "Damiar finds Liora after another move and reveals why she is hiding: several surviving authorities want her account of the damping failure, but they do not agree whether she is a witness, a culprit, or the owner of a text they want to control.",
+    "summary": "Damian finds Liora after another move and reveals why she is hiding: several surviving authorities want her account of the damping failure, but they do not agree whether she is a witness, a culprit, or the owner of a text they want to control.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
     "factions": [
@@ -779,11 +779,11 @@
     ],
     "characters": [
       "C_liora",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Establish a new, even less comfortable hideout: Liora has packed the treatise for movement rather than settled into a permanent refuge when Damiar arrives with supplies.",
-      "Damiar explains that three surviving authorities are looking for her under three different definitions of jurisdiction, and all three have asked about her draft.",
+      "Establish a new, even less comfortable hideout: Liora has packed the treatise for movement rather than settled into a permanent refuge when Damian arrives with supplies.",
+      "Damian explains that three surviving authorities are looking for her under three different definitions of jurisdiction, and all three have asked about her draft.",
       "Close on Liora taking the paper and filters rather than reacting dramatically; moving again was a deliberate choice to keep both herself and the text outside any one claimant's custody."
     ],
     "directionInline": [
@@ -791,7 +791,7 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "You moved again."
       },
       {
@@ -799,7 +799,7 @@
         "text": "You found me."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Three surviving authorities want you debriefed. Two say inquiry. One says custody."
       },
       {
@@ -807,7 +807,7 @@
         "text": "And the treatise?"
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "All three asked whether I had it."
       },
       {
@@ -815,7 +815,7 @@
         "text": "That's why I moved."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Paper, filters, food. In that order, apparently."
       }
     ],
@@ -823,7 +823,7 @@
   },
   {
     "id": "SHAT_I05_P18",
-    "summary": "Damiar brings supplies to Liora and admits that he mistook reassurance for duty even when it prevented people from confronting danger.",
+    "summary": "Damian brings supplies to Liora and admits that he mistook reassurance for duty even when it prevented people from confronting danger.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
     "factions": [
@@ -831,12 +831,12 @@
     ],
     "characters": [
       "C_liora",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Damiar arrives with practical supplies rather than official materials.",
+      "Damian arrives with practical supplies rather than official materials.",
       "He notices how directly Liora’s notes connect institutional language to delayed action.",
-      "Damiar admits his part without asking for absolution.",
+      "Damian admits his part without asking for absolution.",
       "End on Liora listening but not interrupting the work."
     ],
     "directionInline": [
@@ -845,7 +845,7 @@
     "continuityFrom": "SHAT_I05_P17",
     "dialogueInline": [
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "I found one of my old statements."
       },
       {
@@ -853,11 +853,11 @@
         "text": "Burn it."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "Tempting."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "I called the failures temporary for nine days."
       },
       {
@@ -865,7 +865,7 @@
         "text": "You were trying to keep people calm."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "I know. That's the part I don't trust anymore."
       }
     ],
@@ -873,7 +873,7 @@
   },
   {
     "id": "SHAT_I05_P19",
-    "summary": "Liora and Damiar continue working together despite their different histories, converting remorse and technical failure into material future groups will later fight over.",
+    "summary": "Liora and Damian continue working together despite their different histories, converting remorse and technical failure into material future groups will later fight over.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
     "factions": [
@@ -881,10 +881,10 @@
     ],
     "characters": [
       "C_liora",
-      "C_damiar"
+      "C_damian"
     ],
     "panelPlan": [
-      "Damiar helps sort records while Liora continues drafting.",
+      "Damian helps sort records while Liora continues drafting.",
       "They compare an old reassurance statement to the failure timeline it obscured.",
       "Liora leaves contradictory notes visible rather than smoothing them into one doctrine.",
       "End on the growing treatise as unfinished, layered working material."
@@ -899,7 +899,7 @@
         "text": "Don't make the lesson 'never reassure anyone.'"
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "That's generous."
       },
       {
@@ -907,7 +907,7 @@
         "text": "It's accurate."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "You really can't help yourself."
       },
       {
@@ -915,7 +915,7 @@
         "text": "No."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "What are you writing, then?"
       },
       {
@@ -927,38 +927,38 @@
   },
   {
     "id": "SHAT_I05_P20",
-    "summary": "Ruvian's crews begin turning improvised repairs into transferable field practice while Nereth, alive and still coordinating from the Broken Node rescue network, circulates failure notes between disconnected engineering crews.",
+    "summary": "Ruben's crews begin turning improvised repairs into transferable field practice while Alan, alive and still coordinating from the Broken Node rescue network, circulates failure notes between disconnected engineering crews.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
-      "Outer Ring workers compare two independently built versions of the same emergency brace while a narrowband call from Nereth cuts through intermittent static.",
-      "Ruvian reports that the second crew changed the brace rather than copying it blindly; Nereth asks for the load, material, and first failure point.",
+      "Outer Ring workers compare two independently built versions of the same emergency brace while a narrowband call from Alan cuts through intermittent static.",
+      "Ruben reports that the second crew changed the brace rather than copying it blindly; Alan asks for the load, material, and first failure point.",
       "The outer technician notices that relay operators have started filing these reports under the informal label 'Shard repair.'",
-      "Ruvian objects to the name only long enough to learn that nobody asked the crews what to call themselves.",
-      "Final panel: Nereth tells them to keep the label if it helps the notes travel; another crew receives the same repair file elsewhere."
+      "Ruben objects to the name only long enough to learn that nobody asked the crews what to call themselves.",
+      "Final panel: Alan tells them to keep the label if it helps the notes travel; another crew receives the same repair file elsewhere."
     ],
     "directionInline": [
       "Show the same repair note moving between different crews and being altered with local load, material, and failure information rather than copied as a fixed manual."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
-        "text": "Ruvian. Your brace held?"
+        "handle": "@starsplit.alan.kessler",
+        "text": "Ruben. Your brace held?"
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Different crew. Same ugly idea."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Good. Send load, material, and what failed first."
       },
       {
@@ -966,7 +966,7 @@
         "text": "Relay tagged the file 'Shard repair.'"
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Because we're repairing the shards?"
       },
       {
@@ -974,15 +974,15 @@
         "text": "Because nobody asked us what to call it."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Keep the tag. Send the notes."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "You heard that?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I hear every bad joke that survives transmission."
       }
     ],
@@ -990,22 +990,22 @@
   },
   {
     "id": "SHAT_I05_P21",
-    "summary": "Aveth's hand-verified routes acquire an informal name as people begin calling lanes beyond the old centralized map 'verge routes'; Aveth cares less about the label than preserving who actually vouched for each crossing.",
+    "summary": "Ava's hand-verified routes acquire an informal name as people begin calling lanes beyond the old centralized map 'verge routes'; Ava cares less about the label than preserving who actually vouched for each crossing.",
     "setting": "S_OrbanPort",
     "region": "OuterBand",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_ruvian",
-      "C_aveth",
-      "C_iskari",
+      "C_ruben",
+      "C_ava",
+      "C_iskara",
       "C_staff"
     ],
     "panelPlan": [
       "At Orban, the rebuilt route board has a blank heading over paths that no longer correspond to official Cooperative lanes.",
       "Port staff report two independent crossings on the south leg and mention the label travelers have started using for routes beyond the old map.",
-      "Aveth accepts the practical name but insists that every route still carry the witnesses whose experience made it usable.",
+      "Ava accepts the practical name but insists that every route still carry the witnesses whose experience made it usable.",
       "End on the board reading VERGE ROUTES with actual crew names and timestamps written immediately beneath it."
     ],
     "directionInline": [
@@ -1018,7 +1018,7 @@
         "text": "The board needs a heading for routes outside the old map."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Who vouched for the south leg?"
       },
       {
@@ -1026,7 +1026,7 @@
         "text": "Mira, then Ko's crew. Two crossings."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Good."
       },
       {
@@ -1034,7 +1034,7 @@
         "text": "People are calling these the verge routes."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Fine. Put the witnesses under the name."
       }
     ],
@@ -1042,7 +1042,7 @@
   },
   {
     "id": "SHAT_I05_P22",
-    "summary": "Iskari codifies responsibility as Core, Verge, and Shard practices visibly diverge from the same post-collapse crisis.",
+    "summary": "Iskara codifies responsibility as Core, Verge, and Shard practices visibly diverge from the same post-collapse crisis.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -1051,13 +1051,13 @@
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
-      "C_aveth",
-      "C_iskari"
+      "C_ruben",
+      "C_ava",
+      "C_iskara"
     ],
     "panelPlan": [
-      "Wide montage panel links three simultaneous acts: an outer crew consulting a Shard repair note, an Orban driver checking a named Verge route, and Iskari marking a safety requirement beside a rebuilt facility.",
-      "Medium shared-communications panel as Iskari states the minimum documentation and confirmation rules while Ruvian and Aveth challenge how they work when formal institutions are absent.",
+      "Wide montage panel links three simultaneous acts: an outer crew consulting a Shard repair note, an Orban driver checking a named Verge route, and Iskara marking a safety requirement beside a rebuilt facility.",
+      "Medium shared-communications panel as Iskara states the minimum documentation and confirmation rules while Ruben and Ava challenge how they work when formal institutions are absent.",
       "Final panel holds the three practices side by side without visually merging them: distinct methods growing from the same catastrophe."
     ],
     "directionInline": [
@@ -1066,27 +1066,27 @@
     "continuityFrom": "SHAT_I05_P21",
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "If a brace carries life support, inspection is required. If a route carries medicine, confirmation is required."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "And if the inspector never comes?"
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Then you document what you did and why."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "That I can carry."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "I can live with it."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Good. Start there."
       }
     ],

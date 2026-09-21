@@ -11,11 +11,11 @@
     "characters": [
       "C_shipCaptain",
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
       "Full-width space panel: several ships cross a corridor field whose stars and beacon reflections shear sideways, with one vessel trailing a delayed version of its own silhouette.",
-      "Interior/exterior paired panel: the captain reports the impossible reflection while Liora and Nereth compare the ship's stable hull telemetry to unstable corridor geometry.",
+      "Interior/exterior paired panel: the captain reports the impossible reflection while Liora and Alan compare the ship's stable hull telemetry to unstable corridor geometry.",
       "Final wide panel lets the distortion itself dominate the page as the delayed silhouettes multiply across more than one vessel."
     ],
     "directionInline": [
@@ -35,7 +35,7 @@
         "text": "Stable. Our shadow isn't."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "That's not a shadow."
       },
       {
@@ -57,7 +57,7 @@
     "characters": [
       "C_shipCaptain",
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
       "Liora receives overlapping ship feeds from the damaged network.",
@@ -95,7 +95,7 @@
   },
   {
     "id": "SHAT_I04_P03",
-    "summary": "Nereth realizes even idling ships are unsafe because the anchor points themselves are slipping.",
+    "summary": "Alan realizes even idling ships are unsafe because the anchor points themselves are slipping.",
     "setting": "S_StressField",
     "region": "CollapseZone",
     "factions": [
@@ -105,13 +105,13 @@
     "characters": [
       "C_shipCaptain",
       "C_liora",
-      "C_nereth"
+      "C_alan"
     ],
     "panelPlan": [
-      "Nereth compares the ship’s fixed engine state to the moving anchor reference.",
+      "Alan compares the ship’s fixed engine state to the moving anchor reference.",
       "A supposedly stationary reference marker jumps between positions.",
       "Liora sees that navigation cannot solve a failure of the coordinate frame.",
-      "End on the map losing another reliable anchor as Nereth states the problem."
+      "End on the map losing another reliable anchor as Alan states the problem."
     ],
     "directionInline": [
       "This closes the possibility that skilled pilots can simply wait out the crisis."
@@ -119,7 +119,7 @@
     "continuityFrom": "SHAT_I04_P02",
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Anchor just moved."
       },
       {
@@ -127,7 +127,7 @@
         "text": "Ship didn't."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Second anchor moved too."
       },
       {
@@ -135,7 +135,7 @@
         "text": "So navigation is lying?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Navigation is honest. Space changed underneath it."
       }
     ],
@@ -152,7 +152,7 @@
     "characters": [
       "C_traveler",
       "C_staff",
-      "C_aveth"
+      "C_ava"
     ],
     "panelPlan": [
       "Wide concourse with boards graying out row by row above packed travelers.",
@@ -177,7 +177,7 @@
         "text": "There aren't any alternates on the board."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Stop watching the board. Stay where staff can find you."
       }
     ],
@@ -185,7 +185,7 @@
   },
   {
     "id": "SHAT_I04_P05",
-    "summary": "Port staff can no longer offer routing answers; Aveth keeps the crowd together because any future opening will be useless if people scatter.",
+    "summary": "Port staff can no longer offer routing answers; Ava keeps the crowd together because any future opening will be useless if people scatter.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
@@ -194,13 +194,13 @@
     "characters": [
       "C_traveler",
       "C_staff",
-      "C_aveth"
+      "C_ava"
     ],
     "panelPlan": [
       "A staffer asks civilians to remain in the concourse while internal route tools also show uncertainty.",
       "A few travelers begin moving toward exits or restricted access points.",
-      "Aveth steps into the flow and physically turns people back toward a common waiting zone.",
-      "End on the crowd staying together because of Aveth, not because the boards recovered."
+      "Ava steps into the flow and physically turns people back toward a common waiting zone.",
+      "End on the crowd staying together because of Ava, not because the boards recovered."
     ],
     "directionInline": [
       "Shift authority from system information to trusted human presence."
@@ -212,7 +212,7 @@
         "text": "I have nothing to route them on."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Then route people, not ships."
       },
       {
@@ -220,7 +220,7 @@
         "text": "Meaning?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Keep families together. Clear the doors. Make one waiting zone."
       },
       {
@@ -228,7 +228,7 @@
         "text": "And then what?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Then we use the first real opening we get."
       }
     ],
@@ -236,32 +236,32 @@
   },
   {
     "id": "SHAT_I04_P06",
-    "summary": "Orneth attempts formal corridor lockouts from the old BHA command floor and discovers that the authority channels no longer respond.",
+    "summary": "Owen attempts formal corridor lockouts from the old BHA command floor and discovers that the authority channels no longer respond.",
     "setting": "S_PreBHA_Ruins",
     "region": "HighEraCore",
     "factions": [
       "F_BHA"
     ],
     "characters": [
-      "C_orneth",
+      "C_owen",
       "C_lochran"
     ],
     "panelPlan": [
       "Establish the former BHA command floor under emergency lighting.",
-      "Orneth sends a standard lockout across multiple approaches.",
+      "Owen sends a standard lockout across multiple approaches.",
       "Every command returns dead authority or silent red failure.",
-      "End on Orneth recognizing that his procedural control no longer reaches the network."
+      "End on Owen recognizing that his procedural control no longer reaches the network."
     ],
     "directionInline": [
       "The failure is institutional and technical at once: the command exists, but nothing answers it."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Lockout one through six."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "...No return."
       },
       {
@@ -269,7 +269,7 @@
         "text": "Send it again."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "I sent it three times."
       },
       {
@@ -277,7 +277,7 @@
         "text": "Then use field authority."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Authority isn't reaching the field."
       }
     ],
@@ -285,19 +285,19 @@
   },
   {
     "id": "SHAT_I04_P07",
-    "summary": "Lochran demands that Orneth enforce closures anyway, clinging to boundaries that the physical system can no longer recognize.",
+    "summary": "Lochran demands that Owen enforce closures anyway, clinging to boundaries that the physical system can no longer recognize.",
     "setting": "S_PreBHA_Ruins",
     "region": "HighEraCore",
     "factions": [
       "F_BHA"
     ],
     "characters": [
-      "C_orneth",
+      "C_owen",
       "C_lochran"
     ],
     "panelPlan": [
       "Lochran joins or calls into the failed command floor demanding closure enforcement.",
-      "Orneth demonstrates that the lockout requests are not merely delayed but unregistered.",
+      "Owen demonstrates that the lockout requests are not merely delayed but unregistered.",
       "Lochran points to the mapped corridor boundaries as if authority can restore them.",
       "End on a map line remaining crisp while the live status beneath it goes blank."
     ],
@@ -311,7 +311,7 @@
         "text": "The boundaries still exist."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "On the map."
       },
       {
@@ -319,7 +319,7 @@
         "text": "They are legal closure lines."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "A pilot can't crash into a law, Chair."
       },
       {
@@ -327,7 +327,7 @@
         "text": "They can obey one."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Not if they never receive it."
       }
     ],
@@ -343,13 +343,13 @@
       "F_Outer"
     ],
     "characters": [
-      "C_nereth",
-      "C_orneth",
+      "C_alan",
+      "C_owen",
       "C_shipCaptain"
     ],
     "panelPlan": [
       "Large reveal panel: a major convergence node begins physically separating along one structural arm while occupied sections remain attached and people are still moving through them.",
-      "Inside the node, Nereth and Orneth see the arm's displacement cross the evacuation threshold; the captain confirms people remain in the lower section.",
+      "Inside the node, Alan and Owen see the arm's displacement cross the evacuation threshold; the captain confirms people remain in the lower section.",
       "Final panel gives the failing joint major visual scale as evacuation lights come on across the still-occupied arm."
     ],
     "directionInline": [
@@ -357,15 +357,15 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Arm three is moving."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "How much?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Enough. Evacuate it."
       },
       {
@@ -373,7 +373,7 @@
         "text": "There are still people on that section."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Then don't ask me how much."
       }
     ],
@@ -381,7 +381,7 @@
   },
   {
     "id": "SHAT_I04_P09",
-    "summary": "Nereth organizes immediate evacuation from the failing arm while debris starts to fill the junction.",
+    "summary": "Alan organizes immediate evacuation from the failing arm while debris starts to fill the junction.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
     "factions": [
@@ -389,12 +389,12 @@
       "F_Outer"
     ],
     "characters": [
-      "C_nereth",
-      "C_orneth",
+      "C_alan",
+      "C_owen",
       "C_shipCaptain"
     ],
     "panelPlan": [
-      "Nereth converts a traffic display into an evacuation map.",
+      "Alan converts a traffic display into an evacuation map.",
       "Survivors move toward the remaining stable connection while structural panels tear free behind them.",
       "Rescue craft try to hold relative position in a drifting debris field.",
       "End on the last group reaching the junction as the arm moves out of alignment."
@@ -405,15 +405,15 @@
     "continuityFrom": "SHAT_I04_P08",
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Use the maintenance spine. Leave everything else."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "What about the lower bays?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Cut them loose if you have to."
       },
       {
@@ -421,7 +421,7 @@
         "text": "Rescue two has the last group."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Get them across before the joint turns."
       }
     ],
@@ -429,7 +429,7 @@
   },
   {
     "id": "SHAT_I04_P10",
-    "summary": "Orneth discovers he cannot close the approach, leaving incoming pilots to enter a dead junction without authoritative warning.",
+    "summary": "Owen discovers he cannot close the approach, leaving incoming pilots to enter a dead junction without authoritative warning.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
     "factions": [
@@ -437,12 +437,12 @@
       "F_Outer"
     ],
     "characters": [
-      "C_nereth",
-      "C_orneth",
+      "C_alan",
+      "C_owen",
       "C_shipCaptain"
     ],
     "panelPlan": [
-      "Orneth repeatedly sends closure commands through failing channels.",
+      "Owen repeatedly sends closure commands through failing channels.",
       "Incoming craft remain visible on approach vectors that should have been blocked.",
       "He attempts direct contact as the automated authority path dies.",
       "End on one incoming ship crossing the point where a functioning lockout would have stopped it."
@@ -453,23 +453,23 @@
     "continuityFrom": "SHAT_I04_P09",
     "dialogueInline": [
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Closure still dead."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Incoming vector?"
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Two ships. They think the junction is open."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Call them direct."
       },
       {
-        "handle": "@starsplit.orneth",
+        "handle": "@starsplit.owen.hale",
         "text": "Trying."
       },
       {
@@ -481,7 +481,7 @@
   },
   {
     "id": "SHAT_I04_P11",
-    "summary": "A blinded incoming captain asks for manual guidance as the shattered node spins and Nereth becomes the human replacement for the failed network.",
+    "summary": "A blinded incoming captain asks for manual guidance as the shattered node spins and Alan becomes the human replacement for the failed network.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
     "factions": [
@@ -489,14 +489,14 @@
       "F_Outer"
     ],
     "characters": [
-      "C_nereth",
-      "C_orneth",
+      "C_alan",
+      "C_owen",
       "C_shipCaptain"
     ],
     "panelPlan": [
       "Inside the incoming ship, nav references collapse into contradictory vectors.",
       "The captain calls for guidance before the ship enters the node’s spin.",
-      "Nereth finds one surviving beacon and gives a narrow manual path through the debris.",
+      "Alan finds one surviving beacon and gives a narrow manual path through the debris.",
       "End on the ship committing to the improvised guidance while the broken node turns around it."
     ],
     "directionInline": [
@@ -509,7 +509,7 @@
         "text": "Node control, nav is gone. Give me something."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "You have one beacon. Keep it two degrees port."
       },
       {
@@ -517,7 +517,7 @@
         "text": "Two degrees from what?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "From the only thing in there that isn't moving."
       },
       {
@@ -525,7 +525,7 @@
         "text": "That's a terrible sentence."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Fly it anyway."
       }
     ],
@@ -533,28 +533,28 @@
   },
   {
     "id": "SHAT_I04_P12",
-    "summary": "Aveth chooses a partially functional Sector 9 route because the medical convoy cannot wait for a fully verified corridor.",
+    "summary": "Ava chooses a partially functional Sector 9 route because the medical convoy cannot wait for a fully verified corridor.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_trafficCtrl"
     ],
     "panelPlan": [
-      "Back at Orban, Aveth identifies one intermittent path among otherwise dead routes.",
+      "Back at Orban, Ava identifies one intermittent path among otherwise dead routes.",
       "Medicine pallets are loaded while the route flickers between open and unknown.",
-      "Aveth weighs the route against the destination’s medical need.",
+      "Ava weighs the route against the destination’s medical need.",
       "End on the convoy preparing for Sector 9 despite no guarantee."
     ],
     "directionInline": [
-      "Stage Aveth's choice against visible medicine crates and an intermittently available route; the guaranteed harm of waiting must be readable without explanatory text."
+      "Stage Ava's choice against visible medicine crates and an intermittently available route; the guaranteed harm of waiting must be readable without explanatory text."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Sector Nine."
       },
       {
@@ -562,7 +562,7 @@
         "text": "No confirmation from the far end."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "But the lane is there."
       },
       {
@@ -570,7 +570,7 @@
         "text": "Sometimes."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "Medicine doesn't care about sometimes."
       }
     ],
@@ -578,24 +578,24 @@
   },
   {
     "id": "SHAT_I04_P13",
-    "summary": "The traffic controller warns that Sector 9 may not even know it is open, but Aveth commits to the gamble because waiting guarantees loss.",
+    "summary": "The traffic controller warns that Sector 9 may not even know it is open, but Ava commits to the gamble because waiting guarantees loss.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
       "F_Convoy"
     ],
     "characters": [
-      "C_aveth",
+      "C_ava",
       "C_trafficCtrl"
     ],
     "panelPlan": [
       "The controller shows intermittent alignment with no confirmation from the far end.",
-      "Aveth steadies against the console as the port floor vibrates under another distant failure.",
-      "The convoy crew look to Aveth rather than the system for the go/no-go choice.",
+      "Ava steadies against the console as the port floor vibrates under another distant failure.",
+      "The convoy crew look to Ava rather than the system for the go/no-go choice.",
       "End on the first medical ship entering the uncertain route."
     ],
     "directionInline": [
-      "Finish on action: Aveth’s model of authority is becoming practical trust under uncertainty."
+      "Finish on action: Ava’s model of authority is becoming practical trust under uncertainty."
     ],
     "continuityFrom": "SHAT_I04_P12",
     "dialogueInline": [
@@ -604,7 +604,7 @@
         "text": "You may arrive to a closed corridor."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "If we wait, they arrive to an empty pharmacy."
       },
       {
@@ -612,7 +612,7 @@
         "text": "That's not permission."
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "I'm not asking for permission."
       },
       {
@@ -620,7 +620,7 @@
         "text": "Then why are you still here?"
       },
       {
-        "handle": "@starsplit.aveth",
+        "handle": "@starsplit.ava.seltos",
         "text": "I wanted one person to know where we went."
       }
     ],
@@ -635,21 +635,21 @@
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "Wide outer habitat cycling from light to darkness in uneven sections.",
-      "Ruvian’s crew sees atmosphere and power loads spike across local systems.",
+      "Ruben’s crew sees atmosphere and power loads spike across local systems.",
       "A major conduit bucks under the surge.",
-      "End on Ruvian warning that one more hit could drop atmosphere."
+      "End on Ruben warning that one more hit could drop atmosphere."
     ],
     "directionInline": [
       "Keep the threat domestic and bodily: light, air, pressure."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Atmosphere load is climbing."
       },
       {
@@ -657,7 +657,7 @@
         "text": "Power's dropping on the same leg."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Of course it is."
       },
       {
@@ -665,7 +665,7 @@
         "text": "One more surge and we lose the ring."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Then we don't give it one more surge."
       }
     ],
@@ -680,12 +680,12 @@
       "F_Outer"
     ],
     "characters": [
-      "C_ruvian",
+      "C_ruben",
       "C_outerTech"
     ],
     "panelPlan": [
       "The outer technician rejects waiting for remote assistance and starts stripping usable support material nearby.",
-      "Ruvian redirects workers to a failing conduit while others isolate nonessential loads.",
+      "Ruben redirects workers to a failing conduit while others isolate nonessential loads.",
       "Improvised braces take strain as the habitat remains partially powered.",
       "End on the crew holding the system together by hand."
     ],
@@ -699,7 +699,7 @@
         "text": "Central hasn't answered."
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "Stop calling."
       },
       {
@@ -707,7 +707,7 @@
         "text": "That's your plan?"
       },
       {
-        "handle": "@starsplit.ruvian",
+        "handle": "@starsplit.ruben.markham",
         "text": "My plan is this brace, that cutoff, and six people who showed up."
       },
       {
@@ -728,8 +728,8 @@
     ],
     "characters": [
       "C_lochran",
-      "C_iskari",
-      "C_damiar"
+      "C_iskara",
+      "C_damian"
     ],
     "panelPlan": [
       "Wide Council chamber with overlapping alarms, broken feeds, and delegates receiving contradictory world reports.",
@@ -746,7 +746,7 @@
         "text": "One command channel. We need people hearing the same thing."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "They are not living the same thing."
       },
       {
@@ -754,15 +754,15 @@
         "text": "Fragmented instruction creates panic."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "So does silence."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Damiar, consolidate the feeds."
+        "text": "Damian, consolidate the feeds."
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "They won't consolidate."
       }
     ],
@@ -770,7 +770,7 @@
   },
   {
     "id": "SHAT_I04_P17",
-    "summary": "Iskari directly links the cost of denial to the growing casualty reports, making the leadership fracture irreversible.",
+    "summary": "Iskara directly links the cost of denial to the growing casualty reports, making the leadership fracture irreversible.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -779,11 +779,11 @@
     ],
     "characters": [
       "C_lochran",
-      "C_iskari",
-      "C_damiar"
+      "C_iskara",
+      "C_damian"
     ],
     "panelPlan": [
-      "Iskari brings casualty and failure reports into the same space as Lochran’s command plan.",
+      "Iskara brings casualty and failure reports into the same space as Lochran’s command plan.",
       "She confronts him at close range rather than through procedural debate.",
       "Delegates around them stop pretending this is a normal Council disagreement.",
       "End on Lochran’s practiced composure finally cracking."
@@ -794,7 +794,7 @@
     "continuityFrom": "SHAT_I04_P16",
     "dialogueInline": [
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Orban is rationing movement. Outer is rationing air. Broken Node is pulling bodies out by hand."
       },
       {
@@ -802,7 +802,7 @@
         "text": "I know the reports."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Then stop talking as if this room still runs them."
       },
       {
@@ -810,7 +810,7 @@
         "text": "Someone has to hold the center."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "There is no center left to hold."
       }
     ],
@@ -818,7 +818,7 @@
   },
   {
     "id": "SHAT_I04_P18",
-    "summary": "Damiar abandons any hope of one unified message and pushes for whatever local guidance each world can still receive.",
+    "summary": "Damian abandons any hope of one unified message and pushes for whatever local guidance each world can still receive.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -827,22 +827,22 @@
     ],
     "characters": [
       "C_lochran",
-      "C_iskari",
-      "C_damiar"
+      "C_iskara",
+      "C_damian"
     ],
     "panelPlan": [
-      "Damiar scans world channels with different needs and different surviving capabilities.",
+      "Damian scans world channels with different needs and different surviving capabilities.",
       "He stops editing one central statement and begins routing practical guidance outward.",
-      "Lochran and Iskari remain divided behind him while the communications work becomes decentralized.",
+      "Lochran and Iskara remain divided behind him while the communications work becomes decentralized.",
       "End on multiple separate world messages leaving the chamber instead of one Cooperative broadcast."
     ],
     "directionInline": [
-      "Show Damiar changing what he does, not only what he believes."
+      "Show Damian changing what he does, not only what he believes."
     ],
     "continuityFrom": "SHAT_I04_P17",
     "dialogueInline": [
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "I'm sending local guidance by world."
       },
       {
@@ -850,11 +850,11 @@
         "text": "Without a unified statement?"
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "A unified statement can't tell Outer how to brace a conduit."
       },
       {
-        "handle": "@starsplit.telvek",
+        "handle": "@starsplit.iskara.foster",
         "text": "Send what people can use."
       },
       {
@@ -862,7 +862,7 @@
         "text": "And our authority?"
       },
       {
-        "handle": "@starsplit.colven",
+        "handle": "@starsplit.damian.cole",
         "text": "If it's useful, it survives. If it isn't, the logo won't save it."
       }
     ],
@@ -870,7 +870,7 @@
   },
   {
     "id": "SHAT_I04_P19",
-    "summary": "Nereth and surviving captains establish an ad-hoc rescue cluster around one temporarily stable pocket in the distorted field.",
+    "summary": "Alan and surviving captains establish an ad-hoc rescue cluster around one temporarily stable pocket in the distorted field.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
     "factions": [
@@ -878,12 +878,12 @@
       "F_Convoy"
     ],
     "characters": [
-      "C_nereth",
+      "C_alan",
       "C_shipCaptain"
     ],
     "panelPlan": [
       "Establish a calm pocket surrounded by visibly warped corridor space and drifting debris.",
-      "Nereth anchors rescue traffic to one surviving beacon rather than the dead network.",
+      "Alan anchors rescue traffic to one surviving beacon rather than the dead network.",
       "Captains take assigned sectors and move toward scattered survivors.",
       "End on the first rescue craft crossing into the pocket."
     ],
@@ -892,7 +892,7 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Beacon Seven is steady enough."
       },
       {
@@ -900,7 +900,7 @@
         "text": "For how long?"
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Long enough is the measurement today."
       },
       {
@@ -908,7 +908,7 @@
         "text": "I hate your measurements."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Take sector two. I'll feed you debris drift."
       }
     ],
@@ -924,15 +924,15 @@
       "F_Convoy"
     ],
     "characters": [
-      "C_nereth",
+      "C_alan",
       "C_shipCaptain"
     ],
     "panelPlan": [
       "Rescue craft crosses the temporary pocket boundary.",
       "Debris shifts and forces a second craft to roll away.",
       "Two survivors transfer across a maintenance tether.",
-      "The stable pocket contracts on Nereth's live map.",
-      "A captain reports four people still outside the line; Nereth refuses to reduce the count to fit the time.",
+      "The stable pocket contracts on Alan's live map.",
+      "A captain reports four people still outside the line; Alan refuses to reduce the count to fit the time.",
       "Final panel: the rescue craft turns back toward the moving boundary."
     ],
     "directionInline": [
@@ -945,7 +945,7 @@
         "text": "Pocket boundary is moving."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I see it."
       },
       {
@@ -953,7 +953,7 @@
         "text": "We have four survivors outside the line."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Get three."
       },
       {
@@ -961,7 +961,7 @@
         "text": "There are four."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Then get four faster."
       }
     ],
@@ -977,12 +977,12 @@
       "F_Convoy"
     ],
     "characters": [
-      "C_nereth",
+      "C_alan",
       "C_shipCaptain"
     ],
     "panelPlan": [
       "The captain watches the pocket boundary move against the beacon.",
-      "Nereth orders the last transfer completed before withdrawal.",
+      "Alan orders the last transfer completed before withdrawal.",
       "A final survivor is pulled aboard as the field distorts across the rescue path.",
       "End on the cluster breaking formation and escaping just before the pocket shifts."
     ],
@@ -996,7 +996,7 @@
         "text": "Last one aboard."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Break formation."
       },
       {
@@ -1004,7 +1004,7 @@
         "text": "You first."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "I'm not in a ship."
       },
       {
@@ -1012,7 +1012,7 @@
         "text": "Right. Terrible day."
       },
       {
-        "handle": "@starsplit.nereth",
+        "handle": "@starsplit.alan.kessler",
         "text": "Move."
       }
     ],

@@ -26,6 +26,7 @@ Do not create proxy screenshots, regenerated copies, placeholder images, or mani
 ## Deterministic source-scene mapping
 
 These mappings identify the source scene embedded in each historical candidate. They do **not** identify an active page recipe. Use `data/shows/shattering/README.md` for the scene-to-page-span crosswalk, then inspect recovered pixels to choose the exact page.
+Historical filenames are preserved verbatim as recovery evidence and may therefore contain retired character or setting names.
 
 ### `shattering::shattering-i01::SCN_SHAT_I01_S03`
 Embedded legacy scene number: `2`
@@ -33,7 +34,7 @@ Embedded legacy scene number: `2`
 - `Impossible Late Arrival at Astrin Hall.png`
   - File Library ID: `file_00000000169482099448d6f3a186ff6b`
   - Created: 2026-08-08T13:28:09Z
-  - Embedded source: Heska Astrin / Festival Announcer; Astrin Hall; late delegation disrupts the festival rotation.
+  - Embedded source: Heska Strauss / Festival Announcer; Strauss Hall; late delegation disrupts the festival rotation.
 
 ### `shattering::shattering-i01::SCN_SHAT_I01_S05`
 Embedded legacy scene number: `4`
@@ -41,12 +42,12 @@ Embedded legacy scene number: `4`
 - `Calm Voice, Hidden Fracture.png`
   - File Library ID: `file_00000000c15c820bb53286b6518a770f`
   - Created: 2026-08-08T16:29:55Z
-  - Embedded source: Damiar Colven prepares a minimizing public communication in Cooperative Hall.
+  - Embedded source: Damian Cole prepares a minimizing public communication in Cooperative Hall.
 
 ### `shattering::shattering-i01::SCN_SHAT_I01_S08`
 Embedded legacy scene number: `7`
 
-All three recovered files embed the same Liora / Iskari / Lochran Council recipe despite divergent filenames.
+All three recovered files embed the same Liora / Iskara / Lochran Council recipe despite divergent filenames.
 
 - `Duplicated Convoy at Orban-Tier.png`
   - File Library ID: `file_00000000ad60822f9b14db8cf3d7ddc0`
@@ -58,7 +59,7 @@ All three recovered files embed the same Liora / Iskari / Lochran Council recipe
   - File Library ID: `file_00000000eae4822f8bb4724747532566`
   - Created: 2026-08-08T19:42:35Z
 
-Embedded source: Liora presents the first real drift model; Iskari backs her; Lochran resists escalation in Cooperative Hall.
+Embedded source: Liora presents the first real drift model; Iskara backs her; Lochran resists escalation in Cooperative Hall.
 
 ### `shattering::shattering-i02::SCN_SHAT_I02_S04`
 Embedded legacy scene number: `11`
@@ -86,7 +87,7 @@ Embedded legacy scene number: `14`
 - `Harmonic Tension Divides the Council.png`
   - File Library ID: `file_00000000e4cc81fbb2349d9d902e8f63`
   - Created: 2026-08-08T20:32:55Z
-  - Embedded source: Liora, Iskari, Lochran, Damiar; accelerating harmonic tension; Council fracture.
+  - Embedded source: Liora, Iskara, Lochran, Damiar; accelerating harmonic tension; Council fracture.
 
 ### `shattering::shattering-i03::SCN_SHAT_I03_S03`
 Embedded legacy scene number: `18`
@@ -94,7 +95,7 @@ Embedded legacy scene number: `18`
 - `The Damping Chamber Failsafe.png`
   - File Library ID: `file_0000000083ac822f9861c96d15ea354a`
   - Created: 2026-08-08T20:34:54Z
-  - Embedded source: Ruvian Marrek and Outer Technician monitor a critical Outer Band node vibrating off-pattern; warning that Outer stations fail first.
+  - Embedded source: Ruben Markham and Outer Technician monitor a critical Outer Band node vibrating off-pattern; warning that Outer stations fail first.
 
 ### `shattering::shattering-i04::SCN_SHAT_I04_S02`
 Embedded legacy scene number: `25`
@@ -102,12 +103,12 @@ Embedded legacy scene number: `25`
 - `Containment Fails in Cooperative Hall.png`
   - File Library ID: `file_000000004d84822fbbcc149113e6e548`
   - Created: 2026-08-08T20:44:44Z
-  - Embedded source: Orban-Tier Transit Port departure boards gray out; Aveth attempts to keep civilians calm.
+  - Embedded source: Orban-Tier Transit Port departure boards gray out; Ava attempts to keep civilians calm.
 
 ### `shattering::shattering-i04::SCN_SHAT_I04_S05`
 Embedded legacy scene number: `28`
 
-All three files embed the same Aveth / Transit Controller medical-convoy recipe.
+All three files embed the same Ava / Transit Controller medical-convoy recipe.
 
 - `Gamble through Sector 9.png`
   - File Library ID: `file_000000006810822f918aadac78f6a709`
@@ -119,7 +120,7 @@ All three files embed the same Aveth / Transit Controller medical-convoy recipe.
   - File Library ID: `file_000000001924822f81480d3a349d9b1f`
   - Created: 2026-08-08T20:49:49Z
 
-Embedded source: Aveth proposes a Sector 9 detour to save a medical shipment; the controller warns that she is flying on faith.
+Embedded source: Ava proposes a Sector 9 detour to save a medical shipment; the controller warns that she is flying on faith.
 
 ### `shattering::shattering-i04::SCN_SHAT_I04_S08`
 Embedded legacy scene number: `31`
@@ -127,12 +128,12 @@ Embedded legacy scene number: `31`
 - `Bracing the Outer Ring.png`
   - File Library ID: `file_00000000355c822fadbee2f0fec7d994`
   - Created: 2026-08-08T20:51:28Z
-  - Embedded source: Nereth Kestrel and surviving captains form ad-hoc rescue clusters in drift pockets.
+  - Embedded source: Alan Kessler and surviving captains form ad-hoc rescue clusters in drift pockets.
 
 ### `shattering::shattering-i05::SCN_SHAT_I05_S01`
 Embedded legacy scene number: `33`
 
-All four files embed the same Survivor Plaza / Aveth triage recipe.
+All four files embed the same Survivor Plaza / Ava triage recipe.
 
 - `Rescue at the Broken Node.png`
   - File Library ID: `file_00000000e608822fa4bc83fe8d1694e0`
@@ -147,7 +148,7 @@ All four files embed the same Survivor Plaza / Aveth triage recipe.
   - File Library ID: `file_000000002fa0822fbbcd26c2055761ec`
   - Created: 2026-08-08T20:58:17Z
 
-Embedded source: Local Leader demands resource-allocation authority; Aveth prioritizes heat, water, and medical survival.
+Embedded source: Local Leader demands resource-allocation authority; Ava prioritizes heat, water, and medical survival.
 
 ### `shattering::shattering-i05::SCN_SHAT_I05_S06`
 Embedded legacy scene number: `38`
@@ -155,12 +156,12 @@ Embedded legacy scene number: `38`
 - `Trust Routes at Orban-Tier Port.png`
   - File Library ID: `file_0000000059ac822f8b39db1d41cf92d0`
   - Created: 2026-08-08T20:59:50Z
-  - Embedded source: Iskari confronts Lochran over using sigils without standards in the Pre-Break BHA ruins.
+  - Embedded source: Iskara confronts Lochran over using sigils without standards in the Pre-Break BHA ruins.
 
 ### `shattering::shattering-i06::SCN_SHAT_I06_S03`
 Embedded legacy scene number: `44`
 
-All three files embed the same Courier Relay / Aveth treatise-distribution recipe.
+All three files embed the same Courier Relay / Ava treatise-distribution recipe.
 
 - `Three Paths After the Break.png`
   - File Library ID: `file_000000009ad0822f897ea7e6242bcefd`
@@ -172,7 +173,7 @@ All three files embed the same Courier Relay / Aveth treatise-distribution recip
   - File Library ID: `file_000000002e94822fb18e5c7776b30327`
   - Created: 2026-08-08T21:03:22Z
 
-Embedded source: couriers dispute which worlds receive treatise fragments first; Aveth intervenes and prioritizes need over prestige.
+Embedded source: couriers dispute which worlds receive treatise fragments first; Ava intervenes and prioritizes need over prestige.
 
 ### `shattering::shattering-i06::SCN_SHAT_I06_S07`
 Embedded legacy scene number: `48`
