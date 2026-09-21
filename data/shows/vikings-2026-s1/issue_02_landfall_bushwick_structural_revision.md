@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 2: LANDFALL BUSHWICK
 
-Status: STRUCTURAL SEASON REVISION — dialogue intentionally not line-polished
+Status: STRUCTURAL SEASON REVISION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE
 Primary function: apartment adaptation and neighborhood integration; the temporary shelter becomes a functioning household while Carrie secures a provisional administrative foothold.
 
 ## Revision intent
