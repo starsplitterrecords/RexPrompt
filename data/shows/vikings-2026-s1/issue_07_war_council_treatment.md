@@ -1,7 +1,7 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: ENHANCED TREATMENT — SUPERSEDED FOR CURRENT WRITING BY FULL 24-PAGE DEVELOPMENT SCRIPT `issue_07_war_council_script.md`  
-Primary function: the household decides what it is defending before the city asks it to defend itself.
+Status: ENHANCED TREATMENT — SYNCHRONIZED TO CURRENT ISSUE 8 DISCOVERY-PRESERVATION STRUCTURE; FULL SCRIPT REMAINS WRITING AUTHORITY  
+Primary function: the household discovers that its members want different things before the city asks them to explain those differences.
 
 ## Story lock
 
@@ -15,7 +15,7 @@ The governing question is:
 
 **Are they together because they have chosen one another, or because everyone has been treating them as one administrative unit?**
 
-The answer by the end is deliberately narrower than a promise of permanence. They choose to defend the right of each member to remain, belong, and decide what comes next without having to break the household apart to prove individuality.
+The issue deliberately stops short of a complete household answer. By the end, each person has a clearer sense of what they want, but the group does not reduce those wants to one doctrine of home, permanence, kinship, or integration. The hearing must still discover how those separate answers fit inside the same legal household.
 
 ## Kin continuity
 
@@ -202,86 +202,88 @@ Bjorn objects when the objects begin to look like proof of the household.
 
 **Exit:** paperwork is reduced to representation.
 
-### Page 17 — FIRST, THE PEOPLE
-Bjorn asks the two male Kin and Gunnar the question directly: what do you want protected?
+### Page 17 — SEPARATE ANSWERS
+Bjorn asks Gunnar and the two male Kin what each actually wants.
 
-The answers overlap but do not match.
+The answers overlap but do not resolve:
+- the first male Kin wants this room, this block, and the people who know him;
+- Gunnar wants the city, books, and places he has not seen;
+- the second male Kin wants to remain now without pretending he knows what comes after.
 
-**Turn:** Bjorn does not force convergence.
+**Turn:** Bjorn notices that these are not one answer.
 
-**Exit:** he begins building unity around rights rather than identical preferences.
+**Exit:** Carrie tells him not to make them one tonight.
 
-### Page 18 — TERMS OF THE HOUSEHOLD
-They work toward a plain shared position through objections rather than speeches:
-- no one is forced out by someone else's choice;
-- no one is forced to remain by someone else's choice;
-- an individual path does not erase kinship;
-- the apartment remains a home people can rely on;
-- they want enough stability to make later choices freely.
+### Page 18 — LET THEM ASK
+Carrie names the kinds of questions the hearing may raise: residence, independence, intention, household ties.
 
-**Turn:** the household defines itself before the city does.
+The household immediately sees that those categories do not map cleanly to what they mean.
 
-**Exit:** one chair is still empty.
+**Turn:** Bjorn wants a plan; Carrie distinguishes planning from rehearsed testimony.
+
+**Exit:** they agree to let the hearing ask its own questions rather than writing the finale in advance.
 
 ### Page 19 — CARRIE SITS
-Carrie finally sits at the table rather than standing over the file.
+Carrie physically moves from standing over the file to sitting with the household.
 
-She is still the procedural expert, but she is now helping express a decision rather than supplying one.
+She can explain procedure and boundaries. She cannot author meaning for them.
 
-**Turn:** Bjorn gives her the review notice.
+**Turn:** Bjorn pushes the notice toward her but not the answers.
 
-**Exit:** expertise joins the household instead of hovering above it.
+**Exit:** process support replaces caseworker authorship.
 
 ### Page 20 — ASTRID COMES HOME
-Astrid returns carrying the ordinary residue of a day outside: nothing theatrical, just evidence that she has been somewhere and done things nobody here supervised.
+Astrid returns from an ordinary independent day carrying only the small residue of having been somewhere else.
 
-Do not explain all of it.
+Carrie starts to ask where she has been, then stops herself.
 
-**Turn:** Carrie begins asking where she has been, then stops herself from turning the answer into an intake interview.
+**Turn:** Carrie asks whether Astrid will answer the review for herself.
 
-**Exit:** Astrid sits down because she was asked for her choice, not her itinerary.
+**Exit:** Astrid says yes. Nobody inventories the day.
 
-### Page 21 — ASTRID'S ANSWER
-Astrid gives a concise answer about what she wants. She may want to remain; she may value this home; she does not need a long speech.
+### Page 21 — NO REHEARSAL
+Carrie asks only whether Astrid wants to keep this home.
 
-The surprise is not yet how integrated she is. It is how little consultation she requires to state her own position.
+Astrid answers yes, then declines to preview the rest.
 
-**Turn:** Bjorn accepts her answer without asking her to justify it to him.
+**Turn:** she says the hearing can ask her directly.
 
-**Exit:** the household position now includes all three Kin without flattening them.
+**Exit:** Astrid's practical integration remains unrevealed for Issue 8.
 
-### Page 22 — NO OATH OF FOREVER
-Bjorn returns to the person least willing to promise permanence.
+### Page 22 — NO BORROWED CERTAINTY
+The second male Kin worries the hearing will demand an answer about forever.
 
-He makes clear that defending this home will not require anyone to swear what they cannot know.
+Bjorn does not give him one. Carrie does not coach one.
 
-**Turn:** the skeptical member joins the shared defense.
+**Turn:** he admits he does not know.
 
-**Exit:** unity is chosen without unanimity about the distant future.
+**Exit:** uncertainty survives honestly into the hearing.
 
-### Page 23 — PREPARE, DON'T PERFORM
-Only now does Carrie organize the limited material the review actually requires. This is compressed background work, not the next episode's dramatic engine.
+### Page 23 — BRING ONLY WHAT IS REQUIRED
+Carrie prepares the minimum material required to enter the hearing: identity, residence, notices, procedural records.
 
-People choose what they are willing to contribute. Private relationships remain private unless volunteered.
+Private relationships, support-group material, and optimized narratives stay out unless someone chooses otherwise.
 
-**Turn:** Carrie refuses to make the file cleaner than the household.
+**Turn:** the file is deliberately incomplete as a portrait of the household.
 
-**Exit:** they are ready to appear, not ready to perform a manufactured story.
+**Exit:** it can open the hearing without answering it.
 
-### Page 24 — WHAT WE DEFEND
-Late night. The table is mostly clear. The brass key remains.
+### Page 24 — THEY ARE HERE
+Late night. The table is mostly clear. The brass key remains beside the closed file.
 
-Carrie asks whether they know what they are going to say when they are called in.
+Carrie asks whether Bjorn knows what he is going to say.
 
-Bjorn's answer should concern the household, not legal strategy.
+He answers only for himself.
 
-**Final state:** they have not chosen one permanent future. They have chosen the right to have separate futures without losing the home and kinship they have built.
+When she asks about the others, Bjorn looks at them rather than speaking for them.
+
+**Final state:** five people are ready to appear. Their wants are known to one another but not synthesized into a shared doctrine. Issue 8 still has real questions to ask.
 
 ## Issue 8 bridge
 
-**Issue 8 is the Status Reconciliation Review / hearing issue.** Do not insert another full episode of evidence gathering between War Council and the hearing.
+**Issue 8 is the Status Reconciliation Review / hearing issue.** Issue 7 must not pre-answer its central questions. Do not insert another full episode of evidence gathering or household theorizing between War Council and the hearing.
 
-The file exists only to get them into the room. The dramatic test is what happens when the institution encounters the people themselves.
+The file exists only to get them into the room. The dramatic test is what happens when the institution encounters separate people whose wants are real but not yet translated into one legal conclusion.
 
 Astrid's payoff is central: because Issues 6–7 have not followed her closely, the hearing can reveal that the supposedly background member of the household has quietly become its most practically integrated person.
 

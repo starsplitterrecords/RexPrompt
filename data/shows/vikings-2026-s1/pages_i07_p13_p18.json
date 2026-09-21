@@ -335,133 +335,23 @@
   },
   {
     "id": "VIK_S1I07_P17",
-    "summary": "Bjorn asks Gunnar and the two male Kin what each wants protected, and the answers overlap without matching.",
-    "settingText": "Safe Cave table, all except Astrid.",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "wide",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Wide. Bjorn sits rather than stands. The brass key remains off-center, not on a throne-like axis."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "First male Kin."
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Gunnar."
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          3
-        ],
-        "action": "Second male Kin."
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Bjorn takes that in."
-      },
-      {
-        "panel": 6,
-        "location": "Safe Cave table, all except Astrid.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          5
-        ],
-        "action": "Second male Kin."
-      }
-    ],
-    "dialogueInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "text": "Say what you want protected."
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "text": "This block. This room. The people who know us."
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "text": "The library. The routes. The right to go somewhere because I want to see it."
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "text": "The right to stay. The right to leave. The right to return."
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "You ask me to defend doors in both directions."
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "text": "Yes."
-      }
-    ],
     "page": 17,
-    "directionInline": [
-      {
-        "text": "Astrid is still off-page. Only Gunnar, Bjorn and the two established male Kin are present among the displaced household."
-      }
-    ]
-  },
-  {
-    "id": "VIK_S1I07_P18",
-    "summary": "Through objections rather than speeches, the household defines kinship as something that survives separate choices.",
-    "settingText": "Safe Cave table.",
+    "summary": "Bjorn asks Gunnar and the two male Kin what each actually wants, and the answers remain visibly different instead of being synthesized into one household doctrine.",
+    "settingText": "Safe Cave table, early evening; Astrid is still out.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
       },
       {
         "handle": "@vik.Carrie",
         "name": "Carrie"
       },
       {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
         "handle": "@vik.KinMan1",
         "name": "First Male Kin"
       },
@@ -473,83 +363,179 @@
     "panelPlan": [
       {
         "panel": 1,
-        "location": "Safe Cave table.",
-        "shotType": "medium",
+        "location": "Safe Cave table",
+        "shotType": "wide",
+        "action": "Bjorn sits with Carrie, Gunnar and the two male Kin. The brass key, transit card and review notice are present but pushed to the side rather than arranged as symbols.",
         "dialogueIndices": [
           0
-        ],
-        "action": "Gunnar points at the key."
+        ]
       },
       {
         "panel": 2,
-        "location": "Safe Cave table.",
-        "shotType": "medium",
+        "location": "Safe Cave table",
+        "shotType": "medium on First Male Kin",
+        "action": "First Male Kin answers from the practical life already established around the building and block.",
         "dialogueIndices": [
           1
-        ],
-        "action": "First male Kin."
+        ]
       },
       {
         "panel": 3,
-        "location": "Safe Cave table.",
-        "shotType": "medium",
+        "location": "Safe Cave table",
+        "shotType": "medium on Gunnar",
+        "action": "Gunnar answers without looking at the review notice.",
         "dialogueIndices": [
           2
-        ],
-        "action": "Second male Kin."
+        ]
       },
       {
         "panel": 4,
-        "location": "Safe Cave table.",
-        "shotType": "medium",
-        "action": "Bjorn reacts to that one; it costs him something."
+        "location": "Safe Cave table",
+        "shotType": "medium on Second Male Kin",
+        "action": "Second Male Kin turns the transit card once between his fingers before answering.",
+        "dialogueIndices": [
+          3
+        ]
       },
       {
         "panel": 5,
-        "location": "Safe Cave table.",
-        "shotType": "medium",
+        "location": "Safe Cave table",
+        "shotType": "two-shot Bjorn/Carrie",
+        "action": "Bjorn looks from one man to the next, dissatisfied that the answers do not combine neatly. Carrie leaves that discomfort unresolved.",
         "dialogueIndices": [
-          3
-        ],
-        "action": "Bjorn finally nods."
-      },
-      {
-        "panel": 6,
-        "location": "Safe Cave table.",
-        "shotType": "wide",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Wide. One chair remains empty for Astrid."
+          4,
+          5
+        ]
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@vik.Gunnar",
-        "text": "The room should remain a place we can return to."
+        "handle": "@vik.Bjorn",
+        "text": "Say what you want."
       },
       {
         "handle": "@vik.KinMan1",
-        "text": "No one is sent away because another chooses differently."
+        "text": "This room. This block. The people who know us."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "The library. The city. Places I have not seen yet."
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "No one is kept because another is afraid to lose him."
+        "text": "I want to stay. I do not know after."
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Kinship is not a chain."
+        "text": "Those are not one answer."
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Good. Now say it again without making me put 'chain' in a municipal filing."
-      }
-    ],
-    "page": 18,
-    "directionInline": [
-      {
-        "text": "Astrid is still off-page; preserve the empty chair as the only visual reminder of her absence."
+        "text": "Then don't make them one tonight."
       }
     ]
+  },
+  {
+    "id": "VIK_S1I07_P18",
+    "page": 18,
+    "summary": "Carrie tries to anticipate the hearing's questions, but the household discovers that knowing what each person wants is not the same as knowing how the institution will frame those wants.",
+    "settingText": "Same Safe Cave table, continuing the evening council.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "Safe Cave table",
+        "shotType": "medium on Carrie",
+        "action": "Carrie turns the review notice around and points to several broad categories without reading them as a speech.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Safe Cave table",
+        "shotType": "medium on Gunnar",
+        "action": "Gunnar looks at the paper and then back at Carrie.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Safe Cave table",
+        "shotType": "medium on Second Male Kin",
+        "action": "Second Male Kin leans back, visibly irritated by the idea of rehearsing certainty.",
+        "dialogueIndices": [
+          2
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Safe Cave table",
+        "shotType": "two-shot Bjorn/Carrie",
+        "action": "Bjorn dislikes the lack of a common prepared answer; Carrie refuses to manufacture one for them.",
+        "dialogueIndices": [
+          3,
+          4
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Safe Cave table",
+        "shotType": "wide",
+        "action": "Nobody writes a household statement. The review notice remains open, unanswered in several places.",
+        "dialogueIndices": [
+          5
+        ]
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@vik.Carrie",
+        "text": "They may ask about residence, independence, intention, household ties."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "Those are four questions again."
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "text": "And they may not mean what we mean."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "I dislike entering judgment without a plan."
+      },
+      {
+        "handle": "@vik.Carrie",
+        "text": "A plan is fine. Rehearsed answers are not."
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "text": "Then let them ask."
+      }
+    ],
+    "continuityFrom": "VIK_S1I07_P17"
   }
 ]
