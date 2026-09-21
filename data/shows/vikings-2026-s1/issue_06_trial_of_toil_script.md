@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 6: TRIAL OF TOIL
 
-Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; ACTIVE ASSEMBLER INPUT  
+Status: PRODUCTION SCRIPT — ISSUE 6 STRUCTURAL TIGHTENING APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH STILL PENDING  
 Primary function: Bjorn must discover whether he still has something useful to offer when the household no longer needs him to command it.
 
 ## Continuity lock
@@ -9,7 +9,7 @@ Issue 5 ended with a functioning household and neighborhood that no longer requi
 
 Exactly three Kin exist: Astrid and two men. Astrid is largely outside foreground action in Issues 6–7. Her absence is ordinary. Do not explain where she spends all of that time and do not add another Kin to make the apartment look fuller.
 
-The support group is a catalyst, not the setting for the whole issue. The group occupies eight pages total, with every useful idea tested later in the apartment or neighborhood.
+The support group is a catalyst, not the setting for the whole issue. Its ideas are tested later in apartment and neighborhood life, but not as a chain of repetitive requested-help exercises.
 
 No job offer. No clinical framing. No therapist version of Bjorn. He remains a participant who argues, notices, learns slowly, and changes behavior because the distinction between command and requested responsibility makes sense to him.
 
@@ -275,71 +275,72 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 
 ---
 
-## PAGE 11 — WAIT
+## PAGE 11 — BEFORE PERMISSION
 
-**Summary:** Bjorn watches a bodega delivery problem and does nothing until the owner asks for one specific piece of help.
+**Summary:** On the stairs, Bjorn catches the Upstairs Neighbor before a fall without waiting to be asked, then learns that immediate safety does not give him ownership of the rest of her task.
 
-**Setting:** bodega sidewalk/front aisle.
-
-**5 panels.**
-
-1. **Exterior wide.** A delivery truck has left several heavy sacks and cases on the sidewalk. The delivery worker and Bodega Owner are sorting them.
-2. **Medium on Bjorn approaching.** His body clearly wants to step in. He stops one full stride away.
-3. **Close on his hand flexing once, then relaxing.** No dialogue.
-4. **Bodega Owner looks up.**
-   **BODEGA OWNER:** Bjorn. Grab that flour bag. Just that one.
-5. **Wide.** Bjorn lifts exactly the indicated sack, carries it inside, and stops at the spot the owner points to.
-   **BODEGA OWNER:** There.
-   **BJORN:** There.
-
-**Page turn:** the same physical strength reads differently when the request defines its boundary.
-
----
-
-## PAGE 12 — A SMALLER JOB
-
-**Summary:** Bjorn helps one male Kin repair a stool by accepting the narrow role of holding instead of taking the tools.
-
-**Setting:** Safe Cave, kitchenette.
+**Setting:** Fifth-floor stair landing and hallway outside apartment 5B.
 
 **5 panels.**
 
-1. **Insert.** A cheap modern stool has a loose cross-brace. One male Kin has improvised a repair with a screwdriver and small clamp.
-2. **Medium.** Bjorn kneels beside him and reaches for the screwdriver.
-   **BJORN:** Give it.
-3. **The male Kin keeps the tool and points instead.**
-   **SECOND MALE KIN:** Hold this straight.
-4. **Close on Bjorn's large hands holding the brace perfectly still while the other man tightens the screw.**
-5. **Two-shot.** The Kin member tests the stool; it holds.
-   **SECOND MALE KIN:** Good.
-   Bjorn looks at the repaired stool, then at his empty hand. He is unexpectedly satisfied.
+1. **wide.** The Upstairs Neighbor climbs the last steps carrying a full laundry basket. One foot slips on the stair edge and the basket tips forward.
+2. **medium.** Bjorn moves instantly, catching the neighbor by the forearm with one hand and steadying the basket with the other before either person or laundry falls.
+3. **two-shot.** The neighbor regains her footing and takes the basket back against her hip. Bjorn reaches toward it as if to take the load.
+   **UPSTAIRS NEIGHBOR:** I'm fine.
+   **BJORN:** I will carry it.
+4. **two-shot.** She keeps hold of the basket and gives him a flat look while Bjorn stops reaching.
+   **UPSTAIRS NEIGHBOR:** No. Catching me was helpful. Taking my laundry is not.
+   **BJORN:** You were falling.
+5. **wide.** The neighbor walks toward her door under her own power. Bjorn remains by the stairs, watching her go without following.
+   **UPSTAIRS NEIGHBOR:** And now I'm not.
+   **BJORN:** Yes.
 
-**Page turn:** contribution can be real even when someone else remains the person doing the job.
+**Page turn:** restraint is not passivity; immediate safety can require action before consent is available.
 
----
+## PAGE 12 — NOT A RULE
 
-## PAGE 13 — HOLD THIS
+**Summary:** Bjorn overcorrects by waiting for an invitation to do ordinary shared household work, and Gunnar points out that restraint is not the same thing as becoming passive in his own home.
 
-**Summary:** The Upstairs Neighbor asks Bjorn for a specific practical favor, and he discovers the problem is smaller than the defense he was preparing to offer.
-
-**Setting progression:** fifth-floor hallway → neighbor doorway.
+**Setting:** Safe Cave doorway, kitchenette and table during an ordinary grocery return.
 
 **5 panels.**
 
-1. **Hallway medium.** The Upstairs Neighbor struggles to keep a flat-pack shelving unit upright while trying to start a screw. One box blocks part of her doorway.
-2. **Bjorn emerges from 5B and scans the mess like a threat assessment.**
-   **BJORN:** Who did this?
-3. **Neighbor deadpan.**
-   **UPSTAIRS NEIGHBOR:** Flat-pack furniture.
-4. **Two-shot.** She hands him the upright side panel.
-   **UPSTAIRS NEIGHBOR:** Hold this. Don't improve it. Just hold it.
-5. **Wide.** Bjorn holds the panel perfectly vertical while she tightens the hardware herself.
-   **BJORN:** It is badly joined.
-   **UPSTAIRS NEIGHBOR:** I know. Keep holding.
+1. **wide.** Gunnar and the two male Kin enter with several grocery bags. Bjorn sits at the table, sees the load and deliberately keeps both hands where they are.
+2. **medium on Bjorn and Gunnar.** Gunnar sets two heavy bags on the floor beside Bjorn's chair and looks at him. Bjorn looks from the bags to Gunnar but does not move.
+   **GUNNAR:** You live here.
+   **BJORN:** No one asked.
+3. **two-shot.** Gunnar answers while First Male Kin carries bread toward the kitchenette and Second Male Kin puts a bag on the counter.
+   **GUNNAR:** No one asked me.
+4. **wide.** Bjorn stands, takes the two bags from the floor and begins putting his share of the groceries away with the others.
+5. **two-shot.** Gunnar passes behind Bjorn with another bag and delivers the correction without stopping. Bjorn pauses, then continues unpacking.
+   **GUNNAR:** You made waiting into a rule.
+   **BJORN:** I am correcting.
+   **GUNNAR:** Too far.
 
-**Page turn:** Bjorn can be useful without converting a neighbor's inconvenience into a cause.
+**Page turn:** Bjorn learns that shared obligations are not another person's task for him to request permission to touch.
 
----
+## PAGE 13 — NOTHING TODAY
+
+**Summary:** At the bodega, Bjorn finds no debt to repay and no labor to perform; the owner simply gives him his usual coffee and lets ordinary familiarity be enough.
+
+**Setting:** Recurring bodega front counter during a quiet morning lull.
+
+**5 panels.**
+
+1. **wide.** The store is quiet between customers. The Bodega Owner pours Bjorn's usual coffee while Bjorn automatically scans the aisle, delivery stack and counter for work that might need doing.
+2. **two-shot.** The owner notices Bjorn looking past him toward the back aisle and slides the coffee across.
+   **BODEGA OWNER:** Nothing today.
+   **BJORN:** Nothing?
+3. **medium on Bjorn.** Bjorn takes the cup but continues looking around the shop as if a task must be hiding somewhere.
+   **BODEGA OWNER:** You can just drink the coffee.
+   **BJORN:** That seems inefficient.
+4. **two-shot.** The owner leans one forearm on the counter and asks about the promotional toaster. Bjorn finally looks at him instead of at the work.
+   **BODEGA OWNER:** How's the toaster?
+   **BJORN:** It is excellent at bread.
+5. **wide.** Bjorn stands drinking coffee while the owner checks a receipt. Neither man needs anything from the other for the moment.
+   **BODEGA OWNER:** Then we're having a good week.
+
+**Page turn:** being known can have value even when nobody needs labor from him.
 
 ## PAGE 14 — HE KNOWS THE WAY
 
@@ -367,52 +368,54 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 
 ## PAGE 15 — WHAT DO YOU WANT?
 
-**Summary:** When the 1987 Participant asks whether to attend a difficult family dinner, Bjorn stops himself from deciding and asks what outcome they actually want.
+**Summary:** At the next meeting, the 1987 Participant asks about a family dinner; Bjorn stops before deciding for them, asks what they actually want, and offers a boundary and an exit instead of a verdict.
 
-**Setting:** community-center multipurpose room, second session.
+**Setting:** Community-center multipurpose room during Bjorn's next support-group meeting.
 
-**Caption:** ONE WEEK LATER
+**6 panels.**
 
-**5 panels.**
-
-1. **Medium on 1987 Participant.**
-   **1987 PARTICIPANT:** My brother wants me at dinner. His kids want to meet me. Last time everyone asked what music I remember and whether I knew Reagan.
-2. **Bjorn leans forward, immediate answer forming.**
+1. **wide.** The next meeting is already underway. The 1987 Participant sits across from Bjorn; the facilitator is visible in the same ordinary chair as everyone else.
+   **CAPTION:** ONE WEEK LATER
+2. **medium on 1987 Participant.** The participant describes the family dinner problem with irritation rather than panic.
+   **1987 PARTICIPANT:** My brother wants me at dinner. Last time everyone asked what music I remember and whether I knew Reagan.
+3. **medium on Bjorn.** Bjorn starts to answer immediately, stops after two words, then resets and asks a different question.
    **BJORN:** Then do not—
-3. **Close on Bjorn stopping himself.** He looks briefly at the facilitator, who says nothing.
-4. **Two-shot Bjorn/participant.**
-   **BJORN:** What do you want from the dinner?
-5. **Participant considers rather than defending.**
-   **1987 PARTICIPANT:** I want to see my brother. I don't want to be the entertainment.
-   **BJORN:** Those are different problems.
+   **BJORN:** What do you want?
+4. **two-shot.** The participant answers without looking at the facilitator. Bjorn listens through the whole sentence.
+   **1987 PARTICIPANT:** My brother. Not the performance.
+   **BJORN:** Those are different things.
+5. **two-shot.** Bjorn gives the narrowest advice he can: state the boundary before arriving and leave if the bargain changes.
+   **BJORN:** Tell him that before you go.
+   **BJORN:** If the room changes the bargain, leave.
+6. **close on participant then Bjorn.** The participant asks whether that means they should go. Bjorn refuses to turn the boundary into a command.
+   **1987 PARTICIPANT:** So I should go?
+   **BJORN:** I told you where the door is. You decide whether to use it.
 
-**Page turn:** the wanted outcome changes the advice Bjorn is about to give.
+**Page turn:** Bjorn can offer structure without converting it into a verdict.
 
----
+## PAGE 16 — NO CLEAN CHOICE
 
-## PAGE 16 — A BOUNDARY, NOT AN ORDER
+**Summary:** The 1987 Participant points out that either choice can still hurt; Bjorn admits he cannot make the decision painless, learning that respecting agency does not guarantee a clean outcome.
 
-**Summary:** Bjorn offers the 1987 Participant a boundary and exit plan instead of deciding whether they should attend.
+**Setting:** Same community-center multipurpose room during the same meeting.
 
-**Setting:** same community room.
+**6 panels.**
 
-**5 panels.**
+1. **medium on 1987 Participant.** The participant does not let Bjorn's boundary advice end the problem.
+   **1987 PARTICIPANT:** If I leave, my brother thinks I rejected his family. If I stay, I become the story.
+2. **two-shot.** Bjorn listens. The facilitator watches from the side without stepping in.
+   **1987 PARTICIPANT:** Which one is right?
+3. **close on Bjorn.** Bjorn looks down for a beat instead of producing a faster answer.
+   **BJORN:** Neither is cheap.
+4. **medium on 1987 Participant.** The participant pushes because the answer is unsatisfying.
+   **1987 PARTICIPANT:** That's not an answer.
+5. **two-shot.** Bjorn accepts the inadequacy of his answer rather than turning it into an order.
+   **BJORN:** No.
+   **BJORN:** I cannot make it cost less.
+6. **wide.** The participant leans back and makes their own choice. Bjorn nods once; the facilitator says nothing.
+   **1987 PARTICIPANT:** Then I go. And I leave when it starts.
 
-1. **Medium.** Bjorn uses two fingers on the coffee table to mark a simple before/after sequence, not a tactical map.
-   **BJORN:** Go because you want your brother.
-2. **Participant medium.**
-   **1987 PARTICIPANT:** And when they start asking me to perform the eighties?
-3. **Bjorn close.**
-   **BJORN:** Tell him before you arrive what you will not do.
-4. **Two-shot.**
-   **BJORN:** If he does not defend that boundary in his own hall, leave.
-   **1987 PARTICIPANT:** That's your advice?
-5. **Bjorn settles back.**
-   **BJORN:** It is a door. You decide whether to use it.
-
-**Page turn:** Bjorn's judgment becomes a tool another adult can choose rather than an order they must obey.
-
----
+**Page turn:** respecting agency does not make difficult choices painless.
 
 ## PAGE 17 — WORK AND WORTH
 
@@ -486,29 +489,28 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 
 ---
 
-## PAGE 20 — ASKED
+## PAGE 20 — WATCH THE COUNTER
 
-**Summary:** The Bodega Owner asks Bjorn for a genuinely difficult favor, and Bjorn does exactly that favor without turning it into a new obligation.
+**Summary:** The Bodega Owner trusts Bjorn to stand watch at the counter for two minutes, giving him responsibility based on presence and judgment rather than physical strength.
 
-**Setting:** bodega, closing hour.
+**Setting:** Recurring bodega front counter near closing time.
 
 **5 panels.**
 
-1. **Wide.** A new narrow refrigerated display cabinet has arrived and cannot clear a corner because the floor mat and counter create a tight angle. Two delivery workers and the owner are frustrated.
-2. **Owner sees Bjorn entering for his usual purchase.**
-   **BODEGA OWNER:** Actually. You. I need the ridiculous shoulders.
-3. **Medium.** The owner points to one corner of the cabinet.
-   **BODEGA OWNER:** Lift here. Two inches. Only when I say.
-   **BJORN:** Two inches.
-4. **Wide mechanical staging.** Bjorn lifts his corner exactly enough while the workers pivot the cabinet through. Nobody is endangered; everyone has a defined role.
-5. **Counter after.** The owner hands Bjorn his coffee.
-   **BODEGA OWNER:** That's it. We're even.
-   **BJORN:** We were not counting.
-   **BODEGA OWNER:** Look at you.
+1. **wide.** The Bodega Owner has a delivery invoice in one hand and gestures toward the basement door behind the counter while Bjorn stands with his usual coffee.
+   **BODEGA OWNER:** Watch this for two minutes.
+   **BODEGA OWNER:** Do not touch the register.
+2. **medium on Bjorn.** Bjorn takes position beside the counter with absurd formality while the owner disappears downstairs. He keeps both hands off the register.
+3. **medium.** A familiar neighborhood customer enters, takes a coffee, leaves exact cash on the counter and gives Bjorn a casual nod before leaving. Bjorn watches but does not interfere.
+4. **two-shot.** The owner returns with the invoice and glances around the unchanged store.
+   **BODEGA OWNER:** Anything?
+   **BJORN:** One woman took coffee and left two dollars.
+5. **two-shot.** Bjorn reports the transaction as if delivering a watch report. The owner accepts it without ceremony.
+   **BODEGA OWNER:** Maria. Good.
+   **BJORN:** That was work?
+   **BODEGA OWNER:** You were here. That's what I needed.
 
-**Page turn:** ordinary reciprocity satisfies Bjorn more than ceremonial repayment because it is real and bounded.
-
----
+**Page turn:** trust can make presence useful even when strength is irrelevant.
 
 ## PAGE 21 — SOMETHING HE SAID
 
@@ -560,28 +562,26 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 
 ---
 
-## PAGE 23 — A HAND OFFERED
+## PAGE 23 — OFFER, DON'T SEIZE
 
-**Summary:** Bjorn returns home and lets two separate requests come to him instead of searching for a crisis to own.
+**Summary:** Back home, Bjorn offers help once, accepts a no without injury, and then contributes to a shared household routine without waiting to be invited; Gunnar later asks for his judgment.
 
-**Setting:** Safe Cave, evening.
+**Setting:** Safe Cave, evening, with ordinary repair, groceries, coffee and library books in progress at the same time.
 
 **5 panels.**
 
-1. **Wide.** Gunnar is comparing two library books. One male Kin is trying to tighten a stubborn jar lid or clamp. The other sorts groceries. Bjorn enters and pauses rather than inserting himself.
-2. **Medium.** He takes off his coat and sits. Nobody immediately asks anything.
-3. **First male Kin looks over with the stubborn clamp.**
-   **FIRST MALE KIN:** Your hand.
-   Bjorn rises and braces exactly the piece indicated.
-4. **Gunnar, without looking up from books.**
-   **GUNNAR:** This one says the sea level changes because the moon pulls it.
-   **BJORN:** It does.
-   **GUNNAR:** I want your judgment on the picture.
-5. **Wide.** Bjorn is simultaneously holding the repair steady and looking over Gunnar's open book, useful in two small ways while neither task belongs to him.
+1. **wide.** Gunnar compares two library books. First Male Kin works on a stubborn clamp. Second Male Kin sorts groceries. Bjorn enters and sees all three tasks at once.
+2. **two-shot.** Bjorn stops beside First Male Kin instead of reaching for the tool.
+   **BJORN:** Need a hand?
+   **FIRST MALE KIN:** No.
+3. **medium.** Bjorn accepts the no immediately, moves to the kitchenette and starts the household coffee without asking whether anyone needs it. Second Male Kin silently sets out cups beside him.
+4. **medium on Gunnar and open book.** Gunnar turns an illustrated page toward Bjorn while Bjorn pours the first cup.
+   **GUNNAR:** When you are done, I want your judgment on this picture.
+   **BJORN:** After coffee.
+5. **wide.** First Male Kin keeps his own tool, Second Male Kin continues groceries, Gunnar leaves the book open for later, and Bjorn finishes pouring coffee: participating without owning anyone else's task.
+   **SECOND MALE KIN:** Good.
 
-**Page turn:** usefulness returns as relationship rather than command.
-
----
+**Page turn:** Bjorn can initiate shared work, offer help, accept refusal, and remain part of the room.
 
 ## PAGE 24 — WORK THAT MATTERS
 
