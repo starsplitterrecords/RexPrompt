@@ -367,22 +367,30 @@
       "EFW_Rae",
       "EFW_Theo"
     ],
-    "summary": "Theo and Rae step outside and realize the apparent historical story still functions for everyone around them. They debate whether truth restored to them creates any right to disrupt other people's coherent lives.",
+    "summary": "Theo and Rae step into an ordinary Tyrellis market while messages from Vark and Caelum remind them that the memory crisis is already altering jobs, records and institutions. Their argument about disclosure is grounded in people whose present lives are being changed without explanation.",
     "panelPlan": [
       {
-        "text": "Panel 1 — Theo and Rae emerge into an ordinary evening market built over ancient foundations. Vendors close stalls, families move through, someone argues over a purchase. The present is visibly a real life, not scenery waiting to be corrected."
+        "text": "Panel 1 — Theo and Rae emerge into the ordinary evening market above the archive. Vendors close stalls, families carry groceries, workers change shifts. Theo listens to a short voice note from Vark while walking: Sector Four remains closed and Vark's crew has been reassigned without an explanation anyone believes."
       },
       {
-        "text": "Panel 2 — Theo: 'They're living on a lie.' Rae: 'They're living.' Keep the surrounding people unaware of the protagonists' philosophical crisis."
+        "text": "Panel 2 — Rae reads a terse message from Caelum while helping a vendor pick up dropped papers: Zenith has quietly pulled three more returning records from public access, but Caelum sent Rae the titles before they disappeared. His help remains cautious and institutionally compromised rather than a full change of allegiance."
       },
       {
-        "text": "Panel 3 — Theo: 'That's your answer?' Rae: 'It's the part you keep skipping.' Rae points through the public window toward families crossing the plaza below; Theo follows her finger instead of looking back at the monument."
+        "text": "Panel 3 — Theo pockets the message device: 'They're living on a lie.' Rae watches a family arguing over dinner money while one parent checks a work schedule: 'They're living.' Theo asks, 'So we say nothing?' Rae answers, 'We say nothing we can't take back.'"
       },
       {
-        "text": "Panel 4 — Theo asks, 'And if they were there too?' The question changes the passersby from background to possible owners of lost histories. Rae: 'Then we still don't get to decide for them.' End on Theo watching one ordinary family pass, forced to consider that truth does not automatically grant authority."
+        "text": "Panel 4 — Theo: 'You don't get to decide when they're ready.' Rae: 'Neither do you.' End on the market continuing around them: current jobs, errands, families and obligations remain real even while hidden history presses underneath them."
       }
     ],
     "dialogueInline": [
+      {
+        "handle": "MESSAGE",
+        "text": "Vark: Sector Four's still closed. They moved my crew to Nine. Nobody will say why."
+      },
+      {
+        "handle": "MESSAGE",
+        "text": "Caelum: Zenith pulled three more returning records this morning. I sent the titles before someone else decides what they mean."
+      },
       {
         "handle": "@ech.theo",
         "text": "They're living on a lie."
@@ -410,7 +418,7 @@
     ],
     "directionInline": [
       {
-        "text": "PAGE ARCHITECTURE — G4; exactly 4 panels. Stable present-day grid: rectilinear gutters, clear geography, human-scale acting. Stage dialogue through ongoing physical behavior whenever the scene permits: sorting records, carrying people, repairing, walking, writing, moving equipment, checking injuries, opening barriers, handling objects or navigating occupied rooms. Avoid static thesis-pose staging."
+        "text": "PAGE ARCHITECTURE — G4; exactly 4 panels. Stable present-day grid: rectilinear gutters, clear geography, human-scale acting. Let Vark and Caelum recur through ordinary recorded messages rather than physically appearing in Tyrellis. Their messages must feel like ongoing human relationships with consequences, not exposition drops. Stage Theo and Rae through walking, handling groceries/papers and navigating an occupied market."
       }
     ]
   },
@@ -726,16 +734,16 @@
       "EFW_Rae",
       "EFW_Adrian"
     ],
-    "summary": "The worker remembers a brother who does not exist in his present biography and begins grieving anyway; public memory has escaped the protagonists.",
+    "summary": "The transit worker remembers a brother who does not exist in his present biography. His current partner arrives from the same shift and stays with him, making the contradiction a relationship problem rather than an isolated anomaly.",
     "panelPlan": [
       {
-        "text": "Panel 1 — Worker: 'My brother died there.' Theo asks, carefully, 'Do you have a brother?'"
+        "text": "Panel 1 — The transit worker says, 'My brother died there.' Theo asks carefully, 'Do you have a brother?' The worker answers, 'No.' His work radio keeps repeating an ordinary departure call beside him."
       },
       {
-        "text": "Panel 2 — Worker: 'No.' Hold on the contradiction: present biography and recovered grief are both emotionally real."
+        "text": "Panel 2 — His current partner, still in the same transit-service uniform family but visibly a different person, arrives from farther down the platform after seeing the disruption. Partner: 'You don't have a brother.' Worker: 'I know.' The partner takes the radio from his shaking hand and silences it."
       },
       {
-        "text": "Panel 3 — Final reaction on Adrian at the edge of the platform, face suddenly still as he watches the grieving worker. Behind him commuters continue boarding, a departure board changes normally and the station staff keep working."
+        "text": "Panel 3 — The worker sits on a service bench and says, 'I miss him.' The partner sits beside him rather than correcting the memory again. Adrian watches from the edge of the platform while commuters continue boarding and station staff quietly cover the worker's shift."
       }
     ],
     "dialogueInline": [
@@ -750,11 +758,23 @@
       {
         "handle": "TRANSIT WORKER",
         "text": "No."
+      },
+      {
+        "handle": "PARTNER",
+        "text": "You don't have a brother."
+      },
+      {
+        "handle": "TRANSIT WORKER",
+        "text": "I know."
+      },
+      {
+        "handle": "TRANSIT WORKER",
+        "text": "I miss him."
       }
     ],
     "directionInline": [
       {
-        "text": "PAGE ARCHITECTURE — Q3; exactly 3 panels. Quiet consequence page: larger acting panels, hands/faces/objects, held reaction and silence. Stage dialogue through ongoing physical behavior whenever the scene permits: sorting records, carrying people, repairing, walking, writing, moving equipment, checking injuries, opening barriers, handling objects or navigating occupied rooms. Avoid static thesis-pose staging."
+        "text": "PAGE ARCHITECTURE — Q3; exactly 3 panels. Quiet consequence page: larger acting panels, held reaction, ordinary work objects. Establish the PARTNER as this worker's present-day relationship and preserve both for the Issue 8 social-resolution montage. The partner does not validate or deny the impossible biography; they simply stay."
       }
     ],
     "continuityFrom": "EFW_S1E06_S14"
