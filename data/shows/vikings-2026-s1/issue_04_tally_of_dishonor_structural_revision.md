@@ -292,9 +292,9 @@ Primary function: financial legibility, value, status and partial civic particip
 
 ## PAGE 16 — COFFEE IS NOT DEBT
 
-**Summary:** Bjorn's first discretionary purchase is coffee for Carrie, and he explicitly separates reciprocal affection from the debt he still intends to repay.
+**Summary:** Bjorn's first discretionary purchase is coffee for Carrie at a neighborhood cart they can return to, separating reciprocal affection from the debt he still intends to repay.
 
-**Setting:** Street coffee cart on the walk home
+**Setting:** Recurring Bushwick street coffee cart near the apartment route
 
 5 panels.
 
