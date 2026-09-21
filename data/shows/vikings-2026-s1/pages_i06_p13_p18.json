@@ -1,83 +1,93 @@
 [
   {
     "id": "VIK_S1I06_P13",
-    "summary": "The Upstairs Neighbor asks Bjorn to hold one panel of a flat-pack shelf, and he manages not to turn her small furniture problem into a larger cause.",
-    "settingText": "Fifth-floor apartment hallway and the Upstairs Neighbor's doorway.",
+    "summary": "At the bodega, Bjorn finds no debt to repay and no labor to perform; the owner simply gives him his usual coffee and lets ordinary familiarity be enough.",
+    "settingText": "Recurring bodega front counter during a quiet morning lull.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.UpstairsNeighbor",
-        "name": "Upstairs Neighbor"
+        "handle": "@vik.BodegaOwner",
+        "name": "Bodega Owner"
       }
     ],
     "panelPlan": [
       {
         "panel": 1,
-        "location": "fifth-floor hallway outside Upstairs Neighbor's door",
-        "shotType": "medium",
-        "action": "The Upstairs Neighbor struggles to keep one flat-pack shelving side upright while starting a screw. An open cardboard box partly blocks her doorway."
+        "location": "bodega front counter",
+        "shotType": "wide",
+        "action": "The store is quiet between customers. The Bodega Owner pours Bjorn's usual coffee while Bjorn automatically scans the aisle, delivery stack and counter for work that might need doing."
       },
       {
         "panel": 2,
-        "location": "fifth-floor hallway",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn emerges from 5B and looks from the loose upright panel to the scattered hardware and open box, then briefly up and down the hallway.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "neighbor doorway",
+        "location": "bodega front counter",
         "shotType": "two-shot",
-        "action": "The neighbor answers without looking up from the hardware.",
+        "action": "The owner notices Bjorn looking past him toward the back aisle and slides the coffee across.",
         "dialogueIndices": [
+          0,
           1
         ]
       },
       {
-        "panel": 4,
-        "location": "neighbor doorway",
-        "shotType": "two-shot",
-        "action": "She puts the loose side panel into Bjorn's hands and points exactly where she wants it held.",
+        "panel": 3,
+        "location": "bodega counter",
+        "shotType": "medium on Bjorn",
+        "action": "Bjorn takes the cup but continues looking around the shop as if a task must be hiding somewhere.",
         "dialogueIndices": [
-          2
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "bodega counter",
+        "shotType": "two-shot",
+        "action": "The owner leans one forearm on the counter and asks about the promotional toaster. Bjorn finally looks at him instead of at the work.",
+        "dialogueIndices": [
+          4,
+          5
         ]
       },
       {
         "panel": 5,
-        "location": "neighbor doorway",
+        "location": "bodega front counter",
         "shotType": "wide",
-        "action": "Bjorn holds the panel perfectly vertical with both hands fixed in place while the neighbor tightens the hardware herself.",
+        "action": "Bjorn stands drinking coffee while the owner checks a receipt. Neither man needs anything from the other for the moment.",
         "dialogueIndices": [
-          3,
-          4
+          6
         ]
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@vik.Bjorn",
-        "text": "Who did this?"
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "text": "Flat-pack furniture."
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "text": "Hold this. Don't improve it. Just hold it."
+        "handle": "@vik.BodegaOwner",
+        "text": "Nothing today."
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "It is badly joined."
+        "text": "Nothing?"
       },
       {
-        "handle": "@vik.UpstairsNeighbor",
-        "text": "I know. Keep holding."
+        "handle": "@vik.BodegaOwner",
+        "text": "You can just drink the coffee."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "That seems inefficient."
+      },
+      {
+        "handle": "@vik.BodegaOwner",
+        "text": "How's the toaster?"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "It is excellent at bread."
+      },
+      {
+        "handle": "@vik.BodegaOwner",
+        "text": "Then we're having a good week."
       }
     ],
     "page": 13
@@ -180,8 +190,130 @@
   },
   {
     "id": "VIK_S1I06_P15",
-    "summary": "When the 1987 Participant asks whether to attend a family dinner that keeps turning them into a period exhibit, Bjorn stops before deciding for them and asks what they actually want.",
-    "settingText": "Community-center multipurpose room during a later support-group meeting.",
+    "summary": "At the next meeting, the 1987 Participant asks about a family dinner; Bjorn stops before deciding for them, asks what they actually want, and offers a boundary and an exit instead of a verdict.",
+    "settingText": "Community-center multipurpose room during Bjorn's next support-group meeting.",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Participant1987",
+        "name": "1987 Participant"
+      },
+      {
+        "handle": "@vik.GroupFacilitator",
+        "name": "Group Facilitator"
+      }
+    ],
+    "panelPlan": [
+      {
+        "panel": 1,
+        "location": "community-center chair circle",
+        "shotType": "wide",
+        "action": "The next meeting is already underway. The 1987 Participant sits across from Bjorn; the facilitator is visible in the same ordinary chair as everyone else.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "community-center chair circle",
+        "shotType": "medium on 1987 Participant",
+        "action": "The participant describes the family dinner problem with irritation rather than panic.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "community-center chair circle",
+        "shotType": "medium on Bjorn",
+        "action": "Bjorn starts to answer immediately, stops after two words, then resets and asks a different question.",
+        "dialogueIndices": [
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "community-center chair circle",
+        "shotType": "two-shot",
+        "action": "The participant answers without looking at the facilitator. Bjorn listens through the whole sentence.",
+        "dialogueIndices": [
+          4,
+          5
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "community-center chair circle",
+        "shotType": "two-shot",
+        "action": "Bjorn gives the narrowest advice he can: state the boundary before arriving and leave if the bargain changes.",
+        "dialogueIndices": [
+          6,
+          7
+        ]
+      },
+      {
+        "panel": 6,
+        "location": "community-center chair circle",
+        "shotType": "close on participant then Bjorn",
+        "action": "The participant asks whether that means they should go. Bjorn refuses to turn the boundary into a command.",
+        "dialogueIndices": [
+          8,
+          9
+        ]
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "ONE WEEK LATER"
+      },
+      {
+        "handle": "@vik.Participant1987",
+        "text": "My brother wants me at dinner. Last time everyone asked what music I remember and whether I knew Reagan."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "Then do not—"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "What do you want?"
+      },
+      {
+        "handle": "@vik.Participant1987",
+        "text": "My brother. Not the performance."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "Those are different things."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "Tell him that before you go."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "If the room changes the bargain, leave."
+      },
+      {
+        "handle": "@vik.Participant1987",
+        "text": "So I should go?"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "I told you where the door is. You decide whether to use it."
+      }
+    ],
+    "page": 15
+  },
+  {
+    "id": "VIK_S1I06_P16",
+    "summary": "The 1987 Participant points out that either choice can still hurt; Bjorn admits he cannot make the decision painless, learning that respecting agency does not guarantee a clean outcome.",
+    "settingText": "Same community-center multipurpose room during the same meeting.",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
@@ -201,32 +333,34 @@
         "panel": 1,
         "location": "community-center chair circle",
         "shotType": "medium on 1987 Participant",
-        "action": "1987 Participant leans forward with hands clasped tightly while describing the invitation. Group Facilitator remains seated elsewhere in the circle, hands resting on their knees.",
+        "action": "The participant does not let Bjorn's boundary advice end the problem.",
         "dialogueIndices": [
-          0,
-          1
+          0
         ]
       },
       {
         "panel": 2,
         "location": "community-center chair circle",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn leans forward and starts to give an immediate answer.",
+        "shotType": "two-shot",
+        "action": "Bjorn listens. The facilitator watches from the side without stepping in.",
         "dialogueIndices": [
-          2
+          1
         ]
       },
       {
         "panel": 3,
         "location": "community-center chair circle",
         "shotType": "close on Bjorn",
-        "action": "Bjorn stops mid-sentence and glances once toward the facilitator. The facilitator keeps their eyes on the participant and their hands still."
+        "action": "Bjorn looks down for a beat instead of producing a faster answer.",
+        "dialogueIndices": [
+          2
+        ]
       },
       {
         "panel": 4,
         "location": "community-center chair circle",
-        "shotType": "two-shot",
-        "action": "Bjorn opens both hands, looks directly at the participant, asks what they want from the dinner, and waits for the answer.",
+        "shotType": "medium on 1987 Participant",
+        "action": "The participant pushes because the answer is unsatisfying.",
         "dialogueIndices": [
           3
         ]
@@ -235,127 +369,50 @@
         "panel": 5,
         "location": "community-center chair circle",
         "shotType": "two-shot",
-        "action": "The participant looks down at clasped hands for one beat before answering. As they speak, Bjorn raises one finger at “brother” and a second at “entertainment.”",
+        "action": "Bjorn accepts the inadequacy of his answer rather than turning it into an order.",
         "dialogueIndices": [
           4,
           5
         ]
-      }
-    ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "ONE WEEK LATER"
       },
       {
-        "handle": "@vik.Participant1987",
-        "text": "My brother wants me at dinner. His kids want to meet me. Last time everyone asked what music I remember and whether I knew Reagan."
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "Then do not—"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "What do you want from the dinner?"
-      },
-      {
-        "handle": "@vik.Participant1987",
-        "text": "I want to see my brother. I don't want to be the entertainment."
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "Those are different problems."
-      }
-    ],
-    "page": 15
-  },
-  {
-    "id": "VIK_S1I06_P16",
-    "summary": "Bjorn gives the 1987 Participant a boundary and an exit rather than deciding whether they should attend the dinner.",
-    "settingText": "Same community-center multipurpose room, continuous with Page 15.",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Participant1987",
-        "name": "1987 Participant"
-      }
-    ],
-    "panelPlan": [
-      {
-        "panel": 1,
+        "panel": 6,
         "location": "community-center chair circle",
-        "shotType": "medium",
-        "action": "Bjorn taps two separate points on the edge of the folding coffee table with two fingers as he speaks.",
+        "shotType": "wide",
+        "action": "The participant leans back and makes their own choice. Bjorn nods once; the facilitator says nothing.",
         "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "community-center chair circle",
-        "shotType": "medium on 1987 Participant",
-        "action": "The participant asks what to do when the family starts treating them as entertainment again.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "community-center chair circle",
-        "shotType": "close on Bjorn",
-        "action": "Bjorn points once toward the participant, then holds one flat palm outward while giving the boundary.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "community-center chair circle",
-        "shotType": "two-shot",
-        "action": "Bjorn keeps the flat palm raised through the first sentence, then points toward the room’s exit as he says “leave.”",
-        "dialogueIndices": [
-          3,
-          4
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "community-center chair circle",
-        "shotType": "medium on Bjorn",
-        "action": "After his final line, Bjorn lowers both hands to his knees and leans back into his chair.",
-        "dialogueIndices": [
-          5
+          6
         ]
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@vik.Bjorn",
-        "text": "Go because you want your brother."
+        "handle": "@vik.Participant1987",
+        "text": "If I leave, my brother thinks I rejected his family. If I stay, I become the story."
       },
       {
         "handle": "@vik.Participant1987",
-        "text": "And when they start asking me to perform the eighties?"
+        "text": "Which one is right?"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Tell him before you arrive what you will not do."
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "text": "If he does not defend that boundary in his own hall, leave."
+        "text": "Neither is cheap."
       },
       {
         "handle": "@vik.Participant1987",
-        "text": "That's your advice?"
+        "text": "That's not an answer."
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "It is a door. You decide whether to use it."
+        "text": "No."
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "text": "I cannot make it cost less."
+      },
+      {
+        "handle": "@vik.Participant1987",
+        "text": "Then I go. And I leave when it starts."
       }
     ],
     "page": 16,
