@@ -8,6 +8,23 @@
       "EFW_Adrian"
     ],
     "summary": "Theo, Rae and Adrian reach the site where the forgotten war was erased from lived continuity. Present architecture no longer fully hides the ancient place beneath it. Adrian intends to repeat the Reset if the public memory crisis continues widening.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Theo, Rae and Adrian approach the Core-Forge through ordinary modern construction laid over ancient foundations. Some walls align impossibly with older ones, but the characters remain visually dominant."
+      },
+      {
+        "text": "Panel 2 — Theo steps ahead of Rae and blocks Adrian's path deeper into the chamber: 'You brought us here to do it again.' Adrian stops at the threshold with both hands visible and empty."
+      },
+      {
+        "text": "Panel 3 — Adrian: 'I brought you here because I don't know what else stops this.' His back stays against the doorway, shoulders tight and face pale; he does not move toward the central scar."
+      },
+      {
+        "text": "Panel 4 — Rae: 'Not knowing should terrify you.' Adrian: 'It does.' No one touches a console, studies a schematic or explains how the Reset works."
+      },
+      {
+        "text": "Panel 5 — Wide threshold panel. Rae stands centered a step ahead of Theo and Adrian; all three face the same scarred chamber entrance but keep visible distance from one another. Old dark masonry and newer construction meet around the doorway."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.theo",
@@ -19,16 +36,20 @@
       },
       {
         "handle": "@ech.rae",
-        "text": "Not knowing should terrify you."
+        "text": "Neither did I yesterday."
       },
       {
         "handle": "@ech.adrian",
-        "text": "It does."
+        "text": "You stopped."
+      },
+      {
+        "handle": "@ech.rae",
+        "text": "Eventually."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "Begin with boundaries already unstable. A modern corridor can share walls with an ancient one, but keep the characters anchored. Adrian's plan is moral desperation, not technical confidence."
+        "text": "PAGE ARCHITECTURE — G5; exactly 5 panels. Stable present-day grid with rectilinear gutters, clear geography and human-scale acting. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       }
     ]
   },
@@ -41,7 +62,18 @@
       "EFW_Arbiter",
       "EFW_Oryon"
     ],
-    "summary": "Kyn debuts at the final council not as a mystical hive voice but as an exhausted individual who has felt the war's suffering too directly for too long. Mero asks what continued war feels like beyond strategy. Kyn answers with people, not abstractions.",
+    "summary": "Kyn debuts as one exhausted person describing the war through specific ordinary suffering rather than strategic abstraction.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Final ancient council in a plain neutral chamber. Everyone looks exhausted by years of knowing one another through war. Kyn enters without ceremony and takes an ordinary seat."
+      },
+      {
+        "text": "Panel 2 — Mero: 'Tell me what I'm missing.' Kyn: 'Sleep.' Let the answer land as bodily truth before philosophy."
+      },
+      {
+        "text": "Panel 3 — Mero presses. Kyn refuses the abstraction and begins with children waking afraid of battles they cannot see."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.mero",
@@ -58,34 +90,98 @@
       {
         "handle": "@ech.kyn",
         "text": "No. You asked."
-      },
-      {
-        "handle": "@ech.kyn",
-        "text": "Children wake afraid of battles they can't see. People hate strangers because someone wearing the same mark hurt them three worlds ago. The dead are gone and the living keep carrying them into the next room."
-      },
-      {
-        "handle": "@ech.oryon",
-        "text": "Then we end the threat before it reaches another room."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "We have been ending threats for years."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "Kyn's empathy is specific and burdensome. The final council is a room of exhausted people who know one another, not gods delivering manifestos."
+        "text": "PAGE ARCHITECTURE — W3; exactly 3 panels. Ancient-history page with broader compositions, more negative space and monumental but legible space. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       }
     ]
   },
   {
     "id": "EFW_S1E08_S03",
+    "settingText": "PAST — final ancient council before the Reset, a plain chamber chosen precisely because nobody's faction owns it.",
+    "characters": [
+      "EFW_Mero",
+      "EFW_Kyn",
+      "EFW_Arbiter",
+      "EFW_Oryon"
+    ],
+    "summary": "Kyn, Oryon and Arbiter argue over suffering, prevention and responsibility before the full ancient council assembles.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Kyn describes the spread while the page shows specific close human memories: one person recoils from an old faction mark on a"
+      },
+      {
+        "text": "Panel 2 — stranger, another carries a dead companion through a doorway and a third clutches someone whose name has just returned to them."
+      },
+      {
+        "text": "Panel 3 — Keep each memory grounded in faces and touch."
+      },
+      {
+        "text": "Panel 4 — Oryon: 'Then we end the threat before it reaches another room.' His answer comes from grief, not calculation."
+      },
+      {
+        "text": "Panel 5 — Arbiter: 'We have been ending threats for years.' Hold the whole exhausted council in a wide still panel: Kyn seated, Mero standing, Oryon rigid, Arbiter looking down at the table, with no one immediately answering."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@ech.kyn",
+        "text": "Children wake up screaming in rooms where nothing is happening."
+      },
+      {
+        "handle": "@ech.kyn",
+        "text": "Someone sees a mark on a stranger and remembers the same mark on the person who hurt them three worlds ago."
+      },
+      {
+        "handle": "@ech.kyn",
+        "text": "That's what the war feels like now."
+      },
+      {
+        "handle": "@ech.oryon",
+        "text": "Then we stop it before it reaches another city."
+      },
+      {
+        "handle": "@ech.arbiter",
+        "text": "We've been saying that for years."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — W5; exactly 5 panels. Ancient-history page with broader compositions, more negative space and monumental but legible space. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      }
+    ],
+    "continuityFrom": "EFW_S1E08_S02"
+  },
+  {
+    "id": "EFW_S1E08_S04",
     "settingText": "CONVERGENCE — present Theo walks the Core-Forge corridor while ancient Theo walks the same path carrying papers toward Mero's council; the panels begin alternating within the page.",
     "characters": [
       "EFW_Theo",
       "EFW_Rae"
     ],
     "summary": "Theo and Rae begin experiencing their ancient selves continuously rather than as discrete visions. They do not converse across time; each present action restores the remembered context of an ancient action.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Present Theo walks the Core-Forge corridor. Match the composition with ancient Theo carrying papers through the same geometry on the next panel."
+      },
+      {
+        "text": "Panel 2 — Ancient Theo in the same stride and framing. No ghost overlay; this is one person's restored continuity shown through matched time."
+      },
+      {
+        "text": "Panel 3 — Present Theo: 'I know this hallway.' Present Rae: 'So do I.' Their recognition is mundane and bodily."
+      },
+      {
+        "text": "Panel 4 — Alternate ancient Rae waiting outside the familiar door with present Rae occupying the same position in modern construction."
+      },
+      {
+        "text": "Panel 5 — Theo: 'I hated that door.' Rae: 'I used to wait outside it.' In matching present/ancient compositions, Theo's body"
+      },
+      {
+        "text": "Panel 6 — leans away from the same doorway while Rae occupies the same waiting spot against the opposite wall."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.theo",
@@ -104,14 +200,17 @@
         "text": "I used to wait outside it."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "This is formal convergence, not ghosts. Show present and ancient bodies in matching compositions until the reader understands both belong to one person's continuity. No ancient character acknowledges the modern world."
+        "text": "PAGE ARCHITECTURE — X6; exactly 6 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "First true mixed page: three present panels and three ancient panels in matched positions."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S04",
+    "id": "EFW_S1E08_S05",
     "settingText": "PAST — final council expands to include the already revealed champions, with Flux's place empty and Regent absent from the revealed cast.",
     "characters": [
       "EFW_Mero",
@@ -123,11 +222,28 @@
       "EFW_Atlas",
       "EFW_Afterlight"
     ],
-    "summary": "The surviving principals confront what their virtues have become. Starbreaker no longer trusts restraint, Redlin no longer trusts decisive endings, Atlas refuses another sacrificed population, Afterlight says there is no restoration large enough, Oryon still fears the future, Arbiter insists someone must own the choice, and Kyn refuses to call continued suffering neutral.",
+    "summary": "The surviving ancient principals gather with Flux's place empty, each old virtue now visibly carrying its failure mode.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wide council composition with the established participants present as people who know one another."
+      },
+      {
+        "text": "Panel 2 — One familiar place associated with Flux remains empty; do not add an unidentified mystery figure."
+      },
+      {
+        "text": "Panel 3 — Afterlight: 'There isn't enough of me for what we've done.' Atlas: 'Then we stop doing it.' Their exchange starts from exhaustion and care."
+      },
+      {
+        "text": "Panel 4 — Starbreaker: 'And let the next catastrophe choose for us?' Redlin: 'We have chosen"
+      },
+      {
+        "text": "Panel 5 — catastrophe often enough on our own.' Let old relationship history sharpen both lines."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.afterlight",
-        "text": "There isn't enough of me for what we've done."
+        "text": "I can't repair all of this."
       },
       {
         "handle": "@ech.atlas",
@@ -135,40 +251,94 @@
       },
       {
         "handle": "@ech.starbreaker",
-        "text": "And let the next catastrophe choose for us?"
+        "text": "And wait for the next one to hit?"
       },
       {
         "handle": "@ech.redlin",
-        "text": "We have chosen catastrophe often enough on our own."
-      },
-      {
-        "handle": "@ech.oryon",
-        "text": "Doing nothing is still a choice."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "So is pretending this room can make one without blood on it."
-      },
-      {
-        "handle": "@ech.kyn",
-        "text": "Then stop asking for a clean choice."
+        "text": "We've caused enough of them ourselves."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "The dialogue should feel like the last version of arguments they have had for years. Flux's absence should be visible. Regent remains unrevealed."
+        "text": "PAGE ARCHITECTURE — W5; exactly 5 panels. Ancient-history page with broader compositions, more negative space and monumental but legible space. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S05",
+    "id": "EFW_S1E08_S06",
+    "settingText": "PAST — final council expands to include the already revealed champions, with Flux's place empty and Regent absent from the revealed cast.",
+    "characters": [
+      "EFW_Mero",
+      "EFW_Kyn",
+      "EFW_Arbiter",
+      "EFW_Oryon",
+      "EFW_Starbreaker",
+      "EFW_Redlin",
+      "EFW_Atlas",
+      "EFW_Afterlight"
+    ],
+    "summary": "The argument tightens until Kyn points out that they are still waiting for a clean option that does not exist.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Oryon: 'Doing nothing is still a choice.' He is afraid of futures he has seen, not delivering doctrine."
+      },
+      {
+        "text": "Panel 2 — Arbiter: 'So is pretending this room can make one without blood on it.' Arbiter places both hands on the"
+      },
+      {
+        "text": "Panel 3 — table; around her the others avoid eye contact, and no empty seat offers a clean center to the composition."
+      },
+      {
+        "text": "Panel 4 — Kyn: 'Then stop asking for a clean choice.' End on the full silent group with Flux's established empty chair still plainly visible among occupied seats."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@ech.oryon",
+        "text": "Waiting changes the outcome too."
+      },
+      {
+        "handle": "@ech.arbiter",
+        "text": "Whatever this room does, someone owns it."
+      },
+      {
+        "handle": "@ech.kyn",
+        "text": "There isn't a clean one. Stop waiting for it."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — Q4; exactly 4 panels. Quiet consequence page with larger acting panels and held reactions. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      }
+    ],
+    "continuityFrom": "EFW_S1E08_S05"
+  },
+  {
+    "id": "EFW_S1E08_S07",
     "settingText": "PRESENT — central chamber at the Reset site, where the physical scar of the old act is beginning to become legible again.",
     "characters": [
       "EFW_Theo",
       "EFW_Rae",
       "EFW_Adrian"
     ],
-    "summary": "Adrian tells Theo and Rae he can attempt the same act again. Theo refuses to let the universe lose its history twice. Rae realizes Theo's opposite instinct—to force all memory back at once—also assumes the right to choose for everyone.",
+    "summary": "Adrian offers to close the scar again while Theo insists stolen memory must be restored rather than erased.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Central scar chamber. Ancient and modern material overlap, but there is no obvious device waiting to be operated."
+      },
+      {
+        "text": "Panel 2 — Adrian stands where he once made a choice."
+      },
+      {
+        "text": "Panel 3 — Adrian stands on an old worn floor mark facing the central scar: 'I can close it.' Theo steps between Adrian and"
+      },
+      {
+        "text": "Panel 4 — the scar: 'You mean erase it.' Rae remains off to one side, watching both men claim the center of the room."
+      },
+      {
+        "text": "Panel 5 — Adrian: 'I mean stop this before people start killing for memories they received yesterday.' Keep his fear tied to the people seen in Issue 7."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.adrian",
@@ -185,34 +355,97 @@
       {
         "handle": "@ech.theo",
         "text": "They were stolen from them."
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "That doesn't make them yours to give back."
-      },
-      {
-        "handle": "@ech.theo",
-        "text": "Whose are they?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Theirs."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "The place remembers the old choice and makes repetition possible; that is enough. The conflict is consent and ownership of memory."
+        "text": "PAGE ARCHITECTURE — G5; exactly 5 panels. Stable present-day grid with rectilinear gutters, clear geography and human-scale acting. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S06",
+    "id": "EFW_S1E08_S08",
+    "settingText": "PRESENT — central chamber at the Reset site, where the physical scar of the old act is beginning to become legible again.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae",
+      "EFW_Adrian"
+    ],
+    "summary": "Rae recognizes that forced forgetting and forced restoration both assume the right to decide what other people should carry.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Theo: 'They were stolen from them.' Rae's eyes move from Theo to"
+      },
+      {
+        "text": "Panel 2 — Adrian while both men stand on opposite sides of the central scar."
+      },
+      {
+        "text": "Panel 3 — Rae steps one pace toward the space between them."
+      },
+      {
+        "text": "Panel 4 — Rae: 'That doesn't make them yours to give back.' Theo: 'Whose are they?'"
+      },
+      {
+        "text": "Panel 5 — Rae steps fully between Theo and Adrian and says, 'Theirs.' End in a medium frontal panel with Rae"
+      },
+      {
+        "text": "Panel 6 — centered, Theo on one side, Adrian on the other, and the scar chamber pushed into the background."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@ech.rae",
+        "text": "You can't force it open."
+      },
+      {
+        "handle": "@ech.theo",
+        "text": "Why not?"
+      },
+      {
+        "handle": "@ech.rae",
+        "text": "Because I just watched what happens when we decide people can't handle their own memories."
+      },
+      {
+        "handle": "@ech.theo",
+        "text": "I'm doing the opposite."
+      },
+      {
+        "handle": "@ech.rae",
+        "text": "I don't think you are."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — X6; exactly 6 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Mirror Adrian/forgetting on the left and Theo/restoration on the right, with Rae in the visual center."
+      }
+    ],
+    "continuityFrom": "EFW_S1E08_S07"
+  },
+  {
+    "id": "EFW_S1E08_S09",
     "settingText": "PAST — outside the final council, Kyn and Afterlight share a quiet moment while the others continue arguing behind the door.",
     "characters": [
       "EFW_Kyn",
       "EFW_Afterlight"
     ],
     "summary": "Kyn asks Afterlight whether people can recover if the war ends. Afterlight says recovery is possible only if they stop demanding that recovery restore what was lost. Their exchange gives the Reset debate a human alternative to victory.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Outside the council door. Kyn and Afterlight sit somewhere unceremonious while muffled argument continues behind them. Let exhaustion soften faction distinctions. Kyn: 'If it stopped tonight, could they heal?' Afterlight answers, 'Some.'"
+      },
+      {
+        "text": "Panel 2 — Kyn: 'That's all?' Afterlight: 'That's always all.' They sit close beside the same exhausted survivor; Kyn's hand remains under the survivor's while Afterlight keeps one hand on the repaired ground."
+      },
+      {
+        "text": "Panel 3 — Kyn: 'I keep wanting more than that.' Afterlight looks at Kyn, then at her own tired hands. Kyn follows the gaze and their shoulders settle into the same exhausted posture."
+      },
+      {
+        "text": "Panel 4 — Afterlight: 'So do I. That's how we hurt people.' End almost tenderly, with two people from opposing philosophies admitting that demanding complete repair can become another form of violence."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.kyn",
@@ -228,7 +461,7 @@
       },
       {
         "handle": "@ech.afterlight",
-        "text": "That's always all."
+        "text": "Some is the honest answer."
       },
       {
         "handle": "@ech.kyn",
@@ -236,24 +469,44 @@
       },
       {
         "handle": "@ech.afterlight",
-        "text": "So do I. That's how we hurt people."
+        "text": "So do I. I keep promising more than I can repair."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "Let these two connect through care rather than faction. Kyn is not automatically Concordant in every feeling; Afterlight is not automatically Vanguard in every relationship. This should feel almost tender."
+        "text": "PAGE ARCHITECTURE — Q4; exactly 4 panels. Quiet consequence page with larger acting panels and held reactions. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S07",
+    "id": "EFW_S1E08_S10",
     "settingText": "CONVERGENCE — present Rae reaches a familiar threshold while ancient Rae sits beside Arbiter during the final council; past and present panels begin sharing dialogue rhythm.",
     "characters": [
       "EFW_Rae",
       "EFW_Arbiter",
       "EFW_Theo"
     ],
-    "summary": "Rae recovers her final ancient argument with Arbiter. She opposed calling imposed forgetting peace but admitted that continued war had become unbearable. In the present, Theo hears enough of Rae's remembered words to realize she resisted the Reset before it happened.",
+    "summary": "Ancient Arbiter asks Rae whether she will record the Reset decision; Rae agrees but refuses to rename coercion as mercy.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Present Rae reaches a familiar threshold."
+      },
+      {
+        "text": "Panel 2 — Match her posture to ancient Rae seated beside Arbiter during the final council."
+      },
+      {
+        "text": "Panel 3 — Ancient Arbiter asks, 'If Mero authorizes it, will you record the decision?' Rae answers,"
+      },
+      {
+        "text": "Panel 4 — 'Yes.' Her participation is ordinary and professional, which makes it harder to disown."
+      },
+      {
+        "text": "Panel 5 — Arbiter: 'You disagree.' Rae: 'I disagree with calling it mercy.' Ancient Rae and Arbiter stand close over the same"
+      },
+      {
+        "text": "Panel 6 — marked ruling sheet, both hands sharing the edge of the table instead of facing off across the room."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.arbiter",
@@ -270,30 +523,93 @@
       {
         "handle": "@ech.rae",
         "text": "I disagree with calling it mercy."
-      },
-      {
-        "handle": "@ech.arbiter",
-        "text": "What would you call it?"
-      },
-      {
-        "handle": "@ech.rae",
-        "text": "Something we had no right to do and no courage left not to do."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "In the ancient scenes, keep Rae close enough to Arbiter to witness and record the rulings. She was never secretly the pure dissenter who had the answer; she understood the horror and still participated in recording it."
+        "text": "PAGE ARCHITECTURE — X6; exactly 6 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Interleave present threshold movement and ancient Rae doing record work beside Arbiter. Do not label timelines."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S08",
+    "id": "EFW_S1E08_S11",
+    "settingText": "CONVERGENCE — present Rae reaches a familiar threshold while ancient Rae sits beside Arbiter during the final council; past and present panels begin sharing dialogue rhythm.",
+    "characters": [
+      "EFW_Rae",
+      "EFW_Arbiter",
+      "EFW_Theo"
+    ],
+    "summary": "Rae records the decision in exact language without pretending she has found a clean alternative to it.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Arbiter: 'What would you call it?' Ancient Rae looks down at the ruling before answering."
+      },
+      {
+        "text": "Panel 2 — In the present layer of the matched composition, Theo watches"
+      },
+      {
+        "text": "Panel 3 — Rae's remembered face and grips the same table edge."
+      },
+      {
+        "text": "Panel 4 — Rae: 'Something we had no right to do and no courage left not to do.' End"
+      },
+      {
+        "text": "Panel 5 — on present Rae carrying the same unresolved judgment;"
+      },
+      {
+        "text": "Panel 6 — she was neither pure dissenter nor willing apologist."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@ech.arbiter",
+        "text": "What should I call it?"
+      },
+      {
+        "handle": "@ech.rae",
+        "text": "What it is. We're taking something from everyone because we couldn't stop."
+      },
+      {
+        "handle": "@ech.arbiter",
+        "text": "And if it ends the war?"
+      },
+      {
+        "handle": "@ech.rae",
+        "text": "Then write that too."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — X6; exactly 6 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      }
+    ],
+    "continuityFrom": "EFW_S1E08_S10"
+  },
+  {
+    "id": "EFW_S1E08_S12",
     "settingText": "PAST — Mero and ancient Adrian alone after the final council, the decision effectively made but not yet enacted.",
     "characters": [
       "EFW_Mero",
       "EFW_Adrian"
     ],
-    "summary": "Mero asks Adrian to carry out the Reset because Adrian is the one person who moved between factions and saw enough of every side to understand what is being taken. Adrian refuses at first, invoking his role as envoy rather than ruler. Mero tells him neutrality no longer exists.",
+    "summary": "Mero asks ancient Adrian to execute the Reset because Adrian crossed every factional boundary and understands what is being taken.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — After the council, Mero and ancient Adrian remain alone in a plain room with two chairs, a table and an open doorway."
+      },
+      {
+        "text": "Panel 2 — No machine, schematic, controls or glowing apparatus is visible anywhere in the room."
+      },
+      {
+        "text": "Panel 3 — Mero: 'I need you to do it.' Adrian: 'No.' The refusal is immediate and personal."
+      },
+      {
+        "text": "Panel 4 — Mero: 'You know every road between them.' Adrian: 'I carried messages. I opened doors.' Show the burden of being the person who moved between all sides."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.mero",
@@ -310,7 +626,40 @@
       {
         "handle": "@ech.adrian",
         "text": "I carried messages. I opened doors."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — W4; exactly 4 panels. Ancient-history page with broader compositions, more negative space and monumental but legible space. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      }
+    ]
+  },
+  {
+    "id": "EFW_S1E08_S13",
+    "settingText": "PAST — Mero and ancient Adrian alone after the final council, the decision effectively made but not yet enacted.",
+    "characters": [
+      "EFW_Mero",
+      "EFW_Adrian"
+    ],
+    "summary": "Adrian invokes neutrality and Mero destroys that refuge: carrying every side's messages did not place Adrian outside responsibility.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Mero: 'You watched us use every door you opened to find another battlefield.' He gestures toward the open council-room door, then places the same hand against his own chest."
       },
+      {
+        "text": "Panel 2 — Adrian remains still across from him."
+      },
+      {
+        "text": "Panel 3 — Adrian: 'That doesn't make this mine.' Mero steps closer but does not command him like a technician."
+      },
+      {
+        "text": "Panel 4 — Mero: 'Nothing about this belongs to one person."
+      },
+      {
+        "text": "Panel 5 — That's why I am asking the one who belonged to none of us.' End on Adrian alone in the foreground between two open doorways leading in opposite directions."
+      }
+    ],
+    "dialogueInline": [
       {
         "handle": "@ech.mero",
         "text": "You watched us use every door you opened to find another battlefield."
@@ -321,17 +670,21 @@
       },
       {
         "handle": "@ech.mero",
-        "text": "Nothing about this belongs to one person. That's why I am asking the one who belonged to none of us."
+        "text": "No. It belongs to all of us. I'm asking you because you crossed every line between us and kept going."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "He is visibly the same Adrian. Mero's choice remains Mero's responsibility even though Adrian executes it."
+        "text": "PAGE ARCHITECTURE — M5; exactly 5 panels. Matched-memory page: precisely reuse camera positions, body placement and architecture. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Match ancient Adrian's geometry with present Adrian in the same place so neutrality and repetition become visually inseparable."
       }
-    ]
+    ],
+    "continuityFrom": "EFW_S1E08_S12"
   },
   {
-    "id": "EFW_S1E08_S09",
+    "id": "EFW_S1E08_S14",
     "settingText": "CONVERGENCE — present Theo stands where ancient Theo stood outside Mero's final meeting; past and present now share the same page without labels.",
     "characters": [
       "EFW_Theo",
@@ -339,6 +692,26 @@
       "EFW_Rae"
     ],
     "summary": "Theo recovers his final ancient contribution. Mero asked whether people could become something other than the war if the memory of it were removed. Theo answered that they might, but warned that taking the choice from them would become another act of the war. Mero proceeded anyway.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Present Theo stands outside the same door where ancient Theo once waited. Past and present occupy matching compositions without labels."
+      },
+      {
+        "text": "Panel 2 — Ancient Mero sits heavily on the bench outside the familiar door: 'If they forgot us, could they become something"
+      },
+      {
+        "text": "Panel 3 — else?' Junior Theo stands beside him with papers tucked under one arm and answers, 'Maybe,' without looking certain."
+      },
+      {
+        "text": "Panel 4 — Mero: 'That's more hope than I've heard all year.' Theo: 'It's not permission.' Keep Theo visibly junior but morally present."
+      },
+      {
+        "text": "Panel 5 — Mero: 'I know.' Theo: 'Do you?' The relationship allows the question to land harder than a speech."
+      },
+      {
+        "text": "Panel 6 — Return to present Theo. He remembers that he saw the possible freedom in forgetting and also warned that imposed forgetting would continue the war's coercion. End on responsibility without making him the architect of the Reset."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.mero",
@@ -365,21 +738,47 @@
         "text": "Do you?"
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "Theo was not the architect of the Reset and did not endorse it cleanly. His ancient answer contains the same conflict as his present anger: forgetting might create freedom from the war, but imposed forgetting is itself coercion."
+        "text": "PAGE ARCHITECTURE — X6; exactly 6 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Alternate ancient Theo/Mero and present Theo without timeline labels; keep both physically moving through the same corridor geometry."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S10",
+    "id": "EFW_S1E08_S15",
     "settingText": "PAST/PRESENT — the remembered Reset and the present opportunity to repeat or reverse it occupy the same compositions.",
     "characters": [
       "EFW_Adrian",
       "EFW_Theo",
       "EFW_Rae"
     ],
-    "summary": "Ancient Adrian carries out Mero's decision. In the same visual grammar, present Adrian prepares to repeat it while present Theo moves to force the memory scar fully open. Rae physically stops Theo and tells Adrian to stop as well. The repeated gestures finally diverge.",
+    "summary": "Ancient Reset gestures and present attempts to repeat or reverse them align in matched geometry as Adrian and Theo reach toward opposite coercive solutions.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Ancient Adrian in the remembered Reset position,"
+      },
+      {
+        "text": "Panel 2 — beginning the irreversible gesture under Mero's authority."
+      },
+      {
+        "text": "Panel 3 — Match directly to present Adrian occupying the same place."
+      },
+      {
+        "text": "Panel 4 — Present Theo moves toward the physical scar to force memory"
+      },
+      {
+        "text": "Panel 5 — fully open while saying, 'Everyone should know what was taken.'"
+      },
+      {
+        "text": "Panel 6 — Rae: 'Yes.' Theo: 'Then let me do this.' Rae: 'No.'"
+      },
+      {
+        "text": "Panel 7 — She catches his hand before the repeated gesture completes."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.theo",
@@ -396,7 +795,44 @@
       {
         "handle": "@ech.rae",
         "text": "No."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "PAGE ARCHITECTURE — X7; exactly 7 panels. Mixed-time page: past and present share geometry while temporal cues remain readable. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
       },
+      {
+        "text": "Narrow gutters and align ancient Reset gestures with present Adrian and Theo reaching toward opposite coercive actions."
+      }
+    ]
+  },
+  {
+    "id": "EFW_S1E08_S16",
+    "settingText": "PAST/PRESENT — the remembered Reset and the present opportunity to repeat or reverse it occupy the same compositions.",
+    "characters": [
+      "EFW_Adrian",
+      "EFW_Theo",
+      "EFW_Rae"
+    ],
+    "summary": "Rae physically interrupts Theo and Adrian, breaking the repeated composition and refusing both forced restoration and forced forgetting.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Match ancient Adrian continuing with present Adrian preparing to repeat his own old choice."
+      },
+      {
+        "text": "Panel 2 — Rae turns from Theo toward him."
+      },
+      {
+        "text": "Panel 3 — Adrian: 'Rae—' She cuts him off: 'You too.' The present composition now visibly diverges from the ancient one."
+      },
+      {
+        "text": "Panel 4 — Rae: 'Nobody chooses for everyone again.' End with both men stopped by a person refusing"
+      },
+      {
+        "text": "Panel 5 — the premise that either forgetting or forced remembering can be imposed as a universal solution."
+      }
+    ],
+    "dialogueInline": [
       {
         "handle": "@ech.adrian",
         "text": "Rae—"
@@ -410,14 +846,18 @@
         "text": "Nobody chooses for everyone again."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "Rae takes Theo's hand away from the repeated gesture and turns to Adrian before he can complete his. Use the same remembered physical positions from the ancient Reset so divergence is clear: history has offered the same choice and the present refuses it."
+        "text": "PAGE ARCHITECTURE — C5; exactly 5 panels. Full-convergence page: past and present share one compositional field; gutters no longer cleanly separate chronology. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Full convergence. Rae physically stops both actions; the dominant center panel may cross the normal temporal gutter."
       }
-    ]
+    ],
+    "continuityFrom": "EFW_S1E08_S15"
   },
   {
-    "id": "EFW_S1E08_S11",
+    "id": "EFW_S1E08_S17",
     "settingText": "PRESENT — the Reset site after no one completes either coercive choice. Ancient architecture and modern construction remain imperfectly overlapped.",
     "characters": [
       "EFW_Theo",
@@ -425,6 +865,20 @@
       "EFW_Adrian"
     ],
     "summary": "Nothing resolves cleanly. Memories continue returning, but unevenly. Some people outside remember more; others remember nothing. Theo accepts that truth cannot be ethically restored by force. Adrian accepts that safety cannot be ethically purchased through universal forgetting again.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — The scar chamber remains exactly as it was: overlapped masonry, split floor and imperfect seams. Theo, Rae and Adrian stand apart while ordinary human voices and footsteps continue outside the open doorway; nothing flashes or resets."
+      },
+      {
+        "text": "Panel 2 — Theo looks back at the unchanged scar chamber: 'So what happens now?' Rae is already walking toward the exit and answers over her shoulder, 'People remember what they remember.' Nothing in the room changes around them."
+      },
+      {
+        "text": "Panel 3 — Adrian: 'And if it starts the war again?' He is asking from lived guilt, not seeking a new mechanism. Rae: 'Then we stop the war.' Adrian: 'That's not the same thing.'"
+      },
+      {
+        "text": "Panel 4 — Rae: 'Exactly.' End on the trio leaving the place without repairing it. Conflict remains something people must address without controlling memory itself."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.theo",
@@ -451,14 +905,17 @@
         "text": "Exactly."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "The ethical victory is refusing to control memory, not solving conflict. Present lives and recovered lives now have to coexist."
+        "text": "PAGE ARCHITECTURE — G4; exactly 4 panels. Stable present-day grid with rectilinear gutters, clear geography and human-scale acting. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Restore ordinary present-day gutters after both coercive actions are refused."
       }
     ]
   },
   {
-    "id": "EFW_S1E08_S12",
+    "id": "EFW_S1E08_S18",
     "settingText": "PRESENT — deep-space observation window after the immediate crisis, Theo, Rae and Adrian looking out at a familiar sky.",
     "characters": [
       "EFW_Theo",
@@ -466,6 +923,17 @@
       "EFW_Adrian"
     ],
     "summary": "The trio sees that a familiar region of the night sky is simply wrong: stars everyone remembers are absent. Nobody can tell whether they were erased, belonged only to replacement history, or were lost when continuity returned. Reality's memory has consequences beyond personal recollection.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Quiet observation window after the immediate crisis. Theo, Rae and Adrian look at a familiar region of deep space. No alarms or instruments announce the problem. Theo points through the observation window: 'Were those always gone?' A familiar star cluster has a clean dark gap where several stars should be; render it as ordinary black sky with missing points of light and no glow or distortion."
+      },
+      {
+        "text": "Panel 2 — Rae: 'No.' She steps close to the glass and fixes on the dark gap, face still and certain; Adrian watches Rae instead of the sky. Adrian: 'I don't know.' Give the admission room; for once he does not hide uncertainty behind protection or authority. Theo: 'You finally said it.' Adrian: 'Get used to hearing it.'"
+      },
+      {
+        "text": "Panel 3 — Final wide panel: three small people facing a sky with a meaningful absence. Truth has returned unevenly; certainty has diminished. Do not reveal Flux, Regent or a technical explanation for the missing stars."
+      }
+    ],
     "dialogueInline": [
       {
         "handle": "@ech.theo",
@@ -488,9 +956,12 @@
         "text": "Get used to hearing it."
       }
     ],
-    "writingNotes": [
+    "directionInline": [
       {
-        "text": "End on absence. Familiar stars are simply not there. Preserve Flux's disappearance and Regent's unrevealed existence as future story engines. The first arc ends with truth returning and certainty diminishing."
+        "text": "PAGE ARCHITECTURE — R3; exactly 3 panels. Reveal page: one image has unmistakable dominance. Stage dialogue through ongoing physical behavior—walking corridors, handling records, checking the room, moving through thresholds, carrying papers, or physically attempting/stopping actions—rather than static thesis poses."
+      },
+      {
+        "text": "Two small human reaction panels, then one enormous sky panel. The missing stars own the final image."
       }
     ]
   }
