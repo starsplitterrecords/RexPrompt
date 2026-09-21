@@ -18,13 +18,13 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **wide.** Carrie moves fast down a crowded sidewalk with a DTI folder; Bjorn and Gunnar keep pace.
-   **CARRIE:** Forty-eight hours. No account, no rent setup. No rent setup, housing starts yelling at me.
+   **CARRIE:** Forty-eight hours. No account, no rent setup. Then housing starts calling.
 2. **medium.** Bjorn carries the small wrapped hacksilver pouch he still considers real money.
-   **BJORN:** Then we claim the hoard before sunset.
+   **BJORN:** Then we get the account today.
 3. **medium.** Gunnar checks the bank address against the route he learned in Issue 3.
-   **GUNNAR:** We know the road.
+   **GUNNAR:** I know the way.
 4. **close.** Carrie glances at him.
-   **CARRIE:** That sentence is doing a lot for my blood pressure.
+   **CARRIE:** Thank you.
 5. **wide.** They reach the glass-fronted bank.
 
 ## PAGE 2 — A RETAIL FORTRESS
@@ -36,15 +36,15 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **wide.** Ordinary glass-fronted bank branch with ATM vestibule, queue ropes and fluorescent lobby.
-   **BJORN:** This is the fortress?
-   **CARRIE:** This is the branch.
+   **BJORN:** This is the bank?
+   **CARRIE:** Yep.
 2. **medium.** Gary, the security guard, helps an older customer with the ATM before noticing the trio.
 3. **close.** Bjorn studies Gary's knee brace and relaxed posture.
-   **BJORN:** Your knee has seen battle.
+   **BJORN:** Your knee is bad.
 4. **medium.** Gary looks down at the brace.
    **GARY:** Softball.
 5. **wide.** Carrie steers Bjorn toward the teller line.
-   **CARRIE:** Great. We are bonding. Keep moving.
+   **CARRIE:** Come on.
 
 ## PAGE 3 — THE TELLER
 
@@ -61,7 +61,7 @@ Primary function: financial legibility, value, status and partial civic particip
 3. **medium.** Carrie does not look up from her folder.
    **CARRIE:** Not nineteen eighty-seven. Eight seventy-nine.
 4. **close.** Bjorn waits with grave patience.
-   **BJORN:** The scribe reads slowly.
+   **BJORN:** He read it twice.
 5. **medium.** Kevin decides not to engage and keeps processing.
 
 ## PAGE 4 — ADDRESS IS A PLACE
@@ -79,9 +79,9 @@ Primary function: financial legibility, value, status and partial civic particip
 3. **medium.** Kevin points to the required document field rather than arguing.
    **KEVIN:** The system needs one document it recognizes.
 4. **close.** Gunnar looks from the letter to the teller window.
-   **GUNNAR:** The house knows us. The bank does not.
+   **GUNNAR:** We live there. The bank doesn't know yet.
 5. **medium.** Carrie asks for the branch manager.
-   **CARRIE:** Then let's make the bank catch up.
+   **CARRIE:** Manager.
 
 ## PAGE 5 — WORTHY SILVER
 
@@ -92,16 +92,16 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **medium.** Bjorn unwraps a small piece of hacksilver and places it carefully on the counter.
-   **BJORN:** Then record this. Worthy silver.
+   **BJORN:** Use this.
 2. **close.** Kevin looks at it without touching it.
    **KEVIN:** We cannot deposit that as currency.
 3. **two-shot.** Bjorn looks genuinely offended, not confused.
    **BJORN:** It is silver.
    **KEVIN:** Yes. It is just not dollars.
 4. **medium.** Gunnar turns the hacksilver in his fingers after Kevin slides it back.
-   **GUNNAR:** Value and permission are different.
+   **GUNNAR:** It's worth something. Just not here.
 5. **close.** Carrie looks at Gunnar.
-   **CARRIE:** Unfortunately, yes.
+   **CARRIE:** Right.
 
 ## PAGE 6 — CARRIE'S FIFTY
 
@@ -118,9 +118,9 @@ Primary function: financial legibility, value, status and partial civic particip
 3. **medium.** Bjorn does not let Carrie answer for him.
    **BJORN:** I do not take alms.
 4. **two-shot.** Carrie meets his eyes.
-   **CARRIE:** Good. It is an advance. You owe me fifty dollars after rent and food.
+   **CARRIE:** Then owe me fifty. After rent and food.
 5. **close.** Bjorn nods once.
-   **BJORN:** Name the debt and it can be carried.
+   **BJORN:** Agreed.
 
 ## PAGE 7 — THE ACCOUNT
 
@@ -135,13 +135,13 @@ Primary function: financial legibility, value, status and partial civic particip
 2. **medium.** Carrie pushes the file back into order.
    **CARRIE:** Thank you.
 3. **insert.** Kevin activates a blue debit card and slides it toward Bjorn.
-   **KEVIN:** This accesses the account.
+   **KEVIN:** This is the debit card.
 4. **close.** Bjorn turns the card over.
-   **BJORN:** Where is the silver?
+   **BJORN:** So the money is a number?
 5. **medium.** Henderson answers plainly.
-   **HENDERSON:** Fifty dollars exists as a balance the bank records and guarantees.
+   **HENDERSON:** The bank records the balance. We guarantee it.
 6. **close.** Bjorn looks at Carrie.
-   **BJORN:** Your money has become testimony.
+   **BJORN:** And you stand behind the number.
 
 ## PAGE 8 — A THING THAT EXISTS
 
@@ -152,17 +152,17 @@ Primary function: financial legibility, value, status and partial civic particip
 6 panels.
 
 1. **medium.** Bjorn puts the card down rather than pocketing it.
-   **BJORN:** A pact with no object is wind.
+   **BJORN:** Nothing to hold?
 2. **medium.** Henderson gestures toward a stack of new-account promotional boxes.
-   **HENDERSON:** We do still have the account promotion.
+   **HENDERSON:** We do have the account promotion.
 3. **insert.** A plain metal toaster comes out of the box.
 4. **close.** Gunnar studies it.
-   **GUNNAR:** Controlled fire.
+   **GUNNAR:** It heats bread?
 5. **two-shot.** Carrie looks at Henderson.
-   **CARRIE:** He does not qualify for direct deposit.
+   **CARRIE:** He doesn't have direct deposit.
    **HENDERSON:** He qualifies for the toaster.
 6. **medium.** Bjorn lifts the box with solemn approval.
-   **BJORN:** The hoard yields iron.
+   **BJORN:** We take it.
 
 ## PAGE 9 — OUTSIDE WITH TOO MUCH IRON
 
@@ -173,16 +173,16 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **wide.** Bjorn exits carrying the toaster box under one arm, debit card in the other hand.
-   **BJORN:** The fifty is yours again.
+   **BJORN:** Take the fifty.
 2. **medium.** He offers the debit card to Carrie.
-   **CARRIE:** No. The account is yours.
+   **CARRIE:** No. Keep the account.
 3. **two-shot.** Bjorn does not lower his hand.
-   **BJORN:** The debt is mine.
-   **CARRIE:** Yes. And rent is yours. Food is yours. Soap is yours. Being alive is annoyingly expensive.
+   **BJORN:** I owe you.
+   **CARRIE:** And you owe rent. And you need food. Keep the card.
 4. **close.** Gunnar looks at the card.
-   **GUNNAR:** Then the fifty has other work before it returns.
+   **GUNNAR:** You can owe fifty and still spend fifty.
 5. **medium.** Carrie points toward home.
-   **CARRIE:** Now you're getting it.
+   **CARRIE:** Exactly.
 
 ## PAGE 10 — WHAT IS NEEDED
 
@@ -194,15 +194,15 @@ Primary function: financial legibility, value, status and partial civic particip
 
 1. **wide.** Bjorn sets the boxed toaster on the table. Astrid and the two male Kin gather around while Gunnar removes the packaging.
 2. **medium.** Astrid examines the toaster slots, then points to a torn seam in her clothing.
-   **ASTRID:** Bread later. Needles first.
+   **ASTRID:** Needles first. This tore yesterday.
 3. **medium.** First Male Kin lifts the nearly empty detergent sample from the DTI starter bag.
-   **FIRST MALE KIN:** Soap for clothes.
+   **FIRST MALE KIN:** Detergent.
 4. **medium.** Second Male Kin points to the last piece of fruit from the bodega.
-   **SECOND MALE KIN:** More of these.
+   **SECOND MALE KIN:** Oranges.
 5. **wide.** Carrie lays rent estimate and blank paper beside the toaster.
-   **CARRIE:** Good. Rent, food, laundry, household stuff. Then the fire-box.
+   **CARRIE:** Rent. Food. Laundry. Needles. One thing nobody needs.
 6. **close.** Bjorn puts the debit card in the center of the table.
-   **BJORN:** Then decide what the hoard is for.
+   **BJORN:** Write it.
 
 ## PAGE 11 — THE TALLY
 
@@ -214,14 +214,14 @@ Primary function: financial legibility, value, status and partial civic particip
 
 1. **insert.** Gunnar writes simple categories with numbers: RENT, FOOD, SOAP, CARRIE 50.
 2. **medium.** Bjorn points to Carrie's line.
-   **BJORN:** That debt is first.
+   **BJORN:** Your fifty first.
 3. **medium.** Carrie moves the rent line above it.
-   **CARRIE:** No. Keeping the apartment is first.
+   **CARRIE:** Rent first.
 4. **two-shot.** Bjorn resists, then looks at the people around the table.
-   **BJORN:** A man should repay what he owes.
-   **GUNNAR:** He also owes the hall.
+   **BJORN:** I owe you.
+   **GUNNAR:** You owe the landlord too.
 5. **close.** Bjorn lets the rent line remain on top.
-   **BJORN:** Then the tally remembers both.
+   **BJORN:** Put both down.
 
 ## PAGE 12 — DIFFERENT WANTS
 
@@ -237,7 +237,7 @@ Primary function: financial legibility, value, status and partial civic particip
 4. **medium.** Second Male Kin keeps one inexpensive packaged sweet or fruit on the list after Bjorn glances at it.
    **SECOND MALE KIN:** One.
 5. **close.** Bjorn nods rather than removing it.
-   **BJORN:** One.
+   **BJORN:** One, then.
 
 ## PAGE 13 — BACK TO THE BODEGA
 
@@ -248,9 +248,9 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **wide.** All five displaced adults enter with Carrie. The Bodega Owner recognizes the group from their first night.
-   **BODEGA OWNER:** Money works now?
+   **BODEGA OWNER:** Card working?
 2. **medium.** Bjorn holds up the debit card.
-   **BJORN:** The bank claims it does.
+   **BJORN:** We're finding out.
 3. **wide.** Astrid and the two male Kin move together through the aisles choosing the specific items from the household list.
 4. **medium.** Gunnar checks prices against the tally instead of mapping the room.
 5. **close.** Carrie watches Bjorn allow other people to put things in the basket without asking permission first.
@@ -265,11 +265,11 @@ Primary function: financial legibility, value, status and partial civic particip
 
 1. **medium.** Astrid finds needles and thread; First Male Kin lifts laundry soap; Second Male Kin adds one inexpensive snack or fruit.
 2. **close.** Gunnar looks at the total of the price tags and then at the tally paper.
-   **GUNNAR:** We can take all three.
+   **GUNNAR:** Enough for all three.
 3. **medium.** Bjorn puts back one larger package of meat without ceremony.
 4. **two-shot.** The owner notices.
    **BODEGA OWNER:** That one is cheaper by weight.
-   **BJORN:** But not today.
+   **BJORN:** Not today.
 5. **medium.** The owner shrugs and keeps ringing items.
 
 ## PAGE 15 — FIRST PURCHASE
@@ -284,11 +284,11 @@ Primary function: financial legibility, value, status and partial civic particip
 2. **medium.** The owner points to the PIN pad.
    **BODEGA OWNER:** Four numbers.
 3. **close.** Carrie turns away enough to give privacy.
-   **CARRIE:** Pick something you will remember. Do not tell me.
+   **CARRIE:** Pick four numbers. Don't tell me.
 4. **medium.** The transaction approves.
 5. **wide.** The owner bags groceries, sewing supplies, laundry soap and the one small extra.
-   **BODEGA OWNER:** There. Your money works.
-   **BJORN:** Here.
+   **BODEGA OWNER:** Approved.
+   **BJORN:** Good.
 
 ## PAGE 16 — COFFEE IS NOT DEBT
 
@@ -303,10 +303,10 @@ Primary function: financial legibility, value, status and partial civic particip
    **BJORN:** One for her.
 3. **medium.** Bjorn pays with the debit card himself.
 4. **two-shot.** He hands Carrie the coffee.
-   **CARRIE:** Is this part of the fifty?
-   **BJORN:** No. This is coffee.
+   **CARRIE:** This come out of my fifty?
+   **BJORN:** No. Coffee.
 5. **close.** Carrie accepts that distinction.
-   **CARRIE:** Good.
+   **CARRIE:** Okay.
 
 ## PAGE 17 — THE THINGS MONEY BECAME
 
@@ -320,11 +320,11 @@ Primary function: financial legibility, value, status and partial civic particip
 2. **medium.** Astrid threads a needle and begins repairing the torn seam.
 3. **medium.** First Male Kin portions laundry soap while Second Male Kin opens the one small item he chose.
 4. **medium.** Gunnar lowers two pieces of bread into the toaster.
-   **GUNNAR:** Two gates.
-   **CARRIE:** Nothing metal goes inside. Ever.
+   **GUNNAR:** Two slots.
+   **CARRIE:** No knives.
 5. **insert.** Toast pops up.
 6. **wide.** Bjorn looks from the debit card to the repaired clothing, soap, food and toast.
-   **BJORN:** The bank has one useful custom.
+   **BJORN:** Good bread.
 
 ## PAGE 18 — DEBT NAMED PROPERLY
 
@@ -336,12 +336,12 @@ Primary function: financial legibility, value, status and partial civic particip
 
 1. **insert.** Gunnar's tally now includes the actual grocery spend and remaining balance.
 2. **medium.** Bjorn draws a firm line beneath CARRIE 50.
-   **BJORN:** It remains.
+   **BJORN:** Still there.
 3. **medium.** Carrie drinks the coffee he bought her.
    **CARRIE:** I know.
 4. **two-shot.** Bjorn taps the rent line above it.
-   **BJORN:** The hall first. Then you.
-   **CARRIE:** That is the correct dishonor hierarchy.
+   **BJORN:** Rent first. You after.
+   **CARRIE:** Works for me.
 5. **close.** Bjorn almost objects to the word, then lets it go.
 
 ## PAGE 19 — THE NEIGHBOR'S SNACK
@@ -369,14 +369,14 @@ Primary function: financial legibility, value, status and partial civic particip
 5 panels.
 
 1. **wide.** Silas appears at the open doorway with phone half-raised while the toaster is visible on the counter.
-   **SILAS:** Okay, Viking toaster unboxing is objectively—
+   **SILAS:** Okay, Viking toaster unboxing—
 2. **medium.** Bjorn holds up a piece of toast.
-   **BJORN:** It makes bread hot.
+   **BJORN:** We've had it all day.
 3. **medium.** Gunnar keeps eating and does not look at the phone.
 4. **close.** Silas lowers the device a few inches.
-   **SILAS:** When you say it like that, it loses something.
+   **SILAS:** Yeah. That's worse.
 5. **medium.** Carrie walks past him into the room with her coffee.
-   **CARRIE:** Growth.
+   **CARRIE:** Put the phone away.
 
 ## PAGE 21 — THE HOUSEHOLD LEDGER
 
@@ -390,8 +390,8 @@ Primary function: financial legibility, value, status and partial civic particip
 2. **insert.** Simple lines: RENT, FOOD, LAUNDRY, CARRIE 50, REMAINING.
 3. **medium.** First Male Kin points to laundry; Astrid points to food; Second Male Kin points to remaining money.
 4. **two-shot.** Bjorn looks at Gunnar.
-   **BJORN:** You made a map of money.
-   **GUNNAR:** No. A memory.
+   **BJORN:** You wrote everything down.
+   **GUNNAR:** So we don't have to remember all of it.
 5. **wide.** The ledger stays on the table where everyone can see it.
 
 ## PAGE 22 — FIRST TOAST
@@ -420,9 +420,9 @@ Primary function: financial legibility, value, status and partial civic particip
 
 1. **insert.** Debit card, bodega receipt, household ledger and brass key sit near one another on the table.
 2. **medium.** Bjorn looks at the objects, then at the room around them.
-   **BJORN:** The card is not the hoard.
+   **BJORN:** Put the card by the key.
 3. **medium.** Gunnar looks at groceries, soap and repaired clothing.
-   **GUNNAR:** No. It is a road to it.
+   **GUNNAR:** There?
 4. **wide.** Astrid and the two male Kin continue separate evening tasks.
 5. **close.** Bjorn folds the card into a safe place rather than displaying it.
 
@@ -435,12 +435,12 @@ Primary function: financial legibility, value, status and partial civic particip
 6 panels.
 
 1. **wide.** Carrie stands near the door while the ledger, debit card, brass key, bodega receipt and toaster remain visible in the lived-in room.
-   **CARRIE:** Rent first. Then groceries. Then me.
+   **CARRIE:** Rent. Food. Then me.
 2. **medium.** Astrid finishes the repair she began; First Male Kin puts laundry soap away; Second Male Kin saves part of his small extra for later.
 3. **close.** Bjorn points to the CARRIE 50 line rather than crossing it out.
-   **BJORN:** The debt remains named.
+   **BJORN:** You're still on the list.
 4. **medium.** Gunnar leaves the tally open where everyone can see it.
-   **GUNNAR:** The memory stays.
+   **GUNNAR:** I left it there.
 5. **wide.** After Carrie leaves, the household settles normally despite the unpaid line.
 6. **close.** Bjorn looks from the tally to the household.
-   **BJORN:** Then it is not dishonor yet.
+   **BJORN:** Good.
