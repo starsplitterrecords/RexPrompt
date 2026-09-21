@@ -56,7 +56,7 @@
   },
   {
     "id": "SDS_S1E07_P02",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax sits at the participation table with his card. Middle image: Jax hands the card to Glorp. Closing image: Jax looks mildly pleased.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax chooses NO ENTRY on the participation card. Middle image: Pixa pauses before announcing the result aloud and asks whether Jax wants only private confirmation. Closing image: Noola notices the change in Pixa's behavior before Jax does.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -67,49 +67,54 @@
     "continuityFrom": "SDS_S1E07_P01",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax sits at the participation table with his card."
+        "text": "PANEL 1 — Jax marks DISCLOSURE: NO ENTRY on the participation card."
       },
       {
-        "text": "PANEL 2 — He checks the no-entry disclosure state."
+        "text": "PANEL 2 — Pixa receives the completed state and stops before projecting it to the public table display."
       },
       {
-        "text": "PANEL 3 — Pixa scans it."
+        "text": "PANEL 3 — Pixa asks Jax whether he wants the completion confirmed privately."
       },
       {
-        "text": "PANEL 4 — Jax hands the card to Glorp."
+        "text": "PANEL 4 — Jax looks surprised; Glorp looks even more surprised."
       },
       {
-        "text": "PANEL 5 — Noola passes behind him and glances at the card."
+        "text": "PANEL 5 — Noola watches Pixa send the confirmation only to Jax's handheld."
       },
       {
-        "text": "PANEL 6 — Jax looks mildly pleased."
+        "text": "PANEL 6 — Jax pockets the device and returns to work."
       }
     ],
     "dialogueInline": [
       {
-        "speaker": "SIGN",
-        "text": "DISCLOSURE: NO ENTRY.",
+        "speaker": "PIXA",
+        "text": "Participation complete.",
         "subtext": "Panel 2"
       },
       {
         "speaker": "PIXA",
-        "text": "Participation complete. Disclosure state: no entry.",
+        "text": "Private confirmation?",
         "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
-        "text": "I feel extremely compliant about this.",
+        "text": "Now you ask?",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "I am asking now.",
         "subtext": "Panel 4"
       },
       {
         "speaker": "NOOLA",
-        "text": "Clear.",
+        "text": "Learning.",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "JAX",
-        "text": "Best review I've had all year.",
-        "subtext": "Panel 6"
+        "speaker": "PIXA",
+        "text": "Yes.",
+        "subtext": "Panel 5"
       }
     ]
   },
@@ -222,7 +227,7 @@
   },
   {
     "id": "SDS_S1E07_P05",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: More free-text entries arrive, but instead of being sorted into one interpretive system they point in different directions: EAST HATCH STICKS WHEN COLD; NIGHT SHIFT HAS TWO HANDOFF CHECKLISTS; I MISS HOME ON LATE SHIFT. Middle image: Astra assigns only the first two as work. Closing image: Noola sees Kreeb set the personal card aside without translating it.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Three very different free-text entries sit apart on the table. Middle image: Pixa offers to route them without deriving a single emotional category, and Mira is delighted by the restraint. Closing image: Noola watches Kreeb leave the personal card unconverted while the other two become actual work.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
@@ -234,58 +239,53 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Three cards sit apart on the table: EAST HATCH STICKS WHEN COLD; NIGHT SHIFT HAS TWO HANDOFF CHECKLISTS; I MISS HOME ON LATE SHIFT."
+        "text": "PANEL 1 — Three cards sit apart: EAST HATCH STICKS WHEN COLD; NIGHT SHIFT HAS TWO HANDOFF CHECKLISTS; I MISS HOME ON LATE SHIFT."
       },
       {
-        "text": "PANEL 2 — Pixa notes that the cards describe three different kinds of information without inferring emotion categories."
+        "text": "PANEL 2 — Pixa identifies three requested outcomes without inferring emotion categories."
       },
       {
-        "text": "PANEL 3 — Astra hands the hatch card to Mira for a field check with Jax."
+        "text": "PANEL 3 — Mira looks genuinely pleased at the clean separation."
       },
       {
-        "text": "PANEL 4 — Glorp takes the two-checklist card and, after a beat, asks Kreeb to come with him to the people who use them."
+        "text": "PANEL 4 — Astra routes the hatch card to field work and Glorp takes the handoff problem."
       },
       {
-        "text": "PANEL 5 — Kreeb keeps the personal card in his hand rather than adding it to either work stream."
+        "text": "PANEL 5 — Kreeb keeps the personal card in his hand rather than placing it in either work stream."
       },
       {
-        "text": "PANEL 6 — Across the room, Noola sees him do that and looks away."
+        "text": "PANEL 6 — Noola sees that distinction from across the room."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "PIXA",
-        "text": "Three entries. Three different requested outcomes.",
+        "text": "I can route these without deriving a common category.",
         "subtext": "Panel 2"
       },
       {
         "speaker": "MIRA",
-        "text": "Good. Keep them different.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "Hatch gets checked.",
+        "text": "That is my favorite thing you've said all week.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "GLORP",
-        "text": "The handoff problem needs the current users.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "KREEB",
-        "text": "Agreed.",
-        "subtext": "Panel 4"
+        "speaker": "PIXA",
+        "text": "I have said several things this week.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
-        "text": "And the last one?",
-        "subtext": "Panel 5"
+        "text": "Hatch gets checked. Handoff gets reconciled.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "I want the people who use both lists.",
+        "subtext": "Panel 4"
       },
       {
         "speaker": "KREEB",
-        "text": "Not ours to convert.",
+        "text": "This one stays personal.",
         "subtext": "Panel 5"
       }
     ]
@@ -348,7 +348,7 @@
   },
   {
     "id": "SDS_S1E07_P07",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp and Kreeb meet the actual night-shift handoff materials rather than categorizing the complaint from a desk: two checklists cover overlapping work in different orders. Middle image: Glorp interviews the workflow and discovers the duplication creates missed assumptions between shifts. Closing image: He chooses to reconcile the process before worrying about how the disclosure should be labeled.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp and Kreeb compare the two active night-shift handoff checklists with notes from the people who use them. Middle image: Glorp realizes the defect is the overlapping process itself rather than anyone's failure to comply. Closing image: When Astra asks how to classify the original disclosure, Glorp refuses to classify it until the work is fixed.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -357,38 +357,38 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Two worn night-shift handoff checklists lie side by side, visibly covering overlapping tasks in different orders."
+        "text": "PANEL 1 — Two worn handoff checklists lie side by side with fresh notes from current users."
       },
       {
-        "text": "PANEL 2 — Glorp compares the sheets and initially assumes one must be obsolete."
+        "text": "PANEL 2 — Glorp confirms that both versions are current and both are actively used."
       },
       {
-        "text": "PANEL 3 — Kreeb points out notes and wear on both: people are actively using each version."
+        "text": "PANEL 3 — Kreeb points to where the lists overlap but put responsibility in different orders."
       },
       {
-        "text": "PANEL 4 — Glorp traces where one list assumes a check the other schedules later."
+        "text": "PANEL 4 — Glorp traces the missed assumption between shifts and circles the process conflict."
       },
       {
-        "text": "PANEL 5 — Astra asks what category the original card should receive."
+        "text": "PANEL 5 — Astra asks what category the original disclosure should receive."
       },
       {
-        "text": "PANEL 6 — Glorp sets the category field aside and starts a single reconciled checklist."
+        "text": "PANEL 6 — Glorp moves the category field aside and starts drafting one reconciled checklist."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "GLORP",
-        "text": "Both are current.",
+        "text": "Both current.",
         "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
-        "text": "Then the problem is not the person choosing wrong.",
+        "text": "Both used.",
         "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
-        "text": "The lists disagree about when the handoff is complete.",
+        "text": "Then the lists are the defect.",
         "subtext": "Panel 4"
       },
       {
@@ -398,12 +398,17 @@
       },
       {
         "speaker": "GLORP",
-        "text": "Later.",
+        "text": "Not yet.",
+        "subtext": "Panel 6"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "I like this version of you.",
         "subtext": "Panel 6"
       },
       {
         "speaker": "GLORP",
-        "text": "This first.",
+        "text": "Do not document that.",
         "subtext": "Panel 6"
       }
     ]
@@ -636,7 +641,7 @@
   },
   {
     "id": "SDS_S1E07_P12",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: By afternoon, the feelings initiative has produced a visibly ordinary work board: repaired vent, verified hatch, one reconciled handoff checklist, several minor defects, and a locked personal envelope that is not on the board. Middle image: Glorp posts the new single handoff checklist. Closing image: Noola passes Kreeb; their earlier conversation remains private and unresolved by design.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: By afternoon, the work board shows several concrete repairs and one reconciled handoff process. Middle image: Pixa stops treating the corporate participation table as the center of the day and instead helps return completed work to ordinary station use. Closing image: Noola passes Kreeb with the personal issue still unresolved and private.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -650,16 +655,16 @@
         "text": "PANEL 1 — The work board shows completed items originating from disclosures: vent, hatch, stool, printer and handoff process."
       },
       {
-        "text": "PANEL 2 — Glorp posts one reconciled night-shift checklist and removes the two conflicting versions."
+        "text": "PANEL 2 — Glorp posts the single reconciled handoff checklist and removes the conflicting pair."
       },
       {
-        "text": "PANEL 3 — Pixa counts operational closures only."
+        "text": "PANEL 3 — Pixa carries the repaired stool back to the common work area instead of standing beside the participation display."
       },
       {
-        "text": "PANEL 4 — Astra notices that the participation table itself has become almost irrelevant to the day's useful work."
+        "text": "PANEL 4 — Astra looks at the now-nearly-irrelevant feelings table while ordinary work resumes around it."
       },
       {
-        "text": "PANEL 5 — The personal-disclosure envelope remains locked off the board."
+        "text": "PANEL 5 — The personal-disclosure envelope remains locked off the work board."
       },
       {
         "text": "PANEL 6 — Noola passes Kreeb and gives him a small ordinary nod."
@@ -673,18 +678,23 @@
       },
       {
         "speaker": "ASTRA",
-        "text": "This is the best feelings day I've ever seen.",
-        "subtext": "Panel 4"
+        "text": "And you are delivering furniture now?",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "It needed to return.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
-        "text": "That may not be the approved metric.",
-        "subtext": "Panel 4"
+        "text": "That is not an assigned function.",
+        "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "I know.",
-        "subtext": "Panel 4"
+        "speaker": "PIXA",
+        "text": "It was on my way.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "NOOLA",
@@ -764,7 +774,7 @@
   },
   {
     "id": "SDS_S1E07_P14",
-    "summary": "Primary composition: 5-panel page in Lab Work Area. Opening image: Mira checks passive material totals against the day's completed work because the corporate request explicitly asks for output correlation. Middle image: The material total is lower than previous days despite more ordinary problems being fixed. Closing image: Mira refuses to turn either direction into a causal story.",
+    "summary": "Primary composition: 5-panel page in Lab Work Area. Opening image: Mira compares the lower passive sample total with a day in which more ordinary work was completed and is genuinely intrigued by the mismatch. Middle image: Astra tries to turn the curiosity into an explanation; Mira refuses the leap without losing the curiosity. Closing image: The unresolved pattern goes into the record as a question rather than a conclusion.",
     "setting": "SDS_Lab_Work_Area",
     "characters": [
       "SDS_Mira",
@@ -773,19 +783,19 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Mira compares passive sample totals with the day's completed maintenance and process work."
+        "text": "PANEL 1 — Mira lines up the day's passive sample total beside the completed-work count."
       },
       {
-        "text": "PANEL 2 — The sample total is lower than the previous two workdays."
+        "text": "PANEL 2 — The material total is lower even though more maintenance and process work closed."
       },
       {
-        "text": "PANEL 3 — Astra asks whether fixing the disclosed problems caused the drop."
+        "text": "PANEL 3 — Mira leans closer to the comparison, interested rather than alarmed."
       },
       {
-        "text": "PANEL 4 — Mira points to the tiny dataset and several uncontrolled variables."
+        "text": "PANEL 4 — Astra asks whether fixing the disclosed problems caused the lower material output."
       },
       {
-        "text": "PANEL 5 — She records MATERIAL EFFECT: INDETERMINATE."
+        "text": "PANEL 5 — Mira writes MATERIAL EFFECT: INDETERMINATE, then keeps the comparison open for herself."
       }
     ],
     "dialogueInline": [
@@ -795,30 +805,40 @@
         "subtext": "Panel 2"
       },
       {
+        "speaker": "MIRA",
+        "text": "Huh.",
+        "subtext": "Panel 3"
+      },
+      {
         "speaker": "ASTRA",
-        "text": "Because we fixed things?",
+        "text": "Good huh or bad huh?",
         "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
-        "text": "Unknown.",
-        "subtext": "Panel 4"
+        "text": "Interesting huh.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
-        "text": "You could say that with more warmth.",
+        "text": "Because we fixed things?",
         "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
-        "text": "Unknown, warmly.",
-        "subtext": "Panel 4"
+        "text": "Unknown.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "Still interesting.",
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E07_P15",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp builds the aggregate report from the actual routes the day produced: workplace defect, process conflict, no entry, and personal content withheld locally. Middle image: For once, Glorp is the person protecting distinctions instead of multiplying categories. Closing image: Brick's vending-machine note remains outside every formal bucket because it did not become work.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Glorp builds the aggregate report from the actual routes the day produced. Middle image: Kreeb questions whether even an aggregate count of personal no-entry responses could identify people on a small shift; Glorp accepts the privacy problem and removes the count himself. Closing image: Brick's vending-machine note remains outside the report because it never became work.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -828,48 +848,48 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Glorp builds four report lines from actual outcomes: WORKPLACE DEFECTS ROUTED; PROCESS CONFLICTS ROUTED; NO ENTRY ACCEPTED; PERSONAL CONTENT WITHHELD LOCALLY."
+        "text": "PANEL 1 — Glorp builds report lines for workplace defects, process conflicts, accepted no-entry and personal content withheld locally."
       },
       {
-        "text": "PANEL 2 — Kreeb checks that no individual personal text or personal count appears."
+        "text": "PANEL 2 — Kreeb checks the aggregate fields and pauses at the proposed no-entry count."
       },
       {
-        "text": "PANEL 3 — Astra asks whether NO ENTRY should be described as nonresponse."
+        "text": "PANEL 3 — He points out that on a small shift, even an aggregate number can narrow identity."
       },
       {
-        "text": "PANEL 4 — Glorp answers before Kreeb can: it was the response."
+        "text": "PANEL 4 — Glorp considers it, deletes the count and leaves only the rule that NO ENTRY was accepted."
       },
       {
-        "text": "PANEL 5 — Brick watches from the edge holding THE VENDING MACHINE IS SMUG."
+        "text": "PANEL 5 — Brick appears with THE VENDING MACHINE IS SMUG and waits hopefully."
       },
       {
-        "text": "PANEL 6 — Glorp looks at Brick's note and leaves it out because no action was taken."
+        "text": "PANEL 6 — Glorp leaves it out because no operational action was taken."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "KREEB",
-        "text": "No personal text.",
+        "text": "Do we need the count?",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "No entry equals nonresponse?",
+        "speaker": "GLORP",
+        "text": "For response rate.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "On this shift, a count can become a person.",
         "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
-        "text": "No.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "GLORP",
-        "text": "It was an accepted response with no disclosure.",
+        "text": "Then no count.",
         "subtext": "Panel 4"
       },
       {
         "speaker": "KREEB",
-        "text": "Good.",
+        "text": "Agreed.",
         "subtext": "Panel 4"
       },
       {
@@ -886,7 +906,7 @@
   },
   {
     "id": "SDS_S1E07_P16",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra writes the final summary as a report about routing and outcomes rather than feelings. Middle image: Mira adds that no defensible behavioral predictor or material-output correlation was identified. Closing image: Astra submits the plain account of a day in which listening produced work without turning every disclosure into data.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra writes the final report from the completed work rather than the participation table. Middle image: Mira contributes the unresolved material question without acting as sole arbiter; Glorp and Kreeb contribute the privacy boundary they built together. Closing image: Pixa notices the report contains fewer categories than the source program and regards that as successful compression rather than missing data.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -901,16 +921,16 @@
         "text": "PANEL 1 — Astra writes the report beside the completed work board."
       },
       {
-        "text": "PANEL 2 — First line: WORKPLACE-DEFECT DISCLOSURES ROUTED TO ORDINARY MAINTENANCE AND PROCESS WORK."
+        "text": "PANEL 2 — The first lines describe workplace defects and process conflicts routed into ordinary work."
       },
       {
-        "text": "PANEL 3 — Second line: INDIVIDUAL PERSONAL DISCLOSURE CONTENT OUTSIDE REPORT SCOPE."
+        "text": "PANEL 3 — Mira adds MATERIAL EFFECT: INDETERMINATE and leaves her comparison chart attached as physical reference only."
       },
       {
-        "text": "PANEL 4 — Mira adds NO DEFENSIBLE BEHAVIORAL PREDICTOR OR MATERIAL-OUTPUT CORRELATION IDENTIFIED."
+        "text": "PANEL 4 — Glorp and Kreeb add that personal content remains local and no-entry was accepted without a count."
       },
       {
-        "text": "PANEL 5 — Glorp and Kreeb both read the final version without adding categories."
+        "text": "PANEL 5 — Pixa compares the source program's many fields to the short outgoing report."
       },
       {
         "text": "PANEL 6 — Astra submits it."
@@ -918,29 +938,39 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "SCREEN",
-        "text": "Operational benefit observed. Material-output effect indeterminate.",
-        "subtext": "Panel 4"
-      },
-      {
         "speaker": "MIRA",
-        "text": "Defensible.",
-        "subtext": "Panel 4"
+        "text": "Leave the material question open.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
-        "text": "Unusually plain.",
-        "subtext": "Panel 5"
+        "text": "No personal count.",
+        "subtext": "Panel 4"
       },
       {
         "speaker": "KREEB",
-        "text": "It says what happened.",
+        "text": "No personal text.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "Outgoing report contains fewer categories than the source form.",
         "subtext": "Panel 5"
       },
       {
         "speaker": "ASTRA",
-        "text": "That is becoming a habit.",
-        "subtext": "Panel 6"
+        "text": "Concerned?",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "No.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "PIXA",
+        "text": "It is easier to read.",
+        "subtext": "Panel 5"
       }
     ]
   },
