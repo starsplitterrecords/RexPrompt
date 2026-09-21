@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 6: TRIAL OF TOIL
 
-Status: PRODUCTION SCRIPT — ISSUE 6 STRUCTURAL TIGHTENING APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH STILL PENDING  
+Status: PRODUCTION SCRIPT — ISSUE 6 STRUCTURAL TIGHTENING + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
 Primary function: Bjorn must discover whether he still has something useful to offer when the household no longer needs him to command it.
 
 ## Continuity lock
