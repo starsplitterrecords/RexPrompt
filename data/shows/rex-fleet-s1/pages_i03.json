@@ -78,7 +78,11 @@
       "Paul moves protectively between the adults.",
       "Halev arrives as Dain refuses an easy eviction.",
       "Both families remain on opposite sides of one doorway."
-    ]
+    ],
+    "directionInline": [
+      "Make the luxury ring feel like contested shelter rather than reclaimed housing: refugee bedding, old family possessions and civic staff should occupy the same doorway. No one is clearly wrong, and Halev's inability to promise where the resident family goes must remain visible."
+    ],
+    "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P02",
@@ -162,6 +166,9 @@
       "Richard opens his last field kit.",
       "Paul steadies the lamp while the mother holds her child.",
       "The child breathes as the adults meet eyes without reconciliation."
+    ],
+    "directionInline": [
+      "The medical emergency should interrupt the property dispute rather than resolve it. Richard uses refugee medicine on the resident child without asking for moral credit; the shared heat failure keeps both families dependent on the same failing room."
     ]
   },
   {
@@ -232,6 +239,9 @@
       "Their controlled anger closes the distance.",
       "Venn almost reaches for Naomi and stops.",
       "Venn boards while Naomi remains reflected beside the shuttle."
+    ],
+    "directionInline": [
+      "Naomi's anger is about asymmetry of consequence, not abandonment. Keep the departing shuttle and Auric's damaged public space in the same visual field so Venn literally leaves the place Naomi must continue managing."
     ]
   },
   {
@@ -309,11 +319,15 @@
       "Dominion reduces the events to the order chain.",
       "Kerr activates civilian testimony.",
       "Venn faces accusation and survivors simultaneously."
-    ]
+    ],
+    "directionInline": [
+      "The tribunal architecture should make command hierarchy visually clean while Kerr's evidence makes the event morally messy. Civilian testimony and casualty records should intrude on the neat order-chain presentation rather than decorate it."
+    ],
+    "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P05",
-    "summary": "Richard discovers medical and infrastructure evidence that the Triarch manufactured the refugee crisis by cutting heat and medicine to disloyal districts.",
+    "summary": "Richard proves that Triarch policy selectively cut heat and medicine to disloyal districts, turning broader scarcity into targeted suffering that can be documented.",
     "settingText": "INT. AURIC LUXURY RING — IMPROVISED CLINIC",
     "regionText": "The Verge",
     "charactersInline": [
@@ -388,7 +402,11 @@
       "Paul recognizes districts where official reports claimed unrelated shortages.",
       "Tess sees the deliberate sequence in the timestamps.",
       "Richard holds duplicated clinic and utility records as dangerous evidence, not a ceremonial archive object."
-    ]
+    ],
+    "directionInline": [
+      "Treat the discovery as forensic work: mismatched official reports, clinic copies, utility timestamps and district maps. The evidence proves selective punitive shutdowns inside broader scarcity; do not imply every shortage in the frontier was fabricated."
+    ],
+    "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P06",
@@ -466,7 +484,11 @@
       "Dain shows failing residential levels.",
       "Wallace's market answer is rejected.",
       "Naomi makes Halev name the harmed district."
-    ]
+    ],
+    "directionInline": [
+      "Sera should control the room by forcing costs into names and places. Keep the failing district map visible while Wallace offers a market abstraction and Naomi reacts too aggressively, allowing Sera—not Naomi—to define the civilian political question."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P07",
@@ -549,6 +571,9 @@
       "Refugees surrender blanket and space.",
       "Paul distracts the frightened children while Richard works.",
       "The resident mother makes room for Richard."
+    ],
+    "directionInline": [
+      "This page is not reconciliation. The families cooperate because one child cannot breathe. Preserve guarded body language while blanket, space and medical attention move across the earlier social boundary."
     ]
   },
   {
@@ -619,14 +644,30 @@
       "Her refuge quietly prepares to disappear.",
       "Jex receives another plea from trapped families.",
       "His hands hover between closing and accepting the route."
-    ]
+    ],
+    "directionInline": [
+      "Tali's refuge should look operational and vulnerable: packed bags, erased route marks and people preparing to move. Jex's hesitation must occur between two real groups of people who both need the same network."
+    ],
+    "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P09",
-    "summary": "The Triarch offers peace if Auric returns Richard, forcing Paul to ask whether his surrender might save everyone else.",
+    "summary": "The Trade Mask offers restored trade for Richard's return, forcing Paul to ask whether one surrender could buy safety for everyone else.",
     "settingText": "INT. IMPROVISED CLINIC — BROADCAST LIGHT",
     "regionText": "The Verge",
     "charactersInline": [
+      {
+        "name": "Silent Triarch — Trade",
+        "handle": "@starsplit.silent.triarch.trade"
+      },
+      {
+        "name": "Silent Triarch — Fear",
+        "handle": "@starsplit.silent.triarch.fear"
+      },
+      {
+        "name": "Silent Triarch — Raid",
+        "handle": "@starsplit.silent.triarch.raid"
+      },
       {
         "name": "Dr. Richard Secundo",
         "handle": "@starsplit.richard.secundo"
@@ -642,8 +683,8 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.silent.triarch",
-        "speaker": "Triarch",
+        "handle": "@starsplit.silent.triarch.trade",
+        "speaker": "Trade Mask",
         "text": "Return Richard Secundo. Reject Fleet occupation. Trade resumes."
       },
       {
@@ -698,6 +739,9 @@
       "Richard is publicly labeled thief and traitor.",
       "Paul studies his father while patients watch.",
       "Richard kills the screen but cannot answer him."
+    ],
+    "directionInline": [
+      "Introduce the Silent Triarch as a three-mask council while the Trade Mask alone speaks the offer. Raid and Fear remain silent in the background. The visual distinction between the masks should be readable without explanatory captions so later differences feel like an existing structure, not a retcon."
     ]
   },
   {
@@ -786,6 +830,9 @@
       "Dain faces her through armored glass.",
       "Abby shows Pike and Billie's gathering force.",
       "Halev opens the door while Naomi remains ready."
+    ],
+    "directionInline": [
+      "Abby earns entry by arriving physically alone and disarmed while her warship remains outside. Sera owns the political skepticism, Naomi owns the security risk, and Halev accepts personal responsibility for opening the door."
     ]
   },
   {
@@ -861,7 +908,11 @@
       "Tess continues dressing a civilian wound.",
       "Abby absorbs the refusal.",
       "The token remains on an empty cot between them."
-    ]
+    ],
+    "directionInline": [
+      "The sisters' history should sit in the unused command token between them. Tess keeps treating patients throughout the argument, making staying an action she is already performing rather than a declaration about who she has become."
+    ],
+    "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P12",
@@ -926,7 +977,11 @@
       "Venn deletes it.",
       "Kerr warns her what honesty costs.",
       "Venn returns without notes."
-    ]
+    ],
+    "directionInline": [
+      "Kerr's proposed defense should look genuinely useful, not cowardly. Venn deletes the argument because it is false, forcing the tribunal to judge the actual choice instead of allowing the scene to become a purity test."
+    ],
+    "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P13",
@@ -1004,7 +1059,11 @@
       "The clinic loses a Fleet power feed.",
       "Dain sees a shelter level go dark.",
       "Naomi closes Venn's personal channel without calling."
-    ]
+    ],
+    "directionInline": [
+      "Show the withdrawal as material loss: a power feed goes dark, medical support disappears and Thunderbreak moves beyond the boundary. Sera and Naomi should experience the same act through different lenses—punishment and leverage."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P14",
@@ -1091,7 +1150,11 @@
       "Richard sets conditions limiting how his evidence may be used.",
       "Paul refuses the seat beside him and Richard accepts the decision.",
       "Dain activates the tamper-evident public feed and places Richard’s conditions at its beginning."
-    ]
+    ],
+    "directionInline": [
+      "The archive booth is ordinary evidence infrastructure. Richard's conditions must appear in the public record before his testimony begins, and Paul's refusal of the camera should be accepted without turning him into a symbolic witness."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P15",
@@ -1161,7 +1224,10 @@
       "Paul hears familiar people and districts named outside the booth.",
       "Anonymous hands retransmit the testimony and supporting data before authorities can suppress the channel."
     ],
-    "continuityFrom": "RF_I03_P14"
+    "continuityFrom": "RF_I03_P14",
+    "directionInline": [
+      "Keep names paired with source records and remembered faces so testimony never floats free of evidence. The spread of the feed should happen through ordinary workers retransmitting it, not through a grand public awakening."
+    ]
   },
   {
     "id": "RF_I03_P16",
@@ -1226,6 +1292,9 @@
       "Pike overlays the Auric attack path.",
       "Billie sees the clinic marker.",
       "She takes the strike control key."
+    ],
+    "directionInline": [
+      "Billie should react to one named victim before Pike turns the testimony into an attack opportunity. Her agreement to strike Auric is therefore a choice to answer uncomfortable truth with spectacle, not ignorance of what Richard said."
     ]
   },
   {
@@ -1304,6 +1373,9 @@
       "Residents find the planted evidence.",
       "Accusation becomes a physical fight.",
       "Richard places himself between Paul and the crowd."
+    ],
+    "directionInline": [
+      "The planted insignia must look almost too convenient once Halev sees the physical damage. Let the crowd's fear become dangerous before officials can explain anything; Richard protecting Paul should precede any argument about evidence."
     ]
   },
   {
@@ -1383,7 +1455,11 @@
       "Dain demands evacuation.",
       "Naomi activates the live feed mid-argument.",
       "They face the frightened station together."
-    ]
+    ],
+    "directionInline": [
+      "Naomi should activate the broadcast while the leaders are still disagreeing, denying them the chance to polish a unified message. The public hears uncertainty and argument along with the evacuation warning."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P19",
@@ -1471,6 +1547,9 @@
       "Halev tears up his own authorization.",
       "Dain gives away her family berth.",
       "Mixed families enter while both leaders remain outside."
+    ],
+    "directionInline": [
+      "Halev and Sera give up privileged access before asking anyone else to share. Their families and security remain unresolved outside the frame; the point is not martyrdom but removing an exemption they cannot ethically defend."
     ]
   },
   {
@@ -1555,7 +1634,11 @@
       "Jex reveals a faint hidden web.",
       "Tali understands his consideration.",
       "Her haven glows as one node among many."
-    ]
+    ],
+    "directionInline": [
+      "The hidden route network should be clearly larger than Jex's already-public passage. Tali's haven is one node among many, so opening the system saves Auric by exposing the people who made Jex's private advantage possible."
+    ],
+    "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P21",
@@ -1630,7 +1713,11 @@
       "Tali's node flashes exposed.",
       "It goes black under Jex's hand."
     ],
-    "continuityFrom": "RF_I03_P20"
+    "continuityFrom": "RF_I03_P20",
+    "directionInline": [
+      "The route release should feel irreversible. As concealed apertures activate, Tali's node becomes visible and then disappears; Jex must keep transmitting even after he realizes the cost has become personal."
+    ],
+    "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P22",
@@ -1707,7 +1794,11 @@
       "Billie drives Ashfang into the structure.",
       "The clinic ceiling tears as Tess shields Richard and Paul.",
       "Billie sees the clinic marker ahead."
-    ]
+    ],
+    "directionInline": [
+      "Keep the attack attached to the evacuation geometry. Billie and Pike are not simply attacking Auric; they are forcing civilians to cross exposed space while hunting Richard inside the same structure."
+    ],
+    "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P23",
@@ -1776,7 +1867,11 @@
       "Naomi rejects broad command access.",
       "She assigns civilian shield duty.",
       "Abby relays the order to her defectors."
-    ]
+    ],
+    "directionInline": [
+      "Naomi accepts Abby's help only after narrowing its purpose to civilian protection. Abby's frustration should remain, but the tactical display must show her ships moving into the assigned shield positions rather than pursuing enemies."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P24",
@@ -1845,6 +1940,9 @@
       "Workers launch rescue skiffs by hand.",
       "Thunderbreak holds beyond the boundary.",
       "Deka watches a civilian ship tumble toward fire."
+    ],
+    "directionInline": [
+      "The coalition should look improvised and unequal: Verge escorts, Abby's defectors, worker skiffs and Thunderbreak outside jurisdiction all solve different parts of the same emergency. No formation should suddenly look like a unified fleet."
     ]
   },
   {
@@ -1927,7 +2025,11 @@
       "Venn leaves them untouched.",
       "Her unauthorized channel reaches Thunderbreak.",
       "Deka advances the ship across the boundary."
-    ]
+    ],
+    "directionInline": [
+      "Dominion's offer must be visibly attractive: command restored, legal authority returned, a route out of chaos. Venn refuses the bargain and then deliberately stops short of issuing an unlawful order, leaving Deka's crossing as the crew's choice."
+    ],
+    "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I03_P26",
@@ -2005,6 +2107,9 @@
       "Their shared Shard history is visible.",
       "Close combat ruptures the pressure window.",
       "Billie bleeds beside the buckling barrier."
+    ],
+    "directionInline": [
+      "The fight must read as intimacy turned physical. Billie and Tess know each other's habits, but Tess is no longer using that familiarity to excuse her. Pressure damage around them keeps the fight dangerous to everyone nearby."
     ]
   },
   {
@@ -2097,7 +2202,10 @@
       "Abby reaches with an offered hand.",
       "Billie escapes alone in an emergency launch."
     ],
-    "continuityFrom": "RF_I03_P26"
+    "continuityFrom": "RF_I03_P26",
+    "directionInline": [
+      "Richard treats Billie while Paul objects, preserving the medical ethic that has defined him since Mercy of Dawn. Abby's offered hand is rescue without forgiveness; Billie's refusal keeps her outside reconciliation."
+    ]
   },
   {
     "id": "RF_I03_P28",
@@ -2187,6 +2295,9 @@
       "Dain and Halev reopen shared shelter.",
       "Abby watches Tess remain at the clinic.",
       "Venn hears the guilty finding as testimony spreads behind her."
+    ],
+    "directionInline": [
+      "Do not stage the aftermath as a victory tableau. Each faction has lost something: Venn command, Abby unity, Tess family certainty, Auric infrastructure. The meaningful success is that civilians and evidence survived."
     ]
   },
   {
@@ -2282,7 +2393,11 @@
       "Halev strikes permanent Fleet authority.",
       "The principals assent to mutual civilian defense.",
       "Jex receives TALI STATUS UNKNOWN."
-    ]
+    ],
+    "directionInline": [
+      "The compact should emerge as a list of limits and obligations rather than a triumphant constitution. Jex's Tali alert should intrude at the end, making the new public order coexist with a private unresolved cost."
+    ],
+    "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P30",
@@ -2367,6 +2482,9 @@
       "Their permitted call connects.",
       "Their hands align on opposite screens without touching.",
       "Incompatible ships guard the shared shelter lights."
+    ],
+    "directionInline": [
+      "Keep Venn's detention visible throughout the call: no insignia, restricted compartment, permitted connection. Naomi's invitation is affectionate but not absolution; the final image of incompatible ships guarding the same shelter should carry the larger promise."
     ]
   }
 ]

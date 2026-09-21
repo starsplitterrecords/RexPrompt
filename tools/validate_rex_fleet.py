@@ -184,6 +184,58 @@ for required in ("function findCharacterByHandle", "function formatCharacter", "
     if required not in index_text:
         raise SystemExit(f"Assembler continuity support missing: {required}")
 
+
+settings = load_json(SHOW / "settings.json")
+required_settings = (
+    "RF_Thunderbreak_Command", "RF_Admiralty_Tribunal", "RF_Relic_Court",
+    "RF_Auric_Civic_Core", "RF_Auric_Luxury_Ring", "RF_Veil_Market",
+    "RF_Gravefire_Interior", "RF_Arena_Vault", "RF_Tal_Corvus_Warrens",
+    "RF_Shatterforge", "RF_Auric_Gate",
+)
+for key in required_settings:
+    if key not in settings or not settings[key].get("text"):
+        raise SystemExit(f"Recurring Rex Fleet setting canon missing: {key}")
+
+for issue, pages in issues.items():
+    for page in pages:
+        setting_key = page.get("setting")
+        if setting_key and setting_key not in settings:
+            raise SystemExit(f"{page.get('id')}: unresolved setting continuity key {setting_key}")
+        if issue in (2, 3) and not page.get("directionInline"):
+            raise SystemExit(f"{page.get('id')}: early-issue mature staging direction missing")
+        for d in page.get("dialogueInline", []) or []:
+            if d.get("handle") in ("TRIARCH", "@starsplit.silent.triarch"):
+                raise SystemExit(f"{page.get('id')}: generic Triarch dialogue survived differentiated-mask pass")
+
+if "[SETTING CONTINUITY]" not in index_text:
+    raise SystemExit("Assembler does not emit recurring setting continuity when exact scene labels are present")
+
+for issue, entry in zip(range(2, 13), rex):
+    if entry.get("formatNote") != "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.":
+        raise SystemExit(f"Issue {issue}: variable-length collected-issue format note missing")
+
+def page_blob(issue, page_id):
+    page = next((p for p in issues[issue] if p.get("id") == page_id), None)
+    if page is None:
+        raise SystemExit(f"Required continuity page missing: {page_id}")
+    return json.dumps(page, ensure_ascii=False)
+
+bridge = page_blob(4, "RF_I04_P04")
+if "temporary field authority" not in bridge.lower() or "tribunal" not in bridge.lower():
+    raise SystemExit("Venn Issue 3→4 command-status bridge regressed")
+
+for issue, page_id in ((5, "RF_I05_P12"), (9, "RF_I09_P08"), (12, "RF_I12_P17")):
+    if "tali" not in page_blob(issue, page_id).lower():
+        raise SystemExit(f"Tali unresolved-thread persistence missing at {page_id}")
+
+for issue, page_id in ((5, "RF_I05_P16"), (9, "RF_I09_P04"), (10, "RF_I10_P28"), (12, "RF_I12_P07")):
+    if "@starsplit.sera.dain" not in page_blob(issue, page_id):
+        raise SystemExit(f"Sera civilian-governance continuity missing at {page_id}")
+
+if "mercy of dawn" not in page_blob(12, "RF_I12_P05").lower():
+    raise SystemExit("Billie accountability beat no longer preserves Mercy of Dawn")
+
+
 print("Rex Fleet comic normalization validation passed")
 print("Production model: series -> issue -> page -> panel")
 for issue in range(2, 13):
