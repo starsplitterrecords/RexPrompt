@@ -352,16 +352,16 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 **5 panels.**
 
 1. **Hallway.** Carrie knocks once and enters 5B with coat still on.
-   **CARRIE:** Bjorn. Group. We need to leave in five.
+   **CARRIE:** Bjorn. Group. Five minutes.
 2. **Interior wide.** Gunnar is reading. One male Kin is at the table. Bjorn is absent. Astrid is also not present, without comment.
 3. **Carrie medium.**
    **CARRIE:** Where is he?
    **GUNNAR:** Group.
 4. **Carrie stares.**
    **CARRIE:** By himself?
-   **GUNNAR:** I showed him once.
+   **GUNNAR:** Once.
 5. **Exterior cut to the Bushwick sidewalk.** Bjorn is already half a block from the apartment, moving with purpose through ordinary foot traffic; do not imply Carrie or Gunnar can see him clearly from inside.
-   **GUNNAR (off-panel):** He knows the way.
+   **GUNNAR (off-panel):** He knows it.
 
 **Page turn:** the support group has become Bjorn's own relationship, not Carrie's intervention.
 
