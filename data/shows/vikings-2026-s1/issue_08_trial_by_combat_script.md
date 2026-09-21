@@ -1,7 +1,7 @@
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
-Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; READY FOR REXPROMPT COMPILATION  
-Primary function: the institution finally meets the household as separate people. Bjorn's trial is allowing others to speak for themselves; Astrid's payoff is that the least-followed member has quietly become the most practically integrated.
+Status: PRODUCTION SCRIPT — HARD-PROBLEM / ASTRID-COMPRESSION PASS APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH PENDING  
+Primary function: the institution must decide whether an emergency household file built around Bjorn can be lawfully converted into five individual permanent statuses. The applicants have to prove in the room that the old hierarchy no longer describes them; Bjorn's trial is surrendering its final legal residue, and Astrid's compact testimony reveals how far ordinary independence has already gone.
 
 ## Continuity lock
 
@@ -17,7 +17,7 @@ The hearing authority is competent, bounded, busy, and genuinely trying to make 
 
 This is a fictional DTI municipal administrative process. Use **Status Reconciliation Review** for the proceeding, **hearing chamber** for the room, and **Hearing Officer** for the adjudicator. Do not alternate among judge, court, tribunal, and hearing-authority labels.
 
-The locked dramatic and procedural outcome is: **permanent temporal-resident status** is granted to all five displaced applicants **individually**. The Bushwick placement may continue under ordinary tenancy and program rules rather than intensive DTI case supervision. The order does not require the five applicants to remain one household forever.
+The locked dramatic and procedural outcome remains: **permanent temporal-resident status** is granted to all five displaced applicants **individually**. The hearing must earn that result by curing the emergency-intake classification that still names Bjorn as the household responsible adult. If the record cannot support five independent adult findings, the competent alternative is continued provisional status and reclassification rather than arbitrary denial. The Bushwick placement may continue under ordinary tenancy and program rules after the correction; the order does not require the five applicants to remain one household forever.
 
 ## Page-image language for this issue
 
@@ -115,48 +115,46 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ---
 
-## PAGE 5 — THE FILE
+## PAGE 5 — THE OLD BOX
 
-**Summary:** The hearing authority summarizes a competent case file that accidentally makes the household sound more dependent on Carrie than the people sitting in front of it.
+**Summary:** The Hearing Officer identifies the real legal defect: the emergency intake file still treats Bjorn as the household's responsible adult and the other four adults as derivative members, a structure that cannot simply convert into five individual permanent statuses.
 
-**Setting:** hearing chamber.
-
-**5 panels.**
-
-1. **Insert.** Thin but substantial DTI file: housing placement, incident reports, transit/banking milestones, inspection notes, neighborhood contacts, review notice.
-2. **Medium on Hearing Officer reading.**
-   **HEARING OFFICER:** Five temporal-displacement applicants. Shared emergency placement converted to provisional residence. Repeated compliance exceptions. No criminal referral. Stable housing. Increasing independent activity.
-3. **Carrie listens; Bjorn looks at the file as if it were speaking about someone else.**
-4. **Hearing Officer continues.**
-   **HEARING OFFICER:** Caseworker supervision remains the primary documented support.
-5. **Close on Carrie.** That sentence bothers her because she knows it is no longer true.
-
-**Page turn:** Carrie's own documentation has fallen behind the life it once accurately described.
-
----
-
-## PAGE 6 — CARRIE'S LIMIT
-
-**Summary:** Carrie's strongest testimony is admitting that successful integration increasingly occurs outside her knowledge.
-
-**Setting:** hearing chamber, Carrie standing or seated at designated position.
+**Setting:** Status Reconciliation Review hearing chamber.
 
 **5 panels.**
 
-1. **Two-shot Hearing Officer/Carrie across room.**
-   **HEARING OFFICER:** In your professional judgment, has the placement been successful?
-2. **Carrie gives the automatic answer.**
-   **CARRIE:** Yes. Housing stabilized. Missed appointments are down. Independent travel is up. Neighborhood incidents are—
-3. **She stops herself.**
-   **CARRIE:** Sorry. That's the file answer.
-4. **Hearing Officer.**
-   **HEARING OFFICER:** It is your file.
-5. **Carrie looks toward the household.**
-   **CARRIE:** It used to be accurate. Now success mostly means I don't know everything they do all day.
+1. **wide.** The Hearing Officer reviews the intake cover sheet and the later provisional-residence records while the five applicants sit together at one table.
+2. **insert.** Close on an old DTI intake field: HOUSEHOLD RESPONSIBLE ADULT — BJORN. Four associated adult members are listed beneath the master household record.
+   **HEARING OFFICER:** The emergency intake record has one responsible adult and four derivative household members.
+3. **medium on Carrie.** Carrie recognizes the old classification immediately.
+   **CARRIE:** That was the intake structure.
+4. **medium on Hearing Officer.** The Hearing Officer turns to the governing problem without accusation.
+   **HEARING OFFICER:** Permanent temporal-resident status is individual. I cannot simply roll this household record forward five times.
+5. **reaction strip.** Bjorn reads the significance before the others do. Gunnar looks at Carrie. Astrid remains still.
+   **BJORN:** Then the old paper stands in the way.
 
-**Page turn:** the limit of supervision becomes evidence of adulthood rather than caseworker failure.
+**Page turn:** the hearing now has a genuine legal obstacle rather than merely a set of favorable character questions.
 
----
+## PAGE 6 — NO PERMANENT ORDERS TODAY
+
+**Summary:** The Hearing Officer explains the stakes fairly: the defect can be cured in the hearing if the record now supports five independent adult applicants; otherwise permanent status must wait and the provisional case returns for reclassification.
+
+**Setting:** Same Status Reconciliation Review hearing chamber.
+
+**5 panels.**
+
+1. **medium on Carrie.** Carrie leans forward, ready to argue from everything that has changed since intake.
+   **CARRIE:** That classification is months out of date.
+2. **medium on Hearing Officer.** The Hearing Officer stops the argument only to define the legal lane.
+   **HEARING OFFICER:** I believe you. Belief is not the finding I have to make.
+3. **wide.** The officer gestures to the five applicants rather than to Carrie's file.
+   **HEARING OFFICER:** If the testimony supports five independent adults, I can correct the classification here.
+4. **medium on Carrie.** Carrie absorbs that her own recommendation cannot cure the record by itself.
+   **CARRIE:** And if it doesn't?
+5. **medium on Hearing Officer.** The officer states the alternative outcome without menace.
+   **HEARING OFFICER:** They remain provisional and the file goes back for reclassification. No permanent orders today.
+
+**Page turn:** the result can be earned today, but it can also fail without anyone behaving unfairly.
 
 ## PAGE 7 — THE FIRST MAN
 
@@ -255,29 +253,27 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ---
 
-## PAGE 11 — RECESS / SILAS BROUGHT A BINDER
+## PAGE 11 — THE CHECKBOX
 
-**Summary:** A brief recess breaks the hearing-room rhythm, and Silas demonstrates progress by being willing to remain an unused witness.
+**Summary:** During recess, Carrie sees that the hard problem is partly her own old intake decision; Silas offers to help, but the only useful thing is leaving the room to the people whose status is actually being decided.
 
-**Setting:** municipal hearing-center hallway outside hearing room.
+**Setting:** Municipal hearing-center recess hallway outside the chamber.
 
 **5 panels.**
 
-1. **Wide.** The household spills into the hallway for a short recess. Silas is waiting on a bench with an absurdly thick binder and a phone face-down beside him.
-2. **Carrie sees the binder.**
-   **CARRIE:** No.
-3. **Silas.**
-   **SILAS:** I haven't said anything.
-   **CARRIE:** The binder did.
-4. **Silas looks at the closed hearing-room door.**
+1. **medium.** Carrie stands with the old intake cover sheet open to BJORN — HOUSEHOLD RESPONSIBLE ADULT. Gunnar and Bjorn are nearby but not crowding her.
+   **GUNNAR:** You chose that box?
+2. **close on Carrie.** Carrie looks at the checkbox she made during emergency intake.
+   **CARRIE:** The intake system required one responsible adult. Bjorn was the only person who could answer enough questions that day.
+3. **medium on Silas.** Silas appears with his overprepared binder held against his chest.
+   **SILAS:** I have statements, photos, neighborhood stuff—
+4. **two-shot Carrie/Silas.** Carrie closes the old intake sheet.
+   **CARRIE:** None of that fixes this.
    **SILAS:** Do they need me?
-   **CARRIE:** Maybe not.
-5. **Silas sets the binder under the bench instead of opening it.**
-   **SILAS:** I'll be here if they do.
+5. **wide.** Silas sits down with the binder unopened. Carrie turns back toward the hearing-room door instead of toward a new strategy.
+   **CARRIE:** They need to answer.
 
-**Page turn:** even Silas can support the household without insisting on becoming its interpreter.
-
----
+**Page turn:** Carrie realizes the hard problem is partly an old casework decision she made under emergency conditions.
 
 ## PAGE 12 — THE COMPLAINT
 
@@ -304,271 +300,259 @@ The locked dramatic and procedural outcome is: **permanent temporal-resident sta
 
 ## PAGE 13 — ASTRID IS CALLED
 
-**Summary:** Astrid answers her first question before Carrie can mediate, and the room quietly recalibrates its assumptions.
+**Summary:** Astrid is called after the louder applicants and immediately establishes that she will answer for herself rather than through Carrie.
 
-**Setting:** hearing chamber.
+**Setting:** Status Reconciliation Review hearing chamber.
 
 **5 panels.**
 
-1. **Medium.** Astrid changes seats or moves to the individual questioning position. No hero framing.
-2. **Hearing Officer.**
-   **HEARING OFFICER:** Do you want your caseworker to help answer if you have trouble with a question?
-3. **Carrie turns slightly toward Astrid, ready but not speaking.**
-4. **Astrid.**
+1. **medium.** Astrid moves to the individual questioning position without special framing.
+2. **medium on Hearing Officer.** The Hearing Officer checks whether Astrid wants caseworker assistance.
+   **HEARING OFFICER:** Do you want Ms. Carrie to help answer if you have trouble with a question?
+3. **medium on Carrie.** Carrie turns slightly toward Astrid but does not speak.
+4. **medium on Astrid.** Astrid answers directly.
    **ASTRID:** If I need her, I ask.
-5. **Hearing Officer nods and simply continues. Carrie sits back. Gunnar looks at Astrid with new attention.**
+5. **wide.** Carrie sits back. The Hearing Officer continues without treating the answer as remarkable.
 
-**Page turn:** independence arrives as an ordinary procedural preference, not a reveal speech.
+**Page turn:** Astrid establishes immediately that she will answer as an applicant, not as a dependent voice routed through Carrie.
 
----
+## PAGE 14 — ENOUGH TO KNOW
 
-## PAGE 14 — HER WAY HOME
+**Summary:** One compact line of questioning reveals Astrid's practical independence: she can get home, buy what the household needs, and has neighborhood relationships Carrie did not catalogue as hers.
 
-**Summary:** A basic route question reveals that Astrid has built independent navigation knowledge Gunnar never taught her.
-
-**Setting:** hearing chamber with restrained reader-facing cutaway to prior ordinary travel.
+**Setting:** Hearing chamber with two restrained reader-facing ordinary-life cutaways.
 
 **6 panels.**
 
-1. **Hearing Officer.**
-   **HEARING OFFICER:** If you left this building alone, could you get home?
-2. **Astrid.**
-   **ASTRID:** Yes.
-3. **Hearing Officer.**
-   **HEARING OFFICER:** Tell me how.
-4. **Astrid thinks in landmarks rather than route-number exposition.**
-   **ASTRID:** Train to our stop. If train is closed, bus to the church with the blue door. Three blocks past the fruit man. Turn at the laundromat.
-5. **Small cutaway panel, prior-day ordinary street view.** Astrid alone stepping off a bus near a blue-doored church, carrying groceries, moving with practiced certainty. No caption claiming evidence.
-6. **Back in hearing room, Gunnar quietly leans toward Bjorn.**
+1. **medium on Hearing Officer.** The officer asks one practical question tied to the independent-adult classification.
+   **HEARING OFFICER:** If you left this building alone, could you get home and get what the household needs on the way?
+2. **medium on Astrid.** Astrid answers in concrete landmarks rather than transit jargon.
+   **ASTRID:** Yes. Train if it runs. Bus to the blue church if it does not. Food, soap, needles. I know the stores.
+3. **small cutaway.** Astrid alone steps off a bus near the familiar blue-doored church carrying groceries; she moves with practiced certainty.
+4. **medium on Hearing Officer and Astrid.** The officer follows with ordinary household and neighborhood questions.
+   **HEARING OFFICER:** Who would know you there?
+   **ASTRID:** Store owner. Woman upstairs. Woman with red cart.
+5. **small cutaway.** Astrid at the bodega counter exchanges a familiar nod with the owner while choosing soap and needles; the Upstairs Neighbor passes her in the building hall in a separate sliver of the panel.
+6. **reaction two-shot.** Carrie looks at her generic neighborhood-contact notes. Gunnar realizes Astrid knows routes he never taught her.
    **GUNNAR:** I did not teach her that way.
+   **CARRIE:** And I wrote those down as household contacts.
+
+**Page turn:** three former Astrid proof pages collapse into one practical demonstration of routes, errands and relationships.
+
+## PAGE 15 — DIFFERENT FROM DEPENDENT
+
+**Summary:** Astrid completes the proof without a montage: she can ask for clarification, manages an ordinary day by choice, and makes clear that mutual reliance inside the household is not legal dependency on Bjorn or Carrie.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**6 panels.**
+
+1. **medium on Hearing Officer.** The officer asks a bureaucratically phrased independence question.
+   **HEARING OFFICER:** Do you independently procure ordinary necessities and manage routine travel without household supervision?
+2. **medium on Astrid.** Astrid refuses the wording rather than the question.
+   **ASTRID:** I know those words. Not why you put them together.
+3. **medium on Hearing Officer.** The officer simplifies without irritation.
+   **HEARING OFFICER:** Do you run your own day?
+4. **medium on Astrid.** Astrid answers with the ordinary shape of her day and no effort to impress the room.
+   **ASTRID:** Yes. I shop. I wash clothes. I go where I need. Sometimes where I want.
+5. **two-shot Astrid/Bjorn.** The officer asks the question that matters to the old household classification.
+   **HEARING OFFICER:** Do you need Bjorn to make those decisions?
+   **ASTRID:** No.
+6. **wide.** Bjorn hears Astrid define the relationship without insult; Carrie does not translate or soften it.
+   **ASTRID:** He needs me sometimes. I need him sometimes. That is different.
+
+**Page turn:** mutual reliance is distinguished from legal dependency, completing Astrid's proof without ranking her against the others.
+
+## PAGE 16 — THE PROBLEM RETURNS
+
+**Summary:** After Astrid's testimony, the Hearing Officer returns to the unresolved record defect: strong individual lives do not automatically erase an old legal classification.
+
+**Setting:** Same hearing chamber, after Astrid returns to the applicant table.
+
+**5 panels.**
+
+1. **wide.** Astrid returns to the applicant table. The Hearing Officer stacks the testimony notes beside the old master household record.
+2. **medium on Hearing Officer.** The officer acknowledges what the testimony has established.
+   **HEARING OFFICER:** I have heard five adults describe separate lives and separate intentions.
+3. **insert.** The old field HOUSEHOLD RESPONSIBLE ADULT — BJORN remains visible on the intake record.
+   **HEARING OFFICER:** I still have a record that says one of you is responsible for the other four.
+4. **medium on Carrie.** Carrie understands the distinction between facts and the legal record.
+   **CARRIE:** Because I put it there.
+5. **medium on Hearing Officer.** The officer states the remaining finding she needs.
+   **HEARING OFFICER:** Then I need to know whether it was only an intake shortcut, or whether it still describes this household.
+
+**Page turn:** the room has strong facts but still has to correct the legal meaning of the old household file.
+
+## PAGE 17 — CARRIE'S CHECKBOX
+
+**Summary:** Carrie owns the original classification instead of defending her file, explaining why it was reasonable during emergency intake and why leaving it unchanged became inaccurate.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**5 panels.**
+
+1. **medium on Carrie.** Carrie keeps the old intake sheet open in front of her.
+   **CARRIE:** At intake, the system required one responsible adult. Bjorn could communicate enough to get five people housed. I chose him.
+2. **medium on Hearing Officer.** The officer asks whether the designation was factually true at intake.
+   **HEARING OFFICER:** Was that false?
+3. **medium on Carrie.** Carrie answers without blaming the software or pretending the choice was meaningless.
+   **CARRIE:** No. That day, it was useful and mostly true.
+4. **medium on Carrie.** She then states the part that costs her professionally.
+   **CARRIE:** I should have amended it when it stopped being true.
+5. **reaction wide.** The applicants hear Carrie acknowledge that the case record lagged behind their lives.
+   **HEARING OFFICER:** All right. Then we test whether it stopped.
+
+**Page turn:** Carrie earns part of the result by admitting the record was reasonable at intake and wrong to leave unchanged.
+
+## PAGE 18 — CAN HE ANSWER FOR YOU?
+
+**Summary:** The Hearing Officer tests the old hierarchy directly by asking whether Bjorn can consent, decide, or speak for the other adults; each answer separates respect for Bjorn from legal dependence on him.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**6 panels.**
+
+1. **medium on Hearing Officer.** The officer addresses the four adults listed under Bjorn's old responsible-adult designation.
+   **HEARING OFFICER:** Can Bjorn consent to permanent status, housing decisions, or future residence on your behalf?
+2. **reaction sequence.** First Male Kin answers first, matter-of-fact.
+   **FIRST MALE KIN:** He can tell me what he thinks.
+3. **reaction sequence.** Gunnar answers with the distinction he has learned to live by.
+   **GUNNAR:** He can advise me.
+4. **reaction sequence.** Second Male Kin answers without looking to Bjorn.
+   **SECOND MALE KIN:** He cannot choose where I stay.
+5. **reaction sequence.** Astrid answers last and shortest.
+   **ASTRID:** No.
+6. **medium on Bjorn.** Bjorn listens to four refusals of legal dependence without treating any as disloyalty.
+
+**Page turn:** the four other adults reject legal dependency on Bjorn without rejecting him as kin, adviser or household member.
+
+## PAGE 19 — CORRECT IT
+
+**Summary:** The Hearing Officer gives Bjorn the decision at the center of his season arc: correcting the record means surrendering the only legal document that still names him as responsible for everyone else.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**6 panels.**
+
+1. **medium on Hearing Officer.** The officer turns the old intake sheet toward Bjorn.
+   **HEARING OFFICER:** Mr. Bjorn, the record still gives you authority the people beside you say you do not have.
+2. **close on Bjorn.** Bjorn looks at the responsible-adult field, then at the four people beside him.
+   **BJORN:** It gave me responsibility.
+3. **medium on Hearing Officer.** The officer makes the consequence precise.
+   **HEARING OFFICER:** For this case, those are the same box. If I correct it, you no longer answer for them.
+4. **reaction strip.** Carrie does not rescue him. Gunnar, Astrid and the two male Kin wait.
+5. **close on Bjorn.** Bjorn gives up the formal role without asking what replaces it.
+   **BJORN:** Then correct it.
+6. **insert.** The Hearing Officer draws one clean line through the responsible-adult designation and initials the correction.
+   **HEARING OFFICER:** I am.
+
+**Page turn:** Bjorn earns the central turn by surrendering the last formal authority the record still gives him.
+
+## PAGE 20 — WHAT REMAINS
+
+**Summary:** With the legal hierarchy removed, the Hearing Officer asks what actually remains between the five applicants; the answer comes from their continued choices rather than from Bjorn defining the household for them.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**6 panels.**
+
+1. **medium on Hearing Officer.** The officer sets the corrected intake sheet beside five separate applicant pages.
+   **HEARING OFFICER:** If the legal tie is gone, are you still a household?
+2. **medium on First Male Kin.** First Male Kin answers from present life.
+   **FIRST MALE KIN:** I live there.
+3. **medium on Second Male Kin.** Second Male Kin preserves his uncertainty.
+   **SECOND MALE KIN:** Now.
+4. **medium on Gunnar.** Gunnar answers without turning the household into a rule.
+   **GUNNAR:** I come back there.
+5. **medium on Astrid.** Astrid makes the practical point everyone else has been theorizing around.
+   **ASTRID:** Someone still has to wash the cups.
+6. **medium on Bjorn.** Bjorn does not add a collective declaration.
+
+**Page turn:** removing the legal hierarchy does not dissolve the household; continued connection becomes an actual choice.
+
+## PAGE 21 — NOT A LEGAL CATEGORY
+
+**Summary:** The Hearing Officer asks Bjorn what remains of leadership after the legal responsible-adult role is removed; his answer is deliberately smaller and less polished than the speech he once would have given.
+
+**Setting:** Status Reconciliation Review hearing chamber.
+
+**5 panels.**
+
+1. **medium on Hearing Officer.** The officer looks from the corrected record to Bjorn's armor.
+   **HEARING OFFICER:** What are you to them if you are not their responsible adult?
+2. **close on Bjorn.** Bjorn considers the question without performing certainty.
+   **BJORN:** Bjorn.
+3. **medium on Hearing Officer.** The officer checks the practical meaning rather than inviting philosophy.
+   **HEARING OFFICER:** That is not a legal category.
+4. **two-shot Bjorn/Gunnar.** Bjorn glances once toward Gunnar, then answers for himself.
    **BJORN:** No.
+5. **wide.** The answer lands without applause or reaction montage.
+   **BJORN:** It has been enough outside this room.
 
-**Page turn:** Astrid's independence did not originate with the household's designated navigator.
+**Page turn:** Bjorn's leadership survives without needing a new legal title or a polished thesis speech.
 
----
+## PAGE 22 — FIVE RECORDS
 
-## PAGE 15 — HER PEOPLE
+**Summary:** Carrie gives the final professional testimony the corrected record actually needs: she supports five separate permanent findings and accepts that doing so ends intensive case supervision rather than proving one collective integration score.
 
-**Summary:** Astrid's community ties turn out to belong to her personally, and Carrie discovers that her file flattened those relationships into generic neighborhood contact.
-
-**Setting:** hearing chamber with two restrained cutaway panels.
-
-**6 panels.**
-
-1. **Hearing Officer.**
-   **HEARING OFFICER:** Who in the neighborhood knows you by name?
-2. **Astrid.**
-   **ASTRID:** Woman upstairs. Man at laundromat. Store owner. Woman with red cart.
-3. **Cutaway prior day.** Upstairs Neighbor opens her door and hands Astrid a packaged snack while saying her name; Astrid answers with familiar ease.
-4. **Cutaway prior day.** The laundromat regular with the red cart points to an open folding table before Astrid asks, casual recognition rather than friendship montage.
-5. **Carrie flips one page in her file and finds generic labels like `neighbor contact` / `laundromat interaction`.**
-6. **Carrie close, realizing.**
-   **CARRIE (quietly):** Those were hers.
-
-**Page turn:** Astrid's city exists partly outside the case record because Carrie never knew whose relationships she was recording.
-
----
-
-## PAGE 16 — HER LANGUAGE
-
-**Summary:** Astrid's working English proves practical rather than polished, and she is comfortable asking for clarification instead of surrendering the answer to Carrie.
-
-**Setting:** hearing chamber.
+**Setting:** Status Reconciliation Review hearing chamber.
 
 **5 panels.**
 
-1. **Hearing Officer asks a bureaucratically phrased question.**
-   **HEARING OFFICER:** Do you independently procure ordinary household necessities without caseworker facilitation?
-2. **Astrid stares for a beat.**
-   **ASTRID:** I know the words. I do not know why you put them in that order.
-3. **The Hearing Officer accepts the criticism and simplifies.**
-   **HEARING OFFICER:** Do you buy things the household needs by yourself?
-4. **Astrid.**
-   **ASTRID:** Yes. Food. Soap. Needles. Coffee when Bjorn forgets.
-5. **Bjorn turns toward her, mildly offended.**
-   **BJORN:** I do not forget coffee.
-   **ASTRID:** You forget other people drink it.
+1. **medium on Hearing Officer.** The officer turns to Carrie with five separate applicant sheets now visible.
+   **HEARING OFFICER:** Ms. Carrie, do you support permanent status for each applicant on an individual record?
+2. **medium on Carrie.** Carrie looks once at the old master file, then closes it.
+   **CARRIE:** Yes.
+3. **medium on Hearing Officer.** The officer makes the professional consequence explicit.
+   **HEARING OFFICER:** That ends intensive DTI supervision as a condition of residence. You are not certifying one household unit anymore.
+4. **close on Carrie.** Carrie answers without hedging or converting the applicants into one score.
+   **CARRIE:** Good. I should have stopped doing that sooner.
+5. **wide.** The Hearing Officer separates the five applicant pages physically from the old master file.
+   **HEARING OFFICER:** Then the record is sufficient.
 
-**Page turn:** Astrid communicates effectively because she uses the language, not because she has become linguistically polished.
-
----
-
-## PAGE 17 — WHAT DO YOU DO ALL DAY?
-
-**Summary:** Astrid's answer to a blunt ordinary question accumulates into the most self-directed daily life in the household precisely because no single activity is impressive.
-
-**Setting:** hearing chamber with ordinary-life cutaways.
-
-**6 panels.**
-
-1. **Hearing Officer.**
-   **HEARING OFFICER:** What do you do on a normal day when Ms. Carrie is not with you?
-2. **Astrid begins counting on fingers, genuinely considering.**
-   **ASTRID:** Laundry. Food. I see upstairs woman. Sometimes park.
-3. **Cutaway.** Astrid folding laundry beside ordinary patrons, television on.
-4. **Astrid continues in hearing room.**
-   **ASTRID:** I buy what is missing. I bring back what I borrow. I walk when I want quiet.
-5. **Cutaway.** Astrid at the bodega choosing a household item while owner points her toward a shelf before she asks.
-6. **Astrid finishes.**
-   **ASTRID:** Then I go home.
-
-**Page turn:** the least dramatic answer describes the most autonomous routine.
-
----
-
-## PAGE 18 — THE PERSON THEY TRACKED LEAST
-
-**Summary:** Carrie, Gunnar, and Bjorn realize together that Astrid needed less management than anyone because her successful integration became almost invisible.
-
-**Setting:** hearing chamber, mostly reactions.
-
-**5 panels.**
-
-1. **Wide.** Astrid sits calmly after answering. No one announces a conclusion.
-2. **Carrie looks from Astrid to her file.**
-3. **Gunnar looks at Astrid, then at his own transit card peeking from his pocket.**
-4. **Bjorn watches Astrid with a complicated mix of pride and recognition that he did not know this part of her life.**
-5. **Hearing Officer simply turns the page.**
-   **HEARING OFFICER:** All right.
-   The procedural normality makes the realization larger for the reader than for the room.
-
-**Page turn:** successful integration is revealed as the thing the formal system had the least reason to notice.
-
----
-
-## PAGE 19 — NOT ASSIMILATED
-
-**Summary:** Astrid makes clear that knowing New York well has not required becoming less Norse or less herself.
-
-**Setting:** hearing chamber.
-
-**5 panels.**
-
-1. **Hearing Officer, carefully phrased.**
-   **HEARING OFFICER:** Do you feel that living here has changed who you are?
-2. **Astrid thinks; this is not a slogan setup.**
-   **ASTRID:** Yes.
-3. **Carrie and Bjorn both look at her.**
-4. **Astrid continues.**
-   **ASTRID:** I know this city now. I know things I did not know. I still know my people. I still know where I came from.
-5. **Hearing Officer.**
-   **HEARING OFFICER:** I didn't ask you to give that up.
-   **ASTRID:** Good.
-
-**Page turn:** integration and cultural continuity coexist in one ordinary person without needing theoretical explanation.
-
----
-
-## PAGE 20 — BJORN'S TEST
-
-**Summary:** Asked for the household's collective intention, Bjorn answers only for himself and protects everyone else's right to have already answered differently.
-
-**Setting:** hearing chamber.
-
-**5 panels.**
-
-1. **Hearing Officer turns to Bjorn.**
-   **HEARING OFFICER:** You have described yourself as responsible for this household. Does the household intend permanent residence?
-2. **Bjorn's posture changes; this is the question he once would have seized.**
-3. **Bjorn.**
-   **BJORN:** I intend to remain.
-4. **Hearing Officer waits for the collective answer.**
-5. **Bjorn looks briefly at the other four applicants.**
-   **BJORN:** They have answered for themselves.
-
-**Page turn:** Bjorn's authority is strongest when he refuses to overwrite the people beside him.
-
----
-
-## PAGE 21 — WHAT HE DEFENDS
-
-**Summary:** Bjorn defines leadership after necessity: responsibility means offering strength and judgment without claiming ownership of another person's future.
-
-**Setting:** hearing chamber.
-
-**6 panels.**
-
-1. **Hearing Officer.**
-   **HEARING OFFICER:** If they no longer require your decisions, what is your role?
-2. **Bjorn looks down at his armored forearm, then at the household.**
-3. **Bjorn.**
-   **BJORN:** I carry when I am asked.
-4. **Bjorn.**
-   **BJORN:** I give judgment when it is wanted.
-5. **Bjorn.**
-   **BJORN:** I stand when someone needs a hand beside them.
-6. **Tight.**
-   **BJORN:** Strength does not make another person's road mine.
-
-**Page turn:** the provider identity survives, but sovereignty over other people does not.
-
----
-
-## PAGE 22 — THE QUESTION THE FILE COULD NOT ANSWER
-
-**Summary:** Carrie refuses to turn integration into one score and gives the Hearing Officer the narrower facts actually needed to determine whether these adults can live here.
-
-**Setting:** hearing chamber.
-
-**6 panels.**
-
-1. **Hearing Officer.**
-   **HEARING OFFICER:** Ms. Carrie, are these applicants integrated?
-2. **Carrie looks at the file, then closes it.**
-3. **Carrie.**
-   **CARRIE:** They can maintain housing. They use the city. They meet obligations. They form relationships I didn't assign.
-4. **Carrie.**
-   **CARRIE:** They know when to ask for help. They also know when not to ask me.
-5. **Hearing Officer.**
-   **HEARING OFFICER:** That wasn't exactly my question.
-6. **Carrie.**
-   **CARRIE:** It's the answer I can support.
-
-**Page turn:** the institution receives useful facts without forcing Carrie to pretend the household is one measurable kind of person.
-
----
+**Page turn:** Carrie supports five individual findings and accepts the end of intensive supervision.
 
 ## PAGE 23 — THE RULING
 
-**Summary:** The hearing authority grants the five applicants permanent temporal-resident status individually, preserving the household without making it a legal requirement that they remain one unit forever.
+**Summary:** The Hearing Officer grants permanent temporal-resident status only after correcting the defective household classification and making five separate findings from the testimony heard in the room.
 
-**Setting:** hearing chamber.
+**Setting:** Status Reconciliation Review hearing chamber.
 
 **6 panels.**
 
-1. **Wide.** The Hearing Officer reviews a final page, marks the file, and speaks in ordinary administrative cadence rather than delivering a speech.
-2. **Hearing Officer.**
-   **HEARING OFFICER:** The record supports permanent temporal-resident status for each of the five applicants, individually.
-3. **Reaction strip across five applicants and Carrie.** No cheering. Each absorbs a different meaning.
-4. **Hearing Officer continues.**
+1. **wide.** The Hearing Officer reviews five separate pages, the corrected intake sheet and the thin case file. The cadence is administrative, not triumphant.
+2. **medium on Hearing Officer.** The officer states the first finding.
+   **HEARING OFFICER:** The corrected record supports permanent temporal-resident status for each of the five applicants, individually.
+3. **reaction strip.** The five applicants absorb the word individually in different ways.
+4. **medium on Hearing Officer.** The officer states the housing and supervision consequence.
    **HEARING OFFICER:** The Bushwick placement may continue under ordinary tenancy and program rules. Intensive DTI case supervision is no longer required as a condition of residence.
-5. **Bjorn.**
+5. **two-shot Bjorn/Hearing Officer.** Bjorn confirms the practical meaning.
    **BJORN:** We may remain.
    **HEARING OFFICER:** Yes.
-6. **Hearing Officer, already moving to the next document.**
-   **HEARING OFFICER:** And nothing in this order requires all five of you to make the same future choice.
+6. **wide.** The officer closes the old master household file and keeps the five individual records open.
+   **HEARING OFFICER:** And the order does not make any one of you responsible for the others' future choices.
 
-**Page turn:** the legal result recognizes separate people without dissolving the home they chose together.
-
----
+**Page turn:** the favorable ruling now follows from a corrected record and testimony produced in the room.
 
 ## PAGE 24 — ASTRID LEAVES FIRST
 
-**Summary:** Outside the hearing room, the household begins processing the ruling, but Astrid simply returns to the ordinary independent life the hearing finally made visible.
+**Summary:** Outside the hearing room, the household begins processing the earned ruling, but Astrid simply returns to the ordinary independent life the hearing finally made visible.
 
-**Setting progression:** municipal hearing-center hallway → exterior steps / city sidewalk.
+**Setting:** Municipal hearing-center hallway, exterior steps and city sidewalk.
 
 **6 panels.**
 
-1. **Hallway wide.** Carrie immediately starts explaining practical next steps. Gunnar is looking at Astrid. Bjorn is still carrying the weight of the ruling. The two male Kin talk quietly to each other.
+1. **wide.** Carrie immediately starts explaining administrative next steps while the five applicants emerge together.
    **CARRIE:** Okay. The order still has to get entered, housing gets a copy, DTI will—
-2. **Astrid checks an ordinary clock or her folded paper/receipt, then shoulders her small bag.**
-3. **Gunnar.**
+2. **medium on Astrid.** Astrid checks an ordinary clock or folded receipt, shoulders her small bag and starts toward the exit.
+3. **medium on Gunnar.** Gunnar notices first.
    **GUNNAR:** Where are you going?
-4. **Astrid, already walking.**
+4. **medium on Astrid walking.** Astrid answers without stopping.
    **ASTRID:** Home later.
-5. **Exterior hearing-center steps.** Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route.
-6. **Final wide city panel.** Astrid merges into the street while the others remain higher on the steps for a beat. No narration, no victory caption.
+5. **wide.** Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route.
+6. **final wide.** Astrid merges into the street while the others remain higher on the steps for one beat. No narration, no victory caption.
+
+**Page turn:** Astrid leaves first because the life the hearing finally recognized was already waiting outside.
 
 **END ISSUE 8**
 
