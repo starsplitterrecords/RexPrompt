@@ -1,11 +1,11 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
 Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; READY FOR REXPROMPT COMPILATION  
-Primary function: a Status Reconciliation Review forces the household to decide what it actually wants protected, and the answer can only be found by watching the separate lives that now return to the same home.
+Primary function: a Status Reconciliation Review forces the household to confront that its members want different things. The issue prepares them to appear honestly as separate people without solving the hearing's questions in advance.
 
 ## Continuity lock
 
-Issue 6 changed Bjorn's leadership grammar. He can now ask what kind of help people want, allow disagreement, and contribute without owning every decision. Issue 7 makes him apply that growth to the hardest possible household question: whether unity requires one shared future.
+Issue 6 changed Bjorn's leadership grammar. He can now ask what kind of help people want, allow disagreement, and contribute without owning every decision. Issue 7 makes him apply that growth to the hardest possible household question: whether he can enter judgment with people whose answers remain different and partially unresolved.
 
 Exactly three Kin exist: Astrid and two men. Use the same two male Kin visually established in Issue 5's separate-routine montage. Their production identities remain First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2; personal names are not lettered in Issues 7–8 and therefore do not block production. Astrid remains largely outside foreground action until late in the issue. Her absence is ordinary and does not become a search plot.
 
@@ -383,190 +383,176 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 ---
 
-## PAGE 17 — FIRST, THE PEOPLE
+## PAGE 17 — SEPARATE ANSWERS
 
-**Summary:** Bjorn asks Gunnar and the two male Kin what each wants protected, and the answers overlap without matching.
+**Summary:** Bjorn asks Gunnar and the two male Kin what each actually wants, and the answers remain visibly different instead of being synthesized into one household doctrine.
 
-**Setting:** Safe Cave table, all except Astrid.
+**Setting:** Safe Cave table, early evening; Astrid is still out.
 
-**6 panels.**
+**5 panels.**
 
-1. **Wide.** Bjorn sits rather than stands. The brass key remains off-center, not on a throne-like axis.
-   **BJORN:** Say what you want protected.
-2. **First male Kin.**
-   **FIRST MALE KIN:** This block. This room. The people who know us.
-3. **Gunnar.**
-   **GUNNAR:** The library. The routes. The right to go somewhere because I want to see it.
-4. **Second male Kin.**
-   **SECOND MALE KIN:** The right to stay. The right to leave. The right to return.
-5. **Bjorn takes that in.**
-   **BJORN:** You ask me to defend doors in both directions.
-6. **Second male Kin.**
-   **SECOND MALE KIN:** Yes.
+1. **wide.** Bjorn sits with Carrie, Gunnar and the two male Kin. The brass key, transit card and review notice are present but pushed to the side rather than arranged as symbols.
+   **BJORN:** Say what you want.
+2. **medium on First Male Kin.** First Male Kin answers from the practical life already established around the building and block.
+   **FIRST MALE KIN:** This room. This block. The people who know us.
+3. **medium on Gunnar.** Gunnar answers without looking at the review notice.
+   **GUNNAR:** The library. The city. Places I have not seen yet.
+4. **medium on Second Male Kin.** Second Male Kin turns the transit card once between his fingers before answering.
+   **SECOND MALE KIN:** I want to stay. I do not know after.
+5. **two-shot Bjorn/Carrie.** Bjorn looks from one man to the next, dissatisfied that the answers do not combine neatly. Carrie leaves that discomfort unresolved.
+   **BJORN:** Those are not one answer.
+   **CARRIE:** Then don't make them one tonight.
 
-**Page turn:** Bjorn begins building unity around protected choices instead of identical preferences.
+**Page turn:** the household knows its wants differ, but nobody converts them into a shared doctrine.
 
----
+## PAGE 18 — LET THEM ASK
 
-## PAGE 18 — TERMS OF THE HOUSEHOLD
+**Summary:** Carrie tries to anticipate the hearing's questions, but the household discovers that knowing what each person wants is not the same as knowing how the institution will frame those wants.
 
-**Summary:** Through objections rather than speeches, the household defines kinship as something that survives separate choices.
+**Setting:** Same Safe Cave table, continuing the evening council.
 
-**Setting:** Safe Cave table.
+**5 panels.**
 
-**6 panels.**
+1. **medium on Carrie.** Carrie turns the review notice around and points to several broad categories without reading them as a speech.
+   **CARRIE:** They may ask about residence, independence, intention, household ties.
+2. **medium on Gunnar.** Gunnar looks at the paper and then back at Carrie.
+   **GUNNAR:** Those are four questions again.
+3. **medium on Second Male Kin.** Second Male Kin leans back, visibly irritated by the idea of rehearsing certainty.
+   **SECOND MALE KIN:** And they may not mean what we mean.
+4. **two-shot Bjorn/Carrie.** Bjorn dislikes the lack of a common prepared answer; Carrie refuses to manufacture one for them.
+   **BJORN:** I dislike entering judgment without a plan.
+   **CARRIE:** A plan is fine. Rehearsed answers are not.
+5. **wide.** Nobody writes a household statement. The review notice remains open, unanswered in several places.
+   **GUNNAR:** Then let them ask.
 
-1. **Gunnar points at the key.**
-   **GUNNAR:** The room should remain a place we can return to.
-2. **First male Kin.**
-   **FIRST MALE KIN:** No one is sent away because another chooses differently.
-3. **Second male Kin.**
-   **SECOND MALE KIN:** No one is kept because another is afraid to lose him.
-4. **Bjorn reacts to that one; it costs him something.**
-5. **Bjorn finally nods.**
-   **BJORN:** Kinship is not a chain.
-6. **Wide.** One chair remains empty for Astrid.
-   **CARRIE:** Good. Now say it again without making me put 'chain' in a municipal filing.
-
-**Page turn:** the household defines itself before the city does, but one member has not yet spoken.
-
----
+**Page turn:** they enter the hearing with questions still unresolved instead of rehearsing the institution's answers in advance.
 
 ## PAGE 19 — CARRIE SITS
 
-**Summary:** Carrie physically moves from case manager standing over the file to participant helping the household express its own decision.
+**Summary:** Carrie sits with the household as procedural guide rather than author, making clear that she can explain the process but cannot pre-write what any applicant will say.
 
-**Setting:** Safe Cave table.
+**Setting:** Safe Cave table, same evening.
 
 **5 panels.**
 
-1. **Medium.** Carrie is still standing with the notice and pen while everyone else sits.
-2. **Bjorn slides an empty chair out with his boot.** No speech.
-3. **Carrie looks at the chair, then at the file.**
-4. **She sits.** The camera drops to table height with the others instead of looking down on them.
-   **CARRIE:** Okay. I can tell them what the rules allow. I cannot tell you what to want.
-5. **Bjorn pushes the review notice toward her.**
-   **BJORN:** Then help us say what we mean.
+1. **medium.** Carrie is still standing with the notice while everyone else remains seated.
+2. **medium on Bjorn.** Bjorn slides the empty chair out with his boot. No one comments on the gesture.
+3. **medium on Carrie.** Carrie looks at the chair, then at the partly unanswered review notice.
+4. **wide at table height.** Carrie sits at the same level as everyone else.
+   **CARRIE:** I can tell you what they are allowed to ask. I cannot write what you mean.
+5. **two-shot Carrie/Bjorn.** Bjorn pushes the notice toward her, but not the answers.
+   **BJORN:** Then do not.
+   **CARRIE:** Good.
 
-**Page turn:** expertise joins the household's decision instead of supplying it.
-
----
+**Page turn:** Carrie's expertise becomes procedural support rather than authorship.
 
 ## PAGE 20 — ASTRID COMES HOME
 
-**Summary:** Astrid returns from an ordinary independent day and Carrie stops herself from turning her arrival into an intake interview.
+**Summary:** Astrid returns from an ordinary independent day; Carrie stops herself from turning the arrival into an intake interview and asks only whether Astrid is willing to face the review herself.
 
-**Setting progression:** hallway outside 5B → Safe Cave table.
+**Setting:** Fifth-floor hallway and Safe Cave table, early evening.
 
 **5 panels.**
 
-1. **Hallway wide.** Astrid comes up the stairs carrying a small reusable bag and one folded paper or receipt. Nothing in the props should imply a secret job or dramatic hidden mission.
-2. **Inside, Carrie hears the key/door and stands halfway.**
-3. **Astrid enters, sees everyone seated around the table.**
-   **ASTRID:** You started without me.
-4. **Carrie begins automatically.**
+1. **wide.** Astrid comes up the stairs carrying a small reusable bag and one folded receipt or paper. Nothing about the props suggests a secret job or dramatic mission.
+2. **medium.** The door opens with Astrid's own key. Carrie looks up from the table and reflexively starts to ask where she has been.
    **CARRIE:** Where were—
-   She stops herself.
-5. **Carrie points to the empty chair instead.**
-   **CARRIE:** We need your answer.
-   Astrid puts down the bag and sits.
-
-**Page turn:** Astrid is asked for a choice, not an itinerary.
-
----
-
-## PAGE 21 — ASTRID'S ANSWER
-
-**Summary:** Astrid gives a plain, self-possessed answer about home without revealing how far her independent integration has actually gone.
-
-**Setting:** Safe Cave table.
-
-**5 panels.**
-
-1. **Medium on Astrid.** The others are quiet; no special spotlight composition.
-   **CARRIE:** Do you want to stay in New York?
-2. **Astrid.**
+3. **two-shot Carrie/Astrid.** Carrie catches herself mid-question and changes course.
+   **CARRIE:** No. Different question.
+4. **wide.** Astrid sees the notice and the others around the table. Nobody briefs her before she sits.
+   **CARRIE:** Will you answer them for yourself tomorrow?
+5. **medium on Astrid.** Astrid puts the small bag down by her chair and answers only the question Carrie actually asked.
    **ASTRID:** Yes.
-3. **Carrie waits for more; Astrid considers what actually matters.**
-   **ASTRID:** I know this house. I know this street. I can go out and come back.
-4. **Bjorn watches without prompting.**
-   **ASTRID:** I want to keep that.
-5. **Bjorn nods once.**
-   **BJORN:** Then we defend that.
 
-**Page turn:** Astrid requires no household spokesman to state her own position.
+**Page turn:** Astrid joins because she will answer for herself, not because the household needs to inventory her day.
 
----
+## PAGE 21 — NO REHEARSAL
 
-## PAGE 22 — NO OATH OF FOREVER
+**Summary:** Astrid refuses a rehearsal without being evasive: she knows what matters to her, but she does not offer the household or Carrie a preview of the life the hearing will later uncover.
 
-**Summary:** Bjorn tells the second male Kin that defending the household will not require anyone to swear permanence they cannot honestly promise.
-
-**Setting:** Safe Cave, later that evening.
+**Setting:** Safe Cave table, continuing the council.
 
 **5 panels.**
 
-1. **Medium.** The second male Kin stands near the window, slightly apart after the meeting breaks into smaller conversation.
-2. **Bjorn joins him, not blocking the view or doorway.**
-   **BJORN:** I was wrong this morning.
-3. **Second male Kin glances over.**
-   **BJORN:** A defense does not require an oath beyond what a man knows.
-4. **Second male Kin.**
-   **SECOND MALE KIN:** I know I want to stay now.
-5. **Bjorn.**
-   **BJORN:** Then say that. It is enough because it is true.
+1. **medium on Carrie.** Carrie tests one obvious question, careful not to slip back into caseworker mode.
+   **CARRIE:** Do you want to keep this home?
+2. **medium on Astrid.** Astrid answers the immediate part without expanding into a speech.
+   **ASTRID:** Yes.
+3. **two-shot Carrie/Astrid.** Carrie waits for more. Astrid looks at the brass key and then at the closed door she entered through herself.
+   **ASTRID:** The rest they can ask me.
+4. **medium on Bjorn.** Bjorn almost follows up, then chooses not to. His silence is the behavioral beat.
+5. **wide.** Astrid keeps the small folded receipt or paper to herself and joins the table without explaining her day.
+   **BJORN:** Then they will.
 
-**Page turn:** unity is chosen without false unanimity about the distant future.
+**Page turn:** the hearing retains ownership of discovering how much life Astrid has built beyond the case file.
 
----
+## PAGE 22 — NO BORROWED CERTAINTY
 
-## PAGE 23 — PREPARE, DON'T PERFORM
+**Summary:** The second male Kin worries that the hearing will demand certainty about a future he does not have; Bjorn no longer tries to supply that certainty for him.
 
-**Summary:** Only after the household has decided what it means does Carrie prepare the minimal review material, preserving privacy instead of manufacturing a clean story.
+**Setting:** Safe Cave window and table edge, later that evening.
 
-**Setting:** Safe Cave table, night.
+**5 panels.**
+
+1. **medium.** Second Male Kin stands near the window holding the transit card, separated slightly from the table conversation.
+   **SECOND MALE KIN:** What if they want forever?
+2. **two-shot Bjorn/Second Male Kin.** Bjorn joins him without blocking the window or route back to the room.
+   **BJORN:** Do not borrow an answer from me.
+3. **medium on Second Male Kin.** He looks toward the city rather than toward the review notice.
+   **SECOND MALE KIN:** I do not have one.
+4. **medium on Carrie.** Carrie answers only the procedural part.
+   **CARRIE:** Then don't invent one tonight.
+5. **two-shot.** Bjorn leaves the uncertainty with the man who owns it.
+   **BJORN:** Say only what is yours when they ask.
+
+**Page turn:** uncertainty survives into the hearing honestly instead of being converted into a polished position.
+
+## PAGE 23 — BRING ONLY WHAT IS REQUIRED
+
+**Summary:** Carrie reduces preparation to the records actually required for entry into the hearing and explicitly refuses to turn private relationships or rehearsed narratives into advance evidence.
+
+**Setting:** Safe Cave table, night; thin review file and printer pages.
+
+**5 panels.**
+
+1. **top-down.** Carrie narrows the materials to a thin stack: identity papers, residence records, required notices and the review letter. The symbolic household objects stay off the stack.
+2. **medium on Carrie.** Carrie clips the required documents together.
+   **CARRIE:** IDs. Residence. Notices. What the hearing requires. Nothing else unless someone chooses it.
+3. **two-shot Gunnar/Carrie.** Gunnar gestures toward a private support-group note that is not in the stack.
+   **GUNNAR:** The group?
+   **BJORN:** No.
+4. **medium on Silas.** Silas holds the two clean printer pages from his bounded task, with his phone still in his pocket.
+   **SILAS:** I made copies and no documentary.
+5. **wide.** Carrie takes the printer pages, adds only what is required, and closes the file. Nobody practices testimony.
+   **CARRIE:** Perfect.
+
+**Page turn:** the file gets them into the room without pre-performing their testimony.
+
+## PAGE 24 — THEY ARE HERE
+
+**Summary:** The household ends the night without a shared script. They know their wants differ and that tomorrow each person will have to answer for themselves.
+
+**Setting:** Safe Cave, late night; table mostly cleared, brass key visible.
 
 **6 panels.**
 
-1. **Top-down.** Carrie reduces the material to a thin stack. The earlier clutter of objects is mostly gone.
-2. **Carrie points to a line.**
-   **CARRIE:** Residence. Basic independent movement. Household obligations. That's enough to get the actual questions asked.
-3. **Gunnar.**
-   **GUNNAR:** The support group?
-4. **Bjorn immediately.**
-   **BJORN:** Not mine to offer.
-5. **Carrie crosses that note out.**
-   **CARRIE:** Correct.
-6. **Wide.** The file is smaller, the people around it more distinct.
-   **SILAS (from doorway, holding printer pages):** I made no testimonial video.
-   **CARRIE:** Proud of you.
+1. **wide.** The table is mostly clear. Gunnar closes a book. The two male Kin separate into their evening routines. Astrid puts away her small bag. Carrie stands to leave.
+2. **insert.** The brass key remains near the closed hearing file. No written household statement sits beside it.
+3. **medium on Carrie.** Carrie pauses with one hand on the doorframe.
+   **CARRIE:** Do you know what you're going to say?
+4. **medium on Bjorn.** Bjorn looks first at the closed file, then at the people around the room.
+   **BJORN:** For myself.
+5. **wide.** Nobody offers him a collective answer. He accepts that.
+   **CARRIE:** And them?
+6. **wide.** Carrie leaves. Bjorn picks up the brass key and closes the door on a household that is prepared to appear, not rehearsed to agree.
+   **BJORN:** They are here.
 
-**Page turn:** they are ready to appear honestly, not perform an optimized version of integration.
-
----
-
-## PAGE 24 — WHAT WE DEFEND
-
-**Summary:** The household ends the night without one permanent future, but with a shared definition of home strong enough to carry into the hearing.
-
-**Setting:** Safe Cave, late night.
-
-**6 panels.**
-
-1. **Wide.** The table is mostly clear. Gunnar's book is closed. The two male Kin settle into separate evening routines. Astrid puts away the small bag from her day. Carrie stands to leave.
-2. **Insert on brass key alone near the center of the cleared table.**
-3. **Carrie at doorway.**
-   **CARRIE:** Do you know what you're going to say when they ask what this household is?
-4. **Bjorn looks at Gunnar, Astrid, and the two men before answering.**
-5. **Bjorn.**
-   **BJORN:** A place we return to.
-6. **Doorway wide from hall.** Carrie looks back as Bjorn picks up the key.
-   **BJORN:** Not a place we are forbidden to leave.
+**Page turn:** Issue 8 begins with five people present, prepared to answer, but not pre-agreed on what the hearing will make of them.
 
 **END ISSUE 7**
 
 ## Issue 8 handoff
 
-Issue 8 begins with the household prepared to appear as separate people whose answers do not have to match. The file gets them into the hearing room; it is not the story.
+Issue 8 begins with five applicants prepared to answer for themselves, but without a rehearsed household doctrine. The file gets them into the hearing room; the hearing must discover what their separate lives actually mean.
 
-Astrid's Issue 8 payoff remains protected. Issue 7 shows only that she has an independent day and a clear choice. It does not inventory her routes, language, relationships, or practical competence.
+Astrid's Issue 8 payoff remains protected. Issue 7 shows only that she returns independently, wants to keep the home, and will answer for herself. It does not preview her routes, language, relationships, practical competence, or the degree to which she no longer needs Carrie.
