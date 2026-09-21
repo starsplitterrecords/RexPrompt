@@ -1,6 +1,6 @@
 {
   "series": "Echoes of a Forgotten War",
-  "productionMode": "one assembled RexPrompt recipe equals one finished portrait comic page",
+  "productionMode": "one assembled RexPrompt recipe equals one finished portrait comic page; Season 1 contains 129 production pages",
   "productionAuthority": "assembled RexPrompt output",
   "releaseState": "unreleased; no Echoes material exists in current StarSplitterVisions main",
   "visualAuthority": "released StarSplitterVisions canon when it exists; until then, explicitly approved durable current-production references and drafts, supplemented by assembler-visible character and setting anchors",
@@ -8,19 +8,72 @@
   "pageRule": "One compiled recipe produces one page. Do not combine multiple recipes into a contact sheet, montage, issue summary, spread, cover, or single composite image.",
   "continuityRule": "Use character visual anchors, region/setting language and approved durable artwork for continuity. continuityFrom is reserved for literal physical continuation, or for re-entry to the same interrupted present moment when positions, props, damage, eyelines and emotional state should genuinely be preserved. Do not use continuityFrom merely to link a dramatic thread across a location, time or viewpoint cut; carry those transition anchors explicitly in panelPlan instead.",
   "frontierRule": "Image-production frontier is derived dynamically from released Visions pages plus approved production drafts in recipe order. Do not use the writing/recovery frontier as an image-production cursor and do not store or guess a cursor.",
-  "developmentGranularity": "comic_page_spine_v1.json remains a 22-beat-per-issue development map and is not the image-generation cursor. Issues 1-8 are exposed to RexPrompt as sequential issue packages. Issues 1-5 carry page architecture in their source recipes; Issues 6-8 receive production page architecture through assembler-visible merge-by-ID enhancement overlays.",
+  "developmentGranularity": "The 22-beat-per-issue development spine is retained only as source/provenance. Its page-turn intent has been reconciled into 129 assembler-visible production pages: I1 17, I2 16, I3 15, I4 16, I5 16, I6 15, I7 16, I8 18. Production follows scenes_e01.json through scenes_e08.json directly; enhancement overlays are retired.",
   "letteringRule": "Dialogue emitted by the assembler is exact production text. Do not invent, paraphrase, omit, duplicate or reassign it during image generation.",
-  "pageDesignRule": "Use each compiled recipe's panelPlan as page architecture. Layout may vary, but all specified beats, cast, dialogue and final-page function must remain clear.",
+  "pageDesignRule": "Use each compiled recipe's panelPlan and directionInline as binding page architecture. Present pages begin stable and human-scale; ancient pages use broader monumental compositions; matched-memory and mixed-time layouts become progressively more explicit until Issue 8 convergence. Do not normalize pages back to a five-panel template.",
   "visualRule": "Strong subject/background value separation. Readability first, human consequence second, scale and spectacle third. Ground cosmic events in people, relationships, inhabited places and material consequences. Infrastructure is evidence and environment, not a substitute for drama or a technical solution to the story.",
   "issues": {
-    "1": {"status": "compiled for sequential page production", "recipeFile": "scenes_e01.json", "pageCount": 12, "panelPlan": true},
-    "2": {"status": "compiled for sequential page production", "recipeFile": "scenes_e02.json", "pageCount": 12, "panelPlan": true},
-    "3": {"status": "compiled for sequential page production", "recipeFile": "scenes_e03.json", "pageCount": 12, "panelPlan": true},
-    "4": {"status": "compiled for sequential page production", "recipeFile": "scenes_e04.json", "pageCount": 12, "panelPlan": true},
-    "5": {"status": "compiled for sequential page production", "recipeFile": "scenes_e05.json", "pageCount": 12, "panelPlan": true},
-    "6": {"status": "compiled for sequential page production via enhance_e06.json overlay", "recipeFile": "scenes_e06.json", "pageCount": 12, "panelPlan": true},
-    "7": {"status": "compiled for sequential page production via enhance_e07.json overlay", "recipeFile": "scenes_e07.json", "pageCount": 12, "panelPlan": true},
-    "8": {"status": "compiled for sequential page production via enhance_e08.json overlay", "recipeFile": "scenes_e08.json", "pageCount": 12, "panelPlan": true}
+    "1": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e01.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "2": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e02.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "3": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e03.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "4": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e04.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "5": {
+      "status": "compiled for sequential page production",
+      "recipeFile": "scenes_e05.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "6": {
+      "status": "compiled for sequential page production via enhance_e06.json overlay",
+      "recipeFile": "scenes_e06.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "7": {
+      "status": "compiled for sequential page production via enhance_e07.json overlay",
+      "recipeFile": "scenes_e07.json",
+      "pageCount": 12,
+      "panelPlan": true
+    },
+    "8": {
+      "status": "compiled for sequential page production via enhance_e08.json overlay",
+      "recipeFile": "scenes_e08.json",
+      "pageCount": 12,
+      "panelPlan": true
+    }
   },
-  "writingRecoveryFrontier": "Season 1 compiled through Issue 8; next writing work is new material or a future enhancement pass rather than recovery of missing page architecture."
+  "writingRecoveryFrontier": "Season 1 is recompiled as 129 production pages through Issue 8 with page architecture, character-development and dialogue/voice passes applied. Next writing work is later comprehensive-review passes or new material, not recovery of missing page architecture.",
+  "productionPageCounts": {
+    "1": 17,
+    "2": 16,
+    "3": 15,
+    "4": 16,
+    "5": 16,
+    "6": 15,
+    "7": 16,
+    "8": 18,
+    "season": 129
+  },
+  "dialogueRule": "dialogueInline is exact production dialogue. Preserve naturalism and character-specific rhetorical habits. Do not invent, paraphrase, omit, duplicate or reassign lines during image generation. Stage speech through the physical work scripted in panelPlan/directionInline rather than static debate poses.",
+  "characterDevelopmentRule": "Rae's protection instinct must develop a failure mode before the finale: in Issues 6-7 caution becomes temporary control, she sees the harm, and only then earns the refusal of forced forgetting and forced restoration. Adrian's early function must vary among direct truth, practical help, concealment, error and genuine ignorance rather than repeated riddle-withholding."
 }
