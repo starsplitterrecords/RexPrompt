@@ -1,7 +1,7 @@
 [
   {
     "id": "SDS_S1E06_P01",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: The operations level is covered in polished StarTrust wellness banners. Middle image: Kreeb studies the program packet with sincere interest. Closing image: Zib taps the wall.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: corporate wellness arrives as visual clutter over an ordinary workday. Middle image: Astra and Kreeb identify the contradiction and the one potentially useful provision. Closing image: Zib points to the physical station behind the program.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -10,19 +10,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The operations level is covered in polished StarTrust wellness banners."
+        "text": "PANEL 1 — Wellness Baseline Week banners cover the operations level while ordinary station work continues underneath them."
       },
       {
-        "text": "PANEL 2 — Astra reads the participation line twice."
+        "text": "PANEL 2 — Astra reads the required-participation / optional-disclosure language with coffee still in hand."
       },
       {
-        "text": "PANEL 3 — Kreeb studies the program packet with sincere interest."
+        "text": "PANEL 3 — Kreeb finds the quiet-room provision in the packet and marks it as the first potentially useful element."
       },
       {
-        "text": "PANEL 4 — Zib is standing behind the banner, staring at a service panel it partly covers."
-      },
-      {
-        "text": "PANEL 5 — Zib taps the wall."
+        "text": "PANEL 4 — Zib taps the wall hidden behind one of the banners, bringing the real maintenance problem into the opening page."
       }
     ],
     "dialogueInline": [
@@ -54,18 +51,18 @@
       {
         "speaker": "ZIB",
         "text": "There's another useful thing behind that banner.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "Please tell me it isn't load-bearing.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P02",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: The room has been converted for Wellness Baseline Week; the largest portable screen and chair semicircle block the ventilation-damper service chase. Middle image: Zib shows Astra the maintenance ticket and the room schedule occupying the same hours. Closing image: Astra chooses to let the morning session start before service, creating the physical problem that will drive the day.",
+    "summary": "Primary composition: 5-panel page in Multipurpose Room. Opening image: the room conversion creates the physical conflict immediately. Middle image: a ten-minute repair collides with a day-long program schedule. Closing image: Astra knowingly delays the work for one block.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Zib",
@@ -74,22 +71,19 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The multipurpose room is dressed for Wellness Baseline Week; a portable screen and chair semicircle block the ventilation-damper service chase."
+        "text": "PANEL 1 — The multipurpose room is fully dressed for the program; the largest screen and chair arc visibly block the ventilation service chase."
       },
       {
-        "text": "PANEL 2 — Zib holds up the damper service ticket beside the blocked panel."
+        "text": "PANEL 2 — Zib shows Astra the ten-minute damper ticket at the blocked wall."
       },
       {
-        "text": "PANEL 3 — Pixa displays a morning schedule with nearly every access window occupied by wellness blocks."
+        "text": "PANEL 3 — Pixa displays the room schedule, with the first open access window pushed to late day."
       },
       {
-        "text": "PANEL 4 — Zib points to the current room temperature and the service estimate: ten minutes."
+        "text": "PANEL 4 — Astra weighs the morning block against the maintenance delay while Zib states the physical consequence."
       },
       {
-        "text": "PANEL 5 — Astra looks at the already-arriving chairs, then at the service ticket."
-      },
-      {
-        "text": "PANEL 6 — Astra tells Zib to take the first open gap after the morning session. Zib marks the delay."
+        "text": "PANEL 5 — Astra allows one session block to proceed and Zib records the delay rather than arguing further."
       }
     ],
     "dialogueInline": [
@@ -116,33 +110,33 @@
       {
         "speaker": "ASTRA",
         "text": "It is ten in the morning.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "I noticed.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Can it wait through the first block?",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ZIB",
         "text": "Yes. Room gets warmer.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "One block. Then you get the wall.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P03",
-    "summary": "Primary composition: 6-panel page in Quiet Room. Opening image: Kreeb prepares the adjacent quiet room as a real refuge rather than another programmed activity. Middle image: Glorp arrives expecting a usage requirement, then independently finds a privacy-preserving way to satisfy it. Closing image: Kreeb accepts the compromise after confirming that no identity or dwell-time record will exist.",
+    "summary": "Primary composition: 4-panel page in Quiet Room. Opening image: the alternative room is deliberately plain. Middle image: Glorp solves the tracking problem without invading the room. Closing image: Kreeb accepts the practical compromise.",
     "setting": "SDS_Quiet_Room",
     "characters": [
       "SDS_Kreeb",
@@ -151,65 +145,59 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Kreeb sets up the quiet room with ordinary chairs, water and no corporate slogans."
+        "text": "PANEL 1 — Kreeb prepares the adjacent quiet room with plain chairs, water and no program branding."
       },
       {
-        "text": "PANEL 2 — Glorp arrives with the program's utilization requirement and pauses at the blank room."
+        "text": "PANEL 2 — Glorp studies the utilization requirement at the doorway and relocates the tracking point into the hall instead of the room."
       },
       {
-        "text": "PANEL 3 — He moves the required tracking point into the hallway rather than bringing it inside."
+        "text": "PANEL 3 — Pixa confirms anonymous entry counting with identity and dwell time disabled while Kreeb checks the settings himself."
       },
       {
-        "text": "PANEL 4 — Pixa offers anonymous entry count with identity and dwell time disabled."
-      },
-      {
-        "text": "PANEL 5 — Kreeb checks the display settings himself."
-      },
-      {
-        "text": "PANEL 6 — Glorp leaves the counter outside the room and Kreeb opens the door."
+        "text": "PANEL 4 — Glorp leaves the counter outside and Kreeb opens the door, the compromise already working without a committee scene."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "GLORP",
         "text": "If I count entries only, the room can stay private.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "No names?",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "PIXA",
         "text": "No identity. No dwell time.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "And the counter stays outside.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "Yes, Kreeb. I also know what \"private\" means.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "You've had an exciting month.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "GLORP",
         "text": "Door.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P04",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Jax's required tracker records a mindful pause while he is simply waiting for a cargo lift. Middle image: Jax tests whether the device can distinguish wellness from ordinary delay and learns that it cannot. Closing image: Astra passes without turning the joke into policy; the real problem is still waiting in the multipurpose room.",
+    "summary": "Primary composition: 3-panel page in Main Bullpen / Admin Hub. Opening image: the tracker mistakes an ordinary delay for a wellness event. Middle image: Jax tests the absurdity with Pixa. Closing image: Astra passes through without stopping the workday.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -218,62 +206,56 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax waits beside a cargo lift with a parts cart."
+        "text": "PANEL 1 — Jax waits beside a cargo lift with a parts cart as his tracker announces a mindful pause."
       },
       {
-        "text": "PANEL 2 — His wellness tracker flashes MINDFUL PAUSE RECORDED."
+        "text": "PANEL 2 — Jax argues with Pixa about whether ordinary waiting has accidentally become wellness."
       },
       {
-        "text": "PANEL 3 — Jax takes one deliberate extra breath to see whether anything changes."
-      },
-      {
-        "text": "PANEL 4 — Nothing changes except the timer."
-      },
-      {
-        "text": "PANEL 5 — Astra passes with the multipurpose-room schedule under her arm."
+        "text": "PANEL 3 — Astra passes with the multipurpose-room schedule and warns Jax not to become a case study before lunch."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "SCREEN",
         "text": "MINDFUL PAUSE RECORDED.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "JAX",
         "text": "I am waiting for a lift.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "PIXA",
         "text": "You are also paused.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "Can I bill wellness for the delay?",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "PIXA",
         "text": "No.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "Then it is less mindful already.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "Do not become a case study before lunch.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P05",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: Noola arrives for the required session in her water-dome rig and immediately notices the room is warmer and the air less active than normal. Middle image: She asks whether the room always feels like this; Zib points to the blocked damper chase. Closing image: Astra sees the abstract maintenance delay become a specific coworker's physical comfort problem.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room. Opening image: Noola experiences the delayed maintenance as a physical condition rather than an abstract metric. Middle image: Zib identifies the blocked access as the reason. Closing image: Astra acknowledges Noola's agency before the session starts.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Noola",
@@ -283,70 +265,64 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Noola enters the multipurpose room in her water-dome rig as people settle into the chair semicircle."
+        "text": "PANEL 1 — Noola arrives in the multipurpose room in her water-dome rig while people are still settling into the required session."
       },
       {
-        "text": "PANEL 2 — Condensation is heavier than normal on the dome and Noola adjusts a local cooling control."
+        "text": "PANEL 2 — She checks the heavier condensation and looks toward the room controls before speaking."
       },
       {
-        "text": "PANEL 3 — Kreeb notices her checking the room rather than the wellness materials."
+        "text": "PANEL 3 — Zib points to the blocked service chase while Kreeb reminds Noola that the quiet room is available."
       },
       {
-        "text": "PANEL 4 — Noola asks whether the room is usually this warm."
-      },
-      {
-        "text": "PANEL 5 — Zib points to the wellness screen blocking the damper service chase."
-      },
-      {
-        "text": "PANEL 6 — Astra looks at Noola's cooling readout, then at the schedule she chose to protect."
+        "text": "PANEL 4 — Astra catches the practical exchange and explicitly leaves Noola free to leave whenever she chooses."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "NOOLA",
         "text": "Is it always this warm in here?",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ZIB",
         "text": "No.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "NOOLA",
         "text": "Good.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "It's warmer because I can't get to that wall.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "Quiet room is open.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "NOOLA",
         "text": "I know where the door is.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "And you can use it whenever you want.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "NOOLA",
         "text": "Also good.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P06",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: Mira arrives with more physical sensors than the wellness packet requires and enjoys setting them up despite distrusting the program. Middle image: She explains that the already-warm room makes the corporate wellness claim unusable but the room itself newly interesting. Closing image: Astra recognizes that Mira can dislike the study and still be delighted by the instrumentation.",
+    "summary": "Primary composition: 5-panel page in Multipurpose Room, continuing directly from Noola's arrival. Opening image: the scene widens from comfort to instrumentation. Middle image: the room is already a compromised experiment. Closing image: Mira keeps the physical curiosity while rejecting the institutional claim.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Mira",
@@ -355,22 +331,19 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Mira arrives with three compact environmental sensors and a roll of removable tape."
+        "text": "PANEL 1 — Mira arrives carrying more environmental instrumentation than the wellness packet requires."
       },
       {
-        "text": "PANEL 2 — She places temperature and airflow sensors at different heights around the room."
+        "text": "PANEL 2 — She places temperature and airflow sensors at different heights while Astra corrects her own terminology."
       },
       {
-        "text": "PANEL 3 — Pixa offers the program's staff-condition fields on a tablet."
+        "text": "PANEL 3 — Pixa offers the staff-condition fields; Mira dismisses them while calibrating the physical sensors."
       },
       {
-        "text": "PANEL 4 — Mira waves them away without looking up from a sensor calibration."
+        "text": "PANEL 4 — Astra asks whether anything useful can still come from a room with a known maintenance problem."
       },
       {
-        "text": "PANEL 5 — Astra asks whether any useful baseline is still possible with the damper service delayed."
-      },
-      {
-        "text": "PANEL 6 — Mira looks at the sensor spread with genuine satisfaction even as she rejects the wellness inference."
+        "text": "PANEL 5 — Mira admires the instrumentation and makes clear that useful room data is not the same thing as useful wellness evidence."
       }
     ],
     "dialogueInline": [
@@ -392,39 +365,39 @@
       {
         "speaker": "PIXA",
         "text": "Staff-condition fields are available.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "MIRA",
         "text": "The room is already wrong. I don't need a feelings column to tell me that.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Can we get anything useful out of this?",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
         "text": "Absolutely.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "About wellness?",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       },
       {
         "speaker": "MIRA",
         "text": "I didn't say that.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ],
     "continuityFrom": "SDS_S1E06_P05"
   },
   {
     "id": "SDS_S1E06_P07",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: The required session begins while the temperature is already above normal. Middle image: The synthetic calm track competes with the ventilation noise and Noola shifts her cooling setting again. Closing image: Astra keeps the session running because she still believes she can finish the block before the delayed maintenance matters.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing the same morning session. Opening image: the official program finally starts. Middle image: the unresolved physical problem continues underneath it. Closing image: the door remains an explicit option.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Astra",
@@ -436,70 +409,64 @@
     "continuityFrom": "SDS_S1E06_P06",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The session starts; corporate calm tones play from the portable speaker mounted directly in front of the service chase."
+        "text": "PANEL 1 — The baseline block begins; synthetic calm audio fills the already-warm room."
       },
       {
-        "text": "PANEL 2 — Pixa starts the required participation clock."
+        "text": "PANEL 2 — Zib watches the temperature and reminds Astra that the damper still needs ten minutes."
       },
       {
-        "text": "PANEL 3 — Zib watches the room-temperature readout rise another fraction."
+        "text": "PANEL 3 — Noola adjusts her dome cooling while Kreeb keeps the exit path visibly available."
       },
       {
-        "text": "PANEL 4 — Noola increases cooling in her water-dome rig."
-      },
-      {
-        "text": "PANEL 5 — Kreeb notices several people shifting uncomfortably in their chairs."
-      },
-      {
-        "text": "PANEL 6 — Astra checks the remaining session time and chooses not to interrupt yet."
+        "text": "PANEL 4 — Astra confirms that anyone may leave, refusing to turn required participation into physical confinement."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "PIXA",
         "text": "Baseline block active.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ZIB",
         "text": "Damper still wants ten minutes.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "I remember.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "NOOLA",
         "text": "So do I.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "Anyone can leave.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Yes.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "If you want out, go. We are not holding people hostage for wellness.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ZIB",
         "text": "Strong program slogan.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P08",
-    "summary": "Primary composition: 5-panel page in Multipurpose Room. Opening image: Twenty minutes later, Noola decides the room is too warm and leaves without asking permission. Middle image: Pixa clears the doorway and lowers the speaker volume on its own as two other workers follow. Closing image: Mira's temperature reading and Noola's practical choice become the event Astra can no longer treat as an abstract participation problem.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing the session. Opening image: Noola acts on her own limit. Middle image: the exit becomes contagious without becoming theatrical. Closing image: the physical condition and participation failure become inseparable for Astra.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Noola",
@@ -510,19 +477,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The room is visibly warmer; Noola checks her dome temperature once and stands."
+        "text": "PANEL 1 — Noola decides the room is too warm and stands immediately, without waiting for a program prompt."
       },
       {
-        "text": "PANEL 2 — Pixa moves clear of the doorway and lowers the synthetic calm track as Noola approaches."
+        "text": "PANEL 2 — Pixa clears the doorway and Kreeb opens it; Noola exits and two other workers follow."
       },
       {
-        "text": "PANEL 3 — Kreeb opens the door and Noola leaves; two other workers follow after a beat."
+        "text": "PANEL 3 — Mira records the three-degree rise while Pixa records exits without assigning motives."
       },
       {
-        "text": "PANEL 4 — Mira records a three-degree temperature rise while Pixa records the exits without assigning a feeling category."
-      },
-      {
-        "text": "PANEL 5 — Astra looks from the open doorway to the blocked service chase."
+        "text": "PANEL 4 — Astra looks from the open door to the blocked service chase and finally sees one operational event instead of two separate program metrics."
       }
     ],
     "dialogueInline": [
@@ -554,34 +518,34 @@
       {
         "speaker": "MIRA",
         "text": "Three degrees up.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "PIXA",
         "text": "Three exits.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
         "text": "Don't give me a cause.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "PIXA",
         "text": "I wasn't going to.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "All right. I understand this problem.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ],
     "continuityFrom": "SDS_S1E06_P07"
   },
   {
     "id": "SDS_S1E06_P09",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: More participants choose the doorway over the session as the heat rises. Middle image: Astra realizes the remaining choice is not baseline completeness versus maintenance convenience; it is whether to keep people in a room she knows is physically wrong. Closing image: She ends the block and gives Zib the room.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing directly after the exits. Opening image: the remaining head count becomes morally and scientifically useless. Middle image: Astra stops defending baseline completeness. Closing image: the room is handed back to maintenance.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Astra",
@@ -593,22 +557,16 @@
     "continuityFrom": "SDS_S1E06_P08",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Another worker leaves; Jax is already standing near the door."
+        "text": "PANEL 1 — Jax lingers by the door and offers to stay only if Astra needs the count; Astra refuses to use him that way."
       },
       {
-        "text": "PANEL 2 — Astra looks at the participation clock: forty minutes remain."
+        "text": "PANEL 2 — Mira shows that the baseline is already compromised by the known room condition, and Astra owns the original delay decision."
       },
       {
-        "text": "PANEL 3 — Zib points to the blocked chase without repeating his argument."
+        "text": "PANEL 3 — Kreeb starts clearing the room before the final order, trusting where the conversation is going."
       },
       {
-        "text": "PANEL 4 — Mira shows the environmental log; the baseline is already contaminated by the known maintenance condition."
-      },
-      {
-        "text": "PANEL 5 — Kreeb begins stacking chairs away from the door before Astra speaks."
-      },
-      {
-        "text": "PANEL 6 — Astra cancels the block and tells Zib to take the wall."
+        "text": "PANEL 4 — Astra ends the baseline block and gives Zib the wall."
       }
     ],
     "dialogueInline": [
@@ -630,33 +588,33 @@
       {
         "speaker": "MIRA",
         "text": "The baseline is already contaminated.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "It was contaminated when I made Zib wait.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "Then stop making him wait.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Yes.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "End the block. Zib, take the wall.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P10",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: The wellness room becomes a work site in under a minute. Middle image: Jax unplugs the speaker while Pixa rolls it away from the service chase and Kreeb stacks chairs. Closing image: The program's own equipment has been repurposed into ordinary teamwork before Zib opens the wall.",
+    "summary": "Primary composition: 5-panel page in Multipurpose Room, continuing the same scene as the program space becomes a work site. Opening image: the timer ends. Middle image: everyone finds a practical job clearing the room. Closing image: Zib finally gets the wall he asked for hours earlier.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Zib",
@@ -667,22 +625,19 @@
     "continuityFrom": "SDS_S1E06_P09",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Pixa ends the session timer."
+        "text": "PANEL 1 — Pixa ends the session timer as the room begins changing function."
       },
       {
-        "text": "PANEL 2 — Jax unplugs the portable speaker."
+        "text": "PANEL 2 — Jax unplugs the speaker and jokes with Pixa while people start clearing equipment."
       },
       {
-        "text": "PANEL 3 — Pixa takes the speaker and rolls it out of the service path while Kreeb starts folding chairs."
+        "text": "PANEL 3 — Pixa takes the speaker cart and rolls it out of the service path, volunteering physical help."
       },
       {
-        "text": "PANEL 4 — Zib opens the service chase."
+        "text": "PANEL 4 — Kreeb stacks chairs and the HONOR THE PRESENT MOMENT placard winds up against a tool case."
       },
       {
-        "text": "PANEL 5 — The HONOR THE PRESENT MOMENT placard ends up leaning against Pixa's speaker cart."
-      },
-      {
-        "text": "PANEL 6 — The room is visibly a maintenance space, and everyone has found a useful job."
+        "text": "PANEL 5 — Zib reaches the service panel at last and opens it."
       }
     ],
     "dialogueInline": [
@@ -734,13 +689,13 @@
       {
         "speaker": "ZIB",
         "text": "Panel clear.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P11",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: Zib finds a binding damper hinge, exactly the ordinary fault he expected. Middle image: The repair is quick and physically legible. Closing image: As airflow returns, Astra watches the room recover faster than any wellness metric can explain.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing the repair. Opening image: the fault is small and legible. Middle image: the three-hour delay collapses into a ten-minute mechanical fix. Closing image: the room visibly recovers before any wellness interpretation can catch up.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Zib",
@@ -751,22 +706,16 @@
     "continuityFrom": "SDS_S1E06_P10",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib exposes the ventilation damper and finds one hinge binding."
+        "text": "PANEL 1 — Zib exposes the binding hinge immediately once the service chase is open."
       },
       {
-        "text": "PANEL 2 — Mira records the fault and room temperature."
+        "text": "PANEL 2 — Astra reacts to how ordinary the fault is while Mira reminds her how long Zib has been waiting."
       },
       {
         "text": "PANEL 3 — Zib frees the hinge and cycles the damper."
       },
       {
-        "text": "PANEL 4 — Air movement visibly returns through hanging paper and condensation patterns."
-      },
-      {
-        "text": "PANEL 5 — Pixa reports temperature trending toward normal."
-      },
-      {
-        "text": "PANEL 6 — Astra stands in the now-empty room while the simplest explanation wins."
+        "text": "PANEL 4 — Airflow returns; paper edges and Noola's earlier condensation cues visually reverse while Pixa and Mira report the physical recovery."
       }
     ],
     "dialogueInline": [
@@ -803,28 +752,28 @@
       {
         "speaker": "PIXA",
         "text": "Temperature is coming down.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
         "text": "Airflow too.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "Physical baseline. Beautiful.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ZIB",
         "text": "You people make everything weird.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P12",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: Later, nobody restarts the formal session; people simply drift back into the cooler room for ordinary reasons. Middle image: Noola checks the temperature and settles comfortably while Jax retrieves his abandoned coffee. Closing image: The room is demonstrably better before any program tells them how to feel about it.",
+    "summary": "Primary composition: 4-panel page in Multipurpose Room later that day. Opening image: the room is useful again without a program. Middle image: coworkers drift back for ordinary reasons. Closing image: Zib closes the actual repair while the room quietly proves the point.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Jax",
@@ -834,65 +783,59 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Later, the repaired multipurpose room is cooler and mostly undecorated after the rushed maintenance clear-out."
+        "text": "PANEL 1 — Later, the repaired room is cooler, the wellness equipment is pushed aside, and no official session is running."
       },
       {
-        "text": "PANEL 2 — Jax returns for his coffee and stays leaning against the wall."
+        "text": "PANEL 2 — Jax retrieves his coffee while Noola returns, checks the room once and settles into a chair."
       },
       {
-        "text": "PANEL 3 — Noola enters, checks her dome temperature and chooses a chair."
+        "text": "PANEL 3 — Kreeb restores the water pitcher without restarting the program or asking anyone to reflect."
       },
       {
-        "text": "PANEL 4 — Kreeb brings the water pitcher back without restarting the session."
-      },
-      {
-        "text": "PANEL 5 — Zib closes the service log at the doorway."
-      },
-      {
-        "text": "PANEL 6 — Four coworkers occupy the room comfortably with no timer running."
+        "text": "PANEL 4 — Zib closes the service log at the doorway as ordinary room use resumes around him."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "NOOLA",
         "text": "Better.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "Wellness achieved.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "NOOLA",
         "text": "Ventilation achieved.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "You really take all the romance out of this.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "There was never romance in the speaker.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "Do not put me in the wellness report.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "JAX",
         "text": "Too late. Heroic hinge intervention.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P13",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: After the room is fixed, Glorp works through the interrupted-session record and discovers that participation and reflection are separate fields. Middle image: He tests the rule himself instead of asking Kreeb to resolve it. Closing image: Kreeb, ready for an argument, finds that Glorp has already protected no-entry as a complete state.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the administrative problem arrives only after the physical one is solved. Middle image: Glorp discovers the useful distinction himself. Closing image: Kreeb's prepared argument becomes ordinary coworker teasing.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -902,80 +845,74 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Glorp opens the interrupted-session record beside the ordinary work board."
+        "text": "PANEL 1 — Back in operations, Glorp opens the interrupted-session record and notices that participation and reflection are separate fields."
       },
       {
-        "text": "PANEL 2 — He notices that PARTICIPATION and OPTIONAL REFLECTION are separate fields."
+        "text": "PANEL 2 — Pixa confirms the fields can be completed independently while Glorp tests a no-entry record himself."
       },
       {
-        "text": "PANEL 3 — Pixa confirms that reflection may be NO ENTRY while participation remains complete."
+        "text": "PANEL 3 — Kreeb arrives ready to object and finds the privacy-preserving state already built."
       },
       {
-        "text": "PANEL 4 — Glorp closes a test record without adding any personal text."
-      },
-      {
-        "text": "PANEL 5 — Kreeb arrives prepared to challenge the form and sees the completed example."
-      },
-      {
-        "text": "PANEL 6 — Astra approves the local rule while Glorp tries not to look pleased."
+        "text": "PANEL 4 — Astra approves the local rule while Glorp tries not to look pleased with himself."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "GLORP",
         "text": "Wait.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
         "text": "Good wait or bad wait?",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "GLORP",
         "text": "The fields are independent.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "PIXA",
         "text": "Participation and reflection may be completed separately.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "GLORP",
         "text": "So somebody can participate and disclose nothing.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "Yes.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "I know. I just got there without you.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "I had a speech ready.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "Keep it. There will be another form.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "That may be the healthiest exchange today.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P14",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Jax turns in his tracker showing a mindful pause, an incomplete wellness block and no disclosure. Middle image: Noola turns in hers with an early exit caused by room temperature and no disclosure. Closing image: Glorp has to accept two completely different human days as equally valid completed participation records.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: Jax's messy day enters the same system. Middle image: Noola's very different participation record joins it. Closing image: Glorp accepts both without forcing them into the same story.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -985,19 +922,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax hands Glorp his tracker."
+        "text": "PANEL 1 — Jax turns in a tracker that records ordinary waiting, an early exit, speaker moving and no disclosure."
       },
       {
-        "text": "PANEL 2 — It shows MINDFUL PAUSE / SESSION EXIT / DISCLOSURE: NO ENTRY."
+        "text": "PANEL 2 — Noola turns in her shorter record with the room-temperature exit and no disclosure."
       },
       {
-        "text": "PANEL 3 — Noola hands over hers: EARLY EXIT — ENVIRONMENTAL COMFORT / DISCLOSURE: NO ENTRY."
+        "text": "PANEL 3 — Glorp checks both records and finds that they are equally complete despite describing different days."
       },
       {
-        "text": "PANEL 4 — Glorp checks that both records satisfy the local rule."
-      },
-      {
-        "text": "PANEL 5 — Pixa closes both records without creating an emotional category."
+        "text": "PANEL 4 — Jax tries to make the symmetry sentimental and Glorp refuses."
       }
     ],
     "dialogueInline": [
@@ -1007,24 +941,24 @@
         "subtext": "Panel 1"
       },
       {
+        "speaker": "NOOLA",
+        "text": "I left sooner.",
+        "subtext": "Panel 2"
+      },
+      {
         "speaker": "GLORP",
         "text": "Complete.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
         "text": "That sounded almost approving.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "NOOLA",
-        "text": "I left sooner.",
         "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "Also complete.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
@@ -1040,7 +974,7 @@
   },
   {
     "id": "SDS_S1E06_P15",
-    "summary": "Primary composition: 6-panel page in Quiet Room. Opening image: The quiet room is being used exactly as intended: no tracker, no program, no conversation requirement. Middle image: Noola rests in her water-dome rig while Astra enters, starts to ask whether she is all right, and decides not to turn the room into another check-in. Closing image: Noola acknowledges the restraint with a small practical kindness.",
+    "summary": "Primary composition: 3-panel page in Quiet Room. Opening image: Astra nearly reproduces the wellness-program behavior in the refuge. Middle image: Noola redirects her with dry literalism. Closing image: the only question that remains is practical and welcome.",
     "setting": "SDS_Quiet_Room",
     "characters": [
       "SDS_Kreeb",
@@ -1049,65 +983,56 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The quiet room is cool, plain and occupied by Noola and Kreeb."
+        "text": "PANEL 1 — In the quiet room, Astra opens the door with the report in hand and starts to ask Noola a broader question."
       },
       {
-        "text": "PANEL 2 — Astra opens the door with the interrupted baseline report in hand."
+        "text": "PANEL 2 — Noola's literal answer stops the check-in from becoming another program conversation; Astra narrows the question to room temperature."
       },
       {
-        "text": "PANEL 3 — She starts to ask Noola a question, sees the room's NO TALKING REQUIRED sign and stops."
-      },
-      {
-        "text": "PANEL 4 — Noola looks up."
-      },
-      {
-        "text": "PANEL 5 — Astra silently points at the repaired-room temperature on her slate, asking only whether the physical condition is acceptable."
-      },
-      {
-        "text": "PANEL 6 — Noola gives her a thumbs-up through the dome and returns to resting."
+        "text": "PANEL 3 — Noola answers the physical question, Kreeb approves, and Astra accepts that restraint as progress."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ASTRA",
         "text": "Can I ask one thing?",
-        "subtext": "Panel 3"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "NOOLA",
         "text": "You just did.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
         "text": "Fair.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
         "text": "Room temperature?",
-        "subtext": "Panel 5"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "NOOLA",
         "text": "Good.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "KREEB",
         "text": "Excellent question.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "I have one now.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P16",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: Mira compares the room before, during and after the maintenance interruption. Middle image: The only clean causal result is physical: blocked access delayed a damper repair; the repair improved temperature and comfort conditions. Closing image: The material and wellness effects remain unclaimed.",
+    "summary": "Primary composition: 5-panel page in Multipurpose Room. Opening image: Mira turns the day into a physical timeline. Middle image: the one clean causal chain is mechanical. Closing image: the room recovery is legible while wellness attribution remains deliberately absent.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Mira",
@@ -1117,29 +1042,26 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Mira lays out the environmental timeline in the repaired multipurpose room."
+        "text": "PANEL 1 — Mira lays out the room timeline with before, during, repair and after states."
       },
       {
-        "text": "PANEL 2 — Temperature rises while service access is blocked."
+        "text": "PANEL 2 — The temperature rise is visible beside the beginning of the session."
       },
       {
-        "text": "PANEL 3 — Session exits rise during the same period, but Mira does not label motives beyond recorded reasons."
+        "text": "PANEL 3 — Session exits are shown in the same period without assigning a common motive."
       },
       {
-        "text": "PANEL 4 — Damper repair occurs."
+        "text": "PANEL 4 — Zib's damper repair sits at the center of the sequence as the clear intervention that actually occurred."
       },
       {
-        "text": "PANEL 5 — Temperature returns toward normal and ordinary room use resumes."
-      },
-      {
-        "text": "PANEL 6 — Pixa marks WELLNESS ATTRIBUTION: UNAVAILABLE and MATERIAL EFFECT: INDETERMINATE."
+        "text": "PANEL 5 — Temperature and airflow recover afterward while the wellness claim remains outside the physical conclusion."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "MIRA",
         "text": "Here. Before, during, repair, after.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
@@ -1164,33 +1086,33 @@
       {
         "speaker": "ZIB",
         "text": "Then I fixed the damper.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
         "text": "And temperature recovered.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ZIB",
         "text": "You could put my name next to that.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "What about wellness?",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       },
       {
         "speaker": "MIRA",
         "text": "Ask wellness.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P17",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Astra drafts the baseline report from the actual day. Middle image: Mira likes the plain physical sequence because it tells a complete story without asking her to referee anyone's feelings. Closing image: Glorp objects only to how readable the result is, while Kreeb insists that readability is a feature.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the final report starts from the actual day. Middle image: Mira, Glorp and Kreeb react to its unusual clarity. Closing image: Astra sends the readable version.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -1200,62 +1122,59 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra drafts the report beside the repaired-room temperature trace."
+        "text": "PANEL 1 — Astra drafts the report beside the repaired-room trace rather than beside a wellness dashboard."
       },
       {
-        "text": "PANEL 2 — The report states participation occurred, disclosure remained optional, maintenance interruption changed room conditions, and no material effect was identified."
+        "text": "PANEL 2 — Mira enjoys the simple hot-room / repaired-damper / recovered-room sequence for what it is."
       },
       {
-        "text": "PANEL 3 — Mira traces the simple sequence from warm room to repaired damper to recovered temperature."
+        "text": "PANEL 3 — Glorp and Kreeb react to how readable the report has become."
       },
       {
-        "text": "PANEL 4 — Glorp reads the short report twice; Kreeb reads it once."
-      },
-      {
-        "text": "PANEL 5 — Astra sends it."
+        "text": "PANEL 4 — Astra sends it before anyone can complicate the wording."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "MIRA",
         "text": "I like this report.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "Because it says the room was hot and then wasn't?",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "MIRA",
         "text": "Beginning, middle, end. Strong structure.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "GLORP",
         "text": "It is almost embarrassingly readable.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "You say that like a defect.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "I am adjusting.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Before anybody recovers, I'm sending it.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P18",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Corporate response arrives. Middle image: Astra reads it. Closing image: Astra points at the wording.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub, continuing directly from the submitted report. Opening image: the reply arrives before the scene clears. Middle image: corporate treats low disclosure as a limitation. Closing image: the same required/optional contradiction returns under a new program name.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -1264,22 +1183,16 @@
     "continuityFrom": "SDS_S1E06_P17",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Corporate response arrives."
+        "text": "PANEL 1 — The corporate reply arrives with THANK YOU FOR THE LEARNINGS and Astra immediately distrusts the tone."
       },
       {
-        "text": "PANEL 2 — A second line reframes low disclosure as an interpretability problem."
+        "text": "PANEL 2 — LOW DISCLOSURE CONTEXT LIMITS INTERPRETABILITY appears as the first substantive response."
       },
       {
-        "text": "PANEL 3 — A third line recommends a supplemental initiative."
+        "text": "PANEL 3 — The supplemental voluntary-disclosure initiative appears beneath it."
       },
       {
-        "text": "PANEL 4 — Astra reads it."
-      },
-      {
-        "text": "PANEL 5 — Pixa opens the participation rule."
-      },
-      {
-        "text": "PANEL 6 — Astra points at the wording."
+        "text": "PANEL 4 — Astra rejects the framing while Pixa explains that participation is required even though disclosure remains optional."
       }
     ],
     "dialogueInline": [
@@ -1311,33 +1224,33 @@
       {
         "speaker": "ASTRA",
         "text": "No.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "PIXA",
         "text": "Participation is required. Disclosure remains optional.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "That sentence again.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "PIXA",
         "text": "Different program.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "I liked you better when you were moving the speaker.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P19",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra, Mira and Kreeb remain after the supplemental-disclosure initiative appears. Middle image: Kreeb is relieved that no-entry survived; Mira is already looking back at the room-temperature curve from the failed wellness block. Closing image: Astra recognizes that each of them kept something different from the day.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub, continuing the same response scene. Opening image: Astra reacts to the institutional lesson. Middle image: Kreeb and Mira reveal different personal wins. Closing image: the crew's takeaways remain plural rather than being forced into one meaning.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -1347,22 +1260,16 @@
     "continuityFrom": "SDS_S1E06_P18",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra closes the new supplemental-disclosure notice halfway."
+        "text": "PANEL 1 — Astra keeps the new program open long enough to complain that almost no feelings produced yet another feelings program."
       },
       {
-        "text": "PANEL 2 — Kreeb points to the preserved NO ENTRY rule on the local guidance."
+        "text": "PANEL 2 — Kreeb points to the preserved NO ENTRY rule as the boundary worth keeping."
       },
       {
-        "text": "PANEL 3 — Mira has the repaired-room temperature trace open on a second screen."
+        "text": "PANEL 3 — Mira is already looking back at the airflow curve from the repaired room instead of the new program."
       },
       {
-        "text": "PANEL 4 — Astra notices both screens."
-      },
-      {
-        "text": "PANEL 5 — Kreeb is satisfied about the boundary; Mira is satisfied about the airflow curve."
-      },
-      {
-        "text": "PANEL 6 — Astra looks between them before closing the corporate notice entirely."
+        "text": "PANEL 4 — Astra realizes they each took a different useful thing from the failed week."
       }
     ],
     "dialogueInline": [
@@ -1384,33 +1291,33 @@
       {
         "speaker": "ASTRA",
         "text": "You saved the airflow curve?",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
         "text": "Obviously.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "I saved the no.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "You each took home a souvenir.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
         "text": "Mine has axes.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P20",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax drops his completed wellness tracker on Glorp's desk. Middle image: Jax studies Glorp's expression. Closing image: Jax heads back to work.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the program closes through an ordinary desk handoff. Middle image: Glorp accepts absence without treating it as missing information. Closing image: Jax leaves him to keep adapting.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -1418,65 +1325,59 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax drops his completed wellness tracker on Glorp's desk."
+        "text": "PANEL 1 — Jax drops his completed tracker on Glorp's desk and summarizes the absurdly ordinary day it records."
       },
       {
-        "text": "PANEL 2 — He summarizes it."
+        "text": "PANEL 2 — Glorp confirms every part of the record without adding interpretation."
       },
       {
-        "text": "PANEL 3 — Glorp checks the record."
+        "text": "PANEL 3 — Jax notices Glorp's adjustment to a form that permits absence and needles him about it."
       },
       {
-        "text": "PANEL 4 — Jax studies Glorp's expression."
-      },
-      {
-        "text": "PANEL 5 — Glorp considers the new NO ENTRY rule."
-      },
-      {
-        "text": "PANEL 6 — Jax heads back to work."
+        "text": "PANEL 4 — Jax heads back to work while Glorp keeps the completed no-entry record open for one more second."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "JAX",
         "text": "For the record: participated, disclosed nothing, moved one speaker.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "GLORP",
         "text": "All accurate.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "You're taking this well.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "GLORP",
         "text": "I am adapting to a form that permits absence.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
         "text": "That sounds painful.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "It is unfamiliar.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
         "text": "Keep at it.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P21",
-    "summary": "Primary composition: 6-panel page in Multipurpose Room. Opening image: The corporate wellness banners come down. Middle image: Glorp adds one small line beneath it. Closing image: Glorp looks at her.",
+    "summary": "Primary composition: 3-panel page in Multipurpose Room. Opening image: the program branding disappears. Middle image: one locally useful rule survives. Closing image: the room returns to normal with the boundary left behind.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Zib",
@@ -1486,60 +1387,51 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The corporate wellness banners come down."
+        "text": "PANEL 1 — The corporate wellness banners come down from the multipurpose room, exposing the ordinary wall and repaired access again."
       },
       {
-        "text": "PANEL 2 — Zib restores clear service access to the damper panel."
+        "text": "PANEL 2 — One small local sign remains: NO ENTRY IS VALID."
       },
       {
-        "text": "PANEL 3 — Kreeb keeps the quiet-room sign but removes the StarTrust branding."
-      },
-      {
-        "text": "PANEL 4 — Glorp adds one small line beneath it."
-      },
-      {
-        "text": "PANEL 5 — Astra notices the addition."
-      },
-      {
-        "text": "PANEL 6 — Glorp looks at her."
+        "text": "PANEL 3 — Astra refuses to make the guidance temporary while Glorp and Kreeb return to their familiar bickering."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "SIGN",
         "text": "NO ENTRY IS VALID.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
         "text": "That stays.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "GLORP",
         "text": "As temporary guidance?",
-        "subtext": "Panel 6"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "No adjective.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "KREEB",
         "text": "She's learning.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "Please stop grading everyone.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       }
     ]
   },
   {
     "id": "SDS_S1E06_P22",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: A printer produces a fresh corporate placard. Middle image: Jax reads it. Closing image: Jax looks back at the NO ENTRY sign. Astra checks the date: tomorrow.",
+    "summary": "Primary composition: 3-panel page in Main Bullpen / Admin Hub. Opening image: the next program arrives immediately. Middle image: Jax and Noola treat the new language through what they just learned. Closing image: Astra's one-day reassurance becomes the tag.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -1548,19 +1440,13 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — A printer produces a fresh corporate placard."
+        "text": "PANEL 1 — A printer produces the fresh BRING YOUR FEELINGS TO WORK DAY placard over the required-participation / optional-disclosure language."
       },
       {
-        "text": "PANEL 2 — A smaller participation line appears beneath it."
+        "text": "PANEL 2 — Jax and Noola read it together; Noola reminds him that bringing nothing is now a proven option."
       },
       {
-        "text": "PANEL 3 — Jax reads it."
-      },
-      {
-        "text": "PANEL 4 — Noola walks past."
-      },
-      {
-        "text": "PANEL 5 — Jax looks back at the NO ENTRY sign. Astra checks the date: tomorrow."
+        "text": "PANEL 3 — Astra checks the date and confirms they only have to survive one day, which does not reassure Jax."
       }
     ],
     "dialogueInline": [
@@ -1572,37 +1458,37 @@
       {
         "speaker": "SIGN",
         "text": "PARTICIPATION REQUIRED / DISCLOSURE OPTIONAL.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "JAX",
         "text": "I'm bringing mine in a sealed container.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "NOOLA",
         "text": "Bring none.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "Can I do that?",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "NOOLA",
         "text": "You just spent a week proving it.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "One day.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
         "text": "You say that like it helps.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       }
     ]
   }
