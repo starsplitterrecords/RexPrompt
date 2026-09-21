@@ -159,10 +159,13 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 ## Page 14 — THE KIN KEEP APPEARING ELSEWHERE
 **5-panel parallel montage.**
 
-1. Laundromat: one Kin member folds clothes while watching the television with other patrons.
-2. Park: another studies a public sculpture / street art while eating a snack.
+1. Laundromat: First Male Kin folds clothes while watching the television with other patrons.
+   **FIRST MALE KIN:** Four minutes?
+2. Park: Second Male Kin studies a public sculpture / street art while eating a snack.
+   **SECOND MALE KIN:** Too many people today.
 3. Upstairs-neighbor hallway: Astrid and the neighbor exchange packaged snacks with gestures and partial language.
-4. Bodega: the owner sets aside a familiar item when another Kin member enters.
+   **ASTRID:** For tomorrow.
+4. Bodega: the owner sets aside a familiar item when First Male Kin enters carrying the folded laundry.
 5. None of these scenes explain themselves.
 
 ## Page 15 — BORROWING
@@ -236,9 +239,12 @@ Kin continuity for this issue: The Kin are exactly three recurring people—Astr
 **5 panels. Apartment building exterior / hallway.**
 
 1. Bjorn, Gunnar, Carrie and Silas return.
-2. One Kin member is already coming up behind them with groceries.
-3. Another is ahead of them carrying folded laundry.
-4. The upstairs neighbor calls a casual greeting to Astrid. She answers in whatever partial shared vocabulary/gesture has developed. Do not translate or explain.
+2. Second Male Kin is already coming up behind them with groceries.
+   **SECOND MALE KIN:** You took the slow way.
+3. First Male Kin is ahead of them carrying folded laundry.
+   **FIRST MALE KIN:** Machine lied again.
+4. The upstairs neighbor calls a casual greeting to Astrid. Astrid answers without stopping.
+   **ASTRID:** Evening.
 5. Carrie watches this happen again.
 
 ## Page 22 — THE SAFE CAVE HAS CHANGED
