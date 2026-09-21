@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: PRODUCTION SCRIPT — 24-PAGE WRITING + DRAWABLE PAGE STAGING; READY FOR REXPROMPT COMPILATION  
+Status: PRODUCTION SCRIPT — ISSUE 8 DISCOVERY-PRESERVATION PASS APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH PENDING  
 Primary function: a Status Reconciliation Review forces the household to confront that its members want different things. The issue prepares them to appear honestly as separate people without solving the hearing's questions in advance.
 
 ## Continuity lock
