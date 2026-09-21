@@ -482,9 +482,9 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
    **GUNNAR:** What?
 4. **Bjorn.**
    **BJORN:** I don't know where everyone is.
-   **GUNNAR:** Okay.
+   **GUNNAR:** You don't need to.
 5. **Wide.** Bjorn looks around the functioning room, then sits instead of standing to organize anyone.
-   **BJORN:** It is?
+   **BJORN:** Right.
 
 **Page turn:** not knowing every movement of the household becomes something Bjorn can tolerate rather than a failure of leadership.
 
@@ -528,12 +528,12 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
    **1987 PARTICIPANT:** I went.
    **BJORN:** And?
 3. **Participant.**
-   **1987 PARTICIPANT:** They did it again. Questions. Jokes. My brother told them to stop. They didn't. I left.
+   **1987 PARTICIPANT:** They did it again. Questions, jokes. My brother told them to stop. They didn't. I left.
 4. **Walking inside together.**
-   **1987 PARTICIPANT:** He called me the next day. Asked me back. Just him this time.
+   **1987 PARTICIPANT:** He called the next day. Asked me back. Just us.
    Bjorn nods once.
-   **BJORN:** Better terms.
-   **1987 PARTICIPANT:** Better terms.
+   **BJORN:** Better?
+   **1987 PARTICIPANT:** Yeah.
 
 **Page turn:** Bjorn sees that advice can matter without making him the author of another person's choice.
 
