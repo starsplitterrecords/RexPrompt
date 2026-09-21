@@ -7,9 +7,9 @@
   "publisher": "Star Splitter Visions",
   "logline": "In a near-future coastal city that is safe, automated, and genuinely livable, six old friends become obsessed with crossing exposed seabed into an abandoned offshore district that appears during rare low tides — until one failed return forces them to confront what they were asking the place to give them.",
   "thesis": "A generation builds meaning inside the exposed ruins of abandoned futures.",
-  "premise": "Harbor Phase adapted to rising seas by moving inland. Automation and continuity payments keep life materially stable, but the city is not a dystopia and the six leads are not six versions of the same redundancy. Each has a real adult life that fits badly in a different way. At rare low tides, abandoned offshore expansion districts called the Reach become reachable on foot, offering physical consequence, status, story, curiosity, competence, and unscripted time that inland life does not give them in the same form.",
-  "core_story_engine": "Each chapter advances the group's emotional attachment to the Reach: rumor, first crossing, social occupation, dependency, consequence, disillusionment, and final sober return.",
-  "ensemble_rule": "The six leads are adults with history, attraction, irritation, trust, jokes, embarrassment, obligations, and real familiarity. Every lead wants the Reach for a different personal reason. No lead stands outside the temptation as a clean interpretive device.",
+  "premise": "Harbor Phase adapted to rising seas by moving inland. Automation and continuity payments keep life materially stable, but the city is not a dystopia and the six leads are not six versions of the same redundancy. Each has a real adult life that fits badly in a different way. At rare low tides, abandoned offshore expansion districts become reachable on foot, offering physical consequence, status, story, curiosity, competence, and unscripted time that inland life does not give them in the same form.",
+  "core_story_engine": "Each chapter advances the group's emotional attachment to the offshore district: rumor, first crossing, social occupation, dependency, consequence, disillusionment, and final sober return.",
+  "ensemble_rule": "The six leads are adults with history, attraction, irritation, trust, jokes, embarrassment, obligations, and real familiarity. Every lead wants something different from the offshore district. No lead stands outside the temptation as a clean interpretive device.",
   "what_this_is": [
     "ensemble character drama",
     "grounded speculative coastal science fiction",
@@ -30,8 +30,8 @@
     "nostalgia bait"
   ],
   "character_scope": {
-    "ensemble": "All six leads have functioning adult lives and distinct forms of dissatisfaction. The Reach amplifies different flaws: authority hunger, performance hunger, mythmaking, social hesitation, curiosity, attachment, and bad collective momentum.",
-    "nicole": "Nicole is an adult participant and Reach-fascinated member of the friend group. She likes being there, jokes, explores, takes risks, and sometimes helps bad momentum. She is never the explainer, philosopher, scold, corrective woman, archivist, or Sector 14 detective.",
+    "ensemble": "All six leads have functioning adult lives and distinct forms of dissatisfaction. The offshore district amplifies different flaws: authority hunger, performance hunger, mythmaking, social hesitation, curiosity, attachment, and bad collective momentum.",
+    "nicole": "Nicole is an adult participant and district-fascinated member of the friend group. She likes being there, jokes, explores, takes risks, and sometimes helps bad momentum. She is never the explainer, philosopher, scold, corrective woman, archivist, or Sector 14 detective.",
     "dialogue": "Character differences should show through behavior, jokes, habits, missed timing, awkward trust, practical corrections, and bad choices rather than speeches."
   },
   "hard_visual_rules": [
@@ -61,5 +61,54 @@
     "old friend-group shorthand",
     "casual adult familiarity",
     "setting exposition distributed through action, signage, group discovery, and multiple characters"
-  ]
+  ],
+  "place_naming": {
+    "status": "Active story-development rule. Vocabulary is intentionally allowed to evolve in-world; do not flatten it to one universal nickname yet.",
+    "retired_term": {
+      "term": "the Reach",
+      "rule": "Do not use as Low Tide Signal's umbrella place-name going forward.",
+      "reason": "Too close to Azure Reach and Reach and Resolve, creating avoidable franchise terminology collision."
+    },
+    "governing_principle": "The characters name the place before they fully understand it. Different names may coexist and shift by speaker, context, chapter, and social spread. The naming process is part of the story: ordinary unfinished civic space is mythologized by the people using it.",
+    "active_vocabulary": [
+      {
+        "term": "Low Tide District",
+        "role": "Strong formal/practical descriptive candidate; nearly the right umbrella term but not required in every mouth."
+      },
+      {
+        "term": "the District",
+        "role": "Natural everyday shorthand; especially useful when the mythology falls away and the place is understood as an ordinary district."
+      },
+      {
+        "term": "Tide Town",
+        "role": "Catchy runner/social slang; slightly unserious at first and capable of becoming a brand through repetition."
+      },
+      {
+        "term": "Low Tide Town",
+        "role": "Colloquial variant with the same runner-born quality."
+      },
+      {
+        "term": "Promise District",
+        "role": "Possible original developer/planning/promotional name; carries failed-future optimism without requiring mystery."
+      },
+      {
+        "term": "the Promise",
+        "role": "Possible ironic or affectionate shorthand derived from old branding."
+      }
+    ],
+    "rejected_or_avoid": [
+      "Atlantis",
+      "year-number names such as 2226",
+      "a single elegant mythic name used identically by every speaker",
+      "new Low Tide umbrella terminology built around the word Reach"
+    ],
+    "dramatic_use": [
+      "Early chapters may contain competing or provisional names.",
+      "Midseason social spread can make one or more nicknames behave like accidental branding.",
+      "Different groups may prefer different names: planning language, runner slang, media shorthand, old promotional language.",
+      "After the failed return, some of the grander or jokier names may feel embarrassing or hollow.",
+      "By the final return, plain language such as the District can carry extra weight because the place is revealed to be ordinary civic life that never fully arrived."
+    ],
+    "implementation_note": "Keep stable internal recipe IDs for now where renaming them would create unnecessary production churn. Replace visible story/metadata uses of Reach during the dedicated naming pass once the distribution of names by chapter and speaker is locked."
+  }
 }
