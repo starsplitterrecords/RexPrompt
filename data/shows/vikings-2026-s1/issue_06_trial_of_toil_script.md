@@ -114,10 +114,11 @@ No job offer. No clinical framing. No therapist version of Bjorn. He remains a p
 3. **Wide.** The danger is already over. Carrie, Bjorn, Gunnar, and the two male Kin all look at the inert strip on the floor.
 4. **Medium on Bjorn.** He bends, picks up the dead strip, and stares at it. His jaw tightens.
 5. **Impact panel.** Bjorn slams the plastic strip once into the bare wall. The casing cracks. Everyone else freezes. Do not make the impact spectacular; the shock is that he chose violence after the danger passed.
-6. **Two-shot, Carrie and Bjorn, with the two male Kin visibly wary behind them.** Carrie speaks low and exact.
-   **CARRIE:** That was not protection.
-   **BJORN:** It failed this house.
-   **CARRIE:** Gunnar already protected the house. You scared everybody because the problem didn't need you.
+6. **Two-shot, Carrie and Bjorn, with the two male Kin visibly wary behind them.** Carrie speaks low.
+   **CARRIE:** Bjorn.
+   **BJORN:** It failed.
+   **CARRIE:** Gunnar had it.
+   **CARRIE:** You scared them.
 
 **Page turn:** Bjorn cannot dismiss the correction because the people he intended to protect are the people he frightened.
 
