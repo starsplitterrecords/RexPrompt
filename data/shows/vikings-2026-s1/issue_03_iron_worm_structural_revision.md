@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 3: THE IRON WORM
 
-Status: STRUCTURAL SEASON REVISION — dialogue intentionally not line-polished
+Status: STRUCTURAL SEASON REVISION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE
 Primary function: transit adaptation; Gunnar learns the city as navigable terrain, completes the required errand, then begins using movement for personal curiosity rather than survival alone.
 
 ## Revision intent
