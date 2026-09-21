@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
-Status: PRODUCTION SCRIPT — HARD-PROBLEM / ASTRID-COMPRESSION PASS APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH PENDING  
+Status: PRODUCTION SCRIPT — HARD-PROBLEM / ASTRID-COMPRESSION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
 Primary function: the institution must decide whether an emergency household file built around Bjorn can be lawfully converted into five individual permanent statuses. The applicants have to prove in the room that the old hierarchy no longer describes them; Bjorn's trial is surrendering its final legal residue, and Astrid's compact testimony reveals how far ordinary independence has already gone.
 
 ## Continuity lock
