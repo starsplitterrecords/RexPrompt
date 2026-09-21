@@ -322,12 +322,12 @@
   },
   {
     "id": "SDS_S1E05_P06",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax and Zib walk the station map together, choosing collection locations around access needs instead of around projected yield. Middle image: Mira adds the minimum physical metadata each location can support. Closing image: Jax rejects the highest-traffic placement because it would narrow a service aisle.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Jax and Zib walk the station map together while Pixa highlights high-traffic collection locations. Middle image: Noola passes in her water-dome rig and demonstrates that one recommended bin would pinch the turn she uses every shift. Closing image: Pixa revises its own recommendation toward access rather than yield before Jax has to ask.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
       "SDS_Zib",
-      "SDS_Mira",
+      "SDS_Noola",
       "SDS_Pixa"
     ],
     "continuityFrom": "SDS_S1E05_P05",
@@ -339,16 +339,16 @@
         "text": "PANEL 2 — Pixa highlights three high-traffic suggested collection points."
       },
       {
-        "text": "PANEL 3 — Zib overlays service clearances and two of the suggestions turn red."
+        "text": "PANEL 3 — Noola passes in her water-dome rig and points out that one proposed bin would narrow her regular turn into the corridor."
       },
       {
-        "text": "PANEL 4 — Mira adds only physical logging requirements to the remaining locations."
+        "text": "PANEL 4 — Zib overlays the service clearances; the same location conflicts with maintenance access."
       },
       {
-        "text": "PANEL 5 — Jax moves the highest-traffic bin marker away from a service aisle."
+        "text": "PANEL 5 — Pixa removes that recommendation and redraws the route with the larger access envelope."
       },
       {
-        "text": "PANEL 6 — Pixa records lower projected collection coverage and unobstructed access."
+        "text": "PANEL 6 — Jax moves the bin marker to the lower-yield location and Noola continues through without altering her path."
       }
     ],
     "dialogueInline": [
@@ -358,92 +358,92 @@
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ZIB",
-        "text": "Highest projected swearing is also there.",
+        "speaker": "NOOLA",
+        "text": "Then I hit it twice a shift.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "MIRA",
-        "text": "Location, time, temperature, equipment load, mass.",
+        "speaker": "ZIB",
+        "text": "She is not joking.",
         "subtext": "Panel 4"
       },
       {
+        "speaker": "PIXA",
+        "text": "Revising recommendation. Access envelope takes priority.",
+        "subtext": "Panel 5"
+      },
+      {
         "speaker": "JAX",
-        "text": "Then this one moves.",
+        "text": "Look at that.",
         "subtext": "Panel 5"
       },
       {
         "speaker": "PIXA",
-        "text": "Projected coverage decreases.",
-        "subtext": "Panel 6"
-      },
-      {
-        "speaker": "JAX",
-        "text": "Access increases.",
-        "subtext": "Panel 6"
+        "text": "Correction accepted.",
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E05_P07",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The limited pilot starts quietly: most containers are empty and ordinary work continues around them. Middle image: Jax catches Glorp about to add a requested behavioral-context field to the custody sheet and redirects the log to observable conditions only. Closing image: Astra notices Jax enforcing the boundary without asking her first.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The limited pilot begins quietly while Jax checks seals and access instead of watching coworkers. Middle image: Glorp notices that the corporate context field would invite unsupported personal interpretation and narrows it himself to equipment and location context. Closing image: Pixa offers to suppress the unused staff-condition prompt on the local screen, and Glorp accepts.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
       "SDS_Pixa",
-      "SDS_Astra",
-      "SDS_Glorp"
+      "SDS_Glorp",
+      "SDS_Astra"
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The pilot begins with almost nothing happening: empty containers, normal traffic, normal work."
+        "text": "PANEL 1 — The pilot begins with mostly empty containers and ordinary work continuing around them."
       },
       {
         "text": "PANEL 2 — Jax checks seals and route clearance rather than watching coworkers."
       },
       {
-        "text": "PANEL 3 — Glorp adds a requested CONTEXT field to the local custody sheet."
+        "text": "PANEL 3 — Glorp studies the corporate CONTEXT field beside the local custody sheet."
       },
       {
-        "text": "PANEL 4 — Jax asks what observable event belongs in it."
+        "text": "PANEL 4 — He deletes the broad field and replaces it with EQUIPMENT / LOCATION CONTEXT."
       },
       {
-        "text": "PANEL 5 — Glorp changes the field to EQUIPMENT / LOCATION CONTEXT."
+        "text": "PANEL 5 — Pixa offers a local display option that hides the unused staff-condition prompt without altering the corporate source form."
       },
       {
-        "text": "PANEL 6 — Astra sees the corrected sheet as she passes and keeps walking."
+        "text": "PANEL 6 — Glorp approves the local display change. Astra sees the narrower sheet as she passes."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "GLORP",
-        "text": "Corporate requests context.",
+        "text": "Context of what, exactly?",
         "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
-        "text": "Context of what?",
-        "subtext": "Panel 4"
+        "text": "Good question.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
-        "text": "The collection event.",
+        "text": "Equipment and location are observable.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "JAX",
-        "text": "Then write the event.",
-        "subtext": "Panel 4"
+        "speaker": "PIXA",
+        "text": "I can suppress the unused staff-condition prompt on this screen.",
+        "subtext": "Panel 5"
       },
       {
         "speaker": "GLORP",
-        "text": "That is narrower.",
-        "subtext": "Panel 5"
+        "text": "Do that.",
+        "subtext": "Panel 6"
       },
       {
         "speaker": "JAX",
-        "text": "Good.",
-        "subtext": "Panel 5"
+        "text": "Also a good answer.",
+        "subtext": "Panel 6"
       }
     ]
   },
@@ -568,7 +568,7 @@
   },
   {
     "id": "SDS_S1E05_P10",
-    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Mira reviews the thin first-day sample set. Middle image: She finds no pattern and refuses to turn scarcity into a promising result. Closing image: Astra leaves the lab knowing the honest pilot may not help the procurement problem quickly.",
+    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Mira lays out the small first-day sample set and immediately becomes interested in one fragment that fails differently under compression. Middle image: She repeats the test for the pleasure of resolving the physical oddity, then rejects Pixa's corporate adjective when it appears. Closing image: Astra leaves knowing Mira is curious about the material without being willing to oversell it.",
     "setting": "SDS_Lab_Work_Area",
     "characters": [
       "SDS_Mira",
@@ -577,58 +577,53 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Mira lays out the small first-day sample set."
+        "text": "PANEL 1 — Mira lays out the small first-day sample set and flexes one fragment between gloved fingers."
       },
       {
-        "text": "PANEL 2 — The samples vary in cohesion and location with no meaningful pattern."
+        "text": "PANEL 2 — One sample snaps while another deforms, and Mira smiles despite the low sample count."
       },
       {
-        "text": "PANEL 3 — Pixa offers the corporate status label PROMISING EARLY INDICATOR."
+        "text": "PANEL 3 — Mira resets the compression jig and runs the odd pair again."
       },
       {
-        "text": "PANEL 4 — Mira deletes the adjective and leaves EARLY DATA — INSUFFICIENT."
+        "text": "PANEL 4 — Pixa offers the corporate status label PROMISING EARLY INDICATOR."
       },
       {
-        "text": "PANEL 5 — Astra looks at the replacement-part ETA on her slate."
+        "text": "PANEL 5 — Mira deletes the adjective and leaves EARLY DATA — INSUFFICIENT."
       },
       {
-        "text": "PANEL 6 — Mira closes the sample case instead of producing a better story."
+        "text": "PANEL 6 — Astra looks from Mira's delighted face to the brutally cautious label."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "MIRA",
-        "text": "Low mass. Mixed cohesion. No pattern.",
+        "text": "Oh, that's different.",
         "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "You sound happy.",
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "I like weird material.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "PIXA",
         "text": "Suggested status: promising early indicator.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "MIRA",
-        "text": "Suggested status rejected.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "You enjoy that button.",
         "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
-        "text": "Immensely.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "Eighteen days.",
+        "text": "I do not like weird adjectives.",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "MIRA",
-        "text": "Still eighteen days.",
+        "speaker": "ASTRA",
+        "text": "There she is.",
         "subtext": "Panel 6"
       }
     ]
@@ -765,7 +760,7 @@
   },
   {
     "id": "SDS_S1E05_P13",
-    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Jax transfers the post-repair sample through the custody process he now owns. Middle image: Mira finds that this sample survives compression better than the earlier passive dust, but cannot say why. Closing image: Pixa marks the pilot baseline sufficient for review without adding a behavioral explanation.",
+    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: Jax transfers the post-repair sample through the custody process he now owns. Middle image: Mira discovers that it survives compression better than the earlier material and immediately wants to run it again. Closing image: Pixa marks the baseline sufficient for review while Mira is still physically interested in the sample rather than the status.",
     "setting": "SDS_Lab_Work_Area",
     "characters": [
       "SDS_Mira",
@@ -775,22 +770,22 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax hands Mira the sealed sample with location, equipment load, temperature and time logged."
+        "text": "PANEL 1 — Jax hands Mira the sealed post-repair sample with its physical context logged."
       },
       {
-        "text": "PANEL 2 — Mira repeats the same physical tests used on prior samples."
+        "text": "PANEL 2 — Mira runs the same compression test used on the earlier samples."
       },
       {
-        "text": "PANEL 3 — The sample survives compression better than the thin earlier material."
+        "text": "PANEL 3 — The fragment holds. Mira resets the jig before anyone asks."
       },
       {
-        "text": "PANEL 4 — Astra asks the tempting question."
+        "text": "PANEL 4 — Jax keeps the custody seal and test order straight while Mira repeats the compression."
       },
       {
-        "text": "PANEL 5 — Mira refuses causation she cannot support."
+        "text": "PANEL 5 — Astra asks whether they know why this sample behaves differently."
       },
       {
-        "text": "PANEL 6 — Pixa updates the status: BASELINE SUFFICIENT FOR REVIEW / MECHANISM UNDETERMINED."
+        "text": "PANEL 6 — Mira says no without losing interest; Pixa updates BASELINE SUFFICIENT FOR REVIEW / MECHANISM UNDETERMINED."
       }
     ],
     "dialogueInline": [
@@ -801,32 +796,32 @@
       },
       {
         "speaker": "MIRA",
-        "text": "Good.",
-        "subtext": "Panel 2"
+        "text": "Good. Again.",
+        "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "Can we say why this one held?",
+        "speaker": "JAX",
+        "text": "You already got a result.",
         "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
-        "text": "No.",
-        "subtext": "Panel 5"
+        "text": "Now I want the same result twice.",
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
-        "text": "Can we say it held?",
+        "text": "And why?",
         "subtext": "Panel 5"
       },
       {
         "speaker": "MIRA",
-        "text": "Absolutely.",
-        "subtext": "Panel 5"
+        "text": "No idea yet.",
+        "subtext": "Panel 6"
       },
       {
-        "speaker": "PIXA",
-        "text": "Baseline sufficient for review.",
+        "speaker": "MIRA",
+        "text": "Which is why this is fun.",
         "subtext": "Panel 6"
       }
     ]
@@ -895,7 +890,7 @@
   },
   {
     "id": "SDS_S1E05_P15",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The new recommendation expands the pilot from passive collection into structured collaboration, wellness baseline and scheduled team activity. Middle image: Pixa shows that declining the enhancements may reduce future pilot eligibility. Closing image: Jax recognizes the change immediately: the station is being asked to alter people to support the resource case.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The new recommendation expands the pilot into structured collaboration, wellness baseline and scheduled team activity. Middle image: Glorp follows the eligibility language far enough to realize that the supposedly optional programs carry a practical penalty if declined. Closing image: Kreeb is mildly annoyed that Glorp reached the coercion problem before he did.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -908,48 +903,53 @@
     "continuityFrom": "SDS_S1E05_P14",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The recommendation opens under the newly eligible procurement review."
+        "text": "PANEL 1 — The enhancement recommendation opens under the newly eligible procurement review."
       },
       {
         "text": "PANEL 2 — Suggested pathways list structured collaboration windows, wellness baseline and scheduled team activity blocks."
       },
       {
-        "text": "PANEL 3 — Mira marks them as behavioral interventions rather than material observation."
+        "text": "PANEL 3 — Glorp traces the optional flag to a separate eligibility consequence line."
       },
       {
-        "text": "PANEL 4 — Kreeb reads the participation language closely."
+        "text": "PANEL 4 — He turns the screen toward the group instead of defending the wording."
       },
       {
-        "text": "PANEL 5 — Pixa shows the consequence line: declining enhancements may reduce pilot eligibility."
+        "text": "PANEL 5 — Kreeb reads the same line, then looks at Glorp."
       },
       {
-        "text": "PANEL 6 — Jax looks from that line to the custody log he has been doing successfully."
+        "text": "PANEL 6 — Jax closes his custody log beside the much larger enhancement packet."
       }
     ],
     "dialogueInline": [
       {
-        "speaker": "SCREEN",
-        "text": "SUGGESTED ENHANCEMENT PATHWAYS.",
-        "subtext": "Panel 1"
-      },
-      {
-        "speaker": "MIRA",
-        "text": "That is not passive.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "KREEB",
-        "text": "That changes the workplace to improve the study.",
-        "subtext": "Panel 4"
-      },
-      {
         "speaker": "GLORP",
-        "text": "They are marked optional.",
-        "subtext": "Panel 4"
+        "text": "These are marked optional.",
+        "subtext": "Panel 3"
       },
       {
         "speaker": "PIXA",
         "text": "Declining may reduce pilot eligibility.",
+        "subtext": "Panel 3"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "Then optional is not procedurally neutral.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "I was going to say coercive.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "You still can.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "I am annoyed in two disciplines now.",
         "subtext": "Panel 5"
       },
       {
@@ -1152,7 +1152,7 @@
   },
   {
     "id": "SDS_S1E05_P19",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra and Mira remain at the terminal after everyone else moves on. Middle image: Astra considers that. Closing image: Astra gives her a look.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Astra and Mira remain at the terminal after the Wellness Baseline Week notice arrives. Middle image: Mira admits she dislikes the corporate premise but is genuinely curious about what the room conditions will do to the measurements. Closing image: Astra catches the distinction between Mira wanting data and Mira believing the program's theory.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -1161,48 +1161,53 @@
     "continuityFrom": "SDS_S1E05_P18",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra and Mira remain at the terminal after everyone else moves on."
+        "text": "PANEL 1 — Astra and Mira remain beside the Wellness Baseline Week notice after everyone else returns to work."
       },
       {
-        "text": "PANEL 2 — Astra points at the mandatory baseline notice."
+        "text": "PANEL 2 — Astra points at the required room blocks with visible resignation."
       },
       {
-        "text": "PANEL 3 — Mira points back at the accepted boundary."
+        "text": "PANEL 3 — Mira zooms in on the environmental logging section rather than the wellness language."
       },
       {
-        "text": "PANEL 4 — Astra considers that."
+        "text": "PANEL 4 — Astra notices Mira's interest."
       },
       {
-        "text": "PANEL 5 — Mira continues."
+        "text": "PANEL 5 — Mira taps ambient temperature and equipment-load fields with a small, guilty smile."
       },
       {
-        "text": "PANEL 6 — Astra gives her a look."
+        "text": "PANEL 6 — Astra closes the notice while Mira keeps the room-data section open."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ASTRA",
         "text": "They got a week.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "MIRA",
         "text": "They did not get the intervention they asked for.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
+      },
+      {
+        "speaker": "ASTRA",
+        "text": "You are smiling.",
+        "subtext": "Panel 4"
       },
       {
         "speaker": "MIRA",
-        "text": "A week we can measure without pretending it proves anything.",
+        "text": "I dislike their premise.",
+        "subtext": "Panel 5"
+      },
+      {
+        "speaker": "MIRA",
+        "text": "I do want the room data.",
         "subtext": "Panel 5"
       },
       {
         "speaker": "ASTRA",
-        "text": "You make bad news sound peer reviewed.",
-        "subtext": "Panel 6"
-      },
-      {
-        "speaker": "MIRA",
-        "text": "Thank you.",
+        "text": "Of course you do.",
         "subtext": "Panel 6"
       }
     ]
@@ -1271,55 +1276,64 @@
   },
   {
     "id": "SDS_S1E05_P21",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Zib relocates the collection bins to a proper rack that does not obstruct service access. Middle image: The two labels overlap badly. Closing image: Glorp and Kreeb reluctantly combine the rules into one readable card while Mira watches. Pixa emits a notification tone.",
+    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Zib relocates the collection bins to a proper rack and discovers the two local instruction signs now overlap. Middle image: Astra orders one readable sign; Glorp immediately agrees while Kreeb, surprised, checks that combining them will not erase the access reason. Closing image: Glorp puts access first and Kreeb accepts the simpler version.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Zib",
       "SDS_Kreeb",
       "SDS_Glorp",
       "SDS_Astra",
-      "SDS_Mira",
       "SDS_Pixa"
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib relocates the collection bins to a proper rack that does not obstruct service access."
+        "text": "PANEL 1 — Zib secures the collection bins to a proper rack outside all service clearances."
       },
       {
-        "text": "PANEL 2 — Kreeb adds a simple label."
+        "text": "PANEL 2 — The two local signs overlap badly: PASSIVE COLLECTION ONLY and DO NOT MOVE WITHOUT ACCESS CHECK."
       },
       {
-        "text": "PANEL 3 — Glorp adds a second access label."
+        "text": "PANEL 3 — Astra points at the visual mess and asks for one sign."
       },
       {
-        "text": "PANEL 4 — The two labels overlap badly."
+        "text": "PANEL 4 — Glorp agrees immediately and starts rewriting."
       },
       {
-        "text": "PANEL 5 — Astra sees them."
+        "text": "PANEL 5 — Kreeb checks that the access instruction will remain explicit instead of disappearing into a general rule."
       },
       {
-        "text": "PANEL 6 — Glorp and Kreeb reluctantly combine the rules into one readable card while Mira watches. Pixa emits a notification tone."
+        "text": "PANEL 6 — Glorp posts one card with ACCESS CHECK first and PASSIVE COLLECTION second. Kreeb reads it once and nods."
       }
     ],
     "dialogueInline": [
       {
-        "speaker": "SIGN",
-        "text": "PASSIVE COLLECTION ONLY.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "SIGN",
-        "text": "DO NOT MOVE WITHOUT ACCESS CHECK.",
+        "speaker": "ASTRA",
+        "text": "One sign.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "One sign.",
+        "speaker": "GLORP",
+        "text": "Agreed.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "That was fast.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "GLORP",
+        "text": "Two instructions. One object.",
+        "subtext": "Panel 4"
+      },
+      {
+        "speaker": "KREEB",
+        "text": "Put access first.",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "MIRA",
-        "text": "That may be our best data control.",
+        "speaker": "GLORP",
+        "text": "Already did.",
         "subtext": "Panel 6"
       }
     ]
