@@ -1,6 +1,6 @@
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
-Status: PRODUCTION SCRIPT — ISSUE 8 DISCOVERY-PRESERVATION PASS APPLIED; ACTIVE ASSEMBLER INPUT; LINE POLISH PENDING  
+Status: PRODUCTION SCRIPT — ISSUE 8 DISCOVERY-PRESERVATION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
 Primary function: a Status Reconciliation Review forces the household to confront that its members want different things. The issue prepares them to appear honestly as separate people without solving the hearing's questions in advance.
 
 ## Continuity lock
@@ -56,11 +56,11 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 1. **Wide overhead-ish table composition.** Bjorn clears cups and books with ceremonial seriousness. Carrie places the notice down. Gunnar brings coffee. The two male Kin sit or lean nearby. Astrid is already out.
 2. **Insert.** Bjorn removes the brass apartment key from its hook and places it in the center of the table.
 3. **Medium on Bjorn.**
-   **BJORN:** We will defend the household.
+   **BJORN:** We'll defend the household.
 4. **Carrie, standing with notice.**
-   **CARRIE:** Before we defend anything, I need to know what they are reviewing.
+   **CARRIE:** First I need to know what they're reviewing.
 5. **Gunnar sits with coffee, not a map.**
-   **GUNNAR:** Before that, we should know what we are defending.
+   **GUNNAR:** First we should know what we mean.
 
 **Page turn:** Gunnar turns one external threat into four internal questions.
 
@@ -75,16 +75,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Medium on Bjorn.**
-   **BJORN:** This room. Our place here. All of us.
+   **BJORN:** This room. All of us.
 2. **Gunnar points at the key.**
-   **GUNNAR:** The room.
+   **GUNNAR:** Room.
 3. **He points at a transit card near his coffee.**
-   **GUNNAR:** The city.
+   **GUNNAR:** City.
 4. **He taps Carrie's notice, then a shared wooden bowl.**
-   **GUNNAR:** The paper. Us.
+   **GUNNAR:** Paper. Us.
 5. **Two-shot Gunnar/Bjorn.**
-   **BJORN:** They are one thing.
-   **GUNNAR:** Then why can I lose one and keep three?
+   **BJORN:** Same thing.
+   **GUNNAR:** Not if one can go away.
 
 **Page turn:** Bjorn's instinct for unity no longer answers the actual question.
 
@@ -100,13 +100,13 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 1. **Top-down insert on four objects:** brass key, transit card, review notice, shared household bowl.
 2. **First male Kin points at key and bowl.**
-   **FIRST MALE KIN:** These I want.
+   **FIRST MALE KIN:** These stay.
 3. **Second male Kin points at transit card, then leaves his hand off the review notice.**
-   **SECOND MALE KIN:** I want to stay now. I do not know forever.
+   **SECOND MALE KIN:** I want to stay. For now.
 4. **Bjorn looks at him sharply, old reflex surfacing.**
-   **BJORN:** If you stand in a shield wall—
+   **BJORN:** If we're answering together—
 5. **Bjorn stops himself, then changes the sentence.**
-   **BJORN:** No. What do you mean?
+   **BJORN:** No. Say more.
 
 **Page turn:** Issue 6's change prevents disagreement from becoming disloyalty.
 
@@ -120,15 +120,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 **5 panels.**
 
-1. **Medium.** The first male Kin checks the time on the microwave clock and stands, grabbing the same laundry bag established in Issue 5.
+1. **Medium.** Second Male Kin finishes the thought from the previous page while First Male Kin checks the microwave clock and grabs the laundry bag.
+   **SECOND MALE KIN:** I mean now. Ask me again later.
 2. **Bjorn.**
-   **BJORN:** We are not finished.
-3. **First male Kin shoulders the bag.**
-   **FIRST MALE KIN:** My machine is.
+   **BJORN:** We're not finished.
+3. **First Male Kin shoulders the bag.**
+   **FIRST MALE KIN:** Mine is.
 4. **Carrie blinks; Gunnar smiles faintly.**
-   **FIRST MALE KIN:** If I leave it, the woman with the red cart moves it to the floor.
+   **FIRST MALE KIN:** If I leave it, red-cart lady puts it on the floor.
 5. **Hallway wide.** He is already descending the stairs.
-   **FIRST MALE KIN (from stairs):** She is right to do it.
+   **FIRST MALE KIN (from stairs):** She's right.
 
 **Page turn:** the first answer to the review is not a speech; it is that someone in the neighborhood expects him to keep an ordinary obligation.
 
@@ -143,15 +144,15 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Medium on second male Kin.** He turns the transit card between his fingers.
-   **SECOND MALE KIN:** I like this city.
+   **SECOND MALE KIN:** I like New York.
 2. **Bjorn waits rather than completing the thought for him.**
 3. **Second male Kin.**
-   **SECOND MALE KIN:** I do not know if I want only this city.
+   **SECOND MALE KIN:** I don't know if I want only New York.
 4. **Carrie.**
-   **CARRIE:** The review is going to ask whether you intend to remain.
-   **SECOND MALE KIN:** I intend to remain until I choose otherwise.
+   **CARRIE:** They'll ask if you plan to stay.
+   **SECOND MALE KIN:** Then I say I'm staying.
 5. **Bjorn, after a beat.**
-   **BJORN:** That is not a weak answer.
+   **BJORN:** Good.
 
 **Page turn:** integration and certainty separate cleanly.
 
@@ -166,15 +167,15 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Carrie scans the room and finally notices the empty place.**
-   **CARRIE:** I need Astrid's answer too. Where is she?
+   **CARRIE:** I need Astrid too. Where is she?
 2. **Gunnar looks up from his coffee.**
-   **GUNNAR:** Out.
+   **GUNNAR:** Didn't ask.
 3. **Carrie.**
-   **CARRIE:** Out where?
+   **CARRIE:** Where?
 4. **The second male Kin shrugs. Bjorn does not look alarmed.**
-   **SECOND MALE KIN:** Out.
+   **SECOND MALE KIN:** Didn't ask.
 5. **Carrie starts to reach for her phone, then stops.**
-   **BJORN:** She knows the door.
+   **BJORN:** She has a key.
 
 **Page turn:** what would once have looked like failed supervision now looks like adult autonomy.
 
@@ -189,16 +190,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **6 panels.**
 
 1. **Wide.** Gunnar stands with a library tote. The second male Kin puts on his coat. Bjorn pockets the key. Carrie still has the notice open.
-   **CARRIE:** Could everybody stay in one place for twenty minutes?
+   **CARRIE:** Can everyone stay here twenty minutes?
 2. **Gunnar.**
-   **GUNNAR:** I have books due.
+   **GUNNAR:** Books due.
 3. **Second male Kin.**
-   **SECOND MALE KIN:** I am going to the river.
+   **SECOND MALE KIN:** I'm going to the river.
 4. **Carrie looks at Bjorn as if expecting him to order them back.**
 5. **Bjorn looks at each man, then at the key in his hand.**
-   **BJORN:** Return tonight.
+   **BJORN:** Back tonight?
 6. **Exterior stoop.** They split in three directions with Carrie left momentarily holding the notice.
-   **CARRIE:** Great. Excellent war council.
+   **CARRIE:** Fine. Go.
 
 **Page turn:** the story physically leaves the table.
 
@@ -217,11 +218,11 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
    **REGULAR PATRON:** Four minutes.
    **FIRST MALE KIN:** It lies.
 3. **The patron laughs and taps the machine.**
-   **REGULAR PATRON:** It always lies.
+   **REGULAR PATRON:** Always.
 4. **Bjorn appears at the doorway, having crossed paths rather than followed as a supervisor. He watches the exchange before the Kin notices him.**
 5. **Outside together afterward.**
-   **BJORN:** You know these people.
-   **FIRST MALE KIN:** They know when I leave wet clothes too long.
+   **BJORN:** You know them?
+   **FIRST MALE KIN:** They know my laundry.
 
 **Page turn:** neighborhood belonging is made from repeated inconvenience as much as affection.
 
@@ -239,12 +240,12 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
    **LIBRARIAN:** This came in for you.
 2. **Gunnar takes it with visible pleasure.**
 3. **Bjorn, nearby with his own returned book, notices the hold slip.**
-   **BJORN:** You asked them to save it?
+   **BJORN:** They held it for you?
 4. **Gunnar.**
    **GUNNAR:** Yes.
    **BJORN:** Why this one?
 5. **Gunnar opens the book.**
-   **GUNNAR:** Because I have not finished this place.
+   **GUNNAR:** I wasn't done.
 
 **Page turn:** curiosity becomes a life-choice, not just a navigation skill.
 
@@ -279,15 +280,15 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Carrie walking with Gunnar, reading a DTI email on her phone.**
-   **CARRIE:** They want a statement on whether the placement has been successful.
+   **CARRIE:** They want a statement on whether the placement worked.
 2. **Gunnar keeps walking.**
-   **GUNNAR:** Successful at what?
+   **GUNNAR:** Worked how?
 3. **Carrie glances up.**
-   **CARRIE:** Housing. Integration. Functioning. You know, all the words people use when they want one box.
+   **CARRIE:** Housing. Integration. Functioning.
 4. **Gunnar.**
-   **GUNNAR:** I know where the library is. He knows the river. That one knows the washing machines lie.
+   **GUNNAR:** That's three things.
 5. **Carrie pockets the phone.**
-   **CARRIE:** Right. The file can be perfect and still get the person wrong.
+   **CARRIE:** Form has one box.
 
 **Page turn:** Carrie's objective changes from producing a favorable answer to representing separate choices honestly.
 
@@ -309,7 +310,7 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 4. **They pivot the box together cleanly around the landing, using gestures and a few familiar words. Carrie never gets a sentence in.**
 5. **Carrie watches them disappear upstairs with the mattress.**
    **BJORN:** You were going to help.
-   **CARRIE:** I was going to be very helpful.
+   **CARRIE:** Apparently not needed.
 
 **Page turn:** belonging looks like people already knowing how to inconvenience one another productively.
 
@@ -324,14 +325,14 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Wide.** Silas stands just inside 5B with phone, tablet, and too much energy. Carrie has made the mistake of mentioning the review.
-   **SILAS:** Okay. We can do neighborhood testimonials, a short-form series, maybe one hero piece—
+   **SILAS:** Okay. Testimonials, maybe a short—
 2. **Bjorn stares at him. Gunnar keeps reading.**
 3. **Silas catches his own reflection in the dark phone screen and slows.**
-   **SILAS:** I'm doing the thing again.
+   **SILAS:** No. I'm doing it again.
 4. **Carrie.**
-   **CARRIE:** Very much.
+   **CARRIE:** Yep.
 5. **Silas puts the phone face down.**
-   **SILAS:** Fine. What boring thing actually needs doing?
+   **SILAS:** What do you actually need?
 
 **Page turn:** Silas can now notice the difference between helping and owning the story before someone confiscates the device.
 
@@ -346,16 +347,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **Medium.** Carrie's old compact printer jams on the review-notice copies. Silas is already reaching for a grander solution.
-   **SILAS:** I can scan everything into a shared—
+   **SILAS:** I can scan everything into—
 2. **Carrie points at printer.**
-   **CARRIE:** Make that produce two readable pages.
+   **CARRIE:** Two readable pages.
 3. **Insert.** Silas opens the printer, removes a crumpled sheet, reseats the tray. Ordinary tech repair, no hacker visuals.
 4. **Medium.** Two clean copies feed out.
    **SILAS:** Done.
 5. **Silas hands them over and looks visibly tempted to say more.**
-   **CARRIE:** Thank you.
-   **SILAS:** I have several thoughts.
-   **CARRIE:** I know.
+   **CARRIE:** Thanks.
+   **SILAS:** I have thoughts.
+   **CARRIE:** Later.
 
 **Page turn:** useful participation does not require narrative control.
 
@@ -371,13 +372,13 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 1. **Top-down table composition.** Brass key, Gunnar's library card and book, laundry ticket, transit card, bodega receipt, Carrie's review notice, a small household tool.
 2. **Carrie arranges only the items genuinely relevant to the review.**
-   **CARRIE:** This is enough to establish continuity of residence and independent activity.
+   **CARRIE:** This gets us through the door.
 3. **Bjorn looks at the collection.**
-   **BJORN:** These are not us.
+   **BJORN:** These papers aren't us.
 4. **Carrie meets his eyes.**
-   **CARRIE:** I know.
+   **CARRIE:** No.
 5. **She deliberately moves the objects aside to clear seats around the table.**
-   **CARRIE:** They're how paper points at a life. They are not the life.
+   **CARRIE:** They're enough for the clerk. That's all.
 
 **Page turn:** paperwork is reduced to representation rather than allowed to become the dramatic truth.
 
@@ -392,16 +393,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **wide.** Bjorn sits with Carrie, Gunnar and the two male Kin. The brass key, transit card and review notice are present but pushed to the side rather than arranged as symbols.
-   **BJORN:** Say what you want.
+   **BJORN:** What do you want?
 2. **medium on First Male Kin.** First Male Kin answers from the practical life already established around the building and block.
-   **FIRST MALE KIN:** This room. This block. The people who know us.
+   **FIRST MALE KIN:** The room. This block. People know me here.
 3. **medium on Gunnar.** Gunnar answers without looking at the review notice.
-   **GUNNAR:** The library. The city. Places I have not seen yet.
+   **GUNNAR:** Library. More streets.
 4. **medium on Second Male Kin.** Second Male Kin turns the transit card once between his fingers before answering.
-   **SECOND MALE KIN:** I want to stay. I do not know after.
+   **SECOND MALE KIN:** Stay. For now.
 5. **two-shot Bjorn/Carrie.** Bjorn looks from one man to the next, dissatisfied that the answers do not combine neatly. Carrie leaves that discomfort unresolved.
-   **BJORN:** Those are not one answer.
-   **CARRIE:** Then don't make them one tonight.
+   **BJORN:** They don't match.
+   **CARRIE:** Then don't make them match.
 
 **Page turn:** the household knows its wants differ, but nobody converts them into a shared doctrine.
 
@@ -414,16 +415,16 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **medium on Carrie.** Carrie turns the review notice around and points to several broad categories without reading them as a speech.
-   **CARRIE:** They may ask about residence, independence, intention, household ties.
+   **CARRIE:** They'll ask about residence, independence, intent, household ties.
 2. **medium on Gunnar.** Gunnar looks at the paper and then back at Carrie.
-   **GUNNAR:** Those are four questions again.
+   **GUNNAR:** Four questions.
 3. **medium on Second Male Kin.** Second Male Kin leans back, visibly irritated by the idea of rehearsing certainty.
-   **SECOND MALE KIN:** And they may not mean what we mean.
+   **SECOND MALE KIN:** And not ours.
 4. **two-shot Bjorn/Carrie.** Bjorn dislikes the lack of a common prepared answer; Carrie refuses to manufacture one for them.
-   **BJORN:** I dislike entering judgment without a plan.
-   **CARRIE:** A plan is fine. Rehearsed answers are not.
+   **BJORN:** I want a plan.
+   **CARRIE:** Bring documents. Tell the truth. That's the plan.
 5. **wide.** Nobody writes a household statement. The review notice remains open, unanswered in several places.
-   **GUNNAR:** Then let them ask.
+   **GUNNAR:** Better.
 
 **Page turn:** they enter the hearing with questions still unresolved instead of rehearsing the institution's answers in advance.
 
@@ -439,10 +440,10 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 2. **medium on Bjorn.** Bjorn slides the empty chair out with his boot. No one comments on the gesture.
 3. **medium on Carrie.** Carrie looks at the chair, then at the partly unanswered review notice.
 4. **wide at table height.** Carrie sits at the same level as everyone else.
-   **CARRIE:** I can tell you what they are allowed to ask. I cannot write what you mean.
+   **CARRIE:** I can tell you procedure. I can't tell you what to say.
 5. **two-shot Carrie/Bjorn.** Bjorn pushes the notice toward her, but not the answers.
-   **BJORN:** Then do not.
-   **CARRIE:** Good.
+   **BJORN:** Then don't.
+   **CARRIE:** Fine.
 
 **Page turn:** Carrie's expertise becomes procedural support rather than authorship.
 
@@ -458,9 +459,9 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 2. **medium.** The door opens with Astrid's own key. Carrie looks up from the table and reflexively starts to ask where she has been.
    **CARRIE:** Where were—
 3. **two-shot Carrie/Astrid.** Carrie catches herself mid-question and changes course.
-   **CARRIE:** No. Different question.
+   **CARRIE:** No. Never mind.
 4. **wide.** Astrid sees the notice and the others around the table. Nobody briefs her before she sits.
-   **CARRIE:** Will you answer them for yourself tomorrow?
+   **CARRIE:** You'll answer for yourself tomorrow?
 5. **medium on Astrid.** Astrid puts the small bag down by her chair and answers only the question Carrie actually asked.
    **ASTRID:** Yes.
 
@@ -475,14 +476,14 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 **5 panels.**
 
 1. **medium on Carrie.** Carrie tests one obvious question, careful not to slip back into caseworker mode.
-   **CARRIE:** Do you want to keep this home?
+   **CARRIE:** You want to keep this home?
 2. **medium on Astrid.** Astrid answers the immediate part without expanding into a speech.
    **ASTRID:** Yes.
 3. **two-shot Carrie/Astrid.** Carrie waits for more. Astrid looks at the brass key and then at the closed door she entered through herself.
-   **ASTRID:** The rest they can ask me.
+   **ASTRID:** They can ask the rest.
 4. **medium on Bjorn.** Bjorn almost follows up, then chooses not to. His silence is the behavioral beat.
 5. **wide.** Astrid keeps the small folded receipt or paper to herself and joins the table without explaining her day.
-   **BJORN:** Then they will.
+   **BJORN:** Okay.
 
 **Page turn:** the hearing retains ownership of discovering how much life Astrid has built beyond the case file.
 
@@ -497,13 +498,13 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 1. **medium.** Second Male Kin stands near the window holding the transit card, separated slightly from the table conversation.
    **SECOND MALE KIN:** What if they want forever?
 2. **two-shot Bjorn/Second Male Kin.** Bjorn joins him without blocking the window or route back to the room.
-   **BJORN:** Do not borrow an answer from me.
+   **BJORN:** They can ask.
 3. **medium on Second Male Kin.** He looks toward the city rather than toward the review notice.
-   **SECOND MALE KIN:** I do not have one.
+   **SECOND MALE KIN:** I don't know.
 4. **medium on Carrie.** Carrie answers only the procedural part.
-   **CARRIE:** Then don't invent one tonight.
+   **CARRIE:** Then say that.
 5. **two-shot.** Bjorn leaves the uncertainty with the man who owns it.
-   **BJORN:** Say only what is yours when they ask.
+   **BJORN:** Don't borrow one.
 
 **Page turn:** uncertainty survives into the hearing honestly instead of being converted into a polished position.
 
@@ -517,14 +518,14 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 
 1. **top-down.** Carrie narrows the materials to a thin stack: identity papers, residence records, required notices and the review letter. The symbolic household objects stay off the stack.
 2. **medium on Carrie.** Carrie clips the required documents together.
-   **CARRIE:** IDs. Residence. Notices. What the hearing requires. Nothing else unless someone chooses it.
+   **CARRIE:** IDs. Residence. Notices. What they require.
 3. **two-shot Gunnar/Carrie.** Gunnar gestures toward a private support-group note that is not in the stack.
-   **GUNNAR:** The group?
-   **BJORN:** No.
+   **GUNNAR:** Group notes?
+   **BJORN:** Private.
 4. **medium on Silas.** Silas holds the two clean printer pages from his bounded task, with his phone still in his pocket.
-   **SILAS:** I made copies and no documentary.
+   **SILAS:** Copies. Nothing else.
 5. **wide.** Carrie takes the printer pages, adds only what is required, and closes the file. Nobody practices testimony.
-   **CARRIE:** Perfect.
+   **CARRIE:** Thanks.
 
 **Page turn:** the file gets them into the room without pre-performing their testimony.
 
@@ -539,13 +540,13 @@ The Status Reconciliation Review is the deadline, not the setting for the whole 
 1. **wide.** The table is mostly clear. Gunnar closes a book. The two male Kin separate into their evening routines. Astrid puts away her small bag. Carrie stands to leave.
 2. **insert.** The brass key remains near the closed hearing file. No written household statement sits beside it.
 3. **medium on Carrie.** Carrie pauses with one hand on the doorframe.
-   **CARRIE:** Do you know what you're going to say?
+   **CARRIE:** Know what you'll say?
 4. **medium on Bjorn.** Bjorn looks first at the closed file, then at the people around the room.
-   **BJORN:** For myself.
+   **BJORN:** My part.
 5. **wide.** Nobody offers him a collective answer. He accepts that.
-   **CARRIE:** And them?
+   **CARRIE:** And theirs?
 6. **wide.** Carrie leaves. Bjorn picks up the brass key and closes the door on a household that is prepared to appear, not rehearsed to agree.
-   **BJORN:** They are here.
+   **BJORN:** Ask them.
 
 **Page turn:** Issue 8 begins with five people present, prepared to answer, but not pre-agreed on what the hearing will make of them.
 
