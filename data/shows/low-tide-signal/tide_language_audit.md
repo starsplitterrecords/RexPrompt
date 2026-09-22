@@ -1,4 +1,6 @@
-# Low Tide tide-language audit
+# Low Tide final window audit
+
+Remaining uses of 'window' in active pages after the tide-language pass. These are literal architectural or computer windows.
 
 | Package | Page | Field | Text |
 |---|---|---|---|
@@ -10,16 +12,10 @@
 | C01-C03 | LTS_C01_P03 | summary | 4-panel page. Opening image: Wide municipal control room with staffed desks, drainage maps and blue-gray monitor light reflected in rain-dark windows. Final image: Matt clicks confirmation, then sits back in the quiet room with empty space around his workstation. |
 | C01-C03 | LTS_C01_P03 | panelPlan[0] | Wide municipal control room with staffed desks, drainage maps and blue-gray monitor light reflected in rain-dark windows. |
 | C01-C03 | LTS_C02_P21 | panelPlan[1] | The six cross a wet plaza in the foreground; Chris looks back at the lit windows. |
-| C04 | LTS_C04_P01 | dialogueInline[0].text | Window moved up forty minutes. |
-| C04 | LTS_C04_P17 | dialogueInline[2].text | EXTREME LOW WINDOW — FRIDAY 22:10 |
-| C04 | LTS_C04_P18 | summary | 4-panel page. Opening image: At Matt’s municipal work desk, Friday tabletop materials sit beside the tide alert. Final image: Matt faces his work screen with the coverage request sent and the tide window still glowing at the edge of frame. |
-| C04 | LTS_C04_P18 | panelPlan[2] | The work agenda stays open while the tide window glows at the edge of the same desk. |
-| C05 | LTS_C05_P01 | panelPlan[1] | Close sequence of runner-chat screens on different phones repeating LOWEST WINDOW OF THE YEAR and DEEP SECTOR MAYBE WALKABLE over maps and tide graphics. |
-| C05 | LTS_C05_P01 | dialogueInline[0].text | lowest window of the year |
 | C06 | LTS_C06_P06 | summary | 5-panel page. Opening image: Wide early-morning municipal control room: Matt sits alone at his usual console in yesterday’s rumpled work jacket, shoulders heavy, coffee untouched beside blue-gray drainage monitors. Final image: Final wide from the corridor: Matt walks out carrying his bag while the staffed control room continues behind glass—operators seated, maps updating and rain visible beyond the windows. |
 | C06 | LTS_C06_P06 | panelPlan[4] | Final wide from the corridor: Matt walks out carrying his bag while the staffed control room continues behind glass—operators seated, maps updating and rain visible beyond the windows. |
 | C06 | LTS_C06_P08 | summary | 5-panel page. Opening image: Overhead view of Kevin alone at a kitchen/work table with an open laptop, tide-device, weather sensor, notebook and several forecast windows layered across the screen. Final image: Kevin lowers the laptop lid with both hands; the bright forecast windows collapse to a dark reflective screen on the quiet table. |
 | C06 | LTS_C06_P08 | panelPlan[0] | Overhead view of Kevin alone at a kitchen/work table with an open laptop, tide-device, weather sensor, notebook and several forecast windows layered across the screen. |
 | C06 | LTS_C06_P08 | panelPlan[4] | Kevin lowers the laptop lid with both hands; the bright forecast windows collapse to a dark reflective screen on the quiet table. |
 
-Total window occurrences in active pages: **19**
+Remaining literal/computer-window occurrences: **13**
