@@ -1,4 +1,4 @@
-name: Low Tide tide-language audit
+name: Apply Low Tide natural tide language
 
 on:
   push:
@@ -6,63 +6,131 @@ on:
       - low-tide-natural-tide-language
     paths-ignore:
       - data/shows/low-tide-signal/tide_language_audit.md
+      - data/shows/low-tide-signal/encoded/*.gzb64
 
 permissions:
   contents: write
 
 jobs:
-  audit:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
-      - name: Audit active Low Tide pages
+      - name: Rewrite encoded chapters and audit window usage
         run: |
           python - <<'PY'
           import base64,gzip,json,re
           from pathlib import Path
+
           root=Path("data/shows/low-tide-signal")
-          specs=[
-            ("C01-C03",root/"pages_ch01_ch03_compiled.json",None),
-            ("C04",root/"encoded/pages_c04_between_runs_enhanced.json.gzb64","gz"),
-            ("C05",root/"encoded/pages_c05_return_tide_enhanced.json.gzb64","gz"),
-            ("C06",root/"encoded/pages_c06_after_the_water_enhanced.json.gzb64","gz"),
-            ("C07",root/"encoded/pages_c07_last_low_tide_enhanced.json.gzb64","gz"),
+          encoded_specs=[
+            ("C04",root/"encoded/pages_c04_between_runs_enhanced.json.gzb64"),
+            ("C05",root/"encoded/pages_c05_return_tide_enhanced.json.gzb64"),
+            ("C06",root/"encoded/pages_c06_after_the_water_enhanced.json.gzb64"),
+            ("C07",root/"encoded/pages_c07_last_low_tide_enhanced.json.gzb64"),
           ]
-          def load(p,e):
-            if e=="gz":
-              return json.loads(gzip.decompress(base64.b64decode(p.read_text().strip())).decode())
-            return json.loads(p.read_text())
-          def pages(o):
-            if isinstance(o,list): return o
+
+          def decode(p):
+            return json.loads(gzip.decompress(base64.b64decode(p.read_text().strip())).decode("utf-8"))
+          def encode(p,obj):
+            raw=(json.dumps(obj,indent=2,ensure_ascii=False)+"\n").encode("utf-8")
+            p.write_text(base64.b64encode(gzip.compress(raw,mtime=0)).decode("ascii")+"\n")
+          def transform(v,reps):
+            if isinstance(v,str):
+              for a,b in reps: v=v.replace(a,b)
+              return v
+            if isinstance(v,list): return [transform(x,reps) for x in v]
+            if isinstance(v,dict): return {k:transform(x,reps) for k,x in v.items()}
+            return v
+          def pages(obj):
+            if isinstance(obj,list): return obj
             for k in ("pages","scenes","items"):
-              if isinstance(o,dict) and isinstance(o.get(k),list): return o[k]
-            raise TypeError(type(o))
+              if isinstance(obj,dict) and isinstance(obj.get(k),list): return obj[k]
+            raise TypeError(type(obj))
+
+          reps={
+            "C04":[
+              ("Window moved up forty minutes.","Low tide’s forty minutes earlier."),
+              ("EXTREME LOW WINDOW — FRIDAY 22:10","EXTREME LOW TIDE — FRIDAY 22:10"),
+              ("the tide window still glowing at the edge of frame","the low-tide alert still glowing at the edge of frame"),
+              ("the tide window glows at the edge of the same desk","the low-tide alert glows at the edge of the same desk"),
+            ],
+            "C05":[
+              ("LOWEST WINDOW OF THE YEAR","LOWEST TIDE OF THE YEAR"),
+              ("lowest window of the year","lowest tide of the year"),
+            ],
+            "C06":[],
+            "C07":[],
+          }
+
+          decoded={}
+          for label,p in encoded_specs:
+            obj=decode(p)
+            obj=transform(obj,reps[label])
+            decoded[label]=obj
+            encode(p,obj)
+
+          # Audit active pages. Remaining uses of "window" should only be literal
+          # architectural/computer-window uses, never tide/access jargon.
+          all_specs=[
+            ("C01-C03",json.loads((root/"pages_ch01_ch03_compiled.json").read_text())),
+            *[(label,obj) for label,obj in decoded.items()]
+          ]
           rows=[]
-          for label,p,e in specs:
-            for page in pages(load(p,e)):
+          suspicious=[]
+          for label,obj in all_specs:
+            for page in pages(obj):
               pid=page.get("id","?")
               def walk(v,path):
                 if isinstance(v,str) and re.search(r"window",v,re.I):
                   rows.append((label,pid,path,v.replace("\n"," ")))
+                  if re.search(r"(tide|low|Tide Town|district|access).{0,45}window|window.{0,45}(tide|low|Tide Town|district|access)",v,re.I):
+                    suspicious.append((label,pid,path,v))
                 elif isinstance(v,list):
                   for i,x in enumerate(v): walk(x,f"{path}[{i}]")
                 elif isinstance(v,dict):
                   for k,x in v.items(): walk(x,f"{path}.{k}" if path else k)
               walk(page,"")
-          out=["# Low Tide tide-language audit","","| Package | Page | Field | Text |","|---|---|---|---|"]
-          for row in rows:
-            label,pid,path,txt=row
+
+          # Explicitly forbid the phrases we are retiring.
+          retired=[
+            "tide window","tide-window","low window","Tide Town window",
+            "window moved up","lowest window","extreme low window",
+            "shrinking window","window is not generous"
+          ]
+          blobs=[]
+          for _,obj in all_specs:
+            blobs.append(json.dumps(obj,ensure_ascii=False))
+          for p in [
+            root/"settings.json",
+            root/"sections_ch01_ch04.json",
+            root/"sections_ch04_ch07.json",
+            root/"structure_58_beats.json"
+          ]:
+            blobs.append(p.read_text())
+          combined="\n".join(blobs)
+          bad=[term for term in retired if term.lower() in combined.lower()]
+          if bad:
+            raise SystemExit("Retired tide-window language remains: "+", ".join(bad))
+          if suspicious:
+            for row in suspicious: print("SUSPICIOUS",row)
+            raise SystemExit(f"Suspicious window usage remains: {len(suspicious)}")
+
+          out=["# Low Tide final window audit","",
+               "Remaining uses of 'window' in active pages after the tide-language pass. These are literal architectural or computer windows.","",
+               "| Package | Page | Field | Text |","|---|---|---|---|"]
+          for label,pid,path,txt in rows:
             out.append(f"| {label} | {pid} | {path} | {txt.replace('|','\\|')} |")
-          out += ["",f"Total window occurrences in active pages: **{len(rows)}**",""]
+          out += ["",f"Remaining literal/computer-window occurrences: **{len(rows)}**",""]
           (root/"tide_language_audit.md").write_text("\n".join(out),encoding="utf-8")
           PY
-      - name: Commit audit
+      - name: Commit encoded chapters and audit
         run: |
           git config user.name "starsplitterrecords"
           git config user.email "actions@users.noreply.github.com"
-          git add data/shows/low-tide-signal/tide_language_audit.md
+          git add data/shows/low-tide-signal/encoded/*.gzb64 data/shows/low-tide-signal/tide_language_audit.md
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Audit Low Tide tide-window language"
+          git commit -m "Replace tide-window jargon in encoded Low Tide chapters"
           git push origin HEAD:${{ github.ref_name }}
