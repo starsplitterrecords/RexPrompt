@@ -16,53 +16,53 @@
     "1": {
       "status": "compiled for sequential page production",
       "recipeFile": "scenes_e01.json",
-      "pageCount": 12,
+      "pageCount": 17,
       "panelPlan": true
     },
     "2": {
       "status": "compiled for sequential page production",
       "recipeFile": "scenes_e02.json",
-      "pageCount": 12,
+      "pageCount": 16,
       "panelPlan": true
     },
     "3": {
       "status": "compiled for sequential page production",
       "recipeFile": "scenes_e03.json",
-      "pageCount": 12,
+      "pageCount": 15,
       "panelPlan": true
     },
     "4": {
       "status": "compiled for sequential page production",
       "recipeFile": "scenes_e04.json",
-      "pageCount": 12,
+      "pageCount": 16,
       "panelPlan": true
     },
     "5": {
       "status": "compiled for sequential page production",
       "recipeFile": "scenes_e05.json",
-      "pageCount": 12,
+      "pageCount": 16,
       "panelPlan": true
     },
     "6": {
-      "status": "compiled for sequential page production via enhance_e06.json overlay",
+      "status": "compiled for sequential page production",
       "recipeFile": "scenes_e06.json",
-      "pageCount": 12,
+      "pageCount": 15,
       "panelPlan": true
     },
     "7": {
-      "status": "compiled for sequential page production via enhance_e07.json overlay",
+      "status": "compiled for sequential page production",
       "recipeFile": "scenes_e07.json",
-      "pageCount": 12,
+      "pageCount": 16,
       "panelPlan": true
     },
     "8": {
-      "status": "compiled for sequential page production via enhance_e08.json overlay",
+      "status": "compiled for sequential page production",
       "recipeFile": "scenes_e08.json",
-      "pageCount": 12,
+      "pageCount": 18,
       "panelPlan": true
     }
   },
-  "writingRecoveryFrontier": "Season 1 is recompiled as 129 production pages through Issue 8 with page architecture, character-development and dialogue/voice passes applied. Next writing work is later comprehensive-review passes or new material, not recovery of missing page architecture.",
+  "writingRecoveryFrontier": "Season 1 writing and production recipes have passed final pre-production integration review. Remaining work is image production and post-generation continuity/reader/lettering gates, not further planned season rewriting.",
   "productionPageCounts": {
     "1": 17,
     "2": 16,
@@ -76,5 +76,36 @@
   },
   "dialogueRule": "dialogueInline is exact production dialogue. Preserve naturalism and character-specific rhetorical habits. Do not invent, paraphrase, omit, duplicate or reassign lines during image generation. Stage speech through the physical work scripted in panelPlan/directionInline rather than static debate poses.",
   "characterDevelopmentRule": "Rae's protection instinct must develop a failure mode before the finale: in Issues 6-7 caution becomes temporary control, she sees the harm, and only then earns the refusal of forced forgetting and forced restoration. Adrian's early function must vary among direct truth, practical help, concealment, error and genuine ignorance rather than repeated riddle-withholding.",
-  "socialWorldRule": "Present-day society must remain as specific as the ancient war: recurring work relationships, partners, jobs, shifts, archives, transit, family photos, civic forms, neighborhood groups, childcare, mutual aid and institutional consequences should recur where relevant. Prefer reusing Vark, Caelum, the Tyrellis transit worker/partner and the Neo-Vectra couple over inventing new supporting characters."
+  "socialWorldRule": "Present-day society must remain as specific as the ancient war: recurring work relationships, partners, jobs, shifts, archives, transit, family photos, civic forms, neighborhood groups, childcare, mutual aid and institutional consequences should recur where relevant. Prefer reusing Vark, Calum, the Tyrellis transit worker/partner and the Neo-Vectra couple over inventing new supporting characters.",
+  "settingNormalizationStatus": "Recurring continuity-sensitive locations are normalized into settings/regions for Nuxis, Desert Marker Basin, Vael-Tor, Pax-Aeterna, Tyrellis, Neo-Vectra and Core-Forge. Remaining settingText is intentionally reserved for one-off rooms or page-specific states.",
+  "assembledRecipeAudit": {
+    "status": "passed",
+    "scope": "all 129 Season 1 production pages",
+    "checks": [
+      "unique page IDs",
+      "assembler-visible summary/setting/region/characters/panelPlan/dialogueInline/directionInline",
+      "valid character, setting and region references",
+      "panel count matches page architecture direction",
+      "continuityFrom targets resolve",
+      "no active legacy dialog, direction, writingNotes or writingDirection fields",
+      "panel staging aligned to current exact dialogue",
+      "issue-to-issue causal handoffs reviewed and strengthened where needed"
+    ],
+    "result": "No unresolved structural or assembler-contract defects remain."
+  },
+  "imageProductionPreflight": {
+    "frontier": "EFW_S1E01_S01",
+    "status": "preflight-ready; do not generate until actual visual-reference pixels are retrieved into active multimodal context",
+    "releasedCanon": "none for Echoes",
+    "approvedPageDrafts": "none",
+    "visualReferencePack": "production/references/echoes-forgotten-war/visual-reference-pack.json",
+    "page1Requirements": {
+      "recipe": "ready",
+      "Theo": "approved current-production identity image exists at production/references/echoes-forgotten-war/characters/modern-theo.jpg; actual pixels must be read back before generation",
+      "Vark": "no approved pixel identity reference is registered; use the assembler-visible visualAnchor as first-establishment authority unless a dedicated Vark sheet is approved before production",
+      "setting": "EFW_OlyriaTrench and EFW_OlyriaPrime provide durable visual authority",
+      "immediateContinuity": "none; Page 1 is the production frontier"
+    },
+    "gateRule": "Before any image-generation call, perform mandatory pixel readback for all established image references required by that page and build the active Visual Reference Set."
+  }
 }
