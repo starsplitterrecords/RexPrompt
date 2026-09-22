@@ -115,5 +115,35 @@
     "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
     "currentDurableState": "No Vikings approved production drafts are currently stored in production/drafts/manifest.json; absent stronger explicit approval evidence, production resumes from the first unresolved Issue 2 recipe rather than from prior failed attempts."
   },
-  "storyPageOutputRule": "A normal scripted Vikings story page is a finished full-color portrait comic page in the established Vikings sequential-art language. Do not add a series title, issue header, page label, character name/handle label, dossier frame, municipal form header, credits, promotional callout, or other non-scripted text merely because such elements exist elsewhere in the released issue or promotional material. Only text required by the assembled recipe belongs on the story page."
+  "storyPageOutputRule": "A normal scripted Vikings story page is a finished full-color portrait comic page in the established Vikings sequential-art language. Do not add a series title, issue header, page label, character name/handle label, dossier frame, municipal form header, credits, promotional callout, or other non-scripted text merely because such elements exist elsewhere in the released issue or promotional material. Only text required by the assembled recipe belongs on the story page.",
+  "latestGate": {
+    "evaluatedAt": "2026-09-21",
+    "sourceAuthority": "Assembled RexPrompt recipes on main after the season dialogue/voice pass",
+    "recipeAudit": {
+      "unreleasedPagesChecked": 168,
+      "issues": "2-8",
+      "result": "pass",
+      "checks": [
+        "setting present",
+        "character payload present",
+        "panel plan present",
+        "dialogue handles valid",
+        "panel dialogue indices valid",
+        "scene continuity encoded where state carries",
+        "no analytical writer-room scaffolding in assembled material",
+        "representative assembled recipes inspected directly"
+      ]
+    },
+    "readerGate": {
+      "result": "pass",
+      "note": "Issue endings and Issue 6→7→8 progression read as changed human conditions rather than repeated lesson statements."
+    },
+    "visualProductionGate": {
+      "result": "ready-with-caution",
+      "caution": "Panel-count architecture remains conservative in several issues, especially Issue 7, but shot, setting, cast-focus, silent-page, cutaway, and scene-state variation are sufficient for production. Do not treat five-panel count as a template; follow each exact panel plan.",
+      "lettering": "Issue 8 Page 23 ruling copy was shortened after lettering-density review.",
+      "approvedUnreleasedDrafts": 0,
+      "productionFrontier": "VIK_S1I02_P01"
+    }
+  }
 }
