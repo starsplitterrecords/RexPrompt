@@ -7,32 +7,32 @@ Generated from the active production packages. Every row contains current text w
 | C01-C03 | LTS_C01_P06 | `summary` | 4-panel page. Opening image: Justin hangs from the final hold of a difficult indoor climbing wall while a digital board posts his 96th-percentile result. Final image: Close on Nicole folding a worn harbor map at the printed SECTOR 14 label and sliding it into a compact bag. |
 | C01-C03 | LTS_C01_P06 | `dialogueInline[2].text` | HARBOR PHASE EXPANSION CORRIDOR — SECTOR 14 |
 | C01-C03 | LTS_C01_P06 | `panelPlan[3]` | Close on Nicole folding a worn harbor map at the printed SECTOR 14 label and sliding it into a compact bag. |
-| C01-C03 | LTS_C01_P09 | `summary` | 4-panel page. Opening image: Close on several phones lighting the table with runner-channel posts about the outer shelf and Reach window. Final image: Chris looks around the circle after “So we’re going”; Justin is already upright and reaching for his coat. |
-| C01-C03 | LTS_C01_P09 | `dialogueInline[1].text` | Reach window? |
+| C01-C03 | LTS_C01_P09 | `summary` | 4-panel page. Opening image: Close on several phones lighting the table with runner-channel posts about the outer shelf and Tide Town window. Final image: Chris looks around the circle after “So we’re going”; Justin is already upright and reaching for his coat. |
+| C01-C03 | LTS_C01_P09 | `dialogueInline[1].text` | Tide Town window? |
 | C01-C03 | LTS_C01_P09 | `dialogueInline[5].text` | Sector 14? That’s the one on my old harbor map. |
-| C01-C03 | LTS_C01_P09 | `panelPlan[0]` | Close on several phones lighting the table with runner-channel posts about the outer shelf and Reach window. |
+| C01-C03 | LTS_C01_P09 | `panelPlan[0]` | Close on several phones lighting the table with runner-channel posts about the outer shelf and Tide Town window. |
 | C01-C03 | LTS_C01_P09 | `panelPlan[2]` | Nicole pulls the folded harbor map partly from her bag and points to SECTOR 14 as Kevin studies the tide-window message. |
 | C01-C03 | LTS_C01_P21 | `dialogueInline[0].text` | SECTOR 14 / TRANSIT LOOP C / SERVICE ACCESS |
 | C01-C03 | LTS_C01_P21 | `panelPlan[1]` | Close on a battered official sign reading SECTOR 14 / TRANSIT LOOP C / SERVICE ACCESS, streaked with salt and tide marks. |
-| C01-C03 | LTS_C01_P24 | `summary` | Full-page composition: Full-page panoramic splash: the Reach fills the horizon with unfinished towers, elevated transit, broad decks and drowned lower levels reflected in black tidal water; the six figures stand tiny on exposed road with Harbor Phase a distant glow behind them. |
-| C01-C03 | LTS_C01_P24 | `dialogueInline[4].text` | The Reach. |
-| C01-C03 | LTS_C01_P24 | `panelPlan[0]` | Full-page panoramic splash: the Reach fills the horizon with unfinished towers, elevated transit, broad decks and drowned lower levels reflected in black tidal water; the six figures stand tiny on exposed road with Harbor Phase a distant glow behind them. |
-| C01-C03 | LTS_C02_P01 | `summary` | 4-panel page. Opening image: Wide continuation from the reveal: the six stand at the Reach edge beneath huge parking and transit structures. Final image: They move left in single file with black water visible through gaps on the right. |
-| C01-C03 | LTS_C02_P01 | `panelPlan[0]` | Wide continuation from the reveal: the six stand at the Reach edge beneath huge parking and transit structures. |
-| C01-C03 | LTS_C02_P02 | `summary` | 4-panel page. Opening image: Wide panel resolves the outer Reach into ordinary parking decks, ramps, plazas and painted traffic lanes stained by salt. Final image: Matt gestures them forward through the plaza instead of stopping. |
-| C01-C03 | LTS_C02_P02 | `panelPlan[0]` | Wide panel resolves the outer Reach into ordinary parking decks, ramps, plazas and painted traffic lanes stained by salt. |
-| C01-C03 | LTS_C02_P04 | `summary` | 4-panel page. Opening image: Wide Near Reach view: flooded decks, dead plaza furniture, a sagging upper walkway and small distant work lights behind fog. Final image: They move toward the ramp while black water covers the lower route. |
-| C01-C03 | LTS_C02_P04 | `panelPlan[0]` | Wide Near Reach view: flooded decks, dead plaza furniture, a sagging upper walkway and small distant work lights behind fog. |
+| C01-C03 | LTS_C01_P24 | `summary` | Full-page composition: Full-page panoramic splash: the offshore district fills the horizon with unfinished towers, elevated transit, broad decks and drowned lower levels reflected in black tidal water; the six figures stand tiny on exposed road with Harbor Phase a distant glow behind them. |
+| C01-C03 | LTS_C01_P24 | `dialogueInline[4].text` | Tide Town. |
+| C01-C03 | LTS_C01_P24 | `panelPlan[0]` | Full-page panoramic splash: the offshore district fills the horizon with unfinished towers, elevated transit, broad decks and drowned lower levels reflected in black tidal water; the six figures stand tiny on exposed road with Harbor Phase a distant glow behind them. |
+| C01-C03 | LTS_C02_P01 | `summary` | 4-panel page. Opening image: Wide continuation from the reveal: the six stand at the district edge beneath huge parking and transit structures. Final image: They move left in single file with black water visible through gaps on the right. |
+| C01-C03 | LTS_C02_P01 | `panelPlan[0]` | Wide continuation from the reveal: the six stand at the district edge beneath huge parking and transit structures. |
+| C01-C03 | LTS_C02_P02 | `summary` | 4-panel page. Opening image: Wide panel resolves the outer district into ordinary parking decks, ramps, plazas and painted traffic lanes stained by salt. Final image: Matt gestures them forward through the plaza instead of stopping. |
+| C01-C03 | LTS_C02_P02 | `panelPlan[0]` | Wide panel resolves the outer district into ordinary parking decks, ramps, plazas and painted traffic lanes stained by salt. |
+| C01-C03 | LTS_C02_P04 | `summary` | 4-panel page. Opening image: Wide outer-district view: flooded decks, dead plaza furniture, a sagging upper walkway and small distant work lights behind fog. Final image: They move toward the ramp while black water covers the lower route. |
+| C01-C03 | LTS_C02_P04 | `panelPlan[0]` | Wide outer-district view: flooded decks, dead plaza furniture, a sagging upper walkway and small distant work lights behind fog. |
 | C01-C03 | LTS_C02_P12 | `summary` | 4-panel page. Opening image: Justin returns carrying a loose COMING SOON / HARBOR PHASE AQUARIUM DISTRICT display panel nearly as wide as his torso. Final image: Justin carries the panel back across the corridor while Matt watches him go. |
 | C01-C03 | LTS_C02_P12 | `dialogueInline[0].text` | COMING SOON / HARBOR PHASE AQUARIUM DISTRICT |
 | C01-C03 | LTS_C02_P12 | `panelPlan[0]` | Justin returns carrying a loose COMING SOON / HARBOR PHASE AQUARIUM DISTRICT display panel nearly as wide as his torso. |
-| C01-C03 | LTS_C02_P26 | `dialogueInline[0].text` | The Reach did not feel empty anymore. |
-| C01-C03 | LTS_C03_P01 | `summary` | 3-panel page. Opening image: Wide apartment interior before dawn: Matt’s packed Reach bag, worn boots and work jacket are lined up beside the door while the rest of the room remains ordinarily lived in. Final image: Matt stands in the doorway between the prepared bag and his kitchen, phone in hand. |
-| C01-C03 | LTS_C03_P01 | `panelPlan[0]` | Wide apartment interior before dawn: Matt’s packed Reach bag, worn boots and work jacket are lined up beside the door while the rest of the room remains ordinarily lived in. |
-| C01-C03 | LTS_C03_P04 | `summary` | 4-panel page. Opening image: Close on several phones dropping to NO SIGNAL earlier in the crossing. Final image: They continue toward the Reach with heads up and devices dark. |
-| C01-C03 | LTS_C03_P04 | `panelPlan[3]` | They continue toward the Reach with heads up and devices dark. |
-| C01-C03 | LTS_C03_P05 | `panelPlan[1]` | Chris lets a paid-work notification sit unanswered beside open Reach footage. |
-| C01-C03 | LTS_C03_P10 | `dialogueInline[1].text` | That was usually how things happened in the Reach. |
+| C01-C03 | LTS_C02_P16 | `dialogueInline[0].text` | HARBOR PHASE EAST / PROMISE DISTRICT / RESIDENCES OPENING SOON |
+| C01-C03 | LTS_C02_P16 | `panelPlan[0]` | Justin stands before a dusty leasing display with clean renderings labeled HARBOR PHASE EAST / PROMISE DISTRICT / RESIDENCES OPENING SOON. |
+| C01-C03 | LTS_C02_P26 | `dialogueInline[0].text` | Tide Town did not feel empty anymore. |
+| C01-C03 | LTS_C03_P04 | `summary` | 4-panel page. Opening image: Close on several phones dropping to NO SIGNAL earlier in the crossing. Final image: They continue toward the district with heads up and devices dark. |
+| C01-C03 | LTS_C03_P04 | `panelPlan[3]` | They continue toward the district with heads up and devices dark. |
+| C01-C03 | LTS_C03_P05 | `panelPlan[1]` | Chris lets a paid-work notification sit unanswered beside open Tide Town footage. |
+| C01-C03 | LTS_C03_P10 | `dialogueInline[1].text` | That was usually how things happened in Tide Town. |
 | C01-C03 | LTS_C03_P12 | `panelPlan[1]` | Close on the diagram linking market, rail, mall, aquarium district, residences and a pedestrian loop. |
 | C01-C03 | LTS_C03_P20 | `summary` | 4-panel page. Opening image: A story runner holds both arms wide while describing an impossible municipal sign from an outer sector. Final image: Chris lowers his recorder slightly before admitting “Probably.” |
 | C01-C03 | LTS_C03_P20 | `dialogueInline[0].text` | Outer Sector guy comes back with a municipal sign bigger than a door. |
