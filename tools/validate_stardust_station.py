@@ -193,6 +193,7 @@ for entry in stardust_entries:
                 speaker = line.get("handle") or line.get("speaker")
                 text = line.get("text")
                 assert isinstance(text, str) and text.strip(), f"{page_id}: blank dialogue text"
+                assert '"' not in text, f"{page_id}: dialogue contains straight double quote; use typographic quotes so assembled lettering remains unambiguous"
                 assert isinstance(speaker, str) and speaker.strip(), f"{page_id}: dialogue owner is required"
                 if speaker.startswith("@"):
                     assert speaker in canonical_handles, f"{page_id}: unknown dialogue handle {speaker}"
