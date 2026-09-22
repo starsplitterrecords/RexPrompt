@@ -17,7 +17,7 @@ Generated from the post-pass active story packages. Reach must have zero visible
 | C01-C03 | LTS_C01_P24 | dialogueInline[4].text | Tide Town. |
 | C01-C03 | LTS_C02_P01 | summary | 4-panel page. Opening image: Wide continuation from the reveal: the six stand at the district edge beneath huge parking and transit structures. Final image: They move left in single file with black water visible through gaps on the right. |
 | C01-C03 | LTS_C02_P01 | panelPlan[0] | Wide continuation from the reveal: the six stand at the district edge beneath huge parking and transit structures. |
-| C01-C03 | LTS_C02_P16 | summary | 4-panel page. Opening image: Justin stands before a dusty leasing display with clean renderings labeled HARBOR PHASE EAST / RESIDENCES OPENING SOON. Final image: Matt checks his monitor and gestures everyone toward the exit corridor. |
+| C01-C03 | LTS_C02_P16 | summary | 4-panel page. Opening image: Justin stands before a dusty leasing display with clean renderings labeled HARBOR PHASE EAST / PROMISE DISTRICT / RESIDENCES OPENING SOON. Final image: Matt checks his monitor and gestures everyone toward the exit corridor. |
 | C01-C03 | LTS_C02_P16 | dialogueInline[0].text | HARBOR PHASE EAST / PROMISE DISTRICT / RESIDENCES OPENING SOON |
 | C01-C03 | LTS_C02_P16 | panelPlan[0] | Justin stands before a dusty leasing display with clean renderings labeled HARBOR PHASE EAST / PROMISE DISTRICT / RESIDENCES OPENING SOON. |
 | C01-C03 | LTS_C02_P26 | dialogueInline[0].text | Tide Town did not feel empty anymore. |
