@@ -63,52 +63,48 @@
     "setting exposition distributed through action, signage, group discovery, and multiple characters"
   ],
   "place_naming": {
-    "status": "Active story-development rule. Vocabulary is intentionally allowed to evolve in-world; do not flatten it to one universal nickname yet.",
+    "status": "Locked by dedicated naming pass. The place deliberately carries different names at different social layers and moments; this variation is canonical.",
     "retired_term": {
       "term": "the Reach",
-      "rule": "Do not use as Low Tide Signal's umbrella place-name going forward.",
-      "reason": "Too close to Azure Reach and Reach and Resolve, creating avoidable franchise terminology collision."
+      "rule": "Do not use as Low Tide Signal's umbrella place-name in visible story or production prose.",
+      "reason": "Conflicts with Azure Reach and Reach and Resolve."
     },
-    "governing_principle": "The characters name the place before they fully understand it. Different names may coexist and shift by speaker, context, chapter, and social spread. The naming process is part of the story: ordinary unfinished civic space is mythologized by the people using it.",
-    "active_vocabulary": [
+    "governing_principle": "The characters name the place before they fully understand it. Planning language, developer branding, runner slang, public/media language, and post-accident shorthand coexist instead of collapsing into one universal label.",
+    "vocabulary": [
       {
-        "term": "Low Tide District",
-        "role": "Strong formal/practical descriptive candidate; nearly the right umbrella term but not required in every mouth."
-      },
-      {
-        "term": "the District",
-        "role": "Natural everyday shorthand; especially useful when the mythology falls away and the place is understood as an ordinary district."
-      },
-      {
-        "term": "Tide Town",
-        "role": "Catchy runner/social slang; slightly unserious at first and capable of becoming a brand through repetition."
-      },
-      {
-        "term": "Low Tide Town",
-        "role": "Colloquial variant with the same runner-born quality."
+        "term": "Harbor Phase East / Sector 14",
+        "role": "Actual planning and municipal language preserved on maps, signs and infrastructure. It is factual geography, not the myth."
       },
       {
         "term": "Promise District",
-        "role": "Possible original developer/planning/promotional name; carries failed-future optimism without requiring mystery."
+        "role": "Old developer/marketing language. It appears as optimistic promotional branding inside the abandoned buildout and carries failed-future irony."
       },
       {
-        "term": "the Promise",
-        "role": "Possible ironic or affectionate shorthand derived from old branding."
+        "term": "Tide Town",
+        "role": "Runner slang already circulating before the six first cross. It becomes the dominant early-to-midseason social nickname and is amplified by Chris and runner culture."
+      },
+      {
+        "term": "Low Tide District",
+        "role": "Outsider and media language after the place becomes publicly recognizable. More descriptive, more respectable, and less intimate than Tide Town."
+      },
+      {
+        "term": "the District",
+        "role": "Plain post-accident shorthand used by the group once the mythology has cooled. By the final chapter they often do not name the place at all."
+      },
+      {
+        "term": "Deep Sector",
+        "role": "Route/geography term for the farthest exposed area; not an umbrella name."
       }
     ],
-    "rejected_or_avoid": [
-      "Atlantis",
-      "year-number names such as 2226",
-      "a single elegant mythic name used identically by every speaker",
-      "new Low Tide umbrella terminology built around the word Reach"
+    "narrative_progression": [
+      "Chapter 1 rumor language introduces Tide Town through runner channels before the group understands what it is.",
+      "The first panoramic reveal lands on Tide Town as the inherited runner nickname, while official Sector 14 infrastructure remains visible underneath it.",
+      "Chapter 2 exposes older planning and developer language, including Harbor Phase East and Promise District.",
+      "Chapters 2-5 let Tide Town become normal runner/social speech as the place turns into culture and status.",
+      "As outside attention grows, Low Tide District appears in comments and media framing.",
+      "After the failed return, the group strips the language down to the District.",
+      "The final return mostly avoids umbrella naming; schools, parks, housing, routes and water are allowed to be literal again."
     ],
-    "dramatic_use": [
-      "Early chapters may contain competing or provisional names.",
-      "Midseason social spread can make one or more nicknames behave like accidental branding.",
-      "Different groups may prefer different names: planning language, runner slang, media shorthand, old promotional language.",
-      "After the failed return, some of the grander or jokier names may feel embarrassing or hollow.",
-      "By the final return, plain language such as the District can carry extra weight because the place is revealed to be ordinary civic life that never fully arrived."
-    ],
-    "implementation_note": "Keep stable internal recipe IDs for now where renaming them would create unnecessary production churn. Replace visible story/metadata uses of Reach during the dedicated naming pass once the distribution of names by chapter and speaker is locked."
+    "implementation_note": "Stable internal IDs containing `reach` may remain where renaming would create production churn. They are implementation identifiers only. Visible dialogue, captions, summaries, panel plans, settings and assembled prompt prose should follow the naming progression above."
   }
 }
