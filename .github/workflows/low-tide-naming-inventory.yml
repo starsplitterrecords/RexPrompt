@@ -6,6 +6,7 @@ on:
       - low-tide-dedicated-naming-pass
     paths-ignore:
       - data/shows/low-tide-signal/naming_inventory.md
+      - data/shows/low-tide-signal/naming_work/**
 
 permissions:
   contents: write
@@ -53,8 +54,10 @@ jobs:
               raise TypeError(type(obj))
 
           rows=[]
+          decoded={}
           for label,path,enc in packages:
               obj=load(path,enc)
+              decoded[label]=obj
               for page in pages_from(obj):
                   pid=str(page.get("id","?"))
                   def walk(v,p):
@@ -76,6 +79,14 @@ jobs:
               out.append(f"| {label} | {pid} | `{path}` | {esc} |")
           out += ["", f"Total occurrences: **{len(rows)}**", ""]
           (root/"naming_inventory.md").write_text("\n".join(out),encoding="utf-8")
+
+          work=root/"naming_work"
+          work.mkdir(exist_ok=True)
+          for label in ("C04","C05","C06","C07"):
+              (work/f"pages_{label.lower()}.json").write_text(
+                  json.dumps(decoded[label],indent=2,ensure_ascii=False)+"\n",
+                  encoding="utf-8"
+              )
           PY
       - name: Commit inventory
         run: |
