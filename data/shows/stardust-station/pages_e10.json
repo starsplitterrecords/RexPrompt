@@ -1,7 +1,7 @@
 [
   {
     "id": "SDS_S1E10_P01",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Morning. Astra opens the pilot-status review packet while sorting ordinary work orders. Middle image: Pixa reads the timing. Closing image: Astra looks from the future of the station to the temporary repair holding part of it together.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the season-ending decision arrives inside an ordinary work morning. Middle image: the review deadline competes with real tasks. Closing image: the temporary bracket keeps the abstract future physically grounded.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -10,42 +10,39 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Morning. Astra opens the pilot-status review packet while sorting ordinary work orders."
+        "text": "PANEL 1 — Morning in operations: Astra opens the program-disposition review while still sorting ordinary work orders."
       },
       {
-        "text": "PANEL 2 — Header: STARDUST STATION — PROGRAM DISPOSITION REVIEW."
+        "text": "PANEL 2 — The review deadline sits on the same desk as the day's actual work; Pixa states that the recommendation window closes in four hours."
       },
       {
-        "text": "PANEL 3 — Pixa reads the timing."
+        "text": "PANEL 3 — Zib arrives carrying the temporary-bracket inspection tag and a real wrench, bringing the unresolved physical need into the review."
       },
       {
-        "text": "PANEL 4 — Zib enters carrying the temporary-bracket inspection tag and a real wrench."
-      },
-      {
-        "text": "PANEL 5 — Astra looks from the future of the station to the temporary repair holding part of it together."
+        "text": "PANEL 4 — Astra looks from the future-of-site packet to the repair still holding part of the station together."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "PIXA",
         "text": "Recommendation window closes in four hours.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ZIB",
         "text": "Bracket inspection is also today.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Of course it is.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P02",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The review packet presents Option One: DEDICATED MATERIAL PILOT / BUDGET: INCREASED / PROCUREMENT: PRIORITY / OUTPUT TARGETS: REQUIRED. Middle image: Jax reads all three. Closing image: Astra looks at the three boxes.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub, continuing the disposition review. Opening image: central review defines the available institutional futures. Middle image: none describe Stardust as it actually operates. Closing image: Astra chooses to construct a fourth option rather than select a false one.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Jax",
@@ -55,45 +52,39 @@
     "continuityFrom": "SDS_S1E10_P01",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The review packet presents Option One: DEDICATED MATERIAL PILOT / BUDGET: INCREASED / PROCUREMENT: PRIORITY / OUTPUT TARGETS: REQUIRED."
+        "text": "PANEL 1 — The packet lays out Option One: dedicated material pilot, increased budget, priority procurement, required output targets."
       },
       {
-        "text": "PANEL 2 — Option Two: LOW-PRIORITY OPERATIONS / PILOT SUPPORT: ENDS / PROCUREMENT: STANDARD / FUTURE SITE REVIEW: LIKELY."
+        "text": "PANEL 2 — Option Two offers low-priority operations with pilot support ending; Option Three offers consolidation and site closure."
       },
       {
-        "text": "PANEL 3 — Option Three: CONSOLIDATE OPERATIONS / CLOSE SITE."
+        "text": "PANEL 3 — Jax reads the three-option menu while Glorp scrolls for a standard fourth choice and finds none."
       },
       {
-        "text": "PANEL 4 — Jax reads all three."
-      },
-      {
-        "text": "PANEL 5 — Glorp scrolls for another standard option."
-      },
-      {
-        "text": "PANEL 6 — Astra looks at the three boxes."
+        "text": "PANEL 4 — Astra looks at the three boxes and decides that the missing option is now the work."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "JAX",
         "text": "Strong menu.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "GLORP",
         "text": "There is no fourth selection.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Then we have four hours to make one.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P03",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: In the maintenance bay, Zib opens the coolant-balancing unit while Astra brings the review slate with her. Middle image: Zib taps the procurement status: REPLACEMENT PART ETA: 12 DAYS. Closing image: Zib notices.",
+    "summary": "Primary composition: 4-panel page in Maintenance Bay. Opening image: the tempting standard option is tested against the exact repair need that drove the season. Middle image: the temporary fix remains sound but unresolved. Closing image: Astra refuses to repeat Issue 9's mistake even before it is proposed.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Zib",
@@ -105,42 +96,36 @@
         "text": "PANEL 1 — In the maintenance bay, Zib opens the coolant-balancing unit while Astra brings the review slate with her."
       },
       {
-        "text": "PANEL 2 — The approved clamp is still carrying the load. The incidental filler remains only in the gap."
+        "text": "PANEL 2 — The approved clamp still carries the structural load while Mira checks the old material record beside the live inspection."
       },
       {
-        "text": "PANEL 3 — Mira checks the old sample record beside the current inspection."
+        "text": "PANEL 3 — REPLACEMENT PART ETA: 12 DAYS sits beside Option One's priority-procurement promise on Astra's slate."
       },
       {
-        "text": "PANEL 4 — Zib taps the procurement status: REPLACEMENT PART ETA: 12 DAYS."
-      },
-      {
-        "text": "PANEL 5 — Astra looks at Option One's priority procurement promise on the review slate she brought with her."
-      },
-      {
-        "text": "PANEL 6 — Zib notices."
+        "text": "PANEL 4 — Zib notices Astra looking between them and rejects the bargain before she can voice it; Astra says she knows."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "MIRA",
         "text": "Temporary repair still within monitored limits.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ZIB",
         "text": "Still no.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "I know.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P04",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Astra closes the three-option review slate and sets it face-down on Zib's workbench beside the inspection tools. Middle image: Astra looks out toward the working station. Closing image: Astra points at him specifically.",
+    "summary": "Primary composition: 4-panel page in Maintenance Bay, continuing the bracket inspection. Opening image: Astra rejects the provided framing physically. Middle image: the fourth option begins as a handwritten evidence question. Closing image: the crew's proof standard is established before the proposal exists.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Astra",
@@ -151,39 +136,33 @@
     "continuityFrom": "SDS_S1E10_P03",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra closes the three-option review slate and sets it face-down on Zib's workbench beside the inspection tools."
+        "text": "PANEL 1 — Astra closes the standard-options slate and sets it face-down beside the inspection tools."
       },
       {
-        "text": "PANEL 2 — On the back of an ordinary work-order sheet she writes one question by hand: WHAT CAN WE PROVE?"
+        "text": "PANEL 2 — On the back of an ordinary work-order sheet she writes WHAT CAN WE PROVE? and Mira draws OPERATIONS / MATERIAL beneath it."
       },
       {
-        "text": "PANEL 3 — Mira draws two plain columns beneath it: OPERATIONS / MATERIAL."
+        "text": "PANEL 3 — Astra looks out toward the working station and asks for defensible evidence rather than pitch language."
       },
       {
-        "text": "PANEL 4 — Astra looks out toward the working station."
-      },
-      {
-        "text": "PANEL 5 — Brick opens his notebook with immediate enthusiasm."
-      },
-      {
-        "text": "PANEL 6 — Astra points at Brick specifically. Brick slowly closes the notebook again while Zib keeps inspecting the bracket."
+        "text": "PANEL 4 — Brick opens his notebook enthusiastically; Astra specifies evidence they can defend, and Brick closes it again while Zib keeps working."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ASTRA",
         "text": "No pitch language. Bring me things we can defend.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "BRICK",
         "text": "I have notes.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "Evidence we can defend.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
@@ -243,7 +222,7 @@
   },
   {
     "id": "SDS_S1E10_P06",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Zib wheels over the actual stained work board. Middle image: Zib points at the closed column. Closing image: Zib points at open work orders.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the station's accumulated work history enters as physical evidence. Middle image: operational mess and material uncertainty are placed side by side. Closing image: Zib identifies a repeatable outcome without inventing a new metric.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Zib",
@@ -253,50 +232,44 @@
     "continuityFrom": "SDS_S1E10_P05",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib wheels over the actual stained work board."
+        "text": "PANEL 1 — Zib rolls the stained work board into the review area, full of mundane closed jobs from across the season."
       },
       {
-        "text": "PANEL 2 — It is full of mundane closed items accumulated on the board: stabilizer, microwave ground, wall panel, damper, vent, hatch, galley manifold, Dock 2 sensor."
+        "text": "PANEL 2 — Astra studies the crossed-out notes, magnets and repaired items and calls the board ugly."
       },
       {
-        "text": "PANEL 3 — Astra studies the handwritten corrections, crossed-out notes and magnets."
+        "text": "PANEL 3 — Zib points to the closed column and calls it work while Mira holds the equally messy material chart beside it."
       },
       {
-        "text": "PANEL 4 — Zib points at the closed column."
-      },
-      {
-        "text": "PANEL 5 — Mira holds the inconsistent material-sample chart beside the work board."
-      },
-      {
-        "text": "PANEL 6 — Zib points at open work orders."
+        "text": "PANEL 4 — Zib points to the open-work column and identifies the operational number Stardust actually knows how to reduce."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ASTRA",
         "text": "This is ugly.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ZIB",
         "text": "This is work.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
         "text": "The material chart isn't prettier.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "We know how to make this number go down.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P07",
-    "summary": "Primary composition: 6-panel page in Lab Work Area. Opening image: At the lab bench, Mira lays the season's retained samples and test pieces in physical order. Middle image: Mira seals a sample case. Closing image: Astra reads the handwritten line, then looks at Mira.",
+    "summary": "Primary composition: 4-panel page in Lab Work Area. Opening image: the material history is physically reviewed without romanticizing it. Middle image: uncertainty itself becomes part of the evidence. Closing image: Mira authors the boundary that the final program must preserve.",
     "setting": "SDS_Lab_Work_Area",
     "characters": [
       "SDS_Mira",
@@ -304,22 +277,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — At the lab bench, Mira lays the season's retained samples and test pieces in physical order, from brittle fragments to the limited-use filler sample."
+        "text": "PANEL 1 — At the lab bench, Mira lays the season's retained samples in physical order from brittle fragments to the limited-use filler."
       },
       {
-        "text": "PANEL 2 — Beside each sample are short test cards: properties vary; yield inconsistent; mass does not predict quality; mechanism unresolved."
+        "text": "PANEL 2 — Short test cards beside them make the material limits visible: variable properties, inconsistent yield, mass not predictive, mechanism unresolved."
       },
       {
-        "text": "PANEL 3 — Astra asks across the bench."
+        "text": "PANEL 3 — Astra asks what can actually be promised; Mira answers collection and characterization, nothing stronger."
       },
       {
-        "text": "PANEL 4 — Mira seals a sample case."
-      },
-      {
-        "text": "PANEL 5 — Mira takes the proposal sheet and writes one exact boundary herself: NO INFERRED EMOTIONAL FIELDS."
-      },
-      {
-        "text": "PANEL 6 — Astra reads the handwritten line, then looks at Mira."
+        "text": "PANEL 4 — Mira writes NO INFERRED EMOTIONAL FIELDS herself and Astra tells her to keep the wording exact."
       }
     ],
     "dialogueInline": [
@@ -331,23 +298,23 @@
       {
         "speaker": "MIRA",
         "text": "Collection and characterization. Nothing stronger.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "MIRA",
         "text": "No emotional inference. Not even as context.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "Keep that exact.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P08",
-    "summary": "Primary composition: 5-panel page in Cargo Bay / Dock 2. Opening image: In the cargo lane, Jax catches Astra before she returns to operations and opens the route history beside the conveyor they serviced early. Middle image: Jax traces the route slate from the accelerated conveyor closure to the Dock 2 delay, with the actual lane behind him. Closing image: Jax sends the Dock 2 access-log entry from the route slate to Astra's review packet.",
+    "summary": "Primary composition: 4-panel page in Cargo Bay / Dock 2. Opening image: the season's clearest failure is revisited in the place where it happened. Middle image: Jax connects motive to operational consequence. Closing image: Astra converts her mistake into evidence for the fourth option.",
     "setting": "SDS_Cargo_Bay",
     "characters": [
       "SDS_Jax",
@@ -355,19 +322,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — In the cargo lane, Jax catches Astra before she returns to operations and opens the route history beside the conveyor they serviced early."
+        "text": "PANEL 1 — In the cargo lane, Jax stops Astra beside the conveyor they serviced early and opens the route history."
       },
       {
-        "text": "PANEL 2 — He traces the accelerated conveyor closure and then the Dock 2 problem that arrived while the lane was unnecessarily occupied."
+        "text": "PANEL 2 — He traces the accelerated conveyor closure into the Dock 2 delay while the actual lane remains visible behind them."
       },
       {
-        "text": "PANEL 3 — Jax traces the route slate from the accelerated conveyor closure to the Dock 2 delay, with the actual lane behind him."
+        "text": "PANEL 3 — Jax states the operational lesson plainly: when collection became the reason for the job, the real route got worse."
       },
       {
-        "text": "PANEL 4 — Astra looks down the lane where she made the call and does not defend herself."
-      },
-      {
-        "text": "PANEL 5 — Jax sends the Dock 2 access-log entry from the route slate to Astra's review packet."
+        "text": "PANEL 4 — Astra accepts responsibility without defense and tells Jax to put that evidence into the review packet."
       }
     ],
     "dialogueInline": [
@@ -394,7 +358,7 @@
       {
         "speaker": "JAX",
         "text": "Then use that.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       }
     ]
   },
@@ -446,7 +410,7 @@
   },
   {
     "id": "SDS_S1E10_P10",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The workbench now holds Zib's board, Jax's route slate, Mira's sample cards and Glorp/Kreeb's reporting form around the original WHAT CAN WE PROVE? sheet. Middle image: Astra crosses out the S with a pen. ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION. Closing image: Astra accepts that.",
+    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub, continuing the evidence assembly. Opening image: the different proof streams finally occupy one physical frame. Middle image: the fourth option receives a name through ordinary editing. Closing image: the crew accepts language as a tool rather than an identity.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -456,22 +420,19 @@
     "continuityFrom": "SDS_S1E10_P09",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The workbench now holds Zib's board, Jax's route slate, Mira's sample cards and Glorp/Kreeb's reporting form around the original WHAT CAN WE PROVE? sheet."
+        "text": "PANEL 1 — Zib's work board, Jax's route slate, Mira's sample cards and Glorp/Kreeb's reporting form now surround WHAT CAN WE PROVE? on one workbench."
       },
       {
-        "text": "PANEL 2 — Astra writes a provisional heading across the top of the physical sheet: ADAPTIVE OPERATIONS / INCIDENTAL MATERIALS OBSERVATION."
+        "text": "PANEL 2 — Astra writes ADAPTIVE OPERATIONS / INCIDENTAL MATERIALS OBSERVATION as the first rough heading."
       },
       {
-        "text": "PANEL 3 — Mira reads it."
+        "text": "PANEL 3 — Mira catches the plural; Astra crosses out the S instead of defending it."
       },
       {
-        "text": "PANEL 4 — Astra crosses out the S with a pen. ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION."
+        "text": "PANEL 4 — Zib complains that the phrase still sounds like a department."
       },
       {
-        "text": "PANEL 5 — Zib looks at the handwriting."
-      },
-      {
-        "text": "PANEL 6 — Astra accepts that."
+        "text": "PANEL 5 — Astra accepts the temporary institutional language because today the station needs something central review can carry."
       }
     ],
     "dialogueInline": [
@@ -483,17 +444,17 @@
       {
         "speaker": "ASTRA",
         "text": "Good catch.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "Still sounds like a department.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "Today we need it to.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ]
   },
@@ -553,7 +514,7 @@
   },
   {
     "id": "SDS_S1E10_P12",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The Operations Liaison joins the review by live call from another StarTrust site. Middle image: On the live call, the Liaison lowers the tablet after reading the fourth recommendation, professional and skeptical. Closing image: The Liaison keeps reading.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub, continuing the fourth-option review. Opening image: the proposal reaches the credible outside advocate. Middle image: the Liaison resists the category, not the station. Closing image: Astra grounds the case in evidence rather than exceptionalism.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Liaison",
@@ -562,44 +523,38 @@
     "continuityFrom": "SDS_S1E10_P11",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The Operations Liaison joins the review by live call from another StarTrust site."
+        "text": "PANEL 1 — The Operations Liaison joins by live call while Astra sends the fourth recommendation."
       },
       {
-        "text": "PANEL 2 — Astra sends the fourth recommendation."
+        "text": "PANEL 2 — The Liaison reads silently long enough for the crew to wait instead of pitching over them."
       },
       {
-        "text": "PANEL 3 — The Liaison reads silently for a moment."
+        "text": "PANEL 3 — The Liaison lowers the tablet and states the central problem: this is not a standard pilot category."
       },
       {
-        "text": "PANEL 4 — On the live call, the Liaison lowers the tablet after reading the fourth recommendation, professional and skeptical."
-      },
-      {
-        "text": "PANEL 5 — Astra answers."
-      },
-      {
-        "text": "PANEL 6 — The Liaison keeps reading."
+        "text": "PANEL 4 — Astra answers that the operating record—not Stardust's uniqueness—is the argument, and the Liaison keeps reading."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "LIAISON",
         "text": "This is not a standard pilot category.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "Neither are we.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "LIAISON",
         "text": "That is not an argument.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "ASTRA",
         "text": "The operating record is.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
@@ -657,7 +612,7 @@
   },
   {
     "id": "SDS_S1E10_P14",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The Liaison asks directly. Middle image: Astra slides the three standard options aside and keeps the handwritten fourth recommendation centered in front of her. Closing image: Astra does not revise it.",
+    "summary": "Primary composition: 3-panel page in Main Bullpen / Admin Hub, continuing the live review. Opening image: the decision is made explicit rather than implied by drafting. Middle image: Astra physically chooses the fourth option. Closing image: she accepts the institutional risk without turning it into heroism.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Liaison",
@@ -666,22 +621,13 @@
     "continuityFrom": "SDS_S1E10_P13",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The Liaison asks directly."
+        "text": "PANEL 1 — The Liaison asks which recommendation Astra actually wants carried forward; the three standard options and the handwritten fourth remain visible together."
       },
       {
-        "text": "PANEL 2 — Astra looks at Option One."
+        "text": "PANEL 2 — Astra slides the standard options aside and centers the fourth recommendation: recommend the station we actually run."
       },
       {
-        "text": "PANEL 3 — Then at the fourth recommendation."
-      },
-      {
-        "text": "PANEL 4 — Astra slides the three standard options aside and keeps the handwritten fourth recommendation centered in front of her."
-      },
-      {
-        "text": "PANEL 5 — The Liaison is explicit."
-      },
-      {
-        "text": "PANEL 6 — Astra does not revise it."
+        "text": "PANEL 3 — The Liaison warns that this option can lose; Astra leaves it unchanged and says she knows."
       }
     ],
     "dialogueInline": [
@@ -693,17 +639,17 @@
       {
         "speaker": "ASTRA",
         "text": "Recommend the station we actually run.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "LIAISON",
         "text": "That can lose.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ASTRA",
         "text": "I know.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 3"
       }
     ]
   },
@@ -757,7 +703,7 @@
   },
   {
     "id": "SDS_S1E10_P16",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: The review asks for one concise value statement. Middle image: Mira lifts the sealed sample card from the secondary-observation stack as she gives her part of the answer. Closing image: Kreeb taps the intentional blank on the reporting form while Astra types the final line.",
+    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: central review demands compression. Middle image: the answer is authored by the ensemble rather than summarized for them. Closing image: the season's operational and human boundaries become one value statement.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -769,22 +715,19 @@
     "continuityFrom": "SDS_S1E10_P15",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The review asks for one concise value statement."
+        "text": "PANEL 1 — Central review asks for one concise value statement; Astra starts typing and stops."
       },
       {
-        "text": "PANEL 2 — Astra starts typing, stops, and turns to the crew."
+        "text": "PANEL 2 — She turns to the crew and asks for the plain answer instead of writing a management version herself."
       },
       {
-        "text": "PANEL 3 — Zib plants one hand on the stained work board beside the open-work-order column."
+        "text": "PANEL 3 — Zib anchors the answer on the stained work board: we keep the place working."
       },
       {
-        "text": "PANEL 4 — Mira lifts the sealed sample card from the secondary-observation stack as she gives her part of the answer."
+        "text": "PANEL 4 — Mira adds that they measure the strange part without pretending to understand it; Glorp adds that the record can prove both."
       },
       {
-        "text": "PANEL 5 — Glorp raises the clean reporting form beside the stained work board."
-      },
-      {
-        "text": "PANEL 6 — Kreeb taps the intentional blank on the reporting form while Astra types the final line."
+        "text": "PANEL 5 — Kreeb taps the intentional blank and completes the statement: the proof does not require people to become records while Astra types."
       }
     ],
     "dialogueInline": [
@@ -806,18 +749,18 @@
       {
         "speaker": "GLORP",
         "text": "And we can prove that with records.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "KREEB",
         "text": "That do not require people to become records.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P17",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Astra submits the final site recommendation. Middle image: The Liaison asks one last time. Closing image: She presses SUBMIT before any approval exists.",
+    "summary": "Primary composition: 3-panel page in Main Bullpen / Admin Hub, continuing the review. Opening image: the unapproved fourth option sits beside the sanctioned choices. Middle image: the institutional cost is stated one last time. Closing image: Astra chooses before knowing whether the choice will be rewarded.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Astra",
@@ -826,37 +769,31 @@
     "continuityFrom": "SDS_S1E10_P16",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Astra submits the final site recommendation."
+        "text": "PANEL 1 — Astra submits the fourth site recommendation with the three standard choices still displayed beside it."
       },
       {
-        "text": "PANEL 2 — Central screen still displays the three standard options beside it."
+        "text": "PANEL 2 — The Liaison asks one final time whether she is declining the safer dedicated-material recommendation."
       },
       {
-        "text": "PANEL 3 — The Liaison asks one last time."
-      },
-      {
-        "text": "PANEL 4 — Astra answers."
-      },
-      {
-        "text": "PANEL 5 — She presses SUBMIT before any approval exists."
+        "text": "PANEL 3 — Astra answers that they have a fourth and presses SUBMIT before any approval exists."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "LIAISON",
         "text": "You are declining the dedicated material recommendation?",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "We have a fourth.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P18",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: After the submission, the review status changes to UNDER EVALUATION as Astra returns to the open bracket panel. Middle image: Astra joins him for the scheduled temporary-bracket inspection. Closing image: Zib nods.",
+    "summary": "Primary composition: 4-panel page in Maintenance Bay. Opening image: the major decision produces no immediate answer. Middle image: the station resumes the work that existed before the review. Closing image: Jax's learned routine continues while the future remains pending.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Zib",
@@ -865,44 +802,38 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — After the submission, the review status changes to UNDER EVALUATION as Astra returns to the open bracket panel."
+        "text": "PANEL 1 — UNDER EVALUATION appears as Astra returns from the review to the still-open bracket panel."
       },
       {
-        "text": "PANEL 2 — Astra, Zib and Jax look from the UNDER EVALUATION status back to the still-open bracket panel."
+        "text": "PANEL 2 — Zib immediately puts the decision back in scale by handing her the work in front of them."
       },
       {
-        "text": "PANEL 3 — Zib points at the still-open bracket panel."
+        "text": "PANEL 3 — Astra joins the scheduled bracket inspection while Jax picks up the monitoring reader without being assigned."
       },
       {
-        "text": "PANEL 4 — Astra joins him for the scheduled temporary-bracket inspection."
-      },
-      {
-        "text": "PANEL 5 — Jax takes the monitoring reader without being assigned."
-      },
-      {
-        "text": "PANEL 6 — Zib nods."
+        "text": "PANEL 4 — Zib asks for the remembered six-minute interval and Jax confirms it with familiar annoyance."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ZIB",
         "text": "Great. Hold this.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "JAX",
         "text": "Six-minute interval?",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "ZIB",
         "text": "You remember.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "JAX",
         "text": "Unfortunately.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
@@ -942,7 +873,7 @@
   },
   {
     "id": "SDS_S1E10_P20",
-    "summary": "Primary composition: 6-panel page in Main Bullpen / Admin Hub. Opening image: Later, Pixa's notification tone sounds once in operations. Middle image: Second line: PROGRAM: ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION. Closing image: Astra reads it without speaking for a beat. Zib breaks the silence.",
+    "summary": "Primary composition: 4-panel page in Main Bullpen / Admin Hub. Opening image: the answer arrives without fanfare. Middle image: the fourth option is accepted with its crucial boundaries intact. Closing image: Zib immediately reconnects institutional victory to the mundane repair need that started the arc.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
@@ -951,35 +882,29 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Later, Pixa's notification tone sounds once in operations."
+        "text": "PANEL 1 — Later, Pixa's notification tone sounds once in operations and the nearest screen draws everyone's attention."
       },
       {
-        "text": "PANEL 2 — Everyone looks toward the nearest screen."
+        "text": "PANEL 2 — STATION STATUS: ACTIVE appears first, followed by ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION."
       },
       {
-        "text": "PANEL 3 — Central review result: STATION STATUS: ACTIVE."
+        "text": "PANEL 3 — OUTPUT TARGET: NONE / BEHAVIORAL CONDITIONS: NONE / PROCUREMENT: OPERATIONS PRIORITY completes the decision."
       },
       {
-        "text": "PANEL 4 — Second line: PROGRAM: ADAPTIVE OPERATIONS / INCIDENTAL MATERIAL OBSERVATION."
-      },
-      {
-        "text": "PANEL 5 — Third and fourth lines: OUTPUT TARGET: NONE / BEHAVIORAL CONDITIONS: NONE / PROCUREMENT: OPERATIONS PRIORITY."
-      },
-      {
-        "text": "PANEL 6 — Astra reads it without speaking for a beat. Zib breaks the silence."
+        "text": "PANEL 4 — Astra reads in silence long enough for Zib to ask the only question he cares about: whether active comes with a bracket."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ZIB",
         "text": "Does active come with a bracket?",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P21",
-    "summary": "Primary composition: 6-panel page in Maintenance Bay. Opening image: Back at the open bracket panel, Pixa checks procurement. Middle image: Astra finally smiles. Closing image: Jax looks at the temporary repair tag.",
+    "summary": "Primary composition: 4-panel page in Maintenance Bay. Opening image: the abstract approval changes something concrete. Middle image: the crew reacts in character rather than celebrating generically. Closing image: the temporary repair's end becomes a comic future problem.",
     "setting": "SDS_Maintenance_Bay",
     "characters": [
       "SDS_Pixa",
@@ -991,55 +916,49 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Back at the open bracket panel, Pixa checks procurement."
+        "text": "PANEL 1 — Back at the open bracket panel, Pixa checks procurement and the replacement ETA has collapsed to two days."
       },
       {
-        "text": "PANEL 2 — The replacement request has changed: REPLACEMENT PART ETA: 2 DAYS."
+        "text": "PANEL 2 — Zib stares at the screen and calls the sudden generosity suspicious."
       },
       {
-        "text": "PANEL 3 — Zib stares at the screen."
+        "text": "PANEL 3 — Astra finally smiles and tells him not to investigate procurement generosity; Brick opens his notebook anyway."
       },
       {
-        "text": "PANEL 4 — Astra finally smiles."
-      },
-      {
-        "text": "PANEL 5 — Brick opens his notebook."
-      },
-      {
-        "text": "PANEL 6 — Jax looks at the temporary repair tag."
+        "text": "PANEL 4 — Jax looks at the temporary tag and jokes that they may have to learn what permanent means while Glorp objects from nearby."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "ZIB",
         "text": "That's suspicious.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 2"
       },
       {
         "speaker": "ASTRA",
         "text": "Do not investigate procurement generosity.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "BRICK",
         "text": "Too late.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       },
       {
         "speaker": "JAX",
         "text": "Two days. We may have to learn what permanent means.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       },
       {
         "speaker": "GLORP",
         "text": "Do not say that near policy.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 4"
       }
     ]
   },
   {
     "id": "SDS_S1E10_P22",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: Later in operations, Glorp and Kreeb build the durable reporting template for the approved program. Middle image: Glorp leaves BEHAVIORAL CONTEXT blank by rule and marks: NOT REQUIRED. Kreeb looks at the empty area. Closing image: Astra walks past carrying ordinary work orders.",
+    "summary": "Primary composition: 3-panel page in Main Bullpen / Admin Hub. Opening image: the season's negotiated boundaries become routine paperwork. Middle image: the vending-machine joke survives institutional resolution. Closing image: Astra is already carrying ordinary work into whatever comes next.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Glorp",
@@ -1049,31 +968,25 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Later in operations, Glorp and Kreeb build the durable reporting template for the approved program."
+        "text": "PANEL 1 — Later in operations, Glorp and Kreeb build the durable reporting template for the approved program; BEHAVIORAL CONTEXT is visibly marked NOT REQUIRED."
       },
       {
-        "text": "PANEL 2 — Fields include: PHYSICAL CONDITIONS / SAMPLE PROPERTIES / OPERATIONAL EVENT / BEHAVIORAL CONTEXT."
+        "text": "PANEL 2 — Kreeb calls the deliberate blank space intentional while, across the room, the vending machine prints STATION STATUS: ACTIVE and Brick turns toward it."
       },
       {
-        "text": "PANEL 3 — Glorp leaves BEHAVIORAL CONTEXT blank by rule and marks: NOT REQUIRED. Kreeb looks at the empty area."
-      },
-      {
-        "text": "PANEL 4 — Across the room, the vending machine prints an unsolicited receipt: STATION STATUS: ACTIVE. Brick turns slowly toward it."
-      },
-      {
-        "text": "PANEL 5 — Astra walks past carrying ordinary work orders."
+        "text": "PANEL 3 — Astra walks past carrying ordinary work orders and calls the new normal normal enough."
       }
     ],
     "dialogueInline": [
       {
         "speaker": "KREEB",
         "text": "Intentional blank space.",
-        "subtext": "Panel 3"
+        "subtext": "Panel 1"
       },
       {
         "speaker": "ASTRA",
         "text": "Normal enough.",
-        "subtext": "Panel 5"
+        "subtext": "Panel 3"
       }
     ]
   }
