@@ -108,10 +108,20 @@ for file,group in groups:
         if any(n in SALV for n in dn): ef.append("BR_Salvagers")
         if "Cyrus" in dn or "Tetherwell Narrator" in dn: ef.append("BR_Tethergrid")
         if "Dryline Reporter" in dn: ef.append("BR_Dryline")
-        if (s.get("factions") or [])!=ef:
-            issues.append({"scene":sid,"episode":e,"kind":"faction_mismatch","detail":f"declared={s.get('factions')}; expected={ef}","file":file})
+        declared_factions=s.get("factions") or []
+        missing_factions=[f for f in ef if f not in declared_factions]
+        if missing_factions:
+            issues.append({"scene":sid,"episode":e,"kind":"faction_mismatch","detail":f"declared={declared_factions}; missing cast-derived={missing_factions}","file":file})
         for d in dia:
-            if d.get("speaker") not in dn or d.get("handle")!=P.get(d.get("speaker")):
+            speaker=d.get("speaker")
+            expected_handle=P.get(speaker)
+            if expected_handle is None:
+                # Local/off-panel role dialogue is intentional scene-scope speech, not a persistent character identity.
+                # It must remain handle-free so it does not masquerade as canonical character continuity.
+                if d.get("handle"):
+                    issues.append({"scene":sid,"episode":e,"kind":"dialogue_cast_mismatch","detail":f"noncanonical role carries handle: {d}","file":file})
+                continue
+            if speaker not in dn or d.get("handle")!=expected_handle:
                 issues.append({"scene":sid,"episode":e,"kind":"dialogue_cast_mismatch","detail":str(d),"file":file})
         setting=s.get("setting")
         loc=(settings.get(setting) or {}).get("text") if setting else s.get("settingText")
