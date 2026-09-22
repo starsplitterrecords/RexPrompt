@@ -171,12 +171,16 @@ def sanitize_page(page: dict) -> tuple[dict, int]:
 
 
 def sanitize_pages() -> tuple[int, int]:
+    """Sanitize every live Stardust page payload, encoded and direct JSON."""
     pages = 0
     removed_blocks = 0
-    paths = sorted(ENCODED.glob("pages_e*.json.gzb64"))
-    if not paths:
-        raise RuntimeError("No Stardust encoded page payloads found")
-    for path in paths:
+
+    encoded_paths = sorted(ENCODED.glob("pages_e*.json.gzb64"))
+    direct_paths = sorted(SHOW.glob("pages_e*.json"))
+    if not encoded_paths and not direct_paths:
+        raise RuntimeError("No Stardust page payloads found")
+
+    for path in encoded_paths:
         data = decode(path)
         if not isinstance(data, list):
             raise RuntimeError(f"Expected list payload in {path}")
@@ -187,6 +191,19 @@ def sanitize_pages() -> tuple[int, int]:
             pages += 1
             removed_blocks += removed
         encode(path, cleaned)
+
+    for path in direct_paths:
+        data = load(path)
+        if not isinstance(data, list):
+            raise RuntimeError(f"Expected list payload in {path}")
+        cleaned = []
+        for page in data:
+            fixed, removed = sanitize_page(page)
+            cleaned.append(fixed)
+            pages += 1
+            removed_blocks += removed
+        dump(path, cleaned)
+
     return pages, removed_blocks
 
 
@@ -223,8 +240,9 @@ def sanitize_positive_reference_text() -> None:
 
 def verify_clean() -> None:
     forbidden = DROP_DIRECTION_PREFIXES + DIALOGUE_LOCK_MARKERS
-    for path in sorted(ENCODED.glob("pages_e*.json.gzb64")):
-        data = decode(path)
+    payloads = [(path, decode(path)) for path in sorted(ENCODED.glob("pages_e*.json.gzb64"))]
+    payloads += [(path, load(path)) for path in sorted(SHOW.glob("pages_e*.json"))]
+    for path, data in payloads:
         text = json.dumps(data, ensure_ascii=False).lower()
         for term in forbidden:
             if term.lower() in text:
