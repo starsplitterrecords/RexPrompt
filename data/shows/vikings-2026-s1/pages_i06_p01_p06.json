@@ -1,6 +1,6 @@
 [
   {
-    "id": "VIK_S1I06_P01",
+    "id": "VIK_S1E06_P01",
     "summary": "Morning in the Safe Cave: Bjorn wakes after Gunnar and the two male Kin have already taken care of breakfast and laundry, leaving him coffee but no obvious job.",
     "settingText": "Bushwick studio apartment, early morning: sleeping area, tiny kitchenette/table, brass key by the door, books, laundry and groceries accumulated from Issue 5.",
     "charactersInline": [
@@ -22,75 +22,42 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave sleeping area opening onto kitchenette",
-        "shotType": "wide",
-        "action": "Early morning across the whole studio. Gunnar pours coffee. First Male Kin finishes slicing bread at the tiny table. Second Male Kin ties a laundry bag and checks the brass key near the door. Bjorn sits up from bedding at frame edge; Astrid is not present."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave kitchenette table",
-        "shotType": "medium",
-        "action": "Bjorn crosses to the table and reaches for the bread knife just as First Male Kin finishes cutting and slides the bread into a bowl.",
-        "dialogueIndices": [
-          0,
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave doorway side of kitchenette",
-        "shotType": "medium",
-        "action": "Bjorn turns toward the laundry bag; Second Male Kin shoulders it before Bjorn can take it.",
-        "dialogueIndices": [
-          2,
-          3
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave kitchenette",
-        "shotType": "two-shot",
-        "action": "Gunnar hands Bjorn a paper coffee cup. Bjorn accepts it; behind them First Male Kin clears the breakfast area and Second Male Kin settles the laundry bag on his shoulder.",
-        "dialogueIndices": [
-          4
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave kitchenette",
-        "shotType": "tight medium",
-        "action": "Bjorn stands motionless with the coffee held at chest height. Behind him Gunnar turns back to the table while the two male Kin continue their tasks without looking toward Bjorn.",
-        "dialogueIndices": [
-          5
-        ]
-      }
+      "Safe Cave sleeping area opening onto kitchenette — Wide: Early morning across the whole studio. Gunnar pours coffee. First Male Kin finishes slicing bread at the tiny table. Second Male Kin ties a laundry bag and checks the brass key near the door. Bjorn sits up from bedding at frame edge; Astrid is not present.",
+      "Safe Cave kitchenette table — Medium: Bjorn crosses to the table and reaches for the bread knife just as First Male Kin finishes cutting and slides the bread into a bowl.",
+      "Safe Cave doorway side of kitchenette — Medium: Bjorn turns toward the laundry bag; Second Male Kin shoulders it before Bjorn can take it.",
+      "Safe Cave kitchenette — Two-shot: Gunnar hands Bjorn a paper coffee cup. Bjorn accepts it; behind them First Male Kin clears the breakfast area and Second Male Kin settles the laundry bag on his shoulder.",
+      "Safe Cave kitchenette — Tight medium: Bjorn stands motionless with the coffee held at chest height. Behind him Gunnar turns back to the table while the two male Kin continue their tasks without looking toward Bjorn."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Bjorn",
-        "text": "I'll do that."
+        "text": "I'll do that.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.KinMan1",
-        "text": "Done."
+        "text": "Done.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Then that."
+        "text": "Then that.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "Got it."
+        "text": "Got it.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Coffee isn't made."
+        "text": "Coffee isn't made.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Coffee isn't work."
+        "text": "Coffee isn't work.",
+        "subtext": "Panel 5"
       }
     ],
     "directionInline": [
@@ -98,10 +65,11 @@
         "text": "Only Gunnar, Bjorn and the two established male Kin are visible. Astrid is off-page; do not add another Kin."
       }
     ],
-    "page": 1
+    "page": 1,
+    "episode": "S1E06"
   },
   {
-    "id": "VIK_S1I06_P02",
+    "id": "VIK_S1E06_P02",
     "summary": "At the neighborhood bodega, Bjorn tries to repay old kindness with labor and is stopped because the delivery already belongs to someone else's job.",
     "settingText": "Recurring Bushwick bodega: front counter, narrow delivery aisle and sidewalk delivery area in ordinary morning light.",
     "charactersInline": [
@@ -115,85 +83,52 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "bodega front aisle",
-        "shotType": "wide",
-        "action": "A delivery worker wheels beverage crates toward the back through the narrow aisle. Bjorn enters with his familiar coffee cup; the Bodega Owner nods from the counter.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "bodega delivery aisle",
-        "shotType": "medium",
-        "action": "The delivery worker works a loaded hand truck around a tight turn. Bjorn immediately steps toward the cart."
-      },
-      {
-        "panel": 3,
-        "location": "bodega delivery aisle",
-        "shotType": "two-shot",
-        "action": "Before Bjorn can take the hand truck, the Bodega Owner plants one hand on it and stops him. The worker still has control of the load.",
-        "dialogueIndices": [
-          1,
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "bodega delivery aisle",
-        "shotType": "three-shot",
-        "action": "The delivery worker keeps one hand tight on the hand-truck grip, jaw set. The owner holds one forearm across Bjorn's path, leaving the worker a clear lane.",
-        "dialogueIndices": [
-          3,
-          4
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "bodega counter",
-        "shotType": "close medium",
-        "action": "The owner scans Bjorn's usual items. Bjorn stands square to the counter with direct eye contact, hands still at his sides as he answers.",
-        "dialogueIndices": [
-          5,
-          6,
-          7
-        ]
-      }
+      "bodega front aisle — Wide: A delivery worker wheels beverage crates toward the back through the narrow aisle. Bjorn enters with his familiar coffee cup; the Bodega Owner nods from the counter.",
+      "bodega delivery aisle — Medium: The delivery worker works a loaded hand truck around a tight turn. Bjorn immediately steps toward the cart.",
+      "bodega delivery aisle — Two-shot: Before Bjorn can take the hand truck, the Bodega Owner plants one hand on it and stops him. The worker still has control of the load.",
+      "bodega delivery aisle — Three-shot: The delivery worker keeps one hand tight on the hand-truck grip, jaw set. The owner holds one forearm across Bjorn's path, leaving the worker a clear lane.",
+      "bodega counter — Close medium: The owner scans Bjorn's usual items. Bjorn stands square to the counter with direct eye contact, hands still at his sides as he answers."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.BodegaOwner",
-        "text": "Morning."
+        "text": "Morning.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.BodegaOwner",
-        "text": "No."
+        "text": "No.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "He is overmatched."
+        "text": "He is overmatched.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.BodegaOwner",
-        "text": "He is working. You are shopping."
+        "text": "He is working. You are shopping.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "You helped us before we had money."
+        "text": "You helped us before we had money.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.BodegaOwner",
-        "text": "And now you pay me every morning. We're even."
+        "text": "And now you pay me every morning. We're even.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "I still owe you."
+        "text": "I still owe you.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.BodegaOwner",
-        "text": "Have your coffee."
+        "text": "Have your coffee.",
+        "subtext": "Panel 5"
       }
     ],
     "directionInline": [
@@ -201,10 +136,11 @@
         "text": "The delivery worker is an ordinary working adult, not comic relief and not physically helpless."
       }
     ],
-    "page": 2
+    "page": 2,
+    "episode": "S1E06"
   },
   {
-    "id": "VIK_S1I06_P03",
+    "id": "VIK_S1E06_P03",
     "summary": "Back at the apartment, Carrie hears Bjorn say plainly that everyone else now provides the things he once understood as his responsibility.",
     "settingText": "Safe Cave, late morning: table, window and ordinary household clutter from the established apartment.",
     "charactersInline": [
@@ -226,87 +162,52 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave doorway and table",
-        "shotType": "wide",
-        "action": "Carrie enters with a thin folder and grocery receipt. Gunnar reads at the table. First Male Kin repairs a loose bag strap. Bjorn stands at the window with empty hands; Second Male Kin and Astrid are out.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "medium",
-        "action": "Carrie puts the folder down and looks toward Bjorn when he does not react.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave window side",
-        "shotType": "two-shot",
-        "action": "Bjorn turns from the window and gives one restrained sweep of his hand toward the apartment, his face serious and still.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave window side",
-        "shotType": "close medium",
-        "action": "Carrie listens without correcting him. Bjorn indicates Gunnar and the working Kin with a small sweep of his hand.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave window side",
-        "shotType": "two-shot",
-        "action": "Carrie watches Bjorn as she says the word “ornamental.” His brow tightens at the unfamiliar word; after his reply, she supplies the simpler word “decorative.”",
-        "dialogueIndices": [
-          4,
-          5,
-          6,
-          7
-        ]
-      }
+      "Safe Cave doorway and table — Wide: Carrie enters with a thin folder and grocery receipt. Gunnar reads at the table. First Male Kin repairs a loose bag strap. Bjorn stands at the window with empty hands; Second Male Kin and Astrid are out.",
+      "Safe Cave table — Medium: Carrie puts the folder down and looks toward Bjorn when he does not react.",
+      "Safe Cave window side — Two-shot: Bjorn turns from the window and gives one restrained sweep of his hand toward the apartment, his face serious and still.",
+      "Safe Cave window side — Close medium: Carrie listens without correcting him. Bjorn indicates Gunnar and the working Kin with a small sweep of his hand.",
+      "Safe Cave window side — Two-shot: Carrie watches Bjorn as she says the word “ornamental.” His brow tightens at the unfamiliar word; after his reply, she supplies the simpler word “decorative.”"
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "Smoke-detector renewal."
+        "text": "Smoke-detector renewal.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Usually you hate this part."
+        "text": "Usually you hate this part.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Water, heat, food. Gunnar gets anywhere. They shop without us. You know every form."
+        "text": "Water, heat, food. Gunnar gets anywhere. They shop without us. You know every form.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Where does that leave me?"
+        "text": "Where does that leave me?",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Here."
+        "text": "Here.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "That is not the same."
+        "text": "That is not the same.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "No."
+        "text": "No.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Exactly."
+        "text": "Exactly.",
+        "subtext": "Panel 5"
       }
     ],
     "directionInline": [
@@ -314,10 +215,11 @@
         "text": "Only First Male Kin is visible among the Kin on this page. Second Male Kin and Astrid are off-page."
       }
     ],
-    "page": 3
+    "page": 3,
+    "episode": "S1E06"
   },
   {
-    "id": "VIK_S1I06_P04",
+    "id": "VIK_S1E06_P04",
     "summary": "A cheap power strip sparks and is already made safe before Bjorn can act; after the danger is over, he smashes it and frightens the household.",
     "settingText": "Safe Cave kitchenette and sleeping edge, daytime. Ordinary apartment scale; the electrical fault is minor and contained.",
     "charactersInline": [
@@ -343,72 +245,38 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave kitchenette floor beside table",
-        "shotType": "insert",
-        "action": "A cheap overloaded power strip gives one sharp spark and a small puff of gray smoke beside the table. No flame develops."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave kitchenette",
-        "shotType": "medium",
-        "action": "Gunnar immediately pulls the wall plug while First Male Kin lifts nearby bedding away in one motion.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave kitchenette",
-        "shotType": "wide",
-        "action": "The smoke is gone. The unplugged, inert power strip lies on the floor while Carrie, Bjorn, Gunnar and both male Kin look down at it."
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave kitchenette",
-        "shotType": "medium",
-        "action": "Bjorn bends, picks up the dead strip and stares at it. His jaw tightens; nobody is asking him to do anything."
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave bare wall beside kitchenette",
-        "shotType": "impact medium",
-        "action": "Bjorn slams the plastic strip once into the bare wall. The casing cracks. First Male Kin jerks backward; Second Male Kin freezes with hands half-raised; Carrie flinches; Gunnar remains still with the unplugged cord."
-      },
-      {
-        "panel": 6,
-        "location": "Safe Cave kitchenette",
-        "shotType": "two-shot",
-        "action": "Carrie steps within arm’s length of Bjorn. Behind her, First Male Kin shifts behind the table edge, Second Male Kin keeps several feet of distance, and Gunnar stays still with the unplugged cord in hand.",
-        "dialogueIndices": [
-          1,
-          2,
-          3,
-          4
-        ]
-      }
+      "Safe Cave kitchenette floor beside table — Insert: A cheap overloaded power strip gives one sharp spark and a small puff of gray smoke beside the table. No flame develops.",
+      "Safe Cave kitchenette — Medium: Gunnar immediately pulls the wall plug while First Male Kin lifts nearby bedding away in one motion.",
+      "Safe Cave kitchenette — Wide: The smoke is gone. The unplugged, inert power strip lies on the floor while Carrie, Bjorn, Gunnar and both male Kin look down at it.",
+      "Safe Cave kitchenette — Medium: Bjorn bends, picks up the dead strip and stares at it. His jaw tightens; nobody is asking him to do anything.",
+      "Safe Cave bare wall beside kitchenette — Impact medium: Bjorn slams the plastic strip once into the bare wall. The casing cracks. First Male Kin jerks backward; Second Male Kin freezes with hands half-raised; Carrie flinches; Gunnar remains still with the unplugged cord.",
+      "Safe Cave kitchenette — Two-shot: Carrie steps within arm’s length of Bjorn. Behind her, First Male Kin shifts behind the table edge, Second Male Kin keeps several feet of distance, and Gunnar stays still with the unplugged cord in hand."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Gunnar",
-        "text": "Dead."
+        "text": "Dead.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Bjorn."
+        "text": "Bjorn.",
+        "subtext": "Panel 6"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "It failed."
+        "text": "It failed.",
+        "subtext": "Panel 6"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Gunnar had it."
+        "text": "Gunnar had it.",
+        "subtext": "Panel 6"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "You scared them."
+        "text": "You scared them.",
+        "subtext": "Panel 6"
       }
     ],
     "directionInline": [
@@ -416,10 +284,11 @@
         "text": "Astrid is not visible. The electrical fault is one brief minor spark; by Panel 5 the smoke has stopped. The wall strike cracks the plastic casing once, with the household reaction carrying the impact."
       }
     ],
-    "page": 4
+    "page": 4,
+    "episode": "S1E06"
   },
   {
-    "id": "VIK_S1I06_P05",
+    "id": "VIK_S1E06_P05",
     "summary": "Carrie offers Bjorn a voluntary temporal-arrival support group, and he agrees only after she makes clear that no form, housing rule or compliance requirement is attached.",
     "settingText": "Safe Cave table, then the apartment-building stoop later the same day.",
     "charactersInline": [
@@ -433,98 +302,64 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave table",
-        "shotType": "medium",
-        "action": "The cracked power strip sits inside a trash bag off to one side. Carrie and Bjorn sit across from each other with no folder between them.",
-        "dialogueIndices": [
-          0,
-          1
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "close on Carrie",
-        "action": "After Bjorn’s immediate refusal, Carrie keeps her hands off the bare table and watches him; no paperwork sits between them.",
-        "dialogueIndices": [
-          2,
-          3
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave table",
-        "shotType": "two-shot",
-        "action": "Carrie puts both hands flat on the bare table while listing “No form. No compliance box. No housing condition.”",
-        "dialogueIndices": [
-          4
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table",
-        "shotType": "close on Bjorn",
-        "action": "Bjorn’s shoulders drop a fraction; his eyes move to the bagged broken power strip and then back to Carrie.",
-        "dialogueIndices": [
-          5,
-          6
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "apartment-building stoop",
-        "shotType": "wide",
-        "action": "Later, Carrie holds the building door. Bjorn comes out already dressed in his coat and passes her toward the stairs while delivering his complaint about the meeting.",
-        "dialogueIndices": [
-          7,
-          8
-        ]
-      }
+      "Safe Cave table — Medium: The cracked power strip sits inside a trash bag off to one side. Carrie and Bjorn sit across from each other with no folder between them.",
+      "Safe Cave table — Close on Carrie: After Bjorn’s immediate refusal, Carrie keeps her hands off the bare table and watches him; no paperwork sits between them.",
+      "Safe Cave table — Two-shot: Carrie puts both hands flat on the bare table while listing “No form. No compliance box. No housing condition.”",
+      "Safe Cave table — Close on Bjorn: Bjorn’s shoulders drop a fraction; his eyes move to the bagged broken power strip and then back to Carrie.",
+      "apartment-building stoop — Wide: Later, Carrie holds the building door. Bjorn comes out already dressed in his coat and passes her toward the stairs while delivering his complaint about the meeting."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "DTI has a group for arrivals."
+        "text": "DTI has a group for arrivals.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "No."
+        "text": "No.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "You don't know what I'm asking."
+        "text": "You don't know what I'm asking.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "You have a forms voice."
+        "text": "You have a forms voice.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "No form. No condition. Just people who got dropped into another time."
+        "text": "No form. No condition. Just people who got dropped into another time.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "What do they do there?"
+        "text": "What do they do there?",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Talk. Argue."
+        "text": "Talk. Argue.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "If it's useless, I leave."
+        "text": "If it's useless, I leave.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Fine."
+        "text": "Fine.",
+        "subtext": "Panel 5"
       }
     ],
-    "page": 5
+    "page": 5,
+    "episode": "S1E06"
   },
   {
-    "id": "VIK_S1I06_P06",
+    "id": "VIK_S1E06_P06",
     "summary": "At his first group meeting, Bjorn assumes a person from 1987 lost less than he did and is forced to confront how completely one instant can erase a life.",
     "settingText": "Plain community-center multipurpose room: mismatched stackable chairs, folding table, coffee urn, bulletin board, radiator and mixed fluorescent/daylight. No therapy-office staging.",
     "charactersInline": [
@@ -542,75 +377,42 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "community-center multipurpose room",
-        "shotType": "wide",
-        "action": "Eight mismatched chairs make an imperfect circle. Ordinary displaced adults sit casually. Bjorn sits too upright. Group Facilitator occupies an ordinary chair, not a head position. Coffee urn and paper cups sit behind them."
-      },
-      {
-        "panel": 2,
-        "location": "community-center chair circle",
-        "shotType": "medium",
-        "action": "1987 Participant speaks while holding one subtle late-1980s personal object; their current clothes are practical contemporary layers.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "community-center chair circle",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn turns toward the participant, tilts his head and narrows his eyes before answering immediately.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "community-center chair circle",
-        "shotType": "close on 1987 Participant",
-        "action": "The participant's mouth tightens; they square their shoulders and hold Bjorn's gaze.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "community-center chair circle",
-        "shotType": "two-shot",
-        "action": "The participant keeps steady eye contact. Bjorn’s eyes widen slightly and his jaw relaxes; after a beat he answers the literal wording.",
-        "dialogueIndices": [
-          3,
-          4,
-          5
-        ]
-      }
+      "community-center multipurpose room — Wide: Eight mismatched chairs make an imperfect circle. Ordinary displaced adults sit casually. Bjorn sits too upright. Group Facilitator occupies an ordinary chair, not a head position. Coffee urn and paper cups sit behind them.",
+      "community-center chair circle — Medium: 1987 Participant speaks while holding one subtle late-1980s personal object; their current clothes are practical contemporary layers.",
+      "community-center chair circle — Medium on Bjorn: Bjorn turns toward the participant, tilts his head and narrows his eyes before answering immediately.",
+      "community-center chair circle — Close on 1987 Participant: The participant's mouth tightens; they square their shoulders and hold Bjorn's gaze.",
+      "community-center chair circle — Two-shot: The participant keeps steady eye contact. Bjorn’s eyes widen slightly and his jaw relaxes; after a beat he answers the literal wording."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Participant1987",
-        "text": "I came through from 1987."
+        "text": "I came through from 1987.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Then you knew almost this world."
+        "text": "Then you knew almost this world.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Participant1987",
-        "text": "My brother was eight. He's sixty-two now. My parents are dead. I'm still thirty-four."
+        "text": "My brother was eight. He's sixty-two now. My parents are dead. I'm still thirty-four.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Participant1987",
-        "text": "Don't rank it."
+        "text": "Don't rank it.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "I thought—"
+        "text": "I thought—",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Participant1987",
-        "text": "I know."
+        "text": "I know.",
+        "subtext": "Panel 5"
       }
     ],
     "directionInline": [
@@ -618,6 +420,7 @@
         "text": "Group Facilitator remains seated in the same chair circle as everyone else. Background participants wear ordinary contemporary practical clothing with no historical-costume styling."
       }
     ],
-    "page": 6
+    "page": 6,
+    "episode": "S1E06"
   }
 ]
