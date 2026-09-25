@@ -1,6 +1,6 @@
 [
   {
-    "id": "VIK_S1I07_P19",
+    "id": "VIK_S1E07_P19",
     "page": 19,
     "summary": "Carrie sits with the household as procedural guide rather than author, making clear that she can explain the process but cannot pre-write what any applicant will say.",
     "settingText": "Safe Cave table, same evening.",
@@ -27,62 +27,34 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave table",
-        "shotType": "medium",
-        "action": "Carrie is still standing with the notice while everyone else remains seated."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn slides the empty chair out with his boot. No one comments on the gesture."
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave table",
-        "shotType": "medium on Carrie",
-        "action": "Carrie looks at the chair, then at the partly unanswered review notice."
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table",
-        "shotType": "wide at table height",
-        "action": "Carrie sits at the same level as everyone else.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave table",
-        "shotType": "two-shot Carrie/Bjorn",
-        "action": "Bjorn pushes the notice toward her, but not the answers.",
-        "dialogueIndices": [
-          1,
-          2
-        ]
-      }
+      "Medium: Carrie is still standing with the notice while everyone else remains seated.",
+      "Medium on Bjorn: Bjorn slides the empty chair out with his boot. No one comments on the gesture.",
+      "Medium on Carrie: Carrie looks at the chair, then at the partly unanswered review notice.",
+      "Wide at table height: Carrie sits at the same level as everyone else.",
+      "Two-shot Carrie/Bjorn: Bjorn pushes the notice toward her, but not the answers."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "I can tell you procedure. I can't tell you what to say."
+        "text": "I can tell you procedure. I can't tell you what to say.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Then don't."
+        "text": "Then don't.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Fine."
+        "text": "Fine.",
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1I07_P18"
+    "continuityFrom": "VIK_S1E07_P18",
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P20",
+    "id": "VIK_S1E07_P20",
     "page": 20,
     "summary": "Astrid returns from an ordinary independent day; Carrie stops herself from turning the arrival into an intake interview and asks only whether Astrid is willing to face the review herself.",
     "settingText": "Fifth-floor hallway and Safe Cave table, early evening.",
@@ -113,70 +85,38 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "fifth-floor hallway outside 5B",
-        "shotType": "wide",
-        "action": "Astrid comes up the stairs carrying a small reusable bag and one folded receipt or paper. Nothing about the props suggests a secret job or dramatic mission."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave doorway",
-        "shotType": "medium",
-        "action": "The door opens with Astrid's own key. Carrie looks up from the table and reflexively starts to ask where she has been.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave doorway",
-        "shotType": "two-shot Carrie/Astrid",
-        "action": "Carrie catches herself mid-question and changes course.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table",
-        "shotType": "wide",
-        "action": "Astrid sees the notice and the others around the table. Nobody briefs her before she sits.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave table",
-        "shotType": "medium on Astrid",
-        "action": "Astrid puts the small bag down by her chair and answers only the question Carrie actually asked.",
-        "dialogueIndices": [
-          3
-        ]
-      }
+      "fifth-floor hallway outside 5B — Wide: Astrid comes up the stairs carrying a small reusable bag and one folded receipt or paper. Nothing about the props suggests a secret job or dramatic mission.",
+      "Safe Cave doorway — Medium: The door opens with Astrid's own key. Carrie looks up from the table and reflexively starts to ask where she has been.",
+      "Safe Cave doorway — Two-shot Carrie/Astrid: Carrie catches herself mid-question and changes course.",
+      "Safe Cave table — Wide: Astrid sees the notice and the others around the table. Nobody briefs her before she sits.",
+      "Safe Cave table — Medium on Astrid: Astrid puts the small bag down by her chair and answers only the question Carrie actually asked."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "Where were—"
+        "text": "Where were—",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "No. Never mind."
+        "text": "No. Never mind.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "You'll answer for yourself tomorrow?"
+        "text": "You'll answer for yourself tomorrow?",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Yes."
+        "text": "Yes.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P21",
+    "id": "VIK_S1E07_P21",
     "page": 21,
     "summary": "Astrid refuses a rehearsal without being evasive: she knows what matters to her, but she does not offer the household or Carrie a preview of the life the hearing will later uncover.",
     "settingText": "Safe Cave table, continuing the council.",
@@ -207,71 +147,39 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave table",
-        "shotType": "medium on Carrie",
-        "action": "Carrie tests one obvious question, careful not to slip back into caseworker mode.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "medium on Astrid",
-        "action": "Astrid answers the immediate part without expanding into a speech.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave table",
-        "shotType": "two-shot Carrie/Astrid",
-        "action": "Carrie waits for more. Astrid looks at the brass key and then at the closed door she entered through herself.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn almost follows up, then chooses not to. His silence is the behavioral beat."
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave table",
-        "shotType": "wide",
-        "action": "Astrid keeps the small folded receipt or paper to herself and joins the table without explaining her day.",
-        "dialogueIndices": [
-          3
-        ]
-      }
+      "Medium on Carrie: Carrie tests one obvious question, careful not to slip back into caseworker mode.",
+      "Medium on Astrid: Astrid answers the immediate part without expanding into a speech.",
+      "Two-shot Carrie/Astrid: Carrie waits for more. Astrid looks at the brass key and then at the closed door she entered through herself.",
+      "Medium on Bjorn: Bjorn almost follows up, then chooses not to. His silence is the behavioral beat.",
+      "Wide: Astrid keeps the small folded receipt or paper to herself and joins the table without explaining her day."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "You want to keep this home?"
+        "text": "You want to keep this home?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Yes."
+        "text": "Yes.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "They can ask the rest."
+        "text": "They can ask the rest.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Okay."
+        "text": "Okay.",
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1I07_P20"
+    "continuityFrom": "VIK_S1E07_P20",
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P22",
+    "id": "VIK_S1E07_P22",
     "page": 22,
     "summary": "The second male Kin worries that the hearing will demand certainty about a future he does not have; Bjorn no longer tries to supply that certainty for him.",
     "settingText": "Safe Cave window and table edge, later that evening.",
@@ -290,77 +198,43 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave window",
-        "shotType": "medium",
-        "action": "Second Male Kin stands near the window holding the transit card, separated slightly from the table conversation.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave window",
-        "shotType": "two-shot Bjorn/Second Male Kin",
-        "action": "Bjorn joins him without blocking the window or route back to the room.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave window",
-        "shotType": "medium on Second Male Kin",
-        "action": "He looks toward the city rather than toward the review notice.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave table/window axis",
-        "shotType": "medium on Carrie",
-        "action": "Carrie answers only the procedural part.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave window",
-        "shotType": "two-shot",
-        "action": "Bjorn leaves the uncertainty with the man who owns it.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Safe Cave window — Medium: Second Male Kin stands near the window holding the transit card, separated slightly from the table conversation.",
+      "Safe Cave window — Two-shot Bjorn/Second Male Kin: Bjorn joins him without blocking the window or route back to the room.",
+      "Safe Cave window — Medium on Second Male Kin: He looks toward the city rather than toward the review notice.",
+      "Safe Cave table/window axis — Medium on Carrie: Carrie answers only the procedural part.",
+      "Safe Cave window — Two-shot: Bjorn leaves the uncertainty with the man who owns it."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.KinMan2",
-        "text": "What if they want forever?"
+        "text": "What if they want forever?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "They can ask."
+        "text": "They can ask.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "I don't know."
+        "text": "I don't know.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Then say that."
+        "text": "Then say that.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Don't borrow one."
+        "text": "Don't borrow one.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P23",
+    "id": "VIK_S1E07_P23",
     "page": 23,
     "summary": "Carrie reduces preparation to the records actually required for entry into the hearing and explicitly refuses to turn private relationships or rehearsed narratives into advance evidence.",
     "settingText": "Safe Cave table, night; thin review file and printer pages.",
@@ -383,75 +257,43 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave table",
-        "shotType": "top-down",
-        "action": "Carrie narrows the materials to a thin stack: identity papers, residence records, required notices and the review letter. The symbolic household objects stay off the stack."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "medium on Carrie",
-        "action": "Carrie clips the required documents together.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave table",
-        "shotType": "two-shot Gunnar/Carrie",
-        "action": "Gunnar gestures toward a private support-group note that is not in the stack.",
-        "dialogueIndices": [
-          1,
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave doorway",
-        "shotType": "medium on Silas",
-        "action": "Silas holds the two clean printer pages from his bounded task, with his phone still in his pocket.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave table",
-        "shotType": "wide",
-        "action": "Carrie takes the printer pages, adds only what is required, and closes the file. Nobody practices testimony.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Safe Cave table — Top-down: Carrie narrows the materials to a thin stack: identity papers, residence records, required notices and the review letter. The symbolic household objects stay off the stack.",
+      "Safe Cave table — Medium on Carrie: Carrie clips the required documents together.",
+      "Safe Cave table — Two-shot Gunnar/Carrie: Gunnar gestures toward a private support-group note that is not in the stack.",
+      "Safe Cave doorway — Medium on Silas: Silas holds the two clean printer pages from his bounded task, with his phone still in his pocket.",
+      "Safe Cave table — Wide: Carrie takes the printer pages, adds only what is required, and closes the file. Nobody practices testimony."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "IDs. Residence. Notices. What they require."
+        "text": "IDs. Residence. Notices. What they require.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Group notes?"
+        "text": "Group notes?",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Private."
+        "text": "Private.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Silas",
-        "text": "Copies. Nothing else."
+        "text": "Copies. Nothing else.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Thanks."
+        "text": "Thanks.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P24",
+    "id": "VIK_S1E07_P24",
     "page": 24,
     "summary": "The household ends the night without a shared script. They know their wants differ and that tomorrow each person will have to answer for themselves.",
     "settingText": "Safe Cave, late night; table mostly cleared, brass key visible.",
@@ -482,73 +324,36 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave whole room",
-        "shotType": "wide",
-        "action": "The table is mostly clear. Gunnar closes a book. The two male Kin separate into their evening routines. Astrid puts away her small bag. Carrie stands to leave."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave table",
-        "shotType": "insert",
-        "action": "The brass key remains near the closed hearing file. No written household statement sits beside it."
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave doorway",
-        "shotType": "medium on Carrie",
-        "action": "Carrie pauses with one hand on the doorframe.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave room",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn looks first at the closed file, then at the people around the room.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave room",
-        "shotType": "wide",
-        "action": "Nobody offers him a collective answer. He accepts that.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 6,
-        "location": "fifth-floor hallway looking into 5B",
-        "shotType": "wide",
-        "action": "Carrie leaves. Bjorn picks up the brass key and closes the door on a household that is prepared to appear, not rehearsed to agree.",
-        "dialogueIndices": [
-          3
-        ]
-      }
+      "Safe Cave whole room — Wide: The table is mostly clear. Gunnar closes a book. The two male Kin separate into their evening routines. Astrid puts away her small bag. Carrie stands to leave.",
+      "Safe Cave table — Insert: The brass key remains near the closed hearing file. No written household statement sits beside it.",
+      "Safe Cave doorway — Medium on Carrie: Carrie pauses with one hand on the doorframe.",
+      "Safe Cave room — Medium on Bjorn: Bjorn looks first at the closed file, then at the people around the room.",
+      "Safe Cave room — Wide: Nobody offers him a collective answer. He accepts that.",
+      "fifth-floor hallway looking into 5B — Wide: Carrie leaves. Bjorn picks up the brass key and closes the door on a household that is prepared to appear, not rehearsed to agree."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "Know what you'll say?"
+        "text": "Know what you'll say?",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "My part."
+        "text": "My part.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "And theirs?"
+        "text": "And theirs?",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Ask them."
+        "text": "Ask them.",
+        "subtext": "Panel 6"
       }
     ],
-    "continuityFrom": "VIK_S1I07_P23"
+    "continuityFrom": "VIK_S1E07_P23",
+    "episode": "S1E07"
   }
 ]
