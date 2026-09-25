@@ -1,6 +1,6 @@
 [
   {
-    "id": "VIK_S1I07_P07",
+    "id": "VIK_S1E07_P07",
     "summary": "Carrie's instinct to account for Astrid collides with the new reality that nobody in the household needs to know her itinerary.",
     "settingText": "Safe Cave.",
     "charactersInline": [
@@ -22,72 +22,37 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Carrie scans the room and finally notices the empty place."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Gunnar looks up from his coffee."
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Carrie."
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          3
-        ],
-        "action": "The second male Kin shrugs. Bjorn does not look alarmed."
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Carrie starts to reach for her phone, then stops."
-      }
+      "Medium: Carrie scans the room and finally notices the empty place.",
+      "Medium: Gunnar looks up from his coffee.",
+      "Medium: Carrie.",
+      "Medium: The second male Kin shrugs. Bjorn does not look alarmed.",
+      "Medium: Carrie starts to reach for her phone, then stops."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "I need Astrid too. Where is she?"
+        "text": "I need Astrid too. Where is she?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Didn't ask."
+        "text": "Didn't ask.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Where?"
+        "text": "Where?",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "Didn't ask."
+        "text": "Didn't ask.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "She has a key."
+        "text": "She has a key.",
+        "subtext": "Panel 5"
       }
     ],
     "page": 7,
@@ -95,10 +60,11 @@
       {
         "text": "Astrid is off-page. Her absence is ordinary adult autonomy, not a crisis or search plot."
       }
-    ]
+    ],
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P08",
+    "id": "VIK_S1E07_P08",
     "summary": "The war council cannot keep everyone at the table because the lives under discussion are already underway outside it.",
     "settingText": "Safe Cave → building stoop / street.",
     "charactersInline": [
@@ -120,84 +86,45 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "wide",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Wide. Gunnar stands with a library tote. The second male Kin puts on his coat. Bjorn pockets the key. Carrie still has the notice open."
-      },
-      {
-        "panel": 2,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Gunnar."
-      },
-      {
-        "panel": 3,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Second male Kin."
-      },
-      {
-        "panel": 4,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "medium",
-        "action": "Carrie looks at Bjorn as if expecting him to order them back."
-      },
-      {
-        "panel": 5,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          3
-        ],
-        "action": "Bjorn looks at each man, then at the key in his hand."
-      },
-      {
-        "panel": 6,
-        "location": "Safe Cave → building stoop / street.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Exterior stoop. They split in three directions with Carrie left momentarily holding the notice."
-      }
+      "Wide. Gunnar stands with a library tote. The second male Kin puts on his coat. Bjorn pockets the key. Carrie still has the notice open.",
+      "Medium: Gunnar.",
+      "Medium: Second male Kin.",
+      "Medium: Carrie looks at Bjorn as if expecting him to order them back.",
+      "Medium: Bjorn looks at each man, then at the key in his hand.",
+      "Medium: Exterior stoop. They split in three directions with Carrie left momentarily holding the notice."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "Can everyone stay here twenty minutes?"
+        "text": "Can everyone stay here twenty minutes?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Books due."
+        "text": "Books due.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "I'm going to the river."
+        "text": "I'm going to the river.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Back tonight?"
+        "text": "Back tonight?",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Fine. Go."
+        "text": "Fine. Go.",
+        "subtext": "Panel 6"
       }
     ],
-    "page": 8
+    "page": 8,
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P09",
+    "id": "VIK_S1E07_P09",
     "summary": "Bjorn sees that the first male Kin has become part of the laundromat's ordinary social fabric without anyone arranging it for him.",
     "settingText": "neighborhood laundromat.",
     "charactersInline": [
@@ -215,74 +142,44 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "neighborhood laundromat.",
-        "shotType": "wide",
-        "action": "Wide. Rows of machines, folding tables, daytime television. The first male Kin moves his laundry from dryer to table with practiced efficiency."
-      },
-      {
-        "panel": 2,
-        "location": "neighborhood laundromat.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0,
-          1
-        ],
-        "action": "Medium. A regular patron with the red laundry cart points at a dryer timer before it buzzes."
-      },
-      {
-        "panel": 3,
-        "location": "neighborhood laundromat.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "The patron laughs and taps the machine."
-      },
-      {
-        "panel": 4,
-        "location": "neighborhood laundromat.",
-        "shotType": "medium",
-        "action": "Bjorn appears at the doorway, having crossed paths rather than followed as a supervisor. He watches the exchange before the Kin notices him."
-      },
-      {
-        "panel": 5,
-        "location": "neighborhood laundromat.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          3,
-          4
-        ],
-        "action": "Outside together afterward."
-      }
+      "Wide. Rows of machines, folding tables, daytime television. The first male Kin moves his laundry from dryer to table with practiced efficiency.",
+      "Medium. A regular patron with the red laundry cart points at a dryer timer before it buzzes.",
+      "Medium: The patron laughs and taps the machine.",
+      "Medium: Bjorn appears at the doorway, having crossed paths rather than followed as a supervisor. He watches the exchange before the Kin notices him.",
+      "Medium: Outside together afterward."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.LaundromatRegular",
-        "text": "Four minutes."
+        "text": "Four minutes.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.KinMan1",
-        "text": "It lies."
+        "text": "It lies.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.LaundromatRegular",
-        "text": "Always."
+        "text": "Always.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "You know them?"
+        "text": "You know them?",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.KinMan1",
-        "text": "They know my laundry."
+        "text": "They know my laundry.",
+        "subtext": "Panel 5"
       }
     ],
-    "page": 9
+    "page": 9,
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P10",
+    "id": "VIK_S1E07_P10",
     "summary": "Gunnar's library routine reveals a positive reason to remain in New York that has nothing to do with surviving it.",
     "settingText": "neighborhood library.",
     "charactersInline": [
@@ -296,76 +193,44 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "neighborhood library.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Medium at circulation desk. A librarian slides a held book toward Gunnar without needing Carrie present."
-      },
-      {
-        "panel": 2,
-        "location": "neighborhood library.",
-        "shotType": "medium",
-        "action": "Gunnar takes it with visible pleasure."
-      },
-      {
-        "panel": 3,
-        "location": "neighborhood library.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Bjorn, nearby with his own returned book, notices the hold slip."
-      },
-      {
-        "panel": 4,
-        "location": "neighborhood library.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2,
-          3
-        ],
-        "action": "Gunnar."
-      },
-      {
-        "panel": 5,
-        "location": "neighborhood library.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Gunnar opens the book."
-      }
+      "Medium at circulation desk. A librarian slides a held book toward Gunnar without needing Carrie present.",
+      "Medium: Gunnar takes it with visible pleasure.",
+      "Medium: Bjorn, nearby with his own returned book, notices the hold slip.",
+      "Medium: Gunnar.",
+      "Medium: Gunnar opens the book."
     ],
     "dialogueInline": [
       {
         "speaker": "LIBRARIAN",
-        "text": "This came in for you."
+        "text": "This came in for you.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "They held it for you?"
+        "text": "They held it for you?",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Yes."
+        "text": "Yes.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Why this one?"
+        "text": "Why this one?",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "I wasn't done."
+        "text": "I wasn't done.",
+        "subtext": "Panel 5"
       }
     ],
-    "page": 10
+    "page": 10,
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P11",
+    "id": "VIK_S1E07_P11",
     "summary": "The second male Kin travels alone to the East River waterfront and enjoys the fact that the city contains routes he can choose without anyone witnessing or assigning them.",
     "settingText": "subway car → East River waterfront / ferry pier area.",
     "charactersInline": [
@@ -375,57 +240,29 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "subway car → East River waterfront / ferry pier area.",
-        "shotType": "medium",
-        "action": "Subway medium. The second male Kin rides alone among commuters. He checks station signs without anxiety; no map held like a crisis object."
-      },
-      {
-        "panel": 2,
-        "location": "subway car → East River waterfront / ferry pier area.",
-        "shotType": "medium",
-        "action": "Platform/exterior transition. He exits with the crowd and follows ordinary pedestrian flow toward open water."
-      },
-      {
-        "panel": 3,
-        "location": "subway car → East River waterfront / ferry pier area.",
-        "shotType": "wide",
-        "action": "Wide waterfront. Ferries, skyline, wind, railings. He leans on the barrier watching a vessel cross the river."
-      },
-      {
-        "panel": 4,
-        "location": "subway car → East River waterfront / ferry pier area.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Medium. A ferry attendant at the nearby boarding line gestures toward the gate."
-      },
-      {
-        "panel": 5,
-        "location": "subway car → East River waterfront / ferry pier area.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "The second male Kin keeps watching the boat rather than joining the line."
-      }
+      "Medium: Subway medium. The second male Kin rides alone among commuters. He checks station signs without anxiety; no map held like a crisis object.",
+      "Medium: Platform/exterior transition. He exits with the crowd and follows ordinary pedestrian flow toward open water.",
+      "Wide waterfront. Ferries, skyline, wind, railings. He leans on the barrier watching a vessel cross the river.",
+      "Medium. A ferry attendant at the nearby boarding line gestures toward the gate.",
+      "Medium: The second male Kin keeps watching the boat rather than joining the line."
     ],
     "dialogueInline": [
       {
         "speaker": "FERRY ATTENDANT",
-        "text": "Boarding?"
+        "text": "Boarding?",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "Not today."
+        "text": "Not today.",
+        "subtext": "Panel 5"
       }
     ],
-    "page": 11
+    "page": 11,
+    "episode": "S1E07"
   },
   {
-    "id": "VIK_S1I07_P12",
+    "id": "VIK_S1E07_P12",
     "summary": "Carrie hears herself describe the household as a successful case and realizes the phrase does not answer what any person wants.",
     "settingText": "sidewalk outside library / neighborhood walk.",
     "charactersInline": [
@@ -439,74 +276,40 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "sidewalk outside library / neighborhood walk.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          0
-        ],
-        "action": "Carrie walking with Gunnar, reading a DTI email on her phone."
-      },
-      {
-        "panel": 2,
-        "location": "sidewalk outside library / neighborhood walk.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          1
-        ],
-        "action": "Gunnar keeps walking."
-      },
-      {
-        "panel": 3,
-        "location": "sidewalk outside library / neighborhood walk.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          2
-        ],
-        "action": "Carrie glances up."
-      },
-      {
-        "panel": 4,
-        "location": "sidewalk outside library / neighborhood walk.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          3
-        ],
-        "action": "Gunnar."
-      },
-      {
-        "panel": 5,
-        "location": "sidewalk outside library / neighborhood walk.",
-        "shotType": "medium",
-        "dialogueIndices": [
-          4
-        ],
-        "action": "Carrie pockets the phone."
-      }
+      "Medium: Carrie walking with Gunnar, reading a DTI email on her phone.",
+      "Medium: Gunnar keeps walking.",
+      "Medium: Carrie glances up.",
+      "Medium: Gunnar.",
+      "Medium: Carrie pockets the phone."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "They want a statement on whether the placement worked."
+        "text": "They want a statement on whether the placement worked.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Worked how?"
+        "text": "Worked how?",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Housing. Integration. Functioning."
+        "text": "Housing. Integration. Functioning.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "That's three things."
+        "text": "That's three things.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Form has one box."
+        "text": "Form has one box.",
+        "subtext": "Panel 5"
       }
     ],
-    "page": 12
+    "page": 12,
+    "episode": "S1E07"
   }
 ]
