@@ -1,6 +1,6 @@
 [
   {
-    "id": "VIK_S1I08_P19",
+    "id": "VIK_S1E08_P19",
     "page": 19,
     "summary": "The Hearing Officer gives Bjorn the decision at the center of his season arc: correcting the record means surrendering the only legal document that still names him as responsible for everyone else.",
     "settingText": "Status Reconciliation Review hearing chamber.",
@@ -35,84 +35,45 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer turns the old intake sheet toward Bjorn.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber",
-        "shotType": "close on Bjorn",
-        "action": "Bjorn looks at the responsible-adult field, then at the four people beside him.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer makes the consequence precise.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber",
-        "shotType": "reaction strip",
-        "action": "Carrie does not rescue him. Gunnar, Astrid and the two male Kin wait."
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber",
-        "shotType": "close on Bjorn",
-        "action": "Bjorn gives up the formal role without asking what replaces it.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 6,
-        "location": "hearing chamber",
-        "shotType": "insert",
-        "action": "The Hearing Officer draws one clean line through the responsible-adult designation and initials the correction.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Medium on Hearing Officer: The officer turns the old intake sheet toward Bjorn.",
+      "Close on Bjorn: Bjorn looks at the responsible-adult field, then at the four people beside him.",
+      "Medium on Hearing Officer: The officer makes the consequence precise.",
+      "Reaction strip: Carrie does not rescue him. Gunnar, Astrid and the two male Kin wait.",
+      "Close on Bjorn: Bjorn gives up the formal role without asking what replaces it.",
+      "Insert: The Hearing Officer draws one clean line through the responsible-adult designation and initials the correction."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Mr. Bjorn, the record gives you authority they say you don't have."
+        "text": "Mr. Bjorn, the record gives you authority they say you don't have.",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "It gave me duty."
+        "text": "It gave me duty.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Here, they're the same box. If I strike it, you stop answering for them."
+        "text": "Here, they're the same box. If I strike it, you stop answering for them.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Then strike it."
+        "text": "Then strike it.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "I will."
+        "text": "I will.",
+        "subtext": "Panel 6"
       }
     ],
-    "continuityFrom": "VIK_S1I08_P18"
+    "continuityFrom": "VIK_S1E08_P18",
+    "episode": "S1E08"
   },
   {
-    "id": "VIK_S1I08_P20",
+    "id": "VIK_S1E08_P20",
     "page": 20,
     "summary": "With the legal hierarchy removed, the Hearing Officer asks what actually remains between the five applicants; the answer comes from their continued choices rather than from Bjorn defining the household for them.",
     "settingText": "Status Reconciliation Review hearing chamber.",
@@ -143,84 +104,45 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer sets the corrected intake sheet beside five separate applicant pages.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber",
-        "shotType": "medium on First Male Kin",
-        "action": "First Male Kin answers from present life.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber",
-        "shotType": "medium on Second Male Kin",
-        "action": "Second Male Kin preserves his uncertainty.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber",
-        "shotType": "medium on Gunnar",
-        "action": "Gunnar answers without turning the household into a rule.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber",
-        "shotType": "medium on Astrid",
-        "action": "Astrid makes the practical point everyone else has been theorizing around.",
-        "dialogueIndices": [
-          4
-        ]
-      },
-      {
-        "panel": 6,
-        "location": "hearing chamber",
-        "shotType": "medium on Bjorn",
-        "action": "Bjorn does not add a collective declaration."
-      }
+      "Medium on Hearing Officer: The officer sets the corrected intake sheet beside five separate applicant pages.",
+      "Medium on First Male Kin: First Male Kin answers from present life.",
+      "Medium on Second Male Kin: Second Male Kin preserves his uncertainty.",
+      "Medium on Gunnar: Gunnar answers without turning the household into a rule.",
+      "Medium on Astrid: Astrid makes the practical point everyone else has been theorizing around.",
+      "Medium on Bjorn: Bjorn does not add a collective declaration."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Without that legal tie, are you still a household?"
+        "text": "Without that legal tie, are you still a household?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.KinMan1",
-        "text": "I sleep there."
+        "text": "I sleep there.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.KinMan2",
-        "text": "For now."
+        "text": "For now.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "I come back."
+        "text": "I come back.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "And none of them wash the cups."
+        "text": "And none of them wash the cups.",
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1I08_P19"
+    "continuityFrom": "VIK_S1E08_P19",
+    "episode": "S1E08"
   },
   {
-    "id": "VIK_S1I08_P21",
+    "id": "VIK_S1E08_P21",
     "page": 21,
     "summary": "The Hearing Officer asks Bjorn what remains of leadership after the legal responsible-adult role is removed; his answer is deliberately smaller and less polished than the speech he once would have given.",
     "settingText": "Status Reconciliation Review hearing chamber.",
@@ -234,99 +156,49 @@
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer looks from the corrected record to Bjorn's armor.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber",
-        "shotType": "close on Bjorn",
-        "action": "Bjorn considers the question without performing certainty.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer checks the practical meaning rather than inviting philosophy.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber",
-        "shotType": "two-shot Bjorn/Gunnar",
-        "action": "Bjorn glances once toward Gunnar, then answers for himself.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber",
-        "shotType": "wide",
-        "action": "The answer lands without applause or reaction montage.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Medium on Hearing Officer: The officer looks from the corrected record to Bjorn's armor.",
+      "Close on Bjorn: Bjorn considers the question without performing certainty.",
+      "Medium on Hearing Officer: The officer checks the practical meaning rather than inviting philosophy.",
+      "Two-shot Bjorn/Gunnar: Bjorn glances once toward Gunnar, then answers for himself.",
+      "Wide: The answer lands without applause or reaction montage."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "What are you to them then?"
+        "text": "What are you to them then?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "Bjorn."
+        "text": "Bjorn.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "That's not a legal category."
+        "text": "That's not a legal category.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "No."
+        "text": "No.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "I know."
+        "text": "I know.",
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1I08_P20"
+    "continuityFrom": "VIK_S1E08_P20",
+    "episode": "S1E08"
   },
   {
-    "id": "VIK_S1I08_P22",
+    "id": "VIK_S1E08_P22",
     "page": 22,
     "summary": "Carrie gives the final professional testimony the corrected record actually needs: she supports five separate permanent findings and accepts that doing so ends intensive case supervision rather than proving one collective integration score.",
     "settingText": "Status Reconciliation Review hearing chamber.",
@@ -338,101 +210,47 @@
       {
         "handle": "@vik.Carrie",
         "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer turns to Carrie with five separate applicant sheets now visible.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber",
-        "shotType": "medium on Carrie",
-        "action": "Carrie looks once at the old master file, then closes it.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer makes the professional consequence explicit.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber",
-        "shotType": "close on Carrie",
-        "action": "Carrie answers without hedging or converting the applicants into one score.",
-        "dialogueIndices": [
-          3
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber",
-        "shotType": "wide",
-        "action": "The Hearing Officer separates the five applicant pages physically from the old master file.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Medium on Hearing Officer: The officer turns to Carrie with five separate applicant sheets now visible.",
+      "Medium on Carrie: Carrie looks once at the old master file, then closes it.",
+      "Medium on Hearing Officer: The officer makes the professional consequence explicit.",
+      "Close on Carrie: Carrie answers without hedging or converting the applicants into one score.",
+      "Wide: The Hearing Officer separates the five applicant pages physically from the old master file."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Ms. Carrie, do you support permanent status for each applicant separately?"
+        "text": "Ms. Carrie, do you support permanent status for each applicant separately?",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Yes."
+        "text": "Yes.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "That ends intensive DTI supervision as a condition of residence. You're not certifying one household unit."
+        "text": "That ends intensive DTI supervision as a condition of residence. You're not certifying one household unit.",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Carrie",
-        "text": "Good."
+        "text": "Good.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Then I have what I need."
+        "text": "Then I have what I need.",
+        "subtext": "Panel 5"
       }
     ],
-    "continuityFrom": "VIK_S1I08_P21"
+    "continuityFrom": "VIK_S1E08_P21",
+    "episode": "S1E08"
   },
   {
-    "id": "VIK_S1I08_P23",
+    "id": "VIK_S1E08_P23",
     "page": 23,
     "summary": "The Hearing Officer grants permanent temporal-resident status only after correcting the defective household classification and making five separate findings from the testimony heard in the room.",
     "settingText": "Status Reconciliation Review hearing chamber.",
@@ -446,10 +264,6 @@
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
@@ -467,82 +281,45 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing chamber",
-        "shotType": "wide",
-        "action": "The Hearing Officer reviews five separate pages, the corrected intake sheet and the thin case file. The cadence is administrative, not triumphant."
-      },
-      {
-        "panel": 2,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer states the first finding.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 3,
-        "location": "hearing chamber",
-        "shotType": "reaction strip",
-        "action": "The five applicants absorb the word individually in different ways."
-      },
-      {
-        "panel": 4,
-        "location": "hearing chamber",
-        "shotType": "medium on Hearing Officer",
-        "action": "The officer states the housing and supervision consequence.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "hearing chamber",
-        "shotType": "two-shot Bjorn/Hearing Officer",
-        "action": "Bjorn confirms the practical meaning.",
-        "dialogueIndices": [
-          2,
-          3
-        ]
-      },
-      {
-        "panel": 6,
-        "location": "hearing chamber",
-        "shotType": "wide",
-        "action": "The officer closes the old master household file and keeps the five individual records open.",
-        "dialogueIndices": [
-          4
-        ]
-      }
+      "Wide: The Hearing Officer reviews five separate pages, the corrected intake sheet and the thin case file. The cadence is administrative, not triumphant.",
+      "Medium on Hearing Officer: The officer states the first finding.",
+      "Reaction strip: The five applicants absorb the word individually in different ways.",
+      "Medium on Hearing Officer: The officer states the housing and supervision consequence.",
+      "Two-shot Bjorn/Hearing Officer: Bjorn confirms the practical meaning.",
+      "Wide: The officer closes the old master household file and keeps the five individual records open."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.HearingOfficer",
-        "text": "The corrected record supports permanent temporal-resident status for each applicant."
+        "text": "The corrected record supports permanent temporal-resident status for each applicant.",
+        "subtext": "Panel 2"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "The Bushwick placement can continue under ordinary tenancy and program rules. Intensive DTI supervision ends."
+        "text": "The Bushwick placement can continue under ordinary tenancy and program rules. Intensive DTI supervision ends.",
+        "subtext": "Panel 4"
       },
       {
         "handle": "@vik.Bjorn",
-        "text": "We stay?"
+        "text": "We stay?",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "Yes."
+        "text": "Yes.",
+        "subtext": "Panel 5"
       },
       {
         "handle": "@vik.HearingOfficer",
-        "text": "And none of you is responsible for another's future decisions under this order."
+        "text": "And none of you is responsible for another's future decisions under this order.",
+        "subtext": "Panel 6"
       }
     ],
-    "continuityFrom": "VIK_S1I08_P22"
+    "continuityFrom": "VIK_S1E08_P22",
+    "episode": "S1E08"
   },
   {
-    "id": "VIK_S1I08_P24",
+    "id": "VIK_S1E08_P24",
     "page": 24,
     "summary": "Outside the hearing room, the household begins processing the earned ruling, but Astrid simply returns to the ordinary independent life the hearing finally made visible.",
     "settingText": "Municipal hearing-center hallway, exterior steps and city sidewalk.",
@@ -573,65 +350,30 @@
       }
     ],
     "panelPlan": [
-      {
-        "panel": 1,
-        "location": "hearing-center hallway",
-        "shotType": "wide",
-        "action": "Carrie immediately starts explaining administrative next steps while the five applicants emerge together.",
-        "dialogueIndices": [
-          0
-        ]
-      },
-      {
-        "panel": 2,
-        "location": "hearing-center hallway",
-        "shotType": "medium on Astrid",
-        "action": "Astrid checks an ordinary clock or folded receipt, shoulders her small bag and starts toward the exit."
-      },
-      {
-        "panel": 3,
-        "location": "hearing-center hallway",
-        "shotType": "medium on Gunnar",
-        "action": "Gunnar notices first.",
-        "dialogueIndices": [
-          1
-        ]
-      },
-      {
-        "panel": 4,
-        "location": "hearing-center hallway",
-        "shotType": "medium on Astrid walking",
-        "action": "Astrid answers without stopping.",
-        "dialogueIndices": [
-          2
-        ]
-      },
-      {
-        "panel": 5,
-        "location": "hearing-center exterior steps",
-        "shotType": "wide",
-        "action": "Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route."
-      },
-      {
-        "panel": 6,
-        "location": "city sidewalk",
-        "shotType": "final wide",
-        "action": "Astrid merges into the street while the others remain higher on the steps for one beat. No narration, no victory caption."
-      }
+      "hearing-center hallway — Wide: Carrie immediately starts explaining administrative next steps while the five applicants emerge together.",
+      "hearing-center hallway — Medium on Astrid: Astrid checks an ordinary clock or folded receipt, shoulders her small bag and starts toward the exit.",
+      "hearing-center hallway — Medium on Gunnar: Gunnar notices first.",
+      "hearing-center hallway — Medium on Astrid walking: Astrid answers without stopping.",
+      "hearing-center exterior steps — Wide: Astrid descends into ordinary pedestrian traffic alone. No one follows to manage her route.",
+      "city sidewalk — Final wide: Astrid merges into the street while the others remain higher on the steps for one beat. No narration, no victory caption."
     ],
     "dialogueInline": [
       {
         "handle": "@vik.Carrie",
-        "text": "Okay. The order gets entered, housing gets a copy, DTI—"
+        "text": "Okay. The order gets entered, housing gets a copy, DTI—",
+        "subtext": "Panel 1"
       },
       {
         "handle": "@vik.Gunnar",
-        "text": "Where are you going?"
+        "text": "Where are you going?",
+        "subtext": "Panel 3"
       },
       {
         "handle": "@vik.Astrid",
-        "text": "Out. Home later."
+        "text": "Out. Home later.",
+        "subtext": "Panel 4"
       }
-    ]
+    ],
+    "episode": "S1E08"
   }
 ]
