@@ -1,3 +1,7 @@
+# SUPERSEDED HISTORICAL SOURCE
+
+Current authority: `issue_12_trial_by_combat_script.md` and `pages_i12_trial_by_combat.json`.
+
 # Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
 Status: PRODUCTION SCRIPT — HARD-PROBLEM / ASTRID-COMPRESSION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
