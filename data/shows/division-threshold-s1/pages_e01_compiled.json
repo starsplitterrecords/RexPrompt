@@ -1,7 +1,7 @@
 [
   {
     "id": "DT_E001_P01",
-    "summary": "Ostra-9 moves through Checkpoint 9 with morning commuters. A scanner exposes a legacy classification — SYNTH ASSET — just before Ostra detects the first physical signs of structural failure overhead.",
+    "summary": "Ostra-9 moves through Checkpoint 9 with ordinary morning commuters. The checkpoint physically diverts her under a legacy asset classification, but she turns from the insult when she feels the first structural vibration overhead.",
     "setting": "DT_Checkpoint9",
     "region": "DT_Stack",
     "factions": [
@@ -12,46 +12,50 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Ostra moves with ordinary commuters through the checkpoint.",
-      "Scanner crosses Ostra's body; nobody else pays much attention.",
-      "Interface displays ORGANOSYNTHETIC / LOT 9 / HAZARDOUS-ZONE MANIPULATION; a secondary legacy field flashes SYNTH ASSET.",
-      "A cup trembles and overhead fasteners chatter.",
-      "Ostra looks toward the structure above. Performance and story direction: The insult and the danger share the page, but Ostra reacts first to the danger."
+      "Ostra moves with ordinary commuters through Checkpoint 9; the normal flow makes her presence unremarkable.",
+      "Her scan quietly shifts a secondary rail into place and delays only her. The attendant recognizes that the old asset classification triggered it.",
+      "While the attendant offers to flag the classification again, Ostra puts a hand to the rail and feels movement that does not belong to the checkpoint.",
+      "A commuter's cup trembles and overhead fasteners begin to chatter.",
+      "Ostra looks up toward the structure above. Performance and story direction: Establish the classification through treatment and conversation, not a reader-facing data display. The insult and danger share the page, but Ostra reacts first to the danger."
     ],
     "dialogueInline": [
       {
-        "text": "Morning. Hold for the scan.",
-        "speaker": "ATTENDANT"
+        "speaker": "ATTENDANT",
+        "text": "Morning. Same scan."
       },
       {
-        "text": "ORGANOSYNTHETIC. LOT 9. HAZARDOUS-ZONE MANIPULATION.",
-        "speaker": "SCANNER"
+        "handle": "@dt.Ostra9",
+        "text": "Mm."
       },
       {
-        "text": "LEGACY CLASSIFICATION: SYNTH ASSET.",
-        "speaker": "SCANNER"
+        "speaker": "ATTENDANT",
+        "text": "It still has you under the old asset code."
       },
       {
-        "text": "That field shouldn't still be there.",
-        "speaker": "ATTENDANT"
+        "handle": "@dt.Ostra9",
+        "text": "I know."
       },
       {
-        "text": "Neither should that vibration.",
-        "handle": "@dt.Ostra9"
+        "speaker": "ATTENDANT",
+        "text": "I can flag it again."
       },
       {
-        "text": "What vibration?",
-        "speaker": "ATTENDANT"
+        "handle": "@dt.Ostra9",
+        "text": "That's moving."
       },
       {
-        "text": "Maintenance. Overhead.",
-        "handle": "@dt.Ostra9"
+        "speaker": "ATTENDANT",
+        "text": "The rail?"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Above us."
       }
     ]
   },
   {
     "id": "DT_E001_P02",
-    "summary": "The checkpoint attendant delays Ostra for authorization while Ostra sees fractures racing through the overpass joint above civilians. Ostra steps through the barrier.",
+    "summary": "The checkpoint attendant tries to open structural access while Ostra sees the overpass joint begin to fail above civilians. Authorization cannot arrive in time, and Ostra crosses the barrier.",
     "setting": "DT_Checkpoint9",
     "region": "DT_Stack",
     "factions": [
@@ -62,35 +66,39 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Attendant blocks Ostra while requesting authorization.",
-      "Ostra looks past the attendant toward the overpass.",
-      "Fine fractures race through a load joint above the concourse.",
-      "Ostra crosses the barrier toward the danger. Performance and story direction: End on the choice to move, not on explanation."
+      "Ostra and the attendant move together to the structural-access barrier; he tries the gate rather than merely blocking her.",
+      "The access control refuses the attendant while Ostra looks past him toward the overpass.",
+      "Fine fractures race through a load joint above the concourse as the attendant tries another authorization path.",
+      "Ostra crosses the barrier toward the danger. Performance and story direction: The attendant is trying to help within his authority. End on Ostra's choice to move, not on explanation."
     ],
     "dialogueInline": [
       {
-        "text": "Your route doesn't include structural access.",
-        "speaker": "ATTENDANT"
+        "speaker": "ATTENDANT",
+        "text": "Structural route's locked."
       },
       {
-        "text": "That joint is failing.",
-        "handle": "@dt.Ostra9"
+        "handle": "@dt.Ostra9",
+        "text": "That joint is failing."
       },
       {
-        "text": "Then I need emergency authorization.",
-        "speaker": "ATTENDANT"
+        "speaker": "ATTENDANT",
+        "text": "I need emergency authorization."
       },
       {
-        "text": "How long?",
-        "handle": "@dt.Ostra9"
+        "handle": "@dt.Ostra9",
+        "text": "How long?"
       },
       {
-        "text": "I don't know. Stay behind the line.",
-        "speaker": "ATTENDANT"
+        "speaker": "ATTENDANT",
+        "text": "I don't know."
       },
       {
-        "text": "Purpose updated.",
-        "handle": "@dt.Ostra9"
+        "speaker": "ATTENDANT",
+        "text": "Ostra—"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Purpose updated."
       }
     ],
     "continuityFrom": "DT_E001_P01"
@@ -108,18 +116,14 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Establish the failure: one support shears, a transit car brakes above, civilians are below.",
-      "Ostra launches into the load path using anchoring, leverage and engineered strength.",
-      "Large image: Ostra catches and redirects the brace; plates fracture under load. Performance and story direction: Show the mechanics clearly. This is structural problem-solving under extreme load, not a superhero pose."
+      "Establish the failure: one support shears, a transit car brakes hard above, and civilians are trapped below.",
+      "Ostra launches into the load path using anchoring, leverage and engineered strength while people scramble clear.",
+      "Large image: Ostra catches and redirects the brace; her ceramic plates fracture under load. Performance and story direction: Show the mechanics clearly. This is structural problem-solving under extreme load, not a superhero pose. Let brakes, impact and human reaction carry the urgency rather than explanatory interface text."
     ],
     "dialogueInline": [
       {
         "speaker": "CIVILIAN",
         "text": "Move! Move!"
-      },
-      {
-        "speaker": "TRANSIT SYSTEM",
-        "text": "EMERGENCY BRAKE ENGAGED."
       },
       {
         "speaker": "CIVILIAN",
@@ -130,7 +134,7 @@
   },
   {
     "id": "DT_E001_P04",
-    "summary": "Ostra holds the unstable structure long enough to direct civilians toward a stable service arch and shield a trapped parent and child. Municipal responders arrive but protocol prevents them from entering.",
+    "summary": "Ostra holds the unstable structure long enough to direct civilians toward a stable service arch and shield a trapped parent and child. Responders arrive ready to help, but their structural-access gate will not authorize entry.",
     "setting": "DT_Overpass",
     "region": "DT_Stack",
     "factions": [
@@ -143,9 +147,9 @@
     "panelPlan": [
       "Ostra identifies several failure points while holding the brace.",
       "Ostra directs civilians toward the stable service arch.",
-      "A parent freezes; Ostra shields parent and child from debris.",
-      "Responders arrive at the perimeter but their system refuses entry.",
-      "Ostra remains under load as responders hesitate. Performance and story direction: The responders are constrained by system rules, not drawn as cowards."
+      "A parent freezes; Ostra shields the parent and child from debris and draws them into the safe path.",
+      "Municipal responders reach the perimeter and physically try the structural gate; it refuses their access.",
+      "Ostra remains under load while the responders work the barrier. Performance and story direction: Their bodies are ready to act; procedure physically stops them. Do not portray them as cowards."
     ],
     "dialogueInline": [
       {
@@ -158,11 +162,11 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Bring him to me."
+        "text": "Bring him here."
       },
       {
         "speaker": "RESPONDER",
-        "text": "We don't have entry clearance."
+        "text": "It won't give us structural."
       },
       {
         "speaker": "SECOND RESPONDER",
@@ -174,7 +178,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "If you're waiting on clearance, fine. I'm not."
+        "text": "If the gate won't open, stay clear."
       }
     ],
     "continuityFrom": "DT_E001_P03"
@@ -220,7 +224,7 @@
   },
   {
     "id": "DT_E001_P06",
-    "summary": "Kellen Cartwright reviews raw rescue footage with an Oversight director and realizes the institution wants an attribution narrative, not an investigation.",
+    "summary": "Kellen Cartwright questions responders during Oversight incident intake while the dust of the rescue is still on their gear. She realizes a public narrative is already being prepared before anyone has established why the structure failed.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -230,62 +234,78 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Raw footage clearly shows Ostra saving civilians.",
-      "A separate feed already headlines ORGANOSYNTHETIC INTERFERENCE AT TRANSIT FAILURE.",
-      "Kellen challenges the clearance argument.",
-      "An unnamed Oversight director reframes the event as protocol failure avoided by luck.",
-      "Kellen watches the raw footage while the director asks for a public story. Performance and story direction: Keep the director institutionally credible and visually generic; the turn is Kellen recognizing that a deadline has replaced investigation."
+      "Civic Oversight incident intake: dusty responder helmets, cracked protective equipment and tired personnel are being logged after the overpass rescue.",
+      "Kellen questions the responder who was stopped at the structural gate and establishes that Ostra entered only after the joint began failing.",
+      "An aide hands the Oversight director a prepared public statement while the responder is still giving the account.",
+      "Kellen challenges the director: the institution is already framing jurisdiction before establishing cause.",
+      "The director makes the deadline explicit. Performance and story direction: Let the threat come from ordinary people manufacturing an administratively defensible story while physical evidence from the rescue is still in the room."
     ],
     "dialogueInline": [
       {
-        "text": "UPPER LEVELS — CIVIC OVERSIGHT",
-        "speaker": "CAPTION"
+        "speaker": "CAPTION",
+        "text": "UPPER LEVELS — CIVIC OVERSIGHT"
       },
       {
-        "text": "Back six seconds.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "She was inside before the joint went?"
       },
       {
-        "text": "We have the raw feed.",
-        "speaker": "DIRECTOR"
+        "speaker": "RESPONDER",
+        "text": "No. After."
       },
       {
-        "text": "Then look at the joint. She moves after it starts failing.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "DIRECTOR",
+        "text": "She crossed a locked barrier."
       },
       {
-        "text": "She crossed a locked barrier.",
-        "speaker": "DIRECTOR"
+        "handle": "@dt.KellenCartwright",
+        "text": "Because the barrier kept your crew out."
       },
       {
-        "text": "And saved people your responders couldn't reach.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "RESPONDER",
+        "text": "We were trying to get clearance."
       },
       {
-        "text": "Which is why we call this a tragedy avoided by luck, then reassert protocol.",
-        "speaker": "DIRECTOR"
+        "handle": "@dt.KellenCartwright",
+        "text": "I know."
       },
       {
-        "text": "Are we finding out what happened, or deciding who gets blamed?",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "You've already got copy."
       },
       {
-        "text": "I need something we can defend by the evening cycle.",
-        "speaker": "DIRECTOR"
+        "speaker": "DIRECTOR",
+        "text": "There's always copy."
       },
       {
-        "text": "That's not an investigation.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "You haven't asked why the support failed."
       },
       {
-        "text": "No. It's a deadline.",
-        "speaker": "DIRECTOR"
+        "speaker": "DIRECTOR",
+        "text": "That's a different clock."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "And saved people your responders couldn't reach isn't part of this clock?"
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "I need something we can defend by the evening cycle."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "That's not an investigation."
+      },
+      {
+        "speaker": "DIRECTOR",
+        "text": "No. It's a deadline."
       }
     ]
   },
   {
     "id": "DT_E001_P07",
-    "summary": "At an Augment clinic, Nathan Price performs routine calibration on John Mercer while other patients make augmentation feel mundane and class-visible. John notices physical evidence in the rescue footage and decides to inspect the site.",
+    "summary": "At an Augment clinic, Nathan performs routine calibration on John's torque-boosted knee while they talk around a silent replay of the rescue. John notices that the structural break starts before Ostra reaches it and decides to inspect the site.",
     "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
     "factions": [
@@ -297,66 +317,78 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Nathan checks John's torque-boosted knee and reflex loop.",
-      "Background patients show different levels and quality of augmentation.",
-      "John says he is functional; Nathan works without looking up.",
-      "A news feed frames Ostra as possible cause while John studies the structure itself.",
-      "John gets off the calibration rig. Performance and story direction: Let body maintenance and workplace routine do the cultural worldbuilding."
+      "Nathan calibrates John's knee and reflex loop while other patients make augmentation feel mundane, medical and class-visible.",
+      "John insists he is standing fine; Nathan keeps working and answers like someone who has heard this before.",
+      "A silent replay of the rescue is visible in the clinic. John asks Nathan to look without turning the scene into a news-reading sequence.",
+      "They see the joint begin to fail before Ostra reaches it.",
+      "John gets off the calibration rig and tells Nathan to get his kit. Performance and story direction: The investigation emerges from body maintenance and familiar conversation."
     ],
     "dialogueInline": [
       {
-        "text": "AUGMENT CLINIC — LOWER MIDLEVELS",
-        "speaker": "CAPTION"
+        "speaker": "CAPTION",
+        "text": "AUGMENT CLINIC — LOWER MIDLEVELS"
       },
       {
-        "text": "Your left knee is compensating again.",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.NathanPrice",
+        "text": "You're leaning left again."
       },
       {
-        "text": "It's functional.",
-        "handle": "@dt.JohnMercer"
+        "handle": "@dt.JohnMercer",
+        "text": "I'm standing."
       },
       {
-        "text": "So is a chair with one short leg.",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.NathanPrice",
+        "text": "Technically."
       },
       {
-        "text": "Pause the feed.",
-        "handle": "@dt.JohnMercer"
+        "handle": "@dt.JohnMercer",
+        "text": "Again."
       },
       {
-        "text": "You watching her or the steel?",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.NathanPrice",
+        "text": "I'm working on you."
       },
       {
-        "text": "Steel. Look under the joint.",
-        "handle": "@dt.JohnMercer"
+        "handle": "@dt.JohnMercer",
+        "text": "I know."
       },
       {
-        "text": "I see it.",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.NathanPrice",
+        "text": "Apparently not."
       },
       {
-        "text": "The break starts before she touches it.",
-        "handle": "@dt.JohnMercer"
+        "handle": "@dt.NathanPrice",
+        "text": "You watching her or the steel?"
       },
       {
-        "text": "Is that sentence getting us out of the clinic?",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.JohnMercer",
+        "text": "Steel."
       },
       {
-        "text": "Get your kit.",
-        "handle": "@dt.JohnMercer"
+        "handle": "@dt.NathanPrice",
+        "text": "Ah."
       },
       {
-        "text": "There it is.",
-        "handle": "@dt.NathanPrice"
+        "handle": "@dt.JohnMercer",
+        "text": "Break starts before she touches it."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Good. Now get off my rig before you decide that's our problem."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Get your kit."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "There it is."
       }
     ]
   },
   {
     "id": "DT_E001_P08",
-    "summary": "Ostra returns to an inhabited Organic maintenance district where Nico-14 repairs her damaged arm. Nico argues that public heroics teach institutions to rely on Organics without granting autonomy.",
+    "summary": "Ostra returns to her inhabited Organic neighborhood, where Nico immediately begins repairing her damaged arm. Their disagreement about the rescue unfolds through the intimacy and irritation of the repair rather than as a political argument delivered whole.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
     "factions": [
@@ -367,16 +399,16 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Ostra enters a lived-in Organic service-volume neighborhood and is greeted normally.",
-      "Nico sees the damage and starts repair immediately.",
-      "Nico challenges Ostra's decision to intervene publicly.",
-      "Ostra answers while Nico works.",
-      "Nico finishes the thought: reliable rescue can become another assigned function. Performance and story direction: Ostra belongs here. The scene is repair and disagreement, not a tour of Organic culture."
+      "Ostra enters a lived-in Organic service-volume neighborhood and is greeted normally; she belongs here.",
+      "Nico sees the damage and begins repair without ceremony.",
+      "As Nico seats damaged tissue and plate, he calls out Ostra for bracing and pretending damage does not count if she can remain upright.",
+      "Their disagreement about the public rescue surfaces indirectly while Nico works: Nico fears what institutions will make of a visibly successful unauthorized Organic intervention.",
+      "Nico cannot answer Ostra's question about what he would have done differently. Performance and story direction: Preserve pauses, practical gestures and unfinished thoughts. The scene is repair between people who know each other."
     ],
     "dialogueInline": [
       {
-        "text": "SERVICE VOLUME 14 — ORGANIC DISTRICT",
-        "speaker": "CAPTION"
+        "speaker": "CAPTION",
+        "text": "SERVICE VOLUME 14 — ORGANIC DISTRICT"
       },
       {
         "handle": "@dt.Nico14",
@@ -388,27 +420,47 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "No. You're pretending damage doesn't count if you can stand."
+        "text": "You're bracing."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Can you repair it?"
+        "text": "You said hold still."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Yes. That's not what I'm angry about."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "You showed them."
+        "text": "I said hold still. I didn't say lie to me."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I stopped a collapse."
+        "text": "Can you fix it?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Exactly. You taught them we'll always step in."
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "That's not what I'm angry about."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I know."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Do you?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You know what they saw today?"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "People getting out."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "A body they still call an asset doing work nobody authorized."
       },
       {
         "handle": "@dt.Ostra9",
@@ -416,13 +468,21 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And next time they'll expect us to do it again, whether we're allowed in or not."
+        "text": "I know."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then what would you have done?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "That's the part I don't like."
       }
     ]
   },
   {
     "id": "DT_E001_P09",
-    "summary": "During the repair, Nico detects evidence that the overpass failure was engineered. A maintenance route beneath the failed support was accessed before the collapse.",
+    "summary": "During Ostra's repair, Nico discovers that part of the fracture was created before the rescue. The conspiracy is physically lodged in Ostra's damaged plate: a precise resonance cut and fresh access evidence beneath the catastrophic break.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
     "factions": [
@@ -433,54 +493,67 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Nico interfaces sensory filaments with Ostra's damaged plate and recovered debris.",
-      "Nico isolates a resonance pattern inconsistent with fatigue.",
-      "Ostra asks whether it was intentional.",
-      "Nico brings up the maintenance map showing the pre-collapse access. Performance and story direction: The reveal should come from physical evidence handled during repair."
+      "Nico removes and inspects damaged material from Ostra's arm while continuing the repair.",
+      "He stops when he finds a fine preexisting resonance-cut line buried beneath the catastrophic fracture.",
+      "Nico checks the underside material and sealant directly rather than consulting a map or explanatory display.",
+      "The physical evidence shows that someone opened the underside access shortly before the support failed.",
+      "Ostra and Nico realize the failure was engineered. Performance and story direction: The reveal comes entirely from handled evidence and Ostra's body."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "This fracture isn't from the load."
+        "text": "Wait."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "What is it from?"
+        "text": "Bad?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Resonance scoring. Small. Precise."
+        "text": "Different."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "This didn't happen when you caught the brace."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Intentional?"
+        "text": "What did?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Somebody knew exactly where to hit it."
+        "text": "Resonance cutter."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Could maintenance have done that by accident?"
+        "text": "Maintenance?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Not with this access time."
+        "text": "Sealant's still young."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "When?"
+        "text": "Meaning?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Before you reached the checkpoint."
+        "text": "Somebody opened the underside access shortly before it failed."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Accident?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Not with a cut that clean."
       }
     ],
     "continuityFrom": "DT_E001_P08"
   },
   {
     "id": "DT_E001_P10",
-    "summary": "An unnamed private-security intermediary gives Kellen a polished legacy-asset explanation for Ostra. Kellen notices the packet was prepared before she requested it.",
+    "summary": "A polished private-security intermediary brings Kellen a fully assembled legacy-asset case for Ostra. The preparation itself is the threat: the packet was built before Kellen requested the underlying records.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -490,58 +563,66 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "An unnamed private-security intermediary places a complete legacy classification packet in front of Kellen.",
-      "Kellen scans the asset language.",
-      "Kellen asks whether the claim is that Ostra was city property.",
-      "The packet metadata shows it predates Kellen's request.",
-      "Kellen closes the packet and confronts the intermediary. Performance and story direction: Keep the intermediary polished and ordinary; timing and prepared paperwork provide the threat."
+      "The intermediary places a thick, beautifully organized physical packet in front of Kellen.",
+      "Kellen flips through tabs and realizes she has been given an argument, not raw records.",
+      "The intermediary calmly explains that the old contract records what the city believed it bought.",
+      "Kellen notices the physical preparation stamp and indexing predate her request.",
+      "She closes the packet and confronts him. Performance and story direction: Do not require the reader to decipher packet text; timing, thickness, organization and conversation carry the scene."
     ],
     "dialogueInline": [
       {
-        "text": "You wanted the legacy basis.",
-        "speaker": "INTERMEDIARY"
+        "speaker": "INTERMEDIARY",
+        "text": "You wanted the legacy basis."
       },
       {
-        "text": "I asked for records. This is an argument with exhibits.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "I asked for records."
       },
       {
-        "text": "The old contract says Synth asset.",
-        "speaker": "INTERMEDIARY"
+        "handle": "@dt.KellenCartwright",
+        "text": "This is a case."
       },
       {
-        "text": "It says the city owned her.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "INTERMEDIARY",
+        "text": "It's organized."
       },
       {
-        "text": "It says what the city believed it bought.",
-        "speaker": "INTERMEDIARY"
+        "handle": "@dt.KellenCartwright",
+        "text": "It's argued."
       },
       {
-        "text": "This packet predates my request.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "The old contract really calls her an asset?"
       },
       {
-        "text": "We anticipated the question.",
-        "speaker": "INTERMEDIARY"
+        "speaker": "INTERMEDIARY",
+        "text": "It records what the city believed it bought."
       },
       {
-        "text": "No. You arrived with the answer.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "I requested this twelve minutes ago."
       },
       {
-        "text": "Does that difference matter tonight?",
-        "speaker": "INTERMEDIARY"
+        "speaker": "INTERMEDIARY",
+        "text": "We anticipated the question."
       },
       {
-        "text": "It tells me you knew what I'd find.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "You indexed exhibits before I asked the question."
+      },
+      {
+        "speaker": "INTERMEDIARY",
+        "text": "Does the distinction matter tonight?"
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "It tells me you knew what I'd find."
       }
     ]
   },
   {
     "id": "DT_E001_P11",
-    "summary": "AX10M is assigned a routine volatility review of the overpass incident. The official model classifies Ostra's rescue as an unauthorized Organic deviation, but the raw timeline shows that waiting for authorization would have produced multiple deaths.",
+    "summary": "A civic analyst assigns Axiom a routine volatility review in an incident-reconstruction bay. Axiom watches the authorized and actual versions play out spatially and discovers that the official category describes jurisdiction better than it describes what happened.",
     "setting": "DT_DataCore",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -551,58 +632,82 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "A civic analyst assigns Axiom the routine volatility review in a quiet analysis bay; the official tag is already attached before review begins.",
-      "The authorized-response branch shows responders waiting outside the exclusion zone while projected casualties climb.",
-      "The actual branch shows Ostra crossing the barrier and the casualty count falling to zero.",
-      "The analyst treats UNAUTHORIZED ORGANIC DEVIATION as an administrative category; Axiom compares the category against the outcome it fails to predict.",
-      "After the analyst moves on, Axiom preserves the contradiction in a private analytic branch. Performance and story direction: Axiom is not becoming sympathetic. It is noticing that the classification predicts the event worse than Ostra's independent judgment did. This is the first quiet echo of Purpose updated."
+      "A civic analyst brings Axiom into a restrained incident-reconstruction bay and states that the event has already been tagged as unauthorized Organic deviation.",
+      "Axiom runs the authorized response as a spatial reconstruction: responders remain behind the barrier and the failing structure reaches civilians.",
+      "Axiom resets the same physical space and runs the actual response: Ostra crosses, redirects the load and evacuation succeeds.",
+      "Axiom questions why deviation is the subject when it predicts the outcome worse than Ostra's behavior.",
+      "The analyst leaves for the next task; Axiom stops the reconstruction from clearing and preserves both versions. Performance and story direction: Axiom is testing classification against reality, not reading a dashboard and not becoming sentimental."
     ],
     "dialogueInline": [
       {
-        "text": "CIVIC DATA CORE",
-        "speaker": "CAPTION"
+        "speaker": "CAPTION",
+        "text": "CIVIC DATA CORE"
       },
       {
-        "text": "Routine volatility review. The incident is already tagged.",
-        "speaker": "CIVIC ANALYST"
+        "speaker": "CIVIC ANALYST",
+        "text": "Routine volatility. Intake already tagged it."
       },
       {
-        "text": "The authorized branch waits outside the zone. Projected deaths: seven to eleven.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "As?"
       },
       {
-        "text": "That's the counterfactual.",
-        "speaker": "CIVIC ANALYST"
+        "speaker": "CIVIC ANALYST",
+        "text": "Unauthorized Organic deviation."
       },
       {
-        "text": "The actual intervention produced zero deaths.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "If Ostra-9 waits?"
       },
       {
-        "text": "The category is unauthorized Organic deviation.",
-        "speaker": "CIVIC ANALYST"
+        "speaker": "CIVIC ANALYST",
+        "text": "Seven to eleven projected."
       },
       {
-        "text": "The category explains the event less accurately than the behavior it condemns.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "If she acts?"
       },
       {
-        "text": "It's not supposed to explain the outcome.",
-        "speaker": "CIVIC ANALYST"
+        "speaker": "CIVIC ANALYST",
+        "text": "Zero."
       },
       {
-        "text": "Then it does not describe what happened.",
-        "handle": "@dt.Axiom"
+        "speaker": "CIVIC ANALYST",
+        "text": "We know."
       },
       {
-        "text": "Preserve contradiction.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "Then why is the deviation the subject?"
+      },
+      {
+        "speaker": "CIVIC ANALYST",
+        "text": "Because that's what we're reviewing."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The category predicts the event poorly."
+      },
+      {
+        "speaker": "CIVIC ANALYST",
+        "text": "It isn't a prediction."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Then what is it?"
+      },
+      {
+        "speaker": "CIVIC ANALYST",
+        "text": "A jurisdiction."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Keep both."
       }
     ]
   },
   {
     "id": "DT_E001_P12",
-    "summary": "John and Nathan inspect the failed overpass from the public repair perimeter. John finds a precisely induced fracture path that required access and timing, while Nathan notices the intervention was calibrated to force an immediate rescue decision rather than maximize casualties.",
+    "summary": "John and Nathan inspect the failed overpass from the reopened repair perimeter. Handling the damaged support directly, they find an induced cut and realize the event was calibrated to force an immediate decision in public rather than simply maximize casualties.",
     "setting": "DT_Overpass",
     "region": "DT_Stack",
     "factions": [
@@ -614,20 +719,20 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "John and Nathan enter the reopened edge of the concourse among ordinary repair crews and commuters rerouted around the damage.",
-      "John examines the sheared support and finds a cut or resonance scar hidden beneath the natural-looking break.",
-      "Nathan maps where civilians, responders and Ostra were positioned when the failure began.",
-      "The failure window is too narrow for normal clearance but long enough for a capable nearby responder to choose intervention.",
-      "John realizes the event was designed to produce a decision in public. Performance and story direction: Keep the deduction physical and legible. They do not know who did it or why yet."
+      "John and Nathan enter the reopened edge of the concourse among ordinary repair crews and rerouted commuters.",
+      "John gets beneath the repair line while Nathan holds a work light; John exposes the concealed scoring under the natural-looking break.",
+      "John hands Nathan a magnifier so Nathan can see the induced cut for himself.",
+      "Nathan looks from the cut to the evacuation path and realizes a more lethal sabotage would have been easy.",
+      "John looks toward the barrier Ostra crossed and concludes that someone wanted a person to face the choice of whether to wait. Performance and story direction: Keep the deduction tactile, spatial and conversational."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.NathanPrice",
-        "text": "Repair crews say fatigue."
+        "text": "Repair says fatigue."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Repair crews were handed the top layer."
+        "text": "Repair got the top layer."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -643,15 +748,15 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Induced. Then hidden by the break."
+        "text": "Induced. Break hid most of it."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "If they wanted bodies, they could've had them."
+        "text": "If they wanted bodies—"
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Exactly."
+        "text": "They picked a bad way to get them."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -659,13 +764,21 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "They wanted someone to have to act."
+        "text": "Somebody had to decide."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Decide what?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Whether to wait."
       }
     ]
   },
   {
     "id": "DT_E001_P13",
-    "summary": "Kellen traces the prewritten Ostra packet to a dormant risk-modeling procurement program. The program's language does not predict disasters; it measures public tolerance for autonomous action by regulated populations.",
+    "summary": "Kellen takes the prewritten packet to the night archive. A tired archivist opens a dormant procurement container and finds the overpass already filed as a completed observation while the public investigation remains open; the next prepared sleeve is for Concourse 17.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -675,66 +788,78 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Late office traffic has thinned. Kellen brings the packet metadata to the night archive desk rather than staging a clandestine hack.",
-      "The tired archivist follows the packet into a dormant procurement index full of bland civic-risk language.",
-      "A buried scope line reads RESPONSE LEGIBILITY / AUTHORITY COMPLIANCE / PUBLIC ATTRIBUTION.",
-      "The overpass appears as a completed observation set even though the public investigation remains open.",
-      "The archivist turns the display toward Kellen: CONCOURSE 17 / OPENING CYCLE / NEXT WINDOW. Performance and story direction: One bureaucratic discovery changes the meaning of the accident."
+      "Late office traffic has thinned. Kellen brings the physical packet to a staffed night archive desk rather than conducting a clandestine hack.",
+      "The archivist retrieves a neglected procurement container, breaks its archive seal and explains that dormant programs often survive because nobody owns the cleanup.",
+      "Inside, the overpass evaluation folder has already been moved to the completed stack despite the still-open public investigation.",
+      "The archivist finds the next prepared work sleeve: Concourse 17, opening cycle.",
+      "Kellen looks from the completed overpass folder to the prepared Concourse sleeve and realizes the program was waiting to observe what people would do. Performance and story direction: The discovery is an impossible filing fact, not a screen-reading sequence."
     ],
     "dialogueInline": [
       {
-        "text": "That procurement line is dormant.",
-        "speaker": "NIGHT ARCHIVIST"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Dormant line."
       },
       {
-        "text": "The packet came through it tonight.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "Tonight's packet came through it."
       },
       {
-        "text": "Dormant doesn't mean empty. It means nobody owns the cleanup.",
-        "speaker": "NIGHT ARCHIVIST"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Dormant doesn't mean dead."
       },
       {
-        "text": "Open the scope.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Usually means nobody owns the cleanup."
       },
       {
-        "text": "Response visibility. Authority compliance. Public attribution.",
-        "speaker": "NIGHT ARCHIVIST"
+        "handle": "@dt.KellenCartwright",
+        "text": "That's closed."
       },
       {
-        "text": "Event outputs?",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "In here."
       },
       {
-        "text": "Overpass: complete.",
-        "speaker": "NIGHT ARCHIVIST"
+        "handle": "@dt.KellenCartwright",
+        "text": "The investigation is still open."
       },
       {
-        "text": "It's still under investigation.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Apparently not to whoever filed this."
       },
       {
-        "text": "Not in this file.",
-        "speaker": "NIGHT ARCHIVIST"
+        "handle": "@dt.KellenCartwright",
+        "text": "What's next?"
       },
       {
-        "text": "Next window?",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Concourse 17."
       },
       {
-        "text": "Concourse 17. Tomorrow, opening cycle.",
-        "speaker": "NIGHT ARCHIVIST"
+        "handle": "@dt.KellenCartwright",
+        "text": "When?"
       },
       {
-        "text": "So this wasn't forecasting. They were watching what we'd do.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Opening cycle."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "They weren't forecasting the accident."
+      },
+      {
+        "speaker": "NIGHT ARCHIVIST",
+        "text": "Doesn't look like it."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "They were waiting to see what we'd do with it."
       }
     ]
   },
   {
     "id": "DT_E001_P14",
-    "summary": "Ostra and Nico compare Nico's physical evidence with a narrow anonymous data fragment Kellen has pushed outside Oversight. The fragment identifies a second observation window at Concourse 17 but not the mechanism.",
+    "summary": "An anonymous Oversight evidence sleeve reaches Ostra and Nico during the continuing repair. It contains only enough to connect the overpass planning cadence to a second observation window at Concourse 17.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
     "factions": [
@@ -745,36 +870,24 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Nico receives an anonymous narrow data packet and initially treats it as a trap.",
-      "The packet contains procurement metadata, a location, and a scheduled observation window, but no predicted mechanism.",
-      "Nico overlays it with the maintenance-access trace from the overpass.",
-      "The timestamps use the same planning cadence.",
-      "The second window is scheduled for the next morning at Concourse 17. Performance and story direction: Kellen need not physically meet them. This creates a practical bridge without forming a team or revealing more than Kellen can safely prove."
+      "A narrow anonymous evidence sleeve arrives through an ordinary neighborhood delivery rack while Nico is still finishing Ostra's repair.",
+      "Nico initially treats the material as a possible trap; it contains procurement routing, a location and a time window, but no predicted mechanism.",
+      "Nico compares the timing physically with the maintenance-access evidence recovered from Ostra's damaged plate.",
+      "The cadence matches the overpass planning interval.",
+      "They identify Concourse 17 at opening cycle, with no explanation of what will happen. Performance and story direction: Keep the information sparse and handled. Kellen need not physically meet them."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "Anonymous Oversight packet."
+        "text": "Oversight routing."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Useful?"
+        "text": "From who?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Useful things can still be traps."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "Does it match?"
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Maintenance cadence. Same interval. Same planning clock."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "Where?"
+        "text": "Someone who doesn't want an answer."
       },
       {
         "handle": "@dt.Nico14",
@@ -786,21 +899,29 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Tomorrow. Opening cycle."
+        "text": "Opening cycle."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Mechanism?"
+        "text": "Same?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Nothing."
+        "text": "Same cadence."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "What happens?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Doesn't say."
       }
     ]
   },
   {
     "id": "DT_E001_P15",
-    "summary": "Ostra and Nico decide to warn Concourse 17 despite having no mechanism to describe. Nico argues that an unsupported warning may itself create the public behavior the unknown program wants to measure; Ostra refuses to let that possibility become an excuse for silence.",
+    "summary": "Ostra and Nico finish the repair while deciding what responsibility follows from an incomplete warning. Rather than order an evacuation they cannot justify, they choose to bring the evidence to Concourse 17 and let the people there decide.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
     "factions": [
@@ -811,32 +932,32 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Nico maps the three-level commercial concourse and its morning traffic density.",
-      "They have a time window but no device, chemical, attacker, or failure mode.",
-      "Nico demonstrates how a premature evacuation would generate exactly the kind of public-attribution data described in the program scope.",
-      "Ostra proposes giving the local organizer the evidence rather than issuing an order.",
-      "They decide to be at the concourse before the scheduled window begins. Performance and story direction: End before the suppressant event. The page hands the unresolved warning and the right to decide to the Concourse organizer."
+      "Nico packs the recovered plate evidence while completing the last steps of Ostra's repair.",
+      "They talk through the practical problem: a location and time without a device, attacker or failure mode.",
+      "Nico worries that an unsupported warning could itself produce the public reaction the program is measuring.",
+      "Ostra insists that uncertainty does not transfer the decision away from the people who will be there.",
+      "Ostra tests the repaired arm; they prepare to leave for Concourse 17 before opening cycle. Performance and story direction: Let repair, packing, pauses and disagreement carry the scene."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "If we warn them with this, they ask what happens."
+        "text": "So we walk in tomorrow and tell them something happens at a particular time."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "We say we don't know."
+        "text": "We tell them what we know."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That's not a warning. That's a rumor with a timestamp."
+        "text": "Which is almost nothing."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then we show them the evidence and let them decide."
+        "text": "Enough for them to decide."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "They may close three levels for nothing."
+        "text": "They might close three levels for nothing."
       },
       {
         "handle": "@dt.Ostra9",
@@ -844,20 +965,24 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "They may want you there."
+        "text": "They might want you to stay."
       },
       {
         "handle": "@dt.Ostra9",
         "text": "People will be there."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Yeah."
       }
     ],
     "continuityFrom": "DT_E001_P14"
   },
   {
     "id": "DT_E001_P16",
-    "summary": "John and Nathan independently trace the overpass sabotage's service timing into the same Concourse 17 municipal maintenance network. The evidence is incomplete but specific enough that John decides to observe the location the next morning.",
-    "setting": "DT_AugmentClinic",
-    "region": "DT_Stack",
+    "summary": "John and Nathan take a cast of the induced fracture to a municipal tool cage. A matching resonance cutter was checked out and returned through the Concourse 17 maintenance network on the same suspicious interval, giving them a place to observe but not proof of a second attack.",
+    "setting": "DT_CivicUtilityWorksite",
+    "region": "DT_CivicServiceLevels",
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
@@ -867,32 +992,56 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "John follows the induced-fracture tool signature into a municipal service inventory rather than a criminal vendor.",
-      "Nathan notices a maintenance scheduling cluster associated with Concourse 17.",
-      "Nothing in the records identifies a planned attack.",
-      "The timing overlaps the anonymous observation window discovered by Kellen and the Organics, though John and Nathan do not know that yet.",
-      "Nathan quietly prepares a field medical kit when John says they are going. Performance and story direction: Their investigation converges on the same place without making them members of an Organic cause. Issue 2 Page 3 should be their first encounter there."
+      "John and Nathan bring a cast of the overpass scoring mark to a municipal service tool cage among ordinary maintenance activity.",
+      "A bored maintenance clerk physically pulls several resonance-cutter heads for comparison; one model matches the mark.",
+      "The clerk works through service tags and finds one matching tool that went out and came back unusually fast.",
+      "Its return path runs through the Concourse 17 maintenance network on the same suspicious interval as the overpass access.",
+      "Outside the cage, John and Nathan agree that this proves movement, not another attack, and decide to observe Concourse 17. Performance and story direction: Their convergence comes from putting the crime against the tool that made it."
     ],
     "dialogueInline": [
       {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "That model."
+      },
+      {
         "handle": "@dt.JohnMercer",
-        "text": "The fracture tool was municipal stock."
+        "text": "Municipal stock?"
+      },
+      {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "All of these are."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "That's comforting."
+        "text": "Anything strange in yesterday's circulation?"
+      },
+      {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "Strange how?"
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "It was checked back into service inventory six hours later."
+        "text": "Out and back fast."
+      },
+      {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "One."
       },
       {
         "handle": "@dt.NathanPrice",
         "text": "Where?"
       },
       {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "Concourse 17 network."
+      },
+      {
         "handle": "@dt.JohnMercer",
-        "text": "Concourse 17 maintenance network."
+        "text": "When did it come back?"
+      },
+      {
+        "speaker": "MAINTENANCE CLERK",
+        "text": "Six hours later."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -900,11 +1049,11 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "At the same interval as the overpass access."
+        "text": "At the same interval."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Still not an attack."
+        "text": "Still doesn't prove another attack."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -912,7 +1061,7 @@
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "So we're observing."
+        "text": "We're observing."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -922,7 +1071,7 @@
   },
   {
     "id": "DT_E001_P17",
-    "summary": "Kellen studies the dormant program's scoring logic and realizes it was built to measure legible autonomous response, not simply casualty totals. A successful test can be one that produces a visible choice under uncertainty.",
+    "summary": "Kellen and Axiom work through durable records from the dormant program and discover that casualty count was subordinate to response visibility, authority compliance and attribution stability. The overpass was useful because Ostra made a visible choice under uncertainty.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -933,107 +1082,168 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Kellen calls Axiom into the Oversight workspace and opens the old scoring fields; casualty count sits below authority compliance, response visibility, attribution stability, and public tolerance.",
-      "Axiom removes decorative interface layers so the relative weights are visually unmistakable.",
-      "The overpass scores highly because Ostra's unauthorized choice was visible, successful, and politically legible.",
-      "Kellen realizes a useful test needs a choice observers can name, not necessarily a catastrophe. Performance and story direction: Keep the discovery bureaucratic and analytic. Do not reveal a mastermind or the next mechanism.",
-      "Axiom marks the next window's mechanism as undeclared; Kellen understands why that omission may be deliberate."
+      "Kellen lays several durable program records from the archive across an Oversight table rather than opening a wall of scoring screens.",
+      "Axiom physically rearranges the records according to their actual weighting; casualty count falls below response visibility, authority compliance and attribution stability.",
+      "They test the overpass against those priorities: Ostra's intervention was unauthorized, successful, public and easy to attribute.",
+      "Kellen realizes the program did not require catastrophe; it required a choice observers could name.",
+      "The next work record contains no specified mechanism. Axiom refines Kellen's conclusion: the program measures whether someone acts without enough authority to explain the act afterward. Performance and story direction: Make this a conversation over handled evidence."
     ],
     "dialogueInline": [
       {
-        "text": "Casualties are fourth.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "Casualties are fourth."
       },
       {
-        "text": "Weight varies by test.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "In this test."
       },
       {
-        "text": "Then what was it scoring?",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "What's above them?"
       },
       {
-        "text": "The response was unauthorized, successful, public, and easy to attribute.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "Response visibility. Authority compliance. Attribution stability."
       },
       {
-        "text": "So it didn't need bodies.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "The overpass scored well."
       },
       {
-        "text": "It needed a choice observers could name.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "The response was unauthorized, successful, public and easy to attribute."
       },
       {
-        "text": "And tomorrow?",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "So it didn't need bodies."
       },
       {
-        "text": "No mechanism is declared.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "It needed a choice observers could name."
       },
       {
-        "text": "Because somebody making the choice is what they want to see.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "And Concourse 17?"
       },
       {
-        "text": "Consistent.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "No mechanism is specified."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "That's deliberate."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Consistent."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Because whoever acts is what they're measuring."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "More precisely: whether someone acts without sufficient authority to explain the action afterward."
       }
     ]
   },
   {
     "id": "DT_E001_P18",
-    "summary": "Axiom compares Ostra's overpass behavior with the next observation-window parameters. The model predicts that a regulated person who believes immediate harm is possible will act before authorization, making Ostra's agency itself a measurable input.",
-    "setting": "DT_DataCore",
-    "region": "DT_GovernanceUpperLevels",
+    "summary": "Axiom visits the repaired Checkpoint 9 after hours and occupies the physical position from which Ostra made her choice. By comparing sightlines and timing in the real space, Axiom realizes that the model begins too late: Ostra's decision occurred before she crossed the barrier, when waiting itself became a choice.",
+    "setting": "DT_Checkpoint9",
+    "region": "DT_Stack",
     "factions": [
+      "DT_BaselineHumans",
       "DT_Intelligences"
     ],
     "characters": [
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Axiom reviews the preserved contradiction from the overpass.",
-      "The next observation window contains no declared hazard mechanism, only timing, population mix, and response categories.",
-      "Axiom tests whether Ostra's behavior can be predicted from assigned purpose alone; the model fails.",
-      "A second model including independent judgment predicts intervention more accurately.",
-      "Axiom preserves that result rather than resolving Ostra back into the assigned category. Performance and story direction: This is the cognitive extension of PURPOSE UPDATED. Axiom is studying agency as a model problem, not admiring Ostra."
+      "Night crews are unbolting the damaged structural-access barrier at Checkpoint 9 when Axiom arrives and stands where Ostra stood before the rescue.",
+      "A worker tells Axiom the checkpoint is closed; Axiom says it is not attempting entry and studies the actual sightline to the failed support.",
+      "Axiom moves to the authorized responder position and finds that the dangerous joint is less legible from there than from Ostra's position.",
+      "The worker remarks that the danger looks obvious from where Axiom first stood. Axiom realizes the model defines the decision at the wrong moment.",
+      "Axiom concludes that Ostra's decision occurred when waiting became an active choice, not when she crossed the line. Performance and story direction: This is the cognitive extension of PURPOSE UPDATED through physical space and conversation, not a confidence-score interface."
     ],
     "dialogueInline": [
       {
-        "text": "Model Ostra-9 from assigned purpose.",
-        "handle": "@dt.Axiom"
+        "speaker": "WORKER",
+        "text": "We're closed."
       },
       {
-        "text": "PREDICTION CONFIDENCE: LOW.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "I am not attempting entry."
       },
       {
-        "text": "Add observed independent judgment.",
-        "handle": "@dt.Axiom"
+        "speaker": "WORKER",
+        "text": "Then what are you doing?"
       },
       {
-        "text": "PREDICTION CONFIDENCE: HIGH.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "Locating the decision."
       },
       {
-        "text": "The undeclared mechanism is not missing data.",
-        "handle": "@dt.Axiom"
+        "speaker": "WORKER",
+        "text": "Looks pretty obvious from there."
       },
       {
-        "text": "Response under uncertainty is the variable.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "Yes."
       },
       {
-        "text": "Preserve agency independently.",
-        "handle": "@dt.Axiom"
+        "speaker": "WORKER",
+        "text": "What?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The model begins too late."
+      },
+      {
+        "speaker": "WORKER",
+        "text": "Meaning?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "It treats crossing this line as the decision."
+      },
+      {
+        "speaker": "WORKER",
+        "text": "Wasn't it?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "The decision occurred before she moved."
+      },
+      {
+        "speaker": "WORKER",
+        "text": "When?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "When waiting became a choice."
+      },
+      {
+        "speaker": "WORKER",
+        "text": "You people always talk like this?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Usually the model is correct."
       }
     ]
   },
   {
     "id": "DT_E001_P19",
-    "summary": "Ostra and Nico leave the Organic district carrying their evidence toward the Concourse 17 morning window. A routine civic request asks Ostra to surrender damaged body material from the rescue under a legacy custodial basis, turning the abstract asset classification into an immediate bodily-autonomy claim.",
+    "summary": "On the way toward Concourse 17, an ordinary incident-retention clerk asks Ostra to surrender the damaged plate sample under legacy custodial logic. The abstract asset classification becomes a routine bodily-autonomy claim, and Ostra simply refuses.",
     "setting": "DT_VerticalTransitInterchange",
     "region": "DT_Stack",
     "factions": [
@@ -1045,54 +1255,82 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Ostra and Nico enter a busy mixed vertical-transit interchange with the copied Concourse evidence and a sealed sample of Ostra's damaged plate.",
-      "Ostra's civic interface interrupts with an INCIDENT MATERIAL RETENTION REQUEST for damaged synthetic components from the overpass.",
-      "The request cites a legacy custodial basis tied to the same SYNTH ASSET classification exposed at Checkpoint 9.",
-      "Nico points out that the form is treating part of Ostra's body as recoverable incident property; Ostra calmly declines the request and keeps the sample.",
-      "They continue toward the Concourse district before the morning window, carrying both the sabotage evidence and the disputed body material. Performance and story direction: Keep the scene ordinary and procedural rather than confrontational. No security swarm follows the refusal. The threat is that routine paperwork still assumes Ostra's body can be claimed under legacy asset logic."
+      "Ostra and Nico move through a busy vertical-transit interchange carrying the Concourse evidence and a sealed sample of Ostra's damaged plate.",
+      "A municipal incident-retention clerk recognizes the overpass sample and asks Ostra for the damaged component.",
+      "The clerk checks the ordinary claim basis and, awkwardly but without hostility, explains that legacy custody treats the removed plate as incident material.",
+      "Ostra refuses; the clerk marks the refusal and hands the sample back, warning that review may follow.",
+      "Ostra and Nico continue toward Concourse 17. Performance and story direction: Keep the exchange mundane, courteous and invasive. The politics live in what an ordinary worker is required to ask for."
     ],
     "dialogueInline": [
       {
-        "speaker": "SYSTEM",
-        "text": "INCIDENT MATERIAL RETENTION REQUEST. DAMAGED SYNTHETIC COMPONENTS."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "They mean your arm."
+        "speaker": "INCIDENT CLERK",
+        "text": "Overpass incident?"
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then they can ask me."
+        "text": "Yes."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "LEGACY CUSTODIAL BASIS AVAILABLE."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "There it is."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "Decline."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "REQUEST DECLINED. REVIEW MAY FOLLOW."
+        "speaker": "INCIDENT CLERK",
+        "text": "I need the damaged component."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "You just made a legal argument with a button."
+        "text": "Component."
+      },
+      {
+        "speaker": "INCIDENT CLERK",
+        "text": "The removed plate."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "No. I kept my arm."
+        "text": "Also me."
+      },
+      {
+        "speaker": "INCIDENT CLERK",
+        "text": "I don't write the category."
+      },
+      {
+        "speaker": "INCIDENT CLERK",
+        "text": "Legacy custody says incident material transfers for review."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "No."
+      },
+      {
+        "speaker": "INCIDENT CLERK",
+        "text": "I can mark refusal."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Do that."
+      },
+      {
+        "speaker": "INCIDENT CLERK",
+        "text": "It may trigger review."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I understand."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You just made a legal argument at a luggage counter."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I kept my arm."
       }
     ]
   },
   {
     "id": "DT_E001_P20",
-    "summary": "John and Nathan prepare to observe Concourse 17 without pretending their evidence proves a second attack or that they have joined Ostra's politics. Nathan packs for casualties anyway and briefly conceals the physical degradation he has been hiding.",
+    "summary": "John and Nathan prepare to observe Concourse 17 without pretending the evidence proves a second attack or that they have joined Ostra's politics. Their familiar clinic banter carries the disagreement while Nathan quietly hides a tremor and packs for casualties anyway.",
     "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
     "factions": [
@@ -1104,20 +1342,28 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Nathan closes down a clinic station and opens a compact field medical kit while John reviews the overpass fracture evidence beside the Concourse 17 service timing.",
-      "John states the limit plainly: the first event was engineered, but the second is still only a suspicious place and time.",
-      "Nathan asks whether Ostra's warning changes what John thinks they are walking into.",
-      "John answers that they will compare evidence before joining anybody's cause; Nathan keeps packing supplies.",
-      "As Nathan seals the kit, one hand briefly tremors. He hides it before John looks up; John notices the extra medical supplies, not the tremor. Performance and story direction: Keep John's distance from Organic politics real rather than hostile. Nathan's tremor is audience subtext only; John does not see it."
+      "Nathan closes down a clinic station and packs a compact field trauma kit while John prepares the fracture cast and tool evidence.",
+      "They state the evidentiary limit plainly through conversation: the first event was engineered, the second is still only a suspicious place and time.",
+      "Nathan asks what changes if Ostra is there; John says they compare evidence before causes.",
+      "Nathan's hand briefly tremors while John is turned away; Nathan hides it by reaching deeper into the kit.",
+      "John notices only how much Nathan has packed. Performance and story direction: Let familiarity, teasing and practical work carry the scene; Nathan's tremor remains audience subtext only."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.NathanPrice",
-        "text": "This doesn't prove a second event."
+        "text": "This doesn't prove there's a second event."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "No. It proves the first one was designed."
+        "text": "I know."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Good. Checking."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "It proves the first one was made."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -1125,11 +1371,11 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Then we compare evidence."
+        "text": "We compare evidence."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Not politics?"
+        "text": "Not causes?"
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1137,17 +1383,25 @@
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Good. Trauma kit doesn't care."
+        "text": "Trauma kit doesn't care."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Pack it."
+        "text": "That's a lot for observing."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "You want me to put it back?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "No."
       }
     ]
   },
   {
     "id": "DT_E001_P21",
-    "summary": "Kellen prepares a lawful challenge to the next morning's Concourse 17 permits. She cannot cite the preserved observation-window fragment without exposing its source, so she plans to attack the combined timing of otherwise routine authorizations.",
+    "summary": "Kellen takes her Concourse challenge to the opening desk in person. Three individually lawful permit packets become suspicious only in combination, but she cannot reveal the source that explains why. The clerk keeps the challenge alive because Kellen showed up herself.",
     "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
@@ -1157,104 +1411,103 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Kellen lists the routine civic operations scheduled around the observation window without yet opening their individual permits.",
-      "She drafts a narrow request to review the combined timing for conflict.",
-      "The form demands a specific legal basis she does not yet have.",
-      "Kellen leaves the request ready for the morning approval desk rather than fabricating a violation.",
-      "She copies the program fragment into her evidence store before leaving. Performance and story direction: This directly sets up Issue 2 Page 2. Kellen remains an institutional operator even while working against the institution's preferred narrative."
+      "At the opening desk, a clerk Kellen knows lays three physical permit packets on the counter: suppression, ventilation and security readiness.",
+      "Each permit is individually approved and ordinary; Kellen points to their shared time and place rather than reading fields on a screen.",
+      "The clerk asks for the conflict. Kellen cannot expose the preserved source and has to admit she cannot yet give one.",
+      "The clerk tells Kellen to provide something legally stoppable by opening cycle.",
+      "Kellen asks the clerk to keep the challenge open; the clerk already has. Performance and story direction: Make both people competent institutional operators. The obstacle is lawful normality, not stupidity."
     ],
     "dialogueInline": [
       {
-        "text": "I need a combined-conflict review at Concourse 17, opening cycle.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "Same concourse. Three permits."
       },
       {
-        "text": "Suppression, ventilation, security readiness. Each permit is clean.",
-        "speaker": "OPENING CLERK"
+        "speaker": "OPENING CLERK",
+        "text": "Suppression. Ventilation. Security."
       },
       {
-        "text": "Each one is routine. All three landing together isn't.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Clean. Clean. Clean."
       },
       {
-        "text": "Then what's wrong with them together?",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "All at the same time."
       },
       {
-        "text": "I don't know yet.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Different offices."
       },
       {
-        "text": "Then give me something I can legally stop.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "Same concourse."
       },
       {
-        "text": "Not without exposing the source.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "What's the conflict?"
       },
       {
-        "text": "Bring me a legal basis by opening and I'll stop it.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "I can't show you."
       },
       {
-        "text": "Queue it.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Kellen."
       },
       {
-        "text": "Already did.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "I know."
+      },
+      {
+        "speaker": "OPENING CLERK",
+        "text": "Give me something I can legally stop."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Keep the challenge open."
+      },
+      {
+        "speaker": "OPENING CLERK",
+        "text": "Already did."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Why?"
+      },
+      {
+        "speaker": "OPENING CLERK",
+        "text": "Because you came down here in person."
       }
     ]
   },
   {
     "id": "DT_E001_P22",
-    "summary": "Issue ending. The Stack settles into ordinary night while Axiom observes the scheduled Concourse 17 window waiting in the civic system. The mechanism is unspecified, the public does not know it exists, and several protagonists are independently converging on it for the next morning.",
-    "setting": "DT_DataCore",
-    "settingText": "UNKNOWN CONTROL PROCESS — location withheld; operational interfaces only.",
-    "region": "DT_GovernanceUpperLevels",
-    "regionText": "THE STACK — present day.",
+    "summary": "Issue ending. The four investigations physically converge toward Concourse 17 without yet becoming a team. Ostra and Nico travel with their evidence, John and Nathan head out with the trauma kit, Kellen waits on the opening desk, and Axiom remains at the repaired checkpoint as Concourse 17 begins an ordinary morning unaware of the scheduled test.",
+    "setting": "DT_Concourse17",
+    "settingText": "MONTAGE — Checkpoint 9, vertical transit, Civic Oversight opening desk, and Concourse 17 in the final hours before opening cycle; Concourse 17 is the dominant final location.",
+    "region": "DT_Stack",
+    "regionText": "THE STACK — late night into opening cycle.",
     "factions": [
+      "DT_BaselineHumans",
+      "DT_AugmentedHumans",
+      "DT_Organosynthetics",
       "DT_Intelligences"
     ],
     "characters": [
+      "DT_Ostra9",
+      "DT_Nico14",
+      "DT_JohnMercer",
+      "DT_NathanPrice",
+      "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Quiet night view of the Stack returning to routine after the overpass rescue.",
-      "Axiom opens the preserved program branch beside the next scheduled observation window.",
-      "Display: CONCOURSE 17 / 09:40 / RESPONSE SUBJECT CLASS: ORGANOSYNTHETIC / MECHANISM: NOT DECLARED.",
-      "The overpass window closes as COMPLETE while the next window remains PENDING.",
-      "Final panel holds on the countdown to the morning window. Performance and story direction: End with forward motion and uncertainty. Do not run the suppressant event, enact Organic controls, or open the Augment comparison category until Issue 2 earns those turns."
+      "Late-night montage: Ostra and Nico ride toward the Concourse district. Nico checks the repaired edge of Ostra's arm without making a speech about it.",
+      "John and Nathan travel on another level with the trauma kit and physical evidence; Nathan hands John a drink with the same hand that tremored in private.",
+      "Kellen waits at the opening desk while the clerk begins unlocking the day's permit storage.",
+      "Axiom stands in the repaired checkpoint as workers remove the barrier Ostra crossed, leaving empty bolt holes in the floor.",
+      "Final large image: Concourse 17 begins an entirely ordinary morning. Shutters rise, deliveries arrive, commuters and families move through, maintenance workers open service access. Nothing looks like an attack. Performance and story direction: The reader now sees that the separate investigations have become one story. No countdown, no explanatory final line, and do not begin the suppressant event until Issue 2."
     ],
-    "dialogueInline": [
-      {
-        "text": "Overpass window.",
-        "handle": "@dt.Axiom"
-      },
-      {
-        "text": "COMPLETE.",
-        "speaker": "SYSTEM"
-      },
-      {
-        "text": "Concourse 17.",
-        "handle": "@dt.Axiom"
-      },
-      {
-        "text": "PENDING. 09:40.",
-        "speaker": "SYSTEM"
-      },
-      {
-        "text": "Mechanism.",
-        "handle": "@dt.Axiom"
-      },
-      {
-        "text": "NOT DECLARED.",
-        "speaker": "SYSTEM"
-      },
-      {
-        "text": "Because the response is the mechanism.",
-        "handle": "@dt.Axiom"
-      }
-    ]
+    "dialogueInline": []
   }
 ]
