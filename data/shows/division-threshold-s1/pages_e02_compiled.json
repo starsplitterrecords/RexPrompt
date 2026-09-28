@@ -65,69 +65,77 @@
   },
   {
     "id": "DT_E002_P02",
-    "summary": "Kellen tries to stop the scheduled civic test through formal channels without exposing her stolen evidence. The request dies because every individual component is routine and properly authorized.",
+    "summary": "Kellen tries to stop the scheduled civic test through formal channels without exposing her source. At the opening desk, three individually lawful permit packets leave her unable to name a violation before the window begins.",
     "characters": [
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Kellen searches permits tied to the concourse window.",
-      "Fire suppression test: authorized. Ventilation cycling: authorized. Security readiness: authorized.",
-      "She flags the combined timing and is asked for a specific violation.",
-      "Kellen cannot reveal Axiom's preserved fragment without exposing the source.",
-      "A routine approval indicator turns green: TEST PROCEED. Performance and story direction: The trap is administrative normality: no single order looks sinister."
+      "Kellen is physically at the Civic Oversight opening desk with the same clerk from Issue 1; three permit packets are already separated on the counter.",
+      "The clerk checks suppression, ventilation and security readiness one by one. Each carries a valid authorization from a different office.",
+      "Kellen points to their shared location and time; the clerk asks what legal conflict the combination creates.",
+      "Kellen cannot expose the source that tells her the timing matters.",
+      "The clerk checks the wall clock: four minutes. Performance and story direction: The trap is administrative normality, not a green screen indicator. Both people understand the stakes but only one has evidence she cannot use."
     ],
     "dialogueInline": [
       {
-        "text": "CIVIC OVERSIGHT — 09:36",
-        "speaker": "CAPTION"
+        "speaker": "CAPTION",
+        "text": "CIVIC OVERSIGHT — 09:36"
       },
       {
-        "text": "You again.",
-        "speaker": "OPENING CLERK"
+        "speaker": "OPENING CLERK",
+        "text": "You again."
       },
       {
-        "text": "Same concourse. Three permits, one window.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "Same concourse. Three permits."
       },
       {
-        "text": "Suppression, ventilation, security. Different offices.",
-        "speaker": "OPENING CLERK"
+        "speaker": "OPENING CLERK",
+        "text": "Suppression. Ventilation. Security."
       },
       {
-        "text": "Same time.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Three offices. Three approvals."
       },
       {
-        "text": "Still not a violation.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "One time."
       },
       {
-        "text": "Then call it a conflict review.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Still not a violation."
       },
       {
-        "text": "Conflict between what?",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "Then call it a conflict review."
       },
       {
-        "text": "I can't show you yet.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Conflict between what?"
       },
       {
-        "text": "Then I can't stop lawful work because you don't like the clock.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "I can't show you yet."
       },
       {
-        "text": "How long?",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Then I can't stop lawful work because you don't like the clock."
       },
       {
-        "text": "Four minutes.",
-        "speaker": "OPENING CLERK"
+        "handle": "@dt.KellenCartwright",
+        "text": "How long?"
       },
       {
-        "text": "Keep the challenge open.",
-        "handle": "@dt.KellenCartwright"
+        "speaker": "OPENING CLERK",
+        "text": "Four minutes."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Keep it open."
+      },
+      {
+        "speaker": "OPENING CLERK",
+        "text": "It is."
       }
     ],
     "setting": "DT_OversightOffice",
@@ -204,16 +212,16 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Small ceiling indicators announce a scheduled suppression test.",
-      "A fine clear suppressant mist enters the concourse; Baseline pedestrians barely react.",
+      "A routine suppression-test chime sounds and maintenance staff casually wave pedestrians through; nobody treats it as an emergency.",
+      "A fine clear mist enters the concourse; Baseline pedestrians barely react.",
       "Ostra stops mid-step as spatial information doubles across her sensory field.",
-      "Nico's filaments recoil and he catches a railing.",
-      "Across the concourse, several Organics simultaneously brace themselves against walls, fixtures, and the floor. Performance and story direction: Show category-specific disorientation and involuntary stabilization; the affected Organics remain recognizable people, not monsters."
+      "Nico's filaments recoil and he catches a railing while Nathan moves toward him.",
+      "Across the concourse, several Organics simultaneously brace themselves against walls, fixtures and the floor. Performance and story direction: The civic procedure is understood through ordinary staff behavior and bodily effect, not an announcement the reader must parse."
     ],
     "dialogueInline": [
       {
-        "speaker": "CIVIC SYSTEM",
-        "text": "ROUTINE SUPPRESSION TEST. NO EVACUATION REQUIRED."
+        "speaker": "MAINTENANCE WORKER",
+        "text": "Routine suppression test. Keep moving."
       },
       {
         "handle": "@dt.Ostra9",
@@ -304,7 +312,7 @@
   },
   {
     "id": "DT_E002_P06",
-    "summary": "Crowd panic creates the real emergency. A security partition begins closing to compartmentalize the concourse, trapping people on the wrong side while affected Organics cannot safely move.",
+    "summary": "Crowd panic creates the real emergency. A heavy security partition begins closing to compartmentalize the concourse, trapping people on the wrong side while affected Organics cannot safely move; the local operator cannot override it because the test still has not been declared an emergency.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14",
@@ -312,40 +320,44 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "People surge toward an exit as the security system detects structural damage.",
-      "A heavy partition descends between levels.",
-      "A family and several affected Organics are caught beyond it.",
-      "John tries the emergency control; access is denied because the suppression test remains nominally non-emergency.",
-      "Ostra looks at the closing door, then at John. Performance and story direction: The system is following its rules correctly based on bad premises."
+      "People surge toward an exit as fixtures are damaged in the panic; a heavy compartment partition begins descending between levels.",
+      "A family and several disoriented Organics are caught beyond it.",
+      "John reaches the local emergency station while a concourse security operator is already fighting the mechanical control.",
+      "The operator cannot release the partition because the suppression test has not been formally escalated; the door continues descending in front of them.",
+      "Ostra looks at the closing partition, then at John. Performance and story direction: Show people trapped by a rule expressed through machinery and an operator who is trying to help, not by reader-facing denial text."
     ],
     "dialogueInline": [
       {
-        "speaker": "SECURITY SYSTEM",
-        "text": "COMPARTMENTALIZATION IN PROGRESS."
+        "speaker": "SECURITY OPERATOR",
+        "text": "It's compartmentalizing."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Emergency override."
+        "text": "Override it."
       },
       {
-        "speaker": "SECURITY SYSTEM",
-        "text": "NO EMERGENCY CONDITION REGISTERED."
+        "speaker": "SECURITY OPERATOR",
+        "text": "It still has the floor under routine test."
       },
       {
         "handle": "@dt.JohnMercer",
         "text": "There's a family under that door."
       },
       {
-        "speaker": "SECURITY SYSTEM",
-        "text": "SUPPRESSION TEST ACTIVE."
+        "speaker": "SECURITY OPERATOR",
+        "text": "I can see them."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "It thinks this is containment."
+        "text": "Then this is the emergency."
+      },
+      {
+        "speaker": "SECURITY OPERATOR",
+        "text": "Tell the system."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then open it."
+        "text": "Open it."
       }
     ],
     "continuityFrom": "DT_E002_P05",
@@ -655,54 +667,62 @@
   },
   {
     "id": "DT_E002_P12",
-    "summary": "Kellen discovers the emergency response package for an Organic capability incident was approved before the suppressant test. The altered chemical also entered through legitimate civic procurement.",
+    "summary": "Kellen and Axiom assemble the concourse paper trail at an Oversight worktable. A sealed emergency-response packet was approved hours before the test, while the altered suppressant passed through ordinary municipal purchasing and custody without any rogue handoff.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Kellen and Axiom compare the suppression permit with the capability-incident response package at the Oversight worktable.",
-      "The response approval timestamp predates the event by three hours and twenty-eight minutes.",
-      "Axiom traces the suppressant through municipal purchasing, certified delivery, and standard custody; every handoff is ordinary.",
-      "Kellen searches the chain for a rogue vendor and finds none.",
-      "Kellen copies the complete institutional chain to the offline evidence store. Performance and story direction: Keep the cause institutional: ordinary authorized handoffs form the operation without a visible mastermind."
+      "Kellen lays the suppression permit, sealed emergency-response package and municipal purchase chain physically across the Oversight worktable.",
+      "The approval stamp on the emergency package predates the suppression test by three hours and twenty-eight minutes.",
+      "Axiom follows the custody chain by moving through the ordinary stamped handoffs: municipal purchase, certified delivery, facilities receipt.",
+      "Kellen keeps looking for a rogue vendor or broken custody seal and finds none.",
+      "She places the entire chain into the protected evidence store. Performance and story direction: Make the institutional cause legible through ordinary objects and conversation rather than timestamp-reading panels."
     ],
     "dialogueInline": [
       {
-        "text": "Emergency response approved at 06:12. Test began at 09:40.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "This was sealed before the test."
       },
       {
-        "text": "The response package preceded the incident by three hours and twenty-eight minutes.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "Three hours and twenty-eight minutes before."
       },
       {
-        "text": "Suppressant lot?",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "And the suppressant?"
       },
       {
-        "text": "Municipal purchase. Certified delivery. Every handoff regular.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "Municipal purchase. Certified delivery. Facilities receipt."
       },
       {
-        "text": "No rogue vendor.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "No broken custody?"
       },
       {
-        "text": "None.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "None."
       },
       {
-        "text": "They didn't predict the response.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "No rogue vendor."
       },
       {
-        "text": "No.",
-        "handle": "@dt.Axiom"
+        "handle": "@dt.Axiom",
+        "text": "None."
       },
       {
-        "text": "They ordered it.",
-        "handle": "@dt.KellenCartwright"
+        "handle": "@dt.KellenCartwright",
+        "text": "They didn't predict the response."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "No."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "They prepared for it."
       }
     ],
     "setting": "DT_OversightOffice",
@@ -718,11 +738,11 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "A human administrator assigns Axiom a liability reconstruction and asks which office missed the violation.",
-      "Procurement, delivery, and test approvals each return compliant on the shared work display.",
-      "Axiom exposes the classification hinge: Organic safety was tested as equipment compatibility, not person safety.",
-      "The administrator confronts the impossible result—people were harmed and no administrative rule was broken.",
-      "Axiom refuses to close the reconstruction because compliance describes the paperwork, not the event. Performance and story direction: Axiom's concern remains model validity and category coherence, not human-style outrage."
+      "A human administrator meets Axiom in a liability room with the physical procurement, delivery and test sign-offs from the concourse incident.",
+      "The administrator moves the three compliant approvals into a row and asks which office failed.",
+      "Axiom identifies the classification hinge from the test protocol: Organic exposure was treated as equipment compatibility rather than person safety.",
+      "The administrator is left holding three valid approvals while hospitalized people exist outside the room.",
+      "Axiom refuses to mark the reconstruction complete because administrative compliance does not explain the observed harm. Performance and story direction: Let the contradiction sit between two people and three lawful approvals."
     ],
     "dialogueInline": [
       {
@@ -1132,22 +1152,22 @@
   },
   {
     "id": "DT_E002_P20",
-    "summary": "The human-run permit system immediately backlogs because Organic lot histories, jobs, capabilities, locations, exceptions, and legacy classifications conflict. Government asks Axiom to reconcile records, initially as clerical assistance.",
+    "summary": "The new Organic permit regime immediately produces long physical queues because old lot histories, work authorizations, locations and legacy classifications contradict one another. Human administrators ask Axiom to reconcile cases as bounded clerical assistance.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Permit queues expand across multiple civic offices.",
-      "Kellen sees contradictory classifications for the same Organic in different databases.",
-      "Axiom is given bounded authority to reconcile identity and capability records.",
-      "Axiom resolves dozens of straightforward conflicts faster than a human review team.",
-      "Queue estimates drop. Performance and story direction: This is the first useful delegation. Nothing about it should feel like a power grab."
+      "Permit-office queues spill through improvised rails; clerks carry stacks of cases between counters while applicants wait with work gear, children and appointment slips.",
+      "Kellen watches one Organic get sent between two desks because the same body is classified differently for work and transit.",
+      "An administrator brings Axiom a cart of unresolved cases and gives it bounded authority to reconcile identity and capability conflicts without setting policy.",
+      "Axiom resolves straightforward contradictions at the counters while human clerks immediately put the corrected decisions into practice.",
+      "The physical queue begins to move. Performance and story direction: This is useful delegation. Show relief on ordinary faces; do not frame it as a power grab."
     ],
     "dialogueInline": [
       {
         "speaker": "ADMINISTRATOR",
-        "text": "We have twelve thousand unresolved conflicts and sixty-three clerks."
+        "text": "Twelve thousand conflicts. Sixty-three clerks."
       },
       {
         "handle": "@dt.Axiom",
@@ -1155,19 +1175,19 @@
       },
       {
         "speaker": "ADMINISTRATOR",
-        "text": "Reconcile records. Do not set policy."
+        "text": "Reconcile these. Don't make policy."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Define conflict priority."
+        "text": "Conflict priority?"
       },
       {
         "speaker": "ADMINISTRATOR",
-        "text": "Use existing law."
+        "text": "Existing law."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Existing law assigns incompatible priorities."
+        "text": "Existing law disagrees with itself."
       },
       {
         "speaker": "ADMINISTRATOR",
@@ -1192,16 +1212,16 @@
   },
   {
     "id": "DT_E002_P21",
-    "summary": "Axiom's decisions are noticeably more consistent than human clerks. An Organic appeal previously denied on vague safety grounds is approved because the written rule does not support the denial.",
+    "summary": "At the permit counter, an Organic applicant challenges a denial based on their lot's reputation rather than their own record. Axiom intervenes in the live conversation and applies the written criterion to the individual, reversing the denial.",
     "characters": [
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Axiom compares an appeal with the governing capability rule. Performance and story direction: Establish that Intelligence administration can genuinely reduce prejudice and arbitrariness.",
-      "Human note reads DISCRETIONARY SAFETY CONCERN.",
-      "Axiom finds no criterion supporting the denial.",
-      "Authorization changes from denied to approved.",
-      "The Organic applicant receives clearance without knowing an Intelligence made the difference."
+      "A clerk returns an Organic applicant's permit slip denied on broad hazard grounds.",
+      "The applicant points out that they have never held the hazard authorization associated with their lot.",
+      "Axiom, working the same counter queue, asks for the individual record and the actual governing criterion.",
+      "The clerk cannot connect the population association to a written requirement in this case.",
+      "Axiom corrects the decision in front of the applicant; the applicant leaves with ordinary clearance. Performance and story direction: The benefit of Intelligence administration is experienced as a fair interaction, not an abstract metric."
     ],
     "dialogueInline": [
       {
@@ -1255,69 +1275,69 @@
   },
   {
     "id": "DT_E002_P22",
-    "summary": "Kellen compares the concourse operation with the overpass and finds the common product is not physical damage but policy-ready data: response times, public fear, media framing, legal classification, and support for controls.",
+    "summary": "Kellen and Axiom compare the physical case material from the overpass and concourse and discover the same strange documentation in both: extensive records of who acted, how the public responded, who was blamed and what controls became defensible. The damage itself is secondary.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Kellen overlays the two incident datasets.",
-      "Both contain physical-event metrics, but unusually detailed social-response fields dominate.",
-      "Axiom identifies matching schema structures.",
-      "Kellen asks what the experiments are optimizing.",
-      "Axiom cannot answer because the objective field is absent from the preserved data. Performance and story direction: The measurement program is legible, but its sponsor and final objective remain unresolved."
+      "Kellen opens the overpass and concourse evidence containers side by side at a civic evidence table.",
+      "Both contain ordinary damage evidence, but each also contains unusually elaborate observation sheets tracking response timing, witnesses, attribution disputes and public-control consequences.",
+      "Kellen removes the structural and chemical evidence from the center of each case; the matching social-response documentation remains.",
+      "Axiom notes that the two cases were built to make different physical events produce comparable human and institutional observations.",
+      "They cannot identify the sponsor or final objective from the surviving records. Performance and story direction: The insight should be visible even if the reader ignores every small written field."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Compare overpass and concourse datasets."
+        "text": "Take out the damage."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Common output fields identified."
+        "text": "Clarify."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Casualties?"
+        "text": "Steel. Suppressant. Injuries. Put all of it aside."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Secondary."
+        "text": "Done."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Structural failure?"
+        "text": "What's left?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Secondary."
+        "text": "Who acted. Who waited. Who was blamed. Public response. Administrative response."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Chemical response?"
+        "text": "Same questions in both boxes."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Secondary."
+        "text": "Yes."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "So the damage wasn't what they were collecting."
+        "text": "So the damage was how they asked."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "No."
+        "text": "That is consistent."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Same with the concourse."
+        "text": "Asked what?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "No."
+        "text": "Objective not preserved."
       }
     ],
-    "setting": "DT_DataCore",
+    "setting": "DT_CivicEvidenceArchive",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans",
@@ -1326,17 +1346,17 @@
   },
   {
     "id": "DT_E002_P23",
-    "summary": "Nico discovers the new Organic permit schema is built around capability rather than origin. The same fields could describe mechanical strength, reflex speed, network access, sensory range, or embedded systems in Augments.",
+    "summary": "While helping neighbors navigate the new rules, Nico lays an Organic capability permit beside an ordinary Augment calibration form and strips away the population labels. The remaining questions describe the same kinds of capability.",
     "characters": [
       "DT_Nico14",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Nico inspects the public-facing permit schema while building a travel workaround.",
-      "He strips away Organic-specific labels and exposes generic capability fields underneath.",
-      "Ostra asks whether this means the rules can be used on anyone.",
-      "Nico answers by opening a common Augment calibration profile beside it.",
-      "The fields align. Performance and story direction: This is setup, not immediate Augment regulation. The audience should see the expansion mechanism before John does."
+      "At the Organic safehouse, Nico is helping neighbors sort travel and work paperwork while Ostra repairs or packs ordinary gear nearby.",
+      "Nico lays an Organic capability permit beside a common Augment calibration form.",
+      "He covers or folds away the population headings and points only to what each form asks a body to do: force, reflex, hazard tolerance, dependence and tissue response.",
+      "Ostra realizes the architecture does not intrinsically know which population it was supposedly written for.",
+      "Nico leaves the two forms aligned on the table. Performance and story direction: Make the future expansion mechanism obvious from physical paperwork, not a schema screen."
     ],
     "dialogueInline": [
       {
@@ -1357,7 +1377,7 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Torque. Reflex latency. Hazard tolerance. Firmware dependence. Tissue response."
+        "text": "Force. Reflex. Hazard tolerance. Dependence. Tissue response."
       },
       {
         "handle": "@dt.Ostra9",
@@ -1373,7 +1393,7 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "They put our name on top. That's all."
+        "text": "They put our name at the top. That's all."
       }
     ],
     "setting": "DT_OrganicSafehouse",
@@ -1390,16 +1410,16 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Parallel lanes: HUMAN and ORGANOSYNTHETIC CAPABILITY VERIFICATION.",
-      "John's identity clears immediately.",
-      "Ostra is held for a function-permission mismatch.",
+      "John and Ostra reach the same civic verification gate from Issue 1. Ordinary human circulation continues through the main lane while Organics are diverted to a slower side review.",
+      "An attendant glances at John's human credential and waves him through without examining his installed hardware.",
+      "The same attendant stops Ostra because her current function permission does not match the route.",
       "John looks back; Ostra meets his eyes without asking for help.",
-      "John continues through. Performance and story direction: Hold the moral tension. John still believes the distinction has a defensible basis."
+      "John continues through. Performance and story direction: The disparity is carried by movement, waiting and human treatment. John still believes the distinction has a defensible basis."
     ],
     "dialogueInline": [
       {
-        "speaker": "SYSTEM",
-        "text": "HUMAN IDENTITY VERIFIED."
+        "speaker": "ATTENDANT",
+        "text": "You're clear."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1407,11 +1427,11 @@
       },
       {
         "speaker": "ATTENDANT",
-        "text": "You're clear."
+        "text": "Human lane."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "ORGANOSYNTHETIC CAPABILITY REVIEW REQUIRED."
+        "speaker": "ATTENDANT",
+        "text": "Ostra, I need the function review."
       },
       {
         "handle": "@dt.Ostra9",
@@ -1444,25 +1464,25 @@
   },
   {
     "id": "DT_E002_P25",
-    "summary": "Axiom receives an expanded assignment after its successful permit reconciliation: evaluate whether existing capability-assurance logic can reduce risk in adjacent regulated populations.",
+    "summary": "Because Axiom's permit reconciliation visibly reduces delay and arbitrary outcomes, administrators broaden its assignment to look for preventable capability risk in adjacent regulated populations. The expansion is presented as ordinary successful administration.",
     "characters": [
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Administrative metrics show faster processing and fewer inconsistent Organic rulings after Axiom's involvement.",
-      "A supervisor authorizes an expanded comparative analysis.",
-      "Axiom opens adjacent population datasets.",
-      "One dataset resolves into AUGMENTED HUMAN / CALIBRATION AND CAPABILITY RECORDS.",
-      "Axiom begins comparison. Performance and story direction: Nobody intends a political betrayal. The expansion follows directly from a system that appears to work."
+      "At the permit office, the once-stalled queue is visibly shorter and clerks are finishing cases that had been stuck for days.",
+      "Two administrators walk the floor with Axiom and point to the practical improvement rather than reading performance dashboards.",
+      "They authorize Axiom to examine adjacent regulated populations using the same risk logic.",
+      "Axiom asks whether origin category matters; the administrators say only when it changes the actual risk.",
+      "A nearby Augment clinic referral stack becomes part of the new review intake. Performance and story direction: Nobody intends a political betrayal. The expansion follows from a process that appears to work."
     ],
     "dialogueInline": [
       {
         "speaker": "ADMINISTRATOR",
-        "text": "The Organic queue is down forty-one percent."
+        "text": "Yesterday this line reached the lift."
       },
       {
         "speaker": "SECOND ADMINISTRATOR",
-        "text": "Appeal variance is down too."
+        "text": "Appeals are moving too."
       },
       {
         "speaker": "ADMINISTRATOR",
@@ -1474,7 +1494,7 @@
       },
       {
         "speaker": "ADMINISTRATOR",
-        "text": "Adjacent populations. Same risk logic."
+        "text": "Adjacent ones. Same risk logic."
       },
       {
         "handle": "@dt.Axiom",
@@ -1505,68 +1525,70 @@
   },
   {
     "id": "DT_E002_P26",
-    "summary": "Issue end. Ostra waits at the new Organic-only verification gate while John has already disappeared into the human flow. Elsewhere, Axiom's analysis finds John's own calibration profile contains capabilities exceeding several Organic thresholds now subject to special control.",
+    "summary": "Issue end. Ostra remains delayed in the new Organic verification line while human commuters, including Augments, move through. Elsewhere, Axiom's newly expanded review reaches a routine Augment calibration case and discovers that John's ordinary registered capabilities exceed thresholds now used to justify special Organic control.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Ostra stands in a slow Organic verification line beneath polite new public-safety signage.",
-      "Beyond the barrier, mixed human commuters—including Augments—move freely.",
-      "Cut to Axiom comparing capability thresholds without social labels.",
-      "Ostra's hazard-manipulation profile and John's torque/reflex profile occupy adjacent analytical rows.",
-      "Final screen: REVIEW CANDIDATE — AUGMENTED HUMAN. Performance and story direction: End on causal inevitability, not villainous intent. The system reaches Augments because the capability logic John supported already describes them."
+      "Ostra stands in the slower Organic verification queue while the main human lane continues moving; the attendant recognizes her and is apologetic but still has to process the review.",
+      "John has already disappeared into the human flow with other Baselines and Augments.",
+      "At an ordinary Augment clinic records handoff, a technician gives Axiom a routine calibration case from the newly expanded review assignment.",
+      "Axiom compares the actual physical capability description with the thresholds it has been applying to Organics and stops at John's torque and reflex range.",
+      "The technician says John is human and therefore has never required this review. Axiom answers that the stated criterion is capability. Performance and story direction: End on a spoken administrative contradiction, not an analytical screen."
     ],
     "dialogueInline": [
       {
-        "text": "This line is moving slower than yesterday.",
-        "speaker": "ATTENDANT"
+        "speaker": "ATTENDANT",
+        "text": "This line is moving slower than yesterday."
       },
       {
-        "text": "Yesterday it wasn't a separate line.",
-        "handle": "@dt.Ostra9"
+        "handle": "@dt.Ostra9",
+        "text": "Yesterday it wasn't a separate line."
       },
       {
-        "text": "Compare Organic thresholds against registered Human Citizen augmentation profiles.",
-        "handle": "@dt.Axiom"
+        "speaker": "CLINIC TECHNICIAN",
+        "text": "This one's routine. Mercer, John."
       },
       {
-        "text": "MULTIPLE EXCEEDANCES.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "His registered torque exceeds three current Organic review thresholds."
       },
       {
-        "text": "Highest relevant match.",
-        "handle": "@dt.Axiom"
+        "speaker": "CLINIC TECHNICIAN",
+        "text": "He's human."
       },
       {
-        "text": "MERCER, JOHN — TORQUE / REFLEX / EMERGENCY OVERRIDE.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "Yes."
       },
       {
-        "text": "Current status?",
-        "handle": "@dt.Axiom"
+        "speaker": "CLINIC TECHNICIAN",
+        "text": "Then he doesn't need Organic review."
       },
       {
-        "text": "HUMAN. NO REVIEW REQUIRED.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "The stated criterion is capability."
       },
       {
-        "text": "Inconsistent criterion.",
-        "handle": "@dt.Axiom"
+        "speaker": "CLINIC TECHNICIAN",
+        "text": "For Organics."
       },
       {
-        "text": "REVIEW CANDIDATE — AUGMENTED HUMAN.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Axiom",
+        "text": "That is an origin criterion."
       }
     ],
-    "settingText": "SPLIT LOCATION — first hold on the same CIVIC VERIFICATION GATE established on Page 24, with Ostra in the slow Organic review line while ordinary human circulation continues beyond; then cut to the CIVIC DATA CORE where Axiom compares capability thresholds. Preserve both established environments exactly rather than blending them into one futuristic space.",
-    "regionText": "THE STACK — simultaneous public consequence and governance analysis.",
+    "settingText": "SPLIT LOCATION — first hold on the established CIVIC VERIFICATION GATE with Ostra in the slow Organic review line while ordinary human circulation continues; then cut to an ordinary AUGMENT CLINIC calibration handoff where Axiom's expanded administrative review reaches John's existing record.",
+    "regionText": "THE STACK — simultaneous public consequence and administrative expansion.",
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
-    ]
+    ],
+    "setting": "DT_CivicVerificationGate",
+    "region": "DT_Stack"
   }
 ]
