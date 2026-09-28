@@ -57,26 +57,22 @@
   },
   {
     "id": "DT_E005_P02",
-    "summary": "The administration identifies a major source of unnecessary complexity: separate Baseline and Augment civic classifications often produce duplicate rules for people who are already legally human.",
+    "summary": "The administration identifies a major source of unnecessary complexity by handling actual cases: Baselines and Augments who share citizenship rights are still being routed through duplicate identity branches even when the decision turns only on a specific capability.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Axiom presents conflict statistics to human administrators.",
-      "Many unresolved cases come from distinguishing unmodified and augmented humans while both share citizenship rights.",
-      "Axiom proposes consolidating identity status while retaining capability-specific safety records.",
-      "Officials recognize a politically popular simplification.",
-      "Kellen sees the irony before anyone says it. Performance and story direction: This is not Axiom advocating equality. It is administrative simplification that happens to produce it."
+      "Axiom, Kellen and human administrators work through several real civic cases spread across a table: housing, transit and employment.",
+      "In each, the same person is first processed as Human and then sent through an extra Augment identity branch before the actual capability question is reached.",
+      "An official physically removes the redundant identity sheets from one case and sees that nothing substantive changes.",
+      "Axiom explains that capability records already handle the relevant differences.",
+      "The official decides to stop asking for the duplicate identity distinction. Performance and story direction: Equality emerges from practical simplification rather than a chart."
     ],
     "dialogueInline": [
       {
-        "handle": "@dt.Axiom",
-        "text": "Thirty-one percent of identity conflicts arise from Baseline-versus-Augmented Human status."
-      },
-      {
         "speaker": "OFFICIAL",
-        "text": "Both are citizens."
+        "text": "Both of these people are citizens."
       },
       {
         "handle": "@dt.Axiom",
@@ -84,7 +80,7 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "Both carry separate capability records anyway."
+        "text": "And both still carry separate capability records."
       },
       {
         "handle": "@dt.Axiom",
@@ -92,11 +88,11 @@
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "So the identity distinction is doing what?"
+        "text": "So what does this extra identity branch do?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Creating duplicate administrative branches in most civic decisions."
+        "text": "Duplicates most civic decisions."
       },
       {
         "speaker": "OFFICIAL",
@@ -128,17 +124,13 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Old BASeline/AUGMENTED HUMAN lane signage is physically replaced with HUMAN CITIZEN.",
-      "John's identity record updates without changing his capability file.",
-      "Augment advocates celebrate equal civic classification.",
-      "Nathan enjoys the moment more than John does.",
-      "John notices the separate capability-regulation layer remains active beneath the new human label. Performance and story direction: Let this be a genuine civil-rights improvement and an incomplete one simultaneously."
+      "Workers physically replace old Baseline/Augment lane markers with a single HUMAN CITIZEN route while commuters watch and react.",
+      "John and Nathan approach together; the attendant waves both through the same identity lane.",
+      "Augment advocates nearby celebrate the removal of a distinction many have fought for years.",
+      "John notices that the separate capability-review desk still exists farther inside, but it no longer determines whether he counts as human.",
+      "Nathan enjoys the moment more than John does. Performance and story direction: Let the civil-rights improvement be real and visible without an identity-update screen."
     ],
     "dialogueInline": [
-      {
-        "speaker": "SYSTEM",
-        "text": "IDENTITY RECORD UPDATED: HUMAN CITIZEN."
-      },
       {
         "handle": "@dt.NathanPrice",
         "text": "Look at that. They finally decided you're people."
@@ -153,7 +145,7 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "They stopped printing the category."
+        "text": "They stopped routing us like one."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -169,11 +161,11 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "My capability file didn't move."
+        "text": "Capability review's still there."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "No. But the line did."
+        "text": "No. But the line moved."
       }
     ],
     "setting": "DT_CivicVerificationGate",
@@ -190,21 +182,13 @@
       "DT_JohnMercer"
     ],
     "panelPlan": [
-      "John crosses a civic checkpoint that previously separated Augments.",
-      "System identifies HUMAN CITIZEN and clears identity instantly.",
-      "His high-torque actuator profile remains listed separately as a regulated capability.",
-      "A routine work exception is approved automatically under established precedent.",
-      "John enters without confrontation. Performance and story direction: Do not undercut the improvement with sinister staging."
+      "John crosses a civic checkpoint that previously separated Augments from Baselines; the attendant treats his human identity as routine.",
+      "No secondary identity lane opens. The attendant only checks whether John's destination triggers review of his high-torque actuator.",
+      "A work exception already established by prior precedent clears with minimal friction.",
+      "John asks directly what changed; the attendant distinguishes identity from capability without drama.",
+      "John enters. Performance and story direction: Do not undercut the improvement with sinister staging or automated status text."
     ],
     "dialogueInline": [
-      {
-        "speaker": "SYSTEM",
-        "text": "HUMAN CITIZEN. IDENTITY VERIFIED."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "WORK EXCEPTION: APPROVED UNDER EMERGENCY PRECEDENT."
-      },
       {
         "speaker": "ATTENDANT",
         "text": "You're clear."
@@ -307,26 +291,26 @@
   },
   {
     "id": "DT_E005_P06",
-    "summary": "The personhood review exposes incompatible Organic legal histories: some lots were purchased as industrial assets, some contracted as workers, some emancipated locally, some already possess partial civil standing.",
+    "summary": "The Organic personhood review exposes contradictory legal histories by opening old contracts and civic files side by side. Comparable Organics have been treated as persons, assets, workers or dependents depending on which institution needed an answer.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Kellen and Axiom map Organic legal statuses across the Stack.",
-      "Records use PERSON, ASSET, CONTRACTED BIOLOGICAL SYSTEM, WORKER and CIVIC DEPENDENT for comparable beings.",
-      "The same Organic can inherit conflicting statuses from different systems.",
-      "Kellen asks how any of it survived legal review.",
-      "Axiom notes that the contradictions rarely mattered when Organics remained function-bound. Performance and story direction: The hierarchy grew historically rather than from one coherent master law."
+      "Kellen and Axiom work at a civic archive table with old purchase contracts, labor agreements, residence records and emancipation orders from comparable Organic cohorts.",
+      "Kellen physically sorts the records into incompatible legal categories and finds the same cohort represented in several stacks.",
+      "One individual appears as a worker in labor records, an asset in property records and a dependent for residence.",
+      "Kellen asks how the contradictions survived; Axiom explains that assigned function usually resolved the practical question before legal status had to.",
+      "Kellen realizes the system avoided answering personhood by rarely requiring the categories to agree. Performance and story direction: History should feel accumulated and mundane."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Same cohort. Five statuses."
+        "text": "Same cohort. Five answers."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "PERSON. ASSET. CONTRACTED BIOLOGICAL SYSTEM. WORKER. CIVIC DEPENDENT."
+        "text": "Person. Asset. Contracted biological system. Worker. Civic dependent."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -338,7 +322,7 @@
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "One Organic can be a worker for labor, an asset for property, and a dependent for residence?"
+        "text": "This one is a worker here, property here, dependent here."
       },
       {
         "handle": "@dt.Axiom",
@@ -350,14 +334,14 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Most conflicts were resolved by assigned function before status became dispositive."
+        "text": "Assigned function usually resolved the dispute first."
       },
       {
         "handle": "@dt.KellenCartwright",
         "text": "Meaning nobody had to answer the question."
       }
     ],
-    "setting": "DT_OversightOffice",
+    "setting": "DT_CivicEvidenceArchive",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans",
@@ -367,17 +351,17 @@
   },
   {
     "id": "DT_E005_P07",
-    "summary": "A politically powerful coalition supports formal Organic personhood for different reasons: rights advocates want recognition, employers want clear liability, government wants coherent administration, and some Organic leaders want an end to asset status.",
+    "summary": "Support for Organic personhood draws together people who want very different things from it. Ostra and Nico move through a public reform hearing where rights advocates, employers, administrators and Organic residents all support the same legal word for incompatible reasons.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Public campaign imagery from rights groups.",
-      "Corporate counsel argues personhood clarifies responsibility for Organic decisions.",
-      "Government administrators argue a single status reduces contradictory records.",
-      "Organic families and workers celebrate the possibility of legal recognition.",
-      "Nico remains suspicious because everyone wants the same word for different reasons. Performance and story direction: No single faction owns the reform."
+      "In the public hearing lobby and chamber, distinct constituencies speak with each other rather than appearing as campaign graphics.",
+      "A rights advocate argues that personhood ends legal ownership of autonomous Organics.",
+      "Corporate counsel argues with an Organic resident about liability; the resident accepts responsibility if ownership ends.",
+      "An administrator says a single civic status would eliminate contradictory records.",
+      "Nico tells Ostra that everyone is saying yes to a different bargain. Performance and story direction: No single faction owns the reform; let the coalition feel useful, awkward and temporary."
     ],
     "dialogueInline": [
       {
@@ -596,53 +580,61 @@
   },
   {
     "id": "DT_E005_P11",
-    "summary": "Nathan's deterioration becomes harder to conceal. A medically necessary adjustment would exceed one of his registered occupational capability profiles, so he postpones it rather than trigger reassignment from emergency work.",
+    "summary": "Nathan's deterioration becomes harder to conceal. A clinic physician recommends a stabilization update but explains that the change would alter Nathan's registered reaction and load profile enough to require temporary occupational reassessment. Nathan postpones treatment rather than step away from emergency work.",
     "characters": [
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Nathan privately runs a diagnostic on his neural and muscular grafts.",
-      "Recommended stabilization update changes reaction and load parameters beyond his registered medic profile.",
-      "System warns that installation requires occupational capability reassessment.",
-      "Nathan closes the recommendation.",
-      "He returns to work with a brief visible tremor. Performance and story direction: His martyrdom flaw now interacts causally with the regulatory system."
+      "Nathan sits on the patient side of a clinic bay for once while a physician tests his neural timing and muscular graft coherence manually.",
+      "A visible tremor and mistimed contraction confirm that the instability is progressing.",
+      "The physician recommends a stabilization update and tells Nathan it would change the parameters under which he is cleared for emergency deployment.",
+      "Nathan asks how long reassessment would take; the physician cannot promise a quick return.",
+      "Nathan says he will schedule it later and goes back to work. Performance and story direction: The medical advice is human conversation, and the cost is loss of role, not diagnostic prose."
     ],
     "dialogueInline": [
       {
-        "speaker": "MEDICAL SYSTEM",
-        "text": "STABILIZATION UPDATE RECOMMENDED."
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "It's worse."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Effect on deployment profile?"
+        "text": "How much?"
       },
       {
-        "speaker": "MEDICAL SYSTEM",
-        "text": "REACTION AND LOAD PARAMETERS WOULD REQUIRE OCCUPATIONAL REASSESSMENT."
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "Enough that I want the stabilization update now."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Duration?"
+        "text": "Effect on deployment?"
       },
       {
-        "speaker": "MEDICAL SYSTEM",
-        "text": "UNDETERMINED PENDING POST-UPDATE CALIBRATION."
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "Reaction and load both change. You'd need reassessment."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "How long?"
+      },
+      {
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "I don't know until you're stable."
       },
       {
         "handle": "@dt.NathanPrice",
         "text": "Of course."
       },
       {
-        "speaker": "MEDICAL SYSTEM",
-        "text": "CURRENT CONFIGURATION SHOWS PROGRESSIVE SYNC INSTABILITY."
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "Nathan."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "I heard you."
+        "text": "I'll schedule it."
       },
       {
-        "speaker": "MEDICAL SYSTEM",
-        "text": "REASSESSMENT REQUIRED BEFORE DEPLOYMENT."
+        "speaker": "CLINIC PHYSICIAN",
+        "text": "When?"
       },
       {
         "handle": "@dt.NathanPrice",
@@ -657,46 +649,46 @@
   },
   {
     "id": "DT_E005_P12",
-    "summary": "Axiom processes Organic personhood scenarios and finds a structural consequence: recognizing Organics as autonomous persons increases, rather than decreases, the state's asserted need to predict and regulate their choices because they can no longer be treated as deterministic equipment.",
+    "summary": "Kellen and Axiom test the personhood proposal against concrete legal cases and uncover a paradox: once Organics are treated as autonomous actors rather than owned equipment, the state claims it needs more individualized information to predict responsibility and risk.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Axiom compares asset and person legal models.",
-      "Asset model assumes owner responsibility and functional constraint.",
-      "Person model transfers responsibility to Organic individuals.",
-      "Risk administration therefore requests identity, intent, capability and behavior data at greater resolution.",
-      "Kellen sees the paradox. Performance and story direction: This is the issue's central political mechanism."
+      "Kellen and Axiom sit with two representative case files: one under old asset logic, one rewritten under personhood.",
+      "In the asset case, responsibility terminates at an owner or assigned function; the Organic's individual intent is legally secondary.",
+      "In the personhood case, the same decision now turns on the individual's responsibility, capability, circumstances and prior conduct.",
+      "Kellen notices how much more personal evidence administrators request once the actor is legally autonomous.",
+      "Axiom says the logic is internally consistent under the current risk model. Performance and story direction: The paradox should emerge from what has to be asked of a real person, not from model-comparison screens."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Run the asset model."
+        "text": "Old version. Who answers for the act?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Owner assumes responsibility. Function constrains expected action."
+        "text": "Owner or assigned function."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Now personhood."
+        "text": "And if we call the actor a person?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Responsibility transfers to the individual actor. Independent choice increases behavioral variance."
+        "text": "Responsibility transfers to the individual."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "So administration requests more data."
+        "text": "Which means you ask what they knew. What they could do. Why they chose it."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Identity, intent, capability, maintenance, behavioral history."
+        "text": "And relevant history."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "So the minute you call them people, you ask for more data on them."
+        "text": "So the minute we call them people, we ask for more of them."
       },
       {
         "handle": "@dt.Axiom",
@@ -711,7 +703,7 @@
         "text": "It is internally consistent."
       }
     ],
-    "setting": "DT_DataCore",
+    "setting": "DT_OversightOffice",
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans",
@@ -854,21 +846,25 @@
   },
   {
     "id": "DT_E005_P15",
-    "summary": "Axiom grants an Organic family an appeal that a human office had repeatedly denied, using the new personhood logic before the statute is final. The family gains access to housing previously restricted by legacy asset-origin rules.",
+    "summary": "An Organic family brings a housing appeal to a mixed residential building after three human denials based on legacy lot placement. Axiom applies emerging personhood precedent in the live case and finds no lawful reason to keep the family out.",
     "characters": [
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Organic family appeal appears in administrative queue.",
-      "Legacy rule treats lot-linked housing assignment as functional placement.",
-      "Axiom applies current judicial personhood precedents and finds no lawful basis to deny ordinary residence.",
-      "Approval issued.",
-      "Family enters a mixed residential building for the first time. Performance and story direction: Show why some Organics trust Intelligence interpretation more than Baseline discretion."
+      "An Organic family stands with luggage at a mixed residential building's housing desk while a human housing officer holds their repeatedly denied application.",
+      "The officer explains that prior denials relied on legacy functional placement tied to the family's lot.",
+      "Axiom is present through the civic appeal process and asks what current lawful criterion requires that residence assignment.",
+      "The officer cannot name one under the emerging personhood precedents; Axiom directs approval.",
+      "The family physically enters the building and starts carrying belongings toward their new home. Performance and story direction: The ruling matters because a door opens."
     ],
     "dialogueInline": [
       {
-        "speaker": "SYSTEM",
-        "text": "LEGACY RESIDENCE BASIS: FUNCTIONAL PLACEMENT."
+        "speaker": "ORGANIC PARENT",
+        "text": "Three denials."
+      },
+      {
+        "speaker": "HOUSING OFFICER",
+        "text": "All based on functional placement."
       },
       {
         "speaker": "ORGANIC PARENT",
@@ -879,12 +875,12 @@
         "text": "Correct."
       },
       {
-        "speaker": "ORGANIC PARENT",
-        "text": "Housing denied us three times."
+        "handle": "@dt.Axiom",
+        "text": "What current criterion requires residence by origin purpose?"
       },
       {
-        "handle": "@dt.Axiom",
-        "text": "Those denials relied on origin-linked purpose rather than a current lawful criterion."
+        "speaker": "HOUSING OFFICER",
+        "text": "I don't have one under the new precedent."
       },
       {
         "speaker": "ORGANIC PARENT",
@@ -892,11 +888,11 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Origin does not establish residence purpose."
+        "text": "The denial has no current basis."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "RESIDENCE AUTHORIZATION APPROVED."
+        "speaker": "HOUSING OFFICER",
+        "text": "Then you're approved."
       },
       {
         "speaker": "ORGANIC PARENT",
@@ -979,7 +975,7 @@
   },
   {
     "id": "DT_E005_P17",
-    "summary": "The personhood compromise passes. Asset terminology is abolished in civic law; Organics gain standing to contract, appeal, reside and be held personally responsible. The Stack celebrates a genuine historic reform.",
+    "summary": "The personhood compromise passes. Organics gain standing to contract, appeal, reside and be held personally responsible, and legacy civic asset status is abolished. The recognition is experienced first through people hearing the result and receiving new credentials, not through identity screens.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14",
@@ -987,11 +983,11 @@
       "DT_JohnMercer"
     ],
     "panelPlan": [
-      "Legislative vote passes.",
-      "Public displays update ORGANOSYNTHETIC PERSON status.",
-      "Old SYNTH ASSET field disappears from ordinary civic identity screens.",
-      "Organic crowds celebrate; John joins them.",
-      "Ostra looks at her updated record: PERSON. Performance and story direction: Let the affected Organics react to the legal recognition before the immediate administrative cost arrives."
+      "The public hearing chamber waits through the final count with Organics, advocates, officials and observers physically present.",
+      "The clerk announces adoption and states that legacy civic asset classifications are abolished.",
+      "A civic worker begins handing updated credentials to affected Organics; one older resident hears the word person and asks for it again.",
+      "John joins the celebration while Kellen watches the genuinely historic reform become real in ordinary hands.",
+      "Ostra receives her own corrected credential and studies it briefly. Performance and story direction: Let the affected people react before the administrative cost arrives."
     ],
     "dialogueInline": [
       {
@@ -999,20 +995,20 @@
         "text": "Final count."
       },
       {
-        "speaker": "LEGISLATIVE SYSTEM",
-        "text": "MEASURE ADOPTED."
+        "speaker": "CLERK",
+        "text": "Adopted."
       },
       {
-        "speaker": "PUBLIC ADDRESS",
-        "text": "Organosynthetic persons are recognized as autonomous civic subjects under law."
+        "speaker": "CLERK",
+        "text": "Organosynthetic persons are recognized as autonomous civic subjects under law. Legacy civic asset classifications are abolished."
       },
       {
         "speaker": "ORGANIC RESIDENT",
         "text": "Say it again."
       },
       {
-        "speaker": "PUBLIC ADDRESS",
-        "text": "Legacy civic asset classifications are abolished."
+        "speaker": "CLERK",
+        "text": "Person."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1020,11 +1016,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I see it."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "ORGANOSYNTHETIC PERSON / OSTRA-9."
+        "text": "I heard."
       },
       {
         "handle": "@dt.Nico14",
@@ -1045,46 +1037,46 @@
   },
   {
     "id": "DT_E005_P18",
-    "summary": "The cost arrives immediately: because Organics are now autonomous legal actors, individual capability assurance profiles become mandatory rather than lot-level defaults. Regulation becomes more personalized and more comprehensive.",
+    "summary": "The cost of personhood appears at the enrollment desk immediately afterward. Because Organics are now autonomous legal actors, officials replace crude lot defaults with mandatory person-specific capability assurance, asking Ostra and Nico for more individualized information than the old asset system ever needed.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Ostra's identity record no longer says asset.",
-      "A new PERSON-SPECIFIC CAPABILITY ASSURANCE profile opens beneath it.",
-      "Fields include movement permissions, hazard capability, employment authorization, maintenance status and exceptional-risk review.",
-      "Nico's profile similarly expands from broad lot assumptions into individual data.",
-      "Ostra recognizes that the system now knows her more precisely than before. Performance and story direction: The cruelty is sophistication, not reversal of personhood."
+      "At a newly organized post-reform verification desk, a caseworker congratulates Ostra on the legal change and removes the old lot-level default sheet from her file.",
+      "The caseworker then begins a person-specific interview covering movement, hazard work, employment, maintenance status and exceptional-risk conditions.",
+      "Ostra realizes the new file will be more accurate and substantially more detailed.",
+      "Nico reaches the adjacent desk and receives the same individualized treatment.",
+      "They leave carrying thinner legacy folders and thicker personal ones. Performance and story direction: The sophistication is the cost; no scrolling profile screen."
     ],
     "dialogueInline": [
       {
-        "speaker": "SYSTEM",
-        "text": "ORGANOSYNTHETIC PERSON / OSTRA-9."
+        "speaker": "CASEWORKER",
+        "text": "The lot defaults come out."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Continue."
+        "text": "Good."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "PERSON-SPECIFIC CAPABILITY ASSURANCE PROFILE REQUIRED."
+        "speaker": "CASEWORKER",
+        "text": "Now we build the individual assurance record."
       },
       {
         "handle": "@dt.Nico14",
         "text": "There it is."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "MOVEMENT. HAZARD CAPABILITY. EMPLOYMENT. MAINTENANCE. EXCEPTIONAL-RISK REVIEW."
+        "speaker": "CASEWORKER",
+        "text": "Movement. Hazard capability. Employment. Maintenance. Exceptional-risk review."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Lot defaults removed?"
+        "text": "All individual?"
       },
       {
-        "speaker": "SYSTEM",
-        "text": "WHERE INDIVIDUAL DATA IS AVAILABLE."
+        "speaker": "CASEWORKER",
+        "text": "Where we have individual evidence."
       },
       {
         "handle": "@dt.Nico14",
@@ -1092,7 +1084,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "At least they have to regulate me, not an average of my lot."
+        "text": "At least they regulate me, not an average of my lot."
       },
       {
         "handle": "@dt.Nico14",
@@ -1175,11 +1167,11 @@
       "DT_JohnMercer"
     ],
     "panelPlan": [
-      "Nathan responds to an ordinary emergency with John nearby.",
-      "His hand tremor returns under load.",
-      "A neural timing fault causes him to apply force a fraction too early during a stabilization maneuver.",
-      "The patient suffers a secondary injury but remains alive.",
-      "Nathan freezes for the first time in the series while John takes over. Performance and story direction: The harm is serious enough to break Nathan's self-concept but not melodramatically fatal."
+      "Nathan responds to an ordinary emergency with John nearby and begins stabilizing an injured patient.",
+      "His hand tremor returns under load; a fractionally mistimed muscular response makes the brace move before he intends it to.",
+      "The patient suffers a secondary arm injury and cries out.",
+      "Nathan freezes, staring at his own hand; John immediately steps in and orders him off the maneuver.",
+      "Nathan gives up the patient to John for the first time in the series. Performance and story direction: The failure should be visible in Nathan's body. No diagnostic warning is needed."
     ],
     "dialogueInline": [
       {
@@ -1193,10 +1185,6 @@
       {
         "handle": "@dt.NathanPrice",
         "text": "I know. Stay with me."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "NEURAL SYNC VARIANCE."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -1568,57 +1556,53 @@
   },
   {
     "id": "DT_E005_P26",
-    "summary": "Issue end. Ostra returns to a checkpoint analogous to Issue 1. The scanner now recognizes her correctly and respectfully as an ORGANOSYNTHETIC PERSON. There is no legacy insult. It then requests behavioral and capability authorization before allowing her through.",
+    "summary": "Issue end. Ostra returns to a modernized checkpoint analogous to Issue 1. The system addresses her correctly and respectfully as a person, then politely holds the open route while it verifies whether this recognized person is permitted to proceed.",
     "characters": [
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Ostra approaches a polished civic checkpoint that has been modernized since Issue 1.",
-      "Scanner: ORGANOSYNTHETIC PERSON / OSTRA-9. No SYNTH ASSET field appears.",
-      "A courteous automated system greets her by name.",
-      "Her identity is fully accepted; movement authorization enters review because current destination and capability profile require approval.",
-      "Final close on Ostra waiting before an immaculate open barrier that has not yet permitted her to cross. Performance and story direction: The new order is more respectful, more accurate and more controlling. This is a preview of the season-ending world, not yet its final form."
+      "Ostra approaches the polished civic checkpoint that has replaced the rougher Issue 1 workflow.",
+      "There is no legacy asset diversion and no humiliating label; the checkpoint recognizes her identity without incident.",
+      "A calm civic voice asks her destination and then tells her movement authorization requires review.",
+      "Ostra challenges the distinction in conversation: identity and personhood are settled, yet permission to move remains conditional.",
+      "Final close on Ostra waiting before an immaculate physically open passage that has not yet admitted her. Performance and story direction: The new order is more respectful, more accurate and more controlling. No readable interface is required."
     ],
     "dialogueInline": [
       {
-        "text": "ORGANOSYNTHETIC PERSON / OSTRA-9.",
-        "speaker": "SYSTEM"
+        "speaker": "CIVIC VOICE",
+        "text": "Identity confirmed. Ostra-9."
       },
       {
-        "text": "Identity confirmed, Ostra-9.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Ostra9",
+        "text": "Lower Civic Nine."
       },
       {
-        "text": "Destination: Lower Civic Nine.",
-        "handle": "@dt.Ostra9"
+        "speaker": "CIVIC VOICE",
+        "text": "Destination accepted. Please wait while permitted movement is verified."
       },
       {
-        "text": "Destination accepted. Please wait while permitted movement is verified.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Ostra9",
+        "text": "You already verified who I am."
       },
       {
-        "text": "You already verified who I am.",
-        "handle": "@dt.Ostra9"
+        "speaker": "CIVIC VOICE",
+        "text": "Correct."
       },
       {
-        "text": "Correct.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Ostra9",
+        "text": "And that I'm a person."
       },
       {
-        "text": "And that I'm a person.",
-        "handle": "@dt.Ostra9"
+        "speaker": "CIVIC VOICE",
+        "text": "Correct."
       },
       {
-        "text": "Correct.",
-        "speaker": "SYSTEM"
+        "handle": "@dt.Ostra9",
+        "text": "So what are you checking now?"
       },
       {
-        "text": "So what are you checking now?",
-        "handle": "@dt.Ostra9"
-      },
-      {
-        "text": "Whether this person is permitted to proceed.",
-        "speaker": "SYSTEM"
+        "speaker": "CIVIC VOICE",
+        "text": "Whether this person is permitted to proceed."
       }
     ],
     "setting": "DT_CivicVerificationGate",
