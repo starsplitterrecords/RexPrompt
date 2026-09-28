@@ -1,3 +1,7 @@
+# SUPERSEDED HISTORICAL SOURCE
+
+Current authority: `issue_11_war_council_structural_revision.md` and `pages_i11_war_council.json`.
+
 # Vikings 2026 — Issue 7: WAR COUNCIL
 
 Status: PRODUCTION SCRIPT — ISSUE 8 DISCOVERY-PRESERVATION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
