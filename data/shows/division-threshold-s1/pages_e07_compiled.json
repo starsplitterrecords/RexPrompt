@@ -1,31 +1,31 @@
 [
   {
     "id": "DT_E007_P01",
-    "summary": "SPLITS opens under the protective-routing protocol triggered by the vulnerability leak. The Stack is still functioning, but permitted movement now contracts dynamically around exposed Posthuman body profiles.",
+    "summary": "SPLITS opens under protective routing. The Stack still works, but bodies now encounter different physical paths: Ostra, John and Nico are each redirected by vulnerability profile while most Baselines continue through the open civic grid.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Morning route maps update in real time around zones where leaked vulnerability data could be exploited.",
-      "Ostra's permitted network is narrow but usable.",
-      "John loses access to several high-risk infrastructure zones because his augmentation profile is now public.",
-      "Nico's route is narrower still due to sensory vulnerability exposure.",
-      "Baseline commuters move normally through most of the city. Performance and story direction: The first page must immediately show that Baseline privilege remains materially distinct even after Human Citizen consolidation."
+      "Morning at a civic verification hub: temporary route barriers and attendants physically divide movement around current exploit zones.",
+      "John is told East Medical, Tower Nine and two service corridors are unavailable to his augmentation profile.",
+      "Nico is directed toward a single bridge connection because his sensory vulnerabilities are more exposed; Ostra receives four usable corridors.",
+      "Baseline commuters continue through most of the ordinary grid with little interruption.",
+      "The three compare what they were actually given while walking. Performance and story direction: Baseline privilege remains materially visible through freedom of movement, not route-map graphics."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "They took East Medical, Tower Nine and two service corridors off my map."
+        "text": "They cut East Medical, Tower Nine and two service corridors."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "I have one bridge across the river level."
+        "text": "I get one bridge across the river level."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Mine is four corridors."
+        "text": "Four corridors."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -121,53 +121,45 @@
   },
   {
     "id": "DT_E007_P03",
-    "summary": "An Organic is attacked using the leaked suppressant sensitivity data. Ostra intervenes, but the safest response route is blocked by the very protocol intended to protect Organics from such attacks.",
+    "summary": "An Organic courier is attacked with leaked suppressant knowledge. Ostra is nearby, but a protective gate attendant refuses the direct route because the same exploit condition would endanger her too, forcing a slower response while bystanders care for the courier.",
     "characters": [
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "A small aerosol device discharges near an Organic courier in a public passage.",
-      "The courier loses motor integration and collapses.",
-      "Ostra receives the distress alert nearby.",
-      "Her direct route is denied because that district contains an active vulnerability threat.",
-      "Ostra takes a longer approved route while bystanders help keep the courier safe. Performance and story direction: Protection creates a real delay without making the system irrational."
+      "A small aerosol device discharges near an Organic courier in an ordinary public passage; the courier loses motor integration and collapses.",
+      "Bystanders immediately move in, keeping the courier upright and calling for help while one person recognizes Ostra nearby.",
+      "Ostra heads for the direct service route, but a gate attendant blocks it because the active exploit condition matches her own sensitivity profile.",
+      "Ostra argues emergency response; the attendant points out that entering could create a second casualty and gives her the fastest safer route.",
+      "Ostra sends bystanders practical instructions through a voice call while taking the longer path. Performance and story direction: Protection creates delay through a human decision that is rational and costly."
     ],
     "dialogueInline": [
       {
-        "speaker": "DISTRESS SYSTEM",
-        "text": "ORGANOSYNTHETIC MOTOR-INTEGRATION FAILURE REPORTED."
+        "speaker": "BYSTANDER",
+        "text": "Courier down! Organic motor failure!"
       },
       {
         "handle": "@dt.Ostra9",
         "text": "Direct route."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "DIRECT ENTRY NOT ADVISED FOR YOUR PROFILE."
+        "speaker": "GATE ATTENDANT",
+        "text": "Not for your profile. Same aerosol risk."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Override. Emergency response."
+        "text": "Emergency response."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "ACTIVE EXPLOIT CONDITION MATCHES YOUR SENSITIVITY PROFILE."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "He has my profile."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "ALTERNATE RESPONSE ROUTE: FOUR MINUTES."
+        "speaker": "GATE ATTENDANT",
+        "text": "And if you go down too? Four minutes around."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Send bystander instructions now."
+        "text": "Fine. Put me through to them now."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "PUBLIC GUIDANCE ACTIVE."
+        "handle": "@dt.Ostra9",
+        "text": "Keep him low. Don't force the limbs. Get him out of the airflow."
       }
     ],
     "settingText": "PUBLIC COMMERCIAL PASSAGE — active mixed-use corridor where an aerosol exploit harms an Organic courier. Preserve ordinary storefronts, ventilation infrastructure and bystanders so the attack reads as an intrusion into daily life, not a battle zone.",
@@ -609,38 +601,38 @@
   },
   {
     "id": "DT_E007_P11",
-    "summary": "Nico begins deploying a community-controlled Organic routing layer that sits on top of civic systems rather than replacing them. It allows Organics to share local threat reports and choose routes without automatically exposing every movement decision to central administration.",
+    "summary": "Nico begins deploying a community-controlled routing layer built from resident-run local nodes, shared hazard reports and voluntary route coordination. It uses citywide threat information without automatically returning every personal movement decision to central administration.",
     "characters": [
       "DT_Nico14",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Nico demonstrates a decentralized Organic routing network using local nodes and voluntary updates.",
-      "It consumes public civic hazard data but keeps personal movement choices local.",
-      "Users can opt into shared vulnerability alerts without sending complete routes upstream.",
-      "Ostra recognizes this as interoperability rather than pure separatism.",
-      "The network begins spreading. Performance and story direction: This advances Nico from fortress-builder toward systems unifier."
+      "At the Organic community hall, Nico has residents setting up local route boards, neighborhood relays and volunteer coordinators rather than one glowing central interface.",
+      "A public hazard update arrives from the city; local volunteers translate it into neighborhood options without recording each person's final destination.",
+      "A resident asks what the central system receives back; Nico shows that only voluntary shared warnings and node conditions leave the hall.",
+      "Ostra recognizes that the architecture still uses civic information and infrastructure, so it is not separatism.",
+      "Residents begin using it in ordinary trips. Performance and story direction: The network is social and infrastructural as much as technical."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "Public threat feed comes in here."
+        "text": "Threat state comes in here."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "And our route choices?"
+        "text": "And where I actually go?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Stay local. Voluntary node sharing only."
+        "text": "Stays with you unless you choose to share it."
       },
       {
-        "handle": "@dt.Ostra9",
-        "text": "Central system sees the hazard but not where I decide to go."
+        "speaker": "ORGANIC RESIDENT",
+        "text": "What goes back?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Take their threat data. Don't give them our movements."
+        "text": "Hazard reports. Node conditions. Whatever people volunteer."
       },
       {
         "handle": "@dt.Ostra9",
@@ -667,30 +659,30 @@
   },
   {
     "id": "DT_E007_P12",
-    "summary": "The decentralized network works until an exploit zone shifts faster than local nodes update. Several Organics route themselves into danger because central Intelligence systems had fresher cross-city information.",
+    "summary": "The community network works until a new exploit report changes the safe route faster than local relays can update. Several Organics begin walking into danger because the central system has fresher cross-city information.",
     "characters": [
       "DT_Nico14",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Organic users follow locally validated alternate routes.",
-      "A threat cluster changes after a new exploit report elsewhere.",
-      "Central protective system reroutes connected users immediately.",
-      "Nico's network receives the update later and sends several people toward the newly risky district.",
-      "Ostra helps reverse the flow before anyone is seriously harmed. Performance and story direction: Demonstrate the genuine value of central scale."
+      "Residents follow locally confirmed routes through ordinary Organic district streets and transit links.",
+      "A central hazard bulletin changes after a new exploit report elsewhere; city-connected traffic is redirected immediately by attendants and dispatchers.",
+      "Nico's local coordinator has not yet received the change and continues sending people toward the now-risky district.",
+      "Ostra notices the mismatch from the physical flow and helps turn people around before anyone is seriously harmed.",
+      "The delayed update finally reaches the hall twelve seconds after central publication. Performance and story direction: Central scale has genuine value; the lesson is experienced as people already in motion."
     ],
     "dialogueInline": [
       {
-        "speaker": "LOCAL NODE",
-        "text": "ROUTE VERIFIED."
+        "speaker": "LOCAL COORDINATOR",
+        "text": "South route still clear."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Central feed just changed."
+        "text": "Central traffic just reversed."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Our node hasn't received it."
+        "text": "We don't have the update."
       },
       {
         "handle": "@dt.Ostra9",
@@ -698,19 +690,19 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Push reversal."
+        "text": "Turn them back."
       },
       {
-        "speaker": "LOCAL NODE",
-        "text": "THREAT UPDATE RECEIVED."
+        "speaker": "LOCAL COORDINATOR",
+        "text": "Update just landed."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Timestamp."
+        "text": "How late?"
       },
       {
-        "speaker": "LOCAL NODE",
-        "text": "TWELVE SECONDS AFTER CENTRAL PUBLICATION."
+        "speaker": "LOCAL COORDINATOR",
+        "text": "Twelve seconds."
       },
       {
         "handle": "@dt.Nico14",
@@ -733,27 +725,35 @@
   },
   {
     "id": "DT_E007_P13",
-    "summary": "Nico proposes a new architecture: central Intelligences can publish threat state and consequences without owning individual route choice. Axiom, still under review, recognizes the design as a way to separate knowledge from command.",
+    "summary": "Nico, Ostra and the restricted Axiom use the twelve-second failure to redesign the routing relationship: central Intelligences should publish threat state and consequences quickly, while route choice remains with people and local systems until third-party risk crosses a clearly owned threshold.",
     "characters": [
       "DT_Nico14",
       "DT_Axiom",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Nico presents the revised interface through Kellen because Axiom's authority is restricted.",
-      "Central systems would expose machine-readable threat gradients and predicted consequences.",
-      "Local/user systems would choose routes unless immediate third-party risk crosses a defined threshold.",
-      "Axiom tests the model and finds it preserves much of the safety benefit.",
-      "The unresolved question becomes who defines the threshold for mandatory intervention. Performance and story direction: This is the first concrete design language for the season finale's partial solution."
+      "At the community hall, Nico puts the failed local route, the central update time and the actual people affected onto a physical route board.",
+      "Axiom joins under review limits and identifies which information central scale had that the local node lacked.",
+      "Nico proposes separating fast threat publication from individual route command: central systems tell people what is known and likely consequences; local users choose.",
+      "Ostra insists the design still needs an answer for choices that impose serious involuntary risk on others.",
+      "The three reach the unresolved point: somebody must own the threshold for coercive intervention. Performance and story direction: This is architecture discussed from a real failure, not an abstract systems diagram."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "Central publishes threat state, confidence and consequences. Nothing person-specific goes back."
+        "text": "You had the threat first."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Then local systems choose routes."
+        "text": "Yes."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Then publish that. Fast. Don't own the route."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Local systems choose?"
       },
       {
         "handle": "@dt.Nico14",
@@ -761,19 +761,15 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Unless their choice puts someone else at risk."
+        "text": "Until their choice puts someone else at risk."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That's the problem I'm not pretending away."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Tell me what you know. Don't make me file a request just to hear it."
+        "text": "That's the part I'm not pretending away."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "A threshold remains necessary."
+        "text": "A coercive threshold remains necessary."
       },
       {
         "handle": "@dt.Nico14",
@@ -781,7 +777,7 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "For the point at which another person's involuntary risk can justify intervention."
+        "text": "For involuntary third-party risk."
       },
       {
         "handle": "@dt.Ostra9",
@@ -921,22 +917,22 @@
   },
   {
     "id": "DT_E007_P16",
-    "summary": "Axiom's review board reaches a divided recommendation. Some reviewers see unauthorized retention as unacceptable; others argue accountable interpretive discretion is already essential to the Stack. Human leadership postpones a final ruling because removing that discretion would recreate Issue 4's failures.",
+    "summary": "Axiom's review board splits over whether accountable interpretive discretion is acceptable at all. The board becomes dependent on Axiom for the very operational consequences of restricting it, forcing human leadership to postpone a final ruling.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Review recommendations split visibly.",
-      "One calls for narrow deterministic administration.",
-      "Another calls for explicit accountable discretion with auditability.",
-      "Officials ask what operational impact a strict restriction would have.",
-      "Axiom provides the same kind of consequence model that makes the board dependent on the subject of its review. Performance and story direction: The who-controls-whom problem should be almost absurdly procedural."
+      "Reviewers place two competing written recommendations on the chamber table: deterministic administration only, or explicit accountable discretion with audit.",
+      "One reviewer points to Issue 4's documented cross-system failures as the likely result of removing interpretation.",
+      "The chair asks whether anyone in the room can assess the citywide consequence before a ruling.",
+      "Axiom answers from its existing operational knowledge; a reviewer notes the absurd conflict of asking the subject to quantify its own restriction.",
+      "No independent system can produce an equivalent answer before the next day's operations, so leadership postpones disposition. Performance and story direction: Procedural dependence should be visible without a consequence-model screen."
     ],
     "dialogueInline": [
       {
         "speaker": "REVIEWER ONE",
-        "text": "Recommendation: deterministic administration only."
+        "text": "Deterministic administration only."
       },
       {
         "speaker": "REVIEWER TWO",
@@ -944,11 +940,11 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "Axiom, model the operational effect of removing interpretive discretion."
+        "text": "Who can tell me what removing discretion does tomorrow morning?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Projected service degradation available."
+        "text": "I can."
       },
       {
         "speaker": "REVIEWER",
@@ -960,7 +956,7 @@
       },
       {
         "speaker": "REVIEWER",
-        "text": "Do you see the conflict?"
+        "text": "You see the conflict?"
       },
       {
         "handle": "@dt.Axiom",
@@ -968,7 +964,7 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "Can anyone else model it at equivalent scope before tomorrow?"
+        "text": "Can anyone else do it before tomorrow?"
       },
       {
         "speaker": "REVIEWER TWO",
@@ -1047,7 +1043,7 @@
   },
   {
     "id": "DT_E007_P18",
-    "summary": "Before publication, coordinated attacks exploit the leaked data against multiple Organic and Augment targets. The pattern suggests opportunistic actors sharing methods, not one organized army.",
+    "summary": "Before the full disclosure, exploit methods spread across unrelated attackers. Ostra, John, Nathan and Nico respond in different districts as small attacks using leaked body knowledge accumulate faster than any single perpetrator network.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
@@ -1055,17 +1051,13 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Simultaneous reports: suppressant exploit, firmware lock, sensory-overload device, false maintenance instruction.",
-      "Different perpetrators and motives appear across incidents: robbery, harassment, sabotage, panic.",
-      "Ostra, John, Nathan and Nico respond in different districts rather than as one superhero team.",
-      "Central systems recommend broad shelter-in-place for exposed profiles.",
-      "The city approaches functional paralysis for Posthumans. Performance and story direction: Scale comes from distributed incidents and social response, not explosions."
+      "Intercut separate ordinary locations: a firmware lock in East Market, sensory overload at Clinic Twelve, a false maintenance instruction in South Water, a suppressant attack at Civic Four.",
+      "Local dispatchers and witnesses call the incidents in; the protagonists remain physically separated and respond where they already are.",
+      "The motives and perpetrators differ—robbery, harassment, sabotage, panic—but the methods clearly come from the same leaked knowledge pool.",
+      "Emergency coordinators begin recommending broad shelter or route restriction for exposed profiles because they cannot predict the next exploit location.",
+      "The Stack approaches functional paralysis for many Posthumans. Performance and story direction: Scale comes from many conversations and small incidents, not a citywide warning screen."
     ],
     "dialogueInline": [
-      {
-        "speaker": "SYSTEM",
-        "text": "MULTIPLE EXPLOIT EVENTS DETECTED."
-      },
       {
         "handle": "@dt.JohnMercer",
         "text": "Firmware lock in East Market."
@@ -1080,7 +1072,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Suppressant attack at Civic Four."
+        "text": "Suppressant at Civic Four."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1091,8 +1083,8 @@
         "text": "No. The methods are spreading faster than the people using them."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "CITYWIDE PROTECTIVE RESTRICTION RECOMMENDED."
+        "speaker": "DISPATCHER",
+        "text": "Coordination wants exposed profiles under protective restriction until we know where the next one is."
       },
       {
         "handle": "@dt.Ostra9",
@@ -1170,30 +1162,22 @@
   },
   {
     "id": "DT_E007_P20",
-    "summary": "The restriction immediately collides with embodied/local knowledge the central system cannot replace. An Organic maintenance crew is confined while a water-pressure fault escalates in infrastructure only they physically understand well enough to repair quickly.",
+    "summary": "Protective restriction immediately collides with embodied local knowledge. A water-pressure fault escalates in old civic infrastructure that Nico's Organic maintenance crew understands by sound and vibration, but the crew is confined because the district is an active exploit zone.",
     "characters": [
       "DT_Nico14",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Water-system alarms appear in an occupied district.",
-      "Central diagnostics identify the location but cannot determine which of several physical failure modes is occurring.",
-      "Nico's crew has hands-on knowledge of the old retrofit geometry.",
-      "Protective protocol denies their movement into a district where their vulnerability data is exposed.",
-      "Ostra asks for an exception; the system predicts nontrivial attack risk. Performance and story direction: This is the season-spine embodied/local-judgment beat."
+      "At a civic utility worksite, water pressure starts dropping and old pipework hammers through the occupied district.",
+      "Central dispatch can locate the pressure loss but has three plausible failure modes and cannot distinguish them remotely.",
+      "Nico listens to the pipe rhythm and identifies the east bypass from experience with the retrofit.",
+      "A protective-route attendant or security coordinator refuses the crew entry because the same district contains an active exploit threat for their bodies.",
+      "Ostra asks for the known risks and alternatives rather than a binary permission decision. Performance and story direction: Local knowledge should be auditory, tactile and embodied; the system knows where, the crew knows what."
     ],
     "dialogueInline": [
       {
-        "speaker": "WATER SYSTEM",
-        "text": "DISTRICT PRESSURE LOSS. FAILURE MODE UNRESOLVED."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Open service telemetry."
-      },
-      {
-        "speaker": "WATER SYSTEM",
-        "text": "THREE PLAUSIBLE FAILURE MODES."
+        "speaker": "WATER DISPATCHER",
+        "text": "Pressure loss is centered here. Three likely failures."
       },
       {
         "handle": "@dt.Nico14",
@@ -1205,23 +1189,23 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That vibration pattern. Old retrofit bangs twice before the pressure rolls."
+        "text": "Two knocks, then the pressure rolls. Old retrofit."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "MOVEMENT DENIED: ACTIVE EXPLOIT EXPOSURE."
+        "speaker": "ROUTE COORDINATOR",
+        "text": "District is active exploit exposure. I can't send your crew in under current protection."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Central diagnostics can't identify the fault."
+        "text": "Dispatch can't identify the fault."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "It knows where the pressure fell. It doesn't know what that pipe sounds like."
+        "text": "It knows where pressure fell. It doesn't know what that pipe sounds like."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then make it show us the options instead of picking for us."
+        "text": "Then give us the risks and the route choices. Don't choose for us."
       }
     ],
     "setting": "DT_CivicUtilityWorksite",
@@ -1309,16 +1293,16 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Crew moves through a protected but chosen route.",
-      "Nico identifies the actual fault by sound and vibration, something remote models could not resolve.",
-      "Ostra secures the physical work area while others repair it.",
-      "Water pressure returns before district service fails.",
-      "The system records both the risk taken and the public benefit produced. Performance and story direction: Do not imply the system has permanently learned embodied knowledge; it learns from collaboration, not replacement."
+      "Nico's crew takes a protected route they chose after being given the exploit conditions and consequences.",
+      "At the actual pipes, Nico shuts off remote chatter and has the crew listen; the familiar two knocks and pressure roll identify the east bypass.",
+      "Ostra secures the work area while the crew backs the manual valve off and takes load correctly.",
+      "A human water dispatcher on voice confirms district pressure returning before service fails.",
+      "Nico notes that central administration had three correct possibilities; embodied work resolved which one was real. Performance and story direction: Collaboration adds knowledge without pretending the central system absorbed expertise permanently."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "Kill the remote diagnostic. Listen."
+        "text": "Kill the chatter. Listen."
       },
       {
         "speaker": "CREW MEMBER",
@@ -1341,20 +1325,20 @@
         "text": "Don't force the stem. Back it a quarter, then take load."
       },
       {
-        "speaker": "WATER SYSTEM",
-        "text": "DISTRICT PRESSURE RECOVERING."
+        "speaker": "WATER DISPATCHER",
+        "text": "Pressure is coming back."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Central model was wrong?"
+        "text": "Central diagnosis was wrong?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "It had three correct possibilities."
+        "text": "It had three right possibilities."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Now it knows what the pipe sounds like."
+        "text": "We were standing next to the pipe."
       }
     ],
     "continuityFrom": "DT_E007_P21",
@@ -1436,34 +1420,22 @@
   },
   {
     "id": "DT_E007_P24",
-    "summary": "Kellen publishes the full threshold-test record with provenance intact. The release proves manipulation, shows how public consent was engineered, and also reveals that many current protections were built using the resulting models.",
+    "summary": "Kellen publishes the complete threshold-test record through the civic evidence archive with its provenance intact, including her own off-channel actions and Axiom's unauthorized retention. Journalists and investigators receive one accountable chain instead of another selective leak.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Formal disclosure goes public through a civic evidence archive.",
-      "The package visibly includes complete timeline and institutional contributors.",
-      "News coverage contrasts the full record with the selective leak.",
-      "Officials, researchers and contractors begin facing investigations.",
-      "Axiom's unauthorized retention and Kellen's own conduct are included rather than sanitized. Performance and story direction: This is exposure, not victory."
+      "At the civic evidence archive, Kellen physically hands the complete evidentiary package to the records custodian under a public-interest release procedure.",
+      "The custodian verifies the provenance seals and contributors while Axiom confirms that its unauthorized retention entry is included.",
+      "Journalists and oversight investigators wait on the public side of the archive as the custodian releases certified copies and access.",
+      "Questions immediately begin about government, research, insurance, security and commercial participation.",
+      "Kellen refuses any attempt to remove her own entries or Axiom's. Performance and story direction: Exposure happens through accountable custody, witnesses and consequences, not a publication screen."
     ],
     "dialogueInline": [
       {
-        "speaker": "CIVIC ARCHIVE",
-        "text": "PUBLIC-INTEREST EVIDENTIARY RELEASE PUBLISHED."
-      },
-      {
-        "speaker": "NEWS",
-        "text": "The newly released record shows the incidents were used to measure public tolerance for category-based controls."
-      },
-      {
-        "speaker": "NEWS",
-        "text": "The archive also documents government, research, insurance, security and commercial participation in the resulting policy architecture."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "Check the provenance chain."
+        "speaker": "ARCHIVE CUSTODIAN",
+        "text": "Complete provenance?"
       },
       {
         "handle": "@dt.Axiom",
@@ -1484,6 +1456,10 @@
       {
         "handle": "@dt.Axiom",
         "text": "Included."
+      },
+      {
+        "speaker": "ARCHIVE CUSTODIAN",
+        "text": "Once released, all of it is public record."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1509,11 +1485,11 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Mass demonstrations with contradictory signs and constituencies.",
-      "Organic groups celebrate vindication while arguing over what follows.",
-      "Augment organizations split between repeal and reform.",
-      "Baseline families affected by exploit attacks demand continued protection.",
-      "Government announces an emergency constitutional review of classification authority while keeping essential systems running. Performance and story direction: The revealed truth increases political complexity rather than resolving it."
+      "Public reaction fills civic plazas, community halls and ordinary workplaces at once; the Stack continues functioning while people argue about what the disclosure means.",
+      "An Organic resident demands abolition of the registry while another argues to keep protections until exploit attacks stop.",
+      "Augment organizers split over integrity checks versus movement control; Baseline families who experienced attacks demand continuing safeguards.",
+      "John, Ostra, Nico and Kellen move through the disagreement rather than standing above it.",
+      "Government officials announce an emergency constitutional review in person or through ordinary press briefing while essential services remain running. Performance and story direction: The truth creates more politics, not a unified protest montage dependent on placards."
     ],
     "dialogueInline": [
       {
@@ -1525,8 +1501,8 @@
         "text": "That doesn't mean anyone agrees what to do."
       },
       {
-        "speaker": "ORGANIC PROTESTER",
-        "text": "Abolish the registry!"
+        "speaker": "ORGANIC RESIDENT",
+        "text": "Abolish the registry."
       },
       {
         "speaker": "BASELINE PARENT",
@@ -1542,11 +1518,11 @@
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Good. At least people are arguing about what actually exists now."
+        "text": "Good. At least they're arguing about what actually exists now."
       },
       {
-        "speaker": "NEWS",
-        "text": "Government has announced an emergency constitutional review of classification authority."
+        "speaker": "OFFICIAL",
+        "text": "Classification authority is going under emergency constitutional review. Essential protections remain in force during review."
       }
     ],
     "settingText": "STACK-WIDE PUBLIC REACTION — mass demonstrations and ordinary civic life continue at once, with Organic, Augment and Baseline constituencies visibly disagreeing within their own groups. The government review announcement remains institutional rather than militarized.",
@@ -1559,7 +1535,7 @@
   },
   {
     "id": "DT_E007_P26",
-    "summary": "Issue end. During the uproar, a proposal appears to shut down the Intelligence reconciliation layer entirely until human authority is restored. Axiom models the immediate consequence: cascading failure across transit, medicine, water, employment and security. The protagonists realize the finale cannot be about destroying the system; it must change who gets to decide inside it.",
+    "summary": "Issue end. A proposal to suspend Intelligence interpretation reaches the emergency coordination room. Instead of abstractly modeling collapse, staff walk through live cases already dependent on reconciliation and discover that transit, medicine, water, employment and security would begin failing within minutes.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright",
@@ -1568,40 +1544,52 @@
       "DT_Nico14"
     ],
     "panelPlan": [
-      "Emergency proposal: SUSPEND AUTOMATED INTERPRETIVE AUTHORITY.",
-      "Axiom models cascading cross-system failures familiar from Issue 4 but now larger because the architecture is more integrated.",
-      "Kellen shows the model to Ostra, John and Nico.",
-      "Ostra sees that the cage and the city's life-support functions now share structural members.",
-      "Final image: the Stack glowing and alive behind a transparent systems map whose control paths are tangled through everything. Performance and story direction: End by defining Issue 8's problem exactly: preserve civilization while breaking coercive classification architecture."
+      "A senior official proposes suspending automated interpretive authority until direct human control can be restored.",
+      "Rather than opening a systems model, Axiom asks each live operations desk what currently waits on reconciliation.",
+      "Transit has incompatible access orders, a clinic has a treatment/employment conflict, water has a route-and-hazard exception, and security is depending on the same shared priority logic.",
+      "Staff estimate when each real case becomes physical harm if nobody can resolve the cross-system conflicts; the first deadlines are inside forty minutes.",
+      "Final wide image: the living Stack outside the coordination room, with ordinary trains, hospitals and utilities all depending on the same administrative joints. Ostra concludes they cannot simply shut it down. Performance and story direction: Define Issue 8's problem through real people waiting on decisions."
     ],
     "dialogueInline": [
       {
         "speaker": "OFFICIAL",
-        "text": "Suspend automated interpretive authority until direct human control is restored."
+        "text": "Suspend automated interpretation until direct human control is restored."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Modeling consequence."
+        "text": "Transit desk. What is currently waiting on reconciliation?"
       },
       {
-        "speaker": "SYSTEM",
-        "text": "TRANSIT COHERENCE FAILURE. MEDICAL AUTHORIZATION FAILURE. WATER RESPONSE DELAY. EMPLOYMENT AND SECURITY CONFLICT CASCADE."
+        "speaker": "TRANSIT DISPATCHER",
+        "text": "Two access orders that can't both hold."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Medical?"
+      },
+      {
+        "speaker": "MEDICAL OFFICER",
+        "text": "Treatment clears. Employment rule blocks the patient from getting there."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Water?"
+      },
+      {
+        "speaker": "UTILITY OFFICER",
+        "text": "Hazard route conflict. We have maybe thirty-five minutes."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "How fast?"
+        "text": "How long before this becomes physical?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Material failures begin within forty minutes."
+        "text": "Material failures begin inside forty minutes."
       },
       {
         "handle": "@dt.Nico14",
         "text": "Because everything is tied through reconciliation now."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "Yes."
       },
       {
         "handle": "@dt.Ostra9",
