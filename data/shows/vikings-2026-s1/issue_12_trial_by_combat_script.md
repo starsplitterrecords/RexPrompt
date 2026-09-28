@@ -1,8 +1,4 @@
-# SUPERSEDED HISTORICAL SOURCE
-
-Current authority: `issue_12_trial_by_combat_script.md` and `pages_i12_trial_by_combat.json`.
-
-# Vikings 2026 — Issue 8: PERMANENT RESIDENCY / TRIAL BY COMBAT
+# Vikings 2026 — Issue 12: PERMANENT RESIDENCY / TRIAL BY COMBAT
 
 Status: PRODUCTION SCRIPT — HARD-PROBLEM / ASTRID-COMPRESSION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE; ACTIVE ASSEMBLER INPUT  
 Primary function: the institution must decide whether an emergency household file built around Bjorn can be lawfully converted into five individual permanent statuses. The applicants have to prove in the room that the old hierarchy no longer describes them; Bjorn's trial is surrendering its final legal residue, and Astrid's compact testimony reveals how far ordinary independence has already gone.
@@ -13,7 +9,7 @@ Exactly three Kin exist: Astrid and two men. Their production identities remain 
 
 Bjorn wears armor without weapons. Carrie does not ask him to remove it.
 
-Astrid's competence must feel accumulated from Issue 5 and her off-page life in Issues 6–7. No hidden job, degree, secret municipal training, or sudden polished fluency. She knows what she knows because she has repeated ordinary life enough times for it to become ordinary.
+Astrid's competence must feel accumulated across The Neighborhood, Belonging, and her ordinary partly off-page life throughout the season. No hidden job, degree, secret municipal training, or sudden polished fluency. She knows what she knows because she has repeated ordinary life enough times for it to become ordinary.
 
 The hearing authority is competent, bounded, busy, and genuinely trying to make a fair decision. No villain turn. No sentimental conversion.
 
@@ -560,7 +556,7 @@ The locked dramatic and procedural outcome remains: **permanent temporal-residen
 
 **END ISSUE 8**
 
-## Season-state after Issue 8
+## Season-state after Issue 12
 
 - Bjorn can lead without speaking for everyone.
 - Gunnar has a chosen life larger than navigation.
@@ -569,4 +565,4 @@ The locked dramatic and procedural outcome remains: **permanent temporal-residen
 - Astrid has moved from background household member to the clearest proof that integration can become ordinary enough to disappear from casework.
 - The household remains chosen kin without requiring one future.
 
-Issue 8 is the Season 1 finale. Any later Vikings material must begin from the post-hearing state and introduce a genuinely new consequence or story engine; do not reopen residency preparation, collect more evidence, or repeat the hearing.
+Issue 12 is the Season 1 finale. Any later Vikings material must begin from the post-hearing state and introduce a genuinely new consequence or story engine; do not reopen residency preparation, collect more evidence, or repeat the hearing.
