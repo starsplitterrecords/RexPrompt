@@ -1,3 +1,7 @@
+# SUPERSEDED HISTORICAL SOURCE
+
+This earlier neighborhood-memory version was superseded after Issue 5 — The Neighborhood absorbed the recurring-vendor, laundromat, Kin-routine and neighborhood-recognition material. Current Issue 7 authority: `issue_07_skaldic_interface_structural_revision.md` and `pages_i07_skaldic_interface.json`.
+
 # Vikings 2026 — Issue 5: THE SKALDIC INTERFACE
 
 Status: ENHANCED PRODUCTION SCRIPT — SCENE-BASED DIALOGUE/VOICE PASS COMPLETE
