@@ -1,16 +1,16 @@
 {
   "series": "Vikings 2026",
   "season": "S1",
-  "seasonMovement": "Impossible arrival -> settlement -> navigation -> participation -> belonging -> usefulness -> chosen household -> self-defined belonging under judgment.",
-  "seasonDramaticShift": "Issues 1–5 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 6 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, autonomy, responsibility, and belonging.",
+  "seasonMovement": "Impossible arrival -> settlement -> orientation and territory -> navigation -> participation -> belonging -> usefulness -> chosen household -> self-defined belonging under judgment.",
+  "seasonDramaticShift": "Issues 1–6 are driven largely by collision with 2026 and the work of building an ordinary life. From Issue 7 forward, modern systems remain real pressure but stop being the default dramatic protagonist. The later season is driven by what these particular people want from work, one another, New York, autonomy, responsibility, and belonging.",
   "kinContinuity": {
     "count": 3,
     "composition": "Two men and Astrid, the only woman.",
     "issues1To3": "The three Kin are seen primarily together in or immediately around the Bushwick placement; they are not yet followed independently around the city.",
     "middleSeason": "Their independent errands, relationships, routines and interests begin to appear individually.",
-    "issues6To7": "Astrid is deliberately largely absent from foreground action while the two male Kin remain visible. Her absence is ordinary, not mysterious.",
-    "issue8": "The hearing reveals that Astrid has quietly built a robust independent ordinary life outside the parts of New York Carrie and Bjorn were tracking.",
-    "maleNames": "Personal names remain unresolved and intentionally unlettered through Issues 7–8. Current production identities are First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2; this does not block production."
+    "maleNames": "Personal names remain unresolved and intentionally unlettered through Issues 8–9. Current production identities are First Male Kin / @vik.KinMan1 and Second Male Kin / @vik.KinMan2; this does not block production.",
+    "issues7To8": "Astrid is deliberately largely absent from foreground action while the two male Kin remain visible. Her absence is ordinary, not mysterious.",
+    "issue9": "The hearing reveals that Astrid has quietly built a robust independent ordinary life outside the parts of New York Carrie and Bjorn were tracking."
   },
   "issues": [
     {
@@ -31,60 +31,72 @@
     },
     {
       "issue": 3,
+      "title": "Territory",
+      "function": "Independent orientation and first settlement: Gunnar establishes north and meets Silas; Bjorn and Gunnar confront the apartment's lack of a safe hearth without ever lighting an indoor fire; a later contained rooftop fire becomes hearth, watch post and neighborhood threshold while Carrie begins crossing from procedural accommodation into personal investment.",
+      "beatCoverage": "Inserted New York interstitial — Finding North / Hearth / Neon and Noise",
+      "status": "production-ready 21-page inserted issue; chef-visible RexPrompt recipes registered",
+      "payloadFile": "pages_i03_territory.json"
+    },
+    {
+      "issue": 4,
       "title": "The Iron Worm",
       "function": "Transit adaptation; Gunnar learns the city well enough to complete the required errand, then begins using navigation for curiosity and choice before leading the group home.",
       "beatCoverage": "21-27",
       "status": "structural season revision complete; 24-page revised script compiled; scene-based dialogue/voice pass complete",
       "scriptFile": "issue_03_iron_worm_structural_revision.md",
-      "payloadFile": "pages_i03_season_revision.json"
+      "payloadFile": "pages_i04_iron_worm.json"
     },
     {
-      "issue": 4,
+      "issue": 5,
       "title": "The Tally of Dishonor",
       "function": "Financial legibility, value and partial civic participation; the bank is resolved in the first act, then money becomes household choice, reciprocal debt, neighborhood exchange and ordinary capability.",
       "beatCoverage": "28-32",
       "status": "structural season revision complete; 24-page revised script compiled; scene-based dialogue/voice pass complete",
       "referenceFile": "issue_04_reference.json",
       "scriptFile": "issue_04_tally_of_dishonor_structural_revision.md",
-      "payloadFile": "pages_i04_season_revision.json"
+      "payloadFile": "pages_i05_tally_of_dishonor.json"
     },
     {
-      "issue": 5,
+      "issue": 6,
       "title": "The Skaldic Interface",
       "function": "Neighborhood-memory and emerging belonging; recurring relationships and ordinary routines show the Vikings beginning to live independently in New York. This is where the three Kin begin to read as separate people rather than a permanent background unit.",
       "beatCoverage": "33-36 plus neighborhood-memory material",
       "status": "production-ready 24-page enhanced script encoded in RexPrompt; visual recipes normalized with panel-level location; scene-based dialogue/voice pass complete",
-      "scriptFile": "issue_05_skaldic_interface_enhanced.md"
+      "scriptFile": "issue_05_skaldic_interface_enhanced.md",
+      "payloadFile": "pages_i06_skaldic_interface.json"
     },
     {
-      "issue": 6,
+      "issue": 7,
       "title": "Trial of Toil",
       "function": "Bjorn's crisis over usefulness becomes a character story about respect, consent, responsibility and meaningful contribution. The support group changes his behavior, but the revised middle tests that change through distinct situations—emergency action, shared household obligation, ordinary belonging, difficult advice, emotional witnessing and trust—rather than repeated requested-help exercises.",
       "status": "structural tightening complete; active 24-page RexPrompt payload updated; scene-based dialogue/voice pass complete",
       "developmentFile": "issue_06_trial_of_toil_development.json",
-      "scriptFile": "issue_06_trial_of_toil_script.md"
-    },
-    {
-      "issue": 7,
-      "title": "War Council",
-      "function": "A Status Reconciliation Review forces the household to confront different wants without reducing them to one household doctrine. The city excursions make those wants concrete; the final council prepares five people to answer for themselves while leaving permanence, kinship, integration and Astrid's practical competence for the hearing to discover.",
-      "status": "Issue 8 discovery-preservation pass complete; active 24-page RexPrompt payload updated; scene-based dialogue/voice pass complete",
-      "treatmentFile": "issue_07_war_council_treatment.md",
-      "scriptFile": "issue_07_war_council_script.md"
+      "scriptFile": "issue_06_trial_of_toil_script.md",
+      "payloadFile": "pages_i07_trial_of_toil.json"
     },
     {
       "issue": 8,
-      "title": "Permanent Residency / Trial by Combat",
-      "function": "The Status Reconciliation Review exposes a genuine defect in the emergency intake record: Bjorn is still listed as the household responsible adult and the other four adults are carried derivatively, which cannot simply become five individual permanent statuses. The applicants must establish separate adult lives in the room; Carrie must correct her old casework assumption; Bjorn must surrender the last formal residue of authority before the Hearing Officer can grant five individual permanent temporal-resident statuses. Astrid's independence proof is deliberately compressed to three pages.",
-      "beatCoverage": "hearing / trial-by-combat material previously deferred beyond Issue 8",
-      "status": "hard-problem / Astrid-compression pass complete; active 24-page RexPrompt payload updated; scene-based dialogue/voice pass complete",
-      "treatmentFile": "issue_08_trial_by_combat_treatment.md",
-      "scriptFile": "issue_08_trial_by_combat_script.md"
+      "title": "War Council",
+      "function": "A Status Reconciliation Review forces the household to confront different wants without reducing them to one household doctrine. The city excursions make those wants concrete; the final council prepares five people to answer for themselves while leaving permanence, kinship, integration and Astrid's practical competence for the hearing to discover.",
+      "status": "Issue 9 discovery-preservation pass complete; active 24-page RexPrompt payload updated; scene-based dialogue/voice pass complete",
+      "treatmentFile": "issue_07_war_council_treatment.md",
+      "scriptFile": "issue_07_war_council_script.md",
+      "payloadFile": "pages_i08_war_council.json"
     },
     {
       "issue": 9,
+      "title": "Permanent Residency / Trial by Combat",
+      "function": "The Status Reconciliation Review exposes a genuine defect in the emergency intake record: Bjorn is still listed as the household responsible adult and the other four adults are carried derivatively, which cannot simply become five individual permanent statuses. The applicants must establish separate adult lives in the room; Carrie must correct her old casework assumption; Bjorn must surrender the last formal residue of authority before the Hearing Officer can grant five individual permanent temporal-resident statuses. Astrid's independence proof is deliberately compressed to three pages.",
+      "beatCoverage": "hearing / trial-by-combat material previously deferred beyond Issue 9",
+      "status": "hard-problem / Astrid-compression pass complete; active 24-page RexPrompt payload updated; scene-based dialogue/voice pass complete",
+      "treatmentFile": "issue_08_trial_by_combat_treatment.md",
+      "scriptFile": "issue_08_trial_by_combat_script.md",
+      "payloadFile": "pages_i09_trial_by_combat.json"
+    },
+    {
+      "issue": 10,
       "title": "Season coda — title unresolved",
-      "function": "No planned Issue 9. Issue 8 is the Season 1 finale; any later material must earn itself as genuinely new aftermath or consequence rather than continued residency procedure.",
+      "function": "No planned Issue 10. Issue 9 is the Season 1 finale; any later material must earn itself as genuinely new aftermath or consequence rather than continued residency procedure.",
       "status": "not planned"
     }
   ],
@@ -97,50 +109,57 @@
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
-      "payloadIds": "VIK_S1E03_P01-P24",
-      "storyPlacement": "Issue 3 — The Iron Worm",
+      "payloadIds": "VIK_S1E03_P01-P21",
+      "storyPlacement": "Issue 3 — Territory",
+      "status": "production-ready",
+      "source": "Recovered Finding North / Hearth / fire-escape / Neon and Noise material compiled into chef-visible RexPrompt page recipes.",
+      "dialogueState": "Page-specific action and dialogue locked for production; Gunnar/Silas first meeting occurs in main action; no indoor fire is lit; rooftop fire is contained and safety-competent; Carrie feeds the fire while pursuing the signature."
+    },
+    {
+      "payloadIds": "VIK_S1E05_P01-P24",
+      "storyPlacement": "Issue 4 — The Iron Worm",
       "status": "production-ready",
       "source": "Season-level structural revision compiled to pages_i03_season_revision.json; DTI errand completes before final act so chosen movement and Gunnar's curiosity can develop, line polish pending.",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
       "payloadIds": "VIK_S1E02_P01-P24",
-      "storyPlacement": "Issue 4 — The Tally of Dishonor",
+      "storyPlacement": "Issue 5 — The Tally of Dishonor",
       "status": "production-ready",
-      "identifierNote": "S1E02 is the stable production identifier for the approved Issue 4 bank material.",
+      "identifierNote": "S1E02 is the stable production identifier for the approved Issue 5 bank material.",
       "source": "Season-level structural revision compiled to pages_i04_season_revision.json; bank compressed to first act and household/neighborhood consequences expanded, line polish pending.",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
-      "payloadIds": "VIK_S1E05_P01-P24",
-      "storyPlacement": "Issue 5 — The Skaldic Interface",
+      "payloadIds": "VIK_S1E07_P01-P24",
+      "storyPlacement": "Issue 6 — The Skaldic Interface",
       "status": "production-ready",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
       "payloadIds": "VIK_S1I06_P01-P24",
-      "storyPlacement": "Issue 6 — Trial of Toil",
+      "storyPlacement": "Issue 7 — Trial of Toil",
       "status": "production-ready",
-      "source": "Active four-file plain-JSON page package compiled from the Issue 6 script; structural tightening removed repetitive requested-help demonstrations while preserving the crisis, support-group catalyst, behavioral change and Issue 7 handoff. Line polish remains pending.",
+      "source": "Active four-file plain-JSON page package compiled from the Issue 7 script; structural tightening removed repetitive requested-help demonstrations while preserving the crisis, support-group catalyst, behavioral change and Issue 8 handoff. Line polish remains pending.",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
       "payloadIds": "VIK_S1I07_P01-P24",
-      "storyPlacement": "Issue 7 — War Council",
+      "storyPlacement": "Issue 8 — War Council",
       "status": "production-ready structural revision",
-      "source": "Active four-file plain-JSON page package; final council revised so different household wants remain visible without pre-solving Issue 8. Astrid's integration payoff, the second male Kin's permanence answer, and the household's legal meaning remain for the hearing.",
+      "source": "Active four-file plain-JSON page package; final council revised so different household wants remain visible without pre-solving Issue 9. Astrid's integration payoff, the second male Kin's permanence answer, and the household's legal meaning remain for the hearing.",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     },
     {
       "payloadIds": "VIK_S1I08_P01-P24",
-      "storyPlacement": "Issue 8 — Permanent Residency / Trial by Combat",
+      "storyPlacement": "Issue 9 — Permanent Residency / Trial by Combat",
       "status": "production-ready structural revision",
       "source": "Active four-file plain-JSON page package; hearing now centers on correcting the emergency responsible-adult classification before five individual permanent statuses can be granted. Astrid's proof is compressed to Pages 13-15; the favorable ruling is earned through testimony and in-room correction.",
       "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script."
     }
   ],
   "finaleState": {
-    "ordeal": "Issue 8 residency hearing functions as Bjorn's trial by combat through a genuine record defect: the emergency file still encodes him as the responsible adult for four other adults, and permanent status cannot issue individually until that hierarchy is tested and corrected.",
+    "ordeal": "Issue 9 residency hearing functions as Bjorn's trial by combat through a genuine record defect: the emergency file still encodes him as the responsible adult for four other adults, and permanent status cannot issue individually until that hierarchy is tested and corrected.",
     "hearingPurpose": "The institution must decide whether the emergency household classification still describes reality. The hearing can grant five individual permanent statuses only if the applicants establish separate adult agency and the old Bjorn-centered record is lawfully corrected.",
     "bjorn": "Bjorn arrives in armor without weapons. His decisive act is not a speech: when the Hearing Officer explains that correcting the record removes his formal authority to answer for the others, he says, 'Then correct it.'",
     "carrie": "Carrie admits she selected Bjorn as responsible adult during emergency intake because the system required one and he could answer enough questions. She earns the result by acknowledging that the designation became inaccurate and supporting five separate permanent findings.",
@@ -148,10 +167,10 @@
   },
   "openDecisions": [
     "Carrie's full legal/display name remains optional and non-blocking until a story page actually requires it.",
-    "Personal names for the two male Kin remain optional and non-blocking; Issues 7–8 intentionally use stable production identities without lettered personal names.",
+    "Personal names for the two male Kin remain optional and non-blocking; Issues 8–9 intentionally use stable production identities without lettered personal names.",
     "Magister's return and eventual role",
     "Detailed Silas progression after the hearing",
-    "Whether the unnamed Issue 6 support-group facilitator and 1987 participant ever require personal names",
+    "Whether the unnamed Issue 7 support-group facilitator and 1987 participant ever require personal names",
     "Museum continuity placement"
   ]
 }
