@@ -4,79 +4,21 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 1,
-    "title": "Morning Has Already Started",
-    "summary": "Carrie enters the Safe Cave with a plan for the day and finds Astrid and the two male Kin already preparing separate errands while Bjorn drinks his usual coffee.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Wide apartment. The room is still recognizably the Safe Cave, but now layered with ordinary city life: grocery bags, MetroCards, library flyer, laundry bag, toaster, coffee cups, brass key. One Kin member is tying a shopping bag shut. Another is halfway out the door with laundry. A third eats something packaged while looking at a neighborhood flyer.",
-      "Insert: Carrie enters with a folder, already talking.",
-      "Medium: She stops. The room is in motion without her.",
-      "Insert: Bjorn drinks coffee from a paper cup like this has become routine.",
-      "Medium: Carrie looks at the folder in her hand."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P01_L01",
-        "handle": "@vik.Carrie",
-        "text": "Okay. Today we need to—",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L02",
-        "handle": "@vik.Astrid",
-        "text": "Laundry.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L03",
-        "handle": "@vik.KinMan1",
-        "text": "Store.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L04",
-        "handle": "@vik.KinMan2",
-        "text": "Park.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L05",
-        "handle": "@vik.Bjorn",
-        "text": "We have begun.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L06",
-        "handle": "@vik.Carrie",
-        "text": "I can see that.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L07",
-        "handle": "@vik.Carrie",
-        "text": "Since when do you all have separate mornings?",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P01_L08",
-        "handle": "@vik.Gunnar",
-        "text": "They've been doing this all week.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick studio apartment",
+    "title": "What Happened While We Were Here",
+    "summary": "The morning after the financial issue, Gunnar reads a free newspaper for interest rather than navigation and discovers that he wants context the household cannot supply itself.",
+    "settingText": "Bushwick studio apartment, morning",
     "charactersInline": [
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
       },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       },
       {
         "handle": "@vik.Astrid",
@@ -89,102 +31,120 @@
       {
         "handle": "@vik.KinMan2",
         "name": "Second Male Kin"
+      }
+    ],
+    "panelPlan": [
+      "Wide: Morning in 5B. The household ledger from the previous issue remains open on the table beside breakfast. Gunnar reads a free local newspaper folded away from the financial pages.",
+      "Medium: Bjorn notices Gunnar is reading instead of checking a route or list.",
+      "Close: Gunnar scans local events, short notices and city reporting with genuine interest.",
+      "Medium: Carrie enters or looks over from the table while Gunnar asks a question that is not tied to any required errand.",
+      "Wide: The others keep eating while Gunnar keeps the paper."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P01_L01",
+        "handle": "@vik.Bjorn",
+        "text": "Does it say where we're going?",
+        "subtext": "Panel 2"
       },
       {
+        "fid": "VIK_S1E07_P01_L02",
         "handle": "@vik.Gunnar",
-        "name": "Gunnar"
+        "text": "No.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P01_L03",
+        "handle": "@vik.Bjorn",
+        "text": "Then why read it?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P01_L04",
+        "handle": "@vik.Gunnar",
+        "text": "I want to know what happened while we were here.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P01_L05",
+        "handle": "@vik.Carrie",
+        "text": "That's a bigger project than breakfast.",
+        "subtext": "Panel 4"
       }
-    ]
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E06_P24"
   },
   {
     "id": "VIK_S1E07_P02",
     "episode": "S1E07",
     "issue": 7,
     "page": 2,
-    "title": "Downstairs",
-    "summary": "Downstairs: The group descends, but not as a military column. They separate naturally at the building entrance.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium: The group descends, but not as a military column. They separate naturally at the building entrance.",
-      "Medium: One Kin member heads toward the laundromat with a bag. Another crosses toward a neighbor carrying snacks. No dialogue explaining this.",
-      "Close on Carrie at the apartment doorway: She watches Astrid and the two male Kin split naturally toward different errands on the stairs and stoop, realizing nobody waited for her to assign destinations.",
-      "Medium: Gunnar, already walking another direction with Bjorn:"
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P02_L01",
-        "handle": "@vik.Carrie",
-        "text": "Where are they going?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L02",
-        "handle": "@vik.Gunnar",
-        "text": "Out.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L03",
-        "handle": "@vik.Carrie",
-        "text": "Yes, Gunnar. I got the concept.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Then why ask?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L05",
-        "handle": "@vik.Bjorn",
-        "text": "They know the block.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L06",
-        "handle": "@vik.Carrie",
-        "text": "That is not the same as knowing where you're going.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P02_L07",
-        "handle": "@vik.Gunnar",
-        "text": "It's enough to start.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick apartment hallway and stoop",
+    "title": "Where They Keep It",
+    "summary": "Gunnar asks where the city keeps older information, and Carrie points him toward the library as an ordinary answer rather than a lesson.",
+    "settingText": "Bushwick studio apartment, morning",
     "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
       }
     ],
+    "panelPlan": [
+      "Medium: Gunnar folds the newspaper and places it beside the household map rather than on top of it.",
+      "Two-shot: He asks Carrie where older newspapers, histories and other written accounts are kept.",
+      "Medium: Carrie answers while organizing a small folder of records she needs copied.",
+      "Close on Bjorn: He hears the word library and recognizes the broad function even if the scale is unknown.",
+      "Wide: Carrie gathers her folder; Gunnar takes the newspaper with him."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P02_L01",
+        "handle": "@vik.Gunnar",
+        "text": "Where do they keep the older ones?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P02_L02",
+        "handle": "@vik.Carrie",
+        "text": "Older papers?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P02_L03",
+        "handle": "@vik.Gunnar",
+        "text": "Papers. Stories. Records.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P02_L04",
+        "handle": "@vik.Carrie",
+        "text": "Library.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P02_L05",
+        "handle": "@vik.Bjorn",
+        "text": "A house for writing.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P02_L06",
+        "handle": "@vik.Carrie",
+        "text": "Basically.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P01"
   },
   {
@@ -192,143 +152,133 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 3,
-    "title": "The Bodega Knows Them",
-    "summary": "The Bodega Knows Them: Bjorn enters. The Bodega Owner does not look surprised.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: Bjorn enters. The Bodega Owner does not look surprised.",
-      "recurring bodega counter — Medium: Bjorn puts exact familiar items on the counter: coffee, orange juice, something salty/meaty, maybe a banana.",
-      "recurring bodega counter — Medium: The owner reaches for the correct coffee setup without asking.",
-      "Close on Bjorn at the bodega counter: He watches the owner reach for his usual items before being asked, solemnly registering that recognition matters.",
-      "Medium across the counter: The owner keeps scanning groceries and talking without ceremony, treating Bjorn as a regular customer rather than an event."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P03_L01",
-        "handle": "@vik.BodegaOwner",
-        "text": "Morning.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Coffee. Juice. Salt meat.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L03",
-        "handle": "@vik.BodegaOwner",
-        "text": "Already got the coffee.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L04",
-        "handle": "@vik.Bjorn",
-        "text": "Still remember me?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L05",
-        "handle": "@vik.BodegaOwner",
-        "text": "Every day.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L06",
-        "handle": "@vik.Bjorn",
-        "text": "We have not been here every day.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P03_L07",
-        "handle": "@vik.BodegaOwner",
-        "text": "Feels like it.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood bodega",
+    "title": "The Library Is Already A Place",
+    "summary": "They approach the neighborhood library as an ordinary civic place; Gunnar and Bjorn adapt to its social rules by observation before Carrie says anything.",
+    "settingText": "Neighborhood public library exterior and entrance",
     "charactersInline": [
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Wide: Ordinary neighborhood library exterior. People enter and leave with bags, books and strollers; no monumental awe framing.",
+      "Medium: Gunnar holds the door for an elderly patron; the patron nods and continues inside.",
+      "Interior medium: Bjorn begins to speak at normal volume, notices the room's low conversational level, and lowers his voice himself.",
+      "Close on Carrie: She notices the adjustment and chooses not to comment.",
+      "Wide: Gunnar looks toward the stacks while Carrie heads toward the copier/computer area with her folder."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P03_L01",
+        "handle": "@vik.Bjorn",
+        "text": "No one told me to be quiet.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P03_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Everyone else did.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P03_L03",
+        "handle": "@vik.Carrie",
+        "text": "Look at you two.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P03_L04",
+        "handle": "@vik.Bjorn",
+        "text": "What?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P03_L05",
+        "handle": "@vik.Carrie",
+        "text": "Nothing.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P02"
   },
   {
     "id": "VIK_S1E07_P04",
     "episode": "S1E07",
     "issue": 7,
     "page": 4,
-    "title": "Recognition Is Not Ceremony",
-    "summary": "Recognition Is Not Ceremony: Bjorn places money down carefully.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium at the bodega counter: Bjorn counts out the correct modern cash from his folded bills and places it down with the careful formality he once reserved for hacksilver.",
-      "Insert on the counter: The owner drops ordinary coins and bills back into Bjorn's palm without explanation; Bjorn sorts the unfamiliar change by sight.",
-      "Insert: Bjorn regards the exchange as something more formal than the owner does.",
-      "Medium: The owner hands over the grocery bag and turns immediately to the next task while Bjorn remains half a beat behind, still taking in the effortless routine."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P04_L01",
-        "handle": "@vik.Bjorn",
-        "text": "You remember everyone?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P04_L02",
-        "handle": "@vik.BodegaOwner",
-        "text": "I remember the people standing in my doorway. Move.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P04_L03",
-        "handle": "@vik.Bjorn",
-        "text": "That is not remembrance.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P04_L04",
-        "handle": "@vik.BodegaOwner",
-        "text": "Your coffee's right, isn't it?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P04_L05",
-        "handle": "@vik.Bjorn",
-        "text": "Yes.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P04_L06",
-        "handle": "@vik.BodegaOwner",
-        "text": "Move.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood bodega counter",
+    "title": "Too Much Memory",
+    "summary": "The library's scale registers not as magic but as an enormous accumulation of other people's remembered work.",
+    "settingText": "Neighborhood public library main floor",
     "charactersInline": [
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       }
     ],
+    "panelPlan": [
+      "Wide: Long but ordinary rows of shelves, patrons seated at tables, returns cart, computers and children's area all visible in one lived-in public interior.",
+      "Medium: Gunnar slowly turns, taking in the number of shelves rather than any single object.",
+      "Close: Bjorn runs a finger just above a row of spines without touching them.",
+      "Two-shot: Gunnar and Bjorn quietly estimate what the room represents.",
+      "Medium: Carrie continues toward the copier, letting them make their own sense of it."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P04_L01",
+        "handle": "@vik.Bjorn",
+        "text": "All of these were written by people?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P04_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Most of them.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P04_L03",
+        "handle": "@vik.Bjorn",
+        "text": "How many people?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P04_L04",
+        "handle": "@vik.Gunnar",
+        "text": "More than we can meet.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P04_L05",
+        "handle": "@vik.Carrie",
+        "text": "That's one way to describe a library.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P03"
   },
   {
@@ -336,72 +286,14 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 5,
-    "title": "Coffee Cart",
-    "summary": "Coffee Cart: Gunnar and Bjorn approach the cart. The vendor sees Bjorn and starts preparing coffee before they arrive.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Wide: Gunnar and Bjorn approach the cart. The vendor sees Bjorn and starts preparing coffee before they arrive.",
-      "Medium at the coffee cart: The vendor holds up Bjorn's familiar regular cup and the sweeter drink Bjorn disliked once, already anticipating the choice.",
-      "Medium on Bjorn: He points immediately to the regular coffee with the certainty of an established preference.",
-      "Close on Gunnar: He laughs openly at the idea that Bjorn has acquired an enemy coffee; for once his attention is on the joke, not the city around them.",
-      "Medium: The vendor passes over the regular cup while Gunnar is still amused and Bjorn accepts the exchange with complete seriousness."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P05_L01",
-        "handle": "@vik.CoffeeVendor",
-        "text": "Regular, or the one you hated?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Regular.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L03",
-        "handle": "@vik.Gunnar",
-        "text": "You have an enemy coffee.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L04",
-        "handle": "@vik.Bjorn",
-        "text": "I chose it once.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L05",
-        "handle": "@vik.CoffeeVendor",
-        "text": "That's how enemies start.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L06",
-        "handle": "@vik.Bjorn",
-        "text": "You remember too.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L07",
-        "handle": "@vik.CoffeeVendor",
-        "text": "Look at that.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P05_L08",
-        "handle": "@vik.Bjorn",
-        "text": "You did.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Street coffee cart",
+    "title": "Carrie's Problem",
+    "summary": "Carrie has a small records-and-copying task of her own and explicitly releases Gunnar and Bjorn to use the library rather than treating them as part of her errand.",
+    "settingText": "Neighborhood public library copier and stacks junction",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
@@ -409,92 +301,116 @@
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
+      }
+    ],
+    "panelPlan": [
+      "Medium: Carrie opens her folder near the copier/computer area.",
+      "Insert: Two municipal pages that need copying and one record request note; readable detail should remain minimal and recipe-required only.",
+      "Two-shot: Bjorn asks what she needs from them.",
+      "Medium: Carrie gestures toward the library rather than giving them another task.",
+      "Wide: Gunnar immediately heads toward the stacks; Bjorn follows more slowly."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P05_L01",
+        "handle": "@vik.Carrie",
+        "text": "I need two copies and one city record. That's my problem.",
+        "subtext": "Panel 1"
       },
       {
-        "handle": "@vik.CoffeeVendor",
-        "name": "Coffee Vendor"
+        "fid": "VIK_S1E07_P05_L02",
+        "handle": "@vik.Bjorn",
+        "text": "And us?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P05_L03",
+        "handle": "@vik.Carrie",
+        "text": "Go look around.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P05_L04",
+        "handle": "@vik.Bjorn",
+        "text": "Anywhere?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P05_L05",
+        "handle": "@vik.Carrie",
+        "text": "Inside the library. Do not make me regret the wording.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P05_L06",
+        "handle": "@vik.Gunnar",
+        "text": "Too late.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P04"
   },
   {
     "id": "VIK_S1E07_P06",
     "episode": "S1E07",
     "issue": 7,
     "page": 6,
-    "title": "Gunnar, Not Navigating",
-    "summary": "At the coffee cart, Gunnar reads a free newspaper because he is interested in what happened in the city, not because the information helps him get anywhere.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium: Gunnar is reading the back page of a free newspaper left at the cart—not a map. Sports results / cultural listings / small local notices are visible without making one specific modern obsession canon.",
-      "Close on Bjorn: He notices Gunnar reading the free newspaper instead of watching where they are going and leans slightly to see what has caught his attention.",
-      "Medium on Gunnar with the paper open: He keeps reading while answering that the paper is not useful to their errand; his interest is plainly personal.",
-      "Medium two-shot: Gunnar points out the stolen-goat story with quiet amusement; Bjorn's skepticism disappears the moment a goat is involved."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P06_L01",
-        "handle": "@vik.Bjorn",
-        "text": "Does it say where we're going?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L02",
-        "handle": "@vik.Gunnar",
-        "text": "No.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L03",
-        "handle": "@vik.Bjorn",
-        "text": "Then why read it?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Because I want to.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L05",
-        "handle": "@vik.Bjorn",
-        "text": "What's in it?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L06",
-        "handle": "@vik.Gunnar",
-        "text": "Baseball. Somebody stole a goat in Queens.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L07",
-        "handle": "@vik.Bjorn",
-        "text": "A goat?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P06_L08",
-        "handle": "@vik.Gunnar",
-        "text": "Now you care.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Street coffee cart sidewalk",
+    "title": "Today",
+    "summary": "Gunnar first follows his newspaper curiosity into current periodicals and discovers that information is organized for browsing rather than only delivered to him as needed.",
+    "settingText": "Neighborhood public library periodicals area",
     "charactersInline": [
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
     ],
+    "panelPlan": [
+      "Wide: Gunnar enters the periodicals area with current newspapers and magazines arranged by category and date; avoid legible real-world mastheads unless necessary.",
+      "Medium: He compares the free paper he brought with several other current publications.",
+      "Close: He notices multiple accounts of the same kind of event placed beside each other.",
+      "Medium: A librarian or staff member passes; Gunnar asks a direct practical question.",
+      "Wide: The staff member points him toward archived issues/catalog access, then continues working."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P06_L01",
+        "handle": "@vik.Gunnar",
+        "text": "These are all from today?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P06_L02",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Most of them.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P06_L03",
+        "handle": "@vik.Gunnar",
+        "text": "And yesterday?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P06_L04",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Archive. Catalog can show you where.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P06_L05",
+        "handle": "@vik.Gunnar",
+        "text": "Good.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P05"
   },
   {
@@ -502,155 +418,76 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 7,
-    "title": "The Day Fractures",
-    "summary": "The Day Fractures: Carrie on the sidewalk, trying to gather everyone.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Wide: Carrie on the sidewalk, trying to gather everyone.",
-      "Medium: A Kin member passes behind her carrying a laundry basket with neatly folded clothes.",
-      "Medium: Another Kin member is visible across the street talking to the upstairs neighbor over a bag of snacks.",
-      "Medium: Carrie half-turns, trying to identify what she just saw, but a delivery bike cuts through foreground.",
-      "Medium while walking: Gunnar answers Carrie without urgency, glancing back once toward the directions Astrid and the two male Kin took before continuing toward the library."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P07_L01",
-        "handle": "@vik.Carrie",
-        "text": "Library first. I need fifteen minutes at DTI after.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L02",
-        "handle": "@vik.Carrie",
-        "text": "Where are they going?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L03",
-        "handle": "@vik.Gunnar",
-        "text": "Out.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L04",
-        "handle": "@vik.Carrie",
-        "text": "You said that downstairs.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L05",
-        "handle": "@vik.Gunnar",
-        "text": "Still true.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L06",
-        "handle": "@vik.Carrie",
-        "text": "Do they know where they're going?",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L07",
-        "handle": "@vik.Bjorn",
-        "text": "Ask when they return.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L08",
-        "handle": "@vik.Carrie",
-        "text": "That's the part making me nervous.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P07_L09",
-        "handle": "@vik.Gunnar",
-        "text": "They're returning.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick neighborhood sidewalks",
+    "title": "Before Today",
+    "summary": "Gunnar follows the library's organization backward in time, using staff help once and then navigating the information structure himself.",
+    "settingText": "Neighborhood public library catalog terminal and stacks",
     "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "name": "Upstairs Neighbor"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Medium: Gunnar stands at a catalog terminal while a librarian points to the simplest search field and result location.",
+      "Insert: The screen is framed so no invented readable interface text is required beyond a simple search box and shelf code if needed.",
+      "Medium: Gunnar writes down a shelf code on scrap paper.",
+      "Wide: He leaves the terminal and follows the code through the stacks without further help.",
+      "Close: He finds the correct shelf and gives a small satisfied nod."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P07_L01",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Type what you're looking for.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "VIK_S1E07_P07_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Anything?",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "VIK_S1E07_P07_L03",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Try something specific first.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "VIK_S1E07_P07_L04",
+        "handle": "@vik.Gunnar",
+        "text": "Reasonable.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P07_L05",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Write down the number.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P07_L06",
+        "handle": "@vik.Gunnar",
+        "text": "Then find the shelf.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P06"
   },
   {
     "id": "VIK_S1E07_P08",
     "episode": "S1E07",
     "issue": 7,
     "page": 8,
-    "title": "The Library Is Already A Place",
-    "summary": "The Library Is Already A Place: They approach a neighborhood library. No awe splash. People enter and leave normally.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Wide: They approach the neighborhood public library in ordinary daytime traffic; people enter and leave through the glass doors while Bjorn and Gunnar take in the building at street level.",
-      "Close-up: Gunnar holds the door for an elderly patron. She nods thanks. He nods back.",
-      "Wide: Inside, Bjorn lowers his voice because everyone else has.",
-      "Close-up: Carrie notices this tiny adaptation and says nothing."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P08_L01",
-        "handle": "@vik.Bjorn",
-        "text": "No one told me to be quiet.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P08_L02",
-        "handle": "@vik.Gunnar",
-        "text": "Everyone else did.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P08_L03",
-        "handle": "@vik.Carrie",
-        "text": "Look at you two.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P08_L04",
-        "handle": "@vik.Bjorn",
-        "text": "What?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P08_L05",
-        "handle": "@vik.Carrie",
-        "text": "Nothing.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library",
+    "title": "A Useful Number",
+    "summary": "The classification system appeals to Gunnar because it is not an explanation of knowledge, only a repeatable way to find it again.",
+    "settingText": "Neighborhood public library nonfiction stacks",
     "charactersInline": [
       {
         "handle": "@vik.Gunnar",
@@ -659,91 +496,75 @@
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
+      }
+    ],
+    "panelPlan": [
+      "Wide: Gunnar moves through shelf ranges using the code he wrote down; Bjorn has wandered into the same aisle from another direction.",
+      "Insert: Gunnar compares the written shelf code to a spine label.",
+      "Medium: Bjorn asks what the number means.",
+      "Two-shot: Gunnar answers while pulling the correct book.",
+      "Close: Bjorn looks at several adjacent books sharing related numbers."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P08_L01",
+        "handle": "@vik.Bjorn",
+        "text": "What does the number mean?",
+        "subtext": "Panel 3"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "fid": "VIK_S1E07_P08_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Where the book lives.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P08_L03",
+        "handle": "@vik.Bjorn",
+        "text": "Not what is in it?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P08_L04",
+        "handle": "@vik.Gunnar",
+        "text": "That too. Mostly where it lives.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P08_L05",
+        "handle": "@vik.Bjorn",
+        "text": "Useful.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P07"
   },
   {
     "id": "VIK_S1E07_P09",
     "episode": "S1E07",
     "issue": 7,
     "page": 9,
-    "title": "Why They Came",
-    "summary": "Why They Came: Carrie hands over a small list/folder.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: Carrie hands over a small list/folder.",
-      "Medium: Gunnar is already looking past her toward the stacks.",
-      "Medium among the library stacks: Bjorn asks what happens to them while Carrie works, already looking past her toward shelves that rise well above his head.",
-      "Medium on Carrie: She gestures broadly at the open stacks, reading tables, and aisles as she gives them permission to wander inside the library.",
-      "Medium on Gunnar: He is already turning toward the shelves with a small pleased look when he tells Carrie her warning came too late."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P09_L01",
-        "handle": "@vik.Carrie",
-        "text": "I need two copies and one city record. That's my problem.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L02",
-        "handle": "@vik.Bjorn",
-        "text": "And us?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L03",
-        "handle": "@vik.Carrie",
-        "text": "Go look around.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L04",
-        "handle": "@vik.Bjorn",
-        "text": "Anywhere?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L05",
-        "handle": "@vik.Carrie",
-        "text": "Inside the library. Do not make me regret the wording.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L06",
-        "handle": "@vik.Gunnar",
-        "text": "Too late.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P09_L07",
-        "handle": "@vik.Carrie",
-        "text": "I heard that.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library desk and stacks",
+    "title": "Gunnar Finds Words",
+    "summary": "Gunnar moves beyond factual records into translated poetry, sagas and literature and recognizes that written storage can preserve voices as well as information.",
+    "settingText": "Neighborhood public library literature stacks",
     "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
       }
     ],
+    "panelPlan": [
+      "Wide: Gunnar browses slowly through translated literature, poetry and saga-related shelves; do not lock a specific copyrighted title.",
+      "Close: His hand stops on a book whose format suggests verse or translated oral narrative.",
+      "Medium: He opens it and reads silently.",
+      "Close: His expression changes from information-seeking concentration to personal recognition.",
+      "Wide: Gunnar sits at a nearby table and keeps reading, no map or errand visible."
+    ],
+    "dialogueInline": [],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P08"
   },
   {
@@ -751,28 +572,66 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 10,
-    "title": "Gunnar Finds Words",
-    "summary": "Gunnar Finds Words: Gunnar browses slowly. No tactical overlay, no route logic.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Neighborhood library stacks — Medium: Gunnar moves slowly along a shelf, fingertips brushing book spines while other patrons pass quietly behind him.",
-      "Medium: He stops at a shelf mixing translated sagas, poetry, and general literature and pulls one book free because its subject catches him.",
-      "Insert: Gunnar opens the book in the aisle and reads several lines, the page held close enough to show concentrated attention.",
-      "Close on Gunnar: Recognition and interest replace the guarded alertness he usually wears in unfamiliar places.",
-      "Medium at a nearby reading chair: He sits with the book open on his knees and settles in without checking where Bjorn or Carrie are."
-    ],
-    "dialogueInline": [],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library stacks",
+    "title": "Meant To Be Heard",
+    "summary": "Gunnar recognizes the oral structure inside written verse and tests the text quietly aloud, making the library's stored words feel closer to a living skaldic tradition.",
+    "settingText": "Neighborhood public library reading table",
     "charactersInline": [
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       }
     ],
+    "panelPlan": [
+      "Medium: Gunnar reads the book silently at a table; Bjorn arrives carrying a different book.",
+      "Close: Gunnar quietly mouths a short generic rhythm from the page without reproducing any real copyrighted passage.",
+      "Two-shot: Bjorn notices the cadence rather than the content.",
+      "Medium: Gunnar taps the rhythm once with a fingertip on the page.",
+      "Close: He looks at the printed lines with new appreciation."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P10_L01",
+        "handle": "@vik.Bjorn",
+        "text": "You are reading it aloud.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P10_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Quietly.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P10_L03",
+        "handle": "@vik.Bjorn",
+        "text": "Why?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P10_L04",
+        "handle": "@vik.Gunnar",
+        "text": "It works better that way.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P10_L05",
+        "handle": "@vik.Bjorn",
+        "text": "Then it was meant to be heard.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P10_L06",
+        "handle": "@vik.Gunnar",
+        "text": "I think so.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P09"
   },
   {
@@ -781,16 +640,24 @@
     "issue": 7,
     "page": 11,
     "title": "Bjorn Finds Himself Badly Drawn",
-    "summary": "Bjorn Finds Himself Badly Drawn: Bjorn pulls a general illustrated book about Vikings/Norse history.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
+    "summary": "Bjorn encounters an illustrated Viking history book and immediately spots technical errors in the depiction of his own world.",
+    "settingText": "Neighborhood public library history section",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      }
+    ],
     "panelPlan": [
-      "Medium: Bjorn pulls a general illustrated book about Vikings/Norse history.",
-      "Insert: Illustration shows a familiar pop-history cliché.",
-      "Medium on Bjorn in the history aisle: He studies the illustrated Viking page in offended silence, holding the book close enough to inspect the weapon grip, shield, helmet, and ship.",
-      "Medium on Gunnar a few feet away: He looks up from his own book when Bjorn objects, amused before he even sees the offending illustration.",
-      "Medium: Bjorn turns the book so Gunnar can see."
+      "Medium: Bjorn pulls an illustrated general history book from a shelf.",
+      "Insert: An illustration shows a generic pop-history Viking pose with a technically wrong shield grip and implausible equipment; no horned helmet unless the recipe later specifically requires it.",
+      "Close on Bjorn: He studies it with genuine concentration.",
+      "Medium: Gunnar looks up from his own book when Bjorn objects.",
+      "Two-shot: Bjorn turns the illustration toward Gunnar and identifies the first concrete error."
     ],
     "dialogueInline": [
       {
@@ -820,35 +687,12 @@
       {
         "fid": "VIK_S1E07_P11_L05",
         "handle": "@vik.Bjorn",
-        "text": "Helmet is ridiculous.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P11_L06",
-        "handle": "@vik.Gunnar",
-        "text": "Ship's not bad.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P11_L07",
-        "handle": "@vik.Bjorn",
-        "text": "Ship is bad.",
+        "text": "That too.",
         "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library history section",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      }
-    ],
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P10"
   },
   {
@@ -856,68 +700,66 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 12,
-    "title": "The Librarian Does Not Care Enough",
-    "summary": "The Librarian Does Not Care Enough: A librarian passes.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium in the history stacks: A librarian passing with a small cart notices Bjorn planted in the aisle with the open illustrated history book and pauses just long enough to ask if everything is all right.",
-      "Insert over Bjorn's hand: He points directly at the inaccurate illustration while keeping the book open for the librarian to see.",
-      "Medium on the librarian: She glances once at the illustration and call label, points toward the feedback desk with routine efficiency, and continues her work.",
-      "Close-up: The librarian gives the book and its call label one brief glance, gestures toward the feedback desk, and keeps walking. Bjorn watches her continue down the aisle without stopping."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P12_L01",
-        "handle": "@vik.UnnamedArchetypes",
-        "text": "Everything okay?",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P12_L02",
-        "handle": "@vik.Bjorn",
-        "text": "This is wrong.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P12_L03",
-        "handle": "@vik.UnnamedArchetypes",
-        "text": "Feedback form is at the desk.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P12_L04",
-        "handle": "@vik.Bjorn",
-        "text": "You have a form for history being wrong?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P12_L05",
-        "handle": "@vik.UnnamedArchetypes",
-        "text": "We have a form for everything being wrong.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P12_L06",
-        "handle": "@vik.Bjorn",
-        "text": "Good.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library stacks",
+    "title": "It Gets Worse",
+    "summary": "Bjorn and Gunnar inspect the book more closely and discover that some parts are accurate, some are wrong, and the mixture bothers Bjorn more than a simple insult would.",
+    "settingText": "Neighborhood public library history table",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
       },
       {
-        "handle": "@vik.UnnamedArchetypes",
-        "name": "Unnamed Archetypes"
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
       }
     ],
+    "panelPlan": [
+      "Medium: Bjorn and Gunnar sit with the illustrated history book open between them.",
+      "Insert: Bjorn points to a second equipment error.",
+      "Insert: Gunnar points to a ship illustration that is closer to correct.",
+      "Two-shot: They disagree briefly about how bad the ship depiction is.",
+      "Close on Bjorn: He flips another page and finds a new problem."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P12_L01",
+        "handle": "@vik.Gunnar",
+        "text": "Ship's not bad.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P12_L02",
+        "handle": "@vik.Bjorn",
+        "text": "Ship is bad.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P12_L03",
+        "handle": "@vik.Gunnar",
+        "text": "Less bad.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P12_L04",
+        "handle": "@vik.Bjorn",
+        "text": "That is not praise.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P12_L05",
+        "handle": "@vik.Gunnar",
+        "text": "It is improvement.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P12_L06",
+        "handle": "@vik.Bjorn",
+        "text": "There are more errors.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P11"
   },
   {
@@ -925,43 +767,70 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 13,
-    "title": "Carrie's Boring Problem",
-    "summary": "Carrie'S Boring Problem: Carrie is at a terminal/copier working through city records. This is background competence, not a lesson sequence.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium at the library copier/computer area: Carrie works through city records at the terminal while Gunnar reads in the stacks and Bjorn browses nearby, her administrative work reduced to ordinary background activity.",
-      "Insert: She looks over and sees Gunnar reading, Bjorn with a stack of books, both independently occupied.",
-      "Insert: Her phone buzzes with a DTI notification.",
-      "Medium at the copier station: Carrie silences the DTI notification on her phone, looks through the glass toward Gunnar reading and Bjorn browsing, and deliberately returns to her own paperwork.",
-      "Medium: For once she lets them remain where they are rather than summoning them."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P13_L01",
-        "handle": "@vik.Carrie",
-        "text": "Not now.",
-        "subtext": "Panel 3"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library copier and computer area",
+    "title": "The Librarian Does Not Care Enough",
+    "summary": "Bjorn reports the book's errors to a librarian and is confronted with the library's calm procedural answer: record the complaint rather than fight over the shelf.",
+    "settingText": "Neighborhood public library history stacks and service desk",
     "charactersInline": [
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
     ],
+    "panelPlan": [
+      "Medium: A librarian passes the table and notices Bjorn's growing stack of marked scrap-paper notes beside the closed book; no marks are made inside the library book.",
+      "Two-shot: Bjorn states that the book is wrong.",
+      "Medium: The librarian glances at the book and then toward the service desk.",
+      "Close on Bjorn: He processes the existence of a formal feedback route.",
+      "Wide: The librarian continues on; Gunnar picks up the scrap notes."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P13_L01",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Everything okay?",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "VIK_S1E07_P13_L02",
+        "handle": "@vik.Bjorn",
+        "text": "This is wrong.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P13_L03",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Feedback form is at the desk.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P13_L04",
+        "handle": "@vik.Bjorn",
+        "text": "You have a form for history being wrong?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P13_L05",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "We have a form for everything being wrong.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P13_L06",
+        "handle": "@vik.Bjorn",
+        "text": "Good.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P12"
   },
   {
@@ -969,258 +838,208 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 14,
-    "title": "The Kin Keep Appearing Elsewhere",
-    "summary": "The three Kin are now encountered around Bushwick as separate regulars: one man at the laundromat, the other in the park, Astrid with the upstairs neighbor, and later the first man at the bodega before all three return to apartment 5B from their separate errands.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
+    "title": "Correction",
+    "summary": "Bjorn uses the offered feedback process seriously, dictating concrete factual corrections while Gunnar records them without turning the moment into a bureaucratic gag.",
+    "settingText": "Neighborhood public library service desk",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
+      }
+    ],
     "panelPlan": [
-      "Bushwick laundromat — Medium: One of the two male Kin folds the household laundry at a plastic table while watching the laundromat television with two regular patrons. He is comfortable enough to work without Carrie, Bjorn, Gunnar, Astrid, or the other male Kin present.",
-      "Bushwick neighborhood park — Medium: The other male Kin sits alone on a park bench eating a packaged snack while studying a nearby public sculpture and painted wall. Joggers and parents pass without treating him as an event.",
-      "apartment-building hallway outside the upstairs neighbor's door — Insert: Astrid and the upstairs neighbor exchange packaged snacks in the hallway. Their partial shared language is carried by familiar gestures; neither needs Carrie to mediate the exchange.",
-      "neighborhood bodega — Medium: Later, the same male Kin seen at the laundromat enters the bodega carrying the folded laundry bag. The owner has already set a familiar item on the counter for him before he reaches it.",
-      "fifth-floor hallway outside apartment 5B — Wide: Near dusk, the three Kin converge at apartment 5B from separate errands: Astrid approaches with the neighbor's packaged snack, one man carries the folded laundry and small bodega bag, and the other arrives with the park snack wrapper tucked into a pocket. The brass apartment door waits between them; they have plainly spent the day apart and returned home independently."
+      "Medium: A simple feedback form lies on the service desk; Gunnar has the pen because Bjorn is functionally illiterate.",
+      "Close: Bjorn points to his first scrap note while Gunnar writes a short correction.",
+      "Medium: The librarian continues ordinary desk work nearby rather than supervising them.",
+      "Insert: Gunnar adds a second correction on another line; keep form text minimal and only as required by the recipe.",
+      "Two-shot: Bjorn stops before turning the entire book into a campaign."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E07_P14_L01",
-        "handle": "@vik.KinMan1",
-        "text": "Four minutes?",
-        "subtext": "Panel 1"
+        "handle": "@vik.Bjorn",
+        "text": "Write: shield grip.",
+        "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E07_P14_L02",
-        "handle": "@vik.Astrid",
-        "text": "For tomorrow.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Gunnar",
+        "text": "Wrong shield grip.",
+        "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E07_P14_L03",
-        "handle": "@vik.UpstairsNeighbor",
-        "text": "You always bring the spicy ones.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Bjorn",
+        "text": "Write: ship too short.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P14_L04",
-        "handle": "@vik.Astrid",
-        "text": "You eat them.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Gunnar",
+        "text": "You said the ship was bad.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P14_L05",
-        "handle": "@vik.BodegaOwner",
-        "text": "Same?",
-        "subtext": "Panel 4"
+        "handle": "@vik.Bjorn",
+        "text": "Too short is useful.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E07_P14_L06",
-        "handle": "@vik.KinMan1",
-        "text": "Same.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P14_L07",
-        "handle": "@vik.KinMan2",
-        "text": "You were gone longer.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P14_L08",
-        "handle": "@vik.KinMan1",
-        "text": "Machine lied again.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P14_L09",
-        "handle": "@vik.Astrid",
-        "text": "It does that.",
+        "handle": "@vik.Gunnar",
+        "text": "Better.",
         "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick neighborhood interstitial montage",
-    "charactersInline": [
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "name": "Upstairs Neighbor"
-      },
-      {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
-      }
-    ]
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P13"
   },
   {
     "id": "VIK_S1E07_P15",
     "episode": "S1E07",
     "issue": 7,
     "page": 15,
-    "title": "Borrowing",
-    "summary": "Borrowing: Gunnar arrives with a small stack of books.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: Gunnar arrives with a small stack of books.",
-      "Medium at checkout: Carrie looks from Gunnar's stack of books to him, initially assuming he is only carrying them for someone else.",
-      "Medium on Gunnar: He keeps hold of the stack while calmly confirming that the books belong to the library and that he means to take them home.",
-      "Medium on Carrie: Her expression shifts as she realizes Gunnar has already learned enough of the borrowing process to act without waiting for her.",
-      "Medium at the desk: Gunnar produces his newly issued library card beside the stack while the librarian continues the ordinary checkout."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P15_L01",
-        "handle": "@vik.Carrie",
-        "text": "Those aren't mine.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L02",
-        "handle": "@vik.Gunnar",
-        "text": "No.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L03",
-        "handle": "@vik.Carrie",
-        "text": "They're the library's.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Yes.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L05",
-        "handle": "@vik.Carrie",
-        "text": "You need a card.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L06",
-        "handle": "@vik.Gunnar",
-        "text": "I have one.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L07",
-        "handle": "@vik.Carrie",
-        "text": "Of course you do.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P15_L08",
-        "handle": "@vik.Gunnar",
-        "text": "You missed that.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library checkout",
+    "title": "Why Keep A Wrong Book",
+    "summary": "Bjorn asks the question beneath his irritation: why would a library preserve a book known to contain errors? The answer reframes the institution as storage of claims, not an oracle.",
+    "settingText": "Neighborhood public library service desk",
     "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Medium: Bjorn places the completed feedback form beside the book.",
+      "Two-shot: He asks the librarian directly why the book remains if it can be wrong.",
+      "Medium: The librarian answers plainly, without defending the book as authoritative.",
+      "Close on Gunnar: He understands the distinction immediately.",
+      "Wide: Behind them, shelves hold many mutually different books."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P15_L01",
+        "handle": "@vik.Bjorn",
+        "text": "If it is wrong, why keep it?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P15_L02",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Because somebody wrote it.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P15_L03",
+        "handle": "@vik.Bjorn",
+        "text": "That is enough?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P15_L04",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Enough to exist. Not enough to be right.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P15_L05",
+        "handle": "@vik.Gunnar",
+        "text": "So the room remembers arguments too.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P15_L06",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "A lot of them.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P14"
   },
   {
     "id": "VIK_S1E07_P16",
     "episode": "S1E07",
     "issue": 7,
     "page": 16,
-    "title": "Carrie Missed A Step",
-    "summary": "Carrie Missed A Step: Carrie stares at the card.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium on Carrie: She holds Gunnar's library card at eye level for a moment, visibly recalculating how much happened while she was occupied at the copier.",
-      "Medium two-shot: Gunnar explains that he asked the woman at the desk; Carrie listens while the checkout activity continues around them.",
-      "Insert: Bjorn has his own book under one arm.",
-      "Medium on Carrie: She gives the card back and quietly admits that asking was faster, allowing Gunnar's small independent success to stand."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P16_L01",
-        "handle": "@vik.Carrie",
-        "text": "When did that happen?",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L02",
-        "handle": "@vik.Gunnar",
-        "text": "While you were copying.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L03",
-        "handle": "@vik.Carrie",
-        "text": "Who helped you?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Woman at the desk. I asked.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L05",
-        "handle": "@vik.Carrie",
-        "text": "Right.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L06",
-        "handle": "@vik.Gunnar",
-        "text": "I thought asking would be faster.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P16_L07",
-        "handle": "@vik.Carrie",
-        "text": "It was.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library checkout",
+    "title": "A Card",
+    "summary": "Gunnar decides he wants to return for his own reasons and asks library staff what is required to borrow books.",
+    "settingText": "Neighborhood public library checkout desk",
     "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
     ],
+    "panelPlan": [
+      "Medium: Gunnar approaches the checkout desk carrying a small stack of books he selected himself.",
+      "Two-shot: He asks what is required to take them and return later.",
+      "Insert: The staff member indicates the routine library-card process without turning it into a procedural lecture.",
+      "Medium: Gunnar supplies the information he can and asks one practical question about returning the books.",
+      "Close: The staff member prepares a card or temporary borrowing credential."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P16_L01",
+        "handle": "@vik.Gunnar",
+        "text": "I want to take these and bring them back.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "VIK_S1E07_P16_L02",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "You need a library card.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P16_L03",
+        "handle": "@vik.Gunnar",
+        "text": "How do I get one?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P16_L04",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Name. Address. ID if you have it.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P16_L05",
+        "handle": "@vik.Gunnar",
+        "text": "I have an address.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P16_L06",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Good place to start.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P15"
   },
   {
@@ -1228,91 +1047,82 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 17,
-    "title": "The City Gives Things Back",
-    "summary": "The City Gives Things Back: They step outside carrying books and Carrie's copied city records.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: They step outside carrying books and Carrie's copied city records.",
-      "Close-up: Bjorn looks back at the library.",
-      "Library exterior — Medium: Carrie explains borrowing while walking with her copied records; Gunnar carries his own stack and Bjorn keeps several books tucked securely under one arm.",
-      "Medium on Bjorn: He looks down at the number of books he is carrying, genuinely considering the dangerous generosity of a place that lets him take as many as he can carry.",
-      "Medium continuing down the sidewalk: The due-date slip protrudes from Bjorn's book as he immediately understands the return obligation as a debt."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P17_L01",
-        "handle": "@vik.Bjorn",
-        "text": "We can take these?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L02",
-        "handle": "@vik.Carrie",
-        "text": "Borrow. Bring them back.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L03",
-        "handle": "@vik.Bjorn",
-        "text": "How many?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L04",
-        "handle": "@vik.Carrie",
-        "text": "However many you can carry, basically.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L05",
-        "handle": "@vik.Bjorn",
-        "text": "That is a dangerous rule.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L06",
-        "handle": "@vik.Gunnar",
-        "text": "For him.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L07",
-        "handle": "@vik.Carrie",
-        "text": "Return date's on the slip.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L08",
-        "handle": "@vik.Bjorn",
-        "text": "A debt.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P17_L09",
-        "handle": "@vik.Carrie",
-        "text": "Sure. Book debt.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood public library exterior and sidewalk",
+    "title": "Carrie Missed A Step",
+    "summary": "While Carrie is occupied with her records, Gunnar completes the ordinary card process by asking the person whose job it is to help him.",
+    "settingText": "Neighborhood public library checkout and copier area",
     "charactersInline": [
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
       },
       {
         "handle": "@vik.Carrie",
         "name": "Carrie"
       },
       {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
     ],
+    "panelPlan": [
+      "Medium: The librarian hands Gunnar his library card or temporary borrowing credential.",
+      "Wide: Across the room, Carrie finishes at the copier and approaches carrying her records.",
+      "Close: Gunnar presents the card only when Carrie tells him he needs one.",
+      "Close on Carrie: She realizes he already solved the small problem without her.",
+      "Two-shot: Gunnar explains how with complete simplicity."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P17_L01",
+        "handle": "@vik.Carrie",
+        "text": "Those aren't mine.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L02",
+        "handle": "@vik.Gunnar",
+        "text": "No.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L03",
+        "handle": "@vik.Carrie",
+        "text": "You need a card.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L04",
+        "handle": "@vik.Gunnar",
+        "text": "I have one.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L05",
+        "handle": "@vik.Carrie",
+        "text": "When did that happen?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L06",
+        "handle": "@vik.Gunnar",
+        "text": "While you were copying.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L07",
+        "handle": "@vik.Carrie",
+        "text": "Who helped you?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P17_L08",
+        "handle": "@vik.Gunnar",
+        "text": "Woman at the desk. I asked.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P16"
   },
   {
@@ -1320,178 +1130,151 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 18,
-    "title": "Silas, Smaller",
-    "summary": "Silas, Smaller: Silas appears with phone in hand, sees them with books.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: Silas appears with phone in hand, sees them with books.",
-      "Medium on the sidewalk: Bjorn keeps walking past Silas without slowing, books under one arm, making his refusal by continuing the ordinary trip rather than confronting the phone.",
-      "Medium on Gunnar beside him: Gunnar says they are reading while still holding his book; Silas lowers the phone as the obvious 'reaction' refuses to become content.",
-      "Insert: Silas lowers the phone a little.",
-      "Medium: He falls into step anyway, carrying one of Carrie's awkward document bags after she hands it to him without ceremony."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P18_L01",
-        "handle": "@vik.Silas",
-        "text": "Oh, that's good. Viking library reaction could—",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L02",
-        "handle": "@vik.Bjorn",
-        "text": "No.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L03",
-        "handle": "@vik.Gunnar",
-        "text": "We're reading.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L04",
-        "handle": "@vik.Silas",
-        "text": "That is the reaction.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L05",
-        "handle": "@vik.Carrie",
-        "text": "Here. Be useful.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L06",
-        "handle": "@vik.Silas",
-        "text": "Is this a test?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L07",
-        "handle": "@vik.Carrie",
-        "text": "It's a bag.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L08",
-        "handle": "@vik.Gunnar",
-        "text": "Heavy bag.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P18_L09",
-        "handle": "@vik.Silas",
-        "text": "Got it.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick neighborhood sidewalk",
+    "title": "Borrowing",
+    "summary": "Bjorn and Gunnar learn that the library's material can leave the building under a simple promise to return it, a social obligation both understand immediately.",
+    "settingText": "Neighborhood public library checkout",
     "charactersInline": [
       {
-        "handle": "@vik.Silas",
-        "name": "Silas"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
         "handle": "@vik.Carrie",
         "name": "Carrie"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Medium: Gunnar's selected books and Bjorn's inaccurate history book sit at the checkout desk.",
+      "Close: The staff member scans the books and places a due-date slip with them.",
+      "Two-shot: Bjorn looks from the books to the exit, surprised by the permission rather than the technology.",
+      "Medium: Carrie explains only the essential rule.",
+      "Wide: Bjorn accepts the books with the care of someone accepting a temporary obligation."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P18_L01",
+        "handle": "@vik.Bjorn",
+        "text": "We can take these?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L02",
+        "handle": "@vik.Carrie",
+        "text": "Borrow. Bring them back.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L03",
+        "handle": "@vik.Bjorn",
+        "text": "When?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L04",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Date's on the slip.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L05",
+        "handle": "@vik.Bjorn",
+        "text": "A debt.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L06",
+        "handle": "@vik.Carrie",
+        "text": "Book debt.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P18_L07",
+        "handle": "@vik.Bjorn",
+        "text": "Good.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P17"
   },
   {
     "id": "VIK_S1E07_P19",
     "episode": "S1E07",
     "issue": 7,
     "page": 19,
-    "title": "Hotdog Vendor / Park Bench",
-    "summary": "Hotdog Vendor / Park Bench: Familiar hotdog vendor recognizes them.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium at the hotdog cart: The familiar vendor sees Bjorn, Gunnar, Carrie, and Silas approach and begins preparing the usual order before they reach the counter.",
-      "Medium: Transaction is nearly wordless; the vendor already knows quantities/condiments well enough to start.",
-      "Medium: They sit on a familiar park bench. Silas remains nearby but not performing.",
-      "Close-up: Gunnar reads while eating. Bjorn people-watches.",
-      "Close-up: A local passerby gives Bjorn a small nod. Bjorn returns it."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P19_L01",
-        "handle": "@vik.HotdogVendor",
-        "text": "Three usual?",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Four.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L03",
-        "handle": "@vik.Silas",
-        "text": "I'm not hungry.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L04",
-        "handle": "@vik.Bjorn",
-        "text": "Four.",
-        "subtext": "Panel 1"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L05",
-        "handle": "@vik.HotdogVendor",
-        "text": "Four.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L06",
-        "handle": "@vik.Bjorn",
-        "text": "Evening.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P19_L07",
-        "handle": "LOCAL PASSERBY",
-        "text": "Evening.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood park and hotdog vendor",
+    "title": "How Many",
+    "summary": "Bjorn tests the limits of the borrowing arrangement and learns that the library's trust is surprisingly broad but still bounded by return.",
+    "settingText": "Neighborhood public library exit",
     "charactersInline": [
       {
-        "handle": "@vik.HotdogVendor",
-        "name": "Hotdog Vendor"
-      },
-      {
-        "handle": "@vik.Silas",
-        "name": "Silas"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       }
     ],
+    "panelPlan": [
+      "Medium: The three stand just inside the library exit carrying books and Carrie's copied records.",
+      "Close: Bjorn looks back toward the shelves.",
+      "Two-shot: He asks the obvious quantitative question.",
+      "Medium: Carrie's answer is casual enough to worry him.",
+      "Wide: Gunnar shifts his manageable stack and starts toward the door before Bjorn can enlarge his."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P19_L01",
+        "handle": "@vik.Bjorn",
+        "text": "How many can we take?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P19_L02",
+        "handle": "@vik.Carrie",
+        "text": "A lot.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P19_L03",
+        "handle": "@vik.Bjorn",
+        "text": "How many is a lot?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P19_L04",
+        "handle": "@vik.Carrie",
+        "text": "More than you should carry home today.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P19_L05",
+        "handle": "@vik.Gunnar",
+        "text": "We have enough.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P19_L06",
+        "handle": "@vik.Bjorn",
+        "text": "For today.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P18"
   },
   {
@@ -1499,88 +1282,64 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 20,
-    "title": "Bjorn's Kind of Map",
-    "summary": "Bjorn'S Kind Of Map: Carrie looks around: bodega bag, coffee cup, library books, hotdogs, Silas carrying documents, locals passing without alarm.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
-    "panelPlan": [
-      "Medium: Carrie looks around: bodega bag, coffee cup, library books, hotdogs, Silas carrying documents, locals passing without alarm.",
-      "Medium on Carrie at the park bench: She looks past Gunnar toward the neighborhood routes where the other Kin disappeared and finally asks whether he knows where they went.",
-      "Insert on Gunnar's hands: He closes the book over one finger to hold his place before admitting that he does not know and is a little worried.",
-      "Close on Gunnar: He looks around at the familiar block, weighing that worry against the ordinary evidence that the others have keys, routines, and reasons to come home."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P20_L01",
-        "handle": "@vik.Carrie",
-        "text": "You know where they went?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L02",
-        "handle": "@vik.Gunnar",
-        "text": "No.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L03",
-        "handle": "@vik.Carrie",
-        "text": "You're not worried?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L04",
-        "handle": "@vik.Gunnar",
-        "text": "A little.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L05",
-        "handle": "@vik.Carrie",
-        "text": "Thank you. A human answer.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L06",
-        "handle": "@vik.Gunnar",
-        "text": "They have keys. They'll probably be back.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L07",
-        "handle": "@vik.Carrie",
-        "text": "Probably?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P20_L08",
-        "handle": "@vik.Gunnar",
-        "text": "You wanted human.",
-        "subtext": "Panel 4"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Neighborhood park bench",
+    "title": "The Return Slot",
+    "summary": "Before leaving, Gunnar verifies exactly how the obligation is completed, making the borrowing relationship legible on his own terms.",
+    "settingText": "Neighborhood public library entrance and return slot",
     "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Unnamed Archetypes"
       },
       {
-        "handle": "@vik.Silas",
-        "name": "Silas"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       }
     ],
+    "panelPlan": [
+      "Medium: Gunnar pauses beside the library return slot before exiting.",
+      "Two-shot: He asks the staff member nearby whether returned books go there when the desk is closed.",
+      "Insert: The return slot mechanism, framed without invented readable signage.",
+      "Medium: Gunnar tests the flap without inserting a borrowed book.",
+      "Wide: Bjorn waits with the books while Gunnar completes the mental model."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P20_L01",
+        "handle": "@vik.Gunnar",
+        "text": "If you are closed?",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P20_L02",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Return slot.",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P20_L03",
+        "handle": "@vik.Gunnar",
+        "text": "And then the debt is finished?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P20_L04",
+        "handle": "@vik.UnnamedArchetypes",
+        "text": "Once we check them in.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P20_L05",
+        "handle": "@vik.Gunnar",
+        "text": "Good.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P19"
   },
   {
@@ -1588,192 +1347,96 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 21,
-    "title": "Returning Home Separately",
-    "summary": "Returning Home Separately: Bjorn, Gunnar, Carrie and Silas return.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Medium: Bjorn, Gunnar, Carrie and Silas return.",
-      "Medium: One Kin member is already coming up behind them with groceries.",
-      "Medium: Another is ahead of them carrying folded laundry.",
-      "Apartment-building hallway — Medium: The Upstairs Neighbor gives Astrid a casual greeting while passing; Astrid answers just as casually, both continuing in opposite directions without breaking stride.",
-      "Close on Carrie: She watches the separate routines converge around the building—groceries, folded laundry, books, neighbor greeting—and realizes this is now happening without her arrangement."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P21_L01",
-        "handle": "@vik.KinMan2",
-        "text": "You took the slow way.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L02",
-        "handle": "@vik.Bjorn",
-        "text": "We had books.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L03",
-        "handle": "@vik.KinMan1",
-        "text": "Machine lied again.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Still four minutes?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L05",
-        "handle": "@vik.KinMan1",
-        "text": "Long four minutes.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L06",
-        "handle": "@vik.Astrid",
-        "text": "Evening.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L07",
-        "handle": "@vik.UpstairsNeighbor",
-        "text": "Night.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L08",
-        "handle": "@vik.Carrie",
-        "text": "You all have places.",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E07_P21_L09",
-        "handle": "@vik.Astrid",
-        "text": "Yes.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick apartment building exterior and hallway",
+    "title": "Silas, Smaller",
+    "summary": "Silas encounters them leaving with books and briefly tries to turn the moment into content; Gunnar shuts that down and Carrie redirects Silas into an actually useful role.",
+    "settingText": "Bushwick sidewalk outside the library",
     "charactersInline": [
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "handle": "@vik.Silas",
+        "name": "Silas"
       },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
         "handle": "@vik.Carrie",
         "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Silas",
-        "name": "Silas"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      },
-      {
-        "handle": "@vik.UpstairsNeighbor",
-        "name": "Upstairs Neighbor"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Wide: Silas approaches with phone in hand and notices Gunnar and Bjorn carrying library books.",
+      "Medium: He begins framing the sight as a possible post or reaction clip.",
+      "Two-shot: Bjorn simply keeps walking while Gunnar answers without hostility.",
+      "Medium: Carrie hands Silas her awkward document bag before he can resume filming.",
+      "Wide: Silas lowers the phone and falls into step carrying the bag."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P21_L01",
+        "handle": "@vik.Silas",
+        "text": "Viking library reaction could actually—",
+        "subtext": "Panel 2"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L02",
+        "handle": "@vik.Gunnar",
+        "text": "We're reading.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L03",
+        "handle": "@vik.Silas",
+        "text": "That is the reaction.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L04",
+        "handle": "@vik.Carrie",
+        "text": "Here. Be useful.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L05",
+        "handle": "@vik.Silas",
+        "text": "Is this a test?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L06",
+        "handle": "@vik.Carrie",
+        "text": "It's a bag.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P20"
   },
   {
     "id": "VIK_S1E07_P22",
     "episode": "S1E07",
     "issue": 7,
     "page": 22,
-    "title": "The Safe Cave Has Changed",
-    "summary": "The Safe Cave Has Changed: Everyone arrives with things from different parts of the neighborhood: books, groceries, laundry, snacks, small cultural flyers, coffee cups.",
-    "panelCount": 5,
-    "layoutName": "5_PANEL",
-    "focalPanelIndex": 4,
-    "panelPlan": [
-      "Wide: Everyone arrives with things from different parts of the neighborhood: books, groceries, laundry, snacks, small cultural flyers, coffee cups.",
-      "Medium: The apartment absorbs them into existing Viking domestic organization.",
-      "Insert: Gunnar puts his borrowed books somewhere protected, not near his maps.",
-      "Insert: Bjorn sets his inaccurate Viking history book near the brass key.",
-      "Close-up: Carrie notices the visual juxtaposition: home granted by the city; history borrowed from the city."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P22_L01",
-        "handle": "@vik.Astrid",
-        "text": "Laundry there.",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Books stay dry.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L03",
-        "handle": "@vik.Gunnar",
-        "text": "Away from the maps.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L04",
-        "handle": "@vik.Carrie",
-        "text": "Why?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L05",
-        "handle": "@vik.Gunnar",
-        "text": "Different things.",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L06",
-        "handle": "@vik.Bjorn",
-        "text": "This one stays by the key.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E07_P22_L07",
-        "handle": "@vik.Carrie",
-        "text": "Of course it does.",
-        "subtext": "Panel 5"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick studio apartment",
+    "title": "Different Things",
+    "summary": "Back home, Gunnar gives the borrowed books a place separate from his maps and household records, physically marking reading as an interest rather than a survival tool.",
+    "settingText": "Bushwick studio apartment, evening",
     "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
-        "handle": "@vik.Silas",
-        "name": "Silas"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       },
       {
         "handle": "@vik.Astrid",
@@ -1788,6 +1451,47 @@
         "name": "Second Male Kin"
       }
     ],
+    "panelPlan": [
+      "Wide: Evening in 5B. The household absorbs the returned group and their books into ordinary activity.",
+      "Insert: Gunnar places his borrowed books somewhere dry and protected, deliberately separate from the maps and household ledger.",
+      "Medium: Carrie notices the separation and asks why.",
+      "Two-shot: Gunnar answers while opening the verse/literature book again.",
+      "Insert: Bjorn places the inaccurate history book near the brass key with his scrap notes tucked inside as removable markers."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P22_L01",
+        "handle": "@vik.Carrie",
+        "text": "Why not with the maps?",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E07_P22_L02",
+        "handle": "@vik.Gunnar",
+        "text": "Different things.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P22_L03",
+        "handle": "@vik.Carrie",
+        "text": "Maps are books.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P22_L04",
+        "handle": "@vik.Gunnar",
+        "text": "Not to me.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P22_L05",
+        "handle": "@vik.Bjorn",
+        "text": "This one stays where I can find it.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P21"
   },
   {
@@ -1795,62 +1499,76 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 23,
-    "title": "Carrie's Folder",
-    "summary": "Carrie'S Folder: Carrie finally opens the folder she brought in Page 1.",
-    "panelCount": 4,
-    "layoutName": "4_PANEL",
-    "focalPanelIndex": 3,
+    "title": "Fourteen Errors",
+    "summary": "Bjorn continues auditing the borrowed history book without damaging it, while Carrie enforces the one library rule he had not considered: the book itself must remain unchanged.",
+    "settingText": "Bushwick studio apartment, evening",
+    "charactersInline": [
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      }
+    ],
     "panelPlan": [
-      "Medium: Carrie finally opens the folder she brought in Page 1.",
-      "Medium across the room: Bjorn looks from Carrie's newly opened folder to the household already functioning around them and asks whether she still needs the list.",
-      "Close-up: Carrie looks around at the functioning household.",
-      "Medium on Carrie: She closes the folder on the shortened list while ordinary evening activity continues behind her, accepting that much of her planned work has already been overtaken by their lives."
+      "Medium: Bjorn has the history book open with several loose scrap-paper markers protruding from different pages.",
+      "Close: He adds another scrap marker rather than writing in the book.",
+      "Two-shot: Carrie counts the markers with mild concern.",
+      "Medium: Gunnar keeps reading his own book while Bjorn states the current total.",
+      "Close: Carrie checks that no marks have been made on the library pages."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E07_P23_L01",
         "handle": "@vik.Carrie",
-        "text": "I had a whole list.",
-        "subtext": "Panel 1"
+        "text": "How many?",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E07_P23_L02",
         "handle": "@vik.Bjorn",
-        "text": "Still need it?",
-        "subtext": "Panel 2"
+        "text": "Fourteen.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P23_L03",
         "handle": "@vik.Carrie",
-        "text": "Some. The parts you haven't already done without me.",
-        "subtext": "Panel 3"
+        "text": "Errors?",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P23_L04",
         "handle": "@vik.Bjorn",
-        "text": "Shorter list.",
+        "text": "So far.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P23_L05",
         "handle": "@vik.Carrie",
-        "text": "Much.",
-        "subtext": "Panel 4"
+        "text": "You're not writing in the book.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P23_L06",
+        "handle": "@vik.Bjorn",
+        "text": "It is not mine.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P23_L07",
+        "handle": "@vik.Carrie",
+        "text": "Good answer.",
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick studio apartment",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      }
-    ],
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
     "continuityFrom": "VIK_S1E07_P22"
   },
   {
@@ -1858,63 +1576,10 @@
     "episode": "S1E07",
     "issue": 7,
     "page": 24,
-    "title": "The Neighborhood Remembers",
-    "summary": "The Neighborhood Remembers: Bodega Owner wipes counter; one of the Vikings' familiar items sits behind him.",
-    "panelCount": 6,
-    "layoutName": "6_PANEL",
-    "focalPanelIndex": 5,
-    "panelPlan": [
-      "Medium: Bodega Owner wipes counter; one of the Vikings' familiar items sits behind him.",
-      "Insert: Coffee vendor serves another customer; Bjorn's regular cup order notation / remembered routine is implicit in the setup, not labeled for exposition.",
-      "Insert: Library return slot / desk, establishing this is a place they will come back to.",
-      "Medium: Laundromat television glows over folding tables; a Kin member's familiar presence is now part of the room.",
-      "Medium: Apartment window at dusk. The Safe Cave glows among hundreds of ordinary city windows.",
-      "Medium: Inside, Gunnar reads. Bjorn argues silently with the illustration in his history book. The Kin continue their own activities in the background. Carrie sits for once without managing anyone."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E07_P24_L01",
-        "handle": "@vik.Bjorn",
-        "text": "Still wrong.",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E07_P24_L02",
-        "handle": "@vik.Gunnar",
-        "text": "You said that.",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E07_P24_L03",
-        "handle": "@vik.Bjorn",
-        "text": "Still is.",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E07_P24_L04",
-        "handle": "@vik.Carrie",
-        "text": "Please don't file a complaint tonight.",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E07_P24_L05",
-        "handle": "@vik.Bjorn",
-        "text": "Tomorrow.",
-        "subtext": "Panel 6"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Enhanced Issue 7 production script reconstructed from Vikings neighborhood-memory, Kin assimilation, character, prop, library, and current Master Project Bible source material",
-    "settingText": "Bushwick neighborhood closing montage",
+    "title": "The Skaldic Interface",
+    "summary": "The issue closes with Gunnar turning written material back into shared spoken experience; the library has become useful not because it replaces oral culture, but because it gives the household more voices to bring into the room.",
+    "settingText": "Bushwick studio apartment, late evening",
     "charactersInline": [
-      {
-        "handle": "@vik.BodegaOwner",
-        "name": "Bodega Owner"
-      },
-      {
-        "handle": "@vik.CoffeeVendor",
-        "name": "Coffee Vendor"
-      },
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
@@ -1939,6 +1604,55 @@
         "handle": "@vik.KinMan2",
         "name": "Second Male Kin"
       }
-    ]
+    ],
+    "panelPlan": [
+      "Wide: Late evening. The household has settled into quiet tasks. Gunnar sits with the borrowed verse/literature book while the others occupy the room naturally.",
+      "Medium: Gunnar begins reading a short generic passage aloud in his own cadence; no copyrighted text is shown or reproduced.",
+      "Reaction panel: Astrid and the two male Kin listen without stopping their work; Carrie remains seated; Bjorn looks up from the inaccurate history book.",
+      "Two-shot: Bjorn considers the sound of the written passage rather than the page.",
+      "Wide: Gunnar continues reading as the apartment returns the stored words to living voices. The books, maps, ledger, brass key and ordinary household objects coexist without hierarchy.",
+      "Final close on Bjorn, listening."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E07_P24_L01",
+        "handle": "@vik.Bjorn",
+        "text": "That one is better.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P24_L02",
+        "handle": "@vik.Gunnar",
+        "text": "You have not seen the page.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P24_L03",
+        "handle": "@vik.Bjorn",
+        "text": "I heard it.",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E07_P24_L04",
+        "handle": "@vik.Carrie",
+        "text": "That's going on the review form?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P24_L05",
+        "handle": "@vik.Bjorn",
+        "text": "No.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E07_P24_L06",
+        "handle": "@vik.Bjorn",
+        "text": "Read the next one.",
+        "subtext": "Panel 6"
+      }
+    ],
+    "status": "production-ready",
+    "source": "Rebuilt Skaldic Interface after extracting neighborhood-recognition material into Issue 5. Focus: reading, historical representation, borrowing, self-directed civic use, and written material returning to shared oral life.",
+    "continuityFrom": "VIK_S1E07_P23"
   }
 ]
