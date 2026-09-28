@@ -24,9 +24,9 @@
     {
       "issue": 2,
       "title": "Landfall Bushwick",
-      "function": "Apartment adaptation and neighborhood integration; food, neighbors, domestic choice and privacy make the temporary shelter into a functioning household while the acknowledgement problem remains a bounded threat underneath the story.",
+      "function": "Apartment adaptation without premature settlement: food, locks, radiator heat, shared-space boundaries and truthful paperwork make 5B operational as assigned shelter while the room remains sparse, portable and materially unsettled. The final beat points toward roof/orientation rather than declaring home complete.",
       "beatCoverage": "13-20",
-      "status": "structural season revision complete; 24-page revised script compiled; scene-based dialogue/voice pass complete",
+      "status": "structural season revision complete; 24-page active script audited for sparse first-night visual state, Silas first-meeting continuity, and Territory handoff",
       "scriptFile": "issue_02_landfall_bushwick_structural_revision.md",
       "payloadFile": "pages_i02_season_revision.json"
     },
@@ -60,9 +60,9 @@
     {
       "issue": 6,
       "title": "The Tally of Dishonor",
-      "function": "Financial legibility, value and partial civic participation; the bank is resolved in the first act, then money becomes household choice, reciprocal debt, neighborhood exchange and ordinary capability.",
+      "function": "Financial legibility, value and partial civic participation; the bank is resolved in the first act after an outstanding provisional account/rent requirement is flagged, then money becomes household choice, reciprocal debt, neighborhood exchange and ordinary capability.",
       "beatCoverage": "28-32",
-      "status": "structural season revision complete; 24-page revised script compiled; scene-based dialogue/voice pass complete",
+      "status": "production-ready; post-insertion chronology audited and obsolete 48-hour deadline removed",
       "referenceFile": "issue_04_reference.json",
       "scriptFile": "issue_04_tally_of_dishonor_structural_revision.md",
       "payloadFile": "pages_i06_tally_of_dishonor.json"
@@ -72,7 +72,7 @@
       "title": "The Skaldic Interface",
       "function": "Information, reading and self-directed civic use; Gunnar uses the library to pursue current information, stored history and literature for his own reasons, while Bjorn confronts inaccurate historical representation and both learn borrowing as an ongoing civic obligation.",
       "beatCoverage": "library / reading / historical representation / borrowing / self-directed civic use",
-      "status": "production-ready 24-page rebuilt script; neighborhood-recognition material removed after extraction into Issue 5; page-level dialogue and continuity audited",
+      "status": "production-ready 24-page rebuilt script; neighborhood-recognition material removed after extraction into Issue 5; Silas progression and page-level continuity audited",
       "scriptFile": "issue_07_skaldic_interface_structural_revision.md",
       "payloadFile": "pages_i07_skaldic_interface.json"
     },
@@ -219,5 +219,30 @@
     "Detailed Silas progression after the hearing",
     "Whether the unnamed Issue 9 support-group facilitator and 1987 participant ever require personal names",
     "Museum continuity placement"
-  ]
+  ],
+  "seasonalContinuity": {
+    "lock": "Season 1 New York material is spring 2026. Provision explicitly identifies April; earlier Bushwick issues lead into that spring state and later issues remain in spring unless a future script explicitly changes season.",
+    "visualRules": [
+      "No autumn foliage, September signage/dialogue, fall-color leaves, snow or winter streets in active Issues 2–12.",
+      "Issues 2–3 may be cool enough for heavy outer layers and chilly nights while still showing early-spring city conditions.",
+      "Issue 8 must clearly show budding/new green growth and a plausible spring thunderstorm.",
+      "Recovered historical art showing September or autumn conditions is concept/reference material only and does not control current seasonal continuity."
+    ]
+  },
+  "visualProgression": {
+    "issue2": "Assigned shelter becomes operational: fed, lockable, heated, organized enough to sleep. It must remain sparse, portable and visibly provisional.",
+    "issue3": "Housed but unsettled. Orientation, winter-readiness anxiety and the rooftop hearth convert assigned shelter into territory and first security.",
+    "issues4To8": "Repeated routes, merchants, books, provision and ordinary systems gradually accumulate real household texture.",
+    "issues9To10": "The apartment can now read as the earned 'Safe Cave': lived-in through repeated use and separate routines rather than decorative coziness.",
+    "issues11To12": "Home is established; the remaining question is individual choice and legal status, not whether 5B functions."
+  },
+  "auditNotes": {
+    "status": "Full-season production audit in progress/completed September 28, 2026.",
+    "intentionalEchoes": [
+      "Trial of Toil: Bjorn learns he does not need everyone's itinerary; Belonging later gives Carrie the parallel realization.",
+      "Landfall: Carrie instructs Bjorn to lock her out; Belonging later pays this off when she actually waits outside 5B.",
+      "Neighborhood establishes recognition by recurring people; Belonging escalates that into independent city operation."
+    ],
+    "releasedIssue1Exception": "Issue 1 remains released canon and is not active assembler input in RexPrompt. Its reconstruction/encoded payloads are reference-only for regeneration. Active Issue 2+ recipes control the revised season progression."
+  }
 }
