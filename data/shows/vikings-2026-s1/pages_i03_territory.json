@@ -364,10 +364,14 @@
     "episode": "S1E03",
     "issue": 3,
     "page": 7,
-    "title": "Foundation",
-    "summary": "Bjorn and Gunnar begin constructing a hearth base inside 5B, but there is no fuel and no flame; Carrie arrives before they have solved the smoke problem.",
-    "settingText": "Bushwick studio apartment, daytime",
+    "title": "Roof Paperwork",
+    "summary": "Carrie tries to finish a housing acknowledgement while Bjorn makes clear that assigned housing is not yet the same thing as trusted shelter.",
+    "settingText": "Bushwick apartment building roof, bright daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -377,55 +381,75 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Wide: Bjorn and Gunnar have arranged a small, careful noncombustible hearth base on the floor with clear space around it; no firewood is loaded and nothing is burning.",
-      "Medium: Gunnar checks the distance to the wall and window while Bjorn adjusts the stable base.",
-      "Wide: Carrie enters with her folder, sees the structure, and stops.",
-      "Two-shot: Bjorn looks up from the unfinished work rather than hiding it."
+      "Medium: Carrie stands at a stable rooftop work surface with a clipboard and housing acknowledgement while Bjorn faces her. The city is bright behind them.",
+      "Insert: Carrie's pen indicates the signature line; no other form text is readable.",
+      "Medium: Bjorn studies the paper instead of signing.",
+      "Wide: In the background, Gunnar and the two male Kin are examining a stack of loose rooftop sheet-metal sections and spare vent pieces that belong to the building; they are not touching installed machinery.",
+      "Medium: Gunnar looks toward Bjorn with the expression of someone who has found a second problem."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P07_L01",
         "handle": "@vik.Carrie",
-        "text": "Tell me that is not a fire.",
-        "subtext": "Panel 3"
+        "text": "Housing acknowledgment. Initial here, sign here, then I can tell my boss you are indoors on purpose.",
+        "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E03_P07_L02",
         "handle": "@vik.Bjorn",
-        "text": "It is not.",
-        "subtext": "Panel 4"
+        "text": "It says I accept the shelter.",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P07_L03",
         "handle": "@vik.Carrie",
-        "text": "Yet.",
-        "subtext": "Panel 4"
+        "text": "Yeah.",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P07_L04",
         "handle": "@vik.Bjorn",
-        "text": "Correct.",
-        "subtext": "Panel 4"
+        "text": "I am still testing the shelter.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E03_P07_L05",
+        "handle": "@vik.Gunnar",
+        "text": "Bjorn.",
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P06"
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
+    "continuityFrom": "VIK_S1E03_P06",
+    "directionInline": [
+      {
+        "text": "No installed HVAC or active rooftop equipment is being dismantled. The loose metal belongs to the building and has been mistaken for available material."
+      }
+    ]
   },
   {
     "id": "VIK_S1E03_P08",
     "episode": "S1E03",
     "issue": 3,
     "page": 8,
-    "title": "Smoke",
-    "summary": "Carrie discovers that the Vikings have already stopped themselves for the same reason she would have stopped them: the apartment cannot draft smoke safely.",
-    "settingText": "Bushwick studio apartment, daytime",
+    "title": "The Second Problem",
+    "summary": "Carrie discovers that the Kin have identified loose rooftop metal as possible hearth material; their error is ownership, not fire competence.",
+    "settingText": "Bushwick apartment building roof, daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -435,62 +459,61 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Medium: Carrie points at the hearth base, braced for an argument.",
-      "Two-shot: Bjorn answers plainly while Gunnar looks toward the window.",
-      "Insert: Gunnar holds a hand near the closed window frame, tracing the path smoke would have to take.",
-      "Medium: Carrie's alarm shifts into reluctant recognition that they have not made the mistake she expected."
+      "Medium: Carrie turns toward Gunnar, already recognizing from his tone that the paperwork is no longer the only issue.",
+      "Wide: First Male Kin and Second Male Kin each hold one loose sheet-metal section from the building's rooftop maintenance stack while Gunnar evaluates the remaining pieces.",
+      "Medium: Carrie immediately moves toward them and points at the stack.",
+      "Medium: Bjorn watches the work without embarrassment because the material appears unused to him.",
+      "Close on Gunnar: He states the purpose plainly."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P08_L01",
         "handle": "@vik.Carrie",
-        "text": "You were going to light that in here?",
+        "text": "Why did you say that like we have a second problem?",
         "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E03_P08_L02",
-        "handle": "@vik.Bjorn",
-        "text": "No.",
-        "subtext": "Panel 2"
+        "handle": "@vik.Carrie",
+        "text": "Why are they carrying roof parts?",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P08_L03",
-        "handle": "@vik.Carrie",
-        "text": "No?",
-        "subtext": "Panel 2"
+        "handle": "@vik.Bjorn",
+        "text": "They are gathering material.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P08_L04",
-        "handle": "@vik.Bjorn",
-        "text": "The smoke has nowhere to go.",
-        "subtext": "Panel 2"
+        "handle": "@vik.Gunnar",
+        "text": "For the hearth.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P08_L05",
-        "handle": "@vik.Gunnar",
-        "text": "The window is not a chimney.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Carrie",
+        "text": "No.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P08_L06",
         "handle": "@vik.Carrie",
-        "text": "Okay.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E03_P08_L07",
-        "handle": "@vik.Carrie",
-        "text": "Good. That's actually good.",
-        "subtext": "Panel 4"
+        "text": "Absolutely not.",
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
     "continuityFrom": "VIK_S1E03_P07"
   },
   {
@@ -498,10 +521,14 @@
     "episode": "S1E03",
     "issue": 3,
     "page": 9,
-    "title": "No Hearth",
-    "summary": "Carrie explains that the apartment's heat and cooking systems were designed to eliminate the household hearth entirely, which makes practical sense and cultural sense in opposite directions.",
-    "settingText": "Bushwick studio apartment kitchenette and radiator, daytime",
+    "title": "What Shelter Means",
+    "summary": "The argument reveals the actual unsettled state: the apartment has walls and heat, but Bjorn does not yet understand or trust the systems that are supposed to carry the household through winter.",
+    "settingText": "Bushwick apartment roof beside roof-access structure, daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -511,56 +538,67 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Wide: Carrie points out the radiator and the apartment's modern cooking equipment while Bjorn and Gunnar follow the explanation.",
-      "Medium: Bjorn looks from the radiator back to the unfinished hearth base.",
-      "Medium: Gunnar studies the cooking equipment, then the ceiling and walls.",
-      "Three-shot: Carrie realizes the part they find strange is not the machinery but the absence of a central fire."
+      "Medium: Carrie points from the loose metal to the roof equipment, making clear that the pieces are part of the building even if they were not installed.",
+      "Medium: Bjorn answers with the practical standard by which he is judging the placement.",
+      "Wide: The Kin hold the metal still, waiting rather than continuing once the dispute is clear.",
+      "Two-shot: Carrie explains that the building already has heat through radiators and pipes.",
+      "Close on Bjorn: He looks toward the roof access and the unseen apartment below, unconvinced that an invisible system equals a settled household."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P09_L01",
-        "handle": "@vik.Bjorn",
-        "text": "Where is the hearth?",
+        "handle": "@vik.Carrie",
+        "text": "That belongs to the building.",
         "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E03_P09_L02",
-        "handle": "@vik.Carrie",
-        "text": "There isn't one.",
-        "subtext": "Panel 1"
+        "handle": "@vik.Bjorn",
+        "text": "The room has walls. It does not yet have winter.",
+        "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E03_P09_L03",
-        "handle": "@vik.Gunnar",
-        "text": "Then where does the smoke go?",
-        "subtext": "Panel 3"
+        "handle": "@vik.Carrie",
+        "text": "It has heat.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P09_L04",
-        "handle": "@vik.Carrie",
-        "text": "There is no smoke.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Bjorn",
+        "text": "I have seen no fire.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P09_L05",
-        "handle": "@vik.Bjorn",
-        "text": "Then there is no hearth.",
-        "subtext": "Panel 4"
+        "handle": "@vik.Carrie",
+        "text": "Because the heat comes through pipes.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P09_L06",
+        "handle": "@vik.Bjorn",
+        "text": "Where is the hearth?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P09_L07",
         "handle": "@vik.Carrie",
-        "text": "Correct.",
-        "subtext": "Panel 4"
+        "text": "There isn't one.",
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
     "continuityFrom": "VIK_S1E03_P08"
   },
   {
@@ -568,10 +606,14 @@
     "episode": "S1E03",
     "issue": 3,
     "page": 10,
-    "title": "The Alarm",
-    "summary": "The smoke detector makes sense to Bjorn immediately as a communal fire warning, undercutting Carrie's expectation that she must explain basic fire safety.",
-    "settingText": "Bushwick studio apartment, daytime",
+    "title": "Tactical Difference",
+    "summary": "Carrie forbids a rooftop hearth while Bjorn explains that winter readiness is a leadership obligation; Gunnar clarifies that they are preparing, not lighting a reckless fire.",
+    "settingText": "Bushwick apartment building roof, daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -581,68 +623,67 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Insert: Carrie points to the smoke detector on the ceiling.",
-      "Medium: Gunnar looks up at it while Bjorn listens.",
-      "Medium: Carrie explains what happens if smoke accumulates inside the apartment.",
-      "Two-shot: Bjorn accepts the system without resistance."
+      "Medium: Carrie stands between Bjorn and the loose rooftop metal, keeping the disagreement practical.",
+      "Medium: Bjorn answers seriously, one open hand indicating the household below rather than the roof hardware.",
+      "Close on Carrie: She realizes he is talking about responsibility, not preference.",
+      "Medium: Gunnar stands beside the Kin and the still-unmoved metal pieces.",
+      "Wide: The roof, open sky and city surround an argument about what counts as adequate shelter."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P10_L01",
         "handle": "@vik.Carrie",
-        "text": "Smoke in here makes that scream.",
+        "text": "You cannot build a hearth on a Brooklyn roof.",
         "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E03_P10_L02",
-        "handle": "@vik.Gunnar",
-        "text": "At us?",
+        "handle": "@vik.Bjorn",
+        "text": "A chieftain does not forbid warmth.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E03_P10_L03",
-        "handle": "@vik.Carrie",
-        "text": "At the whole building.",
+        "handle": "@vik.Bjorn",
+        "text": "If winter finds my people unready, that failure is mine.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E03_P10_L04",
-        "handle": "@vik.Bjorn",
-        "text": "And then?",
+        "handle": "@vik.Carrie",
+        "text": "Nobody is asking you to let them freeze.",
         "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P10_L05",
-        "handle": "@vik.Carrie",
-        "text": "Fire Department.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Gunnar",
+        "text": "We are not making fire now.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P10_L06",
-        "handle": "@vik.Bjorn",
-        "text": "They fight fire?",
+        "handle": "@vik.Gunnar",
+        "text": "We are correcting the future.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P10_L07",
         "handle": "@vik.Carrie",
-        "text": "That's the job.",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E03_P10_L08",
-        "handle": "@vik.Bjorn",
-        "text": "Good.",
-        "subtext": "Panel 4"
+        "text": "Then correct it without taking apart the building.",
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
     "continuityFrom": "VIK_S1E03_P09"
   },
   {
@@ -650,10 +691,14 @@
     "episode": "S1E03",
     "issue": 3,
     "page": 11,
-    "title": "Fresh Air",
-    "summary": "Carrie refuses indoor fire but, while trying not to give an instruction she should not give, points them toward the building's exterior space.",
-    "settingText": "Bushwick studio apartment near the fire-escape window, daytime",
+    "title": "The Observer",
+    "summary": "Silas, already known to Gunnar but not yet trusted by the household, appears with his phone after hearing rooftop metal; his concern is nosy but reasonable rather than hostile.",
+    "settingText": "Bushwick apartment roof and adjacent fire-escape landing, daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -663,67 +708,98 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "handle": "@vik.Silas",
+        "name": "Silas"
       }
     ],
     "panelPlan": [
-      "Three-shot: The unfinished hearth base sits safely cold behind them while Bjorn looks toward the window.",
-      "Medium: Carrie chooses her words carefully, already aware that Bjorn and Gunnar will hear the useful part.",
-      "Close: Gunnar follows her glance toward the exterior.",
-      "Medium: Bjorn looks from Carrie to the fire escape and roofline beyond."
+      "Medium: Carrie notices movement beyond the immediate group.",
+      "Wide: Silas stands on an adjacent fire-escape landing or roof-access edge with his phone raised, documenting the unusual rooftop activity from a respectful distance.",
+      "Close on Bjorn: His attention locks onto Silas immediately.",
+      "Medium on Carrie: She recognizes him and is more irritated than alarmed.",
+      "Medium on Silas: Caught, he lowers the phone slightly rather than pretending he was not watching.",
+      "Two-shot Carrie/Bjorn with Silas visible behind them."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P11_L01",
-        "handle": "@vik.Carrie",
-        "text": "You are not lighting a fire inside.",
-        "subtext": "Panel 1"
+        "handle": "@vik.Bjorn",
+        "text": "An enemy?",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P11_L02",
-        "handle": "@vik.Bjorn",
-        "text": "We know.",
-        "subtext": "Panel 1"
+        "handle": "@vik.Carrie",
+        "text": "A neighbor.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P11_L03",
         "handle": "@vik.Carrie",
-        "text": "Right.",
-        "subtext": "Panel 2"
+        "text": "Silas, stop filming.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E03_P11_L04",
-        "handle": "@vik.Carrie",
-        "text": "But if you wanted some fresh air... for whatever reason.",
-        "subtext": "Panel 2"
+        "handle": "@vik.Silas",
+        "text": "I heard metal. I thought somebody was stripping the roof.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P11_L05",
-        "handle": "@vik.Gunnar",
-        "text": "Outside.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Carrie",
+        "text": "Nobody is stripping the roof.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E03_P11_L06",
+        "handle": "@vik.Silas",
+        "text": "Okay.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P11_L07",
+        "handle": "@vik.Bjorn",
+        "text": "He watches us from hiding.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E03_P11_L08",
         "handle": "@vik.Carrie",
-        "text": "I said fresh air.",
-        "subtext": "Panel 3"
+        "text": "He's standing in plain sight.",
+        "subtext": "Panel 6"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P10"
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
+    "continuityFrom": "VIK_S1E03_P10",
+    "directionInline": [
+      {
+        "text": "Silas is curious, wary and intrusive, not smug or malicious. He has a plausible reason to document unfamiliar rooftop activity."
+      }
+    ]
   },
   {
     "id": "VIK_S1E03_P12",
     "episode": "S1E03",
     "issue": 3,
     "page": 12,
-    "title": "Not Instructions",
-    "summary": "Bjorn and Gunnar dismantle the unfinished indoor hearth without complaint and begin carrying only the reusable noncombustible pieces toward the exterior.",
-    "settingText": "Bushwick studio apartment and fire-escape window, daytime",
+    "title": "No Spears",
+    "summary": "Bjorn reads observation as possible reporting; Carrie forbids violence, Gunnar names the real risk of losing housing, and Silas makes clear he has not reported them.",
+    "settingText": "Bushwick apartment building roof, daytime",
     "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
@@ -733,44 +809,84 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "handle": "@vik.Silas",
+        "name": "Silas"
       }
     ],
     "panelPlan": [
-      "Wide: Bjorn and Gunnar take the hearth base apart methodically; still no fuel, ash or evidence of any indoor fire.",
-      "Medium: Gunnar stacks the reusable noncombustible pieces while Bjorn clears the floor.",
-      "Medium: Carrie watches them carry the pieces toward the fire-escape window.",
-      "Two-shot: She makes one last attempt to preserve professional distance from the obvious implication."
+      "Medium: Bjorn keeps his attention on Silas, treating the phone as a possible line to authority.",
+      "Medium: Carrie steps into Bjorn's eyeline with one hand raised, stopping the thought before it becomes action.",
+      "Medium: Gunnar looks from Silas to the building roof and states the actual consequence.",
+      "Medium on Silas: He lowers the phone completely and says he has not contacted anyone.",
+      "Wide: First Male Kin and Second Male Kin begin returning the loose metal to the maintenance stack exactly where it came from.",
+      "Two-shot: Carrie takes the unsigned housing form back from Bjorn; neither of them pretends the larger shelter question is settled."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P12_L01",
-        "handle": "@vik.Carrie",
-        "text": "That was not permission.",
-        "subtext": "Panel 3"
+        "handle": "@vik.Bjorn",
+        "text": "If he carries word to the guards, we lose the room.",
+        "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E03_P12_L02",
-        "handle": "@vik.Bjorn",
-        "text": "No.",
-        "subtext": "Panel 4"
+        "handle": "@vik.Carrie",
+        "text": "No spears. No blood.",
+        "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E03_P12_L03",
         "handle": "@vik.Gunnar",
-        "text": "It was useful information.",
-        "subtext": "Panel 4"
+        "text": "The room is the danger.",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P12_L04",
-        "handle": "@vik.Carrie",
-        "text": "I know.",
+        "handle": "@vik.Silas",
+        "text": "I haven't called anybody.",
         "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E03_P12_L05",
+        "handle": "@vik.Carrie",
+        "text": "Good. And they're putting it back.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P12_L06",
+        "handle": "@vik.Carrie",
+        "text": "If there is a real heat problem, you tell me. I handle the landlord. That's my part.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E03_P12_L07",
+        "handle": "@vik.Bjorn",
+        "text": "And mine?",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E03_P12_L08",
+        "handle": "@vik.Carrie",
+        "text": "Do not dismantle the roof.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E03_P12_L09",
+        "handle": "@vik.Bjorn",
+        "text": "I accept the room. Not yet the winter.",
+        "subtext": "Panel 6"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
     "continuityFrom": "VIK_S1E03_P11"
   },
   {
@@ -778,9 +894,9 @@
     "episode": "S1E03",
     "issue": 3,
     "page": 13,
-    "title": "Open Sky",
-    "summary": "The exterior space solves the problem the apartment could not: open sky and an unobstructed place for smoke to leave.",
-    "settingText": "Bushwick fire escape and roof access, late afternoon",
+    "title": "Nothing From the Building",
+    "summary": "The Vikings restore every building-owned piece; Silas helps identify where one loose section belongs, and Gunnar and Bjorn derive the correct next rule: any hearth solution must be exterior, contained, and made from material that is actually theirs.",
+    "settingText": "Bushwick apartment building roof, late afternoon",
     "charactersInline": [
       {
         "handle": "@vik.Bjorn",
@@ -789,37 +905,92 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "handle": "@vik.Silas",
+        "name": "Silas"
       }
     ],
     "panelPlan": [
-      "Wide: Bjorn and Gunnar step onto the iron fire escape with the roof access above them and the neighborhood open around them.",
-      "Medium: Bjorn looks upward at the unobstructed sky.",
-      "Medium: Gunnar checks the path of the breeze along the building face.",
-      "Wide: They look toward the roof, the unfinished solution now obvious but not yet built."
+      "Wide: First Male Kin and Second Male Kin return the loose sheet-metal pieces to the building's maintenance stack while Gunnar checks the arrangement.",
+      "Medium: Silas points to the original position of one section from several feet away.",
+      "Two-shot: Gunnar verifies the placement with him rather than dismissing the help.",
+      "Wide: With the roof restored, Silas leaves toward the fire escape while the Kin carry no building material away.",
+      "Medium: Gunnar and Bjorn look across a clear noncombustible area of roof and then up to the open sky.",
+      "Final two-shot: The solution has changed from taking material to designing something self-contained that belongs to them."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E03_P13_L01",
-        "handle": "@vik.Bjorn",
-        "text": "Yes. I can see the sky from here.",
+        "handle": "@vik.Silas",
+        "text": "That piece was over there.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E03_P13_L02",
         "handle": "@vik.Gunnar",
-        "text": "And the smoke can leave.",
+        "text": "You are certain?",
         "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E03_P13_L03",
+        "handle": "@vik.Silas",
+        "text": "Yeah. It was there yesterday.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L04",
         "handle": "@vik.Bjorn",
-        "text": "There is no ceiling to turn it back into our eyes.",
-        "subtext": "Panel 4"
+        "text": "You watch the roof often.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L05",
+        "handle": "@vik.Silas",
+        "text": "I live here.",
+        "subtext": "Panel 3"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L06",
+        "handle": "@vik.Gunnar",
+        "text": "The building's metal stays.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L07",
+        "handle": "@vik.Bjorn",
+        "text": "Yes.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L08",
+        "handle": "@vik.Gunnar",
+        "text": "The sky still solves the smoke.",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E03_P13_L09",
+        "handle": "@vik.Bjorn",
+        "text": "Then we build with something that is ours.",
+        "subtext": "Panel 6"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P12"
+    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
+    "continuityFrom": "VIK_S1E03_P12",
+    "directionInline": [
+      {
+        "text": "End with no building-owned material removed or damaged. This page must flow directly into P14's later purpose-built contained rooftop stove/fire pit."
+      }
+    ]
   },
   {
     "id": "VIK_S1E03_P14",
