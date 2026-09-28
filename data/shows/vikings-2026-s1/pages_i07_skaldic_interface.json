@@ -1348,7 +1348,7 @@
     "issue": 7,
     "page": 21,
     "title": "Silas, Smaller",
-    "summary": "Silas encounters them leaving with books and briefly tries to turn the moment into content; Gunnar shuts that down and Carrie redirects Silas into an actually useful role.",
+    "summary": "Silas encounters them leaving with books, reflexively reaches for the content frame, then catches himself before Carrie redirects him into an ordinary useful role.",
     "settingText": "Bushwick sidewalk outside the library",
     "charactersInline": [
       {
@@ -1369,17 +1369,18 @@
       }
     ],
     "panelPlan": [
-      "Wide: Silas approaches with phone in hand and notices Gunnar and Bjorn carrying library books.",
-      "Medium: He begins framing the sight as a possible post or reaction clip.",
-      "Two-shot: Bjorn simply keeps walking while Gunnar answers without hostility.",
-      "Medium: Carrie hands Silas her awkward document bag before he can resume filming.",
-      "Wide: Silas lowers the phone and falls into step carrying the bag."
+      "Wide: Silas approaches with phone already in hand and notices Gunnar and Bjorn carrying library books.",
+      "Medium: He raises the phone a little, then hesitates before aiming it at anyone.",
+      "Two-shot: Gunnar answers Silas's question without hostility while Bjorn keeps walking.",
+      "Close on Silas: He lowers the phone on his own and pockets it.",
+      "Medium: Carrie hands Silas her awkward document bag.",
+      "Wide: Silas falls into step carrying the bag instead of filming."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E07_P21_L01",
         "handle": "@vik.Silas",
-        "text": "Viking library reaction could actually—",
+        "text": "Find anything good?",
         "subtext": "Panel 2"
       },
       {
@@ -1391,26 +1392,32 @@
       {
         "fid": "VIK_S1E07_P21_L03",
         "handle": "@vik.Silas",
-        "text": "That is the reaction.",
-        "subtext": "Panel 3"
+        "text": "Right.",
+        "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P21_L04",
-        "handle": "@vik.Carrie",
-        "text": "Here. Be useful.",
+        "handle": "@vik.Silas",
+        "text": "Not everything is a post.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E07_P21_L05",
-        "handle": "@vik.Silas",
-        "text": "Is this a test?",
-        "subtext": "Panel 4"
+        "handle": "@vik.Carrie",
+        "text": "Correct. Here. Be useful.",
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E07_P21_L06",
+        "handle": "@vik.Silas",
+        "text": "Is this a test?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E07_P21_L07",
         "handle": "@vik.Carrie",
         "text": "It's a bag.",
-        "subtext": "Panel 4"
+        "subtext": "Panel 5"
       }
     ],
     "status": "production-ready",

@@ -84,7 +84,7 @@
   },
   {
     "id": "VIK_S1E09_P02",
-    "summary": "At the neighborhood bodega, Bjorn tries to repay old kindness with labor and is stopped because the delivery already belongs to someone else's job.",
+    "summary": "At the neighborhood bodega, Bjorn sees an ordinary delivery job and tries to insert himself as useful labor; Sal stops him because the work already belongs to someone else.",
     "settingText": "Recurring Bushwick bodega: front counter, narrow delivery aisle and sidewalk delivery area in ordinary morning light.",
     "charactersInline": [
       {
@@ -97,11 +97,11 @@
       }
     ],
     "panelPlan": [
-      "bodega front aisle — Wide: A delivery worker wheels beverage crates toward the back through the narrow aisle. Bjorn enters with his familiar coffee cup; the Bodega Owner nods from the counter.",
+      "bodega front aisle — Wide: A delivery worker wheels beverage crates toward the back through the narrow aisle. Bjorn enters to buy a few household staples; Sal nods from the counter.",
       "bodega delivery aisle — Medium: The delivery worker works a loaded hand truck around a tight turn. Bjorn immediately steps toward the cart.",
-      "bodega delivery aisle — Two-shot: Before Bjorn can take the hand truck, the Bodega Owner plants one hand on it and stops him. The worker still has control of the load.",
-      "bodega delivery aisle — Three-shot: The delivery worker keeps one hand tight on the hand-truck grip, jaw set. The owner holds one forearm across Bjorn's path, leaving the worker a clear lane.",
-      "bodega counter — Close medium: The owner scans Bjorn's usual items. Bjorn stands square to the counter with direct eye contact, hands still at his sides as he answers."
+      "bodega delivery aisle — Two-shot: Before Bjorn can take the hand truck, Sal plants one hand on it and stops him. The worker still has control of the load.",
+      "bodega delivery aisle — Three-shot: The delivery worker keeps one hand tight on the hand-truck grip, jaw set. Sal holds one forearm across Bjorn's path, leaving the worker a clear lane.",
+      "bodega counter — Close medium: Sal scans Bjorn's ordinary household items. Bjorn stands square to the counter, still looking toward the delivery aisle as if usefulness is being wasted."
     ],
     "dialogueInline": [
       {
@@ -131,25 +131,25 @@
       {
         "fid": "VIK_S1E09_P02_L05",
         "handle": "@vik.Bjorn",
-        "text": "You helped us before we had money.",
+        "text": "I can make it faster.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E09_P02_L06",
         "handle": "@vik.BodegaOwner",
-        "text": "And now you pay me every morning.",
+        "text": "Then I'd have two people doing one person's job.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E09_P02_L07",
         "handle": "@vik.Bjorn",
-        "text": "I still owe you.",
+        "text": "If you need help, ask.",
         "subtext": "Panel 4"
       },
       {
         "fid": "VIK_S1E09_P02_L08",
         "handle": "@vik.BodegaOwner",
-        "text": "If I need help, I'll ask.",
+        "text": "That's the deal.",
         "subtext": "Panel 4"
       },
       {
@@ -167,7 +167,7 @@
       {
         "fid": "VIK_S1E09_P02_L11",
         "handle": "@vik.BodegaOwner",
-        "text": "Have your coffee.",
+        "text": "Buy your bread.",
         "subtext": "Panel 5"
       }
     ],
@@ -907,7 +907,7 @@
   },
   {
     "id": "VIK_S1E09_P13",
-    "summary": "At the bodega, Bjorn finds no debt to repay and no labor to perform; the owner simply gives him his usual coffee and lets ordinary familiarity be enough.",
+    "summary": "At the bodega, Bjorn again finds no labor to perform; Sal treats him as a familiar member of Gunnar's household and lets ordinary conversation be enough.",
     "settingText": "Recurring bodega front counter during a quiet morning lull.",
     "charactersInline": [
       {
@@ -920,44 +920,51 @@
       }
     ],
     "panelPlan": [
-      "bodega front counter — Wide: The store is quiet between customers. The Bodega Owner pours Bjorn's usual coffee while Bjorn automatically scans the aisle, delivery stack and counter for work that might need doing.",
-      "bodega front counter — Two-shot: The owner notices Bjorn looking past him toward the back aisle and slides the coffee across.",
-      "bodega counter — Medium on Bjorn: Bjorn takes the cup but continues looking around the shop as if a task must be hiding somewhere.",
-      "bodega counter — Two-shot: The owner leans one forearm on the counter and asks about the promotional toaster. Bjorn finally looks at him instead of at the work.",
-      "bodega front counter — Wide: Bjorn stands drinking coffee while the owner checks a receipt. Neither man needs anything from the other for the moment."
+      "bodega front counter — Wide: The store is quiet between customers. Sal places a familiar loaf and one small household item on the counter while Bjorn automatically scans the aisle, delivery stack and counter for work that might need doing.",
+      "bodega front counter — Two-shot: Sal notices Bjorn looking past him toward the back aisle and taps the groceries.",
+      "bodega counter — Medium on Bjorn: Bjorn picks up the loaf but continues looking around the shop as if a task must be hiding somewhere.",
+      "bodega counter — Two-shot: Sal leans one forearm on the counter and asks about the promotional toaster from the household's earlier shopping trip. Bjorn finally looks at him instead of at the work.",
+      "bodega front counter — Wide: Bjorn stands for one ordinary beat while Sal checks a receipt. Neither man needs anything from the other beyond the completed purchase."
     ],
     "dialogueInline": [
       {
+        "fid": "VIK_S1E09_P13_L01",
         "handle": "@vik.BodegaOwner",
         "text": "Nothing today.",
         "subtext": "Panel 2"
       },
       {
+        "fid": "VIK_S1E09_P13_L02",
         "handle": "@vik.Bjorn",
         "text": "Nothing?",
         "subtext": "Panel 2"
       },
       {
+        "fid": "VIK_S1E09_P13_L03",
         "handle": "@vik.BodegaOwner",
-        "text": "Drink the coffee.",
+        "text": "Buy the bread.",
         "subtext": "Panel 3"
       },
       {
+        "fid": "VIK_S1E09_P13_L04",
         "handle": "@vik.Bjorn",
-        "text": "Wasteful.",
+        "text": "That is not work.",
         "subtext": "Panel 3"
       },
       {
+        "fid": "VIK_S1E09_P13_L05",
         "handle": "@vik.BodegaOwner",
         "text": "Toaster still alive?",
         "subtext": "Panel 4"
       },
       {
+        "fid": "VIK_S1E09_P13_L06",
         "handle": "@vik.Bjorn",
         "text": "Good at bread.",
         "subtext": "Panel 4"
       },
       {
+        "fid": "VIK_S1E09_P13_L07",
         "handle": "@vik.BodegaOwner",
         "text": "Then we're good.",
         "subtext": "Panel 5"
@@ -1427,7 +1434,7 @@
   },
   {
     "id": "VIK_S1E09_P20",
-    "summary": "The Bodega Owner trusts Bjorn to stand watch at the counter for two minutes, giving him responsibility based on presence and judgment rather than physical strength.",
+    "summary": "Sal trusts Bjorn to stand watch at the counter for two minutes, giving him responsibility based on presence and judgment rather than physical strength; the scene does not replace Gunnar's primary relationship with Sal or Bjorn's separate Coffee Vendor ritual.",
     "settingText": "Recurring bodega front counter near closing time.",
     "charactersInline": [
       {
@@ -1440,7 +1447,7 @@
       }
     ],
     "panelPlan": [
-      "Wide: The Bodega Owner has a delivery invoice in one hand and gestures toward the basement door behind the counter while Bjorn stands with his usual coffee.",
+      "Wide: Sal has a delivery invoice in one hand and gestures toward the basement door behind the counter while Bjorn stands nearby with a small bag of ordinary household staples. Do not give Bjorn his coffee-cart regular here; Sal's bodega and Bjorn's Coffee Vendor remain distinct relationships.",
       "Medium on Bjorn: Bjorn takes position beside the counter with absurd formality while the owner disappears downstairs. He keeps both hands off the register.",
       "Medium: A familiar neighborhood customer enters, takes a coffee, leaves exact cash on the counter and gives Bjorn a casual nod before leaving. Bjorn watches but does not interfere.",
       "Two-shot: The owner returns with the invoice and glances around the unchanged store.",

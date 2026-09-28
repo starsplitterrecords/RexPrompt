@@ -191,7 +191,7 @@
       {
         "fid": "VIK_S1E04_P02_L07",
         "handle": "@vik.Gunnar",
-        "text": "She locked us out yesterday.",
+        "text": "She already locked us out once.",
         "subtext": "Panel 4"
       },
       {
@@ -293,7 +293,8 @@
         "text": "Bad time for it.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E04_P02"
   },
   {
     "id": "VIK_S1E04_P04",
@@ -865,6 +866,10 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Local Delivery Worker"
       }
     ],
     "panelPlan": [
@@ -907,7 +912,7 @@
       },
       {
         "fid": "VIK_S1E04_P10_L06",
-        "handle": "LOCAL DELIVERY WORKER",
+        "handle": "@vik.UnnamedArchetypes",
         "text": "Other way.",
         "subtext": "Panel 4"
       },
@@ -952,6 +957,10 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Street Vendor"
       }
     ],
     "panelPlan": [
@@ -1006,7 +1015,7 @@
       },
       {
         "fid": "VIK_S1E04_P11_L08",
-        "handle": "STREET VENDOR",
+        "handle": "@vik.UnnamedArchetypes",
         "text": "You two want onions or a philosophy club?",
         "subtext": "Panel 3"
       },
@@ -1024,11 +1033,12 @@
       },
       {
         "fid": "VIK_S1E04_P11_L11",
-        "handle": "STREET VENDOR",
+        "handle": "@vik.UnnamedArchetypes",
         "text": "Mustard's there.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E04_P10"
   },
   {
     "id": "VIK_S1E04_P12",
@@ -1202,7 +1212,8 @@
         "text": "Both of you are very pleased with yourselves.",
         "subtext": "Panel 6"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E04_P12"
   },
   {
     "id": "VIK_S1E04_P14",
@@ -1589,7 +1600,8 @@
         "text": "Go.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E04_P16"
   },
   {
     "id": "VIK_S1E04_P18",
@@ -1855,7 +1867,8 @@
         "text": "Motivation.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E04_P19"
   },
   {
     "id": "VIK_S1E04_P21",
@@ -1877,6 +1890,10 @@
       {
         "handle": "@vik.Bjorn",
         "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.UnnamedArchetypes",
+        "name": "Commuter"
       }
     ],
     "panelPlan": [
@@ -1913,7 +1930,7 @@
       },
       {
         "fid": "VIK_S1E04_P21_L05",
-        "handle": "COMMUTER",
+        "handle": "@vik.UnnamedArchetypes",
         "text": "Yeah. Left, then downstairs.",
         "subtext": "Panel 4"
       },
@@ -2036,7 +2053,7 @@
     "issue": 4,
     "page": 23,
     "title": "The Block Opens Home",
-    "summary": "The return route resolves into ordinary neighborhood recognition and then into the household itself when Astrid opens 5B with the key Bjorn left her.",
+    "summary": "The return route resolves into ordinary neighborhood recognition and then into the household itself; Bjorn also remembers that the first groceries were paid with Carrie's money, keeping the unresolved financial problem alive without misassigning the debt to Sal.",
     "settingText": "Bushwick neighborhood sidewalk and fifth-floor hallway outside apartment 5B",
     "charactersInline": [
       {
@@ -2066,7 +2083,7 @@
     ],
     "panelPlan": [
       "Wide: The trio walks through the familiar Bushwick block in late-afternoon light, moving by recognition past the bodega and toward the apartment building.",
-      "Bushwick sidewalk — Medium: Bjorn slows as the familiar bodega comes into view and looks toward its lit counter, remembering the money still owed while Carrie keeps them moving toward home.",
+      "Bushwick sidewalk — Medium: Bjorn slows as the familiar bodega comes into view, remembering the first groceries Carrie had to pay for while Carrie keeps them moving toward 5B.",
       "Wide: They climb the familiar building stairs and stop at 5B.",
       "Medium: Bjorn knocks once. Astrid opens the door with the brass key still in hand; the two male Kin are visible behind her.",
       "Fifth-floor hallway — Medium: Astrid opens 5B from inside with the brass key. Bjorn steps across the threshold into the already-functioning room while Gunnar and Carrie arrive behind him.",
@@ -2076,25 +2093,25 @@
       {
         "fid": "VIK_S1E04_P23_L01",
         "handle": "@vik.Bjorn",
-        "text": "We still owe the downstairs man.",
+        "text": "We still owe you for the first food.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E04_P23_L02",
         "handle": "@vik.Carrie",
-        "text": "Tomorrow. You're allowed to arrive home before settling every debt.",
+        "text": "And you still need an account. One thing at a time.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E04_P23_L03",
         "handle": "@vik.Gunnar",
-        "text": "He will be there tomorrow.",
+        "text": "The debt remains.",
         "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E04_P23_L04",
         "handle": "@vik.Bjorn",
-        "text": "That is why the debt matters.",
+        "text": "That is why it matters.",
         "subtext": "Panel 2"
       },
       {
@@ -2131,13 +2148,13 @@
         "fid": "VIK_S1E04_P23_L10",
         "handle": "@vik.Astrid",
         "text": "Did you get lost?",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       },
       {
         "fid": "VIK_S1E04_P23_L11",
         "handle": "@vik.Gunnar",
         "text": "Twice on purpose.",
-        "subtext": "Panel 6"
+        "subtext": "Panel 5"
       }
     ],
     "continuityFrom": "VIK_S1E04_P22"
@@ -2223,7 +2240,7 @@
       {
         "fid": "VIK_S1E04_P24_L07",
         "handle": "@vik.Astrid",
-        "text": "Then tomorrow he can get bread.",
+        "text": "Then he can get bread next.",
         "subtext": "Panel 5"
       },
       {

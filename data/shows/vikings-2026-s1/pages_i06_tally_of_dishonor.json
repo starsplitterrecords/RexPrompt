@@ -4,8 +4,8 @@
     "episode": "S1E06",
     "issue": 6,
     "page": 1,
-    "title": "The Forty-Eight-Hour Walk",
-    "summary": "Carrie gets Bjorn and Gunnar to the bank before the account deadline, but the real pressure is that every ordinary household need now depends on money the Vikings still cannot use.",
+    "title": "The Glass Place",
+    "summary": "Carrie gets Bjorn and Gunnar to the bank because the provisional account/rent setup is still unresolved; the real pressure is that ordinary household needs still depend on money the Vikings cannot independently use.",
     "settingText": "Busy NYC sidewalk approaching the bank",
     "charactersInline": [
       {
@@ -24,22 +24,22 @@
     "panelPlan": [
       "Wide: Carrie moves fast down a crowded sidewalk with a DTI folder; Bjorn and Gunnar keep pace.",
       "Medium: Bjorn carries the small wrapped hacksilver pouch he still considers real money.",
-      "Medium: Gunnar recognizes the same glass-fronted bank from the previous day's walk and points it out ahead through the pedestrian traffic.",
-      "Close on Carrie: Still moving, she gives Gunnar a tired sideways look when he reminds her she passed the same entrance yesterday.",
+      "Medium: Gunnar recognizes the same glass-fronted bank from an earlier walk and points it out ahead through the pedestrian traffic.",
+      "Close on Carrie: Still moving, she gives Gunnar a tired sideways look when he reminds her they have passed the same entrance before.",
       "Wide at the bank entrance: The three stop beneath the ordinary branch signage and glass doors; Bjorn cuts off the sidewalk argument and directs everyone inside."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E06_P01_L01",
         "handle": "@vik.Carrie",
-        "text": "Forty-eight hours. No account, no rent setup. Then housing starts calling me like it's my fault.",
+        "text": "Account setup is still open. No account, no rent setup. Housing keeps flagging it.",
         "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E06_P01_L02",
         "handle": "@vik.Bjorn",
         "text": "Then we get the account today.",
-        "subtext": "Panel 2"
+        "subtext": "Panel 1"
       },
       {
         "fid": "VIK_S1E06_P01_L03",
@@ -56,7 +56,7 @@
       {
         "fid": "VIK_S1E06_P01_L05",
         "handle": "@vik.Gunnar",
-        "text": "You walked past it yesterday.",
+        "text": "We passed it before.",
         "subtext": "Panel 4"
       },
       {
@@ -67,11 +67,12 @@
       },
       {
         "fid": "VIK_S1E06_P01_L07",
-        "handle": "@vik.Bjorn",
+        "handle": "@vik.Carrie",
         "text": "Bank first. Argument after.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "continuityFrom": "VIK_S1E05_P21"
   },
   {
     "id": "VIK_S1E06_P02",
