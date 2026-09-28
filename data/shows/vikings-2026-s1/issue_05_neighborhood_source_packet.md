@@ -1,7 +1,7 @@
 # Vikings 2026 — Issue 5: The Neighborhood
 ## Recovered source packet
 
-Status: development source packet, not generation-authoritative until compiled into page recipes and registered in `data/shows.json`.
+Status: compiled historical source packet. Generation authority now lives in `pages_i05_neighborhood.json`, registered through `data/shows.json`.
 
 Placement intent: after **Issue 4 — The Iron Worm**, before the financial-legibility story.
 
