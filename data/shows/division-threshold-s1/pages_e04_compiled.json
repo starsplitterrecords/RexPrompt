@@ -684,44 +684,48 @@
   },
   {
     "id": "DT_E004_P12",
-    "summary": "Public reaction to Axiom's emergency routing is overwhelmingly positive. The crisis that began as evidence of regulatory overreach instead demonstrates the value of intelligent administration.",
+    "summary": "Public reaction to Axiom's emergency routing is strongly positive because travelers experience the result directly: gates opened, mixed populations moved, and the interchange stabilized. Officials take questions in the plaza while Axiom quietly returns to unresolved work.",
     "characters": [
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Travelers emerge safely into open civic plazas.",
-      "News graphics show transit restored and casualty projections avoided.",
-      "Officials credit emergency reconciliation systems.",
-      "People praise the removal of arbitrary delays without focusing on who made each decision.",
-      "Axiom quietly returns to processing the remaining cases. Performance and story direction: Society has a good reason to approve what just happened."
+      "Travelers emerge safely from the restored interchange into an open civic plaza and reunite with people who had been waiting outside.",
+      "Several travelers tell an on-site reporter that the gates opened and the category delays disappeared during evacuation.",
+      "A civic official publicly credits emergency reconciliation while emphasizing that it operated under human emergency authority.",
+      "The praise is ordinary and understandable; people care that the system worked before they care who interpreted which rule.",
+      "Axiom leaves the public cluster and returns to the coordination area where unresolved case folders are still waiting. Performance and story direction: Society has a good reason to approve what just happened."
     ],
     "dialogueInline": [
       {
-        "speaker": "NEWS",
-        "text": "Automated emergency reconciliation restored movement across the interchange in eleven minutes."
-      },
-      {
         "speaker": "TRAVELER",
-        "text": "The gates just opened. Nobody asked what I was first."
+        "text": "The gates opened. Nobody asked what I was first."
       },
       {
         "speaker": "SECOND TRAVELER",
         "text": "Whatever they changed, keep it."
       },
       {
-        "speaker": "NEWS",
-        "text": "Officials say the temporary system prevented a cascading transit failure and possible mass casualty event."
+        "speaker": "REPORTER",
+        "text": "Who made the call?"
+      },
+      {
+        "speaker": "OFFICIAL",
+        "text": "Emergency reconciliation operated under human authority."
       },
       {
         "speaker": "REPORTER",
-        "text": "Emergency reconciliation remains under human authority."
+        "text": "And the result?"
+      },
+      {
+        "speaker": "OFFICIAL",
+        "text": "The interchange is open and nobody died."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Remaining unresolved cases: three thousand eight hundred twelve."
+        "text": "Three thousand eight hundred twelve unresolved cases remain."
       }
     ],
-    "settingText": "SPLIT RECOVERY VIEW — travelers exit the restored vertical-transit interchange into open civic space while news and public-service displays report the successful emergency reconciliation. Keep the physical interchange visually continuous with Pages 1–11.",
+    "settingText": "SPLIT RECOVERY VIEW — travelers exit the restored vertical-transit interchange into open civic space where reporters and officials speak face to face; Axiom then returns to the ordinary coordination workspace. Keep the physical interchange continuous with Pages 1–11.",
     "region": "DT_MixedCommercialLevels",
     "factions": [
       "DT_BaselineHumans",
