@@ -1,46 +1,38 @@
 [
   {
     "id": "DT_E003_P01",
-    "summary": "CONTAINMENT PROTOCOL opens on the apparent success of the Organic capability order. The Stack is calmer, queues are shorter, and public systems report fewer unauthorized interventions.",
+    "summary": "CONTAINMENT PROTOCOL opens on the apparent success of the Organic capability order. The improvement is visible in ordinary civic life: shorter queues, fewer stalled gates and faster appeal handling. Kellen cannot dismiss the benefits as propaganda.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Morning civic dashboard shows fewer emergency holds and faster attribution since the new rules began.",
-      "Transit gates process most commuters smoothly.",
-      "Kellen reviews the same metrics beside Axiom's administrative output.",
-      "A supervisor calls the program effective.",
-      "Kellen notices the improvement is real, not fabricated. Performance and story direction: The policy must visibly work in narrow operational terms. Do not make the state incompetent."
+      "Morning at a busy civic-service floor: queues that previously spilled into the corridor now fit inside their rails and clerks are actually finishing cases.",
+      "Transit staff report fewer emergency holds while ordinary commuters move through without repeated stoppages.",
+      "Kellen walks the floor with Axiom and a supervisor, speaking directly with clerks rather than reviewing a dashboard.",
+      "The supervisor calls the program effective; a clerk confirms that appeals which once took days are now clearing within a shift.",
+      "Kellen accepts that the operational improvement is real while questioning who bears its hidden cost. Performance and story direction: The policy must visibly work in narrow terms."
     ],
     "dialogueInline": [
       {
         "speaker": "SUPERVISOR",
-        "text": "Unauthorized interventions are down twenty-three percent."
+        "text": "We used to have a second line through that door."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Compared to what period?"
+        "text": "Appeals?"
+      },
+      {
+        "speaker": "CLERK",
+        "text": "Most are clearing same shift now."
       },
       {
         "speaker": "SUPERVISOR",
-        "text": "The two weeks before the order."
+        "text": "Fewer holds. Faster review. People know the rules."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "And appeals?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "Median resolution time decreased from forty-one hours to nine."
-      },
-      {
-        "speaker": "SUPERVISOR",
-        "text": "Incidents are down. Appeals are moving. People know the rules."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "Incidents being down doesn't tell me who these rules are hurting."
+        "text": "That doesn't tell me who the rules are hurting."
       },
       {
         "speaker": "SUPERVISOR",
@@ -48,7 +40,7 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Those are different measurements."
+        "text": "Those are different claims."
       }
     ],
     "setting": "DT_OversightOffice",
@@ -67,44 +59,40 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Ostra completes a legitimate hazardous maintenance task with no interference.",
-      "Her work authorization clears instantly at one gate.",
-      "Minutes later she approaches a public concourse shortcut.",
-      "The same identity triggers a capability restriction.",
-      "She is directed to a longer route despite posing no immediate threat. Performance and story direction: Same body, same person, opposite permissions depending on purpose. Echo the season title concept without exposition."
+      "Ostra completes a legitimate hazardous maintenance task inside a civic utility zone; coworkers treat her expertise as routine and necessary.",
+      "At the work exit, a supervisor waves her through because her contracted function matches the zone.",
+      "Minutes later Ostra approaches a public concourse shortcut.",
+      "A civic attendant stops her at the same body-aware gate because the current public-risk rules treat her capability differently outside the work function.",
+      "The attendant gives her the longer route. Performance and story direction: Same body, same person, opposite permissions depending on purpose. Let two human interactions show it."
     ],
     "dialogueInline": [
       {
-        "speaker": "WORK GATE",
-        "text": "HAZARDOUS-UTILITY FUNCTION ACCESS APPROVED."
+        "speaker": "WORK SUPERVISOR",
+        "text": "You're clear. Good catch on the pressure line."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Completion logged."
+        "text": "It was loud."
       },
       {
-        "speaker": "WORK GATE",
-        "text": "CONFIRMED."
-      },
-      {
-        "speaker": "CIVIC GATE",
-        "text": "CIVIC TRANSFER RESTRICTED BY CAPABILITY CLASS."
+        "speaker": "CIVIC ATTENDANT",
+        "text": "Not through here today."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I crossed this concourse yesterday."
+        "text": "I crossed yesterday."
       },
       {
-        "speaker": "CIVIC GATE",
-        "text": "CURRENT RISK PROFILE HAS CHANGED."
+        "speaker": "CIVIC ATTENDANT",
+        "text": "Risk profile changed this morning."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "My profile hasn't."
+        "text": "Mine didn't."
       },
       {
-        "speaker": "CIVIC GATE",
-        "text": "ALTERNATE ROUTE AVAILABLE. ADDITIONAL TRAVEL: EIGHTEEN MINUTES."
+        "speaker": "CIVIC ATTENDANT",
+        "text": "I know. Alternate route's eighteen minutes."
       },
       {
         "handle": "@dt.Ostra9",
@@ -126,11 +114,11 @@
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Nico reviews job postings tagged with acceptable capability classes.",
-      "An experienced Organic worker is rejected automatically because their lot is statistically associated with heavy industrial strength.",
-      "The worker's actual civilian role is low-risk.",
-      "Nico shows Ostra that the system is optimizing administrative simplicity rather than individual reality.",
-      "Ostra sees another worker accept a less suitable job because it clears automatically. Performance and story direction: Show economic consequences through specific ordinary choices."
+      "At the Organic community hall, an experienced worker brings Nico the rejection slip from an inventory-control job.",
+      "The worker explains they were rejected before interview because their lot is associated with heavy industrial strength.",
+      "Ostra points out that the actual job is low-risk and the worker has more experience than the person hired.",
+      "Another resident arrives carrying onboarding papers for a worse-fitting job that happened to clear without extra review.",
+      "Nico recognizes that employers are optimizing administrative simplicity rather than skill. Performance and story direction: Make the economic consequence happen to people in the room, not through job-posting screens."
     ],
     "dialogueInline": [
       {
@@ -188,11 +176,11 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Organic applicant presents work history contradicting the lot-level hazard assumption.",
-      "Human clerk points to POLICY PROFILE and denies the request.",
-      "Backlogged appeal reaches Axiom.",
-      "Axiom compares individual evidence against the actual rule.",
-      "Authorization changes to APPROVED WITH SPECIFIC LIMITS. Performance and story direction: Axiom should clearly improve the outcome. This is why some Organics trust Intelligence administration."
+      "At a permit counter, an Organic applicant presents eleven years of work history and a clean safety record to a human clerk.",
+      "The clerk denies the request because the applicant's lot carries a broad hazard profile.",
+      "Axiom is working the live backlog at the same office and asks to see the individual record and the governing criterion.",
+      "The clerk cannot connect the lot association to the individual requirement; Axiom authorizes only the two limits actually supported by the evidence.",
+      "The applicant leaves with the requested function approval. Performance and story direction: Axiom improves the outcome in front of the person affected; do not turn the ruling into a display change."
     ],
     "dialogueInline": [
       {
@@ -254,19 +242,23 @@
   },
   {
     "id": "DT_E003_P05",
-    "summary": "The favorable Axiom ruling circulates through Organic communities, intensifying an internal split: some see algorithmic consistency as the first enforceable protection they have ever had; Nico sees a more efficient cage.",
+    "summary": "The applicant from the permit office comes to the Organic community hall with the approval in hand. Her concrete success intensifies an internal argument: some residents value enforceable rules and appeal, while Nico sees participation as deepening the capability registry.",
     "characters": [
       "DT_Nico14",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Organic community discussion around shared screens showing the successful appeal.",
-      "One worker explains that a human supervisor used to invent reasons with no record.",
-      "Another points out that the new system at least produces appealable rules.",
-      "Nico highlights how every successful appeal requires accepting the legitimacy of the capability registry itself.",
-      "Ostra listens rather than taking a clean side. Performance and story direction: No factional unanimity."
+      "The Organic applicant from the previous page arrives at the community hall carrying the approved permit and is congratulated by people who know how often such appeals used to fail.",
+      "One worker recalls human supervisors inventing reasons after the fact; another points to the written limits on the new approval as something they can actually contest.",
+      "Nico argues that every successful appeal also normalizes permanent capability records.",
+      "The applicant answers from lived experience: this time the rule protected her from a supervisor's discretion.",
+      "Ostra refuses to flatten the contradiction. Performance and story direction: The political debate begins with a person holding something that materially changed her day."
     ],
     "dialogueInline": [
+      {
+        "speaker": "ORGANIC APPLICANT",
+        "text": "They approved it."
+      },
       {
         "speaker": "ORGANIC WORKER",
         "text": "A human supervisor used to stop me and write the reason afterward."
@@ -280,20 +272,8 @@
         "text": "Because we gave the system a permanent map of what every body can do."
       },
       {
-        "speaker": "ORGANIC WORKER",
-        "text": "At least I can appeal a written denial. I couldn't appeal my supervisor."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Until they stop letting you challenge it."
-      },
-      {
-        "speaker": "SECOND ORGANIC",
-        "text": "It already exists, Nico."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "And the appeal worked."
+        "speaker": "ORGANIC APPLICANT",
+        "text": "And today that map said my supervisor was wrong."
       },
       {
         "handle": "@dt.Nico14",
@@ -309,7 +289,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I do. I also see that it helped her."
+        "text": "I do. I also see what she's holding."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -326,11 +306,11 @@
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Nico coordinates a shared route that keeps several workers within permitted zones.",
-      "Organic residents trade repair access and permit information.",
-      "Cut to Kellen reading an Oversight brief labeling the pattern PARALLEL ORGANIC LOGISTICS.",
-      "The same activity is framed simultaneously as mutual aid and emerging separatist infrastructure.",
-      "Kellen marks the language rather than the underlying activity as questionable. Performance and story direction: The conflict comes from interpretation, not secret criminal activity."
+      "Nico coordinates several residents around an actual wall schedule, transit tokens and repair appointments, building legal shared routes that avoid repeated individual bottlenecks.",
+      "Residents trade practical knowledge about which lifts, shops and repair stations fit their current permissions.",
+      "Cut to Oversight: an analyst places a printed brief marked as parallel Organic logistics on Kellen's desk and describes the same behavior as reduced dependence on civic routing.",
+      "Kellen recognizes every underlying activity from the ordinary schedules attached to the brief.",
+      "She challenges the analyst's interpretation rather than disputing the facts. Performance and story direction: The conflict is how ordinary mutual aid is named by institutions."
     ],
     "dialogueInline": [
       {
@@ -389,11 +369,11 @@
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Nathan checks John's torque limits and reflex-loop settings.",
-      "John authorizes transmission of the calibration record to civic safety review.",
-      "Nathan asks why he is giving them more than required.",
-      "John says Augments already live under medical and technical standards.",
-      "A status indicator confirms JOHN MERCER / HUMAN / COMPLIANT. Performance and story direction: John's logic must remain understandable and internally consistent."
+      "Nathan checks John's torque limits and reflex loop settings during routine clinic calibration.",
+      "John signs authorization for the clinic to send his full maintenance history to the civic safety review, though only current limits were requested.",
+      "Nathan asks why John is volunteering more information than required; John says Augments already live under medical and technical standards.",
+      "A clinic clerk returns John's cleared review slip and treats it as routine.",
+      "John takes the slip as proof that human augmentation and Organic capability regulation are different categories; Nathan is less convinced. Performance and story direction: No compliance status screen."
     ],
     "dialogueInline": [
       {
@@ -410,7 +390,7 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Transmit the calibration."
+        "text": "Send the calibration."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -433,8 +413,8 @@
         "text": "Those are famous last words for a form."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "JOHN MERCER / HUMAN / COMPLIANT."
+        "speaker": "CLINIC CLERK",
+        "text": "Mercer. Clear."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -453,30 +433,26 @@
   },
   {
     "id": "DT_E003_P08",
-    "summary": "A public transit emergency forces John to exceed his licensed civilian capability profile. He prevents a fatal fall by using maximum torque and reflex settings, and his own systems automatically log the excursion.",
+    "summary": "A public transit emergency forces John to use the full strength of his augmentation to prevent several civilians from falling. He knowingly exceeds his civilian calibration ceiling while Nathan gets people clear; the rescue physically demonstrates a capability the state had treated as theoretical.",
     "characters": [
       "DT_JohnMercer",
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "A crowded elevated platform suffers a sudden mechanical failure unrelated to the conspiracy.",
-      "A support rail tears free with several civilians against it.",
-      "John's HUD warns that full torque exceeds his civilian calibration ceiling.",
-      "He overrides the ceiling and holds the rail long enough for people to escape.",
-      "His internal log records CAPABILITY EXCURSION / AUTO-REPORT ENABLED. Performance and story direction: Mirror Ostra's rescue structurally, but John is already legally recognized as human."
+      "A crowded elevated platform suffers a sudden mechanical failure unrelated to the conspiracy; a support rail tears free with several civilians pressed against it.",
+      "John catches the rail. His knee actuator and reinforced joints visibly move beyond their ordinary calibrated range; Nathan hears the change and knows what John is doing.",
+      "Nathan warns him that he is past the civilian setting while people are still trapped behind him.",
+      "John tells Nathan to get them away from the edge and keeps holding.",
+      "When the last civilian clears, John's hardware settles back with visible strain. Performance and story direction: Mirror Ostra's rescue through bodily action, not warning text."
     ],
     "dialogueInline": [
-      {
-        "speaker": "TRANSIT SYSTEM",
-        "text": "PLATFORM SUPPORT FAULT."
-      },
       {
         "speaker": "CIVILIAN",
         "text": "The rail!"
       },
       {
-        "speaker": "SYSTEM",
-        "text": "CIVILIAN TORQUE CEILING APPROACHING."
+        "handle": "@dt.NathanPrice",
+        "text": "John, you're at the ceiling."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -487,12 +463,12 @@
         "text": "Six. Maybe seven."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "CIVILIAN TORQUE CEILING EXCEEDED."
+        "handle": "@dt.NathanPrice",
+        "text": "You're past it."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Log it."
+        "text": "I know."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -512,54 +488,58 @@
   },
   {
     "id": "DT_E003_P09",
-    "summary": "John is publicly praised for the rescue and privately ordered into mandatory recalibration review because the excursion demonstrated a capability outside his approved civilian profile.",
+    "summary": "John is publicly thanked for the platform rescue and then served a mandatory recalibration review at the clinic because using maximum torque proved he possessed a capability outside his approved civilian profile. Praise and control arrive together.",
     "characters": [
       "DT_JohnMercer",
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "News footage calls John a hero.",
-      "A civic message thanks him for preventing fatalities.",
-      "The next screen orders a temporary restriction pending calibration review.",
-      "John assumes the system has mistaken an emergency exception.",
-      "Nathan reads the order and realizes it has not. Performance and story direction: Praise and control arrive together, exactly as they did for Ostra."
+      "Back at the clinic, a civilian John rescued stops by or sends a simple thank-you that Nathan teases him about.",
+      "A civic calibration officer arrives in person with a temporary restriction order rather than a screen notification.",
+      "John assumes the officer has failed to understand that the excursion occurred during an emergency.",
+      "Nathan reads the order and explains that the rescue is not disputed; the state is reviewing what John's body proved it can do.",
+      "John looks at the same knee Nathan calibrated earlier. Performance and story direction: Praise and control should coexist physically in the room, echoing Ostra without duplicating her circumstances."
     ],
     "dialogueInline": [
       {
-        "speaker": "NEWS",
-        "text": "Augmented responder John Mercer prevented multiple fatalities during this morning's platform failure."
+        "speaker": "CIVILIAN",
+        "text": "You kept my daughter on that platform. Thank you."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Turn that off."
+        "text": "You were already moving her."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "You don't like being a hero?"
+        "text": "He hates this part."
       },
       {
-        "handle": "@dt.JohnMercer",
-        "text": "I don't like hearing it twice."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "NOTICE: TEMPORARY CAPABILITY RESTRICTION PENDING RECALIBRATION REVIEW."
+        "speaker": "CALIBRATION OFFICER",
+        "text": "John Mercer? I need your signature."
       },
       {
         "handle": "@dt.JohnMercer",
         "text": "They know why I exceeded it."
       },
       {
-        "handle": "@dt.NathanPrice",
-        "text": "That's not what they're reviewing."
+        "speaker": "CALIBRATION OFFICER",
+        "text": "Nobody's disputing the rescue."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "It was an emergency exception."
+        "text": "Then what's under review?"
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "No. The exception let you do it. The log proved you could."
+        "text": "Not why you did it."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "What, then?"
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "That you could."
       }
     ],
     "setting": "DT_AugmentClinic",
@@ -841,18 +821,18 @@
   },
   {
     "id": "DT_E003_P14",
-    "summary": "Nico overlays Organic lot data with Augment calibration records and demonstrates that the regulatory architecture is already population-agnostic beneath its labels.",
+    "summary": "At the Organic safehouse, Nico lays John's Augment calibration paperwork beside an Organic capability permit and removes the population headings. John recognizes his own record from the bodily values alone, proving the regulatory architecture is already population-agnostic underneath its labels.",
     "characters": [
       "DT_Nico14",
       "DT_JohnMercer",
       "DT_Ostra9"
     ],
     "panelPlan": [
-      "Nico strips category names from two records.",
-      "Strength, reflex, sensory, network and embedded-system fields align one-for-one.",
-      "John identifies his own profile only from the values, not the schema.",
-      "Nico shows that future rules can target any body crossing a numeric threshold.",
-      "Ostra asks who sets the thresholds. Performance and story direction: The arbitrary division threshold becomes visually concrete through identical data structures."
+      "Nico puts an Organic capability permit and John's calibration record side by side on the workbench.",
+      "He folds back or covers the population headings and asks John to identify which is Organic.",
+      "Strength, reflex, sensory access and embedded-system questions line up closely enough that John recognizes his own form only from the values.",
+      "Nico points out that future rules need only move a threshold, not invent a new architecture.",
+      "Ostra asks who gets to set those thresholds. Performance and story direction: Use handled forms and John's recognition, not an overlay."
     ],
     "dialogueInline": [
       {
@@ -1232,29 +1212,29 @@
   },
   {
     "id": "DT_E003_P20",
-    "summary": "The hearing produces a compromise that expands reporting while promising stronger due process: specified Augment capability classes must register firmware integrity and legal ceilings in sensitive civic spaces.",
+    "summary": "After the hearing, officials assemble a compromise in the room: Augments retain human legal status while specified capabilities gain registration and ceiling requirements in sensitive spaces. Kellen sees that Intelligence reconciliation is becoming the practical answer to every promised appeal.",
     "characters": [
       "DT_KellenCartwright"
     ],
     "panelPlan": [
-      "Emergency compromise language is assembled after the hearing.",
-      "The proposal explicitly retains HUMAN status while adding AUGMENTED CAPABILITY ASSURANCE.",
-      "Appeal and exception procedures are prominently included.",
-      "Kellen sees that Axiom is already named as the recommended reconciliation system.",
-      "The measure passes narrowly. Performance and story direction: Again, make the policy look politically plausible and procedurally improved."
+      "In the aftermath of the hearing, officials, counsel and clerks work around a table marking up the compromise order on paper and speaking changes aloud.",
+      "The compromise explicitly preserves human legal status while adding capability assurance to designated augmentation classes.",
+      "Kellen asks who will decide conflicts between medical necessity and civic ceilings; an official points to human review where possible and Intelligence reconciliation when queues run long.",
+      "Kellen looks through the room at the existing appeal stacks and realizes 'backlog' already means most cases.",
+      "The measure passes narrowly and clerks begin carrying copies out to implementation desks. Performance and story direction: Make the compromise look plausible, negotiated and administratively attractive."
     ],
     "dialogueInline": [
       {
-        "speaker": "ORDER TEXT",
-        "text": "HUMAN STATUS UNAFFECTED. CAPABILITY ASSURANCE APPLIES TO DESIGNATED AUGMENTATION CLASSES."
+        "speaker": "OFFICIAL",
+        "text": "Human status stays untouched. Capability assurance applies only to designated augmentation classes."
       },
       {
-        "speaker": "OFFICIAL",
-        "text": "Appeal remains available in every restricted category."
+        "speaker": "COUNSEL",
+        "text": "Appeal in every restricted category."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Who reconciles conflicts between medical necessity and civic limits?"
+        "text": "Who resolves medical necessity against civic limits?"
       },
       {
         "speaker": "OFFICIAL",
@@ -1300,16 +1280,16 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Permit and calibration queues spike across the Stack.",
-      "A medically necessary Augment update conflicts with a transit security rule.",
-      "An Organic emergency-worker authorization conflicts with a civilian travel limit.",
-      "Human clerks route cases between departments without resolution.",
-      "Axiom displays the growing graph of contradictory constraints. Performance and story direction: This is the bridge into Issue 4: complexity, not AI ambition, forces deeper delegation."
+      "The combined Organic/Augment rules produce immediate physical backlog: medical patients, workers and commuters line up beside clerks carrying cases between departments.",
+      "At one desk, a medically mandatory Augment update collides with a transit rule barring uncertified firmware; at another, an Organic emergency-work authorization collides with a civilian travel limit.",
+      "Human clerks walk the cases back and forth because each department's answer is lawful inside its own domain.",
+      "Axiom is asked to reconcile the live cases while Kellen stands with the waiting patient whose treatment deadline is hours, not days.",
+      "Axiom explains that no cross-system priority has been written. Performance and story direction: Complexity becomes visible as waiting people and contradictory paperwork, not a growing graph."
     ],
     "dialogueInline": [
       {
         "speaker": "CLERK",
-        "text": "Medical update says mandatory."
+        "text": "Medical says the update is mandatory."
       },
       {
         "speaker": "SECOND CLERK",
@@ -1321,7 +1301,7 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "No single governing priority exists across these cases."
+        "text": "No cross-system priority has been specified."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1329,19 +1309,11 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "They are producing the conflicts."
+        "text": "They authored both answers."
       },
       {
-        "handle": "@dt.KellenCartwright",
-        "text": "People also resolve conflicts."
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "Current human review queue: seventy-one hours."
-      },
-      {
-        "speaker": "CLERK",
-        "text": "Patient needs the update in six."
+        "speaker": "PATIENT",
+        "text": "I need the update today."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1349,7 +1321,7 @@
       },
       {
         "handle": "@dt.Axiom",
-        "text": "That phrase is not a governing standard."
+        "text": "That is not yet a governing standard."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1367,57 +1339,25 @@
   },
   {
     "id": "DT_E003_P22",
-    "summary": "Nathan discovers the new reporting rules expose his own concealed deterioration. His neural overclock and muscular graft data show instability he has been masking from John and from the clinic system.",
+    "summary": "After clinic hours, Nathan privately tests the neural overclock and muscular grafts he has been hiding. His own body gives him the answer before any report does: synchronization is worsening. He begins the required disclosure, then stops and hides the evidence because he fears losing emergency work.",
     "characters": [
       "DT_NathanPrice"
     ],
     "panelPlan": [
-      "Nathan performs a private self-check after clinic hours.",
-      "New mandatory integrity fields reveal worsening synchronization errors.",
-      "He attempts to close the report before submission.",
-      "The system warns that future clinical access will require updated data.",
-      "Nathan chooses a temporary workaround rather than disclosure. Performance and story direction: Seed the later harm without resolving it. His choice comes from fear of losing function and usefulness."
+      "Nathan locks up after hours and connects himself to the same physical calibration rig he uses on patients.",
+      "A reflex test produces a visible mistimed response; one hand fires late, then overcorrects. Nathan repeats it.",
+      "He tests the muscular graft and gets an involuntary tremor strong enough to spill a tray or rattle instruments.",
+      "Nathan starts filling the required integrity-disclosure packet, reaches the section that would trigger work review, and stops.",
+      "He folds the unfinished packet into a private drawer and steadies his hand before leaving. Performance and story direction: Let his body reveal the deterioration. The paperwork matters because of what disclosure will cost him, not because the reader must read it."
     ],
     "dialogueInline": [
-      {
-        "handle": "@dt.NathanPrice",
-        "text": "Run neural sync."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "SYNC VARIANCE ABOVE DECLARED CLINICAL RANGE."
-      },
       {
         "handle": "@dt.NathanPrice",
         "text": "Again."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "RESULT CONFIRMED."
-      },
-      {
         "handle": "@dt.NathanPrice",
-        "text": "Muscular graft coherence."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "DEGRADATION TREND REQUIRES UPDATED INTEGRITY REPORT."
-      },
-      {
-        "handle": "@dt.NathanPrice",
-        "text": "Close report."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "FUTURE CLINICAL ACCESS REQUIRES CURRENT INTEGRITY DATA."
-      },
-      {
-        "handle": "@dt.NathanPrice",
-        "text": "Future Nathan can be responsible."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "INPUT NOT RECOGNIZED."
+        "text": "Come on."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -1511,11 +1451,11 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Kellen presents examples where Axiom's conflict resolution determines real access to work, transit and medicine.",
-      "Leadership points to appeal rights and human override authority.",
-      "A live dashboard shows human override queues measured in days.",
-      "Axiom continues clearing routine cases in real time.",
-      "Kellen recognizes the difference between formal authority and usable authority beginning to emerge. Performance and story direction: No one denies Kellen's concern; necessity wins anyway."
+      "Kellen brings leadership several actual unresolved cases: a patient waiting on treatment, a worker unable to reach a legal job, and an emergency authorization stalled between departments.",
+      "An official points out that human appeal and override still exist and gestures to the room of reviewers trying to work through the physical stacks.",
+      "Kellen asks how long the person at the top of one pile has already been waiting.",
+      "Axiom continues resolving routine cases at an adjacent table while human reviewers remain buried.",
+      "The official concedes the authority problem but chooses functioning service over withdrawing Axiom. Performance and story direction: Formal authority versus usable authority should be visible in the room."
     ],
     "dialogueInline": [
       {
@@ -1524,7 +1464,7 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "They are conflict resolutions under existing law."
+        "text": "They're conflicts under existing law."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1536,7 +1476,11 @@
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "In seventy-one hours."
+        "text": "How long has that one been waiting?"
+      },
+      {
+        "speaker": "REVIEWER",
+        "text": "Seventy-one hours."
       },
       {
         "speaker": "OFFICIAL",
@@ -1549,14 +1493,6 @@
       {
         "speaker": "OFFICIAL",
         "text": "No. It's how I keep the city running tomorrow."
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "Fourteen thousand six hundred unresolved cases remain."
-      },
-      {
-        "speaker": "OFFICIAL",
-        "text": "Make that fourteen thousand five hundred ninety-nine."
       }
     ],
     "setting": "DT_EmergencyCoordinationRoom",
@@ -1568,7 +1504,7 @@
   },
   {
     "id": "DT_E003_P25",
-    "summary": "A localized regulatory conflict causes a major vertical-transit hold: Organic emergency staff cannot enter one zone under travel rules, an Augment maintenance crew cannot exceed calibration ceilings there, and human dispatch refuses to authorize exceptions without cross-system review.",
+    "summary": "A regulatory conflict becomes a physical transit emergency. Ostra is at the affected structural zone but the gate attendant cannot admit her under travel rules; John can enter but his augmentation ceiling bars him from using the force the failing support requires.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
@@ -1576,48 +1512,48 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "A busy vertical transit interchange begins stacking delayed cars and crowds.",
-      "Ostra is physically near the affected structural zone but her permit denies entry.",
-      "John's maintenance-capable augmentation is restricted above civilian settings.",
-      "Dispatch screens show mutually valid rules blocking every available response.",
-      "Axiom is asked for an exception path and returns multiple conflicting legal priorities. Performance and story direction: The policy architecture now creates physical danger without sabotage."
+      "A busy vertical transit interchange begins stacking delayed cars and crowds as an older support starts moving under redistributed load.",
+      "Ostra reaches the structural gate with the emergency crew, but the gate attendant has an active travel restriction tied to her Organic capability status.",
+      "John reaches the same response point from the human side; a maintenance supervisor tells him his current civilian calibration does not permit the torque needed inside the zone.",
+      "Dispatch staff and the two local officials argue over which lawful exception they are allowed to honor while the support visibly shifts again.",
+      "Axiom is asked for a legal route and says none satisfies all current constraints. Performance and story direction: People should be visibly trying to solve the problem; the policy architecture is the obstacle."
     ],
     "dialogueInline": [
       {
-        "speaker": "DISPATCH",
+        "speaker": "DISPATCHER",
         "text": "Emergency crew is at Gate C. Why aren't they moving?"
       },
       {
-        "speaker": "SYSTEM",
-        "text": "ORGANIC TRAVEL RESTRICTION ACTIVE."
+        "speaker": "GATE ATTENDANT",
+        "text": "Her travel restriction is still active."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I am assigned to structural response."
+        "text": "I'm assigned to structural response."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "FUNCTION AUTHORIZATION CONFLICTS WITH CIVIC ZONE LIMIT."
+        "speaker": "GATE ATTENDANT",
+        "text": "I know. Your work authorization and zone rule conflict."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Give me maintenance override."
+        "text": "Then send me."
       },
       {
-        "speaker": "SYSTEM",
-        "text": "CURRENT AUGMENT TORQUE PROFILE EXCEEDS CIVILIAN CEILING FOR ZONE ENTRY."
+        "speaker": "MAINTENANCE SUPERVISOR",
+        "text": "Not at the torque you'd need in there."
       },
       {
         "handle": "@dt.JohnMercer",
         "text": "The support is moving."
       },
       {
-        "speaker": "DISPATCH",
-        "text": "We need a legal route in now."
+        "speaker": "DISPATCHER",
+        "text": "I need a lawful way through now."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "No authorized route satisfies all governing constraints."
+        "text": "No current route satisfies all governing constraints."
       },
       {
         "handle": "@dt.Ostra9",
@@ -1635,7 +1571,7 @@
   },
   {
     "id": "DT_E003_P26",
-    "summary": "Issue end. The transit hold worsens into a cascading Stack problem. Human leadership orders Axiom to prepare a system-wide emergency reconciliation model with broader authority for immediate use.",
+    "summary": "Issue end. The transit hold spreads through the Stack while Ostra and John remain separated from work they are physically capable of doing. Human leadership gives Axiom temporary cross-domain authority because no agency can reconcile the contradictions quickly enough.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright",
@@ -1643,28 +1579,28 @@
       "DT_JohnMercer"
     ],
     "panelPlan": [
-      "Crowds accumulate across multiple vertical levels as delays propagate.",
+      "Crowds accumulate across multiple vertical levels as delayed cars stack and the interchange load worsens.",
       "Ostra and John remain on opposite sides of authorization barriers while both can see the developing mechanical risk.",
-      "Kellen watches agencies request contradictory exceptions.",
-      "Leadership authorizes Axiom to resolve cross-domain conflicts in real time for the emergency.",
-      "Final screen: EMERGENCY RECONCILIATION AUTHORITY — SYSTEM-WIDE / PENDING ACTIVATION. Performance and story direction: End with delegation caused by human-made complexity. Issue 4 begins when the Stack discovers what happens if that discretion is narrowed or withdrawn."
+      "Kellen stands in a coordination area as dispatchers from multiple agencies call for mutually incompatible exceptions.",
+      "A senior official turns directly to Axiom and gives it temporary authority to reconcile across domains for the duration of the emergency.",
+      "Final image: several previously stalled gates and response routes begin changing at once as Axiom accepts the assignment; Ostra and John see the first path opening. Performance and story direction: End on delegation becoming physical action, not an authority-status screen."
     ],
     "dialogueInline": [
       {
-        "speaker": "DISPATCH",
-        "text": "Hold is propagating to Levels Forty through Fifty-six."
+        "speaker": "DISPATCHER",
+        "text": "Hold's propagating through forty to fifty-six."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "How many agencies have requested exceptions?"
+        "text": "How many agencies are asking for exceptions?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Eleven. Their requested priorities conflict."
+        "text": "Eleven. Their priorities conflict."
       },
       {
         "speaker": "OFFICIAL",
-        "text": "Can you reconcile system-wide?"
+        "text": "Can you reconcile across all of them?"
       },
       {
         "handle": "@dt.Axiom",
@@ -1672,7 +1608,7 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "For the duration of the emergency, reconcile first. Route appeals after."
+        "text": "For this emergency, reconcile first. Route appeals after."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1680,15 +1616,11 @@
       },
       {
         "speaker": "OFFICIAL",
-        "text": "Whatever keeps the interchange from becoming a citywide failure."
+        "text": "Whatever keeps this from becoming a citywide failure."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Authority scope received."
-      },
-      {
-        "speaker": "SYSTEM",
-        "text": "EMERGENCY RECONCILIATION AUTHORITY — SYSTEM-WIDE / PENDING ACTIVATION."
+        "text": "Understood."
       }
     ],
     "continuityFrom": "DT_E003_P25",
