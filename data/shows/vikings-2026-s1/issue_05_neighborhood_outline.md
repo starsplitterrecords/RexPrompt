@@ -1,7 +1,7 @@
 # Vikings 2026 — New Issue 5: The Neighborhood
 ## 21-page development outline
 
-Status: **development outline**. This file is not generation-authoritative. Do not register it in `data/shows.json` or renumber the active downstream chef registrations until the page recipes are compiled and audited.
+Status: **compiled historical outline**. Generation authority now lives in `pages_i05_neighborhood.json`; the live season insertion and downstream renumbering have been completed.
 
 Placement: **after Issue 4 — The Iron Worm, before The Tally of Dishonor**.
 
