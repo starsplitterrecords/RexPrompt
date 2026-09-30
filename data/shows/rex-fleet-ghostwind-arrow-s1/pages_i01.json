@@ -1,0 +1,1451 @@
+[
+  {
+    "id": "GWA_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "The Difference",
+    "summary": "Ghostwind Arrow watches an automated probe complete a clean crossing of a red, unverified corridor. Everyone sees a successful pass until Mina notices that the probe's reference baseline moved between departure and return even though its onboard clock reported no fault.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra"
+    ],
+    "panelPlan": [
+      {
+        "text": "WIDE ESTABLISHING. Ghostwind Arrow hangs small beside red-status beacon infrastructure while a compact survey probe enters the corridor. Keep the beacon visibly red and the scale of the scout modest."
+      },
+      {
+        "text": "COMMAND DECK. Owen calls the passage clean while Samira watches the route geometry. Mina has departure and return reference traces open side by side rather than joining the relief."
+      },
+      {
+        "text": "DETAIL. The two supposedly identical baselines fail to overlay by a small but visible offset. Do not require readable numbers; the visual fact is disagreement."
+      },
+      {
+        "text": "END BEAT. Mina looks up from the comparison, focused rather than frightened. The problem begins as evidence."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Probe is through. No shear alarm. No timing fault."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Return it."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Already coming back."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Hold the route solution."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Why?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Because it did not come back to the same baseline."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ]
+  },
+  {
+    "id": "GWA_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "Red Means Red",
+    "summary": "The waiting Verge relief convoy asks whether the clean probe pass means the route can reopen. Samira refuses to convert one successful transit into certification and gives the crew one objective: determine whether the discrepancy belongs to the probe, the ship, or the corridor.",
+    "setting": "GWA_Command",
+    "region": "GWA_VergeApproach",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_Vergeroute",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NikoPell"
+    ],
+    "panelPlan": [
+      {
+        "text": "Command display includes three waiting Verge relief freighters outside the red route. Cargo modules and support craft make the civilian stakes tangible."
+      },
+      {
+        "text": "Niko Pell appears on comm from a worn civilian cockpit. He is asking what the successful probe means, not demanding recklessness."
+      },
+      {
+        "text": "Samira keeps the route red and gives Mina and Owen a bounded diagnostic problem: ship, probe, or corridor."
+      },
+      {
+        "text": "END BEAT. The red beacon remains red as the crew turns from conversation to work."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "We saw the probe clear. Is that a yes?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "It is one clean crossing."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "We have food and clinic packs holding here."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "I know."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "Then what do you need?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "A second answer that agrees with the first."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Mina. Owen. Ship, probe, or corridor. Eliminate two."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P01"
+  },
+  {
+    "id": "GWA_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "Paired",
+    "summary": "Mina and Owen send two matched probes through the same route solution seconds apart. One records the expected centerline; the second records live shear at the same coordinate, proving the contradiction is reproducible across separate hardware.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "Nessa seats two matched probes in adjacent launch cradles while Mina checks independent timing and Owen loads the same route file into both."
+      },
+      {
+        "text": "EXTERIOR SEQUENCE. Probe A and Probe B enter the same corridor line seconds apart."
+      },
+      {
+        "text": "On command, the two tracks initially overlap and then separate: one follows the stored centerline, the other bends around a live shear region."
+      },
+      {
+        "text": "Mina points to the divergence while Nessa confirms the probes are physically matched."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Same mass. Same package. Same burn."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Same route file."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Good. Send them."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "A says centerline."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "B says shear."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "At the same point?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "At the same point."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P02"
+  },
+  {
+    "id": "GWA_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "Make the Ship Innocent",
+    "summary": "Tomas swaps timing and receiver hardware between Mina's sensor chain and a spare rack. The discrepancy remains tied to the corridor volume rather than following any ship-side component.",
+    "setting": "GWA_SensorBay",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_TomasVarga"
+    ],
+    "panelPlan": [
+      {
+        "text": "Mina and Tomas physically remove a receiver/timing module from one rack and replace it with an independent spare. Show connectors, labels and reference marks clearly enough to read as a real test."
+      },
+      {
+        "text": "They rerun the stored probe returns through the swapped chains while keeping the same external data."
+      },
+      {
+        "text": "The disagreement appears on the opposite hardware path, showing that the error did not follow the component."
+      },
+      {
+        "text": "Tomas reseats the original module with quiet satisfaction while Mina marks the ship-side cause eliminated."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "You wanted the ugly rack."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "I wanted a second clock."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "You got two clocks, two receivers, and my afternoon."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Run it."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Same disagreement."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "It stayed with the volume."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Which means the ship is innocent."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story"
+    ],
+    "continuityFrom": "GWA_I01_P03"
+  },
+  {
+    "id": "GWA_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "The Stars Do Not Move",
+    "summary": "Nessa and Mina compare direct optical references with active survey returns. Outside the corridor the star reference agrees; through the corridor the apparent route geometry shifts while the distant stars themselves remain stable.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_NessaReed",
+      "GWA_OwenIbarra"
+    ],
+    "panelPlan": [
+      {
+        "text": "Nessa suppresses nonessential overlays and establishes a clean optical sightline past the beacon structure. Keep the view practical rather than romantic."
+      },
+      {
+        "text": "Mina pins two distant stars as independent references while Owen projects the active route geometry between them."
+      },
+      {
+        "text": "The stars remain fixed while the active route solution visibly slides relative to those references."
+      },
+      {
+        "text": "END BEAT. Three crew members see the same physical disagreement through different systems."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Optical reference is steady."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "The anchor solution is not."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Then stop asking which screen moved."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Ask what the corridor is doing."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P04"
+  },
+  {
+    "id": "GWA_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "Edge In",
+    "summary": "Samira orders Ghostwind Arrow to the verified edge of the low-tension volume without entering the disputed centerline. The crew begins local ranging from inside the field instead of trusting the remote solution.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_OwenIbarra",
+      "GWA_MinaOkafor",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "EXTERIOR. Ghostwind Arrow leaves the safe holding point and approaches the red beacon line at low speed, tiny against the transit infrastructure."
+      },
+      {
+        "text": "COMMAND. Owen calls verified local margins; Nessa flies manual reference checks; Mina watches live shear instead of the stored route."
+      },
+      {
+        "text": "Samira stops the ship before the disputed centerline and holds it there."
+      },
+      {
+        "text": "END BEAT. A local ranging pulse leaves Ghostwind Arrow from inside the edge volume."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Take us to the verified edge. No farther."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Manual or route assist?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Manual."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Low-tension margin is holding."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Local ranging ready."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Ask it from here."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P05"
+  },
+  {
+    "id": "GWA_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Two Tracks",
+    "summary": "The local ranging pulse returns with a second, weaker track that describes the old centerline at the same time the live track bends away from it. The crew has its first direct evidence that two route solutions are being observed in the same volume.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_SamiraHolt"
+    ],
+    "panelPlan": [
+      {
+        "text": "Mina's local ranging return draws one strong live track and one weaker track. Make confidence/strength visibly different rather than showing identical ghost copies."
+      },
+      {
+        "text": "Owen checks the weak track against the stored historic centerline and finds the shapes match."
+      },
+      {
+        "text": "Samira asks whether the weak track is another usable path or merely another answer being returned by the volume."
+      },
+      {
+        "text": "Mina refuses to decide before another test."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "That weak track is the archived centerline."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Another path?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Or another answer."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Difference?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "One can carry a ship. The other can only fool us."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Prove which is which."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P06"
+  },
+  {
+    "id": "GWA_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "The Old Solution",
+    "summary": "The crew retrieves the corridor's previous survey record and discovers that the weak present-day track matches a route certified during an earlier stable interval before the corridor was closed for drift.",
+    "setting": "GWA_Command",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_SamiraHolt"
+    ],
+    "panelPlan": [
+      {
+        "text": "Owen opens the prior survey geometry as a simple reference overlay while Mina keeps the current local return beside it."
+      },
+      {
+        "text": "The weak present-day track and archived route align closely enough to be unmistakable."
+      },
+      {
+        "text": "A concise archive marker establishes that the route was later closed for drift. Avoid long readable history text."
+      },
+      {
+        "text": "Samira looks from the old route to the live route, understanding that a previously safe answer is physically contaminating the present measurement."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Previous survey. Same curve."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "How old?"
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Before the drift closure."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "So we are measuring a route that was safe."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Was."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P07"
+  },
+  {
+    "id": "GWA_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "Not a Playback",
+    "summary": "Tomas rules out a data-cache or beacon playback. The weak route appears in raw local ranging before the signal reaches any archive or traffic system, meaning the duplicate solution is a property of the volume itself.",
+    "setting": "GWA_SensorBay",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_TomasVarga"
+    ],
+    "panelPlan": [
+      {
+        "text": "Tomas disconnects the local ranging path from external traffic, archive and beacon-data feeds while Mina watches raw acquisition directly at the receiver."
+      },
+      {
+        "text": "They send a fresh pulse with the network path physically isolated."
+      },
+      {
+        "text": "The weak historic-shaped return appears again in raw local acquisition."
+      },
+      {
+        "text": "Tomas points to the visibly disconnected external feed as the decisive negative result."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Traffic net is out. Archive is out. Beacon data is out."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Send."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "There."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Same weak track."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Then nothing played it back to us."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "The volume did."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P08"
+  },
+  {
+    "id": "GWA_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "Three Pulses",
+    "summary": "Mina designs a coded ranging test with an uneven three-pulse interval. The live return preserves the new pattern; the weak historic track does not, separating current geometry from a persistent field echo.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_SamiraHolt"
+    ],
+    "panelPlan": [
+      {
+        "text": "Mina manually sets a visibly uneven three-pulse sequence rather than a standard repeating ping."
+      },
+      {
+        "text": "EXTERIOR. Three ranging pulses enter the corridor at the odd cadence."
+      },
+      {
+        "text": "The strong live return repeats the odd cadence. The weak route response persists with its own older structure instead of encoding Mina's new signature."
+      },
+      {
+        "text": "Owen identifies persistent echo behavior while Samira asks only what the result changes operationally."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "One short. One long. One short."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "If both tracks answer it, both are live."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Strong track copied the cadence. Weak track did not."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Meaning?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "The weak route is an echo. It can be measured. It is not where we can fly."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P09"
+  },
+  {
+    "id": "GWA_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "What We Know",
+    "summary": "The crew states a bounded conclusion: the corridor re-expresses part of an older route geometry strongly enough to contaminate ordinary survey interpretation, while a separate live low-tension path still exists. The mechanism remains unknown.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_TomasVarga"
+    ],
+    "panelPlan": [
+      {
+        "text": "Command-deck working huddle. Keep the old weak path and live strong path visible as simple spatial curves rather than walls of text."
+      },
+      {
+        "text": "Mina states the observation; Owen states the navigation implication; Tomas states what has been eliminated."
+      },
+      {
+        "text": "Samira separates mechanism from decision by asking whether they understand why the volume retains the old path."
+      },
+      {
+        "text": "Mina answers no without embarrassment. Samira explicitly prevents speculation from entering the report."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "We have two measurable returns. One is live. One matches the old route and does not answer new ranging."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Not ship hardware. Not a network replay."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "And the live low-tension path is somewhere else."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Do we know why the old path persists?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Good. Do not put a mechanism in the report."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P10"
+  },
+  {
+    "id": "GWA_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "The Cost of Waiting",
+    "summary": "Niko Pell reports that the relief convoy can hold, but every delay consumes margin at the destination. Samira tells him the route remains red while Ghostwind Arrow determines whether supervised transit is possible without public certification.",
+    "setting": "GWA_Command",
+    "region": "GWA_VergeApproach",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_Vergeroute"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_NikoPell",
+      "GWA_MinaOkafor"
+    ],
+    "panelPlan": [
+      {
+        "text": "Pell's comm view includes cargo handlers checking refrigeration and power status aboard a Verge freighter, making time pressure material."
+      },
+      {
+        "text": "Samira distinguishes reopening the route from escorting a supervised transit."
+      },
+      {
+        "text": "Pell accepts the distinction but asks for the earliest usable answer."
+      },
+      {
+        "text": "Mina hears the exchange while preparing new local probes, linking technical work to the people waiting."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "We can hold. The clinic cargo cannot hold forever."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "The route stays red."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "That sounds like no."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "It means I will not call it public-safe."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "And supervised?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "That is what we are testing."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P11"
+  },
+  {
+    "id": "GWA_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "Local Only",
+    "summary": "Mina and Owen stop using the historic centerline entirely and build a local live map from independent probes positioned across the corridor mouth. The resulting safe volume is offset and narrower than the old route.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "Nessa deploys several small reference probes around the corridor mouth instead of sending them all down the center."
+      },
+      {
+        "text": "Owen connects only strong live returns, constructing a new local corridor shape that visibly bends away from the weak historic path."
+      },
+      {
+        "text": "Mina checks each segment against independent probe timing so no single source owns the solution."
+      },
+      {
+        "text": "END BEAT. The new safe volume is narrower and offset, with the old echo still visible but visually subordinate."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Throw out the archive line."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Already gone."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Outer probe two is steady."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Three is not. Shift the curve starboard."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "There. Live returns agree."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Narrower than the old route."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P12"
+  },
+  {
+    "id": "GWA_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "It Moves",
+    "summary": "Before the crew can declare a supervised path, the live low-tension curve shifts again. The motion appears periodic rather than random, leading Owen to compare it with local Lattice-tide timing.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_SamiraHolt"
+    ],
+    "panelPlan": [
+      {
+        "text": "The newly mapped live curve visibly drifts across fixed local probes while the probes themselves hold position."
+      },
+      {
+        "text": "Mina calls the shift; Owen compares it against a simple local tide-phase reference."
+      },
+      {
+        "text": "The next movement lands near the predicted phase, turning 'unstable' into a testable periodic hypothesis."
+      },
+      {
+        "text": "Samira prevents a premature rule and orders one more complete cycle."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Live path is moving."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Wait."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "For what?"
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Local tide phase."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "You think it is periodic?"
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "I think it moved when the tide model said it should."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "One match is not a rule. Watch the next cycle."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P13"
+  },
+  {
+    "id": "GWA_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "Observed Twice",
+    "summary": "A second full tide cycle repeats the corridor's lateral movement within usable tolerance. The crew now has a reproducible operating window without claiming to understand the echo mechanism.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "Quiet time-sequence across fixed probes, stars and beacon structure while the live corridor curve shifts and returns through the same phase."
+      },
+      {
+        "text": "Mina marks the second matching position; Owen compares the two live cycles."
+      },
+      {
+        "text": "Nessa converts the moving curve into a pilotable entry and exit window with visible margins."
+      },
+      {
+        "text": "Samira asks whether the crew is ready to risk Ghostwind Arrow before any civilian ship."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Second cycle. Same direction. Same phase."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Within transit tolerance."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "I can fly the window."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Can or should?"
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Should, if we want an answer before we put a freighter in it."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Agreed."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P14"
+  },
+  {
+    "id": "GWA_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "First Through",
+    "summary": "Ghostwind Arrow enters the live path at the predicted tide phase. The weak historic route remains measurable, but the crew explicitly ignores it and flies only local strong returns.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed",
+      "GWA_TomasVarga"
+    ],
+    "panelPlan": [
+      {
+        "text": "LARGE EXTERIOR. The small scout enters the corridor while red-status infrastructure remains behind. The live pilotable volume bends slightly away from the old beacon-centered line."
+      },
+      {
+        "text": "Inside, Owen has two route traces: strong live and weak historic. He suppresses the weak route from active guidance rather than deleting the record."
+      },
+      {
+        "text": "Nessa flies by live local references; Mina calls shear changes; Tomas watches field and power loads."
+      },
+      {
+        "text": "END MID-TRANSIT. The weak historic route briefly aligns with the ship's forward vector, visually tempting but deliberately ignored."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Live path only. Echo is reference, not guidance."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Entry."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Shear rising port. Two points."
+      },
+      {
+        "handle": "@starsplit.tomas.varga",
+        "text": "Field load normal."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "I see the old line."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Do not fly what used to be true."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P15"
+  },
+  {
+    "id": "GWA_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "Duplicate",
+    "summary": "Mid-crossing, Ghostwind Arrow's own track briefly appears twice in the survey return: one current, one lagging along the old route. Mina uses the coded local pulse to distinguish the live ship from the echo before guidance can drift.",
+    "setting": "GWA_Command",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed",
+      "GWA_SamiraHolt"
+    ],
+    "panelPlan": [
+      {
+        "text": "Navigation shows two Ghostwind Arrow track returns, but do not depict a literal duplicate ship outside. This is sensor/field geometry, not a supernatural twin."
+      },
+      {
+        "text": "Owen hesitates for one beat because both returns carry the ship identifier."
+      },
+      {
+        "text": "Mina triggers the uneven three-pulse signature; only the live track answers the fresh cadence."
+      },
+      {
+        "text": "Owen locks guidance back to the live track and Nessa corrects smoothly, making the earlier test operationally consequential."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "I have two Arrow tracks."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Pick the one I am flying."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Sending the three-pulse."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Strong track answered."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "That is us."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Then give me us."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Stay on live reference."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P16"
+  },
+  {
+    "id": "GWA_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "Far Side",
+    "summary": "Ghostwind Arrow emerges intact into the far-side exit volume and verifies the crossing against independent local references. The corridor behind them has already begun moving out of the flown position, confirming that the safe route is a recurring window rather than a fixed centerline.",
+    "setting": "GWA_ExitVolume",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "EXTERIOR. Ghostwind Arrow clears the far-side exit with no damage while independent exit markers establish an unambiguous successful crossing."
+      },
+      {
+        "text": "Inside, Nessa relaxes only slightly; Mina verifies local clocks and references; Owen looks back at the mapped path."
+      },
+      {
+        "text": "The live path begins shifting away from the route they just flew while the old weak echo persists elsewhere."
+      },
+      {
+        "text": "Samira asks for the next predicted window and whether a civilian freighter can physically fit its margins."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Clear."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Local references agree. We crossed."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "And the path is already moving."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Next window?"
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Predictable if the cycle holds."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Then calculate it for freighter margins, not ours."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P17"
+  },
+  {
+    "id": "GWA_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "title": "Not Certified",
+    "summary": "The crew concludes that a supervised convoy transit is supportable during the recurring window, but the route does not meet public certification standards because its live geometry moves and historic echoes can contaminate ordinary guidance.",
+    "setting": "GWA_Command",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_Vergeroute",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed",
+      "GWA_NikoPell"
+    ],
+    "panelPlan": [
+      {
+        "text": "Command-deck report formation: no podium, just crew at working stations translating test results into an operational decision."
+      },
+      {
+        "text": "Owen shows a freighter-safe subset of the moving window; Mina marks the condition that invalidates unattended stored-route guidance."
+      },
+      {
+        "text": "Pell returns on comm and hears the distinction directly."
+      },
+      {
+        "text": "Samira states that the beacon stays red even if Ghostwind Arrow escorts the convoy."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "The window can take the freighters one at a time."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "With live local ranging. Not stored route guidance."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "So you can get us through."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Under escort, in the window we measured."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "And the beacon?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Stays red. Transit possible is not route certified."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P18"
+  },
+  {
+    "id": "GWA_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "title": "Follow the Arrow",
+    "summary": "At the next verified tide phase, Ghostwind Arrow leads the first Verge relief freighter through the moving live path while the remaining convoy waits outside the red route. The crossing succeeds because the scout continuously updates local geometry rather than relying on the historic centerline.",
+    "setting": "GWA_CorridorInterior",
+    "region": "GWA_Corridor",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_Vergeroute",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NessaReed",
+      "GWA_NikoPell"
+    ],
+    "panelPlan": [
+      {
+        "text": "LARGE EXTERIOR. Ghostwind Arrow leads, small and close to the live path; one work-worn Verge freighter follows at disciplined separation. The red beacon remains visible behind them."
+      },
+      {
+        "text": "Inside Ghostwind Arrow, Mina updates local shear and Owen sends only current vector corrections to Pell."
+      },
+      {
+        "text": "Cut briefly to Pell flying the civilian freighter, focused on the scout's current guidance rather than the obsolete route line."
+      },
+      {
+        "text": "EXIT. First freighter clears safely. Keep the beat careful and workmanlike rather than triumphal."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Window opening."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Pell. Follow our live vector. Ignore stored centerline."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "Following Arrow."
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Shear moving starboard. Correction coming."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Two degrees port. Hold there."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "Holding."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Exit is clean."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical"
+    ],
+    "continuityFrom": "GWA_I01_P19"
+  },
+  {
+    "id": "GWA_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "title": "The Report",
+    "summary": "With the convoy moving through under escort, Samira and Mina write the operational conclusion: persistent historic-route echo observed; live path periodic within the tested interval; supervised transit possible; public route remains uncertified.",
+    "setting": "GWA_Command",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch",
+      "GWA_Vergeroute"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_OwenIbarra",
+      "GWA_NikoPell"
+    ],
+    "panelPlan": [
+      {
+        "text": "The final convoy freighter clears in the background while Mina composes the concise report at her station."
+      },
+      {
+        "text": "Samira reads only the conclusion lines; Owen adds tested conditions rather than a speculative mechanism."
+      },
+      {
+        "text": "Pell sends a short thanks that acknowledges the practical result rather than declaring the route solved."
+      },
+      {
+        "text": "Samira leaves the red status unchanged as the report transmits."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Persistent historic-route echo observed. Mechanism unconfirmed."
+      },
+      {
+        "handle": "@starsplit.owen.ibarra",
+        "text": "Live path periodic across two measured tide cycles and one escorted transit sequence."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Add: public route remains uncertified."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "Last freighter is clear. Clinic cargo is moving."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Good crossing, Pell."
+      },
+      {
+        "handle": "@starsplit.niko.pell",
+        "text": "Good answer, Arrow."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P20"
+  },
+  {
+    "id": "GWA_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "title": "Once",
+    "summary": "As Ghostwind Arrow prepares to leave, Mina notices a new single anomalous return beyond the verified corridor volume. Samira refuses to name it after one observation and turns the ship toward the new discrepancy, defining the series' continuing mission.",
+    "setting": "GWA_Command",
+    "region": "GWA_LatticeEdge",
+    "factions": [
+      "GWA_FleetRecon",
+      "GWA_LatticeResearch"
+    ],
+    "characters": [
+      "GWA_SamiraHolt",
+      "GWA_MinaOkafor",
+      "GWA_NessaReed"
+    ],
+    "panelPlan": [
+      {
+        "text": "Quiet command deck after the convoy crossing. Work has returned to normal; no victory pose."
+      },
+      {
+        "text": "Mina catches one faint return outside the just-mapped volume. Make it visibly distinct from the historic-route echo but do not explain it."
+      },
+      {
+        "text": "Samira comes to Mina's station and asks how many times it has appeared."
+      },
+      {
+        "text": "FINAL EXTERIOR. Ghostwind Arrow turns away from the convoy route toward open survey space, small against the Lattice edge."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Captain."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "What have you got?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "One return. Outside the volume."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Observed how many times?"
+      },
+      {
+        "handle": "@starsplit.mina.okafor",
+        "text": "Once."
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Then do not name it yet."
+      },
+      {
+        "handle": "@starsplit.nessa.reed",
+        "text": "Course?"
+      },
+      {
+        "handle": "@starsplit.samira.holt",
+        "text": "Go find out."
+      }
+    ],
+    "direction": [
+      "GWA_recon-story",
+      "GWA_lattice-physical",
+      "GWA_ship-continuity"
+    ],
+    "continuityFrom": "GWA_I01_P21"
+  }
+]
