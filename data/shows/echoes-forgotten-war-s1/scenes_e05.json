@@ -1,5 +1,71 @@
 [
   {
+    "id": "EFW_S1E05_EDITOR_OPEN",
+    "summary": "Opening previously page for Issue 5. Carries forward the midpoint identity reveal and shifts the loaded question from what happened to what Theo and Rae personally chose, without introducing Afterlight.",
+    "settingText": "EDITORIAL COMPOSITE — present-day Theo and Rae in a quiet archive/workroom, each aligned with a faint matched architectural echo of an ancient room behind them. The echoes may suggest that they once occupied real positions in those spaces, but do not show a new champion, an aftermath sequence, or any unrevealed ancient action. Adrian remains farther back between the two layers, visibly carrying knowledge he has not fully shared.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae",
+      "EFW_Adrian"
+    ],
+    "panelPlan": [
+      {
+        "text": "Single full-page editorial splash built on matched past/present geometry. Theo and Rae are the dominant human anchors, each with a restrained nonliteral historical echo occupying the same body position. Leave a clean central text column between them."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "PREVIOUSLY IN ECHOES OF A FORGOTTEN WAR…"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "ISSUE 5 — EMBERS OF THE ZENITH"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "At Pax-Aeterna, the question changed."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Theo and Rae were not watching somebody else’s history."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "They were there."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "That does not tell them who they were."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "It does not tell them what they chose."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "And Adrian has spent a very long time deciding how much of that truth they should be allowed to recover."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Now the memories are opening again."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "This time, Theo and Rae know to look for themselves.",
+        "subtext": "Final emphasis line."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
+  },
+  {
     "id": "EFW_S1E05_S01",
     "settingText": "Present-day temporary quarters aboard the exposed Vael-Tor dreadnought, repurposed by local authorities into a shelter and investigation site.",
     "region": "EFW_VaelTor",
@@ -816,5 +882,51 @@
       }
     ],
     "continuityFrom": "EFW_S1E05_S15"
+  },
+  {
+    "id": "EFW_S1E05_EDITOR_CLOSE",
+    "summary": "Closing NEXT ISSUE teaser for Issue 5. Signals that the returning war memory is about to escape the protagonists without revealing Flux or the specific public-memory incident.",
+    "settingText": "EDITORIAL COMPOSITE — ordinary present-day transit platform at rush hour. The crowd continues moving while one anonymous commuter in the middle distance has stopped, hand on a rail, reacting to something no one else can see. Theo, Rae and Adrian are not present. No flashback, champion, symbol or explicit impossible memory is shown.",
+    "characters": [],
+    "panelPlan": [
+      {
+        "text": "Single full-page teaser splash. Motion and routine should flow around one still human figure. Keep the stopped commuter small enough to preserve mystery and use the long blank station wall/ceiling plane for lettering."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Until now, the impossible memories have had an address."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Theo. Rae. Adrian."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "That arrangement is ending."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "The war has found a way out of the room.",
+        "subtext": "Largest emphasis line."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "NEXT: THE MARGIN OF ERROR"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
   }
 ]
