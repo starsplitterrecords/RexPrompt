@@ -1,5 +1,69 @@
 [
   {
+    "id": "EFW_S1E02_EDITOR_OPEN",
+    "summary": "Opening previously page for Issue 2. Re-arms the unresolved memories, names and Adrian's withholding without introducing Redlin visually or revealing the Desert Marker battle outcome.",
+    "settingText": "EDITORIAL COMPOSITE — present-day Nuxis archive room in ordinary rain-muted light. Theo and Rae sit on opposite sides of a worktable with separate sketches, notes and recovered fragments that do not quite align. Adrian stands farther back near the doorway, watching rather than joining them. Use faint reflected white-gold fracture shapes on Theo's side and restrained dark-red/violet geometry on Rae's side as nonliteral visual echoes only; do not depict Starbreaker, Redlin, the battlefield, or any ancient action.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae",
+      "EFW_Adrian"
+    ],
+    "panelPlan": [
+      {
+        "text": "Single full-page editorial splash. Build the composition around the gap between Theo's and Rae's evidence, with Adrian held in the background and generous text space above and between them. The page should feel like two incompatible recollections being brought to the same table."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "PREVIOUSLY IN ECHOES OF A FORGOTTEN WAR…",
+        "subtext": "Small kicker at top."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "ISSUE 2 — GLASS DUST AND VIOLET LIGHT",
+        "subtext": "Large issue title."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Theo found something beneath Olyria-Prime exactly where his dreams said it would be."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Rae found a name returning to records someone had erased."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Both found Adrian waiting."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Starbreaker was real. Redlin was real. The impossible sky was real."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "What nobody has explained is why Theo and Rae remember any of it."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Now they have enough pieces to compare."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "That may be worse than having none.",
+        "subtext": "Final emphasis line."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
+  },
+  {
     "id": "EFW_S1E02_S01",
     "settingText": "Present-day Nuxis archive room, quiet and rain-muted, with ordinary shelves and a sealed window.",
     "characters": [
@@ -795,6 +859,56 @@
     "directionInline": [
       {
         "text": "PAGE ARCHITECTURE — G4; exactly 4 panels. Stable present-day grid: rectilinear gutters, clear geography, human-scale acting. Stage dialogue through ongoing physical behavior whenever the scene permits: sorting records, carrying people, repairing, walking, writing, moving equipment, checking injuries, opening barriers, handling objects or navigating occupied rooms. Avoid static thesis-pose staging."
+      }
+    ]
+  },
+  {
+    "id": "EFW_S1E02_EDITOR_CLOSE",
+    "summary": "Closing NEXT ISSUE teaser for Issue 2. Points toward Vael-Tor and the material survival of the war without revealing Atlas or the buried dreadnought.",
+    "settingText": "EDITORIAL COMPOSITE — night view across modern Vael-Tor: inhabited towers, transit lines, wet streets and ordinary apartment light. Deep beneath the visible city, use one enormous unreadable negative-space geometry that could be old infrastructure or something larger, but never resolve it into a recognizable ship or weapon. No ancient champion appears.",
+    "characters": [],
+    "panelPlan": [
+      {
+        "text": "Single full-page teaser splash. The living city occupies the upper two-thirds; the lower foundation band contains the unsettling hidden geometry. Make the city beautiful and ordinary so the buried scale feels ominous by contrast. Reserve clear sky and building shadow for lettering."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "The battle is over."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "The argument isn’t."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "And neither is the machinery it left behind."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "A city full of people is living on top of history that no longer knows it is history."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Something underneath is about to notice them.",
+        "subtext": "Largest emphasis line."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "NEXT: THE ARCHITECTURE OF RUIN"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
     ]
   }
