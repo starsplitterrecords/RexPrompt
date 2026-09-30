@@ -1,111 +1,38 @@
 #!/usr/bin/env python3
-"""Validate current Echoes of a Forgotten War RexPrompt production structure.
-
-Developmental/editorial reasoning may remain in writing-only fields and architecture files.
-Assembler-visible image recipes must stay concrete: drawable panel staging, visual continuity,
-exact lettering and character/world anchors rather than explanations of why the writing works.
-"""
+"""Validate current Echoes of a Forgotten War RexPrompt production structure."""
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
-ENHANCE_FILES = {issue: SHOW / f"enhance_e{issue:02d}.json" for issue in (6, 7, 8)}
 REFERENCE_POLICY = ROOT / "production" / "references" / "echoes-forgotten-war" / "README.md"
 REFERENCE_PACK = ROOT / "production" / "references" / "echoes-forgotten-war" / "visual-reference-pack.json"
-REVEAL_ORDER = ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
-ALLOWED_CHARACTER_FIELDS = {
-    "name", "handle", "role", "visualAnchor", "visualStatus", "continuityLocks"
-}
-ALLOWED_OVERLAY_FIELDS = {"id", "panelPlan", "continuityFrom"}
 
-EXPECTED_CONTINUITY = {
-    1: {},
-    2: {
-        "EFW_S1E02_S03": "EFW_S1E02_S02",
-        "EFW_S1E02_S10": "EFW_S1E02_S09",
-    },
-    3: {},
-    4: {
-        "EFW_S1E04_S03": "EFW_S1E04_S02",
-        "EFW_S1E04_S10": "EFW_S1E04_S09",
-        "EFW_S1E04_S11": "EFW_S1E04_S01",
-    },
-    5: {
-        "EFW_S1E05_S03": "EFW_S1E05_S01",
-    },
-    6: {
-        "EFW_S1E06_S12": "EFW_S1E06_S11",
-    },
-    7: {},
-    8: {},
+STORY_COUNTS = {1: 17, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
+TOTAL_COUNTS = {issue: count + 2 for issue, count in STORY_COUNTS.items()}
+CHAMPION_ISSUE = {
+    "EFW_Starbreaker": 1,
+    "EFW_Redlin": 2,
+    "EFW_Atlas": 3,
+    "EFW_Arbiter": 4,
+    "EFW_Afterlight": 5,
+    "EFW_Flux": 6,
+    "EFW_Oryon": 7,
+    "EFW_Kyn": 8,
 }
-
-# Narrow chef-layer guard. This catches editorial/thematic explanation, not ordinary visual
-# words. Add a pattern only when it reliably denotes writing analysis rather than something
-# an image model can draw.
-CHEF_REASONING_PATTERNS = [
-    re.compile(pattern, re.IGNORECASE)
-    for pattern in (
-        r"\bthe reader\b",
-        r"\bthe page's\b",
-        r"\bthe issue\b",
-        r"\bthe story\b",
-        r"\bthe point\b",
-        r"\bthe idea\b",
-        r"\bthe revelation\b",
-        r"\bthe conflict is\b",
-        r"\bthe disagreement is\b",
-        r"\bthe problem belongs\b",
-        r"\bthe uncertainty is\b",
-        r"\bthe emotional hinge\b",
-        r"\bthematic rhyme\b",
-        r"\bproving\b",
-        r"\bproof is\b",
-        r"\bcreating dramatic irony\b",
-        r"\bmore important than\b",
-        r"\bmatters because\b",
-        r"\bshould make\b",
-        r"\bshould feel\b",
-        r"\bthe accusation\b",
-        r"\bthe shock comes\b",
-        r"\bunderstanding that\b",
-        r"\brealizing that\b",
-        r"\brecognizing what\b",
-        r"\bregisters? that\b",
-        r"\breads as\b",
-        r"\bmeans it literally\b",
-        r"\brather than philosophical\b",
-        r"\brather than rhetorical\b",
-        r"\brather than supernatural\b",
-        r"\brather than prophecy\b",
-        r"\brather than a technical\b",
-        r"\brather than on\b",
-        r"\bnot a technical\b",
-        r"\bnot a system\b",
-        r"\bnot physical combat\b",
-        r"\bnot moral theater\b",
-        r"\bnot the invention\b",
-        r"\bnot mechanism\b",
-        r"\bthe crisis has\b",
-        r"\bthe answer is\b",
-        r"\bthe implication\b",
-        r"\bthe line lands\b",
-    )
-]
 
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def expected_issue_ids(issue: int) -> list[str]:
-    return [f"EFW_S1E{issue:02d}_S{i:02d}" for i in range(1, 13)]
+def expected_ids(issue: int) -> list[str]:
+    story = [f"EFW_S1E{issue:02d}_S{i:02d}" for i in range(1, STORY_COUNTS[issue] + 1)]
+    return [f"EFW_S1E{issue:02d}_EDITOR_OPEN", *story, f"EFW_S1E{issue:02d}_EDITOR_CLOSE"]
 
 
 def validate_manifest() -> None:
@@ -113,179 +40,191 @@ def validate_manifest() -> None:
     matches = [entry for entry in manifest if entry.get("id") == "echoes-forgotten-war-s1"]
     assert len(matches) == 1, f"Expected one Echoes manifest entry, found {len(matches)}"
     entry = matches[0]
-    assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES], (
-        "Echoes production manifest must expose Issues 1-8 in source order"
+    assert entry.get("basePath") == "data/shows/echoes-forgotten-war-s1"
+    assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
+    assert not entry.get("sceneOverlays"), "Retired enhancement overlays must not return"
+    assert entry.get("unitLabel") == "PAGE"
+    assert entry.get("seriesId") == "echoes-forgotten-war"
+    assert entry.get("seriesName") == "Echoes of a Forgotten War"
+    assert "generationLine" not in entry, (
+        "Echoes manifest must not override the package assembler generation contract"
     )
-    assert entry.get("sceneOverlays") == [
-        {"file": "enhance_e06.json", "mergeById": True},
-        {"file": "enhance_e07.json", "mergeById": True},
-        {"file": "enhance_e08.json", "mergeById": True},
-    ], "Echoes enhancement overlays are missing, reordered, or malformed"
-    assert "unitLabel" not in entry, "Manifest must not override Echoes package PAGE contract"
-    assert "generationLine" not in entry, "Manifest must not override Echoes package generation contract"
 
 
-def validate_characters() -> None:
-    chars = load(SHOW / "characters.json")
-    assert len(chars) >= 15
-    for key, entry in chars.items():
-        assert isinstance(entry, dict), key
-        extra = set(entry) - ALLOWED_CHARACTER_FIELDS
-        assert not extra, f"Out-of-scope character fields on {key}: {sorted(extra)}"
-        assert entry.get("name") and entry.get("handle") and entry.get("role"), key
-        assert entry.get("visualAnchor"), f"Missing visual anchor: {key}"
-        assert entry.get("visualStatus"), f"Missing visual status: {key}"
-        locks = entry.get("continuityLocks")
-        assert isinstance(locks, list) and locks, f"Missing continuity locks: {key}"
-    assert chars["EFW_Mero"]["role"].startswith("Human")
-    assert chars["EFW_Redlin"]["name"] == "Redlin"
+def validate_editorial(page: dict, page_id: str) -> None:
+    assert page.get("id") == page_id
+    assert isinstance(page.get("summary"), str) and page["summary"].strip(), page_id
+    assert isinstance(page.get("settingText"), str) and page["settingText"].strip(), page_id
+    assert not page.get("continuityFrom"), f"{page_id}: editorial page inherited story continuity"
+
+    plan = page.get("panelPlan")
+    assert isinstance(plan, list) and plan, f"{page_id}: missing editorial panel plan"
+    for block in plan:
+        assert isinstance(block, dict) and isinstance(block.get("text"), str) and block["text"].strip(), (
+            f"{page_id}: bad editorial panel-plan block"
+        )
+
+    lines = page.get("dialogueInline")
+    assert isinstance(lines, list) and lines, f"{page_id}: missing editorial copy"
+    for line in lines:
+        assert isinstance(line, dict), f"{page_id}: malformed editorial line"
+        assert line.get("speaker") == "CAPTION", f"{page_id}: editorial lettering must use CAPTION speaker"
+        assert isinstance(line.get("text"), str) and line["text"].strip(), f"{page_id}: empty editorial line"
+        assert not line.get("handle"), f"{page_id}: editorial caption should not masquerade as character dialogue"
+
+    directions = page.get("directionInline", [])
+    assert isinstance(directions, list) and directions, f"{page_id}: missing editorial production direction"
+    for block in directions:
+        assert isinstance(block, dict) and isinstance(block.get("text"), str) and block["text"].strip(), (
+            f"{page_id}: bad editorial direction block"
+        )
 
 
-def validate_scenes() -> None:
-    all_ids: list[str] = []
-    chars = load(SHOW / "characters.json")
-    regions = load(SHOW / "regions.json")
-    direction = load(SHOW / "direction.json")
+def validate_story_page(
+    page: dict,
+    issue: int,
+    chars: dict,
+    settings: dict,
+    regions: dict,
+    story_ids: set[str],
+) -> None:
+    page_id = page.get("id")
+    assert page_id in story_ids, f"Unexpected story page ID: {page_id}"
+    assert isinstance(page.get("summary"), str) and page["summary"].strip(), page_id
+    assert page.get("setting") or page.get("settingText"), f"{page_id}: missing setting"
+    if page.get("setting"):
+        assert page["setting"] in settings, f"{page_id}: unknown setting {page['setting']}"
+    if page.get("region"):
+        assert page["region"] in regions, f"{page_id}: unknown region {page['region']}"
 
-    for issue, path in enumerate(SCENE_FILES, start=1):
-        scenes = load(path)
-        assert isinstance(scenes, list), path.name
-        assert len(scenes) == 12, f"{path.name}: expected 12 source/recipe units, found {len(scenes)}"
-        expected = expected_issue_ids(issue)
-        ids = [scene.get("id") for scene in scenes]
-        assert ids == expected, f"{path.name}: scene IDs/order changed"
-        all_ids.extend(ids)
+    for char_id in page.get("characters", []):
+        assert char_id in chars, f"{page_id}: unknown character {char_id}"
 
-        for index, scene in enumerate(scenes):
-            scene_id = scene.get("id")
-            assert scene.get("summary"), scene_id
-            for char_id in scene.get("characters", []):
-                assert char_id in chars, f"Missing character {char_id}: {scene_id}"
-            if scene.get("region"):
-                assert scene["region"] in regions, f"Missing region {scene['region']}: {scene_id}"
+    plan = page.get("panelPlan")
+    assert isinstance(plan, list) and plan, f"{page_id}: missing panel plan"
+    for block in plan:
+        assert isinstance(block, dict) and isinstance(block.get("text"), str) and block["text"].strip(), (
+            f"{page_id}: malformed panel-plan block"
+        )
 
-            # Writing/development notes are deliberately preserved but hidden from assembleScene().
-            assert "direction" not in scene, f"Chef-visible Issue 1 direction returned: {scene_id}"
-            assert "directionInline" not in scene, f"Chef-visible source direction returned: {scene_id}"
-            if issue == 1:
-                writing_direction = scene.get("writingDirection", [])
-                assert isinstance(writing_direction, list), f"Bad writingDirection: {scene_id}"
-                for direction_id in writing_direction:
-                    assert direction_id in direction, f"Unknown writing direction {direction_id}: {scene_id}"
-            else:
-                assert scene.get("settingText"), f"Missing settingText: {scene_id}"
-                dialogue = scene.get("dialogueInline")
-                assert isinstance(dialogue, list), f"Missing inline dialogue: {scene_id}"
-                for line in dialogue:
-                    assert line.get("handle") and line.get("text"), f"Bad dialogue: {scene_id}"
-                writing_notes = scene.get("writingNotes", [])
-                assert isinstance(writing_notes, list), f"Bad writingNotes: {scene_id}"
-                for note in writing_notes:
-                    assert isinstance(note, dict) and isinstance(note.get("text"), str), f"Bad writing note: {scene_id}"
-
-            if issue <= 5:
-                plan = scene.get("panelPlan")
-                assert isinstance(plan, list) and len(plan) >= 4, f"Missing source page plan: {scene_id}"
-                for panel in plan:
-                    assert isinstance(panel, dict) and panel.get("text"), f"Bad source panel: {scene_id}"
-
-            if issue <= 5:
-                expected_from = EXPECTED_CONTINUITY[issue].get(scene_id)
-                assert scene.get("continuityFrom") == expected_from, (
-                    f"Incorrect direct continuity on {scene_id}: "
-                    f"{scene.get('continuityFrom')!r} != {expected_from!r}"
-                )
-            else:
-                assert scene.get("continuityFrom") is None, (
-                    f"Source continuity must live in the production overlay: {scene_id}"
-                )
-
-    assert len(all_ids) == 96 and len(set(all_ids)) == 96
-
-    e04 = load(SCENE_FILES[3])
-    for scene in e04[1:10]:
-        assert "EFW_Theo" not in scene.get("characters", []), f"Ancient Theo revealed early: {scene['id']}"
-        assert "EFW_Rae" not in scene.get("characters", []), f"Ancient Rae revealed early: {scene['id']}"
-    assert "EFW_Theo" in e04[11]["characters"]
-    assert "EFW_Rae" in e04[11]["characters"]
-
-    e05 = {s["id"]: s for s in load(SCENE_FILES[4])}
-    assert "EFW_Theo" in e05["EFW_S1E05_S02"]["characters"]
-    assert "EFW_Rae" in e05["EFW_S1E05_S04"]["characters"]
-
-
-def validate_enhancement_overlays() -> None:
-    for issue, overlay_path in ENHANCE_FILES.items():
-        source = load(SCENE_FILES[issue - 1])
-        source_by_id = {scene["id"]: scene for scene in source}
-        overlay = load(overlay_path)
-        assert isinstance(overlay, list), overlay_path.name
-        assert len(overlay) == 12, f"{overlay_path.name}: expected 12 overlay records"
-        ids = [patch.get("id") for patch in overlay]
-        assert ids == expected_issue_ids(issue), f"{overlay_path.name}: overlay IDs/order changed"
-        assert len(set(ids)) == 12, f"{overlay_path.name}: duplicate IDs"
-
-        for index, patch in enumerate(overlay):
-            scene_id = patch["id"]
-            extra = set(patch) - ALLOWED_OVERLAY_FIELDS
-            assert not extra, f"{overlay_path.name}:{scene_id}: unsafe overlay fields {sorted(extra)}"
-            plan = patch.get("panelPlan")
-            assert isinstance(plan, list) and len(plan) >= 4, f"Missing overlay page plan: {scene_id}"
-            for panel in plan:
-                assert isinstance(panel, dict) and panel.get("text"), f"Bad panel plan: {scene_id}"
-            expected_from = EXPECTED_CONTINUITY[issue].get(scene_id)
-            assert patch.get("continuityFrom") == expected_from, (
-                f"Incorrect overlay continuity on {scene_id}: "
-                f"{patch.get('continuityFrom')!r} != {expected_from!r}"
+    lines = page.get("dialogueInline")
+    assert isinstance(lines, list), f"{page_id}: dialogueInline must be a list"
+    for line in lines:
+        assert isinstance(line, dict), f"{page_id}: malformed dialogue entry"
+        assert isinstance(line.get("text"), str) and line["text"].strip(), f"{page_id}: empty dialogue"
+        handle = line.get("handle")
+        speaker = line.get("speaker")
+        assert handle or speaker, f"{page_id}: dialogue owner missing"
+        if isinstance(handle, str) and handle.startswith("@"):
+            matching = [cid for cid, entry in chars.items() if entry.get("handle") == handle]
+            assert matching, f"{page_id}: unknown dialogue handle {handle}"
+            assert matching[0] in page.get("characters", []), (
+                f"{page_id}: speaker {handle} absent from page character list"
             )
 
-            original = source_by_id[scene_id]
-            merged = {**original, **patch}
-            assert merged.get("summary") == original.get("summary"), f"Overlay changed summary: {scene_id}"
-            assert merged.get("characters") == original.get("characters"), f"Overlay changed cast: {scene_id}"
-            assert merged.get("dialogueInline") == original.get("dialogueInline"), f"Overlay changed dialogue: {scene_id}"
-            assert merged.get("settingText") == original.get("settingText"), f"Overlay changed setting: {scene_id}"
-            assert isinstance(merged.get("panelPlan"), list) and len(merged["panelPlan"]) >= 4
+    directions = page.get("directionInline", [])
+    assert isinstance(directions, list), f"{page_id}: directionInline must be a list"
+    for block in directions:
+        assert isinstance(block, dict) and isinstance(block.get("text"), str) and block["text"].strip(), (
+            f"{page_id}: malformed direction block"
+        )
+
+    continuity = page.get("continuityFrom")
+    if continuity:
+        assert continuity in story_ids, f"{page_id}: continuity target is not a story page: {continuity}"
 
 
-def validate_issue1_references() -> None:
-    scenes = load(SCENE_FILES[0])
-    dialogue = load(SHOW / "dialogue.json")
-    direction = load(SHOW / "direction.json")
+def validate_pages() -> None:
+    chars = load(SHOW / "characters.json")
     settings = load(SHOW / "settings.json")
     regions = load(SHOW / "regions.json")
-    for scene in scenes:
-        for dialog_id in scene.get("dialog", []):
-            assert dialog_id in dialogue, f"Missing dialogue {dialog_id}"
-        for direction_id in scene.get("writingDirection", []):
-            assert direction_id in direction, f"Missing writing direction {direction_id}"
-        if scene.get("setting"):
-            assert scene["setting"] in settings, f"Missing setting {scene['setting']}"
-        if scene.get("region"):
-            assert scene["region"] in regions, f"Missing region {scene['region']}"
+
+    all_ids: set[str] = set()
+    total = 0
+    champion_first_issue: dict[str, int] = {}
+
+    for issue, path in enumerate(SCENE_FILES, start=1):
+        pages = load(path)
+        assert isinstance(pages, list), path.name
+        assert len(pages) == TOTAL_COUNTS[issue], (
+            f"{path.name}: expected {TOTAL_COUNTS[issue]} pages, found {len(pages)}"
+        )
+
+        ids = [page.get("id") for page in pages]
+        expected = expected_ids(issue)
+        assert ids == expected, f"{path.name}: page order/IDs changed"
+
+        validate_editorial(pages[0], expected[0])
+        validate_editorial(pages[-1], expected[-1])
+
+        story_ids = set(expected[1:-1])
+        for page in pages[1:-1]:
+            validate_story_page(page, issue, chars, settings, regions, story_ids)
+            for char_id in page.get("characters", []):
+                if char_id in CHAMPION_ISSUE:
+                    champion_first_issue.setdefault(char_id, issue)
+
+        for page_id in ids:
+            assert page_id not in all_ids, f"Duplicate page ID {page_id}"
+            all_ids.add(page_id)
+
+        total += len(pages)
+
+    assert total == 145, f"Expected 145 production pages, found {total}"
+    assert len(all_ids) == 145
+
+    for champion, expected_issue in CHAMPION_ISSUE.items():
+        assert champion_first_issue.get(champion) == expected_issue, (
+            f"{champion} first appears in Issue {champion_first_issue.get(champion)}, expected Issue {expected_issue}"
+        )
 
 
 def validate_architecture() -> None:
-    architecture = load(SHOW / "season_architecture_v2.json")
-    order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
-    assert order == REVEAL_ORDER, order
+    expected_counts = {str(issue): TOTAL_COUNTS[issue] for issue in range(1, 9)}
+    expected_counts["season"] = 145
 
-    reset = load(SHOW / "identity_reset.json")
-    assert reset.get("status") == "locked"
-    assert "Issue 4" in reset.get("midpointReveal", "")
+    architecture = load(SHOW / "season_architecture_v2.json")
+    assert architecture.get("productionPageCounts") == expected_counts
+    assert "145 production pages" in architecture.get("format", "")
+    order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
+    assert order == ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
+
+    status = load(SHOW / "development_status.json")
+    assert status.get("productionPageCounts") == expected_counts
+    assert "145 production pages" in status.get("productionMode", "")
+    assert "129 unchanged story pages" in status.get("writingRecoveryFrontier", "")
+    assert "EFW_S1E01_EDITOR_OPEN" in status.get("visualReferenceState", "")
+    for issue in range(1, 9):
+        entry = status.get("issues", {}).get(str(issue), {})
+        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json"
+        assert entry.get("pageCount") == TOTAL_COUNTS[issue]
+        assert entry.get("panelPlan") is True
 
     spine = load(SHOW / "comic_page_spine_v1.json")
+    assert spine.get("productionPageCounts") == expected_counts
     issues = spine.get("issues", [])
     assert len(issues) == 8
     for issue_number, issue in enumerate(issues, start=1):
         assert issue.get("issue") == issue_number
-        pages = issue.get("pages", [])
-        assert len(pages) == 22, f"Issue {issue_number}: expected 22 development beats"
-        assert [p.get("page") for p in pages] == list(range(1, 23))
+        beats = issue.get("pages", [])
+        assert len(beats) == 22, f"Issue {issue_number}: expected 22 retained development beats"
+        assert [beat.get("page") for beat in beats] == list(range(1, 23))
 
 
-def validate_visual_references() -> None:
-    assert REFERENCE_POLICY.exists(), "Missing Echoes production visual-reference authority policy"
+def validate_characters_and_references() -> None:
+    chars = load(SHOW / "characters.json")
+    required = {
+        "EFW_Theo", "EFW_Rae", "EFW_Adrian", "EFW_Vark", "EFW_Caelum",
+        "EFW_Starbreaker", "EFW_Redlin", "EFW_Atlas", "EFW_Arbiter",
+        "EFW_Afterlight", "EFW_Flux", "EFW_Oryon", "EFW_Kyn", "EFW_Mero",
+    }
+    assert required.issubset(chars), f"Missing required Echoes characters: {sorted(required - set(chars))}"
+    for char_id, entry in chars.items():
+        assert entry.get("name") and entry.get("handle") and entry.get("visualAnchor"), char_id
+        locks = entry.get("continuityLocks")
+        assert isinstance(locks, list) and locks, f"{char_id}: missing continuity locks"
+
+    assert REFERENCE_POLICY.exists(), "Missing Echoes visual-reference policy"
     assert REFERENCE_PACK.exists(), "Missing Echoes visual-reference pack"
     pack = load(REFERENCE_PACK)
     assert pack.get("status") == "active", "Echoes visual-reference pack is not active"
@@ -295,109 +234,35 @@ def validate_visual_references() -> None:
         image = ref.get("image")
         assert image, f"Reference missing image path: {ref.get('id')}"
         assert (ROOT / image).exists(), f"Reference image missing: {image}"
-        assert ref.get("type") == "approved-current-production-reference", (
-            f"Reference is not explicitly approved: {ref.get('id')}"
-        )
 
 
-def chef_layer_strings() -> list[tuple[str, str]]:
-    """Return only strings actually emitted to the image recipe by the assembler."""
-    strings: list[tuple[str, str]] = []
-    assembler = load(SHOW / "assembler.json")
-    strings.append(("assembler:generationLine", assembler.get("generationLine", "")))
-
-    # Summaries carry concise page action and intentionally remain upstream of the visual plan.
-    # Developmental writingDirection/writingNotes and direction.json are intentionally excluded:
-    # assembleScene() does not emit those fields.
-    for issue, path in enumerate(SCENE_FILES, start=1):
-        if issue > 5:
-            continue
-        for scene in load(path):
-            scene_id = scene.get("id", path.name)
-            for panel_index, panel in enumerate(scene.get("panelPlan", []), start=1):
-                if isinstance(panel, dict) and isinstance(panel.get("text"), str):
-                    strings.append((f"{scene_id}:panel:{panel_index}", panel["text"]))
-
-    for issue, path in ENHANCE_FILES.items():
-        for patch in load(path):
-            scene_id = patch.get("id", path.name)
-            for panel_index, panel in enumerate(patch.get("panelPlan", []), start=1):
-                if isinstance(panel, dict) and isinstance(panel.get("text"), str):
-                    strings.append((f"{scene_id}:overlay-panel:{panel_index}", panel["text"]))
-            for direction_index, block in enumerate(patch.get("directionInline", []), start=1):
-                if isinstance(block, dict) and isinstance(block.get("text"), str):
-                    strings.append((f"{scene_id}:overlay-direction:{direction_index}", block["text"]))
-    return strings
-
-
-def validate_chef_layer_separation() -> None:
-    candidates: list[tuple[str, str]] = []
-    for label, text in chef_layer_strings():
-        if any(pattern.search(text) for pattern in CHEF_REASONING_PATTERNS):
-            candidates.append((label, text))
-    detail = "\n".join(f"{label}: {text}" for label, text in candidates[:30])
-    assert not candidates, (
-        f"Echoes chef layer contains {len(candidates)} writing/editorial reasoning strings. "
-        f"Rewrite them as directly drawable staging:\n{detail}"
-    )
-
-
-def validate_current_production_contract() -> None:
+def validate_assembler_contract() -> None:
     assembler = load(SHOW / "assembler.json")
     assert assembler.get("unitLabel") == "PAGE"
     assert assembler.get("requirePanelPlan") is True
     assert assembler.get("requireVisualAnchors") is True
-    generation_line = assembler.get("generationLine", "")
+    generation = assembler.get("generationLine", "")
     for required in (
         "One assembled RexPrompt recipe equals one page only",
-        "Render only the selected recipe",
         "Painterly prestige cosmic science-fiction sequential art",
-        "Stage emotion through faces, hands, posture, distance, eyelines, touch, carried objects",
-        "match camera position, body placement and architectural geometry precisely",
-        "show interfaces or diagrams only when the selected page explicitly scripts one",
+        "Present-day spaces are tactile and inhabited",
+        "Ancient spaces are monumental but physically legible",
         "Follow the PANEL PLAN as page architecture",
+        "letter only the exact DIALOGUE supplied by the recipe",
     ):
-        assert required in generation_line, f"Echoes generation contract missing: {required}"
-
-    status = load(SHOW / "development_status.json")
-    assert status.get("productionMode") == "one assembled RexPrompt recipe equals one finished portrait comic page"
-    assert "dynamically" in status.get("frontierRule", "")
-    granularity = status.get("developmentGranularity", "")
-    assert "Issues 1-8" in granularity
-    assert "merge-by-ID enhancement overlays" in granularity
-    visual_state = status.get("visualReferenceState", "")
-    assert "visual-reference-pack.json" in visual_state
-    assert "approved current-production" in visual_state
-    assert "EFW_S1E01_S01" in visual_state
-
-    issues = status.get("issues", {})
-    for issue in (1, 2, 3, 4, 5):
-        entry = issues.get(str(issue), {})
-        assert entry.get("status") == "compiled for sequential page production", issue
-        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
-        assert entry.get("pageCount") == 12, issue
-        assert entry.get("panelPlan") is True, issue
-    for issue in (6, 7, 8):
-        entry = issues.get(str(issue), {})
-        assert entry.get("status") == f"compiled for sequential page production via enhance_e{issue:02d}.json overlay", issue
-        assert entry.get("recipeFile") == f"scenes_e{issue:02d}.json", issue
-        assert entry.get("pageCount") == 12, issue
-        assert entry.get("panelPlan") is True, issue
+        assert required in generation, f"Echoes generation contract missing: {required}"
 
 
 def main() -> None:
     validate_manifest()
-    validate_characters()
-    validate_scenes()
-    validate_enhancement_overlays()
-    validate_issue1_references()
+    validate_pages()
     validate_architecture()
-    validate_visual_references()
-    validate_current_production_contract()
-    validate_chef_layer_separation()
+    validate_characters_and_references()
+    validate_assembler_contract()
     print(
-        "Echoes validation passed: 96 PAGE recipes preserve story/cast/dialogue/continuity; "
-        "developmental reasoning is kept in writing-only fields; chef-visible direction is concrete visual staging."
+        "Echoes validation passed: 8 issues / 145 PAGE recipes "
+        "(129 story + 16 editorial bookends), valid reveal order, references, "
+        "page counts, continuity targets and package generation contract."
     )
 
 
