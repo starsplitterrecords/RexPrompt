@@ -17,21 +17,23 @@ There are currently no released Low Tide interior pages in StarSplitterVisions, 
 
 ## Active recipe contract
 
-Current sequential production uses page-level `LTS_CNN_PNN` recipes only.
+Current story production uses page-level `LTS_CNN_PNN` recipes, wrapped by explicit editorial framing recipes.
 
-- Chapter 1: 24 pages
-- Chapter 2: 26 pages
-- Chapter 3: 28 pages
-- Chapter 4: 26 pages
-- Chapter 5: 24 pages
-- Chapter 6: 24 pages
-- Chapter 7: 26 pages
+- Chapter 1: `LTS_C01_EDITOR_OPEN` + 24 story pages + `LTS_C01_EDITOR_NEXT`
+- Chapter 2: `LTS_C02_EDITOR_OPEN` + 26 story pages + `LTS_C02_EDITOR_NEXT`
+- Chapter 3: `LTS_C03_EDITOR_OPEN` + 28 story pages + `LTS_C03_EDITOR_NEXT`
+- Chapter 4: `LTS_C04_EDITOR_OPEN` + 26 story pages + `LTS_C04_EDITOR_NEXT`
+- Chapter 5: `LTS_C05_EDITOR_OPEN` + 24 story pages + `LTS_C05_EDITOR_NEXT`
+- Chapter 6: `LTS_C06_EDITOR_OPEN` + 24 story pages + `LTS_C06_EDITOR_NEXT`
+- Chapter 7: `LTS_C07_EDITOR_OPEN` + 26 story pages + `LTS_C07_EDITOR_CLOSE`
 
-The retired scene-level Chapter 1 recovery structure is not an active production contract and must not be mixed with current page IDs. No approved Low Tide production image is currently persisted in the draft manifest.
+The 178 story-page recipes remain unchanged. Editorial framing lives in separate opener/closer overlays so story payloads and story IDs are not renumbered. The retired scene-level Chapter 1 recovery structure is not an active production contract and must not be mixed with current page IDs. No approved Low Tide production image is currently persisted in the draft manifest.
 
 ## Character visual state
 
 The six core characters have assembler-visible textual design baselines in `data/shows/low-tide-signal/characters.json`, but no approved character image reference is currently stored in RexPrompt.
+
+The new editorial framing pages deliberately use environments and objects rather than identifiable core-character faces. They may be produced before recurring-character identity references are approved, but they do not satisfy or bypass the identity gate for the first character-bearing story page.
 
 Before sequential production advances into character-bearing pages, establish and approve visual identity references for:
 
@@ -59,7 +61,7 @@ No lanterns. No supernatural effects. No generic cyberpunk neon. No apocalypse-b
 
 ## Interior page-language rule
 
-Interior pages are prestige indie sequential comic pages, not infographics, dossiers, promotional cards, title pages, or labeled character sheets unless the exact RexPrompt recipe explicitly calls for one.
+Normal story pages are prestige indie sequential comic pages, not infographics, dossiers, promotional cards, title pages, or labeled character sheets unless the exact RexPrompt recipe explicitly calls for one. The `EDITOR_OPEN`, `EDITOR_NEXT`, and `EDITOR_CLOSE` recipes are the explicit editorial-framing exception: they are art-directed environment-led pages whose scripted display text and editor copy are intentional issue content.
 
 Do not add:
 
