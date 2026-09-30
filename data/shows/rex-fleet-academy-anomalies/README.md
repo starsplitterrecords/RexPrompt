@@ -76,7 +76,7 @@ Only Issue 1 is production-compiled at initialization. Later issue titles and co
 
 ## Issue 1 dramatic purpose
 
-The cadets enter a recorded survey reconstruction expecting one bad instrument. Instead, optical range, tether length, inertial motion, and reciprocal-phase measurements remain individually valid while disagreeing with one another. Their first attempt to navigate by a visually obvious straight line returns them to the same anchor without any local turn. They recover the survey recorder only after they stop navigating by apparent position and instead follow measured changes across phase and anchor relationships.
+The cadets enter a recorded boundary survey around Calm Eddy Forty-Seven expecting one bad instrument. The verified calm eddy itself remains locally coherent, but its charted boundary has drifted; just outside the safe pocket, optical range, tether length, inertial motion, and reciprocal-phase measurements remain individually valid while disagreeing with one another. A controlled run deliberately leaves the primary beacon behind, holds a locally straight vector, and then encounters that same beacon ahead without any local turn. They recover the survey recorder only after they stop navigating by apparent position and instead follow measured changes across phase and anchor relationships.
 
 The debrief establishes the series thesis:
 
