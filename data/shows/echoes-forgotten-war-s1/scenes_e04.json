@@ -1,5 +1,67 @@
 [
   {
+    "id": "EFW_S1E04_EDITOR_OPEN",
+    "summary": "Opening previously page for Issue 4. Establishes that forgotten physical history survived and turns the reader toward Pax-Aeterna without revealing Arbiter or Theo and Rae's ancient identities.",
+    "settingText": "EDITORIAL COMPOSITE — the sealed approach to Pax-Aeterna's treaty vault. Theo, Rae and Adrian stand at a threshold facing a monumental but austere chamber whose central table is still mostly lost in shadow. The room should feel abandoned rather than mystical: repaired stone, metal seams, old civic architecture, dust and one opened line of cold light. Do not show Arbiter, ancient Theo, ancient Rae, a council scene, or any extinction event.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae",
+      "EFW_Adrian"
+    ],
+    "panelPlan": [
+      {
+        "text": "Single full-page editorial splash. Frame the trio small at the doorway and let the empty vault occupy most of the page. Keep the old table and distant seats suggestive but unreadable. Reserve clean vertical negative space in the shadowed upper half for copy."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "PREVIOUSLY IN ECHOES OF A FORGOTTEN WAR…"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "ISSUE 4 — SILENCE IN THE VAULT"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Vael-Tor settled one question."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Forgetting did not make anything disappear."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Not the foundations."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Not the machines."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Not the damage."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Theo and Rae are no longer hunting stories. They are walking through the physical remains of a war that still does not explain itself."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Next stop: a place built for people who thought explanation might be enough.",
+        "subtext": "Final emphasis line."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
+  },
+  {
     "id": "EFW_S1E04_S01",
     "settingText": "Present-day Pax-Aeterna treaty vault, preserved as a ceremonial ruin whose official history describes negotiations nobody can name.",
     "region": "EFW_PaxAeterna",
@@ -851,5 +913,59 @@
       }
     ],
     "continuityFrom": "EFW_S1E04_S15"
+  },
+  {
+    "id": "EFW_S1E04_EDITOR_CLOSE",
+    "summary": "Closing NEXT ISSUE teaser for Issue 4. Uses the newly revealed truth that Theo and Rae were present in the ancient war and converts it into the personal question that drives Issue 5, without revealing their choices or Afterlight.",
+    "settingText": "EDITORIAL COMPOSITE — present Theo and Rae in separate pools of low archive light, each facing a reflective surface or old piece of architecture that aligns their current posture with a faint ancient human silhouette in the same position. The ancient figures are clearly them only by matched body geometry, not by costume detail or new story action. Adrian is absent. No new champion appears.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae"
+    ],
+    "panelPlan": [
+      {
+        "text": "Single full-page teaser splash with mirrored left/right composition. Theo and Rae should look less frightened by the past than by themselves inside it. Keep the center mostly empty and dark for the very short teaser copy."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Until now, Theo and Rae have been asking the safest question:"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "What happened?",
+        "subtext": "Large emphasis."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "That question is over."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "There is a worse one."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "What did I do?",
+        "subtext": "Largest emphasis line."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "NEXT: EMBERS OF THE ZENITH"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
   }
 ]
