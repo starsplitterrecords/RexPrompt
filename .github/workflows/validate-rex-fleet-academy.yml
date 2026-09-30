@@ -1,0 +1,23 @@
+name: Validate Rex Fleet Academy data
+
+on:
+  pull_request:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/rex-fleet-academy/**'
+      - 'data/shows/rex-fleet-s1/characters.json'
+      - 'production/references/rex-fleet-academy/**'
+      - 'tools/validate_rex_fleet_academy.py'
+      - '.github/workflows/validate-rex-fleet-academy.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Rex Fleet Academy
+        run: python tools/validate_rex_fleet_academy.py
