@@ -1,0 +1,39 @@
+# Rex Fleet Academy: Between the Beacons
+
+- Series ID: `rex-fleet-academy-between-beacons`
+- Active issue: `rex-fleet-academy-between-beacons-i01`
+- Production unit: `PAGE`
+- Active source: empty `pages_base.json` plus `pages_i01.json` overlay
+- Issue length: 24 story pages
+
+This one-off explains corridor science, navigation culture, public infrastructure and the politics created by control of safe movement through dramatized Academy instruction.
+
+## Canon carried by Issue 1
+- Corridors are measured three-dimensional low-tension volumes, not ocean channels.
+- The certified cross-section is approximately circular and normally about twice the beam of the largest ship the route is rated to carry.
+- Ships stay near the surveyed spine between beacons; shortest safe is not always shortest geometric.
+- Riding the Inversion is maintaining a workable relationship with the local inverse/reciprocal tension state.
+- Green means measured/certified low-tension route state.
+- Red means unsafe, unverified, or sensor failure; unknown defaults to red.
+- Extreme tension can physically shatter a beacon.
+- Historical chain: Sundering → corridor collapse → Shattering.
+- Fleet and private surveyors use repeated passes, offset measurements, drift checks, vessel limits, timestamps and provenance.
+- Private routes may be unmarked or privately marked. A marker is not BHA certification.
+- Brokers may resell routes to legitimate or illegitimate customers and can profit by stripping age/provenance.
+- Leaked BHA harmonic/diagnostic data can reveal why a beacon is red without restoring certification.
+- Fleet power resembles King's-Road/Roman-road power: stewardship of movement is also structural political power.
+
+## Color grammar
+- Green — Verge dependence, civilian continuity, colony/ecology work such as Verdant Tides, and public routes.
+- Blue/gold/white — Fleet/Crown stewardship.
+- Bright red — Shards and fracture from the public network.
+- Purple — survey craft.
+- Subtle cyan — blockade runners, a hyper-attuned proto-Fleet echo.
+- Yellow — maintenance, construction, geology and applied science.
+- Dark purple/gold — Tempest at the margins.
+- Deep crimson/gold — present-era Fleet-aligned Crimson protection; never collapse it visually into bright Shard red.
+
+## Continuity
+Present-day BHA is the **Beacon Harmonics Authority**. The historical Shattering package uses **Beacon Harmonization Authority** for its High-Era predecessor. Preserve the distinction.
+
+Jia Morgan shares her Rex Fleet identity, handle and visual anchor. The closing page points toward the already-established `Rex Fleet Academy: Navigating the Mirrorfold` series without changing its mechanics.
