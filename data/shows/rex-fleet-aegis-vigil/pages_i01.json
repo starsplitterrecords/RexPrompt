@@ -1,0 +1,1916 @@
+[
+  {
+    "id": "RF_AV_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "The Line",
+    "setting": "aegisVigilExterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "vergeCivicTraffic"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern"
+    ],
+    "summary": "Aegis Vigil escorts eight civilian ships through a public Verge corridor, deliberately holding the exposed rear quarter while smaller vessels cluster near the verified green beacon line. The series opens on protection as geometry and work rather than combat.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — LARGE WIDE exterior. Eight mismatched civilian ships travel inside the broad safe volume centered on a line of GREEN BHA beacons. RFV Aegis Vigil occupies the exposed rear quarter of the formation, visibly larger than every ship it protects but not blocking the route."
+      },
+      {
+        "text": "Panel 2 — Closer exterior. A small unpowered debris slab drifts toward the convoy edge. Aegis Vigil changes position and uses restrained point-defense fire to break only the pieces on collision vectors; civilian ships continue without scattering."
+      },
+      {
+        "text": "Panel 3 — Bridge insert. Captain Imani Kade watches the convoy plot rather than the weapons display. Commander Tomas Greer has cargo temperatures and ship-status columns open beside the route."
+      },
+      {
+        "text": "Panel 4 — Jonah Tern at navigation marks the next green beacon and the safe-volume boundary. The convoy is orderly but visibly composed of old ships with unequal acceleration."
+      },
+      {
+        "text": "Panel 5 — Exterior from behind Aegis Vigil: the heavy cruiser settles back into place after the debris correction, again forming the outer edge of the moving group."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Eight ships. Eight different ideas of formation.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Are they inside the line?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "All eight.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Then they agree enough.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "Cargo and People",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "vergeCivicTraffic"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_mira_dace"
+    ],
+    "summary": "The bridge tracks the convoy as lives and material obligations, not anonymous contacts. Convoy master Mira Dace checks in from Wayfarer Nine and reminds Kade that the cargo has deadlines of its own.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wide bridge view. The shared display identifies eight civilian ships by role: passenger carrier, two agricultural haulers, water-system transport, machine-parts freighter, clinic barge and two mixed cargo vessels. Keep labels concise and legible."
+      },
+      {
+        "text": "Panel 2 — Greer scrolls a manifest view showing passenger counts, refrigeration loads, propulsion margins and medical priority cargo. It reads like operations, not an infographic."
+      },
+      {
+        "text": "Panel 3 — Mira Dace appears on a practical comm window from Wayfarer Nine. Her civilian bridge is worn and busy behind her."
+      },
+      {
+        "text": "Panel 4 — Kade and Mira speak as peers responsible for different things. No saluting, no ceremonial framing."
+      },
+      {
+        "text": "Panel 5 — Exterior: the convoy passes another green beacon, each ship crossing at its own slightly different spacing."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Wayfarer Nine. Convoy still yours to shepherd?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Until you tell me otherwise.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Good. My cold holds are not impressed by Fleet tradition.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Neither are the clinic cultures.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Then we all understand the schedule.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P01",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "Forty-One Minutes",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_mira_dace"
+    ],
+    "summary": "A BHA route update predicts the downstream verification will lapse as a Lattice tide raises corridor tension. Beacon Seven is green now; if its sensors can no longer verify the low-tension volume, it will go red. The convoy has forty-one minutes to clear.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Tern receives a route-state update. The current beacon chain remains GREEN, but a simple time bar beside Beacon Seven shows the forecast verification margin shrinking."
+      },
+      {
+        "text": "Panel 2 — He expands the route plot: the convoy is inside the verified cylinder around the beacon line; the safe route ahead narrows modestly as the modeled Lattice tide arrives."
+      },
+      {
+        "text": "Panel 3 — Close on Kade reading the update. Avoid alarm theatrics; this is a familiar operational constraint."
+      },
+      {
+        "text": "Panel 4 — Mira receives the same update aboard Wayfarer Nine and immediately checks the slowest ship in the convoy."
+      },
+      {
+        "text": "Panel 5 — Shared display: FORTY-ONE MINUTES TO BEACON 7 VERIFICATION LAPSE. Green remains green; do not invent yellow beacon state."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "BHA moved the forecast. Beacon Seven loses verification in forty-one minutes.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Our slowest clears in thirty-two.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Margin?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Nine minutes if nobody develops a personality.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "They are civilian ships, Captain. Personality is structural.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P02",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "Behind Us",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "vergeCivicTraffic"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_mira_dace",
+      "C_rfav_eli_varek"
+    ],
+    "summary": "A weak distress signal appears behind the convoy and outside its formation. The freighter Good Measure has lost main drive, has twenty-seven people aboard, and is drifting toward the edge of the verified safe volume.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — A faint contact flashes behind the convoy plot, offset from the green beacon line. Communications resolves a broken civilian distress carrier."
+      },
+      {
+        "text": "Panel 2 — Eli Varek appears through static from Good Measure, bruised and strapped into a failing bridge seat."
+      },
+      {
+        "text": "Panel 3 — Tern plots Good Measure's drift vector toward the outer boundary of the verified low-tension volume."
+      },
+      {
+        "text": "Panel 4 — Greer overlays the rescue turn on the convoy clock. The remaining margin nearly disappears."
+      },
+      {
+        "text": "Panel 5 — Kade looks from the eight ships ahead to the single contact behind. Both remain visible on the same display."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "Good Measure to any ship on Seven Line. Main drive is dead. Twenty-seven aboard.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "They're drifting outboard. Fifteen minutes to the verified edge.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Turn back, recover, rejoin — best case seventeen minutes.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "We have nine.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "We had nine.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P03",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "The Cost of Turning",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "aegisCrown"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_mira_dace"
+    ],
+    "summary": "The command team reduces the decision to actual consequences. A rescue cutter alone cannot evacuate Good Measure before it drifts out of the safe volume; Aegis Vigil must fall back close enough to support the transfer. Kade decides the convoy will continue under Mira Dace while Vigil turns.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Greer and Tern work the route board. A rescue cutter's limited transfer cycle is shown against Good Measure's drift; it cannot make enough trips in time."
+      },
+      {
+        "text": "Panel 2 — Kade asks for alternatives. Greer identifies the real choice rather than decorating it: abandon the distress call or detach the heavy cruiser from the convoy."
+      },
+      {
+        "text": "Panel 3 — Kade opens comms to Mira. The civilian convoy remains ahead on the main display."
+      },
+      {
+        "text": "Panel 4 — Mira absorbs the order without gratitude. She begins moving her ships into a tighter self-led formation."
+      },
+      {
+        "text": "Panel 5 — Kade gives the turn. The bridge crew move immediately; no speech or ceremonial Aegis invocation."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Can the cutter do it without us?",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Not twenty-seven before they cross the edge.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Mira. Take the line. Keep your speed.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "You are leaving the convoy.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "I'm going back for a ship.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Then do not make me wait for you.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Turn us around.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P04",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "You Keep Moving",
+    "setting": "wayfarerNineBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_mira_dace",
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer"
+    ],
+    "summary": "From the civilian side, Aegis Vigil's turn looks like the escort abandoning the formation. Mira assumes convoy command, refuses panic, and makes clear that civilian captains will keep moving even if the Fleet does not catch up.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wayfarer Nine bridge. Mira pulls Aegis Vigil's marker out of the convoy formation and redraws the civilian spacing herself."
+      },
+      {
+        "text": "Panel 2 — Through her forward window, the other seven civilian ships continue toward the next green beacon while the heavy cruiser visibly turns away behind them."
+      },
+      {
+        "text": "Panel 3 — Mira issues terse civilian instructions over convoy comms; old ships adjust one by one rather than in perfect military unison."
+      },
+      {
+        "text": "Panel 4 — Split visual between Mira and Kade's comm window. Neither asks the other to approve the choice already made."
+      },
+      {
+        "text": "Panel 5 — Exterior: convoy ahead, Aegis Vigil receding behind. The physical separation becomes real."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Wayfarer to convoy. I have route lead. Hold your order and tell me before you slow.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Kade, I will not burn the window waiting for your silhouette.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "You shouldn't.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Catch us.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "That was almost encouraging.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P05",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Fall Back",
+    "setting": "aegisVigilExterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_jonah_tern",
+      "C_rfav_rhea_calder"
+    ],
+    "summary": "Aegis Vigil executes the rescue turn while Rhea Calder launches a rescue cutter. Tern must bring the heavy cruiser close enough to support the evacuation without chasing Good Measure outside the verified route.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — LARGE exterior. Aegis Vigil rolls through a controlled turn inside the safe volume while the civilian convoy continues away in the distance."
+      },
+      {
+        "text": "Panel 2 — The hangar opens and a compact rescue cutter launches, carrying Rhea Calder's team and folded transfer gear."
+      },
+      {
+        "text": "Panel 3 — Bridge. Tern draws a hard limit at the safe-volume boundary and plots the closest support position he can certify."
+      },
+      {
+        "text": "Panel 4 — Rhea in the rescue cutter watches Good Measure grow larger ahead: scarred, yawing slowly, one docking side visibly damaged."
+      },
+      {
+        "text": "Panel 5 — Kade watches the cutter separate while the bridge countdown continues to run."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "I can give Calder four hundred meters. Closer puts our stern outside verified volume.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Four hundred.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Rescue Two away. I can work with four hundred.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "You have sixteen minutes before I ask how fast you can work.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Ask now. Same answer.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P06",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "No Dock",
+    "setting": "corridorRescueZone",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_eli_varek",
+      "C_rfav_imani_kade"
+    ],
+    "summary": "Rhea reaches Good Measure and discovers that its damaged docking collar cannot make a pressure seal. The rescue becomes an exterior suit-and-tether transfer instead of a fast docked evacuation.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Rescue Two matches Good Measure's slow tumble. The freighter's near docking collar is visibly twisted and vent-stained."
+      },
+      {
+        "text": "Panel 2 — Rhea examines the collar through the cutter viewport while a crew member extends a diagnostic arm; the surfaces cannot align."
+      },
+      {
+        "text": "Panel 3 — Eli appears at Good Measure's inner lock in a pressure layer, one side of his face bruised."
+      },
+      {
+        "text": "Panel 4 — Rhea's team deploys two physical transfer tethers between the cutter and the freighter rather than attempting a false seal."
+      },
+      {
+        "text": "Panel 5 — Wide exterior. The tiny tether lines connect the two moving vessels while Aegis Vigil holds farther inboard."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Your collar is gone. We do this suited.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "Twenty-seven people through that lock?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Twenty-seven people through that lock.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "I have two who cannot cross under their own power.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Then I brought the right harnesses.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P07",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "Good Measure",
+    "setting": "goodMeasureInterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_eli_varek",
+      "C_rfav_jae_torren"
+    ],
+    "summary": "Inside Good Measure, the distressed ship is revealed as a competent working vessel failing faster than its crew can repair it. Jae Torren is holding a coolant bypass together while Eli organizes passengers at the lock.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Rhea enters Good Measure through the cycling lock. The corridor beyond is patched, cold, crowded and organized: passengers already wear pressure layers and hold numbered tether clips."
+      },
+      {
+        "text": "Panel 2 — Eli points Rhea toward the two immobile passengers while continuing to count people himself."
+      },
+      {
+        "text": "Panel 3 — In a machinery recess, Jae Torren kneels beside a vibrating temporary coolant bypass, knee brace locked and gloved hands on an improvised clamp."
+      },
+      {
+        "text": "Panel 4 — Frost crawls along an agricultural cold-storage trunk behind him as power fluctuates."
+      },
+      {
+        "text": "Panel 5 — Rhea recognizes that Jae is not merely trying to save the ship; he is keeping the pressure and cold systems stable long enough for everyone else to leave."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "Everyone is suited. Two stretchers. Jae is aft.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Why is Jae aft?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Because the bypass does not care that you arrived.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Can it run without you?",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Not yet.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P08",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "Triage",
+    "setting": "aegisVigilMedical",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_safiya_menon",
+      "C_rfav_rhea_calder",
+      "C_rfav_eli_varek",
+      "C_rfav_imani_kade"
+    ],
+    "summary": "Menon coordinates the evacuation from Aegis Vigil's medical complex while the first evacuees arrive by cutter. One injured passenger cannot tolerate repeated acceleration, forcing the transfer team to change tempo rather than simply hurry.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Aegis Vigil medical intake receives the first Good Measure evacuees. Staff move them through marked lanes without turning the bay into chaos."
+      },
+      {
+        "text": "Panel 2 — Menon studies the remote vital signs of an injured passenger still aboard Good Measure while speaking to Rhea through comms."
+      },
+      {
+        "text": "Panel 3 — Rhea and Eli secure a rigid transfer cocoon around the passenger rather than dragging them into a standard harness."
+      },
+      {
+        "text": "Panel 4 — Menon signals the cutter pilot to reduce acceleration for the next crossing, visibly adding time to the operation."
+      },
+      {
+        "text": "Panel 5 — Kade receives the revised rescue time on the bridge: the remaining convoy margin drops again."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "Do not rush that stretcher.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "We are out of slow options.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "Then keep this one. Their pressure is falling when you accelerate.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "How much time?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "More than the clock wants. Less than they need.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Use what they need.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P09",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "Not on the Passenger List",
+    "setting": "goodMeasureInterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_jae_torren",
+      "C_rfav_devika_arlen",
+      "C_rfav_imani_kade"
+    ],
+    "summary": "Rhea learns why Jae is fighting to preserve the cold-storage circuit: Good Measure carries seed cultures and agricultural starters already allocated to two Verge settlements. Kade refuses to trade passenger lives for cargo, but Arlen looks for a way to preserve both without slowing the evacuation.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Rhea follows Jae's coolant line to a cold-storage compartment filled with compact agricultural culture racks and seed modules, each physically secured for freight."
+      },
+      {
+        "text": "Panel 2 — Jae shows her the temperature rise on a local gauge while still working the bypass."
+      },
+      {
+        "text": "Panel 3 — Rhea relays the situation. On Aegis Vigil, Arlen joins Kade at an engineering display and immediately traces the freighter's emergency-power interface."
+      },
+      {
+        "text": "Panel 4 — Kade draws a hard boundary: evacuation sequence does not change."
+      },
+      {
+        "text": "Panel 5 — Arlen identifies a rescue-cutter power umbilical as a temporary cold-storage feed that can be connected during the same transfer operation."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "That hold is two planting seasons for Lysa and New Cairn.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "People first.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "They are why I care about the seeds.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Nobody loses a place in the transfer for freight.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "I do not need a place. I need their service socket and one cutter cable.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P10",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "Keep It Cold",
+    "setting": "corridorRescueZone",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_devika_arlen",
+      "C_rfav_rhea_calder",
+      "C_rfav_jae_torren",
+      "C_rfav_tomas_greer"
+    ],
+    "summary": "Arlen and Jae improvise a temporary external power feed from Rescue Two to Good Measure's cold-storage circuit. It saves the agricultural cargo for now without interrupting passenger transfer, but locks the cutter physically to the failing freighter until the last person is off.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Exterior. A rescue technician crawls along the secured tether carrying a heavy power umbilical from the cutter toward Good Measure's service socket."
+      },
+      {
+        "text": "Panel 2 — Arlen guides the connection remotely from Aegis Vigil engineering while Jae opens the correct local isolation path."
+      },
+      {
+        "text": "Panel 3 — The cable locks in. Inside Good Measure, the cold-storage gauge stabilizes just above its safe threshold."
+      },
+      {
+        "text": "Panel 4 — Rhea watches another pair of evacuees cross the separate personnel tethers while the power cable remains taut below them."
+      },
+      {
+        "text": "Panel 5 — Greer updates the bridge: because Rescue Two is now feeding the freighter, it cannot depart early with partial loads."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "Jae, isolate bus three. If bus two follows it, stop.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Bus two has been threatening to quit since before you were born.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "Then it knows the routine.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Cold hold is stable. People keep moving.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "And the cutter stays attached until the end.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P11",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "The Long Transfer",
+    "setting": "corridorRescueZone",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_safiya_menon",
+      "C_rfav_eli_varek",
+      "C_rfav_imani_kade"
+    ],
+    "summary": "The immobile passenger crosses the gap in a rigid rescue cocoon while Good Measure nears the verified boundary. The transfer is slow, physical, and vulnerable; Kade resists pressure to move Aegis Vigil outside the safe volume just to shorten the gap.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wide exterior. The rigid cocoon begins crossing the twin personnel tethers between Good Measure and Rescue Two. Aegis Vigil holds four hundred meters inboard."
+      },
+      {
+        "text": "Panel 2 — Rhea moves hand-over-hand beside the cocoon, keeping it from rotating while Eli feeds the line from the freighter lock."
+      },
+      {
+        "text": "Panel 3 — Tern's bridge display shows Good Measure approaching the safe-volume boundary. A tempting closer support position would put part of Aegis Vigil beyond verified space."
+      },
+      {
+        "text": "Panel 4 — Kade looks at the geometry, then refuses to move the heavy cruiser past Tern's certified limit."
+      },
+      {
+        "text": "Panel 5 — The cocoon reaches Rescue Two. Menon receives stable vitals. No cheering; the next evacuee is already clipping in."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "I can cut the transfer distance if you let me cross the verified edge.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Can you certify what is outside it?",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "No.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Then we do not spend the rescue ship too.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "Cocoon is stable. Next.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P12",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "Last Man Aft",
+    "setting": "goodMeasureInterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_eli_varek",
+      "C_rfav_jae_torren"
+    ],
+    "summary": "The passenger count reaches twenty-six. Eli is ready to leave, but Jae remains aft because the temporary bypass will fail violently if simply abandoned under load. Rhea goes back instead of ordering him to solve it alone.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — At Good Measure's lock, Eli checks the physical count board: twenty-six evacuees transferred. One name remains."
+      },
+      {
+        "text": "Panel 2 — He and Rhea look down the empty corridor toward engineering. A warning vibration shakes frost from the wall."
+      },
+      {
+        "text": "Panel 3 — Jae is still at the bypass, now preparing to isolate the failing loop before he leaves."
+      },
+      {
+        "text": "Panel 4 — Rhea returns to him and kneels at the second valve. She does not argue about whether the shutdown is necessary; she asks how to do it safely."
+      },
+      {
+        "text": "Panel 5 — Eli waits at the lock despite the clock, refusing to become the twenty-seventh until Jae and Rhea return."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "Twenty-six.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Where is twenty-seven?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "If I walk now, the bypass tears itself open.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Tell me which valve.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Red handle, then the wheel. Not together.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "I'm not leaving them.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P13",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "Cut Loose",
+    "setting": "corridorRescueZone",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_eli_varek",
+      "C_rfav_jae_torren",
+      "C_rfav_devika_arlen"
+    ],
+    "summary": "Jae and Rhea complete the shutdown, but the freighter's internal power collapses as they reach the lock. The cold-storage feed cannot remain attached when Rescue Two departs. Everyone survives; Good Measure and much of what it carried must be left behind.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Rhea and Jae close the isolation sequence together. The temporary bypass stops hammering; half the freighter's lights go dark."
+      },
+      {
+        "text": "Panel 2 — The three remaining people — Rhea, Jae and Eli — cross the tethers in quick succession while Good Measure's exterior lights flicker."
+      },
+      {
+        "text": "Panel 3 — Exterior close. A technician disconnects the temporary power umbilical from Good Measure. The cold-storage indicator on Rhea's wrist immediately begins falling."
+      },
+      {
+        "text": "Panel 4 — Rescue Two reels in the last tether. Good Measure continues drifting, now empty, with a red emergency hazard beacon attached by the rescue crew."
+      },
+      {
+        "text": "Panel 5 — Jae watches his ship recede through the cutter window. Rhea sits beside him, equally exhausted, without offering a slogan."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "Calder, if you disconnect, the cold hold has minutes.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "I know.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Two seasons.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "Jae—",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "I know what we saved.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P14",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "Nineteen Minutes",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_devika_arlen",
+      "C_rfav_mira_dace"
+    ],
+    "summary": "With all twenty-seven aboard, Aegis Vigil accelerates after the convoy. The rescue consumed nineteen minutes, leaving almost no margin before Beacon Seven's forecast verification lapse.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Rescue Two locks into Aegis Vigil's hangar while the heavy cruiser is already rotating back toward the route."
+      },
+      {
+        "text": "Panel 2 — Bridge. Tern recomputes intercept with the convoy; the old nine-minute cushion is gone."
+      },
+      {
+        "text": "Panel 3 — Engineering insert. Arlen watches propulsion temperatures rise as the cruiser accelerates hard but keeps them inside rated limits."
+      },
+      {
+        "text": "Panel 4 — Mira appears on comms. The convoy is several beacons ahead, stretched but intact."
+      },
+      {
+        "text": "Panel 5 — Exterior. Aegis Vigil drives down the green beacon line after the distant civilian formation."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Twenty-seven aboard. Rescue time: nineteen minutes.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "We can catch the rear before Seven. Barely.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "You can have this acceleration for twelve minutes. Not thirteen.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "We are still moving.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "So are we.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P15",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "Not Done",
+    "setting": "wayfarerNineBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_mira_dace",
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern"
+    ],
+    "summary": "Before Aegis Vigil can rejoin, Mira reports that Fieldglass, the oldest agricultural carrier, is overheating and falling off the back of the convoy. The rescue did not create one problem; it consumed the margin that normally absorbs the next problem.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wayfarer Nine's route board shows Fieldglass slipping behind the other seven civilian ships."
+      },
+      {
+        "text": "Panel 2 — Mira listens to its engineering report while checking the shrinking time to Beacon Seven."
+      },
+      {
+        "text": "Panel 3 — On Aegis Vigil, Greer adds Fieldglass to the intercept. The line now shows Aegis Vigil catching the failing carrier before it catches the convoy."
+      },
+      {
+        "text": "Panel 4 — Tern marks Beacon Seven ahead, still GREEN but much closer to its forecast lapse."
+      },
+      {
+        "text": "Panel 5 — Kade looks at Fieldglass on the plot, then at the rest of the convoy. The same dilemma has returned with less time."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Fieldglass is losing drive temperature margin.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "How much speed?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Enough to become your problem first.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "Beacon Seven still green. Forecast lapse in eleven.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "What is Fieldglass carrying that it can lose?",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P16",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "The Slowest Ship",
+    "setting": "aegisVigilBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "vergeCivicTraffic"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_mira_dace",
+      "C_rfav_devika_arlen",
+      "C_rfav_jonah_tern"
+    ],
+    "summary": "Kade refuses both easy extremes: she will not abandon Fieldglass and will not stop the whole convoy without first reducing the carrier's load. Mira and Greer identify expendable freight; Arlen calculates how much mass must go for Fieldglass to regain acceleration.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Aegis Vigil catches Fieldglass from behind. The agricultural carrier's engines are visibly uneven but still functioning."
+      },
+      {
+        "text": "Panel 2 — Bridge conference across working displays: Kade, Greer, Arlen and Mira compare Fieldglass's cargo manifest with required acceleration."
+      },
+      {
+        "text": "Panel 3 — Greer highlights three categories: water-system parts, produce modules, and dense replacement machine housings."
+      },
+      {
+        "text": "Panel 4 — Arlen writes a mass target beside the machine housings and several lower-priority freight pallets."
+      },
+      {
+        "text": "Panel 5 — Mira makes the civilian call to dump the selected cargo. Kade does not take that authority from her."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "If we stop everybody, Seven goes red before the rear clears.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Then we do not stop everybody. What can Fieldglass lose?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "Twenty-eight tons gets their acceleration back inside margin.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Not the water parts. Not the food.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Machine housings and deadweight pallets make thirty-one.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Fieldglass, dump thirty-one. My authority.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P17",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "title": "What Can Be Lost",
+    "setting": "fieldglassCargoDeck",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_mira_dace",
+      "C_rfav_devika_arlen",
+      "C_rfav_imani_kade"
+    ],
+    "summary": "Fieldglass crews physically jettison valuable machine housings and selected freight while Aegis Vigil matches speed beside them. The solution works because people accept a real material loss; protection does not mean preserving everything.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Fieldglass cargo crew unlock heavy replacement housings from floor restraints and move them toward a freight ejector. Show labor, forklifts and caution, not explosive spectacle."
+      },
+      {
+        "text": "Panel 2 — Exterior. Pallets leave Fieldglass on controlled low-speed trajectories away from the beacon line, tagged as hazards rather than sprayed randomly."
+      },
+      {
+        "text": "Panel 3 — Arlen watches Fieldglass's mass and propulsion temperatures change on Aegis Vigil's engineering display."
+      },
+      {
+        "text": "Panel 4 — The carrier's acceleration begins climbing. Aegis Vigil holds position on its exposed side while the rest of the convoy remains ahead."
+      },
+      {
+        "text": "Panel 5 — Mira sees the numbers improve but also sees the lost freight value accumulating on her manifest."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.arlen",
+        "speaker": "Arlen",
+        "text": "Twenty-two tons. Keep going.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Those housings were six months late already.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "I know.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "No, you know the number. I know who ordered them.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Then remember who made the choice.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "I will.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P18",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "title": "Green",
+    "setting": "aegisVigilExterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern",
+      "C_rfav_mira_dace"
+    ],
+    "summary": "Fieldglass regains enough acceleration to re-form at the rear. The entire convoy drives toward Beacon Seven while its verification margin counts down. Aegis Vigil does not surge ahead; it takes the final position behind the slowest ship.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — LARGE exterior. The eight civilian ships converge toward Beacon Seven, glowing GREEN ahead. Fieldglass is last among them; Aegis Vigil is last of all."
+      },
+      {
+        "text": "Panel 2 — Bridge. Tern calls distance and verification time. Keep the data simple and legible."
+      },
+      {
+        "text": "Panel 3 — Wayfarer Nine bridge. Mira watches the same green beacon and refuses to increase spacing beyond what Fieldglass can hold."
+      },
+      {
+        "text": "Panel 4 — Greer suggests Aegis Vigil could clear early at full acceleration. Kade stays behind Fieldglass."
+      },
+      {
+        "text": "Panel 5 — Exterior close: Fieldglass passes beneath/alongside the green beacon marker with Aegis Vigil still just behind it."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "Seven remains green. Three minutes to forecast lapse.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "We can clear in ninety seconds if we pass them.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Fieldglass clears first.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Convoy lead to rear. We see you.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Keep looking forward.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P19",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "title": "Clear",
+    "setting": "aegisVigilExterior",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_jonah_tern"
+    ],
+    "summary": "Fieldglass clears Beacon Seven, followed by Aegis Vigil. Only after the entire formation is through does the beacon behind them turn red as its sensors can no longer verify the route state.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Fieldglass crosses the Beacon Seven reference plane. The beacon remains GREEN."
+      },
+      {
+        "text": "Panel 2 — Aegis Vigil follows, the last ship in the formation. Tern watches the safe-volume trace rather than the clock."
+      },
+      {
+        "text": "Panel 3 — Bridge. The display marks all eight civilian ships and Aegis Vigil beyond the beacon reference."
+      },
+      {
+        "text": "Panel 4 — Exterior looking back. Beacon Seven changes from GREEN to RED behind the convoy after the last ship has cleared. Do not show yellow."
+      },
+      {
+        "text": "Panel 5 — No celebration shot. Kade sits back once, Greer closes the emergency intercept layer, and Tern starts checking the next beacon."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "Fieldglass clear.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Vigil clear.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "Seven just went red.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Ahead state?",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.tern",
+        "speaker": "Tern",
+        "text": "Green.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Keep the line.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P20",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "title": "The Bill",
+    "setting": "wayfarerNineBridge",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "civilianConvoys",
+      "vergeCivicTraffic",
+      "rexFleet"
+    ],
+    "characters": [
+      "C_rfav_mira_dace",
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer"
+    ],
+    "summary": "After the immediate danger passes, Mira makes Kade account for the material consequences: lost cargo, consumed fuel, spoiled produce margin and a delayed arrival slot. Kade does not convert survival into a claim that the cost no longer matters.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wayfarer Nine bridge. Mira's screen lists the practical consequences: dumped freight, additional drive fuel, reduced cold-hold margin, shifted berth arrival."
+      },
+      {
+        "text": "Panel 2 — Kade appears on her comm window from Aegis Vigil. Greer stands nearby with the same cost list."
+      },
+      {
+        "text": "Panel 3 — Mira points to the lost machine housings and late cold cargo rather than offering thanks."
+      },
+      {
+        "text": "Panel 4 — Kade accepts the report without defending the decision or calling the losses trivial."
+      },
+      {
+        "text": "Panel 5 — Mira sends the damage-and-delay file. Greer receives it on Aegis Vigil."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Thirty-one tons gone. Cold margin down six hours. We miss our original berth.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Send the costs.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "I am not asking permission to be angry about them.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "I did not hear a request.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "File received.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.dace",
+        "speaker": "Mira",
+        "text": "Good. Now keep us on time from here.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P21",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P23",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 23,
+    "title": "A Ship Is a Long Time",
+    "setting": "aegisVigilMess",
+    "region": "vergeConvoyRoutes",
+    "factions": [
+      "rexFleet",
+      "civilianConvoys",
+      "vergeCivicTraffic"
+    ],
+    "characters": [
+      "C_rfav_rhea_calder",
+      "C_rfav_jae_torren",
+      "C_rfav_eli_varek",
+      "C_rfav_safiya_menon"
+    ],
+    "summary": "The rescued Good Measure crew eat in Aegis Vigil's mess while Menon checks injuries. Jae grieves the freighter and its cargo without being told that a ship is replaceable. Rhea acknowledges what was lost and what the old vessel accomplished.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Aegis Vigil mess deck. Good Measure survivors sit among off-duty Fleet crew with borrowed blankets, food trays and medical tags. The room is busy but ordinary."
+      },
+      {
+        "text": "Panel 2 — Menon checks Eli's bruised head while he tries to complete a loss report on a borrowed slate."
+      },
+      {
+        "text": "Panel 3 — Jae sits with his old tool harness on the bench beside him, staring at a small schematic of Good Measure rather than eating."
+      },
+      {
+        "text": "Panel 4 — Rhea sits opposite him with two mugs. She does not say the ship was only metal."
+      },
+      {
+        "text": "Panel 5 — Jae finally takes the mug. Around them, survivors begin sorting where they will berth for the rest of the voyage."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "Eli, stop doing paperwork while I am checking your pupils.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.varek",
+        "speaker": "Eli",
+        "text": "I can do both.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.menon",
+        "speaker": "Menon",
+        "text": "You are currently proving otherwise.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "Thirty-four years in that hull.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "Long time.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.torren",
+        "speaker": "Jae",
+        "text": "She deserved better than drifting red.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.calder",
+        "speaker": "Rhea",
+        "text": "She got twenty-seven people to the lock.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P22",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  },
+  {
+    "id": "RF_AV_I01_P24",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 24,
+    "title": "The Slowest One",
+    "setting": "aegisVigilHangar",
+    "region": "coreAegisLogistics",
+    "factions": [
+      "rexFleet",
+      "aegisCrown",
+      "civilianConvoys"
+    ],
+    "characters": [
+      "C_rfav_imani_kade",
+      "C_rfav_tomas_greer",
+      "C_rfav_rhea_calder",
+      "C_rfav_devika_arlen"
+    ],
+    "summary": "After arrival, the crew reloads rescue equipment instead of posing for recognition. Greer brings Kade the next convoy manifest. She immediately asks which ship is slowest and places it where Aegis Vigil can reach it, establishing the continuing series engine.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Wide hangar after docking. Crew replace used tether cartridges, inspect Rescue Two, reload medical modules and coil new power umbilicals. The work of the previous issue is visibly being reset."
+      },
+      {
+        "text": "Panel 2 — Rhea signs off a damaged harness; Arlen's technicians replace the overheated cable connector used on Good Measure."
+      },
+      {
+        "text": "Panel 3 — Greer walks beside Kade through the active deck carrying a fresh convoy manifest rather than an award or debrief plaque."
+      },
+      {
+        "text": "Panel 4 — Insert on the manifest: thirteen civilian ships, with propulsion margins and special loads. No need for extensive readable prose."
+      },
+      {
+        "text": "Panel 5 — Final wide. Kade and Greer walk toward Aegis Vigil's open internal corridor while work continues around them. The ship is readying to leave again."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Next one is thirteen ships. Two old drives and a medical barge.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Which is slowest?",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Hearthline Six.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Put it where we can reach it.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.greer",
+        "speaker": "Greer",
+        "text": "Departure is 0600.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@aegis.kade",
+        "speaker": "Kade",
+        "text": "Then load now.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RF_AV_I01_P23",
+    "direction": [
+      "aegisStory",
+      "rescueProcedural",
+      "civilianScale",
+      "aegisVigilIdentity",
+      "combatRestraint"
+    ]
+  }
+]
