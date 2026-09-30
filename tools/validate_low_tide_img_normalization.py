@@ -331,7 +331,7 @@ def validate_editorial_pages() -> None:
             assert setting in settings, f"{pid}: unknown setting {setting}"
         region = page.get("region")
         if region:
-            assert region in regions, f"{pid}: unknown region {region}")
+            assert region in regions, f"{pid}: unknown region {region}"
 
 
 def validate_show_registration() -> None:
