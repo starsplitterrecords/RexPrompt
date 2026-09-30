@@ -72,6 +72,36 @@
     "generationLine": "Finished full-color portrait interior comic page for Shattering of the Corridors. Prestige political science-fiction origin story with human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve established character identity, corridor technology, causal action, and exact scripted dialogue. Shattering predates the mature Rex Fleet political order: Issues 1–4 use High Era Cooperative, BHA, Convoy, and Outer Band design; Issues 5–6 may visibly foreshadow later Core/Fleet, Verge, and Shard traditions without copying their mature uniforms or institutions wholesale. The shared safety sigil is a common ancestor later interpreted differently, not three unrelated symbols. Use approved Shattering visual references when available and preserve released Rex Fleet continuity only where chronologically applicable. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details."
   },
   {
+    "id": "rex-fleet-academy-anomalies-i01",
+    "name": "Rex Fleet Academy: Anomalies of Broken Space — Issue 1 — What Is Broken Space?",
+    "seriesId": "rex-fleet-academy-anomalies",
+    "seriesName": "Rex Fleet Academy: Anomalies of Broken Space",
+    "issueLabel": "Issue 1 — What Is Broken Space?",
+    "basePath": "data/shows/rex-fleet-academy-anomalies",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "includeIdPattern": "^RFAA_ABS_I01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Rex Fleet Academy: Anomalies of Broken Space. Prestige educational science-fiction drama inside the established Rex Fleet universe: mature Fleet Academy blue/gold/ion-white design, natural young-adult acting, rigorous physically grounded anomaly visualization, clear sequential storytelling, and professional integrated lettering. Treat Lattice phenomena as objective measurable physics, not magic, mysticism, dream imagery, or generic psychedelic abstraction. Preserve exact scripted dialogue, recurring character identity, Academy geography, simulation state, and the distinction between ordinary local physics and damaged geometric relationships. Use established mature Rex Fleet visual canon for Fleet uniforms and infrastructure where applicable. Interior story page only—no cover, dossier, textbook infographic, character labels, or promotional framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details."
+  },
+  {
+    "id": "rfa-reach-resolve-i01",
+    "name": "Rex Fleet Academy: Reach and Resolve — Issue 1 — The Two Failures",
+    "seriesId": "rfa-reach-resolve",
+    "seriesName": "Rex Fleet Academy: Reach and Resolve",
+    "issueLabel": "Issue 1 — The Two Failures",
+    "basePath": "data/shows/rfa-reach-resolve",
+    "scenesFile": "pages_i01.json",
+    "includeIdPattern": "^RFA_RR_I01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Reach and Resolve. Prestige instructional political science fiction with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Academy framing must function as drama rather than textbook exposition; historical case studies are lived scenes with practical consequences. Preserve established Rex Fleet and Shattering continuity where referenced, especially early post-Break technology and character identity. Do not import mature faction design into early historical sequences. Preserve exact scripted dialogue and render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "formatNote": "Academy doctrine/history series. Issue 1 is production-authoritative; future planned issues remain unregistered until their page recipes exist."
+  },
+  {
     "id": "rex-fleet-i02",
     "name": "Rex Fleet — Issue 2",
     "seriesId": "rex-fleet",
@@ -291,36 +321,84 @@
     "scenesFile": "scenes_base.json",
     "sceneOverlays": [
       {
+        "file": "editorial_e01_open.json"
+      },
+      {
         "file": "encoded/scenes_e01_oxidizer_gap_rebuilt.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e01_close.json"
+      },
+      {
+        "file": "editorial_e02_open.json"
       },
       {
         "file": "encoded/scenes_e02_copper_lattice_rebuilt.json.gzb64",
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_e02_close.json"
+      },
+      {
+        "file": "editorial_e03_open.json"
+      },
+      {
         "file": "encoded/scenes_e03_public_sky.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e03_close.json"
+      },
+      {
+        "file": "editorial_e04_open.json"
       },
       {
         "file": "encoded/scenes_e04_trip_point.json.gzb64",
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_e04_close.json"
+      },
+      {
+        "file": "editorial_e05_open.json"
+      },
+      {
         "file": "encoded/scenes_e05_reserve_margin.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e05_close.json"
+      },
+      {
+        "file": "editorial_e06_open.json"
       },
       {
         "file": "encoded/scenes_e06_ground_loop.json.gzb64",
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_e06_close.json"
+      },
+      {
+        "file": "editorial_e07_open.json"
+      },
+      {
         "file": "encoded/scenes_e07_ablative_armor.json.gzb64",
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_e07_close.json"
+      },
+      {
+        "file": "editorial_e08_open.json"
+      },
+      {
         "file": "encoded/scenes_e08_sky_piercer.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e08_close.json"
       }
     ],
     "unitLabel": "PAGE",
@@ -335,6 +413,10 @@
     "generationLine": "Single full-color portrait comic page. Modern prestige comic-book art, clean professional integrated lettering, cinematic composition, glossy contemporary marine-park finish. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "encoded/editorial_e01_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
         "file": "encoded/pages_e01_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
       },
@@ -348,6 +430,10 @@
       },
       {
         "file": "encoded/pages_e01_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e01_outro.json.gzb64",
         "encoding": "gzip-base64"
       }
     ]
@@ -361,6 +447,9 @@
     "generationLine": "Finished full-color portrait comic page. Source-locked sequential art from Stardust Station Issue #1. Preserve exact panel count, panel order, character continuity and exact lettering. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e01_intro.json"
+      },
+      {
         "file": "encoded/pages_e01_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
       },
@@ -375,6 +464,9 @@
       {
         "file": "encoded/pages_e01_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e01_teaser.json"
       }
     ]
   },
@@ -386,6 +478,9 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
+      {
+        "file": "editorial/pages_e02_intro.json"
+      },
       {
         "file": "encoded/pages_e02_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
@@ -401,6 +496,9 @@
       {
         "file": "encoded/pages_e02_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e02_teaser.json"
       }
     ]
   },
@@ -412,6 +510,9 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
+      {
+        "file": "editorial/pages_e03_intro.json"
+      },
       {
         "file": "encoded/pages_e03_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
@@ -427,6 +528,9 @@
       {
         "file": "encoded/pages_e03_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e03_teaser.json"
       }
     ]
   },
@@ -439,7 +543,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e04_intro.json"
+      },
+      {
         "file": "pages_e04.json"
+      },
+      {
+        "file": "editorial/pages_e04_teaser.json"
       }
     ]
   },
@@ -452,7 +562,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e05_intro.json"
+      },
+      {
         "file": "pages_e05.json"
+      },
+      {
+        "file": "editorial/pages_e05_teaser.json"
       }
     ]
   },
@@ -465,7 +581,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e06_intro.json"
+      },
+      {
         "file": "pages_e06.json"
+      },
+      {
+        "file": "editorial/pages_e06_teaser.json"
       }
     ]
   },
@@ -478,7 +600,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e07_intro.json"
+      },
+      {
         "file": "pages_e07.json"
+      },
+      {
+        "file": "editorial/pages_e07_teaser.json"
       }
     ]
   },
@@ -491,7 +619,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e08_intro.json"
+      },
+      {
         "file": "pages_e08.json"
+      },
+      {
+        "file": "editorial/pages_e08_teaser.json"
       }
     ]
   },
@@ -504,7 +638,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e09_intro.json"
+      },
+      {
         "file": "pages_e09.json"
+      },
+      {
+        "file": "editorial/pages_e09_teaser.json"
       }
     ]
   },
@@ -517,7 +657,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e10_intro.json"
+      },
+      {
         "file": "pages_e10.json"
+      },
+      {
+        "file": "editorial/pages_e10_outro.json"
       }
     ]
   },
@@ -529,6 +675,10 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Azure Reach. Bright, polished, extremely high-end contemporary marine-park visual language with luminous water, elegant glass-and-stone architecture, credible animal habitats, natural character acting, cinematic sequential composition, and clean professional integrated lettering. Use released Azure Reach Issue 1 as strict visual canon for established character identity and rendering language. Preserve scripted panel count, panel order, setting, physical geography, animal behavior, continuity, and exact lettering. Interior story page only; no cover, promotional, dossier, or infographic framing unless explicitly scripted. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
+      {
+        "file": "encoded/editorial_e02_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
       {
         "file": "encoded/pages_e02_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
@@ -543,6 +693,10 @@
       },
       {
         "file": "encoded/pages_e02_p19_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e02_outro.json.gzb64",
         "encoding": "gzip-base64"
       }
     ]
@@ -758,6 +912,10 @@
     "generationLine": "Finished full-color portrait interior story comic page for Azure Reach. Bright, polished, extremely high-end contemporary marine-park visual language with luminous water, elegant glass-and-stone architecture, credible animal habitats, natural character acting, cinematic sequential composition, and clean professional integrated lettering. Use released Azure Reach Issue 1 as strict visual canon for established character identity and rendering language. Preserve scripted panel count, panel order, setting, physical geography, animal behavior, continuity, and exact lettering. Interior story page only; no cover, promotional, dossier, or infographic framing unless explicitly scripted. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "encoded/editorial_e03_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
         "file": "encoded/pages_e03_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
       },
@@ -772,6 +930,10 @@
       {
         "file": "encoded/pages_e03_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e03_outro.json.gzb64",
+        "encoding": "gzip-base64"
       }
     ]
   },
@@ -784,6 +946,10 @@
     "generationLine": "Finished full-color portrait interior story comic page for Azure Reach. Bright, polished, extremely high-end contemporary marine-park visual language with luminous water, elegant glass-and-stone architecture, credible animal habitats, natural character acting, cinematic sequential composition, and clean professional integrated lettering. Use released Azure Reach Issue 1 as strict visual canon for established character identity and rendering language. Preserve scripted panel count, panel order, setting, physical geography, animal behavior, continuity, and exact lettering. Interior story page only; no cover, promotional, dossier, or infographic framing unless explicitly scripted. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "encoded/editorial_e04_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
         "file": "encoded/pages_e04_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
       },
@@ -793,6 +959,10 @@
       },
       {
         "file": "encoded/pages_e04_p13_p22.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e04_outro.json.gzb64",
         "encoding": "gzip-base64"
       }
     ]
@@ -806,7 +976,15 @@
     "generationLine": "Finished full-color portrait interior story comic page for Azure Reach. Bright, polished, extremely high-end contemporary marine-park visual language with luminous water, elegant glass-and-stone architecture, credible animal habitats, natural character acting, cinematic sequential composition, and clean professional integrated lettering. Use released Azure Reach Issue 1 as strict visual canon for established character identity and rendering language. Preserve scripted panel count, panel order, setting, physical geography, animal behavior, continuity, and exact lettering. Interior story page only; no cover, promotional, dossier, or infographic framing unless explicitly scripted. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "encoded/editorial_e05_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
         "file": "encoded/pages_e05.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e05_outro.json.gzb64",
         "encoding": "gzip-base64"
       }
     ]
@@ -820,7 +998,15 @@
     "generationLine": "Finished full-color portrait interior story comic page for Azure Reach. Bright, polished, extremely high-end contemporary marine-park visual language with luminous water, elegant glass-and-stone architecture, credible animal habitats, natural character acting, cinematic sequential composition, and clean professional integrated lettering. Use released Azure Reach Issue 1 as strict visual canon for established character identity and rendering language. Preserve scripted panel count, panel order, setting, physical geography, animal behavior, continuity, and exact lettering. Interior story page only; no cover, promotional, dossier, or infographic framing unless explicitly scripted. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "encoded/editorial_e06_intro.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
         "file": "encoded/pages_e06.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "encoded/editorial_e06_outro.json.gzb64",
         "encoding": "gzip-base64"
       }
     ]
@@ -1118,8 +1304,7 @@
     ],
     "unitLabel": "PAGE",
     "seriesId": "echoes-forgotten-war",
-    "seriesName": "Echoes of a Forgotten War",
-    "generationLine": "Use creative modern panel layouts that highlight the important scene details."
+    "seriesName": "Echoes of a Forgotten War"
   },
   {
     "id": "sunforge-outlaw-s1-e01",
@@ -1312,5 +1497,58 @@
         "file": "pages_e12.json"
       }
     ]
+  },
+  {
+    "id": "rex-fleet-academy-navigating-mirrorfold-i01",
+    "name": "Rex Fleet Academy: Navigating the Mirrorfold — Issue 1 — The First Instrument",
+    "seriesId": "rex-fleet-academy-navigating-mirrorfold",
+    "seriesName": "Rex Fleet Academy: Navigating the Mirrorfold",
+    "issueLabel": "Issue 1 — The First Instrument",
+    "basePath": "data/shows/rex-fleet-academy-navigating-mirrorfold",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "includeIdPattern": "^RFA_NM_I01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Navigating the Mirrorfold. Prestige science-fiction Academy drama grounded in mature Rex Fleet canon, with natural cadet/instructor acting, clear sequential storytelling, rigorous fictional navigation logic, varied page composition, and professional integrated lettering. Instruction must be dramatized through questions, simulations, case logs, field decisions, mistakes, and consequences rather than presented as detached infographic exposition. Mature Fleet visual grammar is blue, gold, and Ion White. Mirrorfold space uses Warp Black depth with Nova Blue, Plasma Violet, and Ion White refractions; public-route beacon green means verified low-tension route state, while red means unsafe, unverified, or sensor failure. Reflections, duplicated figures, echoing signals, and folded corridors must remain spatially coherent enough for the reader to follow the navigational problem. Preserve exact scripted dialogue, established character identity, causal action, panel intent, and Rex Fleet continuity. No generic cyberpunk, mystical magic, random kaleidoscope geometry, or unscripted environmental text. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "formatNote": "Rex Fleet Academy topic-series. Issue length follows the instructional drama rather than a fixed monthly page target; later issues should extend the same cohort and subject without rewriting this issue."
+  },
+  {
+    "id": "rex-fleet-academy-doctrine-many-crowns-i01",
+    "name": "Rex Fleet Academy: Doctrine of Many Crowns — Issue 1",
+    "seriesId": "rex-fleet-academy-doctrine-many-crowns",
+    "seriesName": "Rex Fleet Academy: Doctrine of Many Crowns",
+    "issueLabel": "Issue 1 — Five Answers",
+    "basePath": "data/shows/rex-fleet-academy-doctrine-many-crowns",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Doctrine of Many Crowns. Prestige political science-fiction Academy story with human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Lecture framing must lead into dramatized historical or operational cases rather than static exposition. Preserve released Rex Fleet canon as the mature visual authority. Crown ideology is not a five-color faction code: preserve current Fleet blue/gold/white grammar and distinguish Crowns primarily through crest motifs, materials, ritual objects, and restrained lineage accents. Historical Shattering-era reconstructions predate mature Fleet uniforms and formal Crown standardization; do not copy later designs wholesale. Preserve exact scripted dialogue, source uncertainty, causal action, and the distinction between documented record, later tradition, and Academy reconstruction. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "formatNote": "Variable-length Academy issue; Issue 1 is a 24-page seminar and historical-case story."
+  },
+  {
+    "id": "rex-fleet-academy-core-worlds-i01",
+    "name": "Rex Fleet Academy: The Core Worlds — Issue 1 — Meridian Is Not the Core",
+    "seriesId": "rex-fleet-academy-core-worlds",
+    "seriesName": "Rex Fleet Academy: The Core Worlds",
+    "issueLabel": "Issue 1 — Meridian Is Not the Core",
+    "basePath": "data/shows/rex-fleet-academy-core-worlds",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "includeIdPattern": "^RFA_CW_I01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: The Core Worlds. Prestige educational political science fiction framed through Academy instruction, with lived-in human-scale acting, clear sequential storytelling, concrete civic infrastructure, varied page composition, and professional integrated lettering. Treat the Core as a functioning civilization of many institutions and communities, not a generic utopia, sterile capital, or secret villain. Preserve established Rex Fleet Crown, Meridian, Bastion Spire, Core Spire, and corridor visual canon where applicable. Fleet and Academy identity is blue, gold, and white; verified safe corridors are green; unsafe or held corridors are red. The lecture frame must remain dramatic: students question, choose, disagree, revise, and learn through concrete cases rather than passive exposition. Render only exact scripted dialogue, captions, display text, and story-page elements required by the recipe; do not invent readable environmental text, labels, signage, or logos. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "formatNote": "Rex Fleet Academy topic-series. Issue length follows the instructional drama rather than a fixed monthly page target; later issues should extend the same cohort and subject without rewriting this issue."
   }
 ]

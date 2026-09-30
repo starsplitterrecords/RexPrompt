@@ -135,7 +135,13 @@ for entry in stardust_entries:
         pages.extend(decoded)
 
     assert pages, f"{show_id}: no pages assembled"
-    page_numbers: list[int] = []
+    story_page_numbers: list[int] = []
+
+    issue_match = re.search(r"-e(\d+)$", str(show_id))
+    issue_number = int(issue_match.group(1)) if issue_match else 1
+    assert pages[0].get("editorialRole") == "intro", f"{show_id}: opening editorial missing"
+    expected_closing_role = "outro" if issue_number == 10 else "teaser"
+    assert pages[-1].get("editorialRole") == expected_closing_role, f"{show_id}: closing editorial role drift"
 
     for page in pages:
         assert isinstance(page, dict), f"{show_id}: page payload must be an object"
@@ -145,7 +151,19 @@ for entry in stardust_entries:
         seen_ids.add(page_id)
         all_recipe_ids.add(page_id)
 
-        page_numbers.append(page_number_for(page))
+        editorial_role = page.get("editorialRole")
+        if editorial_role is None:
+            story_page_numbers.append(page_number_for(page))
+        else:
+            assert editorial_role in {"intro", "teaser", "outro"}, f"{page_id}: invalid editorialRole {editorial_role}"
+            assert isinstance(page.get("settingText"), str) and page["settingText"].strip(), f"{page_id}: editorial art direction missing"
+            assert not page.get("continuityFrom"), f"{page_id}: editorial page must not inherit story continuity"
+            editorial_lines = page.get("dialogueInline", [])
+            assert isinstance(editorial_lines, list) and editorial_lines, f"{page_id}: editorial copy missing"
+            for editorial_line in editorial_lines:
+                assert isinstance(editorial_line, dict), f"{page_id}: malformed editorial line"
+                assert editorial_line.get("speaker") == "CAPTION", f"{page_id}: editorial copy must use CAPTION speaker"
+                assert isinstance(editorial_line.get("text"), str) and editorial_line["text"].strip(), f"{page_id}: blank editorial line"
 
         assert isinstance(page.get("summary"), str) and page["summary"].strip(), f"{page_id}: missing summary"
         panel_plan = page.get("panelPlan")
@@ -213,9 +231,10 @@ for entry in stardust_entries:
                     "store it in dialogueInline instead"
                 )
 
-    ordered = sorted(page_numbers)
-    assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate page numbers"
-    assert ordered == list(range(1, max(ordered) + 1)), f"{show_id}: non-contiguous page numbering"
+    assert story_page_numbers, f"{show_id}: no story pages assembled"
+    ordered = sorted(story_page_numbers)
+    assert len(ordered) == len(set(ordered)), f"{show_id}: duplicate story page numbers"
+    assert ordered == list(range(1, max(ordered) + 1)), f"{show_id}: non-contiguous story page numbering"
     page_total += len(pages)
 
 pack = load(REFERENCE_PACK)

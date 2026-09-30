@@ -1,0 +1,1033 @@
+[
+  {
+    "id": "RFA_RR_I01_P01",
+    "summary": "Opening Academy splash introduces Reach and Resolve as a paired doctrine whose familiar wording conceals two different ways a civilization can fail.",
+    "setting": "RRA_Academy_Lecture",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Single full-page opening splash: the doctrine seminar is already in session, with Merin on the floor among four cadets and a broad route map split between connected worlds and isolated settlements.",
+      "Integrate the complete title and opening copy into deliberate negative space without turning the page into a poster detached from the room."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET ACADEMY"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "REACH AND RESOLVE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "ISSUE 1 — THE TWO FAILURES"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Reach outward or be forgotten."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Resolve within or fall."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Every cadet can repeat the words."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "This course is about what happens when the words stop agreeing."
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated opening typography.",
+      "The page must feel like the first moment of a dramatic seminar, not a textbook title card.",
+      "No environmental readable text beyond the supplied copy."
+    ],
+    "sceneId": "RFA_RR_I01_S01"
+  },
+  {
+    "id": "RFA_RR_I01_P02",
+    "summary": "Merin opens by asking which half of the doctrine actually kept civilization alive, baiting the class into the safe answer.",
+    "setting": "RRA_Academy_Lecture",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Wide classroom panel with Merin holding two old physical route tokens, one intact and one deliberately darkened.",
+      "Medium on Oren answering from a carefully prepared slate while Jo glances sideways at him.",
+      "Close on Merin, neither approving nor correcting him."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Which one kept us alive? Reach or Resolve?"
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "Both. That's the approved answer."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "It is."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Now earn it."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S01"
+  },
+  {
+    "id": "RFA_RR_I01_P03",
+    "summary": "The cadets immediately fracture the slogan along regional experience: connection can mean survival, dependence, intrusion, or simply one more clock running out.",
+    "setting": "RRA_Academy_Lecture",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Jo leans forward over the route map and taps an isolated Verge cluster rather than looking at Merin.",
+      "Senn turns the intact route token in one hand while questioning who controls the route.",
+      "Nadi pulls the discussion back to a timing display showing reserves declining.",
+      "Merin watches the disagreement become useful."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.jo.ardin",
+        "text": "Depends where you were."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "Depends who was doing the reaching."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "And how long you had."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Better."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P02",
+    "sceneId": "RFA_RR_I01_S01"
+  },
+  {
+    "id": "RFA_RR_I01_P04",
+    "summary": "Merin moves the class into the archive lab and assigns two linked cases from the first multiworld rescue vessel launched after the Resolve Circle.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Transition into the archive lab as Merin places a battered early-relief route packet on the central table.",
+      "The projection resolves into the unfinished first rescue vessel seen at the end of Shattering, preserving its mismatched construction and unresolved command lineage.",
+      "Two destination lights appear on the route reconstruction: Orison and Varda.",
+      "End on the cadets reading the same mission brief from different sides of the table."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "First rescue vessel out of the Resolve Circle."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "The unnamed prototype."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "At launch, yes."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Same ship. Same week. Opposite mistakes."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S02"
+  },
+  {
+    "id": "RFA_RR_I01_P05",
+    "summary": "The archive reconstruction drops into the prototype's first route, where Ava and Ruben discover that the next two settlements need incompatible kinds of help.",
+    "setting": "RRA_Prototype_Interior",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_ava",
+      "C_ruben"
+    ],
+    "panelPlan": [
+      "Wide inside the prototype: patched consoles, hand-carried route packets, and mixed-origin systems make the ship feel assembled under deadline.",
+      "Ava marks Orison as immediate life-support risk and Varda as dark but transmitting local power stability.",
+      "Ruben opens the cargo inventory and realizes they cannot fully supply both destinations.",
+      "End on the ship turning toward Orison."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Orison is asking for couplers, food, and scrubber media."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "That's three cargos."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Varda is asking for nothing."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "That worries me more."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S03"
+  },
+  {
+    "id": "RFA_RR_I01_P06",
+    "summary": "Orison looks orderly at first glance, but its entire survival model is still waiting for a network that no longer exists.",
+    "setting": "RRA_Orison",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Orison"
+    ],
+    "characters": [
+      "C_mira"
+    ],
+    "panelPlan": [
+      "Establish Orison as a beautiful standardized habitat under visible strain: empty replacement racks, ration queues, and untouched fabrication space.",
+      "Mira checks an arrival board whose expected convoy times have been crossed out by hand again and again.",
+      "A technician presents a failed scrubber module that the habitat was designed to replace rather than rebuild.",
+      "A child carries a food tray past sealed hydroponic bays that were never sized to feed the station."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "The relief convoy is late."
+      },
+      {
+        "speaker": "TECHNICIAN",
+        "text": "There is no relief convoy."
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "Then the next one."
+      },
+      {
+        "speaker": "TECHNICIAN",
+        "text": "Mira."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S04"
+  },
+  {
+    "id": "RFA_RR_I01_P07",
+    "summary": "When the prototype docks, Ruben discovers that Orison's celebrated standardization left almost no local repair authority or raw-material practice.",
+    "setting": "RRA_Orison",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Orison",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_mira",
+      "C_ruben",
+      "C_ava"
+    ],
+    "panelPlan": [
+      "Cargo doors open to residents expecting finished replacement modules.",
+      "Ruben examines the failed scrubber beside an immaculate empty standardized rack.",
+      "Mira points toward the replacement slots as if the missing parts are the whole problem.",
+      "Ruben turns instead toward the dormant fabrication bay."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Who rebuilds these?"
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "Central service."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Here."
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "We don't rebuild them here."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Central is gone."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P06",
+    "sceneId": "RFA_RR_I01_S04"
+  },
+  {
+    "id": "RFA_RR_I01_P08",
+    "summary": "Ava offers Orison both immediate relief and the less welcome cargo of seed stock, machine patterns, and training time.",
+    "setting": "RRA_Orison",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Orison",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_mira",
+      "C_ava",
+      "C_ruben"
+    ],
+    "panelPlan": [
+      "Ava opens one cargo pallet of food and medical consumables; relief is tangible and desperately needed.",
+      "She opens the next pallet to reveal seed stock, raw feed material, and physical fabrication patterns.",
+      "Mira looks from hungry residents to tools that will not solve tonight.",
+      "Ruben starts laying out the failed scrubber for a local repair team rather than taking it back aboard."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Food first."
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "Good."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Then seed stock and machine patterns."
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "We asked for food."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "I'm bringing both."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P07",
+    "sceneId": "RFA_RR_I01_S04"
+  },
+  {
+    "id": "RFA_RR_I01_P09",
+    "summary": "Mira accuses the crew of turning emergency relief into conditions, while Ruben insists that leaving only consumables would recreate the same emergency.",
+    "setting": "RRA_Orison",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Orison",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_mira",
+      "C_ruben",
+      "C_ava"
+    ],
+    "panelPlan": [
+      "Mira blocks a pallet being redirected from finished couplers toward raw fabrication stock.",
+      "Behind her, Orison residents unload food while a local team gathers around Ruben's opened scrubber assembly.",
+      "Ava keeps the manifest visible so the dispute is about finite cargo, not abstract virtue.",
+      "End on Mira looking at the first locally machined replacement piece coming off the dormant fabrication bay."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "You're holding back what we asked for."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "I'm leaving you what we have."
+      },
+      {
+        "handle": "@starsplit.academy.case.mira.cale",
+        "text": "That's not the same thing."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "I'm trying not to come back to the same emergency."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P08",
+    "sceneId": "RFA_RR_I01_S04"
+  },
+  {
+    "id": "RFA_RR_I01_P10",
+    "summary": "Back at the Academy, Jo sees Resolve in the Orison response while Oren objects that relief became coercive the moment outsiders decided what the habitat should become.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "The Orison reconstruction freezes on food unloading beside the first locally fabricated part.",
+      "Jo points to the fabrication bay while Oren points to the withheld finished cargo.",
+      "Senn watches Merin rather than joining either side.",
+      "Merin closes Orison's file and opens Varda's."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.jo.ardin",
+        "text": "That's Resolve."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "That's a relief crew deciding how Orison should live."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "Both can be true."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Good. Case two."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S05"
+  },
+  {
+    "id": "RFA_RR_I01_P11",
+    "summary": "Varda appears to be the success Orison was not: fed, powered, repaired, locally manufactured—and deliberately disconnected.",
+    "setting": "RRA_Varda",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Varda"
+    ],
+    "characters": [
+      "C_eshen"
+    ],
+    "panelPlan": [
+      "Wide establishing view of Varda's productive civic space: food growing, workshops, locally made machinery, and residents moving with practiced self-sufficiency.",
+      "A dark route receiver stands beside a locally built communications mast.",
+      "Eshen signs off on a repaired pump using a hand-kept tolerance book.",
+      "In the far distance, the prototype rescue vessel appears but does not cross the marked landing boundary."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TECHNICIAN",
+        "text": "Offworld ship is holding outside the line."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Good."
+      },
+      {
+        "speaker": "TECHNICIAN",
+        "text": "They're requesting approach."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Decline it."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S06"
+  },
+  {
+    "id": "RFA_RR_I01_P12",
+    "summary": "Ava requests docking only to exchange updated route and engineering data; Eshen refuses because Varda's survival began by stopping trust in external systems.",
+    "setting": "RRA_Varda",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Varda",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_eshen",
+      "C_ava"
+    ],
+    "panelPlan": [
+      "Split the page between Eshen at Varda's physical boundary station and Ava aboard the prototype; neither side is visually dominant.",
+      "Ava keeps the request narrow: data exchange and inspection, no transfer of authority.",
+      "Eshen looks past the comm screen toward graves or a memorial wall built from early corridor-loss names.",
+      "The landing field remains empty."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "We have newer route drift and component tables."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Keep them."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "You don't have to take us."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "We buried everyone who trusted a green light."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S06"
+  },
+  {
+    "id": "RFA_RR_I01_P13",
+    "summary": "The prototype detects a debris migration that will soon narrow Varda's only safe launch volume, but the settlement refuses external navigation authority.",
+    "setting": "RRA_Prototype_Interior",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_EarlyRelief",
+      "F_Varda"
+    ],
+    "characters": [
+      "C_ava",
+      "C_ruben",
+      "C_eshen"
+    ],
+    "panelPlan": [
+      "Ava overlays current drift measurements against Varda's older locally maintained route model.",
+      "Ruben sees the mismatch widening toward the settlement's only launch volume.",
+      "Ava transmits the raw measurements rather than an order.",
+      "Eshen receives the packet but leaves it unopened beside his local route book."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Their safe window is moving."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Tell them."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "I did."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "And?"
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "They said it's their window."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S07"
+  },
+  {
+    "id": "RFA_RR_I01_P14",
+    "summary": "The relief crew considers crossing Varda's boundary to inspect the route receiver, then rejects forced help even as the margin shrinks.",
+    "setting": "RRA_Prototype_Interior",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_EarlyRelief",
+      "F_Varda"
+    ],
+    "characters": [
+      "C_ava",
+      "C_ruben"
+    ],
+    "panelPlan": [
+      "Ruben studies the landing boundary and the dark receiver through the forward view.",
+      "Ava lays the time-to-debris estimate beside the explicit refusal message.",
+      "A small boarding team waits for a decision but never launches.",
+      "End on the prototype holding position outside the line while the clock runs."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "We could be on that receiver in ten minutes."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "They said no."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "They may lose the window."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Then we keep sending the numbers."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P13",
+    "sceneId": "RFA_RR_I01_S07"
+  },
+  {
+    "id": "RFA_RR_I01_P15",
+    "summary": "Varda's locally manufactured pump fails not because local engineering is poor, but because years of isolated measurement drift have moved its tolerances away from the surviving external standard.",
+    "setting": "RRA_Varda_Maintenance",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Varda"
+    ],
+    "characters": [
+      "C_eshen"
+    ],
+    "panelPlan": [
+      "A critical pump begins vibrating violently in the maintenance hall.",
+      "Eshen and local technicians strip it quickly and competently, revealing a replacement bearing that looks correct by their own book.",
+      "A micrometer comparison against an old preserved external gauge reveals accumulated calibration drift.",
+      "Eshen looks toward the unopened external component table on the bench."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TECHNICIAN",
+        "text": "Bearing fits the book."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Check the old gauge."
+      },
+      {
+        "speaker": "TECHNICIAN",
+        "text": "We don't use that scale anymore."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Check it."
+      },
+      {
+        "speaker": "TECHNICIAN",
+        "text": "...We're out."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S08"
+  },
+  {
+    "id": "RFA_RR_I01_P16",
+    "summary": "Varda asks for data rather than rescue; the prototype responds with full repair tables and the route model without demanding docking rights.",
+    "setting": "RRA_Varda",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Varda",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_eshen",
+      "C_ava",
+      "C_ruben"
+    ],
+    "panelPlan": [
+      "Eshen opens the previously rejected packet and sends a short return request from the boundary station.",
+      "Ava receives it aboard the prototype and immediately expands the transfer to include raw measurements and provenance.",
+      "Ruben adds field notes explaining which tolerances can safely vary and which cannot.",
+      "No shuttle launches; the exchange happens across the boundary."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Send the component table."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Sending the table and the raw measurements."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "No inspection team."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "No inspection team."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "I'm adding failure limits. Don't ignore those."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S09"
+  },
+  {
+    "id": "RFA_RR_I01_P17",
+    "summary": "After repairing the pump and correcting its launch model, Varda sends back a locally developed repair method the prototype does not have, turning one-way assistance into exchange.",
+    "setting": "RRA_Varda_Maintenance",
+    "region": "EarlyPostBreak",
+    "factions": [
+      "F_Varda",
+      "F_EarlyRelief"
+    ],
+    "characters": [
+      "C_eshen",
+      "C_ruben",
+      "C_ava"
+    ],
+    "panelPlan": [
+      "Varda machines a corrected bearing using the external tolerance reference while retaining its own local fabrication method.",
+      "The pump returns to stable operation.",
+      "Eshen records a Varda field repair for a casing fracture that the prototype's standardized table marks only as replace.",
+      "Ava receives the return packet aboard the ship; Ruben smiles despite himself."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Your table says replace the casing."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "If you can get one."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "We don't."
+      },
+      {
+        "handle": "@starsplit.academy.case.eshen.varr",
+        "text": "Sending you what we do instead."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Now we're talking."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S09"
+  },
+  {
+    "id": "RFA_RR_I01_P18",
+    "summary": "The Academy returns to the paired cases, where Senn identifies the Varda exchange as Reach without physical entry or political incorporation.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "The two case projections sit side by side: Orison's reopened fabrication bay and Varda's still-empty landing field.",
+      "Senn stands between them rather than on either side.",
+      "Oren studies the dark Varda landing field with visible surprise.",
+      "Merin lets Senn state the point."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "They reached Varda without entering it."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "And Varda reached back."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "So Reach isn't Fleet presence."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Correct."
+      }
+    ],
+    "sceneId": "RFA_RR_I01_S10"
+  },
+  {
+    "id": "RFA_RR_I01_P19",
+    "summary": "Merin names the paired failure plainly: Orison had connection without independent capacity; Varda had capacity without exchange.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Merin places the intact route token over Orison and the dark token over Varda.",
+      "Jo moves the tokens away from a simple left-right opposition and overlaps them at the center of the map.",
+      "Nadi brings up survival timelines showing both settlements approaching failure for different reasons.",
+      "End on Oren realizing neither case is the 'good' example."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Orison had Reach without Resolve."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Varda had Resolve without Reach."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "They both survived."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "Barely."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P18",
+    "sceneId": "RFA_RR_I01_S10"
+  },
+  {
+    "id": "RFA_RR_I01_P20",
+    "summary": "The class argues over whether aid may ever carry requirements and whether refusal remains sovereign when delay threatens lives.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Jo points to Orison's consumption curve and argues that unrestricted relief would have repeated the dependency.",
+      "Senn points to Varda's boundary and argues that survival does not erase consent.",
+      "Nadi puts the debris clock between them.",
+      "Merin refuses to settle the dispute for them."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.jo.ardin",
+        "text": "If you keep bringing finished parts, they never build the shop."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "If you force the shop on them, it's not theirs."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "If the pump fails tonight, none of that matters."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Now you're in the course."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P19",
+    "sceneId": "RFA_RR_I01_S10"
+  },
+  {
+    "id": "RFA_RR_I01_P21",
+    "summary": "Merin removes the historical answer and turns the cases into a live simulation: one ship, two settlements, insufficient cargo, one refusal to land.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Historical projections collapse into a neutral simulation with altered names and no visible outcome.",
+      "A cargo inventory appears physically limited: food, medical media, raw feed stock, one fabrication head, and one navigation packet.",
+      "One simulated settlement requests everything; the other refuses landing but faces a moving route hazard.",
+      "Merin steps back and starts the clock."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "No archive now."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "How long?"
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Forty-seven minutes to the first route loss."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "Cargo?"
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Not enough."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P20",
+    "sceneId": "RFA_RR_I01_S11"
+  },
+  {
+    "id": "RFA_RR_I01_P22",
+    "summary": "The cadets assemble a compromise that separates help from obedience: immediate consumables, local-production tools, raw data to the refusing settlement, and transparent handoffs rather than jurisdictional conditions.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Oren allocates emergency consumables while Jo redirects part of the cargo to the fabrication head and raw feed stock.",
+      "Senn creates a neutral unmanned transfer point outside the refusing settlement's boundary.",
+      "Nadi transmits raw route measurements with confidence bands rather than a command course.",
+      "The four cadets realize their plan still depends on the corridor remaining usable long enough for another contact."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "Food and scrubber media now."
+      },
+      {
+        "handle": "@starsplit.academy.jo.ardin",
+        "text": "And the fabrication head. Not all finished parts."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "No forced landing. Put the transfer outside their line."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "Send the route data raw. Let them choose the course."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "Good."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P21",
+    "sceneId": "RFA_RR_I01_S11"
+  },
+  {
+    "id": "RFA_RR_I01_P23",
+    "summary": "Merin changes one assumption after the cadets think they have solved the exercise: the corridor may never reopen, forcing them to define the purpose of connection and self-sufficiency together.",
+    "setting": "RRA_Academy_ArchiveLab",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin",
+      "C_oren",
+      "C_jo",
+      "C_senn",
+      "C_nadi"
+    ],
+    "panelPlan": [
+      "Merin removes the future-resupply line from the simulation with one quiet gesture.",
+      "The cadets' carefully balanced plan suddenly shows a permanent break rather than a delay.",
+      "Nadi looks at the local-production package; Senn looks at the still-open communications channel.",
+      "End on the two route tokens from the first page now sitting together in the center of the table."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "New information."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "The corridor may never reopen."
+      },
+      {
+        "handle": "@starsplit.academy.oren.pell",
+        "text": "That changes everything."
+      },
+      {
+        "handle": "@starsplit.academy.nadi.voss",
+        "text": "Then we leave them something that works without us."
+      },
+      {
+        "handle": "@starsplit.academy.senn.tal",
+        "text": "And something that lets them call us anyway."
+      },
+      {
+        "handle": "@starsplit.academy.talia.merin",
+        "text": "That's the beginning."
+      }
+    ],
+    "continuityFrom": "RFA_RR_I01_P22",
+    "sceneId": "RFA_RR_I01_S11"
+  },
+  {
+    "id": "RFA_RR_I01_P24",
+    "summary": "Closing teaser turns from survival after disconnection to the opposite danger: what happens when reconnection begins reshaping the people being connected.",
+    "setting": "RRA_Academy_Lecture",
+    "region": "AcademyCore",
+    "factions": [
+      "F_Academy"
+    ],
+    "characters": [
+      "C_merin"
+    ],
+    "panelPlan": [
+      "Single full-page closing image: a modern green corridor opens between a polished Core docking standard and a smaller locally built port whose old hardware is already being removed for compatibility.",
+      "Merin appears only as a small figure observing the case image from the darkened Academy floor.",
+      "Reserve clean space for the exact teaser copy."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT: THE COST OF CONNECTION"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Reach can reopen a world."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It can also begin deciding the shape of the world it connects."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Rex Fleet Academy: Reach and Resolve — Issue 2"
+      }
+    ],
+    "directionInline": [
+      "Treat CAPTION entries as exact integrated teaser typography.",
+      "Do not depict the Core standard as obviously villainous or the local port as obviously superior; the tension is interoperability versus autonomy.",
+      "No incidental readable environmental text."
+    ],
+    "sceneId": "RFA_RR_I01_TEASER"
+  }
+]

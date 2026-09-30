@@ -1,0 +1,1254 @@
+[
+  {
+    "id": "RFAA_ABS_I01_P01",
+    "summary": "Jia opens the anomaly block by stripping away notes and asking the cadets for a definition none of them has actually had to defend.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Wide establishing panel: Fleet Academy reciprocal-field lecture lab at Bastion Spire Anchorage, active traffic visible through the observation window while a clean green corridor model hangs above the central geometry table. Jia stands at the table; the four cadets are at nearby workstations, close enough to talk naturally.",
+      "Medium on Jia closing the shared lesson display with one deliberate gesture. The cadets' personal slates go blank at the same time.",
+      "Reaction strip across the four cadets: Talia is attentive, Jonah mildly suspicious, Jori already checking whether the system actually locked them out, Amel waiting for the task.",
+      "Tight final panel on Jia beside the now-empty geometry table as she asks the question."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "All right. No notes."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "That's usually bad."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "What is broken space?"
+      }
+    ],
+    "directionInline": [
+      "The Academy should feel like a working technical institution inside the mature Rex Fleet era, not a ceremonial temple and not a contemporary Earth classroom.",
+      "Keep the opening visually calm and orderly. The question should disrupt certainty, not the environment."
+    ],
+    "sceneId": "RFAA_ABS_I01_S01"
+  },
+  {
+    "id": "RFAA_ABS_I01_P02",
+    "summary": "The cadets answer from their specialties, revealing four different assumptions about what an anomaly actually is.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jonah answers first, gesturing toward the window and the corridor traffic beyond it as if the problem is obvious.",
+      "Talia turns toward him with a navigator's impatience; her blank slate is still in her hand.",
+      "Jori half-raises a diagnostic tool from habit, treating the disagreement as a possible hardware problem.",
+      "Amel looks to Jia rather than joining the specialist argument, asking what kind of answer the decision-maker is actually supposed to need.",
+      "Jia lets the disagreement sit for a beat instead of correcting anyone."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P01",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Where the instruments stop agreeing with what you can see."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "That's a sensor problem, not a definition."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Sometimes it's a sensor problem."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Operational definition or physics?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Good. You're already arguing with the question."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S01"
+  },
+  {
+    "id": "RFAA_ABS_I01_P03",
+    "summary": "Rather than lecture, Jia assigns the four cadets to an archival survey reconstruction and makes Amel responsible for the crew's decisions.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "The central geometry table folds open into four simulator stations while the room darkens only enough to shift attention; this is advanced Academy equipment, not magical transformation.",
+      "Jia assigns stations with quick pointing gestures: Jonah forward pilot, Talia navigation, Jori systems, Amel command.",
+      "Amel pauses at the command seat, registering that the exercise gives him authority over classmates who know more than he does in their specialties.",
+      "Jonah drops into the pilot seat and pulls on his training gloves with visible relief at finally getting something physical to do.",
+      "The simulator canopy closes around the four cadets while Jia remains outside the reconstruction."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P02",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Four seats. One recorded survey problem."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Who's in command?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You are."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "If we break the ship, class ends early?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You won't."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S01"
+  },
+  {
+    "id": "RFAA_ABS_I01_P04",
+    "summary": "The reconstruction drops the cadets into a routine survey of Calm Eddy Forty-Seven's charted boundary, where the safe pocket is supposed to end exactly where the map says.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Full-width transition into the immersive survey-skiff reconstruction: compact cockpit, sparse anchor beacons ahead, stable-looking stars, and one verified green safe marker at Calm Eddy Forty-Seven.",
+      "A small integrated training display presents the exact scripted system text without turning the page into an infographic.",
+      "Amel checks the mission card while Jonah settles the simulated craft into a slow survey hold.",
+      "Talia and Jori bring navigation and sensor feeds online; everything initially looks clean and professional."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "TRAINING RECONSTRUCTION — CASE 47-DELTA"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Recorded conditions. Original crew data. No answer key."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Mission?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Confirm Eddy Forty-Seven's boundary is still where the chart says."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Simple."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "That's what they logged."
+      }
+    ],
+    "directionInline": [
+      "Jia is heard over the simulator comm on this page; do not place her physically inside the survey skiff.",
+      "The anomaly has not become visually spectacular. At first the exterior must look almost disappointingly normal.",
+      "The verified calm eddy remains the coherent safe reference. The survey begins at its charted edge; severe metric behavior belongs to the damaged space beyond a boundary that has shifted."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P05",
+    "summary": "The first anomaly is tiny but concrete: optical and reciprocal-phase ranging give different distances to the same beacon.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Talia tags the primary survey beacon on her navigation display; visually it hangs in a stable black field ahead.",
+      "Jori compares independent sensor channels, with two clearly distinct numeric readouts represented only through the scripted dialogue and simple interface graphics.",
+      "Jonah leans toward the forward view and judges the beacon by parallax and optical scale.",
+      "Talia asks for a rerun without alarm; this still feels like a calibration problem.",
+      "Jori's final expression shifts from routine to interested when the same disagreement repeats."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P04",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Primary beacon. Eight point two kilometers."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Phase range says eleven six."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Optical says eight."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Run it again."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Already did."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P06",
+    "summary": "Jori verifies the hardware while Talia realizes the disagreement survives independent measurement, forcing the crew to treat contradiction as data.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jori runs a fast physical diagnostic across the sensor panel: optical channel, inertial solution, reciprocal-phase channel, clock health.",
+      "Talia overlays the independent measurements and sees that none is wandering or noisy; the disagreement is stable.",
+      "Amel looks from Jori to Talia, needing a decision rather than a philosophical answer.",
+      "Jonah keeps the beacon centered in the canopy, visibly unconvinced by an explanation that does not identify a broken component.",
+      "Talia looks at the steady contradictory values and reframes the problem."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P05",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Optical clean. Inertial clean. Phase channel clean."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Which one's wrong?"
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "None of them are drifting."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "That's not an answer."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "It is if the error isn't in the box."
+      }
+    ],
+    "directionInline": [
+      "Do not depict the instruments as glitching, sparking, or obviously malfunctioning. Their stability is the point."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P07",
+    "summary": "Amel refuses a direct approach and orders a tether drone, turning the abstract range disagreement into a physical test.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Amel studies the beacon, then the conflicting numbers, visibly resisting pressure to choose one just to simplify the problem.",
+      "He points Jori toward the physical tether-drone controls rather than authorizing Jonah to fly the whole skiff forward.",
+      "Jori ejects a compact survey drone from the skiff; a real physical tether begins to spool behind it.",
+      "Jonah watches the drone head toward a beacon that still looks close enough to reach quickly.",
+      "Talia starts a separate phase trace so the three forms of range can be compared during the test."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P06",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "No direct approach. Send the tether drone."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "At eight kilometers?"
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "At however many kilometers it actually is."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Spooling."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P08",
+    "summary": "The tether physically exceeds the visible distance before touching the beacon, proving that the disagreement cannot be dismissed as display error.",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Exterior-heavy panel: the drone travels toward the visible beacon while the tether draws a clean physical line back to the survey skiff.",
+      "Inside the cockpit, Jori calls eight kilometers of actual deployed tether while the drone still has visible separation from the beacon.",
+      "A narrow exterior panel holds on the impossible practical fact: more cable has been paid out than the optical straight-line estimate, yet the drone has not arrived.",
+      "Jori continues the count while Talia watches the phase value converge on the same number.",
+      "The drone finally docks against the beacon at eleven point six kilometers of deployed tether; Jonah stares through the canopy at what still looks like an eight-kilometer gap."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P07",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Eight kilometers."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "It's still short."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Optical range hasn't moved."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Keep it slow."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Nine. Ten. Eleven."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Contact. Eleven six."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "I can see eight."
+      }
+    ],
+    "directionInline": [
+      "Make the tether the visual proof. It must read as a physical cable with measurable deployed length, not an energy beam.",
+      "Avoid surreal distortion for its own sake; the contradiction should be understandable before it becomes uncanny."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P09",
+    "summary": "As the drone returns, the tether appears to cross itself without contact, showing that projected position and actual path are no longer the same thing.",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Exterior panel: the returning tether creates a simple visible crossing when projected against the stars, like two lengths occupying the same apparent point.",
+      "Jonah notices the crossing first through the canopy and points without touching the controls.",
+      "Jori checks the tether sensors for impact, abrasion, or tension change and finds none.",
+      "Talia rotates the navigation model; the apparent crossing persists from the skiff's current frame but the recorded path tracks remain distinct.",
+      "Tight final panel on the two apparently crossing cable segments with a small but clear physical gap implied by phase/path data rather than impossible material intersection."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P08",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Cable crosses itself."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "On the display?"
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Outside."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "No contact spike."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Because those lines aren't actually meeting."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P10",
+    "summary": "Talia identifies the core problem: the crew is treating an apparent coordinate as though it uniquely determines path length through the damaged region.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Talia strips the nav display down to only the skiff, beacon, tether trace, and reciprocal-phase track.",
+      "She draws two routes between the same apparent endpoints: one optical straight line and one measured tether/phase path.",
+      "Jonah looks between the simple visual outside and the ugly route model, frustrated because both describe the same beacon.",
+      "Amel asks the practical question while Jori keeps the drone recovery stable.",
+      "Talia answers by pointing not at a coordinate but at the path itself."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P09",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Same apparent point. Different path length."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "That's impossible."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Not locally."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Can we still navigate it?"
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Not by pretending the picture is the route."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P11",
+    "summary": "A survey recorder becomes the exercise objective, but its unchanged coordinates produce a shifting apparent location around the skiff.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "A new target marker appears on Talia's display: the original survey crew's recorder, recovered in the real incident but deliberately withheld until now.",
+      "Jonah spots the recorder as a small visible object ahead-right through the canopy.",
+      "Without the skiff moving, Jori notices the visual target slide toward the aft display while its recorded coordinate and local beacon references remain unchanged.",
+      "Talia checks whether the simulator changed the target; the data remains continuous.",
+      "Amel recognizes that the exercise now requires action inside a geometry they do not yet understand."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P10",
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "RECORDER TARGET ACQUIRED"
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "There. Four kilometers."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Don't move."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Target just shifted aft."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Without moving?"
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Coordinates didn't change."
+      }
+    ],
+    "directionInline": [
+      "The recorder's shift should be shown as a change in apparent relation, not teleportation with a flash or magical effect."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P12",
+    "summary": "Jonah proposes a controlled inertial run: hold one local vector, ignore the moving picture, and see where a physically straight course actually leads.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jonah puts both hands on the pilot controls and deliberately lowers the canopy overlay so the visual target cannot steer him unconsciously.",
+      "Talia verifies a local inertial vector and gives him a clean heading relative to the skiff's current frame.",
+      "Jori locks a diagnostic trace to thrust, acceleration, and clock data so any ordinary ship-control failure will be visible.",
+      "Amel authorizes the test with a strict abort condition rather than a vague 'be careful.'",
+      "The skiff begins a low-thrust straight run; locally every instrument behaves normally."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P11",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Give me one clean vector."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Local vector only."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Thrust and inertial are recording clean."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Thirty seconds. Abort on any shear rise."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Moving."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P13",
+    "summary": "After thirty seconds of uninterrupted forward acceleration, the skiff arrives back at the same beacon without ever turning.",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Exterior panel follows the skiff along a visually straight track through sparse black space; no spiral tunnel or portal effect.",
+      "Inside, Jori confirms continuous thrust and no attitude change while Talia watches the phase trace curve in a way the local heading does not.",
+      "The same verified green beacon slowly appears ahead of the skiff despite the craft never turning toward it.",
+      "Jonah kills thrust on Amel's command and stares at the beacon identity, visibly unsettled for the first time.",
+      "Talia overlays the outbound track and realizes the local straight path closes back onto its starting anchor."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P12",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Twenty-eight seconds. No turn."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Cut thrust."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Tell me that's not our beacon."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Same ID."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "We never turned."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "So straight is a loop."
+      }
+    ],
+    "directionInline": [
+      "This is the issue's central visual proof: local straight motion closes globally. Keep the ship's local behavior physically ordinary.",
+      "Do not depict a wormhole mouth, jump flash, magical fold, or sudden teleport."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P14",
+    "summary": "With the stability window narrowing, Talia proposes navigating changes in phase and anchor relation instead of apparent coordinates.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "The simulator introduces a measured stability countdown as the calm eddy begins a small but real drift; keep the display integrated and practical.",
+      "Talia redraws the route not as a map of positions but as an ordered sequence of anchor relationships and phase changes.",
+      "Jonah studies the route and realizes it asks him to steer visually away from the recorder at first.",
+      "Jori couples the tether drone telemetry to Talia's phase trace, giving them a physical sanity check.",
+      "Amel chooses the new method and assigns the crew to it without pretending they now understand the underlying cause."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P13",
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "BOUNDARY STABILITY WINDOW — SIX MINUTES"
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "We stop navigating position."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "What do I fly?"
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Changes. Phase down to the next anchor, then gap up."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "I'll keep the tether honest."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Do it."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P15",
+    "summary": "Jonah flies Talia's measured phase changes even when the visible recorder appears to move the wrong way.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jonah keeps his attention on Talia and the pilot instruments rather than chasing the recorder through the canopy.",
+      "Talia calls a tiny left correction as the phase value falls toward the next verified relation.",
+      "Exterior panel: the skiff appears to angle away from the recorder even though the tether-probe path and anchor geometry begin simplifying.",
+      "Jori watches tether tension remain stable and confirms the path is physically opening rather than looping.",
+      "Amel stands behind the three specialists, focused on keeping the sequence coherent rather than adding his own technical input."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P14",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Left two degrees. Hold until phase drops."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Visual says that's away."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Don't fly the visual."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Fly her numbers."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Tether tension stable."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Eyes down."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P16",
+    "summary": "The recorder finally approaches along the measured path, and the crew recovers it without ever obtaining a simple conventional map of the region.",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Exterior panel: the recorder that looked farther away now closes rapidly as the skiff follows the correct ordered anchor relationships.",
+      "Talia counts phase range down while Jonah makes small controlled corrections.",
+      "Jori reaches the physical recovery arm toward the recorder instead of relying on an abstract capture effect.",
+      "Amel calls the final approach and watches the stability window rather than the target.",
+      "The recorder locks into the skiff's recovery cradle with a mundane mechanical clunk."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P15",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Three point one. Two four. One eight."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Now it looks close."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Please don't start trusting it again."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Recover on contact."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Recorder secured."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P17",
+    "summary": "The crew exits by reversing the ordered anchor sequence rather than merely reversing the ship's vector, and the simulator returns them to the Academy lab.",
+    "setting": "RFAA_Simulation_Skiff",
+    "region": "Lattice",
+    "factions": [
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Talia lays out the exit as the same verified anchor sequence in reverse order.",
+      "Jonah starts to reverse the ship physically, then catches himself before committing to the intuitive but wrong solution.",
+      "Jori keeps the recovered recorder latched while checking the same phase milestones in reverse order.",
+      "The green safe marker stabilizes ahead; the external reconstruction fades only at the edges as the Academy lab returns around the cadets.",
+      "Jia stands outside the opened simulator with the original incident file on her slate."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P16",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Same path back?"
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Same markers. Reverse order."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Not the vector."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "I heard you."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You got the recorder."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The original crew did too."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "They still filed the wrong conclusion."
+      }
+    ],
+    "directionInline": [
+      "The return to the lecture lab should feel mechanical and grounded: simulator boundaries reappear around the cadets. Do not imply they physically traveled to the Lattice."
+    ],
+    "sceneId": "RFAA_ABS_I01_S02"
+  },
+  {
+    "id": "RFAA_ABS_I01_P18",
+    "summary": "In debrief, Jia reveals that the original survey team blamed instrument failure for eighteen months even though every major measurement system was healthy.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "The cadets are back around the geometry table, physically tired from the simulator despite knowing it was a reconstruction.",
+      "Jia places the original filed incident conclusion beside the recovered telemetry without making the page a document close-up.",
+      "Jori reacts first to the idea that healthy instruments were blamed.",
+      "Talia reconstructs the assumption that made the false conclusion seem reasonable at the time.",
+      "Jia confirms the lesson with a small nod rather than a triumphal reveal."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "They called it sensor failure?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "For eighteen months."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "But the sensors were right."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Each measured what it was built to measure."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "They assumed the measurements shared one geometry."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "There it is."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S03"
+  },
+  {
+    "id": "RFAA_ABS_I01_P19",
+    "summary": "Jia defines the course's core distinction: local physical law remained ordinary while the relationships among valid measurements became non-simple.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jia rebuilds the exercise as a stripped-down physical model: skiff, tether, beacon, thrust vector, and measured path only.",
+      "She isolates the ordinary local facts one by one through action in the model: thrust arrow, cable length, healthy clocks, light path.",
+      "Amel looks at the model and states the decision-relevant failure in plain language.",
+      "Jia folds the apparent map away, leaving only the measured relationships.",
+      "Close on the cadets seeing that the word 'broken' belongs to the mapping between quantities rather than to every local law."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P18",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Thrust still produced acceleration."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The cable still had length. The clocks still ran."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "But position stopped telling us distance."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Broken space is not where physics stops."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "It's where familiar relationships stop staying simple."
+      }
+    ],
+    "directionInline": [
+      "This is a lecture moment earned by the exercise. Keep Jia conversational and physically engaged with the model rather than posing like a narrator."
+    ],
+    "sceneId": "RFAA_ABS_I01_S03"
+  },
+  {
+    "id": "RFAA_ABS_I01_P20",
+    "summary": "Jia introduces the Academy's five working anomaly families while emphasizing that the categories are provisional tools rather than laws of nature.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "The central table presents five restrained visual exemplars as physically distinct small models, not a full-page infographic: folded route, separated clock traces, delayed signal path, shear field, crystallized phase boundary.",
+      "Jia names the families while walking around the table; the cadets follow the actual objects rather than reading a wall of text.",
+      "Jonah catches on the word 'working' and challenges it.",
+      "Talia sees why overlap matters before Jia answers.",
+      "Jia closes the five models slightly together so their boundaries visually overlap."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P19",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Academy uses five working families."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Metric. Temporal. Echo. Gradient. Phase."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Working."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Important word."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Because they overlap."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "And because nature does not care about our filing system."
+      }
+    ],
+    "directionInline": [
+      "The five examples are part of the physical Academy lesson. Do not turn the comic page itself into a labeled scientific poster."
+    ],
+    "sceneId": "RFAA_ABS_I01_S03"
+  },
+  {
+    "id": "RFAA_ABS_I01_P21",
+    "summary": "The cadets test the five-family model against familiar named anomalies and discover how often Jia has to qualify a clean classification.",
+    "setting": "RFAA_Lecture_Lab",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Talia brings up a compact Mirrorfold visual sample: repeating sightlines and doubled route traces rather than fantasy mirrors.",
+      "Jori swaps in a Memory Well signal trace that loops and arrives late.",
+      "Amel calls up a Lattice Tide shear map while Jonah selects a Fracture Bloom sample.",
+      "Jia moves among the examples, answering quickly but qualifying each answer where needed.",
+      "The cadets exchange a look when they realize 'usually' is going to matter throughout the course."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P20",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Mirrorfold."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Metric-dominant."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Memory Wells?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Echo-dominant."
+      },
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Lattice Tides."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Gradient."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Fracture Blooms."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Phase-heavy. Usually."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Usually."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You'll learn to hate that word."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S03"
+  },
+  {
+    "id": "RFAA_ABS_I01_P22",
+    "summary": "On the observation deck after class, Amel asks about the Ebon Maw and Jia openly admits that the five-family model does not explain it cleanly.",
+    "setting": "RFAA_Observation_Deck",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Quiet wide panel on the Academy observation deck: verified green corridor traffic outside, ordinary and stable after the disorienting simulator sequence.",
+      "The group walks together rather than sitting in formal class formation; Amel catches Jia before they split.",
+      "Amel asks about the Ebon Maw while Talia and Jori slow down to listen.",
+      "Jia stops at the window, choosing a precise admission instead of filling the gap with theory.",
+      "Jonah looks from the safe corridor outside back to Jia, registering that the course contains real boundaries of knowledge."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.amel.varo",
+        "text": "Where does the Ebon Maw fit?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "It doesn't. Not cleanly."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "Which family is closest?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "All of them badly."
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "That's reassuring."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "It shouldn't be."
+      }
+    ],
+    "sceneId": "RFAA_ABS_I01_S04"
+  },
+  {
+    "id": "RFAA_ABS_I01_P23",
+    "summary": "A small live phase offset appears in a nearby monitored training lane, turning the day's lesson from archived problem into present observation.",
+    "setting": "RFAA_Observation_Deck",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "The green corridor outside looks completely normal: commuter and training traffic moving on a verified line with no spectacular visual anomaly.",
+      "A small technical alert appears on Jia's Academy slate with the exact scripted system text; it is a monitored offset, not an emergency alarm.",
+      "Jori notices the number over Jia's shoulder before anyone else reacts.",
+      "Jonah looks back out at the visually normal corridor and recognizes the trap from the simulator.",
+      "Jia begins a fresh record rather than announcing a theory."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P22",
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "TRAINING LANE 3 — PHASE OFFSET 0.4% — MONITORING"
+      },
+      {
+        "handle": "@starsplit.jori.kest",
+        "text": "Is that part of the lesson?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Looks normal."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "So did the beacon."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Good. Record before you explain."
+      }
+    ],
+    "directionInline": [
+      "The alert is routine monitoring, not a crisis. Do not add alarms, evacuation, red emergency light, or visible corridor catastrophe.",
+      "The safe corridor must still look safe. The point is disciplined observation before interpretation."
+    ],
+    "sceneId": "RFAA_ABS_I01_S04"
+  },
+  {
+    "id": "RFAA_ABS_I01_P24",
+    "summary": "Although class is over, all four cadets stay to log the live offset, and Jia names the next mistake they will study: confusing distance with position.",
+    "setting": "RFAA_Observation_Deck",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Academy",
+      "F_Lattice"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_talia_quist",
+      "C_jonah_creel",
+      "C_jori_kest",
+      "C_amel_varo"
+    ],
+    "panelPlan": [
+      "Jia opens a clean monitoring record on the deck workstation while the corridor remains visible beyond the glass.",
+      "Jori plugs in a diagnostic feed without being asked; Talia pulls up the lane's anchor geometry; Amel closes the nearby door so they can work without blocking deck traffic.",
+      "Jonah lingers at the window, deliberately checks the instruments before looking back outside, then joins the others.",
+      "Jia notices that nobody has left and allows herself the smallest amused expression.",
+      "Final wide panel: the five of them gathered around the live lane data, stable green corridor beyond them. The course has shifted from lecture to shared practice."
+    ],
+    "continuityFrom": "RFAA_ABS_I01_P23",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "You said class was over."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "It is."
+      },
+      {
+        "handle": "@starsplit.talia.quist",
+        "text": "This is field data."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Apparently."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Tomorrow we start with the mistake you almost made."
+      },
+      {
+        "handle": "@starsplit.jonah.creel",
+        "text": "Which one?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Distance is not position."
+      }
+    ],
+    "directionInline": [
+      "End on curiosity and disciplined work, not ominous spectacle. This is a science series about learning how to know things.",
+      "No teaser banner or promotional caption; the final dialogue line is the issue's handoff to the next subject."
+    ],
+    "sceneId": "RFAA_ABS_I01_S04"
+  }
+]
