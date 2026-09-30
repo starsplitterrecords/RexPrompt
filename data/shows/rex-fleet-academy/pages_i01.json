@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "RFA_I01_P01",
+    "summary": "Opening editorial frames the corridor network as invisible public infrastructure: the roads that ordinary people depend on, the Fleet maintains, and rival powers learn to bypass or break.",
+    "settingText": "Full-page civilization-scale image in the mature Rex Fleet era. Multiple inhabited worlds and working stations are connected by elegant green beacon-to-beacon corridor traces. Civilian Verge freighters, family transports, food carriers and medical ships dominate the traffic. Blue-gold Fleet ships are present as patrol, rescue and maintenance authority without visually owning the green. At the far edge, one purple survey ship noses beyond the public network while a faint bright-red Shard route exists outside the green map. The image should read as beautiful infrastructure first, political map second.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a large, deliberately quiet field for the complete editorial copy. Integrate typography professionally without covering the central route geography."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Every civilization has roads."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "In Rex Fleet, the most important roads have no pavement, no walls, and no visible edge."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A green beacon tells a farmer, a freighter crew, a refugee ship, a Crown courier, and a medical convoy the same thing: somebody measured the dark ahead and is willing to stand behind the answer."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "But green does not belong to the Fleet."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It belongs to the people who need the road."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "This issue is about what exists between the beacons: the physics, the surveyors, the markets, the leaks, the colors, and the power hidden inside the simple act of getting from one world to another."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Welcome to Rex Fleet Academy."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Class is in session."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons. Preserve wording, punctuation, paragraph order and headings exactly."
+      },
+      {
+        "text": "No incidental readable signage or invented labels. The image must make the green/blue-gold/red/purple relationship legible without turning into a labeled infographic."
+      }
+    ]
+  },
+  {
+    "id": "RFA_I01_P02",
+    "summary": "Jia opens with a deceptively simple question and exposes the cadets' first assumption: the line on a chart is not the corridor itself.",
+    "setting": "RFA_LectureHall",
+    "region": "Core",
+    "factions": [
+      "F_Fleet"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Wide establishing panel: Jia stands inside a volumetric display showing two distant green beacons connected by one clean green line; the three cadets occupy the front tier rather than a huge anonymous classroom.",
+      "Nia steps into the projection and traces the obvious line between the beacons with one finger.",
+      "Elian glances at Jia as if the question was too easy; Tomas watches the hardware instead of the map.",
+      "Jia rotates the display ninety degrees so the line becomes a tiny point in cross-section, ending on the students realizing the question has changed."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Where is the corridor?"
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Between the beacons."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "That line."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "That is where people draw it."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Try again."
+      }
+    ],
+    "direction": [
+      "academy-story"
+    ],
+    "sceneId": "RFA_I01_S01"
+  },
+  {
+    "id": "RFA_I01_P03",
+    "summary": "The familiar flat route diagram becomes a three-dimensional safe envelope, eliminating the ocean-channel misconception.",
+    "setting": "RFA_LectureHall",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Direct continuation: the display remains in cross-section. Nia tentatively draws two parallel boundaries on opposite sides of the point, like port and starboard channel markers.",
+      "Jia dismisses the parallel lines with a hand motion; they vanish while the point expands into a translucent circular safe envelope around the surveyed spine.",
+      "A scale silhouette of the largest certified cruiser appears centered inside the envelope, its beam visibly about half the usable diameter.",
+      "Tomas leans closer to the scale relationship while Elian circles the projection to see that the safe space surrounds the ship in every direction."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Channel limits? Port and starboard?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "There is no port side of space."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The certified volume wraps the spine."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "How wide?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The usable diameter is usually about twice the beam of the largest ship the route is certified to carry."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P02",
+    "direction": [
+      "academy-story",
+      "corridor-physics"
+    ],
+    "sceneId": "RFA_I01_S01"
+  },
+  {
+    "id": "RFA_I01_P04",
+    "summary": "Jia shows that the corridor edge is a physical rise in risk, not a wall; drifting outward increases correction load, shear and instability.",
+    "setting": "RFA_LectureHall",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Direct continuation: the cruiser silhouette drifts off-center inside the translucent envelope.",
+      "Instrument overlays rise gradually rather than flashing at an arbitrary boundary: correction demand, shear and phase error worsen as the model approaches the edge.",
+      "Tomas reaches for the projection as if expecting a hard collision boundary and finds none.",
+      "Close on Nia watching the trend lines continue worsening beyond the certified envelope while Jia lets the implication land."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "What happens at the edge?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Nothing hits you."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "That sounded encouraging for half a second."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Correction load climbs. Shear climbs. Phase gets harder to hold."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "So the edge is physical, not painted."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Exactly."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P03",
+    "direction": [
+      "academy-story",
+      "corridor-physics"
+    ],
+    "sceneId": "RFA_I01_S01"
+  },
+  {
+    "id": "RFA_I01_P05",
+    "summary": "In the inversion lab, the cadets move from route geometry to the reciprocal-field relationship that makes transit possible.",
+    "setting": "RFA_InversionLab",
+    "region": "Lattice",
+    "factions": [
+      "F_Fleet"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "New scene establishing panel: a safe low-energy field visualizer surrounds a suspended ship model with paired tension-state curves, clearly a teaching instrument rather than a real transit engine.",
+      "Jia adjusts one control and the paired curves shift in opposite relationship around the model.",
+      "Nia studies the phase trace while Tomas watches the control response lag.",
+      "The final panel simplifies the display to the ship balanced on the stable side of a reciprocal relationship, preparing the phrase the cadets already know."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The local field has a tension state."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "The drive couples against it—reciprocal, inverted."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "And rides the low-tension side."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "If you keep phase."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "If."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "corridor-physics"
+    ],
+    "sceneId": "RFA_I01_S02"
+  },
+  {
+    "id": "RFA_I01_P06",
+    "summary": "A moving lab demonstration makes 'Riding the Inversion' literal without making it mystical: the ship maintains a dynamic relationship rather than traveling through a fixed tunnel.",
+    "setting": "RFA_InversionLab",
+    "region": "Lattice",
+    "factions": [
+      "F_Fleet"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Direct continuation: the field around the model slowly deforms while the ship remains centered by continuous small corrections.",
+      "Nia takes the controls and deliberately overcorrects; the model begins to oscillate against the changing field solution.",
+      "Jia steadies one control rather than taking over completely, letting Nia recover the phase relationship herself.",
+      "Close on the now-stable trace with the corridor envelope projected around the successful solution."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "That is why we call it riding the inversion."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You are not pushing through a tunnel."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "I am holding a moving relationship."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "And the corridor is where that relationship stays manageable."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Manageable enough to certify."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P05",
+    "direction": [
+      "academy-story",
+      "corridor-physics"
+    ],
+    "sceneId": "RFA_I01_S02"
+  },
+  {
+    "id": "RFA_I01_P07",
+    "summary": "The students translate the field model back into navigation: fly as close as practical to the surveyed beacon-to-beacon spine while staying inside the measured safe envelope.",
+    "setting": "RFA_InversionLab",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Direct continuation: the lab view expands from cross-section into a long three-dimensional route between successive green beacons.",
+      "A purely geometric straight line appears first; the measured safe spine sits almost on it but bends subtly with the local field.",
+      "Nia plots a course that remains centered on the measured spine rather than forcing the ship onto the geometric line.",
+      "Jia accepts the solution while a sequence of green beacons recedes into depth beyond the first pair."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "So we just fly straight to the next beacon?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "As close as the measured spine allows."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Beacon to beacon. Stay centered on the field solution."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Shortest safe answer, not shortest geometric answer."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Now it looks like navigation."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P06",
+    "direction": [
+      "academy-story",
+      "corridor-physics"
+    ],
+    "sceneId": "RFA_I01_S02"
+  },
+  {
+    "id": "RFA_I01_P08",
+    "summary": "At a BHA service gallery, Inspector Miko Saye turns green from a familiar traffic signal into a technical certification state.",
+    "setting": "RFA_BHA_Gallery",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "New scene establishing panel: the group stands beside a full-scale beacon service assembly with redundant detector racks and a restrained green status element; working technicians continue maintenance in the background.",
+      "Miko opens a service panel to expose multiple independent sensor channels while Jia hangs back and lets the field inspector own the lesson.",
+      "Nia watches several traces converge inside the certified envelope rather than simply staring at the green light.",
+      "Close on Miko beside the green status as she defines what it does and does not mean."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Green means the local channels agree the certified envelope is inside tolerance."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Safe."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Measured safe."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Different sentence."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Remember that difference."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "beacon-rules"
+    ],
+    "sceneId": "RFA_I01_S03"
+  },
+  {
+    "id": "RFA_I01_P09",
+    "summary": "Miko deliberately removes a sensor channel and the beacon turns red even though the modeled field itself has not changed, establishing the rule that unknown defaults to red.",
+    "setting": "RFA_BHA_Gallery",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: Miko disconnects one designated training sensor lead while the other field traces remain calm.",
+      "The status changes cleanly from green to red; nothing outside the service housing explodes or visibly distorts.",
+      "Tomas checks the still-normal secondary readings, confused by the red state.",
+      "Miko reseats the connector but waits before restoring green, emphasizing that certification follows verified evidence rather than intuition."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "The field did not move."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Our ability to prove it did not."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Sensor failure defaults red."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Unknown is red."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Even if the route is actually fine."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Especially then. That is when people are tempted."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P08",
+    "direction": [
+      "academy-story",
+      "beacon-rules"
+    ],
+    "sceneId": "RFA_I01_S03"
+  },
+  {
+    "id": "RFA_I01_P10",
+    "summary": "Archival Shattering footage separates the physical Sundering and corridor collapse from the social catastrophe that followed, while showing that extreme tension can literally destroy a beacon.",
+    "setting": "RFA_BHA_Gallery",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: the service gallery darkens into archival projection showing a High-Era green corridor developing violent timing and tension disagreement during the Sundering.",
+      "A historical beacon strains under extreme field conditions; its structure twists and physically fractures rather than producing a magical explosion.",
+      "The archive widens to chains of routes going red or dark and worlds losing dependable connection.",
+      "Return to the cadets' faces in the present gallery as Jia distinguishes the sequence of events."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "During the Sundering, the field stopped behaving like the maps."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Some beacons went red."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Some never got the chance."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Enough tension can shatter the beacon itself."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "And that was the Shattering."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "No. That was physics."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Sundering. Corridor collapse. Shattering."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "In that order."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P09",
+    "direction": [
+      "academy-story",
+      "beacon-rules"
+    ],
+    "directionInline": [
+      {
+        "text": "Historical imagery should visually rhyme with the established Shattering package without importing mature Fleet uniforms or ship classes into the High Era."
+      }
+    ],
+    "sceneId": "RFA_I01_S03"
+  },
+  {
+    "id": "RFA_I01_P11",
+    "summary": "The lesson moves to the survey dock, where Fleet and private purple ships make visible the profession that discovers routes before anyone can certify or sell them.",
+    "setting": "RFA_SurveyDock",
+    "region": "Lattice",
+    "factions": [
+      "F_Fleet",
+      "F_PrivateSurvey"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun"
+    ],
+    "panelPlan": [
+      "New scene wide panel: a disciplined Fleet survey craft and Rhea Orun's more weathered independent survey ship sit on adjacent service positions, both clearly purple-coded but with different registry language.",
+      "The cadets walk with Jia under calibration masts and instrument pods while crews continue loading sensor packages.",
+      "Rhea drops from her ship's boarding stair carrying a battered survey case and hears the end of Jia's introduction.",
+      "Nia looks from one purple ship to the other, recognizing a shared craft culture despite different institutions."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Surveyors leave the green network so everyone else does not have to."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Academy makes that sound tidy."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Captain Rhea Orun. Private survey."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Both ships are purple."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "The field does not care who signs our pay sheet."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "survey-culture",
+      "color-grammar"
+    ],
+    "sceneId": "RFA_I01_S04"
+  },
+  {
+    "id": "RFA_I01_P12",
+    "summary": "Rhea explains why survey maps require repeated offset passes: a single transit proves only that one ship survived one solution at one time.",
+    "setting": "RFA_SurveyDock",
+    "region": "Lattice",
+    "factions": [
+      "F_Fleet",
+      "F_PrivateSurvey"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun"
+    ],
+    "panelPlan": [
+      "Direct continuation: Rhea opens her case into a layered three-dimensional route record showing multiple offset passes around one candidate spine.",
+      "First-pass data appears as a narrow uncertain trace; second and third passes begin defining width, drift and asymmetry rather than merely repeating the same line.",
+      "Tomas isolates mass-envelope notes and timestamped calibration data while Nia compares the route on different days.",
+      "Rhea collapses the model to show how little confidence remains if the repeated passes are removed."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "One pass tells me where the field was once."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Second pass tells me whether I got lucky."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Third?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Third begins an argument."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "With who?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Tomorrow."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Route age matters as much as route shape."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P11",
+    "direction": [
+      "academy-story",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S04"
+  },
+  {
+    "id": "RFA_I01_P13",
+    "summary": "Fleet and private surveyors share methods but diverge in obligation: Fleet work moves toward public certification, while private data remains a commodity and may be marked without becoming public.",
+    "setting": "RFA_SurveyDock",
+    "region": "Lattice",
+    "factions": [
+      "F_Fleet",
+      "F_BHA",
+      "F_PrivateSurvey"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun"
+    ],
+    "panelPlan": [
+      "Direct continuation: one side of Rhea's display shows a Fleet survey packet moving through repeat checks toward BHA certification and eventual public beacon placement.",
+      "The other side shows a private route packet stopping at a private registry seal rather than entering public certification.",
+      "Nia highlights private marker coordinates along the route, challenging the idea that private always means invisible.",
+      "Rhea closes the case while a Fleet survey crew and her own crew continue parallel preparations in the background."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Fleet survey goes to the BHA."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "After repeats, checks, mass limits, drift."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "And private means unmarked?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Sometimes."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Sometimes privately marked."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Marker is not certification."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "And certification is not the same thing as existence."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P12",
+    "direction": [
+      "academy-story",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S04"
+  },
+  {
+    "id": "RFA_I01_P14",
+    "summary": "A route-market case study shows how the same privately surveyed path can serve ordinary trade and illicit traffic once a broker separates the surveyor from later buyers.",
+    "setting": "RFA_RouteExchange",
+    "region": "Verge",
+    "factions": [
+      "F_PrivateSurvey",
+      "F_Trade",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun"
+    ],
+    "panelPlan": [
+      "New scene: a reconstructed route transaction begins with Rhea's original survey packet sold to one broker with full provenance and age attached.",
+      "The broker node branches to a legitimate grain hauler serving a Verge settlement and separately to an unidentified fast trader using the same bypass.",
+      "A later branch reveals Shard-linked traffic without depicting every independent customer as criminal.",
+      "Elian studies the branching chain while Rhea remains matter-of-fact about where her direct knowledge ends."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "You know your customer?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Usually the first one."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "The second?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Broker."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "The third?"
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Ask the broker."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "One route can feed a settlement at noon and move contraband at midnight."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S05"
+  },
+  {
+    "id": "RFA_I01_P15",
+    "summary": "The cadets watch an unscrupulous middleman make a route more profitable by stripping its age and provenance, revealing that information quality can be degraded deliberately without falsifying the coordinates themselves.",
+    "setting": "RFA_RouteExchange",
+    "region": "Verge",
+    "factions": [
+      "F_PrivateSurvey",
+      "F_Trade"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun"
+    ],
+    "panelPlan": [
+      "Direct continuation: the original private survey packet visibly contains survey date, repeat-pass count, vessel mass limits and provenance.",
+      "A broker reconstruction removes the timestamp and origin while leaving the attractive route coordinates intact.",
+      "Nia notices the missing fields first; Tomas compares the cleaned package to the original and looks more offended by the omission than by the sale.",
+      "Rhea watches the stripped package being offered at a higher price to several buyers."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "He changed the timestamp."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Worse."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "He removed it."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "So the buyer cannot tell how old the route is."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "And pays more for confidence nobody earned."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Some brokers sell access."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Some sell ambiguity."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P14",
+    "direction": [
+      "academy-story",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S05"
+  },
+  {
+    "id": "RFA_I01_P16",
+    "summary": "A leaked BHA diagnostic demonstrates why internal harmonic data is so valuable: knowing that a red beacon reflects failed sensing rather than measured high tension changes the commercial risk calculation without restoring public certification.",
+    "setting": "RFA_RouteExchange",
+    "region": "Corridors",
+    "factions": [
+      "F_BHA",
+      "F_PrivateSurvey",
+      "F_Trade",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: Miko joins the exercise and loads a sanitized BHA incident record showing a public beacon red after primary detector failure while secondary field traces remain nominal.",
+      "The public-facing view contains only the red closure; a second internal layer reveals the sensor diagnosis and supporting measurements.",
+      "A simulated leak icon moves from the internal layer to a broker, then branches toward ordinary traders and Shard-linked buyers.",
+      "End on the cadets comparing the unchanged red public status to the suddenly valuable private knowledge."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Public board says closed."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Internal secondary says the field is nominal."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Which is why that report stays inside BHA."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Until somebody sells it."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Or steals it."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Either way, the leak turns uncertainty into a market."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Still red, though."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Still red."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P15",
+    "direction": [
+      "academy-story",
+      "survey-culture",
+      "beacon-rules"
+    ],
+    "sceneId": "RFA_I01_S05"
+  },
+  {
+    "id": "RFA_I01_P17",
+    "summary": "Back in the strategic gallery, Jia corrects another color assumption: green belongs culturally to the Verge and ordinary connected life, not to the Fleet that maintains the network.",
+    "setting": "RFA_StrategyGallery",
+    "region": "Verge",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_BHA"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "New scene wide panel: a green corridor web connects working Verge ports, farms, markets and small habitats while blue-gold Fleet patrol and service markers sit over the network rather than replacing it.",
+      "Elian selects the green layer as if it were Fleet territory; Jia separates the blue-gold authority overlay from the green civilian network.",
+      "The map zooms into ordinary consequences: food pallets, passengers, medicine and family traffic moving because the route is open.",
+      "Close on Elian taking in the distinction between the institution and the life it supports."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "I thought green was ours."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Common mistake."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Green is the Verge."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "The people who need the road."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Exactly."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Fleet is blue and gold."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Authority. Stewardship. Crown."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "color-grammar"
+    ],
+    "sceneId": "RFA_I01_S06"
+  },
+  {
+    "id": "RFA_I01_P18",
+    "summary": "The Crown metaphor becomes explicit: like King's Roads and Roman roads, corridor maintenance creates power because societies organize trade, relief and government around whoever can keep movement reliable.",
+    "setting": "RFA_StrategyGallery",
+    "region": "Core",
+    "factions": [
+      "F_Fleet",
+      "F_Verge"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade"
+    ],
+    "panelPlan": [
+      "Direct continuation: Elian overlays Fleet logistics, relief timing and patrol reach on the same green civilian routes, showing how much institutional action follows the network.",
+      "A restrained historical teaching graphic briefly evokes an old terrestrial royal road and Roman road network as analogy, integrated into the gallery projection rather than becoming a separate textbook page.",
+      "Tomas notices maintenance depots and repair crews hidden beneath the strategic overlay while Elian watches political reach expand with the roads.",
+      "Jia returns the display to the present network, leaving the Crown marks visibly dependent on the underlying green routes."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "King's Road."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "That is the old analogy."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "All roads lead to Rome."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "And everyone remembers Rome."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Not the road crew."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Whoever controls movement holds power."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Yes."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Which is why maintenance becomes political whether you want it to or not."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P17",
+    "direction": [
+      "academy-story",
+      "color-grammar"
+    ],
+    "sceneId": "RFA_I01_S06"
+  },
+  {
+    "id": "RFA_I01_P19",
+    "summary": "Bright-red Shard space appears where public certainty fails: red and unmarked routes weaken Fleet control, and hostile actors can gain leverage simply by forcing a route outside safe certification.",
+    "setting": "RFA_StrategyGallery",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA",
+      "F_Shards",
+      "F_Verge"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: bright-red Shard routes and unmarked private traces appear beyond or between the green public chains, especially in sparsely patrolled regions.",
+      "A modeled local disturbance raises tension around one public spine until its beacon status turns red; the Shard force never needs to occupy the beacon itself.",
+      "Nearby Verge traffic backs away from the red route while alternate unmarked movement continues outside Fleet visibility.",
+      "Miko and Jia stand on opposite sides of the same map: technical closure and political consequence shown simultaneously."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Bright red is Shard."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Fracture from the public network."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "They benefit when our routes go red."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Or when nobody certifies the route at all."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "They can force one red?"
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "If they disturb the local field enough."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Easier where nobody is patrolling."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "They do not always have to take the road."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Sometimes they only have to make us stop using it."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P18",
+    "direction": [
+      "academy-story",
+      "color-grammar",
+      "beacon-rules"
+    ],
+    "sceneId": "RFA_I01_S06"
+  },
+  {
+    "id": "RFA_I01_P20",
+    "summary": "A ship-lineup exercise completes the color grammar: survey purple, subtle-cyan blockade runners, yellow maintenance/science craft, dark-purple/gold Tempest and deep-crimson Fleet protectors all express different relationships to the corridor network.",
+    "setting": "RFA_StrategyGallery",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_PrivateSurvey",
+      "F_BlockadeRunner",
+      "F_Tempest",
+      "F_Crimson",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation expands the gallery into a clean in-world lineup of working ship silhouettes, not a detached poster: purple survey craft at the edge of mapped space, a subtle-cyan blockade runner on a difficult line, yellow maintenance/geology craft servicing infrastructure, dark-purple/gold Tempest patrol beyond ordinary protection, and deep-crimson Fleet heavy protection with gold registry.",
+      "Rhea stands beside the purple survey silhouette while Miko points out the yellow service craft, tying colors to work rather than abstract symbolism alone.",
+      "Elian compares the dark-purple/gold Tempest and deep-crimson ships to bright-red Shard craft shown farther away; Fleet crown/registry cues keep Crimson visually distinct and fully aligned.",
+      "Final panel: the entire palette sits around the green network, making clear that the colors describe relationships to the roads rather than ownership of one factional rainbow."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Purple makes sense now."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "We live at the boundary."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Yellow is work."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "Usually the expensive kind."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "And cyan?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "A sharpened echo of proto-Fleet navigation."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Blockade runners are built around getting through."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Tempest and Crimson are both Fleet."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Both Fleet."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Tempest patrols the margins. Crimson protects like it expects a fight."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P19",
+    "direction": [
+      "academy-story",
+      "color-grammar"
+    ],
+    "directionInline": [
+      {
+        "text": "Crimson must read as a present-era allied Fleet formation: deep institutional red plus gold registry, not bright Shard red, and no sinister lighting or traitor staging."
+      }
+    ],
+    "sceneId": "RFA_I01_S06"
+  },
+  {
+    "id": "RFA_I01_P21",
+    "summary": "The final bridge exercise combines every layer: a Verge medical convoy faces a red public beacon caused by sensor failure, a recent private bypass, leaked BHA diagnostics and possible Shard activity.",
+    "setting": "RFA_SimBridge",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA",
+      "F_Verge",
+      "F_PrivateSurvey",
+      "F_Trade",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "New scene establishing panel: the cadets take navigation, engineering and command stations while Jia, Rhea and Miko stand behind them as evaluators rather than operators.",
+      "The shared display presents a Verge medical convoy holding at a red public beacon; diagnostics identify primary sensor failure, but only through an unauthorized leaked BHA layer.",
+      "A private bypass appears nearby with thirty-six-hour-old repeated survey data purchased through a broker; a faint Shard contact is reported near the margin but not confirmed.",
+      "A countdown on medical delivery urgency begins while Jia removes herself from the decision."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "You are the duty watch."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Move the medicine."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Public route red."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Sensor failure, not a measured field excursion."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "According to a report you were not supposed to have."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "Private bypass is thirty-six hours old. Repeated twice."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Shard contact?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Unconfirmed."
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "corridor-physics",
+      "beacon-rules",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S07"
+  },
+  {
+    "id": "RFA_I01_P22",
+    "summary": "Every available answer is partly defensible, forcing the cadets to distinguish evidence, certification and urgency instead of treating any one data source as permission.",
+    "setting": "RFA_SimBridge",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA",
+      "F_Verge",
+      "F_PrivateSurvey",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: Nia highlights the red public spine and proposes using secondary data; Miko leaves the red status unchanged.",
+      "Tomas highlights the old sensor fault and maintenance requirements while the medical clock continues to run.",
+      "Rhea opens the private bypass packet, showing its repeated passes and age without pretending it is public certification.",
+      "Elian studies the unconfirmed Shard contact and the available Fleet assets, then turns from choosing a route to choosing a response package."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "We can ride the public spine on the secondary data."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "You can."
+      },
+      {
+        "handle": "@starsplit.miko.saye",
+        "text": "You cannot call it certified."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "Private bypass is older."
+      },
+      {
+        "handle": "@starsplit.rhea.orun",
+        "text": "And independently repeated."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "And brokered."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "Decision."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Stop choosing between two bad maps."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P21",
+    "direction": [
+      "academy-story",
+      "beacon-rules",
+      "survey-culture"
+    ],
+    "sceneId": "RFA_I01_S07"
+  },
+  {
+    "id": "RFA_I01_P23",
+    "summary": "The cadets solve the exercise as stewards rather than owners: hold the convoy briefly, verify the route, repair the beacon and protect the margin so a green status means something when traffic moves again.",
+    "setting": "RFA_SimBridge",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_BHA",
+      "F_Verge",
+      "F_PrivateSurvey",
+      "F_Tempest",
+      "F_Crimson",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_jia_morgan",
+      "C_nia_voss",
+      "C_tomas_reed",
+      "C_elian_kade",
+      "C_rhea_orun",
+      "C_miko_saye"
+    ],
+    "panelPlan": [
+      "Direct continuation: Elian assigns a yellow maintenance tender to the failed beacon while Nia sends a purple survey craft to re-run the bypass and Tomas packages the secondary BHA measurements for comparison.",
+      "A dark-purple/gold Tempest patrol moves to the uncertain margin while a deep-crimson Fleet escort stays with the vulnerable medical convoy; both are visibly allied and task-specific.",
+      "Fresh survey returns, the beacon sensor is restored, and the route status moves from red through verification to green based on new evidence rather than narrative convenience.",
+      "Final wide panel: the medical convoy enters the green corridor toward a Verge settlement while Fleet ships remain outside the civilian traffic stream, supporting rather than visually possessing it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Hold the convoy."
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Maintenance to the beacon. Survey the bypass again. Tempest checks the margin."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "Crimson stays with the convoy."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.reed",
+        "text": "And we compare fresh survey against the secondary BHA channels."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "What did you control?"
+      },
+      {
+        "handle": "@starsplit.academy.elian.kade",
+        "text": "Not the road."
+      },
+      {
+        "handle": "@starsplit.academy.nia.voss",
+        "text": "But if we say it is green, people build their lives on that."
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "text": "That is the job."
+      }
+    ],
+    "continuityFrom": "RFA_I01_P22",
+    "direction": [
+      "academy-story",
+      "beacon-rules",
+      "survey-culture",
+      "color-grammar"
+    ],
+    "sceneId": "RFA_I01_S07"
+  },
+  {
+    "id": "RFA_I01_P24",
+    "summary": "Closing editorial turns the lesson outward: knowing the road is safe is only the beginning, because navigating the Mirrorfold requires understanding what happens when maps, frames and apparent geometry stop agreeing.",
+    "settingText": "Full-page Academy closing image. A green public corridor recedes cleanly from the foreground, then gives way in the far distance to a subtle region of folded, ambiguous geometry where several apparently consistent paths disagree. A small blue-gold training craft remains safely outside the ambiguous region while a purple survey trace probes its edge. The visual should tease the next subject without depicting a specific future story scene or explaining the phenomenon prematurely.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete next-lecture copy, integrated as premium comic back matter."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT LECTURE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Knowing where the safe road is solves only the first problem."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Because the map assumes that distance, direction, sequence, and reference still agree with one another."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Sometimes they do not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Next: REX FLEET ACADEMY: NAVIGATING THE MIRRORFOLD"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons. Preserve wording, punctuation, paragraph order and heading exactly."
+      },
+      {
+        "text": "Tease Mirrorfold geometry visually without inventing new canon mechanics on this page. No labels, equations or explanatory environmental text beyond the specified editorial copy."
+      }
+    ]
+  }
+]
