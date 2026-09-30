@@ -4,6 +4,115 @@
     "unit": "PAGE",
     "issue": 1,
     "page": 1,
+    "title": "From the Editor",
+    "summary": "Opening editorial splash introduces Between the Beacons as the science-and-culture companion to Rex Fleet, inviting a new reader into the infrastructure, physics, places and human systems that make the wider series possible without giving away the lesson that follows.",
+    "settingText": "Full-page civilizational panorama of the mature Rex Fleet world: a vast green public corridor spans deep space between two clearly legible beacon stations, linking distant inhabited worlds. Civilian freighters, passenger craft and working Verge traffic use the green route; a blue-gold-white Fleet vessel protects the lane without visually owning it; a purple survey craft works outside the certified envelope; a yellow maintenance tender services one beacon. The image must make an unfamiliar reader feel that this road through impossible distance is ordinary infrastructure to the people who live here, while still looking spectacular enough to justify a whole civilization being built around it.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate, quiet column or field of negative space for the complete editorial copy. The route, worlds and ships should frame the typography rather than compete with it.",
+      "The visual hierarchy should read immediately even to a new reader: distant worlds; the green route connecting them; beacon infrastructure defining the route; ordinary ships depending on it; Fleet/survey/maintenance craft performing different jobs around it."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET ACADEMY: BETWEEN THE BEACONS"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "SCIENCE, CULTURE, AND THE WORLDS OF THE FLEET"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "If you’ve read Rex Fleet, you’ve seen ships vanish into corridors, green routes stretch between distant worlds, and entire civilizations depend on paths through space that most people aboard those ships take for granted."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "But Rex Fleet is a story about what people do when those systems are under pressure."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It doesn’t always stop to tell you how they work."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "That’s what Rex Fleet Academy: Between the Beacons is for."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "This is our guide to the science, history, cultures, places and ideas behind the world of Rex Fleet—but we’re not going to hand you an encyclopedia."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "We’re going there."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Into Academy classrooms. Onto survey ships. Across trading worlds and frontier stations. Into laboratories, old disasters, political arguments, engineering problems and the ordinary lives built around extraordinary technology."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Because a corridor isn’t just a glowing road through space."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It is the difference between a neighboring world and an unreachable one."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And a beacon isn’t just a light telling a ship where to go."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Someone had to decide that light could be trusted."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "For our first issue, we’re starting with the thing that makes the entire civilization of Rex Fleet possible."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Two places may be separated by light-years."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A ship may cross the distance between them in minutes."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And somewhere between those two facts is a piece of physics that changed human history."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Welcome to Between the Beacons."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The first lesson is about to begin."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat every CAPTION entry as exact integrated editorial typography, not speech balloons and not standard story narration boxes. Preserve wording, punctuation, paragraph order, headings and subtitle exactly.",
+      "This is a FROM THE EDITOR page, not an in-world Academy textbook page. The art may establish the world visually, but the voice must remain external editorial framing.",
+      "Prioritize legibility. Do not allow stars, ships, corridor glow, beacon hardware, lensing or interface detail to interfere with the text field.",
+      "No environmental lettering, labels, signage, logos or incidental readable text beyond the specified editorial copy.",
+      "Do not explain corridor mechanics beyond what the copy and visual relationship establish. The story pages earn those explanations."
+    ],
+    "status": "production-ready",
+    "source": "Editorial intro/teaser pass developed September 30, 2026."
+  },
+  {
+    "id": "RFA_BB_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
     "title": "Whose Green?",
     "setting": "RFA_LectureHall",
     "region": "Core",
@@ -73,7 +182,7 @@
     "sceneId": "RFA_BB_I01_S01"
   },
   {
-    "id": "RFA_BB_I01_P02",
+    "id": "RFA_BB_I01_P03",
     "summary": "Jia opens with a deceptively simple question and exposes the cadets' first assumption: the line on a chart is not the corridor itself.",
     "setting": "RFA_LectureHall",
     "region": "Core",
@@ -120,12 +229,12 @@
     "sceneId": "RFA_BB_I01_S01",
     "unit": "PAGE",
     "issue": 1,
-    "page": 2,
+    "page": 3,
     "title": "Where Is the Corridor?",
-    "continuityFrom": "RFA_BB_I01_P01"
+    "continuityFrom": "RFA_BB_I01_P02"
   },
   {
-    "id": "RFA_BB_I01_P03",
+    "id": "RFA_BB_I01_P04",
     "summary": "The familiar flat route diagram becomes a three-dimensional safe envelope, eliminating the ocean-channel misconception.",
     "setting": "RFA_LectureHall",
     "region": "Corridors",
@@ -167,7 +276,7 @@
         "text": "The usable diameter is usually about twice the beam of the largest ship the route is certified to carry."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P02",
+    "continuityFrom": "RFA_BB_I01_P03",
     "direction": [
       "academy-story",
       "corridor-physics"
@@ -175,11 +284,11 @@
     "sceneId": "RFA_BB_I01_S01",
     "unit": "PAGE",
     "issue": 1,
-    "page": 3,
+    "page": 4,
     "title": "No Port Side"
   },
   {
-    "id": "RFA_BB_I01_P04",
+    "id": "RFA_BB_I01_P05",
     "summary": "Jia shows that the corridor edge is a physical rise in risk, not a wall; drifting outward increases correction load, shear and instability.",
     "setting": "RFA_LectureHall",
     "region": "Corridors",
@@ -225,7 +334,7 @@
         "text": "Exactly."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P03",
+    "continuityFrom": "RFA_BB_I01_P04",
     "direction": [
       "academy-story",
       "corridor-physics"
@@ -233,11 +342,11 @@
     "sceneId": "RFA_BB_I01_S01",
     "unit": "PAGE",
     "issue": 1,
-    "page": 4,
+    "page": 5,
     "title": "The Edge Is Physical"
   },
   {
-    "id": "RFA_BB_I01_P05",
+    "id": "RFA_BB_I01_P06",
     "summary": "In the inversion lab, the cadets move from route geometry to the reciprocal-field relationship that makes transit possible.",
     "setting": "RFA_InversionLab",
     "region": "Lattice",
@@ -289,11 +398,11 @@
     "sceneId": "RFA_BB_I01_S02",
     "unit": "PAGE",
     "issue": 1,
-    "page": 5,
+    "page": 6,
     "title": "Inverse Tension"
   },
   {
-    "id": "RFA_BB_I01_P06",
+    "id": "RFA_BB_I01_P07",
     "summary": "A moving lab demonstration makes 'Riding the Inversion' literal without making it mystical: the ship maintains a dynamic relationship rather than traveling through a fixed tunnel.",
     "setting": "RFA_InversionLab",
     "region": "Lattice",
@@ -338,7 +447,7 @@
         "text": "Manageable enough to certify."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P05",
+    "continuityFrom": "RFA_BB_I01_P06",
     "direction": [
       "academy-story",
       "corridor-physics"
@@ -346,11 +455,11 @@
     "sceneId": "RFA_BB_I01_S02",
     "unit": "PAGE",
     "issue": 1,
-    "page": 6,
+    "page": 7,
     "title": "Riding the Inversion"
   },
   {
-    "id": "RFA_BB_I01_P07",
+    "id": "RFA_BB_I01_P08",
     "summary": "The students translate the field model back into navigation: fly as close as practical to the surveyed beacon-to-beacon spine while staying inside the measured safe envelope.",
     "setting": "RFA_InversionLab",
     "region": "Corridors",
@@ -392,7 +501,7 @@
         "text": "Now it looks like navigation."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P06",
+    "continuityFrom": "RFA_BB_I01_P07",
     "direction": [
       "academy-story",
       "corridor-physics"
@@ -400,11 +509,11 @@
     "sceneId": "RFA_BB_I01_S02",
     "unit": "PAGE",
     "issue": 1,
-    "page": 7,
+    "page": 8,
     "title": "Shortest Safe Answer"
   },
   {
-    "id": "RFA_BB_I01_P08",
+    "id": "RFA_BB_I01_P09",
     "summary": "At a BHA service gallery, Inspector Miko Saye turns green from a familiar traffic signal into a technical certification state.",
     "setting": "RFA_BHA_Gallery",
     "region": "Corridors",
@@ -454,11 +563,11 @@
     "sceneId": "RFA_BB_I01_S03",
     "unit": "PAGE",
     "issue": 1,
-    "page": 8,
+    "page": 9,
     "title": "Measured Safe"
   },
   {
-    "id": "RFA_BB_I01_P09",
+    "id": "RFA_BB_I01_P10",
     "summary": "Miko deliberately removes a sensor channel and the beacon turns red even though the modeled field itself has not changed, establishing the rule that unknown defaults to red.",
     "setting": "RFA_BHA_Gallery",
     "region": "Corridors",
@@ -505,7 +614,7 @@
         "text": "Especially then. That is when people are tempted."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P08",
+    "continuityFrom": "RFA_BB_I01_P09",
     "direction": [
       "academy-story",
       "beacon-rules"
@@ -513,11 +622,11 @@
     "sceneId": "RFA_BB_I01_S03",
     "unit": "PAGE",
     "issue": 1,
-    "page": 9,
+    "page": 10,
     "title": "Unknown Is Red"
   },
   {
-    "id": "RFA_BB_I01_P10",
+    "id": "RFA_BB_I01_P11",
     "summary": "Archival Shattering footage separates the physical Sundering and corridor collapse from the social catastrophe that followed, while showing that extreme tension can literally destroy a beacon.",
     "setting": "RFA_BHA_Gallery",
     "region": "Corridors",
@@ -572,7 +681,7 @@
         "text": "In that order."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P09",
+    "continuityFrom": "RFA_BB_I01_P10",
     "direction": [
       "academy-story",
       "beacon-rules"
@@ -585,11 +694,11 @@
     "sceneId": "RFA_BB_I01_S03",
     "unit": "PAGE",
     "issue": 1,
-    "page": 10,
+    "page": 11,
     "title": "Physics, Then History"
   },
   {
-    "id": "RFA_BB_I01_P11",
+    "id": "RFA_BB_I01_P12",
     "summary": "The lesson moves to the survey dock, where Fleet and private purple ships make visible the profession that discovers routes before anyone can certify or sell them.",
     "setting": "RFA_SurveyDock",
     "region": "Lattice",
@@ -640,11 +749,11 @@
     "sceneId": "RFA_BB_I01_S04",
     "unit": "PAGE",
     "issue": 1,
-    "page": 11,
+    "page": 12,
     "title": "Beyond Green"
   },
   {
-    "id": "RFA_BB_I01_P12",
+    "id": "RFA_BB_I01_P13",
     "summary": "Rhea explains why survey maps require repeated offset passes: a single transit proves only that one ship survived one solution at one time.",
     "setting": "RFA_SurveyDock",
     "region": "Lattice",
@@ -695,7 +804,7 @@
         "text": "Route age matters as much as route shape."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P11",
+    "continuityFrom": "RFA_BB_I01_P12",
     "direction": [
       "academy-story",
       "survey-culture"
@@ -703,11 +812,11 @@
     "sceneId": "RFA_BB_I01_S04",
     "unit": "PAGE",
     "issue": 1,
-    "page": 12,
+    "page": 13,
     "title": "Arguing With Tomorrow"
   },
   {
-    "id": "RFA_BB_I01_P13",
+    "id": "RFA_BB_I01_P14",
     "summary": "Fleet and private surveyors share methods but diverge in obligation: Fleet work moves toward public certification, while private data remains a commodity and may be marked without becoming public.",
     "setting": "RFA_SurveyDock",
     "region": "Lattice",
@@ -759,7 +868,7 @@
         "text": "And certification is not the same thing as existence."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P12",
+    "continuityFrom": "RFA_BB_I01_P13",
     "direction": [
       "academy-story",
       "survey-culture"
@@ -767,11 +876,11 @@
     "sceneId": "RFA_BB_I01_S04",
     "unit": "PAGE",
     "issue": 1,
-    "page": 13,
+    "page": 14,
     "title": "Marker Is Not Certification"
   },
   {
-    "id": "RFA_BB_I01_P14",
+    "id": "RFA_BB_I01_P15",
     "summary": "A route-market case study shows how the same privately surveyed path can serve ordinary trade and illicit traffic once a broker separates the surveyor from later buyers.",
     "setting": "RFA_RouteExchange",
     "region": "Verge",
@@ -831,11 +940,11 @@
     "sceneId": "RFA_BB_I01_S05",
     "unit": "PAGE",
     "issue": 1,
-    "page": 14,
+    "page": 15,
     "title": "Who Bought the Route?"
   },
   {
-    "id": "RFA_BB_I01_P15",
+    "id": "RFA_BB_I01_P16",
     "summary": "The cadets watch an unscrupulous middleman make a route more profitable by stripping its age and provenance, revealing that information quality can be degraded deliberately without falsifying the coordinates themselves.",
     "setting": "RFA_RouteExchange",
     "region": "Verge",
@@ -886,7 +995,7 @@
         "text": "Some sell ambiguity."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P14",
+    "continuityFrom": "RFA_BB_I01_P15",
     "direction": [
       "academy-story",
       "survey-culture"
@@ -894,11 +1003,11 @@
     "sceneId": "RFA_BB_I01_S05",
     "unit": "PAGE",
     "issue": 1,
-    "page": 15,
+    "page": 16,
     "title": "Selling Ambiguity"
   },
   {
-    "id": "RFA_BB_I01_P16",
+    "id": "RFA_BB_I01_P17",
     "summary": "A leaked BHA diagnostic demonstrates why internal harmonic data is so valuable: knowing that a red beacon reflects failed sensing rather than measured high tension changes the commercial risk calculation without restoring public certification.",
     "setting": "RFA_RouteExchange",
     "region": "Corridors",
@@ -956,7 +1065,7 @@
         "text": "Still red."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P15",
+    "continuityFrom": "RFA_BB_I01_P16",
     "direction": [
       "academy-story",
       "survey-culture",
@@ -965,11 +1074,11 @@
     "sceneId": "RFA_BB_I01_S05",
     "unit": "PAGE",
     "issue": 1,
-    "page": 16,
+    "page": 17,
     "title": "The Value of Why"
   },
   {
-    "id": "RFA_BB_I01_P17",
+    "id": "RFA_BB_I01_P18",
     "summary": "Back in the strategic gallery, Jia corrects another color assumption: green belongs culturally to the Verge and ordinary connected life, not to the Fleet that maintains the network.",
     "setting": "RFA_StrategyGallery",
     "region": "Verge",
@@ -1027,11 +1136,11 @@
     "sceneId": "RFA_BB_I01_S06",
     "unit": "PAGE",
     "issue": 1,
-    "page": 17,
+    "page": 18,
     "title": "Green Is the Verge"
   },
   {
-    "id": "RFA_BB_I01_P18",
+    "id": "RFA_BB_I01_P19",
     "summary": "The Crown metaphor becomes explicit: like King's Roads and Roman roads, corridor maintenance creates power because societies organize trade, relief and government around whoever can keep movement reliable.",
     "setting": "RFA_StrategyGallery",
     "region": "Core",
@@ -1085,7 +1194,7 @@
         "text": "Which is why maintenance becomes political whether you want it to or not."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P17",
+    "continuityFrom": "RFA_BB_I01_P18",
     "direction": [
       "academy-story",
       "color-grammar"
@@ -1093,11 +1202,11 @@
     "sceneId": "RFA_BB_I01_S06",
     "unit": "PAGE",
     "issue": 1,
-    "page": 18,
+    "page": 19,
     "title": "The King's Road"
   },
   {
-    "id": "RFA_BB_I01_P19",
+    "id": "RFA_BB_I01_P20",
     "summary": "Bright-red Shard space appears where public certainty fails: red and unmarked routes weaken Fleet control, and hostile actors can gain leverage simply by forcing a route outside safe certification.",
     "setting": "RFA_StrategyGallery",
     "region": "Corridors",
@@ -1158,7 +1267,7 @@
         "text": "Sometimes they only have to make us stop using it."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P18",
+    "continuityFrom": "RFA_BB_I01_P19",
     "direction": [
       "academy-story",
       "color-grammar",
@@ -1167,11 +1276,11 @@
     "sceneId": "RFA_BB_I01_S06",
     "unit": "PAGE",
     "issue": 1,
-    "page": 19,
+    "page": 20,
     "title": "Make the Road Red"
   },
   {
-    "id": "RFA_BB_I01_P20",
+    "id": "RFA_BB_I01_P21",
     "summary": "A ship-lineup exercise completes the color grammar: survey purple, subtle-cyan blockade runners, yellow maintenance/science craft, dark-purple/gold Tempest and deep-crimson Fleet protectors all express different relationships to the corridor network.",
     "setting": "RFA_StrategyGallery",
     "region": "Corridors",
@@ -1243,7 +1352,7 @@
         "text": "Both Fleet. Tempest patrols the margins. Crimson protects like it expects a fight."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P19",
+    "continuityFrom": "RFA_BB_I01_P20",
     "direction": [
       "academy-story",
       "color-grammar"
@@ -1256,11 +1365,11 @@
     "sceneId": "RFA_BB_I01_S06",
     "unit": "PAGE",
     "issue": 1,
-    "page": 20,
+    "page": 21,
     "title": "Colors at the Margin"
   },
   {
-    "id": "RFA_BB_I01_P21",
+    "id": "RFA_BB_I01_P22",
     "summary": "The final bridge exercise combines every layer: a Verge medical convoy faces a red public beacon caused by sensor failure, a recent private bypass, leaked BHA diagnostics and possible Shard activity.",
     "setting": "RFA_SimBridge",
     "region": "Corridors",
@@ -1329,11 +1438,11 @@
     "sceneId": "RFA_BB_I01_S07",
     "unit": "PAGE",
     "issue": 1,
-    "page": 21,
+    "page": 22,
     "title": "Duty Watch"
   },
   {
-    "id": "RFA_BB_I01_P22",
+    "id": "RFA_BB_I01_P23",
     "summary": "Every available answer is partly defensible, forcing the cadets to distinguish evidence, certification and urgency instead of treating any one data source as permission.",
     "setting": "RFA_SimBridge",
     "region": "Corridors",
@@ -1392,7 +1501,7 @@
         "text": "Stop choosing between two bad maps."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P21",
+    "continuityFrom": "RFA_BB_I01_P22",
     "direction": [
       "academy-story",
       "beacon-rules",
@@ -1401,11 +1510,11 @@
     "sceneId": "RFA_BB_I01_S07",
     "unit": "PAGE",
     "issue": 1,
-    "page": 22,
+    "page": 23,
     "title": "Two Bad Maps"
   },
   {
-    "id": "RFA_BB_I01_P23",
+    "id": "RFA_BB_I01_P24",
     "summary": "The cadets solve the exercise as stewards rather than owners: hold the convoy briefly, verify the route, repair the beacon and protect the margin so a green status means something when traffic moves again.",
     "setting": "RFA_SimBridge",
     "region": "Corridors",
@@ -1466,7 +1575,7 @@
         "text": "That is the job."
       }
     ],
-    "continuityFrom": "RFA_BB_I01_P22",
+    "continuityFrom": "RFA_BB_I01_P23",
     "direction": [
       "academy-story",
       "beacon-rules",
@@ -1476,14 +1585,14 @@
     "sceneId": "RFA_BB_I01_S07",
     "unit": "PAGE",
     "issue": 1,
-    "page": 23,
+    "page": 24,
     "title": "That Is the Job"
   },
   {
-    "id": "RFA_BB_I01_P24",
+    "id": "RFA_BB_I01_P25",
     "unit": "PAGE",
     "issue": 1,
-    "page": 24,
+    "page": 25,
     "title": "One Hard Part",
     "setting": "RFA_ObservationGallery",
     "region": "Core",
@@ -1565,5 +1674,86 @@
       }
     ],
     "sceneId": "RFA_BB_I01_S08"
+  },
+  {
+    "id": "RFA_BB_I01_P26",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 26,
+    "title": "Next Course",
+    "summary": "Closing editorial teaser carries the Academy reader from ordinary corridor logic into Navigating the Mirrorfold by making the next problem feel impossible before explaining any of its answers.",
+    "settingText": "Full-page teaser in deep Warp Black space at the edge of a Mirrorfold training visualization. A familiar green route enters from the lower foreground and then becomes spatially uncertain without turning into fantasy: one distant ship silhouette appears in two plausible positions, star depth and route perspective no longer agree, and restrained Nova Blue, Plasma Violet and Ion White refractions suggest folded geometry. Keep the image readable and elegant rather than kaleidoscopic. Do not stage a specific scene from Navigating the Mirrorfold and do not reveal a solution.",
+    "panelPlan": [
+      "Single full-page editorial teaser splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate field of clean negative space for the complete teaser copy.",
+      "Let the normal green corridor remain visible at the edge of the composition so the reader can feel the transition from a known road into geometry that no longer gives the same answers."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT COURSE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET ACADEMY: NAVIGATING THE MIRRORFOLD"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Between the beacons, a navigator can trust a few basic things: distance, direction, sequence, reference."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Usually."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The Mirrorfold is what happens when “usually” stops being useful."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A route seems to continue straight."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The instruments say it does not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A ship appears where it cannot be."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The stars insist on one answer."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The clocks insist on another."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "At the Academy, the first rule is simple:"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "When your eyes and your instruments disagree, trust the instruments."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Then the instruments disagree."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT: THE FIRST INSTRUMENT"
+      }
+    ],
+    "directionInline": [
+      "Treat every CAPTION entry as exact integrated editorial typography, not speech balloons and not standard story narration boxes. Preserve wording, punctuation, paragraph order and headings exactly.",
+      "This is an editorial teaser, not a scene from Navigating the Mirrorfold. Suggest the next problem without depicting plot beats, named characters, outcomes or solutions from that issue.",
+      "Prioritize legibility and controlled negative space. The geometry should feel physically strange but visually comprehensible enough to support the text.",
+      "No environmental lettering, labels, signage, logos or incidental readable text beyond the specified teaser copy.",
+      "Preserve established Mirrorfold visual grammar: Warp Black depth with restrained Nova Blue, Plasma Violet and Ion White refractions; no random kaleidoscope, magical portal or generic hyperspace tunnel."
+    ],
+    "status": "production-ready",
+    "source": "Editorial intro/teaser pass developed September 30, 2026."
   }
 ]
