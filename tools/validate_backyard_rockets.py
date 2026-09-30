@@ -38,6 +38,9 @@ def episode(scene):
     match = re.search(r"S1E\d{2}", str(scene.get("id", "")))
     return match.group(0) if match else None
 
+def is_editorial(scene):
+    return str(scene.get("pageRole", "")).startswith("editorial-")
+
 def flatten(value):
     if isinstance(value, str): return value
     if isinstance(value, list): return "\n".join(flatten(v) for v in value)
@@ -80,10 +83,19 @@ compressed = []
 for ep in eps:
     if not compressed or compressed[-1] != ep: compressed.append(ep)
 if compressed != expected_eps: raise SystemExit(f"Episode ordering invalid: {compressed}")
-counts = Counter(eps)
+story_counts = Counter(episode(s) for s in scenes if not is_editorial(s))
+editorial_counts = Counter(episode(s) for s in scenes if is_editorial(s))
 expected_authored = {"S1E01":20,"S1E02":24,"S1E03":19,"S1E04":18,"S1E05":21,"S1E06":19,"S1E07":19,"S1E08":22}
 for ep, expected in expected_authored.items():
-    if counts[ep] != expected: raise SystemExit(f"{ep}: expected {expected}, found {counts[ep]}")
+    if story_counts[ep] != expected:
+        raise SystemExit(f"{ep}: expected {expected} authored story pages, found {story_counts[ep]}")
+    if editorial_counts[ep] != 2:
+        raise SystemExit(f"{ep}: expected 2 editorial pages, found {editorial_counts[ep]}")
+    group = [s for s in scenes if episode(s) == ep]
+    if not group or group[0].get("pageRole") != "editorial-opening":
+        raise SystemExit(f"{ep}: editorial opening is not first")
+    if group[-1].get("pageRole") != "editorial-closing":
+        raise SystemExit(f"{ep}: editorial closing is not last")
 
 factions = load_json(SHOW / "factions.json")
 regions = load_json(SHOW / "regions.json")
@@ -110,8 +122,13 @@ for scene in scenes:
     for c in scene.get("charactersInline", []) or []:
         if c.get("handle") not in handles: raise SystemExit(f"{sid}: unknown character handle {c.get('handle')}")
     ep = episode(scene)
-    if ep in {f"S1E{n:02d}" for n in range(3, 9)}:
-        panels = scene.get("panelPlan") or []
+    panels = scene.get("panelPlan") or []
+    if is_editorial(scene):
+        if len(panels) < 4:
+            raise SystemExit(f"{sid}: editorial production page requires at least four concrete art-direction beats")
+        if scene.get("pageRole") not in {"editorial-opening", "editorial-closing"}:
+            raise SystemExit(f"{sid}: invalid editorial pageRole {scene.get('pageRole')}")
+    elif ep in {f"S1E{n:02d}" for n in range(3, 9)}:
         if len(panels) < 4:
             raise SystemExit(f"{sid}: unreleased production page requires at least four concrete planned panels")
         chef_text = "\n".join([scene.get("summary", ""), flatten(panels), flatten(scene.get("directionInline", []))])
@@ -134,7 +151,8 @@ for scene in scenes:
         raise SystemExit(f"{scene.get('id')}: continuityFrom references missing scene {target}")
 print("Active continuity links:", continuity_count, flush=True)
 
-print("Observed scene counts:", dict(counts), flush=True)
+print("Observed authored story counts:", dict(story_counts), flush=True)
+print("Observed editorial counts:", dict(editorial_counts), flush=True)
 print("Observed payload boundaries:", flush=True)
 for file, count, first_id, last_id in file_counts: print(f"  {file}: {count} [{first_id} .. {last_id}]", flush=True)
 print("Backyard Rockets validation passed")
