@@ -1,6 +1,79 @@
 [
   {
     "id": "SHAT_I01_P01",
+    "summary": "Opening editor splash frames Shattering as the lost pre-Fleet age when the corridor network still seemed permanent, inviting Rex Fleet readers to recognize the unnamed roots of the world they already know.",
+    "settingText": "Full-page High Era panorama at civilization scale: multiple inhabited worlds linked by immense stable green corridors, with civilian, diplomatic, and freight traffic moving through luminous lanes around elegant Cooperative/BHA infrastructure. The age should feel prosperous, precise, optimistic, and almost impossibly connected. Subtle shapes, colors, and design rhythms may echo visual traditions familiar from later Rex Fleet, Verge, and Shard culture, but no mature post-Shattering faction, uniform, ship class, or institution is physically present.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "You know the Fleet."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "You know the green corridors, the hard borders, the old arguments, the symbols people still fight over."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "But none of those things began with the names we know."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "There was a time when the great roads between the stars simply worked."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A ship could cross impossible distance and arrive exactly where civilization expected it. Worlds separated by darkness lived as neighbors. The machinery was ancient, immense, and so dependable that an entire age had forgotten what dependence felt like."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "This is that age."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Look closely."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "You will recognize things that nobody has names for yet."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "You may recognize some mistakes, too."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Welcome to Rex Fleet Academy: Shattering of the Corridors."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Before there were fleets, there were roads."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And everyone believed the roads would last forever."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
+  },
+  {
+    "id": "SHAT_I01_P02",
     "summary": "At the height of a Cooperative celebration, Liora notices a repeating corridor-timing drift that does not belong in the era’s supposedly perfect system.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -30,7 +103,7 @@
     "sceneId": "SCN_SHAT_I01_S01"
   },
   {
-    "id": "SHAT_I01_P02",
+    "id": "SHAT_I01_P03",
     "summary": "Liora brings the repeating drift to Lochran; he treats the pattern as an artifact of interpretation rather than a warning.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -50,7 +123,7 @@
       "Reverse on Liora as Lochran dismisses the pattern as something produced by looking too hard for one.",
       "End with the public display behind them still glowing green while Liora’s handheld continues to pulse off-time."
     ],
-    "continuityFrom": "SHAT_I01_P01",
+    "continuityFrom": "SHAT_I01_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -80,7 +153,7 @@
     "sceneId": "SCN_SHAT_I01_S01"
   },
   {
-    "id": "SHAT_I01_P03",
+    "id": "SHAT_I01_P04",
     "summary": "Damian steps into the dispute and deliberately shifts the question from accuracy to language, establishing reassurance as the Cooperative’s first response.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -103,7 +176,7 @@
     "directionInline": [
       "Hold the contrast between unresolved physical evidence and the institution’s immediate instinct to manage tone."
     ],
-    "continuityFrom": "SHAT_I01_P02",
+    "continuityFrom": "SHAT_I01_P03",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -129,7 +202,7 @@
     "sceneId": "SCN_SHAT_I01_S01"
   },
   {
-    "id": "SHAT_I01_P04",
+    "id": "SHAT_I01_P05",
     "summary": "Alan shows Liora that one convoy has been logged as arriving twice at the same time, turning her subtle timing drift into a concrete anomaly.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
@@ -167,7 +240,7 @@
     "sceneId": "SCN_SHAT_I01_S02"
   },
   {
-    "id": "SHAT_I01_P05",
+    "id": "SHAT_I01_P06",
     "summary": "Liora identifies the anomaly as echo-lag: the corridor itself is flexing enough for one arrival to register twice.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
@@ -188,7 +261,7 @@
     "directionInline": [
       "Keep the science legible through cause and image: one path, two temporal impressions."
     ],
-    "continuityFrom": "SHAT_I01_P04",
+    "continuityFrom": "SHAT_I01_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -210,7 +283,7 @@
     "sceneId": "SCN_SHAT_I01_S02"
   },
   {
-    "id": "SHAT_I01_P06",
+    "id": "SHAT_I01_P07",
     "summary": "Alan states the practical consequence of echo-lag: if it spreads, the network will no longer agree with reality about when ships arrive.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
@@ -228,7 +301,7 @@
       "Close on Alan spelling out what happens when arrival records and physical arrival cease to match.",
       "End on the Nexus traffic wall, still orderly at a glance but now containing more than one impossible timestamp. Direction: Land on the operational consequence: the network may stop agreeing with reality about when ships arrive."
     ],
-    "continuityFrom": "SHAT_I01_P05",
+    "continuityFrom": "SHAT_I01_P06",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
@@ -254,7 +327,7 @@
     "sceneId": "SCN_SHAT_I01_S02"
   },
   {
-    "id": "SHAT_I01_P07",
+    "id": "SHAT_I01_P08",
     "summary": "At Strauss Hall’s cultural festival, a delegation arrives late enough to break a ceremony designed around perfect corridor timing.",
     "setting": "S_StraussHall",
     "region": "HighEraCore",
@@ -296,7 +369,7 @@
     "sceneId": "SCN_SHAT_I01_S03"
   },
   {
-    "id": "SHAT_I01_P08",
+    "id": "SHAT_I01_P09",
     "summary": "Heska catches the same temporal inconsistency in the festival record and realizes that the celebrated system has produced a contradiction history will have to explain.",
     "setting": "S_StraussHall",
     "region": "HighEraCore",
@@ -317,7 +390,7 @@
     "directionInline": [
       "Preserve the contrast between public grace and Heska’s private archival alarm."
     ],
-    "continuityFrom": "SHAT_I01_P07",
+    "continuityFrom": "SHAT_I01_P08",
     "dialogueInline": [
       {
         "handle": "@starsplit.annc",
@@ -343,7 +416,7 @@
     "sceneId": "SCN_SHAT_I01_S03"
   },
   {
-    "id": "SHAT_I01_P09",
+    "id": "SHAT_I01_P10",
     "summary": "Heska brings the festival discrepancy into the Records Vault and discovers metadata offsets that do not match any archival standard.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
@@ -385,7 +458,7 @@
     "sceneId": "SCN_SHAT_I01_S04"
   },
   {
-    "id": "SHAT_I01_P10",
+    "id": "SHAT_I01_P11",
     "summary": "Liora connects Heska’s archival offsets to corridor drift and explains that a small physical error becomes dangerous when propagated through an interconnected system.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
@@ -406,7 +479,7 @@
     "directionInline": [
       "Make the multiplying dependence visible: the threat comes from propagation through a trusted network."
     ],
-    "continuityFrom": "SHAT_I01_P09",
+    "continuityFrom": "SHAT_I01_P10",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -428,7 +501,7 @@
     "sceneId": "SCN_SHAT_I01_S04"
   },
   {
-    "id": "SHAT_I01_P11",
+    "id": "SHAT_I01_P12",
     "summary": "Heska understands that if corridor timing can distort records, the Cooperative may eventually lose confidence not only in transit but in its own account of what happened.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
@@ -447,7 +520,7 @@
     "directionInline": [
       "Let the three conflicting timestamps and the ordered vault carry the existential concern without additional exposition."
     ],
-    "continuityFrom": "SHAT_I01_P10",
+    "continuityFrom": "SHAT_I01_P11",
     "dialogueInline": [
       {
         "handle": "@starsplit.heska",
@@ -469,7 +542,7 @@
     "sceneId": "SCN_SHAT_I01_S04"
   },
   {
-    "id": "SHAT_I01_P12",
+    "id": "SHAT_I01_P13",
     "summary": "Damian drafts the Cooperative’s response alone, testing phrases that minimize the anomaly without technically denying it.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -506,7 +579,7 @@
     "sceneId": "SCN_SHAT_I01_S05"
   },
   {
-    "id": "SHAT_I01_P13",
+    "id": "SHAT_I01_P14",
     "summary": "The reassurance message goes out across the same network whose timing is beginning to fail, allowing the public story of stability to outrun the evidence.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -523,7 +596,7 @@
     "directionInline": [
       "Show the reassurance spreading through public spaces while unresolved timing anomalies continue nearby; add no new spoken claims."
     ],
-    "continuityFrom": "SHAT_I01_P12",
+    "continuityFrom": "SHAT_I01_P13",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -533,7 +606,7 @@
     "sceneId": "SCN_SHAT_I01_S05"
   },
   {
-    "id": "SHAT_I01_P14",
+    "id": "SHAT_I01_P15",
     "summary": "At Orban-Tier Transit Port, a traveler discovers that her sister’s convoy appears twice in the arrival system and demands to know which arrival is real.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -572,7 +645,7 @@
     "sceneId": "SCN_SHAT_I01_S06"
   },
   {
-    "id": "SHAT_I01_P15",
+    "id": "SHAT_I01_P16",
     "summary": "The transit controller cannot reconcile the two timestamps and falls back on procedure while the crowd begins to sense that procedure no longer answers the problem.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -594,7 +667,7 @@
     "directionInline": [
       "The controller is overwhelmed, not villainous. Procedure is failing faster than staff can adapt."
     ],
-    "continuityFrom": "SHAT_I01_P14",
+    "continuityFrom": "SHAT_I01_P15",
     "dialogueInline": [
       {
         "handle": "@starsplit.tctrl",
@@ -616,7 +689,7 @@
     "sceneId": "SCN_SHAT_I01_S06"
   },
   {
-    "id": "SHAT_I01_P16",
+    "id": "SHAT_I01_P17",
     "summary": "Ava steadies the traveler and crowd without proof that the convoy is safe, revealing the moral burden of reassurance on the ground.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -638,7 +711,7 @@
     "directionInline": [
       "Ava’s reassurance should feel compassionate and risky, distinct from institutional messaging even though both withhold uncertainty."
     ],
-    "continuityFrom": "SHAT_I01_P15",
+    "continuityFrom": "SHAT_I01_P16",
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
@@ -668,7 +741,7 @@
     "sceneId": "SCN_SHAT_I01_S06"
   },
   {
-    "id": "SHAT_I01_P17",
+    "id": "SHAT_I01_P18",
     "summary": "Before the Council session, Lochran instructs Damian to keep the briefing centered on continuity rather than projected turbulence.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -715,7 +788,7 @@
     "sceneId": "SCN_SHAT_I01_S07"
   },
   {
-    "id": "SHAT_I01_P18",
+    "id": "SHAT_I01_P19",
     "summary": "Damian agrees to translate the crisis into reassurance, but his hesitation shows that he now understands the technical warning is real.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -737,7 +810,7 @@
     "directionInline": [
       "Damian’s uncertainty should be visible but not melodramatic; he is still choosing the institution’s approach."
     ],
-    "continuityFrom": "SHAT_I01_P17",
+    "continuityFrom": "SHAT_I01_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -759,7 +832,7 @@
     "sceneId": "SCN_SHAT_I01_S07"
   },
   {
-    "id": "SHAT_I01_P19",
+    "id": "SHAT_I01_P20",
     "summary": "The Council convenes expecting a contained technical briefing; Liora instead brings a model showing corridor tension accelerating across the network.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -803,7 +876,7 @@
     "sceneId": "SCN_SHAT_I01_S08"
   },
   {
-    "id": "SHAT_I01_P20",
+    "id": "SHAT_I01_P21",
     "summary": "Liora states plainly that the drift curve is accelerating and that mounting network tension is now visible in the model.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -826,7 +899,7 @@
     "directionInline": [
       "Liora’s authority should come from clarity and evidence, not grandstanding."
     ],
-    "continuityFrom": "SHAT_I01_P19",
+    "continuityFrom": "SHAT_I01_P20",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -848,7 +921,7 @@
     "sceneId": "SCN_SHAT_I01_S08"
   },
   {
-    "id": "SHAT_I01_P21",
+    "id": "SHAT_I01_P22",
     "summary": "Iskara publicly backs Liora’s model, turning a technical warning into the first visible fracture inside Cooperative leadership.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -871,7 +944,7 @@
     "directionInline": [
       "This is the first unmistakable leadership fracture; stage it as a shift in the room, not merely another line of dialogue."
     ],
-    "continuityFrom": "SHAT_I01_P20",
+    "continuityFrom": "SHAT_I01_P21",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -897,7 +970,7 @@
     "sceneId": "SCN_SHAT_I01_S08"
   },
   {
-    "id": "SHAT_I01_P22",
+    "id": "SHAT_I01_P23",
     "summary": "Lochran refuses to trigger alarm on projections, ending the issue with leadership choosing calm over intervention even after the warning becomes public.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -915,7 +988,7 @@
       "Tight exchange between Lochran, Liora, and Iskara as the argument narrows to what evidence is sufficient to act.",
       "Final panel isolates Lochran against the still-orderly civic architecture after he chooses verified failure over projected prevention."
     ],
-    "continuityFrom": "SHAT_I01_P21",
+    "continuityFrom": "SHAT_I01_P22",
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
@@ -939,5 +1012,54 @@
       }
     ],
     "sceneId": "SCN_SHAT_I01_S08"
+  },
+  {
+    "id": "SHAT_I01_P24",
+    "summary": "Closing teaser keeps the network outwardly functional while pointing toward the widening distance between Core confidence, edge maintenance, urgent transit needs, and forgotten knowledge.",
+    "settingText": "Full-page teaser composition spanning the functioning High Era network from polished Core infrastructure toward the harder-used Outer Band. Most corridor lines remain luminous green, but faint timing echoes and tiny doubled traces are visible only on close inspection. Include distant human-scale hints of maintenance work and waiting freight or medical cargo without staging a specific next-issue scene. The picture should feel beautiful first and uneasy second.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The map is still green."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "That is becoming a problem."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Out at the edges, people are fixing things the center still calls normal."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A medicine convoy needs a road that will stay where it was put."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And buried in the oldest layers of the network is evidence that somebody, long ago, expected this."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The corridors have been trusted for generations."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Next issue, trust gets expensive."
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
   }
 ]
