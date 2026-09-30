@@ -53,6 +53,12 @@
       "manifest": "production/drafts/manifest.json",
       "requiredStatus": "approved-production-draft",
       "rule": "An image is not durable production authority until it is explicitly approved and stored against its exact recipe key."
+    },
+    "editorialFraming": {
+      "use": "Art-directed environment-led opener and closer pages that carry scripted editor copy around each chapter without changing the 178 story-page recipes.",
+      "recipeIds": "LTS_CNN_EDITOR_OPEN for Chapters 1-7; LTS_CNN_EDITOR_NEXT for Chapters 1-6; LTS_C07_EDITOR_CLOSE for the final close.",
+      "visualRule": "Do not depict identifiable core-character faces on editorial framing pages. Use established Low Tide environments, objects, practical light, and negative space for exact integrated lettering.",
+      "storyBoundary": "Editorial framing is intentional issue content but is not a story-page-layout template. Normal LTS_CNN_PNN pages retain the existing sequential story-page rules."
     }
   },
   "knownScopeLocks": [
@@ -103,7 +109,7 @@
       "ordered assembled RexPrompt recipes"
     ],
     "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
-    "currentDurableState": "StarSplitterVisions has no released Low Tide interior pages and RexPrompt stores no approved Low Tide production drafts. The active Chapter 1 contract is LTS_C01_P01 through LTS_C01_P24, so with no stronger durable page approval evidence the production frontier is LTS_C01_P01."
+    "currentDurableState": "StarSplitterVisions has no released Low Tide interior pages and RexPrompt stores no approved Low Tide production drafts. Chapter 1 now begins with LTS_C01_EDITOR_OPEN, followed by LTS_C01_P01 through LTS_C01_P24 and LTS_C01_EDITOR_NEXT. With no stronger durable approval evidence, the production frontier is LTS_C01_EDITOR_OPEN."
   },
   "recipeCompilationState": {
     "chapter1": "24 active page recipes in pages_ch01_ch03_compiled.json; all 24 contain panelPlan.",
@@ -113,13 +119,15 @@
     "chapter5": "24 active page recipes in encoded/pages_c05_return_tide_enhanced.json.gzb64.",
     "chapter6": "24 active page recipes in encoded/pages_c06_after_the_water_enhanced.json.gzb64.",
     "chapter7": "26 active page recipes in encoded/pages_c07_last_low_tide_enhanced.json.gzb64.",
-    "rule": "Current sequential production uses LTS_CNN_PNN recipe IDs only. Do not mix retired scene-level recipe IDs into the active production frontier."
+    "rule": "Current story production uses LTS_CNN_PNN IDs, with explicit LTS_CNN_EDITOR_* framing recipes before and after each chapter. Do not mix retired scene-level recipe IDs into the active production frontier.",
+    "editorialFraming": "14 active editorial recipes: seven EDITOR_OPEN pages, six EDITOR_NEXT pages, and one final EDITOR_CLOSE page, stored in pages_editorial_openers.json and pages_editorial_closers.json. They wrap the existing story overlays without renumbering or rewriting story pages."
   },
   "productionReadiness": {
     "state": "normalized-with-visual-reference-gate",
     "gates": [
-      "Approve durable visual identity references for the six recurring core characters before character-bearing sequential production."
+      "Editorial framing pages may be produced from environment authority because they contain no identifiable core-character faces.",
+      "Approve durable visual identity references for the six recurring core characters before the first character-bearing story page."
     ]
   },
-  "storyPageOutputRule": "A normal scripted Low Tide Signal story page is a finished full-color portrait prestige-indie comic page in the grounded coastal science-fiction language of the current package. Do not add a series title, issue/chapter header, page label, character name/handle label, dossier frame, infographic header, credits, promotional callout, cover trade dress, or other non-scripted text. Only text required by the assembled recipe belongs on the story page."
+  "storyPageOutputRule": "A normal scripted Low Tide Signal story page is a finished full-color portrait prestige-indie comic page in the grounded coastal science-fiction language of the current package. Do not add a series title, issue/chapter header, page label, character name/handle label, dossier frame, infographic header, credits, promotional callout, cover trade dress, or other non-scripted text. Only text required by the assembled recipe belongs on the story page. Explicit LTS_CNN_EDITOR_* recipes are separate art-directed editorial framing pages and may contain their scripted FROM THE EDITOR, NEXT, title, and editor-copy display text."
 }
