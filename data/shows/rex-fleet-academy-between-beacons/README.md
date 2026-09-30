@@ -4,9 +4,9 @@
 - Active issue: `rex-fleet-academy-between-beacons-i01`
 - Production unit: `PAGE`
 - Active source: empty `pages_base.json` plus `pages_i01.json` overlay
-- Issue length: 24 story pages
+- Issue length: 26 production pages — 1 editor opener + 24 story pages + 1 closing teaser
 
-This one-off explains corridor science, navigation culture, public infrastructure and the politics created by control of safe movement through dramatized Academy instruction.
+This one-off explains corridor science, navigation culture, public infrastructure and the politics created by control of safe movement through dramatized Academy instruction. The story core remains 24 pages; premium editorial splashes now frame it at the beginning and end.
 
 ## Canon carried by Issue 1
 - Corridors are measured three-dimensional low-tension volumes, not ocean channels.
@@ -37,3 +37,10 @@ This one-off explains corridor science, navigation culture, public infrastructur
 Present-day BHA is the **Beacon Harmonics Authority**. The historical Shattering package uses **Beacon Harmonization Authority** for its High-Era predecessor. Preserve the distinction.
 
 Jia Morgan shares her Rex Fleet identity, handle and visual anchor. The closing page points toward the already-established `Rex Fleet Academy: Navigating the Mirrorfold` series without changing its mechanics.
+
+
+## Editorial wrapper
+- P01 is a full-page **FROM THE EDITOR** splash introducing `Rex Fleet`, the purpose of `Between the Beacons`, and the science/culture/world-guide promise without previewing the lesson's answers.
+- P02–P25 are the original 24 story pages, preserved beat-for-beat and shifted only in production numbering and within-scene continuity references.
+- P26 is a full-page **NEXT COURSE** teaser for `Rex Fleet Academy: Navigating the Mirrorfold — The First Instrument`; it creates forward pressure without depicting that issue's plot or solution.
+- Editorial lettering is exact integrated typography and remains separate from in-world Academy narration.
