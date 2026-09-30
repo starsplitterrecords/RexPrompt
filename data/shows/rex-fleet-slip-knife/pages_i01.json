@@ -1,0 +1,1024 @@
+[
+  {
+    "id": "RFSK_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "First Cut",
+    "summary": "Title splash establishes Slip Knife as a lean working blockade runner in the gold haze outside the Auric Gate, before the crew becomes larger than life in Verge songs.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [],
+    "panelPlan": [
+      "Single full-page cinematic image: Slip Knife cuts laterally through the immense gold-dusted debris field outside Auric Gate, small enough to feel vulnerable but fast enough to look purposeful. The ship is a lean asymmetrical runner in worn charcoal metal with subtle cyan route-striping, patched plates and informal flank marks; do not make it a pristine Fleet cruiser.",
+      "Reserve clean negative space for the exact title lettering. No other readable environmental text, registry numbers, signage or logos."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET: SLIP KNIFE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "ISSUE ONE — FIRST CUT"
+      }
+    ],
+    "directionInline": [
+      "Treat the two CAPTION entries as exact integrated title typography, not narration boxes. This is an interior title splash, not a cover.",
+      "Verge Campaign era, before the Flanking Rule is codified. Informal runner marks may be visible as shapes, but do not add readable slogans or labels."
+    ]
+  },
+  {
+    "id": "RFSK_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "summary": "At Luminara, the last grain pallets for Auric Freeport are loaded while Jonas Pell learns that the runner has already been stripped to make room.",
+    "setting": "SK_Luminara_Loading",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew",
+      "F_Luminara"
+    ],
+    "characters": [
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell",
+      "C_sk_rhea_kell"
+    ],
+    "panelPlan": [
+      "Wide establishing panel: working Luminara loading ring with greenhouse cylinders beyond the viewports and Slip Knife berthed among civilian freight traffic. Workers move sealed grain pallets toward the small runner.",
+      "Medium on Bram studying a mass slate while Jonas checks cooperative cargo seals. A removed armor panel rests on a service cart beside them.",
+      "Jonas looks from the armor panel to the grain. Bram keeps counting.",
+      "Rhea arrives at the ramp as the final pallet crosses onto Slip Knife."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "That panel came off your ship."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Good eye."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "For the grain?"
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "For six hundred kilos of it."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Seal the ramp when the last pallet clears."
+      }
+    ],
+    "directionInline": [
+      "The humor is dry and incidental. Bram is not reckless or careless; the removed protection is a deliberate mass trade made by people who understand the risk."
+    ],
+    "continuityFrom": "RFSK_I01_P01"
+  },
+  {
+    "id": "RFSK_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "summary": "Rhea accepts the delivery oath in practical Verge fashion: no speech, just an exact destination and an exact promise.",
+    "setting": "SK_CargoDeck",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew",
+      "F_Luminara"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell",
+      "C_sk_emi_varn"
+    ],
+    "panelPlan": [
+      "Cargo-deck wide: pallets fill most available volume while Emi closes a manifest case and Bram checks restraints.",
+      "Jonas offers the cooperative seal tag to Rhea. She checks the destination line first.",
+      "Tight two-shot as Jonas states what Auric Freeport is waiting on.",
+      "Rhea clips the tag inside her jacket and gives the promise plainly."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Auric Freeport. South receiving bins."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "How many are waiting on this load?"
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Enough that they stopped publishing the count."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "All right."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "We take it to the south bins."
+      }
+    ],
+    "directionInline": [
+      "Do not turn the oath into religious pageantry. Its weight comes from the absence of flourish and the crew's immediate behavior afterward."
+    ],
+    "continuityFrom": "RFSK_I01_P02"
+  },
+  {
+    "id": "RFSK_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "summary": "Jonas gets his first look at how little of Slip Knife is actually comfortable, while Emi explains the rule he is expected to follow aboard.",
+    "setting": "SK_CargoDeck",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_jonas_pell",
+      "C_sk_emi_varn",
+      "C_sk_nadi_korr"
+    ],
+    "panelPlan": [
+      "Jonas squeezes sideways along the narrow catwalk between cargo and hull structure, holding his soft gloves out of the machinery.",
+      "Emi passes him in the opposite direction without slowing, carrying route chits and sealed manifests.",
+      "A floor plate lifts ahead of Jonas; Nadi rises from the machinery underneath with a tool in her teeth, forcing him to stop.",
+      "Nadi closes the plate and looks at his clean cargo tags while Emi delivers the only orientation he gets."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.emi",
+        "text": "If Bram says move, move. If Nadi says stop, stop."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "And the captain?"
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "Try not to make her repeat herself."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "See? You're trained."
+      }
+    ],
+    "directionInline": [
+      "Let the ship's cramped geography do most of the worldbuilding. No tour-guide exposition."
+    ],
+    "continuityFrom": "RFSK_I01_P03"
+  },
+  {
+    "id": "RFSK_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "summary": "On the bridge, Tomas identifies the blockade pattern at Auric Gate: not an impenetrable wall, but three ships making a repeatable human mistake.",
+    "setting": "SK_Bridge",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Bridge establishing panel: Tomas works a layered route display while Rhea stands at the rail; Jonas takes the only spare fold-down seat.",
+      "Close on Tomas's plot: three hostile patrol arcs overlap around the Gate, but the overlap shifts when one hull turns to inspect outbound traffic.",
+      "Emi watches a comms status light and a handwritten watch-cycle note.",
+      "Rhea asks the only question that matters."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Three hulls. Same rotation for four watches."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "They search outbound first. Better resale."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Gap?"
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Eleven seconds if they behave."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "And if they don't?"
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Then it isn't a gap."
+      }
+    ],
+    "directionInline": [
+      "The display should communicate geometry visually without requiring readable interface text. Tomas is reading behavior, not performing magical prediction."
+    ],
+    "continuityFrom": "RFSK_I01_P04"
+  },
+  {
+    "id": "RFSK_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "summary": "Slip Knife departs with civilian traffic and receives the blockade order to hold outside the Gate.",
+    "setting": "SK_Bridge",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Exterior panel: Slip Knife leaves the Luminara traffic stream and enters the gold haze with several ordinary freighters farther ahead.",
+      "Bridge panel as a harsh incoming transmission light activates; Emi listens on one ear while watching the patrol arcs.",
+      "Rhea stays focused on Tomas rather than arguing over the channel.",
+      "Tomas raises two fingers as the first patrol begins its expected turn."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "BLOCKADE TRANSMISSION",
+        "text": "Inbound traffic, hold outside Gate control."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "They sound rested."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "That'll pass."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "First turn. Now."
+      }
+    ],
+    "directionInline": [
+      "The blockade voice is functional, not villainous. Do not add taunts or ideological speeches."
+    ],
+    "continuityFrom": "RFSK_I01_P05"
+  },
+  {
+    "id": "RFSK_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "summary": "Instead of challenging the blockade, Slip Knife drops beneath the visible approach lane and enters old siege debris where larger patrol ships cannot maneuver cleanly.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Exterior wide: Slip Knife rolls out of the clean approach lane and descends into a dark field of broken plating and rock below the Gate.",
+      "Bridge two-shot: Jonas watches the patrol icons remain above them while Tomas works without looking up.",
+      "Narrow armored viewport panel: a half-melted turret and shattered hull section slide close past the ship.",
+      "Close on Rhea's hand braced against the rail as the ship vibrates."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "They can see us leave the lane."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Yes."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Is that good?"
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "It means they're looking where we were."
+      }
+    ],
+    "directionInline": [
+      "Keep the maneuver intelligible: hiding in clutter reduces clean sensor tracking but increases collision risk."
+    ],
+    "continuityFrom": "RFSK_I01_P06"
+  },
+  {
+    "id": "RFSK_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "summary": "Tomas threads the first sensor overlap by using the shadow of a dead cruiser, treating the wreck as terrain rather than memorial.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_tomas_reeve",
+      "C_sk_rhea_kell",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Large exterior panel: Slip Knife hugs the broken spine of an enormous dead cruiser, nearly disappearing against its blackened hull.",
+      "Bridge close on Tomas timing the rotation with his fingers against the console edge.",
+      "Jonas sees frozen debris and one suited human figure far outside, tiny and non-graphic against the wreck.",
+      "Rhea notices Jonas noticing it, but neither comments; Tomas calls the exit from shadow."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Three... two... hold."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Go."
+      }
+    ],
+    "directionInline": [
+      "The dead at the Gate are part of the environment, not horror spectacle. One distant suited body is enough; no gore."
+    ],
+    "continuityFrom": "RFSK_I01_P07"
+  },
+  {
+    "id": "RFSK_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "summary": "The drive vibration rises as Slip Knife accelerates inside the debris field, and Nadi tells the bridge the engine mount will not tolerate the planned full burn.",
+    "setting": "SK_EngineBay",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_nadi_korr",
+      "C_sk_bram_ellis"
+    ],
+    "panelPlan": [
+      "Engine-bay wide: the machinery shudders hard enough to make clipped tools tremble against the wall.",
+      "Nadi braces herself between two service frames and watches a vibrating mount under load.",
+      "Bram appears at the hatch from cargo, listening to the same vibration through the deck.",
+      "Nadi keys the bridge intercom without taking her eyes off the mount."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "Rhea, you get eighty-four percent."
+      },
+      {
+        "speaker": "RHEA — COMMS",
+        "text": "We planned ninety-two."
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "Then plan again."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "How bad?"
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "Bad enough I'm being polite."
+      }
+    ],
+    "directionInline": [
+      "Mechanical limits are real and should constrain the later solution. Do not show impossible sparks everywhere; the threat is vibration fatigue and an overworked mount."
+    ],
+    "continuityFrom": "RFSK_I01_P08"
+  },
+  {
+    "id": "RFSK_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "summary": "At the lower burn limit, Slip Knife will miss the eleven-second gap, so Emi proposes using an empty inspection pod as a false damaged freighter return.",
+    "setting": "SK_Bridge",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Bridge: Tomas updates the timing after Nadi's limit and the clean gap visibly closes on the display.",
+      "Rhea looks to Emi, who is already pulling an old transponder puck from a drawer.",
+      "Jonas watches Emi connect the puck to a small maintenance control board.",
+      "Tomas recalculates while Emi explains exactly what she needs from the patrol."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "At eighty-four we arrive six seconds late."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Emi?"
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "We still have the inspection pod."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "That's not a ship."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "It only has to be one for twelve seconds."
+      }
+    ],
+    "directionInline": [
+      "The decoy is a plausible sensor/transponder deception using existing hardware, not hacking omnipotently into enemy systems."
+    ],
+    "continuityFrom": "RFSK_I01_P09"
+  },
+  {
+    "id": "RFSK_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "summary": "Emi and Bram eject the empty pod with a distressed transponder profile, pulling one patrol ship outward just long enough to reopen Tomas's route.",
+    "setting": "SK_CargoDeck",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_emi_varn",
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Cargo-deck exterior hatch area: Emi clamps the transponder puck onto a battered inspection pod while Bram checks that no cargo shares the release rail.",
+      "Jonas helps physically latch the cover after Emi gives him a tool rather than a speech.",
+      "Exterior panel: the small pod tumbles away from Slip Knife toward open space, broadcasting as it spins.",
+      "Bridge-feed inset or final exterior: one distant blockade ship begins turning toward the false contact."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.emi",
+        "text": "Hold that."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Which part?"
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "The part trying to leave."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Pod clear."
+      },
+      {
+        "speaker": "TOMAS — COMMS",
+        "text": "They're taking it."
+      }
+    ],
+    "directionInline": [
+      "Keep action tactile and understandable. The decoy wins attention, not total invisibility."
+    ],
+    "continuityFrom": "RFSK_I01_P10"
+  },
+  {
+    "id": "RFSK_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "summary": "Slip Knife makes the reopened crossing, but a second patrol notices the runner as it leaves the wreck shadow and fires a warning burst across its bow.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn"
+    ],
+    "panelPlan": [
+      "Exterior wide: Slip Knife accelerates across a short exposed interval between wreck shadows.",
+      "A red-marked patrol ship swings its nose toward the runner; a warning burst flashes ahead, not a direct kill shot.",
+      "Bridge panel: Rhea does not flinch; Tomas pulls the route tighter around a rotating slab of armor.",
+      "Emi braces against the console as the blockade transmission returns."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "BLOCKADE TRANSMISSION",
+        "text": "Runner, cut drive and prepare for inspection."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Tomas."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Already moving it."
+      }
+    ],
+    "directionInline": [
+      "The patrol initially attempts seizure, not annihilation. This is a cargo-control action that escalates because Slip Knife refuses to stop."
+    ],
+    "continuityFrom": "RFSK_I01_P11"
+  },
+  {
+    "id": "RFSK_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "summary": "The next burst clips Slip Knife, sending a shock through the hull and breaking one cargo restraint on the packed grain deck.",
+    "setting": "SK_CargoDeck",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Exterior narrow panel: a burst grazes Slip Knife's aft quarter, kicking fragments from already patched plating.",
+      "Cargo deck jolts violently; one restraint hook tears free and a grain pallet shifts half a meter.",
+      "Bram is knocked to one knee but immediately points Jonas to the manual chain winch.",
+      "Jonas reaches the winch as the pallet creeps toward the narrow catwalk."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Red chain. Pull it."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "It's jammed."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Then pull harder."
+      }
+    ],
+    "directionInline": [
+      "Cargo has real inertia. Do not turn the pallet into a weightless object or action-movie projectile."
+    ],
+    "continuityFrom": "RFSK_I01_P12"
+  },
+  {
+    "id": "RFSK_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "summary": "Jonas and Bram re-secure the shifted grain while Nadi reports that the hit damaged cooling around the already-limited drive.",
+    "setting": "SK_CargoDeck",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell",
+      "C_sk_nadi_korr"
+    ],
+    "panelPlan": [
+      "Jonas leans his full weight into the manual winch while Bram guides the pallet back onto its restraint feet.",
+      "The chain seats with a heavy mechanical snap; both men stay braced rather than celebrating.",
+      "Nadi appears on a small wall comm panel, face lit by engine-bay practical light.",
+      "Bram checks the seals on the grain before checking his own bleeding knuckle."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "NADI — COMMS",
+        "text": "Cooling loop took the hit."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Drive?"
+      },
+      {
+        "speaker": "NADI — COMMS",
+        "text": "Still ours. For now."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Do we dump any?"
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "No."
+      }
+    ],
+    "directionInline": [
+      "Bram's 'No' is immediate because dumping food is the last option, not because the crew is irrational about survival."
+    ],
+    "continuityFrom": "RFSK_I01_P13"
+  },
+  {
+    "id": "RFSK_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "summary": "The planned debris seam closes when an old gun platform rotates into the route, leaving Slip Knife too wide to pass without changing the ship itself.",
+    "setting": "SK_Bridge",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn"
+    ],
+    "panelPlan": [
+      "Bridge display and narrow forward view align: a dead gun platform slowly tumbles into the seam Tomas intended to use.",
+      "Tomas measures the shrinking clearance with one hand while Rhea watches the geometry.",
+      "Emi looks back toward the aft status board as pursuit closes.",
+      "Close on Tomas, calm but unequivocal."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "We don't fit anymore."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Other route?"
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Not before they catch us."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "I hate simple choices."
+      }
+    ],
+    "directionInline": [
+      "Make the physical obstruction clear enough that the reader understands why speed alone cannot solve it."
+    ],
+    "continuityFrom": "RFSK_I01_P14"
+  },
+  {
+    "id": "RFSK_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "summary": "Nadi finds the only workable answer: jettison the port service blister and its damaged cooling hardware, making Slip Knife narrow enough for Tomas's seam but leaving the drive without redundancy.",
+    "setting": "SK_EngineBay",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_nadi_korr",
+      "C_sk_rhea_kell"
+    ],
+    "panelPlan": [
+      "Engine bay: Nadi traces the damaged cooling line to a removable exterior service blister on a simple schematic plate.",
+      "She opens a manual release panel and sees that the blister also carries backup coolant capacity.",
+      "Split composition between Nadi on comms and Rhea on the bridge.",
+      "Nadi waits for the order with one hand already on the guarded release."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "We can lose the port blister."
+      },
+      {
+        "speaker": "RHEA — COMMS",
+        "text": "Cooling?"
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "We lose the backup with it."
+      },
+      {
+        "speaker": "RHEA — COMMS",
+        "text": "Will the drive hold to the Gate?"
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "Ask me after the Gate."
+      },
+      {
+        "speaker": "RHEA — COMMS",
+        "text": "Drop it."
+      }
+    ],
+    "directionInline": [
+      "The decision trades survivability after the maneuver for immediate physical clearance. Do not portray it as free weight loss."
+    ],
+    "continuityFrom": "RFSK_I01_P15"
+  },
+  {
+    "id": "RFSK_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "summary": "The service blister tears away and the slimmer Slip Knife commits to the seam with the pursuing patrol too close to turn back.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_nadi_korr"
+    ],
+    "panelPlan": [
+      "Exterior: explosive bolts release the battered port service blister; it spins away trailing a small cloud of vented coolant, not a huge explosion.",
+      "The pursuing patrol is visible farther back, too large to follow the same line cleanly.",
+      "Bridge close: Tomas centers the ship on a gap barely wider than the remaining hull.",
+      "Engine-bay close: Nadi watches temperature climb on a simple gauge while bracing against the drive casing."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Don't correct unless I call it."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Your ship."
+      },
+      {
+        "speaker": "NADI — COMMS",
+        "text": "Please don't say that where it can hear you."
+      }
+    ],
+    "directionInline": [
+      "The small joke releases pressure without undercutting the danger. Keep the gap visually narrow and the runner's profile asymmetrical after the jettison."
+    ],
+    "continuityFrom": "RFSK_I01_P16"
+  },
+  {
+    "id": "RFSK_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "summary": "Slip Knife scrapes through the gun-platform seam, shedding paint and plating while the larger pursuer is forced to break away.",
+    "setting": "SK_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Large exterior panel: Slip Knife enters the seam between asteroid rock and the rotating gun platform, hull nearly touching both sides.",
+      "Interior bridge: metal screams through the structure; Rhea keeps her hands off Tomas's controls.",
+      "Cargo-deck insert: Jonas looks up as dust and paint flakes shake from the overhead seam, one hand still on the red restraint chain.",
+      "Exterior final: Slip Knife exits the far side with a long fresh scrape along its flank; the larger patrol yaws away from the impossible gap."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Was that the hull?"
+      },
+      {
+        "speaker": "BRAM — OFF PANEL",
+        "text": "Most of it."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Clear."
+      }
+    ],
+    "directionInline": [
+      "The scrape is costly but survivable. Do not make the ship emerge pristine."
+    ],
+    "continuityFrom": "RFSK_I01_P17"
+  },
+  {
+    "id": "RFSK_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "summary": "Past the debris seam, the Gate opens ahead; the final hostile shots fall behind as Slip Knife crosses into the Freeport approach on a drive Nadi no longer trusts.",
+    "setting": "SK_Bridge",
+    "region": "Corridors",
+    "factions": [
+      "F_SK_Crew",
+      "F_Auric_Blockade"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_emi_varn",
+      "C_sk_nadi_korr"
+    ],
+    "panelPlan": [
+      "Exterior wide: Slip Knife breaks from the debris into the Gate passage, scarred and missing its port blister, with the Freeport approach lights far beyond.",
+      "A final burst flashes from behind but falls short as debris and geometry block the pursuer.",
+      "Bridge: Emi starts to smile, then an engine warning tone cuts it off.",
+      "Rhea keys the engine room while Tomas keeps the damaged ship on a conservative line."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.emi",
+        "text": "That's the Gate."
+      },
+      {
+        "speaker": "NADI — COMMS",
+        "text": "Do not celebrate on my drive."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "How long?"
+      },
+      {
+        "speaker": "NADI — COMMS",
+        "text": "Long enough if nobody gets ambitious."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "Tomas, be boring."
+      },
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "Finally."
+      }
+    ],
+    "directionInline": [
+      "The climax resolves by passage, not destruction of the blockade force. Slip Knife wins because it gets through."
+    ],
+    "continuityFrom": "RFSK_I01_P18"
+  },
+  {
+    "id": "RFSK_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "summary": "Slip Knife limps into Auric Freeport, where the receiving crew asks for the only number that matters: how much cargo survived.",
+    "setting": "SK_Auric_Freeport",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew",
+      "F_Luminara"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_bram_ellis",
+      "C_sk_jonas_pell",
+      "C_sk_emi_varn"
+    ],
+    "panelPlan": [
+      "Exterior docking panel: the damaged runner settles into a crowded receiving berth while dock crews converge with cargo equipment instead of cheering.",
+      "Ramp opens onto workers waiting with grain carts and empty bin hoppers.",
+      "A receiving foreman, kept generic and unnamed, calls up toward Bram as he checks the first pallet seal.",
+      "Bram looks over the packed deck once before answering."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "RECEIVING FOREMAN",
+        "text": "How much did you lose?"
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "None."
+      },
+      {
+        "speaker": "RECEIVING FOREMAN",
+        "text": "None?"
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Open the bins."
+      }
+    ],
+    "directionInline": [
+      "Avoid triumphal crowd staging. Freeport has work to do; the relief is visible in speed and attention."
+    ],
+    "continuityFrom": "RFSK_I01_P19"
+  },
+  {
+    "id": "RFSK_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "summary": "During unloading, one torn grain sack spills kernels across the dock and Jonas sees workers recover every handful before the next pallet moves.",
+    "setting": "SK_Auric_Freeport",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew",
+      "F_Luminara"
+    ],
+    "characters": [
+      "C_sk_jonas_pell",
+      "C_sk_bram_ellis",
+      "C_sk_rhea_kell"
+    ],
+    "panelPlan": [
+      "Medium on a pallet corner catching the ramp edge; one outer grain sack tears and spills a small fan of kernels onto the metal deck.",
+      "Before Jonas can react, two dock workers kneel with scoops and a shallow bin, gathering the spill efficiently without drama.",
+      "Jonas joins them, now using his once-clean soft gloves to push grain into the bin.",
+      "From farther up the ramp, Bram sees him working and simply sends the next pallet around the spill. Rhea watches the receiving line continue."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "I'll get it."
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Then get it."
+      }
+    ],
+    "directionInline": [
+      "This is famine memory expressed through behavior, not sentimental dialogue. Keep the spill small and the recovery practical."
+    ],
+    "continuityFrom": "RFSK_I01_P20"
+  },
+  {
+    "id": "RFSK_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "summary": "That night at the Ember Cantina, a singer is already turning the Gate run into legend while the exhausted crew knows how improvised it really was.",
+    "setting": "SK_Ember_Cantina",
+    "region": "Verge",
+    "factions": [
+      "F_SK_Crew"
+    ],
+    "characters": [
+      "C_sk_rhea_kell",
+      "C_sk_tomas_reeve",
+      "C_sk_nadi_korr",
+      "C_sk_bram_ellis",
+      "C_sk_emi_varn",
+      "C_sk_jonas_pell"
+    ],
+    "panelPlan": [
+      "Wide cantina panel: dock workers and runner crews crowd around rough tables while a musician on a low platform pounds out a loud new song. Slip Knife's crew occupy one table with food, tools and bandaged knuckles rather than heroic poses.",
+      "Tomas listens as the singer pantomimes an enormous impossible maneuver with one arm.",
+      "Emi leans toward him, amused; Nadi eats with both hands while still wearing a tool harness.",
+      "Close on Bram drawing his small utility knife and cutting one fresh chevron into the worn handle.",
+      "Final quiet panel: Rhea finishes her food as a dock messenger sets a new sealed cargo chit on the table. She looks at it; the others follow her eyes."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@rex.slip.tomas",
+        "text": "There was no plasma storm."
+      },
+      {
+        "handle": "@rex.slip.emi",
+        "text": "There will be by the second verse."
+      },
+      {
+        "handle": "@rex.slip.nadi",
+        "text": "If he rhymes my drive with 'alive,' I'm leaving."
+      },
+      {
+        "handle": "@rex.slip.jonas",
+        "text": "Do they always do this?"
+      },
+      {
+        "handle": "@rex.slip.bram",
+        "text": "Only when we come back."
+      },
+      {
+        "handle": "@rex.slip.rhea",
+        "text": "What's the next load?"
+      }
+    ],
+    "directionInline": [
+      "End on work continuing, not on a slogan. The fresh chevron is a lived record of the run and should be small, tactile and personal. No readable song lyrics or environmental signage."
+    ],
+    "continuityFrom": "RFSK_I01_P21"
+  }
+]
