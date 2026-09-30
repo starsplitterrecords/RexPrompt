@@ -1,6 +1,67 @@
 [
   {
     "id": "SHAT_I06_P01",
+    "summary": "Opening editor splash frames the finale as an origin that begins not with a finished Fleet but with cooperation under pressure among incompatible post-Break inheritances.",
+    "settingText": "Full-page view of the nearly completed prototype rescue vessel surrounded by mixed crews and equipment from the emerging post-Break traditions. The shared safety sigil is visible as a common ancestor, while the ship remains visibly improvised and pre-Fleet. The image should feel like history about to move without turning the vessel into a mature Rex Fleet design.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The Fleet does not begin with a fleet."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It begins with a problem too large for any one inheritance to solve."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A route needs a repair."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A repair needs a standard."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A standard needs trust."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Trust needs someone willing to answer when it fails."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The people on these pages do not know what their descendants will build from that chain."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "They are too busy trying to get one ship off the ground."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "History can name the era later."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
+  },
+  {
+    "id": "SHAT_I06_P02",
     "summary": "Liora reviews the nearly finished treatise and deliberately preserves contradictions and gaps rather than turning it into one complete doctrine.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -31,7 +92,7 @@
     "sceneId": "SCN_SHAT_I06_S01"
   },
   {
-    "id": "SHAT_I06_P02",
+    "id": "SHAT_I06_P03",
     "summary": "Liora closes the final draft and states that future unity must be built through practice rather than borrowed from her authority.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -50,7 +111,7 @@
     "directionInline": [
       "This is Liora relinquishing control over how the text will be completed."
     ],
-    "continuityFrom": "SHAT_I06_P01",
+    "continuityFrom": "SHAT_I06_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -60,7 +121,7 @@
     "sceneId": "SCN_SHAT_I06_S01"
   },
   {
-    "id": "SHAT_I06_P03",
+    "id": "SHAT_I06_P04",
     "summary": "With the prototype rescue vessel visible in the adjacent gantry, Iskara marks a passage in Liora's treatise that crews could misread as permission for unsafe improvisation.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -104,7 +165,7 @@
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
-    "id": "SHAT_I06_P04",
+    "id": "SHAT_I06_P05",
     "summary": "Ruben annotates the disputed passage with the prototype's real repair limits, turning a philosophical disagreement into a field rule another crew can inspect.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -127,7 +188,7 @@
     "directionInline": [
       "Ruben is correcting abstractions with lived breakage, not trying to author a rival scripture."
     ],
-    "continuityFrom": "SHAT_I06_P03",
+    "continuityFrom": "SHAT_I06_P04",
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
@@ -153,7 +214,7 @@
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
-    "id": "SHAT_I06_P05",
+    "id": "SHAT_I06_P06",
     "summary": "Ava tests the treatise against the vessel's first mission and exposes its assumption that a single route authority still exists; the Circle ends with three operational versions because the ship leaves before doctrine can be unified.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -176,7 +237,7 @@
     "directionInline": [
       "The division should emerge through sincere attempts to make the text usable."
     ],
-    "continuityFrom": "SHAT_I06_P04",
+    "continuityFrom": "SHAT_I06_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
@@ -206,7 +267,7 @@
     "sceneId": "SCN_SHAT_I06_S02"
   },
   {
-    "id": "SHAT_I06_P06",
+    "id": "SHAT_I06_P07",
     "summary": "At a fragile courier relay, Ava moves Core down the prototype's first mission priority list because other settlements have less heat, air, and time.",
     "setting": "S_CourierRelay",
     "region": "PostBreakMixed",
@@ -255,7 +316,7 @@
     "sceneId": "SCN_SHAT_I06_S03"
   },
   {
-    "id": "SHAT_I06_P07",
+    "id": "SHAT_I06_P08",
     "summary": "The courier challenges Ava's right to rank the rescue mission; Ava answers with an accountable process rather than claiming authority she does not possess.",
     "setting": "S_CourierRelay",
     "region": "PostBreakMixed",
@@ -274,7 +335,7 @@
     "directionInline": [
       "Keep the legitimacy challenge unresolved; Ava has practical reasons for prioritizing need but no universal law to invoke."
     ],
-    "continuityFrom": "SHAT_I06_P06",
+    "continuityFrom": "SHAT_I06_P07",
     "dialogueInline": [
       {
         "handle": "@starsplit.cour",
@@ -304,7 +365,7 @@
     "sceneId": "SCN_SHAT_I06_S03"
   },
   {
-    "id": "SHAT_I06_P08",
+    "id": "SHAT_I06_P09",
     "summary": "At the Outer yard supplying the prototype, every battery from a Core cache arrives dead, dropping launch-support power and reopening the old suspicion that Outer needs are always the ones expected to absorb failure.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -355,7 +416,7 @@
     "sceneId": "SCN_SHAT_I06_S04"
   },
   {
-    "id": "SHAT_I06_P09",
+    "id": "SHAT_I06_P10",
     "summary": "The outer technician demands usable power for the launch rather than explanations; Lochran denies sabotage but cannot ask Outer survivors to forget the long pattern of arriving last.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -377,7 +438,7 @@
     "directionInline": [
       "Preserve the ambiguity: mistrust grows from accumulated experience even where intent is unproven."
     ],
-    "continuityFrom": "SHAT_I06_P08",
+    "continuityFrom": "SHAT_I06_P09",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -403,7 +464,7 @@
     "sceneId": "SCN_SHAT_I06_S04"
   },
   {
-    "id": "SHAT_I06_P10",
+    "id": "SHAT_I06_P11",
     "summary": "With the prototype's launch board active behind them, the Resolve Circle begins using Liora's treatise to justify competing operating rules; Liora refuses to let her text substitute for decisions the mission itself requires.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -457,7 +518,7 @@
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
-    "id": "SHAT_I06_P11",
+    "id": "SHAT_I06_P12",
     "summary": "Iskara and Ruben argue over the prototype's repair authority: common limits protect the next crew from inheriting an invisible trap, while waiting for ideal parts can kill the crew that exists now.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -482,7 +543,7 @@
     "directionInline": [
       "Stage this as collision between true constraints, not heroes versus villains."
     ],
-    "continuityFrom": "SHAT_I06_P10",
+    "continuityFrom": "SHAT_I06_P11",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -508,7 +569,7 @@
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
-    "id": "SHAT_I06_P12",
+    "id": "SHAT_I06_P13",
     "summary": "Ava reframes the launch around the handoffs between groups; the Circle discovers a narrow shared minimum in accountable transfer rather than a unified doctrine.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -533,7 +594,7 @@
     "directionInline": [
       "The agreement should be narrow by design."
     ],
-    "continuityFrom": "SHAT_I06_P11",
+    "continuityFrom": "SHAT_I06_P12",
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
@@ -567,7 +628,7 @@
     "sceneId": "SCN_SHAT_I06_S05"
   },
   {
-    "id": "SHAT_I06_P13",
+    "id": "SHAT_I06_P14",
     "summary": "Needing one mark that can travel with the vessel, its parts, and the depots it serves, the Circle adopts a shared safety sigil while deliberately refusing to assign it one complete political meaning.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -615,7 +676,7 @@
     "sceneId": "SCN_SHAT_I06_S06"
   },
   {
-    "id": "SHAT_I06_P14",
+    "id": "SHAT_I06_P15",
     "summary": "Ruben and Ava accept the same sigil for different reasons—survival and the right to ask for help—locking ambiguity into the future symbol.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -638,7 +699,7 @@
     "directionInline": [
       "Keep the groups visually distinct even while each adopts the same shared sigil."
     ],
-    "continuityFrom": "SHAT_I06_P13",
+    "continuityFrom": "SHAT_I06_P14",
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
@@ -668,7 +729,7 @@
     "sceneId": "SCN_SHAT_I06_S06"
   },
   {
-    "id": "SHAT_I06_P15",
+    "id": "SHAT_I06_P16",
     "summary": "After the launch preparations produce three annotated working copies, Heska receives them for preservation and realizes the archive can no longer honestly identify one uncontested original meaning.",
     "setting": "S_PreArchiveVault",
     "region": "PostBreakCore",
@@ -713,7 +774,7 @@
     "sceneId": "SCN_SHAT_I06_S07"
   },
   {
-    "id": "SHAT_I06_P16",
+    "id": "SHAT_I06_P17",
     "summary": "The archive curator chooses preservation over adjudication, sealing all versions so the future receives the argument rather than a fabricated certainty.",
     "setting": "S_PreArchiveVault",
     "region": "PostBreakCore",
@@ -733,7 +794,7 @@
     "directionInline": [
       "Give Heska and the curator decisive working body language as they label three separate provenances; this is an intentional archival procedure, not hesitation."
     ],
-    "continuityFrom": "SHAT_I06_P15",
+    "continuityFrom": "SHAT_I06_P16",
     "dialogueInline": [
       {
         "handle": "@starsplit.archv",
@@ -763,7 +824,7 @@
     "sceneId": "SCN_SHAT_I06_S07"
   },
   {
-    "id": "SHAT_I06_P17",
+    "id": "SHAT_I06_P18",
     "summary": "As a prototype rescue vessel nears completion, Lochran argues that command should remain with Core because centralized authority historically held the network together.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -814,7 +875,7 @@
     "sceneId": "SCN_SHAT_I06_S08"
   },
   {
-    "id": "SHAT_I06_P18",
+    "id": "SHAT_I06_P19",
     "summary": "The field officer rejects distant legitimacy and Iskara reframes the role as stewardship, leaving the ship ready before its command philosophy is settled.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -836,7 +897,7 @@
     "directionInline": [
       "Keep the captain field visibly blank beside an active launch countdown while each speaker argues from hierarchy, earned loyalty, or stewardship."
     ],
-    "continuityFrom": "SHAT_I06_P17",
+    "continuityFrom": "SHAT_I06_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -866,7 +927,7 @@
     "sceneId": "SCN_SHAT_I06_S08"
   },
   {
-    "id": "SHAT_I06_P19",
+    "id": "SHAT_I06_P20",
     "summary": "At preflight, the prototype multiworld rescue vessel is no longer an unveiling but a working synthesis already under deadline: patched systems, shared route data, and mixed crews are checked while boarding begins.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -917,7 +978,7 @@
     "sceneId": "SCN_SHAT_I06_S09"
   },
   {
-    "id": "SHAT_I06_P20",
+    "id": "SHAT_I06_P21",
     "summary": "Ruben and Ava assert that Shard crew and Verge routes are partners in the vessel’s mission rather than subordinate contributions, and the ship launches without a named captain.",
     "setting": "S_ResolveCircle",
     "region": "PostBreakMixed",
@@ -940,7 +1001,7 @@
     "directionInline": [
       "The launch works because the groups cooperate operationally without resolving ideology."
     ],
-    "continuityFrom": "SHAT_I06_P19",
+    "continuityFrom": "SHAT_I06_P20",
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
@@ -970,7 +1031,7 @@
     "sceneId": "SCN_SHAT_I06_S09"
   },
   {
-    "id": "SHAT_I06_P21",
+    "id": "SHAT_I06_P22",
     "summary": "From her hideout, Liora watches the rescue vessel depart with three different escort traditions already interpreting the shared sigil in different ways.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -1020,7 +1081,7 @@
     "sceneId": "SCN_SHAT_I06_S10"
   },
   {
-    "id": "SHAT_I06_P22",
+    "id": "SHAT_I06_P23",
     "summary": "Damian recognizes that the launch is not a reunification but the beginning of many future fleets, each likely to claim a different meaning from the same inheritance.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -1040,7 +1101,7 @@
     "directionInline": [
       "Keep the common sigil visible as the formation divides toward different broken lanes, so shared inheritance remains visible inside the separation."
     ],
-    "continuityFrom": "SHAT_I06_P21",
+    "continuityFrom": "SHAT_I06_P22",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -1068,5 +1129,70 @@
       }
     ],
     "sceneId": "SCN_SHAT_I06_S10"
+  },
+  {
+    "id": "SHAT_I06_P24",
+    "summary": "Final editor splash closes Shattering by linking its messy, overlapping inheritances to the cleaner names later history will use and points readers forward toward Rex Fleet.",
+    "settingText": "Full-page historical vista with the prototype rescue vessel departing through fractured but usable routes, accompanied by distinct escort traditions that share ancestry without yet being mature factions. The composition may subtly echo silhouettes, color rhythms, and route imagery familiar from later Rex Fleet, but future ships and uniforms must not literally appear in the scene. Leave generous negative space for the closing editorial text.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "This is where history starts drawing clean lines."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Core. Verge. Shards. Fleet."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The people who lived here never got the clean version."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "They got overlapping promises, borrowed symbols, damaged machines, and decisions made before anyone knew what those decisions would become."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "That is why we came back this far."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Not to find the moment the Fleet was invented."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "To see the world that made a Fleet necessary."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The roads are different now."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The argument is not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET WILL RETURN."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
   }
 ]
