@@ -140,7 +140,7 @@
   },
   {
     "id": "RFAA_ABS_I01_P04",
-    "summary": "The reconstruction drops the cadets into a calm eddy survey case whose original crew believed it was routine.",
+    "summary": "The reconstruction drops the cadets into a routine survey of Calm Eddy Forty-Seven's charted boundary, where the safe pocket is supposed to end exactly where the map says.",
     "setting": "RFAA_Simulation_Skiff",
     "region": "Lattice",
     "factions": [
@@ -174,7 +174,7 @@
       },
       {
         "handle": "@starsplit.jia.morgan",
-        "text": "Confirm Eddy Forty-Seven is still safe."
+        "text": "Confirm Eddy Forty-Seven's boundary is still where the chart says."
       },
       {
         "handle": "@starsplit.jonah.creel",
@@ -187,7 +187,8 @@
     ],
     "directionInline": [
       "Jia is heard over the simulator comm on this page; do not place her physically inside the survey skiff.",
-      "The anomaly has not become visually spectacular. At first the exterior must look almost disappointingly normal."
+      "The anomaly has not become visually spectacular. At first the exterior must look almost disappointingly normal.",
+      "The verified calm eddy remains the coherent safe reference. The survey begins at its charted edge; severe metric behavior belongs to the damaged space beyond a boundary that has shifted."
     ],
     "sceneId": "RFAA_ABS_I01_S02"
   },
@@ -334,7 +335,7 @@
   {
     "id": "RFAA_ABS_I01_P08",
     "summary": "The tether physically exceeds the visible distance before touching the beacon, proving that the disagreement cannot be dismissed as display error.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -393,7 +394,7 @@
   {
     "id": "RFAA_ABS_I01_P09",
     "summary": "As the drone returns, the tether appears to cross itself without contact, showing that projected position and actual path are no longer the same thing.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -588,7 +589,7 @@
   {
     "id": "RFAA_ABS_I01_P13",
     "summary": "After thirty seconds of uninterrupted forward acceleration, the skiff arrives back at the same beacon without ever turning.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -666,7 +667,7 @@
     "dialogueInline": [
       {
         "speaker": "SYSTEM",
-        "text": "ANCHOR STABILITY WINDOW — SIX MINUTES"
+        "text": "BOUNDARY STABILITY WINDOW — SIX MINUTES"
       },
       {
         "handle": "@starsplit.talia.quist",
@@ -745,7 +746,7 @@
   {
     "id": "RFAA_ABS_I01_P16",
     "summary": "The recorder finally approaches along the measured path, and the crew recovers it without ever obtaining a simple conventional map of the region.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
