@@ -33,6 +33,9 @@ CORE_CHARACTER_IDS = {
 REGION_IDS = {"R_lts_inland", "R_lts_threshold", "R_lts_flats", "R_lts_reach"}
 PAGE_COUNTS = {1: 24, 2: 26, 3: 28, 4: 26, 5: 24, 6: 24, 7: 26}
 PAGE_ID = re.compile(r"^LTS_C0([1-7])_P(\d{2})$")
+EDITORIAL_ID = re.compile(r"^LTS_C0([1-7])_EDITOR_(OPEN|NEXT|CLOSE)$")
+RECIPE_ID = re.compile(r"^(?:LTS_C0[1-7]_P\d{2}|LTS_C0[1-7]_EDITOR_(?:OPEN|NEXT|CLOSE))$")
+EDITORIAL_FILES = ("pages_editorial_openers.json", "pages_editorial_closers.json")
 PREVIEW_COVER = "/images/covers/low-tide-signal-issue-01-cover.png"
 ENCODED_PAGE_FILES = (
     "pages_c04_between_runs_enhanced.json.gzb64",
@@ -214,7 +217,7 @@ def validate_visual_state() -> None:
         assert key == expected, f"Low Tide draft key mismatch: {key}"
         assert item.get("seriesId") == "low-tide-signal", f"Low Tide draft seriesId mismatch: {key}"
         assert item.get("status") == "approved-production-draft", f"Low Tide draft is not approved-production-draft: {key}"
-        assert PAGE_ID.match(str(item.get("recipeId", ""))), f"Low Tide draft recipeId is not a current page recipe: {key}"
+        assert RECIPE_ID.match(str(item.get("recipeId", ""))), f"Low Tide draft recipeId is not a current page recipe: {key}"
 
     links = (load_json(RELEASED_LINKS).get("links") or {})
     for key, raw in links.items():
@@ -279,6 +282,58 @@ def validate_page_inventory_and_chef_boundary() -> None:
     assert len(seen) == sum(PAGE_COUNTS.values()) == 178, f"Low Tide total page inventory drift: {len(seen)}"
 
 
+def validate_editorial_pages() -> None:
+    openers = load_json(SHOW_DIR / EDITORIAL_FILES[0])
+    closers = load_json(SHOW_DIR / EDITORIAL_FILES[1])
+    assert isinstance(openers, list) and len(openers) == 7, "Low Tide must have seven editorial openers"
+    assert isinstance(closers, list) and len(closers) == 7, "Low Tide must have six NEXT pages plus one final editor close"
+
+    pages = openers + closers
+    expected = {f"LTS_C{chapter:02d}_EDITOR_OPEN" for chapter in range(1, 8)}
+    expected.update({f"LTS_C{chapter:02d}_EDITOR_NEXT" for chapter in range(1, 7)})
+    expected.add("LTS_C07_EDITOR_CLOSE")
+    actual = {str(page.get("id", "")) for page in pages}
+    assert actual == expected, f"Low Tide editorial page inventory drift: {sorted(actual)}"
+
+    settings = load_json(SHOW_DIR / "settings.json")
+    regions = load_json(SHOW_DIR / "regions.json")
+    for page in pages:
+        pid = str(page.get("id", ""))
+        match = EDITORIAL_ID.match(pid)
+        assert match, f"unexpected Low Tide editorial page id: {pid!r}"
+        chapter = int(match.group(1))
+        kind = match.group(2)
+        assert page.get("unit") == "PAGE", f"{pid}: unit must remain PAGE"
+        assert int(page.get("chapter")) == chapter, f"{pid}: chapter field disagrees with id"
+        assert page.get("characters") == [], f"{pid}: editorial framing pages must not establish core-character faces"
+        if kind == "NEXT":
+            assert chapter <= 6, f"{pid}: Chapter 7 cannot have a NEXT page"
+        if kind == "CLOSE":
+            assert chapter == 7, f"{pid}: only Chapter 7 may use the final editor close"
+
+        summary = page.get("summary")
+        assert isinstance(summary, str) and summary.startswith("Full-page composition:"), f"{pid}: editorial summary must be visual-first"
+        plan = page.get("panelPlan")
+        assert isinstance(plan, list) and plan, f"{pid}: panelPlan is required"
+        assert len(plan) <= 4, f"{pid}: editorial page plan unexpectedly large"
+        combined_plan = " ".join(plan)
+        assert len(combined_plan) >= 80, f"{pid}: editorial page plan is too thin"
+        assert DRAWABLE.search(combined_plan), f"{pid}: editorial page lacks concrete visual construction"
+        assert "directionInline" not in page, f"{pid}: directionInline reintroduced"
+
+        dialogue = page.get("dialogueInline")
+        assert isinstance(dialogue, list) and dialogue, f"{pid}: editorial copy is missing"
+        for item in dialogue:
+            assert isinstance(item.get("text"), str) and item["text"].strip(), f"{pid}: empty editorial text item"
+
+        setting = page.get("setting")
+        if setting:
+            assert setting in settings, f"{pid}: unknown setting {setting}"
+        region = page.get("region")
+        if region:
+            assert region in regions, f"{pid}: unknown region {region}")
+
+
 def validate_show_registration() -> None:
     shows = load_json(SHOWS)
     expected = {f"low-tide-signal-c{n:02d}" for n in range(1, 8)}
@@ -295,12 +350,15 @@ def validate_show_registration() -> None:
         assert_no_meta(f"{sid}.generationLine", line)
 
         overlays = record.get("sceneOverlays") or []
-        assert len(overlays) == 1, f"{sid}: expected exactly one chapter overlay"
+        assert len(overlays) == 3, f"{sid}: expected opener, story, and closing overlays"
+        assert overlays[0].get("file") == EDITORIAL_FILES[0], f"{sid}: editorial opener overlay drift"
+        assert overlays[2].get("file") == EDITORIAL_FILES[1], f"{sid}: editorial closing overlay drift"
+        story_overlay = overlays[1]
         chapter = int(sid[-2:])
         if chapter <= 3:
-            assert overlays[0].get("file") == "pages_ch01_ch03_compiled.json", f"{sid}: C1-C3 source drift"
+            assert story_overlay.get("file") == "pages_ch01_ch03_compiled.json", f"{sid}: C1-C3 source drift"
         else:
-            assert overlays[0].get("encoding") == "gzip-base64", f"{sid}: encoded chapter lost encoding declaration"
+            assert story_overlay.get("encoding") == "gzip-base64", f"{sid}: encoded chapter lost encoding declaration"
 
 
 def validate_show_visual_rules() -> None:
@@ -317,13 +375,15 @@ def main() -> None:
     validate_regions_and_settings()
     validate_visual_state()
     validate_page_inventory_and_chef_boundary()
+    validate_editorial_pages()
     validate_show_registration()
     validate_show_visual_rules()
     print("Low Tide Signal IMG production normalization validation passed")
     print("Recovery conflict: resolved to active P-page contract")
     print("Core character baselines:", len(CORE_CHARACTER_IDS))
-    print("Page inventory:", sum(PAGE_COUNTS.values()))
-    print("Chef page plans:", sum(PAGE_COUNTS.values()), "/", sum(PAGE_COUNTS.values()))
+    print("Story page inventory:", sum(PAGE_COUNTS.values()))
+    print("Editorial page inventory:", 14)
+    print("Chef story page plans:", sum(PAGE_COUNTS.values()), "/", sum(PAGE_COUNTS.values()))
     print("Chef directionInline blocks: 0")
     print("Registered chapters: 7")
     print("Durable frontier policy: derived-not-stored")
