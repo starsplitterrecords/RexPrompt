@@ -72,6 +72,23 @@
     "generationLine": "Finished full-color portrait interior comic page for Shattering of the Corridors. Prestige political science-fiction origin story with human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve established character identity, corridor technology, causal action, and exact scripted dialogue. Shattering predates the mature Rex Fleet political order: Issues 1–4 use High Era Cooperative, BHA, Convoy, and Outer Band design; Issues 5–6 may visibly foreshadow later Core/Fleet, Verge, and Shard traditions without copying their mature uniforms or institutions wholesale. The shared safety sigil is a common ancestor later interpreted differently, not three unrelated symbols. Use approved Shattering visual references when available and preserve released Rex Fleet continuity only where chronologically applicable. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details."
   },
   {
+    "id": "rex-fleet-academy-anomalies-i01",
+    "name": "Rex Fleet Academy: Anomalies of Broken Space — Issue 1 — What Is Broken Space?",
+    "seriesId": "rex-fleet-academy-anomalies",
+    "seriesName": "Rex Fleet Academy: Anomalies of Broken Space",
+    "issueLabel": "Issue 1 — What Is Broken Space?",
+    "basePath": "data/shows/rex-fleet-academy-anomalies",
+    "scenesFile": "pages_base.json",
+    "sceneOverlays": [
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "includeIdPattern": "^RFAA_ABS_I01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Rex Fleet Academy: Anomalies of Broken Space. Prestige educational science-fiction drama inside the established Rex Fleet universe: mature Fleet Academy blue/gold/ion-white design, natural young-adult acting, rigorous physically grounded anomaly visualization, clear sequential storytelling, and professional integrated lettering. Treat Lattice phenomena as objective measurable physics, not magic, mysticism, dream imagery, or generic psychedelic abstraction. Preserve exact scripted dialogue, recurring character identity, Academy geography, simulation state, and the distinction between ordinary local physics and damaged geometric relationships. Use established mature Rex Fleet visual canon for Fleet uniforms and infrastructure where applicable. Interior story page only—no cover, dossier, textbook infographic, character labels, or promotional framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details."
+  },
+  {
     "id": "rfa-reach-resolve-i01",
     "name": "Rex Fleet Academy: Reach and Resolve — Issue 1 — The Two Failures",
     "seriesId": "rfa-reach-resolve",
@@ -281,6 +298,18 @@
     "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target."
   },
   {
+    "id": "rex-fleet-glass-horizon-i01",
+    "name": "Rex Fleet: Glass Horizon — Issue 1 — The Quiet Route",
+    "seriesId": "rex-fleet-glass-horizon",
+    "seriesName": "Rex Fleet: Glass Horizon",
+    "issueLabel": "Issue 1 — The Quiet Route",
+    "basePath": "data/shows/rex-fleet-glass-horizon",
+    "scenesFile": "pages_i01.json",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Glass Horizon. Exploratory hard-science-fiction mystery with lived-in human-scale acting, rigorous physical cause-and-effect, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve mature Rex Fleet blue/gold/Ion White design, restrained survey-violet instrumentation, fractured-crystal Glass Horizon heraldry, established character identity, Lattice physics, beacon-status meaning, and exact scripted dialogue. Treat anomalies as physical systems rather than magic or monsters. Render the story, editorial, or teaser page exactly as scripted; do not invent dossier or infographic framing. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "formatNote": "Issue 1 contains an art-directed editorial opener, 22 story pages, and a closing teaser; story length follows the needs of the investigation rather than a fixed monthly page target."
+  },
+  {
     "id": "backyard-rockets-s1",
     "name": "Backyard Rockets — Season 1",
     "basePath": "data/shows/backyard-rockets-s1",
@@ -413,6 +442,9 @@
     "generationLine": "Finished full-color portrait comic page. Source-locked sequential art from Stardust Station Issue #1. Preserve exact panel count, panel order, character continuity and exact lettering. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e01_intro.json"
+      },
+      {
         "file": "encoded/pages_e01_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
       },
@@ -427,6 +459,9 @@
       {
         "file": "encoded/pages_e01_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e01_teaser.json"
       }
     ]
   },
@@ -438,6 +473,9 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
+      {
+        "file": "editorial/pages_e02_intro.json"
+      },
       {
         "file": "encoded/pages_e02_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
@@ -453,6 +491,9 @@
       {
         "file": "encoded/pages_e02_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e02_teaser.json"
       }
     ]
   },
@@ -464,6 +505,9 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
+      {
+        "file": "editorial/pages_e03_intro.json"
+      },
       {
         "file": "encoded/pages_e03_p01_p06.json.gzb64",
         "encoding": "gzip-base64"
@@ -479,6 +523,9 @@
       {
         "file": "encoded/pages_e03_p19_p22.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial/pages_e03_teaser.json"
       }
     ]
   },
@@ -491,7 +538,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e04_intro.json"
+      },
+      {
         "file": "pages_e04.json"
+      },
+      {
+        "file": "editorial/pages_e04_teaser.json"
       }
     ]
   },
@@ -504,7 +557,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e05_intro.json"
+      },
+      {
         "file": "pages_e05.json"
+      },
+      {
+        "file": "editorial/pages_e05_teaser.json"
       }
     ]
   },
@@ -517,7 +576,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e06_intro.json"
+      },
+      {
         "file": "pages_e06.json"
+      },
+      {
+        "file": "editorial/pages_e06_teaser.json"
       }
     ]
   },
@@ -530,7 +595,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e07_intro.json"
+      },
+      {
         "file": "pages_e07.json"
+      },
+      {
+        "file": "editorial/pages_e07_teaser.json"
       }
     ]
   },
@@ -543,7 +614,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e08_intro.json"
+      },
+      {
         "file": "pages_e08.json"
+      },
+      {
+        "file": "editorial/pages_e08_teaser.json"
       }
     ]
   },
@@ -556,7 +633,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e09_intro.json"
+      },
+      {
         "file": "pages_e09.json"
+      },
+      {
+        "file": "editorial/pages_e09_teaser.json"
       }
     ]
   },
@@ -569,7 +652,13 @@
     "generationLine": "Finished full-color portrait interior story comic page for Stardust Station. Bright polished workplace science fiction with clean maintained StarTrust interiors, natural coworker acting, clear physical props and equipment, varied cinematic sequential composition, and clean professional integrated lettering. Match released Issue 1 interior-story visual canon for established character identity, station design, palette, page language and lettering. Use approved current-production references only for later continuity state. Preserve scripted panel count and order, physical geography, character identity, prop and equipment state, and exact lettering. Interior story page only—no cover, title banner, page header, character labels, dossier, promotional or infographic framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
       {
+        "file": "editorial/pages_e10_intro.json"
+      },
+      {
         "file": "pages_e10.json"
+      },
+      {
+        "file": "editorial/pages_e10_outro.json"
       }
     ]
   },
