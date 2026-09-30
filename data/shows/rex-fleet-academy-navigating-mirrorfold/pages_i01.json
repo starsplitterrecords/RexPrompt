@@ -1,0 +1,1935 @@
+[
+  {
+    "id": "RFA_NM_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "Three Green Beacons",
+    "setting": "far-lantern-bridge",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Cold open inside the Mirrorfold: a younger Edda Vale sees three apparently identical safe-route beacons while Far Lantern is answering a distress call. Pilot Joren Pell starts toward the obvious one; Vale stops him because appearance is not position here.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — LARGE WIDE. RFV Far Lantern hangs inside a colossal Mirrorfold chamber. Three apparently identical GREEN route beacons repeat across different folded planes, each seeming to open onto the same corridor. Nova Blue and Plasma Violet reflections make the geometry beautiful but readable."
+      },
+      {
+        "text": "Panel 2 — MEDIUM on the compact bridge. Younger Edda Vale is at navigation, Joren Pell at pilot, Sana Iri at systems. The distress marker pulses on Edda's route table while Pell begins a turn."
+      },
+      {
+        "text": "Panel 3 — INSERT on Edda's display: three visual beacon solutions share the same identity code but show different path lengths. Do not make it a decorative HUD; the discrepancy is the point."
+      },
+      {
+        "text": "Panel 4 — TIGHT TWO-SHOT. Edda reaches across and stops Pell's hand before the turn is committed."
+      },
+      {
+        "text": "Panel 5 — CLOSE on the forward view. The most convincing green beacon sits dead ahead, inviting the ship toward it."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "That's the gate.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Do not turn.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Edda, it's green.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "That's what it looks like.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "The First Instrument",
+    "setting": "academy-nav-hall",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "In the present, Commander Edda Vale begins an Academy navigation lecture by asking what instrument fails first in the Mirrorfold. The cadets answer with hardware. Her answer is human perception.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — WIDE establishing the Academy navigation hall. Cadets sit around a live three-dimensional route table showing a calm Core corridor, not the Mirrorfold yet. Vale stands among them rather than behind a podium."
+      },
+      {
+        "text": "Panel 2 — MEDIUM on Lio Marin leaning forward, confident. Tamsin Rook has a slate open; Hale Orin is already watching the hardware rather than Vale."
+      },
+      {
+        "text": "Panel 3 — MEDIUM on Nadi Kess, command-track, considering the question more carefully."
+      },
+      {
+        "text": "Panel 4 — CLOSE on Vale. No theatrics; the line lands because she says it plainly."
+      },
+      {
+        "text": "Panel 5 — The route table changes from a simple corridor to a frozen image of the three green beacons from Page 1."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "What is the first instrument you stop trusting in the Mirrorfold?",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "Optical array.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "Active rangefinder.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Whichever one has the longest return path.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "You said instrument.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "I did.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Your eyes.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "Where It Was",
+    "setting": "academy-nav-hall",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "Vale contrasts ordinary corridor navigation with Mirrorfold navigation. A chart is a record of verified geometry, not a promise that geometry has remained unchanged.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — The route table shows a PUBLIC CORRIDOR as a broad safe volume centered on a line of green verified beacons; ships travel near the beacon line inside the low-tension volume. Keep the display diegetic and simple."
+      },
+      {
+        "text": "Panel 2 — Tamsin traces the safe volume with one finger while Vale watches."
+      },
+      {
+        "text": "Panel 3 — Vale folds the projected model. The same beacon line now appears in several places as light follows different paths through the fold."
+      },
+      {
+        "text": "Panel 4 — Hale overlays timestamp labels and shows that the apparent duplicates do not share identical travel time."
+      },
+      {
+        "text": "Panel 5 — Lio looks from the elegant folded model back to Vale, less certain than before."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Inside a stable corridor, a chart tells you where the verified low-tension volume is.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "Centered on the beacon line.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Yes. Green means the route has been verified. It does not mean space signed a contract.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Same beacon. Different arrival times.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "A map tells you where something was when somebody proved it.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P02",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "Pairs",
+    "setting": "academy-sim-chamber",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "The cohort enters the Mirrorfold simulator. Vale makes them pair physically with tethers and explains why touch, inertial history, and partner verification matter when sight can produce convincing duplicates.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — WIDE. The cadets step into the bridge-scale simulator while technicians clip physical tether cords between paired stations. Lio and Tamsin are paired; Hale and Nadi are paired."
+      },
+      {
+        "text": "Panel 2 — CLOSE on a tether carabiner locking to Lio's belt, then to Tamsin's."
+      },
+      {
+        "text": "Panel 3 — Vale checks their inertial recorder and tactile route board by hand."
+      },
+      {
+        "text": "Panel 4 — Lio tests the tether with a small tug and gives Tamsin an amused look."
+      },
+      {
+        "text": "Panel 5 — The simulator walls darken; the stable room disappears into the first reflected chamber."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Your partner is a physical fact. Keep that fact.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "Comforting.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "Only if you stop pulling on it.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "If you see your partner ahead while you are holding their tether, believe the tether.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "And if the tether disagrees with everything else?",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Stop. Disagreement is information.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "Hall of Copies",
+    "setting": "academy-sim-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "The simulation reveals the Mirrorfold's beauty and disorientation. Lio sees a convincing duplicate of Tamsin ahead while the real Tamsin is tethered beside him.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — FULL-WIDTH visual reveal. The simulated Mirrorfold opens around the cadets: repeating stars, distant survey struts, Veil Aurora curtains, and mirrored corridors receding into impossible depth."
+      },
+      {
+        "text": "Panel 2 — MEDIUM on Lio and Tamsin. Lio looks past her shoulder."
+      },
+      {
+        "text": "Panel 3 — LIO POV. Another Tamsin stands twenty meters ahead in an apparently adjacent corridor, matching her posture a fraction late."
+      },
+      {
+        "text": "Panel 4 — CLOSE on Lio's gloved hand feeling the real tether under tension."
+      },
+      {
+        "text": "Panel 5 — Tamsin notices what he is looking at and deliberately raises one hand; the distant duplicate repeats it after a visible delay."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "Tamsin.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "Still attached.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "There's another you.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "Then one of us is finally getting enough sleep.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Do not dismiss it as an illusion. Light reached you. The question is what path it took.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P04",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "The Obvious Way",
+    "setting": "academy-sim-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "A green exit beacon appears directly ahead. Lio trusts the visual route; Tamsin and Hale notice timing inconsistencies. Nadi must make the command decision and chooses to proceed.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Forward view: a clean GREEN beacon burns at the end of a bright corridor, apparently the obvious exit."
+      },
+      {
+        "text": "Panel 2 — Lio points to the visual route while Tamsin compares two time-of-flight readings on her slate."
+      },
+      {
+        "text": "Panel 3 — Hale shows Nadi that the optical range and passive beacon timing imply different path lengths."
+      },
+      {
+        "text": "Panel 4 — Nadi looks between the three cadets, forced to decide rather than simply calculate."
+      },
+      {
+        "text": "Panel 5 — The simulated ship turns toward the green beacon and accelerates."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "There. Straight line.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "It isn't straight.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "It is from here.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Optical says six kilometers. Beacon timing says eleven.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "Any failure flags?",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "No.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "Proceed. Slow.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P05",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Again",
+    "setting": "academy-sim-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "The cadets follow the beacon and return to the same chamber without realizing it. Hale recognizes their own physical marker. Vale freezes the simulation and tells them they have been trapped in a recursive loop.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — The apparent exit opens into another beautiful chamber. At first it feels like progress."
+      },
+      {
+        "text": "Panel 2 — Hale notices a small training marker attached to a physical handrail beside them."
+      },
+      {
+        "text": "Panel 3 — CLOSE on the marker: their own cohort code, placed earlier off-panel by the sim system when they entered."
+      },
+      {
+        "text": "Panel 4 — The cadets exchange looks as the chamber subtly resolves into the SAME geometry from Page 5."
+      },
+      {
+        "text": "Panel 5 — Vale freezes the simulation. All reflections stop mid-echo, making the stable real simulator hardware suddenly visible through them."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Nadi.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "What?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "That's ours.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "No. We moved.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "We moved. We didn't leave.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Fourteen minutes.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "We followed the beacon.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "You followed light.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P06",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "Witnesses",
+    "setting": "academy-nav-hall",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "Back in the lecture hall, Vale demonstrates that several instruments can repeat the same error if they depend on the same reflected path. The cadets begin thinking in terms of independent witnesses rather than instrument count.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — The route table replays the failed simulation from above. Three sensor traces overlay almost perfectly along the same folded path."
+      },
+      {
+        "text": "Panel 2 — Hale separates the optical camera, laser rangefinder and active scanner traces; all three enter through the same reflection plane."
+      },
+      {
+        "text": "Panel 3 — Tamsin adds the inertial recorder, which shows a closed loop instead."
+      },
+      {
+        "text": "Panel 4 — Vale circles the three agreeing sensors with one hand, then points to the lone inertial line."
+      },
+      {
+        "text": "Panel 5 — Lio leans back, seeing the trap."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Camera, rangefinder, active scan. Three instruments.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "How many witnesses?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "One. Same path.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Good.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "So agreement can be the problem.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Agreement without independence is confidence wearing a uniform.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "Case 41-F",
+    "setting": "academy-nav-hall",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "Vale opens a real survey case from her early service aboard RFV Far Lantern. The students realize the Page 1 cold open was not a simulation but her own navigation log.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Vale places an old physical route wafer on the table beside the pristine Academy display. It is scratched, hand-noted and visibly used."
+      },
+      {
+        "text": "Panel 2 — The table identifies RFV FAR LANTERN and MICA-7 RESCUE / CASE 41-F. Keep text limited to these scripted identifiers."
+      },
+      {
+        "text": "Panel 3 — Tamsin recognizes Vale's name in the archived navigator field."
+      },
+      {
+        "text": "Panel 4 — CLOSE on Vale, not sentimental."
+      },
+      {
+        "text": "Panel 5 — MATCH TRANSITION: the bright Academy table becomes the older Far Lantern navigation board under dim survey lighting."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Simulation teaches the shape of a mistake. A case file teaches the price.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "You were the navigator.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Junior navigator.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "The three beacons.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Were real.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "Far Lantern",
+    "setting": "glass-horizon-survey-docks",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "In the historical case, Far Lantern departs Glass Horizon Survey Docks to recover Mica-7, a research pod overdue inside the Mirrorfold. Vale is young but already responsible for route verification.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — WIDE exterior at Glass Horizon Survey Docks. Compact RFV Far Lantern leaves a practical survey berth toward a calm-eddy gate; the distant Mirrorfold shimmers beyond stabilized space."
+      },
+      {
+        "text": "Panel 2 — MEDIUM bridge. Pell runs launch checks; Sana monitors the missing pod's intermittent signal; young Vale verifies the current route packet."
+      },
+      {
+        "text": "Panel 3 — INSERT on Vale's route wafer: last verified path, timestamp and a red UNVERIFIED extension beyond the safe boundary. Do not add extra unreadable text."
+      },
+      {
+        "text": "Panel 4 — Pell looks to Vale before crossing the boundary."
+      },
+      {
+        "text": "Panel 5 — Far Lantern enters the calm eddy toward the first reflective chamber."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Mica-7 pinged again. Same identifier. No voice.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Range?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Depends which return you believe.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Verified route ends at the eddy.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "After that?",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "After that we earn the next line.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "Speak Once",
+    "setting": "far-lantern-bridge",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Inside the Mirrorfold, Mica-7's single transmitter arrives from three apparent bearings. Sana proves the ship is hearing one source by three paths; Vale begins ranking the returns by travel time rather than apparent direction.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — The bridge windows fill with repeating stars as Far Lantern clears the eddy. A restrained paired-lantern reflection ritual is visible at the hatch, secondary to the work."
+      },
+      {
+        "text": "Panel 2 — Sana's station shows three synchronized pings with tiny arrival-time offsets."
+      },
+      {
+        "text": "Panel 3 — Pell hears the distress tone apparently move from left to right across the bridge audio field."
+      },
+      {
+        "text": "Panel 4 — Vale disables directional audio and keeps only timing marks on the route board."
+      },
+      {
+        "text": "Panel 5 — The three bearings draw separate arcs that converge only when Vale accounts for folded path length."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Three contacts.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "One transmitter.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "You're sure?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Same clock error on all three. Unless three pods broke the same oscillator in the same way.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Kill direction. Keep arrival time.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "That feels backward.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Good place for it.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P10",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "Bearing Is Not Direction",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Far Lantern can visually see Mica-7 ahead, but Vale concludes the image is a reflected path. Reaching the real pod requires flying away from what they can see.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Through the forward viewport, Mica-7 is VISIBLE in the distance, apparently stranded beside a crystalline fracture plane."
+      },
+      {
+        "text": "Panel 2 — Pell points at the pod while Vale's timing solution places the transmitter behind and below their apparent line of sight."
+      },
+      {
+        "text": "Panel 3 — Sana rotates the sensor model: the visible pod ray bounces through two folded planes before reaching them."
+      },
+      {
+        "text": "Panel 4 — Vale gives Pell a counterintuitive turn away from the visible pod."
+      },
+      {
+        "text": "Panel 5 — Far Lantern turns; the visible Mica-7 slides farther away even as the measured signal delay SHORTENS."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "I can see them.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "You can see light from them.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Difference feels academic.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Not if you want to arrive.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Port eleven. Down three. Hold it.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "That's away from the pod.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Bearing is not direction here.",
+        "subtext": "Panel 4"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P11",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "Counterturn",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Pell follows Vale's counterturn. The visible pod retreats, but the true signal path shortens and a hidden corridor unfolds. The crew learns to trust a relationship among independent measurements rather than the picture ahead.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Exterior. Far Lantern arcs away from the obvious pod image; repeated ship reflections peel away in several directions."
+      },
+      {
+        "text": "Panel 2 — Pell watches the pod image shrink with visible discomfort."
+      },
+      {
+        "text": "Panel 3 — Sana calls out decreasing time-of-flight numbers while Vale's inertial path remains clean."
+      },
+      {
+        "text": "Panel 4 — A dark seam between two reflective planes opens into a corridor that was invisible head-on."
+      },
+      {
+        "text": "Panel 5 — Vale marks the new path physically on the tactile route board, not just on a screen."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Delay down six milliseconds.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Pod is farther.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Image is farther.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Down nine.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "There.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Now we have a path.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P12",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "Silence",
+    "setting": "mirrorfold-echo-void",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "The route enters an Echo Void where active scans and spoken sound multiply into unusable returns. The crew deliberately reduces information, switching to passive timing, inertial history and tactile confirmation.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Far Lantern enters a much darker Echo Void. Reflections are sparse, but every active pulse blooms into multiple ghost returns."
+      },
+      {
+        "text": "Panel 2 — Sana's active scanner fills with overlapping rings until the display is useless."
+      },
+      {
+        "text": "Panel 3 — Pell says one short word and hears it return from several directions at different delays."
+      },
+      {
+        "text": "Panel 4 — Vale reaches over and powers down active ranging. The bridge becomes quieter and visually simpler."
+      },
+      {
+        "text": "Panel 5 — The remaining route solution uses only passive Mica-7 timing, inertial track and physical ship attitude."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Echo.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "And four more of it.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Active off.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "We lose range.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "We lose bad range.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "What do I fly?",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "What we can defend.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P13",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "Mica-7",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri",
+      "C_rfanm_researcher_a",
+      "C_rfanm_researcher_b"
+    ],
+    "summary": "Far Lantern reaches the actual Mica-7 pod in a blind chamber. The two researchers are alive, but their pod is caught against a fracture seam and cannot maneuver clear on its own.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Reveal the REAL Mica-7 at close range, half-shadowed beside a fracture plane. It is smaller and more battered than the repeated image seen earlier."
+      },
+      {
+        "text": "Panel 2 — Far Lantern matches relative motion. Mica-7's hull is wedged against a thin luminous seam."
+      },
+      {
+        "text": "Panel 3 — Interior of Mica-7 via comm window: Dr. Eren Vos and Dr. Mina Saye are alive, strapped in amid loose equipment."
+      },
+      {
+        "text": "Panel 4 — Sana studies the pod's damaged maneuvering cluster."
+      },
+      {
+        "text": "Panel 5 — Pell looks to Vale; rescue now means disturbing their carefully established geometry."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.vos",
+        "speaker": "Vos",
+        "text": "Far Lantern, we have you physical and visual.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Best sentence I've heard all day.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.saye",
+        "speaker": "Saye",
+        "text": "Starboard cluster is gone. If we push off, the seam takes the hull.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "She's right.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Then we take the pod with us.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P14",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "Extraction",
+    "setting": "far-lantern-lock",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri",
+      "C_rfanm_researcher_a",
+      "C_rfanm_researcher_b"
+    ],
+    "summary": "The crew secures Mica-7 with physical tethers and pulls it free. During extraction a Lattice tide shifts the chamber. Their return beacon drops from verified green to red and the route they used to enter is no longer certified.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Sana and Vale in the field lock clip paired rescue tethers to a hardpoint line leading toward Mica-7. Keep the action technical and controlled."
+      },
+      {
+        "text": "Panel 2 — Exterior. Far Lantern uses a slow lateral pull while the pod clears the fracture seam by centimeters."
+      },
+      {
+        "text": "Panel 3 — The seam flexes and the chamber's reflected planes slide relative to one another: a Lattice tide changing the local geometry."
+      },
+      {
+        "text": "Panel 4 — On the bridge, the return beacon indicator changes from GREEN to RED as verification fails. Reflected copies of the old green state remain visible elsewhere."
+      },
+      {
+        "text": "Panel 5 — Pell sees one green-looking route in the window and the red verified status on the board."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Pod clear.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Hold relative. No acceleration.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Geometry moving.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Return beacon just failed verification.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "I can still see green.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "You can see an old answer.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P15",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "Red Means No",
+    "setting": "far-lantern-bridge",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Pell wants to reverse their remembered course. Vale refuses because the red beacon means the safe volume is no longer verified. The crew separates memory of the route from current evidence.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Tactile route board shows their inbound track ending at a now-red verification marker."
+      },
+      {
+        "text": "Panel 2 — Pell sketches the reverse maneuver with his hand in the air, matching the route they just flew."
+      },
+      {
+        "text": "Panel 3 — Vale compares the old route to current passive drift; the chamber is sliding across it."
+      },
+      {
+        "text": "Panel 4 — Sana highlights a reflected green beacon image that still carries the old timing signature."
+      },
+      {
+        "text": "Panel 5 — Pell removes his hand from the controls, accepting the hold."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Reverse the inbound track.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "No.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "We know it worked.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Past tense.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "The green copy is carrying the old delay.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Red does not mean doomed. It means unverified.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Holding.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P16",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "The Mark That Moves",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Vale and Pell go to an exterior survey platform to physically verify a resonance mark. They see several apparent copies of the same mark and even a duplicate Vale, proving that only touch and tether continuity identify the local surface.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Exterior field platform extending from Far Lantern. Vale and Pell are tethered together and to the ship, moving slowly along a real alloy strut."
+      },
+      {
+        "text": "Panel 2 — Ahead, the same etched resonance mark appears on THREE mirrored planes."
+      },
+      {
+        "text": "Panel 3 — Pell sees a duplicate image of Vale standing beyond the real Vale, facing the wrong direction."
+      },
+      {
+        "text": "Panel 4 — CLOSE on Pell's gloved hand holding the real tether connected to Vale's harness."
+      },
+      {
+        "text": "Panel 5 — Vale physically touches the nearest resonance mark with a tool; only one returns a local vibration through the strut."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Three marks.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "One surface.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "There's another you.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "How many are you holding?",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "One.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Keep that answer.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "This one is physical.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P17",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "title": "The Line You Cannot See",
+    "setting": "far-lantern-bridge",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Using the physically verified resonance mark, passive drift and inertial history, Vale reconstructs a low-tension path that appears visually blocked by a reflective wall.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Back on the bridge, Vale anchors the route model to the verified physical mark instead of the visible beacons."
+      },
+      {
+        "text": "Panel 2 — Sana adds local drift vectors; a narrow low-tension path emerges through the model."
+      },
+      {
+        "text": "Panel 3 — Forward viewport: the calculated path points directly at what looks like a solid mirror-bright fracture wall."
+      },
+      {
+        "text": "Panel 4 — Pell studies the route, then the wall."
+      },
+      {
+        "text": "Panel 5 — Vale places one finger on the tactile route line and waits for Pell's decision."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Physical mark plus drift gives us a corridor.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "That is a wall.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "That is light from a wall.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "You enjoy that sentence too much.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "I will enjoy it when we are outside.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Course set.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P18",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "title": "Through the Wall",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "Far Lantern flies toward the apparent wall. At the last moment the reflected plane peels away and reveals the calculated corridor. The rescue pod follows under tow.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — LARGE. Far Lantern advances toward the mirror-bright plane; its own reflection appears to charge directly back at it."
+      },
+      {
+        "text": "Panel 2 — Pell's hands remain steady on the controls. Vale watches the inertial and drift solution rather than the viewport."
+      },
+      {
+        "text": "Panel 3 — CLOSE on Sana as the calculated tension margin narrows but stays within limit."
+      },
+      {
+        "text": "Panel 4 — The apparent wall splits sideways into two reflected planes as Far Lantern crosses the fold, revealing a dark real passage between them."
+      },
+      {
+        "text": "Panel 5 — WIDE REAR VIEW. Mica-7 follows safely through on the tow line; the false wall closes visually behind them."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "I hate this.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Noted.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Margin holding.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Still hate it.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Also noted.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Through.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P19",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "title": "Make Our Own Shadow",
+    "setting": "mirrorfold-fracture-chamber",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri"
+    ],
+    "summary": "At the final chamber four green beacon images appear. Vale devises a controlled occlusion test: roll Far Lantern so a known external strut blocks the direct line. The one beacon that disappears at the predicted angle is the local source; the others are reflected paths.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Four identical GREEN beacon images hang around the chamber, each plausible as the exit."
+      },
+      {
+        "text": "Panel 2 — Sana confirms all four carry the same identifier but different delays; none are flagged false because they are genuine returns."
+      },
+      {
+        "text": "Panel 3 — Vale looks at the known geometry of an exterior survey strut on Far Lantern and then at the beacon bearings."
+      },
+      {
+        "text": "Panel 4 — Pell slowly rolls the ship. The strut crosses one bearing."
+      },
+      {
+        "text": "Panel 5 — Three green beacon images remain visible. ONE disappears exactly when the strut blocks it."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Four.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "All genuine signal.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Then we ask a different question.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Which is?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Which one can we physically block?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Roll two degrees. Make our own shadow.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "One contact occluded.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "That's the local beacon.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P20",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "title": "Calm Eddy",
+    "setting": "glass-horizon-survey-docks",
+    "region": "mirrorfold",
+    "factions": [
+      "fleet-survey-service"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_pell",
+      "C_rfanm_iri",
+      "C_rfanm_researcher_a",
+      "C_rfanm_researcher_b"
+    ],
+    "summary": "Far Lantern exits through the verified local beacon into a calm eddy and returns Mica-7 to Glass Horizon Survey Docks. Vale realizes navigation is less about possessing a perfect map than knowing the limits of each observation.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Far Lantern and Mica-7 emerge from the Mirrorfold into the calm eddy. The visual field abruptly becomes ordinary, stable space."
+      },
+      {
+        "text": "Panel 2 — Pell exhales and eases the ship toward Glass Horizon Survey Docks."
+      },
+      {
+        "text": "Panel 3 — Mica-7 is received by dock crews; Vos and Saye are visible through the pod hatch, alive."
+      },
+      {
+        "text": "Panel 4 — Sana hands Vale the scratched route wafer containing their newly verified segment."
+      },
+      {
+        "text": "Panel 5 — Young Vale looks at the wafer, then back at the Mirrorfold beyond the docks."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "There. A horizon that stays put.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Do not get attached.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vos",
+        "speaker": "Vos",
+        "text": "Far Lantern, thank you.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Route packet is ugly.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.iri",
+        "speaker": "Sana",
+        "text": "Ugly is honest.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.pell",
+        "speaker": "Pell",
+        "text": "Keep the parts you can prove.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P21",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P23",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 23,
+    "title": "What They Witnessed",
+    "setting": "academy-nav-hall",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "Back in the Academy, the cadets articulate the lesson themselves: sight was not lying; it reported a real light path. Instruments are witnesses with positions and dependencies, and navigation means understanding the limits of their testimony.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — Present-day Academy hall. The old Far Lantern route wafer lies beside the modern simulation trace."
+      },
+      {
+        "text": "Panel 2 — Lio points to the reflected beacon path from their failed simulation."
+      },
+      {
+        "text": "Panel 3 — Tamsin separates sensor sources into independent and shared-path groups."
+      },
+      {
+        "text": "Panel 4 — Hale adds the physical tether, inertial log and controlled occlusion as observations of a different kind."
+      },
+      {
+        "text": "Panel 5 — Nadi looks to Vale, framing the command implication."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "Sight wasn't wrong.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Go on.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "It answered a different question. Where did the light come from, not where is the beacon.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "And instruments are not truth either.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "They're witnesses.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "With positions. Dependencies. Blind spots.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "So command is choosing which uncertainty we can live with.",
+        "subtext": "Panel 5"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Now you're navigating.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  },
+  {
+    "id": "RFA_NM_I01_P24",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 24,
+    "title": "Field Orders",
+    "setting": "academy-observation-gallery",
+    "region": "bastion-academy",
+    "factions": [
+      "rex-fleet-academy"
+    ],
+    "characters": [
+      "C_rfanm_vale",
+      "C_rfanm_marin",
+      "C_rfanm_rook",
+      "C_rfanm_orin",
+      "C_rfanm_kess"
+    ],
+    "summary": "Vale ends the first lesson by issuing field-practicum orders to Glass Horizon Survey Docks. The cohort realizes the next stage of the course will take place in the real Mirrorfold.",
+    "panelPlan": [
+      {
+        "text": "Panel 1 — WIDE observation gallery. Vale walks with the four cadets while ordinary Core traffic moves beyond the window."
+      },
+      {
+        "text": "Panel 2 — Their slates simultaneously receive FIELD PRACTICUM / GLASS HORIZON SURVEY DOCKS. Keep only this scripted text legible."
+      },
+      {
+        "text": "Panel 3 — Lio stops walking. Tamsin reads the order twice; Hale looks immediately interested; Nadi looks at Vale."
+      },
+      {
+        "text": "Panel 4 — Vale keeps walking, forcing them to catch up."
+      },
+      {
+        "text": "Panel 5 — FINAL WIDE. The Academy route display shows the Core shrinking behind a plotted outbound line toward the Lattice and the Mirrorfold. The students stand small beneath it."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@academy.marin",
+        "speaker": "Lio",
+        "text": "We're actually going in.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.rook",
+        "speaker": "Tamsin",
+        "text": "That is what the order says.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.orin",
+        "speaker": "Hale",
+        "text": "Departure is zero six hundred.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.kess",
+        "speaker": "Nadi",
+        "text": "Commander?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "You passed the part where I tell you not to trust your eyes.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@academy.vale",
+        "speaker": "Vale",
+        "text": "Now I need to see whether you can do it.",
+        "subtext": "Panel 5"
+      }
+    ],
+    "continuityFrom": "RFA_NM_I01_P23",
+    "direction": [
+      "academy-story",
+      "mirrorfold-physics"
+    ]
+  }
+]
