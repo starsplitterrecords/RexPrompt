@@ -1,0 +1,1098 @@
+[
+  {
+    "id": "RFACW_L01_P01",
+    "summary": "The Core Worlds course opens on a familiar map with Meridian enlarged at its center, and Professor Aven Teral makes the map itself the first object of suspicion.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Single full-page Academy lecture splash. Aven stands small beneath a wall-scale corridor map whose visual composition places Meridian at the obvious center, with Bastion Spire and other Core nodes radiating around it.",
+      "Integrate the exact lecture title into the wall display as designed Academy typography, leaving ample negative space and preserving the human scale of the cadets below."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "DISPLAY",
+        "text": "REX FLEET ACADEMY"
+      },
+      {
+        "speaker": "DISPLAY",
+        "text": "THE CORE WORLDS"
+      },
+      {
+        "speaker": "DISPLAY",
+        "text": "LECTURE ONE: MERIDIAN IS NOT THE CORE"
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Before we begin, one question."
+      }
+    ],
+    "directionInline": [
+      "Treat DISPLAY entries as exact integrated lecture typography. No other readable environmental text or decorative labels."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P02",
+    "summary": "Aven asks what is wrong with the map; Lysa answers that nothing is, exposing how natural Meridian-centered geography feels to a Meridian-raised cadet.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Wide classroom panel: Aven faces the cadets with the Meridian-centered route map behind him.",
+      "Medium on Lysa studying the display with genuine concentration rather than searching for a trick.",
+      "Corin glances sideways at her answer; Jalen watches Aven instead of the map.",
+      "Close on Aven, almost amused but not mocking."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "What is wrong with this map?"
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Nothing."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Good."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "You volunteered."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P01"
+  },
+  {
+    "id": "RFACW_L01_P03",
+    "summary": "The cadets defend different ideas of the Core's center—Meridian, Bastion Spire, and the supply network—revealing that each is already answering a different question.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Lysa stands at the display and points to Meridian's dense route convergence.",
+      "Corin leans forward from his desk, countering with Bastion Spire's Fleet and repair infrastructure.",
+      "Jalen remains seated, tracing the outer green routes entering the Core rather than either highlighted node.",
+      "Aven lets the disagreement develop without rescuing them."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Trade, population, administration, passenger traffic. They all converge on Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Ships do not get rebuilt on Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "That does not make the drydock the center of civilization."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "You both left out the routes feeding it."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Excellent. Three answers. One map."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P02"
+  },
+  {
+    "id": "RFACW_L01_P04",
+    "summary": "Aven turns the argument into a field assignment: the three cadets must leave the classroom and return with one defensible map of the Core.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Aven collapses the wall display to a blank field with only a few unlabelled route nodes.",
+      "He sets three temporary field passes on the front desk.",
+      "The cadets exchange looks as the assignment becomes physical rather than rhetorical.",
+      "Final narrow panel: Lysa snatches one pass first, competitive energy restored."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "By fourteen hundred, bring me one map of the Core."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "One."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "You want us to agree?"
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "I want you to discover what the word means before you print it."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Where do we start?"
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Outside."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P03"
+  },
+  {
+    "id": "RFACW_L01_P05",
+    "summary": "Crossing Bastion Spire's Crown Gallery, Corin makes the case that the Fleet's working and ceremonial heart is a stronger candidate for the Core's center than Meridian.",
+    "setting": "S_CrownGalleryTransit",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Large establishing panel: the three cadets move through the Crown Gallery Transit Walk beneath enormous banners while workers, travelers, and dock traffic flow through the same space.",
+      "Through a window, a major Fleet hull sits in drydock while maintenance crews swarm around it.",
+      "Corin walks backward for a few steps, gesturing at the working structure around them.",
+      "Lysa keeps moving, unimpressed by his local pride."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Command, repair, launch, memorials, oath halls. This place keeps the Fleet alive."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "And who pays for half of it?"
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "There. Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Great. We have discovered money."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Do not put that on the map."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P04"
+  },
+  {
+    "id": "RFACW_L01_P06",
+    "summary": "In the Anchor Markets, the cadets confront how thoroughly the Core's celebrated abundance is assembled from goods and people arriving from beyond its prestigious centers.",
+    "setting": "S_AnchorMarketsCore",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy",
+      "F_CoreCivil"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_ma_neris"
+    ],
+    "panelPlan": [
+      "Dense but readable market panorama: Verge grain sacks, Core textiles, Shard-forged salvage, ship provisions, food stalls, commuters, and spacers share one vaulted concourse.",
+      "Jalen silently points out the origin diversity of goods without relying on readable labels.",
+      "Lysa scans the scene and starts taking notes on her slate.",
+      "They reach Ma Neris's bread stall where a queue has stopped moving."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "This is still a Core market."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Look at what is in it."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "And what is not moving."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "If you three are here to study the line, congratulations. It is getting longer."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P05"
+  },
+  {
+    "id": "RFACW_L01_P07",
+    "summary": "A grain hold stops Ma Neris's morning production, turning abstract interdependence into an ordinary breakfast problem inside the Core's ceremonial heart.",
+    "setting": "S_NerisStall",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_ma_neris"
+    ],
+    "panelPlan": [
+      "Ma checks a small status display beside nearly empty grain bins while finished loaves disappear from the counter.",
+      "Insert on the one exact status line, simple and legible.",
+      "Lysa looks from the hold notice to the crowded market around them.",
+      "Ma keeps working with the flour she has left."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "DISPLAY",
+        "text": "BERTH 14 — GRAIN HOLD"
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "No grain, no second bake."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "You do not keep local stock?"
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "I keep enough for breakfast."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Meridian keeps enough to believe breakfast is guaranteed."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P06",
+    "directionInline": [
+      "The scripted BERTH 14 line is the only readable operational text in the stall."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P08",
+    "summary": "Ma serves the remaining Shatterbread and strips away the students' assumption that the food is merely a charming Core tradition.",
+    "setting": "S_NerisStall",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_ma_neris"
+    ],
+    "panelPlan": [
+      "Ma cuts one dense dark Shatterbread loaf into small pieces for the stalled queue rather than hoarding it behind the counter.",
+      "Lysa recognizes the famous food immediately.",
+      "Close on Ma's flour-marked hand pressing a piece into Lysa's palm.",
+      "Jalen tastes his piece; Corin studies the empty grain bin."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Shatterbread."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Festival version."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "There is another version?"
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "My grandmother called it ration brick."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Nobody put that on the holiday banners."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P07"
+  },
+  {
+    "id": "RFACW_L01_P09",
+    "summary": "Ma gives the cadets the first usable rule for their map: chart what hurts when movement stops, not merely what looks important when everything works.",
+    "setting": "S_NerisStall",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_ma_neris"
+    ],
+    "panelPlan": [
+      "The queue starts moving again slowly as Ma switches to smaller portions and alternative stock.",
+      "Lysa adds supply lines to the group's draft map.",
+      "Jalen watches her add routes extending beyond the Core.",
+      "Ma points with her bread knife toward the market's freight side without pausing her work."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "So the map needs the food routes."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Your map needs whatever hurts when it stops."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "That is not how maps work."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Then make a better map."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "She is going in the bibliography."
+      },
+      {
+        "handle": "@starsplit.academy.ma.neris",
+        "text": "Spell my name right."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P08"
+  },
+  {
+    "id": "RFACW_L01_P10",
+    "summary": "On the ferry toward Meridian, the planet's overwhelming scale restores Lysa's confidence that visual and cultural centrality must count for something.",
+    "setting": "S_MeridianFerry",
+    "region": "R_Meridian",
+    "factions": [
+      "F_CoreCivil"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Wide observation-window panel: Meridian fills much of the view, blue-green with luminous cities and violet storm belts.",
+      "Lysa stands at the glass while Corin and Jalen sit behind her with their half-finished map.",
+      "A civilian child nearby presses both hands to the window, reinforcing how naturally impressive the world is.",
+      "Close on Lysa, smiling despite herself."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "You can say what you want."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "It still looks like the center."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Of the view."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "From a ferry that left Bastion."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "You two are exhausting."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P09"
+  },
+  {
+    "id": "RFACW_L01_P11",
+    "summary": "At Core Spire Station, senior controller Tomas Kade rejects the students' central question as operationally meaningless until they define what their map is for.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "Establish the busy Core Spire logistics floor with multiple human teams working real traffic and maintenance routing.",
+      "The cadets show Tomas their composite map on a handheld slate.",
+      "Tomas gives it one fast look while still tracking his own active board.",
+      "He hands the slate back without contempt."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "What question did you ask?"
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "What is the center of the Core?"
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "That is not a logistics question."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "What is?"
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Center of what?"
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P10"
+  },
+  {
+    "id": "RFACW_L01_P12",
+    "summary": "Tomas cycles through four legitimate network views, each producing a different center and proving that geography changes with function.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "First operations display: passenger movement makes Meridian visibly dominant.",
+      "Second: defense and heavy repair traffic concentrates around Bastion Spire.",
+      "Third: freight interchange emphasizes Core Spire and multiple less glamorous transfer nodes.",
+      "Fourth: emergency medical reserves create yet another pattern with distributed stockpiles.",
+      "End on the students' faces as none of the maps looks like their single clean diagram."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Passengers."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Defense."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Freight."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Medical reserve."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Same Core."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Four centers."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P11",
+    "directionInline": [
+      "Displays should communicate changing network emphasis visually without adding unscripted labels or legends."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P13",
+    "summary": "A live corridor hold interrupts the lesson, and the logistics floor instantly shifts from analysis to consequence as a verified route turns unsafe.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "A green route on the main operations display snaps to red while one concise alert appears.",
+      "Tomas turns away from the cadets immediately and joins two controllers at a neighboring station.",
+      "Cargo and passenger route lines begin recomputing around the held segment.",
+      "The cadets step back, suddenly observing professionals rather than a demonstration."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "DISPLAY",
+        "text": "CORRIDOR C-19 — HOLD"
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Medical transfer on C-19. Hold every entry."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Confirm the red at both beacons."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "That was green."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Not anymore."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P12",
+    "directionInline": [
+      "Red must read as unsafe/held and green as verified safe. The C-19 alert is the only readable system alert."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P14",
+    "summary": "Tomas gives the students a scrubbed copy of the live routing problem, forcing them to make a timed recommendation while the real operations team works beside them.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "Tomas flicks a sanitized duplicate of the affected network to a side workstation away from the live controls.",
+      "The cadets cluster around it, seeing a medical shipment stranded behind the red segment and several green alternatives of different lengths.",
+      "A small physical timer counts down without readable digits dominating the art.",
+      "Tomas points once, then returns to his real team."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Training copy. You cannot touch traffic."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Nine minutes to the next verified window."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Tell me what you would do."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Route it through Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Of course you did."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P13"
+  },
+  {
+    "id": "RFACW_L01_P15",
+    "summary": "Lysa's Meridian detour is safe and obvious but slow, exposing the cost of treating the most prominent hub as the default solution.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Lysa draws the detour through Meridian on the training display; the path is long but entirely green.",
+      "Jalen compares the new arrival time to the original direct route.",
+      "Corin checks the certified status of each segment and reluctantly sees Lysa's logic.",
+      "Lysa holds her ground."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Every leg is verified."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "And nine hours longer."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "The cargo arrives."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "If the clinic can wait nine hours."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Do you have a safer route?"
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Maybe."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P14"
+  },
+  {
+    "id": "RFACW_L01_P16",
+    "summary": "Corin proposes using a Bastion maintenance tug to reopen the relay, but the solution consumes support assigned to a major Fleet launch, making infrastructure itself a contested resource.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Corin expands a maintenance layer and identifies a tug staged near Bastion Spire.",
+      "The tug's current assignment links visually to a carrier launch support window.",
+      "Jalen sees the conflict before Corin finishes.",
+      "The three cadets argue quietly while the real floor moves around them."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Maintenance tug here. Send it to the relay, verify the lane, reopen C-19."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "That tug is committed."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Move the launch."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "You just moved three thousand crew and a defense schedule."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "You moved medicine nine hours."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Now we are finally mapping something."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P15"
+  },
+  {
+    "id": "RFACW_L01_P17",
+    "summary": "The professional routing team finds a third option through an overlooked maintenance spur, showing the cadets that the network's least prestigious infrastructure can become the most important route in a crisis.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "On the live board, a thin maintenance spur flashes amber while sensors check it.",
+      "A controller confirms the spur; its line turns verified green.",
+      "The medical route redraws through it without passing Meridian or consuming the Bastion tug.",
+      "Tomas glances toward the cadets as the cargo starts moving again."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "DISPLAY",
+        "text": "MAINTENANCE SPUR 6 — VERIFIED GREEN"
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Spur Six is clean. Move the medical transfer."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "Where did that come from?"
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Not Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Helpful."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P16",
+    "directionInline": [
+      "The Spur Six verification is the only readable status text on this page."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P18",
+    "summary": "Lysa discovers that the successful route was always documented; it was invisible only to the prestige map she had mistaken for the system itself.",
+    "setting": "S_CoreSpireLogistics",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_CoreCivil",
+      "F_FleetLogistics"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh",
+      "C_tomas_kade"
+    ],
+    "panelPlan": [
+      "Lysa pulls up their public-facing Core map beside the operations layer and sees that Spur Six is absent from the simplified view.",
+      "Tomas closes one alert and finally gives the cadets his full attention.",
+      "Corin points to the maintenance layer, vindicated but thoughtful rather than triumphant.",
+      "Jalen adds the thin spur to their own map."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Why is that not on the Core atlas?"
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "It is on the operations atlas."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Not the one everyone sees."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Nobody puts maintenance spurs on monuments."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Maybe they should."
+      },
+      {
+        "handle": "@starsplit.academy.tomas.kade",
+        "text": "Maybe cadets should learn there is more than one map."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P17"
+  },
+  {
+    "id": "RFACW_L01_P19",
+    "summary": "Back at the Academy, the group's single assignment has become three incompatible but defensible maps: civic movement, repair capacity, and survival supply.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Three distinct student maps fill the wall: Lysa's civic/passenger network, Corin's repair and maintenance network, Jalen's food and supply network.",
+      "Aven walks slowly across them while the cadets stand beneath their own work.",
+      "Lysa looks mildly annoyed at the assignment's impossible wording.",
+      "Aven turns back to the class."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Which map is wrong?"
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "All of them."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Worse."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "All of them are useful."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P18"
+  },
+  {
+    "id": "RFACW_L01_P20",
+    "summary": "Aven names the real lesson: a map is an answer to a question, and danger begins when one useful answer becomes the unquestioned picture of the whole civilization.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Aven overlays the three student maps so their centers visibly fail to coincide.",
+      "Lysa looks back at the original Meridian-centered map from the morning.",
+      "Jalen folds his arms, considering how often maps arrive with authority already attached.",
+      "Corin sees maintenance lines nearly disappear beneath the prettier layers."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "A map is an answer."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Passenger map. Repair map. Food map. Each answers a different question."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "And the one with Meridian in the middle?"
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "A useful answer that learned to call itself the question."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "That sounds unfair to Meridian."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Good. Defend it."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P19"
+  },
+  {
+    "id": "RFACW_L01_P21",
+    "summary": "For the final exercise, Aven gives the cadets one guaranteed corridor window and three urgent claims on it—medicine, repair capability, and evacuation—forcing them to choose what continuity means in practice.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Aven replaces the map with three clean visual case tiles: medical cargo, relay-control parts, and civilian evacuees, all converging on one safe green transit window before a predicted closure.",
+      "He places a physical decision slate on the desk in front of the three cadets.",
+      "Lysa reads the manifests twice.",
+      "Corin and Jalen realize there is no hidden fourth route this time."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "One guaranteed transit window."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Medicine for a clinic. Relay parts that may reopen two routes tomorrow. Forty-eight civilians who can evacuate now."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "One crosses first."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "There is no maintenance spur."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "There is always a moment when the clever answer runs out."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Sign your decision."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P20",
+    "directionInline": [
+      "Do not invent manifest labels or statistics beyond the exact dialogue. The three choices should be visually clear through objects and people, not extra text."
+    ]
+  },
+  {
+    "id": "RFACW_L01_P22",
+    "summary": "The cadets stop searching for a symbolic winner and build a network response: prioritize repair parts while using the Core's reserves and prestige capacity to mitigate the human costs elsewhere.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_aven_teral",
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "The cadets argue around the decision slate, no one sitting now.",
+      "Jalen taps the medicine case; Corin points to the relay parts; Lysa studies the wider map instead of either object.",
+      "Lysa begins moving resource markers from Meridian and a ceremonial Fleet launch window into the plan.",
+      "All three lean over the slate and sign the same decision.",
+      "Aven reads it without giving them an easy smile."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "People are waiting on the medicine."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "If the relay stays dead, more people wait tomorrow."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Relay parts first."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Lysa—"
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Pull Meridian's reserve stock for the clinic. Delay the ceremonial launch and use its escort capacity for the evacuation."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "You are spending Core privilege."
+      },
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "Then spend it."
+      },
+      {
+        "handle": "@starsplit.academy.aven.teral",
+        "text": "Sign it."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P21"
+  },
+  {
+    "id": "RFACW_L01_P23",
+    "summary": "On the ferry after class, Meridian still looks like the center; the difference is that the cadets now recognize the viewpoint built into that impression.",
+    "setting": "S_MeridianFerry",
+    "region": "R_Meridian",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [
+      "C_lysa_renn",
+      "C_corin_bale",
+      "C_jalen_kesh"
+    ],
+    "panelPlan": [
+      "Quiet evening ferry panel: Meridian glows through the observation glass, still visually enormous and beautiful.",
+      "The three cadets sit together with their now-crowded multi-layer map between them.",
+      "Lysa looks from the planet to the map.",
+      "Final wide panel pulls back enough to show other orbital lights and route nodes around Meridian rather than isolating it as the only meaningful object."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.lysa.renn",
+        "text": "It still looks like the center."
+      },
+      {
+        "handle": "@starsplit.academy.corin.bale",
+        "text": "From here."
+      },
+      {
+        "handle": "@starsplit.academy.jalen.kesh",
+        "text": "Tomorrow we draw it from somewhere else."
+      }
+    ],
+    "continuityFrom": "RFACW_L01_P22"
+  },
+  {
+    "id": "RFACW_L01_P24",
+    "summary": "Closing Academy teaser converts the lesson into the next problem: safe corridors are scarce civic capacity, and allocation determines who moves and who waits.",
+    "setting": "S_AcademyCartography",
+    "region": "R_BastionSpire",
+    "factions": [
+      "F_RFAcademy"
+    ],
+    "characters": [],
+    "panelPlan": [
+      "Single full-page editorial/Academy teaser. Use a clean network image with several equally weighted Core nodes joined by verified green corridors; no node should visually dominate the page as an obvious universal center.",
+      "Reserve strong negative space for the exact teaser copy. This is back-matter framing, not an additional character scene."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT LECTURE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "WHO GETS A CORRIDOR?"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A safe route is not just geometry."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "It is time, food, medicine, trade, authority—and the decision that someone else will wait."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Rex Fleet Academy: The Core Worlds continues."
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons. No other readable environmental text."
+    ]
+  }
+]
