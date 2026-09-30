@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "STORM_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "The Recorder",
+    "setting": "far-lantern-wreck",
+    "region": "lattice-margin",
+    "characters": [
+      "C_ansel_korr"
+    ],
+    "summary": "A Stormwell recovery team extracts one sealed recorder capsule from the shattered civilian survey cutter Far Lantern. The scene establishes that the investigation begins with the physical object, not with the story anyone wants it to tell.",
+    "panelPlan": [
+      {
+        "text": "Wide exterior: Far Lantern broken across the frame at the edge of the Harrow Fold, salvage lamps tiny against the dark. Keep the damage legible and physical."
+      },
+      {
+        "text": "Closer: Ansel, tethered in a field suit, photographs the recorder capsule still lodged in a detached equipment spine before touching it."
+      },
+      {
+        "text": "Ansel applies a numbered tamper seal to the clean recovery canister and locks the recorder inside while another camera records the handoff."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "HARROW FOLD — LATTICE MARGIN"
+      },
+      {
+        "handle": "@starsplit.ansel.korr",
+        "text": "Recorder position photographed. Housing intact. Seal begins here.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service",
+      "civil-survey"
+    ],
+    "directionInline": [
+      {
+        "text": "No bodies, memorial tableau, or dramatic hero pose. The page should feel like evidence recovery under hazardous field conditions."
+      }
+    ]
+  },
+  {
+    "id": "STORM_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "Intake",
+    "setting": "stormwell-evidence-lock",
+    "region": "core-worlds",
+    "characters": [
+      "C_ansel_korr",
+      "C_archivist_selene_stormwell",
+      "C_mara_veld"
+    ],
+    "summary": "The recorder enters Stormwell Archive through the evidence lock. Mara Veld arrives with the Civil Survey custody packet and learns that Selene will not yet ask what the recording means.",
+    "panelPlan": [
+      {
+        "text": "Ansel sets the sealed canister on the intake table beneath fixed cameras. Mara stands on the visitor side of the marked floor boundary; Selene watches the seal number being entered."
+      },
+      {
+        "text": "Close on Mara offering a battered survey slate containing the field chain, recovery coordinates, and Far Lantern's last synchronized clock report."
+      },
+      {
+        "text": "Selene looks at the physical recorder rather than the playback screen as she explains the order of operations."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "You have the file. It shows twelve minutes after the breakup.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "We have a recorder. First we establish what happened to it. Then we decide what its file can mean.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service",
+      "civil-survey"
+    ]
+  },
+  {
+    "id": "STORM_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "Three Clocks",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_keo_maren",
+      "C_captain_arden",
+      "C_mara_veld"
+    ],
+    "summary": "Keo lays out the apparent impossibility: three independent channels inside the recovered file continue coherently for twelve minutes after Far Lantern's structural-loss timestamp. Arden needs to know whether Harrow Fold should be closed.",
+    "panelPlan": [
+      {
+        "text": "Large analysis display: three clean telemetry traces continue beyond a single vertical structural-loss marker. Keep labels sparse and graphic rather than text-heavy."
+      },
+      {
+        "text": "Keo isolates the three sources: navigation inertial set, external gravimeter, and hull strain network. All three appear to continue."
+      },
+      {
+        "text": "Arden faces Selene across the display, asking for an operational answer while Mara watches."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Three channels. Independent sensors, independent buffers. Same twelve minutes.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.lysa.arden",
+        "text": "Can I keep traffic in Harrow Fold?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Not from this display.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "fleet",
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "Authentication",
+    "setting": "stormwell-forensic-lab",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_ansel_korr",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "Imani and Ansel verify the recorder's cryptographic signatures, storage geometry, seal chain, and physical wear. The file is genuinely from Far Lantern and has not been altered since recovery—but that only authenticates the record.",
+    "panelPlan": [
+      {
+        "text": "Imani examines the recorder housing under a magnifying lamp while Ansel compares tool marks and seal photographs."
+      },
+      {
+        "text": "A modern analyzer confirms the recorder's internal signature chain without opening a flashy holographic interface."
+      },
+      {
+        "text": "Selene reads the result and deliberately separates authenticity from interpretation."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Housing matches the survey inventory. Signature chain closes. No post-recovery writes.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.ansel.korr",
+        "text": "Physical custody is clean.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Good. We know where it came from. We do not yet know what its timestamps describe.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "The Wrong Reader",
+    "setting": "stormwell-forensic-lab",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_keo_maren"
+    ],
+    "summary": "The modern Fleet decoder renders the old recorder cleanly, but Imani notices that it is translating a legacy survey format through an undocumented compatibility layer.",
+    "panelPlan": [
+      {
+        "text": "Keo scrolls the decoded event sequence on a restrained screen; everything looks reassuringly orderly."
+      },
+      {
+        "text": "Imani opens the decoder's hardware interface panel and finds the tiny compatibility module bridging the old survey bus to the modern reader."
+      },
+      {
+        "text": "She stops Keo from exporting the rendered dataset."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "The decoder reports no errors.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "The decoder is not the recorder.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Until I know what that bridge is doing, this output is a translation with an unknown translator.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "Reference Hardware",
+    "setting": "stormwell-hardware-vault",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_keo_maren"
+    ],
+    "summary": "Imani pulls the original survey-era clock and bus hardware from Stormwell's reference vault. The archive's obsolete machines exist so investigators can reproduce the assumptions under which old records were created.",
+    "panelPlan": [
+      {
+        "text": "Imani and Keo move through dense hardware aisles, passing tagged processors and sensor interfaces rather than museum displays."
+      },
+      {
+        "text": "Imani finds a preserved Far Lantern-era packet controller and clock module in foam-lined drawers."
+      },
+      {
+        "text": "Close on Keo realizing the old controller has two physically separate time inputs."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Why keep a working one?",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Because documentation tells you what a machine was supposed to do. Hardware tells you what it did.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Two clocks.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Acquisition Time",
+    "setting": "stormwell-forensic-lab",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_keo_maren",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "The reconstructed legacy reader reveals that Far Lantern packets carried both sensor acquisition time and recorder ingestion time. The modern compatibility layer discarded acquisition time and displayed ingestion time as if it were the observation timestamp.",
+    "panelPlan": [
+      {
+        "text": "Legacy controller wired beside the recovered recorder and a modern analyzer, with physical cables showing the translation chain."
+      },
+      {
+        "text": "Keo compares two timestamp columns now visible in the raw packets; one ends before breakup, the other continues."
+      },
+      {
+        "text": "Selene has Imani repeat the result in ordinary language before anyone updates the operational finding."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Acquisition stops before structural loss. Ingestion keeps going.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "The recorder was receiving buffered packets after the sensors had already measured them.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "So the twelve minutes are real data with the wrong displayed time.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "Not a Time Echo",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_captain_arden",
+      "C_mara_veld",
+      "C_keo_maren"
+    ],
+    "summary": "Selene rules out the sensational interpretation. The record does not show Far Lantern sensing after destruction. Arden can reject a temporal-anomaly alert—but Harrow Fold is not cleared yet.",
+    "panelPlan": [
+      {
+        "text": "Before/after comparison on the analysis wall: modern-decoder timeline versus reconstructed acquisition-time timeline."
+      },
+      {
+        "text": "Mara exhales in relief, thinking the incident is solved."
+      },
+      {
+        "text": "Selene keeps one unexplained trace highlighted: a pre-breakup shear spike that the published survey map does not contain."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "Then the Fold didn't do anything impossible.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "The file did nothing impossible. Those are different statements.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.lysa.arden",
+        "text": "What remains?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "This measurement. It should be on the route map.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "Raw and Published",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_keo_maren",
+      "C_mara_veld",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "Keo overlays Far Lantern's raw gravimeter samples against the published Harrow Fold map. The dangerous spike exists in the raw observation but is absent from the navigational product survey crews actually used.",
+    "panelPlan": [
+      {
+        "text": "Raw gravimeter trace with one sharp excursion next to the smooth published route profile. Make the mismatch visually obvious with minimal labels."
+      },
+      {
+        "text": "Mara points out that her team uploaded raw packets and never edited that segment manually."
+      },
+      {
+        "text": "Selene asks for the map's provenance rather than accusing the survey crew."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Raw observation: high shear. Published map: nominal.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "We did not smooth that. We publish from the regional model.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Then we stop asking who changed the number. Show me how the map descended from the measurement.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service",
+      "civil-survey"
+    ]
+  },
+  {
+    "id": "STORM_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "The Family Tree",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_keo_maren",
+      "C_mara_veld"
+    ],
+    "summary": "The team builds a record genealogy from raw Far Lantern packets through regional processing, model revisions, route publication, and later mirrors. The current map is several generations removed from the observation.",
+    "panelPlan": [
+      {
+        "text": "Full-width provenance graph: one raw survey branch splits through processing nodes into several regional map descendants. Keep node names short; the visual logic matters more than text."
+      },
+      {
+        "text": "Keo identifies a missing processing package in the lineage: Regional Model 4.3, preserved only as outputs."
+      },
+      {
+        "text": "Mara recognizes the version as an old model inherited from before her survey office standardized."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "A copy can be authentic and still inherit an old mistake.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Everything downstream of Model Four-Point-Three agrees with itself.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "We don't have its source anymore.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "Missing Source",
+    "setting": "civil-survey-office",
+    "region": "verge",
+    "characters": [
+      "C_mara_veld",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "Remote staff at the Civil Survey Service confirm that Model 4.3's executable survives but its source code and original build notes do not. Selene refuses the easy conclusion that the executable itself is corrupt.",
+    "panelPlan": [
+      {
+        "text": "Intercut-style page: Mara and Selene in Stormwell's analysis room facing a live link to an ordinary Verge cartography office."
+      },
+      {
+        "text": "Survey staff display the surviving model package and decades of derivative maps, all with matching signatures."
+      },
+      {
+        "text": "Selene writes three separate hypotheses on a small slate: bad input, bad model, or valid model applied outside its assumptions."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TECHNICIAN",
+        "text": "Executable is signed. Same build hash across six mirrors.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "So Four-Point-Three is clean.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Clean is not correct. It means we have the same executable they had.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service",
+      "civil-survey"
+    ]
+  },
+  {
+    "id": "STORM_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "Reproduce It",
+    "setting": "stormwell-forensic-lab",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_keo_maren",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "Imani creates an isolated legacy environment and feeds Model 4.3 the recovered raw packets. The model reproduces the published safe map exactly, proving the transformation is deterministic.",
+    "panelPlan": [
+      {
+        "text": "Air-gapped legacy emulation rig runs beside a modern monitor; physical indicator lamps and cables make the isolation visible."
+      },
+      {
+        "text": "Keo feeds the recovered raw packet set into Model 4.3. The sharp shear spike becomes the smooth nominal route profile."
+      },
+      {
+        "text": "Selene asks them to vary one assumption at a time rather than search blindly."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Same input, same output. Every time.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "It is deliberately removing the excursion.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Or deliberately classifying it as something else. Find the assumption.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "Calibration Ghost",
+    "setting": "stormwell-forensic-lab",
+    "region": "core-worlds",
+    "characters": [
+      "C_keo_maren",
+      "C_imani_rusk"
+    ],
+    "summary": "Keo discovers that Model 4.3 expects a calibration table keyed to an older gravimeter family. Modern Civil Survey instruments use a new reference curve but still export a compatibility identifier that the model accepts.",
+    "panelPlan": [
+      {
+        "text": "Keo compares two physical calibration modules and their reference curves, old and current."
+      },
+      {
+        "text": "A sparse table shows the same compatibility identifier attached to different calibration eras."
+      },
+      {
+        "text": "Imani realizes the model is not broken; it is confidently correcting modern measurements as if they came from older sensors."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "The identifier survived the hardware generation. The response curve didn't.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Four-Point-Three thinks the spike is an old-sensor artifact.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "So it subtracts it.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "What the Model Was For",
+    "setting": "stormwell-hardware-vault",
+    "region": "core-worlds",
+    "characters": [
+      "C_imani_rusk",
+      "C_archivist_selene_stormwell",
+      "C_keo_maren"
+    ],
+    "summary": "The team finds a preserved engineering note on a physical maintenance cartridge explaining why Model 4.3 suppressed exactly this signature: early gravimeters produced false shear spikes near high-energy beacons.",
+    "panelPlan": [
+      {
+        "text": "Imani retrieves a small maintenance cartridge from the reference vault, its label mundane and worn."
+      },
+      {
+        "text": "On a simple reader, a short engineering note appears beside an old gravimeter test trace matching Far Lantern's spike shape."
+      },
+      {
+        "text": "Selene compares that legacy artifact trace with the modern Far Lantern measurement."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Here. Early gravimeters rang near beacon harmonics. Same shape.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "The filter was correct when they wrote it.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "And wrong after the instrument changed. Preserve both facts.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "The Dangerous Descendant",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_captain_arden",
+      "C_keo_maren",
+      "C_mara_veld"
+    ],
+    "summary": "The provenance graph now explains the failure: a valid old correction rule propagated through authentic descendant maps after the sensors it was designed for disappeared. Harrow Fold's published route may be masking a real shear event.",
+    "panelPlan": [
+      {
+        "text": "Provenance graph annotated with the instrument-generation change occurring downstream of Model 4.3's creation but upstream of the current published map."
+      },
+      {
+        "text": "Arden asks whether Harrow Fold should close now."
+      },
+      {
+        "text": "Selene gives a bounded operational answer rather than a grand conclusion."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lysa.arden",
+        "text": "Now can I close the Fold?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Yes. The published map is not reliable for this instrument generation. That is enough to suspend traffic.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "Is the shear real?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "That still requires a measurement we trust.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "Field Standard",
+    "setting": "stormwell-evidence-lock",
+    "region": "core-worlds",
+    "characters": [
+      "C_ansel_korr",
+      "C_keo_maren",
+      "C_mara_veld"
+    ],
+    "summary": "Ansel prepares a calibrated reference gravimeter and a sealed field package for a Stormwell probe run. Mara volunteers to fly the survey because she knows the route geometry.",
+    "panelPlan": [
+      {
+        "text": "Ansel lays out a reference gravimeter, calibration standard, clock module, and seals on the evidence table."
+      },
+      {
+        "text": "Keo signs the calibration chain while Mara studies the planned probe path."
+      },
+      {
+        "text": "Ansel closes the field case and hands it directly to Mara across the marked custody line."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ansel.korr",
+        "text": "Reference zero verified here. Seal stays closed until your first acquisition point.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "You really make everything evidence.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.ansel.korr",
+        "text": "Only the things we plan to rely on later.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "Measure Again",
+    "setting": "lattice-harrow-fold",
+    "region": "lattice-margin",
+    "characters": [
+      "C_mara_veld",
+      "C_keo_maren"
+    ],
+    "summary": "A small Stormwell survey shuttle enters the edge of Harrow Fold with the sealed reference instrument. The team repeats Far Lantern's geometry under controlled conditions.",
+    "panelPlan": [
+      {
+        "text": "Small Fleet survey shuttle against Harrow Fold's subtle star shear; no giant combat ship composition."
+      },
+      {
+        "text": "Inside, Mara opens the sealed reference case on camera while Keo watches calibration values from Stormwell by link."
+      },
+      {
+        "text": "The gravimeter trace rises toward the same sharp shear excursion Far Lantern recorded."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "Seal open. Reference zero holds.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Stay on the planned line. Do not chase the number.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "There it is.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service",
+      "civil-survey"
+    ],
+    "directionInline": [
+      {
+        "text": "The anomaly remains subtle and instrument-led. Avoid supernatural distortion or huge spectacle."
+      }
+    ]
+  },
+  {
+    "id": "STORM_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "Real Enough",
+    "setting": "lattice-harrow-fold",
+    "region": "lattice-margin",
+    "characters": [
+      "C_mara_veld",
+      "C_keo_maren",
+      "C_captain_arden"
+    ],
+    "summary": "The controlled measurement confirms a real shear event at the phase predicted by Far Lantern's raw data. Arden orders traffic rerouted while the shuttle exits without attempting to explain the underlying Lattice mechanism.",
+    "panelPlan": [
+      {
+        "text": "Trace peaks; the starfield ahead shifts slightly as the shuttle crosses the instrument threshold."
+      },
+      {
+        "text": "Mara turns away along the preplanned abort vector while Keo confirms the second independent instrument agrees."
+      },
+      {
+        "text": "Arden on Stormwell bridge issues a concise route closure and reroute."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Reference and onboard set agree within tolerance. The shear is real.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.lysa.arden",
+        "text": "Close Harrow Fold. Publish the alternate green route and the measurement basis. No cause statement.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "fleet",
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "title": "The Finding",
+    "setting": "stormwell-analysis-gallery",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_mara_veld",
+      "C_keo_maren",
+      "C_imani_rusk"
+    ],
+    "summary": "Selene drafts the finding as layered claims with confidence levels: recorder authentic; apparent post-destruction timeline caused by timestamp translation; map failure caused by inherited calibration assumptions; shear independently confirmed; underlying Lattice mechanism unresolved.",
+    "panelPlan": [
+      {
+        "text": "Analysis wall divided into five short findings with confidence markers rather than a single dramatic conclusion."
+      },
+      {
+        "text": "Mara reads the finding that explicitly clears Far Lantern's survey crew of manually altering the route map."
+      },
+      {
+        "text": "Keo wants to name the Lattice phenomenon; Selene leaves that field blank."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "You wrote that the crew's raw observations were sound.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "They were.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "And the shear mechanism?",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Observed. Repeated. Not explained.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ]
+  },
+  {
+    "id": "STORM_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "title": "Correction Notice",
+    "setting": "civil-survey-office",
+    "region": "verge",
+    "characters": [
+      "C_mara_veld",
+      "C_archivist_selene_stormwell"
+    ],
+    "summary": "Civil Survey replaces the Harrow Fold map with a corrected product that links back to raw observations, instrument generation, model version, and calibration assumptions so future users can see what the route depends on.",
+    "panelPlan": [
+      {
+        "text": "Verge cartography office staff publish the corrected route product; avoid walls of readable text, show the change graphically."
+      },
+      {
+        "text": "A clear provenance icon chain accompanies the route revision: observation, instrument, model, publication."
+      },
+      {
+        "text": "Mara sends Selene the revision for certification, not approval of the route's policy."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mara.veld",
+        "text": "Raw packets stay attached this time. Instrument family, calibration curve, model build, all of it.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Good. Future readers should not have to trust us more than the evidence requires.",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "civil-survey",
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "title": "Certification",
+    "setting": "stormwell-bridge",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_captain_arden",
+      "C_ansel_korr",
+      "C_imani_rusk",
+      "C_keo_maren"
+    ],
+    "summary": "Stormwell certifies the reconstruction and the new route warning. Arden notes that the ship has prevented further losses without claiming to have solved Harrow Fold itself.",
+    "panelPlan": [
+      {
+        "text": "Small working debrief on the bridge side workspace, not a ceremony. The team stands around one shared display."
+      },
+      {
+        "text": "Arden signs the operational receipt; Selene signs the evidentiary certification separately."
+      },
+      {
+        "text": "Ansel carries the recovered recorder back toward long-term controlled storage while the others return to work."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.lysa.arden",
+        "text": "Traffic is moving around it. No further losses.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Then the finding did what it needed to do.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "And the impossible twelve minutes?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@starsplit.keo.maren",
+        "text": "Not impossible. Just badly inherited.",
+        "subtext": "Panel 2"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "fleet",
+      "stormwell-service"
+    ]
+  },
+  {
+    "id": "STORM_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "title": "What Survives",
+    "setting": "stormwell-hardware-vault",
+    "region": "core-worlds",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_imani_rusk"
+    ],
+    "summary": "After the case closes, Imani shelves the old packet controller beside the newer calibration module. Selene receives a new intake notice: two independently authenticated copies of the same agreement contain different Article Seven text. The next problem is not corruption but divergence.",
+    "panelPlan": [
+      {
+        "text": "Quiet hardware-vault image: old and new devices stored side by side with their provenance tags, emphasizing that preserved context made the reconstruction possible."
+      },
+      {
+        "text": "Selene's slate receives a simple intake summary with two document hashes both authenticated to different post-Shattering branches. Keep screen text minimal."
+      },
+      {
+        "text": "Final close on Selene reading the two divergent clauses, interested rather than alarmed."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.imani.rusk",
+        "text": "Keeping the old controller still feel excessive?",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "text": "Ask me after we stop making descendants.",
+        "subtext": "Panel 1"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT: TWO ORIGINALS",
+        "subtext": "Panel 3"
+      }
+    ],
+    "direction": [
+      "stormwell-story"
+    ],
+    "factions": [
+      "stormwell-service"
+    ],
+    "directionInline": [
+      {
+        "text": "The closing hook introduces record divergence without turning it into a conspiracy reveal or a sacred-document tableau."
+      }
+    ]
+  }
+]
