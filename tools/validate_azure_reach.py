@@ -21,7 +21,11 @@ def load(path):
 
 def decode(path):
     raw = "".join(path.read_text(encoding="utf-8").split())
-    return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
+    try:
+        return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
+    except Exception as exc:
+        print(f"DECODE FAILURE: {path}: {exc!r}", flush=True)
+        raise
 
 
 shows = load(MANIFEST)
@@ -89,7 +93,6 @@ for entry in azure_entries:
         seen_overlay_files.add(overlay_file)
         path = SHOW / overlay_file
         assert path.exists(), f"Missing overlay: {path}"
-        print("VALIDATING OVERLAY", path)
         decoded = decode(path)
         assert isinstance(decoded, list), f"{overlay_file}: decoded payload must be a list"
         pages.extend(decoded)
