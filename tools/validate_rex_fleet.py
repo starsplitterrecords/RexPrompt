@@ -20,16 +20,33 @@ def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def load_payload(entry):
-    overlay = entry.get("sceneOverlays", [None])[0]
-    if not overlay:
-        raise SystemExit(f"{entry.get('id')}: normalized issue payload missing")
+def load_overlay(overlay):
     path = SHOW / overlay["file"]
     if overlay.get("encoding") == "gzip-base64":
         text = "".join(path.read_text(encoding="utf-8").split())
         raw = base64.b64decode(text, validate=True)
-        return json.loads(gzip.decompress(raw).decode("utf-8"))
-    return load_json(path)
+        pages = json.loads(gzip.decompress(raw).decode("utf-8"))
+    else:
+        pages = load_json(path)
+    if overlay.get("includeIds"):
+        include = set(overlay["includeIds"])
+        pages = [page for page in pages if page.get("id") in include]
+    if overlay.get("excludeIds"):
+        exclude = set(overlay["excludeIds"])
+        pages = [page for page in pages if page.get("id") not in exclude]
+    return pages
+
+
+def load_payload(entry):
+    pages = load_json(SHOW / entry.get("scenesFile", "pages_base.json"))
+    overlays = entry.get("sceneOverlays", [])
+    if not overlays:
+        raise SystemExit(f"{entry.get('id')}: normalized issue payload missing")
+    for overlay in overlays:
+        if overlay.get("beforeId") or overlay.get("afterId") or overlay.get("replaceIds"):
+            raise SystemExit(f"{entry.get('id')}: unsupported Rex Fleet overlay placement in validator")
+        pages.extend(load_overlay(overlay))
+    return pages
 
 
 def assert_clean_recipe(page, all_ids):
@@ -95,17 +112,22 @@ if len(all_ids) != sum(len(pages) for pages in issues.values()):
     raise SystemExit("Duplicate normalized Rex Fleet page IDs")
 
 for issue, pages in issues.items():
-    expected_ids = [f"RF_I{issue:02d}_P{n:02d}" for n in range(1, len(pages) + 1)]
     ids = [page.get("id") for page in pages]
-    if ids != expected_ids:
-        raise SystemExit(f"Issue {issue}: page IDs/order invalid: {ids}")
+    open_id = f"RF_I{issue:02d}_EDITOR_OPEN"
+    close_id = f"RF_I{issue:02d}_EDITOR_CLOSE"
+    if not ids or ids[0] != open_id or ids[-1] != close_id:
+        raise SystemExit(f"Issue {issue}: editorial bookend order invalid: {ids}")
+    story_ids = ids[1:-1]
+    expected_story_ids = [f"RF_I{issue:02d}_P{n:02d}" for n in range(1, len(story_ids) + 1)]
+    if story_ids != expected_story_ids:
+        raise SystemExit(f"Issue {issue}: story page IDs/order invalid: {story_ids}")
     for page in pages:
         assert_clean_recipe(page, all_ids)
 
-if len(issues[2]) != 19:
-    raise SystemExit(f"Issue 2 must contain 19 production pages, found {len(issues[2])}")
-if len(issues[3]) != 30:
-    raise SystemExit(f"Issue 3 must contain 30 production pages, found {len(issues[3])}")
+if len(issues[2][1:-1]) != 19:
+    raise SystemExit(f"Issue 2 must retain 19 story pages, found {len(issues[2][1:-1])}")
+if len(issues[3][1:-1]) != 30:
+    raise SystemExit(f"Issue 3 must retain 30 story pages, found {len(issues[3][1:-1])}")
 
 serialized = json.dumps(issues, ensure_ascii=False)
 if "RF_S1E" in serialized:
