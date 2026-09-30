@@ -1,5 +1,71 @@
 [
   {
+    "id": "EFW_S1E03_EDITOR_OPEN",
+    "summary": "Opening previously page for Issue 3. Carries forward the contradictory memories and moral ambiguity, then points toward the material persistence of the forgotten war without revealing Atlas or the buried dreadnought.",
+    "settingText": "EDITORIAL COMPOSITE — busy present-day Vael-Tor arrival concourse under rain-streaked glass, commuters and ordinary civic life in motion. Theo, Rae and Adrian are small within the crowd. Beneath transparent flooring and repaired masonry, only subtle old structural lines fail to match the modern geometry; do not reveal a ship, weapon, champion, active defense system, or refugee emergency.",
+    "characters": [
+      "EFW_Theo",
+      "EFW_Rae",
+      "EFW_Adrian"
+    ],
+    "panelPlan": [
+      {
+        "text": "Single full-page editorial splash. The ordinary city must dominate first impression; the unsettling older geometry is visible only on a second look. Keep the lower architecture detailed and leave the upper transit-glass/sky area clean for lettering."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "PREVIOUSLY IN ECHOES OF A FORGOTTEN WAR…"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "ISSUE 3 — THE ARCHITECTURE OF RUIN"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Two people remembered the same catastrophe from different places."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "One remembered the man who believed waiting would kill everyone."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "The other remembered the people still trying to get out."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Neither memory was false."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "That should have made the past clearer."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Instead it made one thing obvious:"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "There was never a clean side of this war."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "And the past left more than memories behind.",
+        "subtext": "Final emphasis line."
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
+      }
+    ]
+  },
+  {
     "id": "EFW_S1E03_S01",
     "settingText": "Present-day Vael-Tor arrival concourse: crowded, wet, ordinary, built over older foundations nobody thinks about anymore.",
     "region": "EFW_VaelTor",
@@ -728,6 +794,56 @@
     "directionInline": [
       {
         "text": "PAGE ARCHITECTURE — Q3; exactly 3 panels. Quiet consequence page: larger acting panels, hands/faces/objects, held reaction and silence. Stage dialogue through ongoing physical behavior whenever the scene permits: sorting records, carrying people, repairing, walking, writing, moving equipment, checking injuries, opening barriers, handling objects or navigating occupied rooms. Avoid static thesis-pose staging."
+      }
+    ]
+  },
+  {
+    "id": "EFW_S1E03_EDITOR_CLOSE",
+    "summary": "Closing NEXT ISSUE teaser for Issue 3. Points toward Pax-Aeterna's remembered decision without revealing Arbiter, the extinction-level ruling, or Theo and Rae's identity reveal.",
+    "settingText": "EDITORIAL COMPOSITE — Pax-Aeterna treaty vault before anyone enters it: an austere circular chamber, one long central table, empty seats, sealed doors and cold dormant light. No people, champions, symbols, screens, records or explicit evidence of what happened there.",
+    "characters": [],
+    "panelPlan": [
+      {
+        "text": "Single full-page teaser splash. The empty table and vacant seats create the tension. Use strong symmetrical architecture but allow one chair or place setting to sit slightly out of alignment as a human trace. Keep the upper darkness spacious for copy."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "handle": "CAPTION",
+        "text": "A weapon can survive being forgotten."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "So can a decision."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "Pax-Aeterna was built for people who believed they could stop catastrophe by sitting in the same room."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "The room is still there."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "So is what they chose inside it.",
+        "subtext": "Largest emphasis line."
+      },
+      {
+        "handle": "CAPTION",
+        "text": "NEXT: SILENCE IN THE VAULT"
+      }
+    ],
+    "directionInline": [
+      {
+        "text": "EDITORIAL BOOKEND PAGE — one finished portrait comic/editorial page, not a cover and not a story continuation panel. Use a single integrated full-page composition with strong negative space reserved for the supplied CAPTION text. The illustration must be visually specific to this issue and cinematic, but it must not reveal any story answer, character, champion, object, or event that the issue itself has not yet revealed at this point in the reading order."
+      },
+      {
+        "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
     ]
   }
