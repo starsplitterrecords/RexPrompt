@@ -1,0 +1,66 @@
+{
+  "name": "Rex Fleet Academy: Accord Among Enemies",
+  "seriesId": "rex-fleet-academy-accord",
+  "sourceBoundary": {
+    "issuesPlanned": 6,
+    "issuesProductionReady": 1,
+    "pagesProductionReady": 18
+  },
+  "developmentStatus": "New Academy line initiated. Issue 1 is compiled into production-ready page recipes. Issues 2-6 remain development architecture only and are intentionally not registered in data/shows.json until page recipes exist.",
+  "premise": "Fleet Academy students study the Shattered Accord through verified historical cases, operational records, competing testimony, and reconstructed decisions. The series teaches how cooperation emerged among Fleet, Verge, and Shard actors without pretending that distrust, sovereignty disputes, or political conflict disappeared.",
+  "thematicSpine": "Procedure can become possible before trust. The Accord matters because people with incompatible political claims learned to create narrow, verifiable rules that kept civilians, supplies, and rescue moving.",
+  "worldRules": [
+    "Use current Rex Fleet production canon for names, identities, faction design, corridor physics, and historical causality. Do not restore superseded public-wiki variants when RexPrompt has newer production canon.",
+    "Academy history is evidence-based. Telemetry, manifests, logs, orders, testimony, and later analysis may disagree; disagreement remains visible unless the record resolves it.",
+    "The Shards are not a unitary sovereign state. Individual captains, blocs, civilians, and institutions can accept, reject, or partially observe Accord procedures.",
+    "The Accord does not require reconciliation, surrender, ideological agreement, or trust. It creates narrow operating procedures that can be verified in practice.",
+    "Political ideas must be dramatized through concrete human stakes: passage, rescue, command, food, medicine, evacuation, pursuit, and access.",
+    "Stormwell archives are research infrastructure, not sacred memory institutions. Do not use obsolete lantern, shrine, memory-ritual, or Memory Oath framing.",
+    "Academy framing should create genuine argument among students. The instructor is not an omniscient narrator and does not simplify contested history into a single moral."
+  ],
+  "storyEngine": "Each issue begins with an Academy problem that sounds simple, then reopens a historical case whose operational details make the simple answer fail. The class moves between reconstruction, evidence review, and argument until it can state a narrower and more useful principle. The final page turns that principle into the next unresolved problem rather than a lecture-summary moral.",
+  "arcArchitecture": [
+    {
+      "issue": 1,
+      "workingTitle": "What Did the Accord End?",
+      "focus": "Auric Gate civilian crisis, rescue precedent, protected passage, fragmented authority, and the distinction between ending a battle and creating durable procedure.",
+      "status": "production-ready"
+    },
+    {
+      "issue": 2,
+      "workingTitle": "Whose Corridor?",
+      "focus": "Protected passage versus sovereignty, pursuit rights, corridor control, verification windows, and what neutral access can mean when ownership is disputed.",
+      "status": "development"
+    },
+    {
+      "issue": 3,
+      "workingTitle": "The Enemy Beside You",
+      "focus": "Mixed operations, task-specific trust, command ambiguity, information sharing, and what happens when cooperating ships remain politically independent.",
+      "status": "development"
+    },
+    {
+      "issue": 4,
+      "workingTitle": "Open Gates",
+      "focus": "Refugees, families, trade, medical movement, labor, and the social consequences of turning protected passage into ordinary civilian access.",
+      "status": "development"
+    },
+    {
+      "issue": 5,
+      "workingTitle": "Without a Single Sovereign",
+      "focus": "Shard fragmentation, non-signatories, local authority, enforcement, and the limits of agreements that no single actor can impose on everyone.",
+      "status": "development"
+    },
+    {
+      "issue": 6,
+      "workingTitle": "Without Trust",
+      "focus": "Why the Accord persists, how verification changes Reach and Resolve in practice, and how repeatable procedure can become political order without erasing continuing disagreement.",
+      "status": "development"
+    }
+  ],
+  "characterTrajectories": {
+    "Selene Stormwell": "Teaches evidence discipline rather than a sanctioned interpretation. Her challenge is to keep the cadets from replacing propaganda with a different tidy story.",
+    "Anya Rell": "Begins by seeking clean legal categories. Learns to distinguish legitimacy, authority, participation, and practical compliance when those categories do not align.",
+    "Milo Senn": "Begins with chain-of-command answers. Learns that operational leadership can be distributed and that political authority is not identical to military command.",
+    "Priya Dane": "Begins closest to the Accord's material stakes because she thinks in routes and logistics. Her challenge is recognizing when practical procedure itself becomes political."
+  }
+}

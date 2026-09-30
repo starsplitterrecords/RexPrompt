@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "RFA_ACCORD_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "The Answer Everyone Gives",
+    "setting": "RFA_Academy_Seminar",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "At Fleet Academy, Selene Stormwell opens a political-history seminar by asking what the Shattered Accord ended. Milo gives the answer generations of students have learned to distrust: the war.",
+    "panelPlan": [
+      {
+        "text": "Wide establishing panel: a working Academy seminar room, students around a live case table rather than rows facing a podium. Selene stands beside a blank timeline headed only by the date of the Auric Gate crisis."
+      },
+      {
+        "text": "Medium on Milo answering with reasonable confidence while Anya and Priya glance toward him; nobody treats the question as a trick yet."
+      },
+      {
+        "text": "Close on Selene. She does not mark him wrong. She asks a smaller, harder question."
+      },
+      {
+        "text": "Final panel on the wall display as it divides into several simultaneous conflicts rather than one clean war line."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "What did the Shattered Accord end?"
+      },
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "The war."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Which one?"
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "Three Answers",
+    "setting": "RFA_Academy_Seminar",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "The cadets try to define the Accord by outcome: ceasefire, access, or recognition. Selene rejects none of them and loads the source record that produced all three.",
+    "panelPlan": [
+      {
+        "text": "Anya stands at the case table and separates three terms on her slate: HOSTILITIES, PASSAGE, AUTHORITY."
+      },
+      {
+        "text": "Priya adds convoy tonnage, medical shortages, and delayed ships beneath PASSAGE, making the abstract category immediately material."
+      },
+      {
+        "text": "Milo points to armed formations still active after the Accord and challenges the idea that it simply ended war."
+      },
+      {
+        "text": "Selene opens verified Auric Gate records: Fleet orders, Verge manifests, Shard transmissions, and civilian registries appear side by side with provenance tags."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "It ended open hostilities at the Gate."
+      },
+      {
+        "handle": "@starsplit.academy.priya.dane",
+        "speaker": "Priya",
+        "text": "It also got ships moving. Food, medicine, evacuees."
+      },
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "And nobody disarmed."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Good. Keep all three answers. Now earn them."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "A Corridor Full of People",
+    "setting": "RF_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_commodore_ella_venn",
+      "C_captain_naomi_sol",
+      "C_abby_saville",
+      "C_tessa_banks",
+      "C_billie_rusk",
+      "C_oren_pike"
+    ],
+    "summary": "The historical reconstruction begins at Auric Gate: supply traffic, civilian movement, Fleet protection, Verge escorts, and competing Shard forces occupy the same corridor. The crisis is not a neat battle line; it is armed politics wrapped around people who need to pass.",
+    "panelPlan": [
+      {
+        "text": "Large opening panel of Auric Gate with its ember-orange pylons and civilian lanes crowded by halted freight, medical craft, escorts and warships. Make traffic geometry readable."
+      },
+      {
+        "text": "Inset sequence: medicine containers strapped for transit; a family waiting in a civilian berth; targeting tracks sweeping past them without locking."
+      },
+      {
+        "text": "Naomi's Verge escort sits between vulnerable traffic and the heavier ships. Thunderbreak is farther back, powerful but constrained by the same crowded lane."
+      },
+      {
+        "text": "Across the corridor, Shard ships are visibly not a single formation: Abby, Tess, Billie and Pike occupy different vectors and priorities."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Nobody fires through the lane. I don't care whose target is behind it."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Thunderbreak copies. Civilian traffic stays the line."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "Not the Target",
+    "setting": "RF_Gravefire_Interior",
+    "region": "Shards",
+    "factions": [
+      "F_Shards"
+    ],
+    "characters": [
+      "C_abby_saville",
+      "C_tessa_banks",
+      "C_billie_rusk"
+    ],
+    "summary": "Inside the Shard formation, the first meaningful fracture is over civilians. Billie redirects violence toward a civilian vessel; Abby orders her back and Tess refuses the lock.",
+    "panelPlan": [
+      {
+        "text": "Intercut three practical Shard command spaces rather than a unified war room: Abby on Scythe of Saville, Tess on Gravefire, Billie aboard Ashfang."
+      },
+      {
+        "text": "A targeting display places a civilian vessel inside the threatened geometry. The registry is visible as data, not decorative text."
+      },
+      {
+        "text": "Abby gives the pull-back order. Billie remains in motion. Tess watches the lock solution appear on Gravefire and kills it."
+      },
+      {
+        "text": "End on the tactical display showing the Shard formation physically splitting around the civilian ship."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "Billie, pull back. That ship isn't the target."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "I know. It is now."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Do not lock on."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "The Order",
+    "setting": "RF_Thunderbreak_Command",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet"
+    ],
+    "characters": [
+      "C_commodore_ella_venn",
+      "C_admiral_cael_dominion"
+    ],
+    "summary": "Dominion orders Venn to protect the authorized supply convoy rather than divert to a Shard-coded distress vessel. Venn sees verified civilian registries in the same transmission.",
+    "panelPlan": [
+      {
+        "text": "Thunderbreak command with convoy tracks and the separate distress vessel both visible. The tactical problem is spatial: turning toward one exposes the other."
+      },
+      {
+        "text": "Dominion appears on a secure command display, formal and controlled rather than villainous."
+      },
+      {
+        "text": "Venn studies the incoming civilian registry and the convoy exposure plot at the same time."
+      },
+      {
+        "text": "A junior station logs the order. Venn now has an institutional instruction and contradictory human evidence in front of the whole bridge."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "You're authorized to protect the supply convoy, not that vessel."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "They're sending civilian registries."
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "They're also sending Shard codes. Stay with the convoy."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "What Protection Means",
+    "setting": "RF_Thunderbreak_Command",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge"
+    ],
+    "characters": [
+      "C_commodore_ella_venn",
+      "C_captain_naomi_sol"
+    ],
+    "summary": "Venn cannot protect both groups with Fleet force alone. She asks Auric's Verge escorts to cover the convoy while Thunderbreak turns toward the civilians, converting a political relationship into a shared operational dependency.",
+    "panelPlan": [
+      {
+        "text": "Venn traces two routes on the shared display: Thunderbreak toward the distress vessel, Verge escorts folding around the medicine convoy."
+      },
+      {
+        "text": "Naomi appears from her smaller working cockpit, checking the same geometry from a different set of instruments."
+      },
+      {
+        "text": "Verge escorts spread into an imperfect protective screen around the convoy. They are taking real exposure, not symbolically cooperating."
+      },
+      {
+        "text": "Thunderbreak begins its turn. The convoy remains visible behind it, now protected by people the Fleet cannot simply command."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Auric, cover the convoy as long as you can. We're going for the civilians."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "That's not an order you get to give me."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Good. We're covering it."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Who Goes First",
+    "setting": "RF_Thunderbreak_Command",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge"
+    ],
+    "characters": [
+      "C_commodore_ella_venn",
+      "C_captain_naomi_sol",
+      "C_richard_secundo"
+    ],
+    "summary": "The rescue cannot simply be a Fleet boarding. Naomi argues that civilians who distrust Fleet marines may fight the people trying to save them. Venn gives the Verge captain operational lead.",
+    "panelPlan": [
+      {
+        "text": "Richard's damaged transmission from Mercy of Dawn fills one bridge display: crowded triage spaces and failing compartments."
+      },
+      {
+        "text": "Fleet boarding icons line up in the launch queue. Naomi interrupts before they launch."
+      },
+      {
+        "text": "Naomi explains the access problem while Venn looks from the tactical solution to the human one."
+      },
+      {
+        "text": "The launch order changes: Verge shuttle first, Fleet medics supporting, weapons posture visibly lowered."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "Mercy of Dawn to anyone listening. They're through the outer hull."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Not with Fleet marines in front. Half that ship will fight you before they figure out you're helping."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Sol has the lead. Fleet supports."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Then launch."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "A Rule Before a Treaty",
+    "setting": "RFA_Mercy_Dawn_Interior",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_captain_naomi_sol",
+      "C_richard_secundo"
+    ],
+    "summary": "The Verge-led rescue works because the participants accept a narrow procedure: civilians first, visible weapons down, medical teams follow, and nobody asks the rescued to declare allegiance before receiving help.",
+    "panelPlan": [
+      {
+        "text": "Naomi enters the damaged civilian space first with empty hands visible. Fleet medics follow several steps behind carrying medical equipment, not rifles."
+      },
+      {
+        "text": "Richard points them toward the worst casualties while frightened civilians watch faction insignia rather than faces."
+      },
+      {
+        "text": "A stretcher passes from Shard civilian hands to Verge crew to Fleet medics in one continuous physical action."
+      },
+      {
+        "text": "Naomi marks the next load while the rescue lane stays open behind her. The cooperation is functional and tense, not celebratory."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "We're taking people out. Nobody has to join anything."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "Then start with the aft ward. They have the least time."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "The Line Breaks",
+    "setting": "RF_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_Shards"
+    ],
+    "characters": [
+      "C_abby_saville",
+      "C_tessa_banks",
+      "C_billie_rusk",
+      "C_oren_pike"
+    ],
+    "summary": "The Shard side does not resolve into one negotiating authority. The civilian crisis breaks alliances instead: some captains enforce the emerging restraint, others reject it, and Billie ultimately remains outside the Accord even after acting against Pike at the Gate.",
+    "panelPlan": [
+      {
+        "text": "Pike's Broken Oath moves to exploit the confused lane while rescue craft are still crossing."
+      },
+      {
+        "text": "Billie's Ashfang cuts across Pike's vector and disables his firing solution; show a concrete systems strike rather than a heroic broadside."
+      },
+      {
+        "text": "Abby and Tess hold different positions but both keep the civilian lane clear. Their ships are not under one command."
+      },
+      {
+        "text": "Final tactical view: the Shard formation is now several blocs with visible gaps between them. No image should suggest a unified Shard state."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "You think one rescue makes them neutral?"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "No. I think you're in my firing line."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Keep the lane clear."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "Who Made Peace",
+    "setting": "RFA_Academy_Seminar",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "Back in the seminar, the cadets try to identify the person who 'made peace.' Selene makes them account for the fact that every useful rule emerged from different actors with different authority.",
+    "panelPlan": [
+      {
+        "text": "The historical reconstruction freezes on a multi-ship tactical map. Selene walks into the image space created by the classroom display."
+      },
+      {
+        "text": "Milo points to Venn; Anya points to Halev's later negotiation record; Priya points to Naomi's rescue procedure."
+      },
+      {
+        "text": "Selene layers Abby, Tess, Billie and Pike over the same display, emphasizing that the Shard actors did not share one chain of command."
+      },
+      {
+        "text": "The table now shows not a founder portrait but a web of decisions that overlap only in a narrow center labeled PASSAGE."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "Venn made the break possible."
+      },
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "Halev turned it into terms."
+      },
+      {
+        "handle": "@starsplit.academy.priya.dane",
+        "speaker": "Priya",
+        "text": "Naomi made it usable before anyone signed anything."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "So who made peace?"
+      },
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "Maybe nobody did."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Now we can start."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "The First Term",
+    "setting": "RFA_Accord_Working_Room",
+    "region": "Verge",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_governor_halev",
+      "C_commodore_ella_venn",
+      "C_captain_naomi_sol",
+      "C_abby_saville",
+      "C_tessa_banks"
+    ],
+    "summary": "In the first working negotiations, Halev refuses a grand declaration. He wants a route that can be used tomorrow: marked passage windows, rescue access, and a way to verify when a lane is protected.",
+    "panelPlan": [
+      {
+        "text": "Tired representatives crowd a scuffed working table in Auric's civic complex. The central objects are route maps, convoy manifests and corridor status, not a treaty document."
+      },
+      {
+        "text": "Halev pushes a manifest into the center: food, medicine, replacement scrubbers, passenger capacity."
+      },
+      {
+        "text": "Venn asks what can actually be guaranteed. Abby and Tess exchange a look before separating what they can promise from what they cannot bind."
+      },
+      {
+        "text": "Naomi draws a protected passage window directly onto the operational map."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "I don't need a speech. I need this lane open tomorrow."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "For which traffic?"
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Food, medicine, evacuation, repair. Start there."
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "I can hold my ships to that."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Not every ship with red on it."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Then write down exactly who you can hold."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "No Single Signature",
+    "setting": "RFA_Accord_Working_Room",
+    "region": "Verge",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_governor_halev",
+      "C_commodore_ella_venn",
+      "C_abby_saville",
+      "C_tessa_banks",
+      "C_billie_rusk"
+    ],
+    "summary": "The negotiators confront the Accord's central authority problem: there is no single Shard sovereign who can bind every captain. Billie participates in the immediate deconfliction but refuses to be absorbed into a settlement she did not authorize.",
+    "panelPlan": [
+      {
+        "text": "The map shows separate Shard ship groups, each tagged by the authority actually controlling it. Avoid flags standing in for a nonexistent unified state."
+      },
+      {
+        "text": "Abby marks ships she can bind. Tess adds Gravefire and aligned civilian-protection craft. Several other groups remain unmarked."
+      },
+      {
+        "text": "Billie stands at the edge of the room rather than at a symbolic seat, listening while keeping her own ship outside the marked commitment."
+      },
+      {
+        "text": "Halev writes the limitation into the working terms instead of pretending consensus exists."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Who speaks for the Shards?"
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "Nobody."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Good answer."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Then the terms name the commands that accept them."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "And the ones that don't stay outside them."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Mine stays outside."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "Protected Passage",
+    "setting": "RFA_Accord_Working_Room",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_governor_halev",
+      "C_commodore_ella_venn",
+      "C_captain_naomi_sol",
+      "C_abby_saville"
+    ],
+    "summary": "The negotiators define the practical center of the Accord: designated passage can be protected without transferring ownership or allegiance. A protected lane is a temporary operating rule, not a claim that everyone agrees who ultimately controls the corridor.",
+    "panelPlan": [
+      {
+        "text": "Naomi draws a transit cylinder between two verified gate markers. Halev adds time windows and traffic categories."
+      },
+      {
+        "text": "Venn adds the escort condition: protection follows the registered movement, not a territorial claim."
+      },
+      {
+        "text": "Abby adds a warning boundary around weapons locks and pursuit across the protected movement."
+      },
+      {
+        "text": "The finished operations display is useful but visibly conditional: times, participating commands, verification points and expiration."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Inside the window, registered traffic moves."
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "No lock through it. No firing through it."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Protection doesn't establish ownership."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Good. I need passage, not a flag."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "Shared Operations",
+    "setting": "RF_Auric_Gate",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_captain_naomi_sol",
+      "C_tessa_banks",
+      "C_commodore_ella_venn"
+    ],
+    "summary": "The first Accord operations test whether the rescue precedent can become repeatable practice. Naomi leads a passage because local ships will accept her call; Venn supplies heavy protection; Tess reports a Shard-side threat without surrendering her independent command.",
+    "panelPlan": [
+      {
+        "text": "A post-Accord convoy enters the protected window. Naomi's smaller escort is visibly at point while Thunderbreak holds farther out."
+      },
+      {
+        "text": "Tess reports an unregistered contact approaching from the Shard side. Her transmission is information between commands, not a request for Fleet orders."
+      },
+      {
+        "text": "Naomi adjusts the convoy timing. Venn shifts Thunderbreak's defensive screen without taking over the route call."
+      },
+      {
+        "text": "The contact turns away before weapons fire. The convoy keeps moving; the procedure succeeds quietly."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Unregistered contact, Shard-side edge. Fast enough to matter."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Convoy holds speed. Thunderbreak, shade our right side."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Shading right. Route stays yours."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Contact is turning off."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "People, Not Cargo",
+    "setting": "RF_Auric_Civic_Core",
+    "region": "Verge",
+    "factions": [
+      "F_Verge",
+      "F_Fleet",
+      "F_Shards"
+    ],
+    "characters": [
+      "C_governor_halev",
+      "C_captain_naomi_sol"
+    ],
+    "summary": "Accord access immediately becomes more complicated than freight. Refugees, medevac patients, separated families, repair crews, and ordinary travelers all test whether protected passage applies to people whose political status is disputed.",
+    "panelPlan": [
+      {
+        "text": "Auric civic operations during the first sustained protected movements: freight clerks work beside family reunification desks and medical transfer queues."
+      },
+      {
+        "text": "A manifest screen mixes cargo with passenger names and medical priority codes. Keep the space crowded but organized."
+      },
+      {
+        "text": "Naomi and Halev confront a disputed passenger list where origin, destination and political affiliation do not line up cleanly."
+      },
+      {
+        "text": "Halev approves movement based on the Accord's access category while a Fleet clerk records the decision for later review."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Three of these families came out of Shard space."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "They're families."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Admiralty will ask what status they entered under."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Alive."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "What It Did Not Do",
+    "setting": "RFA_Academy_Seminar",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "Selene makes the cadets list the things the Accord did not accomplish: no surrender, no unified Shard government, no settled sovereignty, no universal trust, and no end to political conflict.",
+    "panelPlan": [
+      {
+        "text": "The classroom board now has two columns: CREATED and NOT CREATED. The CREATED side contains narrow procedures; the NOT CREATED side grows much longer."
+      },
+      {
+        "text": "Milo adds NO SURRENDER. Anya adds NO SHARED SOVEREIGNTY. Priya adds NO GUARANTEED SUPPLY."
+      },
+      {
+        "text": "Selene adds NO TRUST last, then circles it rather than treating it as failure."
+      },
+      {
+        "text": "The cadets look back at the operational record: convoys moved anyway."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "Nobody surrendered."
+      },
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "The Shards didn't become a state."
+      },
+      {
+        "handle": "@starsplit.academy.priya.dane",
+        "speaker": "Priya",
+        "text": "And one open lane didn't fix the shortages."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Did they trust one another?"
+      },
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "No."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Yet the lane opened."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "The Second Question",
+    "setting": "RFA_Archive_Review_Bay",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "In the archive review bay, the cadets compare motives they cannot prove with procedures they can verify. They identify the Accord's durable innovation: people did not have to agree why they were cooperating to verify whether they had done what they promised.",
+    "panelPlan": [
+      {
+        "text": "Four adjacent evidence displays show the same passage from different records: Fleet log, Verge manifest, Shard transmission, civilian arrival register."
+      },
+      {
+        "text": "Anya tries to infer motives from a command statement. Selene asks her to separate the claim from the observable action."
+      },
+      {
+        "text": "Priya lines up departure time, gate crossing and arrival record. Milo adds the weapons-status log."
+      },
+      {
+        "text": "The four sources disagree about intent but agree that the convoy crossed without engagement."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "So they trusted the procedure more than each other."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Careful. We can prove they used it."
+      },
+      {
+        "handle": "@starsplit.academy.priya.dane",
+        "speaker": "Priya",
+        "text": "Departure, crossing, arrival. Same ship count."
+      },
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "And no weapons locks inside the window."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "That is what history can actually give you."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  },
+  {
+    "id": "RFA_ACCORD_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "The Next Case",
+    "setting": "RFA_Academy_Seminar",
+    "region": "Core",
+    "characters": [
+      "C_archivist_selene_stormwell",
+      "C_rfa_anya_rell",
+      "C_rfa_milo_senn",
+      "C_rfa_priya_dane"
+    ],
+    "summary": "Selene closes the first case by replacing the original question. The Accord did not end politics; it created a way to keep people moving while politics continued. The cadets' next assignment asks who owns a protected corridor when everyone accepts passage but nobody agrees on sovereignty.",
+    "panelPlan": [
+      {
+        "text": "Back in the seminar room, the original question WHAT DID THE ACCORD END? remains faintly visible behind the day's evidence."
+      },
+      {
+        "text": "Priya erases THE WAR from Milo's first answer and replaces it with a route line connecting several competing jurisdictions."
+      },
+      {
+        "text": "Selene loads the next case map: a protected corridor with pursuit tracks approaching its boundary from opposite sides."
+      },
+      {
+        "text": "Final panel on the three cadets leaning toward the new problem as Selene gives the assignment. End on curiosity and difficulty, not a ceremonial conclusion."
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.academy.milo.senn",
+        "speaker": "Milo",
+        "text": "So the Accord didn't end the argument."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "It made some arguments survivable."
+      },
+      {
+        "handle": "@starsplit.academy.priya.dane",
+        "speaker": "Priya",
+        "text": "What's next?"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "A protected corridor. Three claims of authority. One ship in pursuit."
+      },
+      {
+        "handle": "@starsplit.academy.anya.rell",
+        "speaker": "Anya",
+        "text": "Whose corridor?"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Exactly."
+      }
+    ],
+    "direction": [
+      "academy-accord-story"
+    ]
+  }
+]
