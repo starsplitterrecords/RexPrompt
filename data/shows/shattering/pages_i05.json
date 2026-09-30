@@ -1,6 +1,67 @@
 [
   {
     "id": "SHAT_I05_P01",
+    "summary": "Opening editor splash frames the post-Break world as a period when future political traditions are being created accidentally through practical survival choices.",
+    "settingText": "Full-page lived-world recovery montage unified into one scene: repaired structural bracing, water and heat distribution, a hand-verified route board, improvised cargo transfer, and a newly painted safety mark. Visual ancestry of later Core/Fleet, Verge, and Shard traditions may be perceptible, but no mature faction presentation should appear.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Civilizations do not restart with flags."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "They restart with a working heater."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A repaired beam."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A route somebody actually crossed."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A mark on a door that means something because a person is willing to answer for it."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "You already know some of the names these habits will inherit."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The people inventing them do not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "To them, this is not the birth of a new political order."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Somebody needs water."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
+  },
+  {
+    "id": "SHAT_I05_P02",
     "summary": "After the network collapse, Survivor Plaza confronts the immediate question of who has authority to allocate scarce heat, water, food, and medicine.",
     "setting": "S_SurvivorPlaza",
     "region": "PostBreakMixed",
@@ -46,7 +107,7 @@
     "sceneId": "SCN_SHAT_I05_S01"
   },
   {
-    "id": "SHAT_I05_P02",
+    "id": "SHAT_I05_P03",
     "summary": "Ava answers the authority vacuum by prioritizing heat and water first, taking practical responsibility without claiming a formal title.",
     "setting": "S_SurvivorPlaza",
     "region": "PostBreakMixed",
@@ -67,7 +128,7 @@
     "directionInline": [
       "Authority here comes from service and action rather than inherited office."
     ],
-    "continuityFrom": "SHAT_I05_P01",
+    "continuityFrom": "SHAT_I05_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
@@ -101,7 +162,7 @@
     "sceneId": "SCN_SHAT_I05_S01"
   },
   {
-    "id": "SHAT_I05_P03",
+    "id": "SHAT_I05_P04",
     "summary": "In the refugee sector, a displaced family appears differently in three improvised ledgers, turning the argument over restored protocol into an immediate problem of who can actually be found and served.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
@@ -149,7 +210,7 @@
     "sceneId": "SCN_SHAT_I05_S02"
   },
   {
-    "id": "SHAT_I05_P04",
+    "id": "SHAT_I05_P05",
     "summary": "The neighborhood coordinator defends neighborhood improvisation with a concrete food handoff, while the Core advocate presses the real question of how mistakes are prevented rather than merely traced afterward.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
@@ -172,7 +233,7 @@
     "directionInline": [
       "Keep the neighborhood coordinator physically tied to named kitchens, handwritten source tags, and people who can answer for the food; the local model should be visible through practice rather than faction iconography."
     ],
-    "continuityFrom": "SHAT_I05_P03",
+    "continuityFrom": "SHAT_I05_P04",
     "dialogueInline": [
       {
         "handle": "@starsplit.vgvc",
@@ -198,7 +259,7 @@
     "sceneId": "SCN_SHAT_I05_S02"
   },
   {
-    "id": "SHAT_I05_P05",
+    "id": "SHAT_I05_P06",
     "summary": "The political argument stops when the shelter structure begins to fail; all three positions become useful only when converted into a shared physical repair.",
     "setting": "S_RefugeSector",
     "region": "PostBreakMixed",
@@ -220,7 +281,7 @@
     "directionInline": [
       "Use a physical interruption to puncture abstraction."
     ],
-    "continuityFrom": "SHAT_I05_P04",
+    "continuityFrom": "SHAT_I05_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -250,7 +311,7 @@
     "sceneId": "SCN_SHAT_I05_S02"
   },
   {
-    "id": "SHAT_I05_P06",
+    "id": "SHAT_I05_P07",
     "summary": "Ruben leads a salvage crew into a damaged Outer node where one critical conduit threatens to take the whole system dark.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -295,7 +356,7 @@
     "sceneId": "SCN_SHAT_I05_S03"
   },
   {
-    "id": "SHAT_I05_P07",
+    "id": "SHAT_I05_P08",
     "summary": "The outer crew improvises a reinforcement without waiting for central approval, turning emergency habit into an emerging engineering culture.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -315,7 +376,7 @@
     "directionInline": [
       "Let the words about grit name a repair culture already visible in the crew’s practiced behavior."
     ],
-    "continuityFrom": "SHAT_I05_P06",
+    "continuityFrom": "SHAT_I05_P07",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -345,7 +406,7 @@
     "sceneId": "SCN_SHAT_I05_S03"
   },
   {
-    "id": "SHAT_I05_P08",
+    "id": "SHAT_I05_P09",
     "summary": "The patched Outer node holds, giving Ruben's crew proof that local repair and salvage can sustain infrastructure the old supply system abandoned.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -365,7 +426,7 @@
     "directionInline": [
       "Show the method succeeding materially while keeping the improvised brace and damaged surroundings visible."
     ],
-    "continuityFrom": "SHAT_I05_P07",
+    "continuityFrom": "SHAT_I05_P08",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -395,7 +456,7 @@
     "sceneId": "SCN_SHAT_I05_S03"
   },
   {
-    "id": "SHAT_I05_P09",
+    "id": "SHAT_I05_P10",
     "summary": "At Orban, Ava builds new convoy schedules from eyewitness reports and personal reliability rather than centralized route predictions.",
     "setting": "S_OrbanPort",
     "region": "PostBreakMixed",
@@ -444,7 +505,7 @@
     "sceneId": "SCN_SHAT_I05_S04"
   },
   {
-    "id": "SHAT_I05_P10",
+    "id": "SHAT_I05_P11",
     "summary": "A port staffer challenges the trust-route model by asking what happens when a trusted person cuts a corner, forcing the new system to acknowledge its own risk.",
     "setting": "S_OrbanPort",
     "region": "PostBreakMixed",
@@ -464,7 +525,7 @@
     "directionInline": [
       "Leave the accountability problem genuinely unresolved so trust remains useful but fallible."
     ],
-    "continuityFrom": "SHAT_I05_P09",
+    "continuityFrom": "SHAT_I05_P10",
     "dialogueInline": [
       {
         "handle": "@starsplit.pstf",
@@ -494,7 +555,7 @@
     "sceneId": "SCN_SHAT_I05_S04"
   },
   {
-    "id": "SHAT_I05_P11",
+    "id": "SHAT_I05_P12",
     "summary": "Lochran returns to an old BHA safety sigil and argues that recognizable symbols can restore a sense of protection even before institutions are rebuilt.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -540,7 +601,7 @@
     "sceneId": "SCN_SHAT_I05_S05"
   },
   {
-    "id": "SHAT_I05_P12",
+    "id": "SHAT_I05_P13",
     "summary": "A field officer warns that repainting the sigil creates a promise of protection they cannot yet guarantee, but begins modifying the mark at Lochran’s request.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -561,7 +622,7 @@
     "directionInline": [
       "Retain the basic geometry of the older BHA safety mark while adding visibly hand-made modifications that narrow what the mark promises."
     ],
-    "continuityFrom": "SHAT_I05_P11",
+    "continuityFrom": "SHAT_I05_P12",
     "dialogueInline": [
       {
         "handle": "@starsplit.foff",
@@ -591,7 +652,7 @@
     "sceneId": "SCN_SHAT_I05_S05"
   },
   {
-    "id": "SHAT_I05_P13",
+    "id": "SHAT_I05_P14",
     "summary": "Iskara confronts Lochran over using safety symbols without enforceable standards, arguing that a mark without practice becomes a lie.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -640,7 +701,7 @@
     "sceneId": "SCN_SHAT_I05_S06"
   },
   {
-    "id": "SHAT_I05_P14",
+    "id": "SHAT_I05_P15",
     "summary": "Lochran answers that social belief is itself a form of infrastructure and that people need symbols capable of holding communities together.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -660,7 +721,7 @@
     "directionInline": [
       "Frame Lochran with civilians organizing around the mark and Iskara with the damaged structure it is meant to certify, keeping both arguments physically present."
     ],
-    "continuityFrom": "SHAT_I05_P13",
+    "continuityFrom": "SHAT_I05_P14",
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
@@ -686,7 +747,7 @@
     "sceneId": "SCN_SHAT_I05_S06"
   },
   {
-    "id": "SHAT_I05_P15",
+    "id": "SHAT_I05_P16",
     "summary": "Iskara insists that any shared safety symbol must bind its user to real inspection; Lochran acknowledges the damping-chamber decision without abandoning his belief that institutions must still make promises.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -706,7 +767,7 @@
     "directionInline": [
       "Use the environment to keep both philosophies answerable to material conditions."
     ],
-    "continuityFrom": "SHAT_I05_P14",
+    "continuityFrom": "SHAT_I05_P15",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -740,7 +801,7 @@
     "sceneId": "SCN_SHAT_I05_S06"
   },
   {
-    "id": "SHAT_I05_P16",
+    "id": "SHAT_I05_P17",
     "summary": "Alone, the field officer finishes a modified safety mark and recognizes that painting it also claims responsibility for whoever trusts it.",
     "setting": "S_PreBHA_Ruins",
     "region": "PostBreakCore",
@@ -770,7 +831,7 @@
     "sceneId": "SCN_SHAT_I05_S07"
   },
   {
-    "id": "SHAT_I05_P17",
+    "id": "SHAT_I05_P18",
     "summary": "Damian finds Liora after another move and reveals why she is hiding: several surviving authorities want her account of the damping failure, but they do not agree whether she is a witness, a culprit, or the owner of a text they want to control.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -822,7 +883,7 @@
     "sceneId": "SCN_SHAT_I05_S08"
   },
   {
-    "id": "SHAT_I05_P18",
+    "id": "SHAT_I05_P19",
     "summary": "Damian brings supplies to Liora and admits that he mistook reassurance for duty even when it prevented people from confronting danger.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -842,7 +903,7 @@
     "directionInline": [
       "Keep the remorse specific and understated."
     ],
-    "continuityFrom": "SHAT_I05_P17",
+    "continuityFrom": "SHAT_I05_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -872,7 +933,7 @@
     "sceneId": "SCN_SHAT_I05_S08"
   },
   {
-    "id": "SHAT_I05_P19",
+    "id": "SHAT_I05_P20",
     "summary": "Liora and Damian continue working together despite their different histories, converting remorse and technical failure into material future groups will later fight over.",
     "setting": "S_HideoutLab",
     "region": "PostBreakHidden",
@@ -892,7 +953,7 @@
     "directionInline": [
       "Keep the treatise visibly open and provisional, with contradictions and competing notes still present."
     ],
-    "continuityFrom": "SHAT_I05_P18",
+    "continuityFrom": "SHAT_I05_P19",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -926,7 +987,7 @@
     "sceneId": "SCN_SHAT_I05_S08"
   },
   {
-    "id": "SHAT_I05_P20",
+    "id": "SHAT_I05_P21",
     "summary": "Ruben's crews begin turning improvised repairs into transferable field practice while Alan, alive and still coordinating from the Broken Node rescue network, circulates failure notes between disconnected engineering crews.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -989,7 +1050,7 @@
     "sceneId": "SCN_SHAT_I05_S09"
   },
   {
-    "id": "SHAT_I05_P21",
+    "id": "SHAT_I05_P22",
     "summary": "Ava's hand-verified routes acquire an informal name as people begin calling lanes beyond the old centralized map 'verge routes'; Ava cares less about the label than preserving who actually vouched for each crossing.",
     "setting": "S_OrbanPort",
     "region": "OuterBand",
@@ -1011,7 +1072,7 @@
     "directionInline": [
       "Show a functioning alternative, not merely a slogan."
     ],
-    "continuityFrom": "SHAT_I05_P20",
+    "continuityFrom": "SHAT_I05_P21",
     "dialogueInline": [
       {
         "handle": "@starsplit.pstf",
@@ -1041,7 +1102,7 @@
     "sceneId": "SCN_SHAT_I05_S09"
   },
   {
-    "id": "SHAT_I05_P22",
+    "id": "SHAT_I05_P23",
     "summary": "Iskara codifies responsibility as Core, Verge, and Shard practices visibly diverge from the same post-collapse crisis.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -1063,7 +1124,7 @@
     "directionInline": [
       "Show differentiation already underway through distinct practices and visual habits, not suddenly completed factions."
     ],
-    "continuityFrom": "SHAT_I05_P21",
+    "continuityFrom": "SHAT_I05_P22",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -1092,5 +1153,54 @@
     ],
     "sceneId": "SCN_SHAT_I05_S09",
     "settingText": "Cross-cut montage between an Outer Ring repair deck, Orban-Tier Transit Port, and a rebuilt standards workspace: three distinct post-Break practices operating at the same time without sharing one visual language."
+  },
+  {
+    "id": "SHAT_I05_P24",
+    "summary": "Closing teaser loads the final issue with three diverging survival traditions that must cooperate on a prototype rescue vessel before their political meanings are settled.",
+    "settingText": "Full-page teaser around the prototype rescue vessel on its gantry, not yet a mature Fleet ship. Around it, different crews contribute patched engineering, route data, annotated documents, and a shared safety sigil. A command roster or captain slot may be visually present but must remain blank and contain no incidental readable environmental text.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Three ways of surviving are beginning to pull apart."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Unfortunately, the next rescue needs all three."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "There is a ship on the gantry."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A document nobody agrees how to read."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A symbol everybody wants to mean something."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And one empty line where a captain's name should go."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Next issue, the future launches before anyone finishes arguing about what it is."
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
   }
 ]

@@ -74,8 +74,8 @@ def main():
         assert entry.get("scenesFile") != "scenes_shattering.json", f"Issue {issue}: source scene file still active"
 
         pages = load(DATA / expected_file)
-        assert len(pages) == 22, f"Issue {issue}: expected 22 pages, found {len(pages)}"
-        expected_ids = [f"SHAT_I{issue:02d}_P{page:02d}" for page in range(1, 23)]
+        assert len(pages) == 24, f"Issue {issue}: expected 24 pages, found {len(pages)}"
+        expected_ids = [f"SHAT_I{issue:02d}_P{page:02d}" for page in range(1, 25)]
         ids = [p.get("id") for p in pages]
         assert ids == expected_ids, f"Issue {issue}: page order/IDs invalid"
 
@@ -89,6 +89,22 @@ def main():
             assert isinstance(panel_plan, list) and panel_plan, f"{pid}: missing panel plan"
             assert all(isinstance(item, str) and item.strip() for item in panel_plan), f"{pid}: invalid panel-plan entry"
             assert "episode" not in page and "act" not in page, f"{pid}: source scene fields survived"
+
+            editorial_page = index in (0, 23)
+            dialogue_inline = page.get("dialogueInline", [])
+            assert isinstance(dialogue_inline, list), f"{pid}: dialogueInline must be a list"
+
+            if editorial_page:
+                assert not page.get("sceneId"), f"{pid}: editorial bookend must not claim a source scene"
+                assert isinstance(page.get("settingText"), str) and page["settingText"].strip(), f"{pid}: editorial art direction missing"
+                assert not page.get("continuityFrom"), f"{pid}: editorial bookend must not inherit story continuity"
+                assert dialogue_inline, f"{pid}: editorial copy missing"
+                for line in dialogue_inline:
+                    assert isinstance(line, dict), f"{pid}: malformed editorial text entry"
+                    assert line.get("speaker") == "CAPTION", f"{pid}: editorial text must use CAPTION speaker"
+                    text = line.get("text")
+                    assert isinstance(text, str) and text.strip(), f"{pid}: editorial text missing"
+                continue
 
             scene_id = page.get("sceneId")
             assert scene_id in source_ids, f"{pid}: unknown source scene {scene_id}"
@@ -106,8 +122,6 @@ def main():
             for character in page_characters:
                 assert character in characters, f"{pid}: unknown character {character}"
 
-            dialogue_inline = page.get("dialogueInline", [])
-            assert isinstance(dialogue_inline, list), f"{pid}: dialogueInline must be a list"
             for line in dialogue_inline:
                 assert isinstance(line, dict), f"{pid}: malformed dialogue entry"
                 handle = line.get("handle")
@@ -119,8 +133,8 @@ def main():
                     speaker_id = handles_to_ids[handle]
                     assert speaker_id in page_characters, f"{pid}: speaker {handle} absent from page character list"
 
-            if index == 0:
-                assert not page.get("continuityFrom"), f"{pid}: issue opener should not inherit prior-page continuity"
+            if index == 1:
+                assert not page.get("continuityFrom"), f"{pid}: first story page should not inherit editorial continuity"
             else:
                 previous = pages[index - 1]
                 same_scene = page.get("sceneId") == previous.get("sceneId")
@@ -131,7 +145,7 @@ def main():
 
         all_pages.extend(pages)
 
-    assert len(all_pages) == 132, f"Expected 132 active pages, found {len(all_pages)}"
+    assert len(all_pages) == 144, f"Expected 144 active pages, found {len(all_pages)}"
     assert active_scene_ids == source_ids, "Active page package and source-scene package do not describe the same scene set"
 
     assert all(scene.get("region") != "PostBreakNetwork" for scene in source), "Retired invalid PostBreakNetwork region remains in source"
@@ -245,7 +259,7 @@ def main():
             assert token not in text, f"{text_path.relative_to(ROOT)}: retired Shattering identity token remains: {token}"
 
     print("Shattering validation passed")
-    print("6 issues / 132 pages / scene-aware continuity / inline dialogue / valid references / normalized Liora identity")
+    print("6 issues / 144 pages (132 story + 12 editorial) / scene-aware continuity / inline dialogue / valid references / normalized Liora identity")
 
 
 if __name__ == "__main__":

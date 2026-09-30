@@ -1,6 +1,63 @@
 [
   {
     "id": "SHAT_I04_P01",
+    "summary": "Opening editor splash frames the corridor map not as a diagram but as living infrastructure on which the High Era's entire civilization depends.",
+    "settingText": "Full-page civilization-scale corridor vista in active distortion: ships, ports, inhabited worlds, and logistics all remain visible while luminous route geometry begins to fold, slip, and disagree with itself. The spectacle should reveal how much daily life depends on movement without previewing the issue's final state.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "For most of history, a map is a picture of where the world is."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "In the High Era, the map is part of what makes the world possible."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Routes carry heat. Medicine. Food. Families. Instructions. Trust."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "If the map changes, people adapt."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "If the roads change, people reroute."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "If the geometry itself stops keeping its promises—"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "there is no box for that on the emergency form."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Welcome to the day the old world discovers how much of itself was moving."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
+  },
+  {
+    "id": "SHAT_I04_P02",
     "summary": "Ships crossing the widening stress field encounter visible harmonic tearing as their hulls cast delayed, fractured reflections in open space.",
     "setting": "S_StressField",
     "region": "CollapseZone",
@@ -46,7 +103,7 @@
     "sceneId": "SCN_SHAT_I04_S01"
   },
   {
-    "id": "SHAT_I04_P02",
+    "id": "SHAT_I04_P03",
     "summary": "Liora tries to hold ships still long enough to map the distortion, warning that movement through folded lane geometry could make the readings—and casualties—worse.",
     "setting": "S_StressField",
     "region": "CollapseZone",
@@ -68,7 +125,7 @@
     "directionInline": [
       "Her instruction is a controlled response to unknown geometry, not passivity."
     ],
-    "continuityFrom": "SHAT_I04_P01",
+    "continuityFrom": "SHAT_I04_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -94,7 +151,7 @@
     "sceneId": "SCN_SHAT_I04_S01"
   },
   {
-    "id": "SHAT_I04_P03",
+    "id": "SHAT_I04_P04",
     "summary": "Alan realizes even idling ships are unsafe because the anchor points themselves are slipping.",
     "setting": "S_StressField",
     "region": "CollapseZone",
@@ -116,7 +173,7 @@
     "directionInline": [
       "This closes the possibility that skilled pilots can simply wait out the crisis."
     ],
-    "continuityFrom": "SHAT_I04_P02",
+    "continuityFrom": "SHAT_I04_P03",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
@@ -142,7 +199,7 @@
     "sceneId": "SCN_SHAT_I04_S01"
   },
   {
-    "id": "SHAT_I04_P04",
+    "id": "SHAT_I04_P05",
     "summary": "At Orban Port, every departure board closes in cascading waves and civilians finally see the transport network stop functioning.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -184,7 +241,7 @@
     "sceneId": "SCN_SHAT_I04_S02"
   },
   {
-    "id": "SHAT_I04_P05",
+    "id": "SHAT_I04_P06",
     "summary": "Port staff can no longer offer routing answers; Ava keeps the crowd together because any future opening will be useless if people scatter.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -205,7 +262,7 @@
     "directionInline": [
       "Shift authority from system information to trusted human presence."
     ],
-    "continuityFrom": "SHAT_I04_P04",
+    "continuityFrom": "SHAT_I04_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.pstf",
@@ -235,7 +292,7 @@
     "sceneId": "SCN_SHAT_I04_S02"
   },
   {
-    "id": "SHAT_I04_P06",
+    "id": "SHAT_I04_P07",
     "summary": "Owen attempts formal corridor lockouts from the old BHA command floor and discovers that the authority channels no longer respond.",
     "setting": "S_PreBHA_Ruins",
     "region": "HighEraCore",
@@ -284,7 +341,7 @@
     "sceneId": "SCN_SHAT_I04_S03"
   },
   {
-    "id": "SHAT_I04_P07",
+    "id": "SHAT_I04_P08",
     "summary": "Lochran demands that Owen enforce closures anyway, clinging to boundaries that the physical system can no longer recognize.",
     "setting": "S_PreBHA_Ruins",
     "region": "HighEraCore",
@@ -304,7 +361,7 @@
     "directionInline": [
       "Make the gap between mapped authority and physical reality explicit."
     ],
-    "continuityFrom": "SHAT_I04_P06",
+    "continuityFrom": "SHAT_I04_P07",
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
@@ -334,7 +391,7 @@
     "sceneId": "SCN_SHAT_I04_S03"
   },
   {
-    "id": "SHAT_I04_P08",
+    "id": "SHAT_I04_P09",
     "summary": "A major convergence node begins physically detaching, turning network failure into a structural disaster with people still aboard.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -380,7 +437,7 @@
     "sceneId": "SCN_SHAT_I04_S04"
   },
   {
-    "id": "SHAT_I04_P09",
+    "id": "SHAT_I04_P10",
     "summary": "Alan organizes immediate evacuation from the failing arm while debris starts to fill the junction.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -402,7 +459,7 @@
     "directionInline": [
       "Keep the rescue procedural and physical, not abstract."
     ],
-    "continuityFrom": "SHAT_I04_P08",
+    "continuityFrom": "SHAT_I04_P09",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
@@ -428,7 +485,7 @@
     "sceneId": "SCN_SHAT_I04_S04"
   },
   {
-    "id": "SHAT_I04_P10",
+    "id": "SHAT_I04_P11",
     "summary": "Owen discovers he cannot close the approach, leaving incoming pilots to enter a dead junction without authoritative warning.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -450,7 +507,7 @@
     "directionInline": [
       "This pays off the dead-authority problem from Pages 6–7."
     ],
-    "continuityFrom": "SHAT_I04_P09",
+    "continuityFrom": "SHAT_I04_P10",
     "dialogueInline": [
       {
         "handle": "@starsplit.owen.hale",
@@ -480,7 +537,7 @@
     "sceneId": "SCN_SHAT_I04_S04"
   },
   {
-    "id": "SHAT_I04_P11",
+    "id": "SHAT_I04_P12",
     "summary": "A blinded incoming captain asks for manual guidance as the shattered node spins and Alan becomes the human replacement for the failed network.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -502,7 +559,7 @@
     "directionInline": [
       "The transition from centralized automation to person-to-person rescue should be unmistakable."
     ],
-    "continuityFrom": "SHAT_I04_P10",
+    "continuityFrom": "SHAT_I04_P11",
     "dialogueInline": [
       {
         "handle": "@starsplit.capt",
@@ -532,7 +589,7 @@
     "sceneId": "SCN_SHAT_I04_S04"
   },
   {
-    "id": "SHAT_I04_P12",
+    "id": "SHAT_I04_P13",
     "summary": "Ava chooses a partially functional Sector 9 route because the medical convoy cannot wait for a fully verified corridor.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -577,7 +634,7 @@
     "sceneId": "SCN_SHAT_I04_S05"
   },
   {
-    "id": "SHAT_I04_P13",
+    "id": "SHAT_I04_P14",
     "summary": "The traffic controller warns that Sector 9 may not even know it is open, but Ava commits to the gamble because waiting guarantees loss.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -597,7 +654,7 @@
     "directionInline": [
       "Finish on action: Ava’s model of authority is becoming practical trust under uncertainty."
     ],
-    "continuityFrom": "SHAT_I04_P12",
+    "continuityFrom": "SHAT_I04_P13",
     "dialogueInline": [
       {
         "handle": "@starsplit.tctrl",
@@ -627,7 +684,7 @@
     "sceneId": "SCN_SHAT_I04_S05"
   },
   {
-    "id": "SHAT_I04_P14",
+    "id": "SHAT_I04_P15",
     "summary": "Outer Ring habitats lose power in sections as severed corridor links destabilize life-support distribution.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -672,7 +729,7 @@
     "sceneId": "SCN_SHAT_I04_S06"
   },
   {
-    "id": "SHAT_I04_P15",
+    "id": "SHAT_I04_P16",
     "summary": "With no central help coming, outer workers brace the grid manually using whatever material remains.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -692,7 +749,7 @@
     "directionInline": [
       "Keep the repair improvised, local, and materially grounded: mismatched braces, hand tools, and worn outer infrastructure; do not introduce mature post-Break faction insignia."
     ],
-    "continuityFrom": "SHAT_I04_P14",
+    "continuityFrom": "SHAT_I04_P15",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -718,7 +775,7 @@
     "sceneId": "SCN_SHAT_I04_S06"
   },
   {
-    "id": "SHAT_I04_P16",
+    "id": "SHAT_I04_P17",
     "summary": "The Council gathers inside a communications storm while Lochran still argues that projecting command is essential to preventing panic.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -769,7 +826,7 @@
     "sceneId": "SCN_SHAT_I04_S07"
   },
   {
-    "id": "SHAT_I04_P17",
+    "id": "SHAT_I04_P18",
     "summary": "Iskara directly links the cost of denial to the growing casualty reports, making the leadership fracture irreversible.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -791,7 +848,7 @@
     "directionInline": [
       "This is moral accusation grounded in consequences already shown."
     ],
-    "continuityFrom": "SHAT_I04_P16",
+    "continuityFrom": "SHAT_I04_P17",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -817,7 +874,7 @@
     "sceneId": "SCN_SHAT_I04_S07"
   },
   {
-    "id": "SHAT_I04_P18",
+    "id": "SHAT_I04_P19",
     "summary": "Damian abandons any hope of one unified message and pushes for whatever local guidance each world can still receive.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -839,7 +896,7 @@
     "directionInline": [
       "Show Damian changing what he does, not only what he believes."
     ],
-    "continuityFrom": "SHAT_I04_P17",
+    "continuityFrom": "SHAT_I04_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -869,7 +926,7 @@
     "sceneId": "SCN_SHAT_I04_S07"
   },
   {
-    "id": "SHAT_I04_P19",
+    "id": "SHAT_I04_P20",
     "summary": "Alan and surviving captains establish an ad-hoc rescue cluster around one temporarily stable pocket in the distorted field.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -915,7 +972,7 @@
     "sceneId": "SCN_SHAT_I04_S08"
   },
   {
-    "id": "SHAT_I04_P20",
+    "id": "SHAT_I04_P21",
     "summary": "Rescuers pull survivors from debris while the stable pocket shifts around them.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -938,7 +995,7 @@
     "directionInline": [
       "Keep action readable and spatially coherent."
     ],
-    "continuityFrom": "SHAT_I04_P19",
+    "continuityFrom": "SHAT_I04_P20",
     "dialogueInline": [
       {
         "handle": "@starsplit.capt",
@@ -968,7 +1025,7 @@
     "sceneId": "SCN_SHAT_I04_S08"
   },
   {
-    "id": "SHAT_I04_P21",
+    "id": "SHAT_I04_P22",
     "summary": "The captain warns that another pocket shift could scatter rescuers into null space, but the cluster stays long enough to recover the last reachable people.",
     "setting": "S_BrokenNode",
     "region": "CollapseZone",
@@ -989,7 +1046,7 @@
     "directionInline": [
       "The rescue succeeds locally while the larger system continues failing."
     ],
-    "continuityFrom": "SHAT_I04_P20",
+    "continuityFrom": "SHAT_I04_P21",
     "dialogueInline": [
       {
         "handle": "@starsplit.capt",
@@ -1019,7 +1076,7 @@
     "sceneId": "SCN_SHAT_I04_S08"
   },
   {
-    "id": "SHAT_I04_P22",
+    "id": "SHAT_I04_P23",
     "summary": "Liora watches the final five network nodes die in synchrony and understands that the Cooperative Network itself is gone.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -1052,5 +1109,62 @@
       }
     ],
     "sceneId": "SCN_SHAT_I04_S09"
+  },
+  {
+    "id": "SHAT_I04_P24",
+    "summary": "Closing teaser pivots from network collapse to the human invention of replacement practices, authority, logistics, and trust.",
+    "settingText": "Full-page post-collapse nightscape made of islands of human light rather than one functioning network: a damaged habitat being braced by hand, a rough convoy route board built from witness reports, supplies moving between local groups, and a newly painted safety mark whose meaning is not yet standardized. Do not label later factions or show mature post-Shattering uniforms.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The network is gone."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The people are not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "They still need heat. Water. Medicine. Repairs. Roads. Someone to trust."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "No Council can issue those things back into existence."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "So the next age begins the way most ages actually begin:"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "with somebody picking up a tool,"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "somebody taking responsibility,"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "and somebody else deciding whether to believe them."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Next issue: what replaces a civilization?"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
   }
 ]

@@ -1,6 +1,55 @@
 [
   {
     "id": "SHAT_I02_P01",
+    "summary": "Opening editor splash presents the High Era as a civilization that inherited miraculous corridor infrastructure and mistook continued operation for understanding.",
+    "settingText": "Full-page layered High Era infrastructure vista: immaculate civic and transit architecture above, massive older corridor machinery and service structures beneath, with distant outer maintenance platforms showing more wear. Everything is still operating. The image should communicate inherited scale and hidden age, not imminent disaster.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "FROM THE EDITOR"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The High Era inherited miracles and called them infrastructure."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Corridors older than governments. Machines older than manuals. A network so vast that whole worlds built their clocks, markets, medicine, and memory around it."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "For generations, that was enough."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Now the people closest to the machinery are hearing something the people farthest from it are not."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A system can keep working long after it stops being well."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And somewhere in the distance between those two facts, history is getting impatient."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "—The Editor"
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
+  },
+  {
+    "id": "SHAT_I02_P02",
     "summary": "Liora and Alan compare overnight corridor data and find the harmonic bowing curve has steepened instead of settling.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
@@ -41,7 +90,7 @@
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
-    "id": "SHAT_I02_P02",
+    "id": "SHAT_I02_P03",
     "summary": "Alan adds three separate echo events from the same window, establishing that the network structure itself is fatigued.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
@@ -61,7 +110,7 @@
     "directionInline": [
       "Make the connection visual and cumulative."
     ],
-    "continuityFrom": "SHAT_I02_P01",
+    "continuityFrom": "SHAT_I02_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
@@ -87,7 +136,7 @@
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
-    "id": "SHAT_I02_P03",
+    "id": "SHAT_I02_P04",
     "summary": "Liora concludes that if tension is not deliberately relieved, the lattice will choose its own failure point.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
@@ -107,7 +156,7 @@
     "directionInline": [
       "Finish on the loss of passive options."
     ],
-    "continuityFrom": "SHAT_I02_P02",
+    "continuityFrom": "SHAT_I02_P03",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -133,7 +182,7 @@
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
-    "id": "SHAT_I02_P04",
+    "id": "SHAT_I02_P05",
     "summary": "In the Outer Band, Ruben’s crew holds aging beacon infrastructure together with scrap while synchronization continues to degrade.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -175,7 +224,7 @@
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
-    "id": "SHAT_I02_P05",
+    "id": "SHAT_I02_P06",
     "summary": "An outer technician reveals that replacement requests have gone unanswered for months, tying corridor instability to unequal maintenance.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -196,7 +245,7 @@
     "directionInline": [
       "Let resentment grow out of visible maintenance history."
     ],
-    "continuityFrom": "SHAT_I02_P04",
+    "continuityFrom": "SHAT_I02_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
@@ -222,7 +271,7 @@
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
-    "id": "SHAT_I02_P06",
+    "id": "SHAT_I02_P07",
     "summary": "Ruben keeps the node operating anyway, making improvised survival the Outer Band’s practical answer to institutional delay.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
@@ -243,7 +292,7 @@
     "directionInline": [
       "Show improvised maintenance as a practical habit whose larger meaning has not yet been named."
     ],
-    "continuityFrom": "SHAT_I02_P05",
+    "continuityFrom": "SHAT_I02_P06",
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
@@ -269,7 +318,7 @@
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
-    "id": "SHAT_I02_P07",
+    "id": "SHAT_I02_P08",
     "summary": "At Orban Port, Ava tries to route medicine through windows that now change faster than a convoy can be scheduled.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -310,7 +359,7 @@
     "sceneId": "SCN_SHAT_I02_S03"
   },
   {
-    "id": "SHAT_I02_P08",
+    "id": "SHAT_I02_P09",
     "summary": "The controller tells Ava the only available option is to route blind, forcing a choice between procedural certainty and immediate need.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
@@ -327,7 +376,7 @@
       "The controller offers the desperate option without pretending it is safe.",
       "End on Ava staring at an unverified corridor entry rather than a sanctioned route. Direction: Land on Ava’s practical moral choice between dangerous action and guaranteed delay."
     ],
-    "continuityFrom": "SHAT_I02_P07",
+    "continuityFrom": "SHAT_I02_P08",
     "dialogueInline": [
       {
         "handle": "@starsplit.tctrl",
@@ -357,7 +406,7 @@
     "sceneId": "SCN_SHAT_I02_S03"
   },
   {
-    "id": "SHAT_I02_P09",
+    "id": "SHAT_I02_P10",
     "summary": "Heska finds Dawn Era schematics for a full-network damping cycle that current manuals barely acknowledge.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
@@ -388,7 +437,7 @@
     "sceneId": "SCN_SHAT_I02_S04"
   },
   {
-    "id": "SHAT_I02_P10",
+    "id": "SHAT_I02_P11",
     "summary": "Heska compares the Dawn Era blueprint to current manuals and realizes later generations retained the network while losing the practice for relieving its accumulated stress.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
@@ -407,7 +456,7 @@
     "directionInline": [
       "Let the visual comparison carry the accusation: the infrastructure outlived the knowledge needed to maintain it."
     ],
-    "continuityFrom": "SHAT_I02_P09",
+    "continuityFrom": "SHAT_I02_P10",
     "dialogueInline": [
       {
         "handle": "@starsplit.heska",
@@ -425,7 +474,7 @@
     "sceneId": "SCN_SHAT_I02_S04"
   },
   {
-    "id": "SHAT_I02_P11",
+    "id": "SHAT_I02_P12",
     "summary": "Lochran orders Damian to keep drift out of public messaging and define the anomalies as a technical matter.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
@@ -470,7 +519,7 @@
     "sceneId": "SCN_SHAT_I02_S05"
   },
   {
-    "id": "SHAT_I02_P12",
+    "id": "SHAT_I02_P13",
     "summary": "Damian agrees to keep the tone steady, but the growing incident feed makes his earlier confidence visibly harder to sustain.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
@@ -487,7 +536,7 @@
       "Lochran leaves him to finish the statement.",
       "End on Damian alone between the calm public script and the worsening private board."
     ],
-    "continuityFrom": "SHAT_I02_P11",
+    "continuityFrom": "SHAT_I02_P12",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -517,7 +566,7 @@
     "sceneId": "SCN_SHAT_I02_S05"
   },
   {
-    "id": "SHAT_I02_P13",
+    "id": "SHAT_I02_P14",
     "summary": "At Waystation Twelve, departure windows vanish and reappear while travelers try to understand whether they are still going anywhere.",
     "setting": "S_Waystation12",
     "region": "HighEraNetwork",
@@ -558,7 +607,7 @@
     "sceneId": "SCN_SHAT_I02_S06"
   },
   {
-    "id": "SHAT_I02_P14",
+    "id": "SHAT_I02_P15",
     "summary": "A staffer calls the failures a board glitch because no one has been given a truthful operational explanation.",
     "setting": "S_Waystation12",
     "region": "HighEraNetwork",
@@ -577,7 +626,7 @@
     "directionInline": [
       "The staffer is trapped inside the same information failure as the public."
     ],
-    "continuityFrom": "SHAT_I02_P13",
+    "continuityFrom": "SHAT_I02_P14",
     "dialogueInline": [
       {
         "handle": "@starsplit.travl",
@@ -603,7 +652,7 @@
     "sceneId": "SCN_SHAT_I02_S06"
   },
   {
-    "id": "SHAT_I02_P15",
+    "id": "SHAT_I02_P16",
     "summary": "The Council reconvenes with Liora’s updated model, now showing synchronized failure rather than scattered drift.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -651,7 +700,7 @@
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
-    "id": "SHAT_I02_P16",
+    "id": "SHAT_I02_P17",
     "summary": "Iskara supports immediate traffic restrictions, arguing that every open corridor adds load to a system already approaching synchronized failure.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -674,7 +723,7 @@
     "directionInline": [
       "This is the first proposed sacrifice: reduce mobility now to preserve the network."
     ],
-    "continuityFrom": "SHAT_I02_P15",
+    "continuityFrom": "SHAT_I02_P16",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -700,7 +749,7 @@
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
-    "id": "SHAT_I02_P17",
+    "id": "SHAT_I02_P18",
     "summary": "Lochran refuses restrictions without proof of imminent failure, converting uncertainty into a reason to preserve normal operations.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -723,7 +772,7 @@
     "directionInline": [
       "Keep Lochran composed and attentive to the model; he is choosing continuity under uncertainty, not failing to understand the evidence."
     ],
-    "continuityFrom": "SHAT_I02_P16",
+    "continuityFrom": "SHAT_I02_P17",
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
@@ -745,7 +794,7 @@
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
-    "id": "SHAT_I02_P18",
+    "id": "SHAT_I02_P19",
     "summary": "Damian proposes calling any intervention a recalibration, but realizes the language compromise no longer bridges the actual divide.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
@@ -768,7 +817,7 @@
     "directionInline": [
       "This closes the messaging strategy that dominated Issues 1–2."
     ],
-    "continuityFrom": "SHAT_I02_P17",
+    "continuityFrom": "SHAT_I02_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
@@ -794,7 +843,7 @@
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
-    "id": "SHAT_I02_P19",
+    "id": "SHAT_I02_P20",
     "summary": "Liora, Alan, and Iskara enter the dormant damping chamber and confirm the ancient hardware still physically exists.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
@@ -836,7 +885,7 @@
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
-    "id": "SHAT_I02_P20",
+    "id": "SHAT_I02_P21",
     "summary": "Liora confirms the damping system could bleed off pressure if its old calibration can be reconstructed.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
@@ -857,7 +906,7 @@
     "directionInline": [
       "Hope should enter for the first time without making the solution feel safe."
     ],
-    "continuityFrom": "SHAT_I02_P19",
+    "continuityFrom": "SHAT_I02_P20",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
@@ -883,7 +932,7 @@
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
-    "id": "SHAT_I02_P21",
+    "id": "SHAT_I02_P22",
     "summary": "Alan identifies the danger: a bad calibration would not merely fail but could accelerate the collapse.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
@@ -904,7 +953,7 @@
     "directionInline": [
       "Make the downside physically understandable through the simulation."
     ],
-    "continuityFrom": "SHAT_I02_P20",
+    "continuityFrom": "SHAT_I02_P21",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
@@ -930,7 +979,7 @@
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
-    "id": "SHAT_I02_P22",
+    "id": "SHAT_I02_P23",
     "summary": "Iskara orders the unauthorized damping attempt to proceed because the Council has left them without another instrument.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
@@ -947,7 +996,7 @@
       "Tight three-shot as Alan states the failure consequence and Liora makes clear how little margin they have.",
       "Final panel on Iskara ordering the attempt to proceed, with the ancient hardware beginning its first activation pulse behind her."
     ],
-    "continuityFrom": "SHAT_I02_P21",
+    "continuityFrom": "SHAT_I02_P22",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
@@ -979,5 +1028,54 @@
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
+  },
+  {
+    "id": "SHAT_I02_P24",
+    "summary": "Closing teaser points from the recovered damping solution toward the coming conflict between engineering control and the demand for reassuring public stability.",
+    "settingText": "Full-page teaser centered on the immense dormant damping chamber, ancient enough to dwarf the small figures approaching or working near it. Above or beyond the chamber, abstract corridor telemetry glows in tension with cleaner public-facing stability imagery. Do not depict the outcome of the attempt.",
+    "panelPlan": [
+      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT ISSUE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "They found the old answer."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Now somebody has to use it."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The machine was built for a network that no longer exists."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "The network that exists cannot afford to wait."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And while the engineers are trying to make ancient physics behave, other people are asking a different question:"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "What does “stable” need to look like?"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "Next issue, one system gets two sets of instructions."
+      }
+    ],
+    "directionInline": [
+      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
+      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
+      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+    ]
   }
 ]
