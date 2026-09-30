@@ -1,0 +1,1898 @@
+[
+  {
+    "id": "RFCW_I01_P01",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 1,
+    "title": "Ask Twice",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_quill",
+      "C_cw_malk",
+      "C_cw_cal",
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "A routine patrol launch establishes Crimson Warden as a working carrier: Quill catches a recurring actuator fault, Cal treats it like an old nuisance, Malk keeps the deck moving, and Korr takes new pilot Milo Hart out on an ordinary convoy-support rotation.",
+    "panelPlan": [
+      "Wide upper panel: Crimson Warden's primary flight deck is already in motion before any crisis exists — deck crews tow fighters, mechanics finish panels, one aircraft rises on an elevator, and two launch lanes remain clearly readable. Korr and Hart walk toward their fighters while Quill and Cal crouch at an open landing-gear bay.",
+      "Medium on Cal holding a diagnostic lead beside a green status light. His battered gray coffee mug sits safely inside the open tool cage behind him, away from the active lane. Quill studies a second readout that disagrees with the first.",
+      "Tight on Quill physically moving the actuator while Cal watches the status flip from green to amber. Their exchange is dry, familiar work talk.",
+      "Malk steps into the lane with headset and hand-signal gloves, points Korr and Hart toward their aircraft and begins the launch count without looking away from moving hardware.",
+      "Bottom wide: Korr climbs into the worn lead fighter; Hart climbs into the visibly newer wing aircraft. Cal closes the gear panel and writes the fault down rather than merely resetting it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Forty-seven's lying again."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Actuator?"
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Says green if you don't ask twice."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Then ask twice."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Korr element, lane two. Ninety seconds."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "First carrier launch where somebody can see me miss it."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Then don't."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P02",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 2,
+    "title": "Look at the Lane",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "Hart's first launch from Crimson Warden is exhilarating only for a second; Korr immediately teaches him that the carrier is not scenery but moving geometry he must respect.",
+    "panelPlan": [
+      "Panel 1: Hart's fighter rolls into lane two while deck crew clear the safety box. Malk's gloved hand is raised; Korr's fighter is already locked ahead.",
+      "Panel 2: Tight inside Hart's cockpit. Through the canopy Crimson Warden seems impossibly huge. Hart glances sideways toward the ship's superstructure.",
+      "Panel 3: Korr's voice cuts in as Malk drops her hand. Hart snaps his eyes back to the launch line and instrument cue.",
+      "Panel 4: Two sequential launch beats share a long horizontal composition: Korr accelerates first, then Hart follows from the same lane, preserving the deck's orientation.",
+      "Panel 5: Exterior bottom panel. The two small fighters peel away from Crimson Warden toward a line of green corridor beacons. The carrier remains behind them, massive but no longer the visual subject."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Hart. Look at the lane, not the ship."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "I was looking at both."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "No, you were admiring one of them."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Lane two clear. Korr one, launch."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Hart two, launch."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Okay. That's different."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "It stops being different fast."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P03",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 3,
+    "title": "A Routine Distress Call",
+    "setting": "cw-flight-ops",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy"
+    ],
+    "characters": [
+      "C_cw_neral",
+      "C_cw_malk"
+    ],
+    "summary": "Flight Operations receives a broken civilian distress burst from a Verge relief convoy near the green-beacon line; Neral turns Korr's routine patrol into a look without yet treating it as a battle.",
+    "panelPlan": [
+      "Panel 1: Flight Operations above the deck. The launch board settles after Korr and Hart depart; fuel clocks and maintenance states are visible but calm.",
+      "Panel 2: A controller flags a burst transmission. On the route display, six civilian transponders bunch near a green beacon, one blinking irregularly.",
+      "Panel 3: Neral leans over the display, reading the actual tracks before reacting. Malk remains visible through the armored glass below, already turning the deck for the next launch.",
+      "Panel 4: Insert of the broken distress waveform and convoy identifiers; no holographic spectacle, just usable operational information.",
+      "Panel 5: Neral keys Korr directly while another operator starts checking civilian registry and beacon health."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CONTROLLER",
+        "text": "Civilian distress, vergeward lane six. Burst only."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Beacon status?"
+      },
+      {
+        "speaker": "CONTROLLER",
+        "text": "Green. Convoy tracks are not."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Korr, you have six civilian transponders twelve minutes ahead. Go look. Do not invent an enemy for me."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Copy. Looking first."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Thank you for humoring command."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P04",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 4,
+    "title": "What Happened Here",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "verge-relief-convoy",
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "Korr and Hart find no clean battle scene: a corridor-stress event has scattered the convoy, one freighter is venting, a passenger transport has lost drive, and debris is drifting toward unsafe space.",
+    "panelPlan": [
+      "Wide establishing panel: six mismatched civilian ships are scattered around a green beacon line. One freighter vents atmosphere, another has cargo pods loose, and a passenger transport drifts nose-first toward the outer edge. No enemy craft are visible.",
+      "Cockpit two-shot split across Korr and Hart. Their targeting displays remain mostly empty while civilian emergency strobes clutter the navigation layer.",
+      "Hart passes close enough to the venting freighter to see suited civilians moving along an exposed service spine, immediately reframing the abstract distress tracks as people.",
+      "Korr rolls under the passenger transport and visually confirms its dead maneuvering thrusters while a green beacon slides dangerously farther behind it.",
+      "Bottom panel: Hart marks three separate rescue problems on his display. The page ends on the realization that the crisis is logistical before it is military."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "No weapons fire. I have debris everywhere."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Then stop looking for weapons."
+      },
+      {
+        "speaker": "CIVILIAN COMMS",
+        "text": "—pressure loss on Morrowline two—"
+      },
+      {
+        "speaker": "CIVILIAN COMMS",
+        "text": "Wayfarer Three has no drive. Repeat, no drive."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "They're sliding out of green."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "I see it. Warden, this is not one rescue."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P05",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 5,
+    "title": "Move the Ship",
+    "setting": "cw-bridge",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_neral"
+    ],
+    "summary": "Rooke moves Crimson Warden closer to the damaged convoy and commits rescue craft, fighter cover and deck capacity before anyone knows whether the corridor event is finished.",
+    "panelPlan": [
+      "Panel 1: Crimson Warden bridge. The convoy appears as a tight cluster near the unsafe edge; the carrier is farther coreward. Rooke stands beside the operations table rather than isolated in a throne-like chair.",
+      "Panel 2: Neral arrives from Flight Operations with a slate showing the rescue needs: venting freighter, powerless passenger transport, debris field.",
+      "Panel 3: Rooke asks what moving closer costs. Navigation indicates reduced maneuver margin near the stressed beacon volume.",
+      "Panel 4: Rooke studies the shrinking distance between Wayfarer Three and the green line. She does not make a speech.",
+      "Panel 5: New orders populate across flight ops and deck control as Crimson Warden changes heading."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "How close can we get without joining the casualty list?"
+      },
+      {
+        "speaker": "NAVIGATION",
+        "text": "Nine thousand kilometers closer. After that I want room to turn."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "I can put rescue one, two cover elements and a tug package out in six minutes."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "What does the deck lose?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Nothing yet."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Then spend the six minutes."
+      },
+      {
+        "speaker": "HELM",
+        "text": "Coming vergeward."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-ember-burden"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P06",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 6,
+    "title": "Five, Not Six",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_quill",
+      "C_cw_malk",
+      "C_cw_neral",
+      "C_cw_cal",
+      "C_cw_shaw"
+    ],
+    "summary": "The first operational cost is small but revealing: Neral asks for six fighters and a rescue craft; Quill gives him five because the recurring actuator fault is now a no-go, while Malk launches what is actually safe.",
+    "panelPlan": [
+      "Panel 1: Deck crews tow rescue craft and fighters into separate lanes. Shaw climbs into the blunt rescue vehicle while Cal pulls the access panel on aircraft forty-seven again.",
+      "Panel 2: Quill sees the actuator lag under real load and slaps a red no-go tag over the aircraft's status board.",
+      "Panel 3: Neral appears on Malk's headset display asking for the sixth fighter while Malk continues physically sequencing the lane.",
+      "Panel 4: Quill points to the red-tagged craft through the glass and refuses the number rather than debating abstract readiness.",
+      "Panel 5: Five fighters and Shaw's rescue craft launch in a staggered sequence; forty-seven remains behind with its panel open."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "I asked for six."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "You have five."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Can forty-seven fly?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Once, probably."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "That's not what I asked."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Then no."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Rescue one, lane one. Go."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Going."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P07",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 7,
+    "title": "Somebody Got Here First",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_hart",
+      "C_cw_shaw"
+    ],
+    "summary": "Shaw approaches the venting freighter while Korr discovers that opportunistic unmarked raiders are already cutting cargo and life-support modules from the disabled convoy.",
+    "panelPlan": [
+      "Panel 1: Shaw's rescue craft threads between drifting cargo toward Morrowline Two; suited civilians flash hand lamps from a breached docking collar.",
+      "Panel 2: Korr spots three small salvaged strike craft tucked against the freighter's dark side, one with a cutting rig attached to an external cargo spine.",
+      "Panel 3: Hart gets visual confirmation that the craft carry no recognized faction markings. One cutter peels away with a life-support canister still attached.",
+      "Panel 4: Korr broadcasts a clear warning while placing her fighter between the raiders and Shaw rather than charging them.",
+      "Panel 5: One raider responds by firing past Korr toward the rescue craft. Korr rolls to intercept the shot; the situation becomes combat because the raiders choose it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Morrowline, rescue one. I have your collar in sight."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Hold. Three contacts on the dark side."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "No marks. Mixed hulls."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Unmarked craft, break contact with the civilian convoy and clear the rescue lane."
+      },
+      {
+        "speaker": "RAIDER COMMS",
+        "text": "You don't own the lane."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Correct."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "I do own this firing solution."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P08",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 8,
+    "title": "Cover, Don't Chase",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_hart",
+      "C_cw_shaw"
+    ],
+    "summary": "Korr and Hart drive the first raiders off without abandoning the rescue geometry, teaching Hart that carrier cover is about controlling space rather than collecting kills.",
+    "panelPlan": [
+      "Panel 1: Korr cuts across the raiders' firing lane, forcing two craft to break away from Shaw. Hart has a clean angle on one fleeing raider.",
+      "Panel 2: Hart begins to pursue; Korr's tactical mark instead highlights the rescue craft and drifting Wayfarer Three behind him.",
+      "Panel 3: Hart visibly checks himself and rolls back into the protective arc. His frustration is small but real.",
+      "Panel 4: Shaw clamps onto Morrowline's emergency collar as suited survivors move toward the rescue lock.",
+      "Panel 5: Far beyond the convoy, one fleeing raider sends a tight burst signal into the dark. Korr notices but cannot know who received it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "I've got the third one."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Let it go."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "It's right there."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "And rescue one is right here."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Copy. Cover."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Good word. Keep using it."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Warden, one raider transmitted before withdrawal."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P09",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 9,
+    "title": "Hot Return",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_quill",
+      "C_cw_cal"
+    ],
+    "summary": "A damaged fighter from the first cover element limps home with landing gear failing and live ordnance that will not safe, forcing Malk, Quill and Cal into an emergency recovery.",
+    "panelPlan": [
+      "Panel 1: Flight deck alarms shift the crew from launch mode to emergency recovery. Malk clears the recovery track while a distant fighter approaches asymmetrically.",
+      "Panel 2: Quill reads the incoming craft's telemetry: left gear intermittent, one missile still electrically live. Cal grabs the correct chocks and suppression kit without being told.",
+      "Panel 3: The fighter hits the deck hard. The left gear folds; the craft slews across the recovery track, showering sparks but remaining oriented consistently with the established deck.",
+      "Panel 4: Malk orders everyone behind the marked line while Cal and another tech move in only after the craft stops. Quill points out the hot ordnance housing.",
+      "Panel 5: A damaged power cell vents under the wing. Cal looks up, sees the warning light change, and shoves the other tech back."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Recovery deck clear. Nobody crosses white until I call it."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Left gear is lying. Missile two won't safe."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Of course it won't."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Cal, wait."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "I am waiting."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Power cell—"
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Back!"
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P10",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 10,
+    "title": "Deck Closed",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_quill",
+      "C_cw_cal"
+    ],
+    "summary": "The power cell detonates locally, injuring Cal and blocking the recovery track with a burning airframe; Malk has to close half the deck while aircraft are already outside the ship.",
+    "continuityFrom": "RFCW_I01_P09",
+    "panelPlan": [
+      "Panel 1: The vent becomes a contained but violent flash beneath the wing. Safety barriers and deck suppression keep it from becoming a cinematic fireball.",
+      "Panel 2: Cal is thrown against the deck edge. Quill and another crew member drag him clear while Malk keeps the rest of the crew from rushing in.",
+      "Panel 3: Overhead suppression floods the damaged fighter. The collapsed gear leaves the aircraft diagonally across the recovery track, physically showing why the deck is closed.",
+      "Panel 4: Malk checks Cal only long enough to see he is breathing, then hands him to a medical team arriving from the service spine.",
+      "Panel 5: She looks up at the recovery board: eleven aircraft currently outside, each with a fuel clock now running against a closed track."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Hold positions! Suppression first."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Renn. Look at me."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "I'm looking."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Medical has him. Quill, can we move the wreck?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Not until the cell is cold."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Flight Ops, recovery track is closed."
+      },
+      {
+        "speaker": "FLIGHT OPS",
+        "text": "We have eleven outside."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "I know."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P11",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 11,
+    "title": "People Inside the Suits",
+    "setting": "cw-medical",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_nyr",
+      "C_cw_cal"
+    ],
+    "summary": "Nyr stabilizes Cal and the recovered pilot while refusing pressure to rush either case; the carrier's operational crisis enters medical as injured people, not aircraft counts.",
+    "panelPlan": [
+      "Panel 1: Medical receives Cal and the fighter pilot simultaneously. Nyr directs two teams without drama, cutting away Cal's scorched deck layer.",
+      "Panel 2: The pilot tries to sit up and asks about returning to flight. Nyr pushes them back with one hand while reading neural and pressure data.",
+      "Panel 3: Cal wakes briefly, disoriented, and asks whether the track is open before asking about himself.",
+      "Panel 4: Nyr answers the medical question he did not ask. A monitor shows internal injuries more serious than his alert expression suggests.",
+      "Panel 5: An operations message requests fit status on the pilot. Nyr marks the pilot grounded and turns the display face-down."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Deck open?"
+      },
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "No."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "That's bad."
+      },
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "Renn, you have internal burns and a pressure injury. Stay with me."
+      },
+      {
+        "speaker": "PILOT",
+        "text": "I can go back out."
+      },
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "No, you can stand up. Those are different findings."
+      },
+      {
+        "speaker": "MEDICAL SYSTEM",
+        "text": "Flight status requested."
+      },
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "Denied."
+      }
+    ],
+    "direction": [
+      "cw-story"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P12",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 12,
+    "title": "Fuel Clocks",
+    "setting": "cw-flight-ops",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy"
+    ],
+    "characters": [
+      "C_cw_neral",
+      "C_cw_malk",
+      "C_cw_rooke"
+    ],
+    "summary": "With the recovery track blocked, Neral sees the crisis as fuel arithmetic: eleven aircraft are outside, three need the deck soon, and the nearest alternate cannot take them in time.",
+    "panelPlan": [
+      "Panel 1: Flight Operations display now centers fuel clocks rather than enemy tracks. Three timers have shifted amber.",
+      "Panel 2: Neral asks Malk for a recovery estimate; her answer comes from the deck where crews are cooling the wreck before moving it.",
+      "Panel 3: An operator plots the nearest compatible alternate deck. The transit time visibly exceeds the amber aircraft's remaining safe fuel.",
+      "Panel 4: Rooke enters and studies the same clocks without asking for a prettier summary.",
+      "Panel 5: Neral overlays the convoy: Wayfarer Three is still drifting toward unsafe space while Shaw remains docked to Morrowline."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Rhea, I need a number."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "You need a cold power cell. Best number is nine minutes."
+      },
+      {
+        "speaker": "CONTROLLER",
+        "text": "Three aircraft hit minimum in seven."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Alternate deck?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Fourteen minutes away for the fastest three."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Then it isn't an alternate."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "No."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops",
+      "cw-ember-burden"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P13",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 13,
+    "title": "Wayfarer Three",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy"
+    ],
+    "characters": [
+      "C_cw_shaw",
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "Shaw evacuates the worst casualties from Morrowline and confirms that Wayfarer Three, carrying hundreds of civilians, will drift beyond the verified green volume unless a tug can hold it soon.",
+    "panelPlan": [
+      "Panel 1: Shaw's rear lock fills with injured civilians from Morrowline; the rescue craft is at capacity, forcing him to close the hatch on people who must wait for the next trip.",
+      "Panel 2: Exterior: Wayfarer Three has visibly crossed closer to the last green beacon. A small civilian tug is attached but its drive is stuttering.",
+      "Panel 3: Korr flies close to the tug while Hart scans its failing power signature.",
+      "Panel 4: Shaw undocks from Morrowline and has to choose between returning casualties to Warden or helping Wayfarer; he keeps the casualties aboard and heads carrierward because they cannot wait.",
+      "Panel 5: Hart watches the powerless passenger transport continue drifting as the green beacon recedes behind it."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Morrowline, that's my pressure limit. I have to close."
+      },
+      {
+        "speaker": "CIVILIAN COMMS",
+        "text": "There are still twelve here."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "I know. I'm coming back."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Wayfarer's tug is losing drive."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "How long to red?"
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Seventeen minutes. Less if the drift increases."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Warden, Wayfarer needs a real tow now."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P14",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 14,
+    "title": "New Contacts",
+    "setting": "cw-bridge",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_neral"
+    ],
+    "summary": "A larger unmarked raider group appears inbound while the deck is compromised; Neral presents the clean military answer—pull the carrier outward—but shows Rooke exactly who that choice strands.",
+    "panelPlan": [
+      "Panel 1: Tactical display adds seven inbound unmarked contacts from the same vector as the earlier raider transmission.",
+      "Panel 2: Neral overlays a withdrawal vector for Crimson Warden that restores maneuver room and keeps the carrier outside the incoming strike envelope.",
+      "Panel 3: The same display shows the consequence: the recovering fighters' approach lengthens beyond two fuel clocks, and Wayfarer Three continues drifting toward red.",
+      "Panel 4: Rooke asks for the operational result, not whether withdrawal is 'safe.' Neral answers without softening it.",
+      "Panel 5: Close on Rooke looking at three different clocks: raider arrival, fighter minimum fuel, Wayfarer drift."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TACTICAL",
+        "text": "Seven new contacts. Same emissions family as the cutters."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "If we pull coreward now, they have to chase us through our guns."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "And the deck queue?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Two aircraft miss us by eight minutes."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Wayfarer?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "The tug can't hold it without cover."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "So say the whole answer."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "We preserve the carrier by leaving people behind."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-ember-burden",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P15",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 15,
+    "title": "Stay on Station",
+    "setting": "cw-bridge",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_neral"
+    ],
+    "summary": "Rooke chooses to hold Crimson Warden in the dangerous position long enough to recover its aircraft and finish the civilian tow, accepting the risk without pretending the decision is noble or free.",
+    "continuityFrom": "RFCW_I01_P14",
+    "panelPlan": [
+      "Panel 1: Rooke asks one final practical question: whether holding position still leaves a maneuver option if the raiders break through.",
+      "Panel 2: Navigation marks a narrow retreat vector that remains possible for another eleven minutes, then worsens as corridor stress shifts.",
+      "Panel 3: Neral waits. Nobody around them performs agreement or dissent for the reader.",
+      "Panel 4: Rooke gives the order in plain language. The bridge immediately turns it into work: tactical retasks batteries, flight ops changes recovery sequence, helm holds position.",
+      "Panel 5: Exterior bottom panel: Crimson Warden stops its coreward drift and holds beside the green beacon line while the damaged convoy remains between it and the unsafe dark."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "If we hold, do I still have a way out?"
+      },
+      {
+        "speaker": "NAVIGATION",
+        "text": "For eleven minutes. After that I stop promising."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Dax?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "I don't like it."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Neither do I."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Hold position. Keep the recovery track open. Rescue continues."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Flight Ops copies."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-ember-burden"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P16",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 16,
+    "title": "Make a Deck",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_quill"
+    ],
+    "summary": "Malk and Quill turn Rooke's decision into physical labor, cooling, jacking and dragging the wreck just far enough to create a narrow emergency recovery lane.",
+    "panelPlan": [
+      "Panel 1: The damaged fighter remains diagonally across the recovery track, suppression foam steaming. Malk marks the minimum corridor the first low-fuel aircraft needs.",
+      "Panel 2: Quill tests the power cell temperature manually with a probe and finally gives permission to move the wreck.",
+      "Panel 3: Deck tractors attach from two angles while crew place skids under the collapsed gear. The movement is slow and ugly, not a magical cleanup.",
+      "Panel 4: One tractor slips; the wreck pivots dangerously toward the service spine. Malk freezes the operation and resets the pull geometry.",
+      "Panel 5: They gain just enough space for a narrow recovery lane. Malk looks at the approach marker, then at the amber fuel clock."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "I don't need the deck. I need four meters of it."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "You get four when this cell stops cooking."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Temperature?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Ugly. Not murderous."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "I'll take ugly."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Pull two, stop. Stop. Reset your angle."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "There's your four meters."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P17",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 17,
+    "title": "The Bubble",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "Korr compresses the fighters into a defensive bubble around the rescue and tow effort, deliberately giving up chances to chase raiders so every maneuver protects a civilian task.",
+    "panelPlan": [
+      "Panel 1: Establish clear geometry: Wayfarer Three and its failing tug near the beacon edge, rescue craft carrierward, Korr's fighters in a tight arc, raiders approaching from one side, Crimson Warden beyond.",
+      "Panel 2: A raider darts toward the tug; Korr angles across it while assigning Hart to the opposite side of the bubble.",
+      "Panel 3: Hart fires only when the raider crosses into the tow lane, damaging it enough to break off.",
+      "Panel 4: Another raider flees outward. Hart does not pursue this time; he immediately returns his nose toward the tug.",
+      "Panel 5: The tug's power flickers. Hart notices a raider lining up a shot from below the passenger transport."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Nobody chases. They leave the bubble, they stop being our problem."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Bubble's getting small."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "That's why it's defensible."
+      },
+      {
+        "speaker": "TUG COMMS",
+        "text": "Drive is dropping again."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Contact low, moving on the tug."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "You have it. Keep the tow alive."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P18",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 18,
+    "title": "Take the Hit",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_hart"
+    ],
+    "summary": "Hart protects the failing tow exactly as ordered but takes a hit that kills his fighter's drive and throws him beyond the verified green volume, turning a correct decision into another rescue problem.",
+    "continuityFrom": "RFCW_I01_P17",
+    "panelPlan": [
+      "Panel 1: The low raider fires at the civilian tug. Hart is already crossing the line of fire rather than making a last-second heroic lunge.",
+      "Panel 2: Hart destroys or deflects the shot but a second burst clips his drive section. His fighter yaws violently away from the tow lane.",
+      "Panel 3: Korr tries to reach him while maintaining the bubble; another raider forces her to break back toward Wayfarer.",
+      "Panel 4: Hart's controls go dark in sections. The nearest green beacon slides behind him as residual momentum carries him outward.",
+      "Panel 5: His transponder flickers. Hart triggers emergency separation while the fighter tumbles into visually darker, less stable space beyond the beacon line."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Tug, move now."
+      },
+      {
+        "speaker": "TUG COMMS",
+        "text": "We don't have—"
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Move!"
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Hart, break high."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Drive's gone."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Eject while I still have you."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Beacon's dropping—"
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Milo. Eject."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P19",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 19,
+    "title": "One More Launch",
+    "setting": "cw-flight-ops",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_neral",
+      "C_cw_rooke",
+      "C_cw_shaw"
+    ],
+    "summary": "Hart's transponder appears only intermittently beyond the green line; Shaw offers to take the recovery craft back out immediately, forcing Rooke to spend another sortie while the carrier itself is under threat.",
+    "panelPlan": [
+      "Panel 1: Flight Operations displays Hart's track ending just beyond the green beacon line, with a weak emergency ping appearing and disappearing.",
+      "Panel 2: Shaw has returned with injured civilians and is still in his rescue suit when he enters the operations feed from the flight deck.",
+      "Panel 3: Neral points out that the rescue craft would have to launch through the narrow emergency lane before the low-fuel fighters recover.",
+      "Panel 4: Rooke asks Shaw for the real pickup window; he gives a short one based on suit reserve and drift.",
+      "Panel 5: Rooke changes the recovery queue: one aircraft traps now, Shaw launches next, remaining aircraft hold. The decision makes every fuel clock tighter."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "I have Hart for one ping in five."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "That's enough to start toward him."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "You're full of casualties."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Medical is unloading them now."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "How long does Hart have?"
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Suit says twenty-two. Drift says less."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Recover amber one. Launch rescue immediately after."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "That leaves two aircraft below reserve."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "I know."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops",
+      "cw-ember-burden"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P20",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 20,
+    "title": "Renn Cal",
+    "setting": "cw-medical",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_nyr",
+      "C_cw_cal",
+      "C_cw_quill"
+    ],
+    "summary": "While the ship commits to another rescue, Cal's injuries worsen beyond what Nyr can reverse; Quill arrives in time for a short, unsentimental goodbye before returning to the deck.",
+    "panelPlan": [
+      "Panel 1: Nyr works with a compact team around Cal as his internal readings deteriorate. The room remains controlled; there is no visual gore.",
+      "Panel 2: Quill arrives still wearing dirty maintenance gear after being summoned. Nyr gives her one clear look that tells her the situation before words do.",
+      "Panel 3: Cal is awake just enough to recognize Quill. He tries to ask about work again and cannot finish the sentence.",
+      "Panel 4: Quill answers the question anyway, telling him they made the four meters and the first aircraft is down.",
+      "Panel 5: Nyr watches Cal's monitor flatten into a stable final state after Quill's hand settles over his gloved wrist. The last panel is small and quiet, with no caption explaining the death."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "Marta."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "How bad?"
+      },
+      {
+        "handle": "@crimson.nyr",
+        "speaker": "Nyr",
+        "text": "Bad enough that you should stay."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Track—"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Open enough. First one's down."
+      },
+      {
+        "handle": "@crimson.cal",
+        "speaker": "Cal",
+        "text": "Good."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Yeah."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-aftermath"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P21",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 21,
+    "title": "The Carrier Gets Hit",
+    "setting": "cw-bridge",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_neral"
+    ],
+    "summary": "The raiders finally reach weapons range and a strike penetrates Crimson Warden's defense, rupturing a pressure boundary beside the flight deck just as Shaw needs to launch.",
+    "panelPlan": [
+      "Panel 1: Tactical display shows Korr's defensive bubble holding but two raiders slip wide toward the carrier while its batteries are constrained by friendly traffic.",
+      "Panel 2: Crimson Warden fires a controlled defensive pattern; one raider breaks, the other launches before being disabled.",
+      "Panel 3: Exterior impact on the carrier's aft flight-deck side — localized armor rupture, not ship-destroying spectacle.",
+      "Panel 4: Bridge and flight ops shake. Damage-control display marks a pressure boundary near the service spine and partial power loss to the recovery track.",
+      "Panel 5: Neral looks at Rooke: Shaw is queued to launch, two fighters still low on fuel, and the deck has just gone dark in sections."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TACTICAL",
+        "text": "Two contacts inside battery three."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Friendly rescue traffic blocks a full pattern."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Then don't fire a full pattern."
+      },
+      {
+        "speaker": "DAMAGE CONTROL",
+        "text": "Impact aft. Flight-deck service boundary. Pressure loss."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Shaw is still on deck."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Can they isolate it?"
+      },
+      {
+        "speaker": "DAMAGE CONTROL",
+        "text": "Trying now."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Keep the ship pointed where the deck needs it."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-ember-burden",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P22",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 22,
+    "title": "Patch the Boundary",
+    "setting": "cw-damage-control",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_quill",
+      "C_cw_shaw"
+    ],
+    "summary": "Malk and Quill isolate the damaged pressure boundary and manually restore the launch path while Shaw waits strapped into the rescue craft, every extra minute reducing Hart's survival window.",
+    "panelPlan": [
+      "Panel 1: Service corridor near the deck vents atmosphere toward a sealed emergency door. Malk, Quill and damage-control crew work from the safe side in emergency hoods.",
+      "Panel 2: Quill identifies a severed power trunk feeding the launch restraint and chooses a temporary bypass rather than a full repair.",
+      "Panel 3: Malk checks the pressure differential and orders one isolation door dogged manually; two crew strain on the mechanical wheel.",
+      "Panel 4: Cut to Shaw strapped into the rescue craft on the dim flight deck, watching Hart's intermittent ping and suit clock while the launch indicator remains red.",
+      "Panel 5: Power returns to one launch lane. Malk's gloved hand appears through the cockpit view, giving Shaw the launch signal."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "I need lane one. Nothing else."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Then stop asking for the whole bus."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Can you bypass it?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "For one launch."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "One is the number I need."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Pressure holding. Lane one live."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Toren. Go get him."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Going."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P23",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 23,
+    "title": "Beyond Green",
+    "setting": "cw-recovery-craft",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_shaw",
+      "C_cw_hart"
+    ],
+    "summary": "Shaw crosses beyond the verified green beacon volume using Hart's intermittent transponder and physical inertial history, finding the young pilot alive but drifting with damaged suit telemetry.",
+    "panelPlan": [
+      "Panel 1: Rescue craft leaves the last green beacon behind. The space beyond is not magical; navigation simply becomes less certain, with route solutions widening and beacon confidence dropping.",
+      "Panel 2: Shaw refuses a tempting visual reflection from a debris fragment and follows the inertial track and time-of-flight ping instead.",
+      "Panel 3: Hart's weak transponder appears off the predicted line. Shaw adjusts deliberately rather than lunging toward it.",
+      "Panel 4: Exterior reveal: Hart is alive, tethered to his ejection couch and a torn section of fighter skin, spinning slowly with one suit panel dark.",
+      "Panel 5: Shaw brings the rescue craft close enough to extend a manipulator/tether while talking Hart through the pickup."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Milo, rescue one. If you hear me, do not chase the light."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Wasn't planning to."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Good. Save your air for complaining later."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Suit says nine minutes."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Suit's pessimistic."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Are you?"
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Professionally."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P24",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 24,
+    "title": "Pickup",
+    "setting": "cw-recovery-craft",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_shaw",
+      "C_cw_hart"
+    ],
+    "summary": "Shaw recovers Hart with a mechanical tether and brings him inside alive, but the rescue costs time Crimson Warden's remaining fighters no longer have.",
+    "continuityFrom": "RFCW_I01_P23",
+    "panelPlan": [
+      "Panel 1: The rescue tether catches Hart's couch frame; the first pull twists him dangerously because the fighter fragment is still attached.",
+      "Panel 2: Hart follows Shaw's instruction to cut the secondary tether only after the rescue line is confirmed locked.",
+      "Panel 3: Shaw reels Hart toward the rear lock while using thrusters to cancel spin rather than simply dragging him through space.",
+      "Panel 4: Inside the pressure lock, Hart collapses onto the deck as pressure returns. Shaw checks him quickly and sees he is conscious.",
+      "Panel 5: Shaw's cockpit display updates from Warden: recovery lane reopened, two fighters at emergency fuel, Wayfarer tow nearly stable. He turns immediately carrierward."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Do not cut anything yet."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "That was specifically my next idea."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Rescue line locked. Now cut secondary."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Cut."
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Pressure coming up."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Korr?"
+      },
+      {
+        "handle": "@crimson.shaw",
+        "speaker": "Shaw",
+        "text": "Still working. So are we."
+      }
+    ],
+    "direction": [
+      "cw-story"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P25",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 25,
+    "title": "No Victory Lap",
+    "setting": "convoy-zone",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden",
+      "verge-relief-convoy",
+      "unmarked-raider-pack"
+    ],
+    "characters": [
+      "C_cw_korr",
+      "C_cw_neral"
+    ],
+    "summary": "Wayfarer's tow finally stabilizes and Korr's remaining fighters make the raider attack too expensive to continue; when the raiders disengage, Neral orders no pursuit because the carrier still has aircraft to recover.",
+    "panelPlan": [
+      "Panel 1: The civilian tug's drive steadies and Wayfarer Three begins moving back toward the green beacon line, slow but unmistakable.",
+      "Panel 2: Korr's remaining fighters hold a compact defensive arc while Crimson Warden's controlled batteries cover the corridor behind them.",
+      "Panel 3: One damaged raider signals withdrawal; the others peel away rather than charging a defended carrier for little remaining salvage.",
+      "Panel 4: Korr has a clean pursuit vector for a moment. Her fuel indicator is amber and the recovery cue from Warden is live.",
+      "Panel 5: She turns toward home without firing. Wayfarer crosses back fully inside green behind her."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "TUG COMMS",
+        "text": "Tow is holding. Wayfarer has positive movement."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Warden, they're breaking."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Let them."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Already did."
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Recovery order Korr one, then cover three. You're both below reserve."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Copy. Coming home."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-combat-clarity"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P26",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 26,
+    "title": "Trap",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_malk",
+      "C_cw_quill",
+      "C_cw_korr",
+      "C_cw_shaw",
+      "C_cw_hart"
+    ],
+    "summary": "The damaged carrier recovers its remaining aircraft and Shaw's rescue craft through a narrow improvised lane; Korr lands last among the fighters, and the deck's relief is procedural rather than celebratory.",
+    "panelPlan": [
+      "Panel 1: The emergency recovery lane is visibly only part of the original track, bordered by the dragged wreck and temporary power cables. Malk stands at control with no wasted space.",
+      "Panel 2: First low-fuel fighter traps hard but safely. Quill's crew immediately pushes it clear by hand because the normal tractor route remains blocked.",
+      "Panel 3: Korr approaches with warning lights showing. Malk holds the lane until the last possible beat, then gives the trap signal.",
+      "Panel 4: Korr lands, rolls past the wreck and stops. She removes her helmet but does not smile; her first look is toward the empty slot where Hart's fighter should be.",
+      "Panel 5: Shaw's rescue craft arrives behind her. The rear lock opens and Hart is transferred directly to medical while Korr sees him conscious."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Keep rolling. Clear the wire. Clear it."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Push left. Left."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Korr one, deck is yours."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "That's a generous description."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Land on the generous part."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "Copy."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Sena."
+      },
+      {
+        "handle": "@crimson.korr",
+        "speaker": "Korr",
+        "text": "You look terrible."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "I had help."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P27",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 27,
+    "title": "Successful Mission",
+    "setting": "cw-maintenance",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_neral",
+      "C_cw_quill",
+      "C_cw_malk"
+    ],
+    "summary": "The mission is formally logged as successful while the crew confronts what that word contains: civilians saved, aircraft damaged, a deck tech dead, and tomorrow's flight schedule already being rebuilt.",
+    "panelPlan": [
+      "Panel 1: Maintenance bay after the action. Damaged aircraft sit open under work lights; crews tag parts, drain fluids and inventory wreckage. No cheering.",
+      "Panel 2: Quill places Cal's battered gray coffee mug inside his open locker beside his gloves. She does not pack the locker yet.",
+      "Panel 3: Rooke and Neral walk the maintenance bay rather than holding an abstract debrief on the bridge. Neral reads the preliminary outcome from a slate.",
+      "Panel 4: Malk joins them briefly, still in deck gear, and tells Rooke the recovery track can support limited operations after a temporary repair.",
+      "Panel 5: Behind them, a mechanic strips a good actuator from one damaged fighter to return another to flight. The work continues through the conversation."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Wayfarer crossed green. Morrowline's remaining passengers are off. Raiders withdrew."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "And ours?"
+      },
+      {
+        "handle": "@crimson.neral",
+        "speaker": "Neral",
+        "text": "Hart is stable. Three aircraft down for major work."
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Four if you count the one that tried to kill Renn."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "I count it."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Recovery track can run limited by second shift."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Renn?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Didn't make it."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "All right."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-aftermath",
+      "cw-ember-burden"
+    ]
+  },
+  {
+    "id": "RFCW_I01_P28",
+    "unit": "PAGE",
+    "issue": 1,
+    "page": 28,
+    "title": "Deck Ready",
+    "setting": "cw-flight-deck",
+    "region": "vergeward-transit",
+    "factions": [
+      "crimson-warden"
+    ],
+    "characters": [
+      "C_cw_rooke",
+      "C_cw_malk",
+      "C_cw_quill",
+      "C_cw_hart"
+    ],
+    "summary": "Hours later, before grief can become ceremony, Crimson Warden receives another support tasking. Hart is grounded, Quill's patched fighter takes a different pilot, Malk reopens the lane, and Rooke sends the carrier back to work.",
+    "panelPlan": [
+      "Panel 1: Quiet pre-launch deck hours later. The damaged track bears visible patch plates and scorch marks. Quill signs off one fighter built from parts taken from two others.",
+      "Panel 2: Hart, arm immobilized and still in medical underlayer, watches from behind the safety line as another pilot climbs into the aircraft he expected to fly next.",
+      "Panel 3: Malk receives a new tasking cue and looks across the deck. For one beat her eyes fall on the tool cage where Cal's station is empty.",
+      "Panel 4: Bridge inset or comm display: Rooke receives Malk's readiness report. She does not invoke sacrifice or destiny.",
+      "Panel 5: Full-width final panel: the patched fighter launches from Crimson Warden past the visible repair scars on the deck. Crew are already turning toward the next aircraft."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "It is ugly."
+      },
+      {
+        "handle": "@crimson.hart",
+        "speaker": "Hart",
+        "text": "Is it safe?"
+      },
+      {
+        "handle": "@crimson.quill",
+        "speaker": "Quill",
+        "text": "Yes. That's why it's going."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Bridge, deck is ready for limited launch."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Understood."
+      },
+      {
+        "handle": "@crimson.rooke",
+        "speaker": "Rooke",
+        "text": "Launch when ready."
+      },
+      {
+        "handle": "@crimson.malk",
+        "speaker": "Malk",
+        "text": "Lane one. Launch."
+      }
+    ],
+    "direction": [
+      "cw-story",
+      "cw-carrier-ops",
+      "cw-aftermath"
+    ]
+  }
+]
