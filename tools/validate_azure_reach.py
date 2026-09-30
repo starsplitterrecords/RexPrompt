@@ -89,6 +89,7 @@ for entry in azure_entries:
         seen_overlay_files.add(overlay_file)
         path = SHOW / overlay_file
         assert path.exists(), f"Missing overlay: {path}"
+        print("VALIDATING OVERLAY", path)
         decoded = decode(path)
         assert isinstance(decoded, list), f"{overlay_file}: decoded payload must be a list"
         pages.extend(decoded)
