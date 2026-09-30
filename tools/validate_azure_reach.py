@@ -21,11 +21,7 @@ def load(path):
 
 def decode(path):
     raw = "".join(path.read_text(encoding="utf-8").split())
-    try:
-        return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
-    except Exception as exc:
-        print(f"DECODE FAILURE: {path}: {exc!r}", flush=True)
-        raise
+    return json.loads(gzip.decompress(base64.b64decode(raw, validate=True)).decode("utf-8"))
 
 
 shows = load(MANIFEST)
