@@ -73,8 +73,23 @@ for overlay in show.get("sceneOverlays", []):
         scenes.extend(incoming)
 
 errors = []
-if len(scenes) != 162:
-    errors.append(f"expected 162 active scenes, found {len(scenes)}")
+editorial_scenes = [s for s in scenes if str(s.get("pageRole", "")).startswith("editorial-")]
+story_scenes = [s for s in scenes if not str(s.get("pageRole", "")).startswith("editorial-")]
+if len(story_scenes) != 162:
+    errors.append(f"expected 162 authored story scenes, found {len(story_scenes)}")
+if len(editorial_scenes) != 16:
+    errors.append(f"expected 16 editorial pages, found {len(editorial_scenes)}")
+for n in range(1, 9):
+    ep = f"S1E{n:02d}"
+    group = [s for s in scenes if s.get("episode") == ep]
+    editorial = [s for s in group if str(s.get("pageRole", "")).startswith("editorial-")]
+    roles = [s.get("pageRole") for s in editorial]
+    if roles.count("editorial-opening") != 1 or roles.count("editorial-closing") != 1:
+        errors.append(f"{ep}: expected one editorial opening and one editorial closing, found {roles}")
+    if group and group[0].get("pageRole") != "editorial-opening":
+        errors.append(f"{ep}: editorial opening is not first")
+    if group and group[-1].get("pageRole") != "editorial-closing":
+        errors.append(f"{ep}: editorial closing is not last")
 
 for name in COMPATIBILITY_FILES:
     path = SHOW / name
@@ -148,6 +163,6 @@ if errors:
     for e in errors: print("-", e)
     raise SystemExit(1)
 print("Backyard Rockets sanitization passed")
-print("Scenes:", len(scenes))
+print("Scenes:", len(scenes), "authored:", len(story_scenes), "editorial:", len(editorial_scenes))
 print("Character records:", len(chars), "unique handles:", len(handles))
 print("Persistent settings:", len(settings), "unique inline settings:", len(inline_settings))
