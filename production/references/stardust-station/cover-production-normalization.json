@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "stardust-station",
+  "status": "active",
+  "purpose": "Cover-production contract for Stardust Station. The released Issue 1 cover is the approved masthead/trade-dress pixel reference; Issues 2-10 use that exact approved image only for recurring cover-brand continuity while their own assembled RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/stardust-station/covers.json",
+  "foundingCover": {
+    "recipeId": "SDS_S1E01_COVER",
+    "issue": 1,
+    "state": "released-approved-trade-dress-reference",
+    "assetPath": "production/references/stardust-station/assets/covers/issue-01-cover-trade-dress.jpg",
+    "sourceRepo": "starsplitterrecords/StarSplitterVisions",
+    "sourcePath": "sites/visions/public/images/covers/stardust-station-issue-01.jpg",
+    "assetSha": "6f855fb23ccf484200c83e9daa6763ee0d86db9b"
+  },
+  "scope": {
+    "controls": [
+      "series masthead identity and two-line title architecture",
+      "masthead placement and scale",
+      "Star Splitter Visions publisher bug treatment",
+      "issue-number placement and hierarchy",
+      "issue-title treatment when a canonical issue title exists",
+      "recurring cover margins and trade-dress geometry",
+      "overall Stardust Station cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "later issue-specific scene composition",
+      "later cover cast count or staging",
+      "story imagery",
+      "issue-specific accent palette",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [
+      "SDS_S1E02_COVER",
+      "SDS_S1E03_COVER",
+      "SDS_S1E04_COVER",
+      "SDS_S1E05_COVER",
+      "SDS_S1E06_COVER",
+      "SDS_S1E07_COVER",
+      "SDS_S1E08_COVER",
+      "SDS_S1E09_COVER",
+      "SDS_S1E10_COVER"
+    ],
+    "requiredAsset": "production/references/stardust-station/assets/covers/issue-01-cover-trade-dress.jpg",
+    "rule": "Before generating any later Stardust Station cover, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the approved Issue 1 cover pixels cannot be visually inspected, stop before later-cover generation rather than reconstructing trade dress from text."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, focal hierarchy, spoiler ceiling and exact required cover text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "worldAuthority": {
+    "rule": "Released Stardust Station interior pages plus the active visual-reference-pack control established character identity, station design, costume/species appearance and interior visual language. Approved current-production references may establish newer story state when applicable."
+  },
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "No recap collage.",
+    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No superhero posing or fake action spectacle.",
+    "No generic cyberpunk neon or grimdark reinterpretation.",
+    "No legible environmental text or fake signage on covers unless explicitly required by the current recipe.",
+    "Only exact required cover lettering from the assembled recipe plus the established publisher bug may be rendered.",
+    "The cover must remain legible and compelling at thumbnail size.",
+    "Do not reveal the issue's decisive solution, late reversal or final image.",
+    "Issue 2 and Issue 3 currently have no canonical subtitle; do not invent one."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "SDS_S1E01_COVER",
+      "title": "Issue 1 Cover — Mandatory Proximity",
+      "status": "released-canon"
+    },
+    {
+      "issue": 2,
+      "recipeId": "SDS_S1E02_COVER",
+      "title": "Issue 2 Cover",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "SDS_S1E03_COVER",
+      "title": "Issue 3 Cover",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "SDS_S1E04_COVER",
+      "title": "Issue 4 Cover — Temporary Material",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "SDS_S1E05_COVER",
+      "title": "Issue 5 Cover — Resource Efficiency Review",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "SDS_S1E06_COVER",
+      "title": "Issue 6 Cover — Wellness Week",
+      "status": "production-ready"
+    },
+    {
+      "issue": 7,
+      "recipeId": "SDS_S1E07_COVER",
+      "title": "Issue 7 Cover — Bring Your Feelings to Work Day",
+      "status": "production-ready"
+    },
+    {
+      "issue": 8,
+      "recipeId": "SDS_S1E08_COVER",
+      "title": "Issue 8 Cover — The Corporate Visit",
+      "status": "production-ready"
+    },
+    {
+      "issue": 9,
+      "recipeId": "SDS_S1E09_COVER",
+      "title": "Issue 9 Cover — Output Target",
+      "status": "production-ready"
+    },
+    {
+      "issue": 10,
+      "recipeId": "SDS_S1E10_COVER",
+      "title": "Issue 10 Cover — The Station Stays Open",
+      "status": "production-ready"
+    }
+  ]
+}
