@@ -99,6 +99,15 @@ The closing beat introduces a small live phase offset in a nearby monitored trai
 
 This course follows `../rex-fleet-academy-shared/curriculum_doctrine.json` and its local `academy_source_program.json`.
 
-The ten-title progression above is a **provisional curriculum map, not a fixed ten-issue season**. An anomaly family may be split, combined, reordered, or omitted when source reconciliation and dramatic development show a better structure. Only compiled/registered issues are production commitments.
+The ten-title progression above is a **candidate topic pool, not a ten-issue season**. This course is expected to be a one-off by default and no more than three issues total. If continuation is justified, combine the strongest related anomaly topics into at most two follow-up issues. Only compiled/registered issues are production commitments.
 
 Source documents, telemetry, accident records, and historical observations may run as a distinct caption lane while Jia and the cadets test what those records actually prove. Keep observation, interpretation, and current Academy theory visibly separate.
+
+## Course production identity
+
+- **Length:** 1–3 issues total; default 1.
+- **Entry point:** Issue 1 must stand alone as an entry point to both this course and the Rex Fleet Academy line.
+- **Cast:** this course may maintain its own instructor/cadets; no line-wide recurring cohort is required.
+- **RexPrompt:** keep this as its own series package and series ID.
+- **IMG:** use a dedicated Anomalies of Broken Space IMG/reference project when visual production begins.
+- **Git:** course-specific feature branches are appropriate for active work, but approved state merges to `main`; do not maintain a divergent canon branch.
