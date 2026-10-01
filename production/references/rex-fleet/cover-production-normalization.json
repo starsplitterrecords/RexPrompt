@@ -2,42 +2,139 @@
   "schemaVersion": 1,
   "seriesId": "rex-fleet",
   "status": "active",
-  "purpose": "Durable image-production source authority for Rex Fleet covers. Keeps cover trade dress stable while allowing each issue to have a distinct selling image.",
-  "canonicalTradeDressReference": {
-    "id": "issue-01-cover",
-    "repository": "starsplitterrecords/StarSplitterVisions",
-    "image": "/images/covers/rex-fleet-issue-01-green-corridor.jpg",
-    "pixelReadRequired": true,
-    "authorityScope": [
-      "masthead",
-      "Star Splitter Visions mark",
-      "cream/gold title typography",
-      "title scale and top-field occupancy",
+  "purpose": "Cover-production contract for Rex Fleet. The exact released Issue 1 Green Corridor cover is persisted locally as the masthead/trade-dress pixel reference; Issues 2-12 use that image only for recurring cover-brand continuity while their own assembled RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/rex-fleet-s1/covers.json",
+  "foundingCover": {
+    "recipeId": "RF_I01_COVER",
+    "issue": 1,
+    "state": "released-canon-approved-trade-dress-reference",
+    "sourceRepository": "starsplitterrecords/StarSplitterVisions",
+    "sourceRuntimePath": "/images/covers/rex-fleet-issue-01-green-corridor.jpg",
+    "sourceBlobSha": "f9517010a6c8601b45b536994f1058947353be06",
+    "localAssetPath": "production/references/rex-fleet/assets/covers/issue-01-cover-trade-dress.jpg",
+    "localBlobSha": "f9517010a6c8601b45b536994f1058947353be06",
+    "exactPixelCopyVerified": true,
+    "rule": "Issue 1 is released canon. Do not regenerate, redraw or replace it unless the user explicitly reopens the cover."
+  },
+  "scope": {
+    "controls": [
+      "REX FLEET masthead identity",
+      "Star Splitter Visions mark treatment and placement",
+      "cream/gold masthead typography",
+      "masthead scale and top-field occupancy",
       "top-right issue-number block",
-      "gold divider/tagline treatment",
-      "border/line rhythm",
-      "bottom emblem system"
+      "gold divider and THREE POWERS. ONE FRONTIER. tagline treatment",
+      "cover border/line rhythm",
+      "bottom emblem system",
+      "overall Rex Fleet cover-brand recognition"
     ],
-    "excludedScope": [
+    "doesNotControl": [
       "later-cover character arrangement",
+      "later-cover cast count",
       "later-cover camera angle",
       "later-cover background composition",
-      "later-cover issue-specific palette emphasis",
-      "interior story-page layout"
+      "issue-specific selling image",
+      "issue-specific palette emphasis",
+      "issue-specific lighting",
+      "story action",
+      "spoiler content",
+      "interior story-page layout or lettering"
     ]
   },
-  "recipeAuthority": {
-    "shelfSeriesId": "rex-fleet-covers",
-    "file": "data/shows/rex-fleet-s1/covers.json",
-    "rule": "The assembled current-issue cover recipe controls the selling concept, focal hierarchy, cast, environment, composition, thumbnail read, spoiler ceiling and issue-specific visual emphasis."
+  "pixelReadGate": {
+    "appliesTo": [
+      "RF_I02_COVER",
+      "RF_I03_COVER",
+      "RF_I04_COVER",
+      "RF_I05_COVER",
+      "RF_I06_COVER",
+      "RF_I07_COVER",
+      "RF_I08_COVER",
+      "RF_I09_COVER",
+      "RF_I10_COVER",
+      "RF_I11_COVER",
+      "RF_I12_COVER"
+    ],
+    "requiredAsset": "production/references/rex-fleet/assets/covers/issue-01-cover-trade-dress.jpg",
+    "rule": "Before generating any later Rex Fleet cover, retrieve and visually inspect the actual pixels from the local approved Issue 1 cover reference in active multimodal context. A path, SHA, metadata record, textual description, memory, or statement that the image was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the approved Issue 1 cover pixels cannot be retrieved and visually inspected, stop before later-cover generation rather than recreating the trade dress from text."
   },
-  "productionGate": [
-    "Assemble the exact current cover recipe from RexPrompt.",
-    "Retrieve the canonical Issue 1 cover as actual image pixels and inspect it before generation.",
-    "Select any additional released/current-production character, ship, location or faction references required by the recipe.",
-    "Apply the Issue 1 cover only to trade dress and brand continuity; do not copy its montage composition into later issues.",
-    "Generate from the assembled cover recipe plus the selected pixel references.",
-    "Audit thumbnail read, exact trade-dress lettering, character/world continuity, spoiler ceiling and absence of invented environmental text before approval."
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, focal hierarchy, thumbnail read, spoiler ceiling, exact required cover lettering and issue-specific visual emphasis. The Issue 1 pixel reference controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current cover recipe, follow the current cover recipe and preserve only the scoped trade-dress continuity."
+  },
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "The cover must work at thumbnail size before fine detail is readable.",
+    "No recap collage.",
+    "No generic floating-head montage.",
+    "No generic cast lineup unless the current issue recipe explicitly requires an ensemble composition.",
+    "No superhero posing when the issue's dramatic engine is procedural, political, civic, scientific or intimate.",
+    "No invented environmental text or fake signage.",
+    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "Do not reveal the issue's decisive solution, late reversal, winner, death, signature, or final image beyond the explicit spoiler ceiling.",
+    "Use established Rex Fleet faction, ship, character, corridor and anomaly visual canon from the normal production reference workflow in addition to the cover trade-dress reference."
   ],
-  "issue1Rule": "Issue 1 is released canon. Do not regenerate or replace its cover unless explicitly reopened by the user."
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "RF_I01_COVER",
+      "status": "released-canon-reference"
+    },
+    {
+      "issue": 2,
+      "recipeId": "RF_I02_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "RF_I03_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "RF_I04_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "RF_I05_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "RF_I06_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 7,
+      "recipeId": "RF_I07_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 8,
+      "recipeId": "RF_I08_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 9,
+      "recipeId": "RF_I09_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 10,
+      "recipeId": "RF_I10_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 11,
+      "recipeId": "RF_I11_COVER",
+      "status": "production-ready"
+    },
+    {
+      "issue": 12,
+      "recipeId": "RF_I12_COVER",
+      "status": "production-ready"
+    }
+  ]
 }
