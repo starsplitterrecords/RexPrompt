@@ -15,6 +15,27 @@
   },
   "references": [
     {
+      "id": "issue-01-cover-trade-dress",
+      "type": "released-cover-canon-local-pixel-reference",
+      "image": "production/references/stardust-station/issue-01-cover-trade-dress.jpg",
+      "source": "starsplitterrecords/StarSplitterVisions: sites/visions/public/images/covers/stardust-station-issue-01.jpg",
+      "scope": [
+        "cover-trade-dress",
+        "masthead",
+        "publisher-bug",
+        "issue-number-placement",
+        "cover-brand-language"
+      ],
+      "use": "Primary pixel-read cover reference. Use for Stardust Station cover trade dress and masthead consistency only; current cover recipe controls later issue composition and story image.",
+      "notFor": [
+        "interior page layout",
+        "interior lettering",
+        "later-cover composition",
+        "later-cover cast selection",
+        "story staging"
+      ]
+    },
+    {
       "id": "core-cast-approved-lineup",
       "type": "approved-current-production-reference",
       "image": "production/references/stardust-station/issue-2-cast-promo-thumb.jpg",
@@ -252,6 +273,11 @@
     "editorial pages",
     "promotional graphics",
     "character-label graphics",
-    "rejected or superseded generations"
-  ]
+    "rejected or superseded generations",
+    "production/references/stardust-station/issue-01-cover-trade-dress.jpg"
+  ],
+  "coverReferenceOrder": [
+    "issue-01-cover-trade-dress"
+  ],
+  "coverProductionAuthority": "production/references/stardust-station/cover-production-normalization.json"
 }
