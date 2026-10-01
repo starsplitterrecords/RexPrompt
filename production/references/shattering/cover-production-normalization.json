@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "shattering",
+  "status": "bootstrap-required",
+  "purpose": "Cover-production contract for Rex Fleet Academy: Shattering of the Corridors. Issue 1 establishes the approved masthead/trade-dress pixel reference; Issues 2-6 use that exact approved image only for recurring cover-brand continuity while their own RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/shattering/covers.json",
+  "foundingCover": {
+    "recipeId": "SHAT_I01_COVER",
+    "issue": 1,
+    "state": "production-ready-recipe-awaiting-approved-pixels",
+    "targetAssetPath": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png",
+    "activationRule": "Do not treat this path as visual authority until the Issue 1 cover is explicitly approved and the exact approved pixels are persisted at this path.",
+    "approvalWriteback": "After approval/persistence, change foundingCover.state to approved-trade-dress-reference and status to active, then record the asset SHA if the production workflow provides one."
+  },
+  "scope": {
+    "controls": [
+      "REX FLEET ACADEMY eyebrow identity",
+      "SHATTERING OF THE CORRIDORS masthead design",
+      "masthead placement and scale",
+      "issue-number hierarchy and placement",
+      "recurring cover margins and trade-dress geometry",
+      "overall Shattering cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "issue-specific scene composition",
+      "character staging",
+      "story imagery",
+      "issue palette",
+      "issue lighting",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content",
+      "interior comic-page design"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [
+      "SHAT_I02_COVER",
+      "SHAT_I03_COVER",
+      "SHAT_I04_COVER",
+      "SHAT_I05_COVER",
+      "SHAT_I06_COVER"
+    ],
+    "requiredAsset": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png",
+    "rule": "Before generating any later Shattering cover, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the Issue 1 approved cover pixels do not yet exist or cannot be visually inspected, stop before later-cover generation and complete the Issue 1 cover bootstrap first."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, spoiler ceiling, and exact required cover text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "chronologyRule": "Shattering predates the mature Rex Fleet political order. High Era covers must use Cooperative/BHA/Convoy/Outer Band visual language; post-Break covers may foreshadow later traditions but must not copy mature Fleet, Verge, Shard, or Crown uniforms, ships, institutions, or finished iconography.",
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "No recap collage.",
+    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No superhero posing.",
+    "No generic space-battle spectacle when the issue is not about combat.",
+    "No mature post-Shattering faction design imported backward into the High Era.",
+    "No legible environmental text or fake signage on covers.",
+    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "The cover must remain legible and compelling at thumbnail size.",
+    "Do not reveal the issue's decisive solution, late reversal, or final image."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "SHAT_I01_COVER",
+      "title": "Issue 1 Cover — The Impossible Flaw",
+      "status": "production-ready"
+    },
+    {
+      "issue": 2,
+      "recipeId": "SHAT_I02_COVER",
+      "title": "Issue 2 Cover — Inherited Machinery",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "SHAT_I03_COVER",
+      "title": "Issue 3 Cover — Two Instructions",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "SHAT_I04_COVER",
+      "title": "Issue 4 Cover — The Road Breaks",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "SHAT_I05_COVER",
+      "title": "Issue 5 Cover — Three Ways to Survive",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "SHAT_I06_COVER",
+      "title": "Issue 6 Cover — Future on the Gantry",
+      "status": "production-ready"
+    }
+  ]
+}
