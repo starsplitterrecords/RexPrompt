@@ -22,6 +22,9 @@ The active RexPrompt package is page-based comic production.
 - Story-level production blockers: none
 - Visual-reference gate: open; no approved Shattering image baseline yet
 - Production frontier: `SHAT_I01_P01`
+- Cover recipe shelf: `data/shows/shattering/covers.json` (Issues 1–6, production-ready)
+- Cover production contract: `production/references/shattering/cover-production-normalization.json`
+- Cover trade-dress bootstrap: generate/approve `SHAT_I01_COVER` first; after approval persist its exact pixels to `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png`. Later covers must pixel-read that asset for masthead/trade-dress continuity only.
 
 `data/scenes_shattering.json` is the source-scene and provenance package. Its legacy dialogue-ID arrays have been retired. Each active page now carries a `sceneId`, and the active generation path is the six page files under `data/shows/shattering/`, with production dialogue stored directly in `dialogueInline`.
 
@@ -144,3 +147,14 @@ Do not infer the page mapping from the old filename or source scene ID alone.
 ## Editorial boundary
 
 The current page package preserves the original 22-page story sequence in each issue while adding one art-directed editor splash before it and one teaser/editorial splash after it. The story event order, causal spine, character arcs, major reveals, scene spans, dialogue, and panel plans remain intact; only story page IDs and within-scene continuity pointers shift by one to make room for the opening editorial. There is no released Shattering canon in StarSplitterVisions at this checkpoint.
+
+
+## Cover production
+
+Shattering has six chef-facing cover recipes in `covers.json`, registered as separate `COVER` units in `data/shows.json`. They use the same assembler-visible fields as story pages, so no assembler change is required.
+
+The Issue 1 cover is the founding trade-dress cover. Its assembled recipe controls the Issue 1 selling image and establishes a repeatable `REX FLEET ACADEMY / SHATTERING OF THE CORRIDORS / ISSUE ##` masthead architecture. After the Issue 1 cover is explicitly approved, persist the exact approved pixels to `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png` and activate the cover contract.
+
+Issues 2–6 must retrieve and visually inspect those actual Issue 1 pixels before cover generation. That pixel reference controls only recurring masthead/trade-dress appearance: title hierarchy, placement, issue-number treatment, margins, logo scale, and cover-brand recognition. The current issue's assembled cover recipe continues to control composition, cast, location, palette, action, symbolism, and spoiler ceiling.
+
+Cover recipes obey Shattering chronology. High Era covers use Cooperative/BHA/Convoy/Outer Band visual language; later covers may show proto-Core/Fleet, proto-Verge, and proto-Shard ancestry through behavior and materials without importing mature post-Shattering uniforms, ships, institutions, or finished faction iconography.
