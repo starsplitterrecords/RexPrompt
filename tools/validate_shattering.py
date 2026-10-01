@@ -25,6 +25,8 @@ PACKAGE_README = SHOW_DIR / "README.md"
 REFERENCE_README = ROOT / "production" / "references" / "shattering" / "README.md"
 RECOVERY_NOTE = ROOT / "production" / "references" / "shattering" / "recovery-binary-note.md"
 REFERENCE_INVENTORY = ROOT / "production" / "references" / "shattering" / "reference-inventory.json"
+COVERS = SHOW_DIR / "covers.json"
+COVER_CONTRACT = ROOT / "production" / "references" / "shattering" / "cover-production-normalization.json"
 
 
 def load(path: Path):
@@ -51,8 +53,16 @@ def main():
         if character.get("handle")
     }
 
-    entries = [s for s in shows if s.get("seriesId") == "shattering"]
+    entries = [s for s in shows if s.get("seriesId") == "shattering" and s.get("unitLabel") == "PAGE"]
     assert len(entries) == 6, f"Expected 6 Shattering issue entries, found {len(entries)}"
+
+    cover_entries = [s for s in shows if s.get("seriesId") == "shattering" and s.get("unitLabel") == "COVER"]
+    assert len(cover_entries) == 1, f"Expected 1 Shattering cover shelf, found {len(cover_entries)}"
+    cover_show = cover_entries[0]
+    assert cover_show.get("id") == "shattering-covers", "Shattering cover shelf id mismatch"
+    assert cover_show.get("basePath") == "data", "Shattering cover shelf basePath mismatch"
+    assert cover_show.get("scenesFiles") == ["shows/shattering/covers.json"], "Shattering cover shelf file mismatch"
+    assert cover_show.get("includeIdPattern") == r"^SHAT_I0[1-6]_COVER$", "Shattering cover shelf include pattern mismatch"
 
     all_pages = []
     all_page_ids = set()
@@ -144,6 +154,50 @@ def main():
                     assert not page.get("continuityFrom"), f"{pid}: new scene must not inherit prior-scene continuity"
 
         all_pages.extend(pages)
+
+    assert COVERS.exists(), "Shattering cover recipe shelf missing"
+    covers = load(COVERS)
+    assert isinstance(covers, list) and len(covers) == 6, f"Expected 6 Shattering cover recipes, found {len(covers) if isinstance(covers, list) else 'non-list'}"
+    expected_cover_ids = [f"SHAT_I{issue:02d}_COVER" for issue in range(1, 7)]
+    assert [cover.get("id") for cover in covers] == expected_cover_ids, "Shattering cover recipe order/IDs invalid"
+    for issue, cover in enumerate(covers, start=1):
+        cid = cover["id"]
+        assert cover.get("issue") == issue, f"{cid}: issue number mismatch"
+        assert cover.get("page") == 1, f"{cid}: cover page field must be 1"
+        assert cover.get("status") == "production-ready", f"{cid}: cover is not production-ready"
+        assert isinstance(cover.get("summary"), str) and cover["summary"].strip(), f"{cid}: missing cover summary"
+        panel_plan = cover.get("panelPlan")
+        assert isinstance(panel_plan, list) and panel_plan, f"{cid}: missing cover panel plan"
+        assert all(isinstance(item, str) and item.strip() for item in panel_plan), f"{cid}: invalid cover panel-plan entry"
+        directions = cover.get("directionInline")
+        assert isinstance(directions, list) and directions, f"{cid}: missing cover direction"
+        assert all(isinstance(item, dict) and isinstance(item.get("text"), str) and item["text"].strip() for item in directions), f"{cid}: invalid cover direction entry"
+
+        setting = cover.get("setting")
+        if setting:
+            assert setting in settings, f"{cid}: unknown cover setting {setting}"
+        region = cover.get("region")
+        if region:
+            assert region in regions, f"{cid}: unknown cover region {region}"
+        for faction in cover.get("factions", []):
+            assert faction in factions, f"{cid}: unknown cover faction {faction}"
+        for character in cover.get("characters", []):
+            assert character in characters, f"{cid}: unknown cover character {character}"
+
+        display = cover.get("dialogueInline")
+        assert isinstance(display, list) and len(display) == 3, f"{cid}: expected exactly 3 cover DISPLAY lines"
+        expected_display = ["REX FLEET ACADEMY", "SHATTERING OF THE CORRIDORS", f"ISSUE {issue:02d}"]
+        assert [line.get("speaker") for line in display] == ["DISPLAY"] * 3, f"{cid}: cover lettering must use DISPLAY"
+        assert [line.get("text") for line in display] == expected_display, f"{cid}: exact cover lettering mismatch"
+
+    assert COVER_CONTRACT.exists(), "Shattering cover-production contract missing"
+    cover_contract = load(COVER_CONTRACT)
+    assert cover_contract.get("schemaVersion") == 1, "Shattering cover contract schemaVersion must be 1"
+    assert cover_contract.get("seriesId") == "shattering", "Shattering cover contract seriesId mismatch"
+    assert cover_contract.get("recipeShelf") == "data/shows/shattering/covers.json", "Shattering cover contract recipe shelf mismatch"
+    founding = cover_contract.get("foundingCover", {})
+    assert founding.get("recipeId") == "SHAT_I01_COVER", "Shattering founding cover recipe mismatch"
+    assert founding.get("targetAssetPath") == "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png", "Shattering founding cover asset path mismatch"
 
     assert len(all_pages) == 144, f"Expected 144 active pages, found {len(all_pages)}"
     assert active_scene_ids == source_ids, "Active page package and source-scene package do not describe the same scene set"
@@ -259,7 +313,7 @@ def main():
             assert token not in text, f"{text_path.relative_to(ROOT)}: retired Shattering identity token remains: {token}"
 
     print("Shattering validation passed")
-    print("6 issues / 144 pages (132 story + 12 editorial) / scene-aware continuity / inline dialogue / valid references / normalized Liora identity")
+    print("6 issues / 144 pages (132 story + 12 editorial) / 6 cover recipes / scene-aware continuity / inline dialogue / valid references / normalized Liora identity")
 
 
 if __name__ == "__main__":
