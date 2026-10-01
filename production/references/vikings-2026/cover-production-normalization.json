@@ -10,14 +10,17 @@
     "scopeRule": "Trade-dress authority does not authorize copying the Issue 1 scene composition into later covers. Later cover images are controlled by their own assembled cover recipes."
   },
   "canonicalTradeDressReference": {
-    "repository": "starsplitterrecords/StarSplitterVisions",
+    "repository": "starsplitterrecords/RexPrompt",
     "branch": "main",
-    "path": "sites/visions/public/images/covers/vikings-2026-issue-01.jpg",
-    "runtimePath": "/images/covers/vikings-2026-issue-01.jpg",
+    "path": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
     "blobSha": "748a2d70924a773b995cafd8a78b8aab69f108d6",
+    "sourceRepository": "starsplitterrecords/StarSplitterVisions",
+    "sourcePath": "sites/visions/public/images/covers/vikings-2026-issue-01.jpg",
+    "sourceBlobSha": "748a2d70924a773b995cafd8a78b8aab69f108d6",
+    "exactPixelCopyVerified": true,
     "sourceStatus": "released-canon",
     "requiredUse": "pixel-read before every Vikings cover generation",
-    "pixelReadRule": "Retrieve and inspect the actual image pixels. Repository path, SHA, metadata, prose description, memory, or a previously viewed version is not a substitute for current pixel inspection."
+    "pixelReadRule": "Retrieve and inspect the actual local reference pixels in active multimodal context. Repository path, SHA, metadata, prose description, memory, or a statement that the image was previously viewed is not a substitute for current pixel inspection."
   },
   "observedTradeDress": {
     "mastheadField": "Large white horizontal field occupying the upper portion of the portrait cover, visually separated from the illustration by dark horizontal rules.",
@@ -37,7 +40,7 @@
   },
   "mandatoryReferenceGate": [
     "Resolve the requested Vikings cover show and assemble the exact VIK_S1E##_COVER recipe.",
-    "Retrieve and visually inspect the actual pixels of the canonical released Issue 1 cover from StarSplitterVisions.",
+    "Retrieve and visually inspect the actual pixels of production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg. This local asset is an exact byte-for-byte copy of the released StarSplitterVisions Issue 1 cover.",
     "Use those pixels only for trade dress, masthead, publication typography architecture, border/rule language, and cover-brand continuity.",
     "Resolve actual released or approved pixels for every recurring character or established location materially present on the cover.",
     "Use the current cover recipe for the issue-specific hook, cast, composition, environment, spoiler ceiling, and exact issue text.",
@@ -116,6 +119,16 @@
       "issue": 12,
       "numberText": "2026 Issue #12",
       "strapline": "PERMANENT RESIDENCY / TRIAL BY COMBAT"
+    }
+  ],
+  "knownScopeLocks": [
+    {
+      "path": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
+      "scope": "cover-trade-dress-only",
+      "coverTradeDressAuthority": true,
+      "characterIdentityAuthority": false,
+      "storyPageLayoutAuthority": false,
+      "issueSpecificCompositionAuthority": false
     }
   ]
 }
