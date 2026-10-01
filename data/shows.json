@@ -2295,5 +2295,18 @@
     "unitLabel": "COVER",
     "generationLine": "Finished full-color portrait COMIC COVER for Low Tide Signal, not an interior page. Prestige indie coastal science fiction: grounded near-future Atlantic infrastructure, wet concrete, black tidal water, fog, salt, practical headlamps/contractor lights, muted teal/cyan/gray with restrained sodium amber, natural adult acting, and strong thumbnail readability. Build one dominant issue-specific selling image with disciplined focal hierarchy and deliberate negative space for established trade dress. Before generation, pixel-read the exact published cover reference at starsplitterrecords/StarSplitterVisions@main:sites/visions/public/images/covers/low-tide-signal-issue-01-cover.png and use it ONLY for Low Tide Signal masthead/logotype, title hierarchy, chapter/issue labeling behavior, recurring brand marks, and cover-line trade dress. Do not use preview-cover figures as character identity authority and do not copy its scene composition. Preserve approved recurring character identity when characters are identifiable. No recap collage, generic cast lineup, superhero posing, cyberpunk neon, supernatural imagery, lanterns, fake spectacle, invented blurbs, barcodes, prices, credits, logos, or readable promotional/environmental text unless explicitly required by the cover recipe or established trade-dress reference.",
     "formatNote": "Dedicated chef-facing cover production unit. Cover trade dress is anchored by the published Issue 1 preview cover at cover-only scope; the active cover recipe controls issue-specific composition and spoiler ceiling."
+  },
+  {
+    "id": "azure-reach-s1-covers",
+    "name": "Azure Reach — Season 1 Covers",
+    "seriesId": "azure-reach",
+    "seriesName": "Azure Reach",
+    "issueLabel": "Season 1 Cover Shelf",
+    "basePath": "data/shows/azure-reach-s1",
+    "scenesFile": "covers.json",
+    "includeIdPattern": "^AZR_S1E\\d{2}_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "One finished full-color portrait comic cover for Azure Reach. This is cover art, not an interior story page. Sell the selected issue through one dominant spoiler-safe visual idea with immediate thumbnail readability, strong focal hierarchy, luminous premium marine-park rendering, natural character acting and exact integrated trade dress from the supplied DISPLAY lettering. Animals remain safe, natural and never the joke. No recap collage, no generic ensemble lineup unless explicitly required, no fake action unrelated to the issue, no unscripted promotional text, no environmental text unless explicitly supplied, no muddy aquarium darkness, and no cover elements borrowed from later unrevealed payoffs. Preserve exact supplied lettering.",
+    "formatNote": "Cover-production shelf. The released Azure Reach Issue 1 cover in StarSplitterVisions is the existing trade-dress anchor. Before generating Issues 2-6, retrieve and visually inspect its actual pixels; use it for masthead/trade dress only. The selected AZR_S1E##_COVER recipe controls the issue-specific illustration and spoiler ceiling."
   }
 ]
