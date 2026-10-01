@@ -1,101 +1,73 @@
 {
   "schemaVersion": 1,
   "seriesId": "azure-reach",
-  "status": "cover-production-reference",
-  "purpose": "Durable pixel-read trade-dress authority and cover-generation gate for Azure Reach issue covers.",
+  "status": "released-issue-01-trade-dress-anchor",
+  "purpose": "Durable cover-production authority for Azure Reach. Cover recipes live in data/shows/azure-reach-s1/covers.json; this file governs scoped pixel-reference use for masthead and trade-dress continuity.",
   "authority": {
-    "issueSpecificRecipe": "The assembled Azure Reach cover recipe controls the selling image, issue-specific concept, cast, composition, spoiler ceiling, thumbnail read and exact scripted cover copy.",
-    "releasedTradeDress": "The released Azure Reach Issue 1 cover in StarSplitterVisions controls established masthead geometry, Star Splitter Visions publisher-mark placement, issue-number block, cyan/white/navy lettering hierarchy and premium cover-brand finish.",
-    "releasedStoryCanon": "Released Azure Reach Issue 1 story pages continue to control established visual identity and world appearance for characters/locations depicted in later covers.",
-    "scopeRule": "Apply authorities by scope. The Issue 1 cover is a trade-dress reference, not a composition template and never an interior-page layout reference."
-  },
-  "tradeDressReference": {
-    "repository": "starsplitterrecords/StarSplitterVisions",
-    "branch": "main",
-    "repoPath": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
-    "runtimePath": "/images/covers/azure-reach-issue-01-cover.jpg",
-    "blobSha": "f9da0be9e6905f3b2039e095cc2ebaae7cb40f2d",
-    "visionsSlug": "azure-reach",
-    "issue": 1,
-    "actualPixelsRequired": true,
-    "scope": [
-      "cover masthead geometry",
-      "Star Splitter Visions mark position",
-      "issue-number block architecture",
-      "white/cyan/deep-navy trade-dress hierarchy",
-      "premium rendering and polish level"
-    ],
-    "explicitlyDoesNotControl": [
-      "later-cover illustration composition",
-      "later-cover cast selection",
-      "later-cover focal character",
-      "issue-specific palette accents",
-      "Issue 1 promotional blurbs",
-      "interior story-page layout or lettering"
+    "issueSpecificRecipe": "The assembled selected AZR_S1E##_COVER recipe controls the issue-specific selling image, cast, composition, spoiler ceiling, thumbnail read, palette emphasis and exact cover lettering.",
+    "tradeDressReference": "The released StarSplitterVisions Azure Reach Issue 1 cover controls masthead and trade-dress pixels for Issues 2-6.",
+    "characterIdentity": "Released StarSplitterVisions story art plus assembler-visible Azure Reach characters.json visual anchors control recurring character identity; clearly approved current-production artwork may extend post-release state.",
+    "rules": [
+      "Issue 1 is already released canon and is the trade-dress anchor; do not regenerate or replace it unless the user explicitly reopens the released cover.",
+      "Before generating any Issue 2-6 cover, retrieve and visually inspect the actual Issue 1 cover pixels. A path, SHA, description, memory or metadata record is not a substitute for pixel readback.",
+      "Use the Issue 1 cover reference only for masthead/trade dress: logo proportions, placement, issue-number treatment, title hierarchy, edge clearances, cyan/white/deep-navy brand rhythm and premium finish.",
+      "Do not use the Issue 1 cover as composition authority for later covers.",
+      "Do not carry Issue 1 promotional blurbs into later covers unless an issue recipe explicitly supplies them.",
+      "Each later cover must remain compositionally distinct and follow its own assembled recipe.",
+      "Character identity references do not control cover layout or promotional typography.",
+      "No generated cover becomes durable production authority until it passes thumbnail/readability, recipe fidelity, visual continuity, lettering and explicit user approval."
     ]
   },
-  "coverRecipeSource": {
-    "rexPromptPath": "data/shows/azure-reach-s1/covers.json",
-    "registration": "data/shows.json",
-    "rule": "Use the exact assembled cover recipe. Raw metadata not emitted by the assembler is not generation instruction."
-  },
-  "sessionStartGate": [
-    "Resolve the requested Azure Reach cover show and assemble its exact RexPrompt recipe.",
-    "Retrieve and visually inspect the actual pixels of the released Issue 1 cover from the canonical StarSplitterVisions path above.",
-    "Use the Issue 1 pixels only for masthead/trade-dress continuity.",
-    "Resolve any recurring character/location appearance from released StarSplitterVisions canon and clearly approved current-production artwork.",
-    "Build a small reference set: Issue 1 cover for trade dress plus the strongest relevant character/world references for the issue-specific illustration.",
-    "Do not generate until the actual cover pixels and required visual references are present in active multimodal context."
-  ],
-  "perCoverGate": [
-    "Confirm one dominant commercial hook and one primary focal hierarchy from the assembled recipe.",
-    "Confirm the upper masthead/issue-number negative-space zone is preserved.",
-    "Confirm the image remains legible at thumbnail scale.",
-    "Confirm no later-issue payoff or spoiler-ceiling exclusion has been visualized.",
-    "Confirm animals remain safe, natural and never treated as the joke.",
-    "Confirm no unscripted cover copy, environmental text, fake social text or promotional labels were added.",
-    "After generation, compare masthead/trade dress directly against the Issue 1 pixel reference and compare characters/world against proper visual authorities."
-  ],
-  "issueCoverRecipes": [
+  "references": [
     {
-      "issue": 1,
-      "recipeId": "AZR_S1E01_COVER",
-      "state": "released-canon-reference"
-    },
-    {
-      "issue": 2,
-      "recipeId": "AZR_S1E02_COVER",
-      "state": "production-ready"
-    },
-    {
-      "issue": 3,
-      "recipeId": "AZR_S1E03_COVER",
-      "state": "production-ready"
-    },
-    {
-      "issue": 4,
-      "recipeId": "AZR_S1E04_COVER",
-      "state": "production-ready"
-    },
-    {
-      "issue": 5,
-      "recipeId": "AZR_S1E05_COVER",
-      "state": "production-ready"
-    },
-    {
-      "issue": 6,
-      "recipeId": "AZR_S1E06_COVER",
-      "state": "production-ready"
-    }
-  ],
-  "knownScopeLocks": [
-    {
+      "id": "azure-reach-issue-01-cover-trade-dress",
+      "type": "released-cover-canon",
       "repository": "starsplitterrecords/StarSplitterVisions",
-      "path": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
-      "scope": "cover-trade-dress-and-released-cover-only",
-      "coverCompositionAuthorityForLaterIssues": false,
-      "storyPageLayoutAuthority": false
+      "branch": "main",
+      "repoPath": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
+      "runtimePath": "/images/covers/azure-reach-issue-01-cover.jpg",
+      "blobSha": "f9da0be9e6905f3b2039e095cc2ebaae7cb40f2d",
+      "state": "released-canonical",
+      "actualPixelsRequired": true,
+      "scope": [
+        "cover-trade-dress",
+        "masthead",
+        "publisher-mark-placement",
+        "issue-number-system",
+        "cover-brand-rhythm",
+        "premium-finish"
+      ],
+      "excludedScope": [
+        "later-issue-composition",
+        "later-issue-cast-selection",
+        "story-page-layout",
+        "interior-lettering",
+        "issue-specific-visual-hook",
+        "Issue-1-only-promotional-blurbs"
+      ],
+      "use": "Mandatory pixel-read trade-dress reference for Azure Reach Issues 2-6."
     }
   ],
-  "outputRule": "A normal Azure Reach cover is one finished full-color portrait comic cover with exactly the scripted trade-dress copy, one issue-specific selling image, clean thumbnail hierarchy and no interior panel grid. Do not add character handles, dossier framing, recap collage, extra blurbs, environmental text or unscripted promotional copy."
+  "coverRecipeSource": {
+    "shelfShowId": "azure-reach-s1-covers",
+    "path": "data/shows/azure-reach-s1/covers.json",
+    "rule": "Use the exact assembled selected cover recipe. Raw metadata not emitted by the assembler is not generation instruction."
+  },
+  "generationOrder": [
+    "AZR_S1E01_COVER is released canon and serves as the trade-dress anchor; no regeneration required.",
+    "AZR_S1E02_COVER through AZR_S1E06_COVER each require actual pixel readback of the released Issue 1 cover for trade dress only.",
+    "For each selected cover, resolve issue-specific character/world references separately from the trade-dress reference."
+  ],
+  "completionGate": [
+    "Correct selected assembled cover recipe.",
+    "Correct recurring character and location references.",
+    "For Issues 2-6, actual released Issue 1 cover pixels inspected in active multimodal context.",
+    "One-second dominant hook reads at thumbnail size.",
+    "Masthead and issue-number treatment are exact, legible and consistent with released Issue 1.",
+    "No spoiler beyond the selected recipe's spoiler ceiling.",
+    "Animals remain safe, natural and not the joke.",
+    "No invented promotional, environmental or social-media text.",
+    "No generic cast lineup or recap collage unless explicitly required by the selected recipe.",
+    "User approval before any generated cover is promoted to durable production authority."
+  ]
 }
