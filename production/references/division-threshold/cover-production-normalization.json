@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "division-threshold",
+  "status": "bootstrap-required",
+  "purpose": "Cover-production contract for Division Threshold. Issue 1 establishes the approved masthead/trade-dress pixel reference; Issues 2-8 use that exact approved image only for recurring cover-brand continuity while their own RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/division-threshold-s1/covers.json",
+  "foundingCover": {
+    "recipeId": "DT_E001_COVER",
+    "issue": 1,
+    "state": "production-ready-recipe-awaiting-approved-pixels",
+    "targetAssetPath": "production/references/division-threshold/assets/covers/issue-01-cover-trade-dress.png",
+    "activationRule": "Do not treat this path as visual authority until the Issue 1 cover is explicitly approved and the exact approved pixels are persisted at this path.",
+    "approvalWriteback": "After approval/persistence, change foundingCover.state to approved-trade-dress-reference and status to active, then record the asset SHA if the production workflow provides one."
+  },
+  "scope": {
+    "controls": [
+      "series masthead identity",
+      "masthead placement and scale",
+      "issue-number hierarchy",
+      "issue-title treatment",
+      "recurring cover margins and trade-dress geometry",
+      "overall Division Threshold cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "issue-specific scene composition",
+      "character staging",
+      "story imagery",
+      "issue palette",
+      "issue lighting",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [
+      "DT_E002_COVER",
+      "DT_E003_COVER",
+      "DT_E004_COVER",
+      "DT_E005_COVER",
+      "DT_E006_COVER",
+      "DT_E007_COVER",
+      "DT_E008_COVER"
+    ],
+    "requiredAsset": "production/references/division-threshold/assets/covers/issue-01-cover-trade-dress.png",
+    "rule": "Before generating any later Division Threshold cover, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the Issue 1 approved cover pixels do not yet exist or cannot be visually inspected, stop before later-cover generation and complete the Issue 1 cover bootstrap first."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, spoiler ceiling, and exact required trade-dress text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "No recap collage.",
+    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No superhero posing.",
+    "No generic cyberpunk neon.",
+    "No legible environmental text or fake signage on covers.",
+    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "The cover must remain legible and compelling at thumbnail size.",
+    "Do not reveal the issue's decisive solution, late reversal, or final image."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "DT_E001_COVER",
+      "title": "Issue 1 Cover — Purpose Updated",
+      "status": "production-ready"
+    },
+    {
+      "issue": 2,
+      "recipeId": "DT_E002_COVER",
+      "title": "Issue 2 Cover — Attribution",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "DT_E003_COVER",
+      "title": "Issue 3 Cover — Containment Protocol",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "DT_E004_COVER",
+      "title": "Issue 4 Cover — Load Bearing",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "DT_E005_COVER",
+      "title": "Issue 5 Cover — Terms",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "DT_E006_COVER",
+      "title": "Issue 6 Cover — Black Budget",
+      "status": "production-ready"
+    },
+    {
+      "issue": 7,
+      "recipeId": "DT_E007_COVER",
+      "title": "Issue 7 Cover — Splits",
+      "status": "production-ready"
+    },
+    {
+      "issue": 8,
+      "recipeId": "DT_E008_COVER",
+      "title": "Issue 8 Cover — Pressure Line",
+      "status": "production-ready"
+    }
+  ]
+}

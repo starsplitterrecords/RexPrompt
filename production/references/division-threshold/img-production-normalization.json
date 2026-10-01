@@ -74,7 +74,8 @@
     "Resolve approved recipe-level drafts from production/drafts/manifest.json and distinguish them from merely generated or provisional images.",
     "Retrieve the actual image pixels for approved current-production references that materially establish immediate state; metadata, paths and descriptions are not substitutes for pixel inspection.",
     "Build a selective visual reference set that combines released canon when present, approved corrective/identity references, approved current production, and immediate continuity.",
-    "Stop before generation if a required visual reference is identifiable but its pixels cannot be brought into active multimodal context."
+    "Stop before generation if a required visual reference is identifiable but its pixels cannot be brought into active multimodal context.",
+    "When producing a Division Threshold cover, load production/references/division-threshold/cover-production-normalization.json. For Issue 2 or later covers, satisfy its Issue 1 cover pixel-read gate before generation."
   ],
   "perPageGate": [
     "Retrieve or assemble the exact current RexPrompt page recipe.",
@@ -86,5 +87,10 @@
     "Determine whether approved current-production artwork contains newer story state than the released or identity baseline.",
     "Confirm that all required production references described as inspected are actually present as pixels in active multimodal context.",
     "Generate only after recipe, visual references and immediate continuity are resolved; preserve exact dialogue ownership and the required final beat."
-  ]
+  ],
+  "coverProduction": {
+    "contract": "production/references/division-threshold/cover-production-normalization.json",
+    "recipeShelf": "data/shows/division-threshold-s1/covers.json",
+    "rule": "When the selected recipe ID ends in _COVER, apply the cover-production contract in addition to the normal Division Threshold visual-reference and pixel-read gates. Issue 1 bootstraps trade dress; later covers require actual approved Issue 1 cover pixel inspection at the scoped authority defined by the cover contract."
+  }
 }
