@@ -5,9 +5,10 @@
   "purpose": "Durable cover-production authority for Azure Reach. Cover recipes live in data/shows/azure-reach-s1/covers.json; this file governs scoped pixel-reference use for masthead and trade-dress continuity.",
   "authority": {
     "issueSpecificRecipe": "The assembled selected AZR_S1E##_COVER recipe controls the issue-specific selling image, cast, composition, spoiler ceiling, thumbnail read, palette emphasis and exact cover lettering.",
-    "tradeDressReference": "The released StarSplitterVisions Azure Reach Issue 1 cover controls masthead and trade-dress pixels for Issues 2-6.",
+    "tradeDressReference": "production/references/azure-reach/covers/issue-01-cover.jpg is an exact byte-for-byte copy of the released StarSplitterVisions Azure Reach Issue 1 cover and controls masthead/trade-dress pixels for Issues 2-6.",
     "characterIdentity": "Released StarSplitterVisions story art plus assembler-visible Azure Reach characters.json visual anchors control recurring character identity; clearly approved current-production artwork may extend post-release state.",
     "rules": [
+      "The local cover reference is an exact byte-for-byte copy of released StarSplitterVisions canon; its blob SHA matches the released source.",
       "Issue 1 is already released canon and is the trade-dress anchor; do not regenerate or replace it unless the user explicitly reopens the released cover.",
       "Before generating any Issue 2-6 cover, retrieve and visually inspect the actual Issue 1 cover pixels. A path, SHA, description, memory or metadata record is not a substitute for pixel readback.",
       "Use the Issue 1 cover reference only for masthead/trade dress: logo proportions, placement, issue-number treatment, title hierarchy, edge clearances, cyan/white/deep-navy brand rhythm and premium finish.",
@@ -22,10 +23,10 @@
     {
       "id": "azure-reach-issue-01-cover-trade-dress",
       "type": "released-cover-canon",
-      "repository": "starsplitterrecords/StarSplitterVisions",
+      "repository": "starsplitterrecords/RexPrompt",
       "branch": "main",
-      "repoPath": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
-      "runtimePath": "/images/covers/azure-reach-issue-01-cover.jpg",
+      "repoPath": "production/references/azure-reach/covers/issue-01-cover.jpg",
+      "runtimePath": "production/references/azure-reach/covers/issue-01-cover.jpg",
       "blobSha": "f9da0be9e6905f3b2039e095cc2ebaae7cb40f2d",
       "state": "released-canonical",
       "actualPixelsRequired": true,
@@ -45,7 +46,13 @@
         "issue-specific-visual-hook",
         "Issue-1-only-promotional-blurbs"
       ],
-      "use": "Mandatory pixel-read trade-dress reference for Azure Reach Issues 2-6."
+      "use": "Mandatory local pixel-read trade-dress reference for Azure Reach Issues 2-6. The stored bytes exactly match the released StarSplitterVisions Issue 1 cover.",
+      "sourceCanon": {
+        "repository": "starsplitterrecords/StarSplitterVisions",
+        "branch": "main",
+        "repoPath": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
+        "blobSha": "f9da0be9e6905f3b2039e095cc2ebaae7cb40f2d"
+      }
     }
   ],
   "coverRecipeSource": {
@@ -54,8 +61,8 @@
     "rule": "Use the exact assembled selected cover recipe. Raw metadata not emitted by the assembler is not generation instruction."
   },
   "generationOrder": [
-    "AZR_S1E01_COVER is released canon and serves as the trade-dress anchor; no regeneration required.",
-    "AZR_S1E02_COVER through AZR_S1E06_COVER each require actual pixel readback of the released Issue 1 cover for trade dress only.",
+    "AZR_S1E01_COVER is released canon and is persisted locally at production/references/azure-reach/covers/issue-01-cover.jpg; no regeneration required.",
+    "AZR_S1E02_COVER through AZR_S1E06_COVER each require actual pixel readback of that local Issue 1 cover reference for trade dress only.",
     "For each selected cover, resolve issue-specific character/world references separately from the trade-dress reference."
   ],
   "completionGate": [
