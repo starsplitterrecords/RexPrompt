@@ -44,3 +44,12 @@ Jia Morgan shares her Rex Fleet identity, handle and visual anchor. The closing 
 - P02–P25 are the original 24 story pages, preserved beat-for-beat and shifted only in production numbering and within-scene continuity references.
 - P26 is a full-page **NEXT COURSE** teaser for `Rex Fleet Academy: Navigating the Mirrorfold — The First Instrument`; it creates forward pressure without depicting that issue's plot or solution.
 - Editorial lettering is exact integrated typography and remains separate from in-world Academy narration.
+
+## Cover production
+- Chef-facing cover shelf: `covers.json`.
+- Current cover recipe: `RFA_BB_I01_COVER`.
+- Cover is registered separately in `data/shows.json` as a `COVER` production unit; the interior-page assembler path is unchanged.
+- Issue 1 is the founding trade-dress cover. Its assembled recipe controls the selling image and establishes the recurring Between the Beacons masthead/trade-dress system.
+- Before generating the founding cover, inspect the released Rex Fleet Issue 1 cover pixels as parent-family brand guidance only; do not copy its character montage or story composition.
+- After the founding cover is explicitly approved, persist its exact pixels at `production/references/rex-fleet-academy-between-beacons/assets/covers/issue-01-cover-trade-dress.png` and activate the cover normalization file.
+- Any later cover for this series must pixel-read that approved Issue 1 asset for masthead/trade-dress continuity while following its own issue-specific cover recipe for imagery.

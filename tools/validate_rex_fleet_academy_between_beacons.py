@@ -18,17 +18,35 @@ def main():
     shelves={n:load(SHOW_DIR/n) for n in SHELVES}
     pages=load(SHOW_DIR/"pages_i01.json")
     assert load(SHOW_DIR/"pages_base.json")==[]
-    entry=[s for s in shows if s.get("seriesId")=="rex-fleet-academy-between-beacons"]
-    assert len(entry)==1
-    entry=entry[0]
+    entries=[s for s in shows if s.get("seriesId")=="rex-fleet-academy-between-beacons"]
+    assert len(entries)==2
+    issue_entries=[s for s in entries if s.get("unitLabel")=="PAGE"]
+    cover_entries=[s for s in entries if s.get("unitLabel")=="COVER"]
+    assert len(issue_entries)==1 and len(cover_entries)==1
+    entry=issue_entries[0]
     assert entry["id"]=="rex-fleet-academy-between-beacons-i01"
     assert entry["basePath"]=="data/shows/rex-fleet-academy-between-beacons"
     assert entry["scenesFile"]=="pages_base.json"
     assert entry["sceneOverlays"]==[{"file":"pages_i01.json"}]
     assert entry["includeIdPattern"]=="^RFA_BB_I01_"
-    assert entry["unitLabel"]=="PAGE"
     assert "between the beacons" in entry["generationLine"].lower()
     assert "26-page" in entry["formatNote"]
+
+    cover_entry=cover_entries[0]
+    assert cover_entry["id"]=="rex-fleet-academy-between-beacons-cover-i01"
+    assert cover_entry["basePath"]=="data/shows/rex-fleet-academy-between-beacons"
+    assert cover_entry["scenesFiles"]==["covers.json"]
+    assert cover_entry["includeIdPattern"]=="^RFA_BB_I01_COVER$"
+    assert "cover" in cover_entry["generationLine"].lower()
+    covers=load(SHOW_DIR/"covers.json")
+    assert len(covers)==1
+    cover=covers[0]
+    assert cover.get("id")=="RFA_BB_I01_COVER"
+    assert cover.get("issue")==1 and cover.get("page")==1
+    assert cover.get("status")=="production-ready"
+    assert cover.get("summary") and cover.get("settingText")
+    assert isinstance(cover.get("panelPlan"),list) and cover["panelPlan"]
+    assert isinstance(cover.get("directionInline"),list) and cover["directionInline"]
 
     assert len(pages)==26
     assert [p["id"] for p in pages]==[f"RFA_BB_I01_P{n:02d}" for n in range(1,27)]
