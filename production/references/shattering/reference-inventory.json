@@ -76,6 +76,19 @@
         "lettering",
         "palette"
       ]
+    },
+    {
+      "id": "cover-trade-dress",
+      "status": "pending-approved-issue1-cover",
+      "subjects": [
+        "Shattering cover masthead",
+        "Rex Fleet Academy eyebrow",
+        "series-title hierarchy",
+        "issue-number treatment",
+        "recurring cover margins and trade-dress geometry"
+      ],
+      "recipeId": "SHAT_I01_COVER",
+      "targetAssetPath": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png"
     }
   ],
   "recoveryGroups": [
@@ -380,5 +393,13 @@
         }
       ]
     }
-  ]
+  ],
+  "coverProduction": {
+    "contract": "production/references/shattering/cover-production-normalization.json",
+    "recipeShelf": "data/shows/shattering/covers.json",
+    "foundingRecipe": "SHAT_I01_COVER",
+    "tradeDressAsset": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png",
+    "state": "issue-01-recipe-ready-approved-pixels-not-yet-created",
+    "rule": "Generate and approve SHAT_I01_COVER first. Persist the exact approved pixels at the tradeDressAsset path, activate the cover-production contract, and require actual pixel inspection of that asset before generating SHAT_I02_COVER through SHAT_I06_COVER."
+  }
 }
