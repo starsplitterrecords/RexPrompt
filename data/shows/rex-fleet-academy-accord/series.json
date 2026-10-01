@@ -28,8 +28,15 @@
   },
   "academyCurriculum": {
     "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "Course length intentionally unset during concept reset.",
-    "issueCountPolicy": "Build the historical movements after source reconciliation. The Shattered Accord is a culmination, not an arbitrary issue-count endpoint.",
+    "planStatus": "Concept reset. Rebuild as a one-off or very short limited course, maximum three issues; do not turn each historical movement into a separate issue.",
+    "issueCountPolicy": "Default 1; maximum expected 3. The Shattered Accord remains the culmination regardless of length.",
     "sourceTextProgram": "See academy_source_program.json. Oral history, treaty language, doctrine text, logs, orders, and testimony should be allowed to speak in a distinct documentary caption lane while the class interrogates provenance and consequence."
+  },
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total when rebuilt; default target 1 if the historical argument can breathe at that length",
+    "issue1EntryPoint": true,
+    "continuationRule": "The long historical source chain must be compressed by selecting the strongest movements, not by assigning each movement its own issue. Use two or three issues only if a one-off cannot preserve documentary clarity and dramatic perspective.",
+    "castScope": "The eventual history instructor/cohort belong to this course package and need not match other Academy courses.",
+    "imgScope": "Use a dedicated Accord/history IMG/reference project when visual production begins."
   }
 }
