@@ -40,6 +40,11 @@
       "manifest": "production/drafts/manifest.json",
       "requiredStatus": "approved-production-draft",
       "rule": "An image is not production authority until it is explicitly approved and stored against its exact recipe key."
+    },
+    "coverTradeDress": {
+      "contract": "production/references/vikings-2026/cover-production-normalization.json",
+      "primaryReleasedReference": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
+      "rule": "For a cover production unit, pixel-read the local exact-copy Issue 1 cover asset and apply it only as masthead/trade-dress authority. The assembled VIK_S1E##_COVER recipe controls the issue-specific image."
     }
   },
   "knownScopeLocks": [
@@ -91,7 +96,8 @@
     "Build a small working Visual Reference Set from relevant released story art plus approved newer production state.",
     "For each recurring character expected in the next page, include an actual established visual reference whenever one exists.",
     "Do not include cover, editorial, dossier, credits, promotional, labeled, or intake assets as story-page-language references.",
-    "Derive the production frontier; never resume from a remembered cursor."
+    "Derive the production frontier; never resume from a remembered cursor.",
+    "When producing a cover, also load production/references/vikings-2026/cover-production-normalization.json and satisfy its mandatory cover reference gate before generation."
   ],
   "perPageGate": [
     "Retrieve or assemble the exact current RexPrompt page recipe.",
@@ -102,7 +108,8 @@
     "Generate only after the reference set and immediate continuity are resolved.",
     "Run reader, recipe-fidelity, character-continuity, spatial/prop, visual-language, composition, and lettering checks.",
     "Repair the smallest failing unit and do not advance while the page is defective.",
-    "After explicit approval, store the page as the approved production draft for its exact recipe key before relying on it as durable current-production state."
+    "After explicit approval, store the page as the approved production draft for its exact recipe key before relying on it as durable current-production state.",
+    "For VIK_S1E##_COVER units, treat the cover-production normalization contract as additive to this gate; do not use interior story-page layout references as cover trade-dress authority."
   ],
   "frontierPolicy": {
     "mode": "derived-not-stored",
@@ -146,6 +153,13 @@
       "productionFrontier": "VIK_S1I02_P01"
     },
     "productionFrontier": "VIK_S1E02_P01",
-    "editorialBookends": "Issues 2–12 include production-ready opening editorial/title splashes and closing teaser/finale splashes. These are intentional issue collateral and are not story-page layout authority."
+    "editorialBookends": "Issues 2–12 include production-ready opening editorial/title splashes and closing teaser/finale splashes. These are intentional issue collateral and are not story-page layout authority.",
+    "coverProduction": {
+      "status": "recipe-ready",
+      "recipeFile": "data/shows/vikings-2026-s1/covers.json",
+      "registeredCoverUnits": 12,
+      "tradeDressReference": "production/references/vikings-2026/cover-production-normalization.json",
+      "releasedAnchor": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg"
+    }
   }
 }
