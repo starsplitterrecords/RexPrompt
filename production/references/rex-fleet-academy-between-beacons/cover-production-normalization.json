@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "seriesId": "rex-fleet-academy-between-beacons",
   "status": "bootstrap-required",
-  "purpose": "Cover-production contract for Rex Fleet Academy: Between the Beacons. Issue 1 establishes the approved masthead/trade-dress pixel reference for this series. Any later cover uses that exact approved image only for recurring cover-brand continuity while its own RexPrompt cover recipe controls issue-specific imagery.",
+  "purpose": "Cover-production contract for Rex Fleet Academy: Between the Beacons. Issue 1 establishes a repeatable Academy/topic cover identity built around transfer of knowledge through visually compelling science and engineering demonstrations, then becomes the approved masthead/trade-dress pixel reference for any later cover. Later issue recipes control their own subject and demonstration.",
   "recipeShelf": "data/shows/rex-fleet-academy-between-beacons/covers.json",
   "foundingCover": {
     "recipeId": "RFA_BB_I01_COVER",
@@ -45,17 +45,19 @@
     "conflictResolution": "If copying Issue 1 composition would conflict with a later issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
   },
   "coverRules": [
-    "One dominant selling idea per issue.",
+    "The primary selling idea is transfer of knowledge: make a difficult feature of the world visible through an Academy lecture demonstration, engineering experiment, simulation, field practicum, or comparable act of learning.",
+    "Prefer instructor/student interaction with active manipulation, observation, error, measurement, or realization over infrastructure-only spectacle.",
+    "One dominant scientific, engineering, cultural, historical, or institutional question per cover.",
     "No recap collage.",
-    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No generic cast lineup or professor-at-podium composition.",
+    "No textbook page, detached infographic, or wall of explanatory HUD text.",
     "No superhero posing.",
     "No generic cyberpunk neon.",
-    "No hard-wall or ocean-channel depiction of a corridor.",
-    "No legible environmental text or fake signage on covers.",
-    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "Scientific visualizations must preserve established fictional physics rather than defaulting to magical portals or decorative energy effects.",
+    "Only exact required cover lettering and explicitly permitted canonical notation may be rendered.",
     "The cover must remain legible and compelling at thumbnail size.",
     "Do not reveal the issue's decisive solution, late reversal, or final image.",
-    "Green public-route imagery must remain visually distinct from Fleet blue/gold/white authority."
+    "Use wider-world infrastructure as context or consequence when useful, but the Academy act of understanding is the visual/emotional center."
   ],
   "issueRecipes": [
     {
