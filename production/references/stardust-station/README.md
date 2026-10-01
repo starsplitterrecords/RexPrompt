@@ -24,3 +24,16 @@ Resolve the production frontier from durable state each time:
 For each selected page, use the exact assembled RexPrompt recipe plus the smallest relevant subset of `visual-reference-pack.json`, then add the immediately preceding approved production image when spatial or story state carries forward.
 
 The previous generated page must never be the sole character or visual authority.
+
+
+## Cover production
+
+Stardust Station cover generation uses two scoped authorities:
+
+- `data/shows/stardust-station/covers.json` contains the issue-specific cover recipes assembled for the chef through dedicated COVER show entries.
+- `assets/covers/issue-01-cover-trade-dress.jpg` is the local pixel-read copy of the released Issue 1 cover and controls cover trade dress only: masthead architecture, publisher bug, issue-number placement, issue-title treatment and recurring cover-brand geometry.
+- `cover-production-normalization.json` records the scope boundary between trade-dress authority and issue-specific recipe authority.
+
+Before every later cover generation, retrieve and inspect the actual pixels of `assets/covers/issue-01-cover-trade-dress.jpg`. Do not substitute the path, SHA, metadata, textual description or memory for pixel readback.
+
+The Issue 1 cover is not interior-page style authority and does not require later covers to repeat its ensemble composition. The assembled current cover recipe controls the later cover's selling image, staging, cast, environment, focal hierarchy, issue-specific accents and spoiler ceiling.
