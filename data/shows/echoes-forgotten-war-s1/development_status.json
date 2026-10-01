@@ -76,5 +76,14 @@
   },
   "dialogueRule": "dialogueInline is exact production dialogue. Preserve naturalism and character-specific rhetorical habits. Do not invent, paraphrase, omit, duplicate or reassign lines during image generation. Stage speech through the physical work scripted in panelPlan/directionInline rather than static debate poses.",
   "characterDevelopmentRule": "Rae's protection instinct must develop a failure mode before the finale: in Issues 6-7 caution becomes temporary control, she sees the harm, and only then earns the refusal of forced forgetting and forced restoration. Adrian's early function must vary among direct truth, practical help, concealment, error and genuine ignorance rather than repeated riddle-withholding.",
-  "socialWorldRule": "Present-day society must remain as specific as the ancient war: recurring work relationships, partners, jobs, shifts, archives, transit, family photos, civic forms, neighborhood groups, childcare, mutual aid and institutional consequences should recur where relevant. Prefer reusing Vark, Caelum, the Tyrellis transit worker/partner and the Neo-Vectra couple over inventing new supporting characters."
+  "socialWorldRule": "Present-day society must remain as specific as the ancient war: recurring work relationships, partners, jobs, shifts, archives, transit, family photos, civic forms, neighborhood groups, childcare, mutual aid and institutional consequences should recur where relevant. Prefer reusing Vark, Caelum, the Tyrellis transit worker/partner and the Neo-Vectra couple over inventing new supporting characters.",
+  "coverProduction": {
+    "status": "recipes-compiled; Issue 1 trade-dress reference pending generation and approval",
+    "recipeShelf": "data/shows/echoes-forgotten-war-s1/covers.json",
+    "showId": "echoes-forgotten-war-s1-covers",
+    "coverCount": 8,
+    "issue1Bootstrap": "EFW_S1E01_COVER establishes cover trade dress. After approval, persist exact pixels at production/references/echoes-forgotten-war/covers/issue-01-cover.jpg.",
+    "laterCoverRule": "Issues 2-8 require actual-pixel readback of the approved Issue 1 cover for masthead/trade-dress continuity only. Issue-specific visual concept remains controlled by the assembled selected cover recipe.",
+    "referencePolicy": "production/references/echoes-forgotten-war/cover-production-normalization.json"
+  }
 }
