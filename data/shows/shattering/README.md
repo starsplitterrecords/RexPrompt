@@ -151,7 +151,7 @@ The current page package preserves the original 22-page story sequence in each i
 
 ## Cover production
 
-Shattering has six chef-facing cover recipes in `covers.json`, registered as separate `COVER` units in `data/shows.json`. They use the same assembler-visible fields as story pages, so no assembler change is required.
+Shattering has six chef-facing cover recipes in `covers.json`, registered through the `shattering-covers` `COVER` shelf in `data/shows.json`. They use the same assembler-visible fields as story pages, so no assembler change is required.
 
 The Issue 1 cover is the founding trade-dress cover. Its assembled recipe controls the Issue 1 selling image and establishes a repeatable `REX FLEET ACADEMY / SHATTERING OF THE CORRIDORS / ISSUE ##` masthead architecture. After the Issue 1 cover is explicitly approved, persist the exact approved pixels to `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png` and activate the cover contract.
 
