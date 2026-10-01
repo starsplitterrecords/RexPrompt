@@ -72,6 +72,21 @@
     "generationLine": "Finished full-color portrait interior comic page for Shattering of the Corridors. Prestige political science-fiction origin story with human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve established character identity, corridor technology, causal action, and exact scripted dialogue. Shattering predates the mature Rex Fleet political order: Issues 1–4 use High Era Cooperative, BHA, Convoy, and Outer Band design; Issues 5–6 may visibly foreshadow later Core/Fleet, Verge, and Shard traditions without copying their mature uniforms or institutions wholesale. The shared safety sigil is a common ancestor later interpreted differently, not three unrelated symbols. Use approved Shattering visual references when available and preserve released Rex Fleet continuity only where chronologically applicable. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details."
   },
   {
+    "id": "shattering-covers",
+    "name": "Shattering — Covers",
+    "seriesId": "shattering",
+    "seriesName": "Shattering",
+    "issueLabel": "Cover Shelf",
+    "basePath": "data",
+    "scenesFiles": [
+      "shows/shattering/covers.json"
+    ],
+    "includeIdPattern": "^SHAT_I0[1-6]_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait prestige political science-fiction comic COVER for Rex Fleet Academy: Shattering of the Corridors. One dominant issue-specific selling image, not an interior page, recap collage, faction lineup, or generic space poster. Preserve Shattering chronology, established character/world identity, High Era corridor technology, clean focal hierarchy, strong thumbnail readability, integrated professional trade dress, and the distinction between early Cooperative/BHA/Convoy/Outer Band design and later post-Shattering traditions. No mature Fleet/Verge/Shard/Crown design imported backward, no superhero posing, no invented promotional copy, and no legible environmental text beyond the exact supplied cover trade dress. Preserve exact supplied DISPLAY lettering. Fictional production.",
+    "formatNote": "Cover-production shelf. Generate SHAT_I01_COVER first. After explicit approval, persist its exact pixels at production/references/shattering/assets/covers/issue-01-cover-trade-dress.png and activate the cover-production contract. SHAT_I02_COVER through SHAT_I06_COVER require actual pixel readback of that approved Issue 1 cover for masthead/trade-dress continuity only."
+  },
+  {
     "id": "rex-fleet-academy-anomalies-i01",
     "name": "Rex Fleet Academy: Anomalies of Broken Space — Issue 1 — What Is Broken Space?",
     "seriesId": "rex-fleet-academy-anomalies",
@@ -2526,5 +2541,145 @@
     "unitLabel": "COVER",
     "generationLine": "One finished full-color portrait comic cover for Azure Reach. This is cover art, not an interior story page. Sell the selected issue through one dominant spoiler-safe visual idea with immediate thumbnail readability, strong focal hierarchy, luminous premium marine-park rendering, natural character acting and exact integrated trade dress from the supplied DISPLAY lettering. Animals remain safe, natural and never the joke. No recap collage, no generic ensemble lineup unless explicitly required, no fake action unrelated to the issue, no unscripted promotional text, no environmental text unless explicitly supplied, no muddy aquarium darkness, and no cover elements borrowed from later unrevealed payoffs. Preserve exact supplied lettering.",
     "formatNote": "Cover-production shelf. The released Azure Reach Issue 1 cover in StarSplitterVisions is the existing trade-dress anchor. Before generating Issues 2-6, retrieve and visually inspect its actual pixels; use it for masthead/trade dress only. The selected AZR_S1E##_COVER recipe controls the issue-specific illustration and spoiler ceiling."
+  },
+  {
+    "id": "stardust-station-cover-e01",
+    "name": "Stardust Station — Issue 1 Cover — Mandatory Proximity",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 1 Cover — Mandatory Proximity",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E01_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e02",
+    "name": "Stardust Station — Issue 2 Cover",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 2 Cover",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E02_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e03",
+    "name": "Stardust Station — Issue 3 Cover",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 3 Cover",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E03_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e04",
+    "name": "Stardust Station — Issue 4 Cover — Temporary Material",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 4 Cover — Temporary Material",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E04_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e05",
+    "name": "Stardust Station — Issue 5 Cover — Resource Efficiency Review",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 5 Cover — Resource Efficiency Review",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E05_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e06",
+    "name": "Stardust Station — Issue 6 Cover — Wellness Week",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 6 Cover — Wellness Week",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E06_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e07",
+    "name": "Stardust Station — Issue 7 Cover — Bring Your Feelings to Work Day",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 7 Cover — Bring Your Feelings to Work Day",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E07_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e08",
+    "name": "Stardust Station — Issue 8 Cover — The Corporate Visit",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 8 Cover — The Corporate Visit",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E08_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e09",
+    "name": "Stardust Station — Issue 9 Cover — Output Target",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 9 Cover — Output Target",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E09_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
+  },
+  {
+    "id": "stardust-station-cover-e10",
+    "name": "Stardust Station — Issue 10 Cover — The Station Stays Open",
+    "seriesId": "stardust-station",
+    "seriesName": "Stardust Station",
+    "issueLabel": "Issue 10 Cover — The Station Stays Open",
+    "basePath": "data/shows/stardust-station",
+    "scenesFiles": [
+      "covers.json"
+    ],
+    "includeIdPattern": "^SDS_S1E10_COVER$",
+    "unitLabel": "COVER",
+    "generationLine": "Finished full-color portrait comic COVER for Stardust Station. One dominant issue-specific selling image, not an interior page and not a recap collage. Preserve established character/world identity, bright polished StarTrust workplace science fiction, clean focal hierarchy, strong thumbnail readability, professional integrated trade dress, dry human workplace comedy, and the released Issue 1 cover's masthead/brand language through the required pixel-read reference. No generic ensemble lineup unless explicitly directed, no fake action spectacle, no grimdark or generic cyberpunk neon, no invented promotional copy, and no legible environmental text beyond the exact required cover lettering. Fictional production."
   }
 ]
