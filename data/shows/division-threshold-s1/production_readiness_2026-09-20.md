@@ -105,3 +105,16 @@ Next visual work should:
 Do not publish Division Threshold Issue 1 yet.
 
 Release is appropriate only after the revised 22-page visual issue and cover are approved, assembled, and verified through the release workflow.
+
+
+## 2026-09-30 character / materiality production pass
+
+Division Threshold now carries a locked character-first production doctrine: **the social commentary is the subject matter; the people are the story**. Civic systems, policy and infrastructure must be staged as pressure on a person's body, desire, self-conception or relationship rather than becoming the dramatic protagonist.
+
+All 204 canonical story pages now include assembler-visible material/performance direction in their `panelPlan` data. Organics must read as living grown bodies with tactile dermis, humidity/moisture where physically appropriate, soft/hard tissue transitions, abrasion and repair residue; Augments remain human flesh around installed technology; Intelligences retain machine-native material weight and wear; Baselines remain physically embodied rather than visually neutral.
+
+Selected abstraction-heavy scenes were rewritten to restore character ownership, especially John's Concourse/containment turn, Ostra's personhood compromise, Kellen/Axiom's threshold-program discovery, Organic political fracture, and the finale governance negotiation.
+
+Cover recipes for Issues 1–8 were re-art-directed around character fascination and embodied identity. The Issue 1 approved cover remains the planned scoped trade-dress pixel anchor for later covers.
+
+A separate `editorial_pages.json` shelf now contains 16 character-first intro/teaser units. These are intentionally outside the canonical 204-story-page shelf so story IDs and continuity remain stable; final issue assembly places each INTRO before P01 and each TEASER after the final story page.

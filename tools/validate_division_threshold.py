@@ -93,13 +93,13 @@ def main():
         "DT_E001_P13": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
         "DT_E001_P14": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
         "DT_E001_P15": ("DT_OrganicSafehouse", "DT_OrganicDistricts"),
-        "DT_E001_P16": ("DT_AugmentClinic", "DT_Stack"),
+        "DT_E001_P16": ("DT_CivicUtilityWorksite", "DT_CivicServiceLevels"),
         "DT_E001_P17": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
-        "DT_E001_P18": ("DT_DataCore", "DT_GovernanceUpperLevels"),
+        "DT_E001_P18": ("DT_Checkpoint9", "DT_Stack"),
         "DT_E001_P19": ("DT_VerticalTransitInterchange", "DT_Stack"),
         "DT_E001_P20": ("DT_AugmentClinic", "DT_Stack"),
         "DT_E001_P21": ("DT_OversightOffice", "DT_GovernanceUpperLevels"),
-        "DT_E001_P22": ("DT_DataCore", "DT_GovernanceUpperLevels"),
+        "DT_E001_P22": ("DT_Concourse17", "DT_Stack"),
     }
     for pid, (setting, region) in expected_issue1_locations.items():
         page = by_id[pid]
