@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "azure-reach",
+  "status": "released-issue-01-trade-dress-anchor",
+  "purpose": "Durable cover-production authority for Azure Reach. Cover recipes live in data/shows/azure-reach-s1/covers.json; this file governs scoped pixel-reference use for masthead and trade-dress continuity.",
+  "authority": {
+    "issueSpecificRecipe": "The assembled selected AZR_S1E##_COVER recipe controls the issue-specific selling image, cast, composition, spoiler ceiling, thumbnail read, palette emphasis and exact cover lettering.",
+    "tradeDressReference": "The released StarSplitterVisions Azure Reach Issue 1 cover controls masthead and trade-dress pixels for Issues 2-6.",
+    "characterIdentity": "Released StarSplitterVisions story art plus assembler-visible Azure Reach characters.json visual anchors control recurring character identity; clearly approved current-production artwork may extend post-release state.",
+    "rules": [
+      "Issue 1 is already released canon and is the trade-dress anchor; do not regenerate or replace it unless the user explicitly reopens the released cover.",
+      "Before generating any Issue 2-6 cover, retrieve and visually inspect the actual Issue 1 cover pixels. A path, SHA, description, memory or metadata record is not a substitute for pixel readback.",
+      "Use the Issue 1 cover reference only for masthead/trade dress: logo proportions, placement, issue-number treatment, title hierarchy, edge clearances, cyan/white/deep-navy brand rhythm and premium finish.",
+      "Do not use the Issue 1 cover as composition authority for later covers.",
+      "Do not carry Issue 1 promotional blurbs into later covers unless an issue recipe explicitly supplies them.",
+      "Each later cover must remain compositionally distinct and follow its own assembled recipe.",
+      "Character identity references do not control cover layout or promotional typography.",
+      "No generated cover becomes durable production authority until it passes thumbnail/readability, recipe fidelity, visual continuity, lettering and explicit user approval."
+    ]
+  },
+  "references": [
+    {
+      "id": "azure-reach-issue-01-cover-trade-dress",
+      "type": "released-cover-canon",
+      "repository": "starsplitterrecords/StarSplitterVisions",
+      "branch": "main",
+      "repoPath": "sites/visions/public/images/covers/azure-reach-issue-01-cover.jpg",
+      "runtimePath": "/images/covers/azure-reach-issue-01-cover.jpg",
+      "blobSha": "f9da0be9e6905f3b2039e095cc2ebaae7cb40f2d",
+      "state": "released-canonical",
+      "actualPixelsRequired": true,
+      "scope": [
+        "cover-trade-dress",
+        "masthead",
+        "publisher-mark-placement",
+        "issue-number-system",
+        "cover-brand-rhythm",
+        "premium-finish"
+      ],
+      "excludedScope": [
+        "later-issue-composition",
+        "later-issue-cast-selection",
+        "story-page-layout",
+        "interior-lettering",
+        "issue-specific-visual-hook",
+        "Issue-1-only-promotional-blurbs"
+      ],
+      "use": "Mandatory pixel-read trade-dress reference for Azure Reach Issues 2-6."
+    }
+  ],
+  "coverRecipeSource": {
+    "shelfShowId": "azure-reach-s1-covers",
+    "path": "data/shows/azure-reach-s1/covers.json",
+    "rule": "Use the exact assembled selected cover recipe. Raw metadata not emitted by the assembler is not generation instruction."
+  },
+  "generationOrder": [
+    "AZR_S1E01_COVER is released canon and serves as the trade-dress anchor; no regeneration required.",
+    "AZR_S1E02_COVER through AZR_S1E06_COVER each require actual pixel readback of the released Issue 1 cover for trade dress only.",
+    "For each selected cover, resolve issue-specific character/world references separately from the trade-dress reference."
+  ],
+  "completionGate": [
+    "Correct selected assembled cover recipe.",
+    "Correct recurring character and location references.",
+    "For Issues 2-6, actual released Issue 1 cover pixels inspected in active multimodal context.",
+    "One-second dominant hook reads at thumbnail size.",
+    "Masthead and issue-number treatment are exact, legible and consistent with released Issue 1.",
+    "No spoiler beyond the selected recipe's spoiler ceiling.",
+    "Animals remain safe, natural and not the joke.",
+    "No invented promotional, environmental or social-media text.",
+    "No generic cast lineup or recap collage unless explicitly required by the selected recipe.",
+    "User approval before any generated cover is promoted to durable production authority."
+  ]
+}
