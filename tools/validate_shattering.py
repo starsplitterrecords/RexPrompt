@@ -186,7 +186,7 @@ def main():
 
         display = cover.get("dialogueInline")
         assert isinstance(display, list) and len(display) == 3, f"{cid}: expected exactly 3 cover DISPLAY lines"
-        expected_display = ["REX FLEET ACADEMY", "SHATTERING OF THE CORRIDORS", f"ISSUE {issue:02d}"]
+        expected_display = ["STAR SPLITTER VISIONS", "SHATTERING OF THE CORRIDORS", f"ISSUE {issue:02d}"]
         assert [line.get("speaker") for line in display] == ["DISPLAY"] * 3, f"{cid}: cover lettering must use DISPLAY"
         assert [line.get("text") for line in display] == expected_display, f"{cid}: exact cover lettering mismatch"
 
