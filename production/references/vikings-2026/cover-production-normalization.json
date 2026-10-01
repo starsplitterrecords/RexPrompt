@@ -29,7 +29,8 @@
     "issueStrapline": "Narrow all-caps line beneath the wordmark, bracketed by thin horizontal rules. For later issues this line carries the issue title.",
     "colorLogic": "Restrained dark navy/black typography and rules on white masthead; the illustration carries the issue-specific color.",
     "letteringRule": "Keep the publication architecture stable while changing only issue number and issue strapline. Do not add blurbs, slogans, price bursts, fake barcodes, variant labels, creator credits, or other unscripted promotional copy.",
-    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity."
+    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity.",
+    "publicationCharacter": "Deliberately resembles a boring municipal/public-information publication rather than conventional flashy comic-book branding. Preserve the deadpan civic-document feel; the illustration below provides the visual excitement."
   },
   "coverRecipeSource": {
     "file": "data/shows/vikings-2026-s1/covers.json",
@@ -56,7 +57,9 @@
     "Tone test: grounded documentary-comedy dignity; humor comes from incompatible systems and ordinary New York indifference rather than caricature.",
     "Composition test: no recap collage, floating-head montage, generic cast lineup, or fake action spectacle unless an exact cover recipe explicitly requires it.",
     "Lettering test: exact series wordmark, year/issue number, and issue strapline only; no invented promotional text.",
-    "Reference test: recurring characters and world elements match actual established pixels rather than prose reconstruction."
+    "Reference test: recurring characters and world elements match actual established pixels rather than prose reconstruction.",
+    "Municipal-shell test: the masthead still feels like a dry civic/public-information publication rather than entertainment marketing.",
+    "New-York-reaction test: when ordinary New Yorkers are present, their behavior remains routine-driven and proportionate; no default gawking crowd or broad reaction comedy."
   ],
   "issueLettering": [
     {
@@ -130,5 +133,15 @@
       "storyPageLayoutAuthority": false,
       "issueSpecificCompositionAuthority": false
     }
+  ],
+  "coverLineDoctrine": [
+    "The masthead/trade dress is intentionally dull, civic and bureaucratic: a City-of-New-York-style public-information publication shell. Do not commercialize or glamorize the top band.",
+    "The cover illustration beneath that municipal shell is the sales engine: specific, cinematic, human, issue-distinct and immediately enticing.",
+    "When Vikings are visibly out of place in ordinary New York, surrounding New Yorkers should usually remain routine-driven and minimally reactive. The city keeps functioning; the displaced Norse characters take the unfamiliar system seriously.",
+    "Humor comes from the mismatch between extraordinary displacement, ordinary municipal/public systems, and New York's practiced indifference—not from caricaturing the Vikings or staging broad crowd reaction.",
+    "Every cover sells one dominant issue-specific contradiction, desire or pressure rather than summarizing the issue.",
+    "Covers must remain legible at thumbnail size through a simple dominant silhouette/shape system and disciplined focal hierarchy.",
+    "Spoiler-safe does not mean generic: advertise the loaded problem or desire, but do not visualize the issue's solution, reversal, ruling, or final payoff.",
+    "No recap collage, floating-head montage, generic cast lineup, superhero posing, fantasy-Norse ornament, fake spectacle, invented blurbs, or promotional clutter."
   ]
 }
