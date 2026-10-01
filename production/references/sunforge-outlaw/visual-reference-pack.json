@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "sunforge-outlaw",
+  "status": "active",
+  "purpose": "Curated cover-trade-dress authority for Sunforge Outlaw image production. The approved/public-preview Issue 1 cover anchors masthead and recurring cover brand language; issue-specific RexPrompt cover recipes control each later cover's actual selling image.",
+  "authority": {
+    "releasedOrPublicVisualSource": "starsplitterrecords/StarSplitterVisions",
+    "coverRecipes": "starsplitterrecords/RexPrompt",
+    "rules": [
+      "Before generating any Sunforge Outlaw cover, retrieve and visually inspect the actual Issue 1 cover pixels. A path, filename, SHA, summary or remembered description is not a substitute for pixel readback.",
+      "Issue 1 cover controls masthead, logo/trade-dress architecture, typography character, issue-number rhythm, border/edge behavior, and recurring cover-brand language.",
+      "Issue 1 cover does not control later issue scene composition, cast arrangement, focal object, setting, or symbolic logic. Those come from the active assembled RexPrompt cover recipe.",
+      "Interior pages and editorial splashes are not cover trade-dress authority.",
+      "Do not allow cover-to-cover drift by using only the immediately preceding generated cover. Re-anchor to the Issue 1 trade-dress reference for every cover."
+    ]
+  },
+  "references": [
+    {
+      "id": "issue-01-cover-trade-dress",
+      "type": "approved-public-preview-reference",
+      "repository": "starsplitterrecords/StarSplitterVisions",
+      "repositoryPath": "sites/visions/public/images/covers/sunforge-outlaw-issue-01.png",
+      "runtimeImage": "/images/covers/sunforge-outlaw-issue-01.png",
+      "scope": [
+        "cover-trade-dress",
+        "masthead",
+        "logo-treatment",
+        "typography-character",
+        "issue-number-system",
+        "cover-brand-language"
+      ],
+      "use": "Mandatory pixel-read reference before every Sunforge Outlaw cover generation. Use for recurring cover identity only; do not force later covers to repeat Issue 1 composition.",
+      "notFor": [
+        "interior-page-layout",
+        "editorial-page-layout",
+        "later-cover-scene-composition",
+        "later-cover-cast-staging",
+        "story continuity outside cover branding"
+      ]
+    }
+  ],
+  "coverReferenceOrder": [
+    "issue-01-cover-trade-dress"
+  ],
+  "sessionStartGate": [
+    "Assemble the exact active cover recipe from RexPrompt.",
+    "Retrieve and pixel-read issue-01-cover-trade-dress.",
+    "Retrieve any needed character/environment references required by the assembled recipe.",
+    "Use Issue 1 cover for trade dress; use the current recipe for the issue-specific selling image.",
+    "Generate only after the visual reference set is actually present in active multimodal context."
+  ],
+  "coverAudit": [
+    "Does the cover read at thumbnail size?",
+    "Is there one dominant selling idea?",
+    "Does the trade dress visibly belong to the Issue 1 line?",
+    "Is the issue-specific composition distinct from other covers?",
+    "Does the cover entice without revealing a later payoff?",
+    "Are recurring characters on-model against their proper visual authorities?",
+    "Is all environmental/promotional text absent unless explicitly required by approved trade dress?"
+  ]
+}
