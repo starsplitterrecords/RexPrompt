@@ -92,3 +92,32 @@ The previous generated page is never the sole visual authority.
 Approved sequential pages belong in `production/drafts/manifest.json` under their exact `<seriesId>::<issueId>::<recipeId>` key. Failed or merely generated attempts do not advance production.
 
 Do not store a cursor. The production frontier is always derived from released canon + approved current-production drafts + ordered RexPrompt recipes.
+
+## Cover production
+
+Low Tide Signal now has dedicated chef-facing cover recipes in `data/shows/low-tide-signal/covers.json`:
+
+- `LTS_C01_COVER` — The Flats
+- `LTS_C02_COVER` — The Dead Mall
+- `LTS_C03_COVER` — No Signal
+- `LTS_C04_COVER` — Between Runs
+- `LTS_C05_COVER` — Return Tide
+- `LTS_C06_COVER` — After the Water
+- `LTS_C07_COVER` — The Last Low Tide
+
+Each is registered as a separate cover production unit in `data/shows.json`. The existing assembler is unchanged; the cover recipes use assembler-visible summary, setting/region, character, panel-plan, dialogue and direction fields.
+
+### Cover trade-dress pixel authority
+
+For every Low Tide Signal cover, retrieve and inspect the actual pixels of the published Issue 1 preview cover:
+
+- repository: `starsplitterrecords/StarSplitterVisions`
+- branch: `main`
+- path: `sites/visions/public/images/covers/low-tide-signal-issue-01-cover.png`
+
+This asset is now authoritative **only** for cover masthead/logotype, title hierarchy, issue/chapter label behavior, recurring brand marks and cover-line trade dress.
+
+It remains explicitly **non-authoritative** for recurring-character identity, interior page layout, interior lettering, story geography, or issue-specific cover composition. The active `LTS_CNN_COVER` recipe controls the selling image for that chapter. Preview-cover figures must never be substituted for approved character identity references.
+
+The full cover authority and generation gate is recorded in `production/references/low-tide-signal/cover-production-normalization.json`.
+
