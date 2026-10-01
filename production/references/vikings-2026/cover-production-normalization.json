@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "vikings-2026",
+  "status": "cover-production-reference",
+  "purpose": "Durable chef-facing cover-production contract for Vikings 2026. It separates issue-specific cover composition from series-wide trade-dress authority and requires actual pixel inspection of the released Issue 1 cover before later-cover generation.",
+  "authority": {
+    "issueRecipe": "The exact assembled VIK_S1E##_COVER RexPrompt recipe controls the issue-specific selling image, cast, environment, composition, spoiler ceiling, and exact issue lettering.",
+    "tradeDress": "The released Vikings 2026 Issue 1 cover in StarSplitterVisions controls masthead architecture, publisher badge, VIKINGS 2026! wordmark treatment, year/issue box, horizontal-rule language, issue-strapline placement, top-band proportions, and restrained dark-on-white publication design.",
+    "characterWorld": "Released StarSplitterVisions pages plus approved current-production references control established character identity, costumes, locations, props, rendering language, and later story state.",
+    "scopeRule": "Trade-dress authority does not authorize copying the Issue 1 scene composition into later covers. Later cover images are controlled by their own assembled cover recipes."
+  },
+  "canonicalTradeDressReference": {
+    "repository": "starsplitterrecords/StarSplitterVisions",
+    "branch": "main",
+    "path": "sites/visions/public/images/covers/vikings-2026-issue-01.jpg",
+    "runtimePath": "/images/covers/vikings-2026-issue-01.jpg",
+    "blobSha": "748a2d70924a773b995cafd8a78b8aab69f108d6",
+    "sourceStatus": "released-canon",
+    "requiredUse": "pixel-read before every Vikings cover generation",
+    "pixelReadRule": "Retrieve and inspect the actual image pixels. Repository path, SHA, metadata, prose description, memory, or a previously viewed version is not a substitute for current pixel inspection."
+  },
+  "observedTradeDress": {
+    "mastheadField": "Large white horizontal field occupying the upper portion of the portrait cover, visually separated from the illustration by dark horizontal rules.",
+    "publisherBadge": "Boxed Star Splitter / VISIONS mark at upper left with star device; year and issue number are contained in the lower portion of the same vertical badge.",
+    "seriesWordmark": "Huge dark condensed all-caps VIKINGS 2026! wordmark spanning the masthead to the right of the publisher badge.",
+    "issueStrapline": "Narrow all-caps line beneath the wordmark, bracketed by thin horizontal rules. For later issues this line carries the issue title.",
+    "colorLogic": "Restrained dark navy/black typography and rules on white masthead; the illustration carries the issue-specific color.",
+    "letteringRule": "Keep the publication architecture stable while changing only issue number and issue strapline. Do not add blurbs, slogans, price bursts, fake barcodes, variant labels, creator credits, or other unscripted promotional copy.",
+    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity."
+  },
+  "coverRecipeSource": {
+    "file": "data/shows/vikings-2026-s1/covers.json",
+    "showSeriesId": "vikings-2026-covers",
+    "recipePattern": "VIK_S1E##_COVER",
+    "showRegistration": "data/shows.json",
+    "rule": "Use the assembled cover recipe, not raw metadata alone. The chef must receive the exact assembled recipe and then resolve pixel references before generation."
+  },
+  "mandatoryReferenceGate": [
+    "Resolve the requested Vikings cover show and assemble the exact VIK_S1E##_COVER recipe.",
+    "Retrieve and visually inspect the actual pixels of the canonical released Issue 1 cover from StarSplitterVisions.",
+    "Use those pixels only for trade dress, masthead, publication typography architecture, border/rule language, and cover-brand continuity.",
+    "Resolve actual released or approved pixels for every recurring character or established location materially present on the cover.",
+    "Use the current cover recipe for the issue-specific hook, cast, composition, environment, spoiler ceiling, and exact issue text.",
+    "Confirm the proposed illustration is one dominant selling image and remains legible at thumbnail size.",
+    "Generate only after all applicable visual references are present as pixels in active multimodal context."
+  ],
+  "coverQualityGate": [
+    "One-second read: the dominant issue hook is legible immediately.",
+    "Thumbnail test: focal silhouette, major shape system, and masthead remain clear when reduced.",
+    "Series test: masthead/trade dress unmistakably belongs to Vikings 2026.",
+    "Issue test: the image could not be casually reassigned to a different issue.",
+    "Spoiler test: cover promises pressure without revealing the issue's solution, reversal, ruling, or final payoff.",
+    "Tone test: grounded documentary-comedy dignity; humor comes from incompatible systems and ordinary New York indifference rather than caricature.",
+    "Composition test: no recap collage, floating-head montage, generic cast lineup, or fake action spectacle unless an exact cover recipe explicitly requires it.",
+    "Lettering test: exact series wordmark, year/issue number, and issue strapline only; no invented promotional text.",
+    "Reference test: recurring characters and world elements match actual established pixels rather than prose reconstruction."
+  ],
+  "issueLettering": [
+    {
+      "issue": 1,
+      "numberText": "2026 Issue #1",
+      "strapline": "AT THE MUNICIPAL TEMPORAL DISPLACEMENT INTEGRATION DEPARTMENT",
+      "status": "released-canon"
+    },
+    {
+      "issue": 2,
+      "numberText": "2026 Issue #2",
+      "strapline": "LANDFALL BUSHWICK"
+    },
+    {
+      "issue": 3,
+      "numberText": "2026 Issue #3",
+      "strapline": "TERRITORY"
+    },
+    {
+      "issue": 4,
+      "numberText": "2026 Issue #4",
+      "strapline": "THE IRON WORM"
+    },
+    {
+      "issue": 5,
+      "numberText": "2026 Issue #5",
+      "strapline": "THE NEIGHBORHOOD"
+    },
+    {
+      "issue": 6,
+      "numberText": "2026 Issue #6",
+      "strapline": "THE TALLY OF DISHONOR"
+    },
+    {
+      "issue": 7,
+      "numberText": "2026 Issue #7",
+      "strapline": "THE SKALDIC INTERFACE"
+    },
+    {
+      "issue": 8,
+      "numberText": "2026 Issue #8",
+      "strapline": "PROVISION"
+    },
+    {
+      "issue": 9,
+      "numberText": "2026 Issue #9",
+      "strapline": "TRIAL OF TOIL"
+    },
+    {
+      "issue": 10,
+      "numberText": "2026 Issue #10",
+      "strapline": "BELONGING"
+    },
+    {
+      "issue": 11,
+      "numberText": "2026 Issue #11",
+      "strapline": "WAR COUNCIL"
+    },
+    {
+      "issue": 12,
+      "numberText": "2026 Issue #12",
+      "strapline": "PERMANENT RESIDENCY / TRIAL BY COMBAT"
+    }
+  ]
+}
