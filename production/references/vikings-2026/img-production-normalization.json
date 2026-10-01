@@ -43,8 +43,8 @@
     },
     "coverTradeDress": {
       "contract": "production/references/vikings-2026/cover-production-normalization.json",
-      "primaryReleasedReference": "StarSplitterVisions sites/visions/public/images/covers/vikings-2026-issue-01.jpg",
-      "rule": "For a cover production unit, pixel-read the released Issue 1 cover and apply it only as masthead/trade-dress authority. The assembled VIK_S1E##_COVER recipe controls the issue-specific image."
+      "primaryReleasedReference": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
+      "rule": "For a cover production unit, pixel-read the local exact-copy Issue 1 cover asset and apply it only as masthead/trade-dress authority. The assembled VIK_S1E##_COVER recipe controls the issue-specific image."
     }
   },
   "knownScopeLocks": [
@@ -159,7 +159,7 @@
       "recipeFile": "data/shows/vikings-2026-s1/covers.json",
       "registeredCoverUnits": 12,
       "tradeDressReference": "production/references/vikings-2026/cover-production-normalization.json",
-      "releasedAnchor": "StarSplitterVisions /images/covers/vikings-2026-issue-01.jpg"
+      "releasedAnchor": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg"
     }
   }
 }
