@@ -29,7 +29,9 @@
     "issueStrapline": "Narrow all-caps line beneath the wordmark, bracketed by thin horizontal rules. For later issues this line carries the issue title.",
     "colorLogic": "Restrained dark navy/black typography and rules on white masthead; the illustration carries the issue-specific color.",
     "letteringRule": "Keep the publication architecture stable while changing only issue number and issue strapline. Do not add blurbs, slogans, price bursts, fake barcodes, variant labels, creator credits, or other unscripted promotional copy.",
-    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity."
+    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity.",
+    "designIntent": "Deliberately bland municipal-publication shell. The masthead should read like an earnest City of New York agency bulletin or public-information document that has accidentally become the cover of an extraordinary comic. The bureaucratic top band must not compete with the illustration; its visual dullness is part of the series identity.",
+    "commercialContrast": "The trade dress supplies deadpan institutional normalcy; the painted image beneath it supplies desire, drama, human specificity and commercial appeal. Do not make the masthead cooler to make the cover more sellable."
   },
   "coverRecipeSource": {
     "file": "data/shows/vikings-2026-s1/covers.json",
@@ -50,6 +52,8 @@
   "coverQualityGate": [
     "One-second read: the dominant issue hook is legible immediately.",
     "Thumbnail test: focal silhouette, major shape system, and masthead remain clear when reduced.",
+    "Municipal masthead test: the upper band reads as a boring official public-agency publication, not a flashy comic logo treatment; no Norse/fantasy/commercial embellishment has leaked into the trade dress.",
+    "New York indifference test: on public covers, surrounding New Yorkers continue ordinary tasks without gawking, pointing, photographing or turning the displaced Norse characters into a spectacle; on private covers, do not invent spectators merely to satisfy this rule.",
     "Series test: masthead/trade dress unmistakably belongs to Vikings 2026.",
     "Issue test: the image could not be casually reassigned to a different issue.",
     "Spoiler test: cover promises pressure without revealing the issue's solution, reversal, ruling, or final payoff.",
@@ -130,5 +134,15 @@
       "storyPageLayoutAuthority": false,
       "issueSpecificCompositionAuthority": false
     }
+  ],
+  "coverLineDoctrine": [
+    "Every cover sells one dominant issue-specific contradiction or desire rather than summarizing the issue.",
+    "The masthead remains deliberately municipal, official, rigid and visually boring; the image beneath it is the sales engine.",
+    "The Norse characters remain visibly ninth-century and therefore materially out of place inside modern New York. Do not solve the contrast by visually modernizing them.",
+    "When a cover occurs in public, ordinary New Yorkers generally continue their own tasks rather than stopping to stare. Background indifference is a recurring New York worldbuilding language, not a one-off gag.",
+    "The public should not point, laugh, photograph, surround, recoil from, or perform astonishment at the Vikings unless a specific story beat explicitly requires such behavior.",
+    "New York indifference remains subordinate to the issue hook: use a few legible routine behaviors, not a crowd-comedy tableau.",
+    "Private-space covers may express the same theme through the city or institution continuing without needing the Vikings rather than by inventing bystanders.",
+    "Covers must remain spoiler-safe, issue-specific and legible at thumbnail size."
   ]
 }
