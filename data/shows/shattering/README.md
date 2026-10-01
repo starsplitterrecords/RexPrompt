@@ -153,8 +153,14 @@ The current page package preserves the original 22-page story sequence in each i
 
 Shattering has six chef-facing cover recipes in `covers.json`, registered through the `shattering-covers` `COVER` shelf in `data/shows.json`. They use the same assembler-visible fields as story pages, so no assembler change is required.
 
-The Issue 1 cover is the founding trade-dress cover. Its assembled recipe controls the Issue 1 selling image and establishes a repeatable `REX FLEET ACADEMY / SHATTERING OF THE CORRIDORS / ISSUE ##` masthead architecture. After the Issue 1 cover is explicitly approved, persist the exact approved pixels to `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png` and activate the cover contract.
+The Issue 1 cover is the founding trade-dress cover. Its assembled recipe controls the Issue 1 selling image and establishes a repeatable standalone `STAR SPLITTER VISIONS / SHATTERING OF THE CORRIDORS / ISSUE ##` masthead architecture. After the Issue 1 cover is explicitly approved, persist the exact approved pixels to `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png` and activate the cover contract.
 
 Issues 2–6 must retrieve and visually inspect those actual Issue 1 pixels before cover generation. That pixel reference controls only recurring masthead/trade-dress appearance: title hierarchy, placement, issue-number treatment, margins, logo scale, and cover-brand recognition. The current issue's assembled cover recipe continues to control composition, cast, location, palette, action, symbolism, and spoiler ceiling.
 
 Cover recipes obey Shattering chronology. High Era covers use Cooperative/BHA/Convoy/Outer Band visual language; later covers may show proto-Core/Fleet, proto-Verge, and proto-Shard ancestry through behavior and materials without importing mature post-Shattering uniforms, ships, institutions, or finished faction iconography.
+
+## Series identity boundary
+
+**Shattering of the Corridors is a standalone direct dramatic series, not part of Rex Fleet Academy.** The reader follows Liora Virelia and the other characters as the events happen to them in their own time. Academy framing, retrospective instructors, and later historical interpretation do not belong inside this series' production identity.
+
+A separate future Rex Fleet Academy history topic may later study the Shattering retrospectively from multiple sources and perspectives. That future course is not currently registered here and must not be conflated with this package.
