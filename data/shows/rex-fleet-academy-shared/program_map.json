@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "line": "Rex Fleet Academy",
+  "sharedDoctrine": "data/shows/rex-fleet-academy-shared/curriculum_doctrine.json",
+  "principle": "Courses are grouped by knowledge domain, not forced into uniform season lengths. Only registered/compiled issues are production commitments.",
+  "courses": [
+    {
+      "id": "rex-fleet-academy-between-beacons",
+      "title": "Between the Beacons",
+      "domain": "science + infrastructure + culture",
+      "state": "Issue 1 compiled",
+      "length": "open after Issue 1",
+      "sourceProgram": "data/shows/rex-fleet-academy-between-beacons/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-physics-lattice",
+      "title": "Physics of the Lattice",
+      "domain": "physics + engineering",
+      "state": "Issue 1 compiled; later curriculum provisional",
+      "length": "source-driven",
+      "sourceProgram": "data/shows/rex-fleet-academy-physics-lattice/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-navigating-mirrorfold",
+      "title": "Navigating the Mirrorfold",
+      "domain": "navigation + measurement",
+      "state": "Issue 1 compiled",
+      "length": "open",
+      "sourceProgram": "data/shows/rex-fleet-academy-navigating-mirrorfold/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-anomalies",
+      "title": "Anomalies of Broken Space",
+      "domain": "science + anomaly classification",
+      "state": "Issue 1 compiled; later curriculum provisional",
+      "length": "source-driven",
+      "sourceProgram": "data/shows/rex-fleet-academy-anomalies/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-doctrine-many-crowns",
+      "title": "Doctrine of Many Crowns",
+      "domain": "political science + institutional history",
+      "state": "Issue 1 compiled",
+      "length": "open",
+      "sourceProgram": "data/shows/rex-fleet-academy-doctrine-many-crowns/academy_source_program.json"
+    },
+    {
+      "id": "rfa-reach-resolve",
+      "title": "Reach and Resolve",
+      "domain": "political doctrine + historical operations",
+      "state": "Issue 1 compiled; later curriculum provisional",
+      "length": "source-driven",
+      "sourceProgram": "data/shows/rfa-reach-resolve/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-core-worlds",
+      "title": "The Core Worlds",
+      "domain": "geography + civics + culture",
+      "state": "Issue 1 compiled; later curriculum provisional",
+      "length": "source-driven",
+      "sourceProgram": "data/shows/rex-fleet-academy-core-worlds/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-academy-travelers-atlas",
+      "title": "Traveler's Atlas (working title)",
+      "domain": "comparative geography + culture + field study",
+      "state": "development root only; source recovery required",
+      "length": "open",
+      "sourceProgram": "data/shows/rex-fleet-academy-travelers-atlas/development_status.json"
+    },
+    {
+      "id": "rex-fleet-academy-accord",
+      "title": "Accord Among Enemies (working title)",
+      "domain": "long-form history + political science",
+      "state": "concept reset; no production-authoritative issue",
+      "length": "open",
+      "sourceProgram": "data/shows/rex-fleet-academy-accord/academy_source_program.json"
+    }
+  ],
+  "sourceProjects": [
+    {
+      "id": "shattering",
+      "role": "Historical source authority for High Era / Sundering / Shattering material; not absorbed into Academy.",
+      "bridge": "data/shows/shattering/academy_source_program.json"
+    },
+    {
+      "id": "rex-fleet-s1",
+      "role": "Present-era production authority within Rex Fleet scope; Academy may teach consequences but should not overwrite it."
+    }
+  ],
+  "crossCourseNeeds": [
+    "Reconcile reciprocal-field/asymptotic terminology with Shattering harmonic terminology.",
+    "Locate and version the exact Traveler's Atlas corpus.",
+    "Locate exact quote-ready Oral History of the Shattering source passages.",
+    "Locate and reconcile the operative Shattered Accord text/edition before verbatim use.",
+    "Resolve final identities for the recovered first-inversion training scene while preserving its dramatic beat.",
+    "Determine which Liora-era texts/treatise passages are exact source text versus later summaries."
+  ]
+}

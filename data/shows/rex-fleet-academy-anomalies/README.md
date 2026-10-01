@@ -94,3 +94,11 @@ The closing beat introduces a small live phase offset in a nearby monitored trai
 - Avoid textbook infographic pages unless explicitly scripted as something physically present in the classroom.
 - Avoid generic psychedelic space, fantasy portals, runes, magical particles, or consciousness-driven effects.
 - Integrated lettering should contain only scripted dialogue, captions, or explicitly scripted system text.
+
+## Shared Academy curriculum doctrine
+
+This course follows `../rex-fleet-academy-shared/curriculum_doctrine.json` and its local `academy_source_program.json`.
+
+The ten-title progression above is a **provisional curriculum map, not a fixed ten-issue season**. An anomaly family may be split, combined, reordered, or omitted when source reconciliation and dramatic development show a better structure. Only compiled/registered issues are production commitments.
+
+Source documents, telemetry, accident records, and historical observations may run as a distinct caption lane while Jia and the cadets test what those records actually prove. Keep observation, interpretation, and current Academy theory visibly separate.
