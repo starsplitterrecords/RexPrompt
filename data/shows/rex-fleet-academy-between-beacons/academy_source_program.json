@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-between-beacons",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Issue 1 compiled; future depth not fixed.",
-  "issueCountPolicy": "Current Issue 1 is not evidence that this topic must remain a one-off. Expand only if source reconciliation and dramatic depth justify additional issues.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "sourceFamilies": [
     {
       "name": "Current corridor science canon",
@@ -20,5 +20,11 @@
       "use": "Certification, private survey practice, provenance, route markets, and power created by control of movement."
     }
   ],
-  "developmentDirection": "Revisit Issue 1 during the source-text adaptation pass. The existing corridor/culture structure may remain, but physics passages can potentially gain a restrained technical-paper caption lane if pacing supports it. Do not force all paper material into this issue if Physics of the Lattice is the better home."
+  "developmentDirection": "Revisit Issue 1 during the source-text adaptation pass. The existing corridor/culture structure may remain, but physics passages can potentially gain a restrained technical-paper caption lane if pacing supports it. Do not force all paper material into this issue if Physics of the Lattice is the better home.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-between-beacons/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }

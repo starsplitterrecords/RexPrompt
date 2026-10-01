@@ -10,48 +10,57 @@
     "The mature problem is balancing both under finite time, capacity, consent, and uncertainty.",
     "Historical sequences must preserve their era: post-Break antecedents may foreshadow later Fleet, Verge, and Shard traditions without importing mature faction design wholesale."
   ],
-  "issues": [
+  "academyCurriculum": {
+    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
+    "planStatus": "Issue 1 is the default complete course. The former six-entry issue list is now a candidate-module pool.",
+    "issueCountPolicy": "One issue by default; two or three only if the doctrine/source material needs additional dramatic room. Three is the expected maximum.",
+    "sourceTextProgram": "See academy_source_program.json. Treatise/doctrine excerpts may run as source captions while the seminar and reconstructed case show what the language protects, misses, or later becomes."
+  },
+  "productionIssues": [
     {
       "issue": 1,
       "title": "The Two Failures",
       "status": "production-authoritative",
       "premise": "The cohort studies the first rescue vessel after the Resolve Circle and two settlements that nearly fail for opposite reasons: Orison through dependence, Varda through isolation."
-    },
-    {
-      "issue": 2,
-      "title": "The Cost of Connection",
-      "status": "planned-unregistered",
-      "premise": "A reopened corridor brings medicine, standards, credit, and traffic to an independent settlement; the class studies when interoperability becomes dependency or political absorption."
-    },
-    {
-      "issue": 3,
-      "title": "The Cost of Standing Alone",
-      "status": "planned-unregistered",
-      "premise": "A community celebrated for self-sufficiency discovers that its closed technical and civic systems have become brittle; the Academy examines when resilience hardens into refusal to learn."
-    },
-    {
-      "issue": 4,
-      "title": "The Verge Rule",
-      "status": "planned-unregistered",
-      "premise": "A Verge logistics case shows a culture that accepts convoys while building local capacity anyway: take the convoy, build the greenhouse, keep the route open, never assume it will remain open."
-    },
-    {
-      "issue": 5,
-      "title": "Who Gets to Decide?",
-      "status": "planned-unregistered",
-      "premise": "A humanitarian crisis forces the cohort to separate local sovereignty from local coercion and outside assistance from outside jurisdiction."
-    },
-    {
-      "issue": 6,
-      "title": "A Ship Is a Contradiction",
-      "status": "planned-unregistered",
-      "premise": "A training cruise becomes a live operational test: a Fleet ship is a self-sufficient piece of civilization using that independence to reconnect others, forcing the cohort to apply Reach and Resolve without a classroom answer."
     }
   ],
-  "academyCurriculum": {
-    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "The current six-entry issues list is a provisional doctrine map. Only registered compiled issues are production commitments.",
-    "issueCountPolicy": "Let exact doctrine texts, oral histories, historical cases, and modern applications determine the number and size of issues.",
-    "sourceTextProgram": "See academy_source_program.json. Treatise/doctrine excerpts may run as source captions while the seminar and reconstructed case show what the language protects, misses, or later becomes."
+  "candidateModules": [
+    {
+      "order": 1,
+      "title": "The Cost of Connection",
+      "premise": "A reopened corridor brings medicine, standards, credit, and traffic to an independent settlement; the class studies when interoperability becomes dependency or political absorption.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 2,
+      "title": "The Cost of Standing Alone",
+      "premise": "A community celebrated for self-sufficiency discovers that its closed technical and civic systems have become brittle; the Academy examines when resilience hardens into refusal to learn.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 3,
+      "title": "The Verge Rule",
+      "premise": "A Verge logistics case shows a culture that accepts convoys while building local capacity anyway: take the convoy, build the greenhouse, keep the route open, never assume it will remain open.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 4,
+      "title": "Who Gets to Decide?",
+      "premise": "A humanitarian crisis forces the cohort to separate local sovereignty from local coercion and outside assistance from outside jurisdiction.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 5,
+      "title": "A Ship Is a Contradiction",
+      "premise": "A training cruise becomes a live operational test: a Fleet ship is a self-sufficient piece of civilization using that independence to reconnect others, forcing the cohort to apply Reach and Resolve without a classroom answer.",
+      "status": "candidate-module"
+    }
+  ],
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total; default 1",
+    "issue1EntryPoint": true,
+    "continuationRule": "The doctrine cases are candidate modules, not Issues 2–6. If continuation is justified, combine the strongest complementary cases into at most two additional issues.",
+    "castScope": "Professor Talia Merin and this cohort belong to Reach and Resolve only unless another course explicitly reuses them.",
+    "imgScope": "Use a dedicated Reach and Resolve IMG/reference project when visual production begins."
   }
 }

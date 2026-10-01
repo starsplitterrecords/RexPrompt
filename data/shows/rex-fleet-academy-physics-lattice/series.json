@@ -27,62 +27,71 @@
     "trainingOfficer": "Lt. Renn Oris",
     "tone": "Exact, curious, practical, and occasionally dry. Students learn by making operational choices, not by passively receiving exposition."
   },
-  "lecturePlan": [
+  "firstLectureArc": "Tomas begins by treating the beacon centerline as the corridor and a straight intercept as the fastest solution. During a live practicum aboard Vector Three, a red forward beacon stops the class inside the last verified volume. A calibration drone reveals that the inverse-tension gradient has bowed inside the still-safe cross-section. The cadets recover it by taking a curved route that initially moves away from the target but reduces structural load and effective Lattice distance. The debrief separates beacon, corridor, path, and map.",
+  "firstIssue": "Issue 1 — The Shortest Path",
+  "academyCurriculum": {
+    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
+    "planStatus": "Issue 1 is the complete default course. The former eight-entry lecture plan has been converted to candidate technical modules, not future issues.",
+    "issueCountPolicy": "Default to one issue. Add Issue 2 or 3 only if source-text pacing and dramatization cannot responsibly fit the course into one; do not exceed three.",
+    "sourceTextProgram": "See academy_source_program.json. Technical-paper caption adaptation is a pacing experiment, initially testing roughly 6–9 short source lines per page alongside demonstrations and practical examples."
+  },
+  "productionIssues": [
     {
       "issue": 1,
       "title": "The Shortest Path",
       "focus": "Corridor geometry, beacon volume, inverse tension, and riding the inversion.",
       "status": "production-ready"
-    },
-    {
-      "issue": 2,
-      "title": "Coherence",
-      "focus": "Why a route remains one stable geometric solution and what it means when correct instruments stop agreeing.",
-      "status": "planned"
-    },
-    {
-      "issue": 3,
-      "title": "Tides",
-      "focus": "Slow changes in the local Lattice field and navigation through moving geometry.",
-      "status": "planned"
-    },
-    {
-      "issue": 4,
-      "title": "Echoes",
-      "focus": "Signal persistence, trapped propagation, and the physical basis of Memory Wells.",
-      "status": "planned"
-    },
-    {
-      "issue": 5,
-      "title": "Drift",
-      "focus": "Evolving phase relationships, failed rendezvous, and the limits of ordinary position and timekeeping.",
-      "status": "planned"
-    },
-    {
-      "issue": 6,
-      "title": "The Mirrorfold",
-      "focus": "Multiple propagation paths, duplicated perception, and navigation when sight is not a reliable guide.",
-      "status": "planned"
-    },
-    {
-      "issue": 7,
-      "title": "Fracture",
-      "focus": "Matter coupling to strained geometry and Fracture Blooms as physical records of field state.",
-      "status": "planned"
-    },
-    {
-      "issue": 8,
-      "title": "The Sundering",
-      "focus": "Apply the course backward to the historical collapse; distinguish increasingly understood mechanism from unresolved trigger.",
-      "status": "planned"
     }
   ],
-  "firstLectureArc": "Tomas begins by treating the beacon centerline as the corridor and a straight intercept as the fastest solution. During a live practicum aboard Vector Three, a red forward beacon stops the class inside the last verified volume. A calibration drone reveals that the inverse-tension gradient has bowed inside the still-safe cross-section. The cadets recover it by taking a curved route that initially moves away from the target but reduces structural load and effective Lattice distance. The debrief separates beacon, corridor, path, and map.",
-  "firstIssue": "Issue 1 — The Shortest Path",
-  "academyCurriculum": {
-    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "The eight-entry lecturePlan is a provisional curriculum map, not a fixed eight-issue season.",
-    "issueCountPolicy": "Split, merge, reorder, expand, or stop based on reconciled technical-source depth and dramatic pacing.",
-    "sourceTextProgram": "See academy_source_program.json. Technical-paper caption adaptation is a pacing experiment, initially testing roughly 6–9 short source lines per page alongside demonstrations and practical examples."
+  "candidateModules": [
+    {
+      "order": 1,
+      "title": "Coherence",
+      "focus": "Why a route remains one stable geometric solution and what it means when correct instruments stop agreeing.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 2,
+      "title": "Tides",
+      "focus": "Slow changes in the local Lattice field and navigation through moving geometry.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 3,
+      "title": "Echoes",
+      "focus": "Signal persistence, trapped propagation, and the physical basis of Memory Wells.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 4,
+      "title": "Drift",
+      "focus": "Evolving phase relationships, failed rendezvous, and the limits of ordinary position and timekeeping.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 5,
+      "title": "The Mirrorfold",
+      "focus": "Multiple propagation paths, duplicated perception, and navigation when sight is not a reliable guide.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 6,
+      "title": "Fracture",
+      "focus": "Matter coupling to strained geometry and Fracture Blooms as physical records of field state.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 7,
+      "title": "The Sundering",
+      "focus": "Apply the course backward to the historical collapse; distinguish increasingly understood mechanism from unresolved trigger.",
+      "status": "candidate-module"
+    }
+  ],
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total; default 1",
+    "issue1EntryPoint": true,
+    "continuationRule": "Candidate modules are not future issue assignments. If the reconciled technical paper needs more room, combine the strongest modules into at most two additional issues.",
+    "castScope": "Dr. Sera Kade and this cohort belong to this course package; other Academy courses may use different casts.",
+    "imgScope": "Use a dedicated Physics of the Lattice IMG/reference project when visual production begins."
   }
 }

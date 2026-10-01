@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-accord",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Concept reset; no current production-authoritative issue. This is the correct time to rebuild the course around source documents.",
-  "issueCountPolicy": "Do not preselect a season length. Build the historical course after source reconciliation reveals the natural movements of the story from High Era through the Accord.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "sourceFamilies": [
     {
       "name": "Shattering RexPrompt source package",
@@ -31,5 +31,11 @@
     }
   ],
   "narrationMethod": "Let oral-history voices and documentary text carry part of the narration across reconstructions. The Academy class should compare versions, provenance, omissions, and consequences rather than receive one omniscient history lecture.",
-  "historicalScope": "Liora Virelia and the BHA/High Era belong near the beginning; the Shattered Accord belongs near the culmination. Present-day Venn/Dominion references may show inheritance but are not the historical center."
+  "historicalScope": "Liora Virelia and the BHA/High Era belong near the beginning; the Shattered Accord belongs near the culmination. Present-day Venn/Dominion references may show inheritance but are not the historical center.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-accord/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }

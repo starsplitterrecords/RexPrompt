@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "line": "Rex Fleet Academy",
   "sharedDoctrine": "data/shows/rex-fleet-academy-shared/curriculum_doctrine.json",
-  "principle": "Courses are grouped by knowledge domain, not forced into uniform season lengths. Only registered/compiled issues are production commitments.",
+  "principle": "Rex Fleet Academy is an umbrella line of self-contained one-off and short limited courses. Each course has its own series package, cast and production identity; every Issue 1 is an entry point. Default length is one issue and the expected maximum is three.",
   "courses": [
     {
       "id": "rex-fleet-academy-between-beacons",
       "title": "Between the Beacons",
       "domain": "science + infrastructure + culture",
       "state": "Issue 1 compiled",
-      "length": "open after Issue 1",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-between-beacons/academy_source_program.json"
     },
     {
@@ -17,7 +17,7 @@
       "title": "Physics of the Lattice",
       "domain": "physics + engineering",
       "state": "Issue 1 compiled; later curriculum provisional",
-      "length": "source-driven",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-physics-lattice/academy_source_program.json"
     },
     {
@@ -25,7 +25,7 @@
       "title": "Navigating the Mirrorfold",
       "domain": "navigation + measurement",
       "state": "Issue 1 compiled",
-      "length": "open",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-navigating-mirrorfold/academy_source_program.json"
     },
     {
@@ -33,7 +33,7 @@
       "title": "Anomalies of Broken Space",
       "domain": "science + anomaly classification",
       "state": "Issue 1 compiled; later curriculum provisional",
-      "length": "source-driven",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-anomalies/academy_source_program.json"
     },
     {
@@ -41,7 +41,7 @@
       "title": "Doctrine of Many Crowns",
       "domain": "political science + institutional history",
       "state": "Issue 1 compiled",
-      "length": "open",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-doctrine-many-crowns/academy_source_program.json"
     },
     {
@@ -49,7 +49,7 @@
       "title": "Reach and Resolve",
       "domain": "political doctrine + historical operations",
       "state": "Issue 1 compiled; later curriculum provisional",
-      "length": "source-driven",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rfa-reach-resolve/academy_source_program.json"
     },
     {
@@ -57,7 +57,7 @@
       "title": "The Core Worlds",
       "domain": "geography + civics + culture",
       "state": "Issue 1 compiled; later curriculum provisional",
-      "length": "source-driven",
+      "length": "1–3 issues total; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-core-worlds/academy_source_program.json"
     },
     {
@@ -65,7 +65,7 @@
       "title": "Traveler's Atlas (working title)",
       "domain": "comparative geography + culture + field study",
       "state": "development root only; source recovery required",
-      "length": "open",
+      "length": "1–3 issues after source recovery; default 1",
       "sourceProgram": "data/shows/rex-fleet-academy-travelers-atlas/development_status.json"
     },
     {
@@ -73,7 +73,7 @@
       "title": "Accord Among Enemies (working title)",
       "domain": "long-form history + political science",
       "state": "concept reset; no production-authoritative issue",
-      "length": "open",
+      "length": "1–3 issues when rebuilt; no issue currently production-authoritative",
       "sourceProgram": "data/shows/rex-fleet-academy-accord/academy_source_program.json"
     }
   ],
@@ -94,5 +94,14 @@
     "Locate and reconcile the operative Shattered Accord text/edition before verbatim use.",
     "Resolve final identities for the recovered first-inversion training scene while preserving its dramatic beat.",
     "Determine which Liora-era texts/treatise passages are exact source text versus later summaries."
-  ]
+  ],
+  "productionArchitecture": {
+    "separateSeriesPackages": true,
+    "separateCourseCasts": true,
+    "dedicatedImgProjectPerCourse": "preferred when visual production begins",
+    "issueRange": "1–3 issues per course; default 1",
+    "issueOneEntryPoint": true,
+    "gitWorkflow": "course-specific feature branches during active development; merge approved state to main rather than maintaining divergent canon branches",
+    "sharedBranding": "Academy line mark/masthead may be an explicit parent reference; course Issue 1 cover establishes course-local trade dress and visual baseline."
+  }
 }

@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-doctrine-many-crowns",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Issue 1 compiled; future issues intentionally open.",
-  "issueCountPolicy": "Build as many doctrine/case-study issues as the reconciled historical and political source corpus warrants. Do not manufacture equal issue counts for the five Crowns.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "sourceFamilies": [
     {
       "name": "Five Crowns doctrine",
@@ -25,5 +25,11 @@
       "use": "Show how survival lessons became mature institutional traditions."
     }
   ],
-  "narrationMethod": "Primary-source narration may run over historical reconstruction while the seminar distinguishes what the witness said, what later institutions claimed it meant, and what the evidence supports."
+  "narrationMethod": "Primary-source narration may run over historical reconstruction while the seminar distinguishes what the witness said, what later institutions claimed it meant, and what the evidence supports.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-doctrine-many-crowns/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }

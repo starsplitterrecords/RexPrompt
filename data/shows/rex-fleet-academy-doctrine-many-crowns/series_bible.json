@@ -47,11 +47,18 @@
     "pages": 24,
     "spine": "Professor Lysa Corven gives cadets five equivalent post-Shattering survival problems. Representative archive reconstructions dramatize the logic and failure mode later associated with Aurelian, Cerulean, Ember, Tempest and Aegis. The cadets expect one winning strategy; the reveal is that all five survived. The Doctrine of Many Crowns exists because no one survival truth is allowed to become civilization's permanent monopoly."
   },
-  "productionStatus": "Initial RexPrompt production package. Issue 1 scripted at page level with exact dialogue, panel plans and assembler-visible continuity. Future issues are intentionally not prewritten here.",
+  "productionStatus": "Initial RexPrompt production package. Issue 1 is scripted at page level and is a valid complete one-off. At most two follow-up issues may be developed if distinct source-backed problems justify them.",
   "academyCurriculum": {
     "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "Future issue count is deliberately open.",
-    "issueCountPolicy": "Do not force one issue per Crown or equal treatment by count. Let source depth and distinct historical problems determine the course.",
+    "planStatus": "Issue 1 is the default complete course; continuation is optional and capped at three total issues.",
+    "issueCountPolicy": "Default 1; maximum expected 3. Do not create one issue per Crown.",
     "sourceTextProgram": "See academy_source_program.json. Oral histories, doctrine passages, orders, and later interpretations can form a documentary caption lane over reconstructions."
+  },
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total; default 1",
+    "issue1EntryPoint": true,
+    "continuationRule": "Issue 1 may stand alone. Any follow-up must combine genuinely distinct doctrine/historical problems; never create one issue per Crown by symmetry.",
+    "castScope": "Professor Lysa Corven and the Issue 1 cohort are course-local unless explicitly reused.",
+    "imgScope": "Use a dedicated Doctrine of Many Crowns IMG/reference project when visual production begins."
   }
 }

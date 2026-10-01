@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-between-beacons",
   "seriesName": "Rex Fleet Academy: Between the Beacons",
   "premise": "The invisible physics of a safe corridor becomes visible social power: ordinary people depend on green routes, surveyors discover alternatives, brokers commoditize route knowledge, the BHA certifies evidence, the Fleet turns stewardship into structural power, and the Shards gain room wherever the public map stops being authoritative.",
-  "format": "Academy science-and-culture topic block told as active instruction, demonstrations, field cases and simulation; currently one compiled issue, with future length left open to source depth.",
+  "format": "Academy science-and-culture one-off / short limited course told as active instruction, demonstrations, field cases and simulation. Issue 1 is a complete entry point; continuation is optional and capped at three total issues.",
   "scienceCanon": {
     "corridor": "Measured three-dimensional low-tension volume around a surveyed spine; approximately circular cross-section, normally about twice the beam of the largest certified ship.",
     "inversion": "Dynamic maintenance of a workable relationship with inverse/reciprocal tension; not a hard tunnel.",
@@ -34,7 +34,14 @@
   },
   "academyCurriculum": {
     "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "Issue 1 is compiled. The topic is not locked permanently to a one-off if deeper reconciled source material warrants expansion.",
+    "planStatus": "Issue 1 is a complete course and line entry point. A second or third issue may be added only if earned; no open-ended expansion.",
     "sourceTextProgram": "See academy_source_program.json. Physics excerpts may be tested as a restrained source-caption lane, but Physics of the Lattice remains the natural home for sustained treatment of the full technical paper."
+  },
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total; default 1",
+    "issue1EntryPoint": true,
+    "continuationRule": "Issue 1 should be treated as complete unless one or two distinct follow-up problems genuinely require their own dramatic space.",
+    "castScope": "Jia Morgan and this cadet group belong to Between the Beacons; other Academy courses may use different instructors and students.",
+    "imgScope": "Between the Beacons keeps its own IMG/reference namespace and founding-cover trade-dress reference."
   }
 }

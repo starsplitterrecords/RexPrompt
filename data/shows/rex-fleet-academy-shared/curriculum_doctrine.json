@@ -5,9 +5,10 @@
   "status": "development-authority",
   "corePromise": "Rex Fleet Academy is about the transfer of consequential knowledge. The reader should watch an expert help serious trainees make a difficult fact about their universe visible, testable, debatable, and usable.",
   "issueCountPolicy": {
-    "rule": "Issue count is topic-driven, not season-template-driven. A course may be one issue, several issues, or a longer sequence depending on the depth of the underlying source material, dramatic opportunities, and page-level pacing.",
-    "existingPlans": "Any numbered lecturePlan, issues list, or planned progression is a curriculum map until the individual issues are developed and registered. Items may be merged, split, reordered, expanded, or dropped after source reconciliation.",
-    "productionBoundary": "Only registered, compiled issue/page payloads are production authority. Development curriculum maps do not obligate a fixed season length."
+    "rule": "Academy courses are one-offs or very short limited series. Default to 1 issue; allow 2 or 3 only when the source material and dramatic form genuinely require it. Do not plan Academy courses as 6-, 8-, 10-, or open-ended issue seasons.",
+    "existingPlans": "Legacy numbered lecture plans beyond Issue 1 are idea inventories, not promised issues. Recast them as candidate modules that may be combined, omitted, or selected for at most two follow-up issues.",
+    "productionBoundary": "Only registered, compiled issue/page payloads are production authority. A course is complete after Issue 1 unless a second or third issue earns its existence.",
+    "maxExpectedIssues": 3
   },
   "sourceTextMethod": {
     "purpose": "Let the world's own technical, historical, political, and geographic documents speak across the comic while instructors and cadets demonstrate, question, contextualize, and apply them.",
@@ -119,5 +120,15 @@
   },
   "externalSeriesBoundary": {
     "shattering": "Shattering of the Corridors is not part of Rex Fleet Academy. It follows its characters directly as events unfold in real time. A future Academy history topic about the Shattering may be developed separately, but is not currently created or registered."
+  },
+  "lineArchitecture": {
+    "model": "Umbrella imprint of self-contained Academy courses, not one continuous Academy season.",
+    "entryPointRule": "Every course Issue 1 must function as a valid entry point both to that subject and to the Rex Fleet Academy line. It may assume the shared world, but not prior Academy-course reading.",
+    "lengthRule": "Default to one issue. Use two or three only when the subject genuinely needs additional dramatic or source-text room. Three issues is the expected upper bound for a single course.",
+    "castRule": "Courses may and often should use different instructors, cadets, technicians, historians, pilots, or field specialists suited to the subject. No recurring Academy ensemble is required across the line.",
+    "packageRule": "Each course remains its own RexPrompt series ID and data package. Do not combine course character shelves, issue payloads, settings, or production state into one giant Academy package.",
+    "imgRule": "Each course should have its own IMG project / visual-reference namespace when it enters image production. Cross-course visual references are explicit parent/shared references, not shared uncontrolled project state.",
+    "branchRule": "Use course-specific short-lived development branches when editing RexPrompt, then merge approved work to main. Do not use long-lived Git branches as competing canon; main remains the durable repository authority.",
+    "brandRule": "Rex Fleet Academy may share an explicit parent masthead/line-brand reference across course IMG projects. Each course still establishes its own Issue 1 cover trade dress and local visual baseline; parent branding must not import another course's cast, composition, locations, or production state."
   }
 }
