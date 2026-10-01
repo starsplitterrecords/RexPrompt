@@ -23,7 +23,7 @@ The inventory is not a visual-reference pack. No entry in it is approved visual 
 
 ## Cover trade-dress bootstrap
 
-Chef-facing cover recipes are stored in `data/shows/shattering/covers.json` and are registered as separate `COVER` production units. The cover-specific visual contract is `cover-production-normalization.json`.
+Chef-facing cover recipes are stored in `data/shows/shattering/covers.json` and are registered through the single `shattering-covers` `COVER` shelf. The cover-specific visual contract is `cover-production-normalization.json`.
 
 `SHAT_I01_COVER` is the founding trade-dress recipe. There is no approved Shattering cover image yet, so the future asset path `production/references/shattering/assets/covers/issue-01-cover-trade-dress.png` is not visual authority at this checkpoint.
 
