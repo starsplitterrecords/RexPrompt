@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "stardust-station",
+  "status": "active",
+  "purpose": "Scoped cover-production authority for Stardust Station. Makes the released Issue 1 cover available as a pixel-read trade-dress anchor while leaving issue-specific cover composition to the assembled RexPrompt cover recipe.",
+  "authority": {
+    "releasedCoverCanon": "starsplitterrecords/StarSplitterVisions — sites/visions/public/images/covers/stardust-station-issue-01.jpg",
+    "localPixelReference": "production/references/stardust-station/issue-01-cover-trade-dress.jpg",
+    "issueSpecificAuthority": "Assembled SDS_S1E##_COVER recipe from data/shows/stardust-station/covers.json",
+    "rules": [
+      "Before generating any Stardust Station cover, retrieve and visually inspect the actual pixels of the local Issue 1 cover trade-dress reference. Repository path, SHA, metadata or remembered appearance are not substitutes for pixel readback.",
+      "The Issue 1 cover reference controls series masthead lettering architecture, Star Splitter Visions publisher bug, issue-number placement, overall cover-brand rhythm, polished animated-comic rendering, and broad blue-violet/cyan StarTrust visual identity.",
+      "The Issue 1 cover reference does NOT control later-cover scene composition, cast count, staging, focal object, issue-specific palette accents, or story hook.",
+      "The assembled current cover recipe controls the selling image, cast, environment, composition, focal hierarchy, spoiler ceiling and exact issue-specific text.",
+      "Released Stardust Station interior pages and approved visual-reference-pack entries control character identity, station design and established world appearance.",
+      "Do not use any cover, including Issue 1, as interior story-page layout authority.",
+      "Do not copy the Issue 1 ensemble-lineup composition onto later issues unless a later recipe explicitly requests an ensemble."
+    ]
+  },
+  "tradeDress": {
+    "preserve": [
+      "large two-line STARDUST STATION masthead",
+      "white masthead letterforms with dark blue depth/outline",
+      "cyan orbital swoosh and star/spark accents integrated around the masthead",
+      "Star Splitter Visions publisher bug in the upper-left region",
+      "ISSUE #N placement in the upper-right region",
+      "issue subtitle centered beneath the masthead when a canonical subtitle exists",
+      "bright polished commercial comic-cover finish"
+    ],
+    "allowIssueVariation": [
+      "issue-specific focal subject",
+      "camera angle",
+      "cast count",
+      "environment",
+      "prop symbolism",
+      "accent color within established Stardust palette",
+      "depth arrangement below the masthead"
+    ],
+    "forbidden": [
+      "generic recap collage",
+      "automatic ensemble lineup",
+      "fake action spectacle unrelated to the issue",
+      "invented subtitle",
+      "invented promotional slogans",
+      "unreadable environmental text used as a required story device",
+      "using the cover reference as interior-page layout authority"
+    ]
+  },
+  "pixelReadReference": {
+    "id": "issue-01-cover-trade-dress",
+    "repo": "starsplitterrecords/RexPrompt",
+    "path": "production/references/stardust-station/issue-01-cover-trade-dress.jpg",
+    "sourceRepo": "starsplitterrecords/StarSplitterVisions",
+    "sourcePath": "sites/visions/public/images/covers/stardust-station-issue-01.jpg",
+    "scope": [
+      "cover-trade-dress",
+      "masthead",
+      "publisher-bug",
+      "issue-number-placement",
+      "cover-brand-language"
+    ],
+    "notFor": [
+      "later-cover scene composition",
+      "interior page layout",
+      "story staging",
+      "later-issue cast selection"
+    ]
+  },
+  "workflow": [
+    "Resolve the selected Stardust cover show entry and assemble its exact cover recipe.",
+    "Retrieve the local Issue 1 cover reference as actual pixels and visually inspect it.",
+    "Retrieve the smallest relevant released/current visual references for characters and station elements named in the cover recipe.",
+    "Use the Issue 1 cover only for trade dress and brand continuity; use the current recipe for the actual cover concept.",
+    "Generate the cover, then audit thumbnail readability, masthead consistency, character/world continuity, spoiler ceiling and exact cover lettering."
+  ]
+}
