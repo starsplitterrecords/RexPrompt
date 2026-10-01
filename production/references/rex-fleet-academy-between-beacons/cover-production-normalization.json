@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet-academy-between-beacons",
+  "status": "bootstrap-required",
+  "purpose": "Cover-production contract for Rex Fleet Academy: Between the Beacons. Issue 1 establishes the approved masthead/trade-dress pixel reference for this series. Any later cover uses that exact approved image only for recurring cover-brand continuity while its own RexPrompt cover recipe controls issue-specific imagery.",
+  "recipeShelf": "data/shows/rex-fleet-academy-between-beacons/covers.json",
+  "foundingCover": {
+    "recipeId": "RFA_BB_I01_COVER",
+    "issue": 1,
+    "state": "production-ready-recipe-awaiting-approved-pixels",
+    "targetAssetPath": "production/references/rex-fleet-academy-between-beacons/assets/covers/issue-01-cover-trade-dress.png",
+    "activationRule": "Do not treat this path as visual authority until the Issue 1 cover is explicitly approved and the exact approved pixels are persisted at this path.",
+    "approvalWriteback": "After approval/persistence, change foundingCover.state to approved-trade-dress-reference and status to active, then record the asset SHA if the production workflow provides one."
+  },
+  "scope": {
+    "controls": [
+      "series masthead identity",
+      "REX FLEET / ACADEMY hierarchy",
+      "BETWEEN THE BEACONS topic-title treatment",
+      "publisher-lockup placement logic",
+      "issue-number hierarchy",
+      "recurring cover margins and trade-dress geometry",
+      "overall Between the Beacons cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "issue-specific scene composition",
+      "character staging",
+      "story imagery",
+      "issue palette",
+      "issue lighting",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [],
+    "requiredAsset": "production/references/rex-fleet-academy-between-beacons/assets/covers/issue-01-cover-trade-dress.png",
+    "rule": "Before generating any later Between the Beacons cover added after Issue 1, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If a later cover is added and the Issue 1 approved cover pixels do not yet exist or cannot be visually inspected, stop before later-cover generation and complete the Issue 1 cover bootstrap first."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, spoiler ceiling, and exact required trade-dress text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with a later issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "No recap collage.",
+    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No superhero posing.",
+    "No generic cyberpunk neon.",
+    "No hard-wall or ocean-channel depiction of a corridor.",
+    "No legible environmental text or fake signage on covers.",
+    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "The cover must remain legible and compelling at thumbnail size.",
+    "Do not reveal the issue's decisive solution, late reversal, or final image.",
+    "Green public-route imagery must remain visually distinct from Fleet blue/gold/white authority."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "RFA_BB_I01_COVER",
+      "title": "Issue 1 Cover — Between the Beacons",
+      "status": "production-ready"
+    }
+  ]
+}
