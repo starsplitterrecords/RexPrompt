@@ -31,9 +31,9 @@ The previous generated page must never be the sole character or visual authority
 Stardust Station cover generation uses two distinct authorities:
 
 - `data/shows/stardust-station/covers.json` contains the issue-specific cover recipes that the existing RexPrompt assembler sends to the chef through dedicated cover show entries.
-- `issue-01-cover-trade-dress.jpg` is the local pixel-read copy of the released Issue 1 cover and controls cover trade dress only: masthead architecture, publisher bug, issue-number placement and overall cover-brand language.
+- `assets/covers/issue-01-cover-trade-dress.jpg` is the local pixel-read copy of the released Issue 1 cover and controls cover trade dress only: masthead architecture, publisher bug, issue-number placement and overall cover-brand language.
 - `cover-production-normalization.json` records the scope boundary between trade-dress authority and issue-specific recipe authority.
 
-Before every cover generation, retrieve and inspect the actual pixels of `issue-01-cover-trade-dress.jpg`. Do not substitute the file path, SHA, metadata, textual description or memory for pixel readback.
+Before every cover generation, retrieve and inspect the actual pixels of `assets/covers/issue-01-cover-trade-dress.jpg`. Do not substitute the file path, SHA, metadata, textual description or memory for pixel readback.
 
 The Issue 1 cover is not interior-page style authority and does not require later covers to repeat its ensemble composition. The assembled current cover recipe controls the later cover's selling image, staging, cast, environment, focal hierarchy and spoiler ceiling.
