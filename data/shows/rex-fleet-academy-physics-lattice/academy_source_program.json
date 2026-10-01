@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-physics-lattice",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Issue 1 compiled; later lecturePlan is provisional curriculum, not fixed issue count.",
-  "issueCountPolicy": "Let the reconciled technical corpus determine length. Existing modules may split when mathematics/phenomenology need room or combine when one practical story can carry several concepts.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "primarySourceProgram": {
     "source": "Reciprocal Field Transit & Asymptotic Inversion recovered technical material",
     "authority": "development-ground; reconcile against current corridor science and Shattering physics before quoting as settled canon",
@@ -21,5 +21,11 @@
     "dialogue competition",
     "page-turn momentum",
     "whether a source passage should span multiple issues instead of being compressed"
-  ]
+  ],
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-physics-lattice/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }
