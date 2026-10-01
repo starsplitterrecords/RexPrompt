@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-anomalies",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Issue 1 compiled; ten-title progression is a provisional curriculum map, not a ten-issue commitment.",
-  "issueCountPolicy": "An anomaly family may receive one issue, several issues, or be folded into another course depending on evidence and dramatic distinctness.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "sourceFamilies": [
     {
       "name": "Shattering failure record",
@@ -20,5 +20,11 @@
       "use": "Shared measurement vocabulary and known limits."
     }
   ],
-  "teachingRule": "Classification is a working model, not an answer. Source captions should often present an observation first; the classroom must decide what it proves."
+  "teachingRule": "Classification is a working model, not an answer. Source captions should often present an observation first; the classroom must decide what it proves.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-anomalies/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }
