@@ -2,7 +2,7 @@
   "seriesId": "rex-fleet-academy-navigating-mirrorfold",
   "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
   "currentState": "Issue 1 compiled; future course length open.",
-  "issueCountPolicy": "Do not infer a fixed course length from the current 24-page first issue. Add field-practicum or advanced-navigation issues only when the source material and navigation problems support them.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
   "sourceFamilies": [
     {
       "name": "Current Mirrorfold canon",
@@ -15,5 +15,11 @@
       "use": "Establish what ordinary navigation assumes before folded geometry violates those assumptions."
     }
   ],
-  "sourceTextMethod": "Use short technical or procedural extracts only where they create a testable claim. Let Edda Vale force cadets to discover which measurement the document assumes and when that assumption fails."
+  "sourceTextMethod": "Use short technical or procedural extracts only where they create a testable claim. Let Edda Vale force cadets to discover which measurement the document assumes and when that assumption fails.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-navigating-mirrorfold/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
 }
