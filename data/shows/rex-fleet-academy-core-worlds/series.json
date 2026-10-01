@@ -24,56 +24,60 @@
     ],
     "tone": "Intelligent, curious, occasionally argumentative. Institutional confidence is tested by concrete evidence rather than mocked."
   },
-  "lecturePlan": [
+  "firstLectureArc": "Lysa begins by treating Meridian's prominence as proof that it is the center of the Core. A field assignment through Bastion Spire, the Anchor Markets, Meridian, and Core Spire logistics shows the cohort that different networks produce different centers. A real corridor hold forces them to confront invisible maintenance infrastructure, and the final exercise requires them to spend the Core's own privilege to protect people away from the prestigious center.",
+  "firstIssue": "Issue 1 — Meridian Is Not the Core",
+  "academyCurriculum": {
+    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
+    "planStatus": "Issue 1 is the default complete course. The former six-entry lecture plan is now a candidate-module pool, not a six-issue run.",
+    "issueCountPolicy": "Default to one issue; use at most two follow-up issues if the Atlas/world-codex material requires them.",
+    "sourceTextProgram": "See academy_source_program.json. Traveler/Atlas passages may form a narrator-caption lane while field study tests the guide against lived reality."
+  },
+  "productionIssues": [
     {
       "issue": 1,
       "title": "Meridian Is Not the Core",
       "lectureFrame": "Lecture 1",
       "focus": "Maps, centrality, supply dependence, and the difference between a capital and a civilization.",
       "status": "production-ready"
-    },
-    {
-      "issue": 2,
-      "title": "Who Gets a Corridor?",
-      "lectureFrame": "Lecture 2",
-      "focus": "Corridor allocation under scarcity; logistics as political consequence.",
-      "status": "planned"
-    },
-    {
-      "issue": 3,
-      "title": "Bastion Spire",
-      "lectureFrame": "Lecture 3",
-      "focus": "How fortress, market, memorial, shipyard, and civic ritual coexist in one institution.",
-      "status": "planned"
-    },
-    {
-      "issue": 4,
-      "title": "Children of the Schedule",
-      "lectureFrame": "Lecture 4",
-      "focus": "Generational memory: people raised after stable corridors versus those formed by interruption and rationing.",
-      "status": "planned"
-    },
-    {
-      "issue": 5,
-      "title": "The Last Complete Census",
-      "lectureFrame": "Lecture 5",
-      "focus": "Archive bias, missing populations, and the geography of records after the Shattering.",
-      "status": "planned"
-    },
-    {
-      "issue": 6,
-      "title": "The Cost of Resolve",
-      "lectureFrame": "Lecture 6",
-      "focus": "Emergency institutions that preserve communities, and what happens when successful temporary systems become permanent.",
-      "status": "planned"
     }
   ],
-  "firstLectureArc": "Lysa begins by treating Meridian's prominence as proof that it is the center of the Core. A field assignment through Bastion Spire, the Anchor Markets, Meridian, and Core Spire logistics shows the cohort that different networks produce different centers. A real corridor hold forces them to confront invisible maintenance infrastructure, and the final exercise requires them to spend the Core's own privilege to protect people away from the prestigious center.",
-  "firstIssue": "Issue 1 — Meridian Is Not the Core",
-  "academyCurriculum": {
-    "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
-    "planStatus": "The six-entry lecturePlan is a provisional curriculum map, not a fixed six-issue season.",
-    "issueCountPolicy": "Let Atlas/world-codex depth and lived-world distinctness determine issue count.",
-    "sourceTextProgram": "See academy_source_program.json. Traveler/Atlas passages may form a narrator-caption lane while field study tests the guide against lived reality."
+  "candidateModules": [
+    {
+      "order": 1,
+      "title": "Who Gets a Corridor?",
+      "focus": "Corridor allocation under scarcity; logistics as political consequence.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 2,
+      "title": "Bastion Spire",
+      "focus": "How fortress, market, memorial, shipyard, and civic ritual coexist in one institution.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 3,
+      "title": "Children of the Schedule",
+      "focus": "Generational memory: people raised after stable corridors versus those formed by interruption and rationing.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 4,
+      "title": "The Last Complete Census",
+      "focus": "Archive bias, missing populations, and the geography of records after the Shattering.",
+      "status": "candidate-module"
+    },
+    {
+      "order": 5,
+      "title": "The Cost of Resolve",
+      "focus": "Emergency institutions that preserve communities, and what happens when successful temporary systems become permanent.",
+      "status": "candidate-module"
+    }
+  ],
+  "courseArchitecture": {
+    "courseLength": "1–3 issues total; default 1",
+    "issue1EntryPoint": true,
+    "continuationRule": "The candidate civic/world modules are a source pool. Select and combine them only if a second or third issue is genuinely needed; do not turn each module into an issue.",
+    "castScope": "Professor Aven Teral and this cohort are local to this course; other Academy subjects may use different instructors and students.",
+    "imgScope": "Use a dedicated Core Worlds IMG/reference project when visual production begins."
   }
 }
