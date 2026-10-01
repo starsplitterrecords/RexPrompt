@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "echoes-forgotten-war",
+  "status": "bootstrap-pending-issue-01-cover",
+  "purpose": "Durable cover-production authority for Echoes of a Forgotten War. Cover recipes live in data/shows/echoes-forgotten-war-s1/covers.json; this file governs scoped visual reference use for masthead and trade-dress continuity.",
+  "authority": {
+    "issueSpecificRecipe": "The assembled selected EFW_S1E##_COVER recipe controls the issue-specific selling image, cast, composition, spoiler ceiling, and exact cover lettering.",
+    "tradeDressReference": "After approval, production/references/echoes-forgotten-war/covers/issue-01-cover.jpg controls masthead and trade-dress pixels for Issues 2-8.",
+    "characterIdentity": "production/references/echoes-forgotten-war/visual-reference-pack.json and assembler-visible characters.json control recurring character identity.",
+    "rules": [
+      "Issue 1 is the trade-dress bootstrap cover and does not require a prior cover pixel reference.",
+      "After Issue 1 cover approval, persist the exact approved pixels at production/references/echoes-forgotten-war/covers/issue-01-cover.jpg.",
+      "Before generating any Issue 2-8 cover, retrieve and visually inspect the actual Issue 1 cover pixels. A path, SHA, description, memory, or metadata record is not a substitute for pixel readback.",
+      "Use the Issue 1 cover reference only for masthead/trade dress: logo proportions, placement, issue-number treatment, issue-title hierarchy, edge clearances, and brand rhythm.",
+      "Do not use the Issue 1 cover as composition authority for later covers.",
+      "Each later cover must remain compositionally distinct and follow its own assembled recipe.",
+      "Character identity references do not control cover layout or promotional typography.",
+      "No cover becomes durable reference authority merely because it was generated. It must pass cover reader/thumbnail test, recipe fidelity, character continuity, lettering, and user approval."
+    ]
+  },
+  "references": [
+    {
+      "id": "echoes-issue-01-cover-trade-dress",
+      "type": "approved-current-production-cover-reference",
+      "image": "production/references/echoes-forgotten-war/covers/issue-01-cover.jpg",
+      "state": "pending-generation-and-approval",
+      "scope": [
+        "cover-trade-dress",
+        "masthead",
+        "issue-number-system",
+        "issue-title-hierarchy",
+        "cover-brand-rhythm"
+      ],
+      "excludedScope": [
+        "issue-specific-composition",
+        "story-page-layout",
+        "character-identity",
+        "interior-lettering",
+        "story-staging"
+      ],
+      "use": "Mandatory pixel-read reference for Issues 2-8 after the Issue 1 cover is approved and persisted."
+    }
+  ],
+  "generationOrder": [
+    "EFW_S1E01_COVER",
+    "Approve and persist Issue 1 cover pixels at the declared reference path.",
+    "EFW_S1E02_COVER through EFW_S1E08_COVER, each using the approved Issue 1 cover pixels for trade dress only."
+  ],
+  "completionGate": [
+    "Correct selected assembled cover recipe.",
+    "Correct recurring character identity references.",
+    "For Issues 2-8, actual Issue 1 cover pixels inspected in active multimodal context.",
+    "One-second dominant hook reads at thumbnail size.",
+    "Masthead and issue title are exact, legible, and consistent with the approved Issue 1 cover.",
+    "No spoiler beyond the recipe's spoiler ceiling.",
+    "No invented promotional or environmental text.",
+    "No generic cast lineup or recap collage unless explicitly required by the recipe.",
+    "User approval before any cover is promoted to durable production authority."
+  ]
+}
