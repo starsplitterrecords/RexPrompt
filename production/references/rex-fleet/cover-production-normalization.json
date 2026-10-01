@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet",
+  "status": "active",
+  "purpose": "Durable image-production source authority for Rex Fleet covers. Keeps cover trade dress stable while allowing each issue to have a distinct selling image.",
+  "canonicalTradeDressReference": {
+    "id": "issue-01-cover",
+    "repository": "starsplitterrecords/StarSplitterVisions",
+    "image": "/images/covers/rex-fleet-issue-01-green-corridor.jpg",
+    "pixelReadRequired": true,
+    "authorityScope": [
+      "masthead",
+      "Star Splitter Visions mark",
+      "cream/gold title typography",
+      "title scale and top-field occupancy",
+      "top-right issue-number block",
+      "gold divider/tagline treatment",
+      "border/line rhythm",
+      "bottom emblem system"
+    ],
+    "excludedScope": [
+      "later-cover character arrangement",
+      "later-cover camera angle",
+      "later-cover background composition",
+      "later-cover issue-specific palette emphasis",
+      "interior story-page layout"
+    ]
+  },
+  "recipeAuthority": {
+    "shelfSeriesId": "rex-fleet-covers",
+    "file": "data/shows/rex-fleet-s1/covers.json",
+    "rule": "The assembled current-issue cover recipe controls the selling concept, focal hierarchy, cast, environment, composition, thumbnail read, spoiler ceiling and issue-specific visual emphasis."
+  },
+  "productionGate": [
+    "Assemble the exact current cover recipe from RexPrompt.",
+    "Retrieve the canonical Issue 1 cover as actual image pixels and inspect it before generation.",
+    "Select any additional released/current-production character, ship, location or faction references required by the recipe.",
+    "Apply the Issue 1 cover only to trade dress and brand continuity; do not copy its montage composition into later issues.",
+    "Generate from the assembled cover recipe plus the selected pixel references.",
+    "Audit thumbnail read, exact trade-dress lettering, character/world continuity, spoiler ceiling and absence of invented environmental text before approval."
+  ],
+  "issue1Rule": "Issue 1 is released canon. Do not regenerate or replace its cover unless explicitly reopened by the user."
+}
