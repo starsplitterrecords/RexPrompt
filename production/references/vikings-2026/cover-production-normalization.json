@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "seriesId": "vikings-2026",
   "status": "cover-production-reference",
-  "purpose": "Durable chef-facing cover-production contract for Vikings 2026. It separates issue-specific cover composition from series-wide trade-dress authority and requires actual pixel inspection of the released Issue 1 cover before later-cover generation.",
+  "purpose": "Durable chef-facing cover-production contract for Vikings 2026. It separates issue-specific cover composition from series-wide trade-dress authority, fixes the municipal-publication shell across the run, requires actual pixel inspection of canonical identity references, and preserves a deliberately different graphic architecture for each issue.",
   "authority": {
-    "issueRecipe": "For Issues 2–12, the exact assembled VIK_S1E##_P01 recipe controls the issue-specific cover selling image, cast, environment, composition, spoiler ceiling, and exact issue lettering. Issue 1 remains released cover canon.",
-    "tradeDress": "The released Vikings 2026 Issue 1 cover in StarSplitterVisions controls masthead architecture, publisher badge, VIKINGS 2026! wordmark treatment, year/issue box, horizontal-rule language, issue-strapline placement, top-band proportions, and restrained dark-on-white publication design.",
-    "characterWorld": "Released StarSplitterVisions pages plus approved current-production references control established character identity, costumes, locations, props, rendering language, and later story state.",
+    "issueRecipe": "The exact assembled Vikings cover recipe controls the issue-specific selling image, cast, environment, composition, spoiler ceiling, and exact issue lettering for all twelve issues. Issue 1 is production-ready as a painted-comic redraw; its released cover remains authority for trade dress only.",
+    "tradeDress": "The released Vikings 2026 Issue 1 cover in StarSplitterVisions controls only masthead architecture, publisher badge, VIKINGS 2026! wordmark treatment, year/issue box, horizontal-rule language, issue-strapline placement, top-band proportions, and restrained dark-on-white municipal-publication design.",
+    "characterWorld": "Released StarSplitterVisions pages plus explicitly approved current-production references control established character identity, faces, bodies, hair, clothing, relative scale, locations, props, rendering language, and later story state. Bjorn and Gunnar may never substitute for one another.",
     "scopeRule": "Trade-dress authority does not authorize copying the Issue 1 scene composition into later covers. Later cover images are controlled by their own assembled cover recipes."
   },
   "canonicalTradeDressReference": {
@@ -35,38 +35,39 @@
   "coverRecipeSource": {
     "file": "data/shows/vikings-2026-s1/covers.json",
     "showSeriesId": "vikings-2026-covers",
-    "recipePattern": "VIK_S1E(0[2-9]|1[0-2])_P01",
+    "recipePattern": "^VIK_S1E01_COVER$|^VIK_S1E(0[2-9]|1[0-2])_P01$",
     "showRegistration": "data/shows.json",
-    "rule": "The same cover recipe is Page 1 of the normal Vikings issue show and is also addressable through the dedicated Vikings Covers shelf. Use the assembled P01 recipe, not raw metadata alone."
+    "rule": "Issue 1 is a dedicated cover recipe. Issues 2–12 use Page 1 of the corresponding normal Vikings issue show and are also addressable through the dedicated Vikings Covers shelf. Use the assembled cover recipe, not raw metadata alone."
   },
   "mandatoryReferenceGate": [
-    "Resolve the requested Vikings issue and assemble its Page 1 cover recipe (VIK_S1E##_P01 for Issues 2–12; released Issue 1 cover for Issue 1).",
-    "Retrieve and visually inspect the actual pixels of production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg. This local asset is an exact byte-for-byte copy of the released StarSplitterVisions Issue 1 cover.",
-    "Use those pixels only for trade dress, masthead, publication typography architecture, border/rule language, and cover-brand continuity.",
-    "Resolve actual released or approved pixels for every recurring character or established location materially present on the cover.",
-    "Use the current cover recipe for the issue-specific hook, cast, composition, environment, spoiler ceiling, and exact issue text.",
-    "Confirm the proposed illustration is one dominant selling image and remains legible at thumbnail size.",
+    "Resolve the requested Vikings issue and assemble its exact cover recipe (VIK_S1E01_COVER for Issue 1; VIK_S1E##_P01 for Issues 2–12).",
+    "Retrieve and visually inspect the actual pixels of production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg. Use this released image for trade dress and masthead architecture only, not as authority for the redrawn Issue 1 art or later issue compositions.",
+    "Resolve and visually inspect actual released or explicitly approved pixels for every recurring character materially present on the cover. Canonical character identity is absolute; do not reconstruct or average faces from prose.",
+    "Use the current issue cover recipe for the hook, cast, graphic architecture, environment, background density, spoiler ceiling, and exact DISPLAY text.",
+    "Confirm the cover remains clearly drawn and painted rather than photographic or prestige-TV key art.",
+    "Confirm the illustration contains no invented readable environmental writing beyond what the exact cover concept requires.",
+    "Confirm the proposed illustration is one dominant issue-specific image, remains legible at thumbnail size, and does not reuse another issue's composition.",
     "Generate only after all applicable visual references are present as pixels in active multimodal context."
   ],
   "coverQualityGate": [
     "One-second read: the dominant issue hook is legible immediately.",
     "Thumbnail test: focal silhouette, major shape system, and masthead remain clear when reduced.",
-    "Series test: masthead/trade dress unmistakably belongs to Vikings 2026.",
-    "Issue test: the image could not be casually reassigned to a different issue.",
+    "Series test: the fixed white municipal-publication masthead unmistakably belongs to Vikings 2026.",
+    "Issue test: the image uses its assigned graphic architecture and could not be casually reassigned to another issue.",
+    "Style test: clearly drawn and painted comic illustration with controlled texture, expressive faces, believable anatomy and tactile New York surfaces; no photographic skin, lens effects, excessive bokeh, over-rendered fur or cinematic orange/blue grading.",
+    "Character test: Bjorn, Gunnar, Astrid and both male Kin match actual canonical reference pixels without substitution, averaging or generic-Viking drift.",
     "Spoiler test: cover promises pressure without revealing the issue's solution, reversal, ruling, or final payoff.",
-    "Tone test: grounded documentary-comedy dignity; humor comes from incompatible systems and ordinary New York indifference rather than caricature.",
-    "Composition test: no recap collage, floating-head montage, generic cast lineup, or fake action spectacle unless an exact cover recipe explicitly requires it.",
-    "Lettering test: exact series wordmark, year/issue number, and issue strapline only; no invented promotional text.",
-    "Reference test: recurring characters and world elements match actual established pixels rather than prose reconstruction.",
+    "Composition test: no recap collage, generic cast lineup, foreground-commuter filler or repeated ensemble architecture unless the exact issue recipe calls for it.",
+    "Lettering test: exact series wordmark, year/issue number and issue strapline only; no invented promotional or environmental text.",
     "Municipal-shell test: the masthead still feels like a dry civic/public-information publication rather than entertainment marketing.",
-    "New-York-reaction test: when ordinary New Yorkers are present, their behavior remains routine-driven and proportionate; no default gawking crowd or broad reaction comedy."
+    "New-York-behavior test: any background people are compositionally useful, sparse when appropriate and routine-driven rather than a gawking audience."
   ],
   "issueLettering": [
     {
       "issue": 1,
       "numberText": "2026 Issue #1",
       "strapline": "AT THE MUNICIPAL TEMPORAL DISPLACEMENT INTEGRATION DEPARTMENT",
-      "status": "released-canon"
+      "status": "production-ready"
     },
     {
       "issue": 2,
@@ -121,7 +122,7 @@
     {
       "issue": 12,
       "numberText": "2026 Issue #12",
-      "strapline": "PERMANENT RESIDENCY / TRIAL BY COMBAT"
+      "strapline": "TRIAL BY COMBAT"
     }
   ],
   "knownScopeLocks": [
@@ -135,14 +136,14 @@
     }
   ],
   "coverLineDoctrine": [
-    "The masthead/trade dress is intentionally dull, civic and bureaucratic: a City-of-New-York-style public-information publication shell. Do not commercialize or glamorize the top band.",
-    "The cover illustration beneath that municipal shell is the sales engine: specific, cinematic, human, issue-distinct and immediately enticing.",
-    "When Vikings are visibly out of place in ordinary New York, surrounding New Yorkers should usually remain routine-driven and minimally reactive. The city keeps functioning; the displaced Norse characters take the unfamiliar system seriously.",
-    "Humor comes from the mismatch between extraordinary displacement, ordinary municipal/public systems, and New York's practiced indifference—not from caricaturing the Vikings or staging broad crowd reaction.",
+    "The masthead/trade dress is intentionally dull, civic and bureaucratic: a white municipal/public-information shell with boxed STAR SPLITTER / VISIONS mark, issue block, enormous condensed VIKINGS 2026! wordmark, thin rules and narrow issue subtitle. Keep it essentially fixed across the run.",
+    "The illustration beneath the shell is the sales engine and uses a different graphic architecture for every issue: 1 seated horizontal triptych; 2 steep diagonal ascent; 3 lone figure and large negative space; 4 train/platform split; 5 tight counter transaction; 6 flat institutional symmetry; 7 soaring vertical library volume; 8 low park/picnic composition; 9 circular support-group composition; 10 distributed depth along one neighborhood block; 11 overhead table geometry; 12 dead-center security arch.",
+    "The series art is clearly drawn and painted, with controlled texture, expressive faces, believable anatomy and tactile New York environments. Avoid photographic skin, lens effects, over-rendered fur, excessive bokeh and cinematic orange/blue grading.",
+    "Canonical character reference pixels are absolute. Bjorn is the close-cropped short-bearded serious leader; Gunnar is the long-haired enormous-bearded navigator with black eye paint. Astrid and both male Kin remain individually recognizable and may not collapse into generic fantasy Vikings.",
+    "Do not solve New York indifference by placing foreground commuters around the household. Background people appear only when the composition benefits from them; some covers may have almost none.",
+    "Apart from exact required trade dress, readable environmental text generally disappears unless the issue concept requires it. Never invent promotional copy.",
     "Every cover sells one dominant issue-specific contradiction, desire or pressure rather than summarizing the issue.",
-    "Covers must remain legible at thumbnail size through a simple dominant silhouette/shape system and disciplined focal hierarchy.",
-    "Spoiler-safe does not mean generic: advertise the loaded problem or desire, but do not visualize the issue's solution, reversal, ruling, or final payoff.",
-    "No recap collage, floating-head montage, generic cast lineup, superhero posing, fantasy-Norse ornament, fake spectacle, invented blurbs, or promotional clutter."
+    "Spoiler-safe does not mean generic: advertise the loaded problem or desire, but do not visualize the issue's solution, reversal, ruling or final payoff."
   ],
   "issueSequenceRule": "Normal Vikings issue assembly order is cover P01 → opening editorial/title splash P02 → story → closing teaser/finale. Covers are not separate from the issue sequence, even though a dedicated cover shelf also exposes the same recipes for focused cover production."
 }
