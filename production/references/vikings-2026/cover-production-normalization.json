@@ -4,7 +4,7 @@
   "status": "cover-production-reference",
   "purpose": "Durable chef-facing cover-production contract for Vikings 2026. It separates issue-specific cover composition from series-wide trade-dress authority and requires actual pixel inspection of the released Issue 1 cover before later-cover generation.",
   "authority": {
-    "issueRecipe": "The exact assembled VIK_S1E##_COVER RexPrompt recipe controls the issue-specific selling image, cast, environment, composition, spoiler ceiling, and exact issue lettering.",
+    "issueRecipe": "For Issues 2–12, the exact assembled VIK_S1E##_P01 recipe controls the issue-specific cover selling image, cast, environment, composition, spoiler ceiling, and exact issue lettering. Issue 1 remains released cover canon.",
     "tradeDress": "The released Vikings 2026 Issue 1 cover in StarSplitterVisions controls masthead architecture, publisher badge, VIKINGS 2026! wordmark treatment, year/issue box, horizontal-rule language, issue-strapline placement, top-band proportions, and restrained dark-on-white publication design.",
     "characterWorld": "Released StarSplitterVisions pages plus approved current-production references control established character identity, costumes, locations, props, rendering language, and later story state.",
     "scopeRule": "Trade-dress authority does not authorize copying the Issue 1 scene composition into later covers. Later cover images are controlled by their own assembled cover recipes."
@@ -35,12 +35,12 @@
   "coverRecipeSource": {
     "file": "data/shows/vikings-2026-s1/covers.json",
     "showSeriesId": "vikings-2026-covers",
-    "recipePattern": "VIK_S1E##_COVER",
+    "recipePattern": "VIK_S1E(0[2-9]|1[0-2])_P01",
     "showRegistration": "data/shows.json",
-    "rule": "Use the assembled cover recipe, not raw metadata alone. The chef must receive the exact assembled recipe and then resolve pixel references before generation."
+    "rule": "The same cover recipe is Page 1 of the normal Vikings issue show and is also addressable through the dedicated Vikings Covers shelf. Use the assembled P01 recipe, not raw metadata alone."
   },
   "mandatoryReferenceGate": [
-    "Resolve the requested Vikings cover show and assemble the exact VIK_S1E##_COVER recipe.",
+    "Resolve the requested Vikings issue and assemble its Page 1 cover recipe (VIK_S1E##_P01 for Issues 2–12; released Issue 1 cover for Issue 1).",
     "Retrieve and visually inspect the actual pixels of production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg. This local asset is an exact byte-for-byte copy of the released StarSplitterVisions Issue 1 cover.",
     "Use those pixels only for trade dress, masthead, publication typography architecture, border/rule language, and cover-brand continuity.",
     "Resolve actual released or approved pixels for every recurring character or established location materially present on the cover.",
@@ -143,5 +143,6 @@
     "Covers must remain legible at thumbnail size through a simple dominant silhouette/shape system and disciplined focal hierarchy.",
     "Spoiler-safe does not mean generic: advertise the loaded problem or desire, but do not visualize the issue's solution, reversal, ruling, or final payoff.",
     "No recap collage, floating-head montage, generic cast lineup, superhero posing, fantasy-Norse ornament, fake spectacle, invented blurbs, or promotional clutter."
-  ]
+  ],
+  "issueSequenceRule": "Normal Vikings issue assembly order is cover P01 → opening editorial/title splash P02 → story → closing teaser/finale. Covers are not separate from the issue sequence, even though a dedicated cover shelf also exposes the same recipes for focused cover production."
 }
