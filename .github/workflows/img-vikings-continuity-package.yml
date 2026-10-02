@@ -1,9 +1,7 @@
 name: IMG Vikings Continuity Package
 
 on:
-  push:
-    paths:
-      - '.github/workflows/img-vikings-continuity-package.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read
