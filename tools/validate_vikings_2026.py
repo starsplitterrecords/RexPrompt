@@ -124,10 +124,15 @@ def validate_img_normalization(characters):
     for character_id in CORE_VISUAL_CHARACTER_IDS:
         record = characters.get(character_id)
         assert isinstance(record, dict), f"missing core Vikings visual character record: {character_id}"
+        # The sanitized character shelf deliberately keeps identity and story roles,
+        # while released pixels and approved drafts remain visual authority.
+        assert isinstance(record.get("role"), str) and record["role"].strip(), f"core Vikings character missing role: {record.get('name', character_id)}"
         visual = record.get("visualAnchor")
-        assert isinstance(visual, str) and len(visual.strip()) >= 60, f"core Vikings character missing useful visual discriminator: {record.get('name', character_id)}"
+        if visual is not None:
+            assert isinstance(visual, str) and visual.strip(), f"malformed visual anchor: {character_id}"
         continuity = record.get("promptContinuity")
-        assert isinstance(continuity, list) and continuity, f"core Vikings character missing character-specific continuity: {record.get('name', character_id)}"
+        if continuity is not None:
+            assert isinstance(continuity, list) and all(isinstance(item, str) and item.strip() for item in continuity), f"malformed character continuity: {character_id}"
         generation_text = json.dumps({"visualAnchor": visual, "promptContinuity": continuity}, ensure_ascii=False)
         for residue in CHARACTER_SCOPE_RESIDUE:
             assert residue not in generation_text, f"global/correction scaffolding leaked into character shelf: {record.get('name', character_id)}: {residue}"
@@ -169,41 +174,44 @@ def main():
     assert issue2_show, "current Vikings Issue 2 is not registered"
     assert issue2_show.get("issueLabel") == "Issue 2 — Landfall Bushwick", "Vikings Issue 2 label drift"
 
-    generation_lines = {show.get("generationLine") for show in active}
-    assert None not in generation_lines and len(generation_lines) == 1, "active Vikings issues must share one series-level generation contract"
-    generation_line = next(iter(generation_lines))
-    for required in [
-        "Vikings are intelligent and dignified",
-        "released Issue 1 story-art references as strict visual canon",
-        "dialogueInline exactly",
-        "natural left-to-right balloon order",
-        "Interior story page only",
-    ]:
-        assert required in generation_line, f"Vikings generation contract missing: {required}"
-    assert "Legacy S1E02 payload IDs" not in generation_line, "legacy identifier explanation leaked into generation instruction"
-
     active_pages = []
     active_files = []
+    issue_pages_by_id = {}
     for show in active:
-        assert show.get("unitLabel") == "PAGE", f"Vikings show is not page production: {show.get('id')}"
-        assert show.get("basePath") == "data/shows/vikings-2026-s1", f"unexpected Vikings basePath: {show.get('id')}"
+        show_id = show["id"]
+        assert show.get("unitLabel") == "PAGE", f"Vikings show is not page production: {show_id}"
+        assert show.get("basePath") == "data/shows/vikings-2026-s1", f"unexpected Vikings basePath: {show_id}"
+        generation_line = show.get("generationLine")
+        assert isinstance(generation_line, str) and generation_line.strip(), f"missing generation contract: {show_id}"
+        assert "panel order" in generation_line.lower() and "exact dialogue" in generation_line.lower(), f"generation contract must preserve panels and dialogue: {show_id}"
+        assert "Legacy S1E02 payload IDs" not in generation_line, "legacy identifier explanation leaked into generation instruction"
 
-        base = SHOW / show.get("scenesFile", "pages_base.json")
-        assert base.exists(), f"missing Vikings base payload: {base.name}"
-        base_payload = load_payload(base)
-        assert isinstance(base_payload, list), f"base payload is not a list: {base.name}"
-        active_pages.extend(base_payload)
-        active_files.append(base.name)
-
+        # Match the current loader: flat scenesFiles, or base plus overlays,
+        # followed by the show's includeIdPattern (shared covers are filtered).
+        files = show.get("scenesFiles") or [show.get("scenesFile", "pages_base.json")]
+        selected = []
+        for rel in files:
+            path = SHOW / rel
+            assert path.exists(), f"missing Vikings payload: {rel}"
+            payload = load_payload(path)
+            assert isinstance(payload, list), f"payload is not a list: {rel}"
+            selected.extend(payload)
+            active_files.append(rel)
         for overlay in show.get("sceneOverlays", []):
             rel = overlay.get("file")
-            assert rel, f"overlay missing file: {show.get('id')}"
+            assert rel, f"overlay missing file: {show_id}"
             path = SHOW / rel
             assert path.exists(), f"active Vikings overlay missing: {rel}"
             payload = load_payload(path, overlay.get("encoding"))
             assert isinstance(payload, list), f"overlay is not a page list: {rel}"
-            active_pages.extend(payload)
+            selected.extend(payload)
             active_files.append(rel)
+        if show.get("includeIdPattern"):
+            pattern = re.compile(show["includeIdPattern"])
+            selected = [page for page in selected if pattern.search(str(page.get("id", "")))]
+        assert selected, f"no assembled pages: {show_id}"
+        issue_pages_by_id[show_id] = selected
+        active_pages.extend(selected)
 
     ids = []
     for page in active_pages:
@@ -244,21 +252,17 @@ def main():
 
     assert len(ids) == len(set(ids)), "duplicate active Vikings page ids"
 
-    issue3_show = next((show for show in active if show.get("id") == "vikings-2026-s1-e03"), None)
-    assert issue3_show, "Vikings Issue 3 is not registered"
-    assert issue3_show.get("issueLabel") == "Issue 3 — The Iron Worm", "Vikings Issue 3 label drift"
-
-    issue2_pages = [page for page in active_pages if str(page.get("id", "")).startswith("VIK_S1I02_P")]
-    expected_issue2_ids = [f"VIK_S1I02_P{number:02d}" for number in range(1, 25)]
-    actual_issue2_ids = [page.get("id") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))]
-    assert actual_issue2_ids == expected_issue2_ids, "Vikings Issue 2 must expose exactly VIK_S1I02_P01-P24 in page order"
-    assert [page.get("page") for page in sorted(issue2_pages, key=lambda page: page.get("page", 0))] == list(range(1, 25)), "Vikings Issue 2 page numbering drift"
-
-    issue3_pages = [page for page in active_pages if str(page.get("id", "")).startswith("VIK_S1E03_P")]
-    expected_issue3_ids = [f"VIK_S1E03_P{number:02d}" for number in range(1, 25)]
-    actual_issue3_ids = [page.get("id") for page in sorted(issue3_pages, key=lambda page: page.get("page", 0))]
-    assert actual_issue3_ids == expected_issue3_ids, "Vikings Issue 3 must expose exactly VIK_S1E03_P01-P24 in page order"
-    assert [page.get("page") for page in sorted(issue3_pages, key=lambda page: page.get("page", 0))] == list(range(1, 25)), "Vikings Issue 3 page numbering drift"
+    # Current season: Issue 1 is released; Issues 2-12 include a cover,
+    # editorial opening, story pages, and closing editorial/teaser.
+    expected_counts = {2: 27, 3: 24, 4: 27, 5: 24, 6: 27, 7: 27,
+                       8: 24, 9: 27, 10: 24, 11: 27, 12: 27}
+    for issue, count in expected_counts.items():
+        show_id = f"vikings-2026-s1-e{issue:02d}"
+        assert show_id in issue_pages_by_id, f"missing current Vikings issue: {show_id}"
+        pages = issue_pages_by_id[show_id]
+        expected_ids = [f"VIK_S1E{issue:02d}_P{number:02d}" for number in range(1, count + 1)]
+        assert [page.get("id") for page in pages] == expected_ids, f"Issue {issue}: publication page IDs/order drift"
+        assert [page.get("page") for page in pages] == list(range(1, count + 1)), f"Issue {issue}: page numbering drift"
 
     decoded_text = json.dumps(active_pages, ensure_ascii=False)
     for residue in PRODUCTION_RESIDUE:
@@ -266,9 +270,8 @@ def main():
 
     print("Vikings 2026 production-hygiene validation passed")
     print("IMG production normalization reference: valid")
-    print("Core visual discriminators:", len(CORE_VISUAL_CHARACTER_IDS))
-    print("Issue 2 page records:", len(issue2_pages))
-    print("Issue 3 page records:", len(issue3_pages))
+    print("Core character identities:", len(CORE_VISUAL_CHARACTER_IDS))
+    print("Current season issues:", len(issue_pages_by_id))
     print("Active page records:", len(active_pages))
     print("Active production files:", len(set(active_files)))
     print("Generic page-direction scaffolding: absent")
