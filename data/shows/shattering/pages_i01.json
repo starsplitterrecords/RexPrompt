@@ -1,75 +1,18 @@
 [
   {
     "id": "SHAT_I01_P01",
-    "summary": "Opening editor splash frames Shattering as the lost pre-Fleet age when the corridor network still seemed permanent, inviting Rex Fleet readers to recognize the unnamed roots of the world they already know.",
-    "settingText": "Full-page High Era panorama at civilization scale: multiple inhabited worlds linked by immense stable green corridors, with civilian, diplomatic, and freight traffic moving through luminous lanes around elegant Cooperative/BHA infrastructure. The age should feel prosperous, precise, optimistic, and almost impossibly connected. Subtle shapes, colors, and design rhythms may echo visual traditions familiar from later Rex Fleet, Verge, and Shard culture, but no mature post-Shattering faction, uniform, ship class, or institution is physically present.",
+    "summary": "Opening panorama establishes the High Era corridor network at peak confidence and dependence, before visible failure.",
+    "settingText": "Full-page High Era panorama at civilization scale: multiple inhabited worlds linked by immense stable green corridors, with civilian, diplomatic, and freight traffic moving through luminous lanes around elegant Cooperative and BHA infrastructure. The age feels prosperous, precise, optimistic, and almost impossibly connected. No post-Shattering faction, uniform, ship class, or institution is present.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "FROM THE EDITOR"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "You know the Fleet."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "You know the green corridors, the hard borders, the old arguments, the symbols people still fight over."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "But none of those things began with the names we know."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "There was a time when the great roads between the stars simply worked."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "A ship could cross impossible distance and arrive exactly where civilization expected it. Worlds separated by darkness lived as neighbors. The machinery was ancient, immense, and so dependable that an entire age had forgotten what dependence felt like."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "This is that age."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Look closely."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "You will recognize things that nobody has names for yet."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "You may recognize some mistakes, too."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Welcome to Shattering of the Corridors."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Before there were fleets, there were roads."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "And everyone believed the roads would last forever."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "—The Editor"
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   },
   {
@@ -130,24 +73,12 @@
         "text": "Don't look at the size. Look at the spacing."
       },
       {
-        "handle": "@starsplit.lochran",
-        "text": "I am."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "It keeps coming back."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "I see the variance."
-      },
-      {
         "handle": "@starsplit.liora.virelia",
         "text": "Every forty-eight seconds."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "With half the Cooperative arriving at once."
+        "text": "With half the Cooperative arriving at once, a recurring timing error is not noise."
       }
     ],
     "sceneId": "SCN_SHAT_I01_S01"
@@ -440,19 +371,11 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.heska",
-        "text": "Tell me I'm reading this wrong."
+        "text": "I checked the standard twice. The record is still wrong."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "You checked the standard?"
-      },
-      {
-        "handle": "@starsplit.heska",
-        "text": "Twice. I was hoping you'd insult me."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Not today."
+        "text": "Then it isn't the archive."
       }
     ],
     "sceneId": "SCN_SHAT_I01_S04"
@@ -532,11 +455,11 @@
       },
       {
         "handle": "@starsplit.heska",
-        "text": "That's a terrible distinction for an archivist."
+        "text": "Then the archive can no longer establish sequence."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "It's worse for a transit system."
+        "text": "Neither can transit control."
       }
     ],
     "sceneId": "SCN_SHAT_I01_S04"
@@ -562,20 +485,7 @@
     "directionInline": [
       "Show that Damian is making a conscious trade: he believes calm is part of his duty, not merely a cynical cover."
     ],
-    "dialogueInline": [
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "Localized variance... no."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "Routine timing correction."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "Better. True enough."
-      }
-    ],
+    "dialogueInline": [],
     "sceneId": "SCN_SHAT_I01_S05"
   },
   {
@@ -678,10 +588,6 @@
         "text": "That is not an answer."
       },
       {
-        "handle": "@starsplit.tctrl",
-        "text": "I know."
-      },
-      {
         "handle": "@starsplit.ava.seltos",
         "text": "Back up half a step. Let them work."
       }
@@ -719,19 +625,11 @@
       },
       {
         "handle": "@starsplit.travl",
-        "text": "Mera."
+        "text": "Her name's Mera. She's on the Harrow Line."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "Her convoy cleared the outer beacon."
-      },
-      {
-        "handle": "@starsplit.travl",
-        "text": "So she's safe?"
-      },
-      {
-        "handle": "@starsplit.ava.seltos",
-        "text": "Yes. Stay here."
+        "text": "Mera's convoy cleared the outer beacon. Stay here."
       },
       {
         "handle": "@starsplit.ava.seltos",
@@ -778,11 +676,11 @@
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "Liora won't leave it there."
+        "text": "That delays the closure argument."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Then don't open with Liora."
+        "text": "It gives us time to verify the scale."
       }
     ],
     "sceneId": "SCN_SHAT_I01_S07"
@@ -911,7 +809,7 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Projected."
+        "text": "Which arcs are measured?"
       },
       {
         "handle": "@starsplit.liora.virelia",
@@ -1000,66 +898,33 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Something we can verify."
+        "text": "A failure we can verify."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "A failure?"
+        "text": "By then someone may already be inside it."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Yes. Then we deal with what actually happened."
+        "text": "Then we deal with what actually happened."
       }
     ],
     "sceneId": "SCN_SHAT_I01_S08"
   },
   {
     "id": "SHAT_I01_P24",
-    "summary": "Closing teaser keeps the network outwardly functional while pointing toward the widening distance between Core confidence, edge maintenance, urgent transit needs, and forgotten knowledge.",
-    "settingText": "Full-page teaser composition spanning the functioning High Era network from polished Core infrastructure toward the harder-used Outer Band. Most corridor lines remain luminous green, but faint timing echoes and tiny doubled traces are visible only on close inspection. Include distant human-scale hints of maintenance work and waiting freight or medical cargo without staging a specific next-issue scene. The picture should feel beautiful first and uneasy second.",
+    "summary": "A quiet closing image shows the network still functioning while maintenance strain, freight delays, and subtle timing errors spread toward the Outer Band.",
+    "settingText": "Full-page view spanning polished Core infrastructure toward harder-used Outer Band systems. Most corridor lines remain luminous green, but faint timing echoes and tiny doubled traces are visible. Human-scale maintenance work continues while freight and medical cargo wait at the edges of an apparently functional network.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "NEXT ISSUE"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The map is still green."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "That is becoming a problem."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Out at the edges, people are fixing things the center still calls normal."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "A medicine convoy needs a road that will stay where it was put."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "And buried in the oldest layers of the network is evidence that somebody, long ago, expected this."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The corridors have been trusted for generations."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Next issue, trust gets expensive."
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   }
 ]
