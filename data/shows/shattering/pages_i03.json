@@ -1,51 +1,18 @@
 [
   {
     "id": "SHAT_I03_P01",
-    "summary": "Opening editor splash uses dramatic irony: later history knows the name Shattering, while the people inside the High Era still believe they are attempting a difficult repair.",
-    "settingText": "Full-page image inside the ancient damping chamber: monumental emitters, layered old engineering, and tiny human figures working beneath machinery built for a more cautious age. Through apertures or schematic light, the still-vast High Era corridor civilization is suggested above. The scale should be awe-inducing, not yet catastrophic.",
+    "summary": "The ancient damping chamber comes under active load as engineers attempt to stabilize a network far larger than the system was built to handle.",
+    "settingText": "Full-page image inside the damping chamber: monumental emitters, layered old engineering, and tiny human figures working beneath machinery built for a more cautious age. Through apertures and instrument light, the still-vast High Era corridor network remains active above.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "FROM THE EDITOR"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "You know this era by the name historians gave its ending."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "They still think they're in the middle of a repair."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "That is the strange privilege of the past: from here, every warning points somewhere. From there, it is just another alarm in a room full of them."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Beneath the High Era sits machinery built by people who remembered that the corridors could fail."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Above it sits a civilization that has forgotten how frightened those builders were."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Today, both are going to be tested."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "—The Editor"
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   },
   {
@@ -79,12 +46,8 @@
         "text": "And carrying all of it now."
       },
       {
-        "handle": "@starsplit.alan.kessler",
-        "text": "That's usually where the story gets bad."
-      },
-      {
         "handle": "@starsplit.liora.virelia",
-        "text": "Let's disappoint tradition."
+        "text": "Keep the old lattice isolated until we have a baseline."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S01"
@@ -130,7 +93,7 @@
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Enough that I don't want to say it out loud."
+        "text": "Enough to invalidate the safety margin."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S01"
@@ -297,23 +260,15 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Feel that?"
+        "text": "Put your hand here. The vibration's in the metal, not the mount."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "I hear it."
+        "text": "The casing is flexing."
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "No. Here."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "...That's new."
-      },
-      {
-        "handle": "@starsplit.ruben.markham",
-        "text": "That's not a loose mount. The metal's fatiguing."
+        "text": "The metal's fatiguing."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S03"
@@ -444,16 +399,8 @@
         "text": "The stress curve's bending."
       },
       {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Say that again."
-      },
-      {
         "handle": "@starsplit.liora.virelia",
-        "text": "No. You'll celebrate and break something."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Cruel."
+        "text": "Hold the secondaries at current power."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S04"
@@ -496,14 +443,6 @@
       {
         "handle": "@starsplit.liora.virelia",
         "text": "Keep checking."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "You could smile once."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "At one percent."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S04"
@@ -579,11 +518,11 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ctech",
-        "text": "I need you to repeat that for the record."
+        "text": "Your emergency key does not satisfy the engineering lockout."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Run the override."
+        "text": "Run the override under my authority."
       },
       {
         "handle": "@starsplit.ctech",
@@ -591,15 +530,7 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "I did."
-      },
-      {
-        "handle": "@starsplit.ctech",
-        "text": "That's not the same authority."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "It is for this decision."
+        "text": "Proceed. I will own the decision."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S05"
@@ -725,24 +656,12 @@
     "continuityFrom": "SHAT_I03_P15",
     "dialogueInline": [
       {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Liora—"
-      },
-      {
         "handle": "@starsplit.liora.virelia",
-        "text": "I'm fine."
+        "text": "The field is feeding itself."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "I wasn't asking about you."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Then yes, the field is feeding itself."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "That's worse."
+        "text": "That makes the instability self-reinforcing."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S06"
@@ -774,16 +693,12 @@
         "text": "We can still chase alignment."
       },
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "No."
-      },
-      {
         "handle": "@starsplit.alan.kessler",
         "text": "If I can get four back in phase—"
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "No. Shut it down."
+        "text": "Shut it down."
       },
       {
         "handle": "@starsplit.alan.kessler",
@@ -824,7 +739,7 @@
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Say again."
+        "text": "Confirm the displacement."
       },
       {
         "handle": "@starsplit.capt",
@@ -866,23 +781,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "It's not optical."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "Great."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "It's a delayed harmonic image."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "Less great."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Keep your engines cold. I need the separation to stay measurable."
+        "text": "It's a delayed harmonic image, not an optical reflection. Keep your engines cold; I need the separation to stay measurable."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S07"
@@ -915,20 +814,8 @@
         "text": "Control, the duplicate is closing."
       },
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "I see it."
-      },
-      {
         "handle": "@starsplit.capt",
-        "text": "You also see the other routes lighting up?"
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Yes."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "Then tell me this is local."
+        "text": "Other routes are lighting up. Tell me this is local."
       },
       {
         "handle": "@starsplit.liora.virelia",
@@ -967,19 +854,11 @@
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "There isn't one situation anymore."
+        "text": "There isn't one situation anymore. Local channels are already giving different guidance."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Then make the message broad enough."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "Listen to that."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "I am. People are asking who's in charge."
+        "text": "Then make the message broad enough. People are asking who's in charge."
       }
     ],
     "sceneId": "SCN_SHAT_I03_S08"
@@ -1011,19 +890,11 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
-        "text": "I've written 'contained' three different ways since breakfast."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "This isn't the time."
+        "text": "The failures are no longer contained."
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "That's exactly why it is."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "I'm done. People get the truth."
+        "text": "I'm sending the actual status."
       },
       {
         "handle": "@starsplit.lochran",
@@ -1059,15 +930,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Enough."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "Iskara—"
-      },
-      {
-        "handle": "@starsplit.iskara.foster",
-        "text": "We're past prevention."
+        "text": "Enough. We're past prevention."
       },
       {
         "handle": "@starsplit.damian.cole",
@@ -1090,51 +953,18 @@
   },
   {
     "id": "SHAT_I03_P24",
-    "summary": "Closing teaser turns the failed attempt outward, hinting that corridor geometry itself is becoming unreliable and that the crisis is about to become physically visible to ordinary traffic.",
-    "settingText": "Full-page deep-space corridor image: a ship traveling inside a once-clean route has a faint delayed duplicate silhouette displaced beside it, while beacon anchors and luminous lane geometry show subtle misalignment. Keep the effect uncanny and spectacular rather than fully catastrophic; do not show the coming network collapse.",
+    "summary": "A corridor ship acquires a delayed duplicate as beacon anchors and route geometry begin to disagree with each other.",
+    "settingText": "Full-page deep-space corridor image: a ship traveling inside a once-clean route has a faint delayed duplicate silhouette displaced beside it, while beacon anchors and luminous lane geometry show visible misalignment. The effect is physical, measurable, and increasingly dangerous.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "NEXT ISSUE"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "A road through impossible space has one unpleasant requirement:"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "space has to keep agreeing where the road is."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The signals are multiplying."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The maps are losing authority."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Ships are beginning to see things that should not be beside them."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Next issue, the crisis leaves the control room."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "And there will be nowhere left to file it as technical."
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   }
 ]
