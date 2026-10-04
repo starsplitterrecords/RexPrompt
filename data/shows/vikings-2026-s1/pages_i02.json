@@ -1901,7 +1901,7 @@
     "issue": 2,
     "page": 17,
     "title": "The Brass Key",
-    "summary": "Carrie hands over the single apartment key; Bjorn understands the lock immediately and values the privacy far more than the paperwork that produced it.",
+    "summary": "Carrie hands over the apartment key immediately after the DTI warning; Bjorn understands the lock as real control over the room, while the single key exposes how provisional that control still is.",
     "settingText": "Bushwick studio doorway",
     "charactersInline": [
       {
@@ -1915,87 +1915,69 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Insert: scratched brass key in Carrie's palm.",
-      "Close: Bjorn takes it and turns it once between thumb and forefinger.",
-      "Two-shot at the door: Carrie demonstrates the deadbolt only as much as needed; Bjorn tests the lock himself.",
-      "Medium: Gunnar points out that one key is a bottleneck for six adults.",
-      "Close: Bjorn closes his hand around the key."
+      "Insert: the scratched brass apartment key rests in Carrie's palm.",
+      "Close: Bjorn takes it and studies the cut metal, then tests it in the lock himself rather than accepting a verbal explanation.",
+      "Two-shot at the door: Bjorn locks and unlocks the deadbolt from inside; the mechanism is familiar enough in principle even if the hardware is modern.",
+      "Medium: Gunnar notices that one key controls return access for five adults.",
+      "Final panel: a hard knock sounds from the hallway before Carrie can answer. Everyone turns toward the door."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P17_L01",
-        "text": "One key tonight. Copies tomorrow.",
+        "text": "One key tonight. I bring copies tomorrow.",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P17_L02",
-        "text": "One key for six people is a poor arrangement.",
-        "subtext": "Panel 2",
+        "text": "From inside, this keeps others out.",
+        "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P17_L03",
-        "text": "For once, your complaint is completely normal.",
-        "subtext": "Panel 2",
+        "text": "That is what the lock is for.",
+        "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P17_L04",
-        "text": "From inside, the door answers to us.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P17_L05",
-        "text": "Once it's locked, the door answers to you.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P17_L06",
-        "text": "And from outside, the key decides.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P17_L07",
-        "text": "That's a lock.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P17_L08",
-        "text": "An excellent invention.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P17_L09",
-        "text": "Until the person with the only key leaves.",
+        "text": "If the person carrying the key leaves, the rest cannot return.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P17_L10",
-        "text": "Tomorrow we make six.",
+        "fid": "VIK_S1E02_P17_L05",
+        "text": "Then tonight it stays with the room.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P17_L11",
-        "text": "Tomorrow a locksmith makes copies. You make nothing.",
+        "fid": "VIK_S1E02_P17_L06",
+        "text": "That works.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P17_L12",
-        "text": "Then tomorrow the locksmith proves useful.",
+        "fid": "VIK_S1E02_P17_L07",
+        "text": "KNOCK. KNOCK. KNOCK.",
         "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
+        "speaker": "SFX"
       }
     ],
     "continuityFrom": "VIK_S1E02_P16",
@@ -2013,9 +1995,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 18,
-    "title": "The Landlord",
-    "summary": "Carrie explains rent only as an oral exchange of obligations; Bjorn maps it onto lordship because that is the political structure he actually knows, while modern tenancy remains mostly opaque.",
-    "settingText": "Bushwick studio table",
+    "title": "The Building Comes Upstairs",
+    "summary": "The building superintendent arrives because management received the fire-escape complaint; Carrie now has to defend the placement to someone whose authority is physical and immediate rather than bureaucratic.",
+    "settingText": "Bushwick studio doorway and apartment 5B",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2028,105 +2010,78 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "name": "Building Superintendent"
       }
     ],
     "panelPlan": [
-      "Medium: Carrie, Bjorn and Gunnar at the table after the key handoff. Carrie explains the arrangement aloud using the room around them.",
-      "Two-shot: Carrie points to roof, running water, locked door and the unfamiliar heat source as things the building owner must maintain.",
-      "Medium: Gunnar counts the obligations on his fingers.",
-      "Close on Bjorn reaching the lordship conclusion with complete seriousness.",
-      "Two-shot Carrie/Bjorn: she realizes the explanation has made his opinion more entrenched."
+      "Wide at the open door: the Building Superintendent stands in the hallway with work clothes, keys and the exhausted look of someone pulled into a tenant problem at night. Carrie recognizes why he is there immediately.",
+      "Medium: he asks to see the rear exterior stairs. Second Male Kin, who set the snare, is visible in the room holding the recovered cord.",
+      "Two-shot Bjorn/Superintendent: Bjorn asks whether this man owns the building; Carrie answers before the superintendent needs to.",
+      "Medium: the superintendent says he works for the owner and maintains the building. Bjorn quietly assigns him a familiar social category.",
+      "Wide: the superintendent enters. Carrie closes the door behind him; the inspection has now moved inside the placement."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P18_L01",
-        "text": "You pay each month to stay here. The owner has to keep the roof sound, the water coming, the door working, and the heat on.",
+        "text": "Management called me about something tied across the rear fire escape.",
+        "subtext": "Panel 1",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P18_L02",
+        "text": "It's already down. You can inspect it.",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P18_L02",
-        "text": "So we pay him and he keeps the hall fit to live in.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
         "fid": "VIK_S1E02_P18_L03",
-        "text": "That's the basic deal.",
+        "text": "I need to.",
         "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P18_L04",
-        "text": "Roof. Water. Door. Heat.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L05",
-        "text": "And if one fails?",
+        "text": "Are you the man who owns this place?",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P18_L06",
-        "text": "Then he has failed his side of it.",
+        "fid": "VIK_S1E02_P18_L05",
+        "text": "He is the building superintendent. He works for the landlord.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
+        "fid": "VIK_S1E02_P18_L06",
+        "text": "I keep the building running.",
+        "subtext": "Panel 4",
+        "speaker": "Building Superintendent"
+      },
+      {
         "fid": "VIK_S1E02_P18_L07",
-        "text": "So the payment binds him too.",
-        "subtext": "Panel 3",
+        "text": "Then you are the landlord's steward.",
+        "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P18_L08",
-        "text": "Yes. That part matters.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L09",
-        "text": "He owns the building. We pay him. He owes protection of the roof and heat.",
+        "text": "If that gets me through this inspection, sure.",
         "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L10",
-        "text": "I know where you're going.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L11",
-        "text": "He is our lord.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L12",
-        "text": "He is not your lord.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L13",
-        "text": "You have described a lord with monthly billing.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L14",
-        "text": "I have described a landlord.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P18_L15",
-        "text": "Exactly.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
+        "speaker": "Building Superintendent"
       }
     ],
     "continuityFrom": "VIK_S1E02_P17",
@@ -2141,8 +2096,107 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 19,
-    "title": "Their Order",
-    "summary": "The household arranges 5B by familiar physical logic; Carrie's interventions reveal unfamiliar building rules only when somebody actually collides with one.",
+    "title": "The Second Road",
+    "summary": "The superintendent verifies that the exterior route is clear, explains the shared boundary in concrete terms, and adds one new restriction the household has not yet considered: the roof is off limits.",
+    "settingText": "Bushwick apartment 5B rear window and exterior fire escape",
+    "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "name": "Building Superintendent"
+      }
+    ],
+    "panelPlan": [
+      "Wide from inside the rear window: the superintendent inspects the cleared exterior iron landing and ladder path while Second Male Kin shows exactly where the snare had been tied.",
+      "Medium: the superintendent checks that nothing remains across the neighboring section and identifies the landing as shared emergency access rather than household territory.",
+      "Two-shot Bjorn/Gunnar: both look down the iron route to the ground, understanding its physical purpose without needing modern terminology.",
+      "Medium: the superintendent points upward toward the next level and states that the roof door is locked and tenants are not permitted there.",
+      "Close on Gunnar: this is the first time the roof has become a specific accessible place rather than just the top of the building."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E02_P19_L01",
+        "text": "This whole run has to stay clear. Your window, her window, ladder, landing. Nobody owns a piece of the escape.",
+        "subtext": "Panel 1",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L02",
+        "text": "The cord crossed farther than I thought.",
+        "subtext": "Panel 2",
+        "handle": "@vik.KinMan2"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L03",
+        "text": "That's why nothing gets tied to it.",
+        "subtext": "Panel 2",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L04",
+        "text": "It is the second road out of the room.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L05",
+        "text": "Exactly. Keep the road open.",
+        "subtext": "Panel 3",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L06",
+        "text": "And the roof door stays locked. Nobody goes up there.",
+        "subtext": "Panel 4",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L07",
+        "text": "There is a door to the roof.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Gunnar"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L08",
+        "text": "There is a locked door to the roof.",
+        "subtext": "Panel 5",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P19_L09",
+        "text": "The second half of that sentence is the important half.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Carrie"
+      }
+    ],
+    "continuityFrom": "VIK_S1E02_P18",
+    "directionInline": [
+      {
+        "text": "LANDFALL VISUAL STATE: Apartment 5B is assigned emergency housing on the first night, not a cozy home. Keep it sparse, cramped, worn and underfurnished: bare walls, hard practical ceiling/street light, portable or mismatched bedding, bundled travel gear, limited furniture, exposed ordinary radiator/pipes, and no decorative domestic warmth. Functional order may increase page by page, but do not add rugs, lamps, plants, framed art, plush furnishings, warm golden ambience, or other visual shorthand for settled comfort."
+      }
+    ]
+  },
+  {
+    "id": "VIK_S1E02_P20",
+    "episode": "S1E02",
+    "issue": 2,
+    "page": 20,
+    "title": "The Hidden Fire",
+    "summary": "A radiator knock during the inspection reveals that the superintendent is also responsible for the building's heat; Bjorn becomes less reassured when he learns the source is another locked place residents do not control.",
     "settingText": "Bushwick studio apartment",
     "charactersInline": [
       {
@@ -2168,148 +2222,17 @@
       {
         "handle": "@vik.KinMan2",
         "name": "Second Male Kin"
+      },
+      {
+        "name": "Building Superintendent"
       }
     ],
     "panelPlan": [
-      "Wide: Astrid claims food/cooking shelf; Kin1 selects dry bedding area; Kin2 arranges small tools; Gunnar preserves the main door path; Bjorn proposes a central shared-gear area.",
-      "Medium: Kin1 rejects Bjorn's preferred bedding placement because of a draft and moves his bundle himself.",
-      "Medium: Kin2 hangs a heavy wet item from an exposed ceiling pipe simply because the pipe is strong and well placed.",
-      "Fast intervention: Carrie removes the item and points to the small sprinkler head, explaining only the immediate consequence.",
-      "Wide: the room arrangement continues; the unfamiliar ceiling device has acquired one terrifying fact and nothing more."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E02_P19_L01",
-        "text": "Shared gear here. Bedding on that wall.",
-        "subtext": "Panel 1",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L02",
-        "text": "Draft comes through there.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Kin1"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L03",
-        "text": "Then move it.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L04",
-        "text": "Take that off the pipe.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L05",
-        "text": "It is strong.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Kin2"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L06",
-        "text": "It is connected to something that can dump water over the entire room.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L07",
-        "text": "From that little piece?",
-        "subtext": "Panel 4",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L08",
-        "text": "If there's a fire.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L09",
-        "text": "Another thing in the building that waits for fire.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L10",
-        "text": "This building has thought about fire more than all of us combined.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L11",
-        "text": "Food stays here.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Astrid"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L12",
-        "text": "Nothing blocks the door.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L13",
-        "text": "And nothing hangs from the ceiling water trap.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L14",
-        "text": "I am not correcting the name. I just want you to leave it alone.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      }
-    ],
-    "continuityFrom": "VIK_S1E02_P18",
-    "directionInline": [
-      {
-        "text": "LANDFALL VISUAL STATE: Apartment 5B is assigned emergency housing on the first night, not a cozy home. Keep it sparse, cramped, worn and underfurnished: bare walls, hard practical ceiling/street light, portable or mismatched bedding, bundled travel gear, limited furniture, exposed ordinary radiator/pipes, and no decorative domestic warmth. Functional order may increase page by page, but do not add rugs, lamps, plants, framed art, plush furnishings, warm golden ambience, or other visual shorthand for settled comfort."
-      }
-    ]
-  },
-  {
-    "id": "VIK_S1E02_P20",
-    "episode": "S1E02",
-    "issue": 2,
-    "page": 20,
-    "title": "The Iron Thing Knocks",
-    "summary": "The old radiator makes an unexplained noise; Carrie can name it and say it provides heat, but Bjorn and Gunnar remain at the level of immediate physical observation rather than understanding boilers, valves or building systems.",
-    "settingText": "Bushwick studio apartment at night",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      "Insert at floor level: the old cast-iron radiator gives a sudden metallic knock and vibrates slightly.",
-      "Medium: Bjorn and Gunnar both turn sharply toward the unexplained noise; Gunnar crouches near the iron object but does not manipulate it.",
-      "Two-shot Carrie/Gunnar: Carrie names it as a radiator and says the noise is ordinary.",
-      "Medium: Bjorn holds a hand near the warm metal, testing the only fact he can verify.",
-      "Wide: everyone returns to settling the room while Gunnar remains suspicious of an object that is warm and knocks by itself."
+      "Insert at floor level: the old iron radiator gives a sudden metallic knock while the superintendent is still inside.",
+      "Medium: Gunnar turns sharply toward it; the superintendent barely reacts because the sound is ordinary to him.",
+      "Two-shot Bjorn/Superintendent: Bjorn asks whether the superintendent is responsible for the warm iron object.",
+      "Medium: the superintendent explains only the practical fact: the heat is made downstairs and distributed through the building; residents do not enter the mechanical room.",
+      "Close on Bjorn and Gunnar exchanging a look at the combination of locked roof above and locked heat source below."
     ],
     "dialogueInline": [
       {
@@ -2320,73 +2243,55 @@
       },
       {
         "fid": "VIK_S1E02_P20_L02",
-        "text": "That iron thing struck itself.",
+        "text": "That iron thing struck itself again.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P20_L03",
-        "text": "Radiator. It makes noise when the heat comes through.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "text": "Old heat. Pipes knock.",
+        "subtext": "Panel 2",
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P20_L04",
-        "text": "What comes through?",
+        "text": "You keep it warm?",
         "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P20_L05",
-        "text": "Heat. Hot water or steam. I genuinely do not know which this building uses.",
+        "text": "Me, mostly. Heat starts downstairs and comes up through the building.",
         "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P20_L06",
-        "text": "You live in this city and do not know what is inside the thing that warms your room.",
+        "text": "Where downstairs?",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P20_L07",
-        "text": "I know enough not to open it.",
+        "text": "Locked mechanical room. Tenants don't go in there.",
         "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P20_L08",
-        "text": "That is not the same knowledge.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P20_L09",
-        "text": "No, and tonight it is the safer kind.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P20_L10",
-        "text": "It is warm.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P20_L11",
-        "text": "That's the part we're keeping.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P20_L12",
-        "text": "And the knocking?",
+        "text": "The roof is locked above us. The heat is locked below us.",
         "subtext": "Panel 5",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P20_L13",
-        "text": "We're keeping that too. Apparently.",
+        "fid": "VIK_S1E02_P20_L09",
+        "text": "And we live between them.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E02_P20_L10",
+        "text": "For one night, living between them is the assignment.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       }
@@ -2403,9 +2308,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 21,
-    "title": "If Something Happens",
-    "summary": "Carrie tries to leave emergency instructions and is forced to confront how little first-night infrastructure the household can actually use: they cannot read her contact card or operate a phone, so the practical plan becomes finding a known modern person.",
-    "settingText": "Bushwick studio table near the door",
+    "title": "Water in the Ceiling",
+    "summary": "During the same inspection, First Male Kin tries to use a sturdy ceiling pipe to dry wet wool; the superintendent stops a second building-safety problem before it becomes a flood.",
+    "settingText": "Bushwick studio apartment",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2418,79 +2323,76 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "name": "Building Superintendent"
       }
     ],
     "panelPlan": [
-      "Insert: Carrie starts writing emergency/contact numbers on a card out of habit.",
-      "Medium: she looks at the card, then at the five Vikings, and realizes the card is useless to them tonight.",
-      "Medium: Carrie holds up her phone briefly while asking whether anyone knows how to use one; their expressions answer before they do.",
-      "Two-shot: Carrie substitutes a human plan—if there is immediate trouble, go to the food shop downstairs or the neighbor and ask them to summon help.",
-      "Medium: Bjorn accepts the chain of people more readily than the unexplained device."
+      "Wide: as attention remains on the radiator, First Male Kin hangs a damp wool garment from an exposed ceiling pipe because it is high, strong and convenient.",
+      "Medium: the superintendent sees it and immediately removes the garment before it loads or strikes the sprinkler head.",
+      "Close: he points out the small sprinkler head and explains that breaking it can release enough water to flood this room and the apartment below.",
+      "Reaction: First Male Kin studies the tiny fitting, recalculating the risk from new information rather than feeling chastened.",
+      "Wide: Carrie looks from the recovered snare cord to the wet garment to the superintendent. The inspection has now generated a second item."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P21_L01",
-        "text": "If something happens after I leave, these are the numbers—",
-        "subtext": "Panel 1",
-        "handle": "@vik.Carrie"
+        "text": "Take that off the pipe.",
+        "subtext": "Panel 2",
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P21_L02",
-        "text": "Right. None of you can read this.",
+        "text": "It is strong.",
         "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Kin1"
       },
       {
         "fid": "VIK_S1E02_P21_L03",
-        "text": "I told you that.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "text": "The pipe is not the problem. Break that little head and this room fills with water.",
+        "subtext": "Panel 3",
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P21_L04",
-        "text": "And none of you knows how to use this.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "text": "From that?",
+        "subtext": "Panel 4",
+        "handle": "@vik.Kin1"
       },
       {
         "fid": "VIK_S1E02_P21_L05",
-        "text": "The black glass you keep speaking into.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
+        "text": "From that. And then the people downstairs get your water too.",
+        "subtext": "Panel 4",
+        "speaker": "Building Superintendent"
       },
       {
         "fid": "VIK_S1E02_P21_L06",
-        "text": "That's enough identification for one day.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P21_L07",
-        "text": "New plan. If there is fire, get out. If somebody is badly hurt or something happens that you cannot handle, go downstairs to the food merchant or knock on the neighbor's door. Tell them to summon help.",
+        "text": "The building keeps water above us as well.",
         "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P21_L08",
-        "text": "The merchant is now part of your government.",
-        "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P21_L09",
-        "text": "Tonight the merchant is part of me getting to go home.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P21_L10",
-        "text": "That is a large responsibility for a man who sells onions.",
-        "subtext": "Panel 5",
+        "fid": "VIK_S1E02_P21_L07",
+        "text": "Water in the wall. Water in the ceiling. Heat below the floor.",
+        "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P21_L11",
-        "text": "He has no idea.",
+        "fid": "VIK_S1E02_P21_L08",
+        "text": "You are discovering the building faster than I can document it.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       }
@@ -2507,8 +2409,95 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 22,
-    "title": "Incident Report",
-    "summary": "Carrie files the required report aloud enough for the household to object to her version; they cannot read the record, which makes their insistence on oral precision even more irritating.",
+    "title": "One Visit",
+    "summary": "The superintendent gives Carrie a narrow reprieve: he will treat the snare and sprinkler near-miss as one first-night inspection, but another call becomes a new management problem.",
+    "settingText": "Bushwick studio doorway",
+    "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
+      },
+      {
+        "name": "Building Superintendent"
+      }
+    ],
+    "panelPlan": [
+      "Medium at the doorway: the superintendent prepares to leave, making a quick note on his phone or work pad.",
+      "Two-shot Carrie/Superintendent: Carrie asks what he is reporting; he gives her the practical answer rather than threatening theatrics.",
+      "Medium: he states that the fire escape is clear, the sprinkler was not damaged, and the occupants were corrected on both issues.",
+      "Close on Carrie as he draws the boundary: another call tonight is a separate incident.",
+      "Wide: the superintendent leaves. Bjorn watches the door close; the household has now met the person physically responsible for the building."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E02_P22_L01",
+        "text": "What are you sending management?",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L02",
+        "text": "Fire escape cleared. Sprinkler untouched. New tenants told what not to attach things to.",
+        "subtext": "Panel 2",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L03",
+        "text": "One incident.",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L04",
+        "text": "One visit.",
+        "subtext": "Panel 3",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L05",
+        "text": "If I get called back tonight, that's another visit.",
+        "subtext": "Panel 4",
+        "speaker": "Building Superintendent"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L06",
+        "text": "We have no reason to call you back.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E02_P22_L07",
+        "text": "That's usually when I get called back.",
+        "subtext": "Panel 5",
+        "speaker": "Building Superintendent"
+      }
+    ],
+    "continuityFrom": "VIK_S1E02_P21",
+    "directionInline": [
+      {
+        "text": "LANDFALL VISUAL STATE: Apartment 5B is assigned emergency housing on the first night, not a cozy home. Keep it sparse, cramped, worn and underfurnished: bare walls, hard practical ceiling/street light, portable or mismatched bedding, bundled travel gear, limited furniture, exposed ordinary radiator/pipes, and no decorative domestic warmth. Functional order may increase page by page, but do not add rugs, lamps, plants, framed art, plush furnishings, warm golden ambience, or other visual shorthand for settled comfort."
+      }
+    ]
+  },
+  {
+    "id": "VIK_S1E02_P23",
+    "episode": "S1E02",
+    "issue": 2,
+    "page": 23,
+    "title": "The City Remembers",
+    "summary": "Carrie records the building incident after the superintendent leaves; Bjorn discovers that correcting a mistake does not erase it from the institutional record, giving him a new and unwelcome fact about modern authority.",
     "settingText": "Bushwick studio table, late night",
     "charactersInline": [
       {
@@ -2524,10 +2513,6 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
         "handle": "@vik.KinMan1",
         "name": "First Male Kin"
       },
@@ -2537,210 +2522,72 @@
       }
     ],
     "panelPlan": [
-      "Medium: Carrie sits at the table typing an incident report while the household settles around her.",
-      "Close on Carrie as she quietly dictates or reads back the factual sentence she is entering: obstruction removed, animal unharmed, neighbor notified.",
-      "Medium: Second Male Kin hears the wording and objects to the omission that the snare functioned; Bjorn supports the distinction from nearby.",
-      "Two-shot: Carrie explains that the purpose of the report is not to celebrate the quality of the snare.",
-      "Wide: Carrie continues typing as the household prepares for sleep."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E02_P22_L01",
-        "text": "'Cord removed from exterior stair. Animal released unharmed. Neighbor notified.'",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L02",
-        "text": "You left out that the snare worked.",
-        "subtext": "Panel 3",
-        "handle": "@vik.KinMan2"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L03",
-        "text": "Intentionally.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L04",
-        "text": "A failed snare and a successful snare are different facts.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L05",
-        "text": "The fact DTI cares about is that there was a trap where people flee a burning building.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L06",
-        "text": "That is the location of the mistake.",
-        "subtext": "Panel 4",
-        "handle": "@vik.KinMan2"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L07",
-        "text": "I am not submitting 'excellent snare, unfortunate venue.'",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L08",
-        "text": "It would be more accurate.",
-        "subtext": "Panel 4",
-        "handle": "@vik.KinMan2"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L09",
-        "text": "The accurate outcome is that you still have housing when I finish typing.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L10",
-        "text": "Then include that.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P22_L11",
-        "text": "That part goes in my prayers.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      }
-    ],
-    "continuityFrom": "VIK_S1E02_P21",
-    "directionInline": [
-      {
-        "text": "LANDFALL VISUAL STATE: Apartment 5B is assigned emergency housing on the first night, not a cozy home. Keep it sparse, cramped, worn and underfurnished: bare walls, hard practical ceiling/street light, portable or mismatched bedding, bundled travel gear, limited furniture, exposed ordinary radiator/pipes, and no decorative domestic warmth. Functional order may increase page by page, but do not add rugs, lamps, plants, framed art, plush furnishings, warm golden ambience, or other visual shorthand for settled comfort."
-      }
-    ]
-  },
-  {
-    "id": "VIK_S1E02_P23",
-    "episode": "S1E02",
-    "issue": 2,
-    "page": 23,
-    "title": "Carrie's Excellent Placement",
-    "summary": "The DTI supervisor calls about the incident; Carrie defends the placement as safe and corrected while the Vikings' audible commentary makes her case progressively harder to present as routine.",
-    "settingText": "Bushwick studio table / speakerphone",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.DtiFloorSupervisor",
-        "name": "DTI Floor Supervisor"
-      }
-    ],
-    "panelPlan": [
-      "Medium: phone on speaker, Carrie seated at table with completed placement paperwork and incident report.",
-      "Medium on Carrie as supervisor lists the complaint facts in bureaucratic language.",
-      "Medium on Bjorn and Gunnar nearby, listening as though this is a review of their work.",
-      "Two-shot Carrie/Bjorn as she tries to keep him out of the call.",
-      "Close on Carrie after the supervisor reminds her the placement is under her supervision."
+      "Medium: Carrie sits at the table typing her DTI incident note while the household continues arranging bedding and food behind her.",
+      "Close on Carrie as she reads back the concise facts she is entering so the non-reading household can hear what will be recorded.",
+      "Medium: Second Male Kin objects that the account omits that the snare successfully caught a bird; First Male Kin listens because his ceiling-pipe mistake is now in the same record.",
+      "Two-shot Bjorn/Carrie: Bjorn asks why corrected acts remain recorded at all.",
+      "Close on Bjorn as Carrie explains that records persist precisely so the department can see patterns later."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P23_L01",
-        "text": "First night: obstruction of required egress, animal trapping, neighbor complaint.",
-        "subtext": "Panel 1",
-        "handle": "@vik.DtiFloorSupervisor"
+        "text": "'Exterior obstruction removed. No injury. No damage. Building inspection completed. Occupants advised regarding shared exit and ceiling fire equipment.'",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P23_L02",
-        "text": "Corrected before the complaint reached us. No injury. No damage. Egress is clear.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "text": "You still left out that the snare worked.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Kin2"
       },
       {
         "fid": "VIK_S1E02_P23_L03",
-        "text": "You were on site.",
-        "subtext": "Panel 2",
-        "handle": "@vik.DtiFloorSupervisor"
+        "text": "DTI is not grading the snare.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P23_L04",
-        "text": "I was standing three feet from it.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "text": "The cord is gone. The pipe was never damaged. Why keep the failures after they are corrected?",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P23_L05",
-        "text": "The placement is under your supervision.",
-        "subtext": "Panel 2",
-        "handle": "@vik.DtiFloorSupervisor"
+        "text": "Because tomorrow's worker needs to know what happened tonight.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P23_L06",
-        "text": "I am aware of the sentence you are building.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "text": "Even if it never happens again.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P23_L07",
-        "text": "Tell him the neighbor accepted compensation.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
+        "text": "Especially if it happens again.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P23_L08",
-        "text": "She accepted a spicy snack.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "text": "So the city remembers mistakes longer than people do.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P23_L09",
-        "text": "Compensation.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "The city remembers whatever somebody bothered to write down.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P23_L10",
-        "text": "Was that him again?",
-        "subtext": "Panel 4",
-        "handle": "@vik.DtiFloorSupervisor"
-      },
-      {
-        "fid": "VIK_S1E02_P23_L11",
-        "text": "I have five adults in one room and no private office. Everybody is 'him again.'",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P23_L12",
-        "text": "One more building-safety complaint and Housing can request reassessment.",
-        "subtext": "Panel 5",
-        "handle": "@vik.DtiFloorSupervisor"
-      },
-      {
-        "fid": "VIK_S1E02_P23_L13",
-        "text": "Then I'll keep Housing out of it.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P23_L14",
-        "text": "We also understand.",
+        "text": "That is a dangerous kind of memory.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P23_L15",
-        "text": "You understand nothing until I hang up.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
       }
     ],
     "continuityFrom": "VIK_S1E02_P22",
@@ -2755,9 +2602,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 24,
-    "title": "Tomorrow's Orders",
-    "summary": "Carrie leaves a short set of concrete prohibitions framed in things the Vikings can actually identify after one day, while Gunnar finds the one unmentioned direction: up.",
-    "settingText": "Bushwick studio doorway / whole room",
+    "title": "Until Morning",
+    "summary": "Carrie reduces the entire chaotic evening to a few concrete prohibitions the household can actually identify; Gunnar immediately isolates the roof as tomorrow's unresolved territory.",
+    "settingText": "Bushwick studio apartment near the door",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2785,70 +2632,64 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie stands near the door putting on her coat; the household is now functional but still sparse.",
-      "Medium: Carrie gives a short overnight prohibition list framed in physical things everyone has actually encountered that day.",
-      "Reaction on Second Male Kin as hunting from the exterior iron is explicitly forbidden; he accepts the restriction without embarrassment.",
-      "Two-shot Carrie/Bjorn: he observes the rule list has grown rapidly.",
-      "Close on Gunnar looking upward toward the ceiling after Carrie finishes, already finding the unmentioned direction."
+      "Wide: Carrie closes the laptop and puts on her coat. The household is tired but still actively settling the room.",
+      "Medium: Carrie gives a concise set of rules based only on objects and spaces everyone has encountered tonight.",
+      "Reaction on Second Male Kin at the recovered cord and First Male Kin at the wet garment; both understand which actions she means.",
+      "Two-shot Carrie/Gunnar: Gunnar asks about the newly revealed roof door rather than any system he has not yet encountered.",
+      "Close on Bjorn as he reframes tomorrow as inspection rather than obedience."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P24_L01",
-        "text": "Until morning: no hunting from the building. Leave the iron stairs outside alone. Do not open anything attached to the walls, floor or ceiling. Do not make a fire indoors. If somebody knocks, answer without a weapon in your hand.",
+        "text": "Until morning: nothing tied outside the window. Nothing hung from the ceiling pipes. No fire in the room. The door stays clear.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P24_L02",
-        "text": "You made a long law from a short evening.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "The bird problem is finished.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Kin2"
       },
       {
         "fid": "VIK_S1E02_P24_L03",
-        "text": "You gave me excellent source material.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "text": "The garment has a chair.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Kin1"
       },
       {
         "fid": "VIK_S1E02_P24_L04",
-        "text": "The bird was one event.",
+        "text": "The man said there is a door above us.",
         "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P24_L05",
-        "text": "The bird already has paperwork.",
+        "text": "He also said it is locked.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P24_L06",
-        "text": "You said nothing about above us.",
-        "subtext": "Panel 5",
+        "text": "I heard both parts.",
+        "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P24_L07",
-        "text": "The roof is also part of the building.",
+        "text": "Tomorrow we learn what is above us and what is below us.",
         "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P24_L08",
-        "text": "But not inside it.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P24_L09",
-        "text": "I can hear tomorrow becoming worse.",
+        "text": "Tomorrow you start with breakfast.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P24_L10",
-        "text": "Then sleep before it arrives.",
+        "fid": "VIK_S1E02_P24_L09",
+        "text": "Breakfast can be first.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       }
@@ -2865,9 +2706,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 25,
-    "title": "Lock It Behind Me",
-    "summary": "Carrie finally leaves; the key gives the household privacy, but the last exchange makes clear she is not leaving them wiser—only temporarily contained.",
-    "settingText": "Bushwick studio doorway and fifth-floor hallway",
+    "title": "If Something Happens",
+    "summary": "Carrie tries to leave emergency instructions and confronts the practical limit of day-one integration: written numbers and her phone are useless to the household, so the emergency network becomes people they have actually met.",
+    "settingText": "Bushwick studio doorway",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -2895,79 +2736,60 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie stands in open doorway with coat and folder; household remains inside among bedding, groceries, tools and map.",
-      "Medium: Bjorn follows to threshold with brass key.",
-      "Close: Carrie points to the key and then the lock.",
-      "Hallway two-shot: she steps outside; Bjorn remains inside.",
-      "Insert from inside: brass key turns, deadbolt locks.",
-      "Wide interior: Bjorn tests the handle. Gunnar sits with the map, already looking upward; the others continue settling."
+      "Insert: Carrie begins writing emergency numbers on a card, then stops after looking at Bjorn and the others.",
+      "Medium: she holds up her phone; nobody mistakes it for something they know how to operate.",
+      "Medium: Carrie points toward the hallway and then downward, reducing the emergency plan to known people and known routes.",
+      "Two-shot Bjorn/Carrie: Bjorn accepts the human chain because it is concrete.",
+      "Wide at the doorway: Carrie finally reaches the point where she can leave."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P25_L01",
-        "text": "Lock the door behind me.",
-        "subtext": "Panel 3",
+        "text": "If something serious happens after I leave, this card is useless to you tonight.",
+        "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P25_L02",
-        "text": "You cannot enter without the key.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "The marks are yours.",
+        "subtext": "Panel 1",
+        "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P25_L03",
-        "text": "That is the dream.",
-        "subtext": "Panel 4",
+        "text": "And this thing is not becoming useful in the next five minutes.",
+        "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P25_L04",
-        "text": "You are responsible for us but cannot enter our room.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "If there is fire, get out. If somebody is badly hurt or something happens you cannot handle, knock on the neighbor's door or go to the food shop. Tell them to summon help.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P25_L05",
-        "text": "That's how privacy works.",
+        "text": "The merchant and the neighbor.",
         "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P25_L06",
-        "text": "Your government has finally produced a sensible arrangement.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P25_L07",
-        "text": "Good night, Bjorn.",
+        "text": "Two people who know this city and already know where you live.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P25_L08",
-        "text": "Good night, Carrie.",
+        "fid": "VIK_S1E02_P25_L07",
+        "text": "That is a better plan than the black glass.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P25_L09",
-        "text": "She forbade the iron stairs.",
-        "subtext": "Panel 6",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P25_L10",
-        "text": "She did.",
-        "subtext": "Panel 6",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P25_L11",
-        "text": "She did not forbid looking out the window.",
-        "subtext": "Panel 6",
-        "handle": "@vik.Gunnar"
+        "fid": "VIK_S1E02_P25_L08",
+        "text": "Tonight, absolutely.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Carrie"
       }
     ],
     "continuityFrom": "VIK_S1E02_P24",
@@ -2982,9 +2804,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 26,
-    "title": "Landfall",
-    "summary": "The household ends its first modern night with only a handful of things understood through direct experience: the door locks, water comes from the wall, the iron heater is warm and noisy, food can be bought downstairs, and the roof remains unknown.",
-    "settingText": "Bushwick apartment 5B late night",
+    "title": "Lock It Behind Me",
+    "summary": "Carrie leaves the household alone for its first modern night; the locked door gives them privacy, while a DTI follow-up notice on Carrie's phone makes clear the evening's consequences have already entered the case file.",
+    "settingText": "Bushwick studio doorway, fifth-floor hallway, and apartment 5B late night",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -3012,78 +2834,60 @@
       }
     ],
     "panelPlan": [
-      "Wide interior: temporary bedding arranged; groceries, completed packet, contact card Carrie started but did not leave as usable instructions, and bundled Norse gear coexist. The room is functional, not cozy.",
-      "Medium: Astrid stores food; Kin1 checks bedding; Kin2 checks the window latch. No one waits for Bjorn to assign tasks.",
-      "Medium on Bjorn: brass key on a simple hook. He looks from it to the sink and the warm iron radiator, still treating both as unresolved facts rather than understood systems.",
-      "Medium on Gunnar at the window, looking up toward the roofline without climbing outside.",
-      "Exterior hallway: Carrie pauses outside the locked door, reads a new DTI message on her phone, grimaces, and heads toward the stairs."
+      "Wide: Carrie stands in the open doorway with coat and folder. The room behind Bjorn is functional but unmistakably temporary: bedding, groceries, tools, recovered cord, wet garment on a chair, bare walls.",
+      "Medium: Bjorn holds the brass key. Carrie tells him to lock the door after she steps into the hall.",
+      "Insert from inside 5B: the brass key turns and the deadbolt engages.",
+      "Wide interior: Bjorn tests the locked handle. Astrid and the Kin settle into separate tasks. Gunnar goes to the window but stays inside, looking upward toward the roofline.",
+      "Exterior hallway: Carrie's phone displays a DTI notice as she heads for the stairs: BUILDING INCIDENT ATTACHED TO PLACEMENT FILE — FOLLOW-UP REQUIRED."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P26_L01",
-        "text": "Food is away.",
-        "subtext": "Panel 1",
-        "handle": "@vik.Astrid"
+        "text": "Lock it behind me.",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P26_L02",
-        "text": "Bedding stays dry here.",
+        "text": "You cannot enter without the key.",
         "subtext": "Panel 2",
-        "handle": "@vik.Kin1"
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P26_L03",
-        "text": "The window holds.",
+        "text": "Neither can anyone else.",
         "subtext": "Panel 2",
-        "handle": "@vik.Kin2"
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P26_L04",
-        "text": "The door locks. Water comes when we ask for it. The iron thing is warm.",
-        "subtext": "Panel 3",
+        "text": "That part I understand.",
+        "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P26_L05",
-        "text": "And strikes itself.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P26_L06",
-        "text": "We have not solved that.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P26_L07",
         "text": "Tomorrow I need to know where north is.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P26_L08",
-        "text": "Then find north.",
+        "fid": "VIK_S1E02_P26_L06",
+        "text": "Higher ground will help.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P26_L09",
-        "text": "Higher would help.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P26_L10",
-        "text": "Sleep would help more.",
+        "fid": "VIK_S1E02_P26_L07",
+        "text": "Sleep will help first.",
         "subtext": "Panel 4",
         "handle": "@vik.Astrid"
       },
       {
-        "fid": "VIK_S1E02_P26_L11",
-        "text": "Oh, come on.",
+        "fid": "VIK_S1E02_P26_L08",
+        "text": "BUILDING INCIDENT ATTACHED TO PLACEMENT FILE — FOLLOW-UP REQUIRED.",
         "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
+        "speaker": "DISPLAY"
       }
     ],
     "continuityFrom": "VIK_S1E02_P25",
@@ -3099,13 +2903,13 @@
     "issue": 2,
     "page": 27,
     "title": "Next: Territory",
-    "summary": "Editorial closing splash: 5B is secure for one night, but almost none of the systems around the household are understood yet; Gunnar's first solvable problem is orientation, and the roof offers height.",
+    "summary": "Editorial closing splash: 5B is secured for one night, but the first evening has already produced a building inspection and a DTI follow-up; above the locked room, the roof remains the household's next obvious unknown.",
     "settingText": "Bushwick apartment building exterior and roofline, late night",
     "charactersInline": [],
     "panelPlan": [
-      "Full-page editorial splash, no conventional grid. Low street-level view of the building so the locked fifth-floor apartment, fire escape, and dark roofline stack vertically. City ordinary and huge: brick, streetlight, distant windows, water towers, wires, cold sky.",
-      "Use the building as the visual argument. 5B is occupied and locked; the roof remains unknown. Do not depict any Issue 3 action.",
-      "Integrate captions in clean negative space, pulling the eye upward toward NEXT: TERRITORY."
+      "Full-page editorial splash, no conventional grid. Low street-level view of the building so the occupied fifth-floor apartment, exterior iron escape, and dark roofline stack vertically above one another.",
+      "The city should feel enormous and ordinary: brick, streetlights, distant windows, water towers, wires and cold night sky. 5B is secure for the moment; the roof above remains unknown.",
+      "Integrate captions in clean negative-space zones with increasing visual pull upward. Do not depict any Issue 3 action, Silas, rooftop fire, or construction."
     ],
     "dialogueInline": [
       {
@@ -3134,25 +2938,25 @@
       },
       {
         "fid": "VIK_S1E02_P27_L05",
-        "text": "Carrie has an incident report.",
+        "text": "The building has already inspected them.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
         "fid": "VIK_S1E02_P27_L06",
-        "text": "Gunnar still does not know where north is.",
+        "text": "DTI wants a follow-up.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
         "fid": "VIK_S1E02_P27_L07",
-        "text": "Above them is a roof.",
+        "text": "Gunnar still does not know where north is.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
         "fid": "VIK_S1E02_P27_L08",
-        "text": "Height has always been useful.",
+        "text": "Above them is a locked roof.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
