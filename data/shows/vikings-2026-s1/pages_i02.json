@@ -492,7 +492,7 @@
     "issue": 2,
     "page": 6,
     "title": "Emergency Provisions",
-    "summary": "Carrie's official emergency food bag is laughably inadequate for five displaced adults, forcing them back downstairs to find food before anyone understands how modern retail or payment works.",
+    "summary": "Carrie's emergency food is obviously insufficient; rather than march the entire household into the neighborhood, Carrie takes Bjorn and Gunnar to find food while Astrid and the two Kin stay behind in 5B.",
     "settingText": "Bushwick studio kitchenette/table",
     "charactersInline": [
       {
@@ -521,11 +521,11 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie empties the DTI emergency grocery bag onto the table: crackers, protein bars, bottled water, a few disposable utensils.",
-      "Medium on Bjorn looking at the food, then at the five adults around him.",
+      "Wide: Carrie empties the DTI emergency grocery bag onto the table: crackers, protein bars, bottled water, disposable utensils.",
+      "Medium on Bjorn looking at the food, then at the five displaced adults.",
       "Medium: Gunnar checks the bag itself as though more food may be hidden in a seam.",
-      "Medium at window: Gunnar looks down toward storefront awnings and foot traffic below.",
-      "Wide: Carrie already has her coat back on as the household prepares to go out."
+      "Medium at the rear window: Gunnar smells food from the street below; outside, pigeons are visible on the iron structure beyond the window, but nobody comments on them yet.",
+      "Wide: Carrie puts her coat back on and deliberately takes only Bjorn and Gunnar. Astrid and the two male Kin remain in the apartment with the unpacked gear and nearly empty food bag."
     ],
     "dialogueInline": [
       {
@@ -596,9 +596,21 @@
       },
       {
         "fid": "VIK_S1E02_P06_L12",
-        "text": "Bring it if it makes you feel better. Put your coat on.",
+        "text": "Bring it. You and Gunnar are coming with me.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P06_L13",
+        "text": "Astrid, I am not taking six people into one corner store.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P06_L14",
+        "text": "We'll stay.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Astrid"
       }
     ],
     "continuityFrom": "VIK_S1E02_P05",
@@ -630,27 +642,15 @@
         "name": "Gunnar"
       },
       {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      },
-      {
         "handle": "@vik.BodegaOwner",
         "name": "Bodega Owner"
       }
     ],
     "panelPlan": [
-      "Wide: all five displaced adults enter the compact bodega with Carrie while ordinary customers continue shopping. The owner looks up once and goes back to work.",
-      "Medium: Astrid and the two male Kin choose recognizable food by sight and smell. Gunnar compares objects, quantities and containers physically, turning packages in his hands and judging weight and contents.",
+      "Wide: Carrie enters the compact bodega with Bjorn and Gunnar only. Ordinary customers continue shopping. The owner looks up once and goes back to work.",
+      "Medium: Carrie chooses basic groceries quickly. Bjorn judges recognizable food by sight; Gunnar compares objects, quantities and containers physically, turning packages in his hands and smelling produce.",
       "Counter close: Bjorn places a small piece of hacksilver beside the groceries.",
-      "Two-shot owner/Carrie: the owner refuses the silver without ceremony. Carrie uses her modern payment card/terminal while the Vikings watch the unfamiliar exchange.",
+      "Two-shot owner/Carrie: the owner refuses the silver without ceremony. Carrie uses her modern payment card/terminal while Bjorn and Gunnar watch the unfamiliar exchange.",
       "Medium: Bjorn watches the owner bag the food and watches Carrie's transaction complete; his concern is that Carrie has somehow paid, not how the mechanism works.",
       "Close: the owner slides the hacksilver back to Bjorn."
     ],
@@ -782,8 +782,8 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 8,
-    "title": "Dinner Announces Itself",
-    "summary": "The household can cook, but the modern stove and smoke alarm are new objects; the first useful lesson arrives when dinner smoke makes the ceiling scream.",
+    "title": "Dinner Was Already Underway",
+    "summary": "Carrie, Bjorn and Gunnar return with groceries to discover that Second Male Kin used their absence to solve the food shortage himself: he has caught a pigeon from the exterior ironwork.",
     "settingText": "Bushwick studio apartment kitchenette/table",
     "charactersInline": [
       {
@@ -812,89 +812,89 @@
       }
     ],
     "panelPlan": [
-      "Wide: back in 5B, Astrid examines the unfamiliar stove while Carrie demonstrates one control once. The others prepare food using familiar knives, pans and hands; nobody behaves as though modern kitchen equipment is already known.",
-      "Medium: flame or burner heat appears from the stove. Astrid immediately understands the practical result even though the mechanism is alien.",
-      "Wide: cooking begins. A little smoke rises higher than expected.",
-      "Large reaction panel: the smoke alarm suddenly SHRIEKS. Bjorn and Gunnar react physically to an unexplained alarm while Carrie grabs a towel and clears smoke beneath it.",
-      "Medium: everyone looks up at the small ceiling device after it quiets; it has acquired a purpose through experience, not explanation."
+      "Wide from inside 5B: the door opens and Carrie, Bjorn and Gunnar return carrying grocery bags. Astrid and First Male Kin are arranging bedding and the room. Second Male Kin is at the rear window beside a bowl containing one very alive pigeon.",
+      "Medium: Carrie stops with the grocery bags still in her hands. Bjorn looks from the bags to the bird. Gunnar immediately notices the cord running out through the open window.",
+      "Medium on Second Male Kin: he explains the obvious logic—there were birds outside and the household needed food.",
+      "Two-shot Bjorn/Second Male Kin: Bjorn regards the successful catch as competent work, while Carrie is already walking toward the window to inspect where it happened.",
+      "Close on Carrie looking through the window and seeing that the cord has been rigged across part of the exterior iron landing toward the neighboring section."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P08_L01",
-        "text": "Turn this. The fire comes from here.",
+        "text": "Why is there a pigeon in a bowl?",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P08_L02",
-        "text": "Without wood.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Astrid"
+        "text": "For dinner.",
+        "subtext": "Panel 1",
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P08_L03",
-        "text": "Without wood.",
-        "subtext": "Panel 2",
+        "text": "We brought dinner.",
+        "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P08_L04",
-        "text": "BEEP! BEEP! BEEP! BEEP!",
-        "subtext": "Panel 4",
-        "speaker": "SFX"
+        "text": "Now there is more.",
+        "subtext": "Panel 1",
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P08_L05",
-        "text": "Nobody hit the ceiling. It's warning us about the smoke.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "text": "You caught it here?",
+        "subtext": "Panel 2",
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P08_L06",
-        "text": "We can see the smoke.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "Birds sit on the iron outside. I had cord.",
+        "subtext": "Panel 3",
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P08_L07",
-        "text": "The thing on the ceiling cannot.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P08_L08",
-        "text": "Then how does it know?",
-        "subtext": "Panel 5",
+        "text": "You made a snare on that?",
+        "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P08_L09",
-        "text": "It senses smoke.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
+        "fid": "VIK_S1E02_P08_L08",
+        "text": "It worked.",
+        "subtext": "Panel 3",
+        "handle": "@vik.KinMan2"
       },
       {
-        "fid": "VIK_S1E02_P08_L10",
-        "text": "But does not know there is smoke.",
-        "subtext": "Panel 5",
+        "fid": "VIK_S1E02_P08_L09",
+        "text": "Quickly.",
+        "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
+        "fid": "VIK_S1E02_P08_L10",
+        "text": "They are not cautious birds.",
+        "subtext": "Panel 4",
+        "handle": "@vik.KinMan2"
+      },
+      {
         "fid": "VIK_S1E02_P08_L11",
-        "text": "You have found the philosophical weakness of the smoke alarm.",
-        "subtext": "Panel 5",
+        "text": "Nobody touch the pigeon for one minute.",
+        "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P08_L12",
-        "text": "Dinner is burning.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Astrid"
+        "text": "It has already been touched.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P08_L13",
-        "text": "That is the practical weakness.",
-        "subtext": "Panel 5",
+        "text": "Then nobody improve the situation while I look at it.",
+        "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       }
     ],
@@ -910,8 +910,8 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 9,
-    "title": "The Iron Stair",
-    "summary": "Gunnar tests the fire escape and immediately treats the shared exterior as usable terrain; Carrie defines the one thing she actually cares about—egress must remain clear.",
+    "title": "The Second Road",
+    "summary": "Carrie explains what the exterior ironwork is for only because the Kin have already used it for something else; Bjorn accepts that the snare is badly placed without accepting that catching pigeons is itself unreasonable.",
     "settingText": "Bushwick studio main window and fire escape",
     "charactersInline": [
       {
@@ -940,78 +940,90 @@
       }
     ],
     "panelPlan": [
-      "Medium: after dinner Gunnar opens the window and steps onto the fire-escape landing, testing the iron with one boot before putting weight on it.",
-      "Wide: Bjorn joins at the window; the Kin remain inside cleaning up. Pigeons occupy the rail and neighboring section.",
-      "Medium: Carrie comes over with the DTI folder under one arm and sees Gunnar measuring the landing by stride.",
-      "Two-shot Bjorn/Carrie: Bjorn looks down through the iron grid to the alley and then toward neighboring windows.",
-      "Close: Gunnar notices pigeons and a clear length of railing."
+      "Wide at the rear window: Carrie leans out just enough to inspect the exterior iron landing. Second Male Kin shows where he tied the snare. Gunnar studies the iron stairs physically from inside the window.",
+      "Medium: Carrie points down the connected iron flights and explains that people use them to escape if the interior stair cannot be used.",
+      "Medium on Bjorn looking down the route to the ground, immediately understanding it as a second road out of the room.",
+      "Medium on Second Male Kin: he looks at the cord crossing part of that route and concedes the placement problem, not the hunting premise.",
+      "Wide: Second Male Kin frees the pigeon and removes the cord from their section. Unknown to them, a separate loose end remains beyond the neighboring window."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P09_L01",
-        "text": "It holds.",
-        "subtext": "Panel 1",
-        "handle": "@vik.Gunnar"
+        "text": "This ironwork is for getting people out if the stairs inside cannot be used.",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P09_L02",
-        "text": "And reaches the ground.",
-        "subtext": "Panel 2",
+        "text": "It reaches the ground.",
+        "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P09_L03",
-        "text": "It's called a fire escape. Keep the landing clear.",
+        "text": "That's the idea. The city calls it a fire escape.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P09_L04",
-        "text": "Clear of what?",
+        "text": "Then it is a second road from the room.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E02_P09_L05",
+        "text": "A narrow one.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P09_L05",
-        "text": "Everything. It has to stay open if people need to get out.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
         "fid": "VIK_S1E02_P09_L06",
-        "text": "Then it is a second road from the room.",
+        "text": "No one was using it.",
         "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P09_L07",
-        "text": "In an emergency.",
+        "text": "When they need it, they need it immediately.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P09_L08",
-        "text": "A road does not become less of a road because you hope not to use it.",
+        "text": "Then the snare was badly placed.",
+        "subtext": "Panel 4",
+        "handle": "@vik.KinMan2"
+      },
+      {
+        "fid": "VIK_S1E02_P09_L09",
+        "text": "Yes. And there are no snares on the fire escape.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P09_L10",
+        "text": "Those are two judgments.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P09_L09",
-        "text": "The birds use it.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P09_L10",
-        "text": "The birds are not my clients.",
-        "subtext": "Panel 5",
+        "fid": "VIK_S1E02_P09_L11",
+        "text": "I am making both.",
+        "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P09_L11",
-        "text": "Then they are less supervised than we are.",
+        "fid": "VIK_S1E02_P09_L12",
+        "text": "The bird is still food.",
         "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.KinMan2"
+      },
+      {
+        "fid": "VIK_S1E02_P09_L13",
+        "text": "The bird is leaving.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Carrie"
       }
     ],
     "continuityFrom": "VIK_S1E02_P08",
@@ -1026,9 +1038,9 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 10,
-    "title": "Shared Space",
-    "summary": "Carrie discovers Gunnar has already converted 'shared fire escape' into 'unclaimed hunting ground'; she stops the snare because it blocks emergency egress, not because the Vikings need a lesson about birds.",
-    "settingText": "Bushwick fire escape and apartment window",
+    "title": "Dinner Announces Itself",
+    "summary": "After the pigeon is released, the household cooks the groceries; the unfamiliar stove and smoke alarm create a second first-night collision with modern domestic technology.",
+    "settingText": "Bushwick studio apartment kitchenette/table",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -1041,105 +1053,111 @@
       {
         "handle": "@vik.Gunnar",
         "name": "Gunnar"
+      },
+      {
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
     "panelPlan": [
-      "Wide: a simple cord snare on the fire escape has caught one ordinary pigeon by the leg without injuring it. Gunnar crouches beside it; Bjorn has brought a bowl inside the window as if dinner logistics are already underway.",
-      "Medium: Carrie returns from the table holding her phone and sees the bird, cord, bowl, and two men in one look.",
-      "Close: Gunnar loosens the snare while explaining his reasoning; the pigeon remains alive and calm enough to be released.",
-      "Medium: Carrie points to the cord crossing part of the shared landing and the drop ladder path.",
-      "Wide: Gunnar releases the pigeon and gathers the cord. Bjorn watches the bird fly away with genuine disappointment."
+      "Wide: Astrid examines the unfamiliar stove while Carrie demonstrates one control once. Second Male Kin is visibly empty-handed after losing the pigeon; the grocery bags are now open on the counter.",
+      "Medium: flame or burner heat appears from the stove. Astrid immediately understands the practical result even though the mechanism is alien.",
+      "Wide: cooking begins. A little smoke rises higher than expected.",
+      "Large reaction panel: the smoke alarm suddenly SHRIEKS. Bjorn and Gunnar react physically to an unexplained alarm while Carrie grabs a towel and clears smoke beneath it.",
+      "Medium: everyone looks up at the small ceiling device after it quiets; it has acquired a purpose through experience, not explanation."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P10_L01",
-        "text": "The iron stairs are not a pantry.",
-        "subtext": "Panel 2",
+        "text": "Turn this. The fire comes from here.",
+        "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L02",
-        "text": "It wasn't in the room.",
+        "text": "Without wood.",
         "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Astrid"
       },
       {
         "fid": "VIK_S1E02_P10_L03",
-        "text": "That sentence is somehow worse.",
+        "text": "Without wood.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L04",
-        "text": "The bird belongs to no one.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "text": "BEEP! BEEP! BEEP! BEEP!",
+        "subtext": "Panel 4",
+        "speaker": "SFX"
       },
       {
         "fid": "VIK_S1E02_P10_L05",
-        "text": "I don't care about the bird.",
-        "subtext": "Panel 2",
+        "text": "Nobody hit the ceiling. It's warning us about the smoke.",
+        "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L06",
-        "text": "You came over very quickly for someone who doesn't care about the bird.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
+        "text": "We can see the smoke.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P10_L07",
-        "text": "I care about the cord across the only emergency way out besides the stairs we came up.",
+        "text": "The thing on the ceiling cannot.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L08",
-        "text": "The cord caught the bird.",
-        "subtext": "Panel 3",
+        "text": "Then how does it know?",
+        "subtext": "Panel 5",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P10_L09",
-        "text": "The cord can also catch the woman next door when everyone is trying to get out.",
-        "subtext": "Panel 4",
+        "text": "It senses smoke.",
+        "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L10",
-        "text": "Then we move it away from her window.",
-        "subtext": "Panel 4",
+        "text": "But does not know there is smoke.",
+        "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P10_L11",
-        "text": "We remove it from the iron stairs.",
-        "subtext": "Panel 4",
+        "text": "You have found the philosophical weakness of the smoke alarm.",
+        "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P10_L12",
-        "text": "You have chosen the bird over us.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "The pigeon would have smoked less.",
+        "subtext": "Panel 5",
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P10_L13",
-        "text": "I have chosen not explaining a pigeon trap to the people who can take this room away.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "text": "The pigeon is gone.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Astrid"
       },
       {
         "fid": "VIK_S1E02_P10_L14",
-        "text": "That is a different reason.",
+        "text": "Exactly.",
         "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P10_L15",
-        "text": "It's the reason that wins.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.KinMan2"
       }
     ],
     "continuityFrom": "VIK_S1E02_P09",
@@ -1154,8 +1172,8 @@
     "episode": "S1E02",
     "issue": 2,
     "page": 11,
-    "title": "The Neighbor Has the Cord",
-    "summary": "The upstairs neighbor arrives with the loose end of Gunnar's cord and no interest in anyone's cultural development; Astrid settles the immediate friction with food while Carrie realizes the incident has already escaped the apartment.",
+    "title": "The Neighbor Has the Other End",
+    "summary": "The upstairs neighbor arrives with the length of Second Male Kin's snare that reached her window; the household learns the exterior iron is shared space because an actual neighbor claims her part of it.",
     "settingText": "Fifth-floor hallway outside apartment 5B",
     "charactersInline": [
       {
@@ -1184,102 +1202,96 @@
       }
     ],
     "panelPlan": [
-      "Wide: knock at 5B. Upstairs Neighbor stands in the hall holding a length of cord that crossed her portion of the fire escape. Carrie opens the door; Bjorn is immediately behind her.",
-      "Medium: Neighbor holds the cord out to Carrie, irritated rather than frightened.",
-      "Medium: Carrie starts a formal apology; Astrid appears beside Bjorn with one unopened packaged snack from the bodega.",
+      "Wide: knock at 5B. Upstairs Neighbor stands in the hall holding a separate length of cord she removed from beside her window. Carrie opens the door; Second Male Kin is visible behind her and recognizes it immediately.",
+      "Medium: Neighbor holds the cord out. Second Male Kin explains where he tied it, revealing that his idea of the household boundary extended too far.",
+      "Medium: Carrie gives a direct apology. Astrid appears with one unopened spicy packaged snack from the bodega bag.",
       "Close: Astrid offers the snack; Neighbor takes it after a beat without becoming friendly.",
-      "Wide: Neighbor walks away. Carrie closes the door while Bjorn watches the hallway."
+      "Wide: Neighbor walks away with the problem settled only provisionally. Carrie closes the door while Second Male Kin looks at the now-returned cord in his hand."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E02_P11_L01",
-        "text": "This yours?",
+        "text": "This was tied next to my window.",
         "subtext": "Panel 1",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
         "fid": "VIK_S1E02_P11_L02",
-        "text": "Yes. It is no longer doing what it was doing.",
+        "text": "I tied it to the iron beside ours.",
         "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P11_L03",
-        "text": "It was tied across my fire escape.",
+        "text": "It crossed mine.",
         "subtext": "Panel 2",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
         "fid": "VIK_S1E02_P11_L04",
-        "text": "The boundary was unclear.",
+        "text": "I did not know that part was yours.",
         "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P11_L05",
-        "text": "The boundary is my window.",
+        "text": "The part outside my window is mine enough.",
         "subtext": "Panel 2",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
         "fid": "VIK_S1E02_P11_L06",
-        "text": "Then we won't cross it again.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P11_L07",
-        "text": "I'm sorry. It won't happen again.",
+        "text": "It's down now, and it stays down. I'm sorry.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P11_L08",
+        "fid": "VIK_S1E02_P11_L07",
         "text": "For trouble.",
         "subtext": "Panel 3",
         "handle": "@vik.Astrid"
       },
       {
-        "fid": "VIK_S1E02_P11_L09",
+        "fid": "VIK_S1E02_P11_L08",
         "text": "What is it?",
         "subtext": "Panel 4",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
-        "fid": "VIK_S1E02_P11_L10",
+        "fid": "VIK_S1E02_P11_L09",
         "text": "Spicy.",
         "subtext": "Panel 4",
         "handle": "@vik.Astrid"
       },
       {
-        "fid": "VIK_S1E02_P11_L11",
+        "fid": "VIK_S1E02_P11_L10",
         "text": "I'll take it.",
         "subtext": "Panel 4",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
+        "fid": "VIK_S1E02_P11_L11",
+        "text": "The bird was released.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
+      },
+      {
         "fid": "VIK_S1E02_P11_L12",
-        "text": "Keep whatever you tied off my window.",
+        "text": "There was a bird?",
         "subtext": "Panel 4",
         "handle": "@vik.UpstairsNeighbor"
       },
       {
         "fid": "VIK_S1E02_P11_L13",
-        "text": "Jesus Christ.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P11_L15",
-        "text": "What were you doing out there?",
-        "subtext": "Panel 4",
-        "handle": "@vik.UpstairsNeighbor"
-      },
-      {
-        "fid": "VIK_S1E02_P11_L16",
-        "text": "Catching a pigeon.",
+        "text": "Briefly.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E02_P11_L14",
+        "text": "Keep it that way.",
+        "subtext": "Panel 5",
+        "handle": "@vik.UpstairsNeighbor"
       }
     ],
     "continuityFrom": "VIK_S1E02_P10",
@@ -1536,9 +1548,9 @@
       }
     ],
     "panelPlan": [
-      "Medium at the table: Bjorn keeps the brass question of ownership practical and asks what ends a temporary placement.",
+      "Medium at the table: Bjorn asks what can actually end a temporary placement.",
       "Two-shot: Carrie answers from professional knowledge, distinguishing ordinary confusion from actual safety, damage, or conduct problems.",
-      "Reaction panel: Gunnar looks toward the coiled snare cord from the fire escape.",
+      "Reaction panel: Second Male Kin looks toward the returned snare cord beside his gear.",
       "Medium: Carrie follows his eyeline and names the relevant problem without turning it into a lecture.",
       "Close on Bjorn: the useful fact he takes away is that removal requires an actual reason, not that he has mastered housing law."
     ],
@@ -1571,7 +1583,7 @@
         "fid": "VIK_S1E02_P14_L05",
         "text": "The cord was on one of the ways out.",
         "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P14_L06",
@@ -2527,7 +2539,7 @@
     "panelPlan": [
       "Medium: Carrie sits at the table typing an incident report while the household settles around her.",
       "Close on Carrie as she quietly dictates or reads back the factual sentence she is entering: obstruction removed, animal unharmed, neighbor notified.",
-      "Medium: Bjorn and Gunnar hear the wording from nearby and object to her account.",
+      "Medium: Second Male Kin hears the wording and objects to the omission that the snare functioned; Bjorn supports the distinction from nearby.",
       "Two-shot: Carrie explains that the purpose of the report is not to celebrate the quality of the snare.",
       "Wide: Carrie continues typing as the household prepares for sleep."
     ],
@@ -2540,9 +2552,9 @@
       },
       {
         "fid": "VIK_S1E02_P22_L02",
-        "text": "You omitted that the snare worked.",
+        "text": "You left out that the snare worked.",
         "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P22_L03",
@@ -2552,21 +2564,21 @@
       },
       {
         "fid": "VIK_S1E02_P22_L04",
-        "text": "Then your account leaves out the cause of the dispute.",
+        "text": "A failed snare and a successful snare are different facts.",
         "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P22_L05",
-        "text": "The cause of the dispute is that you built a trap where people flee a burning building.",
+        "text": "The fact DTI cares about is that there was a trap where people flee a burning building.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P22_L06",
-        "text": "That is the location of the dispute.",
+        "text": "That is the location of the mistake.",
         "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P22_L07",
@@ -2578,7 +2590,7 @@
         "fid": "VIK_S1E02_P22_L08",
         "text": "It would be more accurate.",
         "subtext": "Panel 4",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.KinMan2"
       },
       {
         "fid": "VIK_S1E02_P22_L09",
@@ -2773,11 +2785,11 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie stands near the door putting on her coat; household now functional but still sparse.",
-      "Medium: Carrie gives the shortest possible overnight prohibition list while Bjorn holds the brass key.",
-      "Reaction on Gunnar as Carrie names fire escape, plumbing, boiler, sprinkler and weapons.",
-      "Two-shot Carrie/Bjorn: he observes the list has grown rapidly.",
-      "Close on Gunnar looking upward toward the ceiling after Carrie finishes."
+      "Wide: Carrie stands near the door putting on her coat; the household is now functional but still sparse.",
+      "Medium: Carrie gives a short overnight prohibition list framed in physical things everyone has actually encountered that day.",
+      "Reaction on Second Male Kin as hunting from the exterior iron is explicitly forbidden; he accepts the restriction without embarrassment.",
+      "Two-shot Carrie/Bjorn: he observes the rule list has grown rapidly.",
+      "Close on Gunnar looking upward toward the ceiling after Carrie finishes, already finding the unmentioned direction."
     ],
     "dialogueInline": [
       {
