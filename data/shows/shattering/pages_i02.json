@@ -1,51 +1,18 @@
 [
   {
     "id": "SHAT_I02_P01",
-    "summary": "Opening editor splash presents the High Era as a civilization that inherited miraculous corridor infrastructure and mistook continued operation for understanding.",
-    "settingText": "Full-page layered High Era infrastructure vista: immaculate civic and transit architecture above, massive older corridor machinery and service structures beneath, with distant outer maintenance platforms showing more wear. Everything is still operating. The image should communicate inherited scale and hidden age, not imminent disaster.",
+    "summary": "High Era infrastructure operates at full scale while its hidden age and uneven maintenance burden become visible beneath the civic surface.",
+    "settingText": "Full-page layered infrastructure vista: immaculate civic and transit architecture above, massive older corridor machinery and service structures beneath, and distant outer maintenance platforms showing more wear. Everything is still operating, but the inherited system's age is physically visible.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "FROM THE EDITOR"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The High Era inherited miracles and called them infrastructure."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Corridors older than governments. Machines older than manuals. A network so vast that whole worlds built their clocks, markets, medicine, and memory around it."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "For generations, that was enough."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Now the people closest to the machinery are hearing something the people farthest from it are not."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "A system can keep working long after it stops being well."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "And somewhere in the distance between those two facts, history is getting impatient."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "—The Editor"
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   },
   {
@@ -84,7 +51,7 @@
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "No. It's climbing."
+        "text": "It's climbing."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
@@ -127,10 +94,6 @@
       {
         "handle": "@starsplit.liora.virelia",
         "text": "Then stack them."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "I was afraid you'd say that."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
@@ -168,15 +131,11 @@
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "No. It lets the network pick one."
+        "text": "Waiting lets the network pick one."
       },
       {
         "handle": "@starsplit.alan.kessler",
         "text": "I'd rather pick our own disaster."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Same."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
@@ -207,10 +166,6 @@
       {
         "handle": "@starsplit.ruben.markham",
         "text": "Hold that housing."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "I'm holding it."
       },
       {
         "handle": "@starsplit.ruben.markham",
@@ -253,19 +208,11 @@
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Rejected?"
+        "text": "Rejected or ignored?"
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Ignored."
-      },
-      {
-        "handle": "@starsplit.ruben.markham",
-        "text": "That's somehow ruder."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "Rude doesn't crack a beacon. This does."
+        "text": "Ignored for six months. The mount kept degrading."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S02"
@@ -385,10 +332,6 @@
       {
         "handle": "@starsplit.ava.seltos",
         "text": "So I fly it blind?"
-      },
-      {
-        "handle": "@starsplit.tctrl",
-        "text": "Pretty much."
       },
       {
         "handle": "@starsplit.ava.seltos",
@@ -548,14 +491,6 @@
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "Lochran."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "Damian."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
         "text": "At some point we're just telling people the wrong thing."
       },
       {
@@ -630,7 +565,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.travl",
-        "text": "You said that ten minutes ago."
+        "text": "The board has cycled three times in ten minutes."
       },
       {
         "handle": "@starsplit.pstf",
@@ -646,7 +581,7 @@
       },
       {
         "handle": "@starsplit.travl",
-        "text": "Thank you. That's the first straight answer I've gotten."
+        "text": "Then I'm staying off that departure until somebody does."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S06"
@@ -690,7 +625,7 @@
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Maybe?"
+        "text": "What separates five from nine?"
       },
       {
         "handle": "@starsplit.liora.virelia",
@@ -728,10 +663,6 @@
       {
         "handle": "@starsplit.iskara.foster",
         "text": "Close the busiest routes."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "No."
       },
       {
         "handle": "@starsplit.iskara.foster",
@@ -788,7 +719,7 @@
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "That's what I'm giving you."
+        "text": "Five nodes share the same timing window. That is the evidence."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
@@ -879,7 +810,7 @@
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "That's a different question from whether it should."
+        "text": "It can run. Safe operation is unresolved."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
@@ -1007,10 +938,6 @@
         "text": "That may be the first sensible thing they've done."
       },
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Alan."
-      },
-      {
         "handle": "@starsplit.alan.kessler",
         "text": "I'm calibrating."
       },
@@ -1020,62 +947,29 @@
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "You know what that means?"
+        "text": "The field may worsen if the calibration is wrong."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Yes. And I don't have another option."
+        "text": "I don't have another option."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P24",
-    "summary": "Closing teaser points from the recovered damping solution toward the coming conflict between engineering control and the demand for reassuring public stability.",
-    "settingText": "Full-page teaser centered on the immense dormant damping chamber, ancient enough to dwarf the small figures approaching or working near it. Above or beyond the chamber, abstract corridor telemetry glows in tension with cleaner public-facing stability imagery. Do not depict the outcome of the attempt.",
+    "summary": "The recovered damping chamber stands ready while engineering risk and public pressure converge around it.",
+    "settingText": "Full-page view centered on the immense dormant damping chamber, ancient enough to dwarf the small figures working near it. Corridor telemetry shows unstable load relationships while the chamber's old emitter systems are prepared for use.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "NEXT ISSUE"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "They found the old answer."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Now somebody has to use it."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The machine was built for a network that no longer exists."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The network that exists cannot afford to wait."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "And while the engineers are trying to make ancient physics behave, other people are asking a different question:"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "What does “stable” need to look like?"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Next issue, one system gets two sets of instructions."
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   }
 ]
