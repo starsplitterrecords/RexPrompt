@@ -71,7 +71,7 @@
     "issue": 4,
     "page": 3,
     "title": "One Stamp",
-    "summary": "Carrie arrives with a routine DTI errand; Bjorn and Gunnar learn only the minimum necessary fact about the trip: the destination is across the city and the route runs underground.",
+    "summary": "Carrie arrives expecting a simple DTI errand; before they leave, Bjorn keeps the household anchored by leaving the apartment key with Astrid.",
     "settingText": "Bushwick apartment 5B, morning",
     "charactersInline": [
       {
@@ -101,9 +101,10 @@
     ],
     "panelPlan": [
       "Wide: Breakfast in 5B. Astrid and the Kin remain in the apartment while Carrie stands near the door with coffee in one hand and a neat DTI folder under the other arm; she looks prepared for an easy errand.",
-      "Medium: Carrie shows Bjorn and Gunnar the single paper that needs to be carried to another DTI office; neither reads it.",
-      "Two-shot: Gunnar asks how far. Carrie gestures outward and then down.",
-      "Wide: Bjorn and Gunnar prepare to leave with Carrie while the rest of the household stays behind. Carrie takes one last drink of coffee before heading out."
+      "Medium: Carrie shows Bjorn and Gunnar the single paper that needs to be carried to another DTI office; neither reads it. Gunnar asks how far; Carrie tells them the trip requires the underground train.",
+      "Medium: as Bjorn prepares to leave, he takes the brass key from its fixed place, looks back at Astrid and places it in her palm.",
+      "Wide: Carrie, Bjorn and Gunnar step into the hall. Astrid closes the door from inside.",
+      "Insert from the hallway: the lock turns behind them while Carrie finishes the last of her coffee."
     ],
     "dialogueInline": [
       {
@@ -127,26 +128,44 @@
       {
         "fid": "VIK_S1E04_P03_L04",
         "text": "How far?",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E04_P03_L05",
         "text": "Far enough that we take the train.",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E04_P03_L06",
         "text": "The one under the street.",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E04_P03_L07",
         "text": "That one.",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E04_P03_L08",
+        "text": "Keep the key with the room.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P03_L09",
+        "text": "Come back before dark.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Astrid"
+      },
+      {
+        "fid": "VIK_S1E04_P03_L10",
+        "text": "That is the plan.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
       }
     ],
     "status": "draft",
@@ -158,70 +177,6 @@
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
     "page": 4,
-    "title": "The Key Stays",
-    "summary": "Before leaving, Bjorn leaves the only apartment key with Astrid; the household remains functional without Carrie taking everyone along.",
-    "settingText": "Bushwick apartment 5B doorway",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      "Medium: Bjorn takes the brass key from its fixed place beside the door, then looks back at Astrid and the two Kin staying in 5B.",
-      "Close: he places the key in Astrid's palm.",
-      "Wide: Carrie, Bjorn and Gunnar step into the hall. Astrid closes the door from inside.",
-      "Insert from the hallway: the lock turns behind them."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E04_P04_L01",
-        "text": "Keep the key with the room.",
-        "subtext": "Panel 1",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E04_P04_L02",
-        "text": "Come back before dark.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Astrid"
-      },
-      {
-        "fid": "VIK_S1E04_P04_L03",
-        "text": "That is the plan.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      }
-    ],
-    "status": "draft",
-    "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P03"
-  },
-  {
-    "id": "VIK_S1E04_P05",
-    "episode": "vikings-2026-s1-e04",
-    "issue": 4,
-    "page": 5,
     "title": "A Road With No Sky",
     "summary": "At the subway entrance Gunnar confronts the actual problem: the city expects travelers to surrender the sky and descend anyway.",
     "settingText": "Bushwick subway entrance, morning",
@@ -248,37 +203,37 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P05_L01",
+        "fid": "VIK_S1E04_P04_L01",
         "text": "I found north last night.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P05_L02",
+        "fid": "VIK_S1E04_P04_L02",
         "text": "Congratulations.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P05_L03",
+        "fid": "VIK_S1E04_P04_L03",
         "text": "Now you want me to go where I cannot see it.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P05_L04",
+        "fid": "VIK_S1E04_P04_L04",
         "text": "For about forty minutes.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P05_L05",
+        "fid": "VIK_S1E04_P04_L05",
         "text": "A road with no sky.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P05_L06",
+        "fid": "VIK_S1E04_P04_L06",
         "text": "A bad road.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
@@ -286,13 +241,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P04"
+    "continuityFrom": "VIK_S1E04_P03"
   },
   {
-    "id": "VIK_S1E04_P06",
+    "id": "VIK_S1E04_P05",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 6,
+    "page": 5,
     "title": "The Gate",
     "summary": "The fare gate produces one brief physical collision with the new system; Carrie gets them through without turning it into a lesson.",
     "settingText": "Subway fare-control area",
@@ -312,38 +267,26 @@
     ],
     "panelPlan": [
       "Medium: Carrie taps a small transit card on the reader; the gate releases and she goes through.",
-      "Medium: Gunnar holds his card against the wrong part of the reader. Nothing happens.",
-      "Close: he watches one commuter tap the correct spot without slowing.",
+      "Medium: Gunnar holds his card against the wrong part of the reader. Nothing happens. Carrie points once to the correct spot without stopping to explain the mechanism.",
+      "Close: Gunnar watches one commuter tap the correct spot without slowing.",
       "Medium: Gunnar copies the physical action and the gate opens.",
       "Wide: Bjorn follows after watching once; all three are through."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P06_L01",
+        "fid": "VIK_S1E04_P05_L01",
         "text": "Touch the card there.",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P06_L02",
-        "text": "I did.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E04_P06_L03",
-        "text": "There.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E04_P06_L04",
+        "fid": "VIK_S1E04_P05_L02",
         "text": "It cares where.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P06_L05",
+        "fid": "VIK_S1E04_P05_L03",
         "text": "Most gates do.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
@@ -351,13 +294,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P05"
+    "continuityFrom": "VIK_S1E04_P04"
   },
   {
-    "id": "VIK_S1E04_P07",
+    "id": "VIK_S1E04_P06",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 7,
+    "page": 6,
     "title": "The Iron Worm",
     "summary": "The first train arrives as an enormous physical event; Gunnar confronts the machine while Bjorn immediately wants to know who is responsible for commanding something this dangerous.",
     "settingText": "Subway platform",
@@ -384,55 +327,43 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P07_L01",
-        "text": "That is the train.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E04_P07_L02",
-        "text": "That's the train.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E04_P07_L03",
+        "fid": "VIK_S1E04_P06_L01",
         "text": "It screams before it stops.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P07_L04",
+        "fid": "VIK_S1E04_P06_L02",
         "text": "It stops anyway.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P07_L05",
+        "fid": "VIK_S1E04_P06_L03",
         "text": "Who commands it?",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P07_L06",
+        "fid": "VIK_S1E04_P06_L04",
         "text": "The crew is in the cab.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P07_L07",
+        "fid": "VIK_S1E04_P06_L05",
         "text": "Behind the wall.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P07_L08",
+        "fid": "VIK_S1E04_P06_L06",
         "text": "Where I prefer them.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P07_L09",
+        "fid": "VIK_S1E04_P06_L07",
         "text": "And people enter it anyway.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
@@ -440,13 +371,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P06"
+    "continuityFrom": "VIK_S1E04_P05"
   },
   {
-    "id": "VIK_S1E04_P08",
+    "id": "VIK_S1E04_P07",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 8,
+    "page": 7,
     "title": "Inside",
     "summary": "Inside, Gunnar loses the orientation he fought to recover while Bjorn investigates the equally strange social fact that the passengers organize themselves without a visible steward.",
     "settingText": "Subway car leaving Bushwick",
@@ -474,61 +405,49 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P08_L01",
+        "fid": "VIK_S1E04_P07_L01",
         "text": "We turned.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P08_L02",
+        "fid": "VIK_S1E04_P07_L02",
         "text": "Probably.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P08_L03",
+        "fid": "VIK_S1E04_P07_L03",
         "text": "You do not know?",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P08_L04",
+        "fid": "VIK_S1E04_P07_L04",
         "text": "I know where the train is going. I don't track every curve.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P08_L05",
+        "fid": "VIK_S1E04_P07_L05",
         "text": "Who tells everyone where to stand?",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P08_L06",
-        "text": "Nobody.",
+        "fid": "VIK_S1E04_P07_L06",
+        "text": "Nobody. Move when the doors open.",
         "subtext": "Panel 5",
         "handle": "@vik.UnnamedArchetypes"
       },
       {
-        "fid": "VIK_S1E04_P08_L07",
-        "text": "Nobody.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E04_P08_L08",
-        "text": "Move when the doors open.",
-        "subtext": "Panel 5",
-        "handle": "@vik.UnnamedArchetypes"
-      },
-      {
-        "fid": "VIK_S1E04_P08_L09",
+        "fid": "VIK_S1E04_P07_L07",
         "text": "That is the whole rule?",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P08_L10",
+        "fid": "VIK_S1E04_P07_L08",
         "text": "Pretty much.",
         "subtext": "Panel 5",
         "handle": "@vik.UnnamedArchetypes"
@@ -536,13 +455,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P07"
+    "continuityFrom": "VIK_S1E04_P06"
   },
   {
-    "id": "VIK_S1E04_P09",
+    "id": "VIK_S1E04_P08",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 9,
+    "page": 8,
     "title": "No Horizon",
     "summary": "Gunnar discovers that north is not enough when every external reference has vanished; beside him, Bjorn keeps watching a crowd that somehow functions without visible command.",
     "settingText": "Moving subway car",
@@ -569,49 +488,49 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P09_L01",
+        "fid": "VIK_S1E04_P08_L01",
         "text": "North still exists.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P09_L02",
+        "fid": "VIK_S1E04_P08_L02",
         "text": "I would hope so.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P09_L03",
+        "fid": "VIK_S1E04_P08_L03",
         "text": "It is not useful here.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P09_L04",
+        "fid": "VIK_S1E04_P08_L04",
         "text": "Our stop is useful. Two more.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P09_L05",
+        "fid": "VIK_S1E04_P08_L05",
         "text": "That tells me when to leave. Not where I am.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P09_L06",
+        "fid": "VIK_S1E04_P08_L06",
         "text": "They are moving before the doors open.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P09_L07",
+        "fid": "VIK_S1E04_P08_L07",
         "text": "They know their stop.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P09_L08",
+        "fid": "VIK_S1E04_P08_L08",
         "text": "So everyone is responsible for remembering for himself.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
@@ -619,13 +538,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P08"
+    "continuityFrom": "VIK_S1E04_P07"
   },
   {
-    "id": "VIK_S1E04_P10",
+    "id": "VIK_S1E04_P09",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 10,
+    "page": 9,
     "title": "The Singer",
     "summary": "A busker gives Bjorn and Gunnar something underground that is immediately legible: a performer, an audience and voluntary payment.",
     "settingText": "Subway car / platform",
@@ -656,37 +575,37 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P10_L01",
+        "fid": "VIK_S1E04_P09_L01",
         "text": "Strong voice.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P10_L02",
+        "fid": "VIK_S1E04_P09_L02",
         "text": "You pay after he sings.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P10_L03",
+        "fid": "VIK_S1E04_P09_L03",
         "text": "Only if you want to.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P10_L04",
+        "fid": "VIK_S1E04_P09_L04",
         "text": "Then he trusts the crowd.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P10_L05",
+        "fid": "VIK_S1E04_P09_L05",
         "text": "Appreciate you.",
         "subtext": "Panel 4",
         "handle": "@vik.Arche"
       },
       {
-        "fid": "VIK_S1E04_P10_L06",
+        "fid": "VIK_S1E04_P09_L06",
         "text": "Better than the wheels.",
         "subtext": "Panel 5",
         "handle": "@vik.Gunnar"
@@ -694,13 +613,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P09"
+    "continuityFrom": "VIK_S1E04_P08"
   },
   {
-    "id": "VIK_S1E04_P11",
+    "id": "VIK_S1E04_P10",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 11,
+    "page": 10,
     "title": "The Office Moves",
     "summary": "DTI changes Carrie's destination while they are already underground; Bjorn immediately notices that the supposedly chaotic train has kept its course more reliably than the bureaucracy that sent them onto it.",
     "settingText": "Subway car approaching a station",
@@ -731,43 +650,43 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P11_L01",
+        "fid": "VIK_S1E04_P10_L01",
         "text": "Temporary annex. Same appointment.",
         "subtext": "Panel 1",
         "handle": "@vik.DtiFloorSupervisor"
       },
       {
-        "fid": "VIK_S1E04_P11_L02",
+        "fid": "VIK_S1E04_P10_L02",
         "text": "We're already on the way.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P11_L03",
+        "fid": "VIK_S1E04_P10_L03",
         "text": "Then you're halfway to somewhere else.",
         "subtext": "Panel 2",
         "handle": "@vik.DtiFloorSupervisor"
       },
       {
-        "fid": "VIK_S1E04_P11_L04",
+        "fid": "VIK_S1E04_P10_L04",
         "text": "We're getting off here.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P11_L05",
+        "fid": "VIK_S1E04_P10_L05",
         "text": "The train is still going where it was going.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P11_L06",
+        "fid": "VIK_S1E04_P10_L06",
         "text": "We aren't.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P11_L07",
+        "fid": "VIK_S1E04_P10_L07",
         "text": "The iron worm kept its route. Your office did not.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
@@ -775,15 +694,15 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P10"
+    "continuityFrom": "VIK_S1E04_P09"
   },
   {
-    "id": "VIK_S1E04_P12",
+    "id": "VIK_S1E04_P11",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 12,
+    "page": 11,
     "title": "Ask Someone Who Knows",
-    "summary": "At the transfer, Carrie solves the next piece by asking another rider; Bjorn recognizes a system whose local knowledge is distributed among the people using it rather than concentrated in one visible commander.",
+    "summary": "At the transfer, Carrie solves the next piece by asking another rider; Bjorn notices that useful knowledge may be scattered among the people using the system rather than held by one visible commander.",
     "settingText": "Transfer station",
     "charactersInline": [
       {
@@ -812,39 +731,33 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P12_L01",
+        "fid": "VIK_S1E04_P11_L01",
         "text": "Uptown six from here?",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P12_L02",
+        "fid": "VIK_S1E04_P11_L02",
         "text": "Down one level. Follow the green signs.",
         "subtext": "Panel 4",
         "handle": "@vik.UnnamedArchetypes"
       },
       {
-        "fid": "VIK_S1E04_P12_L03",
+        "fid": "VIK_S1E04_P11_L03",
         "text": "He knew this part.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E04_P12_L04",
-        "text": "No steward. Many guides.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       }
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P11"
+    "continuityFrom": "VIK_S1E04_P10"
   },
   {
-    "id": "VIK_S1E04_P13",
+    "id": "VIK_S1E04_P12",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 13,
+    "page": 12,
     "title": "The Wrong Side of the Street",
     "summary": "They finally surface in an unfamiliar neighborhood; Gunnar can recover north from the daylight, but that does not tell any of them which building contains the moved DTI office.",
     "settingText": "Manhattan street, late morning",
@@ -871,31 +784,31 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P13_L01",
+        "fid": "VIK_S1E04_P12_L01",
         "text": "North is there.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P13_L02",
+        "fid": "VIK_S1E04_P12_L02",
         "text": "That part survived the train.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P13_L03",
+        "fid": "VIK_S1E04_P12_L03",
         "text": "Where is the office?",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P13_L04",
+        "fid": "VIK_S1E04_P12_L04",
         "text": "Different problem.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P13_L05",
+        "fid": "VIK_S1E04_P12_L05",
         "text": "The city has many of those.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
@@ -903,13 +816,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P12"
+    "continuityFrom": "VIK_S1E04_P11"
   },
   {
-    "id": "VIK_S1E04_P14",
+    "id": "VIK_S1E04_P13",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 14,
+    "page": 13,
     "title": "Eat Something",
     "summary": "The reroute consumes the morning, so Carrie forces a short food stop before continuing; the beat shows practical depletion rather than creating another financial-accounting exchange.",
     "settingText": "Street food cart near the temporary annex",
@@ -940,37 +853,37 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P14_L01",
+        "fid": "VIK_S1E04_P13_L01",
         "text": "Eat.",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P14_L02",
+        "fid": "VIK_S1E04_P13_L02",
         "text": "Here?",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P14_L03",
+        "fid": "VIK_S1E04_P13_L03",
         "text": "Here has food.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P14_L04",
+        "fid": "VIK_S1E04_P13_L04",
         "text": "Onions?",
         "subtext": "Panel 3",
         "handle": "@vik.UnnamedArchetypes"
       },
       {
-        "fid": "VIK_S1E04_P14_L05",
+        "fid": "VIK_S1E04_P13_L05",
         "text": "Onions.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P14_L06",
+        "fid": "VIK_S1E04_P13_L06",
         "text": "Bring it with you.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
@@ -978,13 +891,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P13"
+    "continuityFrom": "VIK_S1E04_P12"
   },
   {
-    "id": "VIK_S1E04_P15",
+    "id": "VIK_S1E04_P14",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 15,
+    "page": 14,
     "title": "The Annex",
     "summary": "The temporary DTI annex is harder to identify than it should be; Gunnar contributes by watching where actual workers enter, not by reading modern signage.",
     "settingText": "Temporary municipal annex exterior",
@@ -1015,25 +928,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P15_L01",
+        "fid": "VIK_S1E04_P14_L01",
         "text": "This is the address.",
         "subtext": "Panel 1",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P15_L02",
+        "fid": "VIK_S1E04_P14_L02",
         "text": "The door disagrees.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P15_L03",
+        "fid": "VIK_S1E04_P14_L03",
         "text": "Those people are going around the side.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P15_L04",
+        "fid": "VIK_S1E04_P14_L04",
         "text": "Then we go around the side.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
@@ -1041,13 +954,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P14"
+    "continuityFrom": "VIK_S1E04_P13"
   },
   {
-    "id": "VIK_S1E04_P16",
+    "id": "VIK_S1E04_P15",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 16,
+    "page": 15,
     "title": "One Desk",
     "summary": "After the entire trip, the annex reduces to one plain desk and one clerk; Carrie handles the administrative details because that is her actual expertise.",
     "settingText": "Temporary DTI annex reception",
@@ -1078,31 +991,31 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P16_L01",
+        "fid": "VIK_S1E04_P15_L01",
         "text": "Housing confirmation. I need the receiving stamp.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P16_L02",
+        "fid": "VIK_S1E04_P15_L02",
         "text": "Hold on.",
         "subtext": "Panel 2",
         "handle": "@vik.Arche"
       },
       {
-        "fid": "VIK_S1E04_P16_L03",
+        "fid": "VIK_S1E04_P15_L03",
         "text": "That is it?",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P16_L04",
+        "fid": "VIK_S1E04_P15_L04",
         "text": "That is why we came.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P16_L05",
+        "fid": "VIK_S1E04_P15_L05",
         "text": "THUNK.",
         "subtext": "Panel 5",
         "speaker": "SFX"
@@ -1110,13 +1023,13 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P15"
+    "continuityFrom": "VIK_S1E04_P14"
   },
   {
-    "id": "VIK_S1E04_P17",
+    "id": "VIK_S1E04_P16",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 17,
+    "page": 16,
     "title": "The Paper Changes",
     "summary": "The errand ends in seconds; Bjorn compares the tiny administrative act with the far more complicated transport system that actually delivered them there.",
     "settingText": "Temporary DTI annex reception / exit",
@@ -1143,25 +1056,25 @@
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P17_L01",
+        "fid": "VIK_S1E04_P16_L01",
         "text": "The paper looks almost the same.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P17_L02",
+        "fid": "VIK_S1E04_P16_L02",
         "text": "It is now accepted.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P17_L03",
+        "fid": "VIK_S1E04_P16_L03",
         "text": "The iron worm moved hundreds of people with no steward in sight.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P17_L04",
+        "fid": "VIK_S1E04_P16_L04",
         "text": "We crossed the city so one woman could strike this paper.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
@@ -1169,15 +1082,15 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P16"
+    "continuityFrom": "VIK_S1E04_P15"
   },
   {
-    "id": "VIK_S1E04_P18",
+    "id": "VIK_S1E04_P17",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 18,
+    "page": 17,
     "title": "Back Under",
-    "summary": "Carrie heads straight back to the subway; Gunnar does not receive a lesson in curiosity or leisure, and nobody mistakes surviving the first trip for understanding the system.",
+    "summary": "Carrie turns directly back toward the subway; the second descent is physically easier for Bjorn and Gunnar, but no one mistakes familiarity with the entrance for understanding the system.",
     "settingText": "Street outside annex / subway entrance",
     "charactersInline": [
       {
@@ -1195,42 +1108,42 @@
     ],
     "panelPlan": [
       "Wide: Carrie leaves the annex and turns directly toward the nearest subway entrance without proposing a break.",
-      "Medium: Gunnar looks at the open sky one last time before descending again.",
-      "Two-shot: Bjorn asks whether the same underground road returns them home. Carrie keeps walking while answering.",
-      "Wide: Carrie is already on the stairs before the men follow."
+      "Medium: Gunnar looks at the open sky one last time before descending again. Bjorn asks whether the same underground road returns them home; Carrie keeps walking.",
+      "Quick sequence: at fare control Carrie taps through; Gunnar and Bjorn repeat the physical action they learned that morning without comment.",
+      "Wide: Carrie leads them through the return transfer. By the time they reach the final train toward Bushwick, she finally gets a seat."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P18_L01",
+        "fid": "VIK_S1E04_P17_L01",
         "text": "Same road home?",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P18_L02",
+        "fid": "VIK_S1E04_P17_L02",
         "text": "Different trains.",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E04_P18_L03",
+        "fid": "VIK_S1E04_P17_L03",
         "text": "Worse answer.",
-        "subtext": "Panel 3",
+        "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       }
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P17"
+    "continuityFrom": "VIK_S1E04_P16"
   },
   {
-    "id": "VIK_S1E04_P19",
+    "id": "VIK_S1E04_P18",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 19,
-    "title": "Second Descent",
-    "summary": "The fare gate is less mysterious on the second encounter, but Gunnar still treats passage through it as a physical procedure rather than understanding the network behind it.",
-    "settingText": "Return subway station fare-control area",
+    "page": 18,
+    "title": "The Questions Begin",
+    "summary": "Now that the return trip feels survivable, Bjorn and Gunnar finally have enough spare attention to become curious; Carrie's energy is already gone, and she lets the first wave of questions pass unanswered.",
+    "settingText": "Final subway train toward Bushwick",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -1246,22 +1159,131 @@
       }
     ],
     "panelPlan": [
-      "Medium: Carrie taps through first.",
-      "Medium: Gunnar follows the same physical motion he used that morning and gets through.",
-      "Medium: Bjorn does the same.",
-      "Wide: none of them pause to celebrate; the platform below is still the difficult part."
+      "Wide: Carrie sits with the closed DTI folder on her lap, staring ahead. Bjorn and Gunnar stand nearby, no longer braced for immediate danger; for the first time underground they have room to wonder.",
+      "Medium: Gunnar studies the tunnel wall sliding past and wonders aloud how many men it took to dig a road this long beneath the city. Carrie does not answer.",
+      "Medium: Bjorn studies the metal car, rails and fittings and wonders aloud where anyone could have obtained so much iron.",
+      "Close on Bjorn as another question follows immediately: what sort of horses draw the train, and whether they mind living underground.",
+      "Close on Carrie. Same flat stare. She gives no indication that any answer is coming."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "VIK_S1E04_P18_L01",
+        "text": "How many men did it take to dig a road this long under the city?",
+        "subtext": "Panel 2",
+        "handle": "@vik.Gunnar"
+      },
+      {
+        "fid": "VIK_S1E04_P18_L02",
+        "text": "Where did they get this much iron?",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P18_L03",
+        "text": "Do the horses that pull it mind living underground?",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
+      }
+    ],
+    "status": "draft",
+    "source": "Issue 4 redevelopment draft, October 4, 2026.",
+    "continuityFrom": "VIK_S1E04_P17"
+  },
+  {
+    "id": "VIK_S1E04_P19",
+    "episode": "vikings-2026-s1-e04",
+    "issue": 4,
+    "page": 19,
+    "title": "Not Question-and-Answer Time",
+    "summary": "The questions expand from tunnels and iron into bureaucracy and the apparently incurious people around them until Carrie finally uses the first silence to set a boundary; Bjorn recognizes it immediately.",
+    "settingText": "Final subway train toward Bushwick",
+    "charactersInline": [
+      {
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
+      },
+      {
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
+      },
+      {
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
+      }
+    ],
+    "panelPlan": [
+      "Wide: the train continues. Bjorn and Gunnar are now fully curious, talking past Carrie's silence rather than asking her directly.",
+      "Quick alternating panels: Gunnar wonders why the meeting moved; Bjorn wonders why the paper could not have been stamped at the first place; Gunnar wonders who had authority to move it.",
+      "Widen to the full car: Bjorn wonders where everyone is going and whether they all live nearby. Commuters sit, stand, read, sleep and stare at phones with complete indifference.",
+      "Medium: Bjorn asks why nobody seems surprised by any of this. Gunnar wonders whether all the passengers are also traveling somewhere to have papers stamped.",
+      "Hold one full silent beat after the last question. Carrie does not change expression.",
+      "Close on Carrie: she finally speaks. Bjorn recognizes the boundary immediately, begins an Astrid story, thinks better of extending the conversation, and accepts it."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E04_P19_L01",
-        "text": "This part I remember.",
+        "text": "Why did they move the meeting?",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E04_P19_L02",
-        "text": "The gate is not the road.",
+        "text": "If the stamp was all they needed, why could they not stamp it at the first place?",
+        "subtext": "Panel 2",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L03",
+        "text": "Who decided the meeting should move?",
+        "subtext": "Panel 2",
+        "handle": "@vik.Gunnar"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L04",
+        "text": "Where are all these people going?",
         "subtext": "Panel 3",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L05",
+        "text": "Do they all live here?",
+        "subtext": "Panel 3",
+        "handle": "@vik.Gunnar"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L06",
+        "text": "Why does no one look surprised by anything?",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L07",
+        "text": "Are they all going somewhere for stamps?",
+        "subtext": "Panel 4",
+        "handle": "@vik.Gunnar"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L08",
+        "text": "Guys...",
+        "subtext": "Panel 6",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L09",
+        "text": "It's not question-and-answer time.",
+        "subtext": "Panel 6",
+        "handle": "@vik.Carrie"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L10",
+        "text": "Ha! This I recognize. When Astrid was young I—",
+        "subtext": "Panel 6",
+        "handle": "@vik.Bjorn"
+      },
+      {
+        "fid": "VIK_S1E04_P19_L11",
+        "text": "Anyway, I respect this.",
+        "subtext": "Panel 6",
         "handle": "@vik.Bjorn"
       }
     ],
@@ -1274,128 +1296,8 @@
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
     "page": 20,
-    "title": "Not Question-and-Answer Time",
-    "summary": "On the final train home, Bjorn and Gunnar release a day's worth of unanswered questions about tunnels, iron, horses, bureaucracy and the incurious crowds around them; Carrie answers none of it until the questions finally stop.",
-    "settingText": "Moving subway car / transfer",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      }
-    ],
-    "panelPlan": [
-      "Wide: after Carrie has led them through the return transfer, the three are on the final train toward Bushwick. Carrie has finally gotten a seat. The DTI folder is closed on her lap. Bjorn and Gunnar remain standing nearby, both still looking at everything.",
-      "Medium on Gunnar looking out at the tunnel wall: he begins wondering aloud how many men it took to dig a road this long beneath the city. Carrie stares straight ahead and does not answer.",
-      "Medium on Bjorn studying the metal car, rails and fittings: he wonders aloud where anyone could have obtained this much iron, then whether the horses that pull the train object to living underground. Carrie does not move.",
-      "Quick alternating panels or a widening two-shot as the questions continue without waiting for answers: why was the meeting moved; why could the paper not have been stamped at the first place; who had authority to move it; where all these people are going; whether they all live nearby.",
-      "Wide on the packed car: commuters sit, stand, read, sleep and stare at phones with ordinary New York indifference while Gunnar and Bjorn continue wondering why nobody seems curious about any of it. Gunnar finally asks whether all of these people are also traveling somewhere to have papers stamped.",
-      "Hold the silence for a full beat. Close on Carrie with the flat, exhausted stare of someone who has been containing this day since breakfast. She finally speaks. Bjorn recognizes the boundary immediately and, for once, respects it."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E04_P20_L01",
-        "handle": "@vik.Gunnar",
-        "text": "How many men did it take to dig a road this long under the city?",
-        "subtext": "Panel 2"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L02",
-        "handle": "@vik.Bjorn",
-        "text": "Where did they get this much iron?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L03",
-        "handle": "@vik.Bjorn",
-        "text": "Do the horses that pull it mind living underground?",
-        "subtext": "Panel 3"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L04",
-        "handle": "@vik.Gunnar",
-        "text": "Why did they move the meeting?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L05",
-        "handle": "@vik.Bjorn",
-        "text": "If the stamp was all they needed, why could they not stamp it at the first place?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L06",
-        "handle": "@vik.Gunnar",
-        "text": "Who decided the meeting should move?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L07",
-        "handle": "@vik.Bjorn",
-        "text": "Where are all these people going?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L08",
-        "handle": "@vik.Gunnar",
-        "text": "Do they all live here?",
-        "subtext": "Panel 4"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L09",
-        "handle": "@vik.Bjorn",
-        "text": "Why does no one look surprised by anything?",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L10",
-        "handle": "@vik.Gunnar",
-        "text": "Are they all going somewhere for stamps?",
-        "subtext": "Panel 5"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L11",
-        "handle": "@vik.Carrie",
-        "text": "Guys...",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L12",
-        "handle": "@vik.Carrie",
-        "text": "It's not question-and-answer time.",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L13",
-        "handle": "@vik.Bjorn",
-        "text": "Ha! This I recognize. When Astrid was young I—",
-        "subtext": "Panel 6"
-      },
-      {
-        "fid": "VIK_S1E04_P20_L14",
-        "handle": "@vik.Bjorn",
-        "text": "Anyway, I respect this.",
-        "subtext": "Panel 6"
-      }
-    ],
-    "status": "draft",
-    "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P19"
-  },
-  {
-    "id": "VIK_S1E04_P21",
-    "episode": "vikings-2026-s1-e04",
-    "issue": 4,
-    "page": 21,
     "title": "The Other Stair",
-    "summary": "The return train reaches Bushwick, but the station releases them through a different exit; being near home is not the same as knowing exactly where they are.",
+    "summary": "The train releases them through a different Bushwick exit; after recognizing Carrie's boundary, Bjorn and Gunnar do not ask her to solve the new uncertainty.",
     "settingText": "Bushwick subway station and unfamiliar exit",
     "charactersInline": [
       {
@@ -1412,48 +1314,36 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie leads them up a staircase they did not use that morning, moving more slowly now but without hesitation.",
-      "Medium: Bjorn notices the change before they reach daylight.",
-      "Wide: they emerge on the opposite side of the avenue from the entrance they remember. Carrie stops on the sidewalk and looks around with the expression of someone who has reached the final avoidable complication.",
-      "Medium: Gunnar immediately looks for open sky and familiar landmarks."
+      "Wide: Carrie leads them up a staircase they did not use that morning, moving slowly now with the closed folder tucked under one arm.",
+      "Medium: Bjorn notices the change before they reach daylight but does not ask Carrie about it.",
+      "Wide: they emerge on the opposite side of the avenue from the entrance they remember. Carrie stops and simply waits.",
+      "Medium: Gunnar immediately looks for open sky and physical landmarks while Bjorn scans the block. Carrie says nothing."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P21_L01",
+        "fid": "VIK_S1E04_P20_L01",
         "text": "Different stair.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P21_L02",
-        "text": "Same station.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E04_P21_L03",
+        "fid": "VIK_S1E04_P20_L02",
         "text": "That is not the same place.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E04_P21_L04",
-        "text": "It is very close to the same place.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
       }
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P20"
+    "continuityFrom": "VIK_S1E04_P19"
   },
   {
-    "id": "VIK_S1E04_P22",
+    "id": "VIK_S1E04_P21",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 22,
+    "page": 21,
     "title": "North Is Not Home",
-    "summary": "Gunnar can establish north immediately above ground, but that still does not locate 5B; the distinction keeps his traditional knowledge useful without making it magical.",
+    "summary": "Gunnar recovers north immediately above ground, but north alone does not locate 5B; Bjorn and Gunnar continue solving the problem themselves while Carrie conserves what little energy she has left.",
     "settingText": "Bushwick street outside alternate subway exit",
     "charactersInline": [
       {
@@ -1470,48 +1360,42 @@
       }
     ],
     "panelPlan": [
-      "Wide: traffic and buildings initially make the block look unfamiliar.",
+      "Wide: traffic and buildings initially make the block look unfamiliar. Carrie remains a few steps behind rather than taking over.",
       "Close: Gunnar checks the afternoon sky and fixes north.",
       "Medium: he turns slowly, looking for something actually known rather than pretending direction alone solves the neighborhood.",
-      "Two-shot: Bjorn waits while Carrie scans storefronts."
+      "Two-shot: Bjorn waits with him. Neither asks Carrie."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P22_L01",
+        "fid": "VIK_S1E04_P21_L01",
         "text": "North is there.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P22_L02",
+        "fid": "VIK_S1E04_P21_L02",
         "text": "And the room?",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P22_L03",
+        "fid": "VIK_S1E04_P21_L03",
         "text": "Not north.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E04_P22_L04",
-        "text": "Useful distinction.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
       }
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P21"
+    "continuityFrom": "VIK_S1E04_P20"
   },
   {
-    "id": "VIK_S1E04_P23",
+    "id": "VIK_S1E04_P22",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 23,
+    "page": 22,
     "title": "The Bodega",
-    "summary": "Home becomes legible through repeated neighborhood experience, not transit mastery: they recognize the corner shop before they recognize the street arrangement.",
+    "summary": "Home becomes legible through repeated neighborhood experience: Bjorn and Gunnar recognize the bodega, orient from it, and take over the final walk without asking Carrie for anything.",
     "settingText": "Bushwick block near the bodega",
     "charactersInline": [
       {
@@ -1531,24 +1415,24 @@
       "Wide: Gunnar catches sight of the familiar bodega awning or window across the avenue.",
       "Medium: Bjorn recognizes the entrance where he offered hacksilver.",
       "Three-shot: the entire block resolves around that known point. Carrie sees that they have recognized it before she has to tell them.",
-      "Close: Carrie's shoulders loosen slightly; she simply follows as Gunnar and Bjorn orient themselves from the familiar shop.",
-      "Wide: they cross toward the familiar corner."
+      "Close: Carrie's shoulders loosen slightly. Bjorn and Gunnar start toward 5B; Carrie simply follows.",
+      "Wide: for the first time all day, Carrie is not leading the group."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P23_L01",
+        "fid": "VIK_S1E04_P22_L01",
         "text": "The food shop.",
         "subtext": "Panel 1",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P23_L02",
+        "fid": "VIK_S1E04_P22_L02",
         "text": "Then the room is that way.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P23_L03",
+        "fid": "VIK_S1E04_P22_L03",
         "text": "I know one thing that is here.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
@@ -1556,16 +1440,16 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P22"
+    "continuityFrom": "VIK_S1E04_P21"
   },
   {
-    "id": "VIK_S1E04_P24",
+    "id": "VIK_S1E04_P23",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 24,
-    "title": "The Debt",
-    "summary": "Passing the bodega reminds Bjorn that their first groceries were paid with Carrie's money, keeping the coming financial problem alive without turning the walk into another lesson.",
-    "settingText": "Bushwick sidewalk outside the bodega",
+    "page": 23,
+    "title": "They Lead",
+    "summary": "The last blocks home are deliberately quiet: Bjorn and Gunnar carry the route while Carrie follows, making their recognition of her exhaustion behavioral rather than verbal.",
+    "settingText": "Bushwick neighborhood sidewalk",
     "charactersInline": [
       {
         "handle": "@vik.Carrie",
@@ -1581,42 +1465,24 @@
       }
     ],
     "panelPlan": [
-      "Medium: they pass the bodega entrance without going in.",
-      "Close: Bjorn looks through the window toward the counter where Carrie paid on their first night.",
-      "Two-shot Carrie/Bjorn while Gunnar continues toward the apartment. Carrie keeps moving and answers without breaking stride.",
-      "Wide: Bjorn follows; Carrie does not reopen the subject."
+      "Wide: Bjorn and Gunnar walk ahead at an ordinary pace toward the apartment building; Carrie follows several steps behind with the folder tucked under her arm.",
+      "Medium: Gunnar checks the next corner against the bodega behind them and chooses the familiar direction.",
+      "Medium: Bjorn notices Carrie lagging, slows the pace slightly, and says nothing.",
+      "Close: Carrie notices the adjustment but does not acknowledge it aloud.",
+      "Wide: the three continue toward 5B in silence. Do not insert financial, transit or explanatory dialogue."
     ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E04_P24_L01",
-        "text": "We still owe you for the first food.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E04_P24_L02",
-        "text": "You still have no money the city recognizes.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E04_P24_L03",
-        "text": "Then that problem remains.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      }
-    ],
+    "dialogueInline": [],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P23"
+    "continuityFrom": "VIK_S1E04_P22"
   },
   {
-    "id": "VIK_S1E04_P25",
+    "id": "VIK_S1E04_P24",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 25,
+    "page": 24,
     "title": "The Door Opens",
-    "summary": "The trio returns to 5B by neighborhood recognition; the household did not need them to be gone successfully, and the key left behind has done exactly what it was supposed to do.",
+    "summary": "The trio reaches 5B without Carrie having to direct the final leg; the household opens the door from inside, and Carrie's workday visibly runs out of momentum at the threshold.",
     "settingText": "Fifth-floor hall outside apartment 5B",
     "charactersInline": [
       {
@@ -1645,26 +1511,26 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie, Bjorn and Gunnar climb the familiar final stair to 5B. Carrie is last now, one hand on the rail, folder tucked against her side.",
+      "Wide: Bjorn and Gunnar reach the familiar final stair first. Carrie comes behind them, one hand briefly on the rail, folder tucked against her side.",
       "Medium: Bjorn knocks once rather than reaching for a key he does not have.",
       "Medium: Astrid opens the door from inside with the brass key in hand; the Kin are visible behind her continuing ordinary household activity.",
-      "Wide: Bjorn and Gunnar cross back into the functioning room. Carrie enters last, sets the stamped folder down immediately, and remains standing for one beat as if remembering she still has to leave again eventually."
+      "Wide: Bjorn and Gunnar cross back into the functioning room. Carrie enters last and sets the stamped folder down immediately."
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E04_P25_L01",
+        "fid": "VIK_S1E04_P24_L01",
         "text": "Before dark.",
         "subtext": "Panel 3",
         "handle": "@vik.Astrid"
       },
       {
-        "fid": "VIK_S1E04_P25_L02",
+        "fid": "VIK_S1E04_P24_L02",
         "text": "The road was longer than promised.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P25_L03",
+        "fid": "VIK_S1E04_P24_L03",
         "text": "Most of it had no sky.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
@@ -1672,15 +1538,15 @@
     ],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
-    "continuityFrom": "VIK_S1E04_P24"
+    "continuityFrom": "VIK_S1E04_P23"
   },
   {
-    "id": "VIK_S1E04_P26",
+    "id": "VIK_S1E04_P25",
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
-    "page": 26,
-    "title": "What Gunnar Knows",
-    "summary": "The issue closes on a deliberately modest gain: Gunnar still cannot navigate the subway, but he now knows that the underground route can return him to a neighborhood with recognizable anchors.",
+    "page": 25,
+    "title": "No More Questions",
+    "summary": "Back in 5B, Carrie finally stops managing the day; Bjorn's recognition of her limit continues in silence while Gunnar returns to the open sky.",
     "settingText": "Bushwick apartment 5B at dusk",
     "charactersInline": [
       {
@@ -1709,38 +1575,59 @@
       }
     ],
     "panelPlan": [
-      "Wide: the household resumes around dinner. The stamped DTI paper sits near Carrie's folder; the key is back in its fixed place. Carrie sits at the edge of the room with both hands around a glass of water, no longer managing anything for the moment.",
-      "Medium: Gunnar stands briefly at the window with open sky visible again.",
-      "Close: he locates north without effort now that he can see the sky.",
-      "Medium: below, the familiar bodega corner is visible through the urban gap.",
-      "Wide: Gunnar leaves the window and rejoins the room. Carrie watches without comment; the day has produced one modest piece of independence."
+      "Wide: the household resumes around dinner. Carrie sits at the edge of the room with both hands around a glass of water; the stamped DTI folder lies closed nearby.",
+      "Medium: Gunnar starts toward Carrie with the alert expression of someone who has thought of another question.",
+      "Two-shot: Bjorn catches Gunnar's eye and gives one small head shake. Gunnar changes course without speaking.",
+      "Medium: Carrie sees none of this or chooses not to react; for once nobody needs anything from her.",
+      "Wide: Gunnar goes to the window instead. Bjorn rejoins the household."
     ],
-    "dialogueInline": [
+    "dialogueInline": [],
+    "status": "draft",
+    "source": "Issue 4 redevelopment draft, October 4, 2026.",
+    "continuityFrom": "VIK_S1E04_P24"
+  },
+  {
+    "id": "VIK_S1E04_P26",
+    "episode": "vikings-2026-s1-e04",
+    "issue": 4,
+    "page": 26,
+    "title": "What Gunnar Knows",
+    "summary": "The issue closes on a modest, visual gain: Gunnar still does not understand the subway, but north, the bodega and 5B now connect one small piece of New York into something he can recognize.",
+    "settingText": "Bushwick apartment 5B at dusk",
+    "charactersInline": [
       {
-        "fid": "VIK_S1E04_P26_L01",
-        "text": "Could you take the train alone tomorrow?",
-        "subtext": "Panel 1",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Carrie",
+        "name": "Carrie"
       },
       {
-        "fid": "VIK_S1E04_P26_L02",
-        "text": "Not yet.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Bjorn",
+        "name": "Bjorn"
       },
       {
-        "fid": "VIK_S1E04_P26_L03",
-        "text": "Could you find this room from the food shop?",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Gunnar",
+        "name": "Gunnar"
       },
       {
-        "fid": "VIK_S1E04_P26_L04",
-        "text": "That I can do.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Astrid",
+        "name": "Astrid"
+      },
+      {
+        "handle": "@vik.KinMan1",
+        "name": "First Male Kin"
+      },
+      {
+        "handle": "@vik.KinMan2",
+        "name": "Second Male Kin"
       }
     ],
+    "panelPlan": [
+      "Medium: Gunnar stands at the window with open sky visible again.",
+      "Close: he locates north without effort now that he can see the sky.",
+      "Medium from Gunnar's viewpoint: the familiar bodega corner is visible through the urban gap below.",
+      "Wide interior: Gunnar looks from that known point back into 5B. Carrie remains seated with her water; Bjorn and the household continue ordinary evening activity.",
+      "Final quiet panel: Gunnar leaves the window and rejoins the room. No one assesses what he learned, and no modern system is treated as mastered."
+    ],
+    "dialogueInline": [],
     "status": "draft",
     "source": "Issue 4 redevelopment draft, October 4, 2026.",
     "continuityFrom": "VIK_S1E04_P25"
