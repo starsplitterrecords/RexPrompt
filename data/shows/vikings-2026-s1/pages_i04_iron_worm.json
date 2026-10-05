@@ -1274,8 +1274,8 @@
     "episode": "vikings-2026-s1-e04",
     "issue": 4,
     "page": 20,
-    "title": "Carrie Leads",
-    "summary": "On the return trip Carrie remains responsible for stops and transfers; Gunnar watches physical cues but does not suddenly become a subway navigator.",
+    "title": "Not Question-and-Answer Time",
+    "summary": "On the final train home, Bjorn and Gunnar release a day's worth of unanswered questions about tunnels, iron, horses, bureaucracy and the incurious crowds around them; Carrie answers none of it until the questions finally stop.",
     "settingText": "Moving subway car / transfer",
     "charactersInline": [
       {
@@ -1292,35 +1292,97 @@
       }
     ],
     "panelPlan": [
-      "Wide: on the return train Carrie finally gets a seat. The DTI folder rests closed on her lap while Bjorn and Gunnar remain standing, still studying the car and tunnel with fresh attention.",
-      "Medium: Gunnar notices the changing sound before a stop. Carrie answers without opening her eyes.",
-      "Medium: at the transfer Carrie stands when necessary and leads them across the platform with the practiced movements of someone who wants the day to end.",
-      "Wide: Gunnar follows the sequence but does not read the route map or lead. Bjorn continues watching the crowd while Carrie conserves every unnecessary movement."
+      "Wide: after Carrie has led them through the return transfer, the three are on the final train toward Bushwick. Carrie has finally gotten a seat. The DTI folder is closed on her lap. Bjorn and Gunnar remain standing nearby, both still looking at everything.",
+      "Medium on Gunnar looking out at the tunnel wall: he begins wondering aloud how many men it took to dig a road this long beneath the city. Carrie stares straight ahead and does not answer.",
+      "Medium on Bjorn studying the metal car, rails and fittings: he wonders aloud where anyone could have obtained this much iron, then whether the horses that pull the train object to living underground. Carrie does not move.",
+      "Quick alternating panels or a widening two-shot as the questions continue without waiting for answers: why was the meeting moved; why could the paper not have been stamped at the first place; who had authority to move it; where all these people are going; whether they all live nearby.",
+      "Wide on the packed car: commuters sit, stand, read, sleep and stare at phones with ordinary New York indifference while Gunnar and Bjorn continue wondering why nobody seems curious about any of it. Gunnar finally asks whether all of these people are also traveling somewhere to have papers stamped.",
+      "Hold the silence for a full beat. Close on Carrie with the flat, exhausted stare of someone who has been containing this day since breakfast. She finally speaks. Bjorn recognizes the boundary immediately and, for once, respects it."
     ],
     "dialogueInline": [
       {
         "fid": "VIK_S1E04_P20_L01",
-        "text": "It sounds different before it stops.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Gunnar",
+        "text": "How many men did it take to dig a road this long under the city?",
+        "subtext": "Panel 2"
       },
       {
         "fid": "VIK_S1E04_P20_L02",
-        "text": "Different train.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Bjorn",
+        "text": "Where did they get this much iron?",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E04_P20_L03",
-        "text": "Still under the earth.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Bjorn",
+        "text": "Do the horses that pull it mind living underground?",
+        "subtext": "Panel 3"
       },
       {
         "fid": "VIK_S1E04_P20_L04",
-        "text": "For a little longer.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Gunnar",
+        "text": "Why did they move the meeting?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L05",
+        "handle": "@vik.Bjorn",
+        "text": "If the stamp was all they needed, why could they not stamp it at the first place?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L06",
+        "handle": "@vik.Gunnar",
+        "text": "Who decided the meeting should move?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L07",
+        "handle": "@vik.Bjorn",
+        "text": "Where are all these people going?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L08",
+        "handle": "@vik.Gunnar",
+        "text": "Do they all live here?",
+        "subtext": "Panel 4"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L09",
+        "handle": "@vik.Bjorn",
+        "text": "Why does no one look surprised by anything?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L10",
+        "handle": "@vik.Gunnar",
+        "text": "Are they all going somewhere for stamps?",
+        "subtext": "Panel 5"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L11",
+        "handle": "@vik.Carrie",
+        "text": "Guys...",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L12",
+        "handle": "@vik.Carrie",
+        "text": "It's not question-and-answer time.",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L13",
+        "handle": "@vik.Bjorn",
+        "text": "Ha! This I recognize. When Astrid was young I—",
+        "subtext": "Panel 6"
+      },
+      {
+        "fid": "VIK_S1E04_P20_L14",
+        "handle": "@vik.Bjorn",
+        "text": "Anyway, I respect this.",
+        "subtext": "Panel 6"
       }
     ],
     "status": "draft",
