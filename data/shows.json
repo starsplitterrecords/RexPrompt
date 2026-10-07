@@ -1078,44 +1078,21 @@
   },
   {
     "id": "vikings-2026-s1-e01",
-    "name": "Vikings 2026 — Season 1 / Issue 1",
+    "name": "Vikings 2026 — Season 1 / Issue 1 — Arrival in Time",
     "seriesName": "Vikings 2026",
-    "issueLabel": "Issue 1",
+    "issueLabel": "Issue 1 — Arrival in Time",
     "basePath": "data/shows/vikings-2026-s1",
-    "scenesFile": "pages_base.json",
     "unitLabel": "PAGE",
     "generationLine": "Interior story comic page. Illustrated sequential art, not photorealistic. Preserve panel order and exact dialogue. Use creative modern panel layouts that highlight the important scene details.",
-    "sceneOverlays": [
-      {
-        "file": "encoded/pages_e01_p01_p06.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p07_p12.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p13_p18.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p19_p24.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "encoded/pages_e01_p25_p26.json.gzb64",
-        "encoding": "gzip-base64"
-      },
-      {
-        "file": "pages_e01_insert_after_p15.json",
-        "afterId": "VIK_S1I01_P15"
-      }
-    ],
     "omitCameoHandles": true,
     "omitSummary": true,
     "compactCharacters": true,
     "compactDialogue": true,
-    "compactContinuity": true
+    "compactContinuity": true,
+    "scenesFiles": [
+      "pages_i01_reordered.json"
+    ],
+    "includeIdPattern": "^VIK_S1I01_P\\d+$"
   },
   {
     "id": "vikings-2026-s1-e02",

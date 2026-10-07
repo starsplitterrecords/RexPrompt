@@ -14,10 +14,22 @@
       }
     ],
     "panelPlan": [
-      "Full-page editorial/title splash with no conventional grid. Inside sparse apartment 5B in gray early-morning light: the brass key hangs near the door, the drafty window shows a blank overcast sky, and Gunnar stands looking upward along the exterior iron beyond the glass.",
-      "Keep the room materially simple and newly occupied. Do not show a usable map, readable contact card, phone knowledge, or other modern navigation tools.",
-      "The eye should travel from the locked room to the exterior iron and finally to the clouded sky above the building.",
-      "Integrate the captions as deliberate editorial typography with strong hierarchy. End with Welcome to TERRITORY."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment 5B, cloudy early morning",
+        "shotType": "FULL_PAGE_SPLASH",
+        "action": "Full-page editorial/title splash with no conventional grid. Inside sparse apartment 5B in gray early-morning light: the brass key hangs near the door, the drafty window shows a blank overcast sky, and Gunnar stands looking upward along the exterior iron beyond the glass. Keep the room materially simple and newly occupied. Do not show a usable map, readable contact card, phone knowledge, or other modern navigation tools. The eye should travel from the locked room to the exterior iron and finally to the clouded sky above the building. Integrate the captions as deliberate editorial typography with strong hierarchy. End with Welcome to TERRITORY.",
+        "dialogueIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -70,10 +82,14 @@
       }
     ],
     "directionInline": [
-      "Editorial splash. Preserve the day-two knowledge ceiling: Gunnar understands direction, weather, height and the sky; modern navigation systems remain unfamiliar."
+      {
+        "text": "Editorial splash. Preserve the day-two knowledge ceiling: Gunnar understands direction, weather, height and the sky; modern navigation systems remain unfamiliar."
+      }
     ],
     "status": "production-ready",
-    "source": "Editorial intro/teaser pass developed September 30, 2026."
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E02_P22",
+    "panelCount": 1
   },
   {
     "id": "VIK_S1E03_P03",
@@ -94,10 +110,44 @@
       }
     ],
     "panelPlan": [
-      "Wide: Bjorn wakes to the sound of the rear window opening. Gunnar is already stepping carefully onto the exterior iron.",
-      "Medium: Bjorn remains inside while Gunnar looks upward toward the next landing and roofline.",
-      "Two-shot across the open window: Bjorn recalls Carrie's restriction from the night before.",
-      "Wide exterior: Gunnar begins climbing upward through the gray morning while Bjorn watches from 5B."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment 5B and exterior fire escape, early morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Bjorn wakes to the sound of the rear window opening. Gunnar is already stepping carefully onto the exterior iron.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment 5B and exterior fire escape, early morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Bjorn remains inside while Gunnar looks upward toward the next landing and roofline.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment 5B and exterior fire escape, early morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot across the open window: Bjorn recalls Carrie's restriction from the night before.",
+        "dialogueIndices": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment 5B and exterior fire escape, early morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide exterior: Gunnar begins climbing upward through the gray morning while Bjorn watches from 5B.",
+        "dialogueIndices": [
+          5
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -138,8 +188,10 @@
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P02"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P02",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
     "id": "VIK_S1E03_P04",
@@ -160,10 +212,41 @@
       }
     ],
     "panelPlan": [
-      "Wide: Gunnar reaches the flat roof and finds only gray cloud, water towers, brick walls, antennas and neighboring rooftops. The sun is completely hidden.",
-      "Medium: He studies the cloud cover and horizon, dissatisfied; nothing in the sky gives him the fixed point he came for.",
-      "Wide: Silas appears from the opposite side of the roof with coffee, notices Gunnar and slows.",
-      "Two-shot: Silas keeps a neighborly distance. His tone is casual, but his curiosity is real."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Gunnar reaches the flat roof and finds only gray cloud, water towers, brick walls, antennas and neighboring rooftops. The sun is completely hidden.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: He studies the cloud cover and horizon, dissatisfied; nothing in the sky gives him the fixed point he came for.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Silas appears from the opposite side of the roof with coffee, notices Gunnar and slows.",
+        "dialogueIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot: Silas keeps a neighborly distance. His tone is casual, but his curiosity is real.",
+        "dialogueIndices": [
+          2,
+          3,
+          4
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -198,8 +281,10 @@
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P03"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P03",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
     "id": "VIK_S1E03_P05",
@@ -220,10 +305,46 @@
       }
     ],
     "panelPlan": [
-      "Medium: Silas notices Gunnar repeatedly checking the blank sky and asks what he is looking for.",
-      "Close: Silas takes out his phone and shows the compass screen, with the display visible only as a simple directional interface rather than readable technical detail.",
-      "Medium: Gunnar studies the device itself rather than accepting the indicated direction.",
-      "Wide: Gunnar looks back to the clouds and surrounding roofline; the phone has not solved the problem for him."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Silas notices Gunnar repeatedly checking the blank sky and asks what he is looking for.",
+        "dialogueIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Close: Silas takes out his phone and shows the compass screen, with the display visible only as a simple directional interface rather than readable technical detail.",
+        "dialogueIndices": [
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Gunnar studies the device itself rather than accepting the indicated direction.",
+        "dialogueIndices": [
+          3,
+          4
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, cloudy morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Gunnar looks back to the clouds and surrounding roofline; the phone has not solved the problem for him.",
+        "dialogueIndices": [
+          5,
+          6,
+          7
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -276,8 +397,10 @@
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P04"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P04",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
     "id": "VIK_S1E03_P06",
@@ -310,10 +433,43 @@
       }
     ],
     "panelPlan": [
-      "Wide: Gunnar climbs back through the rear window into 5B. Bjorn is awake; Astrid and the two Kin continue quiet morning tasks in the background without speaking.",
-      "Two-shot: Bjorn expects an answer about north and gets weather instead.",
-      "Medium: Gunnar describes the roof physically—open above, wind moving across it, no beams or ceiling to hold smoke.",
-      "Close on Bjorn as that last observation becomes useful for a different unresolved problem."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Gunnar climbs back through the rear window into 5B. Bjorn is awake; Astrid and the two Kin continue quiet morning tasks in the background without speaking.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot: Bjorn expects an answer about north and gets weather instead.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Gunnar describes the roof physically—open above, wind moving across it, no beams or ceiling to hold smoke.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Bjorn as that last observation becomes useful for a different unresolved problem.",
+        "dialogueIndices": [
+          4,
+          5
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -354,8 +510,10 @@
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P05"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P05",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
     "id": "VIK_S1E03_P07",
@@ -392,11 +550,50 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie enters 5B with her folder while the household is awake and active. The recovered snare cord remains bundled with Second Male Kin's gear.",
-      "Medium: she notices Gunnar's damp boots and the open rear window before he closes it.",
-      "Two-shot: Gunnar states where he went without embarrassment.",
-      "Three-shot Carrie/Bjorn/Gunnar: Bjorn supplies the literal timing distinction from the previous night.",
-      "Close on Carrie as she looks at the existing DTI follow-up notice in her folder, then at the window."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Carrie enters 5B with her folder while the household is awake and active. The recovered snare cord remains bundled with Second Male Kin's gear.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: she notices Gunnar's damp boots and the open rear window before he closes it.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot: Gunnar states where he went without embarrassment.",
+        "dialogueIndices": [
+          1
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Three-shot Carrie/Bjorn/Gunnar: Bjorn supplies the literal timing distinction from the previous night.",
+        "dialogueIndices": [
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment 5B, morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Carrie as she looks at the existing DTI follow-up notice in her folder, then at the window.",
+        "dialogueIndices": [
+          4
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -431,87 +628,150 @@
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P06"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P06",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
     "id": "VIK_S1E03_P08",
     "episode": "S1E03",
     "issue": 3,
     "page": 8,
-    "title": "First Fire",
-    "summary": "Bjorn and Gunnar act on the roof's obvious advantage for smoke; the silent Kin begin assembling a hearth base from loose rooftop metal until Carrie stops the project on the simplest possible ground: the material is not theirs.",
+    "title": "The Building's Iron",
+    "summary": "The Kin begin collecting rooftop building metal for a hearth; Carrie interrupts the work and makes them restore it before a fire is lit.",
     "settingText": "Bushwick apartment building roof, late morning",
     "charactersInline": [
       {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
+        "name": "Carrie",
+        "handle": "@vik.Carrie"
       },
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "name": "Bjorn",
+        "handle": "@vik.Bjorn"
       },
       {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
+        "name": "Gunnar",
+        "handle": "@vik.Gunnar"
       },
       {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
+        "name": "Astrid",
+        "handle": "@vik.Astrid"
       },
       {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
+        "name": "First Male Kin",
+        "handle": "@vik.KinMan1"
+      },
+      {
+        "name": "Second Male Kin",
+        "handle": "@vik.KinMan2"
       }
     ],
     "panelPlan": [
-      "Wide: Carrie follows Bjorn and Gunnar onto the roof and finds First Male Kin and Second Male Kin silently moving loose sheet-metal pieces from a maintenance stack toward a clear roof area.",
-      "Medium: Gunnar has selected a location with open sky and moving air; Bjorn is judging the surface and spacing rather than improvising recklessly.",
-      "Fast medium: Carrie reaches the loose metal before any fire is built.",
-      "Medium: the Kin stop immediately and wait; nobody argues that dangerous work should continue.",
-      "Wide: the metal begins going back exactly where it came from."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "WIDE",
+        "action": "Carrie, Bjorn and Gunnar step from the roof access onto the tar roof. Astrid watches while the two male Kin carry loose galvanized pieces from a maintenance stack toward a proposed hearth site. Intact dish and vents remain in place.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "Carrie catches the men beside the loose pieces and points them back toward the stack; both immediately stop.",
+        "dialogueIndices": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "Bjorn holds a thin loose sheet-metal piece without damaging it; Carrie points toward the working vents.",
+        "dialogueIndices": [
+          3,
+          4
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "The two male Kin return every loose piece to its original stack while Gunnar clears the proposed work area. Astrid checks that nothing remains displaced.",
+        "dialogueIndices": [
+          5,
+          6
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "WIDE",
+        "action": "Bjorn looks toward the apartment below; Carrie follows his eyeline and waits.",
+        "dialogueIndices": [
+          7
+        ]
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P08_L01",
-        "text": "Put that back.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "text": "They are gathering the iron for the hearth.",
+        "subtext": "Panel 1",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P08_L01"
       },
       {
-        "fid": "VIK_S1E03_P08_L02",
+        "text": "Put that back. It belongs to the building.",
+        "subtext": "Panel 2",
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P08_L02"
+      },
+      {
         "text": "It was lying unused.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
+        "subtext": "Panel 2",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P08_L03"
       },
       {
-        "fid": "VIK_S1E03_P08_L03",
-        "text": "It belongs to the building.",
+        "text": "The metal is weak. It yields easily to us.",
         "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P08_L04"
       },
       {
-        "fid": "VIK_S1E03_P08_L04",
+        "text": "It is meant to vent air. Leave the building its air.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P08_L05"
+      },
+      {
         "text": "Then we will use something else.",
         "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P08_L06"
       },
       {
-        "fid": "VIK_S1E03_P08_L05",
-        "text": "There will be no fire on the roof.",
+        "text": "You cannot build a hearth on a tar roof. It is a lease violation.",
         "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P08_L07"
       },
       {
-        "fid": "VIK_S1E03_P08_L06",
-        "text": "There is no fire.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
+        "text": "A chieftain does not forbid his people from finding warmth. It is the oldest law.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P08_L08"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P07"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P07",
+    "panelCount": 5,
+    "directionInline": []
   },
   {
     "id": "VIK_S1E03_P09",
@@ -544,11 +804,53 @@
       }
     ],
     "panelPlan": [
-      "Medium: the Kin silently return the last loose metal while Carrie stays with Bjorn and Gunnar.",
-      "Two-shot Carrie/Bjorn: she asks why a spring morning has become a hearth problem.",
-      "Medium on Gunnar: he points only toward the building below, not to any system diagram or named equipment.",
-      "Close on Bjorn: his concern is redundancy and responsibility, not fear of modern technology.",
-      "Wide: Carrie remains unconvinced by the solution even though the need itself is clearer."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: the Kin silently return the last loose metal while Carrie stays with Bjorn and Gunnar.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot Carrie/Bjorn: she asks why a spring morning has become a hearth problem.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium on Gunnar: he points only toward the building below, not to any system diagram or named equipment.",
+        "dialogueIndices": [
+          4
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Bjorn: his concern is redundancy and responsibility, not fear of modern technology.",
+        "dialogueIndices": [
+          3,
+          5
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Carrie remains unconvinced by the solution even though the need itself is clearer.",
+        "dialogueIndices": [
+          6,
+          7
+        ]
+      }
     ],
     "dialogueInline": [
       {
@@ -601,307 +903,164 @@
       }
     ],
     "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P08"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P08",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
     "id": "VIK_S1E03_P10",
     "episode": "S1E03",
     "issue": 3,
     "page": 10,
-    "title": "Something That Is Ours",
-    "summary": "The household solves the ownership objection without abandoning the fire plan: Bjorn and Gunnar bring their own heavy cooking pot upstairs as a contained vessel while Astrid and the Kin remain present but silent.",
-    "settingText": "Bushwick apartment 5B and roof stair, midday",
+    "title": "The Room Is at Stake",
+    "summary": "Silas documents the rooftop disturbance; Carrie explains the placement consequence, and Bjorn decides the hearth must create no trouble for anyone.",
+    "settingText": "Bushwick apartment building roof, late morning",
     "charactersInline": [
       {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
+        "name": "Carrie",
+        "handle": "@vik.Carrie"
       },
       {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
+        "name": "Bjorn",
+        "handle": "@vik.Bjorn"
       },
       {
-        "handle": "@vik.Astrid",
-        "name": "Astrid"
+        "name": "Gunnar",
+        "handle": "@vik.Gunnar"
       },
       {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
+        "name": "Silas",
+        "handle": "@vik.Silas"
       }
     ],
     "panelPlan": [
-      "Wide: back in 5B, Bjorn and Gunnar inspect the household's own heavy iron cooking pot while Astrid watches from the food area and the Kin continue other tasks without speaking.",
-      "Medium: Gunnar checks the pot's stability and depth; this is practical firecraft, not discovery of fire.",
-      "Wide: Bjorn and Gunnar carry the pot upward together while one Kin silently brings a bucket of water.",
-      "Final panel: the pot reaches the roof. The building-owned metal remains untouched in the background."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "WIDE",
+        "action": "Silas stands at a neighboring roof edge with his phone held vertically, recording the men restoring the metal. Carrie and Bjorn notice him; Gunnar remains beside the restored stack.",
+        "dialogueIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "Carrie points to the restored stack, speaking toward Silas across a plausible conversational distance. Silas keeps recording.",
+        "dialogueIndices": [
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "Carrie lowers her voice to Bjorn; Gunnar hears her beside him.",
+        "dialogueIndices": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "MEDIUM",
+        "action": "Carrie heads for the bulkhead to make her required report. Bjorn and Gunnar stay beside the untouched roof fixtures.",
+        "dialogueIndices": [
+          7,
+          8
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, late morning",
+        "shotType": "WIDE",
+        "action": "Bjorn looks across the roof at the nearby windows and clear access path; Gunnar follows his survey.",
+        "dialogueIndices": [
+          9
+        ]
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P10_L01",
-        "text": "The building's metal is back.",
+        "text": "An enemy?",
         "subtext": "Panel 1",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P10_L01"
       },
       {
-        "fid": "VIK_S1E03_P10_L02",
-        "text": "This is ours.",
+        "text": "A concerned neighbor with a neighborhood watch app.",
         "subtext": "Panel 1",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P10_L02"
       },
       {
-        "fid": "VIK_S1E03_P10_L03",
-        "text": "Astrid needs it before dark.",
+        "text": "Everything is back. Nothing is damaged.",
         "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P10_L03"
       },
       {
-        "fid": "VIK_S1E03_P10_L04",
-        "text": "Then we test before dark.",
+        "text": "Then that is what the recording will show.",
         "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
+        "handle": "@vik.Silas",
+        "fid": "VIK_S1E03_P10_L04"
+      },
+      {
+        "text": "Yesterday was the fire escape. A roof complaint today can put the room under review.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P10_L05"
+      },
+      {
+        "text": "Even with no fire?",
+        "subtext": "Panel 3",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P10_L06"
+      },
+      {
+        "text": "The placement can be endangered without anyone burning.",
+        "subtext": "Panel 3",
+        "handle": "@vik.Carrie",
+        "fid": "VIK_S1E03_P10_L07"
+      },
+      {
+        "text": "Then the building's metal stays here.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Gunnar",
+        "fid": "VIK_S1E03_P10_L08"
+      },
+      {
+        "text": "And we find iron that belongs to us.",
+        "subtext": "Panel 4",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P10_L09"
+      },
+      {
+        "text": "The hearth must make trouble for no one.",
+        "subtext": "Panel 5",
+        "handle": "@vik.Bjorn",
+        "fid": "VIK_S1E03_P10_L10"
       }
     ],
     "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P09"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P09",
+    "panelCount": 5,
+    "directionInline": []
   },
   {
     "id": "VIK_S1E03_P11",
     "episode": "S1E03",
     "issue": 3,
     "page": 11,
-    "title": "Second Fire",
-    "summary": "Bjorn and Gunnar light a small, physically competent test fire in their own iron pot; Silas sees it, fulfilling his promise to watch the roof.",
-    "settingText": "Bushwick apartment building roof, early afternoon",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      },
-      {
-        "handle": "@vik.Silas",
-        "name": "Silas"
-      }
-    ],
-    "panelPlan": [
-      "Wide: the heavy iron pot sits on a bare masonry service area well clear of roof clutter. A water bucket is within reach; the Kin stand back and remain silent.",
-      "Medium: Gunnar checks the wind and Bjorn checks the pot's stability before lighting a very small test fire.",
-      "Insert: a controlled flame takes. Nobody treats the flame as a novelty.",
-      "Wide: Silas appears at the far side of the roof and stops when he sees smoke.",
-      "Two-shot Silas/Gunnar across the roof: Silas takes out his phone."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E03_P11_L01",
-        "text": "Wind is moving away from the building.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E03_P11_L02",
-        "text": "Light it.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E03_P11_L03",
-        "text": "So that's what the pot was for.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Silas"
-      },
-      {
-        "fid": "VIK_S1E03_P11_L04",
-        "text": "For now.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E03_P11_L05",
-        "text": "Carrie is going to love this.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Silas"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P10"
-  },
-  {
-    "id": "VIK_S1E03_P12",
-    "episode": "S1E03",
-    "issue": 3,
-    "page": 12,
-    "title": "Out",
-    "summary": "Carrie arrives before the test becomes a larger fire; she does not teach fire safety, because that is not the problem. The problem is that another rooftop incident can jeopardize the placement.",
-    "settingText": "Bushwick apartment building roof, early afternoon",
-    "charactersInline": [
-      {
-        "handle": "@vik.Carrie",
-        "name": "Carrie"
-      },
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      },
-      {
-        "handle": "@vik.Silas",
-        "name": "Silas"
-      }
-    ],
-    "panelPlan": [
-      "Wide: Carrie reaches the roof quickly and sees the small contained fire, water bucket and silent Kin standing clear.",
-      "Medium: Bjorn is ready to defend the setup's physical competence; Carrie does not debate it.",
-      "Close: Carrie gives one direct command. Gunnar immediately covers or extinguishes the small fire safely.",
-      "Medium: Carrie points to the building below, making the housing consequence the issue rather than explaining combustion.",
-      "Wide: Bjorn and Gunnar carry the still-warm pot back toward the stairs."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E03_P12_L01",
-        "text": "Out.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L02",
-        "text": "It is contained.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L03",
-        "text": "Out.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L04",
-        "text": "Yesterday was a pigeon on the fire escape. Today cannot become a roof fire.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L05",
-        "text": "No one was endangered.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L06",
-        "text": "The placement can be endangered without anyone burning.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E03_P12_L07",
-        "text": "Take the pot downstairs.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P11"
-  },
-  {
-    "id": "VIK_S1E03_P13",
-    "episode": "S1E03",
-    "issue": 3,
-    "page": 13,
-    "title": "The Wrong Danger",
-    "summary": "After Carrie leaves, Bjorn and Gunnar understand exactly enough of the institutional consequence to become more determined: the next fire must create no complaint and no new case problem.",
-    "settingText": "Bushwick apartment stair and 5B, afternoon",
-    "charactersInline": [
-      {
-        "handle": "@vik.Bjorn",
-        "name": "Bjorn"
-      },
-      {
-        "handle": "@vik.Gunnar",
-        "name": "Gunnar"
-      },
-      {
-        "handle": "@vik.KinMan1",
-        "name": "First Male Kin"
-      },
-      {
-        "handle": "@vik.KinMan2",
-        "name": "Second Male Kin"
-      }
-    ],
-    "panelPlan": [
-      "Wide: Bjorn and Gunnar carry the iron pot back into 5B. The Kin follow silently with the water bucket.",
-      "Medium: Bjorn sets the pot down; it cannot remain upstairs because Astrid needs it for food.",
-      "Two-shot: Gunnar separates the physical danger from the housing danger Carrie actually named.",
-      "Close on Bjorn: instead of abandoning the idea, he converts the restriction into a design requirement.",
-      "Wide: the household's own cooking pot returns to the food area, ending attempt two."
-    ],
-    "dialogueInline": [
-      {
-        "fid": "VIK_S1E03_P13_L01",
-        "text": "The fire was not what she feared most.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E03_P13_L02",
-        "text": "The room.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E03_P13_L03",
-        "text": "Another complaint.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E03_P13_L04",
-        "text": "Then the next fire makes trouble for no one.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      }
-    ],
-    "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P12"
-  },
-  {
-    "id": "VIK_S1E03_P14",
-    "episode": "S1E03",
-    "issue": 3,
-    "page": 14,
     "title": "Ask the Merchant",
-    "summary": "Bjorn and Gunnar solve the dedicated-material problem by asking the bodega owner for unwanted iron; he gives them a damaged lidded stockpot while making clear that whatever follows is their business.",
+    "summary": "Bjorn and Gunnar ask the bodega owner for unwanted iron and receive a damaged lidded stockpot for a dedicated hearth.",
     "settingText": "Bushwick bodega, afternoon",
     "charactersInline": [
       {
@@ -918,67 +1077,109 @@
       }
     ],
     "panelPlan": [
-      "Wide: Bjorn and Gunnar return to the familiar corner bodega without Carrie. The owner recognizes them and keeps working.",
-      "Medium: Bjorn asks for iron the merchant no longer wants rather than trying to buy a modern specialty object.",
-      "Close: the owner studies both men before pulling a dented heavy stockpot with a damaged handle and matching lid from behind the counter or storage area.",
-      "Medium: Gunnar checks the vessel physically; it is thick, stable and no longer useful to the merchant for normal kitchen work.",
-      "Wide: Bjorn and Gunnar leave carrying the pot while the owner watches them go."
+      {
+        "panel": 1,
+        "location": "Bushwick bodega, afternoon",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Bjorn and Gunnar return to the familiar corner bodega without Carrie. The owner recognizes them and keeps working.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick bodega, afternoon",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Bjorn asks for iron the merchant no longer wants rather than trying to buy a modern specialty object.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick bodega, afternoon",
+        "shotType": "SEQUENTIAL",
+        "action": "Close: the owner studies both men before pulling a dented heavy stockpot with a damaged handle and matching lid from behind the counter or storage area.",
+        "dialogueIndices": [
+          3,
+          4
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick bodega, afternoon",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Gunnar checks the vessel physically; it is thick, stable and no longer useful to the merchant for normal kitchen work.",
+        "dialogueIndices": [
+          5,
+          6
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick bodega, afternoon",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Bjorn and Gunnar leave carrying the pot while the owner watches them go.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P14_L01",
+        "fid": "VIK_S1E03_P11_L01",
         "text": "Do you have iron you do not want?",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P14_L02",
+        "fid": "VIK_S1E03_P11_L02",
         "text": "That depends why.",
         "subtext": "Panel 2",
         "handle": "@vik.BodegaOwner"
       },
       {
-        "fid": "VIK_S1E03_P14_L03",
+        "fid": "VIK_S1E03_P11_L03",
         "text": "Fire.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E03_P14_L04",
+        "fid": "VIK_S1E03_P11_L04",
         "text": "I have a pot with a broken handle.",
         "subtext": "Panel 3",
         "handle": "@vik.BodegaOwner"
       },
       {
-        "fid": "VIK_S1E03_P14_L05",
+        "fid": "VIK_S1E03_P11_L05",
         "text": "Take the pot. Leave my name out of whatever happens next.",
         "subtext": "Panel 3",
         "handle": "@vik.BodegaOwner"
       },
       {
-        "fid": "VIK_S1E03_P14_L06",
+        "fid": "VIK_S1E03_P11_L06",
         "text": "You gave it to us.",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P14_L07",
+        "fid": "VIK_S1E03_P11_L07",
         "text": "I already regret being specific.",
         "subtext": "Panel 4",
         "handle": "@vik.BodegaOwner"
       }
     ],
     "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P13"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P10",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
-    "id": "VIK_S1E03_P15",
+    "id": "VIK_S1E03_P12",
     "episode": "S1E03",
     "issue": 3,
-    "page": 15,
-    "title": "Third Attempt",
-    "summary": "The third hearth is deliberately built from their own dedicated material and their own fire knowledge; they wait on wind and placement rather than treating Carrie's objection as a challenge to safety.",
+    "page": 12,
+    "title": "Their Own Hearth",
+    "summary": "Using the merchant's pot, the household prepares one contained hearth, protects the roof surface, and waits for suitable wind.",
     "settingText": "Bushwick apartment building roof, late afternoon under lingering clouds",
     "charactersInline": [
       {
@@ -1003,49 +1204,87 @@
       }
     ],
     "panelPlan": [
-      "Wide: the dented lidded stockpot has become the core of a compact contained stove on a bare masonry service pad, with no building material removed or altered. Astrid and the two Kin are present but silent.",
-      "Medium: Gunnar checks the surrounding clearance and wind while Bjorn tests the lid and stability.",
-      "Insert: a full bucket of water is placed within easy reach.",
-      "Medium: the wind shifts toward the building. Gunnar stops the lighting attempt before Bjorn reaches for fuel.",
-      "Wide: everyone simply waits. Competence is shown through restraint."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, late afternoon under lingering clouds",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: the dented lidded stockpot has become the core of a compact contained stove on a bare masonry service pad, with no building material removed or altered. Astrid and the two Kin are present but silent.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, late afternoon under lingering clouds",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Gunnar checks the surrounding clearance and wind while Bjorn tests the lid and stability.",
+        "dialogueIndices": [
+          0,
+          1
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, late afternoon under lingering clouds",
+        "shotType": "SEQUENTIAL",
+        "action": "Insert: a full bucket of water is placed within easy reach.",
+        "dialogueIndices": [
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, late afternoon under lingering clouds",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: the wind shifts toward the building. Gunnar stops the lighting attempt before Bjorn reaches for fuel.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, late afternoon under lingering clouds",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: everyone simply waits. Competence is shown through restraint.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P15_L01",
+        "fid": "VIK_S1E03_P12_L01",
         "text": "Wind turned toward the building.",
         "subtext": "Panel 2",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E03_P15_L02",
+        "fid": "VIK_S1E03_P12_L02",
         "text": "Then we wait.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P15_L03",
+        "fid": "VIK_S1E03_P12_L03",
         "text": "The lid fits.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E03_P15_L04",
+        "fid": "VIK_S1E03_P12_L04",
         "text": "Keep the water there.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       }
     ],
     "status": "production-ready",
-    "source": "Territory rooftop/hearth revision developed from recovered historical hearth-building and Silas-observer artwork; revised to current character logic and continuity.",
-    "continuityFrom": "VIK_S1E03_P14"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P11",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
-    "id": "VIK_S1E03_P16",
+    "id": "VIK_S1E03_P13",
     "episode": "S1E03",
     "issue": 3,
-    "page": 16,
-    "title": "Third Fire",
-    "summary": "When the wind settles, the household lights the dedicated contained stove; the third attempt has solved ownership, physical control and immediate nuisance without resolving whether Carrie will accept it.",
+    "page": 13,
+    "title": "First Flame",
+    "summary": "The household lights its completed contained hearth for the first time; Silas watches from a neighborly distance.",
     "settingText": "Bushwick apartment building roof, early evening",
     "charactersInline": [
       {
@@ -1074,43 +1313,79 @@
       }
     ],
     "panelPlan": [
-      "Wide: the wind has eased. Bjorn lights a modest fire inside the dedicated lidded metal stove; the household gathers around it without crowding the clear zone.",
-      "Medium: Astrid and the Kin use the warmth quietly; nobody treats the fire as entertainment or spectacle.",
-      "Insert: thin smoke rises cleanly into the open air; water and lid remain within reach.",
-      "Wide: Silas appears and watches from a distance, phone still in his pocket this time.",
-      "Two-shot Silas/Gunnar: the fire is obviously deliberate and controlled, but still unmistakably a rooftop fire."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, early evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: the wind has eased. Bjorn lights a modest fire inside the dedicated lidded metal stove; the household gathers around it without crowding the clear zone.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, early evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Astrid and the Kin use the warmth quietly; nobody treats the fire as entertainment or spectacle.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, early evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Insert: thin smoke rises cleanly into the open air; water and lid remain within reach.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, early evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Silas appears and watches from a distance, phone still in his pocket this time.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, early evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot Silas/Gunnar: the fire is obviously deliberate and controlled, but still unmistakably a rooftop fire.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P16_L01",
-        "text": "You really did it again.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Silas"
+        "handle": "@vik.Silas",
+        "text": "You found your own pot.",
+        "subtext": "Panel 5",
+        "fid": "VIK_S1E03_P13_L01"
       },
       {
-        "fid": "VIK_S1E03_P16_L02",
-        "text": "Not the same way.",
+        "handle": "@vik.Gunnar",
+        "text": "The merchant had no use for it.",
         "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
+        "fid": "VIK_S1E03_P13_L02"
       },
       {
-        "fid": "VIK_S1E03_P16_L03",
-        "text": "I'm still deciding whether that helps.",
+        "handle": "@vik.Silas",
+        "text": "I hope he asked what you wanted it for.",
         "subtext": "Panel 5",
-        "handle": "@vik.Silas"
+        "fid": "VIK_S1E03_P13_L03"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P15"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P12",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
-    "id": "VIK_S1E03_P17",
+    "id": "VIK_S1E03_P14",
     "episode": "S1E03",
     "issue": 3,
-    "page": 17,
+    "page": 14,
     "title": "Still No North",
-    "summary": "The third fire holds safely while Gunnar's original problem remains unresolved; the clouds are thinning but the stars have not yet appeared.",
+    "summary": "the completed fire holds safely while Gunnar's original problem remains unresolved; the clouds are thinning but the stars have not yet appeared.",
     "settingText": "Bushwick apartment building roof at dusk",
     "charactersInline": [
       {
@@ -1139,49 +1414,87 @@
       }
     ],
     "panelPlan": [
-      "Wide: dusk darkens the roof while the contained fire remains small. The household occupies the space naturally; Astrid and the Kin remain silent.",
-      "Medium: Gunnar repeatedly looks away from the fire toward breaks forming in the cloud cover.",
-      "Two-shot: Silas recognizes what Gunnar is waiting for.",
-      "Close on Gunnar as the clouds still hide the useful stars.",
-      "Wide: the roof has become useful before it has become orienting."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof at dusk",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: dusk darkens the roof while the contained fire remains small. The household occupies the space naturally; Astrid and the Kin remain silent.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof at dusk",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Gunnar repeatedly looks away from the fire toward breaks forming in the cloud cover.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof at dusk",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot: Silas recognizes what Gunnar is waiting for.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof at dusk",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Gunnar as the clouds still hide the useful stars.",
+        "dialogueIndices": [
+          3
+        ]
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof at dusk",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: the roof has become useful before it has become orienting.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P17_L01",
+        "fid": "VIK_S1E03_P14_L01",
         "text": "Still looking for north?",
         "subtext": "Panel 3",
         "handle": "@vik.Silas"
       },
       {
-        "fid": "VIK_S1E03_P17_L02",
+        "fid": "VIK_S1E03_P14_L02",
         "text": "Still waiting for the sky.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E03_P17_L03",
+        "fid": "VIK_S1E03_P14_L03",
         "text": "I can show you the phone again.",
         "subtext": "Panel 3",
         "handle": "@vik.Silas"
       },
       {
-        "fid": "VIK_S1E03_P17_L04",
+        "fid": "VIK_S1E03_P14_L04",
         "text": "The sky will clear.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P16"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P13",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
-    "id": "VIK_S1E03_P18",
+    "id": "VIK_S1E03_P15",
     "episode": "S1E03",
     "issue": 3,
-    "page": 18,
+    "page": 15,
     "title": "Carrie Comes Back",
-    "summary": "Carrie returns to complete the required follow-up from the previous night's exterior-stair incident and finds that the entire household has established a third, much more competent rooftop fire.",
+    "summary": "Carrie returns to complete the follow-up and discovers the finished hearth built from the household's own material.",
     "settingText": "Bushwick apartment 5B and roof access, evening",
     "charactersInline": [
       {
@@ -1210,46 +1523,77 @@
       }
     ],
     "panelPlan": [
-      "Wide: Carrie reaches 5B with her folder and finds the apartment occupied only by traces of recent activity; the household is above.",
-      "Medium: she follows the sound of movement upward and emerges onto the roof.",
-      "Large reveal: the whole household is gathered around the compact contained stove. The building-owned metal stack is untouched. Water, lid, clear space and restrained flame are visible without being presented as a checklist.",
-      "Close on Carrie: annoyance arrives first, then slows as she actually looks at how the household is using the fire."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment 5B and roof access, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Carrie reaches 5B with her folder and finds the apartment occupied only by traces of recent activity; the household is above.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment 5B and roof access, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: she follows the sound of movement upward and emerges onto the roof.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment 5B and roof access, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Large reveal: the whole household is gathered around the compact contained stove. The building-owned metal stack is untouched. Water, lid, clear space and restrained flame are visible without being presented as a checklist.",
+        "dialogueIndices": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment 5B and roof access, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Carrie: annoyance arrives first, then slows as she actually looks at how the household is using the fire.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P18_L01",
-        "text": "You built another one.",
+        "fid": "VIK_S1E03_P15_L01",
+        "text": "You built it anyway.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E03_P18_L02",
+        "fid": "VIK_S1E03_P15_L02",
         "text": "This one is ours.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P18_L03",
+        "fid": "VIK_S1E03_P15_L03",
         "text": "Where did you get it?",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E03_P18_L04",
+        "fid": "VIK_S1E03_P15_L04",
         "text": "The merchant had no use for it.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P17"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P14",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
-    "id": "VIK_S1E03_P19",
+    "id": "VIK_S1E03_P16",
     "episode": "S1E03",
     "issue": 3,
-    "page": 19,
+    "page": 16,
     "title": "If You Require It",
     "summary": "Bjorn gives Carrie the choice she has been trying to force all day: he will extinguish the fire if she requires it, but he will not pretend the household's need for an independent hearth has disappeared.",
     "settingText": "Bushwick apartment building roof, evening",
@@ -1280,40 +1624,70 @@
       }
     ],
     "panelPlan": [
-      "Medium: Carrie walks once around the setup without touching it. She sees the household-owned vessel, modest flame, water, lid and clear masonry.",
-      "Two-shot Carrie/Bjorn: Bjorn does not argue that she must approve; he states what he will do if she orders it extinguished.",
-      "Wide: Astrid and the Kin remain near the warmth without speaking. Their presence makes the hearth's function obvious without anyone explaining it.",
-      "Close on Carrie holding the DTI folder she came to complete; she does not open it yet."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Carrie walks once around the setup without touching it. She sees the household-owned vessel, modest flame, water, lid and clear masonry.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot Carrie/Bjorn: Bjorn does not argue that she must approve; he states what he will do if she orders it extinguished.",
+        "dialogueIndices": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Astrid and the Kin remain near the warmth without speaking. Their presence makes the hearth's function obvious without anyone explaining it.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Carrie holding the DTI folder she came to complete; she does not open it yet.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P19_L01",
+        "fid": "VIK_S1E03_P16_L01",
         "text": "If you require it out, I will put it out.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P19_L02",
+        "fid": "VIK_S1E03_P16_L02",
         "text": "And tomorrow?",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E03_P19_L03",
+        "fid": "VIK_S1E03_P16_L03",
         "text": "Tomorrow we will still need a second fire before winter.",
         "subtext": "Panel 2",
         "handle": "@vik.Bjorn"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P18"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P15",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
-    "id": "VIK_S1E03_P20",
+    "id": "VIK_S1E03_P17",
     "episode": "S1E03",
     "issue": 3,
-    "page": 20,
+    "page": 17,
     "title": "What It Is For",
     "summary": "Carrie watches the household use the hearth rather than debating it; the fire is plainly not rebellion or novelty but a piece of home they know how to maintain.",
     "settingText": "Bushwick apartment building roof, evening",
@@ -1344,22 +1718,47 @@
       }
     ],
     "panelPlan": [
-      "Quiet visual page. Carrie remains standing at first while the household continues around the contained fire without performing for her.",
-      "Astrid warms her hands briefly before returning to food preparation nearby; First Male Kin adjusts a chair; Second Male Kin brings one more piece of fuel and leaves it beside Bjorn rather than feeding it himself.",
-      "Gunnar checks the sky again. Bjorn checks the fire and lid. The actions are ordinary to them.",
-      "Carrie finally sits on a low dry surface at the edge of the group, still holding the unopened folder.",
-      "No dialogue. Do not caption Carrie's realization or explain the emotional beat."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Quiet visual page. Carrie remains standing at first while the household continues around the contained fire without performing for her.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Astrid warms her hands briefly before returning to food preparation nearby; First Male Kin adjusts a chair; Second Male Kin brings one more piece of fuel and leaves it beside Bjorn rather than feeding it himself.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Gunnar checks the sky again. Bjorn checks the fire and lid. The actions are ordinary to them.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Carrie finally sits on a low dry surface at the edge of the group, still holding the unopened folder.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P19"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P16",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
-    "id": "VIK_S1E03_P21",
+    "id": "VIK_S1E03_P18",
     "episode": "S1E03",
     "issue": 3,
-    "page": 21,
+    "page": 18,
     "title": "The Sky Opens",
     "summary": "After a full day of cloud, the evening sky begins to clear; Gunnar immediately leaves the fire's center to recover the orientation problem he never solved that morning.",
     "settingText": "Bushwick apartment building roof, later evening",
@@ -1382,22 +1781,54 @@
       }
     ],
     "panelPlan": [
-      "Wide: a break opens in the cloud cover above Bushwick, revealing the first clear stars.",
-      "Close on Gunnar noticing before anyone else.",
-      "Medium: he moves away from the fire to a darker edge of the roof with a broader view of the sky.",
-      "Wide from behind Gunnar: more cloud peels away, exposing enough of the northern sky for him to work from familiar stars.",
-      "Silas may be visible at a distance near his own access point, watching without interrupting."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, later evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: a break opens in the cloud cover above Bushwick, revealing the first clear stars.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, later evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Close on Gunnar noticing before anyone else.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, later evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: he moves away from the fire to a darker edge of the roof with a broader view of the sky.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, later evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide from behind Gunnar: more cloud peels away, exposing enough of the northern sky for him to work from familiar stars.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, later evening",
+        "shotType": "SEQUENTIAL",
+        "action": "Silas may be visible at a distance near his own access point, watching without interrupting.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P20"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P17",
+    "directionInline": [],
+    "panelCount": 5
   },
   {
-    "id": "VIK_S1E03_P22",
+    "id": "VIK_S1E03_P19",
     "episode": "S1E03",
     "issue": 3,
-    "page": 22,
+    "page": 19,
     "title": "North",
     "summary": "Gunnar finally establishes north from the stars he trusts, resolving the issue's opening need without technological instruction.",
     "settingText": "Bushwick apartment building roof under clearing night sky",
@@ -1416,40 +1847,71 @@
       }
     ],
     "panelPlan": [
-      "Close: Gunnar traces a familiar relationship among the newly visible stars with his eyes and hand.",
-      "Medium: he turns from the sky to the roofline and neighboring water towers, fixing the direction against physical landmarks he can use later.",
-      "Two-shot: Bjorn recognizes that Gunnar has found what he was looking for.",
-      "Wide: Gunnar stands oriented at last, with the small household fire behind him and the city extending in all directions."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof under clearing night sky",
+        "shotType": "SEQUENTIAL",
+        "action": "Close: Gunnar traces a familiar relationship among the newly visible stars with his eyes and hand.",
+        "dialogueIndices": [
+          0
+        ]
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof under clearing night sky",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: he turns from the sky to the roofline and neighboring water towers, fixing the direction against physical landmarks he can use later.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof under clearing night sky",
+        "shotType": "SEQUENTIAL",
+        "action": "Two-shot: Bjorn recognizes that Gunnar has found what he was looking for.",
+        "dialogueIndices": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof under clearing night sky",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Gunnar stands oriented at last, with the small household fire behind him and the city extending in all directions.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P22_L01",
+        "fid": "VIK_S1E03_P19_L01",
         "text": "There.",
         "subtext": "Panel 1",
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E03_P22_L02",
+        "fid": "VIK_S1E03_P19_L02",
         "text": "North?",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E03_P22_L03",
+        "fid": "VIK_S1E03_P19_L03",
         "text": "North.",
         "subtext": "Panel 3",
         "handle": "@vik.Gunnar"
       }
     ],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P21"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P18",
+    "directionInline": [],
+    "panelCount": 4
   },
   {
-    "id": "VIK_S1E03_P23",
+    "id": "VIK_S1E03_P20",
     "episode": "S1E03",
     "issue": 3,
-    "page": 23,
+    "page": 20,
     "title": "Feed the Fire",
     "summary": "Carrie understands enough of the household's need to make one quiet choice: without explaining or endorsing anything aloud, she adds fuel to the contained fire.",
     "settingText": "Bushwick apartment building roof, clear night",
@@ -1480,23 +1942,61 @@
       }
     ],
     "panelPlan": [
-      "Wide: Gunnar returns from the roof edge after fixing north. The household remains gathered around the contained fire under a now-clear sky.",
-      "Medium: Carrie sets the unopened DTI folder beside her.",
-      "Insert: she picks up one prepared piece of fuel from the household's small stack.",
-      "Close: Carrie places it into the contained fire herself.",
-      "Reaction: Bjorn notices. Carrie does not look at him or explain the gesture.",
-      "Final wide: the household, Carrie, the modest fire and the stars occupy the same frame. The city remains noisy, ordinary and unresolved around them."
+      {
+        "panel": 1,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Wide: Gunnar returns from the roof edge after fixing north. The household remains gathered around the contained fire under a now-clear sky.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 2,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Medium: Carrie sets the unopened DTI folder beside her.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 3,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Insert: she picks up one prepared piece of fuel from the household's small stack.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 4,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Close: Carrie places it into the contained fire herself.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 5,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Reaction: Bjorn notices. Carrie does not look at him or explain the gesture.",
+        "dialogueIndices": []
+      },
+      {
+        "panel": 6,
+        "location": "Bushwick apartment building roof, clear night",
+        "shotType": "SEQUENTIAL",
+        "action": "Final wide: the household, Carrie, the modest fire and the stars occupy the same frame. The city remains noisy, ordinary and unresolved around them.",
+        "dialogueIndices": []
+      }
     ],
     "dialogueInline": [],
     "status": "production-ready",
-    "source": "Issue 3 — Territory insertion developed from recovered Finding North / Hearth / fire-escape / Neon and Noise material and locked September 27, 2026 development decisions.",
-    "continuityFrom": "VIK_S1E03_P22"
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P19",
+    "directionInline": [],
+    "panelCount": 6
   },
   {
-    "id": "VIK_S1E03_P24",
+    "id": "VIK_S1E03_P21",
     "episode": "S1E03",
     "issue": 3,
-    "page": 24,
+    "page": 21,
     "title": "Next: The Iron Worm",
     "summary": "Editorial closing splash: Gunnar has finally found north above the city; the next morning New York immediately sends him and Bjorn in the opposite direction—down.",
     "settingText": "Bushwick street above a subway entrance, following morning",
@@ -1515,53 +2015,67 @@
       }
     ],
     "panelPlan": [
-      "Full-page closing teaser. A normal Bushwick sidewalk occupies the upper half while a subway stair drops sharply into fluorescent darkness below.",
-      "Carrie, Bjorn and Gunnar stand at street level before the entrance. Ordinary commuters descend without hesitation.",
-      "The composition should contrast the previous night's open sky with this narrow downward route. Do not depict the train ride, platform events, transit competence, getting lost, or the return home.",
-      "Integrate the captions into sidewalk and stairwell negative space, ending with NEXT: THE IRON WORM."
+      {
+        "panel": 1,
+        "location": "Bushwick street above a subway entrance, following morning",
+        "shotType": "FULL_PAGE_SPLASH",
+        "action": "Full-page closing teaser. A normal Bushwick sidewalk occupies the upper half while a subway stair drops sharply into fluorescent darkness below. Carrie, Bjorn and Gunnar stand at street level before the entrance. Ordinary commuters descend without hesitation. The composition should contrast the previous night's open sky with this narrow downward route. Do not depict the train ride, platform events, transit competence, getting lost, or the return home. Integrate the captions into sidewalk and stairwell negative space, ending with NEXT: THE IRON WORM.",
+        "dialogueIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
     ],
     "dialogueInline": [
       {
-        "fid": "VIK_S1E03_P24_L01",
+        "fid": "VIK_S1E03_P21_L01",
         "text": "Last night, Gunnar found north.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
-        "fid": "VIK_S1E03_P24_L02",
+        "fid": "VIK_S1E03_P21_L02",
         "text": "Morning brings an errand.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
-        "fid": "VIK_S1E03_P24_L03",
+        "fid": "VIK_S1E03_P21_L03",
         "text": "Carrie knows the route.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
-        "fid": "VIK_S1E03_P24_L04",
+        "fid": "VIK_S1E03_P21_L04",
         "text": "The stairs go down.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
-        "fid": "VIK_S1E03_P24_L05",
+        "fid": "VIK_S1E03_P21_L05",
         "text": "Far down.",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       },
       {
-        "fid": "VIK_S1E03_P24_L06",
+        "fid": "VIK_S1E03_P21_L06",
         "text": "NEXT: THE IRON WORM",
         "subtext": "Panel 1",
         "speaker": "CAPTION"
       }
     ],
     "directionInline": [
-      "Closing teaser only. Preserve Issue 4 discovery: do not show the train, platform events, transit competence, getting lost, or the return home."
+      {
+        "text": "Closing teaser only. Preserve Issue 4 discovery: do not show the train, platform events, transit competence, getting lost, or the return home."
+      }
     ],
     "status": "production-ready",
-    "source": "Season editorial intro/teaser pass developed September 30, 2026."
+    "source": "Official Issues 1–3 restructuring approved October 6, 2026.",
+    "continuityFrom": "VIK_S1E03_P20",
+    "panelCount": 1
   }
 ]

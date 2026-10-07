@@ -120,7 +120,7 @@
       "ordered assembled RexPrompt recipes"
     ],
     "rule": "The first scripted page not successfully produced is the production frontier. Failed, rejected, repeated, superseded, or unusable generations do not advance it.",
-    "currentDurableState": "No Vikings approved production drafts are currently stored in production/drafts/manifest.json. Issue 1 remains released canon. The first unresolved active Issue 2 production unit is now the cover VIK_S1E02_P01."
+    "currentDurableState": "Derive production status from the current drafts manifest and active recipe version. Historical released Issue 1 order is superseded by the October 6 active story restructuring; do not infer revised-page approval from historical art."
   },
   "storyPageOutputRule": "A normal scripted Vikings story page is a finished full-color portrait comic page in the established Vikings sequential-art language. Do not add a series title, issue header, page label, character name/handle label, dossier frame, municipal form header, credits, promotional callout, or other non-scripted text merely because such elements exist elsewhere in the released issue or promotional material. Only text required by the assembled recipe belongs on the story page.",
   "latestGate": {
@@ -162,5 +162,10 @@
       "releasedAnchor": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
       "issueIntegration": "Issues 2–12 expose the cover as P01 in the normal Vikings issue show; the dedicated cover shelf points to the same canonical P01 recipe."
     }
+  },
+  "activeStoryOrderAuthority": {
+    "approvedDate": "2026-10-06",
+    "source": "data/shows/vikings-2026-s1/issues_01_03_scene_order_map.json",
+    "rule": "Active assembled recipes control revised story order. Historical released Issue 1 roof chronology must not override the user-approved Issues 1–3 restructuring. Approved canonical character images and interior style references still control visual identity."
   }
 }

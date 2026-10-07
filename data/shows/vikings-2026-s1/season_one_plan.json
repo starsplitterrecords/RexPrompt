@@ -17,29 +17,35 @@
     {
       "issue": 1,
       "title": "Arrival in Time",
-      "function": "Arrival, DTI intake, premise establishment",
+      "function": "Arrival and DTI intake end with the impossibility of return and departure for assigned housing. No Bushwick roof incident occurs in Issue 1.",
       "beatCoverage": "1-12",
-      "status": "released canon",
-      "editorialBookends": "Released Issue 1 already contains canonical opening municipal reader-orientation editorial collateral and a closing CASE CONTINUES / Issue #2 disposition page; those released bookends remain unchanged."
+      "status": "official reordered production, approved October 6, 2026",
+      "editorialBookends": "Opening material, ordered story, and closing editorial are included in the publication count.",
+      "payloadFile": "pages_i01_reordered.json",
+      "publicationPageCount": 18,
+      "scriptFile": "issue_01_reordered_script.md"
     },
     {
       "issue": 2,
       "title": "Landfall Bushwick",
-      "function": "Apartment adaptation without premature settlement: food, locks, radiator heat, shared-space boundaries and truthful paperwork make 5B operational as assigned shelter while the room remains sparse, portable and materially unsettled. The final beat points toward roof/orientation rather than declaring home complete.",
+      "function": "One continuous first evening: arrival, water, food shortage, bodega, pigeon and neighbor boundary, cooking and meal, acknowledgement, reciprocal tenancy, condition record, household arrangement, emergency plan and locked door.",
       "beatCoverage": "13-20",
-      "status": "structural season revision complete; 24-page active script audited for sparse first-night visual state, Silas first-meeting continuity, and Territory handoff",
-      "scriptFile": "issue_02_landfall_bushwick_structural_revision.md",
-      "payloadFile": "pages_i02_season_revision.json",
-      "editorialBookends": "Active RexPrompt issue sequence begins with the production cover as P01, followed by the opening editorial/title splash at P02, story pages, and the closing teaser/finale as the final page."
+      "status": "official reordered production, approved October 6, 2026",
+      "scriptFile": "issue_02_reordered_script.md",
+      "payloadFile": "pages_i02.json",
+      "editorialBookends": "Opening material, ordered story, and closing editorial are included in the publication count.",
+      "publicationPageCount": 23
     },
     {
       "issue": 3,
       "title": "Territory",
-      "function": "Independent orientation and first settlement: Gunnar establishes north and meets Silas; the household is housed but still materially unsettled, so Bjorn treats winter readiness and a trustworthy hearth as unfinished shelter work. A rooftop material mistake establishes building ownership and Silas as a wary observer rather than an enemy; the Vikings restore everything, devise a self-contained solution from their own materials, and a later contained rooftop fire becomes hearth, watch post and neighborhood threshold while Carrie begins crossing from procedural accommodation into personal investment.",
+      "function": "The first morning leads from Gunnar's search for north to roof discovery, interrupted construction using building metal, restored property, a dedicated pot from the merchant, one completed hearth, and north found after the clouds clear. Carrie quietly adds fuel.",
       "beatCoverage": "Inserted New York interstitial — Finding North / Housed but Unsettled / Rooftop Hearth / Silas Observer / Neon and Noise",
-      "status": "production-ready 21-story-page inserted issue; recovered rooftop hearth/Silas material integrated and audited",
+      "status": "official reordered production, approved October 6, 2026",
       "payloadFile": "pages_i03_territory.json",
-      "editorialBookends": "Active RexPrompt issue sequence begins with the production cover as P01, followed by the opening editorial/title splash at P02, story pages, and the closing teaser/finale as the final page."
+      "editorialBookends": "Opening material, ordered story, and closing editorial are included in the publication count.",
+      "publicationPageCount": 21,
+      "scriptFile": "issue_03_reordered_script.md"
     },
     {
       "issue": 4,
@@ -143,19 +149,19 @@
   ],
   "productionPayloads": [
     {
-      "payloadIds": "VIK_S1E02_P01-P27",
+      "payloadIds": "VIK_S1E02_P01-P23",
       "storyPlacement": "Issue 2 — Landfall Bushwick",
       "status": "production-ready",
-      "source": "Season-level structural revision compiled to pages_i02_season_revision.json; destination preserved, system-of-the-week repetition reduced, line polish pending.",
-      "dialogueState": "Scene-based dialogue/voice pass complete; active RexPrompt payload synchronized to readable script.",
+      "source": "Official October 6 ordered first evening compiled to pages_i02.json.",
+      "dialogueState": "One witnessed acknowledgement, one landlord conversation and one condition-record sequence; exact active dialogue in issue_02_reordered_script.md.",
       "editorialState": "P01 is the issue cover; P02 is the opening editorial/title splash; the closing teaser/finale remains the final page. Existing editorial/story content was shifted mechanically by one page."
     },
     {
-      "payloadIds": "VIK_S1E03_P01-P24",
+      "payloadIds": "VIK_S1E03_P01-P21",
       "storyPlacement": "Issue 3 — Territory",
       "status": "production-ready",
-      "source": "Recovered Finding North / Hearth / fire-escape / Neon and Noise material compiled into chef-visible RexPrompt page recipes.",
-      "dialogueState": "Page-specific action and dialogue locked for production; Gunnar/Silas first meeting occurs in main action; no indoor fire is lit; rooftop fire is contained and safety-competent; Carrie feeds the fire while pursuing the signature.",
+      "source": "Official October 6 roof consolidation compiled to pages_i03_territory.json.",
+      "dialogueState": "First Silas meeting; interrupted construction then one completed hearth; north and Carrie feeding the fire close the action. Follow-up concerns the fire escape, not a signature.",
       "editorialState": "P01 is the issue cover; P02 is the opening editorial/title splash; the closing teaser/finale remains the final page. Existing editorial/story content was shifted mechanically by one page."
     },
     {
@@ -260,16 +266,17 @@
     "issues11To12": "Home is established; the remaining question is individual choice and legal status, not whether 5B functions."
   },
   "auditNotes": {
-    "status": "Full-season production audit completed September 28, 2026. Active Issues 2–12 passed numbering, cast/speaker integrity, issue-boundary continuity, timing, visual-state, recurring-relationship and seasonal checks after targeted corrections.",
+    "status": "Historical full-season audit dated September 28; October 6 Issues 1–3 restructuring supersedes its early-issue counts and chronology. Current package validator checks the active publication order.",
     "intentionalEchoes": [
       "Trial of Toil: Bjorn learns he does not need everyone's itinerary; Belonging later gives Carrie the parallel realization.",
       "Landfall: Carrie instructs Bjorn to lock her out; Belonging later pays this off when she actually waits outside 5B.",
       "Neighborhood establishes recognition by recurring people; Belonging escalates that into independent city operation."
     ],
-    "releasedIssue1Exception": "Issue 1 remains released canon and is not active assembler input in RexPrompt. Its reconstruction/encoded payloads are reference-only for regeneration. Active Issue 2+ recipes control the revised season progression.",
+    "releasedIssue1Exception": "Historical Issue 1 publication remains a visual/reference archive. The user reopened story order on October 6, 2026; pages_i01_reordered.json is now active chef-facing Issue 1 and supersedes the historical rooftop ending.",
     "reportFile": "season_one_production_audit_2026-09-28.md",
     "editorialBookends": "Season-wide editorial bookends added September 30, 2026. Issues 2–12 now carry production-ready opening and closing editorial pages designed to propel the next story movement without recap or spoilers; diegetic story content was preserved.",
-    "coverPlacement": "As of October 1, 2026, Issues 2–12 expose their production-ready covers as P01 in the normal Vikings issue shows. Existing editorial/story/teaser units shift mechanically by one page; Issue 1 already has its released cover as its first page."
+    "coverPlacement": "As of October 1, 2026, Issues 2–12 expose their production-ready covers as P01 in the normal Vikings issue shows. Existing editorial/story/teaser units shift mechanically by one page; Issue 1 already has its released cover as its first page.",
+    "currentOrderAuthority": "issues_01_03_scene_order_map.json and the three active page files; supersedes earlier structural reports and page-range notes for Issues 1–3."
   },
   "dialogueGuidance": {
     "status": "guidance only — not a rule, quota, or minimum line count",
@@ -291,13 +298,12 @@
   "conversationalDepthPass": {
     "status": "completed September 28, 2026",
     "principle": "Targeted expansion only. Selected scenes now stay on one subject longer and allow follow-up, clarification, disagreement and reconsideration. Intentionally terse beats remain terse.",
-    "issue1": "Released canon; not altered by this active-data pass.",
+    "issue1": "Historical pass; superseded for story order by approved October 6 restructuring.",
     "issue2": [
-      "P08 shared-space / pigeon boundary",
-      "P19 rent as reciprocal obligation"
+      "P13 reciprocal tenancy; P17–P18 condition record"
     ],
     "issue3": [
-      "P09-P10 shelter, invisible heat and hearth responsibility"
+      "P08–P10 hearth, warmth and placement consequences"
     ],
     "issue4": [
       "P17-P18 curiosity, leisure and walking without a task"

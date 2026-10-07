@@ -246,23 +246,47 @@ def main():
         directions = page.get("directionInline", [])
         assert isinstance(directions, list), f"directionInline malformed: {page_id}"
         for item in directions:
-            assert isinstance(item, dict), f"directionInline entry malformed: {page_id}"
+            assert isinstance(item, (dict, str)), f"directionInline entry malformed: {page_id}"
+            if isinstance(item, str):
+                assert item.strip(), f"empty direction: {page_id}"
+                continue
             kind = item.get("type")
             assert kind not in GENERIC_DIRECTION_TYPES, f"generic {kind} scaffolding returned to page scope: {page_id}"
 
     assert len(ids) == len(set(ids)), "duplicate active Vikings page ids"
 
-    # Current season: Issue 1 is released; Issues 2-12 include a cover,
+    # User-approved October 6 order: Issue 1 is 18 pages; Issues 2-12 include a cover,
     # editorial opening, story pages, and closing editorial/teaser.
-    expected_counts = {2: 27, 3: 24, 4: 27, 5: 24, 6: 27, 7: 27,
+    expected_counts = {1: 18, 2: 23, 3: 21, 4: 27, 5: 24, 6: 27, 7: 27,
                        8: 24, 9: 27, 10: 24, 11: 27, 12: 27}
     for issue, count in expected_counts.items():
         show_id = f"vikings-2026-s1-e{issue:02d}"
         assert show_id in issue_pages_by_id, f"missing current Vikings issue: {show_id}"
         pages = issue_pages_by_id[show_id]
-        expected_ids = [f"VIK_S1E{issue:02d}_P{number:02d}" for number in range(1, count + 1)]
+        prefix = "VIK_S1I01" if issue == 1 else f"VIK_S1E{issue:02d}"
+        expected_ids = [f"{prefix}_P{number:02d}" for number in range(1, count + 1)]
         assert [page.get("id") for page in pages] == expected_ids, f"Issue {issue}: publication page IDs/order drift"
         assert [page.get("page") for page in pages] == list(range(1, count + 1)), f"Issue {issue}: page numbering drift"
+
+    # Reordered issues must carry each line exactly once and use continuous links.
+    for issue in (1, 2, 3):
+        pages = issue_pages_by_id[f"vikings-2026-s1-e{issue:02d}"]
+        for index, page in enumerate(pages):
+            if issue != 1 and page.get("unit") == "COVER":
+                continue
+            mapped = [line for panel in page["panelPlan"] for line in panel.get("dialogueIndices", [])]
+            assert sorted(mapped) == list(range(len(page["dialogueInline"]))), f"dialogue omitted/duplicated in panel mapping: {page['id']}"
+            if index > 1 or (issue == 1 and index > 0):
+                assert page.get("continuityFrom") == pages[index - 1]["id"], f"broken continuity link: {page['id']}"
+    issue1 = issue_pages_by_id["vikings-2026-s1-e01"]
+    assert issue1[-2]["dialogueInline"][0]["text"] == "Come on, I’ll show you where you will be staying."
+    assert not any("rooftop" in p.get("settingText", "").lower() for p in issue1)
+    issue2 = issue_pages_by_id["vikings-2026-s1-e02"]
+    assert sum(p.get("title") == "Land. Lord." for p in issue2) == 1
+    assert next(p["page"] for p in issue2 if p.get("title") == "The Neighbor Has the Other End") < next(p["page"] for p in issue2 if p.get("title") == "Dinner Announces Itself")
+    issue3 = issue_pages_by_id["vikings-2026-s1-e03"]
+    assert sum(p.get("title") == "First Flame" for p in issue3) == 1
+    assert not any(p.get("title") in ("Second Fire", "Third Fire", "Out") for p in issue3)
 
     decoded_text = json.dumps(active_pages, ensure_ascii=False)
     for residue in PRODUCTION_RESIDUE:
