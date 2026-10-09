@@ -16,9 +16,76 @@ function populate(){S.ui.series.innerHTML='';S.series.forEach(x=>{const o=docume
 function imgUrl(e){return 'https://raw.githubusercontent.com/'+C.owner+'/'+C.repo+'/'+C.branch+'/'+e.image+'?v='+encodeURIComponent(e.updatedAt||Date.now())} function validate(f){return !f?'Choose an image.':!C.mime.includes(f.type)?'Use JPEG, PNG, or WebP.':f.size>C.max?'Image is larger than 50 MB.':''}
 function openLightbox(e){let box=$('#keeperLightbox');if(!box){box=document.createElement('div');box.id='keeperLightbox';box.className='keeper-lightbox';box.hidden=true;box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Reference image preview');box.innerHTML='<button type="button" class="keeper-lightbox-close" aria-label="Close preview">×</button><img alt=""><div class="keeper-lightbox-caption"></div>';document.body.append(box);box.querySelector('button').onclick=closeLightbox;box.addEventListener('click',ev=>{if(ev.target===box)closeLightbox()});document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&!box.hidden)closeLightbox()})}S.previousFocus=document.activeElement;box.querySelector('img').src=imgUrl(e);box.querySelector('img').alt=e.name+' reference';box.querySelector('.keeper-lightbox-caption').textContent=e.name;box.hidden=false;box.querySelector('button').focus()}function closeLightbox(){const box=$('#keeperLightbox');if(box)box.hidden=true;if(S.previousFocus?.isConnected)S.previousFocus.focus();S.previousFocus=null}
 function render(){if(!S.ui)return;let a=Object.values(S.manifest.references||{}).filter(x=>x.seriesId===S.ui.series.value);const v=S.ui.view.value.toLowerCase();if(v!=='all')a=a.filter(x=>x.type===v);a.sort((x,y)=>(x.type+x.name).localeCompare(y.type+y.name));S.ui.count.textContent=a.length+' stored reference'+(a.length===1?'':'s');S.ui.groups.innerHTML='';if(!a.length){S.ui.groups.textContent='No stored references for this selection.';return}const types=v==='all'?C.types:[v];types.forEach(t=>{const items=a.filter(x=>x.type===t);if(!items.length)return;const sec=document.createElement('section');sec.innerHTML='<h5>'+title(t)+'s</h5><div class="keeper-grid"></div>';const g=sec.querySelector('.keeper-grid');items.forEach(e=>{const c=document.createElement('article');c.className='keeper-card';c.innerHTML='<img alt=""><div class="keeper-name"></div><div class="keeper-meta"></div><div class="keeper-actions"><button class="replace">Replace</button><button class="delete">Delete</button><input class="pick" type="file" accept="image/jpeg,image/png,image/webp" hidden></div>';c.querySelector('img').src=imgUrl(e);c.querySelector('img').alt=e.name+' reference';c.querySelector('img').tabIndex=0;c.querySelector('img').setAttribute('role','button');c.querySelector('img').setAttribute('aria-label','Enlarge '+e.name);c.querySelector('img').onclick=()=>openLightbox(e);c.querySelector('img').onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openLightbox(e)}};c.querySelector('.keeper-name').textContent=e.name;c.querySelector('.keeper-meta').textContent=title(e.type)+' · '+e.image;const pick=c.querySelector('.pick');c.querySelector('.replace').onclick=()=>pick.click();pick.onchange=()=>{const f=pick.files?.[0];pick.value='';if(f)askToken(()=>replace(e,f))};c.querySelector('.delete').onclick=()=>askToken(()=>remove(e));g.append(c)});S.ui.groups.append(sec)})}
-async function write(entry,file,old){const t=token(),ref=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/ref/heads/'+encodeURIComponent(C.branch)),head=ref.object.sha,commit=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/commits/'+head),m=await latest(t),path=C.root+'/'+safe(entry.seriesId)+'/keeper/'+safe(entry.type)+'/'+safe(entry.name)+'.'+ext(file),bytes=new Uint8Array(await file.arrayBuffer()),ib=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/blobs',{method:'POST',body:{content:b64(bytes),encoding:'base64'}}),final={...entry,image:path,mimeType:file.type,sourceFilename:file.name,updatedAt:new Date().toISOString()};m.references=m.references||{};m.references[entry.id]=final;const mb=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/blobs',{method:'POST',body:{content:JSON.stringify(m,null,2)+'\n',encoding:'utf-8'}}),tree=[{path,mode:'100644',type:'blob',sha:ib.sha},{path:C.manifest,mode:'100644',type:'blob',sha:mb.sha}];if(old?.image&&old.image!==path)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});const nt=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}}),nc=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/commits',{method:'POST',body:{message:(old?'Replace':'Store')+' reference '+entry.seriesId+' / '+entry.type+' / '+entry.name,tree:nt.sha,parents:[head]}});await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/refs/heads/'+encodeURIComponent(C.branch),{method:'PATCH',body:{sha:nc.sha,force:false}});S.manifest=m;return nc.sha}
+
+// Keep all changes to the manifest on a single local write lane. Concurrent browser
+// tabs / external writers are handled by replaying the operation on the newest HEAD.
+let writeLane=Promise.resolve();
+function queueWrite(task){
+  const next=writeLane.then(task);
+  writeLane=next.catch(()=>{});
+  return next;
+}
+function retryableConflict(error){
+  return /not a fast.forward|reference update failed|update.*ref|conflict|409|422/i.test(String(error?.message||error));
+}
+async function transact(change){
+  const t=token();
+  if(!t)throw Error('GitHub token is required.');
+  const prefix='/repos/'+C.owner+'/'+C.repo;
+  for(let attempt=0;attempt<4;attempt++){
+    try{
+      const ref=await gh(t,prefix+'/git/ref/heads/'+encodeURIComponent(C.branch));
+      const head=ref.object.sha;
+      const [commit,payload]=await Promise.all([
+        gh(t,prefix+'/git/commits/'+head),
+        gh(t,prefix+'/contents/'+C.manifest+'?ref='+encodeURIComponent(head),{allow404:true})
+      ]);
+      const manifest=payload?JSON.parse(utf8(payload.content)):{schemaVersion:1,references:{}};
+      manifest.references=manifest.references||{};
+      const outcome=await change({token:t,manifest,head,prefix});
+      const blob=await gh(t,prefix+'/git/blobs',{method:'POST',body:{content:JSON.stringify(manifest,null,2)+'\n',encoding:'utf-8'}});
+      const tree=await gh(t,prefix+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree:[...outcome.tree,{path:C.manifest,mode:'100644',type:'blob',sha:blob.sha}]}});
+      const next=await gh(t,prefix+'/git/commits',{method:'POST',body:{message:outcome.message,tree:tree.sha,parents:[head]}});
+      await gh(t,prefix+'/git/refs/heads/'+encodeURIComponent(C.branch),{method:'PATCH',body:{sha:next.sha,force:false}});
+      S.manifest=manifest;
+      return next.sha;
+    }catch(error){
+      if(attempt===3||!retryableConflict(error))throw error;
+      S.ui.status.textContent='GitHub changed during save. Retrying '+(attempt+1)+'/3…';
+    }
+  }
+}
+async function write(entry,file,old){
+  const path=C.root+'/'+safe(entry.seriesId)+'/keeper/'+safe(entry.type)+'/'+safe(entry.name)+'.'+ext(file);
+  const bytes=new Uint8Array(await file.arrayBuffer());
+  const imageBlob=await gh(token(),'/repos/'+C.owner+'/'+C.repo+'/git/blobs',{method:'POST',body:{content:b64(bytes),encoding:'base64'}});
+  return queueWrite(()=>transact(async({manifest})=>{
+    const existing=manifest.references[entry.id];
+    if(!old&&existing)throw Error('Reference already exists. Use Replace.');
+    if(old&&!existing)throw Error('Reference no longer exists. Refresh the page.');
+    const final={...entry,image:path,mimeType:file.type,sourceFilename:file.name,updatedAt:new Date().toISOString()};
+    manifest.references[entry.id]=final;
+    const tree=[{path,mode:'100644',type:'blob',sha:imageBlob.sha}];
+    if(existing?.image&&existing.image!==path)tree.push({path:existing.image,mode:'100644',type:'blob',sha:null});
+    return {tree,message:(old?'Replace':'Store')+' reference '+entry.seriesId+' / '+entry.type+' / '+entry.name};
+  }));
+}
 async function store(){const u=S.ui,f=u.file.files?.[0],err=validate(f);if(err)return void(u.status.textContent=err);const name=u.name.value.trim(),type=u.type.value,sid=u.series.value,series=S.series.find(x=>x.id===sid);if(!name)return void(u.status.textContent='Enter a reference name.');const id=safe(sid)+'::'+safe(type)+'::'+safe(name);if(S.manifest.references[id])return void(u.status.textContent='That reference already exists. Use Replace on its card.');if(!confirm('Store '+name+' as a '+type+' reference for '+(series?.name||sid)+'?'))return;u.store.disabled=true;u.status.textContent='Storing reference…';try{const sha=await write({id,seriesId:sid,seriesName:series?.name||sid,type,name},f);u.status.textContent='Stored. Git commit '+sha.slice(0,7)+'.';u.file.value='';u.name.value='';render()}catch(e){u.status.textContent='Upload failed: '+e.message}finally{u.store.disabled=false;syncToken()}}
 async function replace(e,f){const err=validate(f);if(err)return void(S.ui.status.textContent=err);if(!confirm('Replace the stored image for '+e.name+'?'))return;S.ui.status.textContent='Replacing reference…';try{const sha=await write({id:e.id,seriesId:e.seriesId,seriesName:e.seriesName,type:e.type,name:e.name},f,e);S.ui.status.textContent='Replaced. Git commit '+sha.slice(0,7)+'.';render()}catch(x){S.ui.status.textContent='Replace failed: '+x.message}finally{syncToken()}}
-async function remove(e){if(!confirm('Delete '+e.name+' from Reference Keeper?'))return;S.ui.status.textContent='Deleting reference…';try{const t=token(),ref=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/ref/heads/'+encodeURIComponent(C.branch)),head=ref.object.sha,commit=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/commits/'+head),m=await latest(t);delete m.references[e.id];const mb=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/blobs',{method:'POST',body:{content:JSON.stringify(m,null,2)+'\n',encoding:'utf-8'}}),nt=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree:[{path:e.image,mode:'100644',type:'blob',sha:null},{path:C.manifest,mode:'100644',type:'blob',sha:mb.sha}]}}),nc=await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/commits',{method:'POST',body:{message:'Delete reference '+e.seriesId+' / '+e.type+' / '+e.name,tree:nt.sha,parents:[head]}});await gh(t,'/repos/'+C.owner+'/'+C.repo+'/git/refs/heads/'+encodeURIComponent(C.branch),{method:'PATCH',body:{sha:nc.sha,force:false}});S.manifest=m;S.ui.status.textContent='Deleted. Git commit '+nc.sha.slice(0,7)+'.';render()}catch(x){S.ui.status.textContent='Delete failed: '+x.message}finally{syncToken()}}
+async function remove(e){
+  if(!confirm('Delete '+e.name+' from Reference Keeper?'))return;
+  S.ui.status.textContent='Deleting reference…';
+  try{
+    const sha=await queueWrite(()=>transact(async({manifest})=>{
+      const current=manifest.references[e.id];
+      if(!current)throw Error('Reference no longer exists. Refresh the page.');
+      delete manifest.references[e.id];
+      return {tree:[{path:current.image,mode:'100644',type:'blob',sha:null}],message:'Delete reference '+e.seriesId+' / '+e.type+' / '+e.name};
+    }));
+    S.ui.status.textContent='Deleted. Git commit '+sha.slice(0,7)+'.';
+    render();
+  }catch(x){S.ui.status.textContent='Delete failed: '+x.message}
+  finally{syncToken()}
+}
 async function start(){inject();S.ui=ui();const [shows,m]=await Promise.all([load('data/shows.json',[]),load(C.manifest,{schemaVersion:1,references:{}})]);S.manifest={schemaVersion:1,references:{},...m,references:m.references||{}};S.series=seriesFrom(shows);populate();syncToken();$('#assemblerModeBtn').onclick=()=>setMode('assembler');$('#referenceKeeperModeBtn').onclick=()=>setMode('keeper');setMode(localStorage.getItem('rexprompt.mode')==='keeper'?'keeper':'assembler')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>void start());else void start();})();
