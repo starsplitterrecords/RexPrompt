@@ -18,14 +18,45 @@ async function content(repo,path,token){const x=await request(api(repo,'contents
 async function getManifest(){const r=await fetch(DRAFTS+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not read draft manifest');return r.json()}
 async function prepare(){const sel=selection(),manifest=await getManifest();if(!sel.recipeIds.length)throw Error('Issue has no production pages');const pages=sel.recipeIds.map((recipeId,i)=>({recipeId,page:i+1,entry:manifest.drafts?.[[sel.seriesId,sel.issueId,recipeId].join('::')]}));const approved=pages.filter(p=>p.entry?.status==='approved-production-draft'&&p.entry.image);if(!approved.length)throw Error('There are no approved draft images for this issue');return {sel,pages,approved,missing:pages.filter(p=>!approved.includes(p))}}
 async function downloadImages(pages){const result=[];for(const p of pages){report('Reading page '+p.page+' of '+pages.length+'…');const url='https://raw.githubusercontent.com/'+R+'/RexPrompt/main/'+p.entry.image;let response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('Cannot retrieve '+p.recipeId+' ('+response.status+')');const bytes=new Uint8Array(await response.arrayBuffer());const type=p.entry.mimeType||({'png':'image/png','jpg':'image/jpeg','webp':'image/webp'})[p.entry.image.split('.').pop()]||'image/png';result.push({...p,bytes,type,ext:type==='image/jpeg'?'jpg':type==='image/webp'?'webp':'png'})}return result}
-function loadLibrary(url,test){if(test())return Promise.resolve();return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=url;s.onload=()=>test()?resolve():reject(Error('Library missing'));s.onerror=()=>reject(Error('Could not load document library'));document.head.appendChild(s)})}
-async function pdfLib(){await loadLibrary('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js',()=>Boolean(window.jspdf?.jsPDF))}
-async function zipLib(){await loadLibrary('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',()=>Boolean(window.JSZip))}
+
 async function jpeg(bytes,type){const bitmap=await createImageBitmap(new Blob([bytes],{type}));try{const canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;const ctx=canvas.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0);const b=await new Promise((res,rej)=>canvas.toBlob(x=>x?res(x):rej(Error('JPEG conversion failed')),'image/jpeg',.94));return {bytes:new Uint8Array(await b.arrayBuffer()),width:bitmap.width,height:bitmap.height}}finally{bitmap.close()}}
-async function createPdf(images){await pdfLib();let pdf=null;const converted=[];for(const im of images){report('Compiling PDF page '+im.page+' of '+images.length+'…');const jpg=await jpeg(im.bytes,im.type);converted.push({...im,jpg});const w=jpg.width*72/300,h=jpg.height*72/300;if(!pdf)pdf=new window.jspdf.jsPDF({orientation:w>h?'landscape':'portrait',unit:'pt',format:[w,h],compress:true});else pdf.addPage([w,h],w>h?'landscape':'portrait');pdf.addImage(bytesToB64(jpg.bytes),'JPEG',0,0,w,h,undefined,'FAST')}return {pdf:new Uint8Array(pdf.output('arraybuffer')),converted}}
+const utf8=s=>new TextEncoder().encode(s);
+function concatenate(parts){const size=parts.reduce((n,p)=>n+p.length,0),result=new Uint8Array(size);let at=0;for(const part of parts){result.set(part,at);at+=part.length}return result}
+function makePdf(images){
+  const parts=[utf8('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n')],offsets=[0],kids=[],count=2+images.length*3;
+  let position=parts[0].length;
+  function add(data){parts.push(data);position+=data.length}
+  function object(id,body){offsets[id]=position;add(utf8(id+' 0 obj\n'));add(body instanceof Uint8Array?body:utf8(body));add(utf8('\nendobj\n'))}
+  object(1,'<< /Type /Catalog /Pages 2 0 R >>');
+  for(let i=0;i<images.length;i++)kids.push((3+i*3)+' 0 R');
+  object(2,'<< /Type /Pages /Kids ['+kids.join(' ')+'] /Count '+images.length+' >>');
+  for(let i=0;i<images.length;i++){
+    const im=images[i],pageId=3+i*3,imgId=pageId+1,contentId=pageId+2;
+    const w=+(im.jpg.width*72/300).toFixed(3),h=+(im.jpg.height*72/300).toFixed(3);
+    object(pageId,'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+w+' '+h+'] /Resources << /XObject << /Im0 '+imgId+' 0 R >> >> /Contents '+contentId+' 0 R >>');
+    object(imgId,concatenate([utf8('<< /Type /XObject /Subtype /Image /Width '+im.jpg.width+' /Height '+im.jpg.height+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+im.jpg.bytes.length+' >>\nstream\n'),im.jpg.bytes,utf8('\nendstream')]));
+    const commands=utf8('q\n'+w+' 0 0 '+h+' 0 0 cm\n/Im0 Do\nQ\n');
+    object(contentId,concatenate([utf8('<< /Length '+commands.length+' >>\nstream\n'),commands,utf8('endstream')]));
+  }
+  const xref=position;add(utf8('xref\n0 '+(count+1)+'\n0000000000 65535 f \n'));
+  for(let i=1;i<=count;i++)add(utf8(String(offsets[i]).padStart(10,'0')+' 00000 n \n'));
+  add(utf8('trailer\n<< /Size '+(count+1)+' /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF\n'));
+  return concatenate(parts)
+}
+async function createPdf(images){const converted=[];for(const im of images){report('Compiling PDF page '+im.page+' of '+images.length+'…');const jpg=await jpeg(im.bytes,im.type);converted.push({...im,jpg})}return {pdf:makePdf(converted),converted}}
+const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let j=0;j<8;j++)c=c&1?(0xEDB88320^(c>>>1)):(c>>>1);return c>>>0});
+function crc32(bytes){let c=0xFFFFFFFF;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
+function u16(d,v,o){d.setUint16(o,v,true)}
+function u32(d,v,o){d.setUint32(o,v>>>0,true)}
+function makeZip(files){const chunks=[],central=[];let position=0;for(const f of files){const name=utf8(f.name),data=f.bytes,crc=crc32(data),local=new Uint8Array(30+name.length),lv=new DataView(local.buffer);
+u32(lv,0x04034b50,0);u16(lv,20,4);u16(lv,0x0800,6);u32(lv,crc,14);u32(lv,data.length,18);u32(lv,data.length,22);u16(lv,name.length,26);local.set(name,30);
+chunks.push(local,data);
+const header=new Uint8Array(46+name.length),v=new DataView(header.buffer);
+u32(v,0x02014b50,0);u16(v,20,4);u16(v,20,6);u16(v,0x0800,8);u32(v,crc,16);u32(v,data.length,20);u32(v,data.length,24);u16(v,name.length,28);u32(v,position,42);header.set(name,46);central.push(header);position+=local.length+data.length}
+const directory=concatenate(central),end=new Uint8Array(22),v=new DataView(end.buffer);u32(v,0x06054b50,0);u16(v,files.length,8);u16(v,files.length,10);u32(v,directory.length,12);u32(v,position,16);return concatenate([...chunks,directory,end])}
 function download(name,bytes,mime){const u=URL.createObjectURL(new Blob([bytes],{type:mime})),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),10000)}
 function noteMissing(p){return p.missing.length?' ('+p.missing.length+' missing pages omitted: '+p.missing.map(x=>x.recipeId).join(', ')+')':''}
-async function build(kind){const p=await prepare();const images=await downloadImages(p.approved);const {pdf}=await createPdf(images),stem=slug(p.sel);if(kind==='pdf'){download(stem+'.pdf',pdf,'application/pdf');report('PDF downloaded: '+images.length+' approved pages'+noteMissing(p));return}await zipLib();const z=new window.JSZip();z.file(stem+'.pdf',pdf);const folder=z.folder(stem);images.forEach(im=>folder.file('page-'+pad3(im.page)+'.'+im.ext,im.bytes));const bytes=await z.generateAsync({type:'uint8array',compression:'DEFLATE',compressionOptions:{level:4}},m=>report('Compressing ZIP '+Math.round(m.percent)+'%…'));download(stem+'.zip',bytes,'application/zip');report('ZIP downloaded: '+images.length+' original images and PDF'+noteMissing(p))}
+async function build(kind){const p=await prepare();const images=await downloadImages(p.approved);const {pdf}=await createPdf(images),stem=slug(p.sel);if(kind==='pdf'){download(stem+'.pdf',pdf,'application/pdf');report('PDF downloaded: '+images.length+' approved pages'+noteMissing(p));return}const files=[{name:stem+'.pdf',bytes:pdf},...images.map(im=>({name:stem+'/page-'+pad3(im.page)+'.'+im.ext,bytes:im.bytes}))];const bytes=makeZip(files);download(stem+'.zip',bytes,'application/zip');report('ZIP downloaded: '+images.length+' original images and PDF'+noteMissing(p))}
 async function git(token,repo,path,options){return request(api(repo,path),{token,...options})}
 async function release(){const p=await prepare();if(p.missing.length)throw Error('Release blocked. Missing approved pages: '+p.missing.map(x=>x.recipeId).join(', '));const source=await fetch('production/visual-sources.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json());const slugName=source.series?.[p.sel.seriesId]?.visionsSlug;if(!slugName)throw Error('No Visions series mapping. Set up release metadata before publishing.');
 const token=sessionStorage.getItem('rexprompt.githubToken');if(!token)throw Error('Enter a GitHub token using Upload Approved Draft first. It must also have Contents read/write access to StarSplitterVisions.');
