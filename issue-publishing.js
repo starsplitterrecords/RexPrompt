@@ -17,9 +17,27 @@ async function request(url,{token,method='GET',body,allow404=false}={}){const r=
 async function content(repo,path,token){const x=await request(api(repo,'contents/'+path+'?ref=main'),{token,allow404:true});return x?JSON.parse(new TextDecoder().decode(b64ToBytes(x.content))):null}
 async function getManifest(){const r=await fetch(DRAFTS+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not read draft manifest');return r.json()}
 async function prepare(){const sel=selection(),manifest=await getManifest();if(!sel.recipeIds.length)throw Error('Issue has no production pages');const pages=sel.recipeIds.map((recipeId,i)=>({recipeId,page:i+1,entry:manifest.drafts?.[[sel.seriesId,sel.issueId,recipeId].join('::')]}));const approved=pages.filter(p=>p.entry?.status==='approved-production-draft'&&p.entry.image);if(!approved.length)throw Error('There are no approved draft images for this issue');return {sel,pages,approved,missing:pages.filter(p=>!approved.includes(p))}}
-async function downloadImages(pages){const result=[];for(const p of pages){report('Reading page '+p.page+' of '+pages.length+'…');const url='https://raw.githubusercontent.com/'+R+'/RexPrompt/main/'+p.entry.image;let response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('Cannot retrieve '+p.recipeId+' ('+response.status+')');const bytes=new Uint8Array(await response.arrayBuffer());const type=p.entry.mimeType||({'png':'image/png','jpg':'image/jpeg','webp':'image/webp'})[p.entry.image.split('.').pop()]||'image/png';result.push({...p,bytes,type,ext:type==='image/jpeg'?'jpg':type==='image/webp'?'webp':'png'})}return result}
+async function downloadImages(pages){const result=[];for(const p of pages){report('Reading page '+p.page+' of '+pages.length+'…');const url='https://raw.githubusercontent.com/'+R+'/RexPrompt/main/'+p.entry.image;let response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('Cannot retrieve '+p.recipeId+' ('+response.status+')');const bytes=new Uint8Array(await response.arrayBuffer());const prefix=new TextDecoder().decode(bytes.slice(0,120));if(prefix.startsWith('version https://git-lfs.github.com/spec/v1'))throw Error('Draft '+p.recipeId+' is a Git LFS pointer, not an image. File: '+p.entry.image);if(prefix.trimStart().startsWith('<'))throw Error('Draft '+p.recipeId+' returned an HTML response instead of image bytes: '+p.entry.image);const signature=bytes[0]===137&&bytes[1]===80&&bytes[2]===78&&bytes[3]===71?'image/png':bytes[0]===255&&bytes[1]===216?'image/jpeg':prefix.startsWith('RIFF')&&prefix.slice(8,12)==='WEBP'?'image/webp':null;if(!signature)throw Error('Draft '+p.recipeId+' does not contain a supported PNG, JPEG, or WebP image: '+p.entry.image+' ('+bytes.length+' bytes)');const type=signature;result.push({...p,bytes,type,ext:type==='image/jpeg'?'jpg':type==='image/webp'?'webp':'png'})}return result}
 
-async function jpeg(bytes,type){const bitmap=await createImageBitmap(new Blob([bytes],{type}));try{const canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;const ctx=canvas.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0);const b=await new Promise((res,rej)=>canvas.toBlob(x=>x?res(x):rej(Error('JPEG conversion failed')),'image/jpeg',.94));return {bytes:new Uint8Array(await b.arrayBuffer()),width:bitmap.width,height:bitmap.height}}finally{bitmap.close()}}
+async function jpeg(bytes,type){
+  const blob=new Blob([bytes],{type}),url=URL.createObjectURL(blob);
+  let drawable=null,bitmap=null;
+  try{
+    try{bitmap=await createImageBitmap(blob);drawable=bitmap}
+    catch(err){
+      drawable=await new Promise((resolve,reject)=>{
+        const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(new Error('Browser could not decode this image as '+type));img.src=url;
+      });
+    }
+    const width=drawable.width,height=drawable.height;
+    if(!width||!height)throw Error('Image has invalid dimensions');
+    const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;
+    const ctx=canvas.getContext('2d');if(!ctx)throw Error('Could not initialize image canvas');
+    ctx.fillStyle='white';ctx.fillRect(0,0,width,height);ctx.drawImage(drawable,0,0);
+    const b=await new Promise((res,rej)=>canvas.toBlob(x=>x?res(x):rej(Error('JPEG conversion failed')),'image/jpeg',.94));
+    return {bytes:new Uint8Array(await b.arrayBuffer()),width,height}
+  }finally{if(bitmap)bitmap.close();URL.revokeObjectURL(url)}
+}
 const utf8=s=>new TextEncoder().encode(s);
 function concatenate(parts){const size=parts.reduce((n,p)=>n+p.length,0),result=new Uint8Array(size);let at=0;for(const part of parts){result.set(part,at);at+=part.length}return result}
 function makePdf(images){
@@ -43,7 +61,7 @@ function makePdf(images){
   add(utf8('trailer\n<< /Size '+(count+1)+' /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF\n'));
   return concatenate(parts)
 }
-async function createPdf(images){const converted=[];for(const im of images){report('Compiling PDF page '+im.page+' of '+images.length+'…');const jpg=await jpeg(im.bytes,im.type);converted.push({...im,jpg})}return {pdf:makePdf(converted),converted}}
+async function createPdf(images){const converted=[];for(const im of images){report('Compiling PDF page '+im.page+' of '+images.length+'…');let jpg;try{jpg=await jpeg(im.bytes,im.type)}catch(e){throw Error('Page '+im.page+' ('+im.recipeId+', '+im.entry.image+'): '+e.message)}converted.push({...im,jpg})}return {pdf:makePdf(converted),converted}}
 const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let j=0;j<8;j++)c=c&1?(0xEDB88320^(c>>>1)):(c>>>1);return c>>>0});
 function crc32(bytes){let c=0xFFFFFFFF;for(const b of bytes)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
 function u16(d,v,o){d.setUint16(o,v,true)}
