@@ -13,8 +13,8 @@ body{font-family:sans-serif;padding:20px;margin:0;max-width:100%;box-sizing:bord
 </head>
 <body>
 <div class="container">
-<div class="header-row"><h3>RexPrompt Assembler</h3><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
-<div class="block"><label for="showSel">Series</label><br><select id="showSel"></select></div>
+<div class="header-row"><h3 id="appTitle">RexPrompt Assembler</h3><div class="mode-switch" role="group" aria-label="RexPrompt mode"><button id="assemblerModeBtn" type="button" aria-pressed="true">Assembler</button><button id="referenceKeeperModeBtn" type="button" aria-pressed="false">Reference Keeper</button></div><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+<div id="assemblerMode"><div class="block"><label for="showSel">Series</label><br><select id="showSel"></select></div>
 <div class="block"><label for="issueSel">Issue</label><br><select id="issueSel"></select></div>
 <div class="block"><label for="sceneSel">Production page</label><br><select id="sceneSel"></select></div>
 <div id="status" class="status"></div>
@@ -25,6 +25,8 @@ body{font-family:sans-serif;padding:20px;margin:0;max-width:100%;box-sizing:bord
 <div id="exportStatus" class="status"></div>
 <pre id="out"></pre>
 <div id="manualInputs"></div>
+</div>
+<div id="referenceKeeperMode" hidden></div>
 </div>
 <script>
 const SHOW_MANIFEST="data/shows.json",DATA_FILES=["blocking.json","characters.json","dialogue.json","direction.json","factions.json","lighting.json","mood.json","negatives.json","regions.json","settings.json"];
@@ -70,5 +72,6 @@ buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void select
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
 <script src="visuals.js"></script>
+<script src="reference-keeper.js"></script>
 </body>
 </html>
