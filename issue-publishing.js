@@ -35,7 +35,7 @@ const existing=(meta.releases||[]).find(r=>r.issueNumber===n&&r.publicationType=
 const cover=existing?.cover||'/images/covers/'+base+'.jpg',coverPath='sites/visions/public'+cover,coverExists=await request(api(VISIONS,'contents/'+coverPath+'?ref=main'),{token,allow404:true});
 if(!coverExists)throw Error('Release blocked: issue-specific cover missing: '+coverPath);
 const action=existing?'OVERWRITE the already published issue':'Release the issue';
-if(!window.confirm(action+' on PUBLIC Visions?\\n\\n'+p.sel.seriesName+' — '+p.sel.issueLabel+'\\n'+p.pages.length+' approved pages.\\n\\n'+(existing?'This will REPLACE its published page images and collected PDF. Existing catalog identity and original release date will be retained.':'This will publish the pages, collected PDF, and release metadata.')+'\\n\\nAre you sure?'))return;
+if(!window.confirm(action+' on PUBLIC Visions?\n\n'+p.sel.seriesName+' — '+p.sel.issueLabel+'\n'+p.pages.length+' approved pages.\n\n'+(existing?'This will REPLACE its published page images and collected PDF. Existing catalog identity and original release date will be retained.':'This will publish the pages, collected PDF, and release metadata.')+'\n\nAre you sure?'))return;
 const images=await downloadImages(p.approved),{pdf,converted}=await createPdf(images);
 report('Preparing canonical GitHub release…');
 const ref=await git(token,VISIONS,'git/ref/heads/main'),head=ref.object.sha,commit=await git(token,VISIONS,'git/commits/'+head);
