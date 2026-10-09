@@ -111,8 +111,10 @@ function createPanel(){
   const sceneSel=document.getElementById('sceneSel');if(!sceneSel)return null;
   injectStyles();
   const el=document.createElement('div');el.id='promptSuppressPanel';el.className='prompt-suppress';
-  el.innerHTML='<div class="prompt-suppress-title">Suppress from assembled recipe</div><div class="prompt-suppress-options">'+SECTIONS.map(x=>'<label><input type="checkbox" data-prompt-suppress="'+x.id+'"> '+x.label+'</label>').join('')+'</div><div class="prompt-suppress-foot"><button type="button" class="prompt-suppress-reset">Reset page</button><span>Commit carries these selections forward for this browser tab. Page overrides remain saved in this browser; Reset returns this page to its page-data promptSuppress default.</span></div>';
-  const block=sceneSel.closest('.block')||sceneSel.parentElement;block.insertAdjacentElement('afterend',el);
+  el.innerHTML='<div class="prompt-suppress-title">Suppress from assembled recipe</div><div class="prompt-suppress-options">'+SECTIONS.map(x=>'<label><input type="checkbox" data-prompt-suppress="'+x.id+'"> '+x.label+'</label>').join('')+'</div><div class="prompt-suppress-foot"><button type="button" class="prompt-suppress-reset">Reset page</button><span>Next Page carries these selections forward for this browser tab. Page overrides remain saved in this browser; Reset returns this page to its page-data promptSuppress default.</span></div>';
+  const mount=document.getElementById('promptSuppressMount');
+  if(mount)mount.appendChild(el);
+  else{const block=sceneSel.closest('.block')||sceneSel.parentElement;block.insertAdjacentElement('afterend',el)}
   el.querySelectorAll('[data-prompt-suppress]').forEach(input=>input.addEventListener('change',()=>{
     const ctx=domContext();if(!ctx)return;
     const selected=[...el.querySelectorAll('[data-prompt-suppress]:checked')].map(x=>x.dataset.promptSuppress);

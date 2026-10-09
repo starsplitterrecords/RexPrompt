@@ -9,22 +9,79 @@
 :root{color-scheme:light;--bg:#fff;--fg:#111;--muted:#666;--surface:#eee;--surface-soft:#f7f7f7;--border:#ddd;--control-bg:#fff;--control-fg:#111;--accent:#0645ad}
 html[data-theme="dark"]{color-scheme:dark;--bg:#11151a;--fg:#e8edf2;--muted:#9aa7b3;--surface:#1c232b;--surface-soft:#171d24;--border:#36414d;--control-bg:#202832;--control-fg:#eef3f7;--accent:#8ab4ff}
 body{font-family:sans-serif;padding:20px;margin:0;max-width:100%;box-sizing:border-box;background:var(--bg);color:var(--fg);transition:background .15s ease,color .15s ease}.container{max-width:100%;width:100%;overflow-x:hidden}select,button{margin:0 10px 20px 0;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}select{min-width:260px;max-width:100%;padding:8px}button{font-size:1.1rem;padding:14px 20px;cursor:pointer}button:hover{filter:brightness(1.08)}pre{background:var(--surface);padding:10px;white-space:pre-wrap;word-wrap:break-word;max-width:100%;box-sizing:border-box;border:1px solid var(--border)}.block{margin-bottom:15px}.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.status{color:var(--muted);font-size:.9rem;margin:-8px 0 14px}.export-block{padding-top:8px;border-top:1px solid var(--border);margin-top:4px}.export-help{color:var(--muted);font-size:.85rem;margin:-8px 0 14px}.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.header-row h3{margin-right:auto}.theme-toggle{font-size:.9rem;padding:9px 13px;margin-bottom:10px}
+/* Production controls stay together, even when the preview or prompt is long. */
+#assemblerMode{max-width:1180px;margin:0 auto}
+.production-dock{position:sticky;top:0;z-index:30;border:1px solid var(--border);border-radius:0 0 10px 10px;padding:12px 14px;background:var(--bg);box-shadow:0 3px 12px rgba(0,0,0,.09)}
+.production-selector-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);gap:10px}
+.production-field{display:flex;flex-direction:column;gap:5px;min-width:0;color:var(--muted);font-size:.78rem;font-weight:600}
+.production-field select{width:100%;min-width:0;max-width:none;box-sizing:border-box;margin:0;padding:9px;font-size:.92rem;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:5px}
+.production-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start;margin-top:10px}
+.production-actions>button,.production-upload-slot .visual-actions button{box-sizing:border-box;width:100%;min-height:44px;margin:0;padding:10px 12px;font-size:.95rem;font-weight:650}
+.production-copy{background:var(--surface-soft)}
+.production-next{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:700}
+.production-upload-slot{min-width:0}
+.production-upload-slot .visual-actions{display:block;margin:0}
+.production-upload-slot .visual-upload-status{margin-top:4px}
+.production-upload-slot .visual-token-panel{margin-top:8px}
+.production-dock .status{margin:7px 0 0;font-size:.78rem;line-height:1.35}
+.production-section{margin-top:18px;padding:15px;border:1px solid var(--border);border-radius:8px;min-width:0}
+.production-section h4{margin:0 0 12px;font-size:1.05rem}
+.production-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.production-section-head h4{margin:0}
+.production-section-head button{margin:0;font-size:.82rem;padding:8px 12px}
+#productionPreview .visual-workspace{margin:0}
+#promptDetails pre{margin-top:10px;max-height:65vh;overflow:auto}
+#productionExports .export-block{border-top:0;margin-top:0}
+#productionUtilities{margin-top:12px}
+#productionUtilities button{font-size:.82rem;margin:0;padding:8px 10px}
+@media(max-width:640px){
+body{padding:10px}
+.production-dock{padding:9px 10px}
+.production-selector-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.production-field:last-child{grid-column:1/-1}
+.production-field select{font-size:.85rem;padding:7px}
+.production-actions{gap:6px;margin-top:8px}
+.production-actions>button,.production-upload-slot .visual-actions button{min-height:42px;padding:8px 5px;font-size:.82rem}
+.production-section{padding:10px;margin-top:12px}
+}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="header-row"><h3 id="appTitle">RexPrompt Assembler</h3><div class="mode-switch" role="group" aria-label="RexPrompt mode"><button id="assemblerModeBtn" type="button" aria-pressed="true">Assembler</button><button id="referenceKeeperModeBtn" type="button" aria-pressed="false">Reference Keeper</button></div><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
-<div id="assemblerMode"><div class="block"><label for="showSel">Series</label><br><select id="showSel"></select></div>
-<div class="block"><label for="issueSel">Issue</label><br><select id="issueSel"></select></div>
-<div class="block"><label for="sceneSel">Production page</label><br><select id="sceneSel"></select></div>
-<div id="status" class="status"></div>
-<div class="btn-row"><button id="buildBtn">Refresh</button><button id="copyBtn">Copy Assembled Text</button><button id="commitBtn">Commit Page</button></div>
-<div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
-<div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
-<div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
-<div id="exportStatus" class="status"></div>
-<pre id="out"></pre>
-<div id="manualInputs"></div>
+<div id="assemblerMode">
+  <section id="productionDock" class="production-dock" aria-label="Page production controls">
+    <div class="production-selector-grid">
+      <label class="production-field" for="showSel"><span>Series</span><select id="showSel"></select></label>
+      <label class="production-field" for="issueSel"><span>Issue</span><select id="issueSel"></select></label>
+      <label class="production-field" for="sceneSel"><span>Production page</span><select id="sceneSel"></select></label>
+    </div>
+    <div class="production-actions">
+      <button id="copyBtn" type="button" class="production-copy">Copy Prompt</button>
+      <div id="productionUploadSlot" class="production-upload-slot"></div>
+      <button id="commitBtn" type="button" class="production-next">Next Page →</button>
+    </div>
+    <div id="status" class="status" role="status"></div>
+  </section>
+  <section id="productionPreview" class="production-section">
+    <h4>Production Preview</h4>
+    <div id="visualPreviewMount"></div>
+  </section>
+  <section id="promptDetails" class="production-section">
+    <div class="production-section-head"><h4>Prompt Details</h4><button id="buildBtn" type="button">Refresh Prompt</button></div>
+    <div id="promptSuppressMount"></div>
+    <pre id="out"></pre>
+    <div id="manualInputs"></div>
+  </section>
+  <section id="productionExports" class="production-section">
+    <h4>Exports &amp; Utilities</h4>
+    <div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
+    <div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
+    <div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
+    <div id="exportStatus" class="status"></div>
+    <div id="issuePackagingMount"></div>
+    <div id="productionUtilities"></div>
+  </section>
 </div>
 <div id="referenceKeeperMode" hidden></div>
 </div>

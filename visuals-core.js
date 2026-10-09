@@ -93,7 +93,7 @@ function createUi(){
         <div class="visual-badge draft">Approved production draft · not released</div>
         <div id="draftBody" class="visual-empty">No approved production draft stored for this unit.</div>
         <div class="visual-actions">
-          <button id="uploadDraftBtn" type="button">Upload Approved Draft</button>
+          <button id="uploadDraftBtn" type="button" title="Upload an approved production draft for this page">Upload Image</button>
           <button id="forgetGithubTokenBtn" type="button" class="secondary" hidden>Forget GitHub Token</button>
           <input id="draftFileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
         </div>
@@ -109,7 +109,9 @@ function createUi(){
       </div>
     </div>
     <div id="visualStateNote" class="visual-state-note"></div>`;
-  anchor.insertAdjacentElement('afterend',section);
+  const previewMount=document.getElementById('visualPreviewMount');
+  if(previewMount)previewMount.appendChild(section);
+  else anchor.insertAdjacentElement('afterend',section);
   const ui={
     section,
     draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
@@ -120,6 +122,14 @@ function createUi(){
   ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
   ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
   ui.forgetTokenBtn.addEventListener('click',()=>{sessionStorage.removeItem('rexprompt.githubToken');syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten for this tab.'});
+  // The single existing upload control lives in the sticky production toolbar.
+  // Move its original DOM nodes rather than duplicating upload handlers.
+  const uploadSlot=document.getElementById('productionUploadSlot');
+  if(uploadSlot){
+    uploadSlot.append(section.querySelector('.visual-actions'),ui.tokenPanel,ui.uploadStatus);
+    const utilities=document.getElementById('productionUtilities');
+    if(utilities)utilities.appendChild(ui.forgetTokenBtn);
+  }
   state.ui=ui;syncTokenButton();return ui;
 }
 function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!sessionStorage.getItem('rexprompt.githubToken')}
@@ -130,7 +140,7 @@ function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tok
 function setDraftBody(sel,entry){
   const ui=state.ui;if(!ui)return;
   if(!entry){
-    ui.draftBody.className='visual-empty';ui.draftBody.textContent='No approved production draft stored for this unit.';ui.uploadBtn.textContent='Upload Approved Draft';return;
+    ui.draftBody.className='visual-empty';ui.draftBody.textContent='No approved production draft stored for this unit.';ui.uploadBtn.textContent='Upload Image';return;
   }
   const src=draftImageUrl(entry);
   ui.draftBody.className='';ui.draftBody.innerHTML='';
@@ -139,7 +149,7 @@ function setDraftBody(sel,entry){
   const watermark=document.createElement('div');watermark.className='visual-watermark';watermark.textContent='DRAFT · NOT RELEASED';
   wrap.append(img,watermark);ui.draftBody.appendChild(wrap);
   const meta=document.createElement('div');meta.className='visual-meta';meta.textContent=sel.recipeId+' · '+(entry.updatedAt?'stored '+new Date(entry.updatedAt).toLocaleString():'approved production draft');ui.draftBody.appendChild(meta);
-  ui.uploadBtn.textContent='Replace Approved Draft';
+  ui.uploadBtn.textContent='Replace Image';
 }
 function renderCanonItems(sel,items){
   const ui=state.ui;if(!ui)return;
@@ -203,9 +213,9 @@ function decorateSceneOptions(sel,canonMode=false){
   }
 }
 
-async function refreshVisuals(){
+async function refreshVisuals(preserveUploadStatus=false){
   const ui=state.ui,sel=currentSelection();if(!ui||!sel)return;
-  const nonce=++state.refreshNonce;ui.uploadStatus.textContent='';
+  const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
   const explicit=explicitCanon(sel),pageSet=explicit.length?null:await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
   decorateSceneOptions(sel,Boolean(pageSet));
@@ -245,7 +255,7 @@ async function uploadApprovedDraft(file){
     if(old?.image&&old.image!==imagePath)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});
     const newTree=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}}),newCommit=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/commits',{method:'POST',body:{message:'Store approved production draft '+sel.recipeId,tree:newTree.sha,parents:[headSha]}});
     await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/refs/heads/'+encodeURIComponent(CONFIG.branch),{method:'PATCH',body:{sha:newCommit.sha,force:false}});
-    manifest.drafts[key].commitSha=newCommit.sha;state.draftManifest=manifest;ui.uploadStatus.textContent='Approved draft stored. Git commit '+newCommit.sha.slice(0,7)+'.';await refreshVisuals();
+    manifest.drafts[key].commitSha=newCommit.sha;state.draftManifest=manifest;ui.uploadStatus.textContent='Approved draft stored. Git commit '+newCommit.sha.slice(0,7)+'.';await refreshVisuals(true);
   }catch(err){ui.uploadStatus.textContent='Upload failed: '+(err instanceof Error?err.message:String(err));}
   finally{ui.uploadBtn.disabled=false;syncTokenButton()}
 }
