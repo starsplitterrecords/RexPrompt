@@ -245,16 +245,18 @@ async function refreshVisuals(preserveUploadStatus=false){
 }
 
 async function gh(token,path,{method='GET',body=null,allow404=false}={}){
-  const r=await fetch(CONFIG.apiBase+path,{method,headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
+  const fresh=method==='GET'&&path.includes('/git/ref/heads/');
+  const url=CONFIG.apiBase+(fresh?window.RexPromptGithubWrites.freshPath(path):path);
+  const r=await fetch(url,{method,cache:method==='GET'?'no-store':'default',headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
   if(allow404&&r.status===404)return null;
   let payload=null;try{payload=await r.json()}catch{}
-  if(!r.ok)throw new Error((payload&&payload.message)||('GitHub API '+r.status));return payload;
+  if(!r.ok)throw new Error(((payload&&payload.message)||'GitHub API error')+' (HTTP '+r.status+')');return payload;
 }
 function bytesToBase64(bytes){let out='',chunk=0x8000;for(let i=0;i<bytes.length;i+=chunk)out+=String.fromCharCode(...bytes.subarray(i,Math.min(i+chunk,bytes.length)));return btoa(out)}
 function decodeBase64Utf8(value){const binary=atob(String(value||'').replace(/\s+/g,'')),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
 function extensionFor(file){if(file.type==='image/jpeg')return 'jpg';if(file.type==='image/png')return 'png';if(file.type==='image/webp')return 'webp';return ''}
-async function latestDraftManifest(token){
-  const path='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/contents/'+CONFIG.draftManifestPath+'?ref='+encodeURIComponent(CONFIG.branch),payload=await gh(token,path,{allow404:true});
+async function latestDraftManifest(token,commitSha){
+  const path='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/contents/'+CONFIG.draftManifestPath+'?ref='+encodeURIComponent(commitSha||CONFIG.branch),payload=await gh(token,path,{allow404:true});
   if(!payload)return {schemaVersion:1,drafts:{}};
   const parsed=JSON.parse(decodeBase64Utf8(payload.content));if(!parsed.drafts||typeof parsed.drafts!=='object')parsed.drafts={};return parsed;
 }
@@ -264,22 +266,59 @@ async function uploadApprovedDraft(file){
   if(file.size>CONFIG.maxUploadBytes){ui.uploadStatus.textContent='Upload failed: image is larger than 50 MB.';return}
   const verb=state.draftManifest?.drafts?.[visualKey(sel)]?'replace':'store';
   if(!window.confirm('Explicitly '+verb+' the approved production draft for '+sel.recipeId+' in RexPrompt? This does not publish anything to Visions.'))return;
-  const token=window.RexPromptGithubAuth.getToken();if(!token){state.pendingUpload=true;showTokenPanel();return}
-  ui.uploadBtn.disabled=true;ui.uploadStatus.textContent='Storing approved draft in RexPrompt…';
+  const token=window.RexPromptGithubAuth.getToken();
+  if(!token){state.pendingUpload=true;showTokenPanel();return}
+  ui.uploadBtn.disabled=true;
+  ui.uploadStatus.textContent='Preparing approved draft for GitHub…';
   try{
-    const refPath='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch),ref=await gh(token,refPath),headSha=ref.object.sha;
-    const commit=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/commits/'+headSha),manifest=await latestDraftManifest(token),key=visualKey(sel),old=manifest.drafts[key]||null,ext=extensionFor(file);
+    const prefix='/repos/'+CONFIG.owner+'/'+CONFIG.repo;
+    const key=visualKey(sel);
+    const ext=extensionFor(file);
     const imagePath='production/drafts/'+safePart(sel.seriesId)+'/'+safePart(sel.issueId)+'/'+safePart(sel.recipeId)+'.'+ext;
-    const bytes=new Uint8Array(await file.arrayBuffer()),imageBlob=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/blobs',{method:'POST',body:{content:bytesToBase64(bytes),encoding:'base64'}});
-    const updatedAt=new Date().toISOString();manifest.schemaVersion=1;manifest.drafts[key]={seriesId:sel.seriesId,issueId:sel.issueId,recipeId:sel.recipeId,status:'approved-production-draft',image:imagePath,mimeType:file.type,updatedAt};
-    const manifestBlob=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/blobs',{method:'POST',body:{content:JSON.stringify(manifest,null,2)+'\n',encoding:'utf-8'}});
-    const tree=[{path:imagePath,mode:'100644',type:'blob',sha:imageBlob.sha},{path:CONFIG.draftManifestPath,mode:'100644',type:'blob',sha:manifestBlob.sha}];
-    if(old?.image&&old.image!==imagePath)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});
-    const newTree=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}}),newCommit=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/commits',{method:'POST',body:{message:'Store approved production draft '+sel.recipeId,tree:newTree.sha,parents:[headSha]}});
-    await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/refs/heads/'+encodeURIComponent(CONFIG.branch),{method:'PATCH',body:{sha:newCommit.sha,force:false}});
-    manifest.drafts[key].commitSha=newCommit.sha;state.draftManifest=manifest;ui.uploadStatus.textContent='Approved draft stored. Git commit '+newCommit.sha.slice(0,7)+'.';await refreshVisuals(true);
-  }catch(err){ui.uploadStatus.textContent='Upload failed: '+(err instanceof Error?err.message:String(err));}
-  finally{ui.uploadBtn.disabled=false;syncTokenButton()}
+    // Uploading the immutable blob before taking the write lock keeps the
+    // exclusive commit window short. Retrying never re-encodes the image.
+    const bytes=new Uint8Array(await file.arrayBuffer());
+    const imageBlob=await gh(token,prefix+'/git/blobs',{method:'POST',body:{content:bytesToBase64(bytes),encoding:'base64'}});
+    const result=await window.RexPromptGithubWrites.run(()=>
+      window.RexPromptGithubWrites.retryConflicts(async()=>{
+        const ref=await gh(token,prefix+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch));
+        const headSha=ref.object.sha;
+        // Both the tree and manifest must describe exactly the same commit.
+        const [commit,manifest]=await Promise.all([
+          gh(token,prefix+'/git/commits/'+headSha),
+          latestDraftManifest(token,headSha)
+        ]);
+        const old=manifest.drafts[key]||null;
+        manifest.schemaVersion=1;
+        manifest.drafts[key]={
+          seriesId:sel.seriesId,issueId:sel.issueId,recipeId:sel.recipeId,
+          status:'approved-production-draft',image:imagePath,
+          mimeType:file.type,updatedAt:new Date().toISOString()
+        };
+        const manifestBlob=await gh(token,prefix+'/git/blobs',{method:'POST',body:{content:JSON.stringify(manifest,null,2)+'\n',encoding:'utf-8'}});
+        const tree=[
+          {path:imagePath,mode:'100644',type:'blob',sha:imageBlob.sha},
+          {path:CONFIG.draftManifestPath,mode:'100644',type:'blob',sha:manifestBlob.sha}
+        ];
+        if(old?.image&&old.image!==imagePath)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});
+        const newTree=await gh(token,prefix+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}});
+        const newCommit=await gh(token,prefix+'/git/commits',{method:'POST',body:{message:'Store approved production draft '+sel.recipeId,tree:newTree.sha,parents:[headSha]}});
+        await gh(token,prefix+'/git/refs/heads/'+encodeURIComponent(CONFIG.branch),{method:'PATCH',body:{sha:newCommit.sha,force:false}});
+        manifest.drafts[key].commitSha=newCommit.sha;
+        return {sha:newCommit.sha,manifest};
+      },attempt=>{
+        ui.uploadStatus.textContent='GitHub HEAD moved; refreshing and retrying upload ('+attempt+'/3)…';
+      })
+    );
+    state.draftManifest=result.manifest;
+    ui.uploadStatus.textContent='Approved draft stored. Git commit '+result.sha.slice(0,7)+'.';
+    await refreshVisuals(true);
+  }catch(err){
+    ui.uploadStatus.textContent='Upload failed: '+(err instanceof Error?err.message:String(err));
+  }finally{
+    ui.uploadBtn.disabled=false;
+    syncTokenButton();
+  }
 }
 
 async function loadState(){

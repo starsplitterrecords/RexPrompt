@@ -5,7 +5,7 @@ const $=s=>document.querySelector(s), safe=v=>String(v||'item').toLowerCase().re
 function ext(f){return f.type==='image/jpeg'?'jpg':f.type==='image/png'?'png':f.type==='image/webp'?'webp':''} function b64(bytes){let s='';for(let i=0;i<bytes.length;i+=32768)s+=String.fromCharCode(...bytes.subarray(i,Math.min(i+32768,bytes.length)));return btoa(s)} function utf8(v){const x=atob(String(v||'').replace(/\s+/g,''));return new TextDecoder().decode(Uint8Array.from(x,c=>c.charCodeAt(0)))}
 function inject(){const st=document.createElement('style');st.textContent='.mode-switch{display:flex;gap:6px;flex-wrap:wrap}.mode-switch button{margin:0;padding:9px 13px;font-size:.88rem}.mode-switch button[aria-pressed=true]{font-weight:700;border-width:2px}#assemblerMode[hidden],#referenceKeeperMode[hidden]{display:none!important}.keeper{max-width:1180px}.keeper p{color:var(--muted)}.keeper-controls,.keeper-upload{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:12px;margin-bottom:14px}.keeper-upload{padding:14px;border:1px solid var(--border);border-radius:8px;background:var(--surface-soft)}.keeper label{display:block;color:var(--muted);font-size:.82rem;margin-bottom:5px}.keeper input,.keeper select{box-sizing:border-box;width:100%;min-width:0;margin:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.keeper-actions{display:flex;gap:8px;flex-wrap:wrap}.keeper-actions button,.keeper-card button{margin:0;padding:9px 12px;font-size:.86rem}.keeper-card-status{margin-top:8px;font-size:.8rem;color:var(--muted);overflow-wrap:anywhere}.keeper-card-status:empty{display:none}.keeper-card .delete[data-confirm=yes]{border-color:#b53434;color:#b53434;font-weight:700}.keeper-refresh{align-self:end}.keeper-status{color:var(--muted);font-size:.85rem;min-height:1.2em}.keeper-token{grid-column:1/-1;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--bg)}.keeper-token-row{display:flex;gap:8px}.keeper-remember{display:flex!important;align-items:center;gap:7px;grid-column:1/-1;color:var(--fg)!important;font-size:.84rem!important;margin:0}.keeper-remember input{width:auto!important;margin:0!important;flex:none}.keeper-remember-hint{grid-column:1/-1;color:var(--muted);font-size:.76rem;line-height:1.35}.keeper-token-row input{flex:1}.keeper-groups h5{text-transform:capitalize}.keeper-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}.keeper-card{padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--surface-soft)}.keeper-card img{width:100%;height:210px;object-fit:contain;background:var(--surface);border:1px solid var(--border);border-radius:5px}.keeper-card img{cursor:zoom-in}.keeper-card img:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.keeper-lightbox{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:50px 24px 24px;box-sizing:border-box;background:rgba(0,0,0,.91)}.keeper-lightbox[hidden]{display:none!important}.keeper-lightbox img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}.keeper-lightbox-close{position:absolute;top:10px;right:16px;padding:6px 12px!important;font-size:1.65rem!important;background:#202832!important;color:#fff!important;border:1px solid #76808a!important;border-radius:6px;cursor:pointer}.keeper-lightbox-caption{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);color:#fff;font-size:.82rem;background:rgba(0,0,0,.65);padding:3px 8px;border-radius:4px;pointer-events:none}.keeper-name{font-weight:700;margin:8px 0 3px}.keeper-meta{font-size:.74rem;color:var(--muted);overflow-wrap:anywhere;margin-bottom:8px}@media(max-width:760px){.keeper-controls,.keeper-upload{grid-template-columns:1fr}.keeper-token{grid-column:auto}}';document.head.appendChild(st)}
 async function load(path,fallback){try{const r=await fetch(path+(path.includes('?')?'&':'?')+'v='+Date.now(),{cache:'no-store'});if(r.status===404)return fallback;if(!r.ok)throw Error('HTTP '+r.status);return await r.json()}catch(e){console.warn('Reference Keeper',e);return fallback}}
-async function gh(token,path,o={}){const r=await fetch(C.api+path,{method:o.method||'GET',headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(o.body?{'Content-Type':'application/json'}:{})},body:o.body?JSON.stringify(o.body):undefined});if(o.allow404&&r.status===404)return null;let p=null;try{p=await r.json()}catch{}if(!r.ok)throw Error((p?.message||'GitHub API error')+' (HTTP '+r.status+')');return p}
+async function gh(token,path,o={}){const method=o.method||'GET',fresh=method==='GET'&&path.includes('/git/ref/heads/'),url=C.api+(fresh?window.RexPromptGithubWrites.freshPath(path):path);const r=await fetch(url,{method,cache:method==='GET'?'no-store':'default',headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(o.body?{'Content-Type':'application/json'}:{})},body:o.body?JSON.stringify(o.body):undefined});if(o.allow404&&r.status===404)return null;let p=null;try{p=await r.json()}catch{}if(!r.ok)throw Error((p?.message||'GitHub API error')+' (HTTP '+r.status+')');return p}
 async function latest(token){const p=await gh(token,'/repos/'+C.owner+'/'+C.repo+'/contents/'+C.manifest+'?ref='+encodeURIComponent(C.branch),{allow404:true});if(!p)return {schemaVersion:1,references:{}};const m=JSON.parse(utf8(p.content));m.references=m.references||{};return m}
 async function loadCurrentManifest(){
   if(token()){
@@ -117,15 +117,8 @@ function render(){
 
 // Keep all changes to the manifest on a single local write lane. Concurrent browser
 // tabs / external writers are handled by replaying the operation on the newest HEAD.
-let writeLane=Promise.resolve();
-function queueWrite(task){
-  const next=writeLane.then(task);
-  writeLane=next.catch(()=>{});
-  return next;
-}
-function retryableConflict(error){
-  return /not a fast.forward|reference update failed|update.*ref|conflict|409|422/i.test(String(error?.message||error));
-}
+function queueWrite(task){return window.RexPromptGithubWrites.run(task)}
+function retryableConflict(error){return window.RexPromptGithubWrites.isConflict(error)}
 async function transact(change){
   const t=token();
   if(!t)throw Error('GitHub token is required.');
@@ -149,7 +142,8 @@ async function transact(change){
       return next.sha;
     }catch(error){
       if(attempt===3||!retryableConflict(error))throw error;
-      S.ui.status.textContent='GitHub changed during save. Retrying '+(attempt+1)+'/3…';
+      S.ui.status.textContent='Branch updated during save; fetching fresh GitHub HEAD. Retry '+(attempt+1)+'/3…';
+      await new Promise(resolve=>setTimeout(resolve,150*(attempt+1)));
     }
   }
 }
