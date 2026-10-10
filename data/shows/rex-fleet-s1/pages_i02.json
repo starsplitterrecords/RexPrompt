@@ -1,7 +1,7 @@
 [
   {
     "id": "RF_I02_P01",
-    "summary": "Auric’s exhausted residents are already turning against refugees when a mixed Verge–Shard evacuation ship arrives under fire, forcing Halev to spend his government on people he cannot house.",
+    "summary": "Auric is rationing heat and shelter when an evacuation freighter arrives under fire, forcing Halev to open a berth opposed by the residents he governs.",
     "settingText": "AURIC BAZAAR — REFUGEE BERTH AND CIVIC DOCK — NIGHT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -30,7 +30,7 @@
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "Closer to the heater. I'm not asking again."
+        "text": "Closer to the heater. You've been shivering all night."
       },
       {
         "handle": "@starsplit.luminara.boy",
@@ -40,63 +40,63 @@
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "So are nine thousand people who live here. They want this berth closed."
+        "text": "Nine thousand residents depend on this berth's heat. They signed to have it closed."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "They can tell me themselves."
+        "text": "I'll answer them. What's happening at the approach?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "They may have to yell. We've got an unscheduled ship coming in hot."
+        "text": "An unscheduled freighter's coming in with the convoy. Somebody's firing on it."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "What's aboard?"
+        "text": "Who's aboard?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "People. Verge and Shard. Couple hundred, if the life signs are right."
+        "text": "Verge and Shard families. Couple hundred, maybe more."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "Chris, we cannot house them."
+        "text": "We have no safe beds left."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Open the berth."
+        "text": "Open the berth. Move the sleeping families clear of the gate."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "That may be the last order this government follows."
+        "text": "The traders will pull their support."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Then let's make it useful."
+        "text": "Then they can tell me after the ship docks."
       }
     ],
     "panelPlan": [
-      "Wide: Auric’s beautiful market ring is dimmed by rationing; displaced families sleep beneath shuttered stalls while residents argue across a portable heater queue.",
-      "The Luminara Mother gives the Boy her place near the heater as Wallace shows Halev a petition demanding the refugee berth be closed.",
-      "Jex interrupts with a broken distress transmission: an unscheduled evacuation ship, carrying both Verge and Shard civilians, is approaching inside the supply convoy.",
-      "Wallace warns there are no beds, heat reserves, or votes for this; through the canopy, distant weapons fire flashes around the crippled ship.",
-      "Halev orders the berth opened. Dock crews move while Wallace quietly says this may end Halev’s government; Halev watches the ship burn toward them."
+      "Auric's market ring glows faintly beneath rationed work lights. Refugee bedding crowds shuttered stalls; longtime residents and newcomers queue for the same heater.",
+      "The Luminara Mother moves her son beside the heater despite her own cold. Wallace gives Halev the residents' petition to close the berth; the names on the petition are people Halev knows.",
+      "Jex catches a broken distress transmission: a freighter carrying Verge and Shard civilians is running alongside the supply convoy and taking fire.",
+      "Halev looks toward the approaching vessel. Dock workers stand at a locked pressure gate while residents behind him argue about their dwindling heat reserves.",
+      "Halev opens the berth while the burning freighter is still outside the port. Wallace watches the dock workers obey, uncertain whether the traders who support the government will follow."
     ],
     "directionInline": [
-      "Keep Auric visibly exhausted before the crisis arrives: rationing, sleeping families and a heater queue should already be consuming the public space. Halev's final order must happen while the burning evacuation ship is physically visible, so the political cost and the immediate human need occupy the same frame."
+      "Anchor the decision in residents, workers, a real berth, and a visibly endangered freighter. No aphoristic last line or abstract command-room debate."
     ]
   },
   {
     "id": "RF_I02_P02",
-    "summary": "Inside the crippled evacuation ship, Dr. Richard Secundo abandons the bridge to keep a mixed group of enemies alive while his son Paul inherits control of a vessel coming apart.",
+    "summary": "On Mercy of Dawn, Richard chooses the packed passenger hold over an empty bridge; his 19-year-old son Paul moves the freighter's controls onto a repair slate as attackers cut into the hull.",
     "settingText": "EVACUATION FREIGHTER MERCY OF DAWN — PASSENGER HOLD",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -121,88 +121,78 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Hold that brace. Both of you. Together."
+        "text": "Brace it together. The latch won't hold on its own."
       },
       {
         "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
-        "text": "Give the mask to the kid."
+        "text": "Give that mask to the child."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "You need it."
+        "text": "You're still short of air."
       },
       {
         "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
-        "text": "She needs it more."
+        "text": "She has less."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Dad, the bridge is draining reserve. I can keep pressure here or up there. Not both."
+        "text": "Dad, the bridge reserve is draining the hold. I can keep pressure in one section."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Can you move control to your slate?"
+        "text": "Bridge cameras clear?"
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "It's a repair slate."
+        "text": "Every compartment. Nobody up there."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Can you do it?"
+        "text": "Move helm control to your slate and vent the bridge."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "...Yeah."
+        "text": "I'll lose half the instruments."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Then vent the bridge."
+        "text": "Keep the ones you can use."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "What if somebody's still up there?"
+        "text": "Pressure's holding. Something's cutting our outer skin."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "I checked. It's empty. Save the hold."
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "Got it. Dad—something's cutting into the hull."
-      },
-      {
-        "handle": "@starsplit.richard.secundo",
-        "speaker": "Richard",
-        "text": "Keep us moving. I'll take the breach."
+        "text": "Stay with the link. I'll take the breach."
       }
     ],
     "panelPlan": [
-      "Hundreds of Verge and Shard civilians pack a freight hold as a pressure door bows inward; adults from both factions brace it with cargo poles and their bodies.",
-      "Richard treats a wounded Shard caregiver who pushes their last oxygen mask toward a frightened Verge child.",
-      "Paul reports from an exposed engineering crawl that the bridge can retain pressure or the passenger hold can—there is not enough power for both.",
-      "Richard looks toward the distant bridge, then orders Paul to vent it and transfer control to his repair slate; he is terrified and obeys.",
-      "The lights stabilize for one breath. Cutting torches ignite on the outer hull beside the children; Richard tells Paul to keep them moving."
+      "Verge and Shard adults brace a bowing pressure door in a packed freight hold. The wounded Shard caregiver passes an oxygen mask to a Verge child rather than keep it.",
+      "Richard treats the caregiver while Paul, an adult engineering apprentice, reports through a battered communicator from an access crawl between the passenger hold and the supply spine.",
+      "Paul shows a power allocation on his repair slate: pressure can be maintained in the empty bridge or the occupied hold, not both. Richard checks the last bridge compartment on a local camera before deciding.",
+      "Paul vents the empty bridge and transfers limited helm and attitude control to his repair slate. The hold stops losing pressure, but the improvised control link now depends on the service spine.",
+      "Cutting torches flare against the passenger hull. Richard moves toward the threatened door while Paul stays at the service link so he can keep the freighter's remaining systems alive."
     ],
     "directionInline": [
-      "Treat the passenger hold as a failing workplace, not a tableau of suffering. Richard keeps moving while he triages; Paul is separated from him in engineering and communicates through broken systems. The Shard caregiver's sacrifice is practical and quick, with no sentimental staging."
+      "Richard and Paul work in different parts of the same freighter. Paul is 19 and competent within the limits of improvised controls; establish the repair slate and service-spine link that become consequential later."
     ]
   },
   {
     "id": "RF_I02_P03",
-    "summary": "Billie converts Abby’s cargo raid into a political atrocity, while Tess realizes grievance has become an excuse to punish civilians.",
+    "summary": "Billie commandeers Abby's cargo interception to force Fleet away from the supply convoy; she knowingly boards a passenger ship to make Venn choose, driving Tess and Abby against her.",
     "settingText": "ASHFANG MARAUDER — BOARDING GALLERY",
     "regionText": "The Shards",
     "charactersInline": [
@@ -227,73 +217,78 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Cargo only. Nobody touches the passenger hull."
-      },
-      {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "The Fleet left our families outside a cordon to freeze."
+        "text": "Cargo only. The freighter and its passengers are off limits."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "These people didn't."
+        "text": "Billie, that's the passenger hull."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "No. But the Fleet came for them."
+        "text": "Thunderbreak won't leave its supply screen for cargo. It'll leave for people."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "You know there are Shard families on that ship."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "I know what Fleet let happen to ours. Now Venn gets to choose in front of everyone."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Billie, pull back. That ship isn't the target."
+        "text": "Change course. This is not the raid I authorized."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "I know. It is now."
+        "text": "The cargo's still ours once Thunderbreak turns."
       },
       {
         "handle": "@starsplit.raider",
         "speaker": "Raider",
-        "text": "I can hear kids in there."
+        "text": "I hear families at the collar."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Do not lock on."
+        "text": "Break off before you open it."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Our kids froze outside that cordon. Lock us on."
+        "text": "Lock us on. No one leaves until Fleet answers."
       },
       {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Call Venn. Tell her we're boarding the people she came to save."
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "Billie, stand down."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Gravefire, come about. We're going after Ashfang."
+        "text": "Gravefire, take us to that breach."
       }
     ],
     "panelPlan": [
-      "Through Ashfang’s canopy, supply containers separate from the crippled refugee ship; Abby’s order marks the containers while Billie marks the passenger hull.",
-      "Tess challenges the changed target over comm as boarding crews load weapons; Billie shows an old image of Shard families frozen outside a Fleet cordon.",
-      "Abby orders Billie back to cargo. Billie argues the mixed ship will expose Fleet mercy as selective and cuts Abby’s channel.",
-      "A raider hesitates at the boarding collar after hearing children through the hull; Billie personally slams the collar forward.",
-      "Ashfang bites into the passenger section while Gravefire turns away from the cargo prize and follows."
+      "Ashfang watches the legitimate target, supply containers, separate from the civilian freighter. Abby's cargo-only orders remain visible in the Shard command chain.",
+      "Billie identifies Thunderbreak protecting the cargo screen and switches Ashfang's docking trajectory toward the occupied passenger hull. Tess, aboard Gravefire, sees the change and demands an explanation.",
+      "Billie names the old Fleet cordon that stranded Shard families. She argues that boarding the refugees will pull the cruiser off its authorized cargo assignment and leave Auric's supplies vulnerable.",
+      "Abby orders the attack stopped. At the boarding collar a raider hears families through the bulkhead and hesitates; Billie deliberately orders the collar engaged.",
+      "Ashfang locks onto the freighter. Gravefire moves toward the breached hull rather than the supply containers; Abby's skiffs remain divided between the raid and their commander's order."
     ],
     "directionInline": [
-      "Billie's escalation should be visible as a change of target on the tactical display before anyone names it. Abby, Tess and Billie are not delivering faction positions; they are fighting over an order in real time while boarding hardware is already moving."
+      "Billie's goal is a deliberate diversion of Fleet protection from Auric's supplies; civilian danger is an unacceptable tactic she chooses, not a random explosion of anger. Preserve visual and institutional distinction between her force and Abby's."
     ]
   },
   {
     "id": "RF_I02_P04",
-    "summary": "Ordered to protect authorized cargo and treat the refugees as a threat, Venn knowingly trades her command for the burning ship.",
+    "summary": "Dominion orders Venn to guard the supply convoy, but she knowingly turns Thunderbreak toward the boarded civilians, accepting exposure of Auric's medicine and heat.",
     "settingText": "THUNDERBREAK — BRIDGE",
     "regionText": "The Core",
     "charactersInline": [
@@ -315,47 +310,42 @@
       }
     ],
     "panelPlan": [
-      "Thunderbreak’s luminous bridge shows two crises: exposed medicine and heater cargo on one side, the refugee freighter being boarded on the other.",
-      "Dominion appears by holo and orders Venn to hold the authorized supply screen; the mixed evacuees are labeled an infiltration risk.",
-      "Tactical explains that diverting leaves Auric’s supplies open. The officer quietly tells Venn Dominion’s order is logged.",
-      "Venn asks the bridge to identify anyone receiving the refugee distress call; every station light answers. She orders the turn.",
-      "Exterior: Thunderbreak leaves the cargo screen and dives through wreckage toward Mercy of Dawn as raider fire begins walking across its hull."
+      "Thunderbreak's repaired bridge has two simultaneous crises on one coherent tactical view: raiders threatening the refugee hull and the exposed medicine and heater convoy.",
+      "Dominion orders Venn to retain the authorized supply screen. The refugees' mixed registration and Shard docking codes give him grounds to demand caution, but the distress pictures show occupied compartments.",
+      "Tactical identifies the immediate cost: a departure leaves cargo undefended. The bridge crew hears Richard's distress message; a nearby officer notes that Dominion's order has been recorded.",
+      "Venn orders Thunderbreak toward the freighter despite the direct order, taking responsibility herself. The crew obeys at mixed speeds; this is not a ceremonial show of agreement.",
+      "The old cruiser leaves its position in the screen, takes raider fire on previously repaired plates, and exposes the convoy it was assigned to protect."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "You're authorized to protect the supply convoy, not that vessel."
+        "text": "Your assignment is the supply convoy. Remain on that screen."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "They're sending civilian registries."
+        "text": "The freighter's transmitting civilian registries and live distress video."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "They're also sending Shard codes. Stay with the convoy."
+        "text": "And Shard docking codes. I will not have you open a path for an attack."
       },
       {
         "handle": "@starsplit.tactical",
         "speaker": "Tactical",
-        "text": "If we turn, the medicine convoy is exposed."
+        "text": "Turning exposes medicine and heater cargo for Auric."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "Dominion's order is logged, Commodore."
+        "text": "Dominion's order is on the command log."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Everyone hearing that distress call?"
-      },
-      {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Yes, Commodore."
+        "text": "And so is that distress call."
       },
       {
         "handle": "@starsplit.cael.dominion",
@@ -365,27 +355,27 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Helm, take us to the freighter."
+        "text": "Helm, take us to Mercy of Dawn. I'll answer for the diversion."
       },
       {
-        "handle": "@starsplit.cael.dominion",
-        "speaker": "Dominion",
-        "text": "Venn."
+        "handle": "@starsplit.officer",
+        "speaker": "Officer",
+        "text": "Course laid in."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Auric, cover the convoy as long as you can. We're going for the civilians."
+        "text": "Auric, your convoy screen is gone. Pull what you can toward the port."
       }
     ],
     "directionInline": [
-      "Keep the two losses visible at once: exposed medicine and heater cargo on one side of the bridge picture, civilians under boarding fire on the other. Venn's turn should read as a command decision made after hearing the same distress call as everyone else, not as a heroic pose."
+      "Use the same tactical geometry across panels. Venn accepts competing human costs, and the record of her disobedience remains the basis of her tribunal case."
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I02_P05",
-    "summary": "Naomi prevents Fleet rescue from becoming Fleet occupation, and Venn proves trust by surrendering control when command would be easier.",
+    "summary": "Naomi prevents the Fleet rescue from resembling an armed occupation; Venn yields operational lead while retaining accountability for the mission.",
     "settingText": "VERGE ESCORT — COCKPIT / THUNDERBREAK RESCUE BAY",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -414,73 +404,73 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Mercy of Dawn to anyone listening. They're through the outer hull."
+        "text": "Mercy of Dawn to anyone listening. They're inside the outer hull."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "My rescue team launches in forty seconds."
+        "text": "My team can launch now."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Not with Fleet marines in front. Half that ship will fight you before they figure out you're helping."
+        "text": "Not with Fleet rifles leading. The families will think it's another boarding party."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "If we wait, there may not be a ship."
+        "text": "Then give me a way in before the hold loses pressure."
       },
       {
         "handle": "@starsplit.second",
         "speaker": "Second",
-        "text": "Captain... that was my father on the channel."
+        "text": "Our small shuttle can use their service collar. I'll keep the escort alongside."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "We go first. Verge shuttle, Fleet medics. Rifles down."
+        "text": "Verge shuttle first. Fleet medics follow me, rifles down."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "My officer is leading the rescue."
+        "text": "My officer has the boarding plan."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Then they may not open the doors."
+        "text": "Your officer has never met the people behind that door."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Officer, Sol has the lead."
+        "text": "Officer, Sol leads passenger contact. You handle engineering support."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "Commodore?"
+        "text": "Understood."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "You heard me. Support her. Launch."
+        "text": "Launch. Call me when you have pressure."
       }
     ],
     "panelPlan": [
-      "Naomi sees Fleet marines loading in Thunderbreak’s rescue bay while Richard’s broken transmission identifies frightened Shard and Verge families together.",
-      "Naomi tells Venn armed Fleet control will make half the ship resist rescue; Venn argues that waiting will kill them all.",
-      "Naomi’s second receives a broken voice fragment from a parent aboard; the personal connection makes the cost of getting the rescue posture wrong immediate.",
-      "Naomi demands operational lead and Verge markings on the first shuttle. Venn removes her own officer from the lead seat and grants it publicly.",
-      "A small shuttle carrying Naomi, Verge crew, Fleet medics, and unraised weapons launches into fire; Venn remains behind, answerable for Naomi’s choices."
+      "From her Verge escort, Naomi sees Fleet marines preparing to enter the freighter first as Richard's distress images show mixed frightened families.",
+      "Naomi calls Venn directly: visibly armed Fleet troops at the front will provoke resistance inside a ship losing air. Venn points out that postponing launch is equally dangerous.",
+      "Naomi's second identifies a workable alternative: a smaller Verge-marked rescue shuttle can reach the damaged docking collar while the escort remains outside to steer traffic.",
+      "Venn removes her own officer from the lead boarding position, retains Fleet medics and engineering support, and puts Naomi in charge of contact with the passengers.",
+      "Naomi boards the shuttle with medics, unraised weapons and practical rescue equipment. Her second keeps command of the Verge escort outside; Venn remains aboard Thunderbreak to coordinate the exposed convoy and rescue."
     ],
     "directionInline": [
-      "Naomi's objection is operational, not rhetorical: rifles and Fleet markings are the problem she can solve before docking. Venn should visibly remove her own officer from the lead seat so the transfer of control is a concrete act of trust."
+      "Naomi takes civilian-contact lead, not command of Thunderbreak. Her second remains physically in the Verge escort; this geography must remain intact through the Shatterwake crossing."
     ]
   },
   {
     "id": "RF_I02_P06",
-    "summary": "With one shuttle load left before the ship breaks, Naomi sends the children away and stays behind with the adults she cannot promise to save.",
+    "summary": "With one rescue shuttle remaining, Naomi evacuates children and a wounded Shard caregiver while she stays with Richard and the adults; Paul prepares to enter the service spine to preserve the freighter's controls.",
     "settingText": "MERCY OF DAWN — FRACTURED PASSENGER HOLD",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -509,78 +499,78 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "One load. Children or some of the wounded. Not both."
+        "text": "One load. Children and a caregiver, or some of the wounded. We can't take both."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Kids first."
+        "text": "Children board first."
       },
       {
         "handle": "@starsplit.child",
         "speaker": "Child",
-        "text": "Not without her."
+        "text": "Not without her. She gave me her air."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "She can't walk."
-      },
-      {
-        "handle": "@starsplit.child",
-        "speaker": "Child",
-        "text": "She gave me her air."
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "Dad, the crack's opening again."
+        "text": "She can't get to the shuttle alone."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Put her in my seat."
-      },
-      {
-        "handle": "@starsplit.richard.secundo",
-        "speaker": "Richard",
-        "text": "Then you're staying."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "Yeah. Get them aboard."
+        "text": "Put her in my restraint. Carry her across."
       },
       {
         "handle": "@starsplit.junior.rescuer",
         "speaker": "Junior Rescuer",
-        "text": "Captain, I can't leave you."
+        "text": "Then you're staying aboard."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You can. Get those kids out and seal the hatch."
+        "text": "You have the children. Fly."
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "Dad, the ship's opening at the spine joint. My control link runs through it."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "Can you reach the spine before the hatch buckles?"
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "If I go now."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "Keep your suit line clipped. Call me when you're through."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "All right. Who can still work?"
+        "text": "Everybody left aboard: help us clear this compartment."
       }
     ],
     "panelPlan": [
-      "Naomi’s team enters a hold divided by a widening structural crack; one rescue shuttle remains docked while hundreds press toward it.",
-      "Richard explains the shuttle can carry the children or a smaller mixed group of injured adults, not both; the hull has minutes.",
-      "A Verge child refuses boarding without the wounded Shard caregiver who gave up an oxygen mask; panic threatens the transfer.",
-      "Naomi puts the caregiver aboard in her own place, gives command of the shuttle to a junior rescuer, and seals herself, Richard, Paul, and the remaining adults inside.",
-      "Through the closing window, children reach for parents as the shuttle departs. Naomi turns back to the failing compartment and asks who can still work."
+      "The passenger hold has split open along an internal frame. Naomi's one docked shuttle can carry the children and a handful of attendants, or a few more injured adults, not everybody.",
+      "The child who received the Shard caregiver's oxygen refuses to board without her. Richard needs the caregiver's weight carried across; there is no additional rescue seat.",
+      "Naomi gives the caregiver her own restraint and sends the junior rescuer to fly out with the children. Richard remains with immobile patients.",
+      "Paul reports that the section join is deforming and the repair slate's control link may be severed. He offers to move through the narrow service passage into the attached supply spine while it is still connected.",
+      "The shuttle departs. Naomi and Richard are left with the adults in the passenger section as Paul opens the spine access hatch. His father sees him take the slate and go."
     ],
     "directionInline": [
-      "The shuttle capacity problem must be readable without dialogue. Naomi gives up her own restraint for the caregiver and is physically left behind when the children depart. Let the closing hatch carry the emotional beat before she turns back to work."
+      "The shuttle visibly departs with the caregiver and children. Paul is 19, makes his own technically grounded decision, and begins his physical move into the supply spine before it separates."
     ]
   },
   {
     "id": "RF_I02_P07",
-    "summary": "Tess disables one of her own raiders to protect a refugee, then seals the breach beside Naomi as both women cross a faction line they cannot uncross.",
+    "summary": "Tess stops one of Billie's raiders from stealing medical supplies, helps Naomi seal the freighter's breach, and clears a route for Paul into the spine before withdrawing to Gravefire.",
     "settingText": "MERCY OF DAWN — RAIDER BREACH / PASSENGER HOLD",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -609,79 +599,79 @@
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Put the medicine down."
+        "text": "Leave the medicine."
       },
       {
         "handle": "@starsplit.raider",
         "speaker": "Raider",
-        "text": "Billie said strip the hold."
-      },
-      {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "I heard her. Put it back."
+        "text": "Billie ordered us to strip this hold."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "That case is keeping twelve people breathing."
+        "text": "That case is keeping people breathing."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Then it's staying here."
       },
       {
         "handle": "@starsplit.raider",
         "speaker": "Raider",
-        "text": "They can move."
-      },
-      {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "Then you go first."
+        "text": "Move."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Step away from him, Tess."
+        "text": "Tess, hands where I can see them."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Fine. Then grab the plate."
+        "text": "Help me hold this plate before the air goes."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "I'm not turning my back on you."
+        "text": "Richard, get them behind the inner door."
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "Spine hatch is bent. I can't turn the wheel."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Don't. Hold this."
+        "text": "Bring your slate. I'll clear it."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Tess, you're helping them."
+        "text": "You just handed our supplies to Fleet."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "I'm stopping a leak."
+        "text": "I handed their medicine back."
       }
     ],
     "panelPlan": [
-      "Tess enters through Ashfang’s smoking breach and finds a raider tearing medical packs from Richard while the pressure patch fails behind them.",
-      "Tess orders the packs returned. The raider invokes Billie and raises a weapon toward a refugee who tries to intervene.",
-      "Tess strikes first, pinning and disarming her own crew member; Naomi arrives with her weapon trained on Tess.",
-      "The breach splits wider. Naomi and Tess lower their weapons simultaneously and brace a patch while Richard pulls civilians clear.",
-      "The seal holds. On Billie’s monitor, Tess is unmistakably visible working beside Naomi; Billie orders Tess away from them, and Tess keeps working the breach."
+      "Gravefire has made a temporary docking collar beside Ashfang's damaged boarding breach. Tess reaches the passenger hold and finds a raider taking Richard's medical packs as air escapes through a failing pressure patch.",
+      "Tess orders the packs returned; the raider raises a weapon toward a patient trying to stop the theft. Tess disarms her own crew member. Naomi arrives armed but sees the rapidly worsening leak.",
+      "Naomi and Tess set aside their weapons and hold the patch together. Richard moves patients behind a pressure door; the packs stay with them.",
+      "Paul, attached to a safety line with his repair slate, reaches the service-spine hatch. Tess helps release its bent manual latch before he crosses. Richard stays in the passenger hold and hears Paul's access hatch close.",
+      "Tess withdraws through Gravefire's collar as it separates from the passenger hull to pursue the unstable supply spine. Billie sees the refusal on a boarding feed; Tess's action, not a speech, marks her break."
     ],
     "continuityFrom": "RF_I02_P06",
     "directionInline": [
-      "Tess's break with Billie begins as a small physical refusal: return the medicine, stop the raider, hold the failing plate. Naomi and Tess lower their weapons because the air leak becomes more urgent than deciding whether they trust each other."
+      "Keep Paul moving only through connected compartments, Tess's return to Gravefire visible, and Naomi aboard the passenger hull. Tess protects civilians without assuming she has suddenly reconciled with Naomi or Abby."
     ]
   },
   {
     "id": "RF_I02_P08",
-    "summary": "When the refugee ship splits from the supplies Auric needs to survive, Venn chooses the people in front of her and forces Halev to bear the people who may die later.",
+    "summary": "As Mercy of Dawn tears into a passenger hull and supply spine, Venn holds the civilians while the cargo is cast adrift; the eventual recovery of part of Auric's relief remains uncertain.",
     "settingText": "THUNDERBREAK — BRIDGE / AURIC CIVIC CONTROL / MERCY OF DAWN",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -704,75 +694,79 @@
       {
         "name": "Tactical",
         "handle": "@starsplit.tactical"
+      },
+      {
+        "name": "Paul Secundo",
+        "handle": "@starsplit.paul.secundo"
       }
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.tactical",
         "speaker": "Tactical",
-        "text": "Spine's separating. We can hold one section, not both."
+        "text": "The joint's gone. Tractor can hold one section."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "I've got three hundred people back here. Take the passenger section."
+        "text": "Three hundred people on this side. The pressure's falling."
       },
       {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "That spine is heat for nine thousand people and antibiotics for the fever ward."
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "Dad, I'm sealed in the spine. Controls still answer."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "I've got patients who won't survive another hit."
+        "text": "Stay on the slate. We're in the other section."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "And I've got patients who won't make the week."
+        "text": "The spine's carrying our heat and antibiotics. Our clinics won't last without it."
       },
       {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "Venn, pick one."
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Cargo section is beyond tractor range in thirty seconds."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Tractor on the passenger section."
+        "text": "Hold the passenger hull. Keep Gravefire's approach open."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "That's our heat and medicine. People are going to die without it."
+        "text": "If that spine's lost, I need to ration tonight."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "I know."
+        "text": "I understand. I can't leave these people in the debris."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "All right. Auric clinics, revise intake. We just lost a week of supplies."
+        "text": "Clinics, protect the reserve stock. We don't have a delivery yet."
       }
     ],
     "panelPlan": [
-      "Mercy of Dawn breaks into a passenger section and a supply spine as luminous debris closes; Thunderbreak’s single tractor field cannot hold both.",
-      "Naomi calls from the passenger hold while Richard supports failing patients; the tactical display counts hundreds of life signs there.",
-      "Halev appears beside Auric’s dark rings and names what is in the other section: heat for North Ring and antibiotics for the fever ward.",
-      "Venn refuses both Naomi’s demand and Halev’s arithmetic for one silent beat, then locks the tractor onto the passenger hull.",
-      "Thunderbreak pulls the people clear while the supply spine drifts toward debris. Halev orders Auric’s clinics to prepare for what will now be missing."
+      "The freighter's deforming joint finally tears apart. Paul is already inside the supply spine behind its closed pressure hatch; Richard and Naomi are aboard the separate passenger hull. Both sections appear on Thunderbreak's tactical view.",
+      "Thunderbreak's tractor has enough available load capacity to stabilize only one section. The passenger hull still holds hundreds of living people and losing pressure.",
+      "From Auric, Halev identifies the detached spine's contents: North Ring's heater cartridges and the fever ward's antibiotic shipment. Both targets matter to different people.",
+      "Venn uses the only tractor lock to arrest the passenger hull. Gravefire is moving toward the unpowered spine, but no one can promise it can be recovered.",
+      "Thunderbreak drags the passenger hull away from immediate debris. The supply spine drifts toward shifting fragments with Paul aboard. Halev begins emergency rationing, not a declaration that the cargo is permanently destroyed."
     ],
     "directionInline": [
-      "Keep the split ship and the two incompatible rescue targets on the same tactical picture. Venn's silence before choosing the passenger section should last long enough for both Naomi's and Halev's costs to remain valid."
+      "One tractor limit, two incompatible immediate targets. The supplies are endangered, not retrospectively declared destroyed. Make clear Paul is physically on the spine and Richard with the passenger patients."
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I02_P09",
-    "summary": "Jex gives up the hidden passage that made him powerful because a partial secret would send Tess and Auric’s supplies to their deaths.",
+    "summary": "Jex opens the route geometry that protects his commercial advantage because the rescuers cannot coordinate a blind crossing; publishing it also compromises the safe houses attached to his network.",
     "settingText": "AURIC BAZAAR — VEIL MARKET BACK ROOM",
     "regionText": "The Verge",
     "charactersInline": [
@@ -793,79 +787,79 @@
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "You have a route to the supply spine."
+        "text": "That spine still has a chance. You know a way through."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Yeah. One nobody else knows."
+        "text": "One. I built it for people who needed to stay off public routes."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "What's it cost?"
+        "text": "Can you send it to Gravefire?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Clients. Three safe houses. Every favor tied to that route."
+        "text": "Their channel's broken. Verge and Shard can't read the same private key out there."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "I've got nothing left to pay you with."
+        "text": "Then use the emergency band."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I know."
-      },
-      {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "Will you open it?"
-      },
-      {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "Send Gravefire the first marker."
+        "text": "That puts the approach to three safe houses in the open."
       },
       {
         "handle": "@starsplit.scribe",
         "speaker": "Scribe",
-        "text": "That's not enough. They'll hit shear at the second turn."
-      },
-      {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "Fine. Open all of it. Every marker."
+        "text": "The first marker isn't enough. The second turn has shear."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "You won't own that route again."
+        "text": "I can't make that choice for the people hiding there."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I know."
+        "text": "Neither can I. But Paul has no course without it."
+      },
+      {
+        "handle": "@starsplit.jex.marrin",
+        "speaker": "Jex",
+        "text": "Send every anchor fix and timing window. Open band."
+      },
+      {
+        "handle": "@starsplit.scribe",
+        "speaker": "Scribe",
+        "text": "Both rescue craft have it."
+      },
+      {
+        "handle": "@starsplit.jex.marrin",
+        "speaker": "Jex",
+        "text": "I'll answer the safe houses when they're clear."
       }
     ],
     "panelPlan": [
-      "Jex watches the supply spine drift toward destruction on a route table while his private Veil passage glows beneath layers of locked seals. The route table is explicitly technical: timing windows, shear markers, anchor fixes, and the second turn required to stay inside the usable reciprocal gradient; it must not read as mystical cartography.",
-      "Halev asks for the route; Jex names the clients, safe houses, and years of leverage that open transmission would expose.",
-      "Halev has nothing left to buy the route with and asks Jex directly whether he will open it anyway.",
-      "Jex offers only the first marker; the scribe calculates that Tess will enter blind and die at the second turn. Jex removes every seal.",
-      "The full passage erupts across public channels. Jex’s waiting clients destroy their route tokens as Tess turns toward the revealed path."
+      "Jex watches the freighter's separated sections on a technical route table in the Veil Market. The Shatterwake is a hazardous realspace passage defined by shear forecasts, anchor fixes and moving debris; nothing supernatural.",
+      "Halev asks for the geometry. Jex shows that its private approach points also reveal the existence and approaches to clients' safe houses. There is no time to obtain their agreement.",
+      "Jex attempts to send Tess only the initial coordinates through private comms. The jamming and incompatible Shard/Verge channels prevent a reliable shared path; the public emergency channel is the only relay both rescue craft and Auric pilots can receive.",
+      "The route technician finds a second turn where an incomplete course will drive the spine into damaging shear. Jex chooses to release every required timing marker across the open emergency band.",
+      "Tess and the Verge escort correct their trajectories using the public data. Jex watches alarmed private clients abandon a once-exclusive approach on the route board; the consequences to the hidden network have begun."
     ],
     "directionInline": [
-      "Jex's route is technical leverage, not mysticism. Show the hidden passage as timing windows, shear markers and anchor fixes while the list of clients and safe houses makes clear what he is surrendering by opening it."
+      "Public disclosure must be necessary for cross-faction coordination rather than a contrived public announcement. Preserve Jex's fear for actual hidden clients; the route is science and hard-won leverage."
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I02_P10",
-    "summary": "Naomi and Tess carry the severed refugee ship and its supplies through a spectacular broken-moon passage while Paul must trust his father to disappear from view.",
+    "summary": "Naomi shepherds the passenger hull while Paul steers the detached supply spine through the Shatterwake, with Tess physically guiding the spine and Venn taking Thunderbreak on the longer outside course.",
     "settingText": "THE SHATTERWAKE — MULTI-LOCATION INTERCUT: REFUGEE PASSENGER HULL / SUPPLY SPINE / GRAVEFIRE / THUNDERBREAK",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -953,15 +947,15 @@
       }
     ],
     "panelPlan": [
-      "Panel 1 — exterior establishing shot; no faces or shared interior: luminous fragments of a shattered moon rotate inside a violet nebula. Naomi’s small Verge escort shepherds the severed passenger hull; Gravefire braces the loose supply spine; Thunderbreak stops at the passage mouth because the cruiser cannot fit. Show ordinary realspace distorted by rotating fragments and damaged corridor geometry shifting the local reciprocal gradient; no hyperspace tunnel, portal, or mystical passage effect.",
-      "Panel 2 — supply-spine engineering blister; Paul is the only physically present named character. He straps himself beside exposed machinery and steers from his repair slate. A small navigation display shows Naomi’s Verge escort beside the distant passenger hull. Dialogue in exact order: Naomi over bordered radio balloon, ‘Paul, bring our nose toward the blue fracture.’ Paul, ‘It keeps moving.’ Tess over a differently styled radio balloon, ‘Watch the blue edge. It’s moving slower than the rest.’ Do not show Naomi, Tess, or Richard in this compartment.",
-      "Panel 3 — supply-spine engineering blister; Paul remains the only physically present named character. His small comm screen shows Richard working over patients inside the separate passenger-hull medical hold. Dialogue in exact order: Richard through the screen, ‘Paul, keep your eyes on the slate.’ Paul, ‘I can’t see your section.’ Richard through the screen, ‘I’m working. You keep flying.’ Rotating moon fragments eclipse the passenger hull, and Richard’s image breaks into static. Do not put Richard physically beside Paul.",
-      "Panel 4 — Thunderbreak bridge; Venn is the only physically present named character, framed against the passage the cruiser cannot enter. Dialogue in exact order: Venn, ‘Thunderbreak will not fit through.’ Naomi replies through a bordered radio balloon, ‘Take the long way around.’ Venn, ‘We’re already turning.’ Do not show Naomi on Thunderbreak.",
-      "Panel 5 — Gravefire cockpit; Tess is the only physically present named character. A gravity pulse pulls the supply spine away as Tess drives Gravefire bodily against it. Dialogue in exact order: Tess, ‘The supply spine is slipping. I’m going to push it.’ Naomi answers through a bordered radio balloon, ‘You’ll tear Gravefire apart.’ Tess, ‘Maybe. Get Paul through.’ Do not show Naomi inside Gravefire.",
-      "Panel 6 — exterior closing shot; no dialogue and no group portrait: Naomi’s escort and the passenger hull disappear through one luminous gap while Gravefire pushes the supply spine carrying Paul through another. Far behind them, Thunderbreak turns alone toward the pursuing raiders. The ships’ separation must be unmistakable."
+      "Large exterior establishing view of a debris-filled, fractured moon region. The separate passenger hull is escorted by Naomi's Verge vessel piloted by her second; Paul rides the supply spine; Gravefire approaches the spine. Thunderbreak is too large for the gap. Moving fragments and measured reciprocal-field gradients define realspace navigation.",
+      "Inside the supply spine, Paul alone occupies a sealed machinery blister, tethered beside working attitude controls with his repair slate. Naomi radios from inside the passenger hull, and Tess guides him over comm from Gravefire. Neither woman is physically beside him.",
+      "Still inside the supply spine, Paul's small comm display briefly shows Richard tending patients in the separate passenger hold. The rotating fragments interrupt the video connection; Richard cannot be seen directly through a window from Paul's location.",
+      "Thunderbreak bridge, with Venn physically present and Naomi only heard on radio. Venn orders the cruiser around the outside of the narrow debris throat, maintaining protective cover without pretending the cruiser can fit inside.",
+      "Gravefire cockpit with Tess physically present. She uses carefully controlled contact thrusters to nudge the supply spine's yaw while Paul fires its own attitude jets. Naomi warns that Gravefire may be damaged, but Tess commits to the physical push.",
+      "Exterior close: the passenger hull and its Verge escort emerge through the first navigable gap while Paul and the recovered supply spine, pushed by Gravefire, pass a separate exit with damaged cargo pallets visibly venting. Thunderbreak moves around the exterior route, shielding their eventual run toward Auric."
     ],
     "directionInline": [
-      "Preserve strict spatial separation between passenger hull, supply spine, Thunderbreak and Gravefire. The page works only if Paul's inability to see Richard and Thunderbreak's inability to enter the passage remain visually unmistakable."
+      "These dialogue entries alone control exact lettering; the panels never contain contradictory quoted alternatives. Keep physical locations explicit: Naomi stays aboard the passenger hull, her second pilots the Verge escort, Paul is aboard the supply spine, Richard remains with patients, Tess pilots Gravefire, Venn commands Thunderbreak. Cargo suffers damage even though the spine is recovered."
     ]
   },
   {
