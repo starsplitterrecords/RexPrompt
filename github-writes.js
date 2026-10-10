@@ -21,7 +21,7 @@ function freshPath(path){
 }
 function isConflict(error){
   const message=String(error?.message||error||'');
-  return /not a fast.forward|reference update failed|failed to update ref|conflict|HTTP 409\b|HTTP 422\b/i.test(message);
+  return /not a fast.forward|reference update failed|failed to update ref|conflict|HTTP 409\b/i.test(message);
 }
 async function retryConflicts(work,onRetry,maxAttempts=4){
   for(let attempt=1;attempt<=maxAttempts;attempt++){
