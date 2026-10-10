@@ -1,7 +1,7 @@
 [
   {
     "id": "RF_I03_P01",
-    "summary": "Auric's opened luxury ring is shelter, not safety: refugees wake beneath chandeliers while longtime residents discover strangers occupying abandoned homes.",
+    "summary": "A family returns to find their temporarily empty apartment assigned to Tal Corvus refugees; Halev suspends eviction but must find safe accommodation for both households.",
     "settingText": "INT. AURIC BAZAAR — LUXURY RING CONCOURSE — MORNING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -34,42 +34,42 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "My parents' things are still in there."
+        "text": "My parents still live in that apartment. Their belongings are inside."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "We were told the rooms were empty."
+        "text": "The placement office told us it was vacant. We didn't know."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Empty isn't abandoned."
+        "text": "They left yesterday to stay with my brother. They were coming back."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "We can move."
+        "text": "We can take our things and move."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "You can barely stand."
+        "text": "You collapsed on the walk here. You're not sleeping in the corridor."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Nobody's getting put outside."
+        "text": "Nobody is being evicted today. This family can stay until we find another room."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Then where do her parents go?"
+        "text": "And when her parents return? They have nowhere else."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "I don't know yet."
+        "text": "Then I need to find room for them too. I can't promise how quickly."
       }
     ],
     "panelPlan": [
@@ -80,13 +80,16 @@
       "Both families remain on opposite sides of one doorway."
     ],
     "directionInline": [
-      "Make the luxury ring feel like contested shelter rather than reclaimed housing: refugee bedding, old family possessions and civic staff should occupy the same doorway. No one is clearly wrong, and Halev's inability to promise where the resident family goes must remain visible."
+      "Make the luxury ring feel like contested shelter rather than reclaimed housing: refugee bedding, old family possessions and civic staff should occupy the same doorway. No one is clearly wrong, and Halev's inability to promise where the resident family goes must remain visible.",
+      {
+        "text": "Establish clearly that the apartment belonged to a resident family temporarily away, not an abandoned home. Halev grants temporary shelter rather than resolving the housing shortage. Keep the resident and refugee families equally recognizable as individuals."
+      }
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P02",
-    "summary": "A shared heat failure forces two families into one room; Richard saves a resident child with medicine carried out of Tal Corvus.",
+    "summary": "When the shared apartment loses heat, Richard treats the resident child with his remaining Tal Corvus medicine, but the child's improvement depends on restoring warmth.",
     "settingText": "INT. LUXURY RING — TEMPORARY APARTMENT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -107,57 +110,57 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Don't touch her."
+        "text": "Her breathing changed when the heat went out. Please do something."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Then tell me what she took."
+        "text": "How long has she been struggling? Has she taken any medication?"
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Nothing. She was fine."
+        "text": "Nothing. She was fine until the room got cold."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Dad."
+        "text": "Dad, her lips are turning blue."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Blue lips, shallow breathing. She's not fine."
+        "text": "Hold the light steady. I have medicine left from Tal Corvus."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "That medicine is yours."
+        "text": "That's all you have for your own people."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Right now it's hers."
+        "text": "Right now she's the patient. Help me sit her upright."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Will it hold?"
+        "text": "Is the medicine enough?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "If the heat comes back."
+        "text": "It will help, but she needs steady heat. We may have to move her again."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Thank you."
+        "text": "Tell me what to do."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Help me keep her warm."
+        "text": "Wrap the blankets around her shoulders. Keep talking to her."
       }
     ],
     "panelPlan": [
@@ -168,7 +171,10 @@
       "The child breathes as the adults meet eyes without reconciliation."
     ],
     "directionInline": [
-      "The medical emergency should interrupt the property dispute rather than resolve it. Richard uses refugee medicine on the resident child without asking for moral credit; the shared heat failure keeps both families dependent on the same failing room."
+      "The medical emergency should interrupt the property dispute rather than resolve it. Richard uses refugee medicine on the resident child without asking for moral credit; the shared heat failure keeps both families dependent on the same failing room.",
+      {
+        "text": "This is the FIRST treatment of the same resident child who will struggle again on P07. The medicine improves breathing temporarily; do not imply full recovery or a separate unrelated child."
+      }
     ]
   },
   {
@@ -190,47 +196,47 @@
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "They take your ship and you still answer the summons."
+        "text": "Fleet has relieved you of Thunderbreak, and you're still going to their tribunal?"
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "If I don't, Keating gets to explain why."
+        "text": "That's why I have to go. They're turning a rescue into a charge against my crew."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "She already has."
+        "text": "Keating already told the Admiralty her version."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Then I say it myself."
+        "text": "Then they'll hear mine. I gave the order to turn back."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "We stay here with the damage while you go argue about it."
+        "text": "And you'll be gone when Auric has to feed and heat everyone you saved."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "I know."
+        "text": "I know the rescue didn't finish when we docked."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "I'm not sure you do."
+        "text": "You don't know what it's costing the people living here."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "I probably don't. Not all of it."
+        "text": "Not enough. I'll listen when I get back—if they let me."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Then come back with something useful."
+        "text": "Come back with more than an explanation."
       }
     ],
     "panelPlan": [
@@ -241,12 +247,15 @@
       "Venn boards while Naomi remains reflected beside the shuttle."
     ],
     "directionInline": [
-      "Naomi's anger is about asymmetry of consequence, not abandonment. Keep the departing shuttle and Auric's damaged public space in the same visual field so Venn literally leaves the place Naomi must continue managing."
+      "Naomi's anger is about asymmetry of consequence, not abandonment. Keep the departing shuttle and Auric's damaged public space in the same visual field so Venn literally leaves the place Naomi must continue managing.",
+      {
+        "text": "The tribunal summons and provisional loss of Thunderbreak's command must be understandable before Venn departs. Naomi's anger is about Auric bearing the ongoing cost, not opposition to rescuing civilians."
+      }
     ]
   },
   {
     "id": "RF_I03_P04",
-    "summary": "Dominion frames Venn's tribunal as a clean command failure; Kerr forces the dead and saved back into the record.",
+    "summary": "At tribunal, Venn acknowledges knowingly defying withdrawal orders to rescue civilians; the Admiralty must reckon with both the breach of command and the lives saved.",
     "settingText": "INT. DAWNWARD HORIZON — ADMIRALTY TRIBUNAL — DAY",
     "regionText": "The Core",
     "charactersInline": [
@@ -275,42 +284,42 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Did you understand the withdrawal order?"
+        "text": "Commodore, did you receive the order to withdraw Thunderbreak from the engagement?"
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Yes."
+        "text": "I received it. I chose to return for the evacuation ship."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "And Billie Rusk escaped while you held fire."
+        "text": "That delayed the withdrawal and allowed Billie Rusk's vessel to escape."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "After attacking a civilian tug."
+        "text": "Rusk had already attacked a civilian tug. Those civilians were still in danger."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "Because your restraint left her able to."
+        "text": "The order was clear. Venn could not decide the risk was acceptable on her own."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "The civilians are alive because Venn went back."
+        "text": "Her decision brought survivors into Auric. The record has to include them."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "This court is not weighing sentiment."
+        "text": "Survival doesn't erase a failure to obey command."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Then don't call the people who died 'sentiment.'"
+        "text": "Then charge me with disobedience. Don't leave the people we saved out of the account."
       }
     ],
     "panelPlan": [
@@ -321,13 +330,16 @@
       "Venn faces accusation and survivors simultaneously."
     ],
     "directionInline": [
-      "The tribunal architecture should make command hierarchy visually clean while Kerr's evidence makes the event morally messy. Civilian testimony and casualty records should intrude on the neat order-chain presentation rather than decorate it."
+      "The tribunal architecture should make command hierarchy visually clean while Kerr's evidence makes the event morally messy. Civilian testimony and casualty records should intrude on the neat order-chain presentation rather than decorate it.",
+      {
+        "text": "Distinguish three facts for the reader: withdrawal was ordered, Venn knowingly turned back, and Billie escaped during the delay. No invented 'sentiment' argument; the central conflict is whether her specific choice was justified."
+      }
     ],
     "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P05",
-    "summary": "Richard proves that Triarch policy selectively cut heat and medicine to disloyal districts, turning broader scarcity into targeted suffering that can be documented.",
+    "summary": "Cross-checking patient files against preserved power and supply records, Richard establishes that Triarch authorities deliberately diverted heat and medicine from protesting Tal Corvus districts.",
     "settingText": "INT. AURIC LUXURY RING — IMPROVISED CLINIC",
     "regionText": "The Verge",
     "charactersInline": [
@@ -348,69 +360,72 @@
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Same exposure?"
+        "text": "These patients came from different districts. Why do their injuries look the same?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Same shutdown."
+        "text": "Their heat and medical power failed in the same way."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Those districts didn't fail together."
+        "text": "But the official reports say each district had a separate equipment failure."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "No. Somebody shut them down one at a time."
+        "text": "Look at the timestamps. Each district lost supply after it protested Triarch orders."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Punishment."
+        "text": "You're saying someone chose which district went cold."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Policy. They wrote it down."
+        "text": "The distribution orders show it. Their supplies were diverted while other districts stayed online."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "You kept the records?"
+        "text": "The public reports don't match the clinic copies."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Clinic copies. Power logs. Official versions changed twice."
+        "text": "They changed those reports twice. I kept the originals."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "If this leaves the room, they'll come for you."
+        "text": "If this leaves Auric, the Triarch will know you have them."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "They already did."
+        "text": "They've been trying to get these records back since Tal Corvus."
       }
     ],
     "panelPlan": [
-      "Richard treats locals and refugees side by side.",
-      "He compares identical tissue damage across clinical records with district power and medicine shutdown logs.",
-      "Paul recognizes districts where official reports claimed unrelated shortages.",
-      "Tess sees the deliberate sequence in the timestamps.",
-      "Richard holds duplicated clinic and utility records as dangerous evidence, not a ceremonial archive object."
+      "Richard treats patients from several Tal Corvus districts while the Auric clinic also serves locals.",
+      "Tess compares similar clinical effects in patient charts; Richard opens the corresponding original distribution records.",
+      "Paul places separately dated official failure claims beside synchronized diversion orders; the contradiction is visible and specific.",
+      "Richard identifies the connection between public protests, selected district shutdowns and preserved records; Tess sees the motive.",
+      "Richard closes his field archive as nearby patients continue needing care; the records are evidence with a real chain of custody, not mystical revelations."
     ],
     "directionInline": [
-      "Treat the discovery as forensic work: mismatched official reports, clinic copies, utility timestamps and district maps. The evidence proves selective punitive shutdowns inside broader scarcity; do not imply every shortage in the frontier was fabricated."
+      "Treat the discovery as forensic work: mismatched official reports, clinic copies, utility timestamps and district maps. The evidence proves selective punitive shutdowns inside broader scarcity; do not imply every shortage in the frontier was fabricated.",
+      {
+        "text": "Evidence must prove intentional district selection, not merely correlation. Distinguish power failures from diverted medical supply and show original clinic copies versus subsequently revised official reports. All on-screen text beyond scripted wording must remain unreadable."
+      }
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P06",
-    "summary": "Halev asks Auric to extend shelter; Dain makes him admit that Verge families will pay for the promise.",
+    "summary": "Halev's promise to continue shelter collides with failed heat and exhausted Verge households; Dain demands a truthful count of safe space before further reassignment.",
     "settingText": "INT. AURIC BAZAAR — CIVIC CHAMBER",
     "regionText": "The Verge",
     "charactersInline": [
@@ -435,47 +450,42 @@
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "No one goes back to Tal Corvus."
+        "text": "We can't send the Tal Corvus families back. I want the next residential section opened."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Fine. Where do they live?"
+        "text": "That section lost its heat overnight. We can't move people into rooms that are freezing."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "We open another section."
-      },
-      {
-        "handle": "@starsplit.sera.dain",
-        "speaker": "Sera",
-        "text": "Another section lost heat last night."
+        "text": "Then where do we put the families still sleeping in the concourse?"
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "Vacancies can be priced into—"
+        "text": "The available rooms could be rented at a rate that covers the additional load."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Finish that sentence and I'm putting your price sheet through the wall."
+        "text": "People are already sleeping six to a room. Charging them won't create heat."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "My district is sleeping six to a room."
+        "text": "My district is taking the overflow. Our heaters and supplies are running out."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "What do you want me to say?"
+        "text": "How many rooms can we safely use today?"
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Start with what we know. Then tell them what we can actually do."
+        "text": "I'll give you the count, including the homes that volunteered space. Then we tell everyone the actual limits."
       }
     ],
     "panelPlan": [
@@ -486,13 +496,16 @@
       "Naomi makes Halev name the harmed district."
     ],
     "directionInline": [
-      "Sera should control the room by forcing costs into names and places. Keep the failing district map visible while Wallace offers a market abstraction and Naomi reacts too aggressively, allowing Sera—not Naomi—to define the civilian political question."
+      "Sera should control the room by forcing costs into names and places. Keep the failing district map visible while Wallace offers a market abstraction and Naomi reacts too aggressively, allowing Sera—not Naomi—to define the civilian political question.",
+      {
+        "text": "The scene must make a practical decision: assess heated capacity before promising more rooms. Remove rhetorical threats and market caricature. Wallace may advocate pricing but is not shown as an inhuman straw man."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P07",
-    "summary": "Families forced together refuse to reduce one another to abstractions when a local child needs refugee care.",
+    "summary": "The same resident child deteriorates again when the shared warming room cannot hold temperature; a refugee family shares its only good blanket while Richard treats her.",
     "settingText": "INT. LUXURY RING — WARMING ROOM",
     "regionText": "The Verge",
     "charactersInline": [
@@ -517,52 +530,52 @@
       {
         "handle": "@starsplit.luminara.boy",
         "speaker": "Boy",
-        "text": "Were these rooms always this cold?"
+        "text": "Why is it colder in this room than outside?"
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "No. They used to be ugly and warm."
+        "text": "One heater for too many people. It isn't keeping up."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "She's wheezing again."
+        "text": "She's wheezing again. The medicine helped, but only for a while."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Lift her. Don't lay her flat."
+        "text": "Sit her up. Keep her chest clear of the blankets."
       },
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "Take our blanket."
+        "text": "Use ours. It's warmer than that one."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "You need it."
+        "text": "Your family needs it."
       },
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "So does she."
+        "text": "She needs it right now."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Want to see a light trick?"
+        "text": "Want to see something while the doctor works?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Quiet one."
+        "text": "Keep her looking at you. That helps."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Sit here, doctor."
+        "text": "Doctor, there's room beside her now."
       }
     ],
     "panelPlan": [
@@ -573,12 +586,15 @@
       "The resident mother makes room for Richard."
     ],
     "directionInline": [
-      "This page is not reconciliation. The families cooperate because one child cannot breathe. Preserve guarded body language while blanket, space and medical attention move across the earlier social boundary."
+      "This page is not reconciliation. The families cooperate because one child cannot breathe. Preserve guarded body language while blanket, space and medical attention move across the earlier social boundary.",
+      {
+        "text": "Continue the exact child and mother's story from P02. The recurrence must be caused by ongoing thermal failure, not portrayed as a separate medical emergency."
+      }
     ]
   },
   {
     "id": "RF_I03_P08",
-    "summary": "Public knowledge of Jex's passage turns refuge into a hunted commodity; Tali warns him to close the remaining network.",
+    "summary": "Tali warns Jex the public Auric passage has been compromised and that exposing her separate haven network would endanger people hiding behind it.",
     "settingText": "INT. VEIL MARKET — JEX'S OFFICE / TALI'S SAFEHOUSE",
     "regionText": "The Shards",
     "charactersInline": [
@@ -595,47 +611,47 @@
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "Three strangers asked for your passage by name."
+        "text": "Three people asked for your Auric passage by name. None of them had families aboard."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Only three? Fame's slowing down."
+        "text": "So somebody's selling the route."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "They weren't customers."
+        "text": "Or following the people using it. Either way it's not safe anymore."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Close the front rooms."
+        "text": "I'll close the public access after the ships already in transit clear."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "Close all of it."
+        "text": "Close it now. The people hunting you are getting closer to my safehouse."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "There are families waiting."
+        "text": "I've got families waiting for a way into Auric."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "There are families here."
+        "text": "And I'm sheltering families here. They're the ones who'll pay if my doors get exposed."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I know."
+        "text": "Your private network stays off the board. I won't touch it."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "This time you're risking us."
+        "text": "Make certain you keep that promise."
       }
     ],
     "panelPlan": [
@@ -646,13 +662,16 @@
       "His hands hover between closing and accepting the route."
     ],
     "directionInline": [
-      "Tali's refuge should look operational and vulnerable: packed bags, erased route marks and people preparing to move. Jex's hesitation must occur between two real groups of people who both need the same network."
+      "Tali's refuge should look operational and vulnerable: packed bags, erased route marks and people preparing to move. Jex's hesitation must occur between two real groups of people who both need the same network.",
+      {
+        "text": "Establish that the publicly known passage and Tali's private haven network are different physical route systems. Jex promises not to expose her network now, making P20-P21 a costly reversal, not a route invented mid-crisis."
+      }
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P09",
-    "summary": "The Trade Mask offers restored trade for Richard's return, forcing Paul to ask whether one surrender could buy safety for everyone else.",
+    "summary": "The Trade Mask offers renewed commerce for Richard's surrender and rejection of Fleet jurisdiction; Paul confronts the possibility that giving up his father might protect Auric.",
     "settingText": "INT. IMPROVISED CLINIC — BROADCAST LIGHT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -685,52 +704,42 @@
       {
         "handle": "@starsplit.silent.triarch.trade",
         "speaker": "Trade Mask",
-        "text": "Return Richard Secundo. Reject Fleet occupation. Trade resumes."
+        "text": "Deliver Richard Secundo to the Triarch. Reject permanent Fleet control of Auric, and trade may resume."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "They've used that line before."
-      },
-      {
-        "handle": "@starsplit.richard.secundo",
-        "speaker": "Richard",
-        "text": "Yeah. They have."
+        "text": "They cut supplies to districts that protested them. They can cut Auric off again."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "If you go, do they leave Auric alone?"
+        "text": "Dad, if you went back, would they stop threatening this station?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "They'll promise they will."
+        "text": "They'd have me and the records. That's what they're offering to trade for."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "That's not what I asked."
+        "text": "But could your surrender keep everyone here safe?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "I don't know."
+        "text": "I don't know. There's no reason to trust their promise."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Would you do it for me?"
+        "text": "Are you still thinking about it?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "For you? Almost anything."
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "Almost."
+        "text": "I'm thinking about the people they'll hurt if I refuse. And the people they'll hurt if I believe them."
       }
     ],
     "panelPlan": [
@@ -741,12 +750,15 @@
       "Richard kills the screen but cannot answer him."
     ],
     "directionInline": [
-      "Introduce the Silent Triarch as a three-mask council while the Trade Mask alone speaks the offer. Raid and Fear remain silent in the background. The visual distinction between the masks should be readable without explanatory captions so later differences feel like an existing structure, not a retcon."
+      "Introduce the Silent Triarch as a three-mask council while the Trade Mask alone speaks the offer. Raid and Fear remain silent in the background. The visual distinction between the masks should be readable without explanatory captions so later differences feel like an existing structure, not a retcon.",
+      {
+        "text": "Preserve the Triarch's three distinct political masks, but make the offer explicitly conditional. Richard knows surrender risks both himself and the preserved evidence; do not let Paul's question evaporate in vague familial sentiment."
+      }
     ]
   },
   {
     "id": "RF_I03_P10",
-    "summary": "Abby arrives alone with warning of Billie and Pike's gathering force; Auric must decide whether a disarmed Shard warlord may enter.",
+    "summary": "Abby warns Auric of Billie's and Pike's gathering captains, offers a limited civilian-defense commitment, and accepts entry disarmed rather than claiming command.",
     "settingText": "INT./EXT. AURIC SECURITY LOCK",
     "regionText": "The Verge",
     "charactersInline": [
@@ -771,57 +783,47 @@
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Your ships stay outside."
+        "text": "Keep your ships outside Auric's defense line. You can enter alone and unarmed."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "They already are."
+        "text": "They're staying back. My weapons are in the lock."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Why come alone?"
+        "text": "Why take the risk of coming here?"
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Billie's got captains with her. They want payback more than they want to live."
+        "text": "Billie and Pike are gathering captains. They're preparing to attack Auric because Richard's records are spreading."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "And you want shelter."
+        "text": "What do you want from us?"
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "I want you alive tomorrow. Hate me then."
+        "text": "To warn you while there's still time to move civilians. I can bring ships to shield the evacuation if you let me."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "That's not trust."
+        "text": "We can't hand Auric's defenses to another Shard commander."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Wasn't asking for it."
+        "text": "Then don't. Put your captain in charge of my ships. Just don't wait for the attack."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Open it."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "If she lies?"
-      },
-      {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "Then I'm standing closest."
+        "text": "Open the lock. Naomi stays with her."
       }
     ],
     "panelPlan": [
@@ -832,12 +834,15 @@
       "Halev opens the door while Naomi remains ready."
     ],
     "directionInline": [
-      "Abby earns entry by arriving physically alone and disarmed while her warship remains outside. Sera owns the political skepticism, Naomi owns the security risk, and Halev accepts personal responsibility for opening the door."
+      "Abby earns entry by arriving physically alone and disarmed while her warship remains outside. Sera owns the political skepticism, Naomi owns the security risk, and Halev accepts personal responsibility for opening the door.",
+      {
+        "text": "Her offer on this page sets up Naomi's conditional acceptance of six Shard defectors on P23. Abby's political and military authority is distinct from Billie's and Pike's."
+      }
     ]
   },
   {
     "id": "RF_I03_P11",
-    "summary": "Abby expects Tess, her sister, to return; Tess refuses to abandon people harmed by captains they once led.",
+    "summary": "Abby urges Tess to leave before Billie's assault; Tess refuses because helping the victims is her immediate responsibility, while acknowledging her own share of former Shard command.",
     "settingText": "INT. AURIC LUXURY RING — CLINIC PASSAGE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -854,52 +859,47 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "You made your point."
+        "text": "Billie and Pike are taking ships toward Auric. I can't protect you if you stay in this clinic."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "I wasn't making one."
+        "text": "I know where they're headed. I've been helping the people their crews drove out."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Billie's gone. Pike went with her. Come home."
+        "text": "Come with me. You're still my sister, whatever you think of our command."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "To what?"
+        "text": "I helped lead the Shards too. Some of those orders went through us."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "To your sister."
+        "text": "We didn't order the district shutdowns."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "My sister commanded people who did this."
+        "text": "We knew civilians were being hurt and stayed in command. That's what I have to answer for."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "So did you."
+        "text": "Staying here won't undo what happened."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "That's why I'm staying."
+        "text": "I'm not trying to undo it. These patients need me now."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "You think staying here fixes it?"
-      },
-      {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "No. Maybe it fixes something."
+        "text": "Then keep the token. If you change your mind, I can find you."
       }
     ],
     "panelPlan": [
@@ -910,7 +910,10 @@
       "The token remains on an empty cot between them."
     ],
     "directionInline": [
-      "The sisters' history should sit in the unused command token between them. Tess keeps treating patients throughout the argument, making staying an action she is already performing rather than a declaration about who she has become."
+      "The sisters' history should sit in the unused command token between them. Tess keeps treating patients throughout the argument, making staying an action she is already performing rather than a declaration about who she has become.",
+      {
+        "text": "Make the distinction between Triarch policy responsibility, Shard leaders' prior failures to challenge harm, and the immediate Billie/Pike attack explicit. Tess does not claim she or Abby ordered the Triarch shutdowns."
+      }
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
@@ -933,42 +936,42 @@
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "Call it protection of Fleet strategic interests."
+        "text": "You can argue that returning for the evacuation ship protected Fleet interests."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "That's not why I went back."
+        "text": "That wasn't my reason. Those people were going to die."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "Doesn't mean it wasn't true."
+        "text": "Saving them also protected Auric. It's a defense the tribunal may accept."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "It's not what happened."
+        "text": "But it would let them avoid the real question: why was I ordered to leave those people?"
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "Say it your way and they'll use it before you're done talking."
+        "text": "If you challenge the order itself, Dominion will remove you from command."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Let them."
+        "text": "He's already taken Thunderbreak. I won't pretend I obeyed an order I deliberately rejected."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "They'll strip you."
+        "text": "The written finding will follow you long after this hearing."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Then they can do it on the record."
+        "text": "Then I want it to say what I actually did."
       }
     ],
     "panelPlan": [
@@ -979,13 +982,16 @@
       "Venn returns without notes."
     ],
     "directionInline": [
-      "Kerr's proposed defense should look genuinely useful, not cowardly. Venn deletes the argument because it is false, forcing the tribunal to judge the actual choice instead of allowing the scene to become a purity test."
+      "Kerr's proposed defense should look genuinely useful, not cowardly. Venn deletes the argument because it is false, forcing the tribunal to judge the actual choice instead of allowing the scene to become a purity test.",
+      {
+        "text": "Kerr's advice must be a plausible legal defense, not simply an invitation to lie. Venn explicitly chooses a more dangerous truthful account. Do not imply the ship's command has not already been suspended."
+      }
     ],
     "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P13",
-    "summary": "Keating freezes Fleet support to Auric, making Verge civilians bear part of the punishment for Venn's choice.",
+    "summary": "Admiralty command withdraws Thunderbreak and associated medical-power support while Venn's authority remains suspended, abruptly worsening Auric's heating and clinic emergency.",
     "settingText": "INT. AURIC ESCORT CONTROL / LUXURY RING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1008,49 +1014,48 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.deka",
-        "speaker": "Deka",
-        "text": "Thunderbreak's ordered outside the boundary."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "By Venn?"
+        "speaker": "CAPTION",
+        "text": "AURIC — AFTER FLEET'S WITHDRAWAL ORDER."
       },
       {
         "handle": "@starsplit.deka",
         "speaker": "Deka",
-        "text": "Commodore Venn doesn't command this ship anymore."
-      },
-      {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "They're pulling medical support too."
-      },
-      {
-        "handle": "@starsplit.sera.dain",
-        "speaker": "Sera",
-        "text": "Then this is punishment."
+        "text": "Thunderbreak has been ordered beyond Auric's defense boundary."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "It's leverage."
+        "text": "Who's giving that order while Venn's at the tribunal?"
+      },
+      {
+        "handle": "@starsplit.deka",
+        "speaker": "Deka",
+        "text": "Admiralty command. Commodore Venn's authority is suspended."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Can Venn stop it?"
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "She went there to try."
+        "text": "Fleet's medical personnel and power support are withdrawing too."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "And we went dark while she talked."
+        "text": "They know we can't run every shelter heater without them."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "They want Auric to reconsider letting Venn's rescue stand."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Can Venn stop this from the tribunal?"
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Not from where she's standing. We have to keep the clinics running ourselves."
       }
     ],
     "panelPlan": [
@@ -1061,13 +1066,16 @@
       "Naomi closes Venn's personal channel without calling."
     ],
     "directionInline": [
-      "Show the withdrawal as material loss: a power feed goes dark, medical support disappears and Thunderbreak moves beyond the boundary. Sera and Naomi should experience the same act through different lenses—punishment and leverage."
+      "Show the withdrawal as material loss: a power feed goes dark, medical support disappears and Thunderbreak moves beyond the boundary. Sera and Naomi should experience the same act through different lenses—punishment and leverage.",
+      {
+        "text": "State clearly who issued withdrawal, Venn's actual authority, and the immediate civilian consequence. The brief caption marks a temporal move without introducing a narrator."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P14",
-    "summary": "Richard agrees to independent testimony only if his evidence cannot authorize Fleet occupation and Paul may remain private.",
+    "summary": "Richard agrees to public testimony with original evidence attached, explicitly rejects custody and a Fleet occupation rationale, and respects nineteen-year-old Paul's refusal to appear.",
     "settingText": "INT. AURIC ARCHIVE BOOTH — NIGHT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1096,52 +1104,52 @@
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Broadcasting from Auric paints the station around you."
+        "text": "If you broadcast from Auric, the Triarch will know exactly where you are."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "The target was painted before I got here."
+        "text": "They already know. They demanded I surrender on a public transmission."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Your conditions go on record first."
+        "text": "Before we begin, what conditions do you want on the record?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "No Fleet custody. And nobody gets to use my testimony to put troops here."
+        "text": "I won't go into Fleet custody. And I won't testify in support of Fleet troops occupying Auric."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
+        "text": "The records still need to be available for anyone to check."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "All the original clinic copies. The dates and distribution orders too."
+      },
+      {
+        "handle": "@starsplit.sera.dain",
+        "speaker": "Sera",
         "text": "And Paul?"
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "I choose for myself."
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "I'm not going on camera."
+        "text": "I'm nineteen. I'll decide whether to speak. I don't want my face on the feed."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Okay."
+        "text": "You won't be on camera."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "You're still doing it?"
-      },
-      {
-        "handle": "@starsplit.richard.secundo",
-        "speaker": "Richard",
-        "text": "Yes."
+        "text": "Then go ahead. People need to know what happened."
       }
     ],
     "panelPlan": [
@@ -1152,13 +1160,16 @@
       "Dain activates the tamper-evident public feed and places Richard’s conditions at its beginning."
     ],
     "directionInline": [
-      "The archive booth is ordinary evidence infrastructure. Richard's conditions must appear in the public record before his testimony begins, and Paul's refusal of the camera should be accepted without turning him into a symbolic witness."
+      "The archive booth is ordinary evidence infrastructure. Richard's conditions must appear in the public record before his testimony begins, and Paul's refusal of the camera should be accepted without turning him into a symbolic witness.",
+      {
+        "text": "Richard's conditions are his stated limits, not an implausible guarantee governing all later political uses of public evidence. Make the source-file attachments concrete. Paul is 19 and decides for himself; keep him off-camera."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P15",
-    "summary": "Richard names individual victims; testimony spreads because it refuses strategic abstraction.",
+    "summary": "Richard's testimony names victims and publishes source records proving targeted deprivation; ordinary listeners independently duplicate and transmit the material before it can be suppressed.",
     "settingText": "INT. AURIC ARCHIVE / INTERCUT TAL CORVUS",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1179,42 +1190,42 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Nemi Vale. Six weeks old. Incubator power denied."
+        "text": "Nemi Vale. Six weeks old. Her incubator lost power after her district was denied supply."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Ors Dane. Antibiotics withheld after his district protested."
+        "text": "Ors Dane. His district protested. The next delivery contained no antibiotics."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Sergeant Pell carried medicine to children. They executed him for theft."
+        "text": "Sergeant Pell. He carried medicine to sick children. They arrested and executed him for theft."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "He knew all of them."
+        "text": "I remember these people. He treated all three."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Then let him say their names."
+        "text": "Then don't let their names disappear behind a casualty count."
       },
       {
         "handle": "@starsplit.listener",
         "speaker": "Listener",
-        "text": "My sister was in Dane."
+        "text": "My sister lived in Dane's district. Send me those records."
       },
       {
         "handle": "@starsplit.listener",
         "speaker": "Another Listener",
-        "text": "Send it before they cut the channel."
+        "text": "Copy the feed before they cut it off."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "They called them shortages. The logs show who lost power and when."
+        "text": "The official reports call these shortages. The original orders show who was cut off, and when."
       }
     ],
     "panelPlan": [
@@ -1226,7 +1237,10 @@
     ],
     "continuityFrom": "RF_I03_P14",
     "directionInline": [
-      "Keep names paired with source records and remembered faces so testimony never floats free of evidence. The spread of the feed should happen through ordinary workers retransmitting it, not through a grand public awakening."
+      "Keep names paired with source records and remembered faces so testimony never floats free of evidence. The spread of the feed should happen through ordinary workers retransmitting it, not through a grand public awakening.",
+      {
+        "text": "Nemi Vale is a SIX-WEEK-OLD INFANT. Never associate her file with a portrait of an adult man; show infant clinical evidence without misleading faces or unrelated biographies. No invented interface text. Establish what Richard personally treated and what documents independently demonstrate."
+      }
     ]
   },
   {
