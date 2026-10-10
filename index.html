@@ -5,6 +5,7 @@
 <title>RexPrompt Assembler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.dataset.theme=localStorage.getItem("rexprompt.theme")==="dark"?"dark":"light"</script>
+<script src="github-auth.js?v=20261009-remember-1"></script>
 <style>
 :root{color-scheme:light;--bg:#fff;--fg:#111;--muted:#666;--surface:#eee;--surface-soft:#f7f7f7;--border:#ddd;--control-bg:#fff;--control-fg:#111;--accent:#0645ad}
 html[data-theme="dark"]{color-scheme:dark;--bg:#11151a;--fg:#e8edf2;--muted:#9aa7b3;--surface:#1c232b;--surface-soft:#171d24;--border:#36414d;--control-bg:#202832;--control-fg:#eef3f7;--accent:#8ab4ff}
@@ -128,8 +129,8 @@ async function exportDocument(scope){const format=exportFormat.value,currentSeri
 buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void selectIssue(issueSel.value);showSel.onchange=()=>void selectSeries(showSel.value);commitBtn.onclick=()=>{const i=Number(sceneSel.value),p=sceneOrder.indexOf(i);if(p===-1)return;sceneOrder=sceneOrder.slice(p+1).concat(sceneOrder.slice(0,p+1));rebuild();if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}};copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(outEl.textContent||"")}catch{}};exportIssueBtn.onclick=()=>void exportDocument("issue");exportSeriesBtn.onclick=()=>void exportDocument("series");const savedSeries=localStorage.getItem("rexprompt.selectedSeries"),legacyShow=localStorage.getItem("rexprompt.selectedShow"),savedIssue=localStorage.getItem("rexprompt.selectedIssue"),legacyIssue=issues.find(item=>item.id===legacyShow),initial=series.some(item=>item.id===savedSeries)?savedSeries:(legacyIssue?.seriesId||series[0].id);await selectSeries(initial,savedIssue||legacyIssue?.issueId)}
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
-<script src="visuals.js"></script>
-<script src="reference-keeper.js"></script>
+<script src="visuals.js?v=20261009-remember-1"></script>
+<script src="reference-keeper.js?v=20261009-remember-1"></script>
 <script src="issue-publishing.js?v=20261009-image-decode-3"></script>
 </body>
 </html>
