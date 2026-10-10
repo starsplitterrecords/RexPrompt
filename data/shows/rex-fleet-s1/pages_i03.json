@@ -255,7 +255,7 @@
   },
   {
     "id": "RF_I03_P04",
-    "summary": "At tribunal, Venn acknowledges knowingly defying withdrawal orders to rescue civilians; the Admiralty must reckon with both the breach of command and the lives saved.",
+    "summary": "At tribunal, Venn accepts responsibility for diverting Thunderbreak from Auric's supplies and refusing Fleet detention of mixed refugees; the hearing weighs both the lives saved and the relief cargo lost.",
     "settingText": "INT. DAWNWARD HORIZON — ADMIRALTY TRIBUNAL — DAY",
     "regionText": "The Core",
     "charactersInline": [
@@ -284,56 +284,53 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Commodore, did you receive the order to withdraw Thunderbreak from the engagement?"
+        "text": "Commodore, were you ordered to remain with the authorized supply convoy?"
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "I received it. I chose to return for the evacuation ship."
+        "text": "I received that order. I took Thunderbreak to Mercy of Dawn."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "That delayed the withdrawal and allowed Billie Rusk's vessel to escape."
+        "text": "That exposed Auric's heat and medicine. Some of the cargo never arrived."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "Rusk had already attacked a civilian tug. Those civilians were still in danger."
+        "text": "The passenger hull was losing pressure under attack. Her turn kept those people alive."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "The order was clear. Venn could not decide the risk was acceptable on her own."
+        "text": "You later refused an order governing Shard patients still in Fleet custody."
       },
       {
-        "handle": "@starsplit.soren.kerr",
-        "speaker": "Kerr",
-        "text": "Her decision brought survivors into Auric. The record has to include them."
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Those patients were part of mixed care groups. The order would have separated them."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Survival doesn't erase a failure to obey command."
+        "text": "Two refusals do not become lawful because civilians survived."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Then charge me with disobedience. Don't leave the people we saved out of the account."
+        "text": "Then enter both in the charges. Enter the people we saved and the supplies we lost."
       }
     ],
     "panelPlan": [
-      "Venn stands alone below the circular Admiralty dais.",
-      "Keating projects Billie's escape and the damaged tug.",
-      "Dominion reduces the events to the order chain.",
-      "Kerr activates civilian testimony.",
-      "Venn faces accusation and survivors simultaneously."
+      "Venn stands alone below the circular Admiralty dais while Dominion establishes the direct order to guard the supply convoy.",
+      "Keating displays the diverted freighter, Billie's attack at the Shatterwake exit, the recovered but damaged supply spine and the gap in Auric's delivered relief.",
+      "Venn acknowledges the first refusal without claiming the cargo loss was immaterial; Dominion introduces the second order to detain Shard arrivals in Fleet custody.",
+      "Kerr activates civilian testimony from those rescued, including the mixed patients whose caregivers would have been separated. The evidence is practical, human and contested.",
+      "Venn accepts both command charges; behind her the displayed rescue and cargo loss remain visible as parallel consequences."
     ],
     "directionInline": [
-      "The tribunal architecture should make command hierarchy visually clean while Kerr's evidence makes the event morally messy. Civilian testimony and casualty records should intrude on the neat order-chain presentation rather than decorate it.",
-      {
-        "text": "Distinguish three facts for the reader: withdrawal was ordered, Venn knowingly turned back, and Billie escaped during the delay. No invented 'sentiment' argument; the central conflict is whether her specific choice was justified."
-      }
+      "The tribunal must confront two recorded refusals: leaving the authorized supply screen to save refugees, and declining Fleet detention of mixed Shard patients. Present the partially recovered supply spine, missing cargo and civilian testimony together. Keep the hearing grounded in the actual Shatterwake engagement."
     ],
     "setting": "RF_Admiralty_Tribunal"
   },
