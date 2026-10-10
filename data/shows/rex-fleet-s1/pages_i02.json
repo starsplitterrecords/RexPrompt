@@ -960,7 +960,7 @@
   },
   {
     "id": "RF_I02_P11",
-    "summary": "Abby publicly chooses the refugees and her sister over Billie, splitting the Shards and turning a political disagreement into a broken intimate loyalty.",
+    "summary": "At the Shatterwake exit Billie grapples the damaged supply spine with Paul inside and demands Tess; Abby refuses the leverage, fires to protect the civilians, and loses captains who follow Billie.",
     "settingText": "SHATTERWAKE MOUTH — SHARD SKIFF LINE",
     "regionText": "The Shards",
     "charactersInline": [
@@ -981,78 +981,78 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Break your lock on Gravefire."
+        "text": "Release the spine. There's a man inside it."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Your sister picked the refugees."
-      },
-      {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "She picked the people you were about to kill."
+        "text": "Tess comes aboard Ashfang. Then I let the cargo go."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "They were dying right in front of me."
+        "text": "You've already cut through a passenger hull. I won't send Paul into another one."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "You're turning on us over Venn?"
+        "text": "Then the spine stays where I can break it."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Venn has nothing to do with this. You boarded civilians."
+        "text": "This started as a cargo raid. You've made the civilians your target."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Move, Abby."
+        "text": "Every captain can hear you defending Venn."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "No."
+        "text": "They can hear me defending a Shard pilot too."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "You won't fire."
+        "text": "Last chance. Move your skiffs."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Try me."
+        "text": "Cut the grapple or I'll cut it for you."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Abby—"
+        "text": "Paul, hold the attitude jets steady."
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "Holding. Gravefire's got my side."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Go."
+        "text": "All ships, choose your formation. Keep weapons off that spine."
       }
     ],
     "panelPlan": [
-      "Ashfang lines up on Gravefire as it shoves the supply spine; Abby’s smaller skiff crosses between them while Shard captains watch on open comms.",
-      "Billie turns Tess’s rescue into a test of whether Abby will choose her sister over Shard unity; Abby refuses the framing and points to the civilians Tess protects.",
-      "Billie accuses Abby of turning on the Shards for Venn; Abby refuses the frame and points back to the civilian ship Billie chose to board.",
-      "Billie advances. Abby fires across Ashfang’s bow, scorching its armor; the watching skiffs divide into two formations.",
-      "Ashfang withdraws behind its supporters. Tess continues into the passage without thanking Abby; Abby remains between both camps, having lost half her fleet."
+      "At the Shatterwake exit, Ashfang and Billie's skiffs intercept Gravefire and the rescued supply spine. A grappler bites into the spine's already damaged hull while Paul's pressure suit and repair slate remain visible through a small engineering port.",
+      "Billie calls across the open Shard channel: she will release the spine only if Tess submits to her. Tess pilots Gravefire beside the spine, unable to break the grappler without risking Paul and Auric's remaining heat.",
+      "Abby arrives with the Scythe's supporting skiffs. She orders Billie to cut the grappler, making it clear she is protecting the spine's occupant, not accepting Fleet authority.",
+      "Billie orders a cutting charge armed. Abby fires across Ashfang's grappler assembly, damaging it, and her skiff captains visibly divide: some hold beside Abby, others form on Billie's damaged flagship.",
+      "Tess keeps pushing the spine clear while Abby shields it. Billie retreats just beyond firing range with those who chose her; the division of Shard command has become operational and permanent for now."
     ],
     "directionInline": [
-      "Abby's warning shot should divide the watching Shard ships before anyone knows which side will hold. Do not stage Abby as triumphant; she is losing political unity while choosing the civilians and Tess."
+      "One climax, not a new rescue episode. Billie's coercion derives from the existing freighter and supply-spine geometry. The skiff split and Abby's damage to Ashfang have immediate consequences, no triumphant reunion with Tess."
     ]
   },
   {
     "id": "RF_I02_P12",
-    "summary": "Thunderbreak fights alone at the passage mouth, and Venn makes a frightened junior officer choose rescue over a clean act of revenge.",
+    "summary": "Thunderbreak covers the damaged hulls against Billie's retreating skiffs; Venn takes responsibility for prioritizing the last tractor hold over an opportunity to strike Ashfang.",
     "settingText": "THUNDERBREAK — BRIDGE / SHATTERWAKE MOUTH",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1073,79 +1073,69 @@
       {
         "handle": "@starsplit.tactical",
         "speaker": "Tactical",
-        "text": "Three salvos inbound. Point defense is saturated."
+        "text": "Two skiffs still firing. Point defense is saturated."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Launch drones. Push the missiles into debris."
+        "text": "Defensive drones. Give the escorts a clear path."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "I've got a clean shot on the cutter that hit Luminara."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "And taking it pulls power from the tractor."
-      },
-      {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Yes."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "Passenger section drops back into the debris."
-      },
-      {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Yes."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "So that's the trade."
-      },
-      {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Then the cutter gets away."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "Your call."
-      },
-      {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Keeping tractor. Dropping the shot."
+        "text": "Ashfang is crossing our firing line. I have a clean strike."
       },
       {
         "handle": "@starsplit.tactical",
         "speaker": "Tactical",
-        "text": "Impact—brace!"
+        "text": "Strike power takes the tractor offline. Passenger hull drops into the debris."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Keep the tractor. Do not chase Ashfang."
+      },
+      {
+        "handle": "@starsplit.officer",
+        "speaker": "Officer",
+        "text": "Striking solution cancelled. Feeding the tractor bus."
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Gravefire has the spine clear. Cargo damage reported."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Send Auric the condition report. They need an honest count."
+      },
+      {
+        "handle": "@starsplit.officer",
+        "speaker": "Officer",
+        "text": "Brace. Incoming on our patched port armor."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Secure the bridge and keep pulling."
       }
     ],
     "panelPlan": [
-      "Epic exterior: Thunderbreak holds the narrow mouth against Billie’s skiffs, armor shining under impacts while refugee sections disappear behind it.",
-      "On the damaged bridge, Venn opens defensive drones like a luminous fan to bend missiles into rotating moon debris.",
-      "A junior officer finds a clean shot on a retreating Shard ship responsible for an earlier civilian strike and asks permission to take it.",
-      "The same power can fire or preserve the failing tractor field protecting the last passenger section. Venn makes the officer state exactly what loses power and what happens to the civilians if the shot is taken.",
-      "The officer drops the solution and feeds the tractor. Thunderbreak takes a brutal hit, but the last civilian hull clears as bridge lights fail."
+      "Thunderbreak completes its longer route around the Shatterwake and reaches the outgoing convoy path. The passenger hull remains in the cruiser tractor while Naomi's Verge escort holds course beside it.",
+      "Ashfang's supporters fire toward Gravefire and the recovering spine. Venn's bridge is damaged and functioning on redistributed power; an officer presents a firing solution on Ashfang while the tractor begins to fail.",
+      "Venn compares the firing solution with the passenger hull's trajectory. The same power bus cannot sustain a precision strike and the tractor field; the officer gives the true technical limit without being asked to make a moral declaration.",
+      "Venn orders power kept on the tractor, defensive drones toward the missiles, and no pursuit. Tess and Abby clear the spine from the threat; Billie withdraws with her faction rather than being defeated by a revenge shot.",
+      "Thunderbreak absorbs an impact on an already patched armor section. The passenger hull, damaged spine and their escorts clear the final debris and enter Auric's approach. Paul sees frost collecting inside his gloves as the spine's heaters struggle."
     ],
     "directionInline": [
-      "The junior officer's firing solution should look genuinely cleaner and easier than maintaining the tractor. Venn does not give the answer; she makes the officer state the consequence of each use of the same power bus."
+      "Venn commands her ship instead of turning a junior officer into a student. Preserve cumulative Thunderbreak damage. The tactical end state: passenger hull secured, supply spine partially recovered but damaged, Billie withdrawn, Shards politically split."
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I02_P13",
-    "summary": "Auric residents try to divide the arrivals by faction until the Luminara Mother gives part of her own berth to the Shard caregiver who saved a Verge child.",
+    "summary": "Auric receives survivors and a damaged partial cargo shipment, while the Luminara Mother's offer of a berth to a Shard caregiver challenges demands to segregate the arrivals.",
     "settingText": "AURIC BAZAAR — REFUGEE ARRIVALS CONCOURSE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1190,22 +1180,22 @@
       {
         "handle": "@starsplit.crew.various",
         "speaker": "Resident",
-        "text": "Shard arrivals stay behind the red line."
+        "text": "Shard arrivals stay behind the red barrier."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Do not split my patients by faction."
+        "text": "Keep the patients together. Some are helping the people beside them breathe."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "Chris, this berth is about to riot."
+        "text": "The heater pallets are damaged. People expected a whole convoy."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "I know."
+        "text": "Count what works before we promise any of it."
       },
       {
         "handle": "@starsplit.child",
@@ -1215,53 +1205,53 @@
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "How many in your family?"
+        "text": "Is your family still aboard?"
       },
       {
         "handle": "@starsplit.shard.caregiver",
         "speaker": "Shard Caregiver",
-        "text": "Two. If my sister made it off."
+        "text": "My sister was on the other shuttle. I haven't found her."
       },
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "We've got one berth. Take half."
+        "text": "Use half our berth until you do."
       },
       {
         "handle": "@starsplit.luminara.boy",
         "speaker": "Boy",
-        "text": "They can use my blanket."
+        "text": "We've got another blanket."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "That doesn't make room for hundreds."
+        "text": "That room won't hold everyone."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "No. Take the partitions down anyway."
+        "text": "No. The partitions still come down. Triage by need, not faction."
       },
       {
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
-        "text": "Start with that one."
+        "text": "This one first. Help me move it."
       }
     ],
     "panelPlan": [
-      "The severed passenger hull opens into an overwhelmed concourse; wounded Verge and Shard families emerge together beneath improvised faction barriers.",
-      "Residents demand that Shard arrivals be searched and separated. Wallace tells Halev the crowd will not accept them in the existing berth.",
-      "Richard refuses to let medics split mixed family and care groups; the wounded Shard caregiver arrives beside the Verge child saved earlier.",
-      "The Luminara Mother recognizes what happened, removes a barrier herself, and offers half of her family’s tiny berth to the caregiver.",
-      "Others begin moving barriers while some residents turn away in anger. Halev orders all faction partitions removed and accepts the unrest."
+      "The recovered passenger hull docks under Verge supervision; Richard leads injured arrivals from a damaged collar. Farther down the quay, port crews tally partly crushed supply pallets and remove unusable heater cartridges from the recovered spine.",
+      "Auric residents demand a separate Shard processing area. Wallace tells Halev that anger has intensified because the badly needed cargo has arrived incomplete and continuing Fleet relief remains uncertain.",
+      "The wounded Shard caregiver who gave a Verge child her oxygen mask arrives with Richard's patients. A resident's barrier separates her from the child and her sister's possible arrivals.",
+      "The Luminara Mother shifts one divider and offers half of her own berth to the caregiver, whose sister remains missing. The boy offers a blanket; this is one specific family losing space to support another.",
+      "Halev removes faction-separation barriers from the civilian berth but keeps medical triage and capacity checks in place. Some residents help; others refuse and depart. Repair crews continue counting salvage in the background."
     ],
     "directionInline": [
-      "Keep the improvised faction barriers physically present until civilians begin removing them. The Mother's choice should start local and material—half a berth, one blanket—before Halev turns it into policy."
+      "Make partial cargo recovery visually unmistakable: not no supplies, not full relief. Civilian choice precedes public direction. No instant collective change of heart or erasure of local opposition."
     ]
   },
   {
     "id": "RF_I02_P14",
-    "summary": "Dominion offers Venn her command in exchange for separating Shard refugees from their families; she refuses and removes her insignia before her crew.",
+    "summary": "Dominion seeks Fleet detention of Shard evacuees and threatens further relief; Venn rejects the order but remains responsible for Thunderbreak until an appointed relief officer takes command.",
     "settingText": "THUNDERBREAK — DAMAGED BRIDGE",
     "regionText": "The Core",
     "charactersInline": [
@@ -1286,79 +1276,74 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Detain every Shard arrival. Verge nationals can disembark after screening."
+        "text": "Hold any Shard evacuees still in Fleet custody. Ask Auric for separate detention of the others."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "There are mixed families."
+        "text": "Auric is a civilian port. There are mixed households among our patients."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "Classification is not punishment."
+        "text": "Security classification isn't a penalty."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "It is when you lock the door."
+        "text": "Separating patients from their carers will make it one."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Captain Sol's rescuers will submit to inquiry as well."
+        "text": "Sol's rescue personnel will submit to inquiry if they come aboard a Fleet ship."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "They just brought the children through."
+        "text": "They were responsible for bringing the children out."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "Officer, remember your station."
+        "text": "Officer, that's not your jurisdiction."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Ella. Carry this out and you keep your command."
+        "text": "Carry out the order and Thunderbreak remains yours."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "And relief keeps moving?"
+        "text": "I refuse the detention order. Record it without qualification."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Yes."
+        "text": "Your replacement will be sent. You retain responsibility for your ship until relieved."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "No."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "Officer, log the refusal. I'm relinquishing command pending tribunal."
+        "text": "Then I'll bring her to a safe berth and hand her over intact."
       }
     ],
     "panelPlan": [
-      "Emergency lamps illuminate Thunderbreak’s scarred bridge while Auric receives mixed families; Dominion and Keating appear over a fractured holo table.",
-      "Dominion orders all Shard arrivals detained and Naomi’s rescuers surrendered for questioning, presenting compliance as the only way to preserve Fleet relief.",
-      "Venn asks whether children and mixed households will be separated. Keating says classification is not punishment; an officer reacts despite trying not to.",
-      "Dominion privately offers Venn continued command if she executes the order. Venn removes her star insignia and sets it beside the damaged route display.",
-      "The holo vanishes. Some crew salute; others stare at dead consoles and the stranded cruiser, frightened by the cost of following her."
+      "Thunderbreak's damaged bridge runs on emergency systems. Dominion and Keating appear on the working Fleet channel while Auric receives civilians through Verge jurisdiction, beyond Fleet's unilateral police authority.",
+      "Dominion directs Venn to hold Shard refugees still in Fleet medical custody, surrender Naomi's rescuers for questioning if they enter Fleet jurisdiction, and request that Auric accept separate Shard detention.",
+      "Venn points to mixed families and the lives rescued. Keating insists security classification is ordinary Fleet policy; the bridge crew reacts uneasily because Dominion's demand would split patients and caretakers.",
+      "Dominion offers Venn continued command and scheduled relief only if she complies. She refuses on the recorded channel. She remains in charge of Thunderbreak's damaged shipboard systems until a replacement can assume responsibility.",
+      "Dominion orders a formal relief officer dispatched and warns that future Fleet support is under review. Venn stays at the damaged command station, not removing her insignia yet; some crew respect her decision and others fear it."
     ],
     "directionInline": [
-      "Venn's insignia should remain on the damaged console after Dominion's transmission ends. The bridge crew reaction must be mixed: respect, fear and uncertainty rather than a unified salute to rebellion."
+      "Fleet may control its own medical facilities and personnel, not impose Auric-wide detention by fiat. Venn has not resigned or been relieved on this page, allowing a lawful handover later and preserving Issue 3 tribunal charges."
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I02_P15",
-    "summary": "Unable to house the refugees without breaking mixed families, Halev opens Auric’s unsafe luxury ring and makes enemies of the traders who kept him in power.",
+    "summary": "Halev authorizes temporary refugee shelter in the Crown Ring despite contested ownership and a monitored structural fracture, accepting a real political and engineering limit rather than pretending the ring is safe.",
     "settingText": "AURIC BAZAAR — SEALED CROWN RING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1383,74 +1368,74 @@
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "The Crown Ring is sealed for a reason."
+        "text": "Those rooms aren't abandoned. Owners left goods behind and the gallery's fractured."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "The fracture's dangerous. The rooms are empty."
+        "text": "How much of the ring can be isolated from the glass?"
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "These sensors still respond, but I wouldn't trust them alone."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "That splits twelve families. Every care group from the ship too."
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "The fracture monitors still answer. Barely."
+        "text": "The other plan separates care groups. Some patients can't be moved twice."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Can we watch it all night?"
-      },
-      {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "If somebody sits on it."
-      },
-      {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "Clear the bonded stores. Keep the families together."
+        "text": "Then we use the inner rooms only."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "The owners financed your coalition."
+        "text": "The traders hold the leases and financed your coalition."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "They can be angry. I need the rooms."
+        "text": "Record every room. No permanent reassignment. Find the owners."
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "We need a second watch on the crack and a clear route out."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Put a repair crew on it. If it spreads, everyone leaves."
       },
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "They'll end this government."
+        "text": "The traders have already called a vote."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Open the door."
+        "text": "Get the people inside the isolated section tonight."
       }
     ],
     "panelPlan": [
-      "Halev, Wallace, Richard, and Paul stand before the sealed Crown Ring: elegant empty apartments curve around a spectacular cracked observation window while refugees crowd outside.",
-      "Wallace explains that the ring is structurally suspect and its suites hold bonded goods belonging to the traders who support Halev’s coalition.",
-      "Richard rejects the alternative allocation plan because it separates mixed households and care groups; Paul finds the fracture monitors are old but responsive.",
-      "Halev orders the stored luxuries removed and families admitted under continuous watch. Wallace tells him the owners will bring down the government.",
-      "Doors open onto the gorgeous failing habitat. Refugees enter carrying almost nothing as repair crews—including Paul—move toward the glowing crack."
+      "The Crown Ring has expensive empty-looking apartments, locked owners' goods and an observation window with a known fracture. Longtime residents' belongings are visible behind some doorways, preventing the space from reading as abandoned property.",
+      "Wallace explains that bonded goods and apartments belong to traders and families who have temporarily left; opening them without consent risks the coalition. Richard explains that the alternative dispersal plan would split mixed patients and carers.",
+      "Paul checks responsive but aging fracture sensors alongside an adult ring engineer. The engineer identifies rooms farthest from the cracked gallery that can be isolated behind working pressure bulkheads; additional shoring and a continuously staffed watch are required.",
+      "Halev opens only the isolated rooms under a written temporary shelter order. The glass gallery is cordoned off; repair teams erect shoring, maintain a clear evacuation route and agree to empty the ring if the measured crack advances.",
+      "Families enter the limited safe rooms with their possessions. Wallace receives word that the traders are withdrawing support; a resident watches strangers pass an apartment containing her family's things."
     ],
     "directionInline": [
-      "The Crown Ring should look desirable and unsafe at the same time: luxury finishes, bonded goods and a spectacular cracked window. Halev's decision is not opening an empty palace; it is accepting structural risk and political retaliation to keep families intact."
+      "Temporary emergency shelter only; no unsafe placement beside the fracture. Paul advises alongside qualified ring staff and is not single-handedly entrusted with safety. Plant property-rights and structural conflicts that continue in Issue 3."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I02_P16",
-    "summary": "Naomi accuses Venn of making a heroic rescue whose aftermath the Verge must carry; their partnership survives only after Venn stops defending herself and leaves Auric practical support she can still authorize.",
+    "summary": "Naomi confronts Venn over the resources Auric must provide after Fleet's rescue; Venn offers limited authorized civilian rescue support without claiming the Verge's authority or eliminating its losses.",
     "settingText": "AURIC BAZAAR — SERVICE AIRLOCK OVERLOOKING THUNDERBREAK",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1467,78 +1452,73 @@
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You saved them. Now Auric has no relief, no room, and half the Shards coming after us."
+        "text": "You saved the passengers. We got part of the cargo, but the damaged heaters and medicine are our problem now."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "I know."
+        "text": "The route kept the people alive. I should have had a way to recover more freight."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "No. You get to leave. We live with what comes next."
+        "text": "Your command can pull away. My crews still have to keep the ring warm."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "You're right."
+        "text": "I've got civilian rescue stores allocated to this emergency. Your crews can use them while the order stands."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "That's it?"
+        "text": "And when Dominion cancels it?"
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "No. But you're still right."
+        "text": "The replacement can recall Fleet personnel. I can't bind the Admiralty to more relief."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Will Thunderbreak even be yours tomorrow?"
+        "text": "I won't accept a Fleet base as the price for borrowed supplies."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Probably not. Before they take it, I can transfer the rescue drones and give your controllers everything they need to coordinate with Thunderbreak."
+        "text": "No base. Verge controls the civilian work. You can have the rescue charts and tools, not Fleet tactical systems."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Verge command. Civilian oversight. No Fleet base. Not now, not later."
+        "text": "Put the limited loan in writing. Halev needs to know what disappears when you leave."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Agreed."
+        "text": "I'll sign what I'm authorized to provide."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "I'm still angry."
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "I know. You should be."
+        "text": "I'll tell him. It won't make the shortages go away."
       }
     ],
     "panelPlan": [
-      "Naomi finds Venn alone in a service airlock, watching damaged Thunderbreak beyond Auric’s glass while refugee traffic moves behind them.",
-      "Naomi lists the consequences landing on Auric: lost Fleet relief, divided residents, exposed defenses, and hundreds with nowhere durable to live.",
-      "Venn says she knows what Auric is carrying now; Naomi rejects that as insufficient because Venn can still leave while Auric lives with the consequences.",
-      "Venn admits Naomi is right and reveals she may no longer control Thunderbreak tomorrow; while she still has the authority to do it, she offers to transfer Thunderbreak’s rescue drones to Auric and provide the operational data needed for local controllers to coordinate with the cruiser.",
-      "Naomi sets strict terms—Verge command, civilian oversight, no permanent Fleet presence. Venn accepts, and they turn together toward the work."
+      "Naomi finds Venn at a service airlock with damaged Thunderbreak in view. Below, crews move incomplete cargo pallets and refugees toward the Crown Ring, where cordoned repair works are visible.",
+      "Naomi describes actual consequences: lost heater units, interrupted relief, a politically fragile berth, and the threat posed by the Shards who followed Billie. She will not accept that the rescue itself has solved any of them.",
+      "Venn listens without invoking heroism or demanding forgiveness. She identifies her remaining authority: noncombat rescue stores already designated for civilian relief, shared hazard charts, and a short emergency support shift; she cannot promise Dominion's future shipments.",
+      "Naomi refuses a permanent Fleet post or military command relationship. Venn places temporary civilian-use equipment and practical rescue data under Verge management, noting that a successor can recall Fleet personnel when command changes.",
+      "Both watch medics move among the arrivals. They have made one limited arrangement, not repaired the larger political disagreement or the shortage of shelter and future supply."
     ],
     "directionInline": [
-      "Naomi must be allowed to stay angry after Venn agrees with her. Keep refugee traffic and damaged Thunderbreak visible behind them so the argument remains about who carries consequences after a dramatic rescue. Venn's offer must read as a limited operational handoff she can still authorize before being removed from command, not as giving away protected Fleet weapons, command codes, or permanent military control."
+      "No stock handover of weapons, no transfer of Fleet command codes, no unauthorized binding security treaty. Naomi's frustration concerns the persistent uneven burden and remains unresolved."
     ]
   },
   {
     "id": "RF_I02_P17",
-    "summary": "Billie takes a civilian tug hostage and demands Tess, forcing Abby to choose openly between her sister and the unity of the Shards.",
+    "summary": "Halev's emergency housing order provokes concrete opposition from owners and traders, while residents and refugees argue over their actual homes rather than an abstract referendum on kindness.",
     "settingText": "AURIC APPROACH — REFUGEE SERVICE TUG / SHARD COMMS",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1561,80 +1541,70 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Auric, I've got one of your service tugs."
+        "handle": "@starsplit.brent.wallace",
+        "speaker": "Wallace",
+        "text": "The traders have withdrawn their coalition votes. They won't release the bonded stores."
       },
       {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "Dad—if you hear this, I'm on the service tug. We're losing air."
+        "handle": "@starsplit.crew.various",
+        "speaker": "Resident",
+        "text": "That's my parents' apartment. Their things are inside."
       },
       {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Send me Tess and I stop venting it."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Their claim stands. The emergency order doesn't transfer ownership."
       },
       {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "I'm coming out."
+        "handle": "@starsplit.shard.caregiver",
+        "speaker": "Shard Caregiver",
+        "text": "My sister got off the other shuttle. Where do we go if the door closes?"
       },
       {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "No."
+        "handle": "@starsplit.crew.various",
+        "speaker": "Resident",
+        "text": "You can use our kitchen. The room is still my family's."
       },
       {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "She has civilians."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "We'll find a place for both households. I can't promise it tonight."
       },
       {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "She wants you. Walking out there doesn't save them."
+        "handle": "@starsplit.brent.wallace",
+        "speaker": "Wallace",
+        "text": "The recovered heaters buy days, not a season. There's no replacement shipment confirmed."
       },
       {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Choose, Abby. Your sister or your people."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Then publish the count. People need to know what remains."
       },
       {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "Tess is my people. So are the people on that tug."
+        "handle": "@starsplit.brent.wallace",
+        "speaker": "Wallace",
+        "text": "You don't have the votes to continue this."
       },
       {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "You could lose every captain you've got left."
-      },
-      {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "Then I lose them."
-      },
-      {
-        "handle": "@starsplit.abby.saville",
-        "speaker": "Abby",
-        "text": "Any ship still with me, target Ashfang."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "The order expires unless the council renews it. I'll answer them before it does."
       }
     ],
     "panelPlan": [
-      "Ashfang clamps a civilian service tug carrying repair workers and oxygen cylinders beside the inhabited Crown Ring; Billie broadcasts across Auric.",
-      "Paul, aboard after joining the window repair crew, hides beneath machinery and reports that Billie has begun bleeding atmosphere.",
-      "Billie demands Tess surrender, arguing that Abby must choose her traitorous sister or the Shards she claims to lead.",
-      "Tess prepares to launch alone. Abby physically blocks Gravefire’s hatch and tells her dying for Billie will not save the hostages.",
-      "Billie opens a vent valve remotely. Frost blooms across the tug windows as Abby orders every captain still loyal to her to attack Ashfang."
+      "In Auric's civic concourse, Wallace stands beside residents holding property records and traders who have suspended access to their private bonded stores. A Crown Ring owner points to a picture of her family outside the apartment now sheltering refugees.",
+      "Halev explains that occupancy is temporary and limited to isolated rooms; ownership remains with the families who hold it. A refugee caregiver asks where she and her sister should go if the order is reversed.",
+      "Wallace announces that the supporting trade bloc is withdrawing its votes and commercial assurances. A clerk begins tallying what emergency heaters and medicine Auric controls, revealing that the spine recovery bought time, not enough for the enlarged population.",
+      "One owner agrees to share access to her kitchen but will not surrender her family's room. Halev assigns a civic liaison to find a separate place for the owner when her relatives return, without making an unrealistic promise of available housing.",
+      "Halev signs a sunset-dated shelter order under public scrutiny. Wallace leaves without theatrics; the political loss is seen in the empty seats at the council table and in work crews still waiting for fuel."
     ],
     "directionInline": [
-      "Billie's leverage is the venting tug, not her speech. Abby physically stopping Tess from surrendering should make the sister relationship active in the scene before Abby turns the remaining Shard captains against Ashfang."
+      "Do not turn homeowners into villains. The partial cargo recovery and future supply problem are stated consistently; the housing decision is time-limited and openly contested, establishing Issue 3's ownership and heat conflicts."
     ]
   },
   {
     "id": "RF_I02_P18",
-    "summary": "Fleet, Verge, and rebel Shard rescuers save the hostage tug together while Abby defeats Billie but chooses civilian lives over revenge.",
+    "summary": "Venn is formally relieved of Thunderbreak only after its damaged systems are secure; separately, Auric and Verge crews adopt a narrow civilian rescue arrangement without binding the Fleet or resolving the Shard split.",
     "settingText": "AURIC CROWN RING — HOSTAGE TUG / ASHFANG BATTLESPACE",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1665,86 +1635,89 @@
       {
         "name": "Officer",
         "handle": "@starsplit.officer"
+      },
+      {
+        "name": "Admiral Janet Keating",
+        "handle": "@starsplit.janet.keating"
+      },
+      {
+        "name": "Governor Chris Halev",
+        "handle": "@starsplit.halev"
       }
     ],
     "dialogueInline": [
       {
+        "handle": "@starsplit.officer",
+        "speaker": "Officer",
+        "text": "Keating's relief order is authenticated. I have the bridge when you're ready."
+      },
+      {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Thunderbreak, roll between them."
+        "text": "Port armor's compromised. Tractor bus is running hot. Two watches need replacing."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "We may not get back out."
+        "text": "Engineering has the handover. I assume command of Thunderbreak."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "We only need to do it once."
+        "text": "Then the ship is yours. The refusal and the rescue are both in my log."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Paul, manual valve is aft of the oxygen rack."
+        "text": "Auric directs civilian rescue. My escorts take operational lead, not Fleet security."
       },
       {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "The rack's coming loose."
-      },
-      {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "Stay low. I'm cutting Billie's remote."
-      },
-      {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Abby sent you?"
-      },
-      {
-        "handle": "@starsplit.tessa.banks",
-        "speaker": "Tess",
-        "text": "No. Paul needs air."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Shared emergency calls, dock access and a thirty-day review. No permanent Fleet base."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Ashfang's guns are dead. Billie's launching."
+        "text": "My remaining skiffs can protect civilian traffic. Billie's captains don't answer to me."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Let her go—I'm losing the tug!"
+        "text": "They work under civilian traffic control while they're in Auric space."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "I'm coming. Brace."
+        "text": "I'll tell my captains. Each one has to agree."
       },
       {
-        "handle": "@starsplit.paul.secundo",
-        "speaker": "Paul",
-        "text": "Valve shut. We have air."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "I can sign for Auric. Not the Fleet, not the Shards."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "That's enough to start the work."
       }
     ],
     "panelPlan": [
-      "Full-energy opening: Ashfang fires past Abby’s skiffs toward the hostage tug; crippled Thunderbreak rolls between the shot and Auric’s luminous Crown Ring.",
-      "Naomi grapples the venting tug with her escort while Paul crawls through freezing machinery to reach the manual valve.",
-      "Tess breaches Ashfang’s boarding collar and cuts the remote vent control; Billie attacks her inside the narrow industrial passage.",
-      "Abby disables Ashfang’s firing assembly and has Billie’s escape pod in her sights, but Naomi calls that the tug is tearing free with people aboard.",
-      "Abby abandons the shot and braces the tug beside Naomi. Billie escapes; Paul closes the valve, and mixed civilians pull one another toward returning air."
+      "Thunderbreak at a safe Auric berth. A Fleet relief officer comes aboard with Keating's sealed order. Venn gives a physical damage and watch handover, including the ship's patched armor, the recent tractor strain and civilian relief inventory.",
+      "Venn signs the transfer log and removes her command insignia only after the officer formally assumes the bridge. The crew's responses vary; no synchronized heroic salute and no impression Venn can still order Thunderbreak into combat.",
+      "At the Auric civic table, Halev and Naomi prepare a time-limited civilian rescue compact: Verge operational lead, Auric civilian oversight, mutual access for rescue craft and no permanent Fleet base.",
+      "Abby, appearing on a separate open channel from her divided Shard skiffs, offers voluntary escort help on civilian terms but refuses to sign for captains who followed Billie. No one claims that Venn or the Admiralty authorized this agreement.",
+      "Naomi and Halev authorize the limited compact. Outside, damaged Thunderbreak remains available only under its new Fleet command, while local tugs and volunteer skiffs must cover the immediate perimeter."
     ],
     "continuityFrom": "RF_I02_P17",
     "directionInline": [
-      "Crosscut the rescue so every faction contributes a different capability: Thunderbreak absorbs fire, Naomi holds the tug, Paul reaches the valve, Tess kills the remote control and Abby abandons a revenge shot to brace civilians. Do not collapse the action into one hero."
+      "Physically separate command relief from the civic compact. Venn cannot sign a Fleet treaty or command the ship after relief. The compact is provisional and limited, and Abby's contribution is voluntary rather than a magically reconciled Shard fleet."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I02_P19",
-    "summary": "Auric survives without resolving its fractures: refugees gain a precarious home while every leader faces the political cost of saving them.",
+    "summary": "Auric survives the night with incomplete supplies, disputed temporary shelter and a fragile civilian compact; Venn faces tribunal, Halev loses his coalition and former enemies help one another without resolving the war.",
     "settingText": "AURIC BAZAAR — CROWN RING OBSERVATION GALLERY — MORNING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1779,53 +1752,57 @@
       {
         "name": "Paul Secundo",
         "handle": "@starsplit.paul.secundo"
+      },
+      {
+        "name": "Shard Caregiver",
+        "handle": "@starsplit.shard.caregiver"
       }
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Your hands need another hour before you touch a tool."
+        "text": "Your hands need time away from the tools."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "The fracture won't wait an hour."
+        "text": "The ring watch is short of people."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "Someone else can take a shift. Eat first."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "They put my route on the public board. Spelled it wrong."
+        "text": "They're flying my route without asking me now."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Fix it."
+        "text": "Are the safe houses moving?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Publicly?"
+        "text": "The ones that can. I've got calls to make."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Civilian command. Mutual rescue. No permanent Fleet base."
+        "text": "The civilian arrangement starts today. The Fleet can still withdraw its support."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "And when the Fleet asks who authorized that?"
+        "text": "We'll have to build the rest without them."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Tell them I agreed to it."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "Tell them Auric did."
+        "text": "The tribunal has summoned me. I'll give them the complete log."
       },
       {
         "handle": "@starsplit.luminara.boy",
@@ -1836,22 +1813,17 @@
         "handle": "@starsplit.luminara.mother",
         "speaker": "Mother",
         "text": "Tonight."
-      },
-      {
-        "handle": "@starsplit.luminara.boy",
-        "speaker": "Boy",
-        "text": "That's longer than yesterday."
       }
     ],
     "panelPlan": [
-      "Morning over Auric: the Crown Ring’s enormous cracked window frames a radiant planet and damaged ships; refugees and residents repair the gallery together.",
-      "Richard checks Paul’s frostbitten hands while he insists on returning to window watch; the Mother and Boy share breakfast with a Shard family.",
-      "Jex finds his once-secret passage copied on public repair slates; Halev receives notice that his coalition has withdrawn support.",
-      "Venn receives a tribunal summons as Naomi presents Halev with a civilian defense accord—Verge command, shared rescue obligations, no permanent Fleet base.",
-      "The Boy asks whether the gallery is home. His mother answers, ‘For tonight,’ as former enemies raise one transparent repair panel into the stars."
+      "Morning through the Crown Ring's cordoned observation glass: temporary shoring and isolated shelters, visible damage on Thunderbreak, and repair traffic around the recovered but partly emptied cargo spine.",
+      "Richard checks the cold injury to Paul's hands from the supply-spine crossing. Paul wants to help repair the monitored ring; Richard requires him to recover first. Nearby, the Luminara Mother and her son share breakfast with the Shard caregiver and her recovered sister.",
+      "Jex sees his once-private Shatterwake geometry copied among working navigators and receives messages from displaced clients. Halev is told the trade coalition has withdrawn its backing; the emergency shelter order is still posted for review.",
+      "Naomi and Halev distribute the limited civilian-rescue terms to local crews. Venn, now without command, receives formal tribunal travel instructions; her rescue was successful but has no clean institutional victory.",
+      "The boy looks from his sleeping place to the cordoned glass and asks his mother whether this is their home. She answers only for the present. Outside, workers keep repairing the place everyone is trying to share."
     ],
     "directionInline": [
-      "End on unfinished stability. Repairs, political notices, shared breakfast and the new civilian-defense terms should coexist in the same morning. The Boy's final question works because the adults have solved only tonight."
+      "Conclude with unfinished stability, not triumphant unity or a second battle. Partial cargo recovery, damaged ships, civic opposition, fractured Shard loyalty, practical care and Venn's removal remain visible. Set up Issue 3's housing dispute and tribunal without pre-solving either."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   }
