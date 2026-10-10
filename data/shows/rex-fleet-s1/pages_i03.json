@@ -1245,7 +1245,7 @@
   },
   {
     "id": "RF_I03_P16",
-    "summary": "Billie accepts Pike's strike because Richard's truth makes Abby and Tess's rejection impossible to dismiss as weakness.",
+    "summary": "Pike proposes sabotaging Auric's heat to draw defenders away; Billie knowingly authorizes the diversion because Richard's testimony threatens her authority, and insists he be taken alive.",
     "settingText": "INT. BROKEN OATH — WAR ROOM",
     "regionText": "The Shards",
     "charactersInline": [
@@ -1262,58 +1262,61 @@
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "So that's it? A doctor with a camera decides who runs the Shards?"
+        "text": "Richard's broadcast has the captains questioning the Triarch. Abby's people are using it against us."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "A doctor?"
+        "text": "He's showing what happened to those districts. Some of our crews were there."
       },
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "Abby ran. Tess is playing nurse. Now he gets to call it virtue."
+        "text": "Then stop him. My people can cut Auric's heat exchanger before we arrive."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Tess doesn't hide."
+        "text": "You'd turn the residents against the refugees. That's how you get a riot."
       },
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "Then give her somewhere she has to stand."
+        "text": "A riot keeps Auric's guards occupied while we get into the clinic."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Auric."
+        "text": "I want Secundo alive. He will answer for what he's saying in front of everyone."
       },
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "Shut the doctor up."
+        "text": "And if he refuses?"
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "No. Make them watch him fail."
+        "text": "Then everyone sees what it costs to defy us."
       }
     ],
     "panelPlan": [
-      "Richard's testimony fills the battered display.",
-      "A named child's death affects Billie.",
-      "Pike overlays the Auric attack path.",
-      "Billie sees the clinic marker.",
-      "She takes the strike control key."
+      "Richard's testimony remains visible aboard Broken Oath; Billie reacts to the named civilians and original record images.",
+      "Pike shows Auric's ring and service systems, identifying a heat-exchange target already reachable by planted Shard saboteurs.",
+      "Billie objects when Pike acknowledges the likely civilian disorder; he shows how it opens a path toward Richard's clinic.",
+      "Billie orders Richard captured alive so he can be publicly confronted, revealing she is willing to endanger civilians to protect her leadership.",
+      "Pike sends the sabotage order while Billie takes control of the assault plan."
     ],
     "directionInline": [
-      "Billie should react to one named victim before Pike turns the testimony into an attack opportunity. Her agreement to strike Auric is therefore a choice to answer uncomfortable truth with spectacle, not ignorance of what Richard said."
+      "Billie should react to one named victim before Pike turns the testimony into an attack opportunity. Her agreement to strike Auric is therefore a choice to answer uncomfortable truth with spectacle, not ignorance of what Richard said.",
+      {
+        "text": "This is the CAUSAL START of P17 sabotage and the P22 assault. It must be obvious who plans the exchanger cut and who authorizes it. The plan is military-political coercion, not abstract villain rhetoric. Avoid suggesting Billie personally planted the insignia."
+      }
     ]
   },
   {
     "id": "RF_I03_P17",
-    "summary": "Shard sleepers sabotage the luxury ring and plant Richard's insignia, turning residents against refugees as heat fails.",
+    "summary": "Pike's sleeper operatives sabotage a ring exchanger and plant a medical patch associated with Richard; heat loss fuels suspicion until Halev identifies deliberate damage but refuses to accuse without evidence.",
     "settingText": "INT. LUXURY RING — HEAT EXCHANGE / CONCOURSE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1338,63 +1341,66 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "That's his."
+        "text": "That medical patch was beside the broken exchanger. It looks like the doctor's."
       },
       {
         "handle": "@starsplit.refugee",
         "speaker": "Refugee",
-        "text": "You think we froze ourselves?"
+        "text": "He's been treating your families. Why would he shut off our heat?"
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Another Resident",
-        "text": "They brought the Shards here."
+        "text": "Those Shard ships brought trouble here. How do we know who came with them?"
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Back off."
+        "text": "Stop pushing her. She's carrying a child."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Paul, behind me."
+        "text": "Paul, stay with me. Don't let them separate us."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Nobody touches anybody."
+        "text": "Move away from the damaged equipment. Everyone needs the same emergency heat."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "The exchanger was cut."
+        "text": "The exchanger was cut by hand. This was sabotage."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "By who?"
+        "text": "Then who did it?"
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Not by a badge left where we'd find it."
+        "text": "We don't know. Someone left a patch here, and I'm not calling that proof."
       }
     ],
     "panelPlan": [
-      "A gloved hand destroys the exchanger and plants insignia.",
-      "Lights die across the concourse.",
-      "Residents find the planted evidence.",
-      "Accusation becomes a physical fight.",
-      "Richard places himself between Paul and the crowd."
+      "A covert Shard sleeper, face withheld but visibly matching Pike's operational gear from P16, physically cuts an accessible exchanger connection and places a stolen-style medical patch.",
+      "The adjacent heating circuit loses function; emergency illumination comes on while the vulnerable residential ring cools.",
+      "A resident picks up the planted patch at the damaged service hatch, shows it to others, and an argument starts.",
+      "The crowd presses toward Richard and Paul; Richard shields vulnerable patients while Sera clears the area.",
+      "Halev and a technician inspect tool marks on the exchanger, confirming sabotage but not who performed it."
     ],
     "directionInline": [
-      "The planted insignia must look almost too convenient once Halev sees the physical damage. Let the crowd's fear become dangerous before officials can explain anything; Richard protecting Paul should precede any argument about evidence."
+      "The planted insignia must look almost too convenient once Halev sees the physical damage. Let the crowd's fear become dangerous before officials can explain anything; Richard protecting Paul should precede any argument about evidence.",
+      {
+        "text": "This sabotage is a deliberate action ordered by Pike and permitted by Billie, not an unexplained mechanical failure. The medical patch is planted and NOT proof of Richard's guilt. Avoid portraying the sleeper as a generic pirate or making the planted patch a magical plot token."
+      }
     ]
   },
   {
     "id": "RF_I03_P18",
-    "summary": "Naomi forces Halev and Dain to tell everyone the ring may fail, choosing public trust over managed calm.",
+    "summary": "After the exchanger sabotage, Naomi convinces Halev and Dain to state the real hazard and give civilians immediate evacuation directions rather than falsely claiming stability.",
     "settingText": "INT. AURIC CIVIC BROADCAST PLATFORM",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1415,52 +1421,42 @@
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Say we're stabilizing it."
+        "text": "If we tell everyone the heating system could fail, they'll rush the shelter exits."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "We aren't."
-      },
-      {
-        "handle": "@starsplit.halev",
-        "speaker": "Halev",
-        "text": "Say that now and people run."
+        "text": "The exchanger is destroyed. Our crews can't keep all these rooms warm."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "They're already running. They just don't know where."
+        "text": "People are already moving. They need to know which areas still have heat."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "I need an hour."
+        "text": "We can't promise the next shelter will be any safer."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "The ring may not have one."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "Then tell them."
+        "text": "Then we say that too. We can still guide people away from the damaged section."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Tell them what?"
+        "text": "We need time to move the patients."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "That we might lose the ring and we don't know when."
+        "text": "Give them directions now. Richard's clinic can't wait for us to agree on a perfect plan."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "The ring may not stay habitable."
+        "text": "The luxury ring's heating is failing. Move toward the inner shelter with the people who need help walking."
       }
     ],
     "panelPlan": [
@@ -1471,13 +1467,16 @@
       "They face the frightened station together."
     ],
     "directionInline": [
-      "Naomi should activate the broadcast while the leaders are still disagreeing, denying them the chance to polish a unified message. The public hears uncertainty and argument along with the evacuation warning."
+      "Naomi should activate the broadcast while the leaders are still disagreeing, denying them the chance to polish a unified message. The public hears uncertainty and argument along with the evacuation warning.",
+      {
+        "text": "No generic political speech about honesty. Tie dialogue to specific heating damage, vulnerable patients and the route to inner shelter. Keep the existing public broadcast as practical emergency instructions, not a new framing device."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P19",
-    "summary": "Halev and Dain surrender their own security before asking residents and refugees to share shelter.",
+    "summary": "A resident-first emergency order bars Tal Corvus refugees from inner shelter until Halev reverses it and Dain relinquishes her family's reserved berth.",
     "settingText": "INT. AURIC INNER SHELTER GATE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1502,57 +1501,57 @@
       {
         "handle": "@starsplit.guard",
         "speaker": "Guard",
-        "text": "Registered residents first."
+        "text": "The shelter order puts registered Auric residents first. I can't admit people without local registration."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "We knew this was coming."
+        "text": "We're the ones they moved into this ring. Where are we supposed to go now?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Keep walking."
+        "text": "Keep your bag. I'll find a place where we can wait."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Stop. Who told you to do that?"
+        "text": "Stop turning people away. Who authorized this restriction?"
       },
       {
         "handle": "@starsplit.guard",
         "speaker": "Guard",
-        "text": "Your emergency order."
+        "text": "It's in your emergency priority order. I was told to enforce it."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Then the order's wrong."
+        "text": "Then I signed an order that doesn't cover the people we invited here. Let them through."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "My family has berth twelve."
+        "text": "My family's berth is number twelve. Give it to the next family in line."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Sera—"
+        "text": "Sera, where will your family sleep?"
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "Not anymore."
+        "text": "With the other households sharing rooms. They shouldn't lose shelter because they arrived yesterday."
       },
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Where will they go?"
+        "text": "Are they letting the Tal Corvus families in now?"
       },
       {
-        "handle": "@starsplit.sera.dain",
-        "speaker": "Sera",
-        "text": "Where you were asking us to go."
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Yes. Help them bring the children and the injured inside."
       }
     ],
     "panelPlan": [
@@ -1563,12 +1562,15 @@
       "Mixed families enter while both leaders remain outside."
     ],
     "directionInline": [
-      "Halev and Sera give up privileged access before asking anyone else to share. Their families and security remain unresolved outside the frame; the point is not martyrdom but removing an exemption they cannot ethically defend."
+      "Halev and Sera give up privileged access before asking anyone else to share. Their families and security remain unresolved outside the frame; the point is not martyrdom but removing an exemption they cannot ethically defend.",
+      {
+        "text": "Establish the order as a real administrative mistake with immediate consequences; Halev reverses it explicitly. Avoid implying a single surrendered berth can house all displaced residents. Show several residents choosing to assist, not a magically unanimous crowd."
+      }
     ]
   },
   {
     "id": "RF_I03_P20",
-    "summary": "Jex learns the public passage is watched; saving the ring requires exposing Tali's remaining private haven network.",
+    "summary": "With the public evacuation passage targeted, Jex and Naomi seek Tali's private route network; Tali agrees to expose its access points only after warning the families sheltering there.",
     "settingText": "INT. JEX'S OFFICE / TALI SAFEHOUSE / AURIC MAP",
     "regionText": "The Shards",
     "charactersInline": [
@@ -1589,74 +1591,67 @@
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Your famous passage is a firing gallery."
+        "text": "The public passage is under enemy observation. Evacuation ships will fly straight into their weapons."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Fame ruins everything."
+        "text": "Tali warned me somebody was tracking it. I closed the public entry too late."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You got another route?"
+        "text": "Do you have another route into Auric?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "No."
+        "text": "There's a private network. It leads through places where people have been hiding from the Triarch."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "Jex."
+        "text": "Including this safehouse. You promised it would stay off the maps."
+      },
+      {
+        "handle": "@starsplit.jex.marrin",
+        "speaker": "Jex",
+        "text": "Using it now will expose the access points to anyone watching the traffic."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Want to try that answer again?"
+        "text": "We can escort ships once they reach Auric. I can't protect every place they depart from."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "Open mine."
+        "text": "People at the public passage will die if we do nothing. Give me time to warn the safehouses."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "They'll find you."
-      },
-      {
-        "handle": "@starsplit.tali.marrin",
-        "speaker": "Tali",
-        "text": "They'll find everybody if you don't."
-      },
-      {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "I can't buy this back."
-      },
-      {
-        "handle": "@starsplit.tali.marrin",
-        "speaker": "Tali",
-        "text": "Then don't."
+        "text": "I'll wait for your signal. Then we open the routes."
       }
     ],
     "panelPlan": [
-      "The public passage is surrounded by hostile contacts.",
-      "Naomi asks for another way.",
-      "Jex reveals a faint hidden web.",
-      "Tali understands his consideration.",
-      "Her haven glows as one node among many."
+      "Naomi's live traffic picture identifies a public corridor lined with hostile contacts and incoming civilian transports.",
+      "Jex brings up a separate private network of authenticated routes; it includes multiple inhabited safehouses rather than empty coordinates.",
+      "Tali appears from one working haven and objects because use will reveal the system's access points.",
+      "Jex and Naomi identify the ships they can shield near Auric and the departure points they cannot defend.",
+      "Tali begins a hurried warning to the families at her safehouse; Jex holds the transmission until she signals readiness."
     ],
     "directionInline": [
-      "The hidden route network should be clearly larger than Jex's already-public passage. Tali's haven is one node among many, so opening the system saves Auric by exposing the people who made Jex's private advantage possible."
+      "The hidden route network should be clearly larger than Jex's already-public passage. Tali's haven is one node among many, so opening the system saves Auric by exposing the people who made Jex's private advantage possible.",
+      {
+        "text": "Tali knowingly accepts the risk and issues a warning before Jex exposes her network. This pays off P08's promise and gives P21 a concrete cost. Corridors are physical beacon/field routes, not teleportation portals or fantasy magical circles."
+      }
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P21",
-    "summary": "Jex opens the private routes, saving the ring while Tali's refuge disappears from his board.",
+    "summary": "Tali authorizes the release of a concealed corridor network; civilian ships reach Auric, but the activation exposes her haven and communication with her is lost, leaving her fate unknown.",
     "settingText": "INT. JEX'S OFFICE / EXT. AURIC HIDDEN APERTURES",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1675,67 +1670,75 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "Once I send this, there are no private doors."
-      },
-      {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "There are people behind the public ones."
+        "text": "The families are moving. Open the network before the next transport reaches the ambush."
+      },
+      {
+        "handle": "@starsplit.jex.marrin",
+        "speaker": "Jex",
+        "text": "Once I send the route authentication, anyone watching the traffic can trace these private access points."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "I can protect the ships. Not every point they leave from."
+        "text": "I'll protect the ships from the Auric end. I can't cover Tali's safehouse."
       },
       {
         "handle": "@starsplit.tali.marrin",
         "speaker": "Tali",
-        "text": "Neither can he."
+        "text": "I know what we're risking. There are people on those transports too."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Tali—go. Now."
-      },
-      {
-        "handle": "@starsplit.tali.marrin",
-        "speaker": "Tali",
-        "text": "Get them out first."
-      },
-      {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "Route set is yours, Captain."
+        "text": "All right. I'm opening the links."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Her node just—"
+        "text": "First ships are through. They're turning toward the shelter docks."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I can see it."
+        "text": "Tali, hostile traffic is converging on your location. Leave now."
+      },
+      {
+        "handle": "@starsplit.tali.marrin",
+        "speaker": "Tali",
+        "text": "Get the families out. I'm closing the last access here."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Her connection is gone."
+      },
+      {
+        "handle": "@starsplit.jex.marrin",
+        "speaker": "Jex",
+        "text": "That's a lost signal. It doesn't tell us whether she got away."
       }
     ],
     "panelPlan": [
-      "Jex releases the authentication web.",
-      "Concealed apertures ignite around Auric.",
-      "Civilian craft emerge toward the ring.",
-      "Tali's node flashes exposed.",
-      "It goes black under Jex's hand."
+      "Tali helps evacuate people from her refuge and sends Jex an explicit readiness signal.",
+      "Jex authorizes physical corridor anchors and authenticated safe-route beacons, exposing the routes through the pattern of departing traffic.",
+      "Civilian transports follow the newly usable corridors to Auric while Verge escorts move to cover their arrival.",
+      "Hostile sensors converge on Tali's access location; she is seen closing the haven's last access after the families depart.",
+      "Tali's link disappears from the communication display; Jex cannot tell whether the signal failed or the haven was hit."
     ],
     "continuityFrom": "RF_I03_P20",
     "directionInline": [
-      "The route release should feel irreversible. As concealed apertures activate, Tali's node becomes visible and then disappears; Jex must keep transmitting even after he realizes the cost has become personal."
+      "The route release should feel irreversible. As concealed apertures activate, Tali's node becomes visible and then disappears; Jex must keep transmitting even after he realizes the cost has become personal.",
+      {
+        "text": "Do not visually imply Tali's death. Her disappearance must remain uncertainty, not an explosion or magical deletion. Preserve coherent scale of vessels, anchors, corridors and travel times."
+      }
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P22",
-    "summary": "Billie and Pike attack the evacuation; Billie drives toward Richard while civilians cross exposed spans.",
+    "summary": "Billie uses Pike's sabotage and the diverted defense ships to insert a small boarding force through Auric's service side, intending to seize Richard during a wider attack on evacuation craft.",
     "settingText": "EXT./INT. AURIC LUXURY RING — UNDER ATTACK",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1764,59 +1767,62 @@
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "Auric defense is split."
+        "text": "Auric moved its defense ships toward the arriving refugees. The ring's service side is exposed."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "It was split before we got here."
+        "text": "Then put the boarding craft at the maintenance access. I'm taking Richard out of that clinic."
       },
       {
         "handle": "@starsplit.oren.pike",
         "speaker": "Pike",
-        "text": "Witness is inner ring."
+        "text": "His records have already spread beyond Auric."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Richard's mine."
+        "text": "Then I'll make him answer for them where everyone can hear."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Down!"
+        "text": "Get down! Away from the glass!"
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "They found us."
+        "text": "Those are Shard markings. They've come for Dad."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "They found everyone."
+        "text": "Move the patients first. We'll go with them."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Tess. Save me a chair."
+        "text": "The clinic is past that pressure corridor. Bring the boarding craft alongside."
       }
     ],
     "panelPlan": [
-      "Pike's force erupts through fractured ring light.",
-      "Evacuation craft scatter.",
-      "Billie drives Ashfang into the structure.",
-      "The clinic ceiling tears as Tess shields Richard and Paul.",
-      "Billie sees the clinic marker ahead."
+      "Billie and Pike's force approaches outside the Auric ring while civilian ships and escorts cross exposed approaches.",
+      "A compact Shard boarding craft separates from the assault formation and aligns with an actual maintenance access; Ashfang Marauder remains outside rather than physically crashing through the ring.",
+      "Pike directs suppressing fire toward defensive targets and evacuation escorts while Billie leaves the command space aboard the boarding craft.",
+      "Inside Auric, Tess and Paul move patients away from damaged glass as nearby systems shake from the strike.",
+      "The boarding craft locks onto a service port; Billie and a small team enter the pressurized maintenance passage leading toward Richard's clinic."
     ],
     "directionInline": [
-      "Keep the attack attached to the evacuation geometry. Billie and Pike are not simply attacking Auric; they are forcing civilians to cross exposed space while hunting Richard inside the same structure."
+      "Keep the attack attached to the evacuation geometry. Billie and Pike are not simply attacking Auric; they are forcing civilians to cross exposed space while hunting Richard inside the same structure.",
+      {
+        "text": "Supply the missing physical path from Billie's warship to the clinic used in P26. She boards via a smaller craft, not by driving a large named vessel through a station wall. Preserve named ship geometry and show civilian vulnerability without impossible collision scale."
+      }
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P23",
-    "summary": "Naomi accepts Abby's ships only under Verge command and only to protect civilians.",
+    "summary": "Naomi accepts six defecting Shard captains under a narrow Verge-led civilian escort arrangement, refusing any transfer of Auric command authority.",
     "settingText": "INT. AURIC ESCORT CONTROL / ABBY'S SHUTTLE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1837,42 +1843,42 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "I've got six captains outside your line."
+        "text": "Six captains have broken from Billie's formation. They're ready to defend the refugee transports."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You had more yesterday."
+        "text": "Yesterday you claimed more ships than that."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "These six showed."
+        "text": "Six answered. Those are the ones I can actually bring."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "We need them."
+        "text": "The shelter docks are full. We can't wait for Fleet to return."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "They work for me inside the line. Civilians only. No chasing."
+        "text": "Then your six fly under Verge coordination, inside this defense line only. Civilians first. No pursuit."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Short leash."
+        "text": "Understood. Where do you need the shields?"
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "It's a shield job. Take it or don't."
+        "text": "Around the transports coming off Jex's routes. Leave the fight if getting civilians out requires it."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Fine. Send the civilian transponders."
+        "text": "Send me their transponders. I'll put our ships between them and Pike."
       }
     ],
     "panelPlan": [
@@ -1883,13 +1889,16 @@
       "Abby relays the order to her defectors."
     ],
     "directionInline": [
-      "Naomi accepts Abby's help only after narrowing its purpose to civilian protection. Abby's frustration should remain, but the tactical display must show her ships moving into the assigned shield positions rather than pursuing enemies."
+      "Naomi accepts Abby's help only after narrowing its purpose to civilian protection. Abby's frustration should remain, but the tactical display must show her ships moving into the assigned shield positions rather than pursuing enemies.",
+      {
+        "text": "Emphasize the practical agreement and its limits: Abby's six ships protect transports, not attack freely or gain command of Auric. Keep Shard and Verge ship markings distinct."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P24",
-    "summary": "Verge escorts, Abby's defectors and Auric workers fight together while Thunderbreak watches beyond jurisdiction.",
+    "summary": "Verge escorts, Abby's Shard defectors and Auric crews protect civilian traffic while Deka aboard the sidelined Thunderbreak watches a battle she is ordered not to enter.",
     "settingText": "EXT. AURIC BAZAAR — RINGSPACE BATTLE",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1910,42 +1919,42 @@
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Civilian Three, break toward the gold strut."
+        "text": "Civilian Three, turn toward the gold strut. Your escort is coming across your bow."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "I'll take the fire."
+        "text": "My ships will take the fire. Keep the transports moving."
       },
       {
         "handle": "@starsplit.pilot",
         "speaker": "Pilot",
-        "text": "We have children aboard."
+        "text": "There are families aboard. We can't outrun them."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Then stop talking and fly."
+        "text": "You don't have to. Keep your course while we cover you."
       },
       {
         "handle": "@starsplit.deka",
         "speaker": "Deka",
-        "text": "Commodore—"
+        "text": "Thunderbreak has a clear view of the evacuation route. Those transports are under attack."
       },
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "She's not aboard."
+        "text": "Our orders are to remain outside Auric's boundary. Venn's suspension is still in force."
       },
       {
         "handle": "@starsplit.deka",
         "speaker": "Deka",
-        "text": "I know."
+        "text": "I know the order. Put the civilian ships on the main display."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Thunderbreak, people are dying in front of you."
+        "text": "Thunderbreak, if you can hear us, we need your help. They're hitting unarmed transports."
       }
     ],
     "panelPlan": [
@@ -1956,12 +1965,15 @@
       "Deka watches a civilian ship tumble toward fire."
     ],
     "directionInline": [
-      "The coalition should look improvised and unequal: Verge escorts, Abby's defectors, worker skiffs and Thunderbreak outside jurisdiction all solve different parts of the same emergency. No formation should suddenly look like a unified fleet."
+      "The coalition should look improvised and unequal: Verge escorts, Abby's defectors, worker skiffs and Thunderbreak outside jurisdiction all solve different parts of the same emergency. No formation should suddenly look like a unified fleet.",
+      {
+        "text": "Establish that Deka is physically aboard and in acting authority, Venn is away at tribunal, and the ship is outside the defensive line. Naomi explicitly asks for help; no empty 'Commodore—' exchange."
+      }
     ]
   },
   {
     "id": "RF_I03_P25",
-    "summary": "Dominion offers Venn restoration for withdrawal and Richard's transfer; Venn refuses and leaves her crew to choose.",
+    "summary": "Dominion offers Venn reinstatement in exchange for withdrawal and Richard's transfer; Venn refuses and Deka independently orders Thunderbreak into Auric to protect civilians.",
     "settingText": "INT. ADMIRALTY TRIBUNAL / THUNDERBREAK BRIDGE",
     "regionText": "The Core",
     "charactersInline": [
@@ -1990,47 +2002,47 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Resume command. Withdraw Thunderbreak. Transfer Secundo afterward."
+        "text": "I can restore your command of Thunderbreak. Order her to withdraw and arrange Secundo's transfer to Fleet custody."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "You're offering my ship for a doctor."
+        "text": "Richard Secundo is a civilian witness. You're making his surrender the price of my commission."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "We're offering lawful control."
+        "text": "We're offering you a lawful way to end this confrontation."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Keep it."
+        "text": "No. Auric can't be protected by handing him over."
       },
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Then you have no order to give."
+        "text": "Then your suspension stands. You have no authority to command that ship."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "He's right. I can't order you across."
+        "text": "I understand. Lieutenant Deka, my suspension hasn't been lifted. I cannot order you into Auric."
       },
       {
         "handle": "@starsplit.deka",
         "speaker": "Deka",
-        "text": "Commodore—"
+        "text": "We can see the transports being hit, Commodore."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "But you can see who's getting shot."
+        "text": "You and your officers will have to decide what responsibility you have to them."
       },
       {
         "handle": "@starsplit.deka",
         "speaker": "Deka",
-        "text": "Helm. Cross the line."
+        "text": "Helm, cross the boundary. Put us between the refugees and the attackers."
       }
     ],
     "panelPlan": [
@@ -2041,13 +2053,16 @@
       "Deka advances the ship across the boundary."
     ],
     "directionInline": [
-      "Dominion's offer must be visibly attractive: command restored, legal authority returned, a route out of chaos. Venn refuses the bargain and then deliberately stops short of issuing an unlawful order, leaving Deka's crossing as the crew's choice."
+      "Dominion's offer must be visibly attractive: command restored, legal authority returned, a route out of chaos. Venn refuses the bargain and then deliberately stops short of issuing an unlawful order, leaving Deka's crossing as the crew's choice.",
+      {
+        "text": "The command transfer is central: Venn DOES NOT order the ship across. Deka consciously assumes operational responsibility despite Admiralty restrictions. Show the tribunal and bridge as two distinct spaces connected by a call, with no magically restored rank or command."
+      }
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I03_P26",
-    "summary": "Billie reaches Richard's clinic; Tess finally stops the woman she kept calling family.",
+    "summary": "Billie reaches the clinic from the docked boarding craft and tries to seize Richard; Tess rejects the demand, forcing their private rupture into physical confrontation.",
     "settingText": "INT. LUXURY RING — CLINIC PRESSURE CORRIDOR",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2072,63 +2087,61 @@
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Still cleaning up after Abby?"
+        "text": "Move aside, Tess. I'm taking Secundo. He can tell everyone what his records really mean."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "After me."
+        "text": "He published the records. You can't make them disappear by taking him."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Funny. Strangers get the loyal version."
+        "text": "You helped Abby turn half my captains against me."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "They needed it."
+        "text": "I stayed to treat the people our crews left behind. That was my decision."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "You picked Abby."
+        "text": "She's your sister. I thought we were family too."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "She's my sister."
+        "text": "I treated you like family, even when I knew what you were doing to people."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "And me?"
+        "text": "Then are you going to let me pass?"
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "I kept calling you family so I wouldn't have to stop you."
-      },
-      {
-        "handle": "@starsplit.billie.rusk",
-        "speaker": "Billie",
-        "text": "Then stop me."
+        "text": "No. Richard and the patients are staying here. Turn around."
       }
     ],
     "panelPlan": [
-      "Billie enters through smoke.",
-      "Tess blocks the corridor.",
-      "Their shared Shard history is visible.",
-      "Close combat ruptures the pressure window.",
-      "Billie bleeds beside the buckling barrier."
+      "Show the service airlock behind Billie opening into the clinic pressure corridor; Shard boarders remain visible at the docked craft.",
+      "Tess steps between Billie and the patient area while Richard and Paul evacuate vulnerable patients beyond the door.",
+      "Billie demands Richard and advances, but Tess refuses to abandon the clinic or surrender the medical records.",
+      "Billie and Tess struggle at close range in the narrow passage, each attempting to control the route to the clinic rather than posing heroically.",
+      "Their fight damages the already stressed pressure window; Billie is wounded and the barrier begins to fail, leaving both women exposed."
     ],
     "directionInline": [
-      "The fight must read as intimacy turned physical. Billie and Tess know each other's habits, but Tess is no longer using that familiarity to excuse her. Pressure damage around them keeps the fight dangerous to everyone nearby."
+      "The fight must read as intimacy turned physical. Billie and Tess know each other's habits, but Tess is no longer using that familiarity to excuse her. Pressure damage around them keeps the fight dangerous to everyone nearby.",
+      {
+        "text": "Billie's arrival must follow the boarding route shown on P22. Keep Richard and Paul visible beyond Tess, retreating with patients. The conflict concerns a specific attempted seizure, not a sequence of abstract family epigrams."
+      }
     ]
   },
   {
     "id": "RF_I03_P27",
-    "summary": "Richard treats Billie while Pike abandons her; Billie refuses Abby's offered rescue.",
+    "summary": "Richard saves the wounded Billie despite her attempted abduction; Pike leaves her behind, Abby offers evacuation without absolution, and Billie escapes separately rather than accept Abby's help.",
     "settingText": "INT./EXT. CLINIC BREACH / AURIC RING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2161,69 +2174,72 @@
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Let me bleed, doctor."
+        "text": "Leave it, doctor. You'd be safer if I bled out."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "You don't get to pick that for me."
+        "text": "Maybe. But you're bleeding in front of me, and I can stop it."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "She came here to kill you."
+        "text": "She came to drag you out of the clinic."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "I know. Hold pressure."
+        "text": "I know. Help me hold the dressing while Tess seals that window."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Pike's gone."
+        "text": "Pike's force is withdrawing. He isn't answering Billie's signal."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "He'll turn."
+        "text": "He'll come for his ships."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "No, he won't. Take my hand."
+        "text": "His ships are leaving you behind. Take my hand. There's still time."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "So you get to forgive me?"
+        "text": "You think carrying me out makes everything all right?"
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "So you don't bleed out."
+        "text": "No. It means you live long enough to answer for what you did."
       },
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Not from you."
+        "text": "I'm not going anywhere with you."
       }
     ],
     "panelPlan": [
-      "Richard clamps Billie's wound.",
-      "Tess holds the failing pressure barrier.",
-      "Pike turns from Billie's distress beacon.",
-      "Abby reaches with an offered hand.",
-      "Billie escapes alone in an emergency launch."
+      "Richard and Paul apply a pressure dressing to Billie's wound while Tess works to stabilize the corridor's ruptured pressure window.",
+      "A view of the disengaging Shard assault reveals Pike's ships turning away from Billie's distress signal.",
+      "Abby arrives from a small escort shuttle newly docked at a safe service access; she enters the same corridor instead of appearing without an approach.",
+      "Abby offers to evacuate Billie but makes no promise of forgiveness or freedom from consequences.",
+      "Billie pulls away and reaches the boarding craft's independent emergency launch capsule while Richard and Tess protect the remaining patients; her eventual whereabouts are unresolved."
     ],
     "continuityFrom": "RF_I03_P26",
     "directionInline": [
-      "Richard treats Billie while Paul objects, preserving the medical ethic that has defined him since Mercy of Dawn. Abby's offered hand is rescue without forgiveness; Billie's refusal keeps her outside reconciliation."
+      "Richard treats Billie while Paul objects, preserving the medical ethic that has defined him since Mercy of Dawn. Abby's offered hand is rescue without forgiveness; Billie's refusal keeps her outside reconciliation.",
+      {
+        "text": "Clearly distinguish stopping Billie's bleeding from absolving her. Abby must travel physically to the corridor from the escort defense, not teleport. Billie escapes using a plausible emergency launch connected to her already established boarding craft."
+      }
     ]
   },
   {
     "id": "RF_I03_P28",
-    "summary": "The coalition saves Auric, but every faction emerges altered and no one owns the victory.",
+    "summary": "Auric survives with lasting damage and a temporary multi-faction rescue effort; Richard's evidence travels onward as the Admiralty formally removes Venn from command.",
     "settingText": "INT./EXT. AURIC BAZAAR — AFTERMATH",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2258,49 +2274,47 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.sera.dain",
-        "speaker": "Dain",
-        "text": "The ring holds."
+        "speaker": "Sera",
+        "text": "The damaged ring is holding pressure. We've got people sealing the smaller breaches."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Barely."
+        "text": "How many families can stay in the heated sections tonight?"
+      },
+      {
+        "speaker": "Sera",
+        "text": "Enough to keep moving people out of the exposed rooms. We'll need more space tomorrow."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Barely counts."
+        "text": "The escorts held. Abby's ships lost two shield generators getting the transports through."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Tess."
+        "text": "Tess, can you leave the clinic now?"
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "Not yet."
+        "text": "Not while we've still got patients coming in."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "The evidence crossed Tal Corvus."
+        "text": "The Tal Corvus records have been copied beyond Auric. They can't quietly erase them now."
       },
       {
         "handle": "@starsplit.soren.kerr",
         "speaker": "Kerr",
-        "text": "The finding is removal from command."
-      },
-      {
-        "handle": "@starsplit.cael.dominion",
-        "speaker": "Dominion",
-        "text": "Effective immediately."
+        "text": "The tribunal's finding is removal from command. The order is effective immediately."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "It already was."
+        "text": "Then the Admiralty can put my reasons beside its decision."
       }
     ],
     "panelPlan": [
@@ -2311,12 +2325,15 @@
       "Venn hears the guilty finding as testimony spreads behind her."
     ],
     "directionInline": [
-      "Do not stage the aftermath as a victory tableau. Each faction has lost something: Venn command, Abby unity, Tess family certainty, Auric infrastructure. The meaningful success is that civilians and evidence survived."
+      "Do not stage the aftermath as a victory tableau. Each faction has lost something: Venn command, Abby unity, Tess family certainty, Auric infrastructure. The meaningful success is that civilians and evidence survived.",
+      {
+        "text": "Do not present the coalition as a clean military victory or make the ring perfectly repaired. The tribunal finding is formally distinct from Venn's earlier temporary suspension. The survivors still lack enough heated space."
+      }
     ]
   },
   {
     "id": "RF_I03_P29",
-    "summary": "Auric accepts refugees, rejects permanent Fleet jurisdiction, and founds an unauthorized defense compact; Tali is missing.",
+    "summary": "Auric adopts residency and witness protections and forms a voluntary civilian-defense compact without permanent Fleet or Shard control; Tali remains unconfirmed and missing.",
     "settingText": "INT. AURIC CIVIC CHAMBER / JEX'S OFFICE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2353,52 +2370,52 @@
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "If all we're offering is a bunk, this is a waiting room."
+        "text": "Shelter can't stop at tonight. People need permission to live here, not just wait for another departure."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Fine. Residency starts today."
+        "text": "We'll offer residency to the Tal Corvus families who want it. Auric will have to fund the housing and repairs."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "No permanent Fleet authority."
+        "text": "Our defense agreement can't give Fleet permanent authority over Auric. We just saw what their orders cost us."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "And nobody who leaves us gets claimed back by the Shards."
+        "text": "And the Shards don't get to drag anyone back because they used to serve under us."
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Nobody who testified gets handed back."
+        "text": "Witnesses who came here seeking safety stay under Auric's protection. No forced return."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "And next time?"
+        "text": "What do we do when another attack comes?"
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "We call each other. We show up."
+        "text": "Auric calls the escorts and the captains who agreed to defend civilians. We respond together, with Auric in charge of its own station."
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "Tali's place is empty."
+        "text": "Tali's safehouse is empty. The channel is still dead."
       },
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Good empty?"
+        "text": "Do you know if she got out?"
       },
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I don't know."
+        "text": "No. And I won't call her dead because a signal went missing."
       }
     ],
     "panelPlan": [
@@ -2409,13 +2426,16 @@
       "Jex receives TALI STATUS UNKNOWN."
     ],
     "directionInline": [
-      "The compact should emerge as a list of limits and obligations rather than a triumphant constitution. Jex's Tali alert should intrude at the end, making the new public order coexist with a private unresolved cost."
+      "The compact should emerge as a list of limits and obligations rather than a triumphant constitution. Jex's Tali alert should intrude at the end, making the new public order coexist with a private unresolved cost.",
+      {
+        "text": "This is the FIRST creation of the civilian-defense compact in Issue 3, not a pact already established before P01. Make terms specific, non-magical and voluntary. No premature certainty about Tali."
+      }
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P30",
-    "summary": "Under Fleet detention, Venn learns the compact exists without authorization; she and Naomi acknowledge what lies between them.",
+    "summary": "In detention transit after her removal, Venn hears how Auric formed a civilian-defense compact without Fleet authorization and speaks honestly with Naomi about a possible return.",
     "settingText": "INT. FLEET DETENTION TRANSIT / AURIC OBSERVATION GLASS",
     "regionText": "The Core",
     "charactersInline": [
@@ -2432,62 +2452,52 @@
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Auric took them in."
+        "text": "Auric's council approved residency for the refugees. The shelter won't be temporary for everyone."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "On whose terms?"
+        "text": "What about Fleet jurisdiction?"
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Ours."
+        "text": "No permanent command authority. Abby's captains can help defend the station, but Auric decides when they're needed."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "And Abby?"
+        "text": "The Admiralty won't like an agreement it can't control."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Agreed not to be in charge. Nearly killed her."
+        "text": "They didn't protect those transports when it mattered. We did."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Who authorized the compact?"
+        "text": "And when they demand the compact be dissolved?"
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Nobody."
+        "text": "We'll have to decide together what we're willing to defend. You won't be able to give the orders."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Unofficial things are hard to kill."
+        "text": "I know. I'm being sent away without Thunderbreak."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "Come back and make it worse."
+        "text": "Then find a way back. There's still work here, and I won't pretend we don't need you."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Planning on it."
-      },
-      {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "That a promise?"
-      },
-      {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "No. It's what I've got."
+        "text": "I'll try. That's the only promise I can make."
       }
     ],
     "panelPlan": [
@@ -2498,7 +2508,10 @@
       "Incompatible ships guard the shared shelter lights."
     ],
     "directionInline": [
-      "Keep Venn's detention visible throughout the call: no insignia, restricted compartment, permitted connection. Naomi's invitation is affectionate but not absolution; the final image of incompatible ships guarding the same shelter should carry the larger promise."
+      "Keep Venn's detention visible throughout the call: no insignia, restricted compartment, permitted connection. Naomi's invitation is affectionate but not absolution; the final image of incompatible ships guarding the same shelter should carry the larger promise.",
+      {
+        "text": "No smug epigrams about unofficial things, no implied restoration of Venn's authority, and no instant resolution of their personal disagreement. The closing emotional beat is a concrete intention to try returning under changed circumstances."
+      }
     ]
   }
 ]
