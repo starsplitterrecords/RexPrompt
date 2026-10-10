@@ -45,7 +45,20 @@ def load_payload(entry):
     for overlay in overlays:
         if overlay.get("beforeId") or overlay.get("afterId") or overlay.get("replaceIds"):
             raise SystemExit(f"{entry.get('id')}: unsupported Rex Fleet overlay placement in validator")
-        pages.extend(load_overlay(overlay))
+        incoming = load_overlay(overlay)
+        if overlay.get("mergeById"):
+            by_id = {page.get("id"): page for page in pages}
+            for patch in incoming:
+                page_id = patch.get("id")
+                if page_id in by_id:
+                    by_id[page_id].update({k: v for k, v in patch.items() if k != "id"})
+                elif overlay.get("strict"):
+                    raise SystemExit(f"{entry.get('id')}: strict overlay target missing: {page_id}")
+                else:
+                    pages.append(patch)
+                    by_id[page_id] = patch
+        else:
+            pages.extend(incoming)
     return pages
 
 
