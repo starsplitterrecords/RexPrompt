@@ -34,7 +34,7 @@ function injectStyles(){
   .visual-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.visual-actions button{font-size:.88rem;padding:9px 12px;margin:0}
   .visual-actions .secondary{background:var(--surface-soft)}
   .visual-upload-status{margin-top:8px;font-size:.82rem;color:var(--muted)}
-  .visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
+  .visual-remember{display:flex!important;align-items:center;gap:7px;font-size:.83rem;color:var(--fg)!important;margin:8px 0}.visual-remember input{margin:0;width:auto;flex:none}.visual-remember-hint{font-size:.75rem;color:var(--muted);line-height:1.35;margin:4px 0 8px}.visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
   .visual-canon-list{display:grid;gap:10px}.visual-canon-item .visual-meta{margin-top:5px}
   .visual-state-note{margin-top:10px;font-size:.82rem;color:var(--muted)}
   @media(max-width:850px){.visual-grid{grid-template-columns:1fr}.visual-image-wrap img{max-height:none}}
@@ -98,7 +98,9 @@ function createUi(){
           <input id="draftFileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
         </div>
         <div id="githubTokenPanel" class="visual-token-panel" hidden>
-          <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write · stored only for this browser tab</label>
+          <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write</label>
+          <label class="visual-remember"><input id="rememberGithubToken" type="checkbox"> Remember GitHub token on this device</label>
+          <div class="visual-remember-hint">Optional. Saved tokens persist across Safari restarts and can be accessed by scripts on this site. Avoid on shared devices.</div>
           <div class="visual-token-row"><input id="githubTokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"><button id="saveGithubTokenBtn" type="button">Use Token</button><button id="cancelGithubTokenBtn" type="button" class="secondary">Cancel</button></div>
         </div>
         <div id="draftUploadStatus" class="visual-upload-status"></div>
@@ -114,28 +116,48 @@ function createUi(){
   else anchor.insertAdjacentElement('afterend',section);
   const ui={
     section,
-    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
+    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),rememberToggle:section.querySelector('#rememberGithubToken'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
   };
-  ui.uploadBtn.addEventListener('click',()=>{if(!sessionStorage.getItem('rexprompt.githubToken')){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
+  ui.uploadBtn.addEventListener('click',()=>{if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
   ui.fileInput.addEventListener('change',()=>{const file=ui.fileInput.files?.[0];ui.fileInput.value='';if(file)void uploadApprovedDraft(file)});
   ui.saveTokenBtn.addEventListener('click',()=>saveTokenFromPanel());
   ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
   ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
-  ui.forgetTokenBtn.addEventListener('click',()=>{sessionStorage.removeItem('rexprompt.githubToken');syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten for this tab.'});
+  ui.forgetTokenBtn.addEventListener('click',()=>{window.RexPromptGithubAuth.forgetToken();syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten on this device and in this tab.'});
   // The single existing upload control lives in the sticky production toolbar.
   // Move its original DOM nodes rather than duplicating upload handlers.
   const uploadSlot=document.getElementById('productionUploadSlot');
   if(uploadSlot){
     uploadSlot.append(section.querySelector('.visual-actions'),ui.tokenPanel,ui.uploadStatus);
     const utilities=document.getElementById('productionUtilities');
-    if(utilities)utilities.appendChild(ui.forgetTokenBtn);
+    if(utilities){
+      const rememberRow=document.createElement('label');
+      rememberRow.className='visual-remember';
+      rememberRow.innerHTML='<input type="checkbox" id="rememberGithubTokenUtility"> Remember GitHub token on this device';
+      utilities.append(rememberRow,ui.forgetTokenBtn);
+      const hint=document.createElement('div');hint.className='visual-remember-hint';
+      hint.textContent='Optional. Persistent tokens are readable by scripts on this site. Avoid on shared devices.';
+      utilities.appendChild(hint);
+      ui.rememberUtility=rememberRow.querySelector('input');
+    }
   }
-  state.ui=ui;syncTokenButton();return ui;
+  const onRemember=event=>{
+    try{
+      window.RexPromptGithubAuth.setRemember(event.target.checked);
+      ui.uploadStatus.textContent=event.target.checked?'GitHub token will be remembered on this device.':'GitHub token is now session-only.';
+    }catch(error){ui.uploadStatus.textContent=error.message}
+    syncRememberControls();
+  };
+  ui.rememberToggle.addEventListener('change',onRemember);
+  ui.rememberUtility?.addEventListener('change',onRemember);
+  window.addEventListener('rexprompt:github-auth-change',()=>{syncTokenButton();syncRememberControls()});
+  state.ui=ui;syncTokenButton();syncRememberControls();return ui;
 }
-function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!sessionStorage.getItem('rexprompt.githubToken')}
+function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!window.RexPromptGithubAuth.getToken()}
+function syncRememberControls(){const u=state.ui;if(!u)return;const remembered=window.RexPromptGithubAuth.isRemembered();u.rememberToggle.checked=remembered;if(u.rememberUtility)u.rememberUtility.checked=remembered}
 function showTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenPanel.hidden=false;ui.uploadStatus.textContent='GitHub authorization is required only to store an approved draft.';setTimeout(()=>ui.tokenInput.focus(),0)}
 function hideTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenInput.value='';ui.tokenPanel.hidden=true}
-function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}sessionStorage.setItem('rexprompt.githubToken',token);hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent='GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
+function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}try{window.RexPromptGithubAuth.setToken(token)}catch(error){ui.uploadStatus.textContent=error.message;return}hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent=window.RexPromptGithubAuth.isRemembered()?'GitHub token saved on this device.':'GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
 
 function setDraftBody(sel,entry){
   const ui=state.ui;if(!ui)return;
@@ -242,7 +264,7 @@ async function uploadApprovedDraft(file){
   if(file.size>CONFIG.maxUploadBytes){ui.uploadStatus.textContent='Upload failed: image is larger than 50 MB.';return}
   const verb=state.draftManifest?.drafts?.[visualKey(sel)]?'replace':'store';
   if(!window.confirm('Explicitly '+verb+' the approved production draft for '+sel.recipeId+' in RexPrompt? This does not publish anything to Visions.'))return;
-  const token=sessionStorage.getItem('rexprompt.githubToken');if(!token){state.pendingUpload=true;showTokenPanel();return}
+  const token=window.RexPromptGithubAuth.getToken();if(!token){state.pendingUpload=true;showTokenPanel();return}
   ui.uploadBtn.disabled=true;ui.uploadStatus.textContent='Storing approved draft in RexPrompt…';
   try{
     const refPath='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch),ref=await gh(token,refPath),headSha=ref.object.sha;
