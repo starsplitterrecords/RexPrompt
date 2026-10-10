@@ -1,23 +1,22 @@
 [
   {
     "id": "SHAT_I02_P01",
-    "summary": "High Era infrastructure operates at full scale while its hidden age and uneven maintenance burden become visible beneath the civic surface.",
+    "summary": "High Era infrastructure still moves people and goods at full scale, while old machinery and uneven maintenance beneath the civic surface reveal how much the network has inherited.",
     "settingText": "Full-page layered infrastructure vista: immaculate civic and transit architecture above, massive older corridor machinery and service structures beneath, and distant outer maintenance platforms showing more wear. Everything is still operating, but the inherited system's age is physically visible.",
     "panelPlan": [
-      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
+      "One full-page panoramic image, visually linking immaculate Cooperative civic/transit structures to older corridor machinery and hard-to-reach peripheral maintenance platforms; show working traffic rather than collapse.",
+      "Use scale, material age, uneven access, and workers under the architecture to express dependency. No reserved lettering and no readable text."
     ],
     "dialogueInline": [],
     "directionInline": [
-      "No captions or speech balloons.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text.",
-      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
-      "Use the visible situation itself to carry the beat."
+      "No captions, speech balloons, environmental labels, signage, or invented readable text.",
+      "High Era Cooperative, BHA, Convoy, and Outer Band forms only; no mature successor-state designs.",
+      "All infrastructure is still operating at this point; wear differs markedly across the network."
     ]
   },
   {
     "id": "SHAT_I02_P02",
-    "summary": "Liora and Alan compare overnight corridor data and find the harmonic bowing curve has steepened instead of settling.",
+    "summary": "Liora and Alan identify matching phase errors on unrelated routes; the night's new evidence is synchronization across independent infrastructure, not simply a steeper warning curve.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
     "factions": [
@@ -28,37 +27,38 @@
       "C_alan"
     ],
     "panelPlan": [
-      "Open in the resonance lab before normal shift change, with overnight plots still filling the room.",
-      "Liora overlays the latest curve on yesterday’s and the new line visibly climbs away from the old one.",
-      "Alan checks the raw corridor feed to rule out a bad projection.",
-      "End on the two curves diverging sharply rather than converging."
+      "Pre-shift resonance lab: Alan isolates three separate raw corridor traces rather than opening with a generalized red crisis map.",
+      "Large diagnostic panel: the three errors occur in the same narrow time window even though the routes are geographically separate.",
+      "Liora checks the hardware topology and finds no shared local beacon or sensor.",
+      "Finish with the simultaneous spikes foregrounded beside the engineers' wary reaction: a local fault cannot explain their match."
     ],
     "directionInline": [
-      "The evidence must read as a worsening trend, not another isolated glitch."
+      "The event is a new independent correlation beyond Issue 1's isolated/different-arc echoes. Do not use mystical geometry or literal music imagery.",
+      "Only scripted dialogue may be legible; instrumentation remains visual without invented readout prose."
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Overlay yesterday."
-      },
-      {
         "handle": "@starsplit.alan.kessler",
-        "text": "Already did."
+        "text": "Three routes. Same phase error."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "That's not settling."
+        "text": "Shared beacon?"
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "It's climbing."
+        "text": "None. The clocks aren't linked, either."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Then verify the raw returns. All three."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P03",
-    "summary": "Alan adds three separate echo events from the same window, establishing that the network structure itself is fatigued.",
+    "summary": "Independent clock checks confirm that the simultaneous errors belong to corridor behavior rather than a corrupted display or common timing reference.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
     "factions": [
@@ -69,38 +69,38 @@
       "C_alan"
     ],
     "panelPlan": [
-      "Alan pulls three corridor incidents into a shared time window.",
-      "Each route shows a different local anomaly but the same timing behavior.",
-      "The separate traces align into one stress pattern when stacked.",
-      "Liora and Alan realize the incidents are linked by structure rather than coincidence."
+      "Alan disconnects the visualization layer and checks the primary returns against independent physical clock records.",
+      "Use three compact technical inserts to show separate clock sources and the same moment of phase displacement.",
+      "Liora tests whether a common measurement system could have created the apparent correlation; the cross-check fails to eliminate it.",
+      "End on the aligned physical measurements, with the discarded software projection out of focus."
     ],
     "directionInline": [
-      "Make the connection visual and cumulative."
+      "Differentiate measurement, inference, and forecast visually. This page establishes credibility, not yet an exact failure date."
     ],
     "continuityFrom": "SHAT_I02_P02",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Three echoes. Same window."
+        "text": "Independent clocks still show the slip."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Same route?"
+        "text": "What happens if you remove the shared processing?"
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Three routes."
+        "text": "Nothing. The error survives."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Then stack them."
+        "text": "So something is coupling the routes."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P04",
-    "summary": "Liora concludes that if tension is not deliberately relieved, the lattice will choose its own failure point.",
+    "summary": "Liora tests staggered traffic reduction in a calibrated simulation and finds that relieving one corridor shifts load into others, making piecemeal closure unsafe.",
     "setting": "S_ResLab",
     "region": "HighEraCore",
     "factions": [
@@ -111,38 +111,43 @@
       "C_alan"
     ],
     "panelPlan": [
-      "Liora projects the rising slope across the network map and identifies no natural plateau.",
-      "A few potential failure points light up, then shift as load redistributes.",
-      "Alan sees that there is no safe place to wait for the problem to resolve itself.",
-      "End on Liora naming the choice: controlled relief now or uncontrolled release later."
+      "Liora feeds the independently verified observations into a bounded network-load simulation, explicitly distinct from a live control command.",
+      "She reduces modeled demand on one stressed arc; its strain falls briefly while connected arcs rise.",
+      "Alan checks the neighboring routes and highlights the model's uncertainty at their transfer boundaries.",
+      "Final wide technical panel: the model has no isolated safe relief point. Liora shifts from single-route closure to a coordinated, measurable reduction proposal."
     ],
     "directionInline": [
-      "Finish on the loss of passive options."
+      "Never imply they secretly close real corridors here. The experiment is simulated and calibrated against observed independent timing data.",
+      "Show uncertainty honestly: a network-wide risk is established, but the precise failure location remains unknown."
     ],
     "continuityFrom": "SHAT_I02_P03",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "There. The load moves and the weak point moves with it."
+        "text": "Take ten percent off this arc in the model."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "So waiting doesn't give us a safer failure."
+        "text": "It eases. The next two take the load."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Waiting lets the network pick one."
+        "text": "Try the other side."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "I'd rather pick our own disaster."
+        "text": "Same transfer. We can't predict the exact weak point."
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "Then any reduction has to be staged and measured."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S01"
   },
   {
     "id": "SHAT_I02_P05",
-    "summary": "In the Outer Band, Ruben’s crew holds aging beacon infrastructure together with scrap while synchronization continues to degrade.",
+    "summary": "Ruben's Outer Band crew fights a physically deteriorating beacon housing while the surrounding habitat depends on its continued operation.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -154,33 +159,33 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "Wide Outer Ring habitat: patched conduits, exposed housings, workers braced against a tremor.",
-      "Ruben opens a beacon casing to reveal improvised parts where replacements should be.",
-      "A timing indicator slips out of sync while the physical housing shakes.",
-      "End on workers stabilizing by hand what the Core still treats as routine infrastructure."
+      "Establish the inhabited Outer Ring infrastructure with practical patched maintenance spaces and a beacon collar visibly vibrating under load.",
+      "Ruben wedges a tool against a mount while a technician reaches a failing fastener.",
+      "Close view into the opened housing: old fittings, repaired mounts, no fresh replacement hardware.",
+      "End on crew members bracing the assembly just enough to keep the node online, without making the hazard vanish."
     ],
     "directionInline": [
-      "This is material neglect, not abstract ideology."
+      "Industrial age and unequal maintenance are physical facts, not evidence that Outer engineers are careless or inferior."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Hold that housing."
-      },
-      {
-        "handle": "@starsplit.ruben.markham",
-        "text": "It's still walking."
+        "text": "Brace the collar. It's moving against the bolts."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Because half the mounts are older than I am."
+        "text": "If that mount goes, we lose the relay."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Then keep the load off it while I open the casing."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P06",
-    "summary": "An outer technician reveals that replacement requests have gone unanswered for months, tying corridor instability to unequal maintenance.",
+    "summary": "The Outer Band's repeated unanswered replacement requests explain the mechanical vulnerability, while a second timing fault suggests that broken hardware is not the whole story.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -192,34 +197,39 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "The technician produces an old requisition queue beside the failing hardware.",
-      "Multiple replacement requests show no fulfilled delivery.",
-      "Ruben compares the neglected parts to the rising timing mismatch.",
-      "A new vibration interrupts the argument and forces both back to work."
+      "The technician lays an aged requisition queue beside the exposed mounts; visual repetition shows multiple attempts with no received parts, without unscripted lettering.",
+      "Ruben compares the worn collar with a phase trace that appears just as the structure trembles.",
+      "The outer technician points to the latest pending replacement and an increasingly unsafe bolt seating.",
+      "A renewed shudder ends the discussion; they turn immediately to the repair rather than exchanging a thematic speech."
     ],
     "directionInline": [
-      "Let resentment grow out of visible maintenance history."
+      "The neglected mount increases risk but must not be depicted as the established cause of the system-wide synchronization error.",
+      "Queue information is conveyed by document layout and wear, not made-up interface words."
     ],
     "continuityFrom": "SHAT_I02_P05",
     "dialogueInline": [
       {
         "handle": "@starsplit.otech",
-        "text": "Replacement request. Six months."
+        "text": "Fourth replacement request. Six months without a part."
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Rejected or ignored?"
+        "text": "Did anyone reject it?"
       },
       {
         "handle": "@starsplit.otech",
-        "text": "Ignored for six months. The mount kept degrading."
+        "text": "No one answered."
+      },
+      {
+        "handle": "@starsplit.ruben.markham",
+        "text": "Save the phase trace. We need to know what remains after the brace."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P07",
-    "summary": "Ruben keeps the node operating anyway, making improvised survival the Outer Band’s practical answer to institutional delay.",
+    "summary": "Ruben's improvised brace stops the damaging motion, but independent timing error persists; he sends both observations to Core researchers.",
     "setting": "S_OuterRing",
     "region": "OuterBand",
     "factions": [
@@ -231,42 +241,43 @@
       "C_outerTech"
     ],
     "panelPlan": [
-      "Workers cut usable material from a retired housing.",
-      "Ruben directs a brace into place as another component slips.",
-      "The timing readout remains imperfect but the node stops worsening.",
-      "End on the crew working under their own patched solution while the formal replacement queue remains unanswered."
+      "Workers cut a serviceable brace from a retired housing and install it under load.",
+      "Ruben fastens it; the violent mechanical vibration subsides and the physical alignment holds.",
+      "Technical insert: the independent timing trace continues to slip despite the now-stable housing.",
+      "Ruben sends the before-and-after measurements toward the Core; the repair is successful locally but disproves the comforting explanation that bad mounts caused all the drift."
     ],
     "directionInline": [
-      "Show improvised maintenance as a practical habit whose larger meaning has not yet been named."
+      "Show practical Outer Band innovation without anachronistic later Shard insignia or doctrine.",
+      "Ruben's field report is one of the independently verified observations used in the subsequent Council hearing."
     ],
     "continuityFrom": "SHAT_I02_P06",
     "dialogueInline": [
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Strip the dead casing."
+        "text": "Brace is holding. Check the clock."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "That's not approved stock."
+        "text": "The housing's steady. Timing still slips."
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "We don't have approved air, either."
+        "text": "Use the independent reference."
       },
       {
         "handle": "@starsplit.otech",
-        "text": "You want the brace ugly or legal?"
+        "text": "Same offset."
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "I want it holding."
+        "text": "Send both traces to the Core lab. Include the repair time."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S02"
   },
   {
     "id": "SHAT_I02_P08",
-    "summary": "At Orban Port, Ava tries to route medicine through windows that now change faster than a convoy can be scheduled.",
+    "summary": "Ava finds that medical supplies are stranded at Orban-Tier as certified route windows shift faster than crews can commit to a departure.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
@@ -277,37 +288,38 @@
       "C_trafficCtrl"
     ],
     "panelPlan": [
-      "Establish the port with medicine pallets staged for urgent departure.",
-      "Ava compares three route windows and watches each shift before any one can be locked.",
-      "The traffic controller refreshes the board and gets another contradictory answer.",
-      "End on medicine waiting while the system refuses to produce one stable path."
+      "Orban-Tier Transit Port: urgently needed medicine in temperature-controlled pallets, with a ready transport beside ordinary freight.",
+      "Ava tries to reserve a certified corridor window; successive status projections disagree before a departure can be cleared.",
+      "The traffic controller checks independent lane status and cannot issue a verified slot.",
+      "End with the medicine pallets ready and the ships still stationary: the destination's medical reserve is shrinking, but no departure has been authorized."
     ],
     "directionInline": [
-      "Keep the stakes tangible: delayed medicine, not just delayed traffic."
+      "No fixed four-hour delivery deadline: this medical need persists into Issue 4's Sector Nine decision.",
+      "Keep the physical cargo and operational logistics central."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "Give me one window that stays put."
+        "text": "Give me a window long enough to launch."
       },
       {
         "handle": "@starsplit.tctrl",
-        "text": "If I had one, you'd be moving already."
+        "text": "It changes before I can certify it."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "The medicine is due in four hours."
+        "text": "The receiving wards are running on reserve stock."
       },
       {
         "handle": "@starsplit.tctrl",
-        "text": "The route changes in four minutes."
+        "text": "And this board still can't promise a route."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S03"
   },
   {
     "id": "SHAT_I02_P09",
-    "summary": "The controller tells Ava the only available option is to route blind, forcing a choice between procedural certainty and immediate need.",
+    "summary": "Ava commits the medical convoy to a ready berth at the cost of delaying other cargo, preparing for a future unverified opening without launching prematurely.",
     "setting": "S_OrbanPort",
     "region": "HighEraNetwork",
     "factions": [
@@ -318,39 +330,47 @@
       "C_trafficCtrl"
     ],
     "panelPlan": [
-      "The controller clears the unstable predictions and leaves only raw lane status.",
-      "Ava studies the medicine crates and the people waiting for them on the destination manifest.",
-      "The controller offers the desperate option without pretending it is safe.",
-      "End on Ava staring at an unverified corridor entry rather than a sanctioned route. Direction: Land on Ava’s practical moral choice between dangerous action and guaranteed delay."
+      "The controller switches from unreliable forecasts to raw corridor telemetry, leaving the medical convoy without an approved departure.",
+      "Ava examines a berth allocation: holding the refrigerated convoy ready blocks a scheduled general-freight movement.",
+      "She authorizes priority loading and personally accepts responsibility for the displaced schedule.",
+      "Finish on the medical pallets entering the ship while the corridor entrance remains unverified and empty; the convoy is prepared, not yet dispatched."
     ],
     "continuityFrom": "SHAT_I02_P08",
     "dialogueInline": [
       {
         "handle": "@starsplit.tctrl",
-        "text": "I can give you raw status. No prediction."
+        "text": "I can show raw lane status. I can't sign a departure."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "So I fly it blind?"
-      },
-      {
-        "handle": "@starsplit.ava.seltos",
-        "text": "And if I wait?"
+        "text": "Keep the medical ship on the ready berth."
       },
       {
         "handle": "@starsplit.tctrl",
-        "text": "The crates stay here."
+        "text": "Then the next freight convoy loses its slot."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "That doesn't help the people waiting for them."
+        "text": "Move it. Put the delay against my dispatch order."
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "You're tying up our last refrigerated berth."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Until we find an actual opening."
       }
     ],
-    "sceneId": "SCN_SHAT_I02_S03"
+    "sceneId": "SCN_SHAT_I02_S03",
+    "directionInline": [
+      "This is a costly preparatory action, not the launch. Ava's actual unverified Sector Nine transit remains in Issue 4.",
+      "Show the affected freight and cold-storage capacity without adding unlisted speaking characters."
+    ]
   },
   {
     "id": "SHAT_I02_P10",
-    "summary": "Heska finds Dawn Era schematics for a full-network damping cycle that current manuals barely acknowledge.",
+    "summary": "Heska follows the timestamp contradictions discovered in Issue 1 into forgotten maintenance records and finds a Dawn Era procedure indexed against network-wide phase stress.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
     "factions": [
@@ -360,28 +380,30 @@
       "C_heska"
     ],
     "panelPlan": [
-      "Tall establishing panel through the Records Vault: Heska moves past generations of indexed corridor history toward a rarely accessed Dawn Era engineering shelf.",
-      "Wide worktable panel as she opens the full-network damping schematic beside modern manuals that reference the system without preserving its operating procedure.",
-      "Close final panel on Heska's realization that the civilization kept the machine and lost the practice."
+      "Tall establishing panel through Records Vault: Heska retraces the anomalous archive offsets from Strauss Hall to older maintenance records.",
+      "At her table, matching correction intervals link past operational incidents to the present timing anomalies; the old records were filed under routine system maintenance.",
+      "She follows the source references into a seldom accessed Dawn Era engineering collection and opens a full-network damping schematic.",
+      "Final close view connects her earlier archival finding to a physical network-relief system; the discovery is the outcome of her research, not a lucky shelf find."
     ],
     "directionInline": [
-      "The discovery should feel buried by institutional forgetting rather than hidden by conspiracy."
+      "Heska remains a historian/archivist using records as engineering evidence, never an oracle. No conspiracy implication.",
+      "Keep the archival markings nonverbal unless exactly scripted."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.heska",
-        "text": "Full-network damping."
+        "text": "The old maintenance logs corrected the same offset."
       },
       {
         "handle": "@starsplit.heska",
-        "text": "So you did know how to do this once."
+        "text": "They weren't correcting the archive. They were relieving load."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S04"
   },
   {
     "id": "SHAT_I02_P11",
-    "summary": "Heska compares the Dawn Era blueprint to current manuals and realizes later generations retained the network while losing the practice for relieving its accumulated stress.",
+    "summary": "Heska reconstructs how later manuals preserved references to the damping infrastructure while omitting its operating method, and forwards the surviving schematic to Liora.",
     "setting": "S_RecordsVault",
     "region": "HighEraCore",
     "factions": [
@@ -391,34 +413,34 @@
       "C_heska"
     ],
     "panelPlan": [
-      "Heska places the old blueprint beside the modern manual.",
-      "Whole sections of the damping procedure have become references without operational detail.",
-      "She marks the missing chain from systemwide hazard to systemwide response.",
-      "End on her sending the discovery to Liora."
+      "Place Dawn Era schematic and later operational manuals side by side; the newer books still refer to hardware but their linked procedure terminates in missing or purely referential records.",
+      "Graphic close-up on the old network-level relief path and later localized maintenance routines, visually distinguishing the two philosophies of upkeep.",
+      "Heska identifies a surviving calibration table but no trustworthy current-network protocol.",
+      "She sends the original material and its provenance to Liora, including the uncertainty that the network has expanded since its last known use."
     ],
     "directionInline": [
-      "Let the visual comparison carry the accusation: the infrastructure outlived the knowledge needed to maintain it."
+      "Discovery provides a possible instrument, not an easy or fully certified solution; ancient calibration cannot be assumed safe for the expanded modern network."
     ],
     "continuityFrom": "SHAT_I02_P10",
     "dialogueInline": [
       {
         "handle": "@starsplit.heska",
-        "text": "Reference. Reference. Another reference... where's the procedure?"
+        "text": "Every later manual points back to the same missing procedure."
       },
       {
         "handle": "@starsplit.heska",
-        "text": "You kept the machine and lost the instructions."
+        "text": "The hardware survived. The operating method didn't."
       },
       {
         "handle": "@starsplit.heska",
-        "text": "Liora needs this."
+        "text": "Liora needs the original table, not somebody's summary."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S04"
   },
   {
     "id": "SHAT_I02_P12",
-    "summary": "Lochran orders Damian to keep drift out of public messaging and define the anomalies as a technical matter.",
+    "summary": "Lochran orders Damian to issue continuity guidance because he fears uncoordinated closures could trigger supply shortages before a common response can be planned.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
     "factions": [
@@ -429,41 +451,42 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Open inside the BHA Nexus with public communications drafts beside live incident data.",
-      "Lochran separates the public-facing screen from the technical warnings and points Damian to the former.",
-      "Damian watches new anomalies enter the technical feed while being told not to name drift.",
-      "End on the public draft retaining the language of stability."
+      "Inside BHA Nexus, Lochran places unreliable live dispatch feeds beside draft public guidance and a map of vital supply corridors.",
+      "Damian points to stations whose local controllers can no longer certify departure windows.",
+      "Lochran traces supply dependencies through crowded ports and Outer Band communities, showing a credible danger from a blanket halt.",
+      "End on his instruction to describe services as rescheduled rather than admit that some routes cannot currently be verified."
     ],
     "directionInline": [
-      "Lochran’s choice should be explicit but grounded in fear of social destabilization."
+      "Lochran's stated fear is genuine institutional risk; he understands operational damage but prioritizes stability.",
+      "The divergence between technical uncertainty and public reassurance must be visibly concrete, not a debate about word choice alone."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
-        "text": "Take 'drift' out."
+        "text": "The guidance goes out before the next departure cycle."
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "It's what engineering calls it."
+        "text": "Local controllers can't certify half those windows."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Engineering is not addressing six billion people."
+        "text": "A general shutdown strands food and medicine across the network."
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "What am I calling it?"
+        "text": "Then let stations hold departures they can't verify."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Timing instability. Temporary."
+        "text": "Say services are being rescheduled. Do not announce a blanket closure."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S05"
   },
   {
     "id": "SHAT_I02_P13",
-    "summary": "Damian agrees to keep the tone steady, but the growing incident feed makes his earlier confidence visibly harder to sustain.",
+    "summary": "Damian knowingly sends guidance that preserves the appearance of available service, despite recognizing that staff will use it to continue unsafe boarding.",
     "setting": "S_BHANexus",
     "region": "HighEraCore",
     "factions": [
@@ -474,35 +497,43 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Damian edits the message while the live feed adds another affected route.",
-      "He pauses over a warning term, deletes it, and substitutes softer language. Direction: Play Damian’s growing conflict through his hesitation between the calm public script and the worsening private feed.",
-      "Lochran leaves him to finish the statement.",
-      "End on Damian alone between the calm public script and the worsening private board."
+      "Damian's final draft and the live route status occupy opposing sides of his workstation.",
+      "He starts to append a local-verification warning, then removes it after confronting Lochran's instructions.",
+      "Lochran maintains that indiscriminate suspensions would threaten supply lines, but Damian sees which gate staff will receive the simplified message.",
+      "Damian transmits the guidance; a nearby waystation feed shows uncertain departure status that the wording does not account for."
     ],
     "continuityFrom": "SHAT_I02_P12",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
-        "text": "Another route just went red."
+        "text": "This still implies departures are available."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Then write faster."
+        "text": "Some are. We cannot stop every port on a projection."
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "At some point we're just telling people the wrong thing."
+        "text": "They'll keep boarding people without a verified lane."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Not if the alternative gets people killed in a panic."
+        "text": "Local control still has responsibility for safety."
+      },
+      {
+        "handle": "@starsplit.damian.cole",
+        "text": "Then I'm sending them a message that makes that harder."
       }
     ],
-    "sceneId": "SCN_SHAT_I02_S05"
+    "sceneId": "SCN_SHAT_I02_S05",
+    "directionInline": [
+      "Damian is knowingly complicit, not unwitting. His own action produces the information failure shown next at Waystation Twelve.",
+      "Only scripted spoken dialogue should be readable; the precise phrasing of the guidance is shown by the next scene's dialogue, not invented interface text."
+    ]
   },
   {
     "id": "SHAT_I02_P14",
-    "summary": "At Waystation Twelve, departure windows vanish and reappear while travelers try to understand whether they are still going anywhere.",
+    "summary": "At Waystation Twelve, Damian's continuity guidance conflicts with disappearing departures, leaving staff to manage passengers under an instruction they cannot verify.",
     "setting": "S_Waystation12",
     "region": "HighEraNetwork",
     "factions": [
@@ -513,37 +544,38 @@
       "C_staff"
     ],
     "panelPlan": [
-      "Wide crowded waystation with departure boards changing faster than lines can move.",
-      "A traveler reaches the front only to see the assigned window disappear again.",
-      "Staff redirect one queue, then immediately have to stop it.",
-      "End on the traveler asking why the same departure has vanished twice."
+      "Busy Waystation Twelve concourse: departure assignments vanish and reappear before queues can move.",
+      "A traveler brings the same cancelled-and-relisted departure to a staff desk.",
+      "Staff holds the central continuity guidance against a local gate receiver with no stable route lock.",
+      "End on the line bunching at a gate whose boarding status cannot honestly be established."
     ],
     "directionInline": [
-      "The crowd should understand enough to know the official explanation is no longer matching experience."
+      "The staff member is constrained by contradictory guidance and cannot be blamed for the central mismatch.",
+      "Do not invent arrival board text; the disappearance of windows and dialogue carry the contradiction."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.travl",
-        "text": "It disappeared again."
+        "text": "They told us departures were still running."
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Which departure?"
+        "text": "Central says services are being rescheduled."
       },
       {
         "handle": "@starsplit.travl",
-        "text": "The same one I have been standing under for an hour."
+        "text": "Mine has disappeared three times."
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Stay in line. I'll refresh it."
+        "text": "The gate receiver hasn't held a valid window long enough to board."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S06"
   },
   {
     "id": "SHAT_I02_P15",
-    "summary": "A staffer calls the failures a board glitch because no one has been given a truthful operational explanation.",
+    "summary": "The Waystation Twelve staffer defies the reassuring guidance by stopping boarding at an unverifiable gate; passengers discover that local honesty can be more useful than central confidence.",
     "setting": "S_Waystation12",
     "region": "HighEraNetwork",
     "factions": [
@@ -554,41 +586,43 @@
       "C_staff"
     ],
     "panelPlan": [
-      "Wide queue panel: the same departure disappears again as exhausted travelers watch the board erase certainty in real time.",
-      "Two-shot at the desk as the staffer finally stops repeating the official 'board glitch' explanation and admits the system is no longer giving usable answers.",
-      "Close on the traveler absorbing the admission; honesty is more useful than another reassurance, even though it solves nothing."
+      "Return to the same gate and waiting travelers, not a separate crowd crisis.",
+      "The local receiver loses its lock again while the official continuity guidance remains present.",
+      "Staff physically closes the boarding lane and alerts local dispatch, accepting the operational and disciplinary consequences.",
+      "The traveler steps out of line; others follow, forming an orderly waiting area rather than a riot. The held departure registers as another verified operational disruption."
     ],
     "directionInline": [
-      "The staffer is trapped inside the same information failure as the public."
+      "Close on a consequential local decision, not merely a character admitting uncertainty.",
+      "Report the safety hold through the existing operational incident system without adding unscripted readable screen text."
     ],
     "continuityFrom": "SHAT_I02_P14",
     "dialogueInline": [
       {
         "handle": "@starsplit.travl",
-        "text": "The board has cycled three times in ten minutes."
+        "text": "Is that route safe?"
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Ten minutes ago I thought it was the board."
+        "text": "I can't verify it."
       },
       {
         "handle": "@starsplit.travl",
-        "text": "And now?"
+        "text": "But the notice says it's running."
       },
       {
         "handle": "@starsplit.pstf",
-        "text": "Now I don't know."
+        "text": "I'm holding boarding. They can challenge me after I know where the ship would go."
       },
       {
         "handle": "@starsplit.travl",
-        "text": "Then I'm staying off that departure until somebody does."
+        "text": "Then we'll wait off the ramp."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S06"
   },
   {
     "id": "SHAT_I02_P16",
-    "summary": "The Council reconvenes with Liora’s updated model, now showing synchronized failure rather than scattered drift.",
+    "summary": "At a reconvened Council, Liora combines laboratory timing, Ruben's post-repair measurements, and new boarding holds to prove a shared network stress problem without claiming to predict its exact hour of failure.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -602,41 +636,42 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Establish the Council chamber with a larger, denser incident map than in Issue 1.",
-      "Liora replaces the prior projection with a model linking multiple red stress zones.",
-      "Delegates recognize familiar routes now connected into one failure pattern.",
-      "End on the model predicting several nodes failing in the same window."
+      "Establish Cooperative Council Chambers with observed incident points distinguished visually from forecast stress bands and from local departures held by staff.",
+      "Show Liora adding verified independent timing from Core and Outer Band; one Outer trace is annotated visually against a stabilized mechanical housing.",
+      "Council delegates compare the new evidence with the earlier Issue 1 warning: independent observations have multiplied, but predictions remain uncertain.",
+      "Finish on the first proposed operational discussion rather than another ominous map reveal."
     ],
     "directionInline": [
-      "Make the escalation from the earlier Council warning visually undeniable: scattered drift has become synchronized-failure risk."
+      "The hearing advances beyond Issue 1: corroborated multi-region data and concrete operational holds, not the same general argument with a larger red map.",
+      "Keep measured points visually distinct from modeled danger zones."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "These aren't separate anymore."
-      },
-      {
-        "handle": "@starsplit.iskara.foster",
-        "text": "How many nodes hit the same window?"
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Five I can prove. Maybe nine."
+        "text": "Five independent clocks shifted in the same window."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "What separates five from nine?"
+        "text": "How many were independently checked?"
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Five for sure. Nine if the pattern holds."
+        "text": "All five. One Outer beacon still drifted after a successful repair."
+      },
+      {
+        "handle": "@starsplit.iskara.foster",
+        "text": "Can you identify which corridor breaks first?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "No. I can show the coupling. Not the failure order."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P17",
-    "summary": "Iskara supports immediate traffic restrictions, arguing that every open corridor adds load to a system already approaching synchronized failure.",
+    "summary": "Iskara proposes a bounded, staged reduction on two high-load corridors while retaining essential medical traffic, forcing the Council to examine actual distribution costs.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -650,38 +685,43 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Iskara moves from support into a concrete operational demand.",
-      "The model shows traffic continuing through the highest-stress arcs as she speaks.",
-      "Several delegates react to the political cost of closing routes.",
-      "End on Liora and Iskara aligned around restriction while Lochran remains opposed."
+      "Iskara moves from testimony into a specific one-cycle traffic-management proposal with two affected high-load arcs and a protected medical route shown on the map.",
+      "Lochran identifies the Outer Band supply traffic carried by those corridors; concerned delegates examine the affected destinations.",
+      "Liora overlays the predicted redirected load and its uncertainty, explaining why every stage must be measured rather than assumed safe.",
+      "End on the first concrete prevent-or-delay choice in the chamber: a limited disruption now with real risk to dependent communities."
     ],
     "directionInline": [
-      "This is the first proposed sacrifice: reduce mobility now to preserve the network."
+      "Restricting capacity is a risky proposal with costs, not an obvious universally safe solution. Lochran must have a serious objection.",
+      "Do not imply the Council has approved or executed the reduction."
     ],
     "continuityFrom": "SHAT_I02_P16",
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Close the busiest routes."
-      },
-      {
-        "handle": "@starsplit.iskara.foster",
-        "text": "Then what exactly did you ask us here to do?"
+        "text": "Reduce traffic on these two arcs for one cycle. Keep the medical lanes open."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Give me something I can defend."
+        "text": "Those arcs carry Outer Band food shipments."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "How do you defend leaving them open if she's right?"
+        "text": "Stage the holds. Move essentials first."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Where does the displaced load go?"
+      },
+      {
+        "handle": "@starsplit.liora.virelia",
+        "text": "We can measure each stage. I can't promise the transfer is harmless."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P18",
-    "summary": "Lochran refuses restrictions without proof of imminent failure, converting uncertainty into a reason to preserve normal operations.",
+    "summary": "Lochran rejects the staged restriction because the uncertainty about load transfer and supply interruption is politically and operationally unacceptable to him.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -695,38 +735,43 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Lochran challenges the move from projection to shutdown.",
-      "Delegates turn from the red model to him, looking for permission to avoid disruption.",
-      "He distinguishes forecast from proof and holds the line against restrictions.",
-      "End on traffic continuing across the projected danger zones."
+      "Council map separates the measured timing anomalies from modeled redistribution; neither supports a guaranteed safe alternative.",
+      "Lochran presses the practical problem of cargo already in transit and vulnerable communities waiting on supply.",
+      "Liora explains the proposed safeguards but refuses to certify something her science cannot promise.",
+      "Lochran formally withholds authorization; the diagram behind him shows ordinary traffic continuing under an acknowledged risk."
     ],
     "directionInline": [
-      "Keep Lochran composed and attentive to the model; he is choosing continuity under uncertainty, not failing to understand the evidence."
+      "This is a new denial of a specific proposal, not a replay of Issue 1's general dispute about whether a forecast counts as proof.",
+      "Lochran remains attentive, knowledgeable and morally compromised by his choice."
     ],
     "continuityFrom": "SHAT_I02_P17",
     "dialogueInline": [
       {
         "handle": "@starsplit.lochran",
-        "text": "A forecast isn't proof."
+        "text": "Some of those convoys are already committed. Who holds their supplies?"
       },
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "You want proof from something that hasn't happened yet."
+        "handle": "@starsplit.iskara.foster",
+        "text": "At the ports, with priority departures for essentials."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "I want to know what we know, not what we're afraid of."
+        "text": "Not every port has spare storage or a protected lane."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Five nodes share the same timing window. That is the evidence."
+        "text": "The current network is transferring stress whether we intervene or not."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "I won't authorize a closure without a safe transfer plan."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P19",
-    "summary": "Damian proposes calling any intervention a recalibration, but realizes the language compromise no longer bridges the actual divide.",
+    "summary": "Damian offers a narrowly worded maintenance interval, but Lochran's refusal remains substantive; Iskara and Liora leave with no authorized load-reduction option and one dangerous historical alternative.",
     "setting": "S_CoopHall",
     "region": "HighEraCore",
     "factions": [
@@ -740,42 +785,47 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Damian offers a middle formulation that would let restrictions happen without announcing crisis.",
-      "Liora and Iskara focus on the operational need; Lochran focuses on the precedent.",
-      "The room talks past the wording because the disagreement is now about action, not presentation.",
-      "End on Damian recognizing that language cannot reconcile the split."
+      "Damian proposes a short maintenance hold as a limited compromise; Iskara is willing to accept it if the physical reduction actually occurs.",
+      "Lochran makes clear that relabeling a closure does not solve the uncertain load-transfer problem.",
+      "Formal denial: the proposed limited hold does not proceed, while new incident alerts arrive from working ports.",
+      "Close privately within the Council setting as Liora shows Iskara Heska's recovered damping schematic; the unanswered decision now has an actionable, frightening alternative."
     ],
     "directionInline": [
-      "This closes the messaging strategy that dominated Issues 1–2."
+      "End the four-page Council scene with a concrete refusal and transition to Heska's damping evidence; do not repeat debates about choosing names for the crisis.",
+      "Use a personal/technical handoff rather than a grand retrospective prophecy."
     ],
     "continuityFrom": "SHAT_I02_P18",
     "dialogueInline": [
       {
         "handle": "@starsplit.damian.cole",
-        "text": "Call it a recalibration if that gets it done."
+        "text": "One maintenance interval. We don't have to announce a general closure."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Fine. I don't care what we call it."
+        "text": "If traffic comes down, I'll take it."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "I do. People remember what we call things."
+        "text": "Calling it maintenance doesn't make the transfer safe."
       },
       {
         "handle": "@starsplit.damian.cole",
-        "text": "They'll remember the closed routes more."
+        "text": "Then no limited hold either?"
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Not without a validated path for displaced load."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Can we stop naming it and decide?"
+        "text": "Heska found another way to relieve it. No one has certified that one, either."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
   },
   {
     "id": "SHAT_I02_P20",
-    "summary": "Liora, Alan, and Iskara enter the dormant damping chamber and confirm the ancient hardware still physically exists.",
+    "summary": "Liora, Alan, and Iskara inspect the dormant Dawn Era damping chamber revealed by Heska's research, finding preserved emitters buried beneath later retrofits.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -787,37 +837,38 @@
       "C_iskara"
     ],
     "panelPlan": [
-      "Large establishing page: the sealed damping chamber opens onto old emitters and hemisphere controls untouched by normal operations.",
-      "Liora and Alan compare Heska’s schematic to the machinery in front of them.",
-      "Iskara checks access status and confirms no active Council authorization.",
-      "End on the three standing before a system built for exactly the crisis outside."
+      "Wide, imposing first view of the dormant damping chamber: ancient emitters, old network couplings and visually distinct later High Era controllers.",
+      "Liora and Alan match Heska's drawing to emitter positions and discover modern branches grafted onto the same system.",
+      "Iskara checks that physical inspection is permitted while a live network pulse remains unauthorized by the Council.",
+      "End on the technicians confronting the actual old relief equipment and its modern additions, still dormant."
     ],
     "directionInline": [
-      "Give the chamber age, scale, and dormant weight; this is a threshold scene."
+      "Distinguish old hardware from retrofits; do not turn the damping technology into an occult object or a magically self-healing artifact.",
+      "Chamber access for inspection is not equivalent to authorization for network activation."
     ],
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "That's the same emitter profile from Heska's schematic."
+        "text": "Heska found the right emitter layout."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "And that's a retrofit welded over it."
+        "text": "Those later branches aren't on her drawing."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Can it run?"
+        "text": "We can inspect. We have no authority to pulse the network."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "It can run. Safe operation is unresolved."
+        "text": "Then we start with an isolated diagnostic."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P21",
-    "summary": "Liora confirms the damping system could bleed off pressure if its old calibration can be reconstructed.",
+    "summary": "A local, low-energy diagnostic confirms that the old damping hardware can respond coherently, but Alan warns that modern network calibration has not been reconstructed.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -829,42 +880,39 @@
       "C_iskara"
     ],
     "panelPlan": [
-      "Liora traces the flow path from emitters into the wider network.",
-      "The controls respond slowly but coherently to a low-power diagnostic.",
-      "Alan finds calibration values buried in the old interface.",
-      "End on Liora stating that the chamber is intact enough to try."
+      "Alan powers an isolated diagnostic loop at low energy; the emitters answer slowly without transmitting a damping pulse into the wider network.",
+      "Liora checks the measured response against the surviving Dawn Era table and sees a coherent local phase return.",
+      "Alan traces the missing modern branch mappings, marking the additional variables the old procedure cannot cover.",
+      "Finish on a plausible but incomplete path forward: functioning machinery, unverified network-scale calibration."
     ],
     "directionInline": [
-      "Hope should enter for the first time without making the solution feel safe."
+      "Hope is earned from a local measurement only; no full damping cycle has begun.",
+      "Preserve the distinction between low-energy chamber diagnostic and systemwide activation."
     ],
     "continuityFrom": "SHAT_I02_P20",
     "dialogueInline": [
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "Low power."
+        "text": "Diagnostic loop only. No network output."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Response is slow."
+        "text": "Response is slow, but the old phase table still fits."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "But it's coherent."
+        "text": "Then the emitters survived."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "I found the old calibration table."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "Then we've got something to work with."
+        "text": "The emitters did. The expanded network isn't in that table."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P22",
-    "summary": "Alan identifies the danger: a bad calibration would not merely fail but could accelerate the collapse.",
+    "summary": "A simulated half-percent calibration mismatch shows how the retrofitted branches could convert a damping pulse into destructive load transfer across adjacent corridors.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -876,42 +924,39 @@
       "C_iskara"
     ],
     "panelPlan": [
-      "Alan runs a simulation with a deliberately small offset.",
-      "The projected field shears instead of damping, spreading stress faster through adjacent arcs.",
-      "Liora sees the margin for error narrow to almost nothing.",
-      "End on the chamber’s dormant emitters looming over them after Alan states the risk."
+      "Alan extends the local result into a clearly simulated model that includes later branches missing from the historical plan.",
+      "He varies one phase calibration by only half a percent; an otherwise coherent relief pulse folds into stress transfer across neighboring arcs.",
+      "Liora checks that the effect is tied to the modern branch geometry rather than an error in the original records.",
+      "Final panel holds on Iskara looking from the dangerous simulation to the real unpowered network emitters: the instrument exists, but it could make the crisis worse."
     ],
     "directionInline": [
-      "Make the downside physically understandable through the simulation."
+      "This establishes initial calibration sensitivity. Issue 3 will advance to the modern remote-write/control-layer vulnerability, not rediscover this same hazard.",
+      "All destructive motion remains within a simulation here."
     ],
     "continuityFrom": "SHAT_I02_P21",
     "dialogueInline": [
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "And this is what's behind it."
+        "text": "Half-percent error. Watch the outer branches."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "That's a one-percent offset?"
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Half."
+        "text": "The old section stays aligned."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "It shears the field."
+        "text": "The retrofit turns the relief into shear."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "If we get it wrong, we don't just fail. We make it worse."
+        "text": "If we pulse that configuration, we spread the damage ourselves."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S08"
   },
   {
     "id": "SHAT_I02_P23",
-    "summary": "Iskara orders the unauthorized damping attempt to proceed because the Council has left them without another instrument.",
+    "summary": "With the Council's restriction plan denied, Iskara assumes responsibility for unauthorized preparation of the damping chamber, permitting a controlled local precharge but forbidding a live network pulse until independent calibration checks pass.",
     "setting": "S_DampChamber",
     "region": "HighEraCore",
     "factions": [
@@ -923,53 +968,54 @@
       "C_iskara"
     ],
     "panelPlan": [
-      "Wide chamber panel: dormant emitters surround Liora, Alan, and Iskara while the rebuilt calibration model hangs between them.",
-      "Tight three-shot as Alan states the failure consequence and Liora makes clear how little margin they have.",
-      "Final panel on Iskara ordering the attempt to proceed, with the ancient hardware beginning its first activation pulse behind her."
+      "Wide chamber panel: the inactive emitters, the incomplete modern mapping and the three specialists arranged around one bounded, local-only preparation path.",
+      "Iskara checks Alan's technical objections and Liora's uncertainty, then formally authorizes preparation under her own name despite the Council's refusal.",
+      "Alan engages protective isolation and begins chamber-local precharge; a small controlled response appears in the hardware but no outbound damping pulse leaves the chamber.",
+      "Final dominant panel: Iskara stands beside the precharging ancient system, with the untouched network connection and the possibility of catastrophe made visually unmistakable."
     ],
     "continuityFrom": "SHAT_I02_P22",
     "dialogueInline": [
       {
-        "handle": "@starsplit.iskara.foster",
-        "text": "Council still won't authorize it."
-      },
-      {
         "handle": "@starsplit.alan.kessler",
-        "text": "That may be the first sensible thing they've done."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "I'm calibrating."
-      },
-      {
-        "handle": "@starsplit.iskara.foster",
-        "text": "Do it."
+        "text": "I can prepare the chamber. I cannot certify a network pulse."
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "The field may worsen if the calibration is wrong."
+        "text": "The expanded matrix still has to pass an independent check."
       },
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "I don't have another option."
+        "text": "Record both objections. Put my name on the preparation order."
+      },
+      {
+        "handle": "@starsplit.alan.kessler",
+        "text": "Council still hasn't authorized it."
+      },
+      {
+        "handle": "@starsplit.iskara.foster",
+        "text": "Local precharge only. Nothing goes out until the matrix passes."
       }
     ],
-    "sceneId": "SCN_SHAT_I02_S08"
+    "sceneId": "SCN_SHAT_I02_S08",
+    "directionInline": [
+      "The end beat is Iskara's deliberate, unauthorized commitment, not a completed systemwide damping cycle.",
+      "Her order cannot create or exercise Lochran's separate chair-level emergency remote-write override; Issue 3 must establish that vulnerability.",
+      "The technical safety margin and responsibility must remain legible through action rather than symbolic imagery."
+    ]
   },
   {
     "id": "SHAT_I02_P24",
-    "summary": "The recovered damping chamber stands ready while engineering risk and public pressure converge around it.",
+    "summary": "The precharged damping chamber waits behind its local isolation while still-functioning routes and frightened communities approach the limits of coordinated action.",
     "settingText": "Full-page view centered on the immense dormant damping chamber, ancient enough to dwarf the small figures working near it. Corridor telemetry shows unstable load relationships while the chamber's old emitter systems are prepared for use.",
     "panelPlan": [
-      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
+      "One full-page closing editorial illustration, composed around the quiet precharged damping chamber contrasted with distant still-operating corridor traffic and mounting maintenance strain.",
+      "The field has not been pulsed network-wide. Show potential energy and human scale, not a false picture of a completed relief cycle; no readable copy or reserved caption space."
     ],
     "dialogueInline": [],
     "directionInline": [
-      "No captions or speech balloons.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text.",
-      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
-      "Use the visible situation itself to carry the beat."
+      "No captions, speech balloons, invented environmental text, signage, or logos.",
+      "Preserve the Issue 2 final state: isolated local precharge, incomplete matrix verification, Council denial and Iskara's assumed responsibility.",
+      "No mature Rex Fleet/Verge/Shard visual language."
     ]
   }
 ]
