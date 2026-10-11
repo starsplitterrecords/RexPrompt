@@ -275,15 +275,15 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "Forget the forecast. Tell me what your receiver can actually keep open."
-      },
-      {
-        "handle": "@starsplit.tctrl",
-        "text": "Nothing long enough for a certified launch."
+        "text": "The wards are already on reserve stock. I'm not asking for another forecast."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "The wards are already on reserve stock. Let me see the raw lane feed."
+        "text": "Show me the raw lane feed. What can your receiver actually hold?"
+      },
+      {
+        "handle": "@starsplit.tctrl",
+        "text": "Nothing long enough to clear a ship, Ava."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S03"
@@ -309,20 +309,20 @@
     "continuityFrom": "SHAT_I02_P08",
     "dialogueInline": [
       {
-        "handle": "@starsplit.tctrl",
-        "text": "Raw status isn't clearance, Ava. I won't sign a departure from it."
-      },
-      {
         "handle": "@starsplit.ava.seltos",
-        "text": "I'm not asking you to. Move general freight and put the medical ship on the refrigerated berth."
+        "text": "I'm not asking you to launch it. Move general freight and give medicine the refrigerated berth."
       },
       {
         "handle": "@starsplit.tctrl",
-        "text": "That captain's waited two days. It's our last cold hookup."
+        "text": "That captain has waited two days. This is our last cold hookup."
       },
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "Tell the captain I took the slot. Put the displacement under my dispatch order."
+        "text": "Call him. I don't want this passed off as a computer change."
+      },
+      {
+        "handle": "@starsplit.ava.seltos",
+        "text": "Put the displacement under my dispatch order. The medical ship stays docked until we have a real window."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S03",
@@ -396,8 +396,8 @@
     ],
     "panelPlan": [
       "Inside BHA Nexus, Lochran places unreliable live dispatch feeds beside draft public guidance and a map of vital supply corridors.",
-      "Damian points to stations whose local controllers can no longer certify departure windows.",
-      "Lochran traces supply dependencies through crowded ports and Outer Band communities, showing a credible danger from a blanket halt.",
+      "Damian traces Waystation Twelve's repeatedly lost gate lock and points to the conditional boarding restriction he placed in the draft, intending to authorize only local holds.",
+      "Lochran turns to the continuing Outer Band food routes and explains why even conditional wording in a network-wide announcement could trigger widespread closures.",
       "End on his instruction to describe services as rescheduled rather than admit that some routes cannot currently be verified."
     ],
     "directionInline": [
@@ -411,16 +411,16 @@
         "text": "Waystation Twelve has a queue at a gate its own receiver won't clear."
       },
       {
-        "handle": "@starsplit.lochran",
-        "text": "A network warning about unsafe boarding will close ports whose lanes still work. The Outer Band needs those food shipments."
-      },
-      {
         "handle": "@starsplit.damian.cole",
-        "text": "Then let local stations hold only the gates they can't verify."
+        "text": "I put a conditional boarding hold in the draft. Only stations with failed local locks would stop boarding."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "They already have that authority. The public notice says services are rescheduled."
+        "text": "A network-wide message won't stay conditional. Some ports will close every gate when they see it."
+      },
+      {
+        "handle": "@starsplit.lochran",
+        "text": "Outer food shipments are still moving. Stranding them will become tomorrow's emergency."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S05"
@@ -439,23 +439,23 @@
     ],
     "panelPlan": [
       "Damian's final draft and the live route status occupy opposing sides of his workstation.",
-      "Damian leaves a local-verification warning in the public draft until Lochran explicitly orders its removal; he removes it in silence rather than summarizing the ethical problem aloud.",
-      "Lochran maintains that indiscriminate suspensions would threaten supply lines, but Damian sees which gate staff will receive the simplified message.",
+      "Lochran orders the conditional boarding clause removed while Damian studies the unverified gate reports. Damian takes responsibility for transmitting the chair's public wording without signing off on the missing local safety evidence.",
+      "Damian preserves the original field reports; Lochran explicitly wants those reports retained even as he restricts the public announcement.",
       "Damian releases the chair-approved, softened public notice and retains the unedited station reports with his internal copy; Waystation Twelve's local receiver remains unreliable."
     ],
     "continuityFrom": "SHAT_I02_P12",
     "dialogueInline": [
       {
+        "handle": "@starsplit.lochran",
+        "text": "Delete the boarding clause. Public guidance says services are rescheduled. Individual gate holds stay local."
+      },
+      {
         "handle": "@starsplit.damian.cole",
-        "text": "I've kept a warning for stations without a valid lock. It doesn't order a network closure."
+        "text": "Then that goes out under your authorization, not a safety clearance from my office."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Take it out. My office owns the public notice. Local dispatch owns individual gates."
-      },
-      {
-        "handle": "@starsplit.damian.cole",
-        "text": "I'll release your version. The original station reports stay with my copy."
+        "text": "Keep the original station reports. I want what the gate crews actually saw."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S05",
@@ -567,7 +567,7 @@
       "Establish Cooperative Council Chambers with observed incident points distinguished visually from forecast stress bands and from local departures held by staff.",
       "Show Liora adding verified independent timing from Core and Outer Band; one Outer trace is annotated visually against a stabilized mechanical housing.",
       "Council delegates compare the new evidence with the earlier Issue 1 warning: independent observations have multiplied, but predictions remain uncertain.",
-      "Finish on the first proposed operational discussion rather than another ominous map reveal."
+      "Lochran names the potential human cost of closing the wrong supply route; Liora refuses to fabricate an exact failure sequence. Iskara brings her staged traffic proposal forward as the only available planned reduction."
     ],
     "directionInline": [
       "The hearing advances beyond Issue 1: corroborated multi-region data and concrete operational holds, not the same general argument with a larger red map.",
@@ -584,12 +584,12 @@
         "text": "And you still can't name the corridor that fails first."
       },
       {
-        "handle": "@starsplit.liora.virelia",
-        "text": "I can't. I won't invent a first failure to make the decision easier."
+        "handle": "@starsplit.lochran",
+        "text": "If I close the wrong two routes, someone else misses a food delivery."
       },
       {
-        "handle": "@starsplit.iskara.foster",
-        "text": "Then consider the staged traffic plan I submitted."
+        "handle": "@starsplit.liora.virelia",
+        "text": "I won't invent a failure order to make that decision easier."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
@@ -610,7 +610,7 @@
       "C_damian"
     ],
     "panelPlan": [
-      "Iskara moves from testimony into a specific one-cycle traffic-management proposal with two affected high-load arcs and a protected medical route shown on the map.",
+      "Iskara puts a detailed one-cycle restriction proposal before the Council, naming the high-load arcs, preserved medical routes and food priority in one sustained intervention rather than a string of question-answer panels.",
       "Lochran identifies the Outer Band supply traffic carried by those corridors; concerned delegates examine the affected destinations.",
       "Liora overlays the predicted redirected load and its uncertainty, explaining why every stage must be measured rather than assumed safe.",
       "End on the first concrete prevent-or-delay choice in the chamber: a limited disruption now with real risk to dependent communities."
@@ -624,19 +624,19 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.iskara.foster",
-        "text": "Two high-load arcs, one cycle. Medical lanes stay open, and food goes first. I'll supervise the holds."
+        "text": "Two high-load arcs, one cycle. Medical lanes stay open. Food goes first."
+      },
+      {
+        "handle": "@starsplit.iskara.foster",
+        "text": "The ports stagger the holds. I'll supervise them and carry the authorization."
       },
       {
         "handle": "@starsplit.lochran",
         "text": "Orban is already moving freight to make room for medicine. Where does the displaced cargo wait?"
       },
       {
-        "handle": "@starsplit.iskara.foster",
-        "text": "We stagger by port. I'm not proposing a blanket halt."
-      },
-      {
         "handle": "@starsplit.liora.virelia",
-        "text": "Each stage needs a sensor check. If stress transfers badly, we stop there."
+        "text": "Each stage needs a sensor check. If the transfer turns dangerous, we stop there."
       }
     ],
     "sceneId": "SCN_SHAT_I02_S07"
