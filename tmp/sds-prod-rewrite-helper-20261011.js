@@ -14,7 +14,7 @@ const LB=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,
 let last=0;do{last=get(1);let typ=get(2),lit,dist;
 if(typ===0){let rem=bits%8;if(rem)get(rem);let len=get(16),inv=get(16);if((len^inv)!==65535)throw Error("stored len");for(let i=0;i<len;i++)out.push(get(8));continue}
 if(typ===1){lit=huff(Array.from({length:288},(_,i)=>i<144?8:i<256?9:i<280?7:8));dist=huff(Array(32).fill(5))}
-else if(typ===2){let hlit=get(5)+257,hdist=get(5)+1,hclen=get(4)+4,order=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,2,14,1,15],cl=Array(19).fill(0);for(let i=0;i<hclen;i++)cl[order[i]]=get(3);let ch=huff(cl),lens=[];while(lens.length<hlit+hdist){let c=ch();if(c<=15)lens.push(c);else{let repeat=c===16?get(2)+3:c===17?get(3)+3:get(7)+11,fill=c===16?lens[lens.length-1]:0;for(let i=0;i<repeat;i++)lens.push(fill)}}lit=huff(lens.slice(0,hlit));dist=huff(lens.slice(hlit))}
+else if(typ===2){let hlit=get(5)+257,hdist=get(5)+1,hclen=get(4)+4,order=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],cl=Array(19).fill(0);for(let i=0;i<hclen;i++)cl[order[i]]=get(3);let ch=huff(cl),lens=[];while(lens.length<hlit+hdist){let c=ch();if(c<=15)lens.push(c);else{let repeat=c===16?get(2)+3:c===17?get(3)+3:get(7)+11,fill=c===16?lens[lens.length-1]:0;for(let i=0;i<repeat;i++)lens.push(fill)}}lit=huff(lens.slice(0,hlit));dist=huff(lens.slice(hlit))}
 else throw Error("bad deflate type");
 while(true){let sym=lit();if(sym<256){out.push(sym);continue}if(sym===256)break;let j=sym-257;if(j<0||j>=LB.length)throw Error("bad lit");let len=LB[j]+get(LE[j]),k=dist(),dd=DB[k]+get(DE[k]);if(dd>out.length)throw Error("bad dist");for(let i=0;i<len;i++)out.push(out[out.length-dd]);}
 }while(!last);return out;
