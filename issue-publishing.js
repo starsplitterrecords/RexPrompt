@@ -8,7 +8,8 @@ const pad3=n=>String(n).padStart(3,'0');
 const namePart=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const api=(repo,path)=>'https://api.github.com/repos/'+R+'/'+repo+'/'+path;
 function report(s){byId('issuePackageStatus').textContent=s}
-function selection(){const a=byId('showSel'),b=byId('issueSel'),c=byId('sceneSel');return {seriesId:a.value,issueId:b.value,seriesName:a.selectedOptions[0]?.textContent||a.value,issueLabel:b.selectedOptions[0]?.textContent||b.value,recipeIds:[...c.options].map(x=>(x.dataset.recipeId||x.dataset.visualBaseLabel||x.textContent).split(' - ')[0].replace(/\s+\[(DRAFT|CANON)\]/g,'').trim())}}
+function canonicalRecipeOptions(select){return [...select.options].sort((left,right)=>{const a=Number(left.value),b=Number(right.value);return Number.isFinite(a)&&Number.isFinite(b)?a-b:0})}
+function selection(){const a=byId('showSel'),b=byId('issueSel'),c=byId('sceneSel');return {seriesId:a.value,issueId:b.value,seriesName:a.selectedOptions[0]?.textContent||a.value,issueLabel:b.selectedOptions[0]?.textContent||b.value,recipeIds:canonicalRecipeOptions(c).map(x=>(x.dataset.recipeId||x.dataset.visualBaseLabel||x.textContent).split(' - ')[0].replace(/\s+\[(DRAFT|CANON)\]/g,'').trim())}}
 function issueNo(sel){const m=sel.issueLabel.match(/Issue\s*0*(\d+)/i)||sel.issueId.match(/(?:e|issue-)(\d+)$/i);if(!m)throw Error('Cannot determine issue number.');return Number(m[1])}
 function slug(sel){return namePart(sel.seriesId)+'-issue-'+pad(issueNo(sel))}
 function bytesToB64(bytes){let s='';for(let i=0;i<bytes.length;i+=0x8000)s+=String.fromCharCode(...bytes.subarray(i,i+0x8000));return btoa(s)}
