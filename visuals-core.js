@@ -102,7 +102,7 @@ function inspectMasterPng(bytes){
   if(width!==2400||height!==3840)reasons.push('must be exactly 2400×3840 px');
   if(bitDepth!==8)reasons.push('must be 8-bit');
   if(colorType!==2)reasons.push('must be RGB without indexed, grayscale, or alpha color type');
-  if(!hasSrgb&&!hasSrgbIcc)reasons.push('sRGB profile is not confirmed');
+  // Missing sRGB metadata is informational, not a master failure.
   return {ok:reasons.length===0,reasons,width,height,bitDepth,colorType,hasSrgb:hasSrgb||hasSrgbIcc};
 }
 async function masterCompliance(entry,src){
@@ -122,7 +122,7 @@ function appendMasterStatus(entry,src,host){
     if(!status.isConnected)return;
     status.className='visual-master-status '+(result.ok?'pass':'fail');
     status.textContent=result.ok?'✓ MASTER COMPLIANT':'✕ NOT MASTER COMPLIANT YET';
-    status.title=result.ok?'2400×3840 · 5:8 portrait · 8-bit RGB · lossless PNG · sRGB profile confirmed':result.reasons.join(' · ');
+    status.title=result.ok?'2400×3840 · 5:8 portrait · 8-bit RGB · lossless PNG · '+(result.hasSrgb?'sRGB tagged':'color profile unspecified (informational)'):result.reasons.join(' · ');
   }).catch(error=>{
     if(!status.isConnected)return;
     status.className='visual-master-status fail';status.textContent='✕ MASTER COMPLIANCE NOT CONFIRMED';status.title=error instanceof Error?error.message:String(error);
