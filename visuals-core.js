@@ -72,6 +72,7 @@ function currentSelection(){
     issueId:issueSel.value,
     issueLabel:issueSel.options[issueSel.selectedIndex]?.textContent||issueSel.value,
     recipeId,
+    assetKind:option.dataset.assetKind||'interior',
     recipeIndex:Number.isFinite(index)?index:null,
     unitIsPage:/\bpages?\b/i.test(status?.textContent||''),
     recipeCount:sceneSel.options.length
@@ -82,7 +83,15 @@ function parseIssueNumber(label){const m=String(label||'').match(/\bIssue\s*0*(\
 function withCacheBust(path,stamp){const sep=path.includes('?')?'&':'?';return path+sep+'v='+encodeURIComponent(stamp||Date.now())}
 function draftImageUrl(entry){if(entry.commitSha)return 'https://raw.githubusercontent.com/'+CONFIG.owner+'/'+CONFIG.repo+'/'+entry.commitSha+'/'+entry.image;return withCacheBust(entry.image,entry.updatedAt)}
 
-function inspectMasterPng(bytes){
+function masterStandard(sel){
+  // Vikings explicitly specifies the interior geometry for its covers.
+  if(sel.assetKind==='cover'){
+    if(sel.seriesId==='vikings-2026')return {kind:'cover',width:2400,height:3840,ratio:'5:8',note:'Vikings 2026 series cover specification'};
+    return {kind:'cover',width:1800,height:2700,ratio:'2:3',note:'Visions issue cover specification'};
+  }
+  return {kind:'interior',width:2400,height:3840,ratio:'5:8',note:'Interior comic master specification'};
+}
+function inspectMasterPng(bytes,standard){
   const reasons=[];
   const signature=[137,80,78,71,13,10,26,10];
   if(bytes.length<33||signature.some((value,i)=>bytes[i]!==value))return {ok:false,reasons:['file is not a PNG master']};
@@ -99,30 +108,31 @@ function inspectMasterPng(bytes){
     }
     offset=end;if(type==='IEND')break;
   }
-  if(width!==2400||height!==3840)reasons.push('must be exactly 2400×3840 px');
+  if(width!==standard.width||height!==standard.height)reasons.push('must be exactly '+standard.width+'×'+standard.height+' px for '+standard.kind);
   if(bitDepth!==8)reasons.push('must be 8-bit');
   if(colorType!==2)reasons.push('must be RGB without indexed, grayscale, or alpha color type');
   // Missing sRGB metadata is informational, not a master failure.
   return {ok:reasons.length===0,reasons,width,height,bitDepth,colorType,hasSrgb:hasSrgb||hasSrgbIcc};
 }
-async function masterCompliance(entry,src){
+async function masterCompliance(entry,src,standard){
   if(entry?.mimeType&&entry.mimeType!=='image/png')return {ok:false,reasons:['master must be a lossless PNG']};
-  const key=String(entry?.image||src)+'|'+String(entry?.updatedAt||'');
+  const key=String(entry?.image||src)+'|'+String(entry?.updatedAt||'')+'|'+standard.width+'x'+standard.height;
   if(!state.masterComplianceCache.has(key)){
     state.masterComplianceCache.set(key,(async()=>{
       const response=await fetch(src,{cache:'no-store'});if(!response.ok)throw new Error('image HTTP '+response.status);
-      return inspectMasterPng(new Uint8Array(await response.arrayBuffer()));
+      return inspectMasterPng(new Uint8Array(await response.arrayBuffer()),standard);
     })());
   }
   return state.masterComplianceCache.get(key);
 }
-function appendMasterStatus(entry,src,host){
+function appendMasterStatus(entry,src,host,sel){
+  const standard=masterStandard(sel);
   const status=document.createElement('div');status.className='visual-master-status checking';status.textContent='Checking master compliance…';host.appendChild(status);
-  void masterCompliance(entry,src).then(result=>{
+  void masterCompliance(entry,src,standard).then(result=>{
     if(!status.isConnected)return;
     status.className='visual-master-status '+(result.ok?'pass':'fail');
     status.textContent=result.ok?'✓ MASTER COMPLIANT':'✕ NOT MASTER COMPLIANT YET';
-    status.title=result.ok?'2400×3840 · 5:8 portrait · 8-bit RGB · lossless PNG · '+(result.hasSrgb?'sRGB tagged':'color profile unspecified (informational)'):result.reasons.join(' · ');
+    status.title=result.ok?standard.width+'×'+standard.height+' · '+standard.ratio+' portrait · 8-bit RGB · lossless PNG · '+standard.note+' · '+(result.hasSrgb?'sRGB tagged':'color profile unspecified (informational)'):result.reasons.join(' · ');
   }).catch(error=>{
     if(!status.isConnected)return;
     status.className='visual-master-status fail';status.textContent='✕ MASTER COMPLIANCE NOT CONFIRMED';status.title=error instanceof Error?error.message:String(error);
@@ -219,7 +229,7 @@ function setDraftBody(sel,entry){
   const watermark=document.createElement('div');watermark.className='visual-watermark';watermark.textContent='DRAFT · NOT RELEASED';
   wrap.append(img,watermark);ui.draftBody.appendChild(wrap);
   const meta=document.createElement('div');meta.className='visual-meta';meta.textContent=sel.recipeId+' · '+(entry.updatedAt?'stored '+new Date(entry.updatedAt).toLocaleString():'approved production draft');ui.draftBody.appendChild(meta);
-  appendMasterStatus(entry,src,ui.draftBody);
+  appendMasterStatus(entry,src,ui.draftBody,sel);
   ui.uploadBtn.textContent='Replace Image';
 }
 function renderCanonItems(sel,items){
