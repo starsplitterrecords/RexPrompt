@@ -117,6 +117,35 @@
     "formatNote": "Academy doctrine/history series. Issue 1 is production-authoritative; future planned issues remain unregistered until their page recipes exist."
   },
   {
+    "id": "rex-fleet-i01",
+    "name": "Rex Fleet — Issue 1: Green Corridor",
+    "seriesId": "rex-fleet",
+    "seriesName": "Rex Fleet",
+    "issueLabel": "Issue 1",
+    "basePath": "data/shows/rex-fleet-s1",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "RF_I01_COVER"
+        ]
+      },
+      {
+        "file": "editorial_pages.json",
+        "includeIds": [
+          "RF_I01_EDITOR_OPEN"
+        ]
+      },
+      {
+        "file": "pages_i01.json"
+      }
+    ],
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait comic publication page for Rex Fleet. Follow the exact selected recipe. Issue 1 recipes are released-canon reconstructions recovered from the published Green Corridor issue: preserve their established story state, panel logic, faction design, character identity and exact scripted lettering rather than revising the story. If the selected unit is the released Issue 1 cover, obey its released-canon cover lock and canonical pixel reference. Otherwise render the requested editorial or interior story page in the established Rex Fleet prestige political-space-opera language with lived-in human-scale acting and clear sequential storytelling. Use current RexPrompt character names and handles where identity has since been normalized. Fictional production.",
+    "formatNote": "Released canonical collected issue: cover + editor page + 18 story pages. Recovered from the published 2026-08-15 Green Corridor issue for continuity, reconstruction and source-based prompting.",
+    "scenesFile": "pages_base.json"
+  },
+  {
     "id": "rex-fleet-i02",
     "name": "Rex Fleet — Issue 2",
     "seriesId": "rex-fleet",
