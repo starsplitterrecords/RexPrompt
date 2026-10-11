@@ -27,26 +27,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "I read the reports.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Welcome to Stardust Station. Jax is giving the tour; he's promised not to improvise.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "I promised to show you what's here, not what's in the brochure.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "I'm sorry.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Good. I brought comfortable shoes.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "LIAISON",
-        "text": "The “unknown” parts were my favorite.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I'll join you for the lab portion.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "JAX",
-        "text": "Good. We've got plenty more.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "If we get lost, follow the smell of the vending-machine curry. Someone claims it's excellent.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P02",
@@ -72,31 +83,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "These were in the original location?",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "This is the main work area. That corner used to be open until we moved the collection bins.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Was moving them necessary?",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "JAX",
-        "text": "Original location blocked maintenance access.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "Who authorized the move?",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "It was necessary to move them *back*. The computer had put one in Noola's turning space.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "JAX",
-        "text": "Local access override. Documented.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "Good.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "That's the kind of change I'd rather see than a spotless demonstration.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P03",
@@ -129,26 +140,43 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "Show me a production event.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Mira runs the lab. She's prepared a concise demonstration.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "It was concise when I started. Then the fourth sample disagreed with the first three.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "There isn't one.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "The disagreeing samples are generally the ones I ask about.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "I can show you samples, conditions, tests, chain of custody. I can't make it happen on demand.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "Oh. Then you're going to enjoy this.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "It has a very clear set of limits.",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Good. If you could, I wouldn't need to be here.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "And actual photographs. Sorry, I do want you to see the photographs.",
         "subtext": "Panel 6"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P04",
@@ -179,26 +207,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "What reliably produces the high-cohesion material?",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "The material holds under this load and fails above this temperature. Both are repeatable here.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "And you don't know what determines where the residue appears?",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "MIRA",
-        "text": "Nothing we can defend.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "Correct. We have correlations, not a recipe.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "MIRA",
-        "text": "We know the physical context. We have different samples. We do not have a behavioral predictor.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "Good. Don't invent one.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "We've refused to collect personal disclosures as explanatory data.",
         "subtext": "Panel 4"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Then I'll judge what you can show me, not what someone wishes you'd measured.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P05",
@@ -225,31 +264,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "GLORP",
-        "text": "We can trace every sample from collection through testing.",
+        "handle": "@sds.Glorp",
+        "speaker": "Glorp",
+        "text": "These are the original repair logs. Nothing has been edited to make the pilot look tidier.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "And the anonymous staff cards?",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "KREEB",
-        "text": "And nobody has to disclose anything personal to complete the record.",
+        "handle": "@sds.Glorp",
+        "speaker": "Glorp",
+        "text": "We didn't put them in the material record.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Central review had questions about that.",
+        "handle": "@sds.Kreeb",
+        "speaker": "Kreeb",
+        "text": "People told friends things and wrote equipment complaints. Those are not the same permission.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "GLORP",
-        "text": "They can ask.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "KREEB",
-        "text": "Yep.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Good. I didn't come here to collect gossip. Though I understand you have excellent dinner parties.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P06",
@@ -275,31 +320,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "You need procurement priority.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You're worried I won't appreciate how much this station does unless it looks exceptional.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I worry you'll see what headquarters sees: small numbers, high costs, and a crew that won't fit neatly in a chart.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "Yes.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "A material pilot is easier to fund than “interesting operations.”",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I've visited larger sites that looked wonderful until you asked anyone where the spare valves were.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "I know.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "So give me something I can stand behind.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Here everyone can tell you. They might argue about which cupboard first.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P07",
@@ -323,26 +368,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "ZIB",
-        "text": "That's new.",
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "That low-pressure alarm is real. I need this corridor for a repair.",
         "subtext": "Panel 1"
       },
       {
-        "speaker": "ASTRA",
-        "text": "We can continue upstairs.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "We've got a visitor standing in the corridor.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Is this part of the tour?",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "A corridor is for getting somewhere. Please use it.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "It is now.",
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "Excellent. Somebody who understands a doorway.",
         "subtext": "Panel 3"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P08",
@@ -372,21 +422,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "JAX",
-        "text": "Not through here. Use the blue corridor.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "We need to turn here. The manifold is ahead and Zib has the service branch isolated.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You know the repair already?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "I know Zib's face. It's the one he makes when somebody wants to walk through the bit he has opened.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "JAX",
-        "text": "Route changed.",
-        "subtext": "Panel 5"
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Does he often make that face?",
+        "subtext": "Panel 4"
       },
       {
-        "speaker": "LIAISON",
-        "text": "I noticed.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "Only when he's working. So, quite often.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P09",
@@ -419,26 +485,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "Pressure drop started four minutes ago.",
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "The branch pressure's low. I'll isolate the actuator and check the seal.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "I'll take a reading after you shut it down. I won't touch your tools.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ZIB",
-        "text": "There.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "Isolation?",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Would you rather we move the visitor to the lab?",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ZIB",
-        "text": "We lose one sink. Nobody dies of thirst.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I'd rather watch how you respond, if we're not in the way.",
         "subtext": "Panel 4"
+      },
+      {
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "Stay behind that line and we'll get along famously.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P10",
@@ -475,31 +552,43 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "Command is clean. Response is lagging.",
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "Power isolated. Jax, hand me the driver, not the one with the worn tip.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "I know which one. You complained about it at Kreeb's dinner.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "I'm recording the pressure change, not the social history of your screwdriver.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ZIB",
-        "text": "Because it is dirty.",
+        "handle": "@sds.Pixa",
+        "speaker": "Pixa",
+        "text": "Access route around the repair is clear.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "PIXA",
-        "text": "One fixture unavailable. No other service impact.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You all sound like you've done this together before.",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Who's running this?",
-        "subtext": "Panel 6"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "Which part?",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "The arguing is optional. The competence isn't.",
         "subtext": "Panel 6"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P11",
@@ -531,16 +620,43 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "You hand things off fast.",
-        "subtext": "Panel 4"
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "Hold the cover while I reseat the actuator.",
+        "subtext": "Panel 1"
       },
       {
-        "speaker": "ASTRA",
-        "text": "We hand everything off fast. Mostly because nobody has enough hands.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "I have it. Mira, stop trying to take photographs of our hands.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "I'm photographing the seal.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Glorp",
+        "speaker": "Glorp",
+        "text": "The isolation notice is in place.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@sds.Kreeb",
+        "speaker": "Kreeb",
+        "text": "And the visitor route stays open at the far end.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I appreciate not being made the most important person in this room.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P12",
@@ -570,26 +686,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "Stable.",
+        "handle": "@sds.Zib",
+        "speaker": "Zib “Sgotcha” Diaz",
+        "text": "Pressure is back within range.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "The return is steady. Nothing magical, just a fixed actuator.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "JAX",
-        "text": "Blue corridor released.",
-        "subtext": "Panel 2"
-      },
-      {
-        "speaker": "PIXA",
-        "text": "Total service interruption: eleven minutes, forty-two seconds.",
+        "handle": "@sds.Pixa",
+        "speaker": "Pixa",
+        "text": "The service branch is restored.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ZIB",
-        "text": "Long because we had a tour.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You found it and repaired it without waiting for a committee.",
+        "subtext": "Panel 4"
+      },
+      {
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "Don't say that where Astra can hear you. She'll feel challenged.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P13",
@@ -619,26 +746,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "Did the disagreement cause that?",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "There's a small residue trace near the warm seam. It may be entirely incidental.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Can you tell me anything useful about it?",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "Not until I test it. And not if Zib tells me I've left fingerprints on his seal.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "MIRA",
-        "text": "We don't have a behavioral recipe.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "Then what caused it?",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You can say you don't know. I wish more scientists would.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "MIRA",
-        "text": "Don't know yet.",
-        "subtext": "Panel 4"
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "I usually have to apologize for saying it.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P14",
@@ -664,21 +802,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "This repeats.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I've seen a narrow material result and a much broader record of real work.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I thought you were here to evaluate the material pilot.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I am. But I can't ignore the people who kept it safe and kept the station running.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "The failures?",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "The response.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "That's the part I never know how to put in a box.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P15",
@@ -712,26 +860,43 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "Same pattern.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Our last inspection report was a little unflattering.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Many inspection reports are. The question is whether anyone corrected the problem.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Brick",
+        "speaker": "Brick Talos",
+        "text": "I maintained a separate case file.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "We thought that was a polite way to say “messy but useful.”",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "He did. Against advice.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "LIAISON",
-        "text": "It can be both.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Did it help?",
         "subtext": "Panel 5"
       },
       {
-        "speaker": "BRICK",
-        "text": "The old witness returns.",
+        "handle": "@sds.Brick",
+        "speaker": "Brick Talos",
+        "text": "It helped me. The station remained mysterious.",
         "subtext": "Panel 6"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P16",
@@ -758,26 +923,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "That's a different pitch.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I'm changing the introduction. The useful record here is the work the crew actually does.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "I'm glad. But don't make my sample disappear because it's inconvenient to explain.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I won't. It's a genuine result with genuine limits.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "It's a different station.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "MIRA",
-        "text": "It's literally the same station.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "You know what I mean.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "Then we finally have an introduction we can both read without wincing.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P17",
@@ -807,21 +977,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "I can recommend a limited pilot. Central will ask what it produces.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I can recommend an operating trial based on your maintenance record. The material stays an observation, not a promised output.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "That's what we've been trying to tell them.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "I'm not selling certainty we don't have.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I can't guarantee central will listen. But I'll put my name on what I saw.",
+        "subtext": "Panel 3"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I'd be grateful.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Then don't sell certainty. Give them the operating record.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You can thank me after they read the part about costs.",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P18",
@@ -853,31 +1039,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "ASTRA",
-        "text": "Passive collection only.",
+        "handle": "@sds.Glorp",
+        "speaker": "Glorp",
+        "text": "We've kept the original field reports, including the ones that went nowhere.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Kreeb",
+        "speaker": "Kreeb",
+        "text": "And the crew doesn't have to perform a feeling for the pilot to count.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "MIRA",
-        "text": "No behavioral conditions.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "You can see exactly what we measured.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "KREEB",
-        "text": "No personal disclosure required.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "Good. I'd rather defend an unromantic truth than a very polished fiction.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "GLORP",
-        "text": "Material chain of custody remains complete.",
-        "subtext": "Panel 5"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "No output target from me.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "Even if the unromantic truth comes with several boxes of spare parts?",
         "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P19",
@@ -904,26 +1096,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "ASTRA",
-        "text": "That almost sounds like us.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I'll recommend continued operation while central evaluates the actual service record.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "That's the first description of this station that sounds like where I work.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "LIAISON",
-        "text": "Central finance may still ask for a material benchmark.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I haven't promised you a budget.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "ASTRA",
-        "text": "You said no target.",
-        "subtext": "Panel 4"
-      },
-      {
-        "speaker": "LIAISON",
-        "text": "I said no target from me.",
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I know. I have managed to be disappointed professionally before.",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P20",
@@ -952,26 +1149,37 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "LIAISON",
-        "text": "Route was clear.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "That's the correct docking hatch. The other one sticks after a long shift.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "You're a surprisingly frank guide.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "JAX",
-        "text": "We had one unscheduled detour.",
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "I was told I had to be. The brochure is available if you'd like to read a different story.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "LIAISON",
-        "text": "You handled it.",
+        "handle": "@sds.Liaison",
+        "speaker": "Operations Liaison",
+        "text": "I liked this one.",
         "subtext": "Panel 4"
       },
       {
-        "speaker": "JAX",
-        "text": "That was the route.",
-        "subtext": "Panel 4"
+        "handle": "@sds.Jax",
+        "speaker": "Jax Orien",
+        "text": "Do me a favor and don't try the curry on your way out. We have enough reports.",
+        "subtext": "Panel 5"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P21",
@@ -998,26 +1206,31 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "That went better than I expected.",
+        "handle": "@sds.Pixa",
+        "speaker": "Pixa",
+        "text": "The Liaison's recommendation has been submitted.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "I didn't expect them to be that reasonable.",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "A person visited. Now central gets to look at it.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "They liked the failed tests. I'm choosing to focus on that.",
         "subtext": "Panel 3"
       },
       {
-        "speaker": "PIXA",
-        "text": "Central review acknowledgement received.",
-        "subtext": "Panel 3"
-      },
-      {
-        "speaker": "ASTRA",
-        "text": "There we go.",
+        "handle": "@sds.Pixa",
+        "speaker": "Pixa",
+        "text": "Central review is still pending. Should I keep the celebration cake on hold?",
         "subtext": "Panel 4"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   },
   {
     "id": "SDS_S1E08_P22",
@@ -1041,15 +1254,30 @@
     ],
     "dialogueInline": [
       {
-        "speaker": "MIRA",
-        "text": "They extrapolated the visit sample.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "They accepted the site and added a material-output target.",
+        "subtext": "Panel 1"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "To a report that explicitly says we can't predict the output?",
         "subtext": "Panel 2"
       },
       {
-        "speaker": "ASTRA",
-        "text": "Of course they did.",
+        "handle": "@sds.Mira",
+        "speaker": "Mira Klare",
+        "text": "Correct. They appear to have read half of it.",
+        "subtext": "Panel 2"
+      },
+      {
+        "handle": "@sds.Astra",
+        "speaker": "Astra Vega",
+        "text": "That's more than I usually expect, and somehow worse.",
         "subtext": "Panel 3"
       }
-    ]
+    ],
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
   }
 ]
