@@ -13,7 +13,7 @@ const CONFIG={
   acceptedTypes:new Set(['image/jpeg','image/png','image/webp'])
 };
 
-const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
+const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
 
 function injectStyles(){
   const style=document.createElement('style');
@@ -31,6 +31,7 @@ function injectStyles(){
   .visual-image-wrap img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain;background:var(--surface)}
   .visual-watermark{position:absolute;left:10px;bottom:10px;padding:5px 8px;border-radius:4px;background:rgba(0,0,0,.72);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.08em;pointer-events:none}
   .visual-meta{margin-top:8px;color:var(--muted);font-size:.8rem;overflow-wrap:anywhere}
+  .visual-master-status{margin-top:6px;font-size:.8rem;font-weight:800;letter-spacing:.02em}.visual-master-status.pass{color:#1f8f4d}.visual-master-status.fail{color:#b23a3a}.visual-master-status.checking{color:var(--muted);font-weight:650}
   .visual-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.visual-actions button{font-size:.88rem;padding:9px 12px;margin:0}
   .visual-actions .secondary{background:var(--surface-soft)}
   .visual-upload-status{margin-top:8px;font-size:.82rem;color:var(--muted)}
@@ -71,6 +72,7 @@ function currentSelection(){
     issueId:issueSel.value,
     issueLabel:issueSel.options[issueSel.selectedIndex]?.textContent||issueSel.value,
     recipeId,
+    assetKind:option.dataset.assetKind||'interior',
     recipeIndex:Number.isFinite(index)?index:null,
     unitIsPage:/\bpages?\b/i.test(status?.textContent||''),
     recipeCount:sceneSel.options.length
@@ -80,6 +82,62 @@ function visualKey(sel){return [sel.seriesId,sel.issueId,sel.recipeId].join('::'
 function parseIssueNumber(label){const m=String(label||'').match(/\bIssue\s*0*(\d+)\b/i);return m?Number(m[1]):null}
 function withCacheBust(path,stamp){const sep=path.includes('?')?'&':'?';return path+sep+'v='+encodeURIComponent(stamp||Date.now())}
 function draftImageUrl(entry){if(entry.commitSha)return 'https://raw.githubusercontent.com/'+CONFIG.owner+'/'+CONFIG.repo+'/'+entry.commitSha+'/'+entry.image;return withCacheBust(entry.image,entry.updatedAt)}
+
+function masterStandard(sel){
+  // Vikings explicitly specifies the interior geometry for its covers.
+  if(sel.assetKind==='cover'){
+    if(sel.seriesId==='vikings-2026')return {kind:'cover',width:2400,height:3840,ratio:'5:8',note:'Vikings 2026 series cover specification'};
+    return {kind:'cover',width:1800,height:2700,ratio:'2:3',note:'Visions issue cover specification'};
+  }
+  return {kind:'interior',width:2400,height:3840,ratio:'5:8',note:'Interior comic master specification'};
+}
+function inspectMasterPng(bytes,standard){
+  const reasons=[];
+  const signature=[137,80,78,71,13,10,26,10];
+  if(bytes.length<33||signature.some((value,i)=>bytes[i]!==value))return {ok:false,reasons:['file is not a PNG master']};
+  const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
+  let offset=8,width=null,height=null,bitDepth=null,colorType=null,hasSrgb=false,hasSrgbIcc=false;
+  while(offset+12<=bytes.length){
+    const length=view.getUint32(offset),end=offset+12+length;if(end>bytes.length)break;
+    const type=String.fromCharCode(bytes[offset+4],bytes[offset+5],bytes[offset+6],bytes[offset+7]);
+    if(type==='IHDR'&&length>=13){width=view.getUint32(offset+8);height=view.getUint32(offset+12);bitDepth=bytes[offset+16];colorType=bytes[offset+17]}
+    else if(type==='sRGB')hasSrgb=true;
+    else if(type==='iCCP'){
+      const data=bytes.subarray(offset+8,offset+8+length),zero=data.indexOf(0);
+      if(zero>0){const profileName=new TextDecoder().decode(data.subarray(0,zero));if(/sRGB/i.test(profileName))hasSrgbIcc=true}
+    }
+    offset=end;if(type==='IEND')break;
+  }
+  if(width!==standard.width||height!==standard.height)reasons.push('must be exactly '+standard.width+'×'+standard.height+' px for '+standard.kind);
+  if(bitDepth!==8)reasons.push('must be 8-bit');
+  if(colorType!==2)reasons.push('must be RGB without indexed, grayscale, or alpha color type');
+  // Missing sRGB metadata is informational, not a master failure.
+  return {ok:reasons.length===0,reasons,width,height,bitDepth,colorType,hasSrgb:hasSrgb||hasSrgbIcc};
+}
+async function masterCompliance(entry,src,standard){
+  if(entry?.mimeType&&entry.mimeType!=='image/png')return {ok:false,reasons:['master must be a lossless PNG']};
+  const key=String(entry?.image||src)+'|'+String(entry?.updatedAt||'')+'|'+standard.width+'x'+standard.height;
+  if(!state.masterComplianceCache.has(key)){
+    state.masterComplianceCache.set(key,(async()=>{
+      const response=await fetch(src,{cache:'no-store'});if(!response.ok)throw new Error('image HTTP '+response.status);
+      return inspectMasterPng(new Uint8Array(await response.arrayBuffer()),standard);
+    })());
+  }
+  return state.masterComplianceCache.get(key);
+}
+function appendMasterStatus(entry,src,host,sel){
+  const standard=masterStandard(sel);
+  const status=document.createElement('div');status.className='visual-master-status checking';status.textContent='Checking master compliance…';host.appendChild(status);
+  void masterCompliance(entry,src,standard).then(result=>{
+    if(!status.isConnected)return;
+    status.className='visual-master-status '+(result.ok?'pass':'fail');
+    status.textContent=result.ok?'✓ MASTER COMPLIANT':'✕ NOT MASTER COMPLIANT YET';
+    status.title=result.ok?standard.width+'×'+standard.height+' · '+standard.ratio+' portrait · 8-bit RGB · lossless PNG · '+standard.note+' · '+(result.hasSrgb?'sRGB tagged':'color profile unspecified (informational)'):result.reasons.join(' · ');
+  }).catch(error=>{
+    if(!status.isConnected)return;
+    status.className='visual-master-status fail';status.textContent='✕ MASTER COMPLIANCE NOT CONFIRMED';status.title=error instanceof Error?error.message:String(error);
+  });
+}
 
 function createUi(){
   const anchor=document.getElementById('status');
@@ -171,6 +229,7 @@ function setDraftBody(sel,entry){
   const watermark=document.createElement('div');watermark.className='visual-watermark';watermark.textContent='DRAFT · NOT RELEASED';
   wrap.append(img,watermark);ui.draftBody.appendChild(wrap);
   const meta=document.createElement('div');meta.className='visual-meta';meta.textContent=sel.recipeId+' · '+(entry.updatedAt?'stored '+new Date(entry.updatedAt).toLocaleString():'approved production draft');ui.draftBody.appendChild(meta);
+  appendMasterStatus(entry,src,ui.draftBody,sel);
   ui.uploadBtn.textContent='Replace Image';
 }
 function renderCanonItems(sel,items){

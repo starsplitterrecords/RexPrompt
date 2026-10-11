@@ -449,7 +449,7 @@
       {
         "handle": "@starsplit.officer",
         "speaker": "Officer",
-        "text": "Understood."
+        "text": "The engineers will follow Sol's shuttle in."
       },
       {
         "handle": "@starsplit.ella.venn",
@@ -1329,7 +1329,7 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Your replacement will be sent. You retain responsibility for your ship until relieved."
+        "text": "Lieutenant Erin Deka will assume command of Thunderbreak once you're safely berthed. Until then, the ship remains your responsibility."
       },
       {
         "handle": "@starsplit.ella.venn",
@@ -1342,7 +1342,7 @@
       "Dominion directs Venn to hold Shard refugees still in Fleet medical custody, surrender Naomi's rescuers for questioning if they enter Fleet jurisdiction, and request that Auric accept separate Shard detention.",
       "Venn points to mixed families and the lives rescued. Keating insists security classification is ordinary Fleet policy; the bridge crew reacts uneasily because Dominion's demand would split patients and caretakers.",
       "Dominion offers Venn continued command and scheduled relief only if she complies. She refuses on the recorded channel. She remains in charge of Thunderbreak's damaged shipboard systems until a replacement can assume responsibility.",
-      "Dominion orders a formal relief officer dispatched and warns that future Fleet support is under review. Venn stays at the damaged command station, not removing her insignia yet; some crew respect her decision and others fear it."
+      "Dominion names Lieutenant Erin Deka as the officer appointed to assume command once Thunderbreak is securely berthed and the formal handover is complete, and warns that future Fleet support is under review. Venn remains at the damaged command station, retaining shipboard command until then; some crew respect her decision and others fear it."
     ],
     "directionInline": [
       "Fleet may control its own medical facilities and personnel, not impose Auric-wide detention by fiat. Venn has not resigned or been relieved on this page, allowing a lawful handover later and preserving Issue 3 tribunal charges."
@@ -1617,7 +1617,7 @@
   {
     "id": "RF_I02_P18",
     "summary": "Venn is formally relieved of Thunderbreak only after its damaged systems are secure; separately, Auric and Verge crews adopt a narrow civilian rescue arrangement without binding the Fleet or resolving the Shard split.",
-    "settingText": "AURIC CROWN RING — HOSTAGE TUG / ASHFANG BATTLESPACE",
+    "settingText": "THUNDERBREAK — SECURED AURIC BERTH / AURIC CIVIC CONCOURSE",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
       {
@@ -1625,8 +1625,8 @@
         "handle": "@starsplit.ella.venn"
       },
       {
-        "name": "Relief Officer",
-        "handle": "@starsplit.fleet.relief.officer"
+        "name": "Lieutenant Erin Deka",
+        "handle": "@starsplit.deka"
       },
       {
         "name": "Captain Naomi Sol",
@@ -1643,8 +1643,8 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.fleet.relief.officer",
-        "speaker": "Relief Officer",
+        "handle": "@starsplit.deka",
+        "speaker": "Deka",
         "text": "Keating's relief order is authenticated. I have the bridge when you're ready."
       },
       {
@@ -1653,8 +1653,8 @@
         "text": "Port armor's compromised. Tractor bus is running hot. Two watches need replacing."
       },
       {
-        "handle": "@starsplit.fleet.relief.officer",
-        "speaker": "Relief Officer",
+        "handle": "@starsplit.deka",
+        "speaker": "Deka",
         "text": "Engineering has the handover. I assume command of Thunderbreak."
       },
       {
@@ -1699,15 +1699,15 @@
       }
     ],
     "panelPlan": [
-      "Thunderbreak at a safe Auric berth. A newly appointed Fleet relief officer comes aboard with Keating's sealed order. Venn gives a physical damage and watch handover, including the ship's patched armor, recent tractor strain and civilian relief inventory.",
-      "Venn signs the transfer log and removes her command insignia only after the officer formally assumes the bridge. The crew's responses vary; no synchronized heroic salute and no impression Venn can still order Thunderbreak into combat.",
+      "Thunderbreak is secured at a safe Auric berth. Lieutenant Erin Deka formally reports to the bridge as Keating's appointed acting commander with an authenticated relief order. Venn gives Deka a physical damage and watch handover, including the ship's patched armor, recent tractor strain and civilian relief inventory.",
+      "After Deka formally assumes command, Venn signs the transfer log and relinquishes her shipboard command authorization, not her permanent Commodore rank insignia. The crew's responses vary; no synchronized heroic salute and no impression Venn can still order Thunderbreak into combat.",
       "At the Auric civic table, Halev and Naomi prepare a time-limited civilian rescue compact: Verge operational lead, Auric civilian oversight, mutual access for rescue craft and no permanent Fleet base.",
       "Abby, appearing on a separate open channel from her divided Shard skiffs, offers voluntary escort help on civilian terms but refuses to sign for captains who followed Billie. No one claims that Venn or the Admiralty authorized this agreement.",
       "Naomi and Halev authorize the limited compact. Outside, damaged Thunderbreak remains available only under its new Fleet command, while local tugs and volunteer skiffs must cover the immediate perimeter."
     ],
     "continuityFrom": "RF_I02_P17",
     "directionInline": [
-      "Physically separate command relief from the civic compact. Venn cannot sign a Fleet treaty or command the ship after relief. The compact is provisional and limited, and Abby's contribution is voluntary rather than a magically reconciled Shard fleet."
+      "Physically separate command relief from the Auric civilian compact. Erin Deka is the authenticated Fleet acting commander of Thunderbreak after the handover; Venn retains her Commodore rank but cannot command the ship after relief or sign a Fleet treaty. The compact is provisional and limited, and Abby's contribution is voluntary rather than a reconciled Shard fleet."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
@@ -1758,7 +1758,7 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Your hands need time away from the tools."
+        "text": "Your fingers are still numb. No more tools this morning."
       },
       {
         "handle": "@starsplit.paul.secundo",
@@ -1768,7 +1768,17 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Someone else can take a shift. Eat first."
+        "text": "I nearly lost you in that spine, Paul. I'm asking you to eat one meal."
+      },
+      {
+        "handle": "@starsplit.paul.secundo",
+        "speaker": "Paul",
+        "text": "I can eat and take the late shift."
+      },
+      {
+        "handle": "@starsplit.richard.secundo",
+        "speaker": "Richard",
+        "text": "I'd prefer that."
       },
       {
         "handle": "@starsplit.jex.marrin",
