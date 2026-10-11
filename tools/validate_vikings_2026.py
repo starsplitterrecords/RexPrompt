@@ -274,7 +274,7 @@ def main():
     for issue in (1, 2, 3):
         pages = issue_pages_by_id[f"vikings-2026-s1-e{issue:02d}"]
         for index, page in enumerate(pages):
-            if issue != 1 and page.get("unit") == "COVER":
+            if page.get("unit") == "COVER":
                 continue
             mapped = [line for panel in page["panelPlan"] for line in panel.get("dialogueIndices", [])]
             assert sorted(mapped) == list(range(len(page["dialogueInline"]))), f"dialogue omitted/duplicated in panel mapping: {page['id']}"
