@@ -882,8 +882,8 @@
     "id": "RF_I01_P13",
     "issue": 1,
     "page": 15,
-    "summary": "Abby stands before the Silent Triarch and receives three incompatible Shard imperatives from three distinct political authorities: raid, trade and fear.",
-    "settingText": "SILENT TRIARCH CHAMBER — SHARD POWER CENTER",
+    "summary": "The Silent Triarch maintains the standing grain-raiding order but exposes a conflict over its cost: Raid demands seizures, Trade warns that shattered commerce will cut future food access, and Fear demands an unmistakable warning to Fleet. Abby receives orders she cannot simply discard.",
+    "settingText": "SILENT TRIARCH CHAMBER — BLACK DRIFT",
     "regionText": "The Shards",
     "setting": "RF_Triarch_Chamber",
     "region": "Shards",
@@ -910,47 +910,67 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.silent.triarch.raid",
         "speaker": "Raid",
-        "text": "Strike to feed."
+        "text": "The standing grain order remains. Our cutters take what the frontier carries.",
+        "handle": "@starsplit.silent.triarch.raid"
       },
       {
-        "handle": "@starsplit.silent.triarch.trade",
         "speaker": "Trade",
-        "text": "Flow sustains."
+        "text": "Two merchants have suspended crossings since Kaldr. Fewer ships mean fewer supplies for us.",
+        "handle": "@starsplit.silent.triarch.trade"
       },
       {
-        "handle": "@starsplit.silent.triarch.fear",
         "speaker": "Fear",
-        "text": "Terror binds."
+        "text": "Fleet will protect every hold unless protection becomes expensive.",
+        "handle": "@starsplit.silent.triarch.fear"
+      },
+      {
+        "speaker": "Abby",
+        "text": "The damaged shipment cost us as well. I can intercept cargo. I can't make merchants replace wrecked ships.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Raid",
+        "text": "Then take the next shipment intact.",
+        "handle": "@starsplit.silent.triarch.raid"
+      },
+      {
+        "speaker": "Trade",
+        "text": "Keep the traders willing to sail. We need their routes open.",
+        "handle": "@starsplit.silent.triarch.trade"
+      },
+      {
+        "speaker": "Fear",
+        "text": "And make the Core understand those routes are not theirs alone.",
+        "handle": "@starsplit.silent.triarch.fear"
       }
     ],
     "panelPlan": [
-      "Abby stands before three seated Triarch members in a dark but technologically practical Shard chamber; the three masks have distinct silhouettes and fixed left-center-right positions.",
-      "Close portrait of the jagged Raid mask delivering the order to strike to feed.",
-      "Close portrait of the pale etched Trade mask saying flow sustains.",
-      "Close portrait of the glossy dark Fear mask saying terror binds.",
-      "Final panel returns to Abby standing among the three competing authorities, making their political contradiction visible."
+      "Establish exact chamber geography: Abby stands in a working Shard political command space before the three rulers seated in distinct fixed positions. Raid has a jagged dark-industrial mask, Trade a pale etched mask, Fear a smooth dark mask; positions stay invariant across views.",
+      "Material evidence—grain from the recent interception and a simple representation of delayed civilian commerce—is present on a practical shared table, not a mystical artifact.",
+      "Each member responds to a real consequence. Raid maintains an already-existing order; Trade worries about supply erosion; Fear interprets the engagement as a way to impose political pressure.",
+      "Abby challenges the practical impossibility of maintaining shipments by destroying the ships. Her composed body language indicates she is negotiating within authority she still recognizes.",
+      "The Triarch restates directives that are compatible at the slogan level but not obviously easy to satisfy together. End with Abby leaving with conflicting obligations, no invented oath or ceremonial speech."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The Silent Triarch are political rulers, not supernatural beings. Preserve three distinct masks and positions. No ritual magic, runes, incense, sacred glow or mystic framing."
+      "The Triarch ordered the Luminara grain attacks through standing policy. Abby and Billie have both carried it out tactically. This page addresses execution and future results, not whether raiding was ever authorized.",
+      "The Triarch are political rulers; distinctive masks should never appear supernatural. Pale industrial layers and bright-red faction markings must remain visible.",
+      "No abstract triptych of slogans or thematic captions. Every line addresses a decision, consequence or demand."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-014.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P14",
     "issue": 1,
     "page": 16,
-    "summary": "At Auric, Halev turns the rescue into a list of unmet civilian needs; Wallace attacks Core-style tariffs and Naomi demands disciplined formations instead of raider-bought maps.",
-    "settingText": "AURIC BAZAAR — WORKING MARKET AND CIVIC DOCK — DAY",
+    "summary": "Auric's governor, trading elder and escort captain face diminished grain supply and a choice between isolation and Fleet-backed commerce. Halev directs local rationing while asking what protection will actually cost.",
+    "settingText": "AURIC BAZAAR — CIVIC GRAIN DESK — NEXT MORNING",
     "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
     "region": "Verge",
     "factions": [
-      "F_Verge"
+      "F_Verge",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
@@ -968,90 +988,123 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.halev",
+        "speaker": "CAPTION",
+        "text": "AURIC BAZAAR — NEXT MORNING"
+      },
+      {
         "speaker": "Halev",
-        "text": "We need more than food. Medicine. Fuel cells. Heat. Lights for the out-rings."
+        "text": "The out-rings have less grain than we planned. I'm reducing export allocations until households are covered.",
+        "handle": "@starsplit.halev"
       },
       {
-        "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "And fewer tariffs dressed as blessings."
+        "text": "Fleet buyers will dispute that. We signed to send the grain under their escort.",
+        "handle": "@starsplit.brent.wallace"
       },
       {
-        "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You want safety? You ride in formation and you stop buying maps from raiders."
+        "text": "Their cruiser saved the convoy. We still lost a hold, and the Shards learned our crossing window.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Wallace",
+        "text": "If we close the route, the next harvest stays ours. So do the markets we can't reach.",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "speaker": "Halev",
+        "text": "I don't intend to close it. I want the next ship to arrive without half its grain in the rift.",
+        "handle": "@starsplit.halev"
       }
     ],
     "panelPlan": [
-      "Wide market view keeps Halev, Wallace and Naomi in a working civilian environment surrounded by cargo, power hardware, merchants and families.",
-      "A child and caregiver sit beside a portable heater/power unit in the foreground, making Halev's list of needs physically visible.",
-      "Halev counts medicine, fuel cells, heat and lights on his fingers while speaking to Wallace and Naomi.",
-      "Wallace answers with the tariff complaint in a close portrait, skeptical rather than villainous.",
-      "Naomi steps into the argument and states the operational condition for safety: formation discipline and no raider maps."
+      "Visible public grain stocks, ration line and functioning port labor as distinct individual Auric residents work around the civic desk; no abstract conference stage.",
+      "Halev makes a real decision within his authority, revising Auric's export allocation against diminished holdings.",
+      "Wallace shows tangible contract exposure without framing Fleet as sole villain; the Verge can gain autonomy from isolation and lose markets and supplies.",
+      "Naomi identifies actual failures in the escort while keeping her independent command perspective. She is not Venn's subordinate.",
+      "End on Halev considering a narrow route agreement with a real cost; he is governing the consequences, not declaring a universal principle."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Auric is a capable but resource-constrained Verge freeport. Civilians remain individuals with practical work and needs; do not render them as misery wallpaper."
+      "The Verge produces grain and has meaningful autonomy. Isolation can benefit Verge independence; reconnection offers economic benefits and creates dependence and external claims.",
+      "Concentrate on one resource problem and one possible response. Do not add heat, fuel, medicine or tariffs as disconnected new stakes in this scene.",
+      "Keep all temporary damage and remaining grain allocations consistent with earlier arrival."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-015.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P15",
     "issue": 1,
     "page": 17,
-    "summary": "Wallace defends the price of working route information while Halev cuts the argument short and offers a narrow deal: essential cargo only, with Fleet on the wing if it accepts Verge terms.",
-    "settingText": "AURIC BAZAAR — ROUTE TABLE AND CARGO DOCK — DAY",
+    "summary": "Halev develops a conditional Green Corridor proposal with Wallace and Naomi: Auric supplies locally certified transit information and limited berth access, while Fleet supplies escort protection without gaining authority over Verge cargo allocation or civil traffic.",
+    "settingText": "AURIC BAZAAR — CIVIC ROUTE TABLE / WORKING BERTH",
     "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
     "region": "Verge",
     "factions": [
-      "F_Verge"
+      "F_Verge",
+      "F_Fleet"
     ],
     "charactersInline": [
+      {
+        "name": "Governor Chris Halev",
+        "handle": "@starsplit.halev"
+      },
       {
         "name": "Brent Wallace",
         "handle": "@starsplit.brent.wallace"
       },
       {
-        "name": "Governor Chris Halev",
-        "handle": "@starsplit.halev"
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "Maps that work are cheaper than escorts that don't."
+        "text": "Our pilots know when Kaldr's stable. Fleet knows how to put a cruiser between us and cutters. Neither can replace the other.",
+        "handle": "@starsplit.brent.wallace"
       },
       {
-        "handle": "@starsplit.halev",
+        "speaker": "Naomi",
+        "text": "If they fly the route, Verge traffic control sets the crossing order. No Fleet officer takes over a grain hold.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
         "speaker": "Halev",
-        "text": "Enough. Essential cargo only. Fleet on the wing—if they'll take the terms."
+        "text": "And they get a reliable lane and the deliveries they contracted for. That's the offer.",
+        "handle": "@starsplit.halev"
+      },
+      {
+        "speaker": "Wallace",
+        "text": "They'll ask for the route data after the first run.",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "speaker": "Halev",
+        "text": "Then they'll have to ask us again. Put the terms in writing and send them to Venn.",
+        "handle": "@starsplit.halev"
       }
     ],
     "panelPlan": [
-      "Wallace and Halev stand at a low practical route table amid an active market while a young worker carries a compact cargo device behind them.",
-      "Close two-shot as Wallace argues that maps which work are cheaper than escorts that fail.",
-      "The worker crosses through the scene, emphasizing that this negotiation sits inside ordinary commerce rather than a sealed council chamber.",
-      "Halev points toward the working dock and loaded essential cargo as he ends the argument and defines the offer to Fleet."
+      "Same Auric civic logistics environment but with a new action: Naomi demonstrates a physically navigable certified route on a modest shared map, backed by port observations and drift measurements.",
+      "Wallace negotiates the commercial reality of pilot knowledge versus Fleet armed protection. His hands and gaze remain on actual shipping and contract records, not theatrical finger-counting.",
+      "Halev uses civic authority: he can offer pilot certification, berth access, cargo scheduling and a proposed treaty, but cannot order Fleet cruisers or govern the Core.",
+      "Naomi demands Verge traffic-control jurisdiction as a specific condition while not pretending Verge escorts alone can match Thunderbreak.",
+      "The deal is physically written/transmitted by a port clerk or Halev on a practical slate with no readable incidental labels. The final panel is a clear communication leaving Auric for Venn."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The deal is a civilian logistics arrangement, not a ceremonial treaty. Do not add banners, contract text or political slogans."
+      "The corridor has two separate layers: a safe navigable volume verified through measurable reciprocal-field and drift behavior, and political permission for commercial traffic and escort service.",
+      "Halev offers access and cooperation, not submission. Fleet wants the connection because it strengthens Reach and Resolve and creates ongoing interdependence.",
+      "No generic slogans about maps or flow. Dialogue must explicitly negotiate reciprocal benefits and control."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-016.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P16",
     "issue": 1,
     "page": 18,
-    "summary": "In the Core, Admiral Cael Dominion argues that blockades create safety; Venn counters with clinics and heat, and Admiral Colin Rhyne warns that institutional strength can look like siege to civilians.",
-    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR HEARING",
+    "summary": "At the Core Admiralty, Venn presents Auric's conditional transit proposal. Dominion supports opening the lane to advance Reach and Resolve, while Venn and Rhyne question how protection can avoid becoming imposed Fleet administration.",
+    "settingText": "CORE ADMIRALTY CHAMBER — AUTHORIZATION HEARING",
     "regionText": "The Core",
     "setting": "RF_Core_Admiralty_Chamber",
     "region": "Core",
@@ -1075,42 +1128,56 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.cael.dominion",
-        "speaker": "Dominion",
-        "text": "Blockades hold. Green corridors invite knives."
+        "speaker": "CAPTION",
+        "text": "CORE ADMIRALTY — AFTER AURIC'S PROPOSAL"
       },
       {
-        "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Green lanes keep clinics stocked and heaters lit."
+        "text": "Auric will certify the Kaldr crossing and assign local traffic control. They want our cruiser on the exposed flank.",
+        "handle": "@starsplit.ella.venn"
       },
       {
-        "handle": "@starsplit.colin.rhyne",
+        "speaker": "Dominion",
+        "text": "Open it. Once the connection is regular, the settlements can trade again under Fleet protection.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
         "speaker": "Rhyne",
-        "text": "And strength looks like siege to civilians."
+        "text": "Protection has a price. If Auric can't refuse the next escort, they'll call it occupation.",
+        "handle": "@starsplit.colin.rhyne"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "Their traders asked for security. We can give it to them.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
+        "speaker": "Venn",
+        "text": "They asked us to protect a route, not run their port. They keep their cargo and their crossing order.",
+        "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Wide bright Admiralty chamber with a large route map on the rear wall and a circular floor display; a narrow green lane is visible across the network.",
-      "Dominion sits at institutional distance and argues for blockade logic.",
-      "Venn answers from the floor at human scale, holding to the civilian effect of stocked clinics and working heaters.",
-      "Closer portrait of Venn keeps her response controlled rather than defiant.",
-      "Rhyne enters the argument beside a restrained evidence display and states how strength appears from the civilian side."
+      "Bright institutional Admiralty chamber, white stone-metal and disciplined deep navy, with elevated authority seating and an operational floor route display whose green line represents measured route geometry.",
+      "Venn arrives with a definite Auric proposal; no unspecified policy question or sudden invented corridor concept.",
+      "Dominion's body language shows sincere strategic commitment to reconnecting civilizations under Reach and Resolve. He does not advocate closure or use blockade slogans.",
+      "Rhyne introduces the distinct risk that assistance becomes dependence and political domination. He remains a real admiral with identifiable rank, position and action.",
+      "Venn accepts the operational value of opening the lane while defending Auric's stated civil authority. She is not ideologically opposed to Fleet reconstruction.",
+      "End on Dominion considering the control language of the proposed authorization rather than a theatrical moral stare."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Keep the green corridor as measured route geometry, not a magical glowing portal. The Admiralty disagreement is institutional and political; no faction is visually coded as uniquely virtuous."
+      "Reach and Resolve is Fleet's long-term reconstruction doctrine. Fleet believes building and controlling interstellar connections increases both civilization's stability and Fleet political influence; those motives coexist.",
+      "Do not attempt to explain the entire physics or history of the Shattering. Use only relevant physical route data and opposing human decisions.",
+      "All three Fleet officers have distinct faces, ages and uniforms. Keep the hearing's dais and floor display spatially consistent."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-017.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P17",
     "issue": 1,
     "page": 19,
-    "summary": "Dominion grants a monitored trial of the Verge lane; Venn accepts the narrow authority and walks out with the green route still glowing between institutional caution and frontier need.",
-    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR HEARING",
+    "summary": "Dominion authorizes the Green Corridor as part of Reach and Resolve with a monitored trial, explicitly accepting Verge traffic control while reserving Fleet oversight of its own escort. Venn receives a mission that is both a rescue opportunity and a strategic expansion.",
+    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR AUTHORIZATION",
     "regionText": "The Core",
     "setting": "RF_Core_Admiralty_Chamber",
     "region": "Core",
@@ -1134,46 +1201,66 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Hold the wall. Test their lane—under watch."
+        "text": "Authorize the Kaldr trial. Auric controls civilian traffic; Fleet commands its escorts and records every crossing.",
+        "handle": "@starsplit.cael.dominion"
       },
       {
-        "handle": "@starsplit.ella.venn",
+        "speaker": "Rhyne",
+        "text": "How long until a trial becomes the only route anyone can afford to use?",
+        "handle": "@starsplit.colin.rhyne"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "Long enough to learn whether this connection can survive. Reach and Resolve doesn't stop at one convoy.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
         "speaker": "Venn",
-        "text": "Understood."
+        "text": "I'll take Thunderbreak back after the port-bow repairs. Auric will get the terms before we deploy.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "See that they do. I want that corridor open.",
+        "handle": "@starsplit.cael.dominion"
       }
     ],
     "panelPlan": [
-      "Wide view across the circular floor display: Dominion remains at the elevated desk while Venn stands at the edge of the projected green route with Rhyne nearby.",
-      "Dominion authorizes the test with the order to hold the wall and keep the lane under watch.",
-      "Close on Venn as she answers only that she understands.",
-      "Final long view from behind Rhyne as Venn walks alone toward the chamber exit, the green route still visible across the floor between her and the Admiralty."
+      "Continue the same established chamber and character positions. Dominion gives an actual authorization with jurisdiction and reporting conditions; no generic order to 'hold the wall'.",
+      "Rhyne presses the strategic consequences of dependence without making a preachy closing maxim.",
+      "Venn responds through command duties: her damaged ship requires repair before redeployment, and Verge authorities need the complete written terms. Preserve her physical damage knowledge from the raid.",
+      "Tight contrast between elevated Admiralty authority and Venn's lower floor position, using subtle acting and eyelines rather than heroic or submissive posing.",
+      "Final small panel shows authorized transit geometry and the communication leaving for Auric; the green line remains an engineering/navigation display, not an illuminated sacred pathway."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Do not turn Venn's acceptance into triumph. The page ends on conditional permission and institutional distance."
+      "The corridor is being opened because Dominion wants Reach and Resolve to proceed. He is not reluctantly surrendering a preference for isolation.",
+      "The practical and political approval are distinct: mapped transit geometry is measured; the agreement concerns access, escorts, jurisdiction and emerging dependence.",
+      "No invented legal text, route names or interface labels; the only readable text is prescribed dialogue and captions."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-018.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P18",
     "issue": 1,
     "page": 20,
-    "summary": "As the Core authorizes a watched Green Corridor, Abby and Tessa watch Shard ships ignite their engines around a dark industrial stronghold; the Shards answer policy with mobilization.",
-    "settingText": "SHARD ASSEMBLY ORBIT — INDUSTRIAL STRONGHOLD",
+    "summary": "Word of the opening lane reaches Shard leadership. The Triarch keeps its standing supply-seizure policy in force; Abby prepares an intact-cargo operation, while Billie sees a chance to make the Core feel the price of its expansion. Shard ships mobilize toward the new connection.",
+    "settingText": "BLACK DRIFT — SHARD ASSEMBLY ORBIT",
     "regionText": "The Shards",
     "setting": "RF_Shard_Assembly_Orbit",
     "region": "Shards",
     "factions": [
-      "F_Shards"
+      "F_Shards",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
         "name": "Abby Saville",
         "handle": "@starsplit.abby.saville"
+      },
+      {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
       },
       {
         "name": "Tessa Banks",
@@ -1183,21 +1270,47 @@
     "dialogueInline": [
       {
         "speaker": "CAPTION",
-        "text": "THE CORE SPEAKS IN SCROLLS.\nTHE VERGE IN LEDGERS.\nTHE SHARDS—\nWE SWEAR WITH OUR ENGINES."
+        "text": "BLACK DRIFT — AFTER THE KALDR AUTHORIZATION"
+      },
+      {
+        "speaker": "Tessa",
+        "text": "Merchants are scheduling crossings again. Gravefire can patrol the damaged approaches.",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "speaker": "Abby",
+        "text": "Get the cutters ready. We take sealed freight if we have to. The next ship leaves with its passengers untouched.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Fleet's opening a route through our reach and calling it protection.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Abby",
+        "text": "More traffic means more supplies. Don't wreck the trade that feeds our settlements.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "They can afford to ignore hungry people. Maybe they won't ignore a crisis they have to answer for.",
+        "handle": "@starsplit.billie.rusk"
       }
     ],
     "panelPlan": [
-      "Abby and Tessa stand with their backs to the reader on a dark observation platform facing a massive inhabited Shard industrial stronghold surrounded by dormant ships.",
-      "One Shard vessel peels away and lights its engines, the movement small against the station mass.",
-      "More ships ignite around the stronghold in successive directions; the response grows through ordinary propulsion and formation movement.",
-      "Final wide panel shows a ring of Shard ships under varied engine light around the stronghold while Abby and Tessa remain tiny in the foreground. The caption lands at lower right."
+      "Reveal the inhabited Shard industrial stronghold in wide night-space view, with repeatable scale, dock approaches and movement lanes. Ships launch by ordinary engines in coordinated sequences, not a magical glowing halo.",
+      "At a practical observation/control level, Abby, Billie and Tessa appear in identifiable costumes and relative scales; faces are seen clearly in at least one panel before silhouettes against the ships.",
+      "Tessa reports factual route information and stays responsible for Gravefire; Abby gives a specific cargo-preservation order under the Triarch's existing standing policy.",
+      "Billie focuses on the political impact of forcing Fleet to face historical Shard suffering. Her anger is personal and historically grounded; she does not yet hijack the passenger freighter or break openly from Abby.",
+      "Exterior sequence shows a limited number of readable Shard cutters separating in controlled departure lanes as the larger industrial presence stays physically anchored.",
+      "End on a tense exchange between Abby and Billie as the armed vessels leave. Their divergent intentions are visible, but the final issue beat does not spoil Issue 2's specific escalation."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The Shard response is political mobilization through physical ships and engines. No supernatural oath effect, magical glow, portal or occult symbolism."
+      "Opening the connection serves Fleet's political aims and gives Shards new opportunities to obtain supplies. All three powers have something to gain and something to lose.",
+      "Billie favors coercive attacks partly as revenge for real generational harm, while Abby increasingly considers voluntary provision as a way beyond raiding; those trajectories are nascent, not completed in this issue.",
+      "No omniscient faction slogans, swearing to engines, ritualistic symbolism or editorial moral verdict. The hook is the operational and personal danger of two leaders reading one new corridor differently."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-019.jpg"
+    "status": "production-ready"
   }
 ]
