@@ -3,48 +3,71 @@
     "id": "RF_I01_COVER",
     "issue": 1,
     "title": "Rex Fleet Issue 1 Cover — Green Corridor",
-    "summary": "Released canonical cover reference. Preserve the existing Green Corridor cover as the visual and trade-dress anchor for the Rex Fleet cover line; this recipe exists so the chef-facing cover shelf has a complete Issue 1–12 set, not to authorize redesign.",
-    "settingText": "Released Rex Fleet Issue 1 cover composition from StarSplitterVisions: three-power frontier montage around Commodore Ella Venn and civilians, with Core/Fleet, Shard and Verge visual territories clearly separated.",
+    "summary": "A grain freighter carrying civilians passes through a dangerous shattered transit route between an old Fleet heavy cruiser and Shard interceptors. The main image promises protection that can also become control.",
+    "settingText": "KALDR RIFT — CIVILIAN GRAIN CONVOY BETWEEN FLEET ESCORT AND SHARD CUTTERS",
     "panelPlan": [
-      "REPRODUCTION / REFERENCE COVER. The released Issue 1 cover is already canon. Before any reproduction attempt, retrieve and pixel-read the exact approved local reference at production/references/rex-fleet/assets/covers/issue-01-cover-trade-dress.jpg; it is an exact byte-for-byte copy of the released StarSplitterVisions cover.",
-      "Match the released cover's portrait composition rather than reinterpreting it: enormous cream-and-gold REX FLEET masthead across the upper field; Star Splitter Visions mark top-left; ISSUE #1 block top-right; gold divider and tagline beneath the masthead; faction-emblem rhythm along the bottom.",
-      "Preserve the released image's central human hierarchy and three-way environmental split. Do not 'improve' the cast arrangement, faction geometry, palette, insignia, or typography.",
-      "This cover is the cover-brand anchor only. It is not an interior page-layout template and its montage composition is not mandatory for later issue covers."
+      "ONE DOMINANT COVER IDEA: a long, visibly loaded Verge grain freighter is caught between Fleet protection and Shard interception within a dangerously narrow wreckage field. The freighter and its exposed cargo, not a hero portrait, own the central silhouette.",
+      "COMPOSITION: 5:8 portrait; large cream/gold REX FLEET masthead and series trade dress in reserved upper field. Beneath it, the grain ship moves diagonally through a navigable debris gap; blue-gold Thunderbreak occupies a protective flank, while compact pale-gray/red Shard cutters close from the opposite side.",
+      "HUMAN ANCHORS: small but unmistakable embedded cockpit/bridge portrait views or tightly staged lower corners show Venn evaluating the protection line, Naomi piloting with practical urgency, and Abby directing the raid. No generic equal-weight floating-head collage; prioritize the shared grain ship and diverging intentions.",
+      "GRAIN AND STAKES: containers and cargo geometry must clearly identify agricultural food, with intact civilian access compartments. No giant fireball, tormented civilians, or invented catastrophe.",
+      "CORRIDOR SCIENCE: the route is measured low-risk transit geometry through real drifting wreckage, not a magical green tunnel. Any green indication is restrained beacon or navigation geometry.",
+      "COVER READ: at thumbnail size the reader must see one vulnerable freighter, a Fleet ship protecting its passage, and Shard ships threatening its cargo. The politics emerge from the arrangement.",
+      "PRESERVE THE ESTABLISHED FLEET, VERGE AND SHARD COLOR LANGUAGES, realistic ship scales, distinctive named hull designs and believable propulsion clearance. Use a fresh issue-specific composition rather than a universal cast poster."
     ],
     "directionInline": [
       {
-        "text": "Released-canon lock: do not regenerate, redraw, modernize, relabel, or otherwise replace this cover unless the user explicitly reopens Issue 1 cover art. If a reproduction is specifically requested, the canonical cover pixels control the result."
+        "text": "Professional printed comic cover with exact DISPLAY text only. Keep the masthead clear of faces and critical ship details. Stage all three factions with visual neutrality."
+      },
+      {
+        "text": "Do not show the outcome of the raid, the authorization, or Abby and Billie's later division. Avoid mystical portals, faction clichés and warship redesigns."
       }
     ],
     "page": 1,
     "direction": [
       "D_rex_fleet_cover_standard",
-      "D_rex_fleet_cover_trade_dress"
+      "D_rex_fleet_cover_trade_dress",
+      "D_rex_fleet_cover_commercial_read"
     ],
     "dialogueInline": [
       {
         "speaker": "DISPLAY",
-        "text": "STAR SPLITTER VISIONS",
-        "subtext": "Cover trade dress — exact text, positioned from the canonical Issue 1 cover reference."
+        "text": "STAR SPLITTER VISIONS"
       },
       {
         "speaker": "DISPLAY",
-        "text": "REX FLEET",
-        "subtext": "Cover masthead — exact text, typography/scale/placement governed by the canonical Issue 1 cover pixel reference."
+        "text": "REX FLEET"
       },
       {
         "speaker": "DISPLAY",
-        "text": "THREE POWERS. ONE FRONTIER.",
-        "subtext": "Series tagline — exact text, preserve canonical divider/tagline treatment."
+        "text": "THREE POWERS. ONE FRONTIER."
       },
       {
         "speaker": "DISPLAY",
-        "text": "ISSUE #1",
-        "subtext": "Issue marker — exact text, preserve canonical top-right placement and visual hierarchy."
+        "text": "ISSUE #1"
       }
     ],
     "status": "production-ready",
-    "source": "Rex Fleet season cover art-direction pass, 2026-09-30."
+    "charactersInline": [
+      {
+        "name": "Commodore Ella Venn",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "name": "Abby Saville",
+        "handle": "@starsplit.abby.saville"
+      }
+    ],
+    "setting": "RF_Kaldr_Rift",
+    "region": "Corridors",
+    "factions": [
+      "F_Fleet",
+      "F_Verge",
+      "F_Shards"
+    ]
   },
   {
     "id": "RF_I02_COVER",

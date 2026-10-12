@@ -3,8 +3,8 @@
     "id": "RF_I01_P01",
     "issue": 1,
     "page": 3,
-    "summary": "At Luminara Fields, a civilian farm freighter departs with food while a mother and her son watch the shipment leave under the promise of distant Core protection.",
-    "settingText": "LUMINARA FIELDS — AGRICULTURAL FREIGHT DOCK — DAY",
+    "summary": "The grain leaving Luminara is bound for Fleet under a protective agreement, but Verge families worry that sending reserves away leaves their own community short; a mother and her son watch the risky convoy depart.",
+    "settingText": "LUMINARA FIELDS — VERGE AGRICULTURAL FREIGHT DOCK — MORNING",
     "regionText": "The Verge",
     "setting": "RF_Luminara_Fields_Dock",
     "region": "Verge",
@@ -23,68 +23,62 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.luminara.boy",
+        "speaker": "CAPTION",
+        "text": "LUMINARA FIELDS — MORNING"
+      },
+      {
+        "speaker": "Dock Worker",
+        "text": "Fleet's bought another three holds. We're loading the reserve bins now."
+      },
+      {
+        "speaker": "Mother",
+        "text": "Leave the local bins sealed. That's next month's ration.",
+        "handle": "@starsplit.luminara.mother"
+      },
+      {
         "speaker": "Boy",
-        "text": "The Crowns won't let us go hungry, will they?"
+        "text": "If they're taking our grain, what do we eat when the next harvest's late?",
+        "handle": "@starsplit.luminara.boy"
+      },
+      {
+        "speaker": "Mother",
+        "text": "What's left here. And whatever the convoy earns us. That's why everyone's arguing.",
+        "handle": "@starsplit.luminara.mother"
+      },
+      {
+        "speaker": "Boy",
+        "text": "They say the Shards might take it before Fleet gets it.",
+        "handle": "@starsplit.luminara.boy"
+      },
+      {
+        "speaker": "Mother",
+        "text": "They might. But keeping everything here won't feed the settlements waiting for it.",
+        "handle": "@starsplit.luminara.mother"
       }
     ],
     "panelPlan": [
-      "Wide establishing view of a bright agricultural port embedded in productive farmland. Practical cranes and Verge freight infrastructure surround several long tan-and-muted-green farm freighters.",
-      "Dock workers load sacks and food cargo by hand and machine into an open freighter bay. The work is busy, ordinary and communal rather than militarized.",
-      "The Luminara Mother guides her son through the dock crowd as they watch the loading operation.",
-      "One loaded freighter lifts away from the field on four bright engines while workers and families watch from below.",
-      "Close on mother and son at the edge of the port, the departing freighter small over the fields as the boy asks whether the Crowns will keep them fed."
+      "Broad establishing view of productive Luminara fields and a Verge grain dock: intact agricultural infrastructure, multiple sealed grain bins, workers, vehicle lanes and long tan-green modular freighters. Grain is unmistakable as bulk food, not ambiguous cargo.",
+      "Close on dock crews opening reserve bins and loading marked grain containers into a named visually trackable freighter. A worker tells another how many holds Fleet has purchased while the mother, involved in dock logistics, guards the allocation for Luminara households.",
+      "The boy has overheard anxious workers discussing export, Fleet protection and Shard seizures; he asks about their own food while watching the grain move. The mother gives a practical incomplete answer, not a promise from an unseen state.",
+      "The family boards the identifiable lead grain freighter through a clearly marked physical boarding access before departure. They are traveling to Auric as registered civilian passengers with a practical reason to accompany the shipment, not staying on Luminara while the freighter leaves.",
+      "Final quiet view through the freighter's passenger observation glass: the mother and boy watch Luminara's farms recede. She remains concerned about grain allocated away from their community and whether this convoy will survive."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Establish the Verge as productive and capable, not backward. The emotional anchor is a child's practical dependence on promises made by distant institutions."
+      "Begin with a shared material stake, not faction theory. Both the Core-bound buyers and Verge residents need the grain; losing it harms both and may also starve Shard communities that normally seize portions of passing commerce.",
+      "Maintain consistent physical freight dimensions and safe departure clearance. All dialogue belongs to specific visible speakers; the dock worker is an unnamed speaking extra, not a new recurring character.",
+      "Mother and boy board the grain freighter before departure and remain aboard through the attacked transit; the same freighter delivers them to Auric. Preserve clothing, passenger seating, helmet and gangway geography."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-002.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P02",
     "issue": 1,
     "page": 4,
-    "summary": "The food convoy enters the Kaldr Rift, threading a narrow route through wreckage and asteroids while its Verge escort watches the corridor ahead.",
-    "settingText": "KALDR RIFT — CONVOY ROUTE THROUGH WRECKAGE",
-    "regionText": "The Verge",
+    "summary": "The grain convoy enters the slow, debris-filled Kaldr passage; Naomi's escort must accept Thunderbreak's protection despite Verge mistrust of the Fleet's growing authority over routes.",
+    "settingText": "KALDR RIFT — CERTIFIED SLOW-TRANSIT PASSAGE",
+    "regionText": "Inter-faction Corridors",
     "setting": "RF_Kaldr_Rift",
-    "region": "Verge",
-    "factions": [
-      "F_Verge"
-    ],
-    "charactersInline": [
-      {
-        "name": "Second",
-        "handle": "@starsplit.second"
-      }
-    ],
-    "dialogueInline": [],
-    "panelPlan": [
-      "A long Verge farm freighter leads into a dense field of shattered hulls, rock and old industrial wreckage.",
-      "Closer pass along the freighter as smaller escort craft and additional cargo vessels keep disciplined spacing through the debris.",
-      "Very wide view makes the convoy look small inside the hazardous rift; the safe volume is a navigable path through physical wreckage, not a glowing tunnel or portal.",
-      "Interior cockpit view: the Verge second officer watches the convoy through a battered practical viewport as the lead freighter disappears deeper into the rift."
-    ],
-    "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Make corridor danger physical and navigational: obstructed sightlines, wreckage, tight geometry and careful spacing. No magical transit imagery."
-    ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-003.jpg"
-  },
-  {
-    "id": "RF_I01_P03",
-    "issue": 1,
-    "page": 5,
-    "summary": "Captain Naomi Sol sees Thunderbreak join the convoy and tries to believe the combined escort is enough; her second officer voices the fear she is suppressing.",
-    "settingText": "VERGE ESCORT — COCKPIT IN THE KALDR RIFT",
-    "regionText": "The Verge",
-    "setting": "RF_Verge_Escort_Cockpit",
-    "region": "Verge",
+    "region": "Corridors",
     "factions": [
       "F_Verge",
       "F_Fleet"
@@ -101,38 +95,120 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.naomi.sol",
-        "speaker": "Naomi",
-        "text": "We should be enough. We should."
+        "speaker": "CAPTION",
+        "text": "KALDR RIFT — CERTIFIED PASSAGE"
       },
       {
-        "handle": "@starsplit.second",
         "speaker": "Second",
-        "text": "And if we're not?"
+        "text": "Drift markers moved again. The cleared lane's two freighters wide.",
+        "handle": "@starsplit.second"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Put the heaviest grain ship in front. Nothing overtakes inside the wreck field.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Second",
+        "text": "Thunderbreak's asking to close on our port flank.",
+        "handle": "@starsplit.second"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Give them the approach. We don't give them our navigation authority.",
+        "handle": "@starsplit.naomi.sol"
       }
     ],
     "panelPlan": [
-      "Through the Verge escort's forward opening, Thunderbreak arrives as a large blue-and-gold Fleet heavy cruiser among the smaller working convoy craft.",
-      "Naomi grips the controls in a cramped, worn cockpit; her second officer sits close beside her. Their practical Verge gear and ship interior remain distinct from Fleet design.",
-      "Tight close-up on Naomi's brow scar and focused eyes as she studies the threat beyond the canopy.",
-      "Insert on Naomi's hand tightening around the physical control stick.",
-      "Two-shot with Thunderbreak visible behind them as Naomi says they should be enough.",
-      "Close on the second officer turning toward Naomi and asking what happens if they are not."
+      "Wide look at a physically dangerous wreckage field: slowly drifting asteroids, fractured old hulls and navigational beacons or clean graphics identifying a narrow surveyed corridor. No luminous magical tube.",
+      "Identify the distinct grain freighter from Luminara, with escorted cargo modules and several smaller ships maintaining clearance. This is a low-relative-speed volume after field transit, not faster-than-light obstacle dodging.",
+      "Within Naomi's established tan-green practical cockpit, Second compares real drift markers while Naomi adjusts convoy spacing with physical controls.",
+      "Blue-gold Thunderbreak enters the edge of formation in a consistent direction and at a scale well larger than escorts yet separated by sensible maneuvering distance.",
+      "Close on Naomi assessing the new Fleet position, not a generic glare; the final image reveals an unrecognized compact contact tucked against wreck cover or an obscured approach vector."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Naomi's confidence is functional, not heroic posing. Preserve her practical braid, brow scar and patched Verge identity."
+      "Fleet escorts are militarily powerful; Verge pilots retain local route knowledge and want to control their own traffic. This is a conflict of jurisdiction and need, not mere dislike.",
+      "Keep trackable positions for lead freighter, escorts, Thunderbreak, wreck mass and possible incoming raiders. Debris has drift and requires continuous survey.",
+      "No unexplained labels on cockpit screens or background hulls."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-004.jpg"
+    "status": "production-ready"
+  },
+  {
+    "id": "RF_I01_P03",
+    "issue": 1,
+    "page": 5,
+    "summary": "Naomi spots evidence of a planned cargo interception: the Shards know the convoy's exact route. She holds formation while Fleet screens the threatened grain freighter.",
+    "settingText": "VERGE ESCORT COCKPIT — KALDR RIFT",
+    "regionText": "The Verge",
+    "setting": "RF_Verge_Escort_Cockpit",
+    "region": "Verge",
+    "factions": [
+      "F_Verge",
+      "F_Fleet",
+      "F_Shards"
+    ],
+    "charactersInline": [
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "name": "Second",
+        "handle": "@starsplit.second"
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "Second",
+        "text": "Small hulls behind the breaker. They're pacing the grain ship.",
+        "handle": "@starsplit.second"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "They're already inside the lane? Someone gave them the crossing window.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Second",
+        "text": "Fleet wants us to fall behind Thunderbreak.",
+        "handle": "@starsplit.second"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Tell them we know this approach. I'll take the freighter through; they can cover the flank.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Second",
+        "text": "Two contacts accelerating. They're not after the escort.",
+        "handle": "@starsplit.second"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Warn the cargo master. Seal the holds now.",
+        "handle": "@starsplit.naomi.sol"
+      }
+    ],
+    "panelPlan": [
+      "Opening widescreen cockpit-view panel establishes the geometry already seen: compact raider contacts aligned against the identifiable grain freighter, with Thunderbreak protecting the convoy's open flank.",
+      "Naomi and Second compare drift and encounter timing at real working consoles. Her braid and brow scar match her approved identity; the second officer is visibly distinct and contributes decisions rather than asking rhetorical questions.",
+      "Close inserts reveal maneuver markers instead of predictive essays: two raider vectors converging on a freighter's service/docking fittings.",
+      "Naomi gives a rapid warning and continues actually piloting. Second passes the seal order through a functional transmitter while the convoy changes speed in response.",
+      "End on exterior: Shard cutters emerge from wreck cover toward the grain freighter's cargo holds; Fleet reacts but cannot be everywhere along the narrow path."
+    ],
+    "directionInline": [
+      "Nobody yet knows which individual supplied the raiders with the crossing window; Naomi infers only that the raid was informed.",
+      "Keep Venn's cruiser a protective presence, not a vessel that can instantaneously teleport between freighters.",
+      "Dialogue must reflect flight decisions and a developing situation. Avoid abstract confidence or thematic self-repetition."
+    ],
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P04",
     "issue": 1,
     "page": 6,
-    "summary": "When Shard boarders cut into a civilian freighter, Commodore Ella Venn orders Thunderbreak to ram a wreck and turn the debris itself into a shield for the convoy.",
-    "settingText": "KALDR RIFT — THUNDERBREAK COMMAND AND CONVOY BATTLE",
+    "summary": "The Triarch's standing grain-seizure policy becomes a physical fight: Abby coordinates a limited cargo grab, Billie presses the interception harder, and Venn uses a derelict's mass to protect the freighter at a real cost to Thunderbreak.",
+    "settingText": "KALDR RIFT — CONVOY INTERCEPTION / THUNDERBREAK COMMAND",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Thunderbreak_Command",
     "region": "Corridors",
@@ -149,49 +225,66 @@
       {
         "name": "Officer",
         "handle": "@starsplit.officer"
+      },
+      {
+        "name": "Tactical",
+        "handle": "@starsplit.tactical"
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.officer",
-        "speaker": "Officer",
-        "text": "Boarders cutting into a freighter?"
+        "speaker": "Tactical",
+        "text": "Two cutters on the grain ship. They're lining up with the transfer collars.",
+        "handle": "@starsplit.tactical"
       },
       {
-        "handle": "@starsplit.ella.venn",
+        "speaker": "Officer",
+        "text": "If we clear the wreck, we're exposing the freighter's starboard hold.",
+        "handle": "@starsplit.officer"
+      },
+      {
         "speaker": "Venn",
-        "text": "Helm, ram the wreck. Shield them."
+        "text": "Bring our bow along the derelict. Push it across their approach. Keep the grain ship in our lee.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Tactical",
+        "text": "We'll scrape the port armor.",
+        "handle": "@starsplit.tactical"
+      },
+      {
+        "speaker": "Venn",
+        "text": "Log the section. Execute the turn.",
+        "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Wide battle view: Verge cargo freighters and Fleet ships are compressed inside the rift as Shard attack craft enter between wrecks and asteroids.",
-      "On Thunderbreak command, an officer reports boarders cutting into a freighter while Venn watches the tactical situation without theatrics.",
-      "A small tactical inset isolates the attacking craft and threatened convoy geometry.",
-      "Thunderbreak drives its armored bow into a large derelict structure, showering sparks and moving the wreck into the attack line.",
-      "Inset on frightened civilians sheltering inside a freighter as the collision outside changes their cover.",
-      "Return to the readable geography of Thunderbreak command as Venn gives the concise order to ram the wreck and shield the civilians."
+      "Start in coherent exterior wide view, preserving convoy geometry: two Shard cargo cutters moving toward the grain ship's collars; a large drifting derelict sits between Thunderbreak and an exposed approach.",
+      "On Thunderbreak's broad older blue-gold bridge, tactical reports a cargo interception, not an unexplained passenger massacre. Venn hears an officer's specific collision/damage warning.",
+      "Compact inset map or exterior insert shows Venn's proposed motion: Thunderbreak moves beside and contacts the derelict at low relative speed using its reinforced forward shield/armor, transferring momentum to obstruct the cutters' line. No spectacular head-on high-speed crash.",
+      "A dominant exterior panel tracks the derelict sliding across the raiders' approach as Thunderbreak incurs a visible scrape/damage on the port bow armor. Sparks and debris are local to contact, not an impossible ship-wide explosion.",
+      "A Shard cutter breaks away to avoid collision; another continues along the grain hull. In the last narrow panel an engineer or status visual confirms the same port-bow panel damaged and maneuvering margin reduced."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Thunderbreak is an older, repeatedly maintained heavy cruiser. The ram is a controlled protective maneuver, not a kamikaze spectacle."
+      "Abby and Billie are both executing a Triarch standing order to seize grain from moving trade. Their distinct tactical attitudes should read in external action, not a premature ideological speech; if no Shard command interior is shown, do not invent their dialogue on this page.",
+      "Preserve named vessel hull silhouettes and the port-bow damage through the remainder of this issue and into subsequent continuity when relevant.",
+      "Respect mass, relative velocity, contact location, and follow-through. The derelict's new course physically changes the defensive geometry, and there is a cost."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-005.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P05",
     "issue": 1,
     "page": 7,
-    "summary": "A hull breach turns the boarding fight into a civilian emergency inside the farm freighter; the Luminara Mother seals her son's helmet while Fleet troops force everyone down and Shard raiders press for cargo.",
-    "settingText": "LUMINARA FARM FREIGHTER — CARGO HOLD DURING BREACH",
+    "summary": "A grain freighter's service collar is breached during the Shard boarding action; civilian passengers waiting for onward transfer shelter while an already-embarked security detail protects them, and the mother seals her son's emergency gear.",
+    "settingText": "GRAIN FREIGHTER — ACCESS COMPARTMENT BESIDE CARGO HOLD",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Luminara_Freighter_Hold",
     "region": "Corridors",
     "factions": [
       "F_Verge",
-      "F_Fleet",
-      "F_Shards"
+      "F_Shards",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
@@ -213,43 +306,56 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.luminara.mother",
+        "speaker": "CAPTION",
+        "text": "GRAIN FREIGHTER — PASSENGER ACCESS"
+      },
+      {
         "speaker": "Mother",
-        "text": "Helmet. Tight. Eyes on me."
+        "text": "Keep still. I need the helmet seal closed.",
+        "handle": "@starsplit.luminara.mother"
       },
       {
-        "handle": "@starsplit.raider",
+        "speaker": "Boy",
+        "text": "Are they taking the grain?",
+        "handle": "@starsplit.luminara.boy"
+      },
+      {
+        "speaker": "Mother",
+        "text": "I don't know. Stay behind this door.",
+        "handle": "@starsplit.luminara.mother"
+      },
+      {
         "speaker": "Raider",
-        "text": "Crates first. No stragglers."
+        "text": "Cargo hold only. Leave the passengers.",
+        "handle": "@starsplit.raider"
       },
       {
-        "handle": "@starsplit.fleet.sergeant",
         "speaker": "Fleet Sergeant",
-        "text": "Civilians down! Down now!"
+        "text": "Passenger section's sealed. Get clear of the cargo hatch.",
+        "handle": "@starsplit.fleet.sergeant"
       }
     ],
     "panelPlan": [
-      "Large opening panel: a working freight hold erupts into partial zero-g chaos around a torn hull section; cargo, people and loose objects drift toward the breach.",
-      "The mother pulls her son close and locks a clear emergency helmet around his head while keeping his attention on her.",
-      "A Shard raider moves through the cargo lane and orders crates taken first, treating the hold as material objective.",
-      "A Fleet sergeant plants herself between civilians and the open breach, ordering civilians down while armed responders move through the decompressed space.",
-      "Tight reaction on the boy through the helmet visor.",
-      "Final panel returns to mother and son crouched behind cargo while the Fleet sergeant holds the line in the background."
+      "Passenger presence is already established by boarding on story page 1. Re-establish one clear access cross-section: the freighter's transfer collar and grain stacks connect to a separate civilian passenger alcove, emergency pressure door and the Fleet security team already assigned as convoy passenger protection.",
+      "Clear cross-section spatial logic: one freight access/collar, grain stacks and secured cargo hatches, a distinct passenger access alcove, emergency pressure door and the Fleet security detail already stationed with the convoy's protected passengers.",
+      "A Shard boarding cutter attaches at the cargo collar; local cutting and a short pressure leak disturb straps and loose cloth. Do not depict endless decompression, uncontrolled zero gravity or randomly flying bodies.",
+      "At ground-level human scale, the mother seats the boy in an emergency helmet and checks the neck seal while shielding him with her own body. He stays a protected civilian, not a combat actor.",
+      "A raider orders a crew member toward cargo, while a Fleet sergeant on the freighter's pre-embarked security detail directs civilians behind the sealed passenger door. Maintain distinguishable adult uniforms and grounded poses.",
+      "End with an external view or pressure-seal indicator showing that the passenger door holds while the grain holds remain contested; the family is not presented as magically evacuated."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The child is protected, not used as an action participant. Keep violence focused on the breach, adult combatants and rescue behavior rather than injury to the child."
+      "Passenger presence, security pre-positioning and compartment topology must be established before contact. Do not imply Fleet troops arrived through an unexplained teleport or docking event.",
+      "The child's fear concerns the family grain and immediate danger; adults respond with task-specific dialogue. The Shard raider acts under cargo-seizure orders, while potential collateral danger remains a genuine consequence of the attack.",
+      "No visible injury to the child. No gravity or suction spectacle unsupported by this compartment's pressure state."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-006.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P06",
     "issue": 1,
     "page": 8,
-    "summary": "A Shard marauder offers an easy pursuit while convoy losses climb; Venn rejects the tempting intercept and keeps Thunderbreak physically between the attackers and the civilians.",
-    "settingText": "THUNDERBREAK COMMAND — KALDR RIFT BATTLE",
+    "summary": "With one Shard cutter escaping through the debris, Venn declines an easy pursuit shot in order to keep the convoy protected; Naomi and the freighter crew extract survivors while the destroyed and spilled grain reduces everyone's eventual share.",
+    "settingText": "THUNDERBREAK COMMAND / KALDR RIFT — CONVOY AFTERMATH",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Thunderbreak_Command",
     "region": "Corridors",
@@ -266,78 +372,71 @@
       {
         "name": "Tactical",
         "handle": "@starsplit.tactical"
+      },
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.ella.venn",
-        "speaker": "Venn",
-        "text": "Marauder breaking our flanking screen—"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "HOSTILE VECTOR"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "EXPOSED FLANK CIVILIAN LOSSES PREDICTED"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "TEMPTING PURSUIT ROUTE"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "INTERCEPT POSSIBLE BUT CONVOY REMAINS EXPOSED"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "PROJECTED LOSSES HIGH"
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "SHIELD POSITION LOSSES MINIMIZED"
-      },
-      {
-        "handle": "@starsplit.tactical",
         "speaker": "Tactical",
-        "text": "We can cut them off if we push—"
+        "text": "One cutter's getting clear. We have a firing window if we leave the freighter's flank.",
+        "handle": "@starsplit.tactical"
       },
       {
-        "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Hold the wall. Civilians first."
+        "text": "Stay with the freighter. Put the reserve shield over its damaged hold.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Tactical",
+        "text": "That cutter will be out of range in forty seconds.",
+        "handle": "@starsplit.tactical"
+      },
+      {
+        "speaker": "Venn",
+        "text": "I know. Give Naomi the pressure-safe approach.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Passenger seal's holding. Grain is venting from the split container. I'll take the survivors to Auric.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Venn",
+        "text": "I'll escort what's left.",
+        "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Exterior battle view shows Thunderbreak and the freighter column holding a defensive geometry while a fast Shard marauder breaks toward an exposed flank.",
-      "Venn tracks the movement from command as the marauder breaks the screen.",
-      "Two tactical inserts compare the hostile vector and a tempting pursuit route; both explicitly show the civilian consequence of leaving the convoy.",
-      "Large command-table panel contrasts projected high civilian losses from pursuit with minimized losses from holding shield position.",
-      "Tactical urges an intercept while pointing toward the departing marauder.",
-      "Exterior beat confirms Thunderbreak remains with the freighters rather than chasing.",
-      "Close on Venn at the bridge window as she orders the wall held and civilians protected."
+      "Exterior establishes two concurrent facts: one raider cutter escaping behind moving wreckage, while the identifiable grain freighter has a damaged grain container and local hull/pallet damage from boarding action. Grain grains and cargo fragments drift into space in quantities appropriate to the breach.",
+      "On Thunderbreak command, an officer offers a credible short firing window, but doing so would move defensive coverage off the grain ship; the choice has an observable spatial cost.",
+      "Venn refuses pursuit with a practical protective order and assigns the surviving passengers and compromised cargo to a safer path.",
+      "Naomi's smaller escort maneuvers beside the compromised freighter; an operational check confirms the passenger pressure seal still holds. The mother and boy remain in the passenger section; no impossible second evacuation is depicted.",
+      "Show a believable aftermath assessment: intact containers continue under escort, some grain is lost to space or fire and some may have been taken by raiders. Distinguish captured, destroyed and surviving cargo rather than treating all as 'lost'.",
+      "Final wide image shows diminished but moving convoy in certified passage, Thunderbreak's damaged port bow plainly visible, and the attacking cutter's diminishing engine trace. Victory is partial and no triumphant pose replaces the civilian loss."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "All readable tactical display text is listed above and must be reproduced exactly if visible. Do not add any other HUD labels, route names or pseudo-writing."
+      "Record that the raid's aggregate outcome leaves less grain for Verge, Fleet and Shards; nobody obtains an unlimited reward from a damaged trade system. No invented precise casualty totals or cargo tonnages.",
+      "Venn's first choice spent cruiser armor to block the attackers; her second choice preserves civilian protection but permits a raider to escape. Those are distinct decisions with distinct consequences.",
+      "Fleet personnel and Naomi only know what their instruments or observed events support. The identity of the route-information source remains unknown to them."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-007.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P07",
     "issue": 1,
     "page": 9,
-    "summary": "After the fighting, Fleet crew and rescued civilians share the Thunderbreak memorial space; names of the dead are spoken aloud and Venn turns remembrance toward the people still waiting for help.",
-    "settingText": "THUNDERBREAK — MEMORIAL DECK",
-    "regionText": "The Core / Fleet",
-    "setting": "RF_Thunderbreak_Memorial_Deck",
-    "region": "Core",
+    "summary": "The protected convoy reaches Auric with damaged grain holds and frightened survivors. An improvised, secular remembrance of the dead cannot obscure the logistical consequences of the raid.",
+    "settingText": "AURIC BAZAAR — ARRIVAL BERTH AND CASUALTY STATION — EVENING",
+    "regionText": "The Verge",
+    "setting": "RF_Auric_Bazaar",
+    "region": "Verge",
     "factions": [
-      "F_Fleet",
-      "F_Verge"
+      "F_Verge",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
@@ -353,61 +452,81 @@
         "handle": "@starsplit.luminara.boy"
       },
       {
-        "name": "Crew (various)",
-        "handle": "@starsplit.crew.various"
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
       }
     ],
     "dialogueInline": [
       {
-        "speaker": "DISPLAY",
-        "text": "Sathi An"
+        "speaker": "CAPTION",
+        "text": "AURIC BAZAAR — EVENING"
       },
       {
-        "speaker": "DISPLAY",
-        "text": "Ilion Karr"
+        "speaker": "Naomi",
+        "text": "Two grain holds intact. One ruptured. The rest of the cargo's being counted at berth.",
+        "handle": "@starsplit.naomi.sol"
       },
       {
-        "handle": "@starsplit.crew.various",
-        "speaker": "Crew",
-        "text": "…for Sathi An. For Ilion Karr. For the unnamed in Hold Three…"
+        "speaker": "Mother",
+        "text": "The family next to us didn't make it off their ship.",
+        "handle": "@starsplit.luminara.mother"
       },
       {
-        "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Memory for the lost. Reach for the waiting. Resolve for the living."
+        "text": "Tell the dock registrar their names. I'll make sure our security report includes them.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Boy",
+        "text": "Is our grain coming back?",
+        "handle": "@starsplit.luminara.boy"
+      },
+      {
+        "speaker": "Mother",
+        "text": "Not all of it.",
+        "handle": "@starsplit.luminara.mother"
       }
     ],
     "panelPlan": [
-      "Wide circular memorial hall aboard Thunderbreak: Fleet crew stand around a central geometric memorial while rescued Verge civilians are included in the same space.",
-      "Individual quiet portraits show crew and civilians observing the service without turning the scene into religious ritual.",
-      "Close insert on the memorial surface where the names Sathi An and Ilion Karr are legible.",
-      "Crew voices continue the roll of the dead while Venn stands among survivors rather than above them.",
-      "Venn touches the memorial surface in a restrained private beat.",
-      "Final panel brings Venn down to the Luminara Mother and Boy at human scale as she says the service line about the lost, waiting and living."
+      "Wide cargo-berth arrival showing the same long freighter and smaller surviving escorts docking with clear geometry. Thunderbreak remains beyond the berths with its damaged port bow, not pristine or docked in an impossibly small berth.",
+      "Verge port workers unload intact grain containers beside split and smoke-marked cargo. A practical counting station records the remaining grain using abstract graphical counts without invented readable display labels.",
+      "Medics and workers escort passengers from the access compartment along a visibly connected gangway. The mother and boy wear the same clothing and emergency gear state as at the attack; his helmet is removed only once pressure-safe.",
+      "One modest remembrance beat: civilians acknowledge missing people beside a casualty list managed by a registrar. Venn is present briefly, listening to the mother's specific loss rather than conducting an ornate ceremony.",
+      "Close on the boy watching grain unloaded into separate allocations and asking a direct question; his mother cannot promise the cargo will return. End on the visible gap in the cargo lineup, not a motto."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Reach and Resolve is practical Fleet command/service doctrine, not mystical ritual. Preserve the bright disciplined Core/Fleet memorial architecture established by the released page."
+      "Do not move the scene to a grand memorial hall. Place remembrance in the material aftermath, allowing civilians to express grief in their own way.",
+      "No casualty names or memorial inscriptions appear unless explicitly scripted. No omniscient tally or invented number; loss is evident in remaining holds and mourning.",
+      "Keep the rescue successful but incomplete. The mother's earlier concern about exported grain now has a tangible, personal answer."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-008.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P08",
     "issue": 1,
     "page": 10,
-    "summary": "The rescued Luminara civilians reach Auric Bazaar and see the Fleet presence that came for them; broker Jex Marrin watches the arrival as one more route problem he can solve.",
-    "settingText": "AURIC BAZAAR — DOCK RING — NIGHT",
+    "summary": "Auric must allocate diminished grain between local households, standing commitments and Fleet deliveries. Halev faces residents and arriving survivors while Naomi refuses to mistake Fleet protection for political consent.",
+    "settingText": "AURIC BAZAAR — PUBLIC GRAIN BERTH / CIVIC DESK — NIGHT",
     "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
     "region": "Verge",
     "factions": [
       "F_Verge",
-      "F_Fleet",
-      "F_Trade"
+      "F_Fleet"
     ],
     "charactersInline": [
+      {
+        "name": "Governor Chris Halev",
+        "handle": "@starsplit.halev"
+      },
+      {
+        "name": "Brent Wallace",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
+      },
       {
         "name": "Luminara Mother",
         "handle": "@starsplit.luminara.mother"
@@ -415,62 +534,67 @@
       {
         "name": "Luminara Boy",
         "handle": "@starsplit.luminara.boy"
-      },
-      {
-        "name": "Jex Marrin",
-        "handle": "@starsplit.jex.marrin"
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.luminara.boy",
-        "speaker": "Boy",
-        "text": "They came."
+        "speaker": "Halev",
+        "text": "The ship arrived with less grain than the manifests promised. Our local bins won't cover every delivery.",
+        "handle": "@starsplit.halev"
       },
       {
-        "handle": "@starsplit.luminara.mother",
+        "speaker": "Wallace",
+        "text": "Fleet's contract takes its share before the market opens. People here have already paid for the rest.",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "speaker": "Naomi",
+        "text": "Fleet protected the convoy. That doesn't give them a vote on Auric's remaining food.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Halev",
+        "text": "Then Auric makes the allocations. Keep the families out of the loading lane until we can count it properly.",
+        "handle": "@starsplit.halev"
+      },
+      {
         "speaker": "Mother",
-        "text": "They did."
+        "text": "My son heard us arguing at Luminara. What am I supposed to tell him now?",
+        "handle": "@starsplit.luminara.mother"
       },
       {
-        "handle": "@starsplit.jex.marrin",
-        "speaker": "Jex",
-        "text": "Flow finds its way. Or I make one."
-      },
-      {
-        "speaker": "DISPLAY",
-        "text": "THUNDERBREAK"
+        "speaker": "Halev",
+        "text": "Tell him I'll have the household allotments posted before the next shift. I won't promise what I haven't counted.",
+        "handle": "@starsplit.halev"
       }
     ],
     "panelPlan": [
-      "Wide night view of Auric Bazaar's dock ring packed with stalls, relief cargo, blankets and moving civilians; Thunderbreak looms beyond the market infrastructure.",
-      "Close on the boy looking upward and saying that they came.",
-      "Close on his mother answering that they did, relief present but not sentimentalized.",
-      "Jex stands apart in the working crowd with a route slate/notebook, observing the arrivals rather than posing as a mystic guide.",
-      "Jex writes or marks a practical route/manifest note while the market continues behind him.",
-      "A wider market view keeps the word THUNDERBREAK legible only where it appears on the distant ship/structure in the released page.",
-      "Final panel reconnects the family and Jex within the same crowded civic space."
+      "Market and dock in working night light: lined-up freighter containers, sheltered families, recognizable local grain bins and visible Verge cargo crews; the location feels capable and inhabited rather than ruined.",
+      "Halev works at the berth desk with damaged physical manifests while Wallace calculates the commercial impact. Naomi arrives in the same practical gear as the cockpit pages, without changing into Fleet uniform.",
+      "Naomi challenges the idea that Fleet's rescue grants it authority over Verge food; this is a specific allocation issue, not a speech about sovereignty.",
+      "The mother and boy are among individual residents awaiting distribution, not anonymous suffering background. Their family question interrupts an argument with a concrete need.",
+      "Halev chooses a local inventory and household-allocation process, an authority Auric actually possesses. End with workers separating intact grain from compromised stock."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Jex is a practical route broker. Do not add mystical navigation imagery, prophetic behavior or unscripted market signage."
+      "Fleet wants supply and connection; Auric has its own political institutions. Both benefit from the route yet disagree over who controls its consequences.",
+      "Do not reduce Wallace to a comic-relief cynic. His contract and price concerns are legitimate, even where they conflict with humanitarian priorities.",
+      "Any ledger or interface may show simple abstract figures, but no unscripted words or numbers."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-009.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P09",
     "issue": 1,
     "page": 11,
-    "summary": "Jex trades a compact route token to Billie Rusk, who carries that intelligence back to the Ashfang Marauder and launches with the promise to try the attack again tomorrow.",
-    "settingText": "AURIC BAZAAR EXCHANGE / ASHFANG MARAUDER DEPARTURE LANE",
-    "regionText": "The Verge / The Shards",
+    "summary": "Jex Marrin privately meets Billie over the information that made a limited Shard grain interception possible; he discovers the raid damaged the cargo and tells her that killing trade will starve the same Shard families he hoped to help.",
+    "settingText": "AURIC BAZAAR — TRADE CORRIDOR / DOCK-SIDE BROKER TABLE",
+    "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
-    "region": "Corridors",
+    "region": "Verge",
     "factions": [
       "F_Trade",
-      "F_Shards"
+      "F_Shards",
+      "F_Verge"
     ],
     "charactersInline": [
       {
@@ -484,42 +608,61 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.billie.rusk",
+        "speaker": "Jex",
+        "text": "You had the grain route. Transfer windows, escort positions, the lot. Why did the hold split?",
+        "handle": "@starsplit.jex.marrin"
+      },
+      {
         "speaker": "Billie",
-        "text": "Tomorrow, we try again."
+        "text": "Fleet shoved half a wreck between us and the freighter. We had seconds to get clear.",
+        "handle": "@starsplit.billie.rusk"
       },
       {
-        "speaker": "DISPLAY",
-        "text": "DEPARTURE LANE"
+        "speaker": "Jex",
+        "text": "Now half the cargo's no use to anyone. That grain was meant to feed people on both sides.",
+        "handle": "@starsplit.jex.marrin"
       },
       {
-        "speaker": "DISPLAY",
-        "text": "KEEP CLEAR"
+        "speaker": "Billie",
+        "text": "Your buyers still have their ports. Our families get what we bring home.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Jex",
+        "text": "I gave you a way to take containers, not wreck a ship full of people.",
+        "handle": "@starsplit.jex.marrin"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Then give us a better way to make Fleet notice. We don't get one by asking.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Jex",
+        "text": "I'll keep looking. I'm not selling you another passenger's life.",
+        "handle": "@starsplit.jex.marrin"
       }
     ],
     "panelPlan": [
-      "In a crowded market exchange, Jex passes Billie a small physical route token or encoded marker. Their factions remain visually distinct.",
-      "Close insert on the worn token in Jex's hand.",
-      "Another insert shows the token being read against a practical handheld route slate.",
-      "The Ashfang Marauder crosses vivid corridor space, its established Shard hull language and red markings intact.",
-      "Billie works inside the Marauder's compact cockpit with restless focus as route data resolves into action.",
-      "Under fire or amid dangerous traffic, Billie says they will try again tomorrow.",
-      "The Marauder launches hard from the industrial departure lane; only the scripted sign text DEPARTURE LANE and KEEP CLEAR may be readable."
+      "Quiet but busy side of the Auric market, not a secret mystical chamber: Jex checks an actual route slate and cargo balance while dock labor continues through the background.",
+      "Billie appears with her distinctive vivid-red hair and pale-gray/red Shard flight layers; she is human and angry, not gleefully manic or glamour-posed.",
+      "Short physical insert shows Jex's original route token or exchange key being returned or handled by Billie. The device contains crossing information and limited cargo-transfer windows, not mystical power.",
+      "Jex compares expected intact grain transfer with the ruined cargo observed at the dock. Billie disputes the premise that Fleet will ever distribute resources fairly, speaking from Shard deprivation rather than cartoon sadism.",
+      "Conversation ends without reconciliation. Billie departs toward an established small Shard transport connected to Ashfang's operations; Jex stays to renegotiate surviving cargo. Neither knows future events."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The route token is tradecraft and navigation data, never a talisman. Preserve Ashfang Marauder as an established named vessel; do not redesign its hull for spectacle."
+      "Jex is an idealistic opportunist who knowingly helps grain reach Shard people through controlled seizures while also profiting from trade. He does not endorse passenger harm. His dual dealings are politically dangerous to him and others.",
+      "Billie and Abby carried out the Triarch's existing raiding order; the raid was not invented by Jex. Jex supplied crossing intelligence with expectations he could not enforce. Billie has real historical grievances and may interpret the damage as proof of Fleet aggression.",
+      "Jex's involvement is known to him and Billie, not to Fleet or Auric officials. His motives combine profit and a serious wish to prevent Shard civilians from starving. Dialogue remains practical and attributable."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-010.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P10",
     "issue": 1,
     "page": 12,
-    "summary": "Back in the Shardfields, the damaged Ashfang Marauder is rebuilt by a whole repair community; Abby, Tessa and Billie are surrounded by the labor that keeps Shard ships alive.",
-    "settingText": "BLACK DRIFT — SHARD REPAIR YARD — SHARDFIELDS",
+    "summary": "At Black Drift, captured grain arrives alongside a damaged Ashfang Marauder. Repairs and food distribution reveal that Shard raids require ongoing trade and that this interception brought less food than hoped.",
+    "settingText": "BLACK DRIFT — SHARD REPAIR YARD — FOLLOWING SHIFT",
     "regionText": "The Shards",
     "setting": "RF_Black_Drift_Repair_Yard",
     "region": "Shards",
@@ -532,37 +675,70 @@
         "handle": "@starsplit.abby.saville"
       },
       {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
         "name": "Tessa Banks",
+        "handle": "@starsplit.tessa.banks"
+      }
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "BLACK DRIFT — FOLLOWING SHIFT"
+      },
+      {
+        "speaker": "Tessa",
+        "text": "Ashfang's port collar is torn through. We can patch it, but not before the next shift.",
         "handle": "@starsplit.tessa.banks"
       },
       {
-        "name": "Billie Rusk",
+        "speaker": "Abby",
+        "text": "Unload the grain first. Families are waiting at the ration point.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "We got three containers past Thunderbreak.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Tessa",
+        "text": "And lost the others when the hold broke. That wasn't all Fleet's doing.",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "speaker": "Abby",
+        "text": "Three containers won't last. We need merchants willing to make the next crossing.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "You want them willing. I want them unable to ignore us.",
         "handle": "@starsplit.billie.rusk"
       }
     ],
-    "dialogueInline": [],
     "panelPlan": [
-      "Wide exterior of the Ashfang Marauder docked inside a cavernous asteroid repair settlement, surrounded by gantries, worklights and other inhabited industrial structures.",
-      "Large repair panel shows many Shard workers replacing damaged plating, welding seams and working exposed systems across the ship at once.",
-      "Close inserts show a repaired component passed hand-to-hand and a worker welding a pressure or propulsion part.",
-      "A family/crew meal beside a small practical heater makes clear that this is an inhabited survival economy, not a pirate lair.",
-      "Abby directs work from the floor while crews keep repairing around her.",
-      "Final panel includes Tessa at a mechanical task and Billie near the damaged ship, both embedded in the same labor culture rather than posed as warlords."
+      "Exterior of Black Drift, a working inhabited Shard industrial settlement. The angular, named Ashfang Marauder matches its approved hull precisely, with a visibly damaged docking/cargo collar matching the attack and approach.",
+      "Large human-scale panel of workers welding the collar while other workers remove three surviving sealed grain containers. Children or other civilians may wait at distribution points but never enter dangerous machinery or combat.",
+      "Tessa in compact flight clothing and silver-gray curls inspects the collar and predicts limited repair time; Abby tall, Black, braided and still, directs grain to ration crews rather than posing above them.",
+      "Billie reports her tactical success with energy and anger. Tessa ties material loss to the damaged hold without portraying herself as an uninvolved moral judge; she participated in Shard command.",
+      "End with Abby and Billie holding different priorities in a work bay: upcoming trade crossings versus forcing Fleet attention. Neither declares a final split."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "This page establishes Shard repair culture: pale industrial layers, red markings, visible maintenance, families and working infrastructure. No spikes, skulls, medieval raider styling or gratuitous grime."
+      "Shard repair yards are competent, maintained, lived-in industrial spaces; workers and civilians have individual lives. Never use skulls, spikes or barbarian raider cues.",
+      "Grain received by the Shards does not erase losses to all sides. Abby and Billie both resent the need to raid, but their preferred future paths differ.",
+      "Abby and Tessa are sisters; preserve the established distinct visual identities and let shared familiarity inform their reactions without turning the page into explanatory genealogy."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-011.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P11",
     "issue": 1,
     "page": 13,
-    "summary": "A Shard worker mocks Abby as a queen; she drops him into a cargo net and immediately returns the room to the work that keeps everyone alive.",
-    "settingText": "BLACK DRIFT — SHARD HANGAR FLOOR",
+    "summary": "Abby resolves a dock-worker dispute over distributing captured grain and repairs through authority and expertise, rather than physical humiliation; Billie objects to spending scarce time on logistics while Tessa knows the cost of a failed seal.",
+    "settingText": "BLACK DRIFT — ASHFANG REPAIR BAY",
     "regionText": "The Shards",
     "setting": "RF_Black_Drift_Hangar",
     "region": "Shards",
@@ -575,10 +751,6 @@
         "handle": "@starsplit.abby.saville"
       },
       {
-        "name": "Raider",
-        "handle": "@starsplit.raider"
-      },
-      {
         "name": "Billie Rusk",
         "handle": "@starsplit.billie.rusk"
       },
@@ -589,37 +761,51 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.raider",
-        "speaker": "Raider",
-        "text": "Queens belong in the Core."
+        "speaker": "Dock Worker",
+        "text": "The ration crew wants the last container now. If we stop repairs, Ashfang misses the convoy after next."
       },
       {
-        "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Eat. Weld. Follow."
+        "text": "Use the cargo lift while the weld cools. Keep the pressure frame braced until Tessa signs it off.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Tessa",
+        "text": "That frame goes back under load too soon, the collar tears open again.",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Another crossing means another Fleet ship between us and dinner.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Abby",
+        "text": "Then we need the collar intact and enough grain left for people who can't board a cutter.",
+        "handle": "@starsplit.abby.saville"
       }
     ],
     "panelPlan": [
-      "Abby and a male Shard worker face each other on the hangar floor amid active repair crews, compact craft and strong red faction markings.",
-      "The worker dismissively tells Abby that queens belong in the Core.",
-      "Abby uses one controlled movement to throw or redirect him into a suspended cargo net rather than stage a prolonged fight.",
-      "The worker hangs safely in the net while nearby crews continue watching and working.",
-      "Abby turns back toward the repair benches and gives the three-word instruction to eat, weld and follow; Billie and Tessa remain part of the working background."
+      "Abby's authority is visible amid labor: cargo lift, mechanical braces, pressure-frame repair and waiting ration workers occupy coherent positions in the hangar.",
+      "A frustrated adult dock worker argues over which task has priority, with a real concern about the next potential food delivery.",
+      "Abby reassigns lift work and directs the repair sequence so ration distribution and structural repair can continue without needless risk. Crew act on her precise instructions because she understands the work and their needs.",
+      "Tessa tests the braced collar and challenges premature release; she and Abby exchange an experienced sibling glance or abbreviated response grounded in shared practical history.",
+      "Billie objects to the necessity of another dangerous seizure. Her anger at ongoing scarcity is visible in how she watches hungry people receive small shares.",
+      "Conclude with a working lift delivering grain to the ration point while Ashfang's collar remains in repair; no wrestling, impossible throws or ceremonial slogan."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Abby's authority is economical and practical. The physical beat is a controlled humiliation between adults, not cruelty or torture."
+      "The disagreement is among competent Shard adults under real pressure. Abby is not infallible and Billie is not a manic caricature.",
+      "An anonymous dock worker may speak without receiving an invented proper name. The physical repair and cargo movements must remain consistent panel to panel.",
+      "Billie's desire to make Fleet answer for historical harms should be shown through her focus on who imposes the shortages, not an abstract threat to civilians."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-012.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P12",
     "issue": 1,
     "page": 14,
-    "summary": "Around a physical tactical table, Abby forbids attacks on farms, Billie argues for fire first, and Tessa cuts through both positions with the survival question that will keep dividing them.",
-    "settingText": "BLACK DRIFT — SHARD COMMAND ROOM",
+    "summary": "Abby, Billie and Tessa review the raid with enough grain for immediate relief but none of the long-term security their people need. Abby begins to consider access to supplies without seizures; Billie believes forcing powerful outsiders to feel consequences may win more than permission.",
+    "settingText": "BLACK DRIFT — SHARD OPERATIONAL TABLE",
     "regionText": "The Shards",
     "setting": "RF_Shard_Command_Room",
     "region": "Shards",
@@ -642,43 +828,62 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "We bled their shields at the feeders. We do not torch farms. Flow keeps us breathing."
+        "text": "We came back with three containers. The next two convoys are delaying departure.",
+        "handle": "@starsplit.abby.saville"
       },
       {
-        "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "Flow is what's left after fire. Fire first."
+        "text": "Fleet will call that a victory. They can afford to wait. We can't.",
+        "handle": "@starsplit.billie.rusk"
       },
       {
-        "handle": "@starsplit.tessa.banks",
         "speaker": "Tessa",
-        "text": "Or we live first."
+        "text": "Neither can the families who planned to eat from those ships.",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "speaker": "Abby",
+        "text": "If merchants could deliver a set share to our settlements, we'd have ships free to do something besides chase grain.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Why would Fleet let them? They've watched us go hungry for generations.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Abby",
+        "text": "I don't know if they would. I know this route won't last if every shipment ends damaged.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Then they need to be afraid of what happens when they leave us out.",
+        "handle": "@starsplit.billie.rusk"
       }
     ],
     "panelPlan": [
-      "Abby leans over a physical terrain/route table with Shard crew around her; the map is mechanical and operational, not holographic spectacle.",
-      "She marks a route or target while setting the boundary that feeders may be attacked but farms are not to be torched.",
-      "Billie, sprawled with provocative confidence at the opposite side, moves a red marker and argues for fire first.",
-      "Tessa stands between their positions holding a repaired pressure/engineering component, listening rather than performing.",
-      "Close on Tessa as she reframes the argument around living first.",
-      "Final three-shot holds Abby, Tessa and Billie in visible disagreement around the same working table."
+      "Functional Shard command table with physical grain-container tokens, actual transit lanes and a repair manifest. No ornamental infinite hologram, unscripted writing or ritual mapping.",
+      "Abby moves markers for captured grain and delayed merchant departures; the table makes clear how successful seizures can reduce future supply by discouraging trade.",
+      "Billie challenges the possibility of voluntary access while thinking of genuine inherited losses and Fleet indifference. Her anger is controlled enough to be credible, not an uncontrolled snarling pose.",
+      "Tessa handles repair/civilian impact data she is personally responsible for, reminding them that civilians on all sides bear the cost. Her complicity in Shard command remains intact.",
+      "Abby considers negotiated supplies as a possibility, not a sudden conversion or accomplished agreement. Billie believes coercion might force recognition as well as provide food.",
+      "End on unresolved differences and a summons/order signal from the Triarch, whose raiding standing order governs their work."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The conflict is political and operational, not a morality tableau. Do not make Billie manic, Abby saintly, or Tessa mystical."
+      "Every dialogue turn responds to a concrete proposal, constraint or objection. Abby, Billie and Tessa retain distinct operational goals and personal relationships.",
+      "Abby and Billie both believe Shards should not have to raid to survive. Abby is beginning to imagine receiving supplies voluntarily; Billie sees punitive coercion as a route to supplies and historical reckoning.",
+      "Abby and Tessa's sister relationship and Billie's bond with Tessa underlie the disagreement without explicit family-history exposition."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-013.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P13",
     "issue": 1,
     "page": 15,
-    "summary": "Abby stands before the Silent Triarch and receives three incompatible Shard imperatives from three distinct political authorities: raid, trade and fear.",
-    "settingText": "SILENT TRIARCH CHAMBER — SHARD POWER CENTER",
+    "summary": "The Silent Triarch maintains the standing grain-raiding order but exposes a conflict over its cost: Raid demands seizures, Trade warns that shattered commerce will cut future food access, and Fear demands an unmistakable warning to Fleet. Abby receives orders she cannot simply discard.",
+    "settingText": "SILENT TRIARCH CHAMBER — BLACK DRIFT",
     "regionText": "The Shards",
     "setting": "RF_Triarch_Chamber",
     "region": "Shards",
@@ -705,47 +910,67 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.silent.triarch.raid",
         "speaker": "Raid",
-        "text": "Strike to feed."
+        "text": "The standing grain order remains. Our cutters take what the frontier carries.",
+        "handle": "@starsplit.silent.triarch.raid"
       },
       {
-        "handle": "@starsplit.silent.triarch.trade",
         "speaker": "Trade",
-        "text": "Flow sustains."
+        "text": "Two merchants have suspended crossings since Kaldr. Fewer ships mean fewer supplies for us.",
+        "handle": "@starsplit.silent.triarch.trade"
       },
       {
-        "handle": "@starsplit.silent.triarch.fear",
         "speaker": "Fear",
-        "text": "Terror binds."
+        "text": "Fleet will protect every hold unless protection becomes expensive.",
+        "handle": "@starsplit.silent.triarch.fear"
+      },
+      {
+        "speaker": "Abby",
+        "text": "The damaged shipment cost us as well. I can intercept cargo. I can't make merchants replace wrecked ships.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Raid",
+        "text": "Then take the next shipment intact.",
+        "handle": "@starsplit.silent.triarch.raid"
+      },
+      {
+        "speaker": "Trade",
+        "text": "Keep the traders willing to sail. We need their routes open.",
+        "handle": "@starsplit.silent.triarch.trade"
+      },
+      {
+        "speaker": "Fear",
+        "text": "And make the Core understand those routes are not theirs alone.",
+        "handle": "@starsplit.silent.triarch.fear"
       }
     ],
     "panelPlan": [
-      "Abby stands before three seated Triarch members in a dark but technologically practical Shard chamber; the three masks have distinct silhouettes and fixed left-center-right positions.",
-      "Close portrait of the jagged Raid mask delivering the order to strike to feed.",
-      "Close portrait of the pale etched Trade mask saying flow sustains.",
-      "Close portrait of the glossy dark Fear mask saying terror binds.",
-      "Final panel returns to Abby standing among the three competing authorities, making their political contradiction visible."
+      "Establish exact chamber geography: Abby stands in a working Shard political command space before the three rulers seated in distinct fixed positions. Raid has a jagged dark-industrial mask, Trade a pale etched mask, Fear a smooth dark mask; positions stay invariant across views.",
+      "Material evidence—grain from the recent interception and a simple representation of delayed civilian commerce—is present on a practical shared table, not a mystical artifact.",
+      "Each member responds to a real consequence. Raid maintains an already-existing order; Trade worries about supply erosion; Fear interprets the engagement as a way to impose political pressure.",
+      "Abby challenges the practical impossibility of maintaining shipments by destroying the ships. Her composed body language indicates she is negotiating within authority she still recognizes.",
+      "The Triarch restates directives that are compatible at the slogan level but not obviously easy to satisfy together. End with Abby leaving with conflicting obligations, no invented oath or ceremonial speech."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The Silent Triarch are political rulers, not supernatural beings. Preserve three distinct masks and positions. No ritual magic, runes, incense, sacred glow or mystic framing."
+      "The Triarch ordered the Luminara grain attacks through standing policy. Abby and Billie have both carried it out tactically. This page addresses execution and future results, not whether raiding was ever authorized.",
+      "The Triarch are political rulers; distinctive masks should never appear supernatural. Pale industrial layers and bright-red faction markings must remain visible.",
+      "No abstract triptych of slogans or thematic captions. Every line addresses a decision, consequence or demand."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-014.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P14",
     "issue": 1,
     "page": 16,
-    "summary": "At Auric, Halev turns the rescue into a list of unmet civilian needs; Wallace attacks Core-style tariffs and Naomi demands disciplined formations instead of raider-bought maps.",
-    "settingText": "AURIC BAZAAR — WORKING MARKET AND CIVIC DOCK — DAY",
+    "summary": "Auric's governor, trading elder and escort captain face diminished grain supply and a choice between isolation and Fleet-backed commerce. Halev directs local rationing while asking what protection will actually cost.",
+    "settingText": "AURIC BAZAAR — CIVIC GRAIN DESK — NEXT MORNING",
     "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
     "region": "Verge",
     "factions": [
-      "F_Verge"
+      "F_Verge",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
@@ -763,90 +988,123 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.halev",
+        "speaker": "CAPTION",
+        "text": "AURIC BAZAAR — NEXT MORNING"
+      },
+      {
         "speaker": "Halev",
-        "text": "We need more than food. Medicine. Fuel cells. Heat. Lights for the out-rings."
+        "text": "The out-rings have less grain than we planned. I'm reducing export allocations until households are covered.",
+        "handle": "@starsplit.halev"
       },
       {
-        "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "And fewer tariffs dressed as blessings."
+        "text": "Fleet buyers will dispute that. We signed to send the grain under their escort.",
+        "handle": "@starsplit.brent.wallace"
       },
       {
-        "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "You want safety? You ride in formation and you stop buying maps from raiders."
+        "text": "Their cruiser saved the convoy. We still lost a hold, and the Shards learned our crossing window.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
+        "speaker": "Wallace",
+        "text": "If we close the route, the next harvest stays ours. So do the markets we can't reach.",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "speaker": "Halev",
+        "text": "I don't intend to close it. I want the next ship to arrive without half its grain in the rift.",
+        "handle": "@starsplit.halev"
       }
     ],
     "panelPlan": [
-      "Wide market view keeps Halev, Wallace and Naomi in a working civilian environment surrounded by cargo, power hardware, merchants and families.",
-      "A child and caregiver sit beside a portable heater/power unit in the foreground, making Halev's list of needs physically visible.",
-      "Halev counts medicine, fuel cells, heat and lights on his fingers while speaking to Wallace and Naomi.",
-      "Wallace answers with the tariff complaint in a close portrait, skeptical rather than villainous.",
-      "Naomi steps into the argument and states the operational condition for safety: formation discipline and no raider maps."
+      "Visible public grain stocks, ration line and functioning port labor as distinct individual Auric residents work around the civic desk; no abstract conference stage.",
+      "Halev makes a real decision within his authority, revising Auric's export allocation against diminished holdings.",
+      "Wallace shows tangible contract exposure without framing Fleet as sole villain; the Verge can gain autonomy from isolation and lose markets and supplies.",
+      "Naomi identifies actual failures in the escort while keeping her independent command perspective. She is not Venn's subordinate.",
+      "End on Halev considering a narrow route agreement with a real cost; he is governing the consequences, not declaring a universal principle."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Auric is a capable but resource-constrained Verge freeport. Civilians remain individuals with practical work and needs; do not render them as misery wallpaper."
+      "The Verge produces grain and has meaningful autonomy. Isolation can benefit Verge independence; reconnection offers economic benefits and creates dependence and external claims.",
+      "Concentrate on one resource problem and one possible response. Do not add heat, fuel, medicine or tariffs as disconnected new stakes in this scene.",
+      "Keep all temporary damage and remaining grain allocations consistent with earlier arrival."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-015.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P15",
     "issue": 1,
     "page": 17,
-    "summary": "Wallace defends the price of working route information while Halev cuts the argument short and offers a narrow deal: essential cargo only, with Fleet on the wing if it accepts Verge terms.",
-    "settingText": "AURIC BAZAAR — ROUTE TABLE AND CARGO DOCK — DAY",
+    "summary": "Halev develops a conditional Green Corridor proposal with Wallace and Naomi: Auric supplies locally certified transit information and limited berth access, while Fleet supplies escort protection without gaining authority over Verge cargo allocation or civil traffic.",
+    "settingText": "AURIC BAZAAR — CIVIC ROUTE TABLE / WORKING BERTH",
     "regionText": "The Verge",
     "setting": "RF_Auric_Bazaar",
     "region": "Verge",
     "factions": [
-      "F_Verge"
+      "F_Verge",
+      "F_Fleet"
     ],
     "charactersInline": [
+      {
+        "name": "Governor Chris Halev",
+        "handle": "@starsplit.halev"
+      },
       {
         "name": "Brent Wallace",
         "handle": "@starsplit.brent.wallace"
       },
       {
-        "name": "Governor Chris Halev",
-        "handle": "@starsplit.halev"
+        "name": "Captain Naomi Sol",
+        "handle": "@starsplit.naomi.sol"
       }
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "Maps that work are cheaper than escorts that don't."
+        "text": "Our pilots know when Kaldr's stable. Fleet knows how to put a cruiser between us and cutters. Neither can replace the other.",
+        "handle": "@starsplit.brent.wallace"
       },
       {
-        "handle": "@starsplit.halev",
+        "speaker": "Naomi",
+        "text": "If they fly the route, Verge traffic control sets the crossing order. No Fleet officer takes over a grain hold.",
+        "handle": "@starsplit.naomi.sol"
+      },
+      {
         "speaker": "Halev",
-        "text": "Enough. Essential cargo only. Fleet on the wing—if they'll take the terms."
+        "text": "And they get a reliable lane and the deliveries they contracted for. That's the offer.",
+        "handle": "@starsplit.halev"
+      },
+      {
+        "speaker": "Wallace",
+        "text": "They'll ask for the route data after the first run.",
+        "handle": "@starsplit.brent.wallace"
+      },
+      {
+        "speaker": "Halev",
+        "text": "Then they'll have to ask us again. Put the terms in writing and send them to Venn.",
+        "handle": "@starsplit.halev"
       }
     ],
     "panelPlan": [
-      "Wallace and Halev stand at a low practical route table amid an active market while a young worker carries a compact cargo device behind them.",
-      "Close two-shot as Wallace argues that maps which work are cheaper than escorts that fail.",
-      "The worker crosses through the scene, emphasizing that this negotiation sits inside ordinary commerce rather than a sealed council chamber.",
-      "Halev points toward the working dock and loaded essential cargo as he ends the argument and defines the offer to Fleet."
+      "Same Auric civic logistics environment but with a new action: Naomi demonstrates a physically navigable certified route on a modest shared map, backed by port observations and drift measurements.",
+      "Wallace negotiates the commercial reality of pilot knowledge versus Fleet armed protection. His hands and gaze remain on actual shipping and contract records, not theatrical finger-counting.",
+      "Halev uses civic authority: he can offer pilot certification, berth access, cargo scheduling and a proposed treaty, but cannot order Fleet cruisers or govern the Core.",
+      "Naomi demands Verge traffic-control jurisdiction as a specific condition while not pretending Verge escorts alone can match Thunderbreak.",
+      "The deal is physically written/transmitted by a port clerk or Halev on a practical slate with no readable incidental labels. The final panel is a clear communication leaving Auric for Venn."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The deal is a civilian logistics arrangement, not a ceremonial treaty. Do not add banners, contract text or political slogans."
+      "The corridor has two separate layers: a safe navigable volume verified through measurable reciprocal-field and drift behavior, and political permission for commercial traffic and escort service.",
+      "Halev offers access and cooperation, not submission. Fleet wants the connection because it strengthens Reach and Resolve and creates ongoing interdependence.",
+      "The argument concerns enforceable exchange terms, route access, escort protection and who retains authority over cargo and port traffic."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-016.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P16",
     "issue": 1,
     "page": 18,
-    "summary": "In the Core, Admiral Cael Dominion argues that blockades create safety; Venn counters with clinics and heat, and Admiral Colin Rhyne warns that institutional strength can look like siege to civilians.",
-    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR HEARING",
+    "summary": "At the Core Admiralty, Venn presents Auric's conditional transit proposal. Dominion supports opening the lane to advance Reach and Resolve, while Venn and Rhyne question how protection can avoid becoming imposed Fleet administration.",
+    "settingText": "CORE ADMIRALTY CHAMBER — AUTHORIZATION HEARING",
     "regionText": "The Core",
     "setting": "RF_Core_Admiralty_Chamber",
     "region": "Core",
@@ -870,42 +1128,56 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.cael.dominion",
-        "speaker": "Dominion",
-        "text": "Blockades hold. Green corridors invite knives."
+        "speaker": "CAPTION",
+        "text": "CORE ADMIRALTY — AFTER AURIC'S PROPOSAL"
       },
       {
-        "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Green lanes keep clinics stocked and heaters lit."
+        "text": "Auric will certify the Kaldr crossing and assign local traffic control. They want our cruiser on the exposed flank.",
+        "handle": "@starsplit.ella.venn"
       },
       {
-        "handle": "@starsplit.colin.rhyne",
+        "speaker": "Dominion",
+        "text": "Open it. Once the connection is regular, the settlements can trade again under Fleet protection.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
         "speaker": "Rhyne",
-        "text": "And strength looks like siege to civilians."
+        "text": "Protection has a price. If Auric can't refuse the next escort, they'll call it occupation.",
+        "handle": "@starsplit.colin.rhyne"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "Their traders asked for security. We can give it to them.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
+        "speaker": "Venn",
+        "text": "They asked us to protect a route, not run their port. They keep their cargo and their crossing order.",
+        "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Wide bright Admiralty chamber with a large route map on the rear wall and a circular floor display; a narrow green lane is visible across the network.",
-      "Dominion sits at institutional distance and argues for blockade logic.",
-      "Venn answers from the floor at human scale, holding to the civilian effect of stocked clinics and working heaters.",
-      "Closer portrait of Venn keeps her response controlled rather than defiant.",
-      "Rhyne enters the argument beside a restrained evidence display and states how strength appears from the civilian side."
+      "Bright institutional Admiralty chamber, white stone-metal and disciplined deep navy, with elevated authority seating and an operational floor route display whose green line represents measured route geometry.",
+      "Venn arrives with a definite Auric proposal; no unspecified policy question or sudden invented corridor concept.",
+      "Dominion's body language shows sincere strategic commitment to reconnecting civilizations under Reach and Resolve. He does not advocate closure or use blockade slogans.",
+      "Rhyne introduces the distinct risk that assistance becomes dependence and political domination. He remains a real admiral with identifiable rank, position and action.",
+      "Venn accepts the operational value of opening the lane while defending Auric's stated civil authority. She is not ideologically opposed to Fleet reconstruction.",
+      "End on Dominion considering the control language of the proposed authorization rather than a theatrical moral stare."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Keep the green corridor as measured route geometry, not a magical glowing portal. The Admiralty disagreement is institutional and political; no faction is visually coded as uniquely virtuous."
+      "Reach and Resolve is Fleet's long-term reconstruction doctrine. Fleet believes building and controlling interstellar connections increases both civilization's stability and Fleet political influence; those motives coexist.",
+      "Do not attempt to explain the entire physics or history of the Shattering. Use only relevant physical route data and opposing human decisions.",
+      "All three Fleet officers have distinct faces, ages and uniforms. Keep the hearing's dais and floor display spatially consistent."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-017.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P17",
     "issue": 1,
     "page": 19,
-    "summary": "Dominion grants a monitored trial of the Verge lane; Venn accepts the narrow authority and walks out with the green route still glowing between institutional caution and frontier need.",
-    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR HEARING",
+    "summary": "Dominion authorizes the Green Corridor as part of Reach and Resolve with a monitored trial, explicitly accepting Verge traffic control while reserving Fleet oversight of its own escort. Venn receives a mission that is both a rescue opportunity and a strategic expansion.",
+    "settingText": "CORE ADMIRALTY CHAMBER — GREEN CORRIDOR AUTHORIZATION",
     "regionText": "The Core",
     "setting": "RF_Core_Admiralty_Chamber",
     "region": "Core",
@@ -929,46 +1201,66 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Hold the wall. Test their lane—under watch."
+        "text": "Authorize the Kaldr trial. Auric controls civilian traffic; Fleet commands its escorts and records every crossing.",
+        "handle": "@starsplit.cael.dominion"
       },
       {
-        "handle": "@starsplit.ella.venn",
+        "speaker": "Rhyne",
+        "text": "How long until a trial becomes the only route anyone can afford to use?",
+        "handle": "@starsplit.colin.rhyne"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "Long enough to learn whether this connection can survive. Reach and Resolve doesn't stop at one convoy.",
+        "handle": "@starsplit.cael.dominion"
+      },
+      {
         "speaker": "Venn",
-        "text": "Understood."
+        "text": "I'll take Thunderbreak back after the port-bow repairs. Auric will get the terms before we deploy.",
+        "handle": "@starsplit.ella.venn"
+      },
+      {
+        "speaker": "Dominion",
+        "text": "See that they do. I want that corridor open.",
+        "handle": "@starsplit.cael.dominion"
       }
     ],
     "panelPlan": [
-      "Wide view across the circular floor display: Dominion remains at the elevated desk while Venn stands at the edge of the projected green route with Rhyne nearby.",
-      "Dominion authorizes the test with the order to hold the wall and keep the lane under watch.",
-      "Close on Venn as she answers only that she understands.",
-      "Final long view from behind Rhyne as Venn walks alone toward the chamber exit, the green route still visible across the floor between her and the Admiralty."
+      "Continue the same established chamber and character positions. Dominion gives an actual authorization with jurisdiction and reporting conditions; no generic order to 'hold the wall'.",
+      "Rhyne presses the strategic consequences of dependence without making a preachy closing maxim.",
+      "Venn responds through command duties: her damaged ship requires repair before redeployment, and Verge authorities need the complete written terms. Preserve her physical damage knowledge from the raid.",
+      "Tight contrast between elevated Admiralty authority and Venn's lower floor position, using subtle acting and eyelines rather than heroic or submissive posing.",
+      "Final small panel shows authorized transit geometry and the communication leaving for Auric; the green line remains an engineering/navigation display, not an illuminated sacred pathway."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "Do not turn Venn's acceptance into triumph. The page ends on conditional permission and institutional distance."
+      "The corridor is being opened because Dominion wants Reach and Resolve to proceed. He is not reluctantly surrendering a preference for isolation.",
+      "The practical and political approval are distinct: mapped transit geometry is measured; the agreement concerns access, escorts, jurisdiction and emerging dependence.",
+      "No invented legal text, route names or interface labels; the only readable text is prescribed dialogue and captions."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-018.jpg"
+    "status": "production-ready"
   },
   {
     "id": "RF_I01_P18",
     "issue": 1,
     "page": 20,
-    "summary": "As the Core authorizes a watched Green Corridor, Abby and Tessa watch Shard ships ignite their engines around a dark industrial stronghold; the Shards answer policy with mobilization.",
-    "settingText": "SHARD ASSEMBLY ORBIT — INDUSTRIAL STRONGHOLD",
+    "summary": "Word of the opening lane reaches Shard leadership. The Triarch keeps its standing supply-seizure policy in force; Abby prepares an intact-cargo operation, while Billie sees a chance to make the Core feel the price of its expansion. Shard ships mobilize toward the new connection.",
+    "settingText": "BLACK DRIFT — SHARD ASSEMBLY ORBIT",
     "regionText": "The Shards",
     "setting": "RF_Shard_Assembly_Orbit",
     "region": "Shards",
     "factions": [
-      "F_Shards"
+      "F_Shards",
+      "F_Fleet"
     ],
     "charactersInline": [
       {
         "name": "Abby Saville",
         "handle": "@starsplit.abby.saville"
+      },
+      {
+        "name": "Billie Rusk",
+        "handle": "@starsplit.billie.rusk"
       },
       {
         "name": "Tessa Banks",
@@ -978,21 +1270,47 @@
     "dialogueInline": [
       {
         "speaker": "CAPTION",
-        "text": "THE CORE SPEAKS IN SCROLLS.\nTHE VERGE IN LEDGERS.\nTHE SHARDS—\nWE SWEAR WITH OUR ENGINES."
+        "text": "BLACK DRIFT — AFTER THE KALDR AUTHORIZATION"
+      },
+      {
+        "speaker": "Tessa",
+        "text": "Merchants are scheduling crossings again. Gravefire can patrol the damaged approaches.",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "speaker": "Abby",
+        "text": "Get the cutters ready. We take sealed freight if we have to. The next ship leaves with its passengers untouched.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "Fleet's opening a route through our reach and calling it protection.",
+        "handle": "@starsplit.billie.rusk"
+      },
+      {
+        "speaker": "Abby",
+        "text": "More traffic means more supplies. Don't wreck the trade that feeds our settlements.",
+        "handle": "@starsplit.abby.saville"
+      },
+      {
+        "speaker": "Billie",
+        "text": "They can afford to ignore hungry people. Maybe they won't ignore a crisis they have to answer for.",
+        "handle": "@starsplit.billie.rusk"
       }
     ],
     "panelPlan": [
-      "Abby and Tessa stand with their backs to the reader on a dark observation platform facing a massive inhabited Shard industrial stronghold surrounded by dormant ships.",
-      "One Shard vessel peels away and lights its engines, the movement small against the station mass.",
-      "More ships ignite around the stronghold in successive directions; the response grows through ordinary propulsion and formation movement.",
-      "Final wide panel shows a ring of Shard ships under varied engine light around the stronghold while Abby and Tessa remain tiny in the foreground. The caption lands at lower right."
+      "Reveal the inhabited Shard industrial stronghold in wide night-space view, with repeatable scale, dock approaches and movement lanes. Ships launch by ordinary engines in coordinated sequences, not a magical glowing halo.",
+      "At a practical observation/control level, Abby, Billie and Tessa appear in identifiable costumes and relative scales; faces are seen clearly in at least one panel before silhouettes against the ships.",
+      "Tessa reports factual route information and stays responsible for Gravefire; Abby gives a specific cargo-preservation order under the Triarch's existing standing policy.",
+      "Billie focuses on the political impact of forcing Fleet to face historical Shard suffering. Her anger is personal and historically grounded; she does not yet hijack the passenger freighter or break openly from Abby.",
+      "Exterior sequence shows a limited number of readable Shard cutters separating in controlled departure lanes as the larger industrial presence stays physically anchored.",
+      "End on a tense exchange between Abby and Billie as the armed vessels leave. Their divergent intentions are visible, but the final issue beat does not spoil Issue 2's specific escalation."
     ],
     "directionInline": [
-      "RELEASED-CANON RECONSTRUCTION: This recipe was reverse-engineered from the final published Issue 1 page. Preserve the published story state, composition logic, causal action and exact readable text. Use current RexPrompt character names and handles for live identity; do not invent additional text or story information.",
-      "The Shard response is political mobilization through physical ships and engines. No supernatural oath effect, magical glow, portal or occult symbolism."
+      "Opening the connection serves Fleet's political aims and gives Shards new opportunities to obtain supplies. All three powers have something to gain and something to lose.",
+      "Billie favors coercive attacks partly as revenge for real generational harm, while Abby increasingly considers voluntary provision as a way beyond raiding; those trajectories are nascent, not completed in this issue.",
+      "The final hook is the operational and personal danger of two leaders interpreting the same opening corridor differently. Dialogue stays attributable and grounded in what they intend to do."
     ],
-    "status": "released-canon-reference",
-    "source": "Recovered from released Rex Fleet Issue 1 — Green Corridor (StarSplitterVisions, 2026-08-15).",
-    "releasedImage": "/images/pages/rex-fleet/issue-01/page-019.jpg"
+    "status": "production-ready"
   }
 ]
