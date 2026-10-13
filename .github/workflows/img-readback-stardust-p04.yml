@@ -1,9 +1,7 @@
 name: IMG Readback Stardust P04
 
 on:
-  push:
-    paths:
-      - '.github/workflows/img-readback-stardust-p04.yml'
+  workflow_dispatch:
 
 permissions:
   contents: read

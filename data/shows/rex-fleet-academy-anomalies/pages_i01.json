@@ -140,7 +140,7 @@
   },
   {
     "id": "RFAA_ABS_I01_P04",
-    "summary": "The reconstruction drops the cadets into a calm eddy survey case whose original crew believed it was routine.",
+    "summary": "The reconstruction drops the cadets into a routine survey of Calm Eddy Forty-Seven's charted boundary, where the safe pocket is supposed to end exactly where the map says.",
     "setting": "RFAA_Simulation_Skiff",
     "region": "Lattice",
     "factions": [
@@ -174,7 +174,7 @@
       },
       {
         "handle": "@starsplit.jia.morgan",
-        "text": "Confirm Eddy Forty-Seven is still safe."
+        "text": "Confirm Eddy Forty-Seven's boundary is still where the chart says."
       },
       {
         "handle": "@starsplit.jonah.creel",
@@ -187,7 +187,8 @@
     ],
     "directionInline": [
       "Jia is heard over the simulator comm on this page; do not place her physically inside the survey skiff.",
-      "The anomaly has not become visually spectacular. At first the exterior must look almost disappointingly normal."
+      "The anomaly has not become visually spectacular. At first the exterior must look almost disappointingly normal.",
+      "The verified calm eddy remains the coherent safe reference. The survey begins at its charted edge; severe metric behavior belongs to the damaged space beyond a boundary that has shifted."
     ],
     "sceneId": "RFAA_ABS_I01_S02"
   },
@@ -334,7 +335,7 @@
   {
     "id": "RFAA_ABS_I01_P08",
     "summary": "The tether physically exceeds the visible distance before touching the beacon, proving that the disagreement cannot be dismissed as display error.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -393,7 +394,7 @@
   {
     "id": "RFAA_ABS_I01_P09",
     "summary": "As the drone returns, the tether appears to cross itself without contact, showing that projected position and actual path are no longer the same thing.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -540,7 +541,7 @@
   },
   {
     "id": "RFAA_ABS_I01_P12",
-    "summary": "Jonah proposes a controlled inertial run: hold one local vector, ignore the moving picture, and see where a physically straight course actually leads.",
+    "summary": "Jonah proposes a controlled inertial run: put the primary beacon behind them, hold one local vector, ignore the moving picture, and test what a physically straight course actually does.",
     "setting": "RFAA_Simulation_Skiff",
     "region": "Lattice",
     "factions": [
@@ -554,11 +555,11 @@
       "C_amel_varo"
     ],
     "panelPlan": [
-      "Jonah puts both hands on the pilot controls and deliberately lowers the canopy overlay so the visual target cannot steer him unconsciously.",
-      "Talia verifies a local inertial vector and gives him a clean heading relative to the skiff's current frame.",
-      "Jori locks a diagnostic trace to thrust, acceleration, and clock data so any ordinary ship-control failure will be visible.",
+      "Jonah puts both hands on the pilot controls and deliberately lowers the canopy overlay so the moving recorder cannot steer him unconsciously.",
+      "Talia chooses a local inertial vector that places the primary beacon clearly behind the skiff at the start of the run, then verifies the heading from independent local references.",
+      "Jori locks a diagnostic trace to thrust, acceleration, attitude, and clock data so any ordinary ship-control failure or hidden turn will be visible.",
       "Amel authorizes the test with a strict abort condition rather than a vague 'be careful.'",
-      "The skiff begins a low-thrust straight run; locally every instrument behaves normally."
+      "The skiff begins a low-thrust straight run with the primary beacon visibly receding behind it; locally every instrument behaves normally."
     ],
     "continuityFrom": "RFAA_ABS_I01_P11",
     "dialogueInline": [
@@ -587,8 +588,8 @@
   },
   {
     "id": "RFAA_ABS_I01_P13",
-    "summary": "After thirty seconds of uninterrupted forward acceleration, the skiff arrives back at the same beacon without ever turning.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "summary": "After thirty seconds of uninterrupted locally straight acceleration away from the primary beacon, that same beacon reappears ahead even though the skiff never turned.",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",
@@ -601,11 +602,11 @@
       "C_amel_varo"
     ],
     "panelPlan": [
-      "Exterior panel follows the skiff along a visually straight track through sparse black space; no spiral tunnel or portal effect.",
-      "Inside, Jori confirms continuous thrust and no attitude change while Talia watches the phase trace curve in a way the local heading does not.",
-      "The same verified green beacon slowly appears ahead of the skiff despite the craft never turning toward it.",
+      "Exterior panel follows the skiff along a visually straight track through sparse black space; the primary beacon is now clearly behind and receding. No spiral tunnel or portal effect.",
+      "Inside, Jori confirms continuous thrust and no attitude change while Talia watches the phase trace close in a way the local heading does not.",
+      "The same verified green primary beacon that was left behind slowly appears ahead of the skiff despite the craft never turning toward it.",
       "Jonah kills thrust on Amel's command and stares at the beacon identity, visibly unsettled for the first time.",
-      "Talia overlays the outbound track and realizes the local straight path closes back onto its starting anchor."
+      "Talia overlays the outbound track and realizes the locally straight path has closed back onto the same anchor relationship."
     ],
     "continuityFrom": "RFAA_ABS_I01_P12",
     "dialogueInline": [
@@ -619,7 +620,7 @@
       },
       {
         "handle": "@starsplit.jonah.creel",
-        "text": "Tell me that's not our beacon."
+        "text": "Tell me that's not the beacon behind us."
       },
       {
         "handle": "@starsplit.jori.kest",
@@ -631,7 +632,7 @@
       },
       {
         "handle": "@starsplit.amel.varo",
-        "text": "So straight is a loop."
+        "text": "So the straight run closed."
       }
     ],
     "directionInline": [
@@ -666,7 +667,7 @@
     "dialogueInline": [
       {
         "speaker": "SYSTEM",
-        "text": "ANCHOR STABILITY WINDOW — SIX MINUTES"
+        "text": "BOUNDARY STABILITY WINDOW — SIX MINUTES"
       },
       {
         "handle": "@starsplit.talia.quist",
@@ -745,7 +746,7 @@
   {
     "id": "RFAA_ABS_I01_P16",
     "summary": "The recorder finally approaches along the measured path, and the crew recovers it without ever obtaining a simple conventional map of the region.",
-    "setting": "RFAA_SIM_CALM_EDDY",
+    "setting": "RFAA_SIM_EDDY_BOUNDARY",
     "region": "Lattice",
     "factions": [
       "F_Academy",

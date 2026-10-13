@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "vikings-2026",
+  "status": "cover-production-reference",
+  "purpose": "Durable chef-facing cover-production contract for Vikings 2026. The exact shelf recipe carries each issue's composition, cast, setting and lettering; shared shelf directions carry the master-output standard, trade dress, character identity and New York background behavior.",
+  "authority": {
+    "issueRecipe": "The exact assembled Vikings cover shelf recipe controls the issue-specific selling image, cast, environment, graphic architecture and exact issue lettering for all twelve issues. The chef receives those positive descriptions directly from covers.json.",
+    "tradeDress": "The released Vikings 2026 Issue 1 cover in StarSplitterVisions controls the recurring masthead architecture, publisher badge, VIKINGS 2026! wordmark treatment, year/issue box, horizontal-rule language, issue-strapline placement, top-band proportions and restrained dark-on-white municipal-publication design.",
+    "characterWorld": "Released StarSplitterVisions pages plus explicitly approved current-production references control established character identity, faces, bodies, hair, clothing, relative scale, locations, props, rendering language and later story state.",
+    "scopeRule": "Each issue's shelf recipe controls its own illustration architecture while the recurring trade dress and output standard remain stable across the run."
+  },
+  "canonicalTradeDressReference": {
+    "repository": "starsplitterrecords/RexPrompt",
+    "branch": "main",
+    "path": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
+    "blobSha": "748a2d70924a773b995cafd8a78b8aab69f108d6",
+    "sourceRepository": "starsplitterrecords/StarSplitterVisions",
+    "sourcePath": "sites/visions/public/images/covers/vikings-2026-issue-01.jpg",
+    "sourceBlobSha": "748a2d70924a773b995cafd8a78b8aab69f108d6",
+    "exactPixelCopyVerified": true,
+    "sourceStatus": "released-canon",
+    "requiredUse": "pixel-read before every Vikings cover generation",
+    "pixelReadRule": "Retrieve and inspect the actual local reference pixels in active multimodal context. Repository path, SHA, metadata, prose description, memory, or a statement that the image was previously viewed is not a substitute for current pixel inspection."
+  },
+  "observedTradeDress": {
+    "mastheadField": "Large white horizontal field occupying the upper portion of the portrait cover, visually separated from the illustration by dark horizontal rules.",
+    "publisherBadge": "Boxed Star Splitter / VISIONS mark at upper left with star device; year and issue number are contained in the lower portion of the same vertical badge.",
+    "seriesWordmark": "Huge dark condensed all-caps VIKINGS 2026! wordmark spanning the masthead to the right of the publisher badge.",
+    "issueStrapline": "Narrow all-caps line beneath the wordmark, bracketed by thin horizontal rules. For later issues this line carries the issue title.",
+    "colorLogic": "Restrained dark navy/black typography and rules on white masthead; the illustration carries the issue-specific color.",
+    "letteringRule": "Keep the publication architecture stable while changing only issue number and issue strapline. Do not add blurbs, slogans, price bursts, fake barcodes, variant labels, creator credits, or other unscripted promotional copy.",
+    "compositionRule": "The cover illustration begins beneath the masthead. Later issue art should vary boldly by issue while preserving the masthead proportions and overall publication identity.",
+    "publicationCharacter": "Deliberately resembles a boring municipal/public-information publication rather than conventional flashy comic-book branding. Preserve the deadpan civic-document feel; the illustration below provides the visual excitement."
+  },
+  "coverRecipeSource": {
+    "file": "data/shows/vikings-2026-s1/covers.json",
+    "showSeriesId": "vikings-2026-covers",
+    "recipePattern": "^VIK_S1E01_COVER$|^VIK_S1E(0[2-9]|1[0-2])_P01$",
+    "showRegistration": "data/shows.json",
+    "rule": "Issue 1 is a dedicated cover recipe. Issues 2–12 use Page 1 of the corresponding normal Vikings issue show and are also addressable through the dedicated Vikings Covers shelf. The assembled shelf recipe is the chef-facing production truth."
+  },
+  "mandatoryReferenceGate": [
+    "Resolve the requested Vikings issue and assemble its exact cover shelf recipe (VIK_S1E01_COVER for Issue 1; VIK_S1E##_P01 for Issues 2–12).",
+    "Retrieve and visually inspect the actual pixels of production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg for recurring masthead and publication architecture.",
+    "Resolve and visually inspect actual released or explicitly approved pixels for every recurring character materially present on the cover.",
+    "Use the selected shelf recipe for the hook, cast, graphic architecture, environment, background density and exact DISPLAY text.",
+    "Use the shared shelf directions for the 2400 × 3840 master-output standard, illustrated language, trade dress, canonical character identity and New York background behavior.",
+    "Generate one complete cover/page as the canonical lossless PNG master."
+  ],
+  "coverQualityGate": [
+    "Output test: one complete 2400 × 3840 px, 5:8 portrait, sRGB, 8-bit RGB, lossless PNG cover master.",
+    "One-second read: the dominant issue hook is legible immediately.",
+    "Thumbnail test: focal silhouette, major shape system and masthead remain clear when reduced.",
+    "Series test: the fixed white municipal-publication masthead unmistakably belongs to Vikings 2026.",
+    "Issue test: the image uses the graphic architecture specified by its shelf recipe.",
+    "Style test: clearly drawn and painted comic illustration with controlled texture, expressive faces, believable anatomy and tactile New York surfaces.",
+    "Character test: recurring characters match the current approved reference pixels.",
+    "Lettering test: series wordmark, year/issue number and issue strapline match the exact DISPLAY text in the selected shelf recipe.",
+    "Municipal-shell test: the masthead retains the dry civic/public-information character established by Issue 1.",
+    "Background-behavior test: visible New Yorkers follow the density and routine behavior specified by the issue recipe."
+  ],
+  "issueLettering": [
+    {
+      "issue": 1,
+      "numberText": "2026 Issue #1",
+      "strapline": "AT THE MUNICIPAL TEMPORAL DISPLACEMENT INTEGRATION DEPARTMENT",
+      "status": "production-ready"
+    },
+    {
+      "issue": 2,
+      "numberText": "2026 Issue #2",
+      "strapline": "LANDFALL BUSHWICK"
+    },
+    {
+      "issue": 3,
+      "numberText": "2026 Issue #3",
+      "strapline": "TERRITORY"
+    },
+    {
+      "issue": 4,
+      "numberText": "2026 Issue #4",
+      "strapline": "THE IRON WORM"
+    },
+    {
+      "issue": 5,
+      "numberText": "2026 Issue #5",
+      "strapline": "THE NEIGHBORHOOD"
+    },
+    {
+      "issue": 6,
+      "numberText": "2026 Issue #6",
+      "strapline": "THE TALLY OF DISHONOR"
+    },
+    {
+      "issue": 7,
+      "numberText": "2026 Issue #7",
+      "strapline": "THE SKALDIC INTERFACE"
+    },
+    {
+      "issue": 8,
+      "numberText": "2026 Issue #8",
+      "strapline": "PROVISION"
+    },
+    {
+      "issue": 9,
+      "numberText": "2026 Issue #9",
+      "strapline": "TRIAL OF TOIL"
+    },
+    {
+      "issue": 10,
+      "numberText": "2026 Issue #10",
+      "strapline": "BELONGING"
+    },
+    {
+      "issue": 11,
+      "numberText": "2026 Issue #11",
+      "strapline": "WAR COUNCIL"
+    },
+    {
+      "issue": 12,
+      "numberText": "2026 Issue #12",
+      "strapline": "TRIAL BY COMBAT"
+    }
+  ],
+  "knownScopeLocks": [
+    {
+      "path": "production/references/vikings-2026/assets/covers/issue-01-cover-trade-dress.jpg",
+      "scope": "cover-trade-dress-only",
+      "coverTradeDressAuthority": true,
+      "characterIdentityAuthority": false,
+      "storyPageLayoutAuthority": false,
+      "issueSpecificCompositionAuthority": false
+    }
+  ],
+  "coverLineDoctrine": [
+    "Every cover master is one complete 2400 × 3840 px, 5:8 portrait, sRGB, 8-bit RGB, lossless PNG image.",
+    "The masthead/trade dress is a stable white municipal/public-information shell with boxed STAR SPLITTER / VISIONS mark, issue block, enormous condensed VIKINGS 2026! wordmark, thin rules and narrow issue subtitle.",
+    "The illustration beneath the shell uses a different graphic architecture for every issue: 1 seated horizontal triptych; 2 steep diagonal ascent; 3 lone figure and large negative space; 4 train/platform split; 5 tight counter transaction; 6 flat institutional symmetry; 7 soaring vertical library volume; 8 low park/picnic composition; 9 circular support-group composition; 10 distributed depth along one neighborhood block; 11 overhead table geometry; 12 dead-center security arch.",
+    "The series art is clearly drawn and painted, with controlled texture, expressive faces, believable anatomy, restrained natural color and tactile New York environments.",
+    "Canonical character reference pixels control recurring identity: Bjorn is the close-cropped short-bearded serious leader; Gunnar is the long-haired enormous-bearded navigator with black eye paint; Astrid and both male Kin remain individually recognizable.",
+    "Background New Yorkers appear at the density useful to each composition and continue ordinary routine behavior.",
+    "Exact DISPLAY lettering comes from the selected shelf recipe.",
+    "Each cover sells one dominant issue-specific contradiction, desire or pressure."
+  ],
+  "issueSequenceRule": "Normal Vikings issue assembly order is cover P01 → opening editorial/title splash P02 → story → closing teaser/finale. Covers are not separate from the issue sequence, even though a dedicated cover shelf also exposes the same recipes for focused cover production.",
+  "masterOutputStandard": {
+    "masterDimensionsPx": "2400 × 3840",
+    "aspectRatio": "5:8 portrait",
+    "colorSpace": "sRGB",
+    "bitDepth": "8-bit RGB",
+    "masterFormat": "lossless PNG",
+    "pageRule": "one complete cover/page per image",
+    "artworkGeometry": "edge-to-edge artwork on the canonical master canvas",
+    "publicationDerivatives": {
+      "visionsKindleDerivative": "2400 × 3840 high-quality JPEG",
+      "kindleCoverDerivative": "1600 × 2560 JPEG",
+      "printEffectiveResolution": "at least 300 PPI",
+      "paperbackTrim": "6.25 × 10 in",
+      "fullBleedPrintExport": "6.375 × 10.25 in",
+      "bleedRule": "publication bleed is added in print export rather than master artwork geometry"
+    }
+  }
+}

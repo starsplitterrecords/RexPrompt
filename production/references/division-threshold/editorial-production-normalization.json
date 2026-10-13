@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "division-threshold",
+  "status": "active",
+  "purpose": "Chef-facing non-diegetic intro/teaser production contract. Editorial pages hook through character, embodiment, self-conception and relationship rather than recapping systems or policy.",
+  "recipeShelf": "data/shows/division-threshold-s1/editorial_pages.json",
+  "intendedPlacement": "For each issue, *_INTRO is inserted immediately before canonical story page P01 in the finished issue; *_TEASER is inserted immediately after the final canonical story page. Editorial pages are intentionally stored outside the flat 204-story-page assembler shelf so canonical story IDs and continuity remain stable.",
+  "rules": [
+    "Intros re-arm the person: who is under pressure, what they believe about themselves, and what immediate choice is becoming unavoidable.",
+    "Teasers expose the next character collision without giving away the next issue's solution or late reversal.",
+    "Social commentary must emerge through a person or relationship; do not turn editorial pages into policy summaries.",
+    "Bodies remain tactile and materially specific under the same Division Threshold materiality doctrine as interiors.",
+    "Exact caption text is production data. No invented environmental text, taglines or extra copy.",
+    "No panel grid unless the recipe explicitly requests one; default is a single editorial splash."
+  ],
+  "issueUnits": [
+    {
+      "issue": 1,
+      "intro": "DT_E001_INTRO",
+      "teaser": "DT_E001_TEASER"
+    },
+    {
+      "issue": 2,
+      "intro": "DT_E002_INTRO",
+      "teaser": "DT_E002_TEASER"
+    },
+    {
+      "issue": 3,
+      "intro": "DT_E003_INTRO",
+      "teaser": "DT_E003_TEASER"
+    },
+    {
+      "issue": 4,
+      "intro": "DT_E004_INTRO",
+      "teaser": "DT_E004_TEASER"
+    },
+    {
+      "issue": 5,
+      "intro": "DT_E005_INTRO",
+      "teaser": "DT_E005_TEASER"
+    },
+    {
+      "issue": 6,
+      "intro": "DT_E006_INTRO",
+      "teaser": "DT_E006_TEASER"
+    },
+    {
+      "issue": 7,
+      "intro": "DT_E007_INTRO",
+      "teaser": "DT_E007_TEASER"
+    },
+    {
+      "issue": 8,
+      "intro": "DT_E008_INTRO",
+      "teaser": "DT_E008_TEASER"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> Historical development draft. Superseded October 6, 2026 by `issue_02_reordered_script.md`, active `pages_i02.json`, and `issues_01_03_official_restructure.md`.
+
 # Vikings 2026 — Issue 2: LANDFALL BUSHWICK
 
 Status: STRUCTURAL SEASON REVISION + SCENE-BASED DIALOGUE/VOICE PASS COMPLETE

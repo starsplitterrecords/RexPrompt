@@ -76,7 +76,7 @@ Only Issue 1 is production-compiled at initialization. Later issue titles and co
 
 ## Issue 1 dramatic purpose
 
-The cadets enter a recorded survey reconstruction expecting one bad instrument. Instead, optical range, tether length, inertial motion, and reciprocal-phase measurements remain individually valid while disagreeing with one another. Their first attempt to navigate by a visually obvious straight line returns them to the same anchor without any local turn. They recover the survey recorder only after they stop navigating by apparent position and instead follow measured changes across phase and anchor relationships.
+The cadets enter a recorded boundary survey around Calm Eddy Forty-Seven expecting one bad instrument. The verified calm eddy itself remains locally coherent, but its charted boundary has drifted; just outside the safe pocket, optical range, tether length, inertial motion, and reciprocal-phase measurements remain individually valid while disagreeing with one another. A controlled run deliberately leaves the primary beacon behind, holds a locally straight vector, and then encounters that same beacon ahead without any local turn. They recover the survey recorder only after they stop navigating by apparent position and instead follow measured changes across phase and anchor relationships.
 
 The debrief establishes the series thesis:
 
@@ -94,3 +94,20 @@ The closing beat introduces a small live phase offset in a nearby monitored trai
 - Avoid textbook infographic pages unless explicitly scripted as something physically present in the classroom.
 - Avoid generic psychedelic space, fantasy portals, runes, magical particles, or consciousness-driven effects.
 - Integrated lettering should contain only scripted dialogue, captions, or explicitly scripted system text.
+
+## Shared Academy curriculum doctrine
+
+This course follows `../rex-fleet-academy-shared/curriculum_doctrine.json` and its local `academy_source_program.json`.
+
+The ten-title progression above is a **candidate topic pool, not a ten-issue season**. This course is expected to be a one-off by default and no more than three issues total. If continuation is justified, combine the strongest related anomaly topics into at most two follow-up issues. Only compiled/registered issues are production commitments.
+
+Source documents, telemetry, accident records, and historical observations may run as a distinct caption lane while Jia and the cadets test what those records actually prove. Keep observation, interpretation, and current Academy theory visibly separate.
+
+## Course production identity
+
+- **Length:** 1–3 issues total; default 1.
+- **Entry point:** Issue 1 must stand alone as an entry point to both this course and the Rex Fleet Academy line.
+- **Cast:** this course may maintain its own instructor/cadets; no line-wide recurring cohort is required.
+- **RexPrompt:** keep this as its own series package and series ID.
+- **IMG:** use a dedicated Anomalies of Broken Space IMG/reference project when visual production begins.
+- **Git:** course-specific feature branches are appropriate for active work, but approved state merges to `main`; do not maintain a divergent canon branch.
