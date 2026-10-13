@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "RFAPL_I01_P01",
+    "summary": "The first Physics of the Lattice lecture opens with an apparently childish question—what is the shortest path between two points?—and Tomas answers too quickly.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_SeraKade",
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru"
+    ],
+    "panelPlan": [
+      "Full-width opening view of the Academy lecture hall with Kade alone on the demonstration floor and the four cadets scattered among the front rows.",
+      "Kade places two small points of light into the empty volumetric plotting space, nothing else.",
+      "Close on Tomas, already half-smiling because the question seems beneath the room.",
+      "End on Kade looking at him rather than the display."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "REX FLEET ACADEMY: PHYSICS OF THE LATTICE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "ISSUE ONE — THE SHORTEST PATH"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Shortest path between two points?"
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Straight line."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Good. Now forget it."
+      }
+    ],
+    "directionInline": [
+      "Treat the title copy as integrated editorial typography, not environmental signage. The joke lands because Kade is matter-of-fact, not theatrical."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P02",
+    "summary": "Kade draws the straight coordinate-space answer, then adds a second route that looks longer on the diagram but represents less Lattice distance.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_SeraKade",
+      "C_TomasRhee",
+      "C_MiraSen"
+    ],
+    "continuityFrom": "RFAPL_I01_P01",
+    "panelPlan": [
+      "Two lights remain fixed while a straight white line appears between them.",
+      "A second pale-green path bows far away from the straight line in ordinary coordinates.",
+      "Mira leans forward, studying the relation between the two paths instead of Kade.",
+      "Tomas points at the visibly longer curve."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "That is longer."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "On this picture."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Not in the Lattice?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Now we can start."
+      }
+    ],
+    "directionInline": [
+      "The display is geometric and visual; do not fill it with equations or labels."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P03",
+    "summary": "Kade strips away the common tunnel metaphor: a corridor is a changing relationship between places, not a tube punched through another dimension.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "characters": [
+      "C_SeraKade",
+      "C_JoVale",
+      "C_KellanAru"
+    ],
+    "continuityFrom": "RFAPL_I01_P02",
+    "panelPlan": [
+      "The two points become tiny star systems; the bowed path changes shape as Kade rotates the model.",
+      "Jo watches a measurement trace rather than the pretty route.",
+      "Kellan folds his arms as the model shortens without either endpoint moving.",
+      "Close on Kade deleting a stylized tunnel icon that a cadet has called up."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "A corridor is not a tunnel."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "No walls."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "No fixed inside."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "So what are we flying through?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "A relationship."
+      }
+    ],
+    "directionInline": [
+      "Make the concept legible through changing geometry, not lecture-wall prose."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P04",
+    "summary": "The beacon line appears inside a much wider green volume, and Kade makes the distinction the entire issue will test: beacons verify a route; they do not create it.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_SeraKade",
+      "C_MiraSen",
+      "C_TomasRhee",
+      "C_JoVale"
+    ],
+    "continuityFrom": "RFAPL_I01_P03",
+    "panelPlan": [
+      "A chain of green beacons appears through a broad translucent cylindrical volume around the centerline.",
+      "Tomas traces the centerline with one finger.",
+      "Kade expands the cross-section until the safe volume visibly dwarfs the beacon itself.",
+      "Jo notices one beacon pulse red in Kade's demonstration and the entire class looks up."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Green means verified low tension."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "So stay on the line."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Stay in the volume."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "And red?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Unsafe—or we stopped knowing."
+      }
+    ],
+    "directionInline": [
+      "Green and red must follow the established corridor color grammar. The safe volume is broad; never depict the corridor as a narrow glowing pipe."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P05",
+    "summary": "Minutes later the cadets discover the lecture was preflight: they meet Lt. Oris in the training bay and board Vector Three for a live corridor practicum.",
+    "setting": "S_AcademyTrainingBay",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru",
+      "C_RennOris",
+      "C_SeraKade"
+    ],
+    "panelPlan": [
+      "Hard cut from abstract geometry to the real Vector Three on its cradle with technicians finishing checks.",
+      "Oris hands Tomas the training-cutter manifest slate without ceremony.",
+      "Kellan runs a palm over an access seam as he walks, already listening to the ship.",
+      "Kade follows last, carrying no lecture materials."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "Rhee flies. Sen plots. Vale reads the network. Aru reads the ship."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "And Dr. Kade?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Asks annoying questions."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "So nothing changed."
+      }
+    ],
+    "directionInline": [
+      "The humor is dry and familiar; these students have had Kade before."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P06",
+    "summary": "Vector Three enters a normal green public corridor, beautiful precisely because nothing dramatic should happen there.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA",
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru",
+      "C_RennOris",
+      "C_SeraKade"
+    ],
+    "panelPlan": [
+      "Bridge during approach: green beacon chain centered beyond the forward viewport.",
+      "Exterior inset of Vector Three entering the wide verified low-tension volume with ordinary traffic comfortably dispersed around the centerline.",
+      "Mira watches a curved field contour on her plot while Tomas aligns on the beacon line.",
+      "Kade sits behind them, deliberately silent."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Centered."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Volume is wider than that."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Centered still works."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Usually."
+      }
+    ],
+    "directionInline": [
+      "This page establishes public-corridor normality. Avoid ominous visual effects."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P07",
+    "summary": "Tomas treats the beacon chain as the route while Mira notices the local low-tension gradient already bending away from the visible centerline.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_SeraKade"
+    ],
+    "continuityFrom": "RFAPL_I01_P06",
+    "panelPlan": [
+      "Tomas makes a small correction toward the visual beacon centerline.",
+      "Mira's plot shows the lowest-tension contour bowing a few degrees off-center.",
+      "Jo checks that all current beacons remain green.",
+      "Kade asks without looking up from the hull-load trace."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "What are you following?"
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "The corridor."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "The beacon line."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Same thing."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "That answer has killed people."
+      }
+    ],
+    "directionInline": [
+      "Kade's last line is sober, not melodramatic. The disagreement is technical and immediately consequential."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P08",
+    "summary": "Mira overlays the field estimate and shows that the ship can remain safely inside the verified volume while flying off the beacon line; Tomas reluctantly gives her the nose.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_MiraSen",
+      "C_TomasRhee",
+      "C_KellanAru"
+    ],
+    "continuityFrom": "RFAPL_I01_P07",
+    "panelPlan": [
+      "Mira expands the field contour so the safe cross-section becomes obvious across the bridge display.",
+      "Tomas glances from the visual beacon chain to Mira's bowed solution.",
+      "Exterior: Vector Three drifts gently off the centerline but remains deep inside the broad green volume.",
+      "Kellan watches structural load numbers ease."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Two degrees port."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Away from center."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Toward lower tension."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Hull likes her answer."
+      }
+    ],
+    "directionInline": [
+      "Make the off-center motion visibly modest; this is not leaving the corridor."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P09",
+    "summary": "The next BHA beacon flips from green to red, forcing the cadets to confront the canon rule that red can mean danger or failed verification—either way, they no longer have authority to treat the next segment as safe.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_RennOris"
+    ],
+    "continuityFrom": "RFAPL_I01_P08",
+    "panelPlan": [
+      "Forward beacon changes from green to red while the beacons behind remain green.",
+      "Tomas immediately takes thrust out and holds inside the last verified volume.",
+      "Jo's diagnostics split into several disagreeing sensor channels.",
+      "Oris leans forward for the first time."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "SYSTEM",
+        "text": "Forward verification lost."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Holding."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Beacon can’t close the read."
+      },
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "Then the segment is red."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Even if it might be fine."
+      },
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "Especially then."
+      }
+    ],
+    "directionInline": [
+      "Red is an operational state, not proof of catastrophe. Keep the ship calm and controlled."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P10",
+    "summary": "Jo separates sensor failure from physical danger: local readings remain smooth inside the current pocket, but nobody can honestly certify what lies ahead.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_JoVale",
+      "C_MiraSen",
+      "C_SeraKade",
+      "C_TomasRhee"
+    ],
+    "continuityFrom": "RFAPL_I01_P09",
+    "panelPlan": [
+      "Jo isolates the failed forward verification channel and compares it with Vector Three's local instruments.",
+      "Mira marks the boundary of what they actually know rather than extending the old route.",
+      "Tomas looks at the red beacon visible ahead in otherwise ordinary space.",
+      "Kade finally stands behind Jo."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Local field is quiet."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "So it is safe."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "No. I said what we measured."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Keep those sentences separate."
+      }
+    ],
+    "directionInline": [
+      "This is a core Academy principle: measurement and interpretation are distinct. Do not add extra explanatory dialogue."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P11",
+    "summary": "Oris refuses forward transit but authorizes a diagnostic hold and drone deployment inside the still-verified volume, preserving the safety rule while giving the lesson a real problem.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_RennOris",
+      "C_SeraKade",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru"
+    ],
+    "continuityFrom": "RFAPL_I01_P10",
+    "panelPlan": [
+      "Oris marks a hard no-go plane before the red beacon.",
+      "Kade asks for permission to use the remaining verified volume rather than cross the boundary.",
+      "Jo pulls a compact calibration drone from its rack.",
+      "Kellan secures the drone launcher and checks the mechanical interlock."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "No one crosses red."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Agreed."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Then what are we solving?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Where the path is while we wait."
+      }
+    ],
+    "directionInline": [
+      "Do not imply Kade or Oris bends the safety rule. The experiment stays inside the last verified volume."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P12",
+    "summary": "The cadets launch a calibration drone laterally across the broad corridor cross-section and discover that its easiest motion is not parallel to the beacon line.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru"
+    ],
+    "continuityFrom": "RFAPL_I01_P11",
+    "panelPlan": [
+      "Exterior: the small drone leaves Vector Three sideways, clearly remaining inside the broad green-safe volume behind the red forward beacon.",
+      "Mira's display plots the drone's tiny thrust pulses against its unexpectedly curved actual motion.",
+      "Jo compares the result with local tension readings.",
+      "Kellan taps the hull-load strip as Vector Three reacts to the same gradient."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "It is drifting port."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Thrusters are balanced."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Ship feels it too."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "So the field moved."
+      }
+    ],
+    "directionInline": [
+      "The drift is subtle and measurable, not a violent current."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P13",
+    "summary": "Mira reconstructs the local inverse-tension gradient: the low-tension pocket has bowed within the verified volume, making the visually indirect route physically easier.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_MiraSen",
+      "C_SeraKade",
+      "C_TomasRhee",
+      "C_JoVale"
+    ],
+    "continuityFrom": "RFAPL_I01_P12",
+    "panelPlan": [
+      "Mira combines the drone samples into a simple curved trough-like field visualization.",
+      "Kade removes the beacon centerline from the display, leaving only the measured gradient.",
+      "Tomas stares at the curve without the comforting straight reference.",
+      "Jo highlights the point of lowest local tension."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "The inversion bowed."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Inside a green corridor."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Green never meant flat."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "It meant verified."
+      }
+    ],
+    "directionInline": [
+      "Use 'inversion' as established operating language. Visualize a field relationship, not literal liquid or wind."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P14",
+    "summary": "Kellan proves the geometry through the ship itself: when Tomas points Vector Three slightly away from the destination, structural load falls.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_KellanAru",
+      "C_TomasRhee",
+      "C_MiraSen"
+    ],
+    "continuityFrom": "RFAPL_I01_P13",
+    "panelPlan": [
+      "Kellan calls up hull strain across the cutter frame.",
+      "Tomas rotates the nose a few degrees away from the direct line to the next beacon.",
+      "Strain indicators visibly settle.",
+      "Exterior: the cutter is angled 'wrong' relative to the beacon chain but is moving more cleanly through the verified volume."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Hold that heading."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "It points away."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "And the frame stopped arguing."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Because this is the shorter path."
+      }
+    ],
+    "directionInline": [
+      "The page should make mechanics validate navigation. No one needs a speech explaining structural strain."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P15",
+    "summary": "Kade names the practical technique—riding the inversion—and makes Tomas articulate why a longer coordinate-space curve can be the shorter Lattice route.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_SeraKade",
+      "C_TomasRhee",
+      "C_MiraSen"
+    ],
+    "continuityFrom": "RFAPL_I01_P14",
+    "panelPlan": [
+      "Kade stands between Tomas and Mira, looking forward rather than at a display.",
+      "Mira shows the direct coordinate line crossing higher-tension contours.",
+      "Tomas redraws his route as a gentle curve along the low-tension trough.",
+      "Kade accepts the answer with a small nod."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Name it."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Riding the inversion."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Rhee—why?"
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Because straight is only shortest if the geometry stays ordinary."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Better."
+      }
+    ],
+    "directionInline": [
+      "This is the issue's central conceptual payoff, delivered as earned dialogue rather than narration."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P16",
+    "summary": "The calibration drone abruptly begins sliding toward the steep outer gradient of the verified volume, turning the lesson into a recovery problem without requiring anyone to cross the red segment.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_JoVale",
+      "C_RennOris",
+      "C_TomasRhee",
+      "C_MiraSen"
+    ],
+    "continuityFrom": "RFAPL_I01_P15",
+    "panelPlan": [
+      "Drone track bends faster toward the edge of the currently verified green volume.",
+      "Jo tries a remote correction and gets only partial response.",
+      "Oris marks the corridor boundary and confirms the drone has not crossed it yet.",
+      "Tomas reaches for thrust; Mira stops his hand short of committing."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Drone is sliding."
+      },
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "Still inside green. Not for long."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "I can catch it."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Not straight."
+      }
+    ],
+    "directionInline": [
+      "Keep the stakes proportionate: losing the drone is acceptable; crossing an unverified boundary is not."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P17",
+    "summary": "Tomas proposes the obvious direct intercept, but Mira demonstrates that it would cut across the steepest part of the tension gradient and increase both travel time and load.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_KellanAru",
+      "C_SeraKade"
+    ],
+    "continuityFrom": "RFAPL_I01_P16",
+    "panelPlan": [
+      "Tomas throws a straight intercept line to the drone.",
+      "Mira overlays the local tension contours and the direct line cuts across them nearly perpendicular.",
+      "Kellan points to projected strain rising along Tomas's plan.",
+      "Kade says nothing; Tomas deletes his own line."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Direct gets us there first."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "In coordinates."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "In metal, it hurts."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Fine. Give me the ugly route."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Pretty route, actually."
+      }
+    ],
+    "directionInline": [
+      "Let the cadets correct one another; Kade should not solve this page for them."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P18",
+    "summary": "Mira plots a counterintuitive curve that initially moves Vector Three away from the drone so the ship can enter the lower-tension trough and let the geometry carry the intercept.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_MiraSen",
+      "C_TomasRhee",
+      "C_JoVale"
+    ],
+    "continuityFrom": "RFAPL_I01_P17",
+    "panelPlan": [
+      "Mira draws a hooked curve that first bends away from the drone's visible position.",
+      "Tomas studies it, then commits without another argument.",
+      "Exterior wide shot: Vector Three turns away while the drone continues toward the edge.",
+      "Jo watches the predicted separation briefly increase."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Port twelve. Let it widen."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "We are losing distance."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Coordinate distance."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Tension is dropping."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "I know. I still hate it."
+      }
+    ],
+    "directionInline": [
+      "The suspense comes from the ship apparently moving the wrong way while the measurements improve."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P19",
+    "summary": "Once inside the low-tension trough, Tomas needs less thrust and the ship's path bends naturally toward the drone; the 'longer' route becomes the faster intercept.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_KellanAru"
+    ],
+    "continuityFrom": "RFAPL_I01_P18",
+    "panelPlan": [
+      "Kellan reports a clean drop in structural load and drive demand.",
+      "Exterior: Vector Three's curve begins closing on the drone without a hard turn.",
+      "Tomas makes small restrained corrections instead of chasing the target.",
+      "Mira watches the two tracks converge inside the safe boundary."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Drive load down eighteen."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "And now it comes to us."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "We came to it."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Let me enjoy one thing."
+      }
+    ],
+    "directionInline": [
+      "Show the concept in motion: less force, cleaner curve, faster effective intercept."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P20",
+    "summary": "Jo captures the drone telemetry while Tomas brings Vector Three alongside; the recovery works because every discipline contributes a different measurement of the same geometry.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "characters": [
+      "C_JoVale",
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_KellanAru",
+      "C_RennOris"
+    ],
+    "continuityFrom": "RFAPL_I01_P19",
+    "panelPlan": [
+      "Jo locks onto the drone's short-range telemetry and stabilizes its attitude.",
+      "Tomas holds the cutter alongside instead of overtaking.",
+      "Kellan opens the recovery cradle while monitoring frame load.",
+      "Oris watches the boundary remain safely outside their track."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "I have attitude control."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Matching."
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Cradle open."
+      },
+      {
+        "handle": "@starsplit.renn.oris",
+        "text": "Boundary remains clear."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Bring it home."
+      }
+    ],
+    "directionInline": [
+      "The recovery is procedural and cooperative, not heroic stunt flying."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P21",
+    "summary": "The drone is recovered and Vector Three retraces the low-tension curve back toward the green verified route, proving the lesson without crossing the red beacon.",
+    "setting": "S_VectorThreeBridge",
+    "region": "R_PublicCorridor",
+    "factions": [
+      "F_BHA"
+    ],
+    "characters": [
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru",
+      "C_SeraKade"
+    ],
+    "continuityFrom": "RFAPL_I01_P20",
+    "panelPlan": [
+      "Drone slides safely into the cradle.",
+      "Exterior: Vector Three arcs back toward the cluster of green beacons behind it while the unresolved forward beacon remains red.",
+      "Inside, Tomas relaxes his grip only after the load trace settles.",
+      "Kade looks at the four cadets, not the recovered hardware."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Recovered."
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "What did you follow?"
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "Not the line."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Not the drone."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "The measured path."
+      }
+    ],
+    "directionInline": [
+      "Leave the red beacon unresolved. The point is disciplined operation under uncertainty, not conveniently fixing infrastructure."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P22",
+    "summary": "Back in the Academy, Kade reconstructs the flight with the beacon line hidden and asks the opening question again.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_SeraKade",
+      "C_TomasRhee",
+      "C_MiraSen",
+      "C_JoVale",
+      "C_KellanAru"
+    ],
+    "panelPlan": [
+      "Return to the same hall composition as Page 1, now with the cadets clustered close to the floor.",
+      "The volumetric display shows only their curved actual track and the field contours, no beacons.",
+      "Kade restores the two endpoint lights from the opening page.",
+      "Tomas does not answer first this time."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Shortest path between two points?"
+      },
+      {
+        "handle": "@starsplit.kellan.aru",
+        "text": "Depends what the ship feels."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "Depends what we actually know."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Depends on the Lattice."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "So the answer is not a line."
+      }
+    ],
+    "directionInline": [
+      "Mirror Page 1 visually, but show changed student behavior instead of announcing growth."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P23",
+    "summary": "Kade gives the durable rule: the map is a record of verified geometry, not a promise that geometry will stay put; the cadets finally separate beacon, corridor, and path.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "factions": [
+      "F_BHA",
+      "F_RexFleetAcademy"
+    ],
+    "characters": [
+      "C_SeraKade",
+      "C_MiraSen",
+      "C_TomasRhee",
+      "C_JoVale"
+    ],
+    "continuityFrom": "RFAPL_I01_P22",
+    "panelPlan": [
+      "Kade restores the green beacon chain around the actual flight track.",
+      "The actual path sits visibly off-center while remaining inside the verified volume.",
+      "Jo marks the red forward beacon separately from the safe region behind it.",
+      "Final small panel: Kade erases the beacon line again but leaves the measured field."
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "A beacon is a verification."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "The corridor is the low-tension volume."
+      },
+      {
+        "handle": "@starsplit.jo.vale",
+        "text": "The path is what the field allows now."
+      },
+      {
+        "handle": "@starsplit.tomas.rhee",
+        "text": "And the map?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "Yesterday's promise, checked again today."
+      }
+    ],
+    "directionInline": [
+      "Do not turn the final line into mystical philosophy. It is an operational statement with cultural resonance."
+    ]
+  },
+  {
+    "id": "RFAPL_I01_P24",
+    "summary": "A closing Academy teaser introduces the next problem: two equally competent teams can measure the same corridor and disagree if the field loses coherence.",
+    "setting": "S_AcademyLectureHall",
+    "region": "R_CoreAcademy",
+    "characters": [
+      "C_SeraKade",
+      "C_MiraSen"
+    ],
+    "continuityFrom": "RFAPL_I01_P23",
+    "panelPlan": [
+      "Single full-page closing composition: Kade and Mira stand small beneath a volumetric field that has split into two nearly identical but incompatible route solutions.",
+      "Reserve clean negative space for the exact teaser copy; keep the visual elegant and unsettling rather than catastrophic."
+    ],
+    "dialogueInline": [
+      {
+        "speaker": "CAPTION",
+        "text": "NEXT LECTURE — COHERENCE"
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A path can be measured."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "A path can be verified."
+      },
+      {
+        "speaker": "CAPTION",
+        "text": "And two correct instruments can still stop agreeing about where it is."
+      },
+      {
+        "handle": "@starsplit.mira.sen",
+        "text": "Which one is wrong?"
+      },
+      {
+        "handle": "@starsplit.sera.kade",
+        "text": "That is the next question."
+      }
+    ],
+    "directionInline": [
+      "Treat CAPTION entries as exact integrated editorial typography. No environmental lettering or extra explanatory labels."
+    ]
+  }
+]

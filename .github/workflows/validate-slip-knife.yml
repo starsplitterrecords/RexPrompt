@@ -1,0 +1,22 @@
+name: Validate Rex Fleet Slip Knife data
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/shows/rex-fleet-slip-knife/**'
+      - 'tools/validate_rex_fleet_slip_knife.py'
+      - '.github/workflows/validate-slip-knife.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate Slip Knife
+        run: python tools/validate_rex_fleet_slip_knife.py

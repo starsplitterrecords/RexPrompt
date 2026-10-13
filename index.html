@@ -5,26 +5,87 @@
 <title>RexPrompt Assembler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.dataset.theme=localStorage.getItem("rexprompt.theme")==="dark"?"dark":"light"</script>
+<script src="github-auth.js?v=20261009-remember-1"></script>
+<script src="github-writes.js?v=20261009-writefix-1"></script>
 <style>
 :root{color-scheme:light;--bg:#fff;--fg:#111;--muted:#666;--surface:#eee;--surface-soft:#f7f7f7;--border:#ddd;--control-bg:#fff;--control-fg:#111;--accent:#0645ad}
 html[data-theme="dark"]{color-scheme:dark;--bg:#11151a;--fg:#e8edf2;--muted:#9aa7b3;--surface:#1c232b;--surface-soft:#171d24;--border:#36414d;--control-bg:#202832;--control-fg:#eef3f7;--accent:#8ab4ff}
 body{font-family:sans-serif;padding:20px;margin:0;max-width:100%;box-sizing:border-box;background:var(--bg);color:var(--fg);transition:background .15s ease,color .15s ease}.container{max-width:100%;width:100%;overflow-x:hidden}select,button{margin:0 10px 20px 0;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}select{min-width:260px;max-width:100%;padding:8px}button{font-size:1.1rem;padding:14px 20px;cursor:pointer}button:hover{filter:brightness(1.08)}pre{background:var(--surface);padding:10px;white-space:pre-wrap;word-wrap:break-word;max-width:100%;box-sizing:border-box;border:1px solid var(--border)}.block{margin-bottom:15px}.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.status{color:var(--muted);font-size:.9rem;margin:-8px 0 14px}.export-block{padding-top:8px;border-top:1px solid var(--border);margin-top:4px}.export-help{color:var(--muted);font-size:.85rem;margin:-8px 0 14px}.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.header-row h3{margin-right:auto}.theme-toggle{font-size:.9rem;padding:9px 13px;margin-bottom:10px}
+/* Production controls stay together, even when the preview or prompt is long. */
+#assemblerMode{max-width:1180px;margin:0 auto}
+.production-dock{position:sticky;top:0;z-index:30;border:1px solid var(--border);border-radius:0 0 10px 10px;padding:12px 14px;background:var(--bg);box-shadow:0 3px 12px rgba(0,0,0,.09)}
+.production-selector-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);gap:10px}
+.production-field{display:flex;flex-direction:column;gap:5px;min-width:0;color:var(--muted);font-size:.78rem;font-weight:600}
+.production-field select{width:100%;min-width:0;max-width:none;box-sizing:border-box;margin:0;padding:9px;font-size:.92rem;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:5px}
+.production-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start;margin-top:10px}
+.production-actions>button,.production-upload-slot .visual-actions button{box-sizing:border-box;width:100%;min-height:44px;margin:0;padding:10px 12px;font-size:.95rem;font-weight:650}
+.production-copy{background:var(--surface-soft)}
+.production-next{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:700}
+.production-upload-slot{min-width:0}
+.production-upload-slot .visual-actions{display:block;margin:0}
+.production-upload-slot .visual-upload-status{margin-top:4px}
+.production-upload-slot .visual-token-panel{margin-top:8px}
+.production-dock .status{margin:7px 0 0;font-size:.78rem;line-height:1.35}
+.production-section{margin-top:18px;padding:15px;border:1px solid var(--border);border-radius:8px;min-width:0}
+.production-section h4{margin:0 0 12px;font-size:1.05rem}
+.production-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.production-section-head h4{margin:0}
+.production-section-head button{margin:0;font-size:.82rem;padding:8px 12px}
+#productionPreview .visual-workspace{margin:0}
+#promptDetails pre{margin-top:10px;max-height:65vh;overflow:auto}
+#productionExports .export-block{border-top:0;margin-top:0}
+#productionUtilities{margin-top:12px}
+#productionUtilities button{font-size:.82rem;margin:0;padding:8px 10px}
+@media(max-width:640px){
+body{padding:10px}
+.production-dock{padding:9px 10px}
+.production-selector-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.production-field:last-child{grid-column:1/-1}
+.production-field select{font-size:.85rem;padding:7px}
+.production-actions{gap:6px;margin-top:8px}
+.production-actions>button,.production-upload-slot .visual-actions button{min-height:42px;padding:8px 5px;font-size:.82rem}
+.production-section{padding:10px;margin-top:12px}
+}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="header-row"><h3>RexPrompt Assembler</h3><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
-<div class="block"><label for="showSel">Series</label><br><select id="showSel"></select></div>
-<div class="block"><label for="issueSel">Issue</label><br><select id="issueSel"></select></div>
-<div class="block"><label for="sceneSel">Production page</label><br><select id="sceneSel"></select></div>
-<div id="status" class="status"></div>
-<div class="btn-row"><button id="buildBtn">Build</button><button id="copyBtn">Copy Assembled Text</button><button id="commitBtn">Commit Page</button></div>
-<div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
-<div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
-<div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
-<div id="exportStatus" class="status"></div>
-<pre id="out"></pre>
-<div id="manualInputs"></div>
+<div class="header-row"><h3 id="appTitle">RexPrompt Assembler</h3><div class="mode-switch" role="group" aria-label="RexPrompt mode"><button id="assemblerModeBtn" type="button" aria-pressed="true">Assembler</button><button id="referenceKeeperModeBtn" type="button" aria-pressed="false">Reference Keeper</button></div><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+<div id="assemblerMode">
+  <section id="productionDock" class="production-dock" aria-label="Page production controls">
+    <div class="production-selector-grid">
+      <label class="production-field" for="showSel"><span>Series</span><select id="showSel"></select></label>
+      <label class="production-field" for="issueSel"><span>Issue</span><select id="issueSel"></select></label>
+      <label class="production-field" for="sceneSel"><span>Production page</span><select id="sceneSel"></select></label>
+    </div>
+    <div class="production-actions">
+      <button id="copyBtn" type="button" class="production-copy">Copy Prompt</button>
+      <div id="productionUploadSlot" class="production-upload-slot"></div>
+      <button id="commitBtn" type="button" class="production-next">Next Page →</button>
+    </div>
+    <div id="status" class="status" role="status"></div>
+  </section>
+  <section id="productionPreview" class="production-section">
+    <h4>Production Preview</h4>
+    <div id="visualPreviewMount"></div>
+  </section>
+  <section id="promptDetails" class="production-section">
+    <div class="production-section-head"><h4>Prompt Details</h4><button id="buildBtn" type="button">Refresh Prompt</button></div>
+    <div id="promptSuppressMount"></div>
+    <pre id="out"></pre>
+    <div id="manualInputs"></div>
+  </section>
+  <section id="productionExports" class="production-section">
+    <h4>Exports &amp; Utilities</h4>
+    <div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
+    <div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
+    <div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
+    <div id="exportStatus" class="status"></div>
+    <div id="issuePackagingMount"></div>
+    <div id="productionUtilities"></div>
+  </section>
+</div>
+<div id="referenceKeeperMode" hidden></div>
 </div>
 <script>
 const SHOW_MANIFEST="data/shows.json",DATA_FILES=["blocking.json","characters.json","dialogue.json","direction.json","factions.json","lighting.json","mood.json","negatives.json","regions.json","settings.json"];
@@ -60,7 +121,7 @@ function renderMarkdown(model){const lines=["# "+model.title,"","> Exported from
 function renderText(model){const lines=[model.title,"=".repeat(model.title.length),"","Exported from RexPrompt",`Series: ${model.series.name}`,`Scope: ${model.scope==="series"?"Entire series":"Entire issue — "+model.issue.issueLabel}`,`Exported: ${model.stamp.local}`,`Exported ISO: ${model.stamp.iso}`,`Recipes: ${model.recipeCount}`,"","TABLE OF CONTENTS","-----------------"];let n=1;for(const bundle of model.issues){lines.push(`${bundle.issue.issueLabel}`);for(const recipe of bundle.recipes)lines.push(`  ${n++}. ${recipe.id}`)}for(const bundle of model.issues){lines.push("","# "+bundle.issue.issueLabel,"-".repeat(bundle.issue.issueLabel.length+2));for(const recipe of bundle.recipes)lines.push("",`## ${recipe.id}`,recipe.text)}return lines.join("\n")}
 function renderPrintHtml(model){const toc=model.issues.map(bundle=>{const issueAnchor="issue-"+anchorPart(bundle.issue.issueId||bundle.issue.issueLabel),recipes=bundle.recipes.map(r=>`<li><a href="#${r.anchor}">${escapeHtml(r.id)}</a></li>`).join("");return `<li><a href="#${issueAnchor}">${escapeHtml(bundle.issue.issueLabel)}</a><ul>${recipes}</ul></li>`}).join("");const body=model.issues.map(bundle=>{const issueAnchor="issue-"+anchorPart(bundle.issue.issueId||bundle.issue.issueLabel),recipes=bundle.recipes.map(r=>`<section class="recipe"><h3 id="${r.anchor}">${escapeHtml(r.id)}</h3><pre>${escapeHtml(r.text)}</pre></section>`).join("");return `<section class="issue"><h2 id="${issueAnchor}">${escapeHtml(bundle.issue.issueLabel)}</h2>${recipes}</section>`}).join("");return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(model.title)}</title><style>body{font-family:Arial,sans-serif;margin:0.55in;color:#111;font-size:10pt;line-height:1.35}h1{font-size:20pt;margin-bottom:6px}h2{font-size:15pt;margin-top:28px}h3{font-size:12pt;margin-top:22px}.meta{margin:0 0 24px;padding:10px 12px;background:#f2f2f2}.toc{margin-bottom:28px}.toc ul{margin-top:4px}.toc a{color:#0645ad;text-decoration:none}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:9pt/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f7f7f7;border:1px solid #ddd;padding:10px}.recipe{break-before:page}.issue>.recipe:first-of-type{break-before:auto}@media print{a{color:#000;text-decoration:none}.recipe{break-before:page}nav.toc a{text-decoration:underline}}</style></head><body><h1>${escapeHtml(model.title)}</h1><div class="meta"><strong>Exported from RexPrompt</strong><br>Series: ${escapeHtml(model.series.name)}<br>Scope: ${escapeHtml(model.scope==="series"?"Entire series":"Entire issue — "+model.issue.issueLabel)}<br>Exported: ${escapeHtml(model.stamp.local)}<br>Exported ISO: ${escapeHtml(model.stamp.iso)}<br>Recipes: ${model.recipeCount}</div><nav class="toc"><h2>Table of Contents</h2><ul>${toc}</ul></nav>${body}<script>window.addEventListener("load",()=>setTimeout(()=>window.print(),150));<\/script></body></html>`}
 function downloadText(filename,text,mime){const blob=new Blob([text],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-async function init(){const showSel=document.getElementById("showSel"),issueSel=document.getElementById("issueSel"),sceneSel=document.getElementById("sceneSel"),buildBtn=document.getElementById("buildBtn"),copyBtn=document.getElementById("copyBtn"),commitBtn=document.getElementById("commitBtn"),exportFormat=document.getElementById("exportFormat"),exportIssueBtn=document.getElementById("exportIssueBtn"),exportSeriesBtn=document.getElementById("exportSeriesBtn"),themeToggle=document.getElementById("themeToggle"),outEl=document.getElementById("out"),statusEl=document.getElementById("status"),exportStatus=document.getElementById("exportStatus");function setTheme(theme){const dark=theme==="dark";document.documentElement.dataset.theme=dark?"dark":"light";localStorage.setItem("rexprompt.theme",dark?"dark":"light");themeToggle.textContent=dark?"Light mode":"Dark mode";themeToggle.setAttribute("aria-pressed",String(dark))}setTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");themeToggle.onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");const shows=await loadJson(SHOW_MANIFEST);if(!Array.isArray(shows)||!shows.length)throw new Error("No series are defined in "+SHOW_MANIFEST);const issues=shows.flatMap(expandIssues),series=[...new Map(issues.map(issue=>[issue.seriesId,{id:issue.seriesId,name:issue.seriesName}])).values()];series.forEach(item=>{const o=document.createElement("option");o.value=item.id;o.textContent=item.name;showSel.appendChild(o)});let store={},scenes=[],sceneOrder=[];function currentScene(){const i=Number(sceneSel.value);return Number.isFinite(i)?scenes[i]:null}function sceneIdentity(s,i){return s?.id||String(i+1)}function sceneLabel(i){const s=scenes[i],id=sceneIdentity(s,i);if(!s?.summary)return id;const t=s.summary.trim(),m=90;if(t.length<=m)return id+" - "+t;const cut=t.lastIndexOf(" ",m);return id+" - "+t.slice(0,cut===-1?m:cut)}function rebuild(selected=null){sceneSel.innerHTML="";sceneOrder.forEach(i=>{const o=document.createElement("option");o.value=String(i);o.textContent=sceneLabel(i);sceneSel.appendChild(o)});if(selected!==null&&sceneOrder.includes(selected))sceneSel.value=String(selected)}
+async function init(){const showSel=document.getElementById("showSel"),issueSel=document.getElementById("issueSel"),sceneSel=document.getElementById("sceneSel"),buildBtn=document.getElementById("buildBtn"),copyBtn=document.getElementById("copyBtn"),commitBtn=document.getElementById("commitBtn"),exportFormat=document.getElementById("exportFormat"),exportIssueBtn=document.getElementById("exportIssueBtn"),exportSeriesBtn=document.getElementById("exportSeriesBtn"),themeToggle=document.getElementById("themeToggle"),outEl=document.getElementById("out"),statusEl=document.getElementById("status"),exportStatus=document.getElementById("exportStatus");function setTheme(theme){const dark=theme==="dark";document.documentElement.dataset.theme=dark?"dark":"light";localStorage.setItem("rexprompt.theme",dark?"dark":"light");themeToggle.textContent=dark?"Light mode":"Dark mode";themeToggle.setAttribute("aria-pressed",String(dark))}setTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");themeToggle.onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");const shows=await loadJson(SHOW_MANIFEST);if(!Array.isArray(shows)||!shows.length)throw new Error("No series are defined in "+SHOW_MANIFEST);const issues=shows.flatMap(expandIssues),series=[...new Map(issues.map(issue=>[issue.seriesId,{id:issue.seriesId,name:issue.seriesName}])).values()].sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base',numeric:true}));series.forEach(item=>{const o=document.createElement("option");o.value=item.id;o.textContent=item.name;showSel.appendChild(o)});let store={},scenes=[],sceneOrder=[];function currentScene(){const i=Number(sceneSel.value);return Number.isFinite(i)?scenes[i]:null}function sceneIdentity(s,i){return s?.id||String(i+1)}function sceneLabel(i){const s=scenes[i],id=sceneIdentity(s,i);if(!s?.summary)return id;const t=s.summary.trim(),m=90;if(t.length<=m)return id+" - "+t;const cut=t.lastIndexOf(" ",m);return id+" - "+t.slice(0,cut===-1?m:cut)}function rebuild(selected=null){sceneSel.innerHTML="";sceneOrder.forEach(i=>{const o=document.createElement("option");o.value=String(i);o.textContent=sceneLabel(i);const s=scenes[i]||{};o.dataset.assetKind=(/cover/i.test(String(s.unit||""))||/cover/i.test(String(s.pageKind||""))||/cover/i.test(String(s.id||""))?"cover":"interior");sceneSel.appendChild(o)});if(selected!==null&&sceneOrder.includes(selected))sceneSel.value=String(selected)}
 function build(){const s=currentScene();if(!s){outEl.textContent="No scene selected.";return}outEl.textContent=assembleScene(s,store,Number(sceneSel.value),{includeManual:true})}
 async function selectIssue(id){const issue=issues.find(item=>item.issueId===id)||issues.find(item=>item.seriesId===showSel.value);if(!issue)return;issueSel.value=issue.issueId;localStorage.setItem("rexprompt.selectedIssue",issue.issueId);statusEl.textContent="Loading "+issue.seriesName+" — "+issue.issueLabel+"…";outEl.textContent="";sceneSel.disabled=buildBtn.disabled=commitBtn.disabled=true;try{store=await loadShow(issue);scenes=store.__scenes||[];sceneOrder=scenes.map((_,i)=>i);rebuild();const unit=(store.__show?.unitLabel||"scene").toLowerCase();statusEl.textContent=issue.seriesName+" — "+issue.issueLabel+" — "+scenes.length+" "+unit+(scenes.length===1?"":"s");sceneSel.disabled=buildBtn.disabled=commitBtn.disabled=false;if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}else outEl.textContent="This issue contains no scenes."}catch(err){statusEl.textContent="Unable to load issue.";outEl.textContent=err instanceof Error?err.message:String(err)}}
 async function selectSeries(id,preferredIssue=null){const available=issues.filter(item=>item.seriesId===id);if(!available.length)return;showSel.value=id;localStorage.setItem("rexprompt.selectedSeries",id);issueSel.innerHTML="";available.forEach(item=>{const o=document.createElement("option");o.value=item.issueId;o.textContent=item.issueLabel;issueSel.appendChild(o)});const selected=available.some(item=>item.issueId===preferredIssue)?preferredIssue:available[0].issueId;await selectIssue(selected)}
@@ -69,6 +130,8 @@ async function exportDocument(scope){const format=exportFormat.value,currentSeri
 buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void selectIssue(issueSel.value);showSel.onchange=()=>void selectSeries(showSel.value);commitBtn.onclick=()=>{const i=Number(sceneSel.value),p=sceneOrder.indexOf(i);if(p===-1)return;sceneOrder=sceneOrder.slice(p+1).concat(sceneOrder.slice(0,p+1));rebuild();if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}};copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(outEl.textContent||"")}catch{}};exportIssueBtn.onclick=()=>void exportDocument("issue");exportSeriesBtn.onclick=()=>void exportDocument("series");const savedSeries=localStorage.getItem("rexprompt.selectedSeries"),legacyShow=localStorage.getItem("rexprompt.selectedShow"),savedIssue=localStorage.getItem("rexprompt.selectedIssue"),legacyIssue=issues.find(item=>item.id===legacyShow),initial=series.some(item=>item.id===savedSeries)?savedSeries:(legacyIssue?.seriesId||series[0].id);await selectSeries(initial,savedIssue||legacyIssue?.issueId)}
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
-<script src="visuals.js"></script>
+<script src="visuals.js?v=20261011-cover-standard-1"></script>
+<script src="reference-keeper.js?v=20261009-writefix-1"></script>
+<script src="issue-publishing.js?v=20261011-order-1"></script>
 </body>
 </html>

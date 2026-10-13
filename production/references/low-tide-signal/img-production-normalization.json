@@ -59,15 +59,24 @@
       "recipeIds": "LTS_CNN_EDITOR_OPEN for Chapters 1-7; LTS_CNN_EDITOR_NEXT for Chapters 1-6; LTS_C07_EDITOR_CLOSE for the final close.",
       "visualRule": "Do not depict identifiable core-character faces on editorial framing pages. Use established Low Tide environments, objects, practical light, and negative space for exact integrated lettering.",
       "storyBoundary": "Editorial framing is intentional issue content but is not a story-page-layout template. Normal LTS_CNN_PNN pages retain the existing sequential story-page rules."
+    },
+    "coverTradeDress": {
+      "currentState": "The published Low Tide Signal Issue 1 preview cover is now explicit cover-only pixel authority for masthead/logotype, title hierarchy, chapter/issue label behavior, recurring brand marks and cover-line trade dress.",
+      "reference": "starsplitterrecords/StarSplitterVisions@main:sites/visions/public/images/covers/low-tide-signal-issue-01-cover.png",
+      "pixelReadRequired": true,
+      "rule": "Use the actual pixels before generating any Low Tide Signal cover. Do not use preview-cover figures as character-identity authority, do not copy its issue-specific illustration, and never use the cover as interior page-language authority.",
+      "recipes": "Dedicated LTS_C01_COVER through LTS_C07_COVER recipes live in data/shows/low-tide-signal/covers.json and are registered as separate chef-facing cover production units."
     }
   },
   "knownScopeLocks": [
     {
       "path": "/images/covers/low-tide-signal-issue-01-cover.png",
-      "scope": "published preview/cover artifact only",
+      "scope": "published preview cover; cover-trade-dress authority only",
       "characterIdentityAuthority": false,
       "storyPageLayoutAuthority": false,
-      "interiorWorldDesignAuthority": false
+      "interiorWorldDesignAuthority": false,
+      "coverTradeDressAuthority": true,
+      "issueSpecificCoverCompositionAuthority": false
     }
   ],
   "untrustedProductionSources": [
@@ -87,7 +96,8 @@
     "Resolve approved recurring-character identity references before character-bearing sequential generation; do not invent a different face model on each page.",
     "Build a small working Visual Reference Set from approved character/environment references plus approved newer production state.",
     "Do not include preview-cover figures, cover trade dress, promotional, labeled, rejected, superseded, or intake assets as story-page-language references.",
-    "Derive the production frontier; never resume from a remembered cursor."
+    "Derive the production frontier; never resume from a remembered cursor.",
+    "For cover production, also read production/references/low-tide-signal/cover-production-normalization.json and pixel-read the exact published Issue 1 cover before generation; its authority is cover trade dress only."
   ],
   "perPageGate": [
     "Retrieve or assemble the exact current RexPrompt page recipe.",
@@ -127,7 +137,8 @@
     "gates": [
       "Editorial framing pages may be produced from environment authority because they contain no identifiable core-character faces.",
       "Approve durable visual identity references for the six recurring core characters before the first character-bearing story page."
-    ]
+    ],
+    "coverState": "Seven production-ready LTS_CNN_COVER recipes are registered. They can be assembled without RexPrompt code changes; identifiable recurring characters still require approved identity pixels before generation."
   },
   "storyPageOutputRule": "A normal scripted Low Tide Signal story page is a finished full-color portrait prestige-indie comic page in the grounded coastal science-fiction language of the current package. Do not add a series title, issue/chapter header, page label, character name/handle label, dossier frame, infographic header, credits, promotional callout, cover trade dress, or other non-scripted text. Only text required by the assembled recipe belongs on the story page. Explicit LTS_CNN_EDITOR_* recipes are separate art-directed editorial framing pages and may contain their scripted FROM THE EDITOR, NEXT, title, and editor-copy display text."
 }

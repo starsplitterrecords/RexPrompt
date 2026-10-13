@@ -1,6 +1,7 @@
 name: Validate Vikings 2026
 on:
   push:
+    branches: [main]
     paths:
       - 'data/shows/vikings-2026-s1/**'
       - 'data/shows.json'

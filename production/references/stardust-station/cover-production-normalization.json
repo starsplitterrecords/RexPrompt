@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "stardust-station",
+  "status": "active",
+  "purpose": "Cover-production contract for Stardust Station. The released Issue 1 cover is the approved masthead/trade-dress pixel reference; Issues 2-10 use that exact approved image only for recurring cover-brand continuity while their own assembled RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/stardust-station/covers.json",
+  "foundingCover": {
+    "recipeId": "SDS_S1E01_COVER",
+    "issue": 1,
+    "state": "released-approved-trade-dress-reference",
+    "assetPath": "production/references/stardust-station/assets/covers/issue-01-cover-trade-dress.jpg",
+    "sourceRepo": "starsplitterrecords/StarSplitterVisions",
+    "sourcePath": "sites/visions/public/images/covers/stardust-station-issue-01.jpg",
+    "assetSha": "6f855fb23ccf484200c83e9daa6763ee0d86db9b"
+  },
+  "scope": {
+    "controls": [
+      "series masthead identity and two-line title architecture",
+      "masthead placement and scale",
+      "Star Splitter Visions publisher bug treatment",
+      "issue-number placement and hierarchy",
+      "issue-title treatment when a canonical issue title exists",
+      "recurring cover margins and trade-dress geometry",
+      "overall Stardust Station cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "later issue-specific scene composition",
+      "later cover cast count or staging",
+      "story imagery",
+      "issue-specific accent palette",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [
+      "SDS_S1E02_COVER",
+      "SDS_S1E03_COVER",
+      "SDS_S1E04_COVER",
+      "SDS_S1E05_COVER",
+      "SDS_S1E06_COVER",
+      "SDS_S1E07_COVER",
+      "SDS_S1E08_COVER",
+      "SDS_S1E09_COVER",
+      "SDS_S1E10_COVER"
+    ],
+    "requiredAsset": "production/references/stardust-station/assets/covers/issue-01-cover-trade-dress.jpg",
+    "rule": "Before generating any later Stardust Station cover, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the approved Issue 1 cover pixels cannot be visually inspected, stop before later-cover generation rather than reconstructing trade dress from text."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, focal hierarchy, spoiler ceiling and exact required cover text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "worldAuthority": {
+    "rule": "Released Stardust Station interior pages plus the active visual-reference-pack control established character identity, station design, costume/species appearance and interior visual language. Approved current-production references may establish newer story state when applicable."
+  },
+  "coverRules": [
+    "Character personality and relationship chemistry are the default primary selling engine for Stardust Station covers.",
+    "The issue's procedural problem is normally a catalyst or prop, not automatically the visual protagonist.",
+    "Choose issue-specific pairings/groupings that reveal alliances, irritations, care, evasion, interoffice drama or hijinks.",
+    "Show coworkers behaving like themselves with one another; avoid generic posing even on ensemble covers.",
+    "One clear social/compositional idea per issue; no recap collage.",
+    "A character grouping is welcome when it is meaningfully staged. Do not mistake 'avoid generic cast lineup' for 'avoid characters.'",
+    "Preserve the seriousness characters bring to trivial problems; never make the crew look stupid for caring about their work.",
+    "Keep Stardust bright, polished, warm and lived-in. The station is a social habitat, not generic sci-fi scenery.",
+    "Corporate systems should look credible and often attractive enough to create real choices; do not encode villainy through sinister visual shorthand.",
+    "The cover must remain legible and compelling at thumbnail size through strong silhouettes, readable body language and clean masthead space.",
+    "Do not reveal the issue's decisive solution, late reversal or final image.",
+    "Issue 2 and Issue 3 currently have no canonical subtitle; do not invent one."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "SDS_S1E01_COVER",
+      "title": "Issue 1 Cover — Mandatory Proximity",
+      "status": "released-canon"
+    },
+    {
+      "issue": 2,
+      "recipeId": "SDS_S1E02_COVER",
+      "title": "Issue 2 Cover",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "SDS_S1E03_COVER",
+      "title": "Issue 3 Cover",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "SDS_S1E04_COVER",
+      "title": "Issue 4 Cover — Temporary Material",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "SDS_S1E05_COVER",
+      "title": "Issue 5 Cover — Resource Efficiency Review",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "SDS_S1E06_COVER",
+      "title": "Issue 6 Cover — Wellness Week",
+      "status": "production-ready"
+    },
+    {
+      "issue": 7,
+      "recipeId": "SDS_S1E07_COVER",
+      "title": "Issue 7 Cover — Bring Your Feelings to Work Day",
+      "status": "production-ready"
+    },
+    {
+      "issue": 8,
+      "recipeId": "SDS_S1E08_COVER",
+      "title": "Issue 8 Cover — The Corporate Visit",
+      "status": "production-ready"
+    },
+    {
+      "issue": 9,
+      "recipeId": "SDS_S1E09_COVER",
+      "title": "Issue 9 Cover — Output Target",
+      "status": "production-ready"
+    },
+    {
+      "issue": 10,
+      "recipeId": "SDS_S1E10_COVER",
+      "title": "Issue 10 Cover — The Station Stays Open",
+      "status": "production-ready"
+    }
+  ],
+  "seriesCoverDoctrine": {
+    "primaryPurpose": "Sell Stardust Station through character personality, coworker chemistry and relationship dynamics. The procedural issue problem is usually intentionally minor; use it as the catalyst that reveals who these people are together, not automatically as the cover's dominant subject.",
+    "coreTruth": "Stardust Station is a character story about competent, idiosyncratic people taking dumb workplace problems seriously because this is where they are, these are the people they are with, and they cannot stop being themselves.",
+    "preferredCoverEngines": [
+      "personality contrast inside a shared task",
+      "pairing or grouping with a distinct alliance/conflict/hijink",
+      "body language that reveals established coworker history",
+      "one trivial workplace situation that exposes different instincts",
+      "warm lived-in station habitat around the characters",
+      "late-season ensemble behavior that shows accumulated relationship history"
+    ],
+    "problemRole": "The issue problem may provide a prop, room, route, form, metric or interruption. It does not need to be visually spectacular or even primary. If the cover makes the reader want to spend time with the featured coworkers, it is doing its job.",
+    "characterRules": [
+      "Choose the pairing/grouping that best expresses the issue's social energy, not automatically the plot owner.",
+      "Show characters doing something specific to their temperament; avoid interchangeable poses.",
+      "Use eye-lines, posture, distance, handoffs, interruptions and shared work to make relationships visible.",
+      "Allow earnestness and absurdity to coexist. The problem can be dumb while the characters' values and reactions remain sincere.",
+      "Do not flatten Astra into management, Zib into comic relief, Mira into reckless science, Jax into laziness, Kreeb into bureaucracy, Brick into only a joke, or any coworker into a single function.",
+      "An ensemble is allowed when the ensemble relationship itself is the selling point; Issue 1 and the season finale are deliberate bookends."
+    ]
+  }
+}

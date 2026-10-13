@@ -1,0 +1,30 @@
+{
+  "seriesId": "rex-fleet-academy-core-worlds",
+  "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
+  "currentState": "Issue 1 compiled; six-title lecturePlan is provisional curriculum, not a fixed season length.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
+  "sourceFamilies": [
+    {
+      "name": "Traveler's Atlas / travelers-atlas material",
+      "status": "source family named by current development direction; exact canonical corpus still needs retrieval/reconciliation",
+      "use": "Places, routes, civic texture, travel assumptions, local observations, practical advice."
+    },
+    {
+      "name": "World Codex & Shattering History extraction",
+      "status": "current development source",
+      "use": "Core geography, institutional continuity, regional divergence, reconnection."
+    },
+    {
+      "name": "Current Rex Fleet production canon",
+      "status": "era authority",
+      "use": "Meridian, Bastion Spire, routes, markets, institutions, current political geography."
+    }
+  ],
+  "teachingMethod": "Treat the Academy as comparative field study rather than map recitation. Use Atlas passages as traveler/narrator captions while cadets encounter the actual place, logistics, civic systems, and local people; let reality complicate the guidebook.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rex-fleet-academy-core-worlds/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
+}

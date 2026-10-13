@@ -1,59 +1,18 @@
 [
   {
     "id": "SHAT_I04_P01",
-    "summary": "Opening editor splash frames the corridor map not as a diagram but as living infrastructure on which the High Era's entire civilization depends.",
-    "settingText": "Full-page civilization-scale corridor vista in active distortion: ships, ports, inhabited worlds, and logistics all remain visible while luminous route geometry begins to fold, slip, and disagree with itself. The spectacle should reveal how much daily life depends on movement without previewing the issue's final state.",
+    "summary": "Corridor geometry begins to distort across active civilian and freight traffic, turning network failure into a civilization-scale emergency.",
+    "settingText": "Full-page civilization-scale corridor vista in active distortion: ships, ports, inhabited worlds, and logistics remain visible while luminous route geometry folds, slips, and disagrees with itself. Daily life is still moving inside the failure.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "FROM THE EDITOR"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "For most of history, a map is a picture of where the world is."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "In the High Era, the map is part of what makes the world possible."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Routes carry heat. Medicine. Food. Families. Instructions. Trust."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "If the map changes, people adapt."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "If the roads change, people reroute."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "If the geometry itself stops keeping its promises—"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "there is no box for that on the emergency form."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Welcome to the day the old world discovers how much of itself was moving."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "—The Editor"
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   },
   {
@@ -94,10 +53,6 @@
       {
         "handle": "@starsplit.alan.kessler",
         "text": "That's not a shadow."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "I was happier before you said that."
       }
     ],
     "sceneId": "SCN_SHAT_I04_S01"
@@ -134,10 +89,6 @@
       {
         "handle": "@starsplit.capt",
         "text": "We're already drifting."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
-        "text": "I know."
       },
       {
         "handle": "@starsplit.capt",
@@ -273,10 +224,6 @@
         "text": "Forget the ships for a minute."
       },
       {
-        "handle": "@starsplit.pstf",
-        "text": "Meaning?"
-      },
-      {
         "handle": "@starsplit.ava.seltos",
         "text": "Keep families together. Clear the doors. One waiting area."
       },
@@ -315,23 +262,11 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.owen.hale",
-        "text": "Lockout one through six."
-      },
-      {
-        "handle": "@starsplit.owen.hale",
-        "text": "...No return."
+        "text": "Three lockout sends. No return."
       },
       {
         "handle": "@starsplit.lochran",
-        "text": "Send it again."
-      },
-      {
-        "handle": "@starsplit.owen.hale",
-        "text": "I sent it three times."
-      },
-      {
-        "handle": "@starsplit.lochran",
-        "text": "Then use field authority."
+        "text": "Use field authority."
       },
       {
         "handle": "@starsplit.owen.hale",
@@ -526,10 +461,6 @@
         "text": "Call them direct."
       },
       {
-        "handle": "@starsplit.owen.hale",
-        "text": "Trying."
-      },
-      {
         "handle": "@starsplit.capt",
         "text": "One just crossed the old stop line."
       }
@@ -578,10 +509,6 @@
         "text": "The only thing in there that isn't moving."
       },
       {
-        "handle": "@starsplit.capt",
-        "text": "That's a terrible sentence."
-      },
-      {
         "handle": "@starsplit.alan.kessler",
         "text": "Fly it anyway."
       }
@@ -612,7 +539,7 @@
     "dialogueInline": [
       {
         "handle": "@starsplit.ava.seltos",
-        "text": "Sector Nine."
+        "text": "Check Sector Nine."
       },
       {
         "handle": "@starsplit.tctrl",
@@ -757,19 +684,7 @@
       },
       {
         "handle": "@starsplit.ruben.markham",
-        "text": "Stop calling."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "That's the plan?"
-      },
-      {
-        "handle": "@starsplit.ruben.markham",
-        "text": "The plan is this brace, that cutoff, and the six people who actually showed up."
-      },
-      {
-        "handle": "@starsplit.otech",
-        "text": "Finally. Something I can work with."
+        "text": "Stop calling. The plan is this brace, that cutoff, and the six people who actually showed up."
       }
     ],
     "sceneId": "SCN_SHAT_I04_S06"
@@ -962,7 +877,7 @@
       },
       {
         "handle": "@starsplit.capt",
-        "text": "I hate that answer."
+        "text": "Then we use it now."
       },
       {
         "handle": "@starsplit.alan.kessler",
@@ -1002,24 +917,20 @@
         "text": "Pocket boundary is moving."
       },
       {
+        "handle": "@starsplit.capt",
+        "text": "Four survivors are still outside it."
+      },
+      {
         "handle": "@starsplit.alan.kessler",
-        "text": "I see it."
+        "text": "The boundary closes before one pass can reach all four."
       },
       {
         "handle": "@starsplit.capt",
-        "text": "We have four survivors outside the line."
+        "text": "I'm not leaving one."
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Get three."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "There are four."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Then get four faster."
+        "text": "Break formation. Make the pickup fast."
       }
     ],
     "sceneId": "SCN_SHAT_I04_S08"
@@ -1054,23 +965,7 @@
       },
       {
         "handle": "@starsplit.alan.kessler",
-        "text": "Break formation."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "You first."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "I'm not in a ship."
-      },
-      {
-        "handle": "@starsplit.capt",
-        "text": "Right. Terrible day."
-      },
-      {
-        "handle": "@starsplit.alan.kessler",
-        "text": "Move."
+        "text": "Break formation and clear the pocket."
       }
     ],
     "sceneId": "SCN_SHAT_I04_S08"
@@ -1101,10 +996,6 @@
       },
       {
         "handle": "@starsplit.liora.virelia",
-        "text": "...No."
-      },
-      {
-        "handle": "@starsplit.liora.virelia",
         "text": "That's it. The network's gone."
       }
     ],
@@ -1112,59 +1003,18 @@
   },
   {
     "id": "SHAT_I04_P24",
-    "summary": "Closing teaser pivots from network collapse to the human invention of replacement practices, authority, logistics, and trust.",
-    "settingText": "Full-page post-collapse nightscape made of islands of human light rather than one functioning network: a damaged habitat being braced by hand, a rough convoy route board built from witness reports, supplies moving between local groups, and a newly painted safety mark whose meaning is not yet standardized. Do not label later factions or show mature post-Shattering uniforms.",
+    "summary": "Post-collapse recovery takes shape through local repair, witnessed routes, supply movement, and accountable safety practices.",
+    "settingText": "Full-page post-collapse nightscape made of islands of human light: a damaged habitat braced by hand, a rough route board built from witness reports, supplies moving between local groups, and a newly painted safety mark whose use is still being negotiated.",
     "panelPlan": [
-      "Single full-page editorial splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
-      "Reserve a deliberate area of clean negative space for the complete editorial copy. The art and typography should feel designed together, like premium comic front/back matter rather than text placed over a random image."
+      "Single full-page story-world splash. Use one cinematic full-bleed illustration rather than conventional story panels.",
+      "Build the beat entirely through environment, infrastructure, equipment, and human activity. No reserved text area and no readable copy."
     ],
-    "dialogueInline": [
-      {
-        "speaker": "CAPTION",
-        "text": "NEXT ISSUE"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The network is gone."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "The people are not."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "They still need heat. Water. Medicine. Repairs. Roads. Someone to trust."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "No Council can issue those things back into existence."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "So the next age begins the way most ages actually begin:"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "with somebody picking up a tool,"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "somebody taking responsibility,"
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "and somebody else deciding whether to believe them."
-      },
-      {
-        "speaker": "CAPTION",
-        "text": "Next issue: what replaces a civilization?"
-      }
-    ],
+    "dialogueInline": [],
     "directionInline": [
-      "Treat all CAPTION entries as exact integrated editorial typography, not speech balloons and not standard comic narration boxes. Preserve wording, punctuation, paragraph order, and headings exactly.",
-      "Prioritize legibility. Do not allow figures, effects, or background detail to interfere with the text column.",
-      "No environmental lettering, labels, signage, logos, or incidental readable text beyond the specified editorial copy.",
-      "This page is editorial framing, not an additional story scene. Do not invent dialogue, plot events, or spoilers beyond the supplied copy and visual direction."
+      "No captions or speech balloons.",
+      "No environmental lettering, labels, signage, logos, or incidental readable text.",
+      "Preserve the established historical period, faction precursor design, technology state, and accumulated damage for this point in continuity.",
+      "Use the visible situation itself to carry the beat."
     ]
   }
 ]

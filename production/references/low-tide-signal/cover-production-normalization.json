@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "low-tide-signal",
+  "status": "active-cover-production-reference",
+  "purpose": "Durable chef-facing cover authority for Low Tide Signal. Defines the cover-only trade-dress pixel reference, reference scope, and generation gates without changing the RexPrompt assembler.",
+  "authority": {
+    "coverRecipe": "The exact assembled LTS_CNN_COVER RexPrompt recipe controls the issue-specific selling image: focal subject, environment, character use, composition, palette emphasis, thumbnail read, negative space, emotional promise, and spoiler ceiling.",
+    "tradeDress": "The published Low Tide Signal Issue 1 preview cover controls the recurring cover-line masthead/logotype, title hierarchy, chapter/issue label behavior, recurring brand marks, and trade-dress rhythm at cover scope only.",
+    "characterIdentity": "Approved recurring-character visual references control identifiable faces, bodies, hair, proportions, and stable wardrobe. The published preview-cover figures are never character-identity authority.",
+    "interiorProduction": "Cover recipes and the cover reference never control interior page composition, page language, character identity, story geography, or sequential continuity."
+  },
+  "tradeDressAnchor": {
+    "id": "low-tide-signal-issue-01-published-preview-cover",
+    "repository": "starsplitterrecords/StarSplitterVisions",
+    "branch": "main",
+    "repositoryPath": "sites/visions/public/images/covers/low-tide-signal-issue-01-cover.png",
+    "runtimePath": "/images/covers/low-tide-signal-issue-01-cover.png",
+    "sourceStatus": "published-preview-cover",
+    "pixelReadRequired": true,
+    "scope": [
+      "cover-masthead",
+      "cover-logotype",
+      "cover-title-hierarchy",
+      "cover-chapter-label-system",
+      "cover-brand-marks",
+      "cover-trade-dress"
+    ],
+    "use": "Retrieve and inspect the actual image pixels before generating any Low Tide Signal cover. Carry forward the recurring trade-dress system while allowing every chapter recipe to use a different selling composition.",
+    "exclusions": [
+      "character-identity",
+      "interior-page-layout",
+      "story-page-lettering",
+      "interior-world-design",
+      "issue-specific-cover-composition"
+    ]
+  },
+  "coverRecipes": {
+    "file": "data/shows/low-tide-signal/covers.json",
+    "ids": [
+      "LTS_C01_COVER",
+      "LTS_C02_COVER",
+      "LTS_C03_COVER",
+      "LTS_C04_COVER",
+      "LTS_C05_COVER",
+      "LTS_C06_COVER",
+      "LTS_C07_COVER"
+    ],
+    "rule": "Important cover instructions must remain in assembler-visible fields. Summary states the selling promise; setting/region/characters supply reusable production ingredients; panelPlan carries composition, focal hierarchy, thumbnail logic, palette emphasis, negative-space plan and spoiler ceiling; dialogueInline carries exact required cover text; directionInline carries cover-specific hard rules and pixel-reference scope."
+  },
+  "coverLineDoctrine": [
+    "Every cover sells one dominant idea rather than summarizing the chapter.",
+    "A Low Tide Signal cover should feel like a piece of grounded coastal infrastructure the reader wants to enter, with human drama expressed through scale, practical light, weather, objects, posture and environment.",
+    "The sequence may vary dramatically in composition—threshold, architecture, social roof, still life, spectacle, aftermath, spare dawn—while the Issue 1 anchor keeps the line visibly related.",
+    "Covers must remain legible at thumbnail size through a simple dominant silhouette/shape system and disciplined value hierarchy.",
+    "Spoiler-safe does not mean generic: advertise the loaded pressure, contradiction or desire, but do not visualize the issue's resolution, major reversal or climactic reveal.",
+    "No recap collage, generic ensemble lineup, superhero posing, cyberpunk neon, supernatural imagery, lanterns, fake action spectacle, invented blurbs, or decorative promotional clutter."
+  ],
+  "knownScopeLocks": [
+    {
+      "path": "sites/visions/public/images/covers/low-tide-signal-issue-01-cover.png",
+      "repository": "starsplitterrecords/StarSplitterVisions",
+      "scope": "cover-trade-dress-only",
+      "coverTradeDressAuthority": true,
+      "characterIdentityAuthority": false,
+      "storyPageLayoutAuthority": false,
+      "interiorWorldDesignAuthority": false,
+      "issueSpecificCompositionAuthority": false
+    }
+  ],
+  "sessionStartGate": [
+    "Resolve the requested Low Tide Signal cover production unit and assemble its exact LTS_CNN_COVER recipe.",
+    "Retrieve the published Issue 1 cover as actual pixels from the canonical StarSplitterVisions repository and inspect it before generation.",
+    "Use the Issue 1 cover only for recurring masthead/logotype/title/chapter-label/trade-dress continuity.",
+    "Identify any recurring core character that is visually identifiable in the active cover recipe and retrieve approved character-identity pixels before generation.",
+    "Select relevant approved environment/world references when they exist; otherwise use current Low Tide production shelves for environment design.",
+    "Use the active cover recipe—not the Issue 1 reference—for the issue-specific selling composition and spoiler ceiling.",
+    "Generate only after trade dress, character identity when required, and environment authority are resolved."
+  ],
+  "postGenerationGate": [
+    "Thumbnail test: the dominant cover idea remains clear at small size.",
+    "Trade-dress test: masthead/logotype/title hierarchy visibly belongs to the same Low Tide Signal line without copying the Issue 1 illustration.",
+    "Recipe test: composition, cast, environment, palette emphasis and spoiler ceiling match the assembled cover recipe.",
+    "Continuity test: identifiable recurring characters use approved identity references; preview-cover figures are not substituted.",
+    "Lettering test: LOW TIDE SIGNAL and the chapter label/title are exact, legible and professionally integrated; no unscripted promotional text appears.",
+    "Shelf test: the cover is clearly distinct from the other chapter covers while still belonging to the same series."
+  ],
+  "anchorPromotionPolicy": {
+    "current": "Use the published Issue 1 preview cover as cover-only trade-dress anchor.",
+    "future": "If LTS_C01_COVER is generated, explicitly approved, and designated as the production cover-line authority, update this file to point to that approved image as the stronger anchor. Do not silently promote a merely generated draft.",
+    "rule": "Approval changes authority; recency alone does not."
+  }
+}

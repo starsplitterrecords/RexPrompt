@@ -13,7 +13,7 @@ const CONFIG={
   acceptedTypes:new Set(['image/jpeg','image/png','image/webp'])
 };
 
-const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
+const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
 
 function injectStyles(){
   const style=document.createElement('style');
@@ -31,10 +31,11 @@ function injectStyles(){
   .visual-image-wrap img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain;background:var(--surface)}
   .visual-watermark{position:absolute;left:10px;bottom:10px;padding:5px 8px;border-radius:4px;background:rgba(0,0,0,.72);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.08em;pointer-events:none}
   .visual-meta{margin-top:8px;color:var(--muted);font-size:.8rem;overflow-wrap:anywhere}
+  .visual-master-status{margin-top:6px;font-size:.8rem;font-weight:800;letter-spacing:.02em}.visual-master-status.pass{color:#1f8f4d}.visual-master-status.fail{color:#b23a3a}.visual-master-status.checking{color:var(--muted);font-weight:650}
   .visual-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.visual-actions button{font-size:.88rem;padding:9px 12px;margin:0}
   .visual-actions .secondary{background:var(--surface-soft)}
   .visual-upload-status{margin-top:8px;font-size:.82rem;color:var(--muted)}
-  .visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
+  .visual-remember{display:flex!important;align-items:center;gap:7px;font-size:.83rem;color:var(--fg)!important;margin:8px 0}.visual-remember input{margin:0;width:auto;flex:none}.visual-remember-hint{font-size:.75rem;color:var(--muted);line-height:1.35;margin:4px 0 8px}.visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
   .visual-canon-list{display:grid;gap:10px}.visual-canon-item .visual-meta{margin-top:5px}
   .visual-state-note{margin-top:10px;font-size:.82rem;color:var(--muted)}
   @media(max-width:850px){.visual-grid{grid-template-columns:1fr}.visual-image-wrap img{max-height:none}}
@@ -71,6 +72,7 @@ function currentSelection(){
     issueId:issueSel.value,
     issueLabel:issueSel.options[issueSel.selectedIndex]?.textContent||issueSel.value,
     recipeId,
+    assetKind:option.dataset.assetKind||'interior',
     recipeIndex:Number.isFinite(index)?index:null,
     unitIsPage:/\bpages?\b/i.test(status?.textContent||''),
     recipeCount:sceneSel.options.length
@@ -80,6 +82,62 @@ function visualKey(sel){return [sel.seriesId,sel.issueId,sel.recipeId].join('::'
 function parseIssueNumber(label){const m=String(label||'').match(/\bIssue\s*0*(\d+)\b/i);return m?Number(m[1]):null}
 function withCacheBust(path,stamp){const sep=path.includes('?')?'&':'?';return path+sep+'v='+encodeURIComponent(stamp||Date.now())}
 function draftImageUrl(entry){if(entry.commitSha)return 'https://raw.githubusercontent.com/'+CONFIG.owner+'/'+CONFIG.repo+'/'+entry.commitSha+'/'+entry.image;return withCacheBust(entry.image,entry.updatedAt)}
+
+function masterStandard(sel){
+  // Vikings explicitly specifies the interior geometry for its covers.
+  if(sel.assetKind==='cover'){
+    if(sel.seriesId==='vikings-2026')return {kind:'cover',width:2400,height:3840,ratio:'5:8',note:'Vikings 2026 series cover specification'};
+    return {kind:'cover',width:1800,height:2700,ratio:'2:3',note:'Visions issue cover specification'};
+  }
+  return {kind:'interior',width:2400,height:3840,ratio:'5:8',note:'Interior comic master specification'};
+}
+function inspectMasterPng(bytes,standard){
+  const reasons=[];
+  const signature=[137,80,78,71,13,10,26,10];
+  if(bytes.length<33||signature.some((value,i)=>bytes[i]!==value))return {ok:false,reasons:['file is not a PNG master']};
+  const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
+  let offset=8,width=null,height=null,bitDepth=null,colorType=null,hasSrgb=false,hasSrgbIcc=false;
+  while(offset+12<=bytes.length){
+    const length=view.getUint32(offset),end=offset+12+length;if(end>bytes.length)break;
+    const type=String.fromCharCode(bytes[offset+4],bytes[offset+5],bytes[offset+6],bytes[offset+7]);
+    if(type==='IHDR'&&length>=13){width=view.getUint32(offset+8);height=view.getUint32(offset+12);bitDepth=bytes[offset+16];colorType=bytes[offset+17]}
+    else if(type==='sRGB')hasSrgb=true;
+    else if(type==='iCCP'){
+      const data=bytes.subarray(offset+8,offset+8+length),zero=data.indexOf(0);
+      if(zero>0){const profileName=new TextDecoder().decode(data.subarray(0,zero));if(/sRGB/i.test(profileName))hasSrgbIcc=true}
+    }
+    offset=end;if(type==='IEND')break;
+  }
+  if(width!==standard.width||height!==standard.height)reasons.push('must be exactly '+standard.width+'×'+standard.height+' px for '+standard.kind);
+  if(bitDepth!==8)reasons.push('must be 8-bit');
+  if(colorType!==2)reasons.push('must be RGB without indexed, grayscale, or alpha color type');
+  // Missing sRGB metadata is informational, not a master failure.
+  return {ok:reasons.length===0,reasons,width,height,bitDepth,colorType,hasSrgb:hasSrgb||hasSrgbIcc};
+}
+async function masterCompliance(entry,src,standard){
+  if(entry?.mimeType&&entry.mimeType!=='image/png')return {ok:false,reasons:['master must be a lossless PNG']};
+  const key=String(entry?.image||src)+'|'+String(entry?.updatedAt||'')+'|'+standard.width+'x'+standard.height;
+  if(!state.masterComplianceCache.has(key)){
+    state.masterComplianceCache.set(key,(async()=>{
+      const response=await fetch(src,{cache:'no-store'});if(!response.ok)throw new Error('image HTTP '+response.status);
+      return inspectMasterPng(new Uint8Array(await response.arrayBuffer()),standard);
+    })());
+  }
+  return state.masterComplianceCache.get(key);
+}
+function appendMasterStatus(entry,src,host,sel){
+  const standard=masterStandard(sel);
+  const status=document.createElement('div');status.className='visual-master-status checking';status.textContent='Checking master compliance…';host.appendChild(status);
+  void masterCompliance(entry,src,standard).then(result=>{
+    if(!status.isConnected)return;
+    status.className='visual-master-status '+(result.ok?'pass':'fail');
+    status.textContent=result.ok?'✓ MASTER COMPLIANT':'✕ NOT MASTER COMPLIANT YET';
+    status.title=result.ok?standard.width+'×'+standard.height+' · '+standard.ratio+' portrait · 8-bit RGB · lossless PNG · '+standard.note+' · '+(result.hasSrgb?'sRGB tagged':'color profile unspecified (informational)'):result.reasons.join(' · ');
+  }).catch(error=>{
+    if(!status.isConnected)return;
+    status.className='visual-master-status fail';status.textContent='✕ MASTER COMPLIANCE NOT CONFIRMED';status.title=error instanceof Error?error.message:String(error);
+  });
+}
 
 function createUi(){
   const anchor=document.getElementById('status');
@@ -93,12 +151,14 @@ function createUi(){
         <div class="visual-badge draft">Approved production draft · not released</div>
         <div id="draftBody" class="visual-empty">No approved production draft stored for this unit.</div>
         <div class="visual-actions">
-          <button id="uploadDraftBtn" type="button">Upload Approved Draft</button>
+          <button id="uploadDraftBtn" type="button" title="Upload an approved production draft for this page">Upload Image</button>
           <button id="forgetGithubTokenBtn" type="button" class="secondary" hidden>Forget GitHub Token</button>
           <input id="draftFileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
         </div>
         <div id="githubTokenPanel" class="visual-token-panel" hidden>
-          <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write · stored only for this browser tab</label>
+          <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write</label>
+          <label class="visual-remember"><input id="rememberGithubToken" type="checkbox"> Remember GitHub token on this device</label>
+          <div class="visual-remember-hint">Optional. Saved tokens persist across Safari restarts and can be accessed by scripts on this site. Avoid on shared devices.</div>
           <div class="visual-token-row"><input id="githubTokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"><button id="saveGithubTokenBtn" type="button">Use Token</button><button id="cancelGithubTokenBtn" type="button" class="secondary">Cancel</button></div>
         </div>
         <div id="draftUploadStatus" class="visual-upload-status"></div>
@@ -109,28 +169,58 @@ function createUi(){
       </div>
     </div>
     <div id="visualStateNote" class="visual-state-note"></div>`;
-  anchor.insertAdjacentElement('afterend',section);
+  const previewMount=document.getElementById('visualPreviewMount');
+  if(previewMount)previewMount.appendChild(section);
+  else anchor.insertAdjacentElement('afterend',section);
   const ui={
     section,
-    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
+    draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),rememberToggle:section.querySelector('#rememberGithubToken'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
   };
-  ui.uploadBtn.addEventListener('click',()=>{if(!sessionStorage.getItem('rexprompt.githubToken')){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
+  ui.uploadBtn.addEventListener('click',()=>{if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
   ui.fileInput.addEventListener('change',()=>{const file=ui.fileInput.files?.[0];ui.fileInput.value='';if(file)void uploadApprovedDraft(file)});
   ui.saveTokenBtn.addEventListener('click',()=>saveTokenFromPanel());
   ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
   ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
-  ui.forgetTokenBtn.addEventListener('click',()=>{sessionStorage.removeItem('rexprompt.githubToken');syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten for this tab.'});
-  state.ui=ui;syncTokenButton();return ui;
+  ui.forgetTokenBtn.addEventListener('click',()=>{window.RexPromptGithubAuth.forgetToken();syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten on this device and in this tab.'});
+  // The single existing upload control lives in the sticky production toolbar.
+  // Move its original DOM nodes rather than duplicating upload handlers.
+  const uploadSlot=document.getElementById('productionUploadSlot');
+  if(uploadSlot){
+    uploadSlot.append(section.querySelector('.visual-actions'),ui.tokenPanel,ui.uploadStatus);
+    const utilities=document.getElementById('productionUtilities');
+    if(utilities){
+      const rememberRow=document.createElement('label');
+      rememberRow.className='visual-remember';
+      rememberRow.innerHTML='<input type="checkbox" id="rememberGithubTokenUtility"> Remember GitHub token on this device';
+      utilities.append(rememberRow,ui.forgetTokenBtn);
+      const hint=document.createElement('div');hint.className='visual-remember-hint';
+      hint.textContent='Optional. Persistent tokens are readable by scripts on this site. Avoid on shared devices.';
+      utilities.appendChild(hint);
+      ui.rememberUtility=rememberRow.querySelector('input');
+    }
+  }
+  const onRemember=event=>{
+    try{
+      window.RexPromptGithubAuth.setRemember(event.target.checked);
+      ui.uploadStatus.textContent=event.target.checked?'GitHub token will be remembered on this device.':'GitHub token is now session-only.';
+    }catch(error){ui.uploadStatus.textContent=error.message}
+    syncRememberControls();
+  };
+  ui.rememberToggle.addEventListener('change',onRemember);
+  ui.rememberUtility?.addEventListener('change',onRemember);
+  window.addEventListener('rexprompt:github-auth-change',()=>{syncTokenButton();syncRememberControls()});
+  state.ui=ui;syncTokenButton();syncRememberControls();return ui;
 }
-function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!sessionStorage.getItem('rexprompt.githubToken')}
+function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!window.RexPromptGithubAuth.getToken()}
+function syncRememberControls(){const u=state.ui;if(!u)return;const remembered=window.RexPromptGithubAuth.isRemembered();u.rememberToggle.checked=remembered;if(u.rememberUtility)u.rememberUtility.checked=remembered}
 function showTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenPanel.hidden=false;ui.uploadStatus.textContent='GitHub authorization is required only to store an approved draft.';setTimeout(()=>ui.tokenInput.focus(),0)}
 function hideTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenInput.value='';ui.tokenPanel.hidden=true}
-function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}sessionStorage.setItem('rexprompt.githubToken',token);hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent='GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
+function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}try{window.RexPromptGithubAuth.setToken(token)}catch(error){ui.uploadStatus.textContent=error.message;return}hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent=window.RexPromptGithubAuth.isRemembered()?'GitHub token saved on this device.':'GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
 
 function setDraftBody(sel,entry){
   const ui=state.ui;if(!ui)return;
   if(!entry){
-    ui.draftBody.className='visual-empty';ui.draftBody.textContent='No approved production draft stored for this unit.';ui.uploadBtn.textContent='Upload Approved Draft';return;
+    ui.draftBody.className='visual-empty';ui.draftBody.textContent='No approved production draft stored for this unit.';ui.uploadBtn.textContent='Upload Image';return;
   }
   const src=draftImageUrl(entry);
   ui.draftBody.className='';ui.draftBody.innerHTML='';
@@ -139,7 +229,8 @@ function setDraftBody(sel,entry){
   const watermark=document.createElement('div');watermark.className='visual-watermark';watermark.textContent='DRAFT · NOT RELEASED';
   wrap.append(img,watermark);ui.draftBody.appendChild(wrap);
   const meta=document.createElement('div');meta.className='visual-meta';meta.textContent=sel.recipeId+' · '+(entry.updatedAt?'stored '+new Date(entry.updatedAt).toLocaleString():'approved production draft');ui.draftBody.appendChild(meta);
-  ui.uploadBtn.textContent='Replace Approved Draft';
+  appendMasterStatus(entry,src,ui.draftBody,sel);
+  ui.uploadBtn.textContent='Replace Image';
 }
 function renderCanonItems(sel,items){
   const ui=state.ui;if(!ui)return;
@@ -203,9 +294,9 @@ function decorateSceneOptions(sel,canonMode=false){
   }
 }
 
-async function refreshVisuals(){
+async function refreshVisuals(preserveUploadStatus=false){
   const ui=state.ui,sel=currentSelection();if(!ui||!sel)return;
-  const nonce=++state.refreshNonce;ui.uploadStatus.textContent='';
+  const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
   const explicit=explicitCanon(sel),pageSet=explicit.length?null:await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
   decorateSceneOptions(sel,Boolean(pageSet));
@@ -213,16 +304,18 @@ async function refreshVisuals(){
 }
 
 async function gh(token,path,{method='GET',body=null,allow404=false}={}){
-  const r=await fetch(CONFIG.apiBase+path,{method,headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
+  const fresh=method==='GET'&&path.includes('/git/ref/heads/');
+  const url=CONFIG.apiBase+(fresh?window.RexPromptGithubWrites.freshPath(path):path);
+  const r=await fetch(url,{method,cache:method==='GET'?'no-store':'default',headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});
   if(allow404&&r.status===404)return null;
   let payload=null;try{payload=await r.json()}catch{}
-  if(!r.ok)throw new Error((payload&&payload.message)||('GitHub API '+r.status));return payload;
+  if(!r.ok)throw new Error(((payload&&payload.message)||'GitHub API error')+' (HTTP '+r.status+')');return payload;
 }
 function bytesToBase64(bytes){let out='',chunk=0x8000;for(let i=0;i<bytes.length;i+=chunk)out+=String.fromCharCode(...bytes.subarray(i,Math.min(i+chunk,bytes.length)));return btoa(out)}
 function decodeBase64Utf8(value){const binary=atob(String(value||'').replace(/\s+/g,'')),bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}
 function extensionFor(file){if(file.type==='image/jpeg')return 'jpg';if(file.type==='image/png')return 'png';if(file.type==='image/webp')return 'webp';return ''}
-async function latestDraftManifest(token){
-  const path='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/contents/'+CONFIG.draftManifestPath+'?ref='+encodeURIComponent(CONFIG.branch),payload=await gh(token,path,{allow404:true});
+async function latestDraftManifest(token,commitSha){
+  const path='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/contents/'+CONFIG.draftManifestPath+'?ref='+encodeURIComponent(commitSha||CONFIG.branch),payload=await gh(token,path,{allow404:true});
   if(!payload)return {schemaVersion:1,drafts:{}};
   const parsed=JSON.parse(decodeBase64Utf8(payload.content));if(!parsed.drafts||typeof parsed.drafts!=='object')parsed.drafts={};return parsed;
 }
@@ -232,22 +325,59 @@ async function uploadApprovedDraft(file){
   if(file.size>CONFIG.maxUploadBytes){ui.uploadStatus.textContent='Upload failed: image is larger than 50 MB.';return}
   const verb=state.draftManifest?.drafts?.[visualKey(sel)]?'replace':'store';
   if(!window.confirm('Explicitly '+verb+' the approved production draft for '+sel.recipeId+' in RexPrompt? This does not publish anything to Visions.'))return;
-  const token=sessionStorage.getItem('rexprompt.githubToken');if(!token){state.pendingUpload=true;showTokenPanel();return}
-  ui.uploadBtn.disabled=true;ui.uploadStatus.textContent='Storing approved draft in RexPrompt…';
+  const token=window.RexPromptGithubAuth.getToken();
+  if(!token){state.pendingUpload=true;showTokenPanel();return}
+  ui.uploadBtn.disabled=true;
+  ui.uploadStatus.textContent='Preparing approved draft for GitHub…';
   try{
-    const refPath='/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch),ref=await gh(token,refPath),headSha=ref.object.sha;
-    const commit=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/commits/'+headSha),manifest=await latestDraftManifest(token),key=visualKey(sel),old=manifest.drafts[key]||null,ext=extensionFor(file);
+    const prefix='/repos/'+CONFIG.owner+'/'+CONFIG.repo;
+    const key=visualKey(sel);
+    const ext=extensionFor(file);
     const imagePath='production/drafts/'+safePart(sel.seriesId)+'/'+safePart(sel.issueId)+'/'+safePart(sel.recipeId)+'.'+ext;
-    const bytes=new Uint8Array(await file.arrayBuffer()),imageBlob=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/blobs',{method:'POST',body:{content:bytesToBase64(bytes),encoding:'base64'}});
-    const updatedAt=new Date().toISOString();manifest.schemaVersion=1;manifest.drafts[key]={seriesId:sel.seriesId,issueId:sel.issueId,recipeId:sel.recipeId,status:'approved-production-draft',image:imagePath,mimeType:file.type,updatedAt};
-    const manifestBlob=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/blobs',{method:'POST',body:{content:JSON.stringify(manifest,null,2)+'\n',encoding:'utf-8'}});
-    const tree=[{path:imagePath,mode:'100644',type:'blob',sha:imageBlob.sha},{path:CONFIG.draftManifestPath,mode:'100644',type:'blob',sha:manifestBlob.sha}];
-    if(old?.image&&old.image!==imagePath)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});
-    const newTree=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}}),newCommit=await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/commits',{method:'POST',body:{message:'Store approved production draft '+sel.recipeId,tree:newTree.sha,parents:[headSha]}});
-    await gh(token,'/repos/'+CONFIG.owner+'/'+CONFIG.repo+'/git/refs/heads/'+encodeURIComponent(CONFIG.branch),{method:'PATCH',body:{sha:newCommit.sha,force:false}});
-    manifest.drafts[key].commitSha=newCommit.sha;state.draftManifest=manifest;ui.uploadStatus.textContent='Approved draft stored. Git commit '+newCommit.sha.slice(0,7)+'.';await refreshVisuals();
-  }catch(err){ui.uploadStatus.textContent='Upload failed: '+(err instanceof Error?err.message:String(err));}
-  finally{ui.uploadBtn.disabled=false;syncTokenButton()}
+    // Uploading the immutable blob before taking the write lock keeps the
+    // exclusive commit window short. Retrying never re-encodes the image.
+    const bytes=new Uint8Array(await file.arrayBuffer());
+    const imageBlob=await gh(token,prefix+'/git/blobs',{method:'POST',body:{content:bytesToBase64(bytes),encoding:'base64'}});
+    const result=await window.RexPromptGithubWrites.run(()=>
+      window.RexPromptGithubWrites.retryConflicts(async()=>{
+        const ref=await gh(token,prefix+'/git/ref/heads/'+encodeURIComponent(CONFIG.branch));
+        const headSha=ref.object.sha;
+        // Both the tree and manifest must describe exactly the same commit.
+        const [commit,manifest]=await Promise.all([
+          gh(token,prefix+'/git/commits/'+headSha),
+          latestDraftManifest(token,headSha)
+        ]);
+        const old=manifest.drafts[key]||null;
+        manifest.schemaVersion=1;
+        manifest.drafts[key]={
+          seriesId:sel.seriesId,issueId:sel.issueId,recipeId:sel.recipeId,
+          status:'approved-production-draft',image:imagePath,
+          mimeType:file.type,updatedAt:new Date().toISOString()
+        };
+        const manifestBlob=await gh(token,prefix+'/git/blobs',{method:'POST',body:{content:JSON.stringify(manifest,null,2)+'\n',encoding:'utf-8'}});
+        const tree=[
+          {path:imagePath,mode:'100644',type:'blob',sha:imageBlob.sha},
+          {path:CONFIG.draftManifestPath,mode:'100644',type:'blob',sha:manifestBlob.sha}
+        ];
+        if(old?.image&&old.image!==imagePath)tree.push({path:old.image,mode:'100644',type:'blob',sha:null});
+        const newTree=await gh(token,prefix+'/git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree}});
+        const newCommit=await gh(token,prefix+'/git/commits',{method:'POST',body:{message:'Store approved production draft '+sel.recipeId,tree:newTree.sha,parents:[headSha]}});
+        await gh(token,prefix+'/git/refs/heads/'+encodeURIComponent(CONFIG.branch),{method:'PATCH',body:{sha:newCommit.sha,force:false}});
+        manifest.drafts[key].commitSha=newCommit.sha;
+        return {sha:newCommit.sha,manifest};
+      },attempt=>{
+        ui.uploadStatus.textContent='GitHub HEAD moved; refreshing and retrying upload ('+attempt+'/3)…';
+      })
+    );
+    state.draftManifest=result.manifest;
+    ui.uploadStatus.textContent='Approved draft stored. Git commit '+result.sha.slice(0,7)+'.';
+    await refreshVisuals(true);
+  }catch(err){
+    ui.uploadStatus.textContent='Upload failed: '+(err instanceof Error?err.message:String(err));
+  }finally{
+    ui.uploadBtn.disabled=false;
+    syncTokenButton();
+  }
 }
 
 async function loadState(){

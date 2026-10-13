@@ -57,3 +57,16 @@ The production frontier therefore remains `EFW_S1E01_S01`.
 When an Echoes page passes reader test, recipe fidelity, character/world continuity, composition, and lettering review, store the approved image as a recipe-level approved production draft under `production/drafts/` and register it in `production/drafts/manifest.json`.
 
 A standalone approved character or world reference should be stored under this reference directory with its scope stated clearly.
+
+
+## Cover production
+
+Season 1 cover recipes are assembled through the normal RexPrompt UI from the show entry `echoes-forgotten-war-s1-covers` and `data/shows/echoes-forgotten-war-s1/covers.json`. No cover-specific assembler code is required.
+
+Generate `EFW_S1E01_COVER` first. That recipe establishes the series masthead/trade-dress system. After the user approves the finished Issue 1 cover, persist the exact approved image at:
+
+`production/references/echoes-forgotten-war/covers/issue-01-cover.jpg`
+
+Then update `cover-production-normalization.json` from pending to approved. Before generating Issues 2-8, retrieve and visually inspect those actual Issue 1 cover pixels. Use them only for masthead and trade-dress continuity; use each selected cover recipe for issue-specific composition, cast, symbolism, emotional promise, thumbnail logic and spoiler ceiling.
+
+A repository path, SHA, metadata record, prose description or remembered prior view is not a substitute for pixel readback.

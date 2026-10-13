@@ -1,0 +1,584 @@
+[
+  {
+    "id": "RF_I11_P01",
+    "summary": "Auric Gate is a functioning civilian road when the fleets converge; one recognizable damaged skiff will carry the human stakes through the battle.",
+    "directionInline": [
+      "Dawn. Auric Gate is already handling civilian commerce when Shard contacts begin appearing beyond the pylons. Among the twenty-three incoming civilian hulls, establish Skiff Four: a small worn tan-and-green transport with a distinct patched port-side cargo fairing and two aft steering jets. Show its adult pilot in a quick inset checking traffic. Do not add readable lettering or an invented hull number to the ship. Nothing about its route looks extraordinary yet."
+    ],
+    "panelPlan": [
+      "Wide dawn approach: pylons, commuters, cargo traffic, and incoming Shard warships occupy the same geography.",
+      "A closer view singles out Skiff Four's patched cargo fairing and adult pilot amid routine convoy movement.",
+      "The space between warships and commuting civilians begins closing; the Gate remains open."
+    ]
+  },
+  {
+    "id": "RF_I11_P04",
+    "summary": "Billie joins the attack on Fleet but rejects Pike's indiscriminate civilian targeting feed and refuses to carry the Triarch's destruction order.",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Crown hulls only."
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Pike's painting the whole lane."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Clear every civilian mark."
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Our gunners say we're giving Fleet safe passage."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Fleet can defend itself. That skiff can't."
+      },
+      {
+        "handle": "OFFICER",
+        "speaker": "Officer",
+        "text": "Triarch says burn the Gate."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Then don't relay that order to my guns."
+      }
+    ],
+    "directionInline": [
+      "Ashfang receives Pike's shared indiscriminate targeting feed. Billie removes civilian craft, including the distinctive Skiff Four, from her targeting board, retaining armed Fleet targets. An officer reports the Triarch order; Billie deliberately withholds its targeting implementation. Keep her in Shard command, attacking Crown military ships but refusing the civilian vector. This is resistance within an existing conflict, not a sudden conversion to Fleet."
+    ],
+    "panelPlan": [
+      "Ashfang's received targeting returns overlap military and civilian hulls.",
+      "Billie personally strips civilian reticles from the board and retains Crown targets.",
+      "The Triarch's order arrives; Billie's crew watches her refuse to pass a Gate-destruction solution to the guns."
+    ]
+  },
+  {
+    "id": "RF_I11_P05",
+    "summary": "Fleet sacrifices a stronger combat formation to protect the working civilian route, leaving a dangerous gap around Skiff Four.",
+    "directionInline": [
+      "Fleet shields hold a partially open corridor around Auric Gate; the protective formation is strategically weaker because the civilian lane must remain open. Keep Skiff Four's patched port fairing recognizable among traffic. Shard fire probes the exposed edges, where closing the gap militarily would also trap civilians."
+    ],
+    "panelPlan": [
+      "Establish Fleet ships arranged around—but not across—the Gate's civilian road.",
+      "Show Skiff Four entering a gap that cannot be closed without trapping its convoy.",
+      "Shard fire tests that same gap; Fleet vessels absorb the tactical disadvantage."
+    ]
+  },
+  {
+    "id": "RF_I11_P06",
+    "summary": "Halev and Naomi keep Verge escorts with the traffic because no alternate route can absorb the convoy, even if it means giving up pursuit of hostile ships.",
+    "settingText": "INT. AURIC BAZAAR — GATE CONTROL / INT. SUNLASH — COCKPIT — INTERCUT",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "If the Gate closes, where do these convoys go?"
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "No other route takes this volume. Not today."
+      },
+      {
+        "handle": "@starsplit.halev",
+        "speaker": "Halev",
+        "text": "Then stay with them. Don't chase the fight."
+      }
+    ],
+    "directionInline": [
+      "Halev remains at Auric's working civic Gate control with traffic queued across his screens. Naomi is already strapped into Sunlash and answers by live comms, never physically present in Halev's room. Halev directs the Verge escorts to remain with civilian traffic despite the battle outside. Distinguish his civil authority from Naomi's control of the flying."
+    ],
+    "panelPlan": [
+      "Intercut Halev watching civilian queue density from Gate control and Naomi strapped into Sunlash.",
+      "Naomi shows the absence of an immediately workable alternative route, not an abstract strategic diagram.",
+      "The Verge escorts remain with their convoys while enemy ships move into combat outside."
+    ]
+  },
+  {
+    "id": "RF_I11_P07",
+    "summary": "Pike maneuvers for public visibility at the expense of traffic, narrowing the safe lane and displacing Skiff Four into Gravefire's path.",
+    "directionInline": [
+      "Broken Oath forces its way through Gate midspace to dominate its own public camera feeds. Its publicity drones and close passes drive Fleet and Verge pilots off their safe vectors. Skiff Four with its patched port fairing is pushed outside the lane markers and toward Gravefire's sector. Pike's maneuver earns a public image at the immediate expense of the civilian pilot's ability to navigate."
+    ],
+    "panelPlan": [
+      "Broken Oath charges across the approach, camera drones tracking its attack.",
+      "Its turn constricts the civilian lane; Sunlash and Fleet escorts maneuver to avoid crossing traffic.",
+      "Skiff Four is pushed beyond its lane marker into Gravefire's sector, creating the problem Tess must solve."
+    ]
+  },
+  {
+    "id": "RF_I11_P08",
+    "summary": "Venn declines a possible shot at Ashfang because fragments and field effects would strike the civilian skiffs beyond her.",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Ashfang closing. Impact vector."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Prow shields."
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Clear line to Ashfang."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Not beyond her. Civilian skiffs downrange."
+      }
+    ],
+    "directionInline": [
+      "Tactical has a direct line to Ashfang, but the wider approach includes civilian skiffs beyond Billie's hull. Weapons impact, fragments and reciprocal-field effects would endanger them. Venn orders Thunderbreak's prow shields reinforced and lets a legal military target pass. The action costs shield margin and gunnery opportunity; Thunderbreak remains capable of later defensive fire."
+    ],
+    "panelPlan": [
+      "Ashfang's approach is visible from the threatened Thunderbreak.",
+      "Tactical presents a direct targeting line; the same image reveals civilian skiffs beyond.",
+      "Venn shields Thunderbreak instead of firing; the incoming pressure visibly bites into the cruiser."
+    ]
+  },
+  {
+    "id": "RF_I11_P09",
+    "summary": "Tess gives Skiff Four a ship it can actually follow after Pike's maneuver obscures its lane markers.",
+    "settingText": "INT. GRAVEFIRE — BRIDGE / EXT. AURIC GATE CIVILIAN LANE — INTERCUT",
+    "charactersInline": [
+      {
+        "name": "Tessa Banks",
+        "handle": "@starsplit.tessa.banks"
+      },
+      {
+        "name": "Skiff Four pilot"
+      }
+    ],
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Skiff Four, you're outside me."
+      },
+      {
+        "handle": "PILOT",
+        "speaker": "Skiff Four pilot",
+        "text": "Pike drove us off the mark. I can't see the lane."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Find Gravefire's stern lights."
+      },
+      {
+        "handle": "PILOT",
+        "speaker": "Skiff Four pilot",
+        "text": "I've got your stern."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "One ship-length back. Match my turn."
+      }
+    ],
+    "directionInline": [
+      "Cut between Tess at the established Gravefire bridge, the adult Skiff Four pilot in the skiff cockpit, and both craft outside. Pike's turn has obscured the pilot's lane markers. Tess offers the familiar Gravefire hull and stern lights as a physical navigational reference, guiding the patched-fairing skiff toward Fleet shadow. No mystical guidance, inspirational speech, or invented interface writing."
+    ],
+    "panelPlan": [
+      "Skiff Four drifts outside the marked corridor; its adult pilot loses the lane.",
+      "On Gravefire's bridge Tess identifies a real visual reference: her ship's stern lights.",
+      "External tracking view: the skiff falls one ship-length behind Gravefire and matches its turn toward Fleet shadow."
+    ],
+    "setting": "RF_Gravefire_Interior"
+  },
+  {
+    "id": "RF_I11_P10",
+    "summary": "Pike's public attack clips the civilian lane; debris damages Skiff Four's aft steering jet and his own cameras document the recklessness.",
+    "settingText": "EXT. AURIC GATE — LATE AFTERNOON",
+    "directionInline": [
+      "Pike fires across the civilian lane toward a Fleet escort to capture a dramatic hit for his camera drones. The shot clips a structural fixture on the lane's boundary, throwing physical fragments into Skiff Four. Its starboard aft steering jet is knocked out and its patched port cargo fairing is scored. It can still thrust forward but has poor lateral control. This is material impact and debris, not a shock wave in vacuum. The camera drones record the shot and the civilian consequences; the pilot struggles to remain behind Gravefire."
+    ],
+    "panelPlan": [
+      "Broken Oath fires past the civilian lane at a Fleet escort while camera drones frame the attack.",
+      "Broken boundary hardware throws fragments into Skiff Four, striking one aft steering jet.",
+      "Skiff Four slews sideways with a damaged jet while Gravefire corrects to stay ahead; Pike's cameras record the civilian danger."
+    ]
+  },
+  {
+    "id": "RF_I11_P11",
+    "summary": "The Raid Mask orders a deliberate Gate-destruction attack with civilian hulls inside, and Triarch warships begin lining up to execute it.",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.silent.triarch.raid",
+        "speaker": "Raid Mask",
+        "text": "Burn the Gate."
+      },
+      {
+        "handle": "@starsplit.emissary",
+        "speaker": "Emissary",
+        "text": "Civilian traffic is still inside."
+      },
+      {
+        "handle": "@starsplit.silent.triarch.raid",
+        "speaker": "Raid Mask",
+        "text": "Then our ships will find them there."
+      }
+    ],
+    "directionInline": [
+      "In the established Arena Vault, the Raid Mask and emissary see the civilian occupancy overlay. The emissary points out the real occupied lane, and the Raid Mask knowingly confirms an order that would destroy it. Intercut or reserve the last panel for Triarch warships shifting toward the outer attack axis under that order. Keep masks institutional and physically real; do not imply every Shard commander obeys."
+    ],
+    "panelPlan": [
+      "Raid Mask studies the occupied Gate and gives the destruction order.",
+      "The emissary points to civilians still inside the approach.",
+      "Raid knowingly maintains the order as Triarch hulls align their weapons in the outer approach."
+    ],
+    "setting": "RF_Arena_Vault"
+  },
+  {
+    "id": "RF_I11_P12",
+    "summary": "Synchronized heavy volleys interfere with Auric's stabilization pulses, producing measurable echo returns and making coordinated targeting unreliable.",
+    "settingText": "EXT. AURIC GATE — LATE DAY",
+    "directionInline": [
+      "Repeated synchronized weapons volleys overlap Auric Gate's reciprocal-field stabilization pulse. Instruments show repeated sensor returns in adjacent prior hull positions, not solid supernatural duplicates. Visualize anchor timing, shear displacement and false target returns as measurable instrumentation problems. As the echoes grow, heavy formations cannot reliably distinguish actual present hulls from short-lived returns, threatening vessels close to civilian traffic. A Triarch heavy salvo is among the synchronized inputs."
+    ],
+    "panelPlan": [
+      "A massed volley coincides with the Gate's timed stabilization cycle.",
+      "Targets begin showing offset repeated returns in recent positions; real ships stay physically coherent.",
+      "A Triarch formation holds and recalculates amid multiplying false targets while civilian traffic moves below the affected geometry."
+    ],
+    "setting": "RF_Auric_Gate"
+  },
+  {
+    "id": "RF_I11_P13",
+    "summary": "Jia identifies synchronized volleys as the repeatable cause of the echoes; Venn interrupts the firing rhythm without abandoning defensive combat.",
+    "settingText": "INT. THUNDERBREAK — COMMAND / INT. SUNLASH — REMOTE FEED — LATE DAY",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.jia.morgan",
+        "speaker": "Jia",
+        "text": "Venn, break the synchronized volleys."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "What happens if we don't?"
+      },
+      {
+        "handle": "@starsplit.jia.morgan",
+        "speaker": "Jia",
+        "text": "Each pulse locks another return to the Gate. Your firing clock is feeding it."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Break the volley clock. Defensive fire by local solution only."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Naomi, get the traffic off common targeting time."
+      },
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Sunlash will mark the lane by hand. Follow my turns."
+      }
+    ],
+    "directionInline": [
+      "Jia is present through a clearly identified research communications feed, comparing the Gate's live echo density against Calm Corridor measurements. Venn is physically aboard Thunderbreak; Naomi replies remotely from Sunlash, never appearing as a physical command-deck visitor. Venn cancels synchronized battery firing but retains independent defensive weapons, which distinguishes this scientific measure from her later full targeting stand-down. The next pulse creates fewer echoes, showing Jia's falsifiable intervention works partially. Naomi's escorts use practical visual and manual lane cues while target clocks disagree."
+    ],
+    "panelPlan": [
+      "Jia compares repeated returns with synchronized volley timing and spots a changeable physical input.",
+      "Venn cancels volley synchronization but explicitly preserves local defensive fire.",
+      "A subsequent Gate pulse produces fewer false returns, not a miraculous cure.",
+      "Naomi in Sunlash redirects escorts to manual lane vectors and keeps civilian traffic moving."
+    ],
+    "continuityFrom": "RF_I11_P08",
+    "setting": "RF_Thunderbreak_Command"
+  },
+  {
+    "id": "RF_I11_P14",
+    "summary": "Scythe of Saville returns scarred from Shatterforge, bringing damaged survivors and an uncertain bloc into the Triarch attack approach.",
+    "settingText": "EXT. AURIC GATE — TWILIGHT",
+    "directionInline": [
+      "Scythe of Saville emerges from the outer Rift with its established refit silhouette, scorched plating and jury-rigged thrust inherited from Shatterforge. Several surviving Shard vessels trail it irregularly: not a triumphant squadron or pristine rescue force. The Triarch's heavy ships continue preparing the outer Gate attack; Scythe enters the path they intend to use. Identify Abby's ship visually before any explanatory name or caption."
+    ],
+    "panelPlan": [
+      "A battered, visually familiar Scythe of Saville limps into the outer battlefield at twilight.",
+      "Damaged Shard captains follow at different distances, some uncertain.",
+      "The Scythe's path crosses the approach the Triarch guns are setting up to fire through."
+    ]
+  },
+  {
+    "id": "RF_I11_P15",
+    "summary": "Abby puts her damaged ship under Triarch guns to cover civilians; her captains must decide for themselves whether to follow.",
+    "settingText": "INT. SCYTHE OF SAVILLE — COMMAND / EXT. OUTER GATE — TWILIGHT",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "If you're still with me, shields on the convoys."
+      },
+      {
+        "handle": "CAPTAIN",
+        "speaker": "Shard captain",
+        "text": "Triarch guns are tracking our broadside."
+      },
+      {
+        "handle": "@starsplit.abby.saville",
+        "speaker": "Abby",
+        "text": "Stay behind Scythe. I'll take the first strike."
+      }
+    ],
+    "directionInline": [
+      "Abby, visibly exhausted but still in Shard command, opens a channel to the surviving captains. The damaged Scythe spends its remaining shield margin covering an exposed civilian segment and deliberately takes position in the Triarch's planned firing geometry. One Shard captain turns to reinforce the shields; another hesitates while the Triarch guns track them, then follows. No blanket unanimous cheer or announcement of ideological purity. The captains' voluntary material risk is the rebellion. Their defensive guns remain live for now; they will drop offensive target locks later, after Verge and Fleet."
+    ],
+    "panelPlan": [
+      "Inside the scarred Scythe, Abby commits her own vessel first.",
+      "One Shard captain follows while another holds back beneath the looming Triarch weapons.",
+      "Scythe's battered shield expands over vulnerable skiffs; the hesitant captain finally joins, putting their own hull in the line of fire."
+    ],
+    "continuityFrom": "RF_I11_P14"
+  },
+  {
+    "id": "RF_I11_P16",
+    "summary": "Tess makes Billie's choice immediate and practical: Pike's still-active weapons have trapped the damaged Skiff Four.",
+    "settingText": "INT. GRAVEFIRE — BRIDGE / INT. ASHFANG — COMMAND — NIGHTFALL",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "Pike's fire has Skiff Four pinned. She's down a steering jet."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "How much room do you need?"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "A ship's width. His guns own it."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "You could have called Abby."
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "I'm calling the ship that can see Pike's mast."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "You still trust me to fire past that skiff?"
+      },
+      {
+        "handle": "@starsplit.tessa.banks",
+        "speaker": "Tess",
+        "text": "No. I trust you not to let Pike hit it again."
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Keep your pilot ready."
+      }
+    ],
+    "directionInline": [
+      "Tess calls Billie directly while Gravefire attempts to guide the already damaged Skiff Four through a narrow gap. On Ashfang, Billie can see Broken Oath's active weapon mast covering the exit; Pike's earlier civilian near miss remains visible in recorded imagery, but the decision is driven by a present danger, not a lecture about her allegiance. Billie measures the spatial problem. No moral accusation, filler acknowledgement, or verbal reconciliation. Preserve their distinct Shard command identities and separate locations."
+    ],
+    "panelPlan": [
+      "Tess flies near Skiff Four, whose starboard aft steering jet is visibly destroyed.",
+      "On Ashfang Billie sees the only open gap blocked by Broken Oath's tracking weapon mast.",
+      "Tess gives the needed clearance; Billie silently calculates her own attack line to the mast."
+    ]
+  },
+  {
+    "id": "RF_I11_P17",
+    "summary": "Verge escorts drop offensive locks first; Venn follows by making Thunderbreak a shield, and Abby's bloc accepts the exposed position after them.",
+    "settingText": "INT. THUNDERBREAK — COMMAND / EXT. AURIC GATE — NIGHT",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.naomi.sol",
+        "speaker": "Naomi",
+        "text": "Verge escorts are off target lock. Skiff Four is still inside the lane."
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "Broken Oath's guns are live."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Thunderbreak, break offensive lock. Put weapon reserve into the civilian shield."
+      },
+      {
+        "handle": "@starsplit.tactical",
+        "speaker": "Tactical",
+        "text": "That puts our prow under his mast."
+      },
+      {
+        "handle": "@starsplit.ella.venn",
+        "speaker": "Venn",
+        "text": "Then keep the skiffs behind our prow."
+      }
+    ],
+    "directionInline": [
+      "After hours of battle, under dark skies, Naomi's Verge escorts give up offensive target locks while keeping manual civilian vectors. She reports from Sunlash by comms. Venn sees both that choice and the risk to Thunderbreak, then orders her ship's remaining offensive targeting abandoned: this is separate from Page 13's cancellation of synchronized volleys, when independent defensive fire remained available. Thunderbreak reinforces the civilian shield and exposes its prow to Pike. Nearby Fleet vessels follow. Only after this visible Fleet commitment do Abby's captains also release offensive locks while retaining protective shields. The order of full lock drops is Verge, Thunderbreak/Fleet, Saville bloc. Triarch attack hulls remain armed and have not consented."
+    ],
+    "panelPlan": [
+      "Sunlash escorts withdraw offensive target boxes first, retaining their manual convoy vector.",
+      "Venn sees Pike's active weapon mast and orders Thunderbreak's complete offensive lock break, diverting reserve power into the shield.",
+      "Thunderbreak visibly exposes its prow; other Fleet ships take the same risk.",
+      "Saville's captains drop offensive locks afterward while continuing to interpose against the Triarch, who remain armed."
+    ],
+    "continuityFrom": "RF_I11_P13",
+    "setting": "RF_Thunderbreak_Command"
+  },
+  {
+    "id": "RF_I11_P18",
+    "summary": "Pike exploits the stand-down to fire through the civilian exit; Billie disables his weapon mast, while layered shields and unstable target returns force the Triarch into an armed impasse.",
+    "settingText": "EXT. AURIC GATE — BROKEN OATH / ASHFANG / TRIARCH APPROACH — NIGHT",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "They've dropped lock. Fire!"
+      },
+      {
+        "handle": "@starsplit.billie.rusk",
+        "speaker": "Billie",
+        "text": "Break off the skiff."
+      },
+      {
+        "handle": "@starsplit.oren.pike",
+        "speaker": "Pike",
+        "text": "I'm taking the Gate."
+      }
+    ],
+    "directionInline": [
+      "Broken Oath fires despite Verge, Fleet and Abby's defensive stand-down. Its next aim sweeps through the narrow exit Skiff Four needs; the disabled steering jet still prevents it from dodging. Billie lines Ashfang up behind Broken Oath and shoots the already-established weapon mast with a precise military strike. The mast is disabled; Broken Oath survives with engines and main electrical power intact, unable to continue that gun attack. Gravefire guides Skiff Four through the newly opened ship-width gap behind Thunderbreak's shield. At the outer approach, the Triarch heavy guns remain charged, but the combined Fleet/Scythe protective geometry prevents a clean destructive path, and the remaining reciprocal-field echo returns make synchronized penetrating salvos dangerously unreliable to the Triarch's own ships. The Triarch hulls hold at weapons-ready standoff rather than repent or disappear. This is a tactical ceasefire of necessity, not a final surrender."
+    ],
+    "panelPlan": [
+      "Pike fires again across the civilian exit while the other factions are no longer aiming offensively.",
+      "Billie orders him off the skiff; his mast stays trained on the trapped craft.",
+      "Ashfang makes one precise strike: Broken Oath's weapon mast fails, hull and engines intact.",
+      "Gravefire leads damaged Skiff Four behind Thunderbreak's reinforced prow; the civilian escape becomes physical.",
+      "Triarch guns hold at the outer approach as multiple independent shields and unreliable echo returns deny a safe penetrating salvo; they remain pointed at the Gate."
+    ],
+    "continuityFrom": "RF_I11_P16",
+    "setting": "RF_Auric_Gate"
+  },
+  {
+    "id": "RF_I11_P19",
+    "summary": "Selene rejects a Fleet-only victory record with corroborated timestamps; the unresolved Triarch standoff keeps the next political confrontation alive.",
+    "settingText": "INT. RELIC COURT — COMBAT RECORD — NIGHT",
+    "dialogueInline": [
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "Fleet held the Gate."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Sol's escorts broke targeting lock first. Thunderbreak followed. Then Saville's captains."
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "I know who moved when."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Then why do you want only Fleet named?"
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "Because I have to send my captains out again under my orders. They watched us need a Verge pilot to lead."
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "They saw who held the civilian lane, too. Pike fired until Ashfang took his mast."
+      },
+      {
+        "handle": "@starsplit.cael.dominion",
+        "speaker": "Dominion",
+        "text": "And the Triarch?"
+      },
+      {
+        "handle": "@starsplit.selene.stormwell",
+        "speaker": "Selene",
+        "text": "Still armed outside the approach."
+      }
+    ],
+    "directionInline": [
+      "Selene compares independently timestamped Fleet, Verge and Shard instrument records against the public camera evidence. The reliable lock-break sequence is Verge escorts, Thunderbreak/Fleet, then Saville's bloc; this does not erase Scythe's earlier decision to interpose defensively or Jia's earlier volley synchronization intervention. Dominion sees why a simple Fleet victory claim cannot account for the evidence. The record can confirm hull action and timing but not assign one commander ownership of every choice. A live view shows the Triarch force maintaining an armed perimeter. Treat Selene as a skeptical historical analyst using measurements, not as a mystical keeper of truths. Keep the exchange pointed, not procedural theater."
+    ],
+    "panelPlan": [
+      "Dominion begins from the Fleet's real loss and its claim to have held the Gate; Selene brings up the full corroborated Verge-first, Fleet-second, Saville-third break-lock order.",
+      "He does not dispute the telemetry. He worries aloud about keeping the confidence of Fleet captains asked to follow his future orders after relying on an outsider.",
+      "Selene adds Pike's final shot and Ashfang's mast strike without turning the conversation into a lesson or a credit ceremony.",
+      "The live feed ends on armed Triarch ships outside the approach. No claim that a battle victory ended the threat."
+    ],
+    "setting": "RF_Relic_Court"
+  },
+  {
+    "id": "RF_I11_P20",
+    "summary": "Traffic resumes at dawn under an armed temporary standoff; the damaged Skiff Four and battered warships make the civilian cost visible.",
+    "directionInline": [
+      "Morning after the long battle. Civilian ships pass through damaged Auric pylons under wary mixed escort and residual field instability. Skiff Four's patched port fairing remains scored and its starboard aft steering jet is still destroyed; a working escort helps guide it toward a safe berth rather than pretending it is repaired. Broken Oath still has engine power and its intact hull but a ruined weapon mast, withdrawing slowly from the lane under watch; Ashfang keeps distance. Triarch heavy ships remain outside the usable approach with guns ready. Crews from different factions recover civilian craft but keep separate equipment and identities. The Gate stays open without anyone winning control of it."
+    ],
+    "panelPlan": [
+      "Dawn traffic passes scarred Gate pylons while wary warships maintain a temporary separation.",
+      "Skiff Four limps through under escort with the same visibly destroyed steering jet and damaged fairing.",
+      "Broken Oath pulls slowly away with engines live but weapon mast disabled; Ashfang and distant Triarch hulls remain distinct and threatening."
+    ],
+    "setting": "RF_Auric_Gate"
+  },
+  {
+    "id": "RF_I11_P21",
+    "summary": "Tess watches the same battered Skiff Four reach safe docking before allowing herself to stop working.",
+    "charactersInline": [
+      {
+        "name": "Tessa Banks",
+        "handle": "@starsplit.tessa.banks"
+      }
+    ],
+    "directionInline": [
+      "On Gravefire's established bridge Tess keeps watch until Skiff Four, identifiable by its patched scored fairing and missing steering jet, completes a safe docking approach under escort. This is the last delayed craft from her sector, not a newly invented replacement. Tess finally removes her headset, rubbing the pressure mark behind her ear while her crew quietly starts damage checks. A human completion of the pilot's ordeal, without dialogue, speeches, triumphal military reaction, or any implication that Shatterforge's losses are undone."
+    ],
+    "panelPlan": [
+      "Tess watches Skiff Four's damaged approach and final safe berth from Gravefire.",
+      "Only when the craft is secured does Tess set her headset down and rub the mark behind her ear.",
+      "Around her the bridge crew resumes damage checks; she has no line and no victory pose."
+    ],
+    "setting": "RF_Gravefire_Interior"
+  },
+  {
+    "id": "RF_I11_P22",
+    "summary": "Auric Gate survives as damaged public infrastructure under an unresolved armed standoff, carrying the crisis directly into Issue 12's negotiations.",
+    "directionInline": [
+      "In the final wide orbital view Auric Gate remains open, its pylons visibly damaged and stabilization pulses slightly uneven. Ordinary traffic keeps moving cautiously. Thunderbreak, Sunlash, Gravefire, Scythe, Ashfang, withdrawing Broken Oath and the outer Triarch ships retain their established distinct silhouettes, battle damage and physically coherent relative positions. The armed standoff persists with no unified victory formation, no new peace treaty, and no instant repairs. End on the road continuing to operate; Issue 12's political agreement is not yet made."
+    ],
+    "panelPlan": [
+      "A wide orientation of the Gate shows damaged pylons and ordinary transit still underway.",
+      "Distinct surviving factions hold separate uneasy positions, with Triarch guns still beyond the approach.",
+      "Final visual focus returns to the civilian route passing through the scarred but functioning Gate."
+    ],
+    "setting": "RF_Auric_Gate"
+  }
+]

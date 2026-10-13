@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "shattering",
+  "status": "bootstrap-required",
+  "purpose": "Cover-production contract for Shattering of the Corridors as a standalone direct dramatic series. Issue 1 establishes the approved masthead/trade-dress pixel reference; Issues 2-6 use that exact approved image only for recurring cover-brand continuity while their own RexPrompt cover recipes control issue-specific imagery.",
+  "recipeShelf": "data/shows/shattering/covers.json",
+  "foundingCover": {
+    "recipeId": "SHAT_I01_COVER",
+    "issue": 1,
+    "state": "production-ready-recipe-awaiting-approved-pixels",
+    "targetAssetPath": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png",
+    "activationRule": "Do not treat this path as visual authority until the Issue 1 cover is explicitly approved and the exact approved pixels are persisted at this path.",
+    "approvalWriteback": "After approval/persistence, change foundingCover.state to approved-trade-dress-reference and status to active, then record the asset SHA if the production workflow provides one."
+  },
+  "scope": {
+    "controls": [
+      "STAR SPLITTER VISIONS publisher-lockup identity",
+      "SHATTERING OF THE CORRIDORS masthead design",
+      "masthead placement and scale",
+      "issue-number hierarchy and placement",
+      "recurring cover margins and trade-dress geometry",
+      "overall Shattering cover-brand recognition"
+    ],
+    "doesNotControl": [
+      "issue-specific scene composition",
+      "character staging",
+      "story imagery",
+      "issue palette",
+      "issue lighting",
+      "camera angle",
+      "location",
+      "action",
+      "spoiler content",
+      "interior comic-page design"
+    ]
+  },
+  "pixelReadGate": {
+    "appliesTo": [
+      "SHAT_I02_COVER",
+      "SHAT_I03_COVER",
+      "SHAT_I04_COVER",
+      "SHAT_I05_COVER",
+      "SHAT_I06_COVER"
+    ],
+    "requiredAsset": "production/references/shattering/assets/covers/issue-01-cover-trade-dress.png",
+    "rule": "Before generating any later Shattering cover, retrieve and inspect the actual approved Issue 1 cover pixels in active multimodal context. A repository path, description, hash, thumbnail metadata, remembered image, or statement that the cover was previously viewed does not satisfy this gate.",
+    "blockedBehavior": "If the Issue 1 approved cover pixels do not yet exist or cannot be visually inspected, stop before later-cover generation and complete the Issue 1 cover bootstrap first."
+  },
+  "recipeAuthority": {
+    "rule": "The assembled current cover recipe controls the issue-specific selling image, cast, setting, composition, spoiler ceiling, and exact required cover text. The approved Issue 1 cover controls only recurring cover-brand appearance at the scope above.",
+    "conflictResolution": "If copying Issue 1 composition would conflict with the current issue recipe, follow the current issue recipe and preserve only the scoped trade-dress continuity."
+  },
+  "chronologyRule": "Shattering predates the mature Rex Fleet political order. High Era covers must use Cooperative/BHA/Convoy/Outer Band visual language; post-Break covers may foreshadow later traditions but must not copy mature Fleet, Verge, Shard, or Crown uniforms, ships, institutions, or finished iconography.",
+  "coverRules": [
+    "One dominant selling idea per issue.",
+    "No recap collage.",
+    "No generic cast lineup unless the current cover recipe explicitly requires an ensemble composition.",
+    "No superhero posing.",
+    "No generic space-battle spectacle when the issue is not about combat.",
+    "No mature post-Shattering faction design imported backward into the High Era.",
+    "No legible environmental text or fake signage on covers.",
+    "Only exact required cover lettering from the assembled recipe may be rendered.",
+    "The cover must remain legible and compelling at thumbnail size.",
+    "Do not reveal the issue's decisive solution, late reversal, or final image."
+  ],
+  "issueRecipes": [
+    {
+      "issue": 1,
+      "recipeId": "SHAT_I01_COVER",
+      "title": "Issue 1 Cover — The Impossible Flaw",
+      "status": "production-ready"
+    },
+    {
+      "issue": 2,
+      "recipeId": "SHAT_I02_COVER",
+      "title": "Issue 2 Cover — Inherited Machinery",
+      "status": "production-ready"
+    },
+    {
+      "issue": 3,
+      "recipeId": "SHAT_I03_COVER",
+      "title": "Issue 3 Cover — Two Instructions",
+      "status": "production-ready"
+    },
+    {
+      "issue": 4,
+      "recipeId": "SHAT_I04_COVER",
+      "title": "Issue 4 Cover — The Road Breaks",
+      "status": "production-ready"
+    },
+    {
+      "issue": 5,
+      "recipeId": "SHAT_I05_COVER",
+      "title": "Issue 5 Cover — Three Ways to Survive",
+      "status": "production-ready"
+    },
+    {
+      "issue": 6,
+      "recipeId": "SHAT_I06_COVER",
+      "title": "Issue 6 Cover — Future on the Gantry",
+      "status": "production-ready"
+    }
+  ],
+  "seasonCoverLanguage": {
+    "narrativeProgression": [
+      "Issue 1 — certainty with one impossible flaw",
+      "Issue 2 — inherited dependence and buried understanding",
+      "Issue 3 — incompatible control applied to one system",
+      "Issue 4 — infrastructure failure becomes physically visible",
+      "Issue 5 — survival practice begins becoming political doctrine",
+      "Issue 6 — a shared future is assembled before its meaning is settled"
+    ],
+    "visualProgression": [
+      "Issues 1-3: polished High Era confidence; verified green route geometry; luminous white/gold institutional precision; clean stable surfaces.",
+      "Issue 4: preserve the same High Era visual grammar while making the corridor geometry itself lose registration.",
+      "Issue 5: shift toward rough, materially heterogeneous post-Break repair, hand-carried trust systems, and practical work-lighting.",
+      "Issue 6: retain provisional post-Break construction while opening the palette and composition toward forward movement; allow only subtle ancestry of later Fleet visual grammar."
+    ],
+    "commercialRule": "Every cover must contain one visually legible question that remains compelling with all lettering removed. The cover sells the unanswered condition, not the issue's solution.",
+    "restraintRule": "Escalate spectacle across the run. Issue 1 is powerful because almost everything looks perfect; Issue 4 earns the largest visual rupture; Issues 5-6 return consequence to tools, infrastructure, and human practice rather than trying to out-spectacle the collapse.",
+    "thumbnailRule": "At storefront/mobile thumbnail size, the dominant silhouette and contradiction must remain readable before fine worldbuilding detail.",
+    "issueQuestions": {
+      "SHAT_I01_COVER": "What is wrong with this perfect system?",
+      "SHAT_I02_COVER": "What is this civilization standing on?",
+      "SHAT_I03_COVER": "What happens when one machine receives two definitions of stable?",
+      "SHAT_I04_COVER": "How can a road stop agreeing where the traveler is?",
+      "SHAT_I05_COVER": "How do different survival practices become different ideas of order?",
+      "SHAT_I06_COVER": "Who gets to define the future that is already being built?"
+    }
+  },
+  "seriesBoundary": "Shattering of the Corridors is not a Rex Fleet Academy series. Its covers must never use Rex Fleet Academy as a line, eyebrow, course label, or trade-dress identity. A separate future Academy history topic may later study these events retrospectively, but it is not this series."
+}

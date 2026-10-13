@@ -1,0 +1,35 @@
+{
+  "seriesId": "rfa-reach-resolve",
+  "sharedDoctrine": "../rex-fleet-academy-shared/curriculum_doctrine.json",
+  "currentState": "Issue 1 compiled; six listed issues are provisional doctrine modules, not a fixed season.",
+  "issueCountPolicy": "Academy course architecture: default one issue; use two or three only if the source material and dramatic form genuinely require additional room. Three total issues is the expected maximum. Legacy multi-module plans are content pools, not issue assignments.",
+  "sourceFamilies": [
+    {
+      "name": "Reach and Resolve doctrine",
+      "status": "current working political canon",
+      "use": "Operational definitions and later mature interpretation."
+    },
+    {
+      "name": "Liora-era treatise / Resolve antecedent",
+      "status": "historical source requiring exact-text retrieval and canon reconciliation before quotation",
+      "use": "Show how a practical survival argument becomes later doctrine."
+    },
+    {
+      "name": "Oral History of the Shattering",
+      "status": "foundational historical source; exact source text required before quotation",
+      "use": "Human testimony about isolation, endurance, rescue, reconnection."
+    },
+    {
+      "name": "Shattering source package",
+      "status": "historical authority in its scope",
+      "use": "Historical cases and chronology."
+    }
+  ],
+  "narrationMethod": "A doctrine/treatise excerpt can run as captions across the case it later came to describe, while the seminar asks where the text fits, where it overreaches, and how later institutions changed its meaning.",
+  "productionIsolation": {
+    "seriesPackage": "data/shows/rfa-reach-resolve/",
+    "cast": "course-local by default; cross-course reuse must be explicit",
+    "imgProject": "dedicated course IMG/reference project when visual production begins",
+    "gitWorkflow": "develop on a course-specific feature branch when useful, then merge approved state to main; do not treat a long-lived branch as separate canon"
+  }
+}
