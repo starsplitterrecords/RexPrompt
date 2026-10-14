@@ -1,7 +1,7 @@
 [
   {
     "id": "RF_I03_P01",
-    "summary": "A family returns to find their temporarily empty apartment assigned to Tal Corvus refugees; Halev suspends eviction but must find safe accommodation for both households.",
+    "summary": "In Auric's radiant but strained Crown Ring, a returning resident discovers her parents' temporarily empty apartment was assigned to new refugees. Halev, elected Auric leader and head of the wider Verge council, faces two legitimate housing claims.",
     "settingText": "INT. AURIC BAZAAR — LUXURY RING CONCOURSE — MORNING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -73,7 +73,7 @@
       }
     ],
     "panelPlan": [
-      "Wide chandelier concourse converted into a crowded shelter.",
+      "Elegant chandelier concourse converted into a crowded shelter, preserving costly finishes against uncomfortable crowding and limited warming space.",
       "A resident confronts Richard at her sealed family apartment.",
       "Paul moves protectively between the adults.",
       "Halev arrives as Dain refuses an easy eviction.",
@@ -83,13 +83,14 @@
       "Make the luxury ring feel like contested shelter rather than reclaimed housing: refugee bedding, old family possessions and civic staff should occupy the same doorway. No one is clearly wrong, and Halev's inability to promise where the resident family goes must remain visible.",
       {
         "text": "Establish clearly that the apartment belonged to a resident family temporarily away, not an abandoned home. Halev grants temporary shelter rather than resolving the housing shortage. Keep the resident and refugee families equally recognizable as individuals."
-      }
+      },
+      "Auric is genuinely beautiful, functioning and prosperous. Rooms may be temporarily vacant but privately owned, inadequately heated, structurally unsafe or politically unavailable. Halev cannot manufacture warm space by decree."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P02",
-    "summary": "When the shared apartment loses heat, Richard treats the resident child with his remaining Tal Corvus medicine, but the child's improvement depends on restoring warmth.",
+    "summary": "The returning Auric resident's elderly mother has breathing trouble when the contested apartment's heat fails. Richard uses scarce medicine but all households need a sustainable heating solution.",
     "settingText": "INT. LUXURY RING — TEMPORARY APARTMENT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -110,7 +111,7 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Her breathing changed when the heat went out. Please do something."
+        "text": "My mother's breathing changed when the heat went out. Please do something."
       },
       {
         "handle": "@starsplit.richard.secundo",
@@ -120,12 +121,12 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "Nothing. She was fine until the room got cold."
+        "text": "Nothing. She was managing until the room got cold."
       },
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Dad, her lips are turning blue."
+        "text": "Dad, her breathing's getting worse."
       },
       {
         "handle": "@starsplit.richard.secundo",
@@ -140,7 +141,7 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Right now she's the patient. Help me sit her upright."
+        "text": "She's the patient in front of me. Help me sit her upright."
       },
       {
         "handle": "@starsplit.sera.dain",
@@ -165,21 +166,23 @@
     ],
     "panelPlan": [
       "Emergency lights and visible breath crowd both families together.",
-      "The resident child collapses.",
+      "The returning resident's elderly mother is struggling to breathe while seated; no harmed child.",
       "Richard opens his last field kit.",
       "Paul steadies the lamp while the mother holds her child.",
-      "The child breathes as the adults meet eyes without reconciliation."
+      "The older woman breathes easier after treatment, but no one knows how long the room will remain warm."
     ],
     "directionInline": [
       "The medical emergency should interrupt the property dispute rather than resolve it. Richard uses refugee medicine on the resident child without asking for moral credit; the shared heat failure keeps both families dependent on the same failing room.",
       {
         "text": "This is the FIRST treatment of the same resident child who will struggle again on P07. The medicine improves breathing temporarily; do not imply full recovery or a separate unrelated child."
-      }
+      },
+      "The patient is an adult elderly woman, not a child. No injured or medically distressed minors.",
+      "Crown Ring warmth depends on functioning infrastructure, not a supernatural frost effect."
     ]
   },
   {
     "id": "RF_I03_P03",
-    "summary": "Venn leaves for tribunal; Naomi believes the Fleet is withdrawing its most trustworthy person exactly when Auric needs her.",
+    "summary": "Venn leaves Auric for Fleet tribunal as a committed Core officer who accepts accountability. Naomi, responsible for the cold and crowded arrivals, challenges her understanding of the rescue's unfinished consequences.",
     "settingText": "INT. AURIC DOCK — DEPARTURE GLASS",
     "regionText": "The Verge",
     "charactersInline": [
@@ -201,7 +204,7 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "That's why I have to go. They're turning a rescue into a charge against my crew."
+        "text": "I gave the order. My crew shouldn't answer for that choice."
       },
       {
         "handle": "@starsplit.naomi.sol",
@@ -231,7 +234,7 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Not enough. I'll listen when I get back—if they let me."
+        "text": "Not enough. I should have asked before I left."
       },
       {
         "handle": "@starsplit.naomi.sol",
@@ -250,12 +253,13 @@
       "Naomi's anger is about asymmetry of consequence, not abandonment. Keep the departing shuttle and Auric's damaged public space in the same visual field so Venn literally leaves the place Naomi must continue managing.",
       {
         "text": "The tribunal summons and provisional loss of Thunderbreak's command must be understandable before Venn departs. Naomi's anger is about Auric bearing the ongoing cost, not opposition to rescuing civilians."
-      }
+      },
+      "Venn is fundamentally of the Core: she believes in Fleet's BHA inheritance, service traditions and institutional mission. Her frontline experiences challenge decisions, not that identity."
     ]
   },
   {
     "id": "RF_I03_P04",
-    "summary": "At tribunal, Venn accepts responsibility for diverting Thunderbreak from Auric's supplies and refusing Fleet detention of mixed refugees; the hearing weighs both the lives saved and the relief cargo lost.",
+    "summary": "At the tribunal Venn accepts the two refusals: diverting Thunderbreak from Auric's heat-and-medicine convoy to save a civilian ship, and declining to separate mixed patients. Dominion takes seriously the risk to thousands whose supplies weren't protected; Venn speaks to the people dying in front of her.",
     "settingText": "INT. DAWNWARD HORIZON — ADMIRALTY TRIBUNAL — DAY",
     "regionText": "The Core",
     "charactersInline": [
@@ -314,12 +318,12 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "Two refusals do not become lawful because civilians survived."
+        "text": "The convoy carried medicine and heat for thousands. You were assigned to protect them too."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Then enter both in the charges. Enter the people we saved and the supplies we lost."
+        "text": "Enter both refusals. Enter the people saved alongside the supplies we failed to deliver."
       }
     ],
     "panelPlan": [
@@ -330,13 +334,15 @@
       "Venn accepts both command charges; behind her the displayed rescue and cargo loss remain visible as parallel consequences."
     ],
     "directionInline": [
-      "The tribunal must confront two recorded refusals: leaving the authorized supply screen to save refugees, and declining Fleet detention of mixed Shard patients. Present the partially recovered supply spine, missing cargo and civilian testimony together. Keep the hearing grounded in the actual Shatterwake engagement."
+      "The tribunal must confront two recorded refusals: leaving the authorized supply screen to save refugees, and declining Fleet detention of mixed Shard patients. Present the partially recovered supply spine, missing cargo and civilian testimony together. Keep the hearing grounded in the actual Shatterwake engagement.",
+      "Dominion is a sincere institutionalist, not an antagonist seeking civilian suffering. His ambition to make Fleet routes permanent and his service ethic reinforce one another.",
+      "Neither Fleet officer counts the Shard households fed by stolen provisions as equivalent beneficiaries of the convoy's loss; they are aware of piracy but measure losses from the original recipients' perspective."
     ],
     "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P05",
-    "summary": "Cross-checking patient files against preserved power and supply records, Richard establishes that Triarch authorities deliberately diverted heat and medicine from protesting Tal Corvus districts.",
+    "summary": "Richard proves that specific Triarch authorities deliberately cut heating and medicine to protesting Shard districts in Tal Corvus. Political deprivation within Shard society is different from ordinary frontier cargo raiding.",
     "settingText": "INT. AURIC LUXURY RING — IMPROVISED CLINIC",
     "regionText": "The Verge",
     "charactersInline": [
@@ -416,13 +422,14 @@
       "Treat the discovery as forensic work: mismatched official reports, clinic copies, utility timestamps and district maps. The evidence proves selective punitive shutdowns inside broader scarcity; do not imply every shortage in the frontier was fabricated.",
       {
         "text": "Evidence must prove intentional district selection, not merely correlation. Distinguish power failures from diverted medical supply and show original clinic copies versus subsequently revised official reports. All on-screen text beyond scripted wording must remain unreadable."
-      }
+      },
+      "Ground records in measured utility and medical evidence, not mystical objects. Individual Shard civilians suffered; avoid imputing each Triarch act to all captains or all Shards."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P06",
-    "summary": "Halev's promise to continue shelter collides with failed heat and exhausted Verge households; Dain demands a truthful count of safe space before further reassignment.",
+    "summary": "Halev and Dain confront insufficient warmed housing in a beautiful Verge hub. The fast Green Corridor amplifies Auric's existing pressure by accelerating relocation and commerce; real ownership and capacity limits remain.",
     "settingText": "INT. AURIC BAZAAR — CIVIC CHAMBER",
     "regionText": "The Verge",
     "charactersInline": [
@@ -462,12 +469,12 @@
       {
         "handle": "@starsplit.brent.wallace",
         "speaker": "Wallace",
-        "text": "The available rooms could be rented at a rate that covers the additional load."
+        "text": "Some owners might agree to short-term leases if we cover their costs."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "People are already sleeping six to a room. Charging them won't create heat."
+        "text": "People are already sleeping six to a room. Finding the rent still won't make those rooms warm."
       },
       {
         "handle": "@starsplit.sera.dain",
@@ -496,13 +503,15 @@
       "Sera should control the room by forcing costs into names and places. Keep the failing district map visible while Wallace offers a market abstraction and Naomi reacts too aggressively, allowing Sera—not Naomi—to define the civilian political question.",
       {
         "text": "The scene must make a practical decision: assess heated capacity before promising more rooms. Remove rhetorical threats and market caricature. Wallace may advocate pricing but is not shown as an inhuman straw man."
-      }
+      },
+      "Halev is Auric's elected leader and council head for the wider Verge, not a dictator over independently owned homes.",
+      "The corridor expands opportunity and the speed of migration without causing every existing shortage. Resident and merchant concerns are legitimate."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P07",
-    "summary": "The same resident child deteriorates again when the shared warming room cannot hold temperature; a refugee family shares its only good blanket while Richard treats her.",
+    "summary": "The returning resident's elderly mother struggles again in the shared warming room. The Luminara mother contributes her family's good blanket while Richard and nineteen-year-old Paul coordinate her care.",
     "settingText": "INT. LUXURY RING — WARMING ROOM",
     "regionText": "The Verge",
     "charactersInline": [
@@ -537,7 +546,7 @@
       {
         "handle": "@starsplit.resident",
         "speaker": "Resident",
-        "text": "She's wheezing again. The medicine helped, but only for a while."
+        "text": "Mum's wheezing again. The medicine helped, but only for a while."
       },
       {
         "handle": "@starsplit.richard.secundo",
@@ -562,12 +571,12 @@
       {
         "handle": "@starsplit.paul.secundo",
         "speaker": "Paul",
-        "text": "Want to see something while the doctor works?"
+        "text": "Can you hold the light while I help Dad?"
       },
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Keep her looking at you. That helps."
+        "text": "Keep talking to her while I check her breathing."
       },
       {
         "handle": "@starsplit.resident",
@@ -577,21 +586,22 @@
     ],
     "panelPlan": [
       "Families pack around one improvised heater.",
-      "The resident child struggles to breathe.",
+      "The resident's elderly mother struggles to breathe while seated, attended by adults.",
       "Refugees surrender blanket and space.",
-      "Paul distracts the frightened children while Richard works.",
+      "Paul holds the lamp and helps organize blankets while Richard treats the adult patient.",
       "The resident mother makes room for Richard."
     ],
     "directionInline": [
       "This page is not reconciliation. The families cooperate because one child cannot breathe. Preserve guarded body language while blanket, space and medical attention move across the earlier social boundary.",
       {
         "text": "Continue the exact child and mother's story from P02. The recurrence must be caused by ongoing thermal failure, not portrayed as a separate medical emergency."
-      }
+      },
+      "Adult elder is the same patient from page 2. Do not depict harm or medical danger to children. Sharing warmth is meaningful but doesn't end the structural shortage."
     ]
   },
   {
     "id": "RF_I03_P08",
-    "summary": "Tali warns Jex the public Auric passage has been compromised and that exposing her separate haven network would endanger people hiding behind it.",
+    "summary": "Jex's cultivated network of information and favors begins backfiring as Tali warns that the routes protecting hidden families are exposed. He once believed independent captains would preserve the commerce they depend on.",
     "settingText": "INT. VEIL MARKET — JEX'S OFFICE / TALI'S SAFEHOUSE",
     "regionText": "The Shards",
     "charactersInline": [
@@ -613,7 +623,7 @@
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "So somebody's selling the route."
+        "text": "Or somebody leaked a crossing window. We've both seen how that works."
       },
       {
         "handle": "@starsplit.tali.marrin",
@@ -633,7 +643,7 @@
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "I've got families waiting for a way into Auric."
+        "text": "I've got families waiting, and two pilots who owe me a crossing."
       },
       {
         "handle": "@starsplit.tali.marrin",
@@ -662,13 +672,14 @@
       "Tali's refuge should look operational and vulnerable: packed bags, erased route marks and people preparing to move. Jex's hesitation must occur between two real groups of people who both need the same network.",
       {
         "text": "Establish that the publicly known passage and Tali's private haven network are different physical route systems. Jex promises not to expose her network now, making P20-P21 a costly reversal, not a route invented mid-crisis."
-      }
+      },
+      "Jex knowingly leaks ship movements and crossing timings to multiple factions for reciprocal favors, and mistakes the incentives of trade for a power to control others. Tali isn't a pawn and insists on protecting her own families."
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P09",
-    "summary": "The Trade Mask offers renewed commerce for Richard's surrender and rejection of Fleet jurisdiction; Paul confronts the possibility that giving up his father might protect Auric.",
+    "summary": "The Trade Mask's offer to renew commerce in exchange for Richard's surrender puts Shard material needs against the risk of political coercion. Tal Corvus's records make the promise uncertain.",
     "settingText": "INT. IMPROVISED CLINIC — BROADCAST LIGHT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -750,12 +761,13 @@
       "Introduce the Silent Triarch as a three-mask council while the Trade Mask alone speaks the offer. Raid and Fear remain silent in the background. The visual distinction between the masks should be readable without explanatory captions so later differences feel like an existing structure, not a retcon.",
       {
         "text": "Preserve the Triarch's three distinct political masks, but make the offer explicitly conditional. Richard knows surrender risks both himself and the preserved evidence; do not let Paul's question evaporate in vague familial sentiment."
-      }
+      },
+      "Triarch masks embody distinct political interests, not magic; independent Shard captains are not automatically bound by every masked authority. Paul remains a nineteen-year-old autonomous adult."
     ]
   },
   {
     "id": "RF_I03_P10",
-    "summary": "Abby warns Auric of Billie's and Pike's gathering captains, offers a limited civilian-defense commitment, and accepts entry disarmed rather than claiming command.",
+    "summary": "Abby risks her Shard standing by warning Auric and seeking independent captains willing to protect civilian transports against Billie and Pike. She cannot command the confederation.",
     "settingText": "INT./EXT. AURIC SECURITY LOCK",
     "regionText": "The Verge",
     "charactersInline": [
@@ -805,7 +817,7 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "To warn you while there's still time to move civilians. I can bring ships to shield the evacuation if you let me."
+        "text": "To warn you while there's still time to move civilians. I know captains who may shield the evacuation, if you'll let them come."
       },
       {
         "handle": "@starsplit.sera.dain",
@@ -815,7 +827,7 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Then don't. Put your captain in charge of my ships. Just don't wait for the attack."
+        "text": "Then don't. If any agree, coordinate them through Naomi. Just don't wait for the attack."
       },
       {
         "handle": "@starsplit.halev",
@@ -834,12 +846,13 @@
       "Abby earns entry by arriving physically alone and disarmed while her warship remains outside. Sera owns the political skepticism, Naomi owns the security risk, and Halev accepts personal responsibility for opening the door.",
       {
         "text": "Her offer on this page sets up Naomi's conditional acceptance of six Shard defectors on P23. Abby's political and military authority is distinct from Billie's and Pike's."
-      }
+      },
+      "Abby's proposed change risks both practical command alliances and Shard personal and cultural identity. She must persuade fellow captains, not order them."
     ]
   },
   {
     "id": "RF_I03_P11",
-    "summary": "Abby urges Tess to leave before Billie's assault; Tess refuses because helping the victims is her immediate responsibility, while acknowledging her own share of former Shard command.",
+    "summary": "Abby urges her sister Tessa to leave the clinic; Tess accepts her own history as a Shard commander, though she did not order the Triarch's district cutoffs. Their affection remains real even under disagreement.",
     "settingText": "INT. AURIC LUXURY RING — CLINIC PASSAGE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -866,22 +879,22 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Come with me. You're still my sister, whatever you think of our command."
+        "text": "Come with me. I can't lose you here too."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "I helped lead the Shards too. Some of those orders went through us."
+        "text": "I commanded a ship through those years. I knew people were going cold."
       },
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "We didn't order the district shutdowns."
+        "text": "We didn't make the shutdown orders."
       },
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "We knew civilians were being hurt and stayed in command. That's what I have to answer for."
+        "text": "We kept sailing. I told myself keeping my crew alive was enough."
       },
       {
         "handle": "@starsplit.abby.saville",
@@ -910,13 +923,14 @@
       "The sisters' history should sit in the unused command token between them. Tess keeps treating patients throughout the argument, making staying an action she is already performing rather than a declaration about who she has become.",
       {
         "text": "Make the distinction between Triarch policy responsibility, Shard leaders' prior failures to challenge harm, and the immediate Billie/Pike attack explicit. Tess does not claim she or Abby ordered the Triarch shutdowns."
-      }
+      },
+      "Tessa and Abby are sisters and Billie is their close sister-in-arms. Neither woman is a retrospective moral innocent; Tessa feels complicit because she stayed in command while civilians were harmed."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P12",
-    "summary": "Kerr offers Venn a defensible lie; Venn insists the tribunal judge her actual rejection of Dominion's order.",
+    "summary": "Kerr offers Venn a defensible interpretation of her rescue through Fleet interests. She refuses to claim strategic motives she didn't have and accepts professional accountability without rejecting the institution she serves.",
     "settingText": "INT. ADMIRALTY TRIBUNAL — RECESS ALCOVE",
     "regionText": "The Core",
     "charactersInline": [
@@ -948,7 +962,7 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "But it would let them avoid the real question: why was I ordered to leave those people?"
+        "text": "It wasn't my calculation when I turned the ship. I won't tell the tribunal it was."
       },
       {
         "handle": "@starsplit.soren.kerr",
@@ -982,13 +996,14 @@
       "Kerr's proposed defense should look genuinely useful, not cowardly. Venn deletes the argument because it is false, forcing the tribunal to judge the actual choice instead of allowing the scene to become a purity test.",
       {
         "text": "Kerr's advice must be a plausible legal defense, not simply an invitation to lie. Venn explicitly chooses a more dangerous truthful account. Do not imply the ship's command has not already been suspended."
-      }
+      },
+      "Kerr's counsel is plausible rather than corrupt. Venn remains invested in Fleet discipline, despite taking frontline consequences seriously."
     ],
     "setting": "RF_Admiralty_Tribunal"
   },
   {
     "id": "RF_I03_P13",
-    "summary": "Admiralty command withdraws Thunderbreak and associated medical-power support while Venn's authority remains suspended, abruptly worsening Auric's heating and clinic emergency.",
+    "summary": "Admiralty withdraws Thunderbreak and finite temporary medical-power support while Venn's authority is suspended. Fleet's force-allocation and legal logic leaves Auric colder, without requiring Dominion to want anyone to suffer.",
     "settingText": "INT. AURIC ESCORT CONTROL / LUXURY RING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1032,17 +1047,17 @@
       {
         "handle": "@starsplit.halev",
         "speaker": "Halev",
-        "text": "Fleet's medical personnel and power support are withdrawing too."
+        "text": "Fleet's temporary medical and power teams are being reassigned with the ship."
       },
       {
         "handle": "@starsplit.sera.dain",
         "speaker": "Sera",
-        "text": "They know we can't run every shelter heater without them."
+        "text": "Those heaters struggled before the Fleet teams came. They're worse without them."
       },
       {
         "handle": "@starsplit.naomi.sol",
         "speaker": "Naomi",
-        "text": "They want Auric to reconsider letting Venn's rescue stand."
+        "text": "They can call it redeployment. We still need heat by tonight."
       },
       {
         "handle": "@starsplit.halev",
@@ -1066,13 +1081,15 @@
       "Show the withdrawal as material loss: a power feed goes dark, medical support disappears and Thunderbreak moves beyond the boundary. Sera and Naomi should experience the same act through different lenses—punishment and leverage.",
       {
         "text": "State clearly who issued withdrawal, Venn's actual authority, and the immediate civilian consequence. The brief caption marks a temporal move without introducing a narrator."
-      }
+      },
+      "The heating problems predate Fleet aid and increase with rapid migration; emergency Fleet power assistance was real, limited and temporary.",
+      "Do not depict Dominion deliberately withholding heat to terrify residents. He can regard redeployment as strategically or institutionally justified while failing to feel the local cost."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P14",
-    "summary": "Richard agrees to public testimony with original evidence attached, explicitly rejects custody and a Fleet occupation rationale, and respects nineteen-year-old Paul's refusal to appear.",
+    "summary": "Richard agrees to public testimony with original evidence while refusing forced custody or a Fleet occupation rationale. His adult son Paul decides for himself whether to appear.",
     "settingText": "INT. AURIC ARCHIVE BOOTH — NIGHT",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1160,13 +1177,14 @@
       "The archive booth is ordinary evidence infrastructure. Richard's conditions must appear in the public record before his testimony begins, and Paul's refusal of the camera should be accepted without turning him into a symbolic witness.",
       {
         "text": "Richard's conditions are his stated limits, not an implausible guarantee governing all later political uses of public evidence. Make the source-file attachments concrete. Paul is 19 and decides for himself; keep him off-camera."
-      }
+      },
+      "Paul Secundo is nineteen. Evidence is practical measured records with clear provenance, not sacred archival material."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P15",
-    "summary": "Richard's testimony names victims and publishes source records proving targeted deprivation; ordinary listeners independently duplicate and transmit the material before it can be suppressed.",
+    "summary": "Richard's evidence names individual Tal Corvus adults deprived of heat or medicine by specific political decisions; listeners independently preserve copies and contest the official record.",
     "settingText": "INT. AURIC ARCHIVE / INTERCUT TAL CORVUS",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1187,7 +1205,7 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Nemi Vale. Six weeks old. Her incubator lost power after her district was denied supply."
+        "text": "Nemi Vale. Forty-two. Her breathing equipment lost power when her district's supply was cut."
       },
       {
         "handle": "@starsplit.richard.secundo",
@@ -1197,7 +1215,7 @@
       {
         "handle": "@starsplit.richard.secundo",
         "speaker": "Richard",
-        "text": "Sergeant Pell. He carried medicine to sick children. They arrested and executed him for theft."
+        "text": "Sergeant Pell. He carried medicine into a sealed district. They arrested and executed him for theft."
       },
       {
         "handle": "@starsplit.paul.secundo",
@@ -1237,12 +1255,13 @@
       "Keep names paired with source records and remembered faces so testimony never floats free of evidence. The spread of the feed should happen through ordinary workers retransmitting it, not through a grand public awakening.",
       {
         "text": "Nemi Vale is a SIX-WEEK-OLD INFANT. Never associate her file with a portrait of an adult man; show infant clinical evidence without misleading faces or unrelated biographies. No invented interface text. Establish what Richard personally treated and what documents independently demonstrate."
-      }
+      },
+      "Avoid depicting a harmed or deceased infant/child or teen. The suffering subjects in the testimony are adults, shown as people rather than horror imagery."
     ]
   },
   {
     "id": "RF_I03_P16",
-    "summary": "Pike proposes sabotaging Auric's heat to draw defenders away; Billie knowingly authorizes the diversion because Richard's testimony threatens her authority, and insists he be taken alive.",
+    "summary": "Pike proposes sabotage of Auric's heat; Billie agrees to it as part of capturing Richard. Under fear of losing captains and Shard identity, she crosses from cargo piracy into deliberate endangerment of civilians.",
     "settingText": "INT. BROKEN OATH — WAR ROOM",
     "regionText": "The Shards",
     "charactersInline": [
@@ -1274,7 +1293,7 @@
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "You'd turn the residents against the refugees. That's how you get a riot."
+        "text": "You'll turn residents against refugees. Somebody could die in that panic."
       },
       {
         "handle": "@starsplit.oren.pike",
@@ -1284,7 +1303,7 @@
       {
         "handle": "@starsplit.billie.rusk",
         "speaker": "Billie",
-        "text": "I want Secundo alive. He will answer for what he's saying in front of everyone."
+        "text": "Do it away from the clinic. Secundo comes out alive. He'll answer for this in front of everyone."
       },
       {
         "handle": "@starsplit.oren.pike",
@@ -1308,12 +1327,13 @@
       "Billie should react to one named victim before Pike turns the testimony into an attack opportunity. Her agreement to strike Auric is therefore a choice to answer uncomfortable truth with spectacle, not ignorance of what Richard said.",
       {
         "text": "This is the CAUSAL START of P17 sabotage and the P22 assault. It must be obvious who plans the exchanger cut and who authorizes it. The plan is military-political coercion, not abstract villain rhetoric. Avoid suggesting Billie personally planted the insignia."
-      }
+      },
+      "Billie owns the decision. Her cultural grievance and historical anger are real but not absolution, and she must never look like a generic sadistic raider."
     ]
   },
   {
     "id": "RF_I03_P17",
-    "summary": "Pike's sleeper operatives sabotage a ring exchanger and plant a medical patch associated with Richard; heat loss fuels suspicion until Halev identifies deliberate damage but refuses to accuse without evidence.",
+    "summary": "Pike's operatives cut an exchanger and plant a misleading medical patch. Auric residents feel the threat of cold and crowding while Halev insists that physical sabotage does not by itself identify the perpetrator.",
     "settingText": "INT. LUXURY RING — HEAT EXCHANGE / CONCOURSE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1392,12 +1412,13 @@
       "The planted insignia must look almost too convenient once Halev sees the physical damage. Let the crowd's fear become dangerous before officials can explain anything; Richard protecting Paul should precede any argument about evidence.",
       {
         "text": "This sabotage is a deliberate action ordered by Pike and permitted by Billie, not an unexplained mechanical failure. The medical patch is planted and NOT proof of Richard's guilt. Avoid portraying the sleeper as a generic pirate or making the planted patch a magical plot token."
-      }
+      },
+      "Preserve polished Auric ring details and coherent industrial piping/exchanger damage. Failing heat doesn't instantly ice over a pressurized station."
     ]
   },
   {
     "id": "RF_I03_P18",
-    "summary": "After the exchanger sabotage, Naomi convinces Halev and Dain to state the real hazard and give civilians immediate evacuation directions rather than falsely claiming stability.",
+    "summary": "Halev, Dain and Naomi issue honest emergency instructions showing exactly which rooms retain heat and where residents must move, rather than obscuring the danger after sabotage.",
     "settingText": "INT. AURIC CIVIC BROADCAST PLATFORM",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1467,13 +1488,14 @@
       "Naomi should activate the broadcast while the leaders are still disagreeing, denying them the chance to polish a unified message. The public hears uncertainty and argument along with the evacuation warning.",
       {
         "text": "No generic political speech about honesty. Tie dialogue to specific heating damage, vulnerable patients and the route to inner shelter. Keep the existing public broadcast as practical emergency instructions, not a new framing device."
-      }
+      },
+      "Evacuation depends on measured temperatures, known passages and escort teams. No convenient magic warming or instantaneous citywide catastrophe."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P19",
-    "summary": "A resident-first emergency order bars Tal Corvus refugees from inner shelter until Halev reverses it and Dain relinquishes her family's reserved berth.",
+    "summary": "An emergency order intended to prioritize existing residents inadvertently bars newly arrived refugees from warm shelter. Halev publicly corrects his own elected government's mistake and residents share limited space.",
     "settingText": "INT. AURIC INNER SHELTER GATE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1562,12 +1584,13 @@
       "Halev and Sera give up privileged access before asking anyone else to share. Their families and security remain unresolved outside the frame; the point is not martyrdom but removing an exemption they cannot ethically defend.",
       {
         "text": "Establish the order as a real administrative mistake with immediate consequences; Halev reverses it explicitly. Avoid implying a single surrendered berth can house all displaced residents. Show several residents choosing to assist, not a magically unanimous crowd."
-      }
+      },
+      "Halev bears responsibility for his order, but his voters' concern about heat and private space remains valid. Correction costs actual capacity."
     ]
   },
   {
     "id": "RF_I03_P20",
-    "summary": "With the public evacuation passage targeted, Jex and Naomi seek Tali's private route network; Tali agrees to expose its access points only after warning the families sheltering there.",
+    "summary": "Jex and Naomi weigh exposing Tali's concealed network to protect evacuation craft. His business in routes, timing, ship movements and traded favors has created real obligations he cannot control.",
     "settingText": "INT. JEX'S OFFICE / TALI SAFEHOUSE / AURIC MAP",
     "regionText": "The Shards",
     "charactersInline": [
@@ -1603,7 +1626,7 @@
       {
         "handle": "@starsplit.jex.marrin",
         "speaker": "Jex",
-        "text": "There's a private network. It leads through places where people have been hiding from the Triarch."
+        "text": "There's a private network. Its approaches pass shelters I helped keep off public charts."
       },
       {
         "handle": "@starsplit.tali.marrin",
@@ -1642,13 +1665,15 @@
       "The hidden route network should be clearly larger than Jex's already-public passage. Tali's haven is one node among many, so opening the system saves Auric by exposing the people who made Jex's private advantage possible.",
       {
         "text": "Tali knowingly accepts the risk and issues a warning before Jex exposes her network. This pays off P08's promise and gives P21 a concrete cost. Corridors are physical beacon/field routes, not teleportation portals or fantasy magical circles."
-      }
+      },
+      "This scene does not become an expository thesis about zero-sum raids. The families hidden at Jex's routes belong to multiple factions.",
+      "Jex has a partial insight: resources captured from Verge shipments can feed Shard communities, while the violence and damaged trade impose additional human costs. Plant as visual stakes, not a speech."
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P21",
-    "summary": "Tali authorizes the release of a concealed corridor network; civilian ships reach Auric, but the activation exposes her haven and communication with her is lost, leaving her fate unknown.",
+    "summary": "Tali chooses to expose her hidden transit network only after warning affected households, and is lost from communications while protecting incoming refugees. Jex's influence strategy carries intimate consequences.",
     "settingText": "INT. JEX'S OFFICE / EXT. AURIC HIDDEN APERTURES",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1729,13 +1754,14 @@
       "The route release should feel irreversible. As concealed apertures activate, Tali's node becomes visible and then disappears; Jex must keep transmitting even after he realizes the cost has become personal.",
       {
         "text": "Do not visually imply Tali's death. Her disappearance must remain uncertainty, not an explosion or magical deletion. Preserve coherent scale of vessels, anchors, corridors and travel times."
-      }
+      },
+      "Route geometry, anchors, phase and timing are physical science. Tali has agency; Jex can't bargain away her risk."
     ],
     "setting": "RF_Veil_Market"
   },
   {
     "id": "RF_I03_P22",
-    "summary": "Billie uses Pike's sabotage and the diverted defense ships to insert a small boarding force through Auric's service side, intending to seize Richard during a wider attack on evacuation craft.",
+    "summary": "Billie and Pike exploit the ring heat crisis to stage a physically coherent assault on Richard's clinic. Billie has abandoned the limits of the earlier no-death cargo raid.",
     "settingText": "EXT./INT. AURIC LUXURY RING — UNDER ATTACK",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1813,13 +1839,14 @@
       "Keep the attack attached to the evacuation geometry. Billie and Pike are not simply attacking Auric; they are forcing civilians to cross exposed space while hunting Richard inside the same structure.",
       {
         "text": "Supply the missing physical path from Billie's warship to the clinic used in P26. She boards via a smaller craft, not by driving a large named vessel through a station wall. Preserve named ship geometry and show civilian vulnerability without impossible collision scale."
-      }
+      },
+      "Billie remains recognizable and human, not a pirate caricature. Preserve boarding and vessel geometry and responsibility for the civilian threat."
     ],
     "setting": "RF_Auric_Luxury_Ring"
   },
   {
     "id": "RF_I03_P23",
-    "summary": "Naomi accepts six defecting Shard captains under a narrow Verge-led civilian escort arrangement, refusing any transfer of Auric command authority.",
+    "summary": "Six Shard captains voluntarily break with Billie's raid force and follow Abby into Verge-led civilian defense. They choose risk to their cultural standing; Abby cannot command them by rank.",
     "settingText": "INT. AURIC ESCORT CONTROL / ABBY'S SHUTTLE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -1840,7 +1867,7 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Six captains have broken from Billie's formation. They're ready to defend the refugee transports."
+        "text": "Six captains chose to leave Billie's formation. They'll cover the refugee transports."
       },
       {
         "handle": "@starsplit.naomi.sol",
@@ -1850,7 +1877,7 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "Six answered. Those are the ones I can actually bring."
+        "text": "Six agreed. Others refused me. That's what I can offer."
       },
       {
         "handle": "@starsplit.halev",
@@ -1889,13 +1916,14 @@
       "Naomi accepts Abby's help only after narrowing its purpose to civilian protection. Abby's frustration should remain, but the tactical display must show her ships moving into the assigned shield positions rather than pursuing enemies.",
       {
         "text": "Emphasize the practical agreement and its limits: Abby's six ships protect transports, not attack freely or gain command of Auric. Keep Shard and Verge ship markings distinct."
-      }
+      },
+      "The Shards are a confederation. Each captain retains their own crew and ship; allegiance is negotiated, not an order from Abby."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P24",
-    "summary": "Verge escorts, Abby's Shard defectors and Auric crews protect civilian traffic while Deka aboard the sidelined Thunderbreak watches a battle she is ordered not to enter.",
+    "summary": "The Verge and six Shard captains defend civilian craft together while Fleet officer Deka independently confronts the command-versus-consequence decision made by Venn.",
     "settingText": "EXT. AURIC BAZAAR — RINGSPACE BATTLE",
     "regionText": "Inter-faction Corridors",
     "charactersInline": [
@@ -1965,12 +1993,13 @@
       "The coalition should look improvised and unequal: Verge escorts, Abby's defectors, worker skiffs and Thunderbreak outside jurisdiction all solve different parts of the same emergency. No formation should suddenly look like a unified fleet.",
       {
         "text": "Establish that Deka is physically aboard and in acting authority, Venn is away at tribunal, and the ship is outside the defensive line. Naomi explicitly asks for help; no empty 'Commodore—' exchange."
-      }
+      },
+      "Deka remains a sincere trained Core officer, not a reckless mutineer. Shard/Verge/Fleet hull identities and shields must remain physically consistent."
     ]
   },
   {
     "id": "RF_I03_P25",
-    "summary": "Dominion offers Venn reinstatement in exchange for withdrawal and Richard's transfer; Venn refuses and Deka independently orders Thunderbreak into Auric to protect civilians.",
+    "summary": "Dominion offers Venn reinstatement if she supports a controlled Fleet withdrawal and civilian witness custody. He believes this will contain conflict; Venn opposes coercing Auric's witness, and Deka independently takes Thunderbreak toward endangered civilians.",
     "settingText": "INT. ADMIRALTY TRIBUNAL / THUNDERBREAK BRIDGE",
     "regionText": "The Core",
     "charactersInline": [
@@ -1999,17 +2028,17 @@
       {
         "handle": "@starsplit.cael.dominion",
         "speaker": "Dominion",
-        "text": "I can restore your command of Thunderbreak. Order her to withdraw and arrange Secundo's transfer to Fleet custody."
+        "text": "I can restore your command of Thunderbreak if you back a withdrawal and bring Secundo under Fleet protection for testimony."
       },
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Richard Secundo is a civilian witness. You're making his surrender the price of my commission."
+        "text": "Secundo is a civilian witness. Auric hasn't surrendered its authority over him."
       },
       {
         "handle": "@starsplit.janet.keating",
         "speaker": "Keating",
-        "text": "We're offering you a lawful way to end this confrontation."
+        "text": "We're trying to keep one emergency from becoming an inter-faction war."
       },
       {
         "handle": "@starsplit.ella.venn",
@@ -2053,13 +2082,15 @@
       "Dominion's offer must be visibly attractive: command restored, legal authority returned, a route out of chaos. Venn refuses the bargain and then deliberately stops short of issuing an unlawful order, leaving Deka's crossing as the crew's choice.",
       {
         "text": "The command transfer is central: Venn DOES NOT order the ship across. Deka consciously assumes operational responsibility despite Admiralty restrictions. Show the tribunal and bridge as two distinct spaces connected by a call, with no magically restored rank or command."
-      }
+      },
+      "Dominion's goal of lasting Fleet corridor authority can benefit from fear of inadequate protection, but he neither needs to admit nor consciously seek suffering. He sincerely considers stability and command legitimate goals.",
+      "Venn remains Core-loyal and accepts authority; she refuses to command Deka illegally. Deka bears responsibility for her own choice."
     ],
     "setting": "RF_Thunderbreak_Command"
   },
   {
     "id": "RF_I03_P26",
-    "summary": "Billie reaches the clinic from the docked boarding craft and tries to seize Richard; Tess rejects the demand, forcing their private rupture into physical confrontation.",
+    "summary": "Billie and Tess confront each other at the clinic as close lifelong sisters-in-arms, not a rebellious subordinate versus commander. Their disagreement becomes painful because they really are family.",
     "settingText": "INT. LUXURY RING — CLINIC PRESSURE CORRIDOR",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2109,7 +2140,7 @@
       {
         "handle": "@starsplit.tessa.banks",
         "speaker": "Tess",
-        "text": "You were. That's why I kept making excuses when your ships came back with empty holds and full guns."
+        "text": "You are. That's why I kept hoping you'd see what was happening here."
       },
       {
         "handle": "@starsplit.billie.rusk",
@@ -2143,12 +2174,13 @@
       "The fight must read as intimacy turned physical. Billie and Tess know each other's habits, but Tess is no longer using that familiarity to excuse her. Pressure damage around them keeps the fight dangerous to everyone nearby.",
       {
         "text": "Billie's arrival must follow the boarding route shown on P22. Keep Richard and Paul visible beyond Tess, retreating with patients. The conflict concerns a specific attempted seizure, not a sequence of abstract family epigrams."
-      }
+      },
+      "Tess is both Abby's sister and Billie's chosen family; disagreement does not erase familiarity. Keep focus on patients and shared history."
     ]
   },
   {
     "id": "RF_I03_P27",
-    "summary": "Richard saves the wounded Billie despite her attempted abduction; Pike leaves her behind, Abby offers evacuation without absolution, and Billie escapes separately rather than accept Abby's help.",
+    "summary": "Richard treats the wounded Billie despite her attempted abduction; Pike withdraws without her, Abby offers a way out, and Billie declines. Care crosses faction lines without absolving wrongdoing.",
     "settingText": "INT./EXT. CLINIC BREACH / AURIC RING",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2241,12 +2273,13 @@
       "Richard treats Billie while Paul objects, preserving the medical ethic that has defined him since Mercy of Dawn. Abby's offered hand is rescue without forgiveness; Billie's refusal keeps her outside reconciliation.",
       {
         "text": "Clearly distinguish stopping Billie's bleeding from absolving her. Abby must travel physically to the corridor from the escort defense, not teleport. Billie escapes using a plausible emergency launch connected to her already established boarding craft."
-      }
+      },
+      "Abby's appeal is made to a dear friend and fellow independent captain, not a subordinated officer."
     ]
   },
   {
     "id": "RF_I03_P28",
-    "summary": "Auric survives with lasting damage and a temporary multi-faction rescue effort; Richard's evidence travels onward as the Admiralty formally removes Venn from command.",
+    "summary": "Auric survives with ongoing housing, warmth, ship-repair and medical shortages; Shard civilian defenders have helped, while Fleet tribunal formally removes Venn.",
     "settingText": "INT./EXT. AURIC BAZAAR — AFTERMATH",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2337,12 +2370,13 @@
       "Do not stage the aftermath as a victory tableau. Each faction has lost something: Venn command, Abby unity, Tess family certainty, Auric infrastructure. The meaningful success is that civilians and evidence survived.",
       {
         "text": "Do not present the coalition as a clean military victory or make the ring perfectly repaired. The tribunal finding is formally distinct from Venn's earlier temporary suspension. The survivors still lack enough heated space."
-      }
+      },
+      "Partial relief is real but not a cure. Maintain ring damage, crowding and dwindling heating capacity rather than resetting Auric to pristine luxury."
     ]
   },
   {
     "id": "RF_I03_P29",
-    "summary": "Auric adopts residency and witness protections and forms a voluntary civilian-defense compact without permanent Fleet or Shard control; Tali remains unconfirmed and missing.",
+    "summary": "Halev and Auric adopt voluntary civilian residency and defense with independently consenting Shard captains, without ceding permanent control to Fleet. Jex faces Tali's unknown fate and future responsibility for the raiding-and-protection cycle.",
     "settingText": "INT. AURIC CIVIC CHAMBER / JEX'S OFFICE",
     "regionText": "The Verge",
     "charactersInline": [
@@ -2394,7 +2428,7 @@
       {
         "handle": "@starsplit.abby.saville",
         "speaker": "Abby",
-        "text": "And the Shards don't get to drag anyone back because they used to serve under us."
+        "text": "And no Shard captain can claim a family because they once lived under our protection."
       },
       {
         "handle": "@starsplit.richard.secundo",
@@ -2438,13 +2472,15 @@
       "The compact should emerge as a list of limits and obligations rather than a triumphant constitution. Jex's Tali alert should intrude at the end, making the new public order coexist with a private unresolved cost.",
       {
         "text": "This is the FIRST creation of the civilian-defense compact in Issue 3, not a pact already established before P01. Make terms specific, non-magical and voluntary. No premature certainty about Tali."
-      }
+      },
+      "Do not resolve the deeper cycle: Shard scarcity motivates raids, raids increase Verge demand for Fleet protection, Fleet patrols can deepen Shard exclusion. Stolen supplies feed Shard families as well as harming their original recipients; Jex may eventually reveal the full accounting.",
+      "Halev leads Auric and chairs the wider Verge council; the compact does not automatically bind all Verge communities or all independent Shard captains."
     ],
     "setting": "RF_Auric_Civic_Core"
   },
   {
     "id": "RF_I03_P30",
-    "summary": "In detention transit after her removal, Venn hears how Auric formed a civilian-defense compact without Fleet authorization and speaks honestly with Naomi about a possible return.",
+    "summary": "Venn leaves under Fleet disciplinary orders while Naomi reports Auric's fragile self-governing compact. Venn remains a believer shaped by the BHA, proto-Fleet and Core service traditions, even as she confronts their unseen human costs.",
     "settingText": "INT. FLEET DETENTION TRANSIT / AURIC OBSERVATION GLASS",
     "regionText": "The Core",
     "charactersInline": [
@@ -2486,7 +2522,7 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "The Admiralty may try to dissolve it."
+        "text": "The Admiralty will have questions about the compact."
       },
       {
         "handle": "@starsplit.naomi.sol",
@@ -2496,7 +2532,7 @@
       {
         "handle": "@starsplit.ella.venn",
         "speaker": "Venn",
-        "text": "Some mornings I was. I didn't know how to help you without making another promise I couldn't keep."
+        "text": "Some mornings I was relieved to get one clear order. That didn't make your problems go away."
       },
       {
         "handle": "@starsplit.naomi.sol",
@@ -2530,7 +2566,8 @@
       "Keep Venn's detention visible throughout the call: no insignia, restricted compartment, permitted connection. Naomi's invitation is affectionate but not absolution; the final image of incompatible ships guarding the same shelter should carry the larger promise.",
       {
         "text": "No smug epigrams about unofficial things, no implied restoration of Venn's authority, and no instant resolution of their personal disagreement. The closing emotional beat is a concrete intention to try returning under changed circumstances."
-      }
+      },
+      "Venn must not become an anti-Fleet ideological hero. Both she and Dominion are sincere, yet both habitually count Verge/Fleet victims without equally registering Shard families receiving redirected supplies."
     ]
   }
 ]
