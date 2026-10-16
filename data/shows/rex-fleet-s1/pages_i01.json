@@ -213,7 +213,7 @@
     "id": "RF_I01_P04",
     "issue": 1,
     "page": 6,
-    "summary": "At Kaldr's slow approach, Abby's and Billie's independent Shard crews make a coordinated grain seizure under the Triarch's standing policy. Venn uses the mass of a derelict to obstruct the raiders, scraping Thunderbreak's port bow; neither side deliberately targets passengers.",
+    "summary": "At Kaldr's slow approach, cutters from Abby's and Billie's independent Shard crews close on the Verge grain freighter. Thunderbreak is still guarding the convoy from aft and cannot intercept both cutters in time. Venn uses a nearby derelict to disrupt their approach, knowingly scraping her cruiser's port bow. One cutter veers away; the other stays on course for the cargo collar. Neither side deliberately targets passengers.",
     "settingText": "KALDR RIFT — CONVOY INTERCEPTION / THUNDERBREAK COMMAND",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Thunderbreak_Command",
@@ -240,41 +240,43 @@
     "dialogueInline": [
       {
         "speaker": "Tactical",
-        "text": "Two cutters on the grain ship. They're lining up with the transfer collars.",
+        "text": "Two cutters breaking cover. Both heading for the grain ship's cargo collars.",
         "handle": "@starsplit.tactical"
       },
       {
         "speaker": "Officer",
-        "text": "If we clear the wreck, we're exposing the freighter's starboard hold.",
+        "text": "We're too far aft to block them. That wreck's just off our port bow.",
         "handle": "@starsplit.officer"
       },
       {
         "speaker": "Venn",
-        "text": "Bring our bow along the derelict. Push it across their approach. Keep the grain ship in our lee.",
+        "text": "Match its drift. Bring our port bow alongside and ease it into their path.",
         "handle": "@starsplit.ella.venn"
       },
       {
         "speaker": "Tactical",
-        "text": "We'll scrape the port armor.",
+        "text": "We'll scrape the plating.",
         "handle": "@starsplit.tactical"
       },
       {
         "speaker": "Venn",
-        "text": "Log the section. Execute the turn.",
+        "text": "Damage control, stand by. Helm, take us in.",
         "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Start in coherent exterior wide view, preserving convoy geometry: two Shard cargo cutters moving toward the grain ship's collars; a large drifting derelict sits between Thunderbreak and an exposed approach.",
-      "On Thunderbreak's broad older blue-gold bridge, tactical reports a cargo interception, not an unexplained passenger massacre. Venn hears an officer's specific collision/damage warning.",
-      "Compact inset map or exterior insert shows Venn's proposed motion: Thunderbreak moves beside and contacts the derelict at low relative speed using its reinforced forward shield/armor, transferring momentum to obstruct the cutters' line. No spectacular head-on high-speed crash.",
-      "A dominant exterior panel tracks the derelict sliding across the raiders' approach as Thunderbreak incurs a visible scrape/damage on the port bow armor. Sparks and debris are local to contact, not an impossible ship-wide explosion.",
-      "A Shard cutter breaks away to avoid collision; another continues along the grain hull. In the last narrow panel an engineer or status visual confirms the same port-bow panel damaged and maneuvering margin reduced."
+      "Opening wide continues the actual relative geometry from RF_I01_P03: the long tan-and-muted-green Verge grain freighter proceeds behind Naomi's leading escort; Thunderbreak is aft and offset toward the freighter's starboard side, following Second's request for rear protection. Two compact gray-white Shard cutters with red markings have emerged from wreck cover and are closing on the grain ship's starboard cargo collars. A substantial broken derelict lies near Thunderbreak's port-forward side, beside the cutters' constrained approach lane. Give all objects consistent headings and believable separation.",
+      "On Thunderbreak's broad, older, maintained navy-and-gold bridge, a distinct tactical officer reports the cutters' actual target. A duty officer establishes why Thunderbreak cannot overtake the attackers from its aft position. Venn, silver-streaked hair in her low bun and established navy Fleet uniform, makes a practical decision from her command station. Show real crew work at actual stations, not heroic posing or floating magical displays.",
+      "A narrow unlettered tactical insert or clear exterior angle establishes the maneuver before contact: Thunderbreak matches the derelict's relative drift and adjusts slightly toward it. The port-forward armor will brush the wreck's outer structure, imparting a modest lateral motion into the cutters' narrow approach lane. The freighter stays clear of both hulls. Do not imply instantaneous wreck displacement, invented tractor action, or a high-speed ram.",
+      "The dominant exterior action panel shows the same derelict shifting gradually across the nearer cutter's intended line as Thunderbreak's port bow makes a controlled glancing contact. Local metal scraping, short sparks, small debris, and a clearly bounded gouge on the port-forward plating show the deliberate cost. Preserve the established Thunderbreak silhouette and scale. No ship-wide blast or catastrophic collision.",
+      "Finish with the tactical result at comprehensible scale: one Shard cutter must break outward to avoid the drifting wreck, while the second cutter, already on the inside line, continues alongside the grain freighter toward its cargo collar, enabling the boarding on RF_I01_P05. In a compact closing visual rather than another redundant wide strip, show the same damaged port-bow section or a purely graphical damage-control indication. The civilian passenger compartment remains intact and no fatalities occur."
     ],
     "directionInline": [
-      "Abby and Billie are allied but independent Shard captains executing a confederation-wide policy, not superior and subordinate. Do not give Abby command over Ashfang.",
-      "This maneuver occurs after high-speed inversion transit in the slow relative-motion Kaldr approach. Ship momentum and contact forces must remain physically credible.",
-      "Preserve Thunderbreak's port-bow scrape and any local Shard collar damage until repaired; no fatalities in the Issue 1 grain raid."
+      "Carry the same convoy from RF_I01_P03: Naomi's Verge escort leads, the identifiable Luminara freighter remains a single ship with its grain containers and passengers aboard, and Thunderbreak is aft on rear protection rather than appearing instantly between the freighter and cutters. The convoy has already slowed for Kaldr's wreck field; use low relative speeds and correct momentum throughout.",
+      "Abby and Billie command separate, cooperating Shard crews under standing Confederacy grain-raiding policy. Venn's bridge crew sees threatening cutters, not the captains or the source of the leaked crossing window. Do not introduce Abby or Billie into this page as visible characters or assume Fleet knows who supplied the route information.",
+      "The maneuver must produce only the intended result: a controlled port-forward armor scrape on Thunderbreak, enough derelict drift to force one cutter off line, and an unobstructed second cutter that can attach at the freighter's cargo collar next page. Carry the same scrape into RF_I01_P05, RF_I01_P06 and later appearances until repaired. No unexplained hull deformation or instant repairs.",
+      "This is a deliberate grain theft, not a planned assault on passengers. The cargo remains Verge-owned. Boarding causes limited collateral pressure trouble on RF_I01_P05, and the raiders later capture three grain containers while a separate container is damaged; none of that has happened yet on this page. Do not show fatalities or invent early cargo loss.",
+      "Use restrained Fleet navy/gold against Verge tan/green and Shard industrial gray-white/red, clear readable silhouettes and natural lighting. Only the five scripted dialogue lines are readable: no interface labels, hull writing, expository captions or invented text. Balloon tails must identify Tactical, Officer and Venn correctly. Compose a varied portrait comic layout with a dominant action panel, not five repetitive full-width strips."
     ],
     "status": "production-ready"
   },
