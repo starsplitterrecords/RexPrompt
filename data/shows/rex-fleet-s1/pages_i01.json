@@ -284,15 +284,14 @@
     "id": "RF_I01_P05",
     "issue": 1,
     "page": 7,
-    "summary": "A Shard boarding cutter attaches to the grain freighter's cargo collar. A limited pressure leak and armed entry frighten the civilian migrants, but the raiders focus on grain and a Verge shipboard guard secures the passenger compartment. No one dies.",
-    "settingText": "GRAIN FREIGHTER — ACCESS COMPARTMENT BESIDE CARGO HOLD",
+    "summary": "The Shard cutter that held its approach after Thunderbreak moved the derelict docks at the Luminara freighter's starboard cargo collar. The boarders force the inner cargo access, causing a short, localized pressure disturbance. A Verge shipboard guard seals the passenger compartment while the mother fits her son's emergency helmet. The raiders move on grain, not civilians; everyone remains aboard and alive.",
+    "settingText": "GRAIN FREIGHTER — STARBOARD CARGO ACCESS / PASSENGER BULKHEAD",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Luminara_Freighter_Hold",
     "region": "Corridors",
     "factions": [
       "F_Verge",
-      "F_Shards",
-      "F_Fleet"
+      "F_Shards"
     ],
     "charactersInline": [
       {
@@ -308,8 +307,8 @@
         "handle": "@starsplit.raider"
       },
       {
-        "name": "Fleet Sergeant",
-        "handle": "@starsplit.fleet.sergeant"
+        "name": "Verge Shipboard Guard",
+        "handle": "@starsplit.verge.guard"
       }
     ],
     "dialogueInline": [
@@ -319,42 +318,42 @@
       },
       {
         "speaker": "Mother",
-        "text": "Keep still. I need the helmet seal closed.",
+        "text": "Hold still. I need this seal tight.",
         "handle": "@starsplit.luminara.mother"
       },
       {
         "speaker": "Boy",
-        "text": "Are they taking the grain?",
+        "text": "Are they taking our grain?",
         "handle": "@starsplit.luminara.boy"
       },
       {
         "speaker": "Mother",
-        "text": "I don't know. Stay behind this door.",
+        "text": "I don't know. Stay behind me.",
         "handle": "@starsplit.luminara.mother"
       },
       {
         "speaker": "Raider",
-        "text": "Cargo hold only. Leave the passengers.",
+        "text": "Cargo only. Stay out of the passenger section.",
         "handle": "@starsplit.raider"
       },
       {
         "speaker": "Verge Guard",
-        "text": "Passenger section's sealed. Stay clear of the cargo hatch.",
-        "handle": "@starsplit.fleet.sergeant"
+        "text": "Passenger compartment sealed. Keep clear of the cargo hatch.",
+        "handle": "@starsplit.verge.guard"
       }
     ],
     "panelPlan": [
-      "Passenger presence is already established by boarding on story page 1. Re-establish one clear access cross-section: the freighter's transfer collar and grain stacks connect to a separate civilian passenger alcove, emergency pressure door and the Verge shipboard security team already assigned as convoy passenger protection.",
-      "Clear cross-section spatial logic: one freight access/collar, grain stacks and secured cargo hatches, a distinct passenger access alcove, emergency pressure door and the Verge security detail already stationed with the convoy's protected passengers.",
-      "A Shard boarding cutter attaches at the cargo collar; local cutting and a short pressure leak disturb straps and loose cloth. Do not depict endless decompression, uncontrolled zero gravity or randomly flying bodies.",
-      "At ground-level human scale, the mother seats the boy in an emergency helmet and checks the neck seal while shielding him with her own body. He stays a protected civilian, not a combat actor.",
-      "A raider orders a crew member toward cargo, while a Verge guard on the freighter's shipboard Verge guard directs civilians behind the sealed passenger door. Maintain distinguishable adult uniforms and grounded poses.",
-      "End with an external view or pressure-seal indicator showing that the passenger door holds while the grain holds remain contested; the family is not presented as magically evacuated."
+      "Opening exterior establishes the same tan-and-muted-green Luminara grain freighter as RF_I01_P01–P04 and the single Shard cutter that continued after Thunderbreak's derelict maneuver. It docks pressure-tight at the freighter's starboard cargo collar. Space is vacuum; no unprotected people stand on exposed platforms.",
+      "On the cargo side, gray-white/red Shard boarders pass through their pressurized boarding vestibule and force the locked INNER grain-access hatch. Cutting briefly disrupts a small seal and air equalizes locally into the enclosed vestibule; loose straps flutter, but gravity persists and there is no uncontrolled decompression or open-to-space room. Keep exactly one intelligible access route.",
+      "At the separate passenger-side alcove, the Luminara mother secures her son's emergency helmet. Their faces, clothing and personal belongings carry from RF_I01_P01. Other passengers move toward the heavy pressure-rated refuge door as the existing Verge shipboard guard directs them. No child injury or weapon aimed at the child.",
+      "On the cargo side, a raider instructs the other boarder to take grain rather than approach passengers. The Verge guard stays with the civilians and completes the pressure-door closure; the guard's 'sealed' statement follows the visible fully closed door. Raider, guard and civilians occupy distinct sides of the bulkhead.",
+      "End on the protected side with the mother and son beside the shut pressure bulkhead. A small reinforced inspection window permits a limited view of adult raiders beginning cargo handling, not an open doorway. The boy's helmet stays on through this beat. The family has not been moved to another ship, and the three-container theft does not conclude until RF_I01_P06."
     ],
     "directionInline": [
-      "Passenger presence, security pre-positioning and compartment topology must be established before contact. Do not imply Fleet troops arrived through an unexplained teleport or docking event.",
-      "The child's fear concerns the family grain and immediate danger; adults respond with task-specific dialogue. The Shard raider acts under cargo-seizure orders, while potential collateral danger remains a genuine consequence of the attack.",
-      "No visible injury to the child. No gravity or suction spectacle unsupported by this compartment's pressure state."
+      "The raid is the direct continuation of RF_I01_P04: one cutter diverted; one boarded. Preserve the freighter's cargo fittings, station-relative orientation, and established tan-green hull. The docked cutter must not be mistaken for Thunderbreak or a third newly appearing raider.",
+      "Three spaces must remain unmistakable: the pressurized Shard cutter and docking vestibule; the freighter's cargo-access side; and the separate sealed passenger refuge. Local pressure disturbance at the inner cargo seal must remain limited and comprehensible.",
+      "The security figure is a VERGE shipboard guard who was already aboard, not an arriving Fleet sergeant. Keep Verge tan-green separate from Shard pale industrial gray/red. The raiders are committing grain theft, not intentionally attacking passengers. No fatalities, no visible child injury, and no invented evacuation.",
+      "Only the six scripted text entries may be readable, with speaker-accurate balloon tails. Avoid invented hull markings, signs, labels, or alarming displays with extra text. Varied cinematic portrait page layout and credible size/pose continuity."
     ],
     "status": "production-ready"
   },
@@ -362,7 +361,7 @@
     "id": "RF_I01_P06",
     "issue": 1,
     "page": 8,
-    "summary": "The Shard cutters escape with three intact grain containers while one of the freighter's remaining containers is damaged and spills cargo. Venn holds the defensive screen instead of pursuing, and Naomi shepherds the surviving freighter, passengers and cargo toward Auric. No fatalities.",
+    "summary": "Minutes after the cutter boarded the Luminara grain freighter, its raiders withdraw with three intact Verge-owned grain containers. When the boarding connection is pulled free, the damaged cargo-side fitting strains an adjacent container, which ruptures and loses grain into space. Thunderbreak—still carrying the scrape to its port bow—can pursue the escaping cutters only by leaving the civilians unprotected. Venn stays. Naomi leads the damaged freighter toward Auric with its passenger compartment still sealed and everyone alive.",
     "settingText": "THUNDERBREAK COMMAND / KALDR RIFT — CONVOY AFTERMATH",
     "regionText": "Inter-faction Corridors",
     "setting": "RF_Thunderbreak_Command",
@@ -388,48 +387,50 @@
     ],
     "dialogueInline": [
       {
+        "speaker": "CAPTION",
+        "text": "KALDR RIFT — MINUTES LATER"
+      },
+      {
         "speaker": "Tactical",
-        "text": "One cutter's clear with the grain. We could catch them if we leave the freighter.",
+        "text": "Three containers taken. The cutters are withdrawing. We could catch one, but we'd leave the freighter.",
         "handle": "@starsplit.tactical"
       },
       {
         "speaker": "Venn",
-        "text": "Hold position. Keep the damaged cargo collar inside our shield.",
+        "text": "Then we stay. Keep the freighter covered.",
         "handle": "@starsplit.ella.venn"
       },
       {
         "speaker": "Tactical",
-        "text": "The cutter will be out of range in forty seconds.",
+        "text": "The boarding collar's damaged. Another container split when they pulled free.",
         "handle": "@starsplit.tactical"
-      },
-      {
-        "speaker": "Venn",
-        "text": "Let it go. Give Sol a safe course out.",
-        "handle": "@starsplit.ella.venn"
       },
       {
         "speaker": "Naomi",
-        "text": "Passenger pressure's holding. We've got a split grain container. I'll escort them to Auric.",
-        "handle": "@starsplit.naomi.sol"
+        "text": "Passenger pressure's holding. I'll take them to Auric.",
+        "handle": "@starsplit.naomi.sol",
+        "subtext": "Over comms from her Verge escort."
       },
       {
         "speaker": "Venn",
-        "text": "I'll stay on their flank.",
+        "text": "I'll cover your aft quarter. Watch the wreck field.",
         "handle": "@starsplit.ella.venn"
       }
     ],
     "panelPlan": [
-      "Exterior establishes two concurrent facts: one raider cutter escaping behind moving wreckage, while the identifiable grain freighter has a damaged grain container and local hull/pallet damage from boarding action. Grain grains and cargo fragments drift into space in quantities appropriate to the breach.",
-      "On Thunderbreak command, an officer offers a credible short firing window, but doing so would move defensive coverage off the grain ship; the choice has an observable spatial cost.",
-      "Venn refuses pursuit with a practical protective order and assigns the passengers and compromised cargo to a safer path.",
-      "Naomi's smaller escort maneuvers beside the compromised freighter; an operational check confirms the passenger pressure seal still holds. The mother and boy remain in the passenger section; no impossible second evacuation is depicted.",
-      "Show a believable aftermath assessment: intact containers continue under escort, some grain is lost to space or fire and three intact containers have been taken by raiders. Distinguish captured, destroyed and surviving cargo rather than treating all as 'lost'.",
-      "Final wide image shows diminished but moving convoy in certified passage, Thunderbreak's damaged port bow plainly visible, and the attacking cutter's diminishing engine trace. Victory is partial and no triumphant pose replaces the civilian loss."
+      "Opening exterior is explicitly MINUTES AFTER RF_I01_P05, allowing real time for the organized raiders to move exactly three intact, modestly sized standard grain containers across the sealed cargo transfer fitting into the boarding cutter's physically sufficient freight space. The stolen units are separate removable containers, not enormous freighter hull segments. The inside-line Shard boarding cutter is now pulling free; the second cutter, which dodged the derelict in RF_I01_P04, has maneuvered around at low relative speed to cover its withdrawal. No instant relocation or unexplained third craft.",
+      "The hasty departure strains the already compromised starboard cargo-collar assembly, releasing a brace on ONE different, remaining grain container; its edge splits and a limited stream of grain and packing drifts into vacuum through the damaged cargo-side opening. Establish a visible cause-and-effect sequence; keep the sealed passenger pressure door undisturbed and the mother and boy safely aboard. No explosion, fireball, corpses or whole-ship decompression.",
+      "Cut to Thunderbreak's established older navy-and-gold command bridge. The tactical officer reports the three captured containers and the short pursuit opportunity. Venn sees both that the retreating cutters are momentarily reachable and that pursuing would pull her cruiser off the exposed freighter. She explicitly orders protection over pursuit. Preserve Venn's silver-streaked command bun and unshowy working posture.",
+      "In a smaller bridge or tactical insert, the crew identifies the damaged freighter cargo collar and the ruptured FOURTH container. A glance at Thunderbreak's exterior or a nonverbal structural inset keeps the SAME starboard-side convoy placement and the SAME gouged port-forward armor established on RF_I01_P04. The gouge is neither repaired nor transformed into major new damage.",
+      "From Naomi's compact tan-green Verge cockpit, she checks actual passenger compartment pressure telemetry while remaining at the helm of the lead escort. Her dark braid, brow scar and working clothing follow RF_I01_P02–P03. Her line is a radio report, not an impossible face-to-face visit to Thunderbreak. She keeps the freighter on a feasible low-speed exit track through the wreck field.",
+      "Finish on an atmospheric, legible exterior wide: Naomi's Verge escort leads the diminished yet moving tan-and-green freighter, the separate navy Fleet cruiser screens its aft quarter with the established visible PORT-BOW scrape, and two compact gray-white/red Shard cutters recede into the wreck field with three stolen intact containers aboard the boarding craft. The separate torn freighter container vents only a modest amount of grain; intact remaining cargo stays with its rightful Verge owners. The convoy remains intact, all civilian passengers are alive, and Venn has chosen protection rather than revenge."
     ],
     "directionInline": [
-      "Record distinct outcomes: three Verge grain containers were captured and delivered to Shard communities, feeding households there; a separate container ruptured, destroying some grain. Verge merchants bear the theft and future trade may be delayed. No deaths or invented cargo tonnages.",
-      "Venn's first choice spent cruiser armor to block the attackers; her second choice preserves civilian protection but permits a raider to escape. Those are distinct decisions with distinct consequences.",
-      "Fleet personnel and Naomi only know what their instruments or observed events support. The identity of the route-information source remains unknown to them."
+      "Follow physical and story continuity directly from RF_I01_P04–P05: one Shard cutter boarded the freighter's starboard cargo collar, the other was initially displaced by the derelict. The boarding cutter departs after loading three appropriately scaled, intact grain containers; the second cutter supports its escape. A DIFFERENT fourth container ruptures during withdrawal, not as one of the three taken. The damaged freighter collar and Thunderbreak's port-forward scrape persist.",
+      "The cargo-side breach is separate from the sealed passenger compartment, and its limited loss of pressure must not imply the civilians were exposed to vacuum. No fatalities, invented additional raiders, extra shipments, or speculative casualty imagery. The mother and boy stay aboard and do not appear in a fabricated rescue.",
+      "Venn has two distinct command costs: she deliberately sacrificed port-bow armor in RF_I01_P04 and now declines pursuit to protect the civilian ship. Her cruiser does not teleport around the convoy or protect an entire distant ship with an unexplained expanded energy shield. Naomi retains the lead navigation role she defended in RF_I01_P03, with Thunderbreak accepting rear/flank protection.",
+      "Fleet and Naomi may report what they see or receive through telemetry; neither knows who leaked the convoy's crossing window, and no one knows yet that seized grain will reach Shard families. Keep visible faction materials distinct and vessels to their pre-established designs. No unscripted interface text, hull writing or labels. All five speech lines and one caption must be exactly lettered, with Naomi indicated as comms when shown from Thunderbreak.",
+      "Use a deliberate, varied portrait layout with a short passage of time legible between boarding and escape, varied interior/exterior scale and strong closing cost-to-civilians imagery. Avoid a row of repeated horizontal strips, giant over-saturated thruster streaks, and a triumphant action pose."
     ],
     "status": "production-ready"
   },
