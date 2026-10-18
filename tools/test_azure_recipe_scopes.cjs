@@ -52,7 +52,6 @@ for(let number=1;number<=6;number++){
   const p=pages[index],patch=map.get(p.id),lay=layoutMap.get(p.id);
   if(approved.has(p.id)){assert(!patch,'Approved art page modified '+p.id);continue;}
   assert(patch&&lay,'Missing page scope or layout '+p.id);
-  assert.equal(JSON.stringify(Object.keys(patch).sort()),JSON.stringify(Object.keys(patch).sort()),'Failed scope keys');
   for(const key of Object.keys(patch))assert(['id','promptCharacterMode','promptSettingMode','promptSuppress','direction','directionInline'].includes(key),'Extraneous production patch '+key+' on '+p.id);
   assert.equal(patch.id,p.id);
   assert.equal(patch.promptSettingMode==='full'||patch.promptSettingMode==='label',true,'Invalid setting mode');
