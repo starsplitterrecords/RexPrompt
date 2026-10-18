@@ -1140,7 +1140,14 @@
       "covers.json",
       "pages_i02.json"
     ],
-    "includeIdPattern": "^VIK_S1E02_P\\d+$"
+    "includeIdPattern": "^VIK_S1E02_P\\d+$",
+    "sceneOverlays": [
+      {
+        "file": "editorial/dialogue_density_i02.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ]
   },
   {
     "id": "vikings-2026-s1-e03",
