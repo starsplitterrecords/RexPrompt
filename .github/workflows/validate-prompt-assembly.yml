@@ -1,0 +1,34 @@
+name: Validate page assembly
+
+on:
+  push:
+    paths:
+      - 'index.html'
+      - 'prompt-suppress.js'
+      - 'data/shows/vikings-2026-s1/pages_i02.json'
+      - 'data/shows/stardust-station/pages_e04.json'
+      - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'tools/test_prompt_assembly.cjs'
+      - '.github/workflows/validate-prompt-assembly.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'prompt-suppress.js'
+      - 'data/shows/vikings-2026-s1/pages_i02.json'
+      - 'data/shows/stardust-station/pages_e04.json'
+      - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'tools/test_prompt_assembly.cjs'
+      - '.github/workflows/validate-prompt-assembly.yml'
+  workflow_dispatch:
+
+jobs:
+  page-assembly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript
+        run: |
+          node --check prompt-suppress.js
+          node --check tools/test_prompt_assembly.cjs
+      - name: Test assembled page content
+        run: node tools/test_prompt_assembly.cjs
