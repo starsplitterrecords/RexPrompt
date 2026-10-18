@@ -10,6 +10,9 @@ on:
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_page_layout.cjs'
+      - 'tools/fixtures/page_layout_cases.json'
+      - 'docs/page-layout-contract.md'
       - 'data/shows.json'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
@@ -22,6 +25,9 @@ on:
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_page_layout.cjs'
+      - 'tools/fixtures/page_layout_cases.json'
+      - 'docs/page-layout-contract.md'
       - 'data/shows.json'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
@@ -37,7 +43,9 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
+          node --check tools/test_page_layout.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
+          node tools/test_page_layout.cjs
