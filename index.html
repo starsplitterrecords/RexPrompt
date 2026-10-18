@@ -97,6 +97,25 @@ function getHandle(id,c){const e=c[id];return e?e.handle||e.name||id:id}
 function formatEntry(e){if(typeof e==="string")return e;if(e.text)return e.text;if(e.name)return e.name;if(e.summary)return e.summary;return JSON.stringify(e)}
 function findCharacterByHandle(h,c){if(!h)return null;return Object.values(c||{}).find(e=>e&&(e.handle===h||(Array.isArray(e.aliases)&&e.aliases.includes(h))))}
 function formatCharacter(e,fallback){if(!e)return fallback;const p=[e.name||fallback],structured=!!(e.wardrobe||e.performance||e.relationship||e.promptContinuity);if(e.handle)p.push(e.handle);const v=e.visualAnchor||e.visual||e.appearance||e.visualDescription;if(v)p.push((structured?"Identity: ":"Visual: ")+v);if(structured){if(e.wardrobe)p.push("Wardrobe: "+e.wardrobe);if(e.performance)p.push("Performance: "+e.performance);if(e.relationship)p.push("Relationship: "+e.relationship);if(Array.isArray(e.promptContinuity)&&e.promptContinuity.length)p.push("Continuity: "+e.promptContinuity.join("; "))}else{if(e.visualStatus)p.push("Visual status: "+e.visualStatus);if(Array.isArray(e.continuityLocks)&&e.continuityLocks.length)p.push("Continuity: "+e.continuityLocks.join("; "))}return p.join(" — ")}
+// Stardust visual references are artwork presence, not dialogue participation.
+// The authored page cast is the default; promptVisibleCharacters can override it
+// with a narrower list of stable character IDs or canonical @handles.
+function visibleCharacterHandles(scene,characters){
+  const key=scene?.id||"unknown page";
+  const explicit=scene?.promptVisibleCharacters;
+  if(explicit!==undefined&&!Array.isArray(explicit))throw new Error("promptVisibleCharacters must be an array on "+key);
+  const list=explicit!==undefined?explicit:(scene?.charactersInline?.length?scene.charactersInline:(scene?.characters||[]));
+  const handles=[],seen=new Set();
+  for(const item of list){
+    const token=typeof item==="string"?item:(item?.handle||item?.id||item?.name);
+    if(typeof token!=="string"||!token.trim())throw new Error("Invalid visible character on "+key+": "+String(token));
+    const entry=characters[token]||findCharacterByHandle(token,characters)||
+      Object.values(characters).find(c=>c?.name===token);
+    if(!entry?.handle)throw new Error("Unknown visible character on "+key+": "+token);
+    if(!seen.has(entry.handle)){seen.add(entry.handle);handles.push(entry.handle)}
+  }
+  return handles;
+}
 function normalizeScenes(raw){if(Array.isArray(raw))return raw;return Object.entries(raw||{}).map(([id,scene])=>({id,...scene}))}
 function normalizeOverlay(raw){if(Array.isArray(raw))return raw;if(Array.isArray(raw?.pages))return raw.pages;return normalizeScenes(raw)}
 function sceneEpisode(scene){if(scene?.episode)return scene.episode;const m=String(scene?.id||"").match(/^RF_(S1E\d{2})_/);return m?m[1]:null}
@@ -328,6 +347,11 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
   const {suppress,characterMode,settingMode}=pageAssembly(s,show);
+  if(s.promptVisibleCastOnly!==undefined&&typeof s.promptVisibleCastOnly!=="boolean")
+    throw new Error("promptVisibleCastOnly must be a boolean on "+key);
+  const visibleCastOnly=s.promptVisibleCastOnly===undefined?!!show.promptVisibleCastOnly:s.promptVisibleCastOnly;
+  if(s.promptVisibleCharacters!==undefined&&!visibleCastOnly)
+    throw new Error("promptVisibleCharacters requires visible-cast-only mode on "+key);
   const panelMode=s.promptPanelMode||show.promptPanelMode||"original";
   if(!["original","clean"].includes(panelMode))throw new Error("Invalid promptPanelMode on "+key+": "+panelMode);
   const cleanPanels=panelMode==="clean"?prepareCleanPanelPlan(s):null;
@@ -342,7 +366,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     const d=targetStore["dialogue.json"]?.[k];
     if(d)cameos.add(getHandle(d.speakerId,chars));
   });
-  if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));
+  if(visibleCastOnly){
+    if(characterMode!=="none")visibleCharacterHandles(s,chars).forEach(h=>out.push(h));
+  }else if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));
   out.push("\n=== "+(show.unitLabel||"SCENE")+": "+key+" ===");
   if(include("summary")&&!show.omitSummary&&s.summary)out.push(s.summary.trim());
   if(include("production")&&show.generationLine)out.push(show.generationLine);
@@ -365,38 +391,18 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
       if(e)out.push("\n[REGION]\n"+formatEntry(e));
     }
   }
-  if(include("factions")&&s.factions?.length){
+  if(include("factions")&&s.factions?.length&&(!show.omitRoutineFactions||s.promptIncludeFactions===true)){
     const entries=s.factions.map(k=>targetStore["factions.json"]?.[k]).filter(Boolean);
     if(entries.length)out.push("\n[FACTIONS]\n"+entries.map(formatEntry).join("\n"));
   }
-  if(s.promptFeaturedCast!==undefined&&characterMode==="none")
-    throw new Error("promptFeaturedCast cannot be combined with suppressed characters on "+key);
-  if(characterMode!=="none"){
+  if(characterMode!=="none"&&!visibleCastOnly){
     const entries=s.charactersInline?.length
       ?s.charactersInline.map(c=>({name:c.name||findCharacterByHandle(c.handle,chars)?.name||c.handle,
-          handle:c.handle,full:formatCharacter(findCharacterByHandle(c.handle,chars),c.name||c.handle)}))
-      :(s.characters||[]).map(k=>({name:chars[k]?.name||k,handle:getHandle(k,chars),full:formatCharacter(chars[k],k)}));
-    let featured=entries;
-    if(s.promptFeaturedCast!==undefined){
-      if(!Array.isArray(s.promptFeaturedCast)||!s.promptFeaturedCast.length)
-        throw new Error("promptFeaturedCast must be a nonempty array on "+key);
-      const wanted=new Set(s.promptFeaturedCast);
-      if(wanted.size!==s.promptFeaturedCast.length||s.promptFeaturedCast.some(h=>typeof h!=="string"||!h.trim()))
-        throw new Error("Invalid or duplicate promptFeaturedCast handles on "+key);
-      const available=new Set(entries.map(e=>e.handle));
-      for(const handle of wanted)if(!available.has(handle))
-        throw new Error("Featured character not in authored page cast on "+key+": "+handle);
-      // Protect speech ownership; an unseen speaking character must be
-      // explicitly represented in the recipe rather than silently filtered.
-      for(const d of s.dialogueInline||[]){
-        if(d.handle&&available.has(d.handle)&&!wanted.has(d.handle))
-          throw new Error("Speaking character omitted by promptFeaturedCast on "+key+": "+d.handle);
-      }
-      featured=entries.filter(e=>wanted.has(e.handle));
-    }
-    if(featured.length)out.push(characterMode==="cast"
-      ?"\n[CAST]\n"+featured.map(e=>e.name).filter(Boolean).join(", ")
-      :"\n[CHARACTERS]\n"+featured.map(e=>e.full).join("\n"));
+          full:formatCharacter(findCharacterByHandle(c.handle,chars),c.name||c.handle)}))
+      :(s.characters||[]).map(k=>({name:chars[k]?.name||k,full:formatCharacter(chars[k],k)}));
+    if(entries.length)out.push(characterMode==="cast"
+      ?"\n[CAST]\n"+entries.map(e=>e.name).filter(Boolean).join(", ")
+      :"\n[CHARACTERS]\n"+entries.map(e=>e.full).join("\n"));
   }
   if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
   if(s.panelPlan?.length){
@@ -413,7 +419,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
         const panel=!cleanPanels&&/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
         out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
       }else{
-        const sp=d.handle||d.speaker||"TEXT";
+        const rawSpeaker=d.handle||d.speaker||"TEXT";
+        const sp=visibleCastOnly&&typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")
+          ?(d.speaker||findCharacterByHandle(rawSpeaker,chars)?.name||rawSpeaker):rawSpeaker;
         const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
         out.push(panelPrefix+(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"'));
         if(d.subtext&&!cleanPanels)out.push("  ("+d.subtext+")");
@@ -424,7 +432,8 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     s.dialog.forEach(k=>{
       const d=targetStore["dialogue.json"]?.[k];
       if(!d)return;
-      out.push(getHandle(d.speakerId,chars)+' says "'+(d.text||'')+'"');
+      const speaker=visibleCastOnly?(chars[d.speakerId]?.name||d.speakerId):getHandle(d.speakerId,chars);
+      out.push(speaker+' says "'+(d.text||'')+'"');
       if(d.subtext)out.push("  ("+d.subtext+")");
     });
   }
