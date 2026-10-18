@@ -10,15 +10,23 @@ on:
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
       - 'data/shows/rex-fleet-s1/issue_05_dialogue_density_overlay.json'
+      - 'data/shows/rex-fleet-s1/editorial/page_assembly_scope_i*.json'
       - 'data/shows/rex-fleet-s1/encoded/pages_i05.json.gzb64'
       - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
+      - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_recipe_sanitation_rollout.cjs'
+      - 'tools/test_vikings_issue2_compositions.cjs'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
+      - 'tools/test_sunforge_recipe_sanitation.cjs'
+      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
+      - 'docs/sunforge-recipe-sanitation.md'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
@@ -56,15 +64,23 @@ on:
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
       - 'data/shows/rex-fleet-s1/issue_05_dialogue_density_overlay.json'
+      - 'data/shows/rex-fleet-s1/editorial/page_assembly_scope_i*.json'
       - 'data/shows/rex-fleet-s1/encoded/pages_i05.json.gzb64'
       - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
+      - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_recipe_sanitation_rollout.cjs'
+      - 'tools/test_vikings_issue2_compositions.cjs'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
+      - 'tools/test_sunforge_recipe_sanitation.cjs'
+      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
+      - 'docs/sunforge-recipe-sanitation.md'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
@@ -105,11 +121,15 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
+          node --check tools/test_recipe_sanitation_rollout.cjs
+          node --check tools/test_vikings_issue2_compositions.cjs
           node --check tools/test_rex_fleet_issue04_density.cjs
           node --check tools/test_rex_fleet_issue05_density.cjs
+          node --check tools/test_rex_fleet_recipe_scopes.cjs
           node --check tools/test_page_layout.cjs
           node --check tools/test_sunforge_page_layouts.cjs
           node --check tools/test_sunforge_all_layouts.cjs
+          node --check tools/test_sunforge_recipe_sanitation.cjs
           node --check tools/test_azure_page_layouts.cjs
           node --check tools/test_azure_recipe_scopes.cjs
           node --check tools/test_backyard_rockets_layouts.cjs
@@ -121,11 +141,15 @@ jobs:
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
+          node tools/test_recipe_sanitation_rollout.cjs
+          node tools/test_vikings_issue2_compositions.cjs
           node tools/test_rex_fleet_issue04_density.cjs
           node tools/test_rex_fleet_issue05_density.cjs
+          node tools/test_rex_fleet_recipe_scopes.cjs
           node tools/test_page_layout.cjs
           node tools/test_sunforge_page_layouts.cjs
           node tools/test_sunforge_all_layouts.cjs
+          node tools/test_sunforge_recipe_sanitation.cjs
           node tools/test_azure_page_layouts.cjs
           node tools/test_azure_recipe_scopes.cjs
           node tools/test_backyard_rockets_layouts.cjs

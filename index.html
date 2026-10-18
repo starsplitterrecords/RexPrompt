@@ -242,10 +242,51 @@ function pageLayoutWarnings(scene){
   return warnings;
 }
 
+// Opt-in safe sanitation: remove mechanically identical panel-embedded dialogue,
+// retaining panel ownership as line references and the exact [DIALOGUE] text.
+// Never infer or rewrite dialogue. Any mismatch blocks assembly.
+function preparePanelLettering(scene){
+  const mode=scene?.promptPanelLetteringMode||"original";
+  if(!["original","indexed"].includes(mode))throw new Error("Invalid promptPanelLetteringMode on "+(scene?.id||"unknown page")+": "+mode);
+  if(mode==="original")return null;
+  const id=scene?.id||"unknown page";
+  const panels=scene.panelPlan||[],lines=scene.dialogueInline||[];
+  if(!panels.length||!lines.length)throw new Error("Indexed panel lettering requires panelPlan and dialogueInline on "+id);
+  const byDialogue=[],cleanPanels=[];let next=0;
+  for(let i=0;i<panels.length;i++){
+    const original=formatEntry(panels[i]);
+    const marker="EXACT SCRIPTED LETTERING:";
+    const pos=original.indexOf(marker);
+    if(pos<0){
+      if(!/\bNO LETTERING\.?\s*$/i.test(original))throw new Error("Indexed panel "+(i+1)+" lacks explicit lettering or NO LETTERING on "+id);
+      cleanPanels.push(original);
+      continue;
+    }
+    const visual=original.slice(0,pos).trim();
+    const payload=original.slice(pos+marker.length).trim();
+    const matches=[...payload.matchAll(/(?:^|\s{2,})([^:]{1,35}):\s*[“"]([^”"]*)[”"]/g)];
+    const residue=payload.replace(/(?:^|\s{2,})([^:]{1,35}):\s*[“"]([^”"]*)[”"]/g,"").trim();
+    if(!matches.length||residue||!visual)throw new Error("Unparseable panel lettering on "+id+" panel "+(i+1));
+    const first=next+1;
+    for(const match of matches){
+      const line=lines[next];
+      if(!line||line.speaker!==match[1].trim()||line.text!==match[2])
+        throw new Error("Panel lettering differs from canonical dialogueInline on "+id+" panel "+(i+1)+" line "+(next+1));
+      byDialogue.push(i+1);
+      next++;
+    }
+    const last=next;
+    cleanPanels.push(visual+" LETTERING: dialogue "+(first===last?"line "+first:"lines "+first+"–"+last)+".");
+  }
+  if(next!==lines.length)throw new Error("Unmapped dialogueInline items on "+id+": "+next+" of "+lines.length);
+  return {panels:cleanPanels,byDialogue};
+}
+
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
   const {suppress,characterMode,settingMode}=pageAssembly(s,show);
+  const panelLettering=preparePanelLettering(s);
   const include=id=>!suppress.has(id);
   const chars=targetStore["characters.json"]||{};
   if(s.dialogueInline?.length)s.dialogueInline.forEach(d=>{
@@ -295,20 +336,21 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
   if(s.panelPlan?.length){
     out.push("\n[PANEL PLAN]");
-    s.panelPlan.forEach(x=>out.push(formatEntry(x)));
+    (panelLettering?panelLettering.panels:s.panelPlan).forEach(x=>out.push(formatEntry(x)));
   }
   if(s.dialogueInline?.length){
     out.push("\n[DIALOGUE]");
-    s.dialogueInline.forEach(d=>{
+    s.dialogueInline.forEach((d,index)=>{
+      const panelPrefix=panelLettering?"Panel "+panelLettering.byDialogue[index]+" — ":"";
       if(show.compactDialogue){
         const e=findCharacterByHandle(d.handle,chars);
         const speaker=d.speaker||e?.name||d.handle||"TEXT";
         const panel=/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
-        out.push(panel+speaker+': "'+(d.text||'')+'"');
+        out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
       }else{
         const sp=d.handle||d.speaker||"TEXT";
         const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
-        out.push(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"');
+        out.push(panelPrefix+(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"'));
         if(d.subtext)out.push("  ("+d.subtext+")");
       }
     });
