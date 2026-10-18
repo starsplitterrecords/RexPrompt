@@ -191,24 +191,35 @@
   {
     "id": "EFW_S1E03_S05",
     "pageLayout": {
-      "composition": "asymmetric",
-      "visualPriority": "Atlas bears the weight of an inhabited world as physical work.",
-      "readingFlow": "Read beats 1–2 in order; panel 1 commands the eye without inventing a new beat.",
+      "composition": "splash-with-insets",
+      "visualPriority": "Atlas physically bracing an inhabited world dominates; Starbreaker's concern for the next world remains a substantial readable inset.",
+      "readingFlow": "First read the enormous working Atlas and moving civilians, then the lower-right inset confrontation; do not detach his answer from the load he bears.",
       "primaryPanel": 1,
       "panels": [
         {
           "panel": 1,
           "role": "dominant",
-          "scale": "large",
-          "placement": "Large upper or left establishing frame. Keep perspective and lettering readable."
+          "scale": "splash",
+          "placement": "Enormous physically grounded Atlas and inhabited collapsing world fill the page; leave the lower-right region uncluttered for the conversation."
         },
         {
           "panel": 2,
-          "role": "supporting",
+          "role": "inset",
           "scale": "medium",
-          "placement": "Following tier below or right of focal image. Keep perspective and lettering readable."
+          "insetOf": 1,
+          "placement": "Generous lower-right inset, large enough for Starbreaker's three lines and Atlas's exhausted reply; both remain against the same physically continuous crisis."
         }
-      ]
+      ],
+      "negativeSpace": [
+        {
+          "where": "upper environment above the supporting civilians and clear lower-right inset area",
+          "purpose": "lettering space without concealing the strain or escape route"
+        }
+      ],
+      "lettering": {
+        "strategy": "Three scripted conversational lines need a generous inset and clear balloon tails; do not diminish them to tiny captions.",
+        "reservedZone": "Inset upper edge away from Atlas's bearing arm."
+      }
     }
   },
   {
