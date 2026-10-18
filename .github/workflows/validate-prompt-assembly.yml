@@ -13,6 +13,10 @@ on:
       - 'tools/test_page_layout.cjs'
       - 'tools/test_azure_page_layouts.cjs'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
+      - 'tools/test_low_tide_page_layout.cjs'
+      - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
+      - 'data/shows/low-tide-signal/pages_*.json'
+      - 'data/shows/low-tide-signal/encoded/*.gzb64'
       - 'tools/fixtures/page_layout_cases.json'
       - 'docs/page-layout-contract.md'
       - 'data/shows.json'
@@ -32,6 +36,10 @@ on:
       - 'tools/test_page_layout.cjs'
       - 'tools/test_azure_page_layouts.cjs'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
+      - 'tools/test_low_tide_page_layout.cjs'
+      - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
+      - 'data/shows/low-tide-signal/pages_*.json'
+      - 'data/shows/low-tide-signal/encoded/*.gzb64'
       - 'tools/fixtures/page_layout_cases.json'
       - 'docs/page-layout-contract.md'
       - 'data/shows.json'
@@ -53,6 +61,7 @@ jobs:
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_page_layout.cjs
           node --check tools/test_azure_page_layouts.cjs
+          node --check tools/test_low_tide_page_layout.cjs
           node --check tools/test_stardust_e02_layouts.cjs
       - name: Test assembled page content
         run: |
@@ -60,4 +69,5 @@ jobs:
           node tools/test_editorial_page_scopes.cjs
           node tools/test_page_layout.cjs
           node tools/test_azure_page_layouts.cjs
+          node tools/test_low_tide_page_layout.cjs
           node tools/test_stardust_e02_layouts.cjs
