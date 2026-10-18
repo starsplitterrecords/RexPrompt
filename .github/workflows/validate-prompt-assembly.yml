@@ -11,6 +11,8 @@ on:
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_azure_page_layouts.cjs'
+      - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/fixtures/page_layout_cases.json'
       - 'docs/page-layout-contract.md'
       - 'data/shows.json'
@@ -26,6 +28,8 @@ on:
       - 'tools/test_prompt_assembly.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_azure_page_layouts.cjs'
+      - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/fixtures/page_layout_cases.json'
       - 'docs/page-layout-contract.md'
       - 'data/shows.json'
@@ -44,8 +48,10 @@ jobs:
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_page_layout.cjs
+          node --check tools/test_azure_page_layouts.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
           node tools/test_page_layout.cjs
+          node tools/test_azure_page_layouts.cjs
