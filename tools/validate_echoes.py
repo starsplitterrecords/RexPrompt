@@ -122,9 +122,22 @@ def validate_story_page(
         if isinstance(handle, str) and handle.startswith("@"):
             matching = [cid for cid, entry in chars.items() if entry.get("handle") == handle]
             assert matching, f"{page_id}: unknown dialogue handle {handle}"
-            assert matching[0] in page.get("characters", []), (
-                f"{page_id}: speaker {handle} absent from page character list"
-            )
+            if matching[0] not in page.get("characters", []):
+                # A documented off-panel voice is audible, not an instruction
+                # to insert another figure into the finished panel.
+                person = chars[matching[0]]["name"].lower()
+                panel_text = " ".join(block.get("text", "") for block in plan).lower()
+                direction_text = " ".join(
+                    block.get("text", "") for block in page.get("directionInline", [])
+                ).lower()
+                explicitly_unseen = (
+                    f"{person} remains entirely off-panel" in panel_text
+                    and f"off-panel {person} voice" in direction_text
+                )
+                assert explicitly_unseen, (
+                    f"{page_id}: speaker {handle} absent from page character list "
+                    "without explicit off-panel direction"
+                )
 
     directions = page.get("directionInline", [])
     assert isinstance(directions, list), f"{page_id}: directionInline must be a list"
