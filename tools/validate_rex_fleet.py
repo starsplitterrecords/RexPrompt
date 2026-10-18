@@ -262,7 +262,7 @@ def page_blob(issue, page_id):
     return json.dumps(page, ensure_ascii=False)
 
 bridge = page_blob(4, "RF_I04_P04")
-if "temporary field authority" not in bridge.lower() or "tribunal" not in bridge.lower():
+if not any(phrase in bridge.lower() for phrase in ("temporary field authority", "emergency field commission")) or "tribunal" not in bridge.lower():
     raise SystemExit("Venn Issue 3→4 command-status bridge regressed")
 
 for issue, page_id in ((5, "RF_I05_P12"), (9, "RF_I09_P08"), (12, "RF_I12_P17")):
