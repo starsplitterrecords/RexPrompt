@@ -111,7 +111,7 @@ function explicitIssueLabel(show){if(show.issueLabel)return show.issueLabel;cons
 function issueNumber(source){const text=typeof source==="string"?source:(source?.replaceEpisode||source?.file||"");const m=String(text).match(/(?:S\d+E|[_-]e)(\d{2})/i);return m?Number(m[1]):null}
 function onlyIssue(items,n){return (items||[]).filter(item=>issueNumber(item)===n)}
 function expandIssues(show){const explicit=explicitIssueLabel(show),files=show.scenesFiles?.length?show.scenesFiles:[show.scenesFile||"scenes.json"],numbers=new Set();files.forEach(file=>{const n=issueNumber(file);if(n)numbers.add(n)});(show.sceneOverlays||[]).forEach(item=>{const n=issueNumber(item);if(n)numbers.add(n)});if(explicit||numbers.size<=1)return [{...show,seriesId:seriesId(show),seriesName:seriesName(show),issueId:show.id,issueLabel:explicit||show.seasonLabel||"Issue 1"}];return [...numbers].sort((a,b)=>a-b).map(n=>{const issueFiles=files.filter(file=>issueNumber(file)===n);const genericFiles=files.filter(file=>issueNumber(file)===null);return {...show,id:show.id+"-issue-"+n,seriesId:seriesId(show),seriesName:seriesName(show),issueId:show.id+"-issue-"+n,issueLabel:"Issue "+n,scenesFiles:issueFiles.length?genericFiles.concat(issueFiles):genericFiles,scenesFile:undefined,sceneOverlays:onlyIssue(show.sceneOverlays,n),dialogueOverlays:onlyIssue(show.dialogueOverlays,n)}})}
-const PAGE_SUPPRESSIBLE_SECTIONS=new Set(["summary","production","settingContinuity","region","factions","characters"]);
+const PAGE_SUPPRESSIBLE_SECTIONS=new Set(["summary","production","setting","settingContinuity","region","factions","characters","direction"]);
 function pageAssembly(scene,show={}){
   const key=scene?.id||"unknown page";
   if(scene?.promptSuppress!==undefined&&!Array.isArray(scene.promptSuppress))throw new Error("promptSuppress must be an array on "+key);
@@ -124,6 +124,7 @@ function pageAssembly(scene,show={}){
   if(!["full","cast","none"].includes(characterMode))throw new Error("Invalid promptCharacterMode on "+key+": "+characterMode);
   if(!["full","label"].includes(settingMode))throw new Error("Invalid promptSettingMode on "+key+": "+settingMode);
   if(suppress.has("settingContinuity")&&!scene?.settingText&&scene?.setting)throw new Error("Suppressing settingContinuity without settingText would remove all location detail on "+key+"; use promptSettingMode: label.");
+  if(suppress.has("setting")&&!(Array.isArray(scene?.panelPlan)&&scene.panelPlan.length&&scene.panelPlan.every(p=>p&&typeof p==="object"&&typeof p.location==="string"&&p.location.trim())))throw new Error("Cannot suppress setting without explicit location on every panel: "+key);
   return {suppress,characterMode,settingMode};
 }
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
@@ -144,15 +145,17 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   out.push("\n=== "+(show.unitLabel||"SCENE")+": "+key+" ===");
   if(include("summary")&&!show.omitSummary&&s.summary)out.push(s.summary.trim());
   if(include("production")&&show.generationLine)out.push(show.generationLine);
-  if(s.settingText){
-    out.push("\n[SETTING]\n"+s.settingText);
-    if(include("settingContinuity")&&s.setting&&settingMode==="full"){
+  if(include("setting")){
+    if(s.settingText){
+      out.push("\n[SETTING]\n"+s.settingText);
+      if(include("settingContinuity")&&s.setting&&settingMode==="full"){
+        const e=targetStore["settings.json"]?.[s.setting];
+        if(e)out.push("\n[SETTING CONTINUITY]\n"+formatEntry(e));
+      }
+    }else if(s.setting){
       const e=targetStore["settings.json"]?.[s.setting];
-      if(e)out.push("\n[SETTING CONTINUITY]\n"+formatEntry(e));
+      if(e)out.push("\n[SETTING]\n"+(settingMode==="label"?(e.name||s.setting):formatEntry(e)));
     }
-  }else if(s.setting){
-    const e=targetStore["settings.json"]?.[s.setting];
-    if(e)out.push("\n[SETTING]\n"+(settingMode==="label"?(e.name||s.setting):formatEntry(e)));
   }
   if(include("region")){
     if(s.regionText)out.push("\n[REGION]\n"+s.regionText);
