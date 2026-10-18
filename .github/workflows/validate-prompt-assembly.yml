@@ -54,6 +54,10 @@ on:
       - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
       - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
+      - 'tools/test_stardust_e03_e10_density_scope.cjs'
+      - 'data/shows/stardust-station/editorial/pages_e*_density_pass.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e04.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e07.json'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
@@ -111,6 +115,10 @@ on:
       - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
       - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
+      - 'tools/test_stardust_e03_e10_density_scope.cjs'
+      - 'data/shows/stardust-station/editorial/pages_e*_density_pass.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e04.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e07.json'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
@@ -145,6 +153,7 @@ jobs:
           node --check tools/test_low_tide_dialogue_overlay.cjs
           node --check tools/test_stardust_e02_layouts.cjs
           node --check tools/test_stardust_e02_density_scope.cjs
+          node --check tools/test_stardust_e03_e10_density_scope.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
@@ -167,3 +176,4 @@ jobs:
           node tools/test_low_tide_dialogue_overlay.cjs
           node tools/test_stardust_e02_layouts.cjs
           node tools/test_stardust_e02_density_scope.cjs
+          node tools/test_stardust_e03_e10_density_scope.cjs
