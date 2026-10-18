@@ -1,0 +1,28 @@
+name: Validate Vikings Issue 2 dialogue overlay
+
+on:
+  push:
+    paths:
+      - 'data/shows/vikings-2026-s1/editorial/dialogue_density_i02.json'
+      - 'data/shows/vikings-2026-s1/pages_i02.json'
+      - 'data/shows.json'
+      - 'tools/test_vikings_i02_dialogue_overlay.cjs'
+      - '.github/workflows/validate-vikings-i02-dialogue.yml'
+  pull_request:
+    paths:
+      - 'data/shows/vikings-2026-s1/editorial/dialogue_density_i02.json'
+      - 'data/shows/vikings-2026-s1/pages_i02.json'
+      - 'data/shows.json'
+      - 'tools/test_vikings_i02_dialogue_overlay.cjs'
+      - '.github/workflows/validate-vikings-i02-dialogue.yml'
+  workflow_dispatch:
+
+jobs:
+  dialogue-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate issue-specific dialogue and panel mapping
+        run: |
+          node --check tools/test_vikings_i02_dialogue_overlay.cjs
+          node tools/test_vikings_i02_dialogue_overlay.cjs

@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SHOW = ROOT / "data" / "shows" / "echoes-forgotten-war-s1"
 MANIFEST = ROOT / "data" / "shows.json"
 SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
-STORY_COUNTS = {1: 17, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
+STORY_COUNTS = {1: 21, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
 
 
 def load(path: Path):
@@ -35,8 +35,12 @@ def main() -> None:
     expected_files = [p.name for p in SCENE_FILES]
     if entry.get("scenesFiles") != expected_files:
         raise RuntimeError("Echoes manifest issue files are missing or reordered")
-    if entry.get("sceneOverlays"):
-        raise RuntimeError("Echoes direct production package must not restore retired enhancement overlays")
+    expected_overlays = [
+        {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True}
+        for i in range(1, 9)
+    ]
+    if entry.get("sceneOverlays") != expected_overlays:
+        raise RuntimeError("Echoes must use exactly the eight strict per-issue layout overlays")
 
     total = 0
     for issue, path in enumerate(SCENE_FILES, start=1):
@@ -61,10 +65,10 @@ def main() -> None:
             if page.get("continuityFrom"):
                 raise RuntimeError(f"Editorial bookend must not inherit story continuity: {page.get('id')}")
 
-    if total != 145:
-        raise RuntimeError(f"Expected 145 Echoes production pages, found {total}")
+    if total != 149:
+        raise RuntimeError(f"Expected 149 Echoes production pages, found {total}")
 
-    print("Echoes sanitizer passed non-destructively: 129 story pages + 16 editorial bookends = 145 PAGE recipes.")
+    print("Echoes sanitizer passed non-destructively: 133 story pages + 16 editorial bookends = 149 PAGE recipes.")
 
 
 if __name__ == "__main__":
