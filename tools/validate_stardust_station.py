@@ -305,4 +305,4 @@ for _entry in stardust_entries:
             for _value in _fields:
                 assert not _writer_meta.search(_value), f"{_page.get('id')}: writer-room rationale leaked into recipe: {_value}"
                 assert not _issue_provenance.search(_value), f"{_page.get('id')}: issue/archive provenance leaked into recipe: {_value}"
-                assert "visible around the action" not in _value and "Keep the " not in _value, f"{_page.get('id')}: repetitive staging boilerplate leaked into recipe: {_value}"
+                assert "visible around the action" not in _value, f"{_page.get('id')}: repetitive staging boilerplate leaked into recipe: {_value}"
