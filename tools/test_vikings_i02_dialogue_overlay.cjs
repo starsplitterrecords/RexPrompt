@@ -45,6 +45,9 @@ for(const patch of patches){
     }
   }
   assert.deepEqual(referenced.sort((a,b)=>a-b),patch.dialogueInline.map((_,i)=>i),'Orphan, duplicate or missing line: '+patch.id);
+  const originalLinePositions=new Map(original.dialogueInline.map((line,i)=>[line.fid,i]));
+  const ordered=patch.dialogueInline.map(line=>originalLinePositions.get(line.fid));
+  assert(ordered.every((n,i)=>n!==undefined&&(i===0||n>ordered[i-1])),'Original conversational order changed: '+patch.id);
   for(const line of patch.dialogueInline){
     const prior=byFid.get(line.fid);
     assert(prior,'Inserted identity masquerading as old dialogue line: '+line.fid);
