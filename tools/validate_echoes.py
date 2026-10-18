@@ -130,9 +130,13 @@ def validate_story_page(
                 direction_text = " ".join(
                     block.get("text", "") for block in page.get("directionInline", [])
                 ).lower()
-                explicitly_unseen = (
-                    f"{person} remains entirely off-panel" in panel_text
-                    and f"off-panel {person} voice" in direction_text
+                # The character shelf may include a rank (General Mero)
+                # while acting notes use the character's surname (Mero).
+                spoken_names = {person, person.split()[-1]}
+                explicitly_unseen = any(
+                    f"{name} remains entirely off-panel" in panel_text
+                    and f"off-panel {name} voice" in direction_text
+                    for name in spoken_names
                 )
                 assert explicitly_unseen, (
                     f"{page_id}: speaker {handle} absent from page character list "
