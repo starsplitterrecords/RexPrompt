@@ -88,10 +88,41 @@ for(const show of selected){
  counts[group].issues++;counts[group].profiles+=pages;counts[group].savedCharacters+=bytes;counts[group].suppressions+=suppressionCount;
  names.add(show.id);
 }
-assert.equal(selected.length,10,'Unexpected previously unfinished show configurations');
+// Division Threshold intentionally stores page scope *inside its flat compiled page
+// files*. Its mechanical validator prohibits scene overlays.
+const divisionShows=catalog.filter(x=>/^division-threshold-s1-e\d\d$/.test(x.id));
+assert.equal(divisionShows.length,8,'Missing flat Division issues');
+let divisionPages=0,divisionScoped=0,divisionSavings=0;
+for(const show of divisionShows){
+  assert(!show.sceneOverlays?.length,'Division must remain flat '+show.id);
+  const scenes=load(show,true),store={__show:show},base=show.basePath;
+  for(const file of ['characters','settings','regions','factions','dialogue','direction'])
+    store[file+'.json']=json(base+'/'+file+'.json');
+  for(const page of scenes){
+    divisionPages++;
+    const policy=Object.fromEntries(Object.entries(page).filter(([key])=>
+      ['promptSuppress','promptCharacterMode','promptSettingMode'].includes(key)));
+    if(!Object.keys(policy).length)continue;
+    divisionScoped++;
+    const original={...page};delete original.promptSuppress;delete original.promptCharacterMode;delete original.promptSettingMode;
+    const a=assembleScene(original,store,0),b=assembleScene(page,store,0);
+    const tail=v=>{const t=v.indexOf('\n[PAGE COMPOSITION]'),p=v.indexOf('\n[PANEL PLAN]');
+      assert(p>=0,'Missing Division panel plan '+page.id);return v.slice(t>=0?t:p)};
+    assert.equal(tail(a),tail(b),'Division scope altered protected beats '+page.id);
+    if(page.promptSettingMode==='label'&&page.setting&&!page.settingText)
+      assert(store['settings.json'][page.setting]?.name,'Unresolved Division setting label '+page.id);
+    pageAssembly(page,show);
+    divisionSavings+=a.length-b.length;
+  }
+}
+assert.equal(divisionPages,204,'Division canonical flat page count changed');
+assert.equal(divisionScoped,194,'Missing Division editorial page policy');
+counts['division-threshold-s1']={issues:8,profiles:divisionScoped,savedCharacters:divisionSavings,suppressions:0};
+
+assert.equal(selected.length,2,'Unexpected remaining overlay-backed show configurations');
 assert([...Object.values(counts)].every(x=>x.savedCharacters>0),'No reference reduction in one or more series');
 assert(!selected.some(x=>/^vikings-2026-s1/.test(x.id)),'Already-compact Vikings unexpectedly modified');
 assert.equal(Object.keys(counts).length,3,'Expected only Rockets, Division Threshold, Stardust Issue 3');
-console.log('PASS: '+selected.length+' scoped issue/chapter configurations across '+Object.keys(counts).length+' series; no source panels, dialogue, continuity, layout or scene count changed.');
+console.log('PASS: '+(selected.length+divisionShows.length)+' scoped show configurations across '+Object.keys(counts).length+' series; no source panels, dialogue, continuity, layout or scene count changed.');
 for(const [series,x] of Object.entries(counts))console.log('PASS '+series+': '+x.issues+' issue/chapter targets, '+x.profiles+' profiles, '+x.savedCharacters+' prompt characters trimmed.');
-console.log('PASS: source scripts immutable, protected chef ingredients identical; short names resolve from durable setting shelves.');
+console.log('PASS: protected chef ingredients identical; Division flat pages remain canonical; short names resolve from durable setting shelves.');
