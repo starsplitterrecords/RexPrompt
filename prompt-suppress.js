@@ -4,7 +4,7 @@
 const labels={
   summary:"Summary",production:"Production brief",setting:"Setting",
   settingContinuity:"Setting continuity",region:"Region",factions:"Factions",
-  characters:"Cast"
+  characters:"Cast",direction:"Direction"
 };
 function render(){
   const mount=document.getElementById("promptSuppressMount");
