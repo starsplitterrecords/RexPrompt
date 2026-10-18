@@ -25,6 +25,9 @@ on:
       - 'tools/test_backyard_rockets_layouts.cjs'
       - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
+      - 'tools/test_low_tide_dialogue_overlay.cjs'
+      - 'data/shows/low-tide-signal/assembler.json'
+      - 'data/shows/low-tide-signal/dialogue.json'
       - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
       - 'data/shows/low-tide-signal/pages_*.json'
       - 'data/shows/low-tide-signal/encoded/*.gzb64'
@@ -63,6 +66,9 @@ on:
       - 'tools/test_backyard_rockets_layouts.cjs'
       - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
+      - 'tools/test_low_tide_dialogue_overlay.cjs'
+      - 'data/shows/low-tide-signal/assembler.json'
+      - 'data/shows/low-tide-signal/dialogue.json'
       - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
       - 'data/shows/low-tide-signal/pages_*.json'
       - 'data/shows/low-tide-signal/encoded/*.gzb64'
@@ -96,6 +102,7 @@ jobs:
           node --check tools/test_azure_page_layouts.cjs
           node --check tools/test_backyard_rockets_layouts.cjs
           node --check tools/test_low_tide_page_layout.cjs
+          node --check tools/test_low_tide_dialogue_overlay.cjs
           node --check tools/test_stardust_e02_layouts.cjs
           node --check tools/test_stardust_e02_density_scope.cjs
       - name: Test assembled page content
@@ -109,5 +116,6 @@ jobs:
           node tools/test_azure_page_layouts.cjs
           node tools/test_backyard_rockets_layouts.cjs
           node tools/test_low_tide_page_layout.cjs
+          node tools/test_low_tide_dialogue_overlay.cjs
           node tools/test_stardust_e02_layouts.cjs
           node tools/test_stardust_e02_density_scope.cjs
