@@ -109,7 +109,11 @@ for(let i=0;i<scenes.length;i++){
   assert.equal(section(before,'PANEL PLAN'),section(after,'PANEL PLAN'),'Panel changed '+page.id);
   assert.equal(section(before,'DIALOGUE'),section(after,'DIALOGUE'),'Dialogue changed '+page.id);
   assert.equal(section(before,'CONTINUITY'),section(after,'CONTINUITY'),'Continuity changed '+page.id);
-  assert(after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Expected concise cast '+page.id);
+  assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Stardust should use visual-only handle references '+page.id);
+  const visuals=(page.charactersInline||[]).map(x=>x.handle);
+  const actual=after.split('\n').filter(x=>/^@sds\.[A-Za-z0-9_-]+$/.test(x));
+  assert.equal(actual.length,visuals.length,'Wrong Stardust visual reference count '+page.id);
+  assert(actual.every((x,i)=>x===visuals[i]),'Wrong Stardust visual reference identities '+page.id);
   const n=Number(page.id.match(/P(\d+)$/)?.[1]);
   if(n===1||n===20){
     assert(!page.promptSettingMode,'Unexpected location compaction on establishing/return page '+page.id);

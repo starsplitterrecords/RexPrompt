@@ -53,14 +53,12 @@ for(let issue=4;issue<=10;issue++){
     assert(panelBefore>=0&&panelAfter>=0,'Missing scripted panels '+id);
     assert.equal(after.slice(panelAfter),before.slice(panelBefore),'Panel/dialogue/continuity modified '+id);
     for(const line of original.dialogueInline||[])assert(after.includes(line.text),'Lost exact dialogue '+id);
-    if(page.promptCharacterMode==='cast'){
-      assert(after.includes('[CAST]'),'Compact cast not emitted '+id);
-      assert(!after.includes('[CHARACTERS]'),'Full recurring character prose leaked '+id);
-      cast++;
-    }else{
-      // First actual introduction and explicit legacy page profile stay full.
-      if(original.characters?.length)assert(after.includes('[CHARACTERS]'),'Missing approved full character introduction '+id);
-    }
+    assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),
+      'Stardust should emit visible references only, not duplicate cast prose '+id);
+    const tags=after.split('\n').filter(x=>/^@sds\.[A-Za-z0-9_-]+$/.test(x));
+    const expected=(page.characters||[]).map(ref=>store['characters.json'][ref]?.handle);
+    assert.deepEqual(tags,expected,'Page reference tags do not match cast provenance '+id);
+    if(page.promptCharacterMode==='cast')cast++;
     if(page.promptSettingMode==='label'){
       assert(i>0&&pages[i-1].setting===page.setting,'Compact location not adjacent/re-established '+id);
       const setting=store['settings.json'][page.setting];
@@ -73,7 +71,7 @@ for(let issue=4;issue<=10;issue++){
 }
 assert.equal(count,153,'Unexpected Stardust Issue 4-10 interior count');
 assert(summary>=149,'Expected all formulaic summaries suppressed');
-assert(cast>=125,'Too few confirmed recurring cast references compacted');
+assert(cast>=125,'Too few confirmed pages with page-scoped reference policies');
 assert(places>=70,'Expected adjacent repeated locations to become labels');
 assert(added>10000,'No meaningful recipe reduction');
-console.log('PASS Stardust Issues 4–10 '+count+' pages, '+summary+' formulaic summaries suppressed, '+cast+' compact casts, '+places+' compact recurring locations; '+added+' characters removed from assembled recipes');
+console.log('PASS Stardust Issues 4–10 '+count+' pages, '+summary+' formulaic summaries suppressed, '+cast+' visible-only reference profiles, '+places+' compact recurring locations; '+added+' characters removed from assembled recipes');
