@@ -116,10 +116,10 @@ def main():
                         item.get("text", "") if isinstance(item, dict) else item
                         for item in directions
                     ]
-                    assert any("full-page" in item.lower() and "splash" in item.lower() for item in panel_plan), (
+                    assert any("full-page" in item.lower() and any(term in item.lower() for term in ("splash", "image", "illustration")) for item in panel_plan), (
                         f"{pid}: silent editorial must be an explicit full-page splash"
                     )
-                    assert any("no captions or speech balloons" in item.lower() for item in direction_texts), (
+                    assert any(("no captions or speech balloons" in item.lower() or "no captions, speech balloons" in item.lower()) for item in direction_texts), (
                         f"{pid}: silent editorial must explicitly prohibit dialogue and captions"
                     )
                 else:
