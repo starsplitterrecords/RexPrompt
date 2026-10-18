@@ -23,6 +23,12 @@ RexPrompt stores complete production data but sends **only scene-relevant inform
 
 The `[PAGE COMPOSITION]` section, when present, remains separate and intact. Panel size, dominance, insets, negative space, and lettering reserves are not reinterpreted by sanitation.
 
+## Featured-cast selection (optional)
+
+`promptFeaturedCast` is an array of **existing character handles** from the authored page cast, e.g. `["@vik.Carrie", "@vik.Bjorn", "@vik.Gunnar"]`. This restricts the prompt's `[CAST]` or expanded `[CHARACTERS]` reference block to the characters driving that page's visible action. **It does not remove, rename, or reposition anyone in the source story or panel descriptions.**
+
+This is intentionally explicit, not inferred from dialogue. The assembler verifies every handle is known to the page, rejects duplicates, and fails if a named speaking character would be excluded. Pages with background characters needed for on-model visual continuity retain their full cast. Do not use this on a page with an off-screen speaking character unless the text clearly preserves that speaker and the schema is extended with an explicit offscreen-voice distinction.
+
 ## Vikings 2026 Issue 2 (completed first rollout)
 
 The show loads these data layers in order:
@@ -31,7 +37,7 @@ The show loads these data layers in order:
 2. `editorial/dialogue_density_i02.json` — approved issue-specific writing/density revisions on ten unapproved pages.
 3. `editorial/chef_recipe_sanitation_i02.json` — last, strictly ID-merged production delivery policy.
 
-Pages **P02–P04 remain byte-for-byte unchanged in assembled output**, preserving their approved production recipes. Pages **P05–P23** opt into clean panel delivery; none add or remove a story panel.
+Pages **P02–P04 remain byte-for-byte unchanged in assembled output**, preserving their approved production recipes. Pages **P05–P23** opt into clean panel delivery; none add or remove a story panel. On ten conservative pages (P05, P09, P10, P14, P16–P21), the chef receives only the **featured** existing cast handles rather than every household member, with all speaking characters retained. Other pages keep their full contextual cast.
 
 Repeated `LANDFALL VISUAL STATE` apartment-wide notes have been further suppressed on P11 and P17–P19, because their actions already depict the first-night cooking, worn room, repairs and pipe hazard. The setting remains visually anchored on the approved introduction and key return/closing pages (including P08 and P22). On P16 the repeated note is excluded but the **unique, ordinary scratched brass-key reference remains**. On P07 the authored page-layout metadata was synchronized with the corrected silver refusal in panel 3 and the card payment in panel 4; the story and page composition structure remain unchanged.
 
@@ -41,7 +47,7 @@ This is **representation-level cleanup**, not another dialogue, page-count, or v
 
 Run `node tools/test_vikings_i02_chef_sanitation.cjs`. It executes the current inline browser assembler and verifies **all 22 pages**; the original scripted panel plan and dialogue are compared directly with the effective recipe. It also checks:
 
-- No loss of unique panel action, location or character-owned dialogue.
+- No loss of unique panel action, location, featured character identity, or character-owned dialogue.
 - Original dialogue text/order/ownership, continuity and current artistic layout survive intact.
 - The three approved recipes remain byte-identical.
 - The P16 brass key exception and P07 transaction order are respected.
