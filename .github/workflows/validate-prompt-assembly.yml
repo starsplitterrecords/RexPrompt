@@ -19,6 +19,9 @@ on:
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
+      - 'tools/test_vikings_i02_chef_sanitation.cjs'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
+      - 'docs/chef-recipe-sanitation.md'
       - 'tools/test_low_tide_recipe_suppression.cjs'
       - 'data/shows/low-tide-signal/editorial/page_assembly_profiles_c*.json'
       - 'tools/test_vikings_issue2_compositions.cjs'
@@ -75,6 +78,9 @@ on:
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
+      - 'tools/test_vikings_i02_chef_sanitation.cjs'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
+      - 'docs/chef-recipe-sanitation.md'
       - 'tools/test_low_tide_recipe_suppression.cjs'
       - 'data/shows/low-tide-signal/editorial/page_assembly_profiles_c*.json'
       - 'tools/test_vikings_issue2_compositions.cjs'
@@ -126,6 +132,7 @@ jobs:
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_recipe_sanitation_rollout.cjs
+          node --check tools/test_vikings_i02_chef_sanitation.cjs
           node --check tools/test_low_tide_recipe_suppression.cjs
           node --check tools/test_vikings_issue2_compositions.cjs
           node --check tools/test_rex_fleet_issue04_density.cjs
@@ -147,6 +154,7 @@ jobs:
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
           node tools/test_recipe_sanitation_rollout.cjs
+          node tools/test_vikings_i02_chef_sanitation.cjs
           node tools/test_low_tide_recipe_suppression.cjs
           node tools/test_vikings_issue2_compositions.cjs
           node tools/test_rex_fleet_issue04_density.cjs
