@@ -80,5 +80,5 @@ expectBad(bad({lettering:{reservedZone:'top'}}));
 expectBad(bad({unknown:'unexpected'}));
 expectBad(bad({composition:'splash'})); // Multi-panel page cannot become a single splash.
 expectBad({...scene,panelPlan:[]});
-expectBad({...scene,promptSuppress:['pageLayout']}); // No legal suppression of layout authority.
+assert.throws(()=>assemble({...scene,promptSuppress:['pageLayout']},store,0),/Invalid or protected prompt suppression/); // Layout is protected.
 console.log('PASS: 5 distinctive page compositions, legacy compatibility, unchanged script, strict layout validation, density advisory');
