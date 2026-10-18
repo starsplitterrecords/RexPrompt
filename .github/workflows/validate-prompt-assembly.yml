@@ -18,6 +18,7 @@ on:
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
       - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
@@ -56,6 +57,10 @@ on:
       - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
       - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
+      - 'tools/test_stardust_e03_e10_density_scope.cjs'
+      - 'data/shows/stardust-station/editorial/pages_e*_density_pass.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e04.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e07.json'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
@@ -77,6 +82,7 @@ on:
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
       - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
@@ -115,6 +121,10 @@ on:
       - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
       - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
+      - 'tools/test_stardust_e03_e10_density_scope.cjs'
+      - 'data/shows/stardust-station/editorial/pages_e*_density_pass.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e04.json'
+      - 'data/shows/stardust-station/editorial/dialogue_cleanup_e07.json'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
@@ -139,6 +149,7 @@ jobs:
           node --check tools/test_rex_fleet_issue05_density.cjs
           node --check tools/test_rex_fleet_recipe_scopes.cjs
           node --check tools/test_page_layout.cjs
+          node --check tools/test_stardust_visual_refs.cjs
           node --check tools/test_sunforge_page_layouts.cjs
           node --check tools/test_sunforge_all_layouts.cjs
           node --check tools/test_sunforge_recipe_sanitation.cjs
@@ -149,6 +160,7 @@ jobs:
           node --check tools/test_low_tide_dialogue_overlay.cjs
           node --check tools/test_stardust_e02_layouts.cjs
           node --check tools/test_stardust_e02_density_scope.cjs
+          node --check tools/test_stardust_e03_e10_density_scope.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
@@ -161,6 +173,7 @@ jobs:
           node tools/test_rex_fleet_issue05_density.cjs
           node tools/test_rex_fleet_recipe_scopes.cjs
           node tools/test_page_layout.cjs
+          node tools/test_stardust_visual_refs.cjs
           node tools/test_sunforge_page_layouts.cjs
           node tools/test_sunforge_all_layouts.cjs
           node tools/test_sunforge_recipe_sanitation.cjs
@@ -171,3 +184,4 @@ jobs:
           node tools/test_low_tide_dialogue_overlay.cjs
           node tools/test_stardust_e02_layouts.cjs
           node tools/test_stardust_e02_density_scope.cjs
+          node tools/test_stardust_e03_e10_density_scope.cjs
