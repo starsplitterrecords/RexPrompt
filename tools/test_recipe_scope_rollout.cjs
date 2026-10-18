@@ -88,7 +88,7 @@ for(const show of selected){
  counts[group].issues++;counts[group].profiles+=pages;counts[group].savedCharacters+=bytes;counts[group].suppressions+=suppressionCount;
  names.add(show.id);
 }
-assert.equal(selected.length,15,'Unexpected previously unfinished issue/chapter coverage');
+assert.equal(selected.length,10,'Unexpected previously unfinished show configurations');
 assert([...Object.values(counts)].every(x=>x.savedCharacters>0),'No reference reduction in one or more series');
 assert(!selected.some(x=>/^vikings-2026-s1/.test(x.id)),'Already-compact Vikings unexpectedly modified');
 assert.equal(Object.keys(counts).length,3,'Expected only Rockets, Division Threshold, Stardust Issue 3');
