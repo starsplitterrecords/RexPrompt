@@ -205,6 +205,12 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Authored page composition
+
+Pages may optionally include a validated `pageLayout` field for relative panel prominence, splash-with-insets, asymmetry, quiet pacing, negative space, reading flow, and lettering reserves. RexPrompt deterministically emits a `[PAGE COMPOSITION]` section **before** the scripted panel plan; it never drops or rearranges scripted panels or dialogue. Pages without `pageLayout` assemble exactly as before.
+
+The full contract, five sample architectures using real scripted pages, and editorial-phase handoff are documented in [docs/page-layout-contract.md](docs/page-layout-contract.md). Test with `node tools/test_page_layout.cjs`. Layout-density warnings in the assembly UI are advisory only and never rewrite text.
+
 ## Production visuals
 
 RexPrompt displays durable production visuals beside the selected recipe without changing the recipe assembler.
