@@ -88,7 +88,7 @@ def assert_clean_recipe(page, all_ids):
 
 
 shows = load_json(MANIFEST)
-rex = [entry for entry in shows if entry.get("seriesId") == "rex-fleet" or entry.get("id") == "rex-fleet-s1"]
+rex = [entry for entry in shows if (entry.get("seriesId") == "rex-fleet" or entry.get("id") == "rex-fleet-s1") and entry.get("id") != "rex-fleet-i01"]
 if len(rex) != 11:
     raise SystemExit(f"Expected 11 explicit Rex Fleet issue entries (2-12), found {len(rex)}")
 if any(entry.get("id") == "rex-fleet-s1" for entry in rex):

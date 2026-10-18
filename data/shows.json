@@ -138,6 +138,11 @@
       },
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "page_layout_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -173,6 +178,11 @@
         "includeIds": [
           "RF_I02_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i02.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -208,6 +218,11 @@
         "includeIds": [
           "RF_I03_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i03.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -240,10 +255,20 @@
         "encoding": "gzip-base64"
       },
       {
+        "file": "issue_04_dialogue_density_overlay.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
         "file": "editorial_pages.json",
         "includeIds": [
           "RF_I04_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i04.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -280,6 +305,11 @@
         "includeIds": [
           "RF_I05_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i05.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -316,6 +346,11 @@
         "includeIds": [
           "RF_I06_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i06.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -357,6 +392,11 @@
         "file": "issue_07_story_revision_overlay.json",
         "mergeById": true,
         "strict": true
+      },
+      {
+        "file": "page_layout_i07.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -393,6 +433,11 @@
         "includeIds": [
           "RF_I08_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i08.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -429,6 +474,11 @@
         "includeIds": [
           "RF_I09_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i09.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -465,6 +515,11 @@
         "includeIds": [
           "RF_I10_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i10.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -506,6 +561,11 @@
         "includeIds": [
           "RF_I11_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i11.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -542,6 +602,11 @@
         "includeIds": [
           "RF_I12_EDITOR_CLOSE"
         ]
+      },
+      {
+        "file": "page_layout_i12.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -612,6 +677,11 @@
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_page_layouts_e03.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
         "file": "editorial_e03_close.json"
       },
       {
@@ -620,6 +690,11 @@
       {
         "file": "encoded/scenes_e04_trip_point.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e04.json",
+        "mergeById": true,
+        "strict": true
       },
       {
         "file": "editorial_e04_close.json"
@@ -632,6 +707,11 @@
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_page_layouts_e05.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
         "file": "editorial_e05_close.json"
       },
       {
@@ -640,6 +720,11 @@
       {
         "file": "encoded/scenes_e06_ground_loop.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e06.json",
+        "mergeById": true,
+        "strict": true
       },
       {
         "file": "editorial_e06_close.json"
@@ -652,6 +737,11 @@
         "encoding": "gzip-base64"
       },
       {
+        "file": "editorial_page_layouts_e07.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
         "file": "editorial_e07_close.json"
       },
       {
@@ -660,6 +750,11 @@
       {
         "file": "encoded/scenes_e08_sky_piercer.json.gzb64",
         "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e08.json",
+        "mergeById": true,
+        "strict": true
       },
       {
         "file": "editorial_e08_close.json"
@@ -769,6 +864,11 @@
       },
       {
         "file": "editorial/pages_e02_p02_story_thread.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/pages_e02_density_pass.json",
         "mergeById": true,
         "strict": true
       },
@@ -1080,7 +1180,14 @@
       "covers.json",
       "pages_i02.json"
     ],
-    "includeIdPattern": "^VIK_S1E02_P\\d+$"
+    "includeIdPattern": "^VIK_S1E02_P\\d+$",
+    "sceneOverlays": [
+      {
+        "file": "editorial/dialogue_density_i02.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ]
   },
   {
     "id": "vikings-2026-s1-e03",
@@ -1728,7 +1835,49 @@
     ],
     "unitLabel": "PAGE",
     "seriesId": "echoes-forgotten-war",
-    "seriesName": "Echoes of a Forgotten War"
+    "seriesName": "Echoes of a Forgotten War",
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e01.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e02.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e03.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e04.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e05.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e06.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e07.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_layouts_e08.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ]
   },
   {
     "id": "echoes-forgotten-war-s1-covers",
