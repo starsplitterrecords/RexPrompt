@@ -97,6 +97,9 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -211,6 +214,11 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -264,6 +272,9 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -320,6 +331,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -378,6 +394,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -441,6 +462,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -497,6 +523,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -566,6 +598,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -637,6 +675,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -700,6 +743,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -753,6 +801,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -818,6 +872,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -885,6 +945,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -952,6 +1018,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1017,6 +1088,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1064,6 +1141,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1113,6 +1196,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1181,11 +1270,17 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
     "id": "DT_E006_P21",
-    "summary": "Nathan returns in a limited non-emergency role and chooses to disclose a symptom before it becomes a failure. The system adjusts his work rather than removing his value entirely, beginning his movement away from self-sacrifice.",
+    "summary": "Nathan reports a timing fault before it becomes a failure and is startled when the response is a narrow work adjustment rather than professional exile. John sees that reciprocal care can constrain Nathan without erasing him, while Nathan begins learning the same thing about himself.",
     "characters": [
       "DT_NathanPrice",
       "DT_JohnMercer"
@@ -1201,27 +1296,43 @@
     "dialogueInline": [
       {
         "handle": "@dt.NathanPrice",
-        "text": "Timing artifact."
+        "text": "Left hand skipped."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "How bad?"
+        "text": "How much?"
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Minor sync variance."
+        "text": "Enough that I noticed before the tray did."
       },
       {
         "speaker": "SUPERVISING CLINICIAN",
         "text": "No lifting transfers today. Everything else stays."
       },
       {
+        "handle": "@dt.NathanPrice",
+        "text": "That's all?"
+      },
+      {
+        "speaker": "SUPERVISING CLINICIAN",
+        "text": "That's the adjustment."
+      },
+      {
         "handle": "@dt.JohnMercer",
-        "text": "Ask me tomorrow."
+        "text": "You were expecting exile."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "I'll put it on your chart."
+        "text": "I have a talent for worst-case projections when the chart is mine."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "You hate that phrase."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "I hate it less when I get to keep working."
       }
     ],
     "setting": "DT_AugmentClinic",
@@ -1229,11 +1340,17 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
     "id": "DT_E006_P22",
-    "summary": "Kellen prepares to expose the preserved threshold-test evidence. Ostra, John and Nico disagree about timing because disclosure could discredit regulations but also trigger panic, invalidate beneficial rulings and provoke harsher emergency controls.",
+    "summary": "The threshold evidence becomes a trust problem among people who will personally live with disclosure. Nico hears continued concealment as another institution deciding what Organics can bear; John sees patients depending on tainted models; Ostra knows the same architecture delivered both restrictions and real rights.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Ostra9",
@@ -1251,39 +1368,43 @@
     "dialogueInline": [
       {
         "handle": "@dt.KellenCartwright",
-        "text": "This is enough to prove the tests and the policy lineage."
+        "text": "If I release this, I don't get to choose what people do with it."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Publish it."
+        "text": "They already chose what to do with us."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "And tomorrow every permit derived from those models gets challenged at once."
-      },
-      {
-        "handle": "@dt.JohnMercer",
-        "text": "Hospitals use some of the same vulnerability data."
+        "text": "Some of those models are also keeping patients alive."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Waiting won't make the evidence easier to defend."
+        "text": "That doesn't make the tests clean."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Neither will dumping it on a city that's still using it."
+        "text": "It makes the fallout real."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "My housing appeals, work authorizations, personhood decisions—how many used this architecture?"
+        "text": "My housing appeals used this architecture. So did my movement restrictions."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Enough that I can't promise disclosure only removes the bad parts."
+        "text": "I can prove where it came from. I can't promise what falls with it."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Waiting is still a choice."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then we don't have a decision yet."
+        "text": "So is throwing the city at it before we know what breaks."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "Then we find out before somebody else publishes half of it."
       }
     ],
     "setting": "DT_OrganicSafehouse",
@@ -1292,6 +1413,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1347,6 +1473,10 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1411,6 +1541,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1467,6 +1601,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1534,6 +1673,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   }
 ]

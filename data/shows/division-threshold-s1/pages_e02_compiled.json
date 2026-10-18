@@ -136,6 +136,9 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -195,6 +198,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -243,6 +251,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -297,6 +310,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -357,6 +375,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -425,6 +448,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -485,6 +513,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -543,6 +576,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -594,6 +632,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -642,6 +685,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -689,6 +738,11 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -751,6 +805,10 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -804,6 +862,10 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -878,6 +940,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -922,6 +989,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -976,6 +1048,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1036,11 +1114,12 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E002_P19",
-    "summary": "Some Organics welcome predictable written rules compared with arbitrary human discretion, creating the first serious political split inside Organic communities.",
+    "summary": "The first serious Organic political split becomes personal. One worker values a written reason and a real appeal after years of arbitrary supervisors; another is already losing work to the new rules. Ostra refuses to let Nico dismiss a material improvement, and Nico refuses to let improvement hide the cost.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14"
@@ -1056,45 +1135,57 @@
     "dialogueInline": [
       {
         "speaker": "ORGANIC WORKER",
-        "text": "Yesterday they could stop me because they felt like it."
+        "text": "Yesterday my supervisor could stop me because he didn't like the look of my lot record."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And today?"
+        "text": "Today the gate does it."
       },
       {
         "speaker": "ORGANIC WORKER",
-        "text": "Today they have to tell me why."
+        "text": "Today the gate has to give me a reason."
+      },
+      {
+        "speaker": "SECOND ORGANIC",
+        "text": "My reason says I can't reach my shift."
+      },
+      {
+        "speaker": "ORGANIC WORKER",
+        "text": "Mine got reversed on appeal."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "They still control the door."
-      },
-      {
-        "speaker": "ORGANIC WORKER",
-        "text": "Now I can appeal the denial."
+        "text": "A better lock is still a lock."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "That matters."
+        "text": "And an appeal is still more than they had yesterday."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Until nobody has to give you a reason anymore."
+        "text": "Until the appeal becomes the price of every ordinary door."
       },
       {
         "speaker": "ORGANIC WORKER",
-        "text": "At least I can appeal a written denial. I couldn't appeal my supervisor."
+        "text": "I can fight a written denial. I couldn't fight my supervisor's mood."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "You don't get to tell her that improvement doesn't count."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Until they stop letting you challenge it."
+        "text": "I'm telling her to notice what it costs."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
     "region": "DT_OrganicDistricts",
     "factions": [
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -1156,7 +1247,8 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
-    ]
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E002_P21",
@@ -1220,6 +1312,12 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1284,6 +1382,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1339,11 +1442,16 @@
     "region": "DT_OrganicDistricts",
     "factions": [
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
     "id": "DT_E002_P24",
-    "summary": "John passes through a civic checkpoint under the new regime. Ostra is routed to Organic verification while John's human status lets him pass normally. He sees the disparity and still accepts it as a temporary distinction tied to designed capability.",
+    "summary": "John and Ostra reach the same verification gate and receive visibly different treatment. John notices that his installed hardware is ignored because he is human; Ostra is diverted. She refuses to turn his discomfort into another burden she has to manage.",
     "characters": [
       "DT_JohnMercer",
       "DT_Ostra9"
@@ -1363,11 +1471,11 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "That's it?"
+        "text": "You didn't scan the knee."
       },
       {
         "speaker": "ATTENDANT",
-        "text": "Human lane."
+        "text": "Human lane doesn't require it."
       },
       {
         "speaker": "ATTENDANT",
@@ -1375,7 +1483,7 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Go."
+        "text": "You should go."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1383,11 +1491,15 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "That won't change the lane."
+        "text": "For me or for yourself?"
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "I'm not sure yet."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then go."
+        "text": "Figure it out on the other side."
       }
     ],
     "setting": "DT_CivicVerificationGate",
@@ -1396,6 +1508,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Organosynthetics"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1454,6 +1571,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1519,6 +1642,10 @@
       "DT_Intelligences"
     ],
     "setting": "DT_CivicVerificationGate",
-    "region": "DT_Stack"
+    "region": "DT_Stack",
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
+    ]
   }
 ]
