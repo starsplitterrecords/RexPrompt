@@ -205,6 +205,12 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Opt-in strict panel-lettering sanitation
+
+Pages with duplicate exact dialogue quoted inside the visual panel description may opt into `promptPanelLetteringMode: "indexed"`. The assembler verifies every embedded speaker and exact line against the canonical `dialogueInline`, replaces only the duplicated quotes with numbered dialogue references, and emits unchanged dialogue with its **panel ownership** restored. Any mismatch fails assembly, and legacy pages remain unchanged. This is not a dialogue rewrite or a new layout schema.
+
+Sunforge's issue-wide suppression/decluttering policy, including its character/setting/summary/direction decisions and Issue 3's corrected approach setting, is documented in [Sunforge recipe sanitation](docs/sunforge-recipe-sanitation.md). Verify with `node tools/test_sunforge_recipe_sanitation.cjs`.
+
 ## Authored page composition
 
 Pages may optionally include a validated `pageLayout` field for relative panel prominence, splash-with-insets, asymmetry, quiet pacing, negative space, reading flow, and lettering reserves. RexPrompt deterministically emits a `[PAGE COMPOSITION]` section **before** the scripted panel plan; it never drops or rearranges scripted panels or dialogue. Pages without `pageLayout` assemble exactly as before.
