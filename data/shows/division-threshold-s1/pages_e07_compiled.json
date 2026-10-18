@@ -300,11 +300,19 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "And everything else?"
+        "text": "You keep building a door the city can't open."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "We decide what leaves this room."
+        "text": "Because the city keeps walking through ours."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "And when the danger comes in?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Then we decide what leaves this room and what we ask for."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -776,47 +784,39 @@
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "You had the threat first."
+        "text": "You had the threat twelve seconds before we did."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Threat reached me before local route data."
+        "text": "I had citywide threat state. You had local route state."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Then publish that. Fast. Don't own the route."
+        "text": "Then publish what you know. Don't choose where my neighbors walk."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Local systems choose?"
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Or the person does."
+        "text": "Local systems retain route choice."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Until their choice puts someone else at risk."
+        "text": "Until somebody's route puts another person in danger."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That's the part I'm not pretending away."
+        "text": "I'm not asking you to erase that."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "A coercive threshold remains necessary."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "For what?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "For involuntary third-party risk."
+        "text": "Then a coercive threshold remains."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then somebody has to own that call."
+        "text": "And somebody has to put their name on it."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "That requirement is compatible."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -1459,43 +1459,43 @@
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "The pilot works if we only step in when somebody else is actually at risk."
+        "text": "This worked because the crew chose the risk."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Who decides what counts as actual risk?"
+        "text": "And because nobody else was standing under the failure."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And who gets the final say locally?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "A shared threshold requires explicit value assignment."
+        "text": "And because central threat data reached us before the pipe went."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "And I want to know who made the call afterward."
+        "text": "Three conditions. None of them gives one actor the whole decision."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "A shared-risk threshold still requires a deciding authority."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "We need the central information."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Central information is necessary."
+        "text": "Only when the risk crosses onto someone who didn't choose it."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Not central permission."
+        "text": "Who decides that it crossed?"
       },
       {
-        "handle": "@dt.Axiom",
-        "text": "Under some objective structures."
+        "handle": "@dt.Nico14",
+        "text": "Not a category."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "If one rule makes all those differences disappear, we're right back where we started."
+        "text": "Not invisibly."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Then the rule must preserve who decided, the evidence used, and the available appeal."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -1537,12 +1537,16 @@
         "text": "Kellen Cartwright's off-channel entries and my unauthorized preservation action are included."
       },
       {
+        "handle": "@dt.KellenCartwright",
+        "text": "Do not separate mine from the program record."
+      },
+      {
         "speaker": "ARCHIVE CUSTODIAN",
-        "text": "Once released, all of it is public record."
+        "text": "Once released, none of it can be quietly withdrawn."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Then leave it alone."
+        "text": "Then nobody gets to clean it up afterward. Release it intact."
       }
     ],
     "setting": "DT_CivicEvidenceArchive",
