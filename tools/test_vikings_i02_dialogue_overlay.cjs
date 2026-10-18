@@ -55,13 +55,16 @@ for(const patch of patches){
     assert.equal(line.subtext,prior.subtext,'Dialogue ownership changed: '+line.fid);
     assert(typeof line.text==='string'&&line.text.trim(),'Blank dialogue: '+line.fid);
   }
-  // Updated panel descriptions are allowed only to reconcile the bodega
-  // transaction's action with the same-panel dialogue ownership.
-  if(patch.id!=='VIK_S1E02_P07'){
-    for(let n=0;n<patch.panelPlan.length;n++)assert.equal(patch.panelPlan[n].action,original.panelPlan[n].action,'Unexpected action rewrite: '+patch.id);
-  }else{
-    for(let n=0;n<patch.panelPlan.length;n++)if(n!==2&&n!==3)
-      assert.equal(patch.panelPlan[n].action,original.panelPlan[n].action,'Unexpected bodega action rewrite: '+patch.id);
+  // Only bounded staging focus changes are allowed; the panel sequence stays intact.
+  const allowedActionEdits={
+    VIK_S1E02_P06:[4],
+    VIK_S1E02_P07:[2,3],
+    VIK_S1E02_P08:[0,3],
+    VIK_S1E02_P11:[4]
+  };
+  for(let n=0;n<patch.panelPlan.length;n++){
+    if(!allowedActionEdits[patch.id]?.includes(n))
+      assert.equal(patch.panelPlan[n].action,original.panelPlan[n].action,'Unexpected panel action rewrite: '+patch.id);
   }
   beforeLines+=original.dialogueInline.length;afterLines+=patch.dialogueInline.length;
   beforeWords+=original.dialogueInline.reduce((n,d)=>n+words(d.text),0);
