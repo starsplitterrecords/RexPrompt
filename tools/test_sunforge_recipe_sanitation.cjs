@@ -86,6 +86,13 @@ const pct=((oldSize-newSize)*100/oldSize).toFixed(1);
 assert(oldSize>newSize,'Prompts were not decluttered');
 const corrected=json(prefix+'editorial/page_assembly_e03.json').find(x=>x.id==='SUN_S1E03_P01');
 assert.equal(corrected.setting,'sunfields','The road approach must not inherit Mirage Club location');
+// Deliberate corruption must fail loudly, never silently move or drop a balloon.
+const rawSample=json(prefix+'pages_e02.json').find(p=>p.id==='SUN_S1E02_P01');
+const opts={...rawSample,promptPanelLetteringMode:'indexed'};
+assert.throws(()=>preparePanelLettering({...opts,dialogueInline:[{...opts.dialogueInline[0],speaker:'Wrong person'},...opts.dialogueInline.slice(1)]}),/differs from canonical/);
+assert.throws(()=>preparePanelLettering({...opts,dialogueInline:[{...opts.dialogueInline[0],text:'Wrong exact text'},...opts.dialogueInline.slice(1)]}),/differs from canonical/);
+assert.throws(()=>preparePanelLettering({...opts,dialogueInline:[...opts.dialogueInline,{speaker:'CAPTION',text:'Unmapped extra item'}]}),/Unmapped dialogueInline/);
+assert.throws(()=>preparePanelLettering({...opts,promptPanelLetteringMode:'guess'}),/Invalid promptPanelLetteringMode/);
 console.log('PASS Sunforge sanitation: '+pages+' pages; original '+panels+' panel beats and '+dialogue+' dialogue items preserved.');
 console.log('PASS '+indexedPages+' duplicate-lettering pages retain exact speech and panel ownership.');
 console.log('Chef recipe characters: '+oldSize+' => '+newSize+' ('+pct+'% reduction, '+(oldSize-newSize)+' characters removed).');
