@@ -185,17 +185,17 @@ def validate_pages() -> None:
 
 def validate_architecture() -> None:
     expected_counts = {str(issue): TOTAL_COUNTS[issue] for issue in range(1, 9)}
-    expected_counts["season"] = 145
+    expected_counts["season"] = 149
 
     architecture = load(SHOW / "season_architecture_v2.json")
     assert architecture.get("productionPageCounts") == expected_counts
-    assert "145 production pages" in architecture.get("format", "")
+    assert "149 production pages" in architecture.get("format", "")
     order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
     assert order == ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionPageCounts") == expected_counts
-    assert "145 production pages" in status.get("productionMode", "")
+    assert "149 production pages" in status.get("productionMode", "")
     assert "133 story pages" in status.get("writingRecoveryFrontier", "")
     assert "EFW_S1E01_EDITOR_OPEN" in status.get("visualReferenceState", "")
     for issue in range(1, 9):
