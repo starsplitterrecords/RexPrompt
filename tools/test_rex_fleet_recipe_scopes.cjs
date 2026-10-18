@@ -96,6 +96,7 @@ for(let n=1;n<=12;n++){
     assert(new Set(edit.promptSuppress).size===edit.promptSuppress.length,'Repeated suppression '+post.id);
     const prior=original.promptSuppress||[];
     for(const key of prior)assert(edit.promptSuppress.includes(key),'Prior approved suppression lost '+post.id+': '+key);
+    if(original.promptCharacterMode)assert.equal(edit.promptCharacterMode,original.promptCharacterMode,'Prior approved character detail scope changed '+post.id);
     for(const key of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','summary','settingText','setting','regionText','region','factions','charactersInline','directionInline','status','issue','page'])
       assert.deepEqual(post[key],original[key],'Source ingredient mutated: '+post.id+' '+key);
     pageAssembly(post,show); // also reject illegitimate setting/section suppression
