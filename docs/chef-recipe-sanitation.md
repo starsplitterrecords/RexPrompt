@@ -5,7 +5,7 @@ RexPrompt stores complete production data but sends **only scene-relevant inform
 ## Separate the three concerns
 
 1. **Story data** remains complete: `panelPlan`, `dialogueInline`, `directionInline`, stable IDs and speaker ownership, layout data, and status/provenance.
-2. **Stored page policies** determine what to omit or compact. `promptSuppress`, `promptCharacterMode`, `promptSettingMode`, and `promptPanelMode` are authored data. Browser-local suppressions are not canonical.
+2. **Stored page policies** determine what to omit or compact. `promptSuppress`, `promptCharacterMode`, `promptSettingMode`, `promptPanelMode`, and the shared visual-reference controls are authored data. Browser-local suppressions are not canonical.
 3. **Assembler delivery** formats only the information selected for the chef. It never assumes that every raw JSON field must be literally included in the prompt.
 
 ## Panel serialization (new optional capability)
@@ -23,11 +23,15 @@ RexPrompt stores complete production data but sends **only scene-relevant inform
 
 The `[PAGE COMPOSITION]` section, when present, remains separate and intact. Panel size, dominance, insets, negative space, and lettering reserves are not reinterpreted by sanitation.
 
-## Featured-cast selection (optional)
+## Reuse the shared character-reference scope
 
-`promptFeaturedCast` is an array of **existing character handles** from the authored page cast, e.g. `["@vik.Carrie", "@vik.Bjorn", "@vik.Gunnar"]`. This restricts the prompt's `[CAST]` or expanded `[CHARACTERS]` reference block to the characters driving that page's visible action. **It does not remove, rename, or reposition anyone in the source story or panel descriptions.**
+RexPrompt already provides `promptVisibleCharacters` and `promptVisibleCastOnly` for Stardust and other audited series. Vikings uses those **same fields**, opting in **only on P05–P23** instead of creating a competing character schema.
 
-This is intentionally explicit, not inferred from dialogue. The assembler verifies every handle is known to the page, rejects duplicates, and fails if a named speaking character would be excluded. Pages with background characters needed for on-model visual continuity retain their full cast. Do not use this on a page with an off-screen speaking character unless the text clearly preserves that speaker and the schema is extended with an explicit offscreen-voice distinction.
+- `"promptVisibleCastOnly": true` tells the chef to use curated `@vik.*` visual reference handles, **without duplicating all names in a `[CAST]` block**.
+- `promptVisibleCharacters` is an optional list of **existing IDs or handles** from the canonical character shelf. When absent, the original page cast remains the visual reference set.
+- Ten Vikings pages have editorially selected smaller visual sets. All unchanged character behavior, source `charactersInline`, scenes, action and dialogue remain intact.
+- Off-panel dialogue is still literal dialogue, not authorization to draw that person. The selected Vikings pages conservatively include all speaking characters who are in view.
+- The assembler validates field shape and canonical identities. Page-scoped `promptVisibleCastOnly` is explicitly typed and does not alter the defaults of other shows or approved pages.
 
 ## Vikings 2026 Issue 2 (completed first rollout)
 
@@ -37,7 +41,7 @@ The show loads these data layers in order:
 2. `editorial/dialogue_density_i02.json` — approved issue-specific writing/density revisions on ten unapproved pages.
 3. `editorial/chef_recipe_sanitation_i02.json` — last, strictly ID-merged production delivery policy.
 
-Pages **P02–P04 remain byte-for-byte unchanged in assembled output**, preserving their approved production recipes. Pages **P05–P23** opt into clean panel delivery; none add or remove a story panel. On ten conservative pages (P05, P09, P10, P14, P16–P21), the chef receives only the **featured** existing cast handles rather than every household member, with all speaking characters retained. Other pages keep their full contextual cast.
+Pages **P02–P04 remain byte-for-byte unchanged in assembled output**, preserving their approved production recipes. Pages **P05–P23** opt into clean panel delivery; none add or remove a story panel. On ten conservative pages (P05, P09, P10, P14, P16–P21), the chef receives only the **featured** existing visual-reference handles. Remaining pages use the full authored page cast, and no story appearances or speaking roles are removed.
 
 Repeated `LANDFALL VISUAL STATE` apartment-wide notes have been further suppressed on P11 and P17–P19, because their actions already depict the first-night cooking, worn room, repairs and pipe hazard. The setting remains visually anchored on the approved introduction and key return/closing pages (including P08 and P22). On P16 the repeated note is excluded but the **unique, ordinary scratched brass-key reference remains**. On P07 the authored page-layout metadata was synchronized with the corrected silver refusal in panel 3 and the card payment in panel 4; the story and page composition structure remain unchanged.
 
