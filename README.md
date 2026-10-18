@@ -213,7 +213,7 @@ Sunforge's issue-wide suppression/decluttering policy, including its character/s
 
 ## Chef-facing recipe sanitation
 
-Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. It validates every panel-to-dialogue reference and rejects unknown panel fields.
+Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. Pages can also supply `promptFeaturedCast` to limit the chef's recurring-character reference block to explicitly selected, validated scene-driving identities without altering the full source cast. It validates every panel-to-dialogue reference and rejects unknown panel fields.
 
 The first audited rollout uses a strict per-page overlay for **Vikings 2026 Issue 2**, after the dialogue-density overlay, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
 
