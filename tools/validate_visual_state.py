@@ -244,7 +244,7 @@ def validate_integration() -> list[str]:
     if not VISUALS_JS.is_file():
         errors.append("visuals.js is missing")
     index = INDEX.read_text(encoding="utf-8")
-    if '<script src="visuals.js"></script>' not in index:
+    if not re.search(r'<script\s+src=["\']visuals\.js(?:\?[^"\']*)?["\']\s*></script>', index):
         errors.append("index.html does not load visuals.js")
     return errors
 

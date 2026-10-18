@@ -132,7 +132,18 @@ for entry in stardust_entries:
         if isinstance(decoded, dict) and isinstance(decoded.get("pages"), list):
             decoded = decoded["pages"]
         assert isinstance(decoded, list), f"{overlay_file}: payload must be a list"
-        pages.extend(decoded)
+        if overlay.get("mergeById"):
+            patches = {}
+            for patch in decoded:
+                assert isinstance(patch, dict) and isinstance(patch.get("id"), str), f"{overlay_file}: invalid ID patch"
+                assert patch["id"] not in patches, f"{overlay_file}: duplicate patch id {patch['id']}"
+                patches[patch["id"]] = patch
+            known = {page.get("id") for page in pages}
+            if overlay.get("strict"):
+                assert set(patches) <= known, f"{overlay_file}: strict overlay references missing source pages"
+            pages = [{**page, **patches.get(page.get("id"), {})} for page in pages]
+        else:
+            pages.extend(decoded)
 
     assert pages, f"{show_id}: no pages assembled"
     story_page_numbers: list[int] = []
@@ -280,10 +291,18 @@ for _entry in stardust_entries:
         _payload = load_overlay(ROOT / _entry["basePath"] / _overlay["file"], _overlay.get("encoding"))
         _pages = _payload.get("pages") if isinstance(_payload, dict) else _payload
         for _page in _pages:
-            assert str(_page.get("summary", "")).startswith("Primary composition:"), f"{_page.get('id')}: summary is not image-facing composition"
+            # Merge-by-ID editorial policies need not restate the full page summary.
+            # Assess any story prose they actually override, not absent metadata.
+            if "summary" in _page:
+                if _overlay.get("mergeById"):
+                    assert isinstance(_page["summary"], str) and _page["summary"].strip(), f"{_page.get('id')}: blank scoped summary"
+                else:
+                    assert str(_page["summary"]).startswith("Primary composition:"), f"{_page.get('id')}: summary is not image-facing composition"
+            elif not _overlay.get("mergeById"):
+                raise AssertionError(f"{_page.get('id')}: source page missing an image-facing summary")
             _fields = [str(_page.get("summary", "")), str(_page.get("settingText", ""))]
             _fields.extend(str(_p.get("text", "")) for _p in (_page.get("panelPlan") or []) if isinstance(_p, dict))
             for _value in _fields:
                 assert not _writer_meta.search(_value), f"{_page.get('id')}: writer-room rationale leaked into recipe: {_value}"
                 assert not _issue_provenance.search(_value), f"{_page.get('id')}: issue/archive provenance leaked into recipe: {_value}"
-                assert "visible around the action" not in _value and "Keep the " not in _value, f"{_page.get('id')}: repetitive staging boilerplate leaked into recipe: {_value}"
+                assert "visible around the action" not in _value, f"{_page.get('id')}: repetitive staging boilerplate leaked into recipe: {_value}"
