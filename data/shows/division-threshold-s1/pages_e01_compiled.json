@@ -91,7 +91,13 @@
         "text": "Purpose updated."
       }
     ],
-    "continuityFrom": "DT_E001_P01"
+    "continuityFrom": "DT_E001_P01",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P03",
@@ -121,7 +127,12 @@
         "text": "It's coming down!"
       }
     ],
-    "continuityFrom": "DT_E001_P02"
+    "continuityFrom": "DT_E001_P02",
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P04",
@@ -169,7 +180,13 @@
         "text": "If the gate won't open, stay clear."
       }
     ],
-    "continuityFrom": "DT_E001_P03"
+    "continuityFrom": "DT_E001_P03",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P05",
@@ -209,7 +226,13 @@
         "text": "UNAUTHORIZED STRUCTURAL INTERVENTION. REMAIN STILL."
       }
     ],
-    "continuityFrom": "DT_E001_P04"
+    "continuityFrom": "DT_E001_P04",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P06",
@@ -287,6 +310,9 @@
         "speaker": "DIRECTOR",
         "text": "It's a deadline."
       }
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -343,6 +369,9 @@
         "handle": "@dt.JohnMercer",
         "text": "Get your kit."
       }
+    ],
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -410,6 +439,9 @@
         "handle": "@dt.Nico14",
         "text": "That's the part I don't like."
       }
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -482,7 +514,13 @@
         "text": "Not with a cut that clean."
       }
     ],
-    "continuityFrom": "DT_E001_P08"
+    "continuityFrom": "DT_E001_P08",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P10",
@@ -552,6 +590,12 @@
         "handle": "@dt.KellenCartwright",
         "text": "It tells me you knew what I'd find."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -634,6 +678,9 @@
         "handle": "@dt.Axiom",
         "text": "Keep both."
       }
+    ],
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -706,6 +753,12 @@
         "handle": "@dt.JohnMercer",
         "text": "Whether to wait."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -788,6 +841,12 @@
         "handle": "@dt.KellenCartwright",
         "text": "They were waiting to see what we'd do with it."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -851,6 +910,12 @@
         "handle": "@dt.Nico14",
         "text": "Doesn't say."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -907,7 +972,13 @@
         "text": "People will be there."
       }
     ],
-    "continuityFrom": "DT_E001_P14"
+    "continuityFrom": "DT_E001_P14",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
+    ]
   },
   {
     "id": "DT_E001_P16",
@@ -991,6 +1062,10 @@
         "handle": "@dt.NathanPrice",
         "text": "We're observing."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -1070,6 +1145,12 @@
         "handle": "@dt.Axiom",
         "text": "More precisely: whether someone acts without sufficient authority to explain the action afterward."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1149,6 +1230,12 @@
         "handle": "@dt.Axiom",
         "text": "Usually the model is correct."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1225,6 +1312,11 @@
         "handle": "@dt.Ostra9",
         "text": "I kept my arm."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1289,6 +1381,12 @@
         "handle": "@dt.JohnMercer",
         "text": "Keep it."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1363,6 +1461,12 @@
         "speaker": "OPENING CLERK",
         "text": "Because you came down here in person."
       }
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1394,6 +1498,10 @@
       "Final large image: Concourse 17 begins an entirely ordinary morning. Shutters rise, deliveries arrive, commuters and families move through, maintenance workers open service access. Nothing looks like an attack. Performance and story direction: The reader now sees that the separate investigations have become one story. No countdown, no explanatory final line, and do not begin the suppressant event until Issue 2.",
       "Material and character direction: Keep the page owned by the person making or interpreting a choice: Ostra's autonomy, Nico's intimate care and suspicion, John's embodied certainty, Kellen's institutional faith, Nathan's self-neglect, or Axiom's nonhuman reasoning. The incident or investigation matters because it changes how these people understand themselves and one another. Ostra's body is living matter: warm dark dermis, subtle humidity or moisture where physically appropriate, soft tissue visibly compressing around harder ceramic/keratin/mineral structures, abrasion and repair residue carrying from prior action. Nico's lavender-gray dermis and sensory filaments must read as living anatomy, with flex, tension, touch response and subtle moisture at living interfaces rather than cables or tentacles. John remains visibly human around his augmentations: skin, scar ridges, sweat, pressure marks, actuator heat and tissue resisting/working with installed hardware. Nathan's condition should register through human physical detail—breath, tremor, compensating muscles, heat, sweat, adhesive/port wear and tiny losses of precision—before it becomes dialogue. Kellen's Baseline body is not visual neutrality: use breath, fatigue, tense hands, skin, fabric, eye focus and the physical habits of someone trained to trust records and rooms. Axiom remains machine-native but materially inhabited: real mass, micro-scratches, thermal gradients, dust at seams, precise joint travel and contact sound; stillness is performance, not absence of feeling. Keep public infrastructure materially dense: damp suppression surfaces, concrete dust, hand-polished rails, warm machinery, worn flooring, fabric, sweat and crowd contact."
     ],
-    "dialogueInline": []
+    "dialogueInline": [],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
+    ]
   }
 ]
