@@ -180,27 +180,30 @@ Despite the name, **Commit Scene does not write anything to GitHub or the JSON f
 
 ## Page-specific chef assembly
 
-RexPrompt keeps the **complete authored page** in the series data but can send a smaller, deliberately scoped recipe to the image chef. These choices belong to **each page's stored recipe**, not to browser-local settings or changes made during generation.
+RexPrompt stores the full authored page and compiles a focused **chef recipe** from page-level presentation settings. These are authoritative data, not browser choices; no copy/export action or Next Page operation changes them.
 
-A page may carry optional presentation fields alongside its existing `summary`, `characters`, `panelPlan`, `dialogueInline`, and other production fields:
+Production pages may encode:
 
 ```json
 {
   "id": "EXAMPLE_I01_P04",
-  "promptSuppress": ["summary", "settingContinuity"],
-  "promptCharacterMode": "cast"
+  "promptCharacterMode": "cast",
+  "promptSettingMode": "label",
+  "promptSuppress": ["summary"]
 }
 ```
 
-- `promptSuppress`: an optional per-page list. Supported section names are `summary`, `production`, `setting`, `settingContinuity`, `region`, `factions`, `characters`, `continuity`, and `direction`. `settingContinuity` removes the expanded location dictionary only when a separate `settingText` gives the page its visible location.
-- `promptCharacterMode`: `full` (complete selected character entries), `cast` (names only), or `none` (no character section). Omitting the field preserves the existing show's `compactCharacters` behavior, or full character descriptions otherwise.
-- The preserved `panelPlan` and `dialogueInline`/`dialog` remain present in assembled output, even when a stored `promptSuppress` list mistakenly names `dialogue` or `panelPlan`. Suppression never edits, deletes, or renumbers those story assets.
-- Page data is authoritative in both **Copy Prompt** and issue/series exports. The UI reports the page's encoded settings and does not silently copy suppression choices from the previous page or override them from browser storage.
-- Pages without these optional fields assemble exactly as before. Existing `omitSummary`, `omitCameoHandles`, `compactCharacters`, `compactDialogue`, and `compactContinuity` show settings still work.
+- `promptCharacterMode`: `full` includes expanded character entries, `cast` includes names only, and `none` omits the cast block. When absent, the show's existing `compactCharacters` setting (or full mode) applies.
+- `promptSettingMode`: `full` includes the referenced setting description, and `label` emits only the location name. Use `label` for repeat locations that the image references already establish; don't strip a first establishing image of needed design.
+- `promptSuppress`: optional array of section names: `summary`, `production`, `setting`, `settingContinuity`, `region`, `factions`, `characters`, or `direction`. The `settingContinuity` switch applies to the expanded location dictionary when a separate explicit `settingText` remains.
+- `panelPlan`, `dialogueInline`/`dialog`, and `continuityFrom` **cannot be suppressed**. An unknown or protected section raises an assembly error rather than silently discarding story content. Suppressing all setting information also fails unless every panel has an explicit `location` of its own.
+- Existing show-level `omitSummary`, `omitCameoHandles`, `compactCharacters`, `compactDialogue`, and `compactContinuity` continue to work. Pages without the optional per-page fields retain the same output.
 
-**Editorial safety:** Omit only genuinely redundant prompt context, not information needed to understand the art. For example, omit an apartment-wide decoration note from a bodega page, but keep the bodega location, payment prop, panel actions, and all dialogue. Removing detailed character descriptions assumes approved appearance references are still supplied at generation. If the retained panel plan or dialogue is itself too crowded, repair the writing/page design separately; suppression is not permission to drop story beats.
+The interface displays the resolved settings read-only. The full page data remains intact and is not rewritten on copy/export. The same assembly function is used by the page preview, copy, and issue/series exports.
 
-Run `node tools/test_prompt_assembly.cjs` to check the live assembler against stored Vikings 2026, Stardust Station, and Rex Fleet fixtures.
+**Editorial safety:** Set these fields page by page only after checking the actual scene: omission of an irrelevant apartment note from a bodega scene is appropriate; deletion of dialogue, a reaction, a needed prop, or a genuine continuity detail is not. The page composition must still be readable, and canonical image references remain necessary even when full character descriptions are omitted. Do not automatically increase page counts to resolve visual density.
+
+Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
 ## Production visuals
 

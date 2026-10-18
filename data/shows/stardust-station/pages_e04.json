@@ -1,7 +1,9 @@
 [
   {
     "id": "SDS_S1E04_P01",
-    "promptSuppress": ["summary"],
+    "promptSuppress": [
+      "summary"
+    ],
     "promptCharacterMode": "cast",
     "summary": "Primary composition: 4-panel page in Maintenance Bay. Opening image: an ordinary maintenance problem is already open on the wall. Middle image: Astra asks for scale while Zib stays practical. Closing image: the absurd replacement delay becomes the actual pressure.",
     "setting": "SDS_Maintenance_Bay",
@@ -65,7 +67,9 @@
   },
   {
     "id": "SDS_S1E04_P02",
-    "promptSuppress": ["summary"],
+    "promptSuppress": [
+      "summary"
+    ],
     "promptCharacterMode": "cast",
     "summary": "Primary composition: 4-panel page in Maintenance Bay, continuing directly from the delayed-part discovery. Opening image: Astra confirms the delay is real. Middle image: Jax is folded into the repair without ceremony. Closing image: corporate process arrives as paperwork around a small mechanical problem.",
     "setting": "SDS_Maintenance_Bay",
@@ -128,11 +132,14 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E04_P03",
-    "promptSuppress": ["summary"],
+    "promptSuppress": [
+      "summary"
+    ],
     "promptCharacterMode": "cast",
     "summary": "Primary composition: 4-panel page in Lab Work Area. Opening image: Mira is doing ordinary retained-sample work beside the repair. Middle image: two samples behave differently under simple physical tests. Closing image: curiosity appears before interpretation.",
     "setting": "SDS_Lab_Work_Area",
@@ -581,7 +588,12 @@
         "subtext": "Panel 6"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "summary"
+    ]
   },
   {
     "id": "SDS_S1E04_P10",
