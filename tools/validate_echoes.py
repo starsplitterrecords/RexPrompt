@@ -264,7 +264,8 @@ def validate_assembler_contract() -> None:
         "Painterly prestige cosmic science-fiction sequential art",
         "Present-day spaces are tactile and inhabited",
         "Ancient spaces are monumental but physically legible",
-        "Follow the PANEL PLAN as page architecture",
+        "Follow the PAGE COMPOSITION when provided for relative panel prominence",
+        "follow the PANEL PLAN for the exact scripted story beats and order",
         "letter only the exact DIALOGUE supplied by the recipe",
     ):
         assert required in generation, f"Echoes generation contract missing: {required}"
