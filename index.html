@@ -212,6 +212,36 @@ function formatPageLayout(scene){
   return lines.join("\n");
 }
 
+// Editorial-only warnings. They never suppress, rebalance, or rewrite a story beat.
+function pageLayoutWarnings(scene){
+  const panels=scene?.panelPlan||[],count=panels.length,lines=scene?.dialogueInline||[];
+  if(!count)return [];
+  const warnings=[];
+  const totals=new Map();
+  const words=value=>(String(value||"").trim().match(/\S+/g)||[]).length;
+  const indexMap=panels.some(p=>p&&Array.isArray(p.dialogueIndices));
+  if(indexMap){
+    for(let i=0;i<count;i++)for(const idx of (panels[i]?.dialogueIndices||[])){
+      if(Number.isInteger(idx)&&idx>=0&&idx<lines.length){
+        const previous=totals.get(i+1)||{words:0,lines:0};
+        previous.words+=words(lines[idx].text);previous.lines+=1;totals.set(i+1,previous);
+      }
+    }
+  }else{
+    for(const line of lines){
+      const m=String(line.subtext||"").match(/^Panel\s+(\d+)$/i);
+      if(!m)continue;
+      const n=Number(m[1]);if(n<1||n>count)continue;
+      const previous=totals.get(n)||{words:0,lines:0};
+      previous.words+=words(line.text);previous.lines+=1;totals.set(n,previous);
+    }
+  }
+  for(const [n,item] of totals)if(item.words>55||item.lines>7)warnings.push("Panel "+n+" carries "+item.lines+" lettering items / "+item.words+" words; review readable balloon and caption space.");
+  if(lines.length>=15&&lines.length/count>=2.5)warnings.push(lines.length+" dialogue/caption items over "+count+" panels; review lettering density and visual hierarchy.");
+  if(scene.dialogueInline?.length&&totals.size===0&&lines.length>=12)warnings.push("Many dialogue items have no explicit panel mapping; review balloon allocation.");
+  return warnings;
+}
+
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
