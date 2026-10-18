@@ -205,6 +205,26 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Stardust visual reference scope
+
+Stardust issues opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` in `data/shows.json`. Their generation recipes show exactly one canonical `@sds.*` image-reference tag **per visually required character**, rather than both a speaker-derived tag list and a repeated `[CAST]` or `[CHARACTERS]` roster. Dialogue keeps its precise text and speaker attribution **as readable names**, without additional visual-reference tags. Routine `[FACTIONS]` prose is suppressed for Stardust; persistent station/StarTrust visual language still comes from the issue production brief and authored environment instructions.
+
+The default visual cast is the page's authored `charactersInline` (or `characters`) list. For any page where those authorship lists are broader than the *actual figures to draw*, encode `promptVisibleCharacters` as a **narrower explicit list of existing character IDs or canonical handles**:
+
+```json
+{
+  "id": "EXAMPLE_SDS_PAGE",
+  "characters": ["SDS_Zib", "SDS_Astra"],
+  "promptVisibleCharacters": ["SDS_Zib"]
+}
+```
+
+Astra could still speak from off panel or be mentioned; her words and exact speaker attribution remain in the script, but she does not gain a visual reference tag. An empty `promptVisibleCharacters: []` is valid for an intentionally figure-free image. Unknown character IDs/handles are rejected, and duplicate references are removed. Use `promptIncludeFactions: true` on an exceptional page where an authored faction depiction truly requires the full faction prose.
+
+This is **not** a computer-vision inference or a declaration that every listed person must appear in every panel. Page authors must review whether a character is genuinely visible anywhere on the page; if they are only mentioned or heard off panel, exclude them from the explicit visual cast. The referenced image asset is still managed independently: the assembled prompt filters **reference handles**, and any separate attachment workflow must select images using that same visible cast.
+
+Run `node tools/test_stardust_visual_refs.cjs` to verify all Stardust issues, unchanged dialogue, exact single-reference scoping, and faction exceptions.
+
 ## Opt-in strict panel-lettering sanitation
 
 Pages with duplicate exact dialogue quoted inside the visual panel description may opt into `promptPanelLetteringMode: "indexed"`. The assembler verifies every embedded speaker and exact line against the canonical `dialogueInline`, replaces only the duplicated quotes with numbered dialogue references, and emits unchanged dialogue with its **panel ownership** restored. Any mismatch fails assembly, and legacy pages remain unchanged. This is not a dialogue rewrite or a new layout schema.
@@ -213,7 +233,7 @@ Sunforge's issue-wide suppression/decluttering policy, including its character/s
 
 ## Chef-facing recipe sanitation
 
-Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. Pages can also supply `promptFeaturedCast` to limit the chef's recurring-character reference block to explicitly selected, validated scene-driving identities without altering the full source cast. It validates every panel-to-dialogue reference and rejects unknown panel fields.
+Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. Pages can also opt into `promptVisibleCastOnly: true` and select `promptVisibleCharacters` to transmit only the established visual reference handles of scene-driving characters, reusing RexPrompt's shared character-reference contract. It validates every panel-to-dialogue reference and rejects unknown panel fields.
 
 The first audited rollout uses a strict per-page overlay for **Vikings 2026 Issue 2**, after the dialogue-density overlay, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
 
