@@ -211,6 +211,12 @@ Pages with duplicate exact dialogue quoted inside the visual panel description m
 
 Sunforge's issue-wide suppression/decluttering policy, including its character/setting/summary/direction decisions and Issue 3's corrected approach setting, is documented in [Sunforge recipe sanitation](docs/sunforge-recipe-sanitation.md). Verify with `node tools/test_sunforge_recipe_sanitation.cjs`.
 
+## Chef-facing recipe sanitation
+
+Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. It validates every panel-to-dialogue reference and rejects unknown panel fields.
+
+The first audited rollout uses a strict per-page overlay for **Vikings 2026 Issue 2**, after the dialogue-density overlay, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
+
 ## Authored page composition
 
 Pages may optionally include a validated `pageLayout` field for relative panel prominence, splash-with-insets, asymmetry, quiet pacing, negative space, reading flow, and lettering reserves. RexPrompt deterministically emits a `[PAGE COMPOSITION]` section **before** the scripted panel plan; it never drops or rearranges scripted panels or dialogue. Pages without `pageLayout` assemble exactly as before.
