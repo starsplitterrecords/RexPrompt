@@ -9,6 +9,9 @@ on:
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_editorial_page_scopes.cjs'
+      - 'data/shows.json'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
   pull_request:
     paths:
@@ -18,6 +21,9 @@ on:
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_editorial_page_scopes.cjs'
+      - 'data/shows.json'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
   workflow_dispatch:
 
@@ -30,5 +36,8 @@ jobs:
         run: |
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
+          node --check tools/test_editorial_page_scopes.cjs
       - name: Test assembled page content
-        run: node tools/test_prompt_assembly.cjs
+        run: |
+          node tools/test_prompt_assembly.cjs
+          node tools/test_editorial_page_scopes.cjs
