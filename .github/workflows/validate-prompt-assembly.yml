@@ -16,7 +16,9 @@ on:
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_issue2_compositions.cjs'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
@@ -60,7 +62,9 @@ on:
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_issue2_compositions.cjs'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
@@ -101,6 +105,7 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
+          node --check tools/test_recipe_sanitation_rollout.cjs
           node --check tools/test_vikings_issue2_compositions.cjs
           node --check tools/test_rex_fleet_issue04_density.cjs
           node --check tools/test_rex_fleet_issue05_density.cjs
@@ -117,6 +122,7 @@ jobs:
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
+          node tools/test_recipe_sanitation_rollout.cjs
           node tools/test_vikings_issue2_compositions.cjs
           node tools/test_rex_fleet_issue04_density.cjs
           node tools/test_rex_fleet_issue05_density.cjs
