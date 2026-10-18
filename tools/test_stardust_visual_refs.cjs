@@ -56,7 +56,7 @@ for(const show of all){
     const page=pages[i],text=assemble(page,store,i);
     assert(!text.includes('\n[CAST]\n')&&!text.includes('\n[CHARACTERS]\n'),'Duplicate cast roster: '+page.id);
     assert(!text.includes('\n[FACTIONS]\n'),'Routine faction emitted: '+page.id);
-    const refs=actualRefs(text),expected=visual(page,characters);
+    const refs=actualRefs(text),expected=Array.from(visual(page,characters));
     assert.deepEqual(refs,expected,'Wrong visible character references on '+page.id);
     assert.equal((text.match(/@sds\.[A-Za-z][A-Za-z0-9_-]*/g)||[]).length,expected.length,
       'Dialogue or another field added unexpected image references on '+page.id);
