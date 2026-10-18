@@ -34,7 +34,10 @@ function storeFor(sample){
 function sourcePage(sample){
   const page=load('data/shows/'+sample.series+'/'+sample.file).find(p=>p.id===sample.id);
   assert(page,'Missing source page '+sample.id);
-  return page;
+  // Fixtures exercise optional layout from a script-only baseline, even when a
+  // production issue later receives editorial layout assignments.
+  const scriptOnly={...page};delete scriptOnly.pageLayout;
+  return scriptOnly;
 }
 for(const [i,example] of fixtures.entries()){
   const base=sourcePage(example),store=storeFor(example);
