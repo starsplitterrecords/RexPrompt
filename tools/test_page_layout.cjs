@@ -38,8 +38,12 @@ function sourcePage(sample){
 }
 for(const [i,example] of fixtures.entries()){
   const base=sourcePage(example),store=storeFor(example);
-  const scene={...base,pageLayout:example.pageLayout};
-  const original=assemble(base,store,i),revised=assemble(scene,store,i);
+  // The fixtures are non-production alternatives: compare against the same
+  // authored story with layout omitted, even after its page receives a real plan.
+  const unconfigured={...base};
+  delete unconfigured.pageLayout;
+  const scene={...unconfigured,pageLayout:example.pageLayout};
+  const original=assemble(unconfigured,store,i),revised=assemble(scene,store,i);
   assert.equal(validate(scene),example.pageLayout,'Layout validator did not return authored data');
   assert.equal(original.includes('[PAGE COMPOSITION]'),false,'Unconfigured pages must retain old assembly');
   assert(revised.includes('[PAGE COMPOSITION]\nArchitecture: '+example.pageLayout.composition.replaceAll('-',' ')),

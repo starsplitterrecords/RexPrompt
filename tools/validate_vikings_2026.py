@@ -204,7 +204,25 @@ def main():
             assert path.exists(), f"active Vikings overlay missing: {rel}"
             payload = load_payload(path, overlay.get("encoding"))
             assert isinstance(payload, list), f"overlay is not a page list: {rel}"
-            selected.extend(payload)
+            if overlay.get("mergeById"):
+                # Match the live RexPrompt assembler: partial editorial overlays
+                # update existing pages rather than becoming extra incomplete pages.
+                seen_patches = set()
+                positions = {page.get("id"): index for index, page in enumerate(selected)}
+                for patch in payload:
+                    assert isinstance(patch, dict) and patch.get("id"), f"invalid mergeById page in {rel}"
+                    page_id = patch["id"]
+                    assert page_id not in seen_patches, f"duplicate overlay page ID in {rel}: {page_id}"
+                    seen_patches.add(page_id)
+                    if page_id in positions:
+                        index = positions[page_id]
+                        selected[index] = {**selected[index], **patch}
+                    else:
+                        assert not overlay.get("strict"), f"unknown strict overlay page in {rel}: {page_id}"
+                        positions[page_id] = len(selected)
+                        selected.append(patch)
+            else:
+                selected.extend(payload)
             active_files.append(rel)
         if show.get("includeIdPattern"):
             pattern = re.compile(show["includeIdPattern"])
