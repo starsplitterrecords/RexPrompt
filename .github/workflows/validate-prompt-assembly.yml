@@ -8,7 +8,10 @@ on:
       - 'data/shows/vikings-2026-s1/pages_i02.json'
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
+      - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'data/shows.json'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
@@ -20,7 +23,10 @@ on:
       - 'data/shows/vikings-2026-s1/pages_i02.json'
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
+      - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'data/shows.json'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
@@ -37,7 +43,9 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
+          node --check tools/test_rex_fleet_issue04_density.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
+          node tools/test_rex_fleet_issue04_density.cjs
