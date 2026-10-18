@@ -36,11 +36,15 @@ def main() -> None:
     if entry.get("scenesFiles") != expected_files:
         raise RuntimeError("Echoes manifest issue files are missing or reordered")
     expected_overlays = [
-        {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True}
+        entry
         for i in range(1, 9)
+        for entry in (
+            {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True},
+            {"file": f"editorial/page_recipe_scope_e{i:02d}.json", "mergeById": True, "strict": True},
+        )
     ]
     if entry.get("sceneOverlays") != expected_overlays:
-        raise RuntimeError("Echoes must use exactly the eight strict per-issue layout overlays")
+        raise RuntimeError("Echoes must use eight strict layout and recipe-scope overlay pairs")
 
     total = 0
     for issue, path in enumerate(SCENE_FILES, start=1):
