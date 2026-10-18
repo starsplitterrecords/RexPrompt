@@ -301,11 +301,61 @@ function preparePanelLettering(scene){
   return {panels:cleanPanels,byDialogue};
 }
 
+// Keep all source/provenance in page JSON. The chef gets readable instructions,
+// not the serialization protocol used to store them. Opt-in by audited page.
+function prepareCleanPanelPlan(scene){
+  const id=scene?.id||"unknown page",panels=scene.panelPlan||[],lines=scene.dialogueInline||[];
+  if(!Array.isArray(panels)||!panels.length)throw new Error("Clean panel mode requires an authored panelPlan on "+id);
+  if(scene.promptPanelLetteringMode==="indexed")throw new Error("Clean panel mode must not be combined with indexed panel lettering on "+id);
+  const byDialogue=new Array(lines.length).fill(0),entries=[],seenLocations=new Set();
+  for(let i=0;i<panels.length;i++){
+    const p=panels[i],index=i+1;
+    if(!p||typeof p!=="object"||Array.isArray(p)||p.panel!==index||typeof p.action!=="string"||!p.action.trim())
+      throw new Error("Clean panel mode requires ordered numbered panels with complete action text on "+id+" panel "+index);
+    const parts=["Panel "+index];
+    if(p.shotType&&p.shotType!=="SEQUENTIAL")parts.push(String(p.shotType).replaceAll("_"," "));
+    if(p.location!==undefined){
+      if(typeof p.location!=="string"||!p.location.trim())throw new Error("Invalid panel location on "+id+" panel "+index);
+      if(!seenLocations.has(p.location)){
+        // The same setting need not be repeated in every panel; an alternate
+        // location is still stated at its first occurrence.
+        parts.push("Location: "+p.location.trim());
+        seenLocations.add(p.location);
+      }
+    }
+    const allowed=new Set(["panel","location","shotType","action","dialogueIndices"]);
+    for(const name of Object.keys(p))if(!allowed.has(name))
+      throw new Error("Unrecognized panel field "+name+" on "+id+" panel "+index+"; audit before sanitizing");
+    if(lines.length&&!Array.isArray(p.dialogueIndices))throw new Error("Missing panel/dialogue mapping on "+id+" panel "+index);
+    for(const line of p.dialogueIndices||[]){
+      if(!Number.isInteger(line)||line<0||line>=lines.length||byDialogue[line])
+        throw new Error("Invalid or duplicated dialogue index "+line+" on "+id+" panel "+index);
+      byDialogue[line]=index;
+    }
+    entries.push(parts.join(" — ")+": "+p.action.trim());
+  }
+  if(byDialogue.some(x=>!x))throw new Error("Unmapped dialogue items in clean panel mode on "+id);
+  for(let j=0;j<lines.length;j++){
+    const marker=String(lines[j].subtext||"").trim().match(/^Panel\s+(\d+)$/i);
+    if(marker&&Number(marker[1])!==byDialogue[j])
+      throw new Error("Dialogue panel mapping conflicts with authored subtext on "+id+" line "+(j+1));
+  }
+  return {panels:entries,byDialogue};
+}
+
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
   const {suppress,characterMode,settingMode}=pageAssembly(s,show);
-  const panelLettering=preparePanelLettering(s);
+  if(s.promptVisibleCastOnly!==undefined&&typeof s.promptVisibleCastOnly!=="boolean")
+    throw new Error("promptVisibleCastOnly must be a boolean on "+key);
+  const visibleCastOnly=s.promptVisibleCastOnly===undefined?!!show.promptVisibleCastOnly:s.promptVisibleCastOnly;
+  if(s.promptVisibleCharacters!==undefined&&!visibleCastOnly)
+    throw new Error("promptVisibleCharacters requires visible-cast-only mode on "+key);
+  const panelMode=s.promptPanelMode||show.promptPanelMode||"original";
+  if(!["original","clean"].includes(panelMode))throw new Error("Invalid promptPanelMode on "+key+": "+panelMode);
+  const cleanPanels=panelMode==="clean"?prepareCleanPanelPlan(s):null;
+  const panelLettering=cleanPanels?null:preparePanelLettering(s);
   const include=id=>!suppress.has(id);
   const chars=targetStore["characters.json"]||{};
   if(s.dialogueInline?.length)s.dialogueInline.forEach(d=>{
@@ -316,7 +366,7 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     const d=targetStore["dialogue.json"]?.[k];
     if(d)cameos.add(getHandle(d.speakerId,chars));
   });
-  if(show.promptVisibleCastOnly){
+  if(visibleCastOnly){
     if(characterMode!=="none")visibleCharacterHandles(s,chars).forEach(h=>out.push(h));
   }else if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));
   out.push("\n=== "+(show.unitLabel||"SCENE")+": "+key+" ===");
@@ -345,7 +395,7 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     const entries=s.factions.map(k=>targetStore["factions.json"]?.[k]).filter(Boolean);
     if(entries.length)out.push("\n[FACTIONS]\n"+entries.map(formatEntry).join("\n"));
   }
-  if(characterMode!=="none"&&!show.promptVisibleCastOnly){
+  if(characterMode!=="none"&&!visibleCastOnly){
     const entries=s.charactersInline?.length
       ?s.charactersInline.map(c=>({name:c.name||findCharacterByHandle(c.handle,chars)?.name||c.handle,
           full:formatCharacter(findCharacterByHandle(c.handle,chars),c.name||c.handle)}))
@@ -357,24 +407,24 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
   if(s.panelPlan?.length){
     out.push("\n[PANEL PLAN]");
-    (panelLettering?panelLettering.panels:s.panelPlan).forEach(x=>out.push(formatEntry(x)));
+    (cleanPanels?cleanPanels.panels:panelLettering?panelLettering.panels:s.panelPlan).forEach(x=>out.push(formatEntry(x)));
   }
   if(s.dialogueInline?.length){
     out.push("\n[DIALOGUE]");
     s.dialogueInline.forEach((d,index)=>{
-      const panelPrefix=panelLettering?"Panel "+panelLettering.byDialogue[index]+" — ":"";
+      const panelPrefix=cleanPanels?"Panel "+cleanPanels.byDialogue[index]+" — ":panelLettering?"Panel "+panelLettering.byDialogue[index]+" — ":"";
       if(show.compactDialogue){
         const e=findCharacterByHandle(d.handle,chars);
         const speaker=d.speaker||e?.name||d.handle||"TEXT";
-        const panel=/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
+        const panel=!cleanPanels&&/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
         out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
       }else{
         const rawSpeaker=d.handle||d.speaker||"TEXT";
-        const sp=show.promptVisibleCastOnly&&typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")
+        const sp=visibleCastOnly&&typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")
           ?(d.speaker||findCharacterByHandle(rawSpeaker,chars)?.name||rawSpeaker):rawSpeaker;
         const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
         out.push(panelPrefix+(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"'));
-        if(d.subtext)out.push("  ("+d.subtext+")");
+        if(d.subtext&&!cleanPanels)out.push("  ("+d.subtext+")");
       }
     });
   }else if(s.dialog?.length){
@@ -382,7 +432,7 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     s.dialog.forEach(k=>{
       const d=targetStore["dialogue.json"]?.[k];
       if(!d)return;
-      const speaker=show.promptVisibleCastOnly?(chars[d.speakerId]?.name||d.speakerId):getHandle(d.speakerId,chars);
+      const speaker=visibleCastOnly?(chars[d.speakerId]?.name||d.speakerId):getHandle(d.speakerId,chars);
       out.push(speaker+' says "'+(d.text||'')+'"');
       if(d.subtext)out.push("  ("+d.subtext+")");
     });

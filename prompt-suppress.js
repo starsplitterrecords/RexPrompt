@@ -23,7 +23,8 @@ function render(){
   const detail=document.createElement("div");
   detail.style.cssText="margin-top:6px;line-height:1.5";
   detail.textContent="Character detail: "+characterMode+" · Setting detail: "+settingMode+" · Suppressed sections: "+selection;
-  if(show.promptVisibleCastOnly)detail.textContent+=" · Art reference scope: visual cast only (no duplicate cast roster)";
+  detail.textContent+=" · Panel delivery: "+(scene.promptPanelMode||show.promptPanelMode||"original");
+  if(scene.promptVisibleCastOnly??show.promptVisibleCastOnly)detail.textContent+=" · Art reference scope: visual cast only (no duplicate cast roster)";
   if(show.omitRoutineFactions)detail.textContent+=" · Routine factions: hidden";
   if(scene.pageLayout)detail.textContent+=" · Page composition: "+scene.pageLayout.composition;
   if(scene.promptPanelLetteringMode==="indexed")detail.textContent+=" · Duplicate panel lettering: indexed references";
