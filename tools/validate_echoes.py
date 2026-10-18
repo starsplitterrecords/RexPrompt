@@ -12,7 +12,7 @@ SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
 REFERENCE_POLICY = ROOT / "production" / "references" / "echoes-forgotten-war" / "README.md"
 REFERENCE_PACK = ROOT / "production" / "references" / "echoes-forgotten-war" / "visual-reference-pack.json"
 
-STORY_COUNTS = {1: 17, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
+STORY_COUNTS = {1: 21, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
 TOTAL_COUNTS = {issue: count + 2 for issue, count in STORY_COUNTS.items()}
 CHAMPION_ISSUE = {
     "EFW_Starbreaker": 1,
@@ -42,7 +42,11 @@ def validate_manifest() -> None:
     entry = matches[0]
     assert entry.get("basePath") == "data/shows/echoes-forgotten-war-s1"
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
-    assert not entry.get("sceneOverlays"), "Retired enhancement overlays must not return"
+    expected_overlays = [
+        {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True}
+        for i in range(1, 9)
+    ]
+    assert entry.get("sceneOverlays") == expected_overlays, "Expected eight isolated per-issue layout overlays"
     assert entry.get("unitLabel") == "PAGE"
     assert entry.get("seriesId") == "echoes-forgotten-war"
     assert entry.get("seriesName") == "Echoes of a Forgotten War"
@@ -170,8 +174,8 @@ def validate_pages() -> None:
 
         total += len(pages)
 
-    assert total == 145, f"Expected 145 production pages, found {total}"
-    assert len(all_ids) == 145
+    assert total == 149, f"Expected 149 production pages, found {total}"
+    assert len(all_ids) == 149
 
     for champion, expected_issue in CHAMPION_ISSUE.items():
         assert champion_first_issue.get(champion) == expected_issue, (
@@ -192,7 +196,7 @@ def validate_architecture() -> None:
     status = load(SHOW / "development_status.json")
     assert status.get("productionPageCounts") == expected_counts
     assert "145 production pages" in status.get("productionMode", "")
-    assert "129 unchanged story pages" in status.get("writingRecoveryFrontier", "")
+    assert "133 story pages" in status.get("writingRecoveryFrontier", "")
     assert "EFW_S1E01_EDITOR_OPEN" in status.get("visualReferenceState", "")
     for issue in range(1, 9):
         entry = status.get("issues", {}).get(str(issue), {})
@@ -260,8 +264,8 @@ def main() -> None:
     validate_characters_and_references()
     validate_assembler_contract()
     print(
-        "Echoes validation passed: 8 issues / 145 PAGE recipes "
-        "(129 story + 16 editorial bookends), valid reveal order, references, "
+        "Echoes validation passed: 8 issues / 149 PAGE recipes "
+        "(133 story + 16 editorial bookends), valid reveal order, references, "
         "page counts, continuity targets and package generation contract."
     )
 
