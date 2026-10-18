@@ -43,10 +43,14 @@ def validate_manifest() -> None:
     assert entry.get("basePath") == "data/shows/echoes-forgotten-war-s1"
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
     expected_overlays = [
-        {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True}
+        entry
         for i in range(1, 9)
+        for entry in (
+            {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True},
+            {"file": f"editorial/page_recipe_scope_e{i:02d}.json", "mergeById": True, "strict": True},
+        )
     ]
-    assert entry.get("sceneOverlays") == expected_overlays, "Expected eight isolated per-issue layout overlays"
+    assert entry.get("sceneOverlays") == expected_overlays, "Expected eight isolated layout and recipe-scope overlay pairs"
     assert entry.get("unitLabel") == "PAGE"
     assert entry.get("seriesId") == "echoes-forgotten-war"
     assert entry.get("seriesName") == "Echoes of a Forgotten War"
