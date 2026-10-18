@@ -14,6 +14,8 @@ on:
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_azure_page_layouts.cjs'
+      - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/test_backyard_rockets_layouts.cjs'
       - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
@@ -44,6 +46,8 @@ on:
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_azure_page_layouts.cjs'
+      - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/test_backyard_rockets_layouts.cjs'
       - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
@@ -75,6 +79,7 @@ jobs:
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_rex_fleet_issue04_density.cjs
           node --check tools/test_page_layout.cjs
+          node --check tools/test_azure_page_layouts.cjs
           node --check tools/test_backyard_rockets_layouts.cjs
           node --check tools/test_low_tide_page_layout.cjs
           node --check tools/test_stardust_e02_layouts.cjs
@@ -85,6 +90,7 @@ jobs:
           node tools/test_editorial_page_scopes.cjs
           node tools/test_rex_fleet_issue04_density.cjs
           node tools/test_page_layout.cjs
+          node tools/test_azure_page_layouts.cjs
           node tools/test_backyard_rockets_layouts.cjs
           node tools/test_low_tide_page_layout.cjs
           node tools/test_stardust_e02_layouts.cjs
