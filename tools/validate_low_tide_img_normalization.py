@@ -350,7 +350,7 @@ def validate_show_registration() -> None:
         assert_no_meta(f"{sid}.generationLine", line)
 
         overlays = record.get("sceneOverlays") or []
-        assert len(overlays) == 3, f"{sid}: expected opener, story, and closing overlays"
+        assert len(overlays) == 5, f"{sid}: expected authored opener, story, closing, scope, and layout layers"
         assert overlays[0].get("file") == EDITORIAL_FILES[0], f"{sid}: editorial opener overlay drift"
         assert overlays[2].get("file") == EDITORIAL_FILES[1], f"{sid}: editorial closing overlay drift"
         story_overlay = overlays[1]
@@ -359,6 +359,15 @@ def validate_show_registration() -> None:
             assert story_overlay.get("file") == "pages_ch01_ch03_compiled.json", f"{sid}: C1-C3 source drift"
         else:
             assert story_overlay.get("encoding") == "gzip-base64", f"{sid}: encoded chapter lost encoding declaration"
+
+        # Additional strict page-scoped chef policies must follow story source,
+        # while authored page composition remains the last scene overlay.
+        expected_scope = f"editorial/page_assembly_profiles_c{chapter:02d}.json"
+        expected_layout = f"editorial/page_layouts_c{chapter:02d}.json"
+        for overlay, expected_file in ((overlays[3], expected_scope), (overlays[4], expected_layout)):
+            assert overlay.get("file") == expected_file, f"{sid}: unexpected overlay order or path: {overlay}"
+            assert overlay.get("mergeById") and overlay.get("strict"), f"{sid}: page edits must be strict ID merges"
+            assert (SHOW_DIR / expected_file).is_file(), f"{sid}: missing active page overlay {expected_file}"
 
 
 def validate_show_visual_rules() -> None:
