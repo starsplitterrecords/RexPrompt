@@ -24,10 +24,11 @@ assert(show.sceneOverlays.at(-1)?.mergeById&&show.sceneOverlays.at(-1)?.strict,
   'Registered sanitation must be a strict ID overlay');
 assert.equal(scopes.length,19,'Expected 19 audited unapproved interior pages');
 assert.equal(new Set(scopes.map(x=>x.id)).size,scopes.length,'Duplicate sanitation IDs');
-const allowed=new Set(['id','promptPanelMode','promptSuppress','directionInline','pageLayout','promptFeaturedCast']);
+const allowed=new Set(['id','promptPanelMode','promptSuppress','directionInline','pageLayout','promptVisibleCharacters','promptVisibleCastOnly']);
 for(const p of scopes){
   assert(Object.keys(p).every(key=>allowed.has(key)),'Sanitation patch attempted story mutation: '+p.id);
   assert.equal(p.promptPanelMode,'clean','Unconfigured sanitation mode: '+p.id);
+  assert.equal(p.promptVisibleCastOnly,true,'Page must opt into shared visual-reference scoping '+p.id);
   assert(!['VIK_S1E02_P02','VIK_S1E02_P03','VIK_S1E02_P04'].includes(p.id),
     'Approved artwork recipe unexpectedly changed: '+p.id);
 }
@@ -71,18 +72,20 @@ for(let i=0;i<clean.length;i++){
   const unique=new Set(scene.panelPlan.map(p=>p.location).filter(Boolean));
   for(const place of unique)assert(after.includes(place),'Dropped distinct location '+place+' '+scene.id);
   for(const line of scene.dialogueInline)assert(after.includes(line.text),'Lost dialogue '+scene.id);
-  if(scene.promptFeaturedCast!==undefined){
-    const actors=new Map(original.charactersInline.map(x=>[x.handle,x.name]));
-    assert.equal(new Set(scene.promptFeaturedCast).size,scene.promptFeaturedCast.length,'Duplicate featured actors '+scene.id);
-    for(const handle of scene.promptFeaturedCast){
-      assert(actors.has(handle),'Featured actor absent from source '+scene.id);
-      assert(section(after,'CAST')?.includes(actors.get(handle)),'Missing featured character '+scene.id+': '+handle);
-    }
-    const omitted=original.charactersInline.filter(x=>!scene.promptFeaturedCast.includes(x.handle));
-    for(const actor of omitted)
-      assert(!section(after,'CAST')?.includes(actor.name),'Non-featured cast still required by chef '+scene.id+': '+actor.name);
-    for(const d of scene.dialogueInline)
-      if(d.handle)assert(scene.promptFeaturedCast.includes(d.handle),'Speaker silently excluded from featured cast '+scene.id);
+  // The visual reference set uses the shared Stardust/other-series mechanism.
+  // Dialogue speakers remain intelligible even when not rendered as people.
+  assert(!after.includes('\n[CAST]\n')&&!after.includes('\n[CHARACTERS]\n'),
+    'Duplicate textual cast roster leaked '+scene.id);
+  const refs=after.split('\n').filter(line=>/^@vik\.[A-Za-z][A-Za-z0-9_-]*$/.test(line));
+  const intended=scene.promptVisibleCharacters||
+    original.charactersInline.map(x=>x.handle);
+  assert.deepEqual(refs,intended,'Wrong canonical visual reference handles '+scene.id);
+  if(scene.promptVisibleCharacters!==undefined){
+    const known=new Set(original.charactersInline.map(x=>x.handle));
+    assert(intended.every(h=>known.has(h)),'Visual references invented a new character '+scene.id);
+    const speakerHandles=new Set(scene.dialogueInline.map(x=>x.handle).filter(Boolean));
+    for(const h of speakerHandles)
+      assert(intended.includes(h),'Curated featured cast omitted visible dialogue participant '+scene.id+': '+h);
   }
   if(scene.pageLayout!==undefined){
     assert(after.includes('[PAGE COMPOSITION]'),'Layout omitted '+scene.id);
@@ -109,11 +112,11 @@ function fail(invalid,diagnostic){
   assert.throws(()=>assemble(invalid,store,0),diagnostic,'Sanitizer should fail closed');
 }
 const first=clean.find(x=>x.id==='VIK_S1E02_P05');
-assert.equal(scopes.filter(x=>x.promptFeaturedCast).length,10,'Expected ten audited featured-cast trims');
-fail({...first,promptFeaturedCast:['@vik.Carrie','@vik.Carrie']},/Invalid or duplicate promptFeaturedCast/);
-fail({...first,promptFeaturedCast:['@vik.Carrie','@vik.Nobody']},/Featured character not in authored page cast/);
-fail({...first,promptFeaturedCast:['@vik.Carrie']},/Speaking character omitted by promptFeaturedCast/);
-
+assert.equal(scopes.filter(x=>x.promptVisibleCharacters).length,10,
+  'Expected ten audited featured visual-cast trims');
+fail({...first,promptVisibleCharacters:'@vik.Carrie'},/must be an array/);
+fail({...first,promptVisibleCharacters:['@vik.Nobody']},/Unknown visible character/);
+fail({...first,promptVisibleCastOnly:false},/requires visible-cast-only mode/);
 fail({...first,promptPanelMode:'unknown'},/Invalid promptPanelMode/);
 fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===1?{...x,panel:77}:x)},/ordered numbered panels/);
 fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===0?{...x,foo:'bar'}:x)},/Unrecognized panel field/);
