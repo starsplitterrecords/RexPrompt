@@ -19,6 +19,9 @@ on:
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
+      - 'tools/test_sunforge_recipe_sanitation.cjs'
+      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
+      - 'docs/sunforge-recipe-sanitation.md'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
@@ -62,6 +65,9 @@ on:
       - 'tools/test_page_layout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
+      - 'tools/test_sunforge_recipe_sanitation.cjs'
+      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
+      - 'docs/sunforge-recipe-sanitation.md'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
       - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
@@ -104,6 +110,7 @@ jobs:
           node --check tools/test_page_layout.cjs
           node --check tools/test_sunforge_page_layouts.cjs
           node --check tools/test_sunforge_all_layouts.cjs
+          node --check tools/test_sunforge_recipe_sanitation.cjs
           node --check tools/test_azure_page_layouts.cjs
           node --check tools/test_backyard_rockets_layouts.cjs
           node --check tools/test_low_tide_page_layout.cjs
@@ -119,6 +126,7 @@ jobs:
           node tools/test_page_layout.cjs
           node tools/test_sunforge_page_layouts.cjs
           node tools/test_sunforge_all_layouts.cjs
+          node tools/test_sunforge_recipe_sanitation.cjs
           node tools/test_azure_page_layouts.cjs
           node tools/test_backyard_rockets_layouts.cjs
           node tools/test_low_tide_page_layout.cjs
