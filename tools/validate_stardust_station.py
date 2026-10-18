@@ -294,7 +294,10 @@ for _entry in stardust_entries:
             # Merge-by-ID editorial policies need not restate the full page summary.
             # Assess any story prose they actually override, not absent metadata.
             if "summary" in _page:
-                assert str(_page["summary"]).startswith("Primary composition:"), f"{_page.get('id')}: summary is not image-facing composition"
+                if _overlay.get("mergeById"):
+                    assert isinstance(_page["summary"], str) and _page["summary"].strip(), f"{_page.get('id')}: blank scoped summary"
+                else:
+                    assert str(_page["summary"]).startswith("Primary composition:"), f"{_page.get('id')}: summary is not image-facing composition"
             elif not _overlay.get("mergeById"):
                 raise AssertionError(f"{_page.get('id')}: source page missing an image-facing summary")
             _fields = [str(_page.get("summary", "")), str(_page.get("settingText", ""))]
