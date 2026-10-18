@@ -23,6 +23,7 @@ function render(){
   const detail=document.createElement("div");
   detail.style.cssText="margin-top:6px;line-height:1.5";
   detail.textContent="Character detail: "+characterMode+" · Setting detail: "+settingMode+" · Suppressed sections: "+selection;
+  detail.textContent+=" · Panel delivery: "+(scene.promptPanelMode||show.promptPanelMode||"original");
   if(scene.pageLayout)detail.textContent+=" · Page composition: "+scene.pageLayout.composition;
   if(scene.promptPanelLetteringMode==="indexed")detail.textContent+=" · Duplicate panel lettering: indexed references";
   const foot=document.createElement("div");
