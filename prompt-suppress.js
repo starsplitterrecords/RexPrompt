@@ -4,7 +4,7 @@
 const labels={
   summary:"Summary",production:"Production brief",setting:"Setting",
   settingContinuity:"Setting continuity",region:"Region",factions:"Factions",
-  characters:"Cast",continuity:"Continuity",direction:"Direction"
+  characters:"Cast"
 };
 function render(){
   const mount=document.getElementById("promptSuppressMount");
@@ -13,6 +13,7 @@ function render(){
   const scene=active.scene,show=active.show||{};
   const suppress=Array.isArray(scene.promptSuppress)?scene.promptSuppress.filter(x=>labels[x]):[];
   const characterMode=suppress.includes("characters")?"none":scene.promptCharacterMode||(show.compactCharacters?"cast":"full");
+  const settingMode=scene.promptSettingMode||"full";
   const selection=suppress.length?suppress.map(x=>labels[x]).join(", "):"None";
   mount.replaceChildren();
   const panel=document.createElement("div");
@@ -21,7 +22,7 @@ function render(){
   const title=document.createElement("strong");title.textContent="Stored page assembly";
   const detail=document.createElement("div");
   detail.style.cssText="margin-top:6px;line-height:1.5";
-  detail.textContent="Character detail: "+characterMode+" · Suppressed sections: "+selection;
+  detail.textContent="Character detail: "+characterMode+" · Setting detail: "+settingMode+" · Suppressed sections: "+selection;
   const foot=document.createElement("div");
   foot.style.cssText="margin-top:5px;color:var(--muted);font-size:.77rem";
   foot.textContent="Read-only: these settings come from the page's RexPrompt data and apply to copying and exports. No browser or next-page override.";
