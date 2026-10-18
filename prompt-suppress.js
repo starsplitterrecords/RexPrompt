@@ -23,23 +23,10 @@ function render(){
   const detail=document.createElement("div");
   detail.style.cssText="margin-top:6px;line-height:1.5";
   detail.textContent="Character detail: "+characterMode+" · Setting detail: "+settingMode+" · Suppressed sections: "+selection;
-  if(scene.pageLayout)detail.textContent+=" · Page composition: "+scene.pageLayout.composition;
   const foot=document.createElement("div");
   foot.style.cssText="margin-top:5px;color:var(--muted);font-size:.77rem";
   foot.textContent="Read-only: these settings come from the page's RexPrompt data and apply to copying and exports. No browser or next-page override.";
-  panel.append(title,detail,foot);
-  const warnings=typeof pageLayoutWarnings==="function"?pageLayoutWarnings(scene):[];
-  if(warnings.length){
-    const heading=document.createElement("div");
-    heading.style.cssText="margin-top:8px;font-weight:650";
-    heading.textContent="Editorial density advisories (not automatic changes)";
-    panel.appendChild(heading);
-    const list=document.createElement("ul");
-    list.style.cssText="margin:5px 0 0;padding-left:20px;line-height:1.5";
-    for(const warning of warnings){const item=document.createElement("li");item.textContent=warning;list.appendChild(item)}
-    panel.appendChild(list);
-  }
-  mount.append(panel);
+  panel.append(title,detail,foot);mount.append(panel);
 }
 document.addEventListener("rexprompt:assembly-changed",render);
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",render,{once:true});
