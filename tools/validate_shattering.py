@@ -108,12 +108,26 @@ def main():
                 assert not page.get("sceneId"), f"{pid}: editorial bookend must not claim a source scene"
                 assert isinstance(page.get("settingText"), str) and page["settingText"].strip(), f"{pid}: editorial art direction missing"
                 assert not page.get("continuityFrom"), f"{pid}: editorial bookend must not inherit story continuity"
-                assert dialogue_inline, f"{pid}: editorial copy missing"
-                for line in dialogue_inline:
-                    assert isinstance(line, dict), f"{pid}: malformed editorial text entry"
-                    assert line.get("speaker") == "CAPTION", f"{pid}: editorial text must use CAPTION speaker"
-                    text = line.get("text")
-                    assert isinstance(text, str) and text.strip(), f"{pid}: editorial text missing"
+                if not dialogue_inline:
+                    # Editorial bookends are deliberately silent full-page story-world
+                    # splashes. Their drawing instructions explicitly forbid copy.
+                    directions = page.get("directionInline", [])
+                    direction_texts = [
+                        item.get("text", "") if isinstance(item, dict) else item
+                        for item in directions
+                    ]
+                    assert any("full-page" in item.lower() and any(term in item.lower() for term in ("splash", "image", "illustration")) for item in panel_plan), (
+                        f"{pid}: silent editorial must be an explicit full-page splash"
+                    )
+                    assert any(("no captions or speech balloons" in item.lower() or "no captions, speech balloons" in item.lower()) for item in direction_texts), (
+                        f"{pid}: silent editorial must explicitly prohibit dialogue and captions"
+                    )
+                else:
+                    for line in dialogue_inline:
+                        assert isinstance(line, dict), f"{pid}: malformed editorial text entry"
+                        assert line.get("speaker") == "CAPTION", f"{pid}: editorial text must use CAPTION speaker"
+                        text = line.get("text")
+                        assert isinstance(text, str) and text.strip(), f"{pid}: editorial text missing"
                 continue
 
             scene_id = page.get("sceneId")

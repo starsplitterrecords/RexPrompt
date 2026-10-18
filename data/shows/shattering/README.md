@@ -11,6 +11,8 @@ The active RexPrompt package is page-based comic production.
 - Total page recipes: 144 (132 story pages + 12 editorial bookends)
 - Active files: `pages_i01.json` through `pages_i06.json`
 - Production unit: `PAGE`
+- Page-specific art direction: `page_layouts_i01.json` through `page_layouts_i06.json` (132 story-page compositions) registered as strict `mergeById` overlays. These emit `[PAGE COMPOSITION]` through RexPrompt's restored page-layout assembler without changing story text, dialogue, panels, or page count. The 12 existing opening/closing editorial splash recipes remain unchanged.
+- Layout-production gate: deterministic compilation validated by `node tools/test_shattering_page_layouts.cjs`. Rendered artwork has not yet been inspected or approved; the visual-reference gate remains open.
 - Durable approved unpublished images: none at this checkpoint
 - Structured visual-reference inventory: `production/references/shattering/reference-inventory.json`
 - End-to-end writing/continuity review: complete through Issue 6

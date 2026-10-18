@@ -12,7 +12,7 @@ SCENE_FILES = [SHOW / f"scenes_e{i:02d}.json" for i in range(1, 9)]
 REFERENCE_POLICY = ROOT / "production" / "references" / "echoes-forgotten-war" / "README.md"
 REFERENCE_PACK = ROOT / "production" / "references" / "echoes-forgotten-war" / "visual-reference-pack.json"
 
-STORY_COUNTS = {1: 17, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
+STORY_COUNTS = {1: 21, 2: 16, 3: 15, 4: 16, 5: 16, 6: 15, 7: 16, 8: 18}
 TOTAL_COUNTS = {issue: count + 2 for issue, count in STORY_COUNTS.items()}
 CHAMPION_ISSUE = {
     "EFW_Starbreaker": 1,
@@ -42,7 +42,11 @@ def validate_manifest() -> None:
     entry = matches[0]
     assert entry.get("basePath") == "data/shows/echoes-forgotten-war-s1"
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
-    assert not entry.get("sceneOverlays"), "Retired enhancement overlays must not return"
+    expected_overlays = [
+        {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True}
+        for i in range(1, 9)
+    ]
+    assert entry.get("sceneOverlays") == expected_overlays, "Expected eight isolated per-issue layout overlays"
     assert entry.get("unitLabel") == "PAGE"
     assert entry.get("seriesId") == "echoes-forgotten-war"
     assert entry.get("seriesName") == "Echoes of a Forgotten War"
@@ -118,9 +122,26 @@ def validate_story_page(
         if isinstance(handle, str) and handle.startswith("@"):
             matching = [cid for cid, entry in chars.items() if entry.get("handle") == handle]
             assert matching, f"{page_id}: unknown dialogue handle {handle}"
-            assert matching[0] in page.get("characters", []), (
-                f"{page_id}: speaker {handle} absent from page character list"
-            )
+            if matching[0] not in page.get("characters", []):
+                # A documented off-panel voice is audible, not an instruction
+                # to insert another figure into the finished panel.
+                person = chars[matching[0]]["name"].lower()
+                panel_text = " ".join(block.get("text", "") for block in plan).lower()
+                direction_text = " ".join(
+                    block.get("text", "") for block in page.get("directionInline", [])
+                ).lower()
+                # The character shelf may include a rank (General Mero)
+                # while acting notes use the character's surname (Mero).
+                spoken_names = {person, person.split()[-1]}
+                explicitly_unseen = any(
+                    f"{name} remains entirely off-panel" in panel_text
+                    and f"off-panel {name} voice" in direction_text
+                    for name in spoken_names
+                )
+                assert explicitly_unseen, (
+                    f"{page_id}: speaker {handle} absent from page character list "
+                    "without explicit off-panel direction"
+                )
 
     directions = page.get("directionInline", [])
     assert isinstance(directions, list), f"{page_id}: directionInline must be a list"
@@ -170,8 +191,8 @@ def validate_pages() -> None:
 
         total += len(pages)
 
-    assert total == 145, f"Expected 145 production pages, found {total}"
-    assert len(all_ids) == 145
+    assert total == 149, f"Expected 149 production pages, found {total}"
+    assert len(all_ids) == 149
 
     for champion, expected_issue in CHAMPION_ISSUE.items():
         assert champion_first_issue.get(champion) == expected_issue, (
@@ -181,18 +202,18 @@ def validate_pages() -> None:
 
 def validate_architecture() -> None:
     expected_counts = {str(issue): TOTAL_COUNTS[issue] for issue in range(1, 9)}
-    expected_counts["season"] = 145
+    expected_counts["season"] = 149
 
     architecture = load(SHOW / "season_architecture_v2.json")
     assert architecture.get("productionPageCounts") == expected_counts
-    assert "145 production pages" in architecture.get("format", "")
+    assert "149 production pages" in architecture.get("format", "")
     order = [entry.get("newChampion") for entry in architecture.get("revealOrder", [])]
     assert order == ["Starbreaker", "Redlin", "Atlas", "Arbiter", "Afterlight", "Flux", "Oryon", "Kyn"]
 
     status = load(SHOW / "development_status.json")
     assert status.get("productionPageCounts") == expected_counts
-    assert "145 production pages" in status.get("productionMode", "")
-    assert "129 unchanged story pages" in status.get("writingRecoveryFrontier", "")
+    assert "149 production pages" in status.get("productionMode", "")
+    assert "133 story pages" in status.get("writingRecoveryFrontier", "")
     assert "EFW_S1E01_EDITOR_OPEN" in status.get("visualReferenceState", "")
     for issue in range(1, 9):
         entry = status.get("issues", {}).get(str(issue), {})
@@ -247,7 +268,8 @@ def validate_assembler_contract() -> None:
         "Painterly prestige cosmic science-fiction sequential art",
         "Present-day spaces are tactile and inhabited",
         "Ancient spaces are monumental but physically legible",
-        "Follow the PANEL PLAN as page architecture",
+        "Follow the PAGE COMPOSITION when provided for relative panel prominence",
+        "follow the PANEL PLAN for the exact scripted story beats and order",
         "letter only the exact DIALOGUE supplied by the recipe",
     ):
         assert required in generation, f"Echoes generation contract missing: {required}"
@@ -260,8 +282,8 @@ def main() -> None:
     validate_characters_and_references()
     validate_assembler_contract()
     print(
-        "Echoes validation passed: 8 issues / 145 PAGE recipes "
-        "(129 story + 16 editorial bookends), valid reveal order, references, "
+        "Echoes validation passed: 8 issues / 149 PAGE recipes "
+        "(133 story + 16 editorial bookends), valid reveal order, references, "
         "page counts, continuity targets and package generation contract."
     )
 
