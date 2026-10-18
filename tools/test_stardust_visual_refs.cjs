@@ -45,6 +45,30 @@ function loadIssue(show){
 }
 function actualRefs(prompt){return prompt.split('\n').filter(line=>/^@sds\.[A-Za-z][A-Za-z0-9_-]*$/.test(line))}
 const count={pages:0,characters:0,factionSectionsEliminated:0,offscreenProtected:0};
+let curatedPages=0,curatedExcluded=0;
+for(const ep of ['04','05','06','07','08','09']){
+  const suffix='editorial/visual_cast_e'+ep+'.json';
+  const show=allShows.find(x=>x.id==='stardust-station-e'+ep);
+  const registration=show.sceneOverlays.filter(x=>x.file===suffix);
+  assert.equal(registration.length,1,'Missing unique visual-cast overlay E'+ep);
+  assert.equal(registration[0].mergeById,true);
+  assert.equal(registration[0].strict,true);
+  const authored=load('data/shows/stardust-station/pages_e'+ep+'.json');
+  const patches=load('data/shows/stardust-station/'+suffix);
+  for(const patch of patches){
+    assert.deepEqual(Object.keys(patch).sort(),['id','promptVisibleCharacters']);
+    const page=authored.find(p=>p.id===patch.id);
+    assert(page,'Visual-cast overlay references unknown page '+patch.id);
+    assert(patch.promptVisibleCharacters.length>0,'Unexpected empty frame cast '+patch.id);
+    assert(patch.promptVisibleCharacters.every(x=>page.characters.includes(x)),
+      'Visual-cast overlay invented a character '+patch.id);
+    assert(patch.promptVisibleCharacters.length<page.characters.length,
+      'Visual-cast overlay must actually omit an unpictured role '+patch.id);
+    curatedPages++;curatedExcluded+=page.characters.length-patch.promptVisibleCharacters.length;
+  }
+}
+assert.equal(curatedPages,13,'Missing reviewed visible-cast overrides');
+assert.equal(curatedExcluded,15,'Unexpected change to excluded off-frame visual references');
 for(const show of all){
   assert.equal(show.promptVisibleCastOnly,true,show.id+' does not opt in to precise references');
   assert.equal(show.omitRoutineFactions,true,show.id+' still includes routine factions');
@@ -91,5 +115,5 @@ store.__show=old;
 const oldPrompt=assemble(page,store,0);
 assert(oldPrompt.includes('[CAST]')||oldPrompt.includes('[CHARACTERS]'),'Test must prove legacy recipe exists');
 console.log('PASS: Stardust '+all.length+' issues, '+count.pages+' interior pages, '+count.characters+
-  ' relevant image handles, '+count.factionSectionsEliminated+' redundant faction sections suppressed, '+count.offscreenProtected+' dialogue-only speakers excluded');
+  ' relevant image handles, '+count.factionSectionsEliminated+' redundant faction sections suppressed, '+count.offscreenProtected+' dialogue-only speakers excluded; '+curatedExcluded+' curated exclusions across '+curatedPages+' pages');
 console.log('PASS: explicit art-cast override, off-panel speaker, faction opt-in, and legacy non-Stardust compatibility');
