@@ -117,7 +117,7 @@ function pageAssembly(scene,show={}){
   if(scene?.promptSuppress!==undefined&&!Array.isArray(scene.promptSuppress))throw new Error("promptSuppress must be an array on "+key);
   const raw=scene?.promptSuppress||[];
   const invalid=raw.filter(x=>!PAGE_SUPPRESSIBLE_SECTIONS.has(x));
-  if(invalid.length)throw new Error("Invalid or protected prompt suppression on "+key+": "+invalid.join(", ")+". Panel plan, dialogue, location, continuity, and direction are always preserved.");
+  if(invalid.length)throw new Error("Invalid or protected prompt suppression on "+key+": "+invalid.join(", ")+". Panel plan, dialogue, and continuity are always preserved.");
   const suppress=new Set(raw);
   const characterMode=suppress.has("characters")?"none":(scene?.promptCharacterMode||(show.compactCharacters?"cast":"full"));
   const settingMode=scene?.promptSettingMode||"full";
@@ -127,6 +127,91 @@ function pageAssembly(scene,show={}){
   if(suppress.has("setting")&&!(Array.isArray(scene?.panelPlan)&&scene.panelPlan.length&&scene.panelPlan.every(p=>p&&typeof p==="object"&&typeof p.location==="string"&&p.location.trim())))throw new Error("Cannot suppress setting without explicit location on every panel: "+key);
   return {suppress,characterMode,settingMode};
 }
+// Optional authored page-composition contract. The panel plan remains the story authority.
+// Panel references are 1-based positions in panelPlan; layout never moves or rewrites beats.
+const PAGE_LAYOUT_COMPOSITIONS=new Set(["splash","splash-with-insets","asymmetric","grid","vertical","montage","open","quiet","freeform"]);
+const PAGE_LAYOUT_ROLES=new Set(["dominant","supporting","inset","detail","quiet"]);
+const PAGE_LAYOUT_SCALES=new Set(["splash","large","medium","small","micro"]);
+function validatePageLayout(scene){
+  if(scene?.pageLayout===undefined)return null;
+  const id=scene.id||"unknown page",layout=scene.pageLayout;
+  const fail=message=>{throw new Error("Invalid pageLayout on "+id+": "+message)};
+  const obj=value=>value!==null&&typeof value==="object"&&!Array.isArray(value);
+  const text=(value,field)=>{if(typeof value!=="string"||!value.trim())fail(field+" must be non-empty text");return value.trim()};
+  const keys=(value,allowed,field)=>{for(const key of Object.keys(value))if(!allowed.includes(key))fail("unknown "+field+" field "+key)};
+  if(!obj(layout))fail("expected an object");
+  keys(layout,["composition","visualPriority","readingFlow","primaryPanel","panels","negativeSpace","lettering"],"layout");
+  const composition=text(layout.composition,"composition");
+  if(!PAGE_LAYOUT_COMPOSITIONS.has(composition))fail("unknown composition "+composition);
+  text(layout.visualPriority,"visualPriority");
+  text(layout.readingFlow,"readingFlow");
+  const count=scene.panelPlan?.length;
+  if(!Array.isArray(scene.panelPlan)||!count)fail("requires a non-empty authored panelPlan");
+  if(!Array.isArray(layout.panels)||layout.panels.length!==count)fail("panels must cover all "+count+" scripted panels once");
+  const refs=new Map();
+  for(const p of layout.panels){
+    if(!obj(p))fail("each panel assignment must be an object");
+    keys(p,["panel","role","scale","placement","insetOf"],"panel");
+    if(!Number.isInteger(p.panel)||p.panel<1||p.panel>count)fail("invalid 1-based panel reference "+p.panel);
+    if(refs.has(p.panel))fail("duplicate panel "+p.panel);
+    if(!PAGE_LAYOUT_ROLES.has(p.role))fail("invalid role on panel "+p.panel);
+    if(!PAGE_LAYOUT_SCALES.has(p.scale))fail("invalid scale on panel "+p.panel);
+    text(p.placement,"panel "+p.panel+" placement");
+    if(p.role==="inset"){
+      if(!Number.isInteger(p.insetOf)||p.insetOf<1||p.insetOf>=p.panel)fail("inset panel "+p.panel+" must reference a preceding parent panel");
+      if(p.scale==="splash")fail("inset panel "+p.panel+" cannot have splash scale");
+    }else if(p.insetOf!==undefined)fail("insetOf is only valid for inset panels");
+    refs.set(p.panel,p);
+  }
+  for(let n=1;n<=count;n++)if(!refs.has(n))fail("missing panel "+n);
+  for(const p of layout.panels)if(p.insetOf!==undefined&&refs.get(p.insetOf).role==="inset")fail("nested insets are not supported (panel "+p.panel+")");
+  if(layout.primaryPanel!==undefined){
+    if(!Number.isInteger(layout.primaryPanel)||!refs.has(layout.primaryPanel))fail("primaryPanel must reference an authored panel");
+    if(refs.get(layout.primaryPanel).role!=="dominant")fail("primaryPanel must have dominant role");
+  }
+  if(composition==="splash"&&count!==1)fail("multi-panel splashes must use splash-with-insets or another architecture");
+  if(layout.negativeSpace!==undefined){
+    if(!Array.isArray(layout.negativeSpace))fail("negativeSpace must be an array");
+    for(const zone of layout.negativeSpace){
+      if(!obj(zone))fail("negativeSpace entries must be objects");
+      keys(zone,["where","purpose"],"negativeSpace");
+      text(zone.where,"negativeSpace.where");
+      text(zone.purpose,"negativeSpace.purpose");
+    }
+  }
+  if(layout.lettering!==undefined){
+    if(!obj(layout.lettering))fail("lettering must be an object");
+    keys(layout.lettering,["strategy","reservedZone"],"lettering");
+    text(layout.lettering.strategy,"lettering.strategy");
+    if(layout.lettering.reservedZone!==undefined)text(layout.lettering.reservedZone,"lettering.reservedZone");
+  }
+  return layout;
+}
+function formatPageLayout(scene){
+  const layout=validatePageLayout(scene);
+  if(!layout)return "";
+  const count=scene.panelPlan.length;
+  const lines=["[PAGE COMPOSITION]",
+    "Architecture: "+layout.composition.replaceAll("-"," ")+".",
+    "Visual priority: "+layout.visualPriority.trim(),
+    "Reading flow: "+layout.readingFlow.trim(),
+    "Preserve authored story order: "+Array.from({length:count},(_,i)=>i+1).join(" -> ")+"."
+  ];
+  if(layout.primaryPanel!==undefined)lines.push("Primary focal panel: "+layout.primaryPanel+".");
+  lines.push("Panel hierarchy:");
+  const assignments=[...layout.panels].sort((a,b)=>a.panel-b.panel);
+  for(const p of assignments)lines.push("Panel "+p.panel+": "+p.role+", "+p.scale+(p.insetOf!==undefined?", inset over panel "+p.insetOf:"")+". "+p.placement.trim());
+  if(layout.negativeSpace?.length){
+    lines.push("Negative space:");
+    for(const zone of layout.negativeSpace)lines.push("- "+zone.where.trim()+"; reserve for "+zone.purpose.trim()+".");
+  }
+  if(layout.lettering){
+    lines.push("Lettering approach: "+layout.lettering.strategy.trim());
+    if(layout.lettering.reservedZone)lines.push("Lettering reserve: "+layout.lettering.reservedZone.trim());
+  }
+  return lines.join("\n");
+}
+
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
@@ -177,6 +262,7 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
       ?"\n[CAST]\n"+entries.map(e=>e.name).filter(Boolean).join(", ")
       :"\n[CHARACTERS]\n"+entries.map(e=>e.full).join("\n"));
   }
+  if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
   if(s.panelPlan?.length){
     out.push("\n[PANEL PLAN]");
     s.panelPlan.forEach(x=>out.push(formatEntry(x)));
