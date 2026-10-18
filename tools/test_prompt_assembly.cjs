@@ -60,6 +60,11 @@ for(const id of ['SDS_S1E04_P01','SDS_S1E04_P02','SDS_S1E04_P03']){
   assert(!result.includes(p.summary));
   assert(result.includes('[CAST]')&&!result.includes('[CHARACTERS]'));
   assert(result.includes('[SETTING]'));
+  if(id==='SDS_S1E04_P02'){
+    const setting=sdsStore['settings.json'][p.setting];
+    assert(result.includes(setting.name),'Repeat location label missing');
+    assert(!result.includes(setting.text),'Repeated setting prose was not trimmed');
+  }
   linesKept(p,result);panelsKept(p,result);
 }
 // Legacy pages retain full descriptions until explicitly configured.
@@ -77,11 +82,16 @@ assert(!r.includes('[SETTING CONTINUITY]'));
 assert(r.includes('[CAST]')&&!r.includes('[CHARACTERS]'));
 linesKept(bridge,r);panelsKept(bridge,r);
 // Never allow suppression labels to silently remove story action or dialogue.
-const forced={...bridge,promptSuppress:['summary','production','characters','dialogue','panelPlan']};
+const forced={...bridge,promptSuppress:['summary','production','characters']};
 const forcedText=assemble(forced,rexStore,0);
 assert(forcedText.includes('[PANEL PLAN]')&&forcedText.includes('[DIALOGUE]'));
 linesKept(forced,forcedText);panelsKept(forced,forcedText);
 assert(!forcedText.includes('[CAST]')&&!forcedText.includes('[CHARACTERS]'));
+for(const forbidden of ['dialogue','panelPlan','continuity']){
+  assert.throws(()=>assemble({...bridge,promptSuppress:[forbidden]},rexStore,0),/Invalid or protected prompt suppression/);
+}
+assert.throws(()=>assemble({...unchanged,promptSuppress:['setting']},sdsStore,0),/Cannot suppress setting without explicit location/);
 assert.throws(()=>assemble({...bridge,promptCharacterMode:'mystery'},rexStore,0),/Invalid promptCharacterMode/);
+assert.throws(()=>assemble({...bridge,promptSettingMode:'mystery'},rexStore,0),/Invalid promptSettingMode/);
 assert(html.includes('prompt-suppress.js?v=20261018-data-profile-1'));
 console.log('PASS: page-scoped recipe assembly, protected story beats, legacy behavior, and three series fixtures');
