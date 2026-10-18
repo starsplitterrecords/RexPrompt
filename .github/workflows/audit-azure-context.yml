@@ -1,0 +1,15 @@
+name: Audit Azure Chef Context
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_azure_prompt_context.cjs'
+      - 'data/shows/azure-reach-s1/editorial/page_recipe_scopes_e*.json'
+      - '.github/workflows/audit-azure-context.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print Azure page-level ingredient inventory
+        run: node tools/audit_azure_prompt_context.cjs
