@@ -8,14 +8,26 @@ on:
       - 'data/shows/vikings-2026-s1/pages_i02.json'
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
+      - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_page_layout.cjs'
+      - 'tools/test_low_tide_page_layout.cjs'
+      - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
+      - 'data/shows/low-tide-signal/pages_*.json'
+      - 'data/shows/low-tide-signal/encoded/*.gzb64'
+      - 'tools/fixtures/page_layout_cases.json'
+      - 'docs/page-layout-contract.md'
+      - 'data/shows.json'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
+      - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
+      - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
-      - 'data/shows.json'
-      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
   pull_request:
     paths:
@@ -24,14 +36,26 @@ on:
       - 'data/shows/vikings-2026-s1/pages_i02.json'
       - 'data/shows/stardust-station/pages_e04.json'
       - 'data/shows/rex-fleet-s1/pages_i02.json'
+      - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
+      - 'data/shows/rex-fleet-s1/issue_04_dialogue_density_overlay.json'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
+      - 'tools/test_page_layout.cjs'
+      - 'tools/test_low_tide_page_layout.cjs'
+      - 'data/shows/low-tide-signal/editorial/page_layouts_*.json'
+      - 'data/shows/low-tide-signal/pages_*.json'
+      - 'data/shows/low-tide-signal/encoded/*.gzb64'
+      - 'tools/fixtures/page_layout_cases.json'
+      - 'docs/page-layout-contract.md'
+      - 'data/shows.json'
+      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
+      - 'data/shows/stardust-station/editorial/page_layouts_e02.json'
+      - 'tools/test_stardust_e02_layouts.cjs'
       - 'tools/test_stardust_e02_density_scope.cjs'
       - 'data/shows/stardust-station/editorial/pages_e02_density_pass.json'
       - 'data/shows/stardust-station/editorial/pages_e02_p02_story_thread.json'
       - 'data/shows/stardust-station/editorial/dialogue_cleanup_e02.json'
-      - 'data/shows.json'
-      - 'data/shows/stardust-station/editorial/page_assembly_profiles_e02.json'
       - '.github/workflows/validate-prompt-assembly.yml'
   workflow_dispatch:
 
@@ -45,9 +69,17 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
+          node --check tools/test_rex_fleet_issue04_density.cjs
+          node --check tools/test_page_layout.cjs
+          node --check tools/test_low_tide_page_layout.cjs
+          node --check tools/test_stardust_e02_layouts.cjs
           node --check tools/test_stardust_e02_density_scope.cjs
       - name: Test assembled page content
         run: |
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
+          node tools/test_rex_fleet_issue04_density.cjs
+          node tools/test_page_layout.cjs
+          node tools/test_low_tide_page_layout.cjs
+          node tools/test_stardust_e02_layouts.cjs
           node tools/test_stardust_e02_density_scope.cjs
