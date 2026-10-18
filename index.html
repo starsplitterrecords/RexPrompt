@@ -5,26 +5,87 @@
 <title>RexPrompt Assembler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.dataset.theme=localStorage.getItem("rexprompt.theme")==="dark"?"dark":"light"</script>
+<script src="github-auth.js?v=20261009-remember-1"></script>
+<script src="github-writes.js?v=20261009-writefix-1"></script>
 <style>
 :root{color-scheme:light;--bg:#fff;--fg:#111;--muted:#666;--surface:#eee;--surface-soft:#f7f7f7;--border:#ddd;--control-bg:#fff;--control-fg:#111;--accent:#0645ad}
 html[data-theme="dark"]{color-scheme:dark;--bg:#11151a;--fg:#e8edf2;--muted:#9aa7b3;--surface:#1c232b;--surface-soft:#171d24;--border:#36414d;--control-bg:#202832;--control-fg:#eef3f7;--accent:#8ab4ff}
 body{font-family:sans-serif;padding:20px;margin:0;max-width:100%;box-sizing:border-box;background:var(--bg);color:var(--fg);transition:background .15s ease,color .15s ease}.container{max-width:100%;width:100%;overflow-x:hidden}select,button{margin:0 10px 20px 0;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}select{min-width:260px;max-width:100%;padding:8px}button{font-size:1.1rem;padding:14px 20px;cursor:pointer}button:hover{filter:brightness(1.08)}pre{background:var(--surface);padding:10px;white-space:pre-wrap;word-wrap:break-word;max-width:100%;box-sizing:border-box;border:1px solid var(--border)}.block{margin-bottom:15px}.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}.status{color:var(--muted);font-size:.9rem;margin:-8px 0 14px}.export-block{padding-top:8px;border-top:1px solid var(--border);margin-top:4px}.export-help{color:var(--muted);font-size:.85rem;margin:-8px 0 14px}.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.header-row h3{margin-right:auto}.theme-toggle{font-size:.9rem;padding:9px 13px;margin-bottom:10px}
+/* Production controls stay together, even when the preview or prompt is long. */
+#assemblerMode{max-width:1180px;margin:0 auto}
+.production-dock{position:sticky;top:0;z-index:30;border:1px solid var(--border);border-radius:0 0 10px 10px;padding:12px 14px;background:var(--bg);box-shadow:0 3px 12px rgba(0,0,0,.09)}
+.production-selector-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr);gap:10px}
+.production-field{display:flex;flex-direction:column;gap:5px;min-width:0;color:var(--muted);font-size:.78rem;font-weight:600}
+.production-field select{width:100%;min-width:0;max-width:none;box-sizing:border-box;margin:0;padding:9px;font-size:.92rem;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:5px}
+.production-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start;margin-top:10px}
+.production-actions>button,.production-upload-slot .visual-actions button{box-sizing:border-box;width:100%;min-height:44px;margin:0;padding:10px 12px;font-size:.95rem;font-weight:650}
+.production-copy{background:var(--surface-soft)}
+.production-next{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:700}
+.production-upload-slot{min-width:0}
+.production-upload-slot .visual-actions{display:block;margin:0}
+.production-upload-slot .visual-upload-status{margin-top:4px}
+.production-upload-slot .visual-token-panel{margin-top:8px}
+.production-dock .status{margin:7px 0 0;font-size:.78rem;line-height:1.35}
+.production-section{margin-top:18px;padding:15px;border:1px solid var(--border);border-radius:8px;min-width:0}
+.production-section h4{margin:0 0 12px;font-size:1.05rem}
+.production-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.production-section-head h4{margin:0}
+.production-section-head button{margin:0;font-size:.82rem;padding:8px 12px}
+#productionPreview .visual-workspace{margin:0}
+#promptDetails pre{margin-top:10px;max-height:65vh;overflow:auto}
+#productionExports .export-block{border-top:0;margin-top:0}
+#productionUtilities{margin-top:12px}
+#productionUtilities button{font-size:.82rem;margin:0;padding:8px 10px}
+@media(max-width:640px){
+body{padding:10px}
+.production-dock{padding:9px 10px}
+.production-selector-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.production-field:last-child{grid-column:1/-1}
+.production-field select{font-size:.85rem;padding:7px}
+.production-actions{gap:6px;margin-top:8px}
+.production-actions>button,.production-upload-slot .visual-actions button{min-height:42px;padding:8px 5px;font-size:.82rem}
+.production-section{padding:10px;margin-top:12px}
+}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="header-row"><h3>RexPrompt Assembler</h3><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
-<div class="block"><label for="showSel">Series</label><br><select id="showSel"></select></div>
-<div class="block"><label for="issueSel">Issue</label><br><select id="issueSel"></select></div>
-<div class="block"><label for="sceneSel">Production page</label><br><select id="sceneSel"></select></div>
-<div id="status" class="status"></div>
-<div class="btn-row"><button id="buildBtn">Build</button><button id="copyBtn">Copy Assembled Text</button><button id="commitBtn">Commit Page</button></div>
-<div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
-<div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
-<div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
-<div id="exportStatus" class="status"></div>
-<pre id="out"></pre>
-<div id="manualInputs"></div>
+<div class="header-row"><h3 id="appTitle">RexPrompt Assembler</h3><div class="mode-switch" role="group" aria-label="RexPrompt mode"><button id="assemblerModeBtn" type="button" aria-pressed="true">Assembler</button><button id="referenceKeeperModeBtn" type="button" aria-pressed="false">Reference Keeper</button></div><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+<div id="assemblerMode">
+  <section id="productionDock" class="production-dock" aria-label="Page production controls">
+    <div class="production-selector-grid">
+      <label class="production-field" for="showSel"><span>Series</span><select id="showSel"></select></label>
+      <label class="production-field" for="issueSel"><span>Issue</span><select id="issueSel"></select></label>
+      <label class="production-field" for="sceneSel"><span>Production page</span><select id="sceneSel"></select></label>
+    </div>
+    <div class="production-actions">
+      <button id="copyBtn" type="button" class="production-copy">Copy Prompt</button>
+      <div id="productionUploadSlot" class="production-upload-slot"></div>
+      <button id="commitBtn" type="button" class="production-next">Next Page →</button>
+    </div>
+    <div id="status" class="status" role="status"></div>
+  </section>
+  <section id="productionPreview" class="production-section">
+    <h4>Production Preview</h4>
+    <div id="visualPreviewMount"></div>
+  </section>
+  <section id="promptDetails" class="production-section">
+    <div class="production-section-head"><h4>Prompt Details</h4><button id="buildBtn" type="button">Refresh Prompt</button></div>
+    <div id="promptSuppressMount"></div>
+    <pre id="out"></pre>
+    <div id="manualInputs"></div>
+  </section>
+  <section id="productionExports" class="production-section">
+    <h4>Exports &amp; Utilities</h4>
+    <div class="block export-block"><label for="exportFormat">Export assembled recipes</label><br><select id="exportFormat"><option value="md">Markdown (.md)</option><option value="txt">Plain text (.txt)</option><option value="pdf">PDF (print / save)</option></select></div>
+    <div class="btn-row"><button id="exportIssueBtn">Export Issue</button><button id="exportSeriesBtn">Export Series</button></div>
+    <div class="export-help">Exports canonical stored order. PDF opens a print-ready document; choose Save as PDF in the print dialog.</div>
+    <div id="exportStatus" class="status"></div>
+    <div id="issuePackagingMount"></div>
+    <div id="productionUtilities"></div>
+  </section>
+</div>
+<div id="referenceKeeperMode" hidden></div>
 </div>
 <script>
 const SHOW_MANIFEST="data/shows.json",DATA_FILES=["blocking.json","characters.json","dialogue.json","direction.json","factions.json","lighting.json","mood.json","negatives.json","regions.json","settings.json"];
@@ -50,7 +111,228 @@ function explicitIssueLabel(show){if(show.issueLabel)return show.issueLabel;cons
 function issueNumber(source){const text=typeof source==="string"?source:(source?.replaceEpisode||source?.file||"");const m=String(text).match(/(?:S\d+E|[_-]e)(\d{2})/i);return m?Number(m[1]):null}
 function onlyIssue(items,n){return (items||[]).filter(item=>issueNumber(item)===n)}
 function expandIssues(show){const explicit=explicitIssueLabel(show),files=show.scenesFiles?.length?show.scenesFiles:[show.scenesFile||"scenes.json"],numbers=new Set();files.forEach(file=>{const n=issueNumber(file);if(n)numbers.add(n)});(show.sceneOverlays||[]).forEach(item=>{const n=issueNumber(item);if(n)numbers.add(n)});if(explicit||numbers.size<=1)return [{...show,seriesId:seriesId(show),seriesName:seriesName(show),issueId:show.id,issueLabel:explicit||show.seasonLabel||"Issue 1"}];return [...numbers].sort((a,b)=>a-b).map(n=>{const issueFiles=files.filter(file=>issueNumber(file)===n);const genericFiles=files.filter(file=>issueNumber(file)===null);return {...show,id:show.id+"-issue-"+n,seriesId:seriesId(show),seriesName:seriesName(show),issueId:show.id+"-issue-"+n,issueLabel:"Issue "+n,scenesFiles:issueFiles.length?genericFiles.concat(issueFiles):genericFiles,scenesFile:undefined,sceneOverlays:onlyIssue(show.sceneOverlays,n),dialogueOverlays:onlyIssue(show.dialogueOverlays,n)}})}
-function assembleScene(s,targetStore,i,{includeManual=false}={}){if(!s)return "";const key=s?.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};if(s.dialogueInline?.length)s.dialogueInline.forEach(d=>{const h=d.handle||d.speaker;if(typeof h==="string"&&h.startsWith("@"))cameos.add(h)});else s.dialog?.forEach(k=>{const d=targetStore["dialogue.json"]?.[k];if(d)cameos.add(getHandle(d.speakerId,targetStore["characters.json"]||{}))});if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));const unitLabel=show.unitLabel||"SCENE";out.push("\n=== "+unitLabel+": "+key+" ===");if(!show.omitSummary&&s.summary)out.push(s.summary.trim());if(show.generationLine)out.push(show.generationLine);if(s.settingText){out.push("\n[SETTING]\n"+s.settingText);if(s.setting){const e=targetStore["settings.json"]?.[s.setting];if(e)out.push("\n[SETTING CONTINUITY]\n"+formatEntry(e))}}else if(s.setting){const e=targetStore["settings.json"]?.[s.setting];if(e)out.push("\n[SETTING]\n"+formatEntry(e))}if(s.regionText)out.push("\n[REGION]\n"+s.regionText);else if(s.region){const e=targetStore["regions.json"]?.[s.region];if(e)out.push("\n[REGION]\n"+formatEntry(e))}if(s.factions?.length){out.push("\n[FACTIONS]");s.factions.forEach(k=>{const e=targetStore["factions.json"]?.[k];if(e)out.push(formatEntry(e))})}if(s.charactersInline?.length){if(show.compactCharacters){const names=s.charactersInline.map(c=>c.name||findCharacterByHandle(c.handle,targetStore["characters.json"]||{})?.name||c.handle).filter(Boolean);if(names.length)out.push("\n[CAST]\n"+names.join(", "))}else{out.push("\n[CHARACTERS]");s.charactersInline.forEach(c=>{const e=findCharacterByHandle(c.handle,targetStore["characters.json"]||{});out.push(formatCharacter(e,c.name||c.handle))})}}else if(s.characters?.length){if(show.compactCharacters){const names=s.characters.map(k=>targetStore["characters.json"]?.[k]?.name||k).filter(Boolean);if(names.length)out.push("\n[CAST]\n"+names.join(", "))}else{out.push("\n[CHARACTERS]");s.characters.forEach(k=>{const e=targetStore["characters.json"]?.[k];if(e)out.push(formatCharacter(e,k))})}}if(s.panelPlan?.length){out.push("\n[PANEL PLAN]");s.panelPlan.forEach(x=>out.push(formatEntry(x)))}if(s.dialogueInline?.length){out.push("\n[DIALOGUE]");s.dialogueInline.forEach(d=>{if(show.compactDialogue){const e=findCharacterByHandle(d.handle,targetStore["characters.json"]||{}),speaker=d.speaker||e?.name||d.handle||"TEXT",panel=/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";out.push(panel+speaker+': "'+(d.text||'')+'"')}else{const sp=d.handle||d.speaker||"TEXT",label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);out.push(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"');if(d.subtext)out.push("  ("+d.subtext+")")}})}else if(s.dialog?.length){out.push("\n[DIALOGUE]");s.dialog.forEach(k=>{const d=targetStore["dialogue.json"]?.[k];if(!d)return;out.push(getHandle(d.speakerId,targetStore["characters.json"]||{})+' says "'+(d.text||'')+'"');if(d.subtext)out.push("  ("+d.subtext+")")})}if(s.continuityFrom)out.push("\n[CONTINUITY]\n"+(show.compactContinuity?"Direct continuation from the previous page.":"Continue directly from "+s.continuityFrom+"; preserve established positions, props, damage, eyelines, and emotional state."));if(s.direction?.length||s.directionInline?.length){out.push("\n[DIRECTION]");if(s.direction?.length)s.direction.forEach(k=>{const e=targetStore["direction.json"]?.[k];if(e)out.push(formatEntry(e))});if(s.directionInline?.length)s.directionInline.forEach(x=>out.push(formatEntry(x)))}if(includeManual)collectManual(out,targetStore);return out.join("\n").trim()}
+const PAGE_SUPPRESSIBLE_SECTIONS=new Set(["summary","production","setting","settingContinuity","region","factions","characters","direction"]);
+function pageAssembly(scene,show={}){
+  const key=scene?.id||"unknown page";
+  if(scene?.promptSuppress!==undefined&&!Array.isArray(scene.promptSuppress))throw new Error("promptSuppress must be an array on "+key);
+  const raw=scene?.promptSuppress||[];
+  const invalid=raw.filter(x=>!PAGE_SUPPRESSIBLE_SECTIONS.has(x));
+  if(invalid.length)throw new Error("Invalid or protected prompt suppression on "+key+": "+invalid.join(", ")+". Panel plan, dialogue, and continuity are always preserved.");
+  const suppress=new Set(raw);
+  const characterMode=suppress.has("characters")?"none":(scene?.promptCharacterMode||(show.compactCharacters?"cast":"full"));
+  const settingMode=scene?.promptSettingMode||"full";
+  if(!["full","cast","none"].includes(characterMode))throw new Error("Invalid promptCharacterMode on "+key+": "+characterMode);
+  if(!["full","label"].includes(settingMode))throw new Error("Invalid promptSettingMode on "+key+": "+settingMode);
+  if(suppress.has("settingContinuity")&&!scene?.settingText&&scene?.setting)throw new Error("Suppressing settingContinuity without settingText would remove all location detail on "+key+"; use promptSettingMode: label.");
+  if(suppress.has("setting")&&!(Array.isArray(scene?.panelPlan)&&scene.panelPlan.length&&scene.panelPlan.every(p=>p&&typeof p==="object"&&typeof p.location==="string"&&p.location.trim())))throw new Error("Cannot suppress setting without explicit location on every panel: "+key);
+  return {suppress,characterMode,settingMode};
+}
+// Optional authored page-composition contract. The panel plan remains the story authority.
+// Panel references are 1-based positions in panelPlan; layout never moves or rewrites beats.
+const PAGE_LAYOUT_COMPOSITIONS=new Set(["splash","splash-with-insets","asymmetric","grid","vertical","montage","open","quiet","freeform"]);
+const PAGE_LAYOUT_ROLES=new Set(["dominant","supporting","inset","detail","quiet"]);
+const PAGE_LAYOUT_SCALES=new Set(["splash","large","medium","small","micro"]);
+function validatePageLayout(scene){
+  if(scene?.pageLayout===undefined)return null;
+  const id=scene.id||"unknown page",layout=scene.pageLayout;
+  const fail=message=>{throw new Error("Invalid pageLayout on "+id+": "+message)};
+  const obj=value=>value!==null&&typeof value==="object"&&!Array.isArray(value);
+  const text=(value,field)=>{if(typeof value!=="string"||!value.trim())fail(field+" must be non-empty text");return value.trim()};
+  const keys=(value,allowed,field)=>{for(const key of Object.keys(value))if(!allowed.includes(key))fail("unknown "+field+" field "+key)};
+  if(!obj(layout))fail("expected an object");
+  keys(layout,["composition","visualPriority","readingFlow","primaryPanel","panels","negativeSpace","lettering"],"layout");
+  const composition=text(layout.composition,"composition");
+  if(!PAGE_LAYOUT_COMPOSITIONS.has(composition))fail("unknown composition "+composition);
+  text(layout.visualPriority,"visualPriority");
+  text(layout.readingFlow,"readingFlow");
+  const count=scene.panelPlan?.length;
+  if(!Array.isArray(scene.panelPlan)||!count)fail("requires a non-empty authored panelPlan");
+  if(!Array.isArray(layout.panels)||layout.panels.length!==count)fail("panels must cover all "+count+" scripted panels once");
+  const refs=new Map();
+  for(const p of layout.panels){
+    if(!obj(p))fail("each panel assignment must be an object");
+    keys(p,["panel","role","scale","placement","insetOf"],"panel");
+    if(!Number.isInteger(p.panel)||p.panel<1||p.panel>count)fail("invalid 1-based panel reference "+p.panel);
+    if(refs.has(p.panel))fail("duplicate panel "+p.panel);
+    if(!PAGE_LAYOUT_ROLES.has(p.role))fail("invalid role on panel "+p.panel);
+    if(!PAGE_LAYOUT_SCALES.has(p.scale))fail("invalid scale on panel "+p.panel);
+    text(p.placement,"panel "+p.panel+" placement");
+    if(p.role==="inset"){
+      if(!Number.isInteger(p.insetOf)||p.insetOf<1||p.insetOf>=p.panel)fail("inset panel "+p.panel+" must reference a preceding parent panel");
+      if(p.scale==="splash")fail("inset panel "+p.panel+" cannot have splash scale");
+    }else if(p.insetOf!==undefined)fail("insetOf is only valid for inset panels");
+    refs.set(p.panel,p);
+  }
+  for(let n=1;n<=count;n++)if(!refs.has(n))fail("missing panel "+n);
+  for(const p of layout.panels)if(p.insetOf!==undefined&&refs.get(p.insetOf).role==="inset")fail("nested insets are not supported (panel "+p.panel+")");
+  if(layout.primaryPanel!==undefined){
+    if(!Number.isInteger(layout.primaryPanel)||!refs.has(layout.primaryPanel))fail("primaryPanel must reference an authored panel");
+    if(refs.get(layout.primaryPanel).role!=="dominant")fail("primaryPanel must have dominant role");
+  }
+  if(composition==="splash"&&count!==1)fail("multi-panel splashes must use splash-with-insets or another architecture");
+  if(layout.negativeSpace!==undefined){
+    if(!Array.isArray(layout.negativeSpace))fail("negativeSpace must be an array");
+    for(const zone of layout.negativeSpace){
+      if(!obj(zone))fail("negativeSpace entries must be objects");
+      keys(zone,["where","purpose"],"negativeSpace");
+      text(zone.where,"negativeSpace.where");
+      text(zone.purpose,"negativeSpace.purpose");
+    }
+  }
+  if(layout.lettering!==undefined){
+    if(!obj(layout.lettering))fail("lettering must be an object");
+    keys(layout.lettering,["strategy","reservedZone"],"lettering");
+    text(layout.lettering.strategy,"lettering.strategy");
+    if(layout.lettering.reservedZone!==undefined)text(layout.lettering.reservedZone,"lettering.reservedZone");
+  }
+  return layout;
+}
+function formatPageLayout(scene){
+  const layout=validatePageLayout(scene);
+  if(!layout)return "";
+  const count=scene.panelPlan.length;
+  const lines=["[PAGE COMPOSITION]",
+    "Architecture: "+layout.composition.replaceAll("-"," ")+".",
+    "Visual priority: "+layout.visualPriority.trim(),
+    "Reading flow: "+layout.readingFlow.trim(),
+    "Preserve authored story order: "+Array.from({length:count},(_,i)=>i+1).join(" -> ")+"."
+  ];
+  if(layout.primaryPanel!==undefined)lines.push("Primary focal panel: "+layout.primaryPanel+".");
+  lines.push("Panel hierarchy:");
+  const assignments=[...layout.panels].sort((a,b)=>a.panel-b.panel);
+  for(const p of assignments)lines.push("Panel "+p.panel+": "+p.role+", "+p.scale+(p.insetOf!==undefined?", inset over panel "+p.insetOf:"")+". "+p.placement.trim());
+  if(layout.negativeSpace?.length){
+    lines.push("Negative space:");
+    for(const zone of layout.negativeSpace)lines.push("- "+zone.where.trim()+"; reserve for "+zone.purpose.trim()+".");
+  }
+  if(layout.lettering){
+    lines.push("Lettering approach: "+layout.lettering.strategy.trim());
+    if(layout.lettering.reservedZone)lines.push("Lettering reserve: "+layout.lettering.reservedZone.trim());
+  }
+  return lines.join("\n");
+}
+
+// Editorial-only warnings. They never suppress, rebalance, or rewrite a story beat.
+function pageLayoutWarnings(scene){
+  const panels=scene?.panelPlan||[],count=panels.length,lines=scene?.dialogueInline||[];
+  if(!count)return [];
+  const warnings=[];
+  const totals=new Map();
+  const words=value=>(String(value||"").trim().match(/\S+/g)||[]).length;
+  const indexMap=panels.some(p=>p&&Array.isArray(p.dialogueIndices));
+  if(indexMap){
+    for(let i=0;i<count;i++)for(const idx of (panels[i]?.dialogueIndices||[])){
+      if(Number.isInteger(idx)&&idx>=0&&idx<lines.length){
+        const previous=totals.get(i+1)||{words:0,lines:0};
+        previous.words+=words(lines[idx].text);previous.lines+=1;totals.set(i+1,previous);
+      }
+    }
+  }else{
+    for(const line of lines){
+      const m=String(line.subtext||"").match(/^Panel\s+(\d+)$/i);
+      if(!m)continue;
+      const n=Number(m[1]);if(n<1||n>count)continue;
+      const previous=totals.get(n)||{words:0,lines:0};
+      previous.words+=words(line.text);previous.lines+=1;totals.set(n,previous);
+    }
+  }
+  for(const [n,item] of totals)if(item.words>55||item.lines>7)warnings.push("Panel "+n+" carries "+item.lines+" lettering items / "+item.words+" words; review readable balloon and caption space.");
+  if(lines.length>=15&&lines.length/count>=2.5)warnings.push(lines.length+" dialogue/caption items over "+count+" panels; review lettering density and visual hierarchy.");
+  if(scene.dialogueInline?.length&&totals.size===0&&lines.length>=12)warnings.push("Many dialogue items have no explicit panel mapping; review balloon allocation.");
+  return warnings;
+}
+
+function assembleScene(s,targetStore,i,{includeManual=false}={}){
+  if(!s)return "";
+  const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
+  const {suppress,characterMode,settingMode}=pageAssembly(s,show);
+  const include=id=>!suppress.has(id);
+  const chars=targetStore["characters.json"]||{};
+  if(s.dialogueInline?.length)s.dialogueInline.forEach(d=>{
+    const h=d.handle||d.speaker;
+    if(typeof h==="string"&&h.startsWith("@"))cameos.add(h);
+  });
+  else s.dialog?.forEach(k=>{
+    const d=targetStore["dialogue.json"]?.[k];
+    if(d)cameos.add(getHandle(d.speakerId,chars));
+  });
+  if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));
+  out.push("\n=== "+(show.unitLabel||"SCENE")+": "+key+" ===");
+  if(include("summary")&&!show.omitSummary&&s.summary)out.push(s.summary.trim());
+  if(include("production")&&show.generationLine)out.push(show.generationLine);
+  if(include("setting")){
+    if(s.settingText){
+      out.push("\n[SETTING]\n"+s.settingText);
+      if(include("settingContinuity")&&s.setting&&settingMode==="full"){
+        const e=targetStore["settings.json"]?.[s.setting];
+        if(e)out.push("\n[SETTING CONTINUITY]\n"+formatEntry(e));
+      }
+    }else if(s.setting){
+      const e=targetStore["settings.json"]?.[s.setting];
+      if(e)out.push("\n[SETTING]\n"+(settingMode==="label"?(e.name||s.setting):formatEntry(e)));
+    }
+  }
+  if(include("region")){
+    if(s.regionText)out.push("\n[REGION]\n"+s.regionText);
+    else if(s.region){
+      const e=targetStore["regions.json"]?.[s.region];
+      if(e)out.push("\n[REGION]\n"+formatEntry(e));
+    }
+  }
+  if(include("factions")&&s.factions?.length){
+    const entries=s.factions.map(k=>targetStore["factions.json"]?.[k]).filter(Boolean);
+    if(entries.length)out.push("\n[FACTIONS]\n"+entries.map(formatEntry).join("\n"));
+  }
+  if(characterMode!=="none"){
+    const entries=s.charactersInline?.length
+      ?s.charactersInline.map(c=>({name:c.name||findCharacterByHandle(c.handle,chars)?.name||c.handle,
+          full:formatCharacter(findCharacterByHandle(c.handle,chars),c.name||c.handle)}))
+      :(s.characters||[]).map(k=>({name:chars[k]?.name||k,full:formatCharacter(chars[k],k)}));
+    if(entries.length)out.push(characterMode==="cast"
+      ?"\n[CAST]\n"+entries.map(e=>e.name).filter(Boolean).join(", ")
+      :"\n[CHARACTERS]\n"+entries.map(e=>e.full).join("\n"));
+  }
+  if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
+  if(s.panelPlan?.length){
+    out.push("\n[PANEL PLAN]");
+    s.panelPlan.forEach(x=>out.push(formatEntry(x)));
+  }
+  if(s.dialogueInline?.length){
+    out.push("\n[DIALOGUE]");
+    s.dialogueInline.forEach(d=>{
+      if(show.compactDialogue){
+        const e=findCharacterByHandle(d.handle,chars);
+        const speaker=d.speaker||e?.name||d.handle||"TEXT";
+        const panel=/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
+        out.push(panel+speaker+': "'+(d.text||'')+'"');
+      }else{
+        const sp=d.handle||d.speaker||"TEXT";
+        const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
+        out.push(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"');
+        if(d.subtext)out.push("  ("+d.subtext+")");
+      }
+    });
+  }else if(s.dialog?.length){
+    out.push("\n[DIALOGUE]");
+    s.dialog.forEach(k=>{
+      const d=targetStore["dialogue.json"]?.[k];
+      if(!d)return;
+      out.push(getHandle(d.speakerId,chars)+' says "'+(d.text||'')+'"');
+      if(d.subtext)out.push("  ("+d.subtext+")");
+    });
+  }
+  if(include("continuity")&&s.continuityFrom){
+    out.push("\n[CONTINUITY]\n"+(show.compactContinuity?"Direct continuation from the previous page.":"Continue directly from "+s.continuityFrom+"; preserve established positions, props, damage, eyelines, and emotional state."));
+  }
+  if(include("direction")&&(s.direction?.length||s.directionInline?.length)){
+    const entries=[];
+    s.direction?.forEach(k=>{const e=targetStore["direction.json"]?.[k];if(e)entries.push(formatEntry(e))});
+    s.directionInline?.forEach(x=>entries.push(formatEntry(x)));
+    if(entries.length)out.push("\n[DIRECTION]\n"+entries.join("\n"));
+  }
+  if(includeManual)collectManual(out,targetStore);
+  return out.join("\n").trim();
+}
 function safeFilePart(value){return String(value||"rexprompt").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"rexprompt"}
 function anchorPart(value){return safeFilePart(value)}
 function escapeHtml(value){return String(value??"").replace(/[&<>\"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]))}
@@ -60,8 +342,8 @@ function renderMarkdown(model){const lines=["# "+model.title,"","> Exported from
 function renderText(model){const lines=[model.title,"=".repeat(model.title.length),"","Exported from RexPrompt",`Series: ${model.series.name}`,`Scope: ${model.scope==="series"?"Entire series":"Entire issue — "+model.issue.issueLabel}`,`Exported: ${model.stamp.local}`,`Exported ISO: ${model.stamp.iso}`,`Recipes: ${model.recipeCount}`,"","TABLE OF CONTENTS","-----------------"];let n=1;for(const bundle of model.issues){lines.push(`${bundle.issue.issueLabel}`);for(const recipe of bundle.recipes)lines.push(`  ${n++}. ${recipe.id}`)}for(const bundle of model.issues){lines.push("","# "+bundle.issue.issueLabel,"-".repeat(bundle.issue.issueLabel.length+2));for(const recipe of bundle.recipes)lines.push("",`## ${recipe.id}`,recipe.text)}return lines.join("\n")}
 function renderPrintHtml(model){const toc=model.issues.map(bundle=>{const issueAnchor="issue-"+anchorPart(bundle.issue.issueId||bundle.issue.issueLabel),recipes=bundle.recipes.map(r=>`<li><a href="#${r.anchor}">${escapeHtml(r.id)}</a></li>`).join("");return `<li><a href="#${issueAnchor}">${escapeHtml(bundle.issue.issueLabel)}</a><ul>${recipes}</ul></li>`}).join("");const body=model.issues.map(bundle=>{const issueAnchor="issue-"+anchorPart(bundle.issue.issueId||bundle.issue.issueLabel),recipes=bundle.recipes.map(r=>`<section class="recipe"><h3 id="${r.anchor}">${escapeHtml(r.id)}</h3><pre>${escapeHtml(r.text)}</pre></section>`).join("");return `<section class="issue"><h2 id="${issueAnchor}">${escapeHtml(bundle.issue.issueLabel)}</h2>${recipes}</section>`}).join("");return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(model.title)}</title><style>body{font-family:Arial,sans-serif;margin:0.55in;color:#111;font-size:10pt;line-height:1.35}h1{font-size:20pt;margin-bottom:6px}h2{font-size:15pt;margin-top:28px}h3{font-size:12pt;margin-top:22px}.meta{margin:0 0 24px;padding:10px 12px;background:#f2f2f2}.toc{margin-bottom:28px}.toc ul{margin-top:4px}.toc a{color:#0645ad;text-decoration:none}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:9pt/1.35 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f7f7f7;border:1px solid #ddd;padding:10px}.recipe{break-before:page}.issue>.recipe:first-of-type{break-before:auto}@media print{a{color:#000;text-decoration:none}.recipe{break-before:page}nav.toc a{text-decoration:underline}}</style></head><body><h1>${escapeHtml(model.title)}</h1><div class="meta"><strong>Exported from RexPrompt</strong><br>Series: ${escapeHtml(model.series.name)}<br>Scope: ${escapeHtml(model.scope==="series"?"Entire series":"Entire issue — "+model.issue.issueLabel)}<br>Exported: ${escapeHtml(model.stamp.local)}<br>Exported ISO: ${escapeHtml(model.stamp.iso)}<br>Recipes: ${model.recipeCount}</div><nav class="toc"><h2>Table of Contents</h2><ul>${toc}</ul></nav>${body}<script>window.addEventListener("load",()=>setTimeout(()=>window.print(),150));<\/script></body></html>`}
 function downloadText(filename,text,mime){const blob=new Blob([text],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-async function init(){const showSel=document.getElementById("showSel"),issueSel=document.getElementById("issueSel"),sceneSel=document.getElementById("sceneSel"),buildBtn=document.getElementById("buildBtn"),copyBtn=document.getElementById("copyBtn"),commitBtn=document.getElementById("commitBtn"),exportFormat=document.getElementById("exportFormat"),exportIssueBtn=document.getElementById("exportIssueBtn"),exportSeriesBtn=document.getElementById("exportSeriesBtn"),themeToggle=document.getElementById("themeToggle"),outEl=document.getElementById("out"),statusEl=document.getElementById("status"),exportStatus=document.getElementById("exportStatus");function setTheme(theme){const dark=theme==="dark";document.documentElement.dataset.theme=dark?"dark":"light";localStorage.setItem("rexprompt.theme",dark?"dark":"light");themeToggle.textContent=dark?"Light mode":"Dark mode";themeToggle.setAttribute("aria-pressed",String(dark))}setTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");themeToggle.onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");const shows=await loadJson(SHOW_MANIFEST);if(!Array.isArray(shows)||!shows.length)throw new Error("No series are defined in "+SHOW_MANIFEST);const issues=shows.flatMap(expandIssues),series=[...new Map(issues.map(issue=>[issue.seriesId,{id:issue.seriesId,name:issue.seriesName}])).values()];series.forEach(item=>{const o=document.createElement("option");o.value=item.id;o.textContent=item.name;showSel.appendChild(o)});let store={},scenes=[],sceneOrder=[];function currentScene(){const i=Number(sceneSel.value);return Number.isFinite(i)?scenes[i]:null}function sceneIdentity(s,i){return s?.id||String(i+1)}function sceneLabel(i){const s=scenes[i],id=sceneIdentity(s,i);if(!s?.summary)return id;const t=s.summary.trim(),m=90;if(t.length<=m)return id+" - "+t;const cut=t.lastIndexOf(" ",m);return id+" - "+t.slice(0,cut===-1?m:cut)}function rebuild(selected=null){sceneSel.innerHTML="";sceneOrder.forEach(i=>{const o=document.createElement("option");o.value=String(i);o.textContent=sceneLabel(i);sceneSel.appendChild(o)});if(selected!==null&&sceneOrder.includes(selected))sceneSel.value=String(selected)}
-function build(){const s=currentScene();if(!s){outEl.textContent="No scene selected.";return}outEl.textContent=assembleScene(s,store,Number(sceneSel.value),{includeManual:true})}
+async function init(){const showSel=document.getElementById("showSel"),issueSel=document.getElementById("issueSel"),sceneSel=document.getElementById("sceneSel"),buildBtn=document.getElementById("buildBtn"),copyBtn=document.getElementById("copyBtn"),commitBtn=document.getElementById("commitBtn"),exportFormat=document.getElementById("exportFormat"),exportIssueBtn=document.getElementById("exportIssueBtn"),exportSeriesBtn=document.getElementById("exportSeriesBtn"),themeToggle=document.getElementById("themeToggle"),outEl=document.getElementById("out"),statusEl=document.getElementById("status"),exportStatus=document.getElementById("exportStatus");function setTheme(theme){const dark=theme==="dark";document.documentElement.dataset.theme=dark?"dark":"light";localStorage.setItem("rexprompt.theme",dark?"dark":"light");themeToggle.textContent=dark?"Light mode":"Dark mode";themeToggle.setAttribute("aria-pressed",String(dark))}setTheme(document.documentElement.dataset.theme==="dark"?"dark":"light");themeToggle.onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");const shows=await loadJson(SHOW_MANIFEST);if(!Array.isArray(shows)||!shows.length)throw new Error("No series are defined in "+SHOW_MANIFEST);const issues=shows.flatMap(expandIssues),series=[...new Map(issues.map(issue=>[issue.seriesId,{id:issue.seriesId,name:issue.seriesName}])).values()].sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base',numeric:true}));series.forEach(item=>{const o=document.createElement("option");o.value=item.id;o.textContent=item.name;showSel.appendChild(o)});let store={},scenes=[],sceneOrder=[];function currentScene(){const i=Number(sceneSel.value);return Number.isFinite(i)?scenes[i]:null}function sceneIdentity(s,i){return s?.id||String(i+1)}function sceneLabel(i){const s=scenes[i],id=sceneIdentity(s,i);if(!s?.summary)return id;const t=s.summary.trim(),m=90;if(t.length<=m)return id+" - "+t;const cut=t.lastIndexOf(" ",m);return id+" - "+t.slice(0,cut===-1?m:cut)}function rebuild(selected=null){sceneSel.innerHTML="";sceneOrder.forEach(i=>{const o=document.createElement("option");o.value=String(i);o.textContent=sceneLabel(i);const s=scenes[i]||{};o.dataset.assetKind=(/cover/i.test(String(s.unit||""))||/cover/i.test(String(s.pageKind||""))||/cover/i.test(String(s.id||""))?"cover":"interior");sceneSel.appendChild(o)});if(selected!==null&&sceneOrder.includes(selected))sceneSel.value=String(selected)}
+function build(){const s=currentScene();if(!s){outEl.textContent="No scene selected.";return}outEl.textContent=assembleScene(s,store,Number(sceneSel.value),{includeManual:true});window.__rexPromptActiveAssembly={scene:s,show:store.__show};document.dispatchEvent(new Event('rexprompt:assembly-changed'))}
 async function selectIssue(id){const issue=issues.find(item=>item.issueId===id)||issues.find(item=>item.seriesId===showSel.value);if(!issue)return;issueSel.value=issue.issueId;localStorage.setItem("rexprompt.selectedIssue",issue.issueId);statusEl.textContent="Loading "+issue.seriesName+" — "+issue.issueLabel+"…";outEl.textContent="";sceneSel.disabled=buildBtn.disabled=commitBtn.disabled=true;try{store=await loadShow(issue);scenes=store.__scenes||[];sceneOrder=scenes.map((_,i)=>i);rebuild();const unit=(store.__show?.unitLabel||"scene").toLowerCase();statusEl.textContent=issue.seriesName+" — "+issue.issueLabel+" — "+scenes.length+" "+unit+(scenes.length===1?"":"s");sceneSel.disabled=buildBtn.disabled=commitBtn.disabled=false;if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}else outEl.textContent="This issue contains no scenes."}catch(err){statusEl.textContent="Unable to load issue.";outEl.textContent=err instanceof Error?err.message:String(err)}}
 async function selectSeries(id,preferredIssue=null){const available=issues.filter(item=>item.seriesId===id);if(!available.length)return;showSel.value=id;localStorage.setItem("rexprompt.selectedSeries",id);issueSel.innerHTML="";available.forEach(item=>{const o=document.createElement("option");o.value=item.issueId;o.textContent=item.issueLabel;issueSel.appendChild(o)});const selected=available.some(item=>item.issueId===preferredIssue)?preferredIssue:available[0].issueId;await selectIssue(selected)}
 async function buildIssueBundle(issue){const loaded=issue.issueId===issueSel.value?store:await loadShow(issue),loadedScenes=loaded.__scenes||[],used=new Map();const recipes=loadedScenes.map((scene,i)=>{const id=sceneIdentity(scene,i),base="recipe-"+anchorPart(issue.issueId+"-"+id),seen=used.get(base)||0;used.set(base,seen+1);return {id,anchor:seen?base+"-"+(seen+1):base,text:assembleScene(scene,loaded,i,{includeManual:false})}});return {issue,recipes}}
@@ -69,6 +351,9 @@ async function exportDocument(scope){const format=exportFormat.value,currentSeri
 buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void selectIssue(issueSel.value);showSel.onchange=()=>void selectSeries(showSel.value);commitBtn.onclick=()=>{const i=Number(sceneSel.value),p=sceneOrder.indexOf(i);if(p===-1)return;sceneOrder=sceneOrder.slice(p+1).concat(sceneOrder.slice(0,p+1));rebuild();if(sceneOrder.length){sceneSel.value=String(sceneOrder[0]);build()}};copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(outEl.textContent||"")}catch{}};exportIssueBtn.onclick=()=>void exportDocument("issue");exportSeriesBtn.onclick=()=>void exportDocument("series");const savedSeries=localStorage.getItem("rexprompt.selectedSeries"),legacyShow=localStorage.getItem("rexprompt.selectedShow"),savedIssue=localStorage.getItem("rexprompt.selectedIssue"),legacyIssue=issues.find(item=>item.id===legacyShow),initial=series.some(item=>item.id===savedSeries)?savedSeries:(legacyIssue?.seriesId||series[0].id);await selectSeries(initial,savedIssue||legacyIssue?.issueId)}
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
-<script src="visuals.js"></script>
+<script src="prompt-suppress.js?v=20261018-data-profile-1"></script>
+<script src="visuals.js?v=20261011-cover-standard-1"></script>
+<script src="reference-keeper.js?v=20261009-writefix-1"></script>
+<script src="issue-publishing.js?v=20261011-order-1"></script>
 </body>
 </html>

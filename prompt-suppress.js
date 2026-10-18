@@ -1,152 +1,47 @@
 (()=>{
 'use strict';
-
-const SECTIONS=[
-  {id:'summary',label:'Summary',kind:'summary'},
-  {id:'production',label:'Production brief',kind:'production'},
-  {id:'setting',label:'Setting',header:'SETTING'},
-  {id:'region',label:'Region',header:'REGION'},
-  {id:'factions',label:'Factions',header:'FACTIONS'},
-  {id:'characters',label:'Characters',header:'CHARACTERS'},
-  {id:'continuity',label:'Continuity',header:'CONTINUITY'},
-  {id:'direction',label:'Direction',header:'DIRECTION'}
-];
-const VALID=new Set(SECTIONS.map(x=>x.id));
-const STORAGE_PREFIX='rexprompt.promptSuppress::';
-const SESSION_KEY='rexprompt.promptSuppress.session';
-const defaultsByKey=new Map();
-let panel=null;
-let syncQueued=false;
-
-function normalizeList(value){
-  if(!Array.isArray(value))return [];
-  return [...new Set(value.map(x=>String(x||'').trim().toLowerCase()).filter(x=>VALID.has(x)))];
+// Stored per-page assembly policy is authoritative. Display it without browser-local overrides.
+const labels={
+  summary:"Summary",production:"Production brief",setting:"Setting",
+  settingContinuity:"Setting continuity",region:"Region",factions:"Factions",
+  characters:"Cast",direction:"Direction"
+};
+function render(){
+  const mount=document.getElementById("promptSuppressMount");
+  const active=window.__rexPromptActiveAssembly;
+  if(!mount||!active?.scene)return;
+  const scene=active.scene,show=active.show||{};
+  const suppress=Array.isArray(scene.promptSuppress)?scene.promptSuppress.filter(x=>labels[x]):[];
+  const characterMode=suppress.includes("characters")?"none":scene.promptCharacterMode||(show.compactCharacters?"cast":"full");
+  const settingMode=scene.promptSettingMode||"full";
+  const selection=suppress.length?suppress.map(x=>labels[x]).join(", "):"None";
+  mount.replaceChildren();
+  const panel=document.createElement("div");
+  panel.className="prompt-suppress";
+  panel.style.cssText="margin:8px 0 14px;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface-soft);font-size:.84rem";
+  const title=document.createElement("strong");title.textContent="Stored page assembly";
+  const detail=document.createElement("div");
+  detail.style.cssText="margin-top:6px;line-height:1.5";
+  detail.textContent="Character detail: "+characterMode+" · Setting detail: "+settingMode+" · Suppressed sections: "+selection;
+  if(scene.pageLayout)detail.textContent+=" · Page composition: "+scene.pageLayout.composition;
+  const foot=document.createElement("div");
+  foot.style.cssText="margin-top:5px;color:var(--muted);font-size:.77rem";
+  foot.textContent="Read-only: these settings come from the page's RexPrompt data and apply to copying and exports. No browser or next-page override.";
+  panel.append(title,detail,foot);
+  const warnings=typeof pageLayoutWarnings==="function"?pageLayoutWarnings(scene):[];
+  if(warnings.length){
+    const heading=document.createElement("div");
+    heading.style.cssText="margin-top:8px;font-weight:650";
+    heading.textContent="Editorial density advisories (not automatic changes)";
+    panel.appendChild(heading);
+    const list=document.createElement("ul");
+    list.style.cssText="margin:5px 0 0;padding-left:20px;line-height:1.5";
+    for(const warning of warnings){const item=document.createElement("li");item.textContent=warning;list.appendChild(item)}
+    panel.appendChild(list);
+  }
+  mount.append(panel);
 }
-function contextKey(seriesId,issueId,recipeId){
-  return [seriesId||'series',issueId||'issue',recipeId||'recipe'].join('::');
-}
-function sceneContext(scene,targetStore){
-  const show=targetStore?.__show||{};
-  const seriesId=show.seriesId||String(show.seriesName||show.name||'series').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-  const issueId=show.issueId||show.id||show.issueLabel||'issue';
-  const recipeId=scene?.id||'recipe';
-  return {seriesId,issueId,recipeId,key:contextKey(seriesId,issueId,recipeId)};
-}
-function domContext(){
-  const showSel=document.getElementById('showSel'),issueSel=document.getElementById('issueSel'),sceneSel=document.getElementById('sceneSel');
-  const option=sceneSel?.options?.[sceneSel.selectedIndex];
-  if(!showSel||!issueSel||!option)return null;
-  const base=option.dataset.recipeId||option.dataset.visualBaseLabel||option.textContent||'';
-  const recipeId=String(base).split(' - ')[0].replace(/\s+\[(?:DRAFT|CANON)\].*$/,'').trim();
-  return {seriesId:showSel.value,issueId:issueSel.value,recipeId,key:contextKey(showSel.value,issueSel.value,recipeId)};
-}
-function readOverride(key){
-  const raw=localStorage.getItem(STORAGE_PREFIX+key);
-  if(raw===null)return null;
-  try{return normalizeList(JSON.parse(raw))}catch{localStorage.removeItem(STORAGE_PREFIX+key);return null}
-}
-function readSessionList(){
-  const raw=sessionStorage.getItem(SESSION_KEY);
-  if(raw===null)return null;
-  try{return normalizeList(JSON.parse(raw))}catch{sessionStorage.removeItem(SESSION_KEY);return null}
-}
-function writeSessionList(list){sessionStorage.setItem(SESSION_KEY,JSON.stringify(normalizeList(list)))}
-function clearSessionList(){sessionStorage.removeItem(SESSION_KEY)}
-function effectiveList(key){
-  const session=readSessionList();
-  if(session!==null)return session;
-  const override=readOverride(key);
-  return override===null?(defaultsByKey.get(key)||[]):override;
-}
-function writeOverride(key,list){localStorage.setItem(STORAGE_PREFIX+key,JSON.stringify(normalizeList(list)))}
-function clearOverride(key){localStorage.removeItem(STORAGE_PREFIX+key)}
-function escapeRe(value){return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
-function cleanPrompt(text){return String(text||'').replace(/\n{3,}/g,'\n\n').trim()}
-function stripSection(text,header){
-  const re=new RegExp('(?:^|\\n)\\['+escapeRe(header)+'\\]\\n[\\s\\S]*?(?=\\n\\[[A-Z][A-Z0-9 /_&-]*\\]\\n|$)','g');
-  return cleanPrompt(String(text||'').replace(re,''));
-}
-function stripPreambleLine(text,value){
-  const line=String(value||'').trim();
-  if(!line)return text;
-  const re=new RegExp('(?:^|\\n)'+escapeRe(line)+'(?=\\n|$)','g');
-  return cleanPrompt(String(text||'').replace(re,''));
-}
-function queueSync(){
-  if(syncQueued)return;syncQueued=true;
-  setTimeout(()=>{syncQueued=false;syncUi()},0);
-}
-function installAssemblerWrapper(){
-  if(window.__rexPromptPromptSuppressWrapped)return true;
-  const base=window.assembleScene;
-  if(typeof base!=='function')return false;
-  window.assembleScene=function(scene,targetStore,index,options){
-    const ctx=sceneContext(scene,targetStore);
-    defaultsByKey.set(ctx.key,normalizeList(scene?.promptSuppress));
-    let text=base.call(this,scene,targetStore,index,options);
-    const suppress=effectiveList(ctx.key);
-    const show=targetStore?.__show||{};
-    const productionLine=show.generationLine||"10-second vertical clip. 8K modern-futuristic prestige TV style. Fictional production.";
-    for(const id of suppress){
-      const section=SECTIONS.find(x=>x.id===id);
-      if(!section)continue;
-      if(section.kind==='summary')text=stripPreambleLine(text,(scene?.summary||'').trim());
-      else if(section.kind==='production')text=stripPreambleLine(text,productionLine);
-      else if(section.header)text=stripSection(text,section.header);
-    }
-    queueSync();
-    return text;
-  };
-  window.__rexPromptPromptSuppressWrapped=true;
-  return true;
-}
-function injectStyles(){
-  if(document.getElementById('promptSuppressStyles'))return;
-  const style=document.createElement('style');style.id='promptSuppressStyles';
-  style.textContent=`.prompt-suppress{margin:8px 0 14px;padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface-soft)}.prompt-suppress-title{font-size:.88rem;font-weight:700;margin-bottom:7px}.prompt-suppress-options{display:flex;flex-wrap:wrap;gap:7px 14px}.prompt-suppress-options label{display:inline-flex;align-items:center;gap:5px;font-size:.84rem}.prompt-suppress-options input{margin:0}.prompt-suppress-foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;color:var(--muted);font-size:.76rem}.prompt-suppress-reset{font-size:.76rem;padding:5px 8px;margin:0}`;
-  document.head.appendChild(style);
-}
-function createPanel(){
-  if(panel)return panel;
-  const sceneSel=document.getElementById('sceneSel');if(!sceneSel)return null;
-  injectStyles();
-  const el=document.createElement('div');el.id='promptSuppressPanel';el.className='prompt-suppress';
-  el.innerHTML='<div class="prompt-suppress-title">Suppress from assembled recipe</div><div class="prompt-suppress-options">'+SECTIONS.map(x=>'<label><input type="checkbox" data-prompt-suppress="'+x.id+'"> '+x.label+'</label>').join('')+'</div><div class="prompt-suppress-foot"><button type="button" class="prompt-suppress-reset">Reset page</button><span>Commit carries these selections forward for this browser tab. Page overrides remain saved in this browser; Reset returns this page to its page-data promptSuppress default.</span></div>';
-  const block=sceneSel.closest('.block')||sceneSel.parentElement;block.insertAdjacentElement('afterend',el);
-  el.querySelectorAll('[data-prompt-suppress]').forEach(input=>input.addEventListener('change',()=>{
-    const ctx=domContext();if(!ctx)return;
-    const selected=[...el.querySelectorAll('[data-prompt-suppress]:checked')].map(x=>x.dataset.promptSuppress);
-    writeOverride(ctx.key,selected);
-    writeSessionList(selected);
-    document.getElementById('buildBtn')?.click();
-    syncUi();
-  }));
-  el.querySelector('.prompt-suppress-reset').addEventListener('click',()=>{
-    const ctx=domContext();if(!ctx)return;
-    clearOverride(ctx.key);clearSessionList();document.getElementById('buildBtn')?.click();syncUi();
-  });
-  panel=el;return el;
-}
-function syncUi(){
-  const el=createPanel(),ctx=domContext();if(!el||!ctx)return;
-  const active=new Set(effectiveList(ctx.key));
-  el.querySelectorAll('[data-prompt-suppress]').forEach(input=>{input.checked=active.has(input.dataset.promptSuppress)});
-  const reset=el.querySelector('.prompt-suppress-reset');if(reset)reset.disabled=readOverride(ctx.key)===null&&readSessionList()===null;
-}
-function installUiListeners(){
-  const ids=['showSel','issueSel','sceneSel'];
-  ids.forEach(id=>document.getElementById(id)?.addEventListener('change',()=>setTimeout(syncUi,0)));
-  const sceneSel=document.getElementById('sceneSel');
-  if(sceneSel)new MutationObserver(()=>setTimeout(syncUi,0)).observe(sceneSel,{childList:true,subtree:true});
-  document.getElementById('commitBtn')?.addEventListener('click',()=>{
-    const el=createPanel(),ctx=domContext();if(!el||!ctx)return;
-    const selected=[...el.querySelectorAll('[data-prompt-suppress]:checked')].map(x=>x.dataset.promptSuppress);
-    writeSessionList(selected);
-  },true);
-}
-function start(){
-  const tryWrap=()=>{if(!installAssemblerWrapper())setTimeout(tryWrap,25);else{createPanel();installUiListeners();syncUi();setTimeout(()=>document.getElementById('buildBtn')?.click(),50)}};
-  tryWrap();
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+document.addEventListener("rexprompt:assembly-changed",render);
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",render,{once:true});
+else render();
 })();

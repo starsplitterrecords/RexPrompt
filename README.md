@@ -178,6 +178,39 @@ Moves the current scene to the end of the active show's in-browser queue and adv
 
 Despite the name, **Commit Scene does not write anything to GitHub or the JSON files**. Reloading the show restores its original order.
 
+## Page-specific chef assembly
+
+RexPrompt stores the full authored page and compiles a focused **chef recipe** from page-level presentation settings. These are authoritative data, not browser choices; no copy/export action or Next Page operation changes them.
+
+Production pages may encode:
+
+```json
+{
+  "id": "EXAMPLE_I01_P04",
+  "promptCharacterMode": "cast",
+  "promptSettingMode": "label",
+  "promptSuppress": ["summary"]
+}
+```
+
+- `promptCharacterMode`: `full` includes expanded character entries, `cast` includes names only, and `none` omits the cast block. When absent, the show's existing `compactCharacters` setting (or full mode) applies.
+- `promptSettingMode`: `full` includes the referenced setting description, and `label` emits only the location name. Use `label` for repeat locations that the image references already establish; don't strip a first establishing image of needed design.
+- `promptSuppress`: optional array of section names: `summary`, `production`, `setting`, `settingContinuity`, `region`, `factions`, `characters`, or `direction`. The `settingContinuity` switch applies to the expanded location dictionary when a separate explicit `settingText` remains.
+- `panelPlan`, `dialogueInline`/`dialog`, and `continuityFrom` **cannot be suppressed**. An unknown or protected section raises an assembly error rather than silently discarding story content. Suppressing all setting information also fails unless every panel has an explicit `location` of its own.
+- Existing show-level `omitSummary`, `omitCameoHandles`, `compactCharacters`, `compactDialogue`, and `compactContinuity` continue to work. Pages without the optional per-page fields retain the same output.
+
+The interface displays the resolved settings read-only. The full page data remains intact and is not rewritten on copy/export. The same assembly function is used by the page preview, copy, and issue/series exports.
+
+**Editorial safety:** Set these fields page by page only after checking the actual scene: omission of an irrelevant apartment note from a bodega scene is appropriate; deletion of dialogue, a reaction, a needed prop, or a genuine continuity detail is not. The page composition must still be readable, and canonical image references remain necessary even when full character descriptions are omitted. Do not automatically increase page counts to resolve visual density.
+
+Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
+
+## Authored page composition
+
+Pages may optionally include a validated `pageLayout` field for relative panel prominence, splash-with-insets, asymmetry, quiet pacing, negative space, reading flow, and lettering reserves. RexPrompt deterministically emits a `[PAGE COMPOSITION]` section **before** the scripted panel plan; it never drops or rearranges scripted panels or dialogue. Pages without `pageLayout` assemble exactly as before.
+
+The full contract, five sample architectures using real scripted pages, and editorial-phase handoff are documented in [docs/page-layout-contract.md](docs/page-layout-contract.md). Test with `node tools/test_page_layout.cjs`. Layout-density warnings in the assembly UI are advisory only and never rewrite text.
+
 ## Production visuals
 
 RexPrompt displays durable production visuals beside the selected recipe without changing the recipe assembler.

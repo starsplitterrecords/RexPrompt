@@ -45,7 +45,20 @@ def load_payload(entry):
     for overlay in overlays:
         if overlay.get("beforeId") or overlay.get("afterId") or overlay.get("replaceIds"):
             raise SystemExit(f"{entry.get('id')}: unsupported Rex Fleet overlay placement in validator")
-        pages.extend(load_overlay(overlay))
+        incoming = load_overlay(overlay)
+        if overlay.get("mergeById"):
+            by_id = {page.get("id"): page for page in pages}
+            for patch in incoming:
+                page_id = patch.get("id")
+                if page_id in by_id:
+                    by_id[page_id].update({k: v for k, v in patch.items() if k != "id"})
+                elif overlay.get("strict"):
+                    raise SystemExit(f"{entry.get('id')}: strict overlay target missing: {page_id}")
+                else:
+                    pages.append(patch)
+                    by_id[page_id] = patch
+        else:
+            pages.extend(incoming)
     return pages
 
 
@@ -75,7 +88,7 @@ def assert_clean_recipe(page, all_ids):
 
 
 shows = load_json(MANIFEST)
-rex = [entry for entry in shows if entry.get("seriesId") == "rex-fleet" or entry.get("id") == "rex-fleet-s1"]
+rex = [entry for entry in shows if (entry.get("seriesId") == "rex-fleet" or entry.get("id") == "rex-fleet-s1") and entry.get("id") != "rex-fleet-i01"]
 if len(rex) != 11:
     raise SystemExit(f"Expected 11 explicit Rex Fleet issue entries (2-12), found {len(rex)}")
 if any(entry.get("id") == "rex-fleet-s1" for entry in rex):
@@ -93,13 +106,18 @@ for expected_issue, entry in zip(range(2, 13), rex):
         raise SystemExit(f"Issue {expected_issue}: production unit must be PAGE")
     if entry.get("scenesFile") != "pages_base.json":
         raise SystemExit(f"Issue {expected_issue}: normalized page base missing")
+    cover_id = f"RF_I{expected_issue:02d}_COVER"
+    overlays = entry.get("sceneOverlays", [])
+    if not overlays or overlays[0].get("file") != "covers.json" or overlays[0].get("includeIds") != [cover_id]:
+        raise SystemExit(f"Issue {expected_issue}: cover must be the first production page")
     manifest_text = json.dumps(entry, ensure_ascii=False)
     if "replaceEpisode" in manifest_text or "replaceEpisodes" in manifest_text:
         raise SystemExit(f"Issue {expected_issue}: episode replacement machinery survived")
     if re.search(r"\bSeason\b|\bepisode\b", entry.get("name", "") + " " + entry.get("generationLine", ""), re.I):
         raise SystemExit(f"Issue {expected_issue}: show/episode language survived user-facing production config")
-    if "comic page" not in entry.get("generationLine", ""):
-        raise SystemExit(f"Issue {expected_issue}: comic-page production mode missing")
+    generation_line = entry.get("generationLine", "").lower()
+    if "comic" not in generation_line or "page" not in generation_line or "issue cover" not in generation_line:
+        raise SystemExit(f"Issue {expected_issue}: cover-aware comic-page production mode missing")
     issues[expected_issue] = load_payload(entry)
 
 if load_json(SHOW / "pages_base.json") != []:
@@ -113,21 +131,22 @@ if len(all_ids) != sum(len(pages) for pages in issues.values()):
 
 for issue, pages in issues.items():
     ids = [page.get("id") for page in pages]
+    cover_id = f"RF_I{issue:02d}_COVER"
     open_id = f"RF_I{issue:02d}_EDITOR_OPEN"
     close_id = f"RF_I{issue:02d}_EDITOR_CLOSE"
-    if not ids or ids[0] != open_id or ids[-1] != close_id:
-        raise SystemExit(f"Issue {issue}: editorial bookend order invalid: {ids}")
-    story_ids = ids[1:-1]
+    if len(ids) < 3 or ids[0] != cover_id or ids[1] != open_id or ids[-1] != close_id:
+        raise SystemExit(f"Issue {issue}: cover/editorial publication order invalid: {ids}")
+    story_ids = ids[2:-1]
     expected_story_ids = [f"RF_I{issue:02d}_P{n:02d}" for n in range(1, len(story_ids) + 1)]
     if story_ids != expected_story_ids:
         raise SystemExit(f"Issue {issue}: story page IDs/order invalid: {story_ids}")
-    for page in pages:
+    for page in pages[1:]:
         assert_clean_recipe(page, all_ids)
 
-if len(issues[2][1:-1]) != 19:
-    raise SystemExit(f"Issue 2 must retain 19 story pages, found {len(issues[2][1:-1])}")
-if len(issues[3][1:-1]) != 30:
-    raise SystemExit(f"Issue 3 must retain 30 story pages, found {len(issues[3][1:-1])}")
+if len(issues[2][2:-1]) != 19:
+    raise SystemExit(f"Issue 2 must retain 19 story pages, found {len(issues[2][2:-1])}")
+if len(issues[3][2:-1]) != 30:
+    raise SystemExit(f"Issue 3 must retain 30 story pages, found {len(issues[3][2:-1])}")
 
 serialized = json.dumps(issues, ensure_ascii=False)
 if "RF_S1E" in serialized:

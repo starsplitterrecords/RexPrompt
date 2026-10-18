@@ -1,7 +1,7 @@
 {
   "series": "Echoes of a Forgotten War",
-  "status": "retained 22-beat development source map; reconciled into 129 story pages plus 16 editorial bookends for 145 production pages",
-  "pageCountRule": "The 22 entries per issue are development beats and page-turn provenance, not production pages. Current production truth is 145 assembler-visible pages in scenes_e01.json through scenes_e08.json: 129 unchanged story pages plus one opening and one closing editorial bookend per issue.",
+  "status": "Retained 22-beat development provenance; Issue 1 revised to 21 story pages plus 2 editorial bookends; total season now 149 production pages.",
+  "pageCountRule": "Each issue's 22 entries are development beats and page-turn provenance, not actual compiled pages. Production truth is 149 assembled pages: 133 story pages and 16 editorial bookends. Issue 1 has 21 story pages plus 2 editorial pages; the 22-beat map remains as historical development provenance and must not override scenes_e01.json.",
   "globalRules": [
     "Readability first, human consequence second, scale and spectacle third.",
     "Production page count follows dramatic pressure rather than a uniform template.",
@@ -1127,7 +1127,7 @@
   ],
   "developmentBeatTarget": 22,
   "productionPageCounts": {
-    "1": 19,
+    "1": 23,
     "2": 18,
     "3": 17,
     "4": 18,
@@ -1135,6 +1135,6 @@
     "6": 17,
     "7": 18,
     "8": 20,
-    "season": 145
+    "season": 149
   }
 }
