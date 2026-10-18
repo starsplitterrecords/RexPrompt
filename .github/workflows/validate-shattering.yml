@@ -15,6 +15,7 @@ on:
       - 'data/shows/rex-fleet-s1/characters.json'
       - 'production/references/shattering/**'
       - 'tools/validate_shattering.py'
+      - 'tools/test_shattering_page_layouts.cjs'
       - '.github/workflows/validate-shattering.yml'
   workflow_dispatch:
 
@@ -28,3 +29,7 @@ jobs:
           python-version: '3.12'
       - name: Validate Shattering
         run: python tools/validate_shattering.py
+      - name: Validate assembled Shattering layouts
+        run: |
+          node --check tools/test_shattering_page_layouts.cjs
+          node tools/test_shattering_page_layouts.cjs
