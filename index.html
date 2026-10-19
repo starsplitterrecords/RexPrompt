@@ -425,8 +425,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
         out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
       }else{
         const rawSpeaker=d.handle||d.speaker||"TEXT";
-        const sp=visibleCastOnly&&typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")
-          ?(d.speaker||findCharacterByHandle(rawSpeaker,chars)?.name||rawSpeaker):rawSpeaker;
+        const sp=visibleCastOnly
+          ?(d.speaker||(typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")?findCharacterByHandle(rawSpeaker,chars)?.name:undefined)||rawSpeaker)
+          :rawSpeaker;
         const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
         out.push(panelPrefix+(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"'));
         if(d.subtext&&!cleanPanels)out.push("  ("+d.subtext+")");
