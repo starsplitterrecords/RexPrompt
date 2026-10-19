@@ -26,7 +26,7 @@ for(let n=1;n<=6;n++){
   const badLength=lines.filter(d=>words(d.text)>19);
   const max=lines.reduce((a,d)=>Math.max(a,words(d.text)),0);
   console.log('PAGE '+p.id+' '+JSON.stringify({title:p.pageTitle,locked,panels:panels.length,lines:lines.length,words:wordTotal,max,linked,over19:badLength.length,continuityFrom:p.continuityFrom||null}));
-  for(let j=0;j<lines.length;j++){const d=lines[j]; console.log('D '+p.id+' #'+j+' '+JSON.stringify({speaker:d.speaker,handle:d.handle,subtext:d.subtext||'',text:d.text,words:words(d.text)}));}
+  for(let j=0;j<lines.length;j++){const d=lines[j]; console.log('D '+p.id+' #'+j+' '+JSON.stringify({...d,words:words(d.text)}));}
   for(let j=0;j<panels.length;j++){
    const panel=panels[j];console.log('P '+p.id+' #'+(j+1)+' '+JSON.stringify({content:String(typeof panel==='string'?panel:panel.action||panel.text||panel.visual||JSON.stringify(panel)).slice(0,300),dialogueIndices:panel.dialogueIndices||null}));
   }
