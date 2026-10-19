@@ -68,12 +68,15 @@ for(let issue=1;issue<=8;issue++){
   const oldPanel=originalOutput.indexOf('\n[PANEL PLAN]');
   assert(added>=0&&retained>added&&oldPanel>=0,'Assembler layout order failed '+page.id);
   const storyWithLayout=assembleScene({...original,pageLayout:layout},store,i);
-  if(page.promptCharacterMode==='cast'){
-    assert(layoutOutput.includes('[CAST]')&&!layoutOutput.includes('[CHARACTERS]'),'Compact cast not used '+page.id);
-    assert(storyWithLayout.includes('[CHARACTERS]'),'Compact cast lost baseline identity '+page.id);
-  }else{
-    assert.equal(layoutOutput.slice(0,added).trimEnd(),originalOutput.slice(0,oldPanel).trimEnd(),'Pre-panel recipe changed '+page.id);
-  }
+  // Echoes now uses one visible-character handle per authored figure, not a
+  // duplicated compact/full cast roster. Off-panel dialogue keeps speaker names.
+  assert(!layoutOutput.includes('[CAST]')&&!layoutOutput.includes('[CHARACTERS]'),
+    'Duplicate character block on '+page.id);
+  assert(!storyWithLayout.includes('[CAST]')&&!storyWithLayout.includes('[CHARACTERS]'),
+    'Unscoped character block on '+page.id);
+  const visibleTags=layoutOutput.split('\n').filter(x=>/^@ech\.[A-Za-z0-9_-]+$/.test(x));
+  const expectedTags=(page.characters||[]).map(id=>store['characters.json'][id]?.handle);
+  assert.deepEqual(visibleTags,expectedTags,'Incorrect Echoes page visual cast '+page.id);
   assert.equal(layoutOutput.slice(retained),originalOutput.slice(oldPanel),'Script/dialogue/continuity changed '+page.id);
   for(const line of original.dialogueInline||[])assert(layoutOutput.includes(line.text),'Missing scripted lettering '+page.id);
   if(page.id.includes('_EDITOR_')){

@@ -19,6 +19,11 @@ on:
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_stardust_visual_refs.cjs'
+      - 'tools/test_three_series_visual_scope.cjs'
+      - 'data/shows/shattering/visual_cast_i*.json'
+      - 'data/shows/shattering/pages_i*.json'
+      - 'data/shows/division-threshold-s1/pages_e*_compiled.json'
+      - 'data/shows/echoes-forgotten-war-s1/scenes_e*.json'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
       - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
@@ -154,6 +159,7 @@ jobs:
           node --check tools/test_rex_fleet_recipe_scopes.cjs
           node --check tools/test_page_layout.cjs
           node --check tools/test_stardust_visual_refs.cjs
+          node --check tools/test_three_series_visual_scope.cjs
           node --check tools/test_sunforge_page_layouts.cjs
           node --check tools/test_sunforge_all_layouts.cjs
           node --check tools/test_sunforge_recipe_sanitation.cjs
@@ -179,6 +185,7 @@ jobs:
           node tools/test_rex_fleet_recipe_scopes.cjs
           node tools/test_page_layout.cjs
           node tools/test_stardust_visual_refs.cjs
+          node tools/test_three_series_visual_scope.cjs
           node tools/test_sunforge_page_layouts.cjs
           node tools/test_sunforge_all_layouts.cjs
           node tools/test_sunforge_recipe_sanitation.cjs
