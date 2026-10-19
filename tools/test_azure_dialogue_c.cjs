@@ -26,9 +26,9 @@ const allowedChanges={
  AZR_S1E03_P01:[1],AZR_S1E03_P02:[3],AZR_S1E03_P13:[5],
  AZR_S1E03_P17:[4],AZR_S1E04_P11:[0],AZR_S1E05_P04:[1],
  AZR_S1E05_P14:[3],AZR_S1E05_P18:[6],AZR_S1E06_P03:[6],
- AZR_S1E06_P08:[2]
+ AZR_S1E06_P08:[2],AZR_S1E05_P11:[2],AZR_S1E06_P17:[1]
 };
-const expectedCount={2:4,3:9,4:8,5:6,6:7};
+const expectedCount={2:13,3:22,4:22,5:22,6:22};
 let totalPages=0,updatedLines=0,deletedLines=0,attributed=0,savedWords=0;
 function block(text,name){
  const begin=text.indexOf('\n['+name+']');if(begin<0)return null;
@@ -97,9 +97,9 @@ for(let n=1;n<=6;n++){
  }
  console.log('PASS Azure Issue '+n+': '+patches.length+' story-specific pages, exact panel references, original art/layout and character handles protected');
 }
-assert.equal(totalPages,34);
-assert.equal(updatedLines,10,'Unexpected number of reviewed voice revisions');
+assert.equal(totalPages,101);
+assert.equal(updatedLines,12,'Unexpected number of reviewed voice revisions');
 assert.equal(deletedLines,1,'Unexpected dialogue deletion');
-assert(attributed>180,'Too few balloon placements');
+assert(attributed>550,'Too few balloon placements');
 console.log('PASS Azure Phase C: '+totalPages+' pages with explicit balloon placement; '+attributed+' assigned dialogue balloons; '+updatedLines+' selective voice rewrites, '+deletedLines+' dispensable balloon removed, '+savedWords+' fewer spoken words');
 console.log('PASS all issue lengths unchanged, all approved/released pages excluded, authored panel and composition directions unchanged');
