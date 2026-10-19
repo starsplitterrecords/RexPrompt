@@ -205,6 +205,16 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Visible-only reference scopes for four more series
+
+Azure Reach, Low Tide Signal, Sunforge Outlaw and Vikings 2026 now opt into `promptVisibleCastOnly` and `omitRoutineFactions` at the show level, including their registered issue/cover selectors. A generation recipe receives only the page's curated visible characters rather than duplicate dialogue-derived @handles plus a separate `[CAST]`/`[CHARACTERS]` block. Dialogue and panel plans stay authored and exact; spoken names do not automatically authorize a new visual reference. Relevant faction visuals can be explicitly included per page via `promptIncludeFactions: true`.
+
+For characters who have an established canonical `handle`, the assembler emits that one handle. Low Tide Signal currently has **no canonical character-image handles**; some Sunforge minor characters likewise lack handles. For those roles, the assembler emits one brief `Name — Visual: ...` entry sourced strictly from the existing character's `visual` or equivalent identity field. It does **not** invent image handles, remove the only available appearance description, or include full development biographies.
+
+For a page with a speaking/off-panel/mentioned person present in the authored cast, set `promptVisibleCharacters` to the narrower array of canonical existing IDs or handles. This is a **page-level editorial decision**; not a mechanical inference that everyone speaking must be seen. An empty list is permitted for intentionally figure-free scenes.
+
+Run `node tools/test_four_series_visual_scope.cjs` to verify all four series and registered covers, including text-only identity fallback. The separately selected image attachments must still follow the same page-specific visual references.
+
 ## Stardust visual reference scope
 
 Stardust issues opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` in `data/shows.json`. Their generation recipes show exactly one canonical `@sds.*` image-reference tag **per visually required character**, rather than both a speaker-derived tag list and a repeated `[CAST]` or `[CHARACTERS]` roster. Dialogue keeps its precise text and speaker attribution **as readable names**, without additional visual-reference tags. Routine `[FACTIONS]` prose is suppressed for Stardust; persistent station/StarTrust visual language still comes from the issue production brief and authored environment instructions.
