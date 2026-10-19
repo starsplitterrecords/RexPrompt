@@ -205,6 +205,14 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Visible-only character references for Shattering, Division Threshold, and Echoes
+
+Shattering (six issues and covers), Division Threshold (eight issues, covers and editorial pages), and Echoes of the Forgotten War (eight-issue sequence and covers) use `promptVisibleCastOnly: true`. The assembler now emits only canonical reference handles from each page's authored visible cast or its `promptVisibleCharacters` override, without a second cast/character prose block or implicit image reference from speaking. Dialogue and panel plans are preserved; speaker labels remain readable names.
+
+Routine `[FACTIONS]` material is suppressed on **Shattering and Division Threshold interior/issue and editorial recipes** via `omitRoutineFactions`. Cover-specific faction art direction is preserved; pages with a special need for faction notes can explicitly use `promptIncludeFactions: true`. Echoes has no faction entries in its issue source, so only its character scoping changes.
+
+A targeted Shattering Issue 1 `mergeById` overlay removes unpictured co-leads from the Liora discovery and the transit scenes without changing source cast data or dialogue. Use `node tools/test_three_series_visual_scope.cjs` to validate every relevant issue, cover, and editorial unit. These source-level reference handles should also control any separate image attachment workflow; plain prompt filtering cannot itself remove manually attached images.
+
 ## Stardust visual reference scope
 
 Stardust issues opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` in `data/shows.json`. Their generation recipes show exactly one canonical `@sds.*` image-reference tag **per visually required character**, rather than both a speaker-derived tag list and a repeated `[CAST]` or `[CHARACTERS]` roster. Dialogue keeps its precise text and speaker attribution **as readable names**, without additional visual-reference tags. Routine `[FACTIONS]` prose is suppressed for Stardust; persistent station/StarTrust visual language still comes from the issue production brief and authored environment instructions.
