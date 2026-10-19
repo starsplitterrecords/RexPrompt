@@ -207,7 +207,7 @@ Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vi
 
 ## Thunderbreak page-visible reference scope
 
-Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` in the **strict per-page assembly scope overlays**. Interior pages emit a single canonical reference handle for each person in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
+Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` in the **strict per-page assembly scope overlays**. Interior pages emit a single canonical reference handle for each registered visual identity in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. Unregistered incidental roles (such as a merchant or crew member) remain drawable through the panel instructions and attributed dialogue but have no invented canonical reference. Two Issue 3 pages further narrow the visual cast where listed people are not depicted. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
 
 Covers and editorial opens/closes intentionally retain their original reference behavior. They are not included in the visible-only override.
 
