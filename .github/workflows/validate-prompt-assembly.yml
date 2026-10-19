@@ -20,6 +20,8 @@ on:
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_rex_academy_visual_scope.cjs'
+      - 'tools/test_rex_ship_visual_scope.cjs'
+      - 'data/shows/rex-fleet-*/editorial/visual_faction_pages_i*.json'
       - 'data/shows/rex-fleet-academy-*/editorial/visual_faction_pages_i*.json'
       - 'data/shows/rfa-reach-resolve/editorial/visual_faction_pages_i*.json'
       - 'tools/test_four_series_visual_scope.cjs'
@@ -95,6 +97,8 @@ on:
       - 'tools/test_editorial_page_scopes.cjs'
       - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_rex_academy_visual_scope.cjs'
+      - 'tools/test_rex_ship_visual_scope.cjs'
+      - 'data/shows/rex-fleet-*/editorial/visual_faction_pages_i*.json'
       - 'data/shows/rex-fleet-academy-*/editorial/visual_faction_pages_i*.json'
       - 'data/shows/rfa-reach-resolve/editorial/visual_faction_pages_i*.json'
       - 'tools/test_four_series_visual_scope.cjs'
@@ -168,6 +172,7 @@ jobs:
           node --check tools/test_page_layout.cjs
           node --check tools/test_stardust_visual_refs.cjs
           node --check tools/test_rex_academy_visual_scope.cjs
+          node --check tools/test_rex_ship_visual_scope.cjs
           node --check tools/test_four_series_visual_scope.cjs
           node --check tools/test_three_series_visual_scope.cjs
           node --check tools/test_sunforge_page_layouts.cjs
@@ -196,6 +201,7 @@ jobs:
           node tools/test_page_layout.cjs
           node tools/test_stardust_visual_refs.cjs
           node tools/test_rex_academy_visual_scope.cjs
+          node tools/test_rex_ship_visual_scope.cjs
           node tools/test_four_series_visual_scope.cjs
           node tools/test_three_series_visual_scope.cjs
           node tools/test_sunforge_page_layouts.cjs
