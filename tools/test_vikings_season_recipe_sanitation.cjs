@@ -113,7 +113,7 @@ for(const show of list){
           // and line order are untouched, rather than rearranged by panel.
           let panel=0,groups=0;
           for(const n of product.byDialogue)if(n!==panel){panel=n;groups++}
-          assert.equal((section(result,'DIALOGUE').match(/^Panel \d+:$/gm)||[]).length,groups,
+          assert.equal(((section(result,'DIALOGUE')||'').match(/^Panel \d+:$/gm)||[]).length,groups,
             'Wrong dialogue group count '+page.id);
         }else assert.equal(section(result,'DIALOGUE'),section(baseline,'DIALOGUE'),
           'Issue 6 exception failed to keep dialogue order '+page.id);
