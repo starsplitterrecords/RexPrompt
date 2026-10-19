@@ -263,6 +263,8 @@ Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbere
 
 The first audited rollout uses a strict per-page overlay for **Vikings 2026 Issue 2**, after the dialogue-density overlay, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
 
+**Vikings-wide rollout:** [Season 1 chef recipe audit](docs/vikings-season-recipe-sanitization.md) protects Issues 1–2, converts Issue 3's 20 structured pages to clean delivery, and numbers/groups original prose panels across Issues 4–12 without rewriting scripts. Run `node tools/test_vikings_season_recipe_sanitation.cjs`.
+
 ## Authored page composition
 
 Pages may optionally include a validated `pageLayout` field for relative panel prominence, splash-with-insets, asymmetry, quiet pacing, negative space, reading flow, and lettering reserves. RexPrompt deterministically emits a `[PAGE COMPOSITION]` section **before** the scripted panel plan; it never drops or rearranges scripted panels or dialogue. Pages without `pageLayout` assemble exactly as before.
