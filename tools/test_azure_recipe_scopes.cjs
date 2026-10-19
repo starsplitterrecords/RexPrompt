@@ -73,7 +73,10 @@ for(let number=1;number<=6;number++){
    assert.equal(section(after,key),section(before,key),key+' changed on '+p.id);
   for(const line of p.dialogueInline||[])assert(after.includes(line.text),'Scripted line omitted on '+p.id);
   assert(section(after,'SETTING')!==null,'Location lost '+p.id);
-  assert(section(after,patch.promptCharacterMode==='cast'?'CAST':'CHARACTERS')!==null,'Cast lost '+p.id);
+   assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Duplicate cast prose leaked '+p.id);
+   const refs=after.split('\n').filter(x=>/^@azr\.[A-Za-z0-9_-]+$/.test(x));
+   const expected=(p.characters||[]).map(id=>store['characters.json'][id]?.handle).filter(Boolean);
+   assert.deepEqual(refs,expected,'Page-specific art references lost or duplicated '+p.id);
   assert(!after.includes('[FACTIONS]')&&!after.includes('[REGION]'),'Unnecessary shelf repetition on '+p.id);
   if(patch.promptSuppress.includes('summary')){removedSummaries++;assert(!after.includes(p.summary),'Redundant summary leaked '+p.id);}
   assert(!patch.direction.includes('AZR_PRODUCTION_CORE')&&!patch.direction.includes('AZR_LETTERING'),'Repeated generic direction leaked '+p.id);
