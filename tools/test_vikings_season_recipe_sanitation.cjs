@@ -76,7 +76,7 @@ for(const show of list){
     const overlays=show.sceneOverlays||[];
     assert(overlays.some(o=>o.file==='editorial/chef_recipe_exceptions_i06.json'&&o.strict&&o.mergeById),
       'Issue 6 out-of-order mapping exception not registered');
-    const map=byId(exception6);pages=source.map(p=>({...p,...(map.get(p.id)||{})}));
+    const map=byId(exception6);pages=pages.map(p=>({...p,...(map.get(p.id)||{})}));
   }
   if(number<=2)assert(!show.promptPanelMode&&!show.promptDialogueMode,
     'Released/approved issues must keep existing recipe delivery');
