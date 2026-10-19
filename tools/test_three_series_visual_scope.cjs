@@ -90,7 +90,9 @@ for(const show of shows){
       lines++;
     }
   }
-  const previous=assemble(page,{...shelf,__show:{...show,promptVisibleCastOnly:false,omitRoutineFactions:false}},i);
+  const legacyPage={...page};
+  delete legacyPage.promptVisibleCharacters; // Legacy output had no visual-cast override contract.
+  const previous=assemble(legacyPage,{...shelf,__show:{...show,promptVisibleCastOnly:false,omitRoutineFactions:false}},i);
   assert.equal(panelSection(assembled),panelSection(previous),'Scripted panel plan changed '+page.id);
   if(page.pageLayout)assert(assembled.includes('[PAGE COMPOSITION]'),'Existing layout lost '+page.id);
   totals[show.seriesId]++;
