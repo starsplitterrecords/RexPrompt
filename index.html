@@ -97,7 +97,7 @@ function getHandle(id,c){const e=c[id];return e?e.handle||e.name||id:id}
 function formatEntry(e){if(typeof e==="string")return e;if(e.text)return e.text;if(e.name)return e.name;if(e.summary)return e.summary;return JSON.stringify(e)}
 function findCharacterByHandle(h,c){if(!h)return null;return Object.values(c||{}).find(e=>e&&(e.handle===h||(Array.isArray(e.aliases)&&e.aliases.includes(h))))}
 function formatCharacter(e,fallback){if(!e)return fallback;const p=[e.name||fallback],structured=!!(e.wardrobe||e.performance||e.relationship||e.promptContinuity);if(e.handle)p.push(e.handle);const v=e.visualAnchor||e.visual||e.appearance||e.visualDescription;if(v)p.push((structured?"Identity: ":"Visual: ")+v);if(structured){if(e.wardrobe)p.push("Wardrobe: "+e.wardrobe);if(e.performance)p.push("Performance: "+e.performance);if(e.relationship)p.push("Relationship: "+e.relationship);if(Array.isArray(e.promptContinuity)&&e.promptContinuity.length)p.push("Continuity: "+e.promptContinuity.join("; "))}else{if(e.visualStatus)p.push("Visual status: "+e.visualStatus);if(Array.isArray(e.continuityLocks)&&e.continuityLocks.length)p.push("Continuity: "+e.continuityLocks.join("; "))}return p.join(" — ")}
-// Stardust visual references are artwork presence, not dialogue participation.
+// Visible visual references are artwork presence, not dialogue participation.
 // The authored page cast is the default; promptVisibleCharacters can override it
 // with a narrower list of stable character IDs or canonical @handles.
 function visibleCharacterHandles(scene,characters){
@@ -111,8 +111,15 @@ function visibleCharacterHandles(scene,characters){
     if(typeof token!=="string"||!token.trim())throw new Error("Invalid visible character on "+key+": "+String(token));
     const entry=characters[token]||findCharacterByHandle(token,characters)||
       Object.values(characters).find(c=>c?.name===token);
-    if(!entry?.handle)throw new Error("Unknown visible character on "+key+": "+token);
-    if(!seen.has(entry.handle)){seen.add(entry.handle);handles.push(entry.handle)}
+    if(!entry)throw new Error("Unknown visible character on "+key+": "+token);
+    // No canonical image handle exists yet for some Low Tide and Sunforge roles.
+    // Preserve only their visual identity, never the entire development dossier.
+    const visual=[entry.visualAnchor,entry.visual,entry.appearance,entry.visualDescription]
+      .find(v=>typeof v==="string"&&v.trim());
+    if(!entry.handle&&!visual)throw new Error("Missing visual identity for "+token+" on "+key);
+    const reference=entry.handle||(entry.name||token)+" — Visual: "+visual.trim();
+    const identity=entry.handle||token;
+    if(!seen.has(identity)){seen.add(identity);handles.push(reference)}
   }
   return handles;
 }
