@@ -55,7 +55,9 @@ for(let issue=1;issue<=12;issue++){
      assert(!after.includes(canonicalSetting.text),'Expanded recurring setting leaked '+page.id);settingCompacted++;
    }else if(canonicalSetting?.text)assert(after.includes(canonicalSetting.text),'Establishing setting lost '+page.id);
    if(profile.promptCharacterMode==='cast'){
-     if(page.characters?.length||page.charactersInline?.length)assert(after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Full cast leaked '+page.id);
+     assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Duplicate cast prose leaked '+page.id);
+     const visualRefs=after.split('\n').filter(x=>/^@sun\./.test(x)||x.includes(' — Visual: '));
+     assert.equal(visualRefs.length,(page.characters||[]).length,'Visible-only character reference count changed '+page.id);
      castCompacted++;
    }
    if(profile.promptPanelLetteringMode==='indexed'){

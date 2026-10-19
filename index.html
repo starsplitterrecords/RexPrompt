@@ -111,13 +111,19 @@ function visibleCharacterHandles(scene,characters){
     if(typeof token!=="string"||!token.trim())throw new Error("Invalid visible character on "+key+": "+String(token));
     const entry=characters[token]||findCharacterByHandle(token,characters)||
       Object.values(characters).find(c=>c?.name===token);
-    if(!entry?.handle){
-      // A named but unregistered incidental role is still drawn via the scripted
-      // panel and dialogue; it has no canonical image asset to reference.
+    if(!entry){
+      // Keep the existing behavior for genuinely unregistered incidental names.
       if(explicit===undefined&&typeof item==="object"&&item!==null&&!item.handle&&typeof item.name==="string"&&item.name.trim())continue;
       throw new Error("Unknown visible character on "+key+": "+token);
     }
-    if(!seen.has(entry.handle)){seen.add(entry.handle);handles.push(entry.handle)}
+    // Some Low Tide and Sunforge characters lack approved image handles.
+    // Keep only their authored visual description, not their development dossier.
+    const visual=[entry.visualAnchor,entry.visual,entry.appearance,entry.visualDescription]
+      .find(v=>typeof v==="string"&&v.trim());
+    if(!entry.handle&&!visual)throw new Error("Missing visual identity for "+token+" on "+key);
+    const reference=entry.handle||(entry.name||token)+" — Visual: "+visual.trim();
+    const identity=entry.handle||token;
+    if(!seen.has(identity)){seen.add(identity);handles.push(reference)}
   }
   return handles;
 }

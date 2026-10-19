@@ -223,6 +223,14 @@ Routine `[FACTIONS]` material is suppressed on **Shattering and Division Thresho
 
 A targeted Shattering Issue 1 `mergeById` overlay removes unpictured co-leads from the Liora discovery and the transit scenes without changing source cast data or dialogue. Use `node tools/test_three_series_visual_scope.cjs` to validate every relevant issue, cover, and editorial unit. These source-level reference handles should also control any separate image attachment workflow; plain prompt filtering cannot itself remove manually attached images.
 
+## Page-visible image references: Azure Reach, Low Tide, Sunforge and Vikings
+
+These four series opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` for every registered issue and cover. The chef receives only each page's authored visible-character references; there are no dialogue-derived visual handles or redundant `[CAST]`/`[CHARACTERS]` blocks. Routine faction prose is omitted while `promptIncludeFactions: true` still enables a meaningful page-specific faction depiction. Dialogue, page panels and continuity remain independent.
+
+When no approved image handle exists (all current Low Tide characters and several Sunforge minor roles), emit a single **name + authored visual description**, not a fabricated handle or a full development biography. Canonical handles are used unchanged where they do exist. Existing unregistered incidental characters do not acquire invented canonical identities.
+
+Authors can narrow a page's actual visible cast with `promptVisibleCharacters` while retaining off-panel speakers in the script. The separate image attachment workflow must respect these references. Run `node tools/test_four_series_visual_scope.cjs` to validate all issues and covers.
+
 ## Stardust visual reference scope
 
 Stardust issues opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` in `data/shows.json`. Their generation recipes show exactly one canonical `@sds.*` image-reference tag **per visually required character**, rather than both a speaker-derived tag list and a repeated `[CAST]` or `[CHARACTERS]` roster. Dialogue keeps its precise text and speaker attribution **as readable names**, without additional visual-reference tags. Routine `[FACTIONS]` prose is suppressed for Stardust; persistent station/StarTrust visual language still comes from the issue production brief and authored environment instructions.
