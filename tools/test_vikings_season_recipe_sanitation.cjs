@@ -57,15 +57,26 @@ for(const show of list){
     assert(!map.has('VIK_S1E03_P01'),'Issue 3 special editorial P01 must be unchanged');
     pages=source.map(p=>({...p,...(map.get(p.id)||{})}));
   }
+  if(number>=4){
+    assert(!show.promptPanelMode&&!show.promptDialogueMode,
+      'Numbered prose may only apply to audited pages; do not enable on covers '+show.id);
+    const overlayPath='editorial/chef_recipe_sanitation_i'+String(number).padStart(2,'0')+'.json';
+    const registered=(show.sceneOverlays||[]).filter(o=>o.file===overlayPath&&o.strict&&o.mergeById);
+    assert.equal(registered.length,1,'Missing unique strict issue delivery overlay '+show.id);
+    const patches=json(base+overlayPath);
+    assert.equal(new Set(patches.map(p=>p.id)).size,patches.length,'Duplicate prose policy IDs '+show.id);
+    assert.equal(patches.length,source.length,'Unscoped interior recipe '+show.id);
+    assert(patches.every(p=>Object.keys(p).length===3&&p.promptPanelMode==='prose-numbered'&&p.promptDialogueMode==='grouped'),
+      'Unexpected story mutations in delivery overlay '+show.id);
+    const map=byId(patches);
+    assert(source.every(p=>map.has(p.id)),'Orphan/missing issue page scope '+show.id);
+    pages=source.map(p=>({...p,...map.get(p.id)}));
+  }
   if(number===6){
     const overlays=show.sceneOverlays||[];
     assert(overlays.some(o=>o.file==='editorial/chef_recipe_exceptions_i06.json'&&o.strict&&o.mergeById),
       'Issue 6 out-of-order mapping exception not registered');
     const map=byId(exception6);pages=source.map(p=>({...p,...(map.get(p.id)||{})}));
-  }
-  if(number>=4){
-    assert.equal(show.promptPanelMode,'prose-numbered','Missing audited prose mode '+show.id);
-    assert.equal(show.promptDialogueMode,'grouped','Missing grouped lettering '+show.id);
   }
   if(number<=2)assert(!show.promptPanelMode&&!show.promptDialogueMode,
     'Released/approved issues must keep existing recipe delivery');
