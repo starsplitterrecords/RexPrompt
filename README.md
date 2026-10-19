@@ -205,6 +205,16 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
+## Thunderbreak page-visible reference scope
+
+Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` in the **strict per-page assembly scope overlays**. Interior pages emit a single canonical reference handle for each registered visual identity in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. Unregistered incidental roles (such as a merchant or crew member) remain drawable through the panel instructions and attributed dialogue but have no invented canonical reference. Two Issue 3 pages further narrow the visual cast where listed people are not depicted. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
+
+Covers and editorial opens/closes intentionally retain their original reference behavior. They are not included in the visible-only override.
+
+Unlike Stardust, Thunderbreak continues to include faction-specific visual guidance when it establishes or differentiates Verge, Fleet, and Shard imagery. Issue 1's previously selective faction suppression is preserved; repeated shelf prose is additionally omitted on Pages 6, 7, 14, and 18, while six visually important pages retain the original faction block. The later mainline issues already omit faction shelf references in their normal interior source data.
+
+Run `node tools/test_rex_fleet_recipe_scopes.cjs` to validate every interior page and verify that cover/editorial recipes, exact dialogue, the scripted panel plan, and preserved faction beats have not been removed. Full story and continuity data remain in RexPrompt.
+
 ## Visible-only character references for Shattering, Division Threshold, and Echoes
 
 Shattering (six issues and covers), Division Threshold (eight issues, covers and editorial pages), and Echoes of the Forgotten War (eight-issue sequence and covers) use `promptVisibleCastOnly: true`. The assembler now emits only canonical reference handles from each page's authored visible cast or its `promptVisibleCharacters` override, without a second cast/character prose block or implicit image reference from speaking. Dialogue and panel plans are preserved; speaker labels remain readable names.
