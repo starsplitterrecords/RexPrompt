@@ -215,6 +215,14 @@ Unlike Stardust, Thunderbreak continues to include faction-specific visual guida
 
 Run `node tools/test_rex_fleet_recipe_scopes.cjs` to validate every interior page and verify that cover/editorial recipes, exact dialogue, the scripted panel plan, and preserved faction beats have not been removed. Full story and continuity data remain in RexPrompt.
 
+## Visible-only character references for Shattering, Division Threshold, and Echoes
+
+Shattering (six issues and covers), Division Threshold (eight issues, covers and editorial pages), and Echoes of the Forgotten War (eight-issue sequence and covers) use `promptVisibleCastOnly: true`. The assembler now emits only canonical reference handles from each page's authored visible cast or its `promptVisibleCharacters` override, without a second cast/character prose block or implicit image reference from speaking. Dialogue and panel plans are preserved; speaker labels remain readable names.
+
+Routine `[FACTIONS]` material is suppressed on **Shattering and Division Threshold interior/issue and editorial recipes** via `omitRoutineFactions`. Cover-specific faction art direction is preserved; pages with a special need for faction notes can explicitly use `promptIncludeFactions: true`. Echoes has no faction entries in its issue source, so only its character scoping changes.
+
+A targeted Shattering Issue 1 `mergeById` overlay removes unpictured co-leads from the Liora discovery and the transit scenes without changing source cast data or dialogue. Use `node tools/test_three_series_visual_scope.cjs` to validate every relevant issue, cover, and editorial unit. These source-level reference handles should also control any separate image attachment workflow; plain prompt filtering cannot itself remove manually attached images.
+
 ## Page-visible image references: Azure Reach, Low Tide, Sunforge and Vikings
 
 These four series opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` for every registered issue and cover. The chef receives only each page's authored visible-character references; there are no dialogue-derived visual handles or redundant `[CAST]`/`[CHARACTERS]` blocks. Routine faction prose is omitted while `promptIncludeFactions: true` still enables a meaningful page-specific faction depiction. Dialogue, page panels and continuity remain independent.
