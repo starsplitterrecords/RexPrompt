@@ -354,6 +354,24 @@ function prepareCleanPanelPlan(scene){
   return {panels:entries,byDialogue};
 }
 
+// A prose-only issue already has author-approved panel language. Number those
+// existing beats for reliable dialogue attribution; never interpret or rewrite them.
+function prepareNumberedProsePanels(scene){
+  const id=scene?.id||"unknown page",panels=scene.panelPlan,lines=scene.dialogueInline||[];
+  if(scene.promptPanelLetteringMode==="indexed")
+    throw new Error("Numbered prose mode conflicts with indexed lettering on "+id);
+  if(!Array.isArray(panels)||!panels.length||panels.some(x=>typeof x!=="string"||!x.trim()))
+    throw new Error("Numbered prose mode requires nonempty authored string panels on "+id);
+  const byDialogue=[];
+  for(const [i,line] of lines.entries()){
+    const hit=String(line.subtext||"").trim().match(/^Panel\s+(\d+)$/i);
+    if(!hit||+hit[1]<1||+hit[1]>panels.length)
+      throw new Error("Numbered prose dialogue requires valid Panel N ownership on "+id+" line "+(i+1));
+    byDialogue.push(+hit[1]);
+  }
+  return {panels:panels.map((x,i)=>"Panel "+(i+1)+" — "+x.trim()),byDialogue};
+}
+
 function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(!s)return "";
   const key=s.id||String(i+1),out=[],cameos=new Set(),show=targetStore.__show||{};
@@ -364,8 +382,8 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   if(s.promptVisibleCharacters!==undefined&&!visibleCastOnly)
     throw new Error("promptVisibleCharacters requires visible-cast-only mode on "+key);
   const panelMode=s.promptPanelMode||show.promptPanelMode||"original";
-  if(!["original","clean"].includes(panelMode))throw new Error("Invalid promptPanelMode on "+key+": "+panelMode);
-  const cleanPanels=panelMode==="clean"?prepareCleanPanelPlan(s):null;
+  if(!["original","clean","prose-numbered"].includes(panelMode))throw new Error("Invalid promptPanelMode on "+key+": "+panelMode);
+  const cleanPanels=panelMode==="clean"?prepareCleanPanelPlan(s):panelMode==="prose-numbered"?prepareNumberedProsePanels(s):null;
   const panelLettering=cleanPanels?null:preparePanelLettering(s);
   const include=id=>!suppress.has(id);
   const chars=targetStore["characters.json"]||{};
