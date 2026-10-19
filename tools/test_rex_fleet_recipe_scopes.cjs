@@ -90,7 +90,9 @@ for(let n=1;n<=12;n++){
     }
     stories++;
     assert.deepEqual(Object.keys(edit).sort(),
-      edit.promptCharacterMode?['id','promptCharacterMode','promptSuppress','promptVisibleCastOnly']:['id','promptSuppress','promptVisibleCastOnly'],
+      ['id','promptSuppress','promptVisibleCastOnly',
+        ...(edit.promptCharacterMode?['promptCharacterMode']:[]),
+        ...(edit.promptVisibleCharacters?['promptVisibleCharacters']:[])].sort(),
       'Scope overlay must contain assembly fields only');
     assert(Array.isArray(edit.promptSuppress),'Missing explicit suppression list '+post.id);
     assert.equal(edit.promptVisibleCastOnly,true,'Interior page must enable visible-only references '+post.id);
@@ -109,6 +111,11 @@ for(let n=1;n<=12;n++){
     assert.equal(!!section(after,'DIALOGUE'),!!section(before,'DIALOGUE'),'Dialogue section missing on '+post.id);
     const references=after.split('\n').filter(x=>/^@starsplit\.[A-Za-z0-9._-]+$/.test(x));
     const visible=Array.from(visibleCharacterHandles(post,catalogs['characters.json']));
+    if(edit.promptVisibleCharacters){
+      const sourceHandles=new Set((original.charactersInline||[]).map(c=>c.handle).filter(Boolean));
+      assert(edit.promptVisibleCharacters.every(h=>sourceHandles.has(h)),
+        'A visual-only override may only narrow the original cast: '+post.id);
+    }
     assert.deepEqual(references,visible,'Incorrect visible character reference handles '+post.id);
     assert(section(after,'CAST')===null&&section(after,'CHARACTERS')===null,'Duplicate cast prose on '+post.id);
     if(original.summary)assert(after.includes(original.summary.trim()),'Story summary lost '+post.id);
