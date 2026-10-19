@@ -32,6 +32,12 @@ on:
       - 'data/shows/echoes-forgotten-war-s1/scenes_e*.json'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
+      - 'tools/test_vikings_season_recipe_sanitation.cjs'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i03.json'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i*.json'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_exceptions_i06.json'
+      - 'data/shows/vikings-2026-s1/pages_i*.json'
+      - 'docs/vikings-season-recipe-sanitization.md'
       - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
       - 'docs/chef-recipe-sanitation.md'
       - 'tools/test_low_tide_recipe_suppression.cjs'
@@ -104,6 +110,12 @@ on:
       - 'tools/test_four_series_visual_scope.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
+      - 'tools/test_vikings_season_recipe_sanitation.cjs'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i03.json'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i*.json'
+      - 'data/shows/vikings-2026-s1/editorial/chef_recipe_exceptions_i06.json'
+      - 'data/shows/vikings-2026-s1/pages_i*.json'
+      - 'docs/vikings-season-recipe-sanitization.md'
       - 'data/shows/vikings-2026-s1/editorial/chef_recipe_sanitation_i02.json'
       - 'docs/chef-recipe-sanitation.md'
       - 'tools/test_low_tide_recipe_suppression.cjs'
@@ -164,6 +176,7 @@ jobs:
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_recipe_sanitation_rollout.cjs
           node --check tools/test_vikings_i02_chef_sanitation.cjs
+          node --check tools/test_vikings_season_recipe_sanitation.cjs
           node --check tools/test_low_tide_recipe_suppression.cjs
           node --check tools/test_vikings_issue2_compositions.cjs
           node --check tools/test_rex_fleet_issue04_density.cjs
@@ -193,6 +206,7 @@ jobs:
           node tools/test_editorial_page_scopes.cjs
           node tools/test_recipe_sanitation_rollout.cjs
           node tools/test_vikings_i02_chef_sanitation.cjs
+          node tools/test_vikings_season_recipe_sanitation.cjs
           node tools/test_low_tide_recipe_suppression.cjs
           node tools/test_vikings_issue2_compositions.cjs
           node tools/test_rex_fleet_issue04_density.cjs
