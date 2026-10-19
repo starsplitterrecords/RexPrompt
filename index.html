@@ -97,9 +97,9 @@ function getHandle(id,c){const e=c[id];return e?e.handle||e.name||id:id}
 function formatEntry(e){if(typeof e==="string")return e;if(e.text)return e.text;if(e.name)return e.name;if(e.summary)return e.summary;return JSON.stringify(e)}
 function findCharacterByHandle(h,c){if(!h)return null;return Object.values(c||{}).find(e=>e&&(e.handle===h||(Array.isArray(e.aliases)&&e.aliases.includes(h))))}
 function formatCharacter(e,fallback){if(!e)return fallback;const p=[e.name||fallback],structured=!!(e.wardrobe||e.performance||e.relationship||e.promptContinuity);if(e.handle)p.push(e.handle);const v=e.visualAnchor||e.visual||e.appearance||e.visualDescription;if(v)p.push((structured?"Identity: ":"Visual: ")+v);if(structured){if(e.wardrobe)p.push("Wardrobe: "+e.wardrobe);if(e.performance)p.push("Performance: "+e.performance);if(e.relationship)p.push("Relationship: "+e.relationship);if(Array.isArray(e.promptContinuity)&&e.promptContinuity.length)p.push("Continuity: "+e.promptContinuity.join("; "))}else{if(e.visualStatus)p.push("Visual status: "+e.visualStatus);if(Array.isArray(e.continuityLocks)&&e.continuityLocks.length)p.push("Continuity: "+e.continuityLocks.join("; "))}return p.join(" — ")}
-// Stardust visual references are artwork presence, not dialogue participation.
-// The authored page cast is the default; promptVisibleCharacters can override it
-// with a narrower list of stable character IDs or canonical @handles.
+// Visual reference tags represent canonical artwork identities, not every dialogue speaker.
+// Anonymous page-local roles without a canonical handle remain in story/panels/dialogue;
+// they never become invented image-reference handles. Explicit overrides stay strict.
 function visibleCharacterHandles(scene,characters){
   const key=scene?.id||"unknown page";
   const explicit=scene?.promptVisibleCharacters;
@@ -111,7 +111,12 @@ function visibleCharacterHandles(scene,characters){
     if(typeof token!=="string"||!token.trim())throw new Error("Invalid visible character on "+key+": "+String(token));
     const entry=characters[token]||findCharacterByHandle(token,characters)||
       Object.values(characters).find(c=>c?.name===token);
-    if(!entry?.handle)throw new Error("Unknown visible character on "+key+": "+token);
+    if(!entry?.handle){
+      // A named but unregistered incidental role is still drawn via the scripted
+      // panel and dialogue; it has no canonical image asset to reference.
+      if(explicit===undefined&&typeof item==="object"&&item!==null&&!item.handle&&typeof item.name==="string"&&item.name.trim())continue;
+      throw new Error("Unknown visible character on "+key+": "+token);
+    }
     if(!seen.has(entry.handle)){seen.add(entry.handle);handles.push(entry.handle)}
   }
   return handles;
@@ -420,8 +425,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
         out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
       }else{
         const rawSpeaker=d.handle||d.speaker||"TEXT";
-        const sp=visibleCastOnly&&typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")
-          ?(d.speaker||findCharacterByHandle(rawSpeaker,chars)?.name||rawSpeaker):rawSpeaker;
+        const sp=visibleCastOnly
+          ?(d.speaker||(typeof rawSpeaker==="string"&&rawSpeaker.startsWith("@")?findCharacterByHandle(rawSpeaker,chars)?.name:undefined)||rawSpeaker)
+          :rawSpeaker;
         const label=/^(CAPTION|SYSTEM|SCREEN|DISPLAY|MESSAGE|GROUP CHAT|MONITOR|SIGN|SFX|MAP|TIDE BOARD|SECURITY|TECHNICIAN)$/.test(sp);
         out.push(panelPrefix+(label?sp+': "'+(d.text||'')+'"':sp+' says "'+(d.text||'')+'"'));
         if(d.subtext&&!cleanPanels)out.push("  ("+d.subtext+")");
