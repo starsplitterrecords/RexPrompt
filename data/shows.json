@@ -766,6 +766,11 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
@@ -2917,6 +2922,11 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "includeIdPattern": "^RF_AV_I01_",
@@ -2939,7 +2949,14 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Ghostwind Arrow. Grounded reconnaissance science fiction in the mature Rex Fleet world: compact scout-ship spaces, disciplined Fleet blue/gold/white identity, violet survey/anomaly instrumentation only as technical language, physically legible corridor geometry, naturalistic crew acting, restrained Lattice strangeness, and professional integrated lettering. Preserve exact scripted dialogue and causal action. Strange phenomena must remain physically observed and testable; do not substitute supernatural explanation, generic horror imagery, cyberpunk neon, or abstract infographic staging for the story. Use released Rex Fleet Issue 1 as shared Fleet visual canon where applicable; new Ghostwind Arrow hull and crew designs remain provisional until approved. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Variable-length collected issue; page count follows the mission rather than a fixed monthly page target.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "sceneOverlays": [
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ]
   },
   {
     "id": "division-threshold-s1-cover-e01",
@@ -3462,6 +3479,11 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "formatNote": "Ship-centered Rex Fleet series; issues may be self-contained missions. Page count follows story structure rather than a fixed monthly target.",
@@ -3480,6 +3502,11 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "includeIdPattern": "^RFCW_I01_",
