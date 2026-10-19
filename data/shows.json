@@ -766,11 +766,18 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Rex Fleet: Stormwell Archive. Forensic science fiction about archival evidence, provenance, reconstruction, metrology, and uncertainty within established Rex Fleet canon. Use released Rex Fleet visual canon for shared Fleet identity; make Stormwell Archive a working research vessel, not a shrine. Preserve causal action, evidence handling, data interpretation, exact scripted dialogue, and integrated lettering. No mystical archive symbolism unless directly required by story. Minimize environmental text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
-    "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target."
+    "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true
   },
   {
     "id": "rex-fleet-glass-horizon-i01",
@@ -782,7 +789,9 @@
     "scenesFile": "pages_i01.json",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Glass Horizon. Exploratory hard-science-fiction mystery with lived-in human-scale acting, rigorous physical cause-and-effect, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve mature Rex Fleet blue/gold/Ion White design, restrained survey-violet instrumentation, fractured-crystal Glass Horizon heraldry, established character identity, Lattice physics, beacon-status meaning, and exact scripted dialogue. Treat anomalies as physical systems rather than magic or monsters. Render the story, editorial, or teaser page exactly as scripted; do not invent dossier or infographic framing. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
-    "formatNote": "Issue 1 contains an art-directed editorial opener, 22 story pages, and a closing teaser; story length follows the needs of the investigation rather than a fixed monthly page target."
+    "formatNote": "Issue 1 contains an art-directed editorial opener, 22 story pages, and a closing teaser; story length follows the needs of the investigation rather than a fixed monthly page target.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true
   },
   {
     "id": "backyard-rockets-s1",
@@ -2913,12 +2922,19 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "includeIdPattern": "^RF_AV_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Aegis Vigil. Grounded mature Rex Fleet rescue-and-convoy procedural with natural adult acting, physically legible ship operations, and protection expressed through navigation, engineering, rescue, medicine, logistics, restraint, and command judgment rather than speeches or combat spectacle. RFV Aegis Vigil is a large working heavy cruiser in mature Fleet blue, Ion White, and restrained gold: scarred, maintained, redundant, dependable, and built to put itself between danger and smaller vessels. Aegis Crown refers only to the political and philosophical Crown tradition; never use Aegis Crown as the ship name. Public corridor beacon green means verified low-tension route state; red means unsafe, unverified, or sensor failure; do not invent a yellow beacon state. Preserve exact scripted dialogue, established character identity, civilian competence, causal rescue geometry, panel intent, and Rex Fleet continuity. No generic cyberpunk, no magical shield imagery, no invulnerable hero-ship staging, no gratuitous weapons spectacle, and no unscripted environmental text. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
-    "formatNote": "Rex Fleet ship-series. Issues may be self-contained one-off protection, rescue, convoy, engineering, disaster, or survival stories centered on Aegis Vigil and its recurring crew. Carry character relationships, ship wear, and consequences forward without forcing every issue into Thunderbreak's political-drama structure."
+    "formatNote": "Rex Fleet ship-series. Issues may be self-contained one-off protection, rescue, convoy, engineering, disaster, or survival stories centered on Aegis Vigil and its recurring crew. Carry character relationships, ship wear, and consequences forward without forcing every issue into Thunderbreak's political-drama structure.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true
   },
   {
     "id": "rex-fleet-ghostwind-arrow-i01",
@@ -2931,7 +2947,16 @@
     "includeIdPattern": "^GWA_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Ghostwind Arrow. Grounded reconnaissance science fiction in the mature Rex Fleet world: compact scout-ship spaces, disciplined Fleet blue/gold/white identity, violet survey/anomaly instrumentation only as technical language, physically legible corridor geometry, naturalistic crew acting, restrained Lattice strangeness, and professional integrated lettering. Preserve exact scripted dialogue and causal action. Strange phenomena must remain physically observed and testable; do not substitute supernatural explanation, generic horror imagery, cyberpunk neon, or abstract infographic staging for the story. Use released Rex Fleet Issue 1 as shared Fleet visual canon where applicable; new Ghostwind Arrow hull and crew designs remain provisional until approved. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
-    "formatNote": "Variable-length collected issue; page count follows the mission rather than a fixed monthly page target."
+    "formatNote": "Variable-length collected issue; page count follows the mission rather than a fixed monthly page target.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true,
+    "sceneOverlays": [
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ]
   },
   {
     "id": "division-threshold-s1-cover-e01",
@@ -3454,9 +3479,16 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
-    "formatNote": "Ship-centered Rex Fleet series; issues may be self-contained missions. Page count follows story structure rather than a fixed monthly target."
+    "formatNote": "Ship-centered Rex Fleet series; issues may be self-contained missions. Page count follows story structure rather than a fixed monthly target.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true
   },
   {
     "id": "rex-fleet-crimson-warden-i01",
@@ -3470,11 +3502,18 @@
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
+      },
+      {
+        "file": "editorial/visual_faction_pages_i01.json",
+        "mergeById": true,
+        "strict": true
       }
     ],
     "includeIdPattern": "^RFCW_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Crimson Warden. Prestige carrier-operations space drama in the established Rex Fleet universe, with lived-in human-scale acting, exact scripted dialogue, readable launch/recovery geography, and clear operational cause-and-effect. Crimson Warden is an Ember-lineage Fleet carrier: institutional Fleet blue, gold and Ion White remain the base visual grammar, with disciplined ember-crimson lineage accents and dark industrial deck spaces. Treat launch, recovery, maintenance, medicine, rescue and command as connected work performed by specific people. Preserve established Rex Fleet corridor logic and do not use one unmarked raider splinter group as shorthand for all Shards. Avoid generic military spectacle, propaganda poses, gratuitous flame motifs, throne imagery or abstract laser clutter. Interior story page only. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
-    "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target."
+    "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.",
+    "promptVisibleCastOnly": true,
+    "omitRoutineFactions": true
   }
 ]
