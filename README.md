@@ -205,15 +205,23 @@ The interface displays the resolved settings read-only. The full page data remai
 
 Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vikings 2026, Stardust Station, and Rex Fleet pages.
 
-## Visible-only reference scopes for four more series
+## Thunderbreak page-visible reference scope
 
-Azure Reach, Low Tide Signal, Sunforge Outlaw and Vikings 2026 now opt into `promptVisibleCastOnly` and `omitRoutineFactions` at the show level, including their registered issue/cover selectors. A generation recipe receives only the page's curated visible characters rather than duplicate dialogue-derived @handles plus a separate `[CAST]`/`[CHARACTERS]` block. Dialogue and panel plans stay authored and exact; spoken names do not automatically authorize a new visual reference. Relevant faction visuals can be explicitly included per page via `promptIncludeFactions: true`.
+Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` in the **strict per-page assembly scope overlays**. Interior pages emit a single canonical reference handle for each registered visual identity in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. Unregistered incidental roles (such as a merchant or crew member) remain drawable through the panel instructions and attributed dialogue but have no invented canonical reference. Two Issue 3 pages further narrow the visual cast where listed people are not depicted. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
 
-For characters who have an established canonical `handle`, the assembler emits that one handle. Low Tide Signal currently has **no canonical character-image handles**; some Sunforge minor characters likewise lack handles. For those roles, the assembler emits one brief `Name — Visual: ...` entry sourced strictly from the existing character's `visual` or equivalent identity field. It does **not** invent image handles, remove the only available appearance description, or include full development biographies.
+Covers and editorial opens/closes intentionally retain their original reference behavior. They are not included in the visible-only override.
 
-For a page with a speaking/off-panel/mentioned person present in the authored cast, set `promptVisibleCharacters` to the narrower array of canonical existing IDs or handles. This is a **page-level editorial decision**; not a mechanical inference that everyone speaking must be seen. An empty list is permitted for intentionally figure-free scenes.
+Unlike Stardust, Thunderbreak continues to include faction-specific visual guidance when it establishes or differentiates Verge, Fleet, and Shard imagery. Issue 1's previously selective faction suppression is preserved; repeated shelf prose is additionally omitted on Pages 6, 7, 14, and 18, while six visually important pages retain the original faction block. The later mainline issues already omit faction shelf references in their normal interior source data.
 
-Run `node tools/test_four_series_visual_scope.cjs` to verify all four series and registered covers, including text-only identity fallback. The separately selected image attachments must still follow the same page-specific visual references.
+Run `node tools/test_rex_fleet_recipe_scopes.cjs` to validate every interior page and verify that cover/editorial recipes, exact dialogue, the scripted panel plan, and preserved faction beats have not been removed. Full story and continuity data remain in RexPrompt.
+
+## Page-visible image references: Azure Reach, Low Tide, Sunforge and Vikings
+
+These four series opt into `promptVisibleCastOnly: true` and `omitRoutineFactions: true` for every registered issue and cover. The chef receives only each page's authored visible-character references; there are no dialogue-derived visual handles or redundant `[CAST]`/`[CHARACTERS]` blocks. Routine faction prose is omitted while `promptIncludeFactions: true` still enables a meaningful page-specific faction depiction. Dialogue, page panels and continuity remain independent.
+
+When no approved image handle exists (all current Low Tide characters and several Sunforge minor roles), emit a single **name + authored visual description**, not a fabricated handle or a full development biography. Canonical handles are used unchanged where they do exist. Existing unregistered incidental characters do not acquire invented canonical identities.
+
+Authors can narrow a page's actual visible cast with `promptVisibleCharacters` while retaining off-panel speakers in the script. The separate image attachment workflow must respect these references. Run `node tools/test_four_series_visual_scope.cjs` to validate all issues and covers.
 
 ## Stardust visual reference scope
 

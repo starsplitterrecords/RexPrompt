@@ -16,8 +16,8 @@ const html=read('index.html');
 const start=html.indexOf('const SHOW_MANIFEST='),stop=html.indexOf('function safeFilePart(',start);
 assert(start>=0&&stop>start,'Live assembler not found');
 const scope={};
-vm.runInNewContext(html.slice(start,stop)+';globalThis.scoping={assembleScene,pageAssembly};',scope);
-const {assembleScene:assemble,pageAssembly}=scope.scoping;
+vm.runInNewContext(html.slice(start,stop)+';globalThis.scoping={assembleScene,pageAssembly,visibleCharacterHandles};',scope);
+const {assembleScene:assemble,pageAssembly,visibleCharacterHandles}=scope.scoping;
 const catalogs={};
 for(const name of ['blocking','characters','dialogue','direction','factions','lighting','mood','negatives','regions','settings']){
   catalogs[name+'.json']=json(base+'/'+name+'.json');
@@ -90,9 +90,12 @@ for(let n=1;n<=12;n++){
     }
     stories++;
     assert.deepEqual(Object.keys(edit).sort(),
-      edit.promptCharacterMode?['id','promptCharacterMode','promptSuppress']:['id','promptSuppress'],
+      ['id','promptSuppress','promptVisibleCastOnly',
+        ...(edit.promptCharacterMode?['promptCharacterMode']:[]),
+        ...(edit.promptVisibleCharacters?['promptVisibleCharacters']:[])].sort(),
       'Scope overlay must contain assembly fields only');
     assert(Array.isArray(edit.promptSuppress),'Missing explicit suppression list '+post.id);
+    assert.equal(edit.promptVisibleCastOnly,true,'Interior page must enable visible-only references '+post.id);
     assert(new Set(edit.promptSuppress).size===edit.promptSuppress.length,'Repeated suppression '+post.id);
     const prior=original.promptSuppress||[];
     for(const key of prior)assert(edit.promptSuppress.includes(key),'Prior approved suppression lost '+post.id+': '+key);
@@ -100,18 +103,28 @@ for(let n=1;n<=12;n++){
     for(const key of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','summary','settingText','setting','regionText','region','factions','charactersInline','directionInline','status','issue','page'])
       assert.deepEqual(post[key],original[key],'Source ingredient mutated: '+post.id+' '+key);
     pageAssembly(post,show); // also reject illegitimate setting/section suppression
-    for(const name of ['PANEL PLAN','DIALOGUE','CONTINUITY','PAGE COMPOSITION','DIRECTION','SETTING']){
+    for(const name of ['PANEL PLAN','CONTINUITY','PAGE COMPOSITION','DIRECTION','SETTING']){
       assert.equal(section(after,name),section(before,name),'Protected or intentionally retained section altered: '+post.id+' '+name);
     }
     assert(after.includes(show.generationLine),'Production brief removed on '+post.id);
+    for(const line of post.dialogueInline||[])assert(after.includes('"'+line.text+'"'),'Lost scripted dialogue on '+post.id);
+    assert.equal(!!section(after,'DIALOGUE'),!!section(before,'DIALOGUE'),'Dialogue section missing on '+post.id);
+    const references=after.split('\n').filter(x=>/^@starsplit\.[A-Za-z0-9._-]+$/.test(x));
+    const visible=Array.from(visibleCharacterHandles(post,catalogs['characters.json']));
+    if(edit.promptVisibleCharacters){
+      const sourceHandles=new Set((original.charactersInline||[]).map(c=>c.handle).filter(Boolean));
+      assert(edit.promptVisibleCharacters.every(h=>sourceHandles.has(h)),
+        'A visual-only override may only narrow the original cast: '+post.id);
+    }
+    assert.deepEqual(references,visible,'Incorrect visible character reference handles '+post.id);
+    assert(section(after,'CAST')===null&&section(after,'CHARACTERS')===null,'Duplicate cast prose on '+post.id);
     if(original.summary)assert(after.includes(original.summary.trim()),'Story summary lost '+post.id);
     if(edit.promptCharacterMode==='cast'){
       cast++;
-      assert(section(after,'CAST')!==null,'Cast names missing '+post.id);
-      assert(section(after,'CHARACTERS')===null,'Full character descriptions remain '+post.id);
+      assert(section(after,'CAST')===null,'Duplicate cast names emitted '+post.id);
     }else if(edit.promptCharacterMode==='full'){
       full++;
-      assert.equal(section(after,'CHARACTERS'),section(before,'CHARACTERS'),'Identity anchor changed '+post.id);
+      assert(section(after,'CHARACTERS')===null,'Full visual character descriptions duplicated '+post.id);
     }
     if(edit.promptSuppress.includes('settingContinuity')){
       setting++;
@@ -125,7 +138,6 @@ for(let n=1;n<=12;n++){
       factions++;
       assert(section(after,'FACTIONS')===null,'Faction shelf leaked '+post.id);
     }
-    assert(after.length<=before.length,'Scope increased recipe size '+post.id);
     issueSaved+=before.length-after.length;
   }
   assert(issueSaved>0,'No effective decluttering in '+id);
@@ -137,6 +149,6 @@ assert(unmodifiedSpecial===35,'Cover/editorial pages unexpectedly modified');
 assert(reductions>15000,'Scope changes too small to be useful');
 console.log('PASS Rex Fleet page-scoped recipe sanitation: '+total+' assembled pages; '+stories+' interiors, '+unmodifiedSpecial+' unchanged covers/editorials');
 console.log('PASS Unchanged dialogue, panels, continuities, layout, summary, setting and production line');
-console.log('PASS '+cast+' cast-scoped pages, '+full+' full identity anchors, '+setting+' setting-continuity suppressions, '+region+' repeated region suppressions, '+factions+' repeated faction suppressions');
+console.log('PASS '+cast+' previously cast-scoped pages, '+full+' previously full-identity pages now reduced to visible-only handles; '+setting+' setting-continuity suppressions, '+region+' repeated region suppressions, '+factions+' repeated faction suppressions');
 console.log('PASS '+reductions+' repeated characters omitted across issue recipes');
 for(const row of report)console.log('Issue '+String(row.issue).padStart(2,'0')+': '+row.story+' interiors, '+row.savedCharacters+' characters trimmed');

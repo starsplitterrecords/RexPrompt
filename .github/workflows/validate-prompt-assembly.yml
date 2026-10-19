@@ -39,6 +39,8 @@ on:
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
       - 'tools/test_azure_page_layouts.cjs'
       - 'tools/test_azure_recipe_scopes.cjs'
+      - 'tools/test_azure_dialogue_c.cjs'
+      - 'data/shows/azure-reach-s1/editorial/dialogue_c_e*.json'
       - 'data/shows/azure-reach-s1/editorial/page_recipe_scopes_e*.json'
       - 'data/shows/azure-reach-s1/settings.json'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
@@ -104,6 +106,8 @@ on:
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
       - 'tools/test_azure_page_layouts.cjs'
       - 'tools/test_azure_recipe_scopes.cjs'
+      - 'tools/test_azure_dialogue_c.cjs'
+      - 'data/shows/azure-reach-s1/editorial/dialogue_c_e*.json'
       - 'data/shows/azure-reach-s1/editorial/page_recipe_scopes_e*.json'
       - 'data/shows/azure-reach-s1/settings.json'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
@@ -158,6 +162,7 @@ jobs:
           node --check tools/test_sunforge_recipe_sanitation.cjs
           node --check tools/test_azure_page_layouts.cjs
           node --check tools/test_azure_recipe_scopes.cjs
+          node --check tools/test_azure_dialogue_c.cjs
           node --check tools/test_backyard_rockets_layouts.cjs
           node --check tools/test_low_tide_page_layout.cjs
           node --check tools/test_low_tide_dialogue_overlay.cjs
@@ -183,6 +188,7 @@ jobs:
           node tools/test_sunforge_recipe_sanitation.cjs
           node tools/test_azure_page_layouts.cjs
           node tools/test_azure_recipe_scopes.cjs
+          node tools/test_azure_dialogue_c.cjs
           node tools/test_backyard_rockets_layouts.cjs
           node tools/test_low_tide_page_layout.cjs
           node tools/test_low_tide_dialogue_overlay.cjs
