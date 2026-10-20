@@ -312,7 +312,7 @@ function updateIssueImageCoverage(sel,pageSet){
   const fullPublishedIssue=Boolean(pageSet&&pageSet.pages?.length===options.length);
   const covered=options.filter(option=>{
     const label=option.dataset.recipeId||option.dataset.visualBaseLabel||option.textContent||'';
-    const recipeId=label.split(' - ')[0].replace(/\\s+\\[(?:DRAFT|CANON)\\]/g,'').trim();
+    const recipeId=label.split(' - ')[0].replace(/\s+\[(?:DRAFT|CANON)\]/g,'').trim();
     const key=visualKey({...sel,recipeId});
     const draft=state.draftManifest?.drafts?.[key];
     return (draft?.status==='approved-production-draft'&&Boolean(draft.image))||
