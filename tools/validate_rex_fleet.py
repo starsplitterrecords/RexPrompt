@@ -120,6 +120,11 @@ for expected_issue, entry in zip(range(2, 13), rex):
         raise SystemExit(f"Issue {expected_issue}: cover-aware comic-page production mode missing")
     issues[expected_issue] = load_payload(entry)
 
+issue_one = next((entry for entry in shows if entry.get("id") == "rex-fleet-i01"), None)
+if not issue_one:
+    raise SystemExit("Rex Fleet Issue 1 manifest entry missing")
+issues[1] = load_payload(issue_one)
+
 if load_json(SHOW / "pages_base.json") != []:
     raise SystemExit("Rex Fleet pages_base.json must remain an empty structural base")
 
@@ -131,22 +136,27 @@ if len(all_ids) != sum(len(pages) for pages in issues.values()):
 
 for issue, pages in issues.items():
     ids = [page.get("id") for page in pages]
-    cover_id = f"RF_I{issue:02d}_COVER"
-    open_id = f"RF_I{issue:02d}_EDITOR_OPEN"
-    close_id = f"RF_I{issue:02d}_EDITOR_CLOSE"
-    if len(ids) < 3 or ids[0] != cover_id or ids[1] != open_id or ids[-1] != close_id:
-        raise SystemExit(f"Issue {issue}: cover/editorial publication order invalid: {ids}")
-    story_ids = ids[2:-1]
+    prefix = [f"RF_I{issue:02d}_COVER", f"RF_I{issue:02d}_EDITOR_OPEN", f"RF_I{issue:02d}_CAST"]
+    ending = (
+        [f"RF_I{issue:02d}_EDITOR_CLOSE"] if issue == 12
+        else ([f"RF_I01_EDITOR_CLOSE"] if issue == 1
+              else [f"RF_I{issue:02d}_EDITOR_ENDMATTER", f"RF_I{issue:02d}_EDITOR_CLOSE"])
+    )
+    if len(ids) < len(prefix) + len(ending) or ids[:3] != prefix or ids[-len(ending):] != ending:
+        raise SystemExit(f"Issue {issue}: cover/open/cast/story/endmatter/teaser order invalid: {ids}")
+    story_ids = ids[3:-len(ending)]
     expected_story_ids = [f"RF_I{issue:02d}_P{n:02d}" for n in range(1, len(story_ids) + 1)]
     if story_ids != expected_story_ids:
         raise SystemExit(f"Issue {issue}: story page IDs/order invalid: {story_ids}")
     for page in pages[1:]:
         assert_clean_recipe(page, all_ids)
 
-if len(issues[2][2:-1]) != 19:
-    raise SystemExit(f"Issue 2 must retain 19 story pages, found {len(issues[2][2:-1])}")
-if len(issues[3][2:-1]) != 30:
-    raise SystemExit(f"Issue 3 must retain 30 story pages, found {len(issues[3][2:-1])}")
+if len(issues[1][3:-1]) != 18:
+    raise SystemExit("Issue 1 must retain 18 story pages")
+if len(issues[2][3:-2]) != 19:
+    raise SystemExit(f"Issue 2 must retain 19 story pages, found {len(issues[2][3:-2])}")
+if len(issues[3][3:-2]) != 30:
+    raise SystemExit(f"Issue 3 must retain 30 story pages, found {len(issues[3][3:-2])}")
 
 serialized = json.dumps(issues, ensure_ascii=False)
 if "RF_S1E" in serialized:

@@ -145,7 +145,7 @@ for(let n=1;n<=12;n++){
   report.push({issue:n,story:interiors.length,savedCharacters:issueSaved});
 }
 assert(stories>250,'Expected full mainline scope rollout');
-assert(unmodifiedSpecial===35,'Cover/editorial pages unexpectedly modified');
+assert(unmodifiedSpecial===56,'Cover/editorial pages unexpectedly modified');
 assert(reductions>15000,'Scope changes too small to be useful');
 console.log('PASS Rex Fleet page-scoped recipe sanitation: '+total+' assembled pages; '+stories+' interiors, '+unmodifiedSpecial+' unchanged covers/editorials');
 console.log('PASS Unchanged dialogue, panels, continuities, layout, summary, setting and production line');
