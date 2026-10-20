@@ -38,6 +38,7 @@ function injectStyles(){
   .visual-remember{display:flex!important;align-items:center;gap:7px;font-size:.83rem;color:var(--fg)!important;margin:8px 0}.visual-remember input{margin:0;width:auto;flex:none}.visual-remember-hint{font-size:.75rem;color:var(--muted);line-height:1.35;margin:4px 0 8px}.visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
   .visual-canon-list{display:grid;gap:10px}.visual-canon-item .visual-meta{margin-top:5px}
   .visual-state-note{margin-top:10px;font-size:.82rem;color:var(--muted)}
+  .issue-image-coverage{margin-left:8px;font-size:.72rem;font-weight:700;white-space:nowrap;color:var(--fg)}
   @media(max-width:850px){.visual-grid{grid-template-columns:1fr}.visual-image-wrap img{max-height:none}}
   `;
   document.head.appendChild(style);
@@ -294,12 +295,42 @@ function decorateSceneOptions(sel,canonMode=false){
   }
 }
 
+function updateIssueImageCoverage(sel,pageSet){
+  // An image for every current page is a coverage milestone, not a quality or release approval.
+  const heading=document.querySelector('label[for="issueSel"] > span');
+  const sceneSel=document.getElementById('sceneSel');
+  if(!heading||!sceneSel)return;
+  let indicator=document.getElementById('issueImageCoverage');
+  if(!indicator){
+    indicator=document.createElement('span');
+    indicator.id='issueImageCoverage';
+    indicator.className='issue-image-coverage';
+    indicator.style.display='none';
+    heading.appendChild(indicator);
+  }
+  const options=[...sceneSel.options];
+  const fullPublishedIssue=Boolean(pageSet&&pageSet.pages?.length===options.length);
+  const covered=options.filter(option=>{
+    const label=option.dataset.recipeId||option.dataset.visualBaseLabel||option.textContent||'';
+    const recipeId=label.split(' - ')[0].replace(/\\s+\\[(?:DRAFT|CANON)\\]/g,'').trim();
+    const key=visualKey({...sel,recipeId});
+    const draft=state.draftManifest?.drafts?.[key];
+    return (draft?.status==='approved-production-draft'&&Boolean(draft.image))||
+      explicitCanon({...sel,recipeId}).length>0||fullPublishedIssue;
+  }).length;
+  const complete=sel.unitIsPage&&options.length>0&&covered===options.length;
+  indicator.textContent=complete?'✓ All images':'';
+  indicator.title=complete?'Images recorded for all '+covered+' pages (approved drafts or released canon). This does not mean the issue passed review or is released.':'';
+  indicator.style.display=complete?'inline':'none';
+}
+
 async function refreshVisuals(preserveUploadStatus=false){
   const ui=state.ui,sel=currentSelection();if(!ui||!sel)return;
   const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
-  const explicit=explicitCanon(sel),pageSet=explicit.length?null:await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
+  const explicit=explicitCanon(sel),pageSet=await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
   decorateSceneOptions(sel,Boolean(pageSet));
+  updateIssueImageCoverage(sel,pageSet);
   const bits=[];if(entry)bits.push('approved draft stored');if(canon.length)bits.push('released canon available');ui.stateNote.textContent=bits.length?('Production state: '+bits.join(' · ')):'Production state: no approved draft or mapped released canon for this unit.';
 }
 
@@ -391,6 +422,7 @@ async function loadState(){
   state.sources=sources||{schemaVersion:1,series:{}};
 }
 function bindRefreshEvents(){
+  ['showSel','issueSel'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{const indicator=document.getElementById('issueImageCoverage');if(indicator)indicator.style.display='none'}));
   ['showSel','issueSel','sceneSel'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>setTimeout(()=>void refreshVisuals(),0)));
   const sceneSel=document.getElementById('sceneSel');if(sceneSel)new MutationObserver(()=>setTimeout(()=>void refreshVisuals(),0)).observe(sceneSel,{childList:true});
   document.getElementById('commitBtn')?.addEventListener('click',()=>setTimeout(()=>void refreshVisuals(),0));
