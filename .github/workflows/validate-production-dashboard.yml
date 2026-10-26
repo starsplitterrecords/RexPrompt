@@ -1,0 +1,18 @@
+name: Validate production dashboard
+on:
+  pull_request:
+    paths: ['production-dashboard*','tools/test_production_dashboard.cjs','index.html','production/drafts/manifest.json','production/book-manifests.json','.github/workflows/validate-production-dashboard.yml']
+  push:
+    branches: [main]
+    paths: ['production-dashboard*','tools/test_production_dashboard.cjs','index.html','production/drafts/manifest.json','production/book-manifests.json','.github/workflows/validate-production-dashboard.yml']
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check production-dashboard-core.js
+      - run: node --check production-dashboard.js
+      - run: node tools/test_production_dashboard.cjs
