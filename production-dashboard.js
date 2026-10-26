@@ -34,7 +34,7 @@ function draw(m){
   const f=seriesFilter.value,q=query.value.trim().toLowerCase(),flag=qualityFilter.value;
   summary.replaceChildren();
   for(const s of m.series.filter(x=>!f||x.id===f)){
-   const row=tableRow([s.id,s.configurationCount,s.distinctRecipeUnits,s.approvedDraftUnits,s.keeper.total,s.linkedUnits]);
+   const row=tableRow([s.id,s.configurationCount,s.distinctRecipeUnits,s.approvedDraftUnits,s.keeper.total,s.linkedUnits,s.recoveryLeads]);
    const release=el('td');
    release.append(chip(s.releaseMetadata==='available'?s.publishedEditions.length+' edition(s)':s.releaseMetadata==='unavailable'?'Metadata unavailable':'Not configured',s.releaseMetadata==='available'?'ok':'neutral'));
    row.append(release);summary.append(row);
@@ -55,6 +55,7 @@ function draw(m){
    td(tr,r.keeperCoverage.total+' Keeper');
    const mastering=el('td');mastering.append(chip(r.mastering,r.mastering==='mastered'?'ok':'neutral'));tr.append(mastering);
    const exp=el('td');exp.append(chip(r.exporterReadiness,r.exporterReadiness==='inventory-complete-not-mastered'?'warn':'neutral'));tr.append(exp);
+   td(tr,r.exported);
    const rel=el('td');rel.append(chip(r.published,r.releases.length?'ok':'neutral'));tr.append(rel);
    const detail=el('td');
    const d=el('details'),head=el('summary','Inspect exact IDs');
@@ -62,6 +63,8 @@ function draw(m){
    const intro=el('p','Unindexed here is not evidence that the image was never generated or is absent from other storage. Approved draft records are not artistic, mastering, or export certification.','muted');
    d.append(intro);
    if(!r.sourceHealthy)d.append(el('p','Recipe inventory has source warnings or no assembled IDs; investigate before relying on its denominator.','warning'));
+   if(r.exporterEvidence){d.append(el('p','Book exporter source audit: '+r.exporterEvidence.status+' ('+r.exporterEvidence.approvedImages+'/'+r.exporterEvidence.expectedUnits+' approved image mappings).','muted'));if(r.unapprovedRequiredUnitIds.length)d.append(el('p','Required book units without approved images: '+r.unapprovedRequiredUnitIds.join(', '),'warning'))}
+   if(r.extraBookUnits?.length){const sibling=r.units.filter(u=>r.extraBookUnits.includes(u.recipeId)&&u.sourceSelectors?.length).map(u=>u.recipeId+' ← '+u.sourceSelectors.join(', '));if(sibling.length)d.append(el('p','Additional book units available through registered sibling cover/editorial selectors: '+sibling.join('; '),'muted'))}
    if(r.sourceQualitySummary?.audited){d.append(el('p','Binary source facts: '+r.sourceQualitySummary.audited+' files examined; '+r.sourceQualitySummary.profileUnspecified+' with unspecified color profile; '+r.sourceQualitySummary.shortEdgeUnder2000+' with a native short edge below 2,000 pixels. These are observations, not a universal print standard.','muted'))}
    if(r.quality.length){const qblock=el('div');qblock.append(el('b','Source-quality findings: '));for(const item of r.quality)qblock.append(el('p',item.summary+' ('+item.source+')','muted'));d.append(qblock)}
    if(r.recoveryCandidates.length){d.append(el('b','Recovery candidates'));const ul=el('ul');r.recoveryCandidates.forEach(x=>ul.append(el('li',x.recipeId+' — '+x.status+': '+x.note)));d.append(ul)}
@@ -69,7 +72,7 @@ function draw(m){
    if(r.sourceFiles.length){const src=el('p');src.append(el('b','Sources: '));r.sourceFiles.forEach((p,i)=>{if(i)src.append(document.createTextNode(' · '));src.append(showLink(githubFile(p),p.split('/').at(-1))) });d.append(src)}
    const table=el('table',undefined,'units');const thead=el('thead'),hr=tableRow(['Exact recipe ID','Assembly','Draft record','Recovery','Release link']);thead.append(hr);table.append(thead);
    const tb=el('tbody');
-   r.units.forEach(u=>{const item=el('tr');td(item,u.recipeId);td(item,u.inBook?'Book + '+(u.inRecipe?'recipe':'editorial/extra'):u.inRecipe?'Recipe':'Unresolved');
+   r.units.forEach(u=>{const item=el('tr');td(item,u.recipeId);td(item,u.inBook?'Book + '+(u.inRecipe?'issue recipe':u.sourceSelectors?.length?'sibling '+u.sourceSelectors.join(', '):'source unverified'):u.inRecipe?'Recipe':'Unresolved');
      const status=el('td');status.append(chip(u.draftState,u.draftState==='approved-draft-indexed'?'ok':u.recovery?'warn':'neutral'));
      if(u.imagePath){status.append(el('small',' ', 'muted'),showLink(githubFile(u.imagePath),'source image'))}
      item.append(status);if(u.sourceQualityObservation){const z=u.sourceQualityObservation;status.append(el('small',z.width+'×'+z.height+' · '+z.colorProfile+' · '+z.mimeType,'muted'))}td(item,u.recovery?u.recovery.status:'Not recorded');const link=el('td');if(u.releaseLinks?.length){u.releaseLinks.forEach(x=>{link.append(showLink('https://star-splitter-visions.vercel.app'+x.path,x.label||'Released image'));link.append(document.createTextNode(' '))})}else link.textContent='Not linked';item.append(link);tb.append(item)});
@@ -79,15 +82,16 @@ function draw(m){
  seriesFilter.onchange=render;query.oninput=render;qualityFilter.onchange=render;render();
 }
 async function load(){
- const inputs=await Promise.all([get('data/shows.json'),get('production/portfolio-recipe-inventory.json'),get('production/drafts/manifest.json'),get('production/references/reference-keeper-manifest.json'),get('production/book-manifests.json'),get('production/released-links.json'),get('production/portfolio-quality-evidence.json'),get('production/visual-sources.json'),get('production/portfolio-source-quality.json')]);
- const [shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,visuals,sourceQuality]=inputs;
+ const inputs=await Promise.all([get('data/shows.json'),get('production/portfolio-recipe-inventory.json'),get('production/drafts/manifest.json'),get('production/references/reference-keeper-manifest.json'),get('production/book-manifests.json'),get('production/released-links.json'),get('production/portfolio-quality-evidence.json'),get('production/visual-sources.json'),get('production/portfolio-source-quality.json'),get('production/book-export-coverage.json'),get('production/audits/visual_review_2026-10-25.json')]);
+ const [shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,visuals,sourceQuality,exportCoverage,pixelReview]=inputs;
  const release={};
  await Promise.all(Object.entries(visuals.series||{}).map(async([sid,v])=>{
   if(!v.visionsSlug)return;
   const url='https://raw.githubusercontent.com/starsplitterrecords/StarSplitterVisions/main/sites/visions/src/content/series/'+encodeURIComponent(v.visionsSlug)+'.json';
   try{release[sid]=await (async()=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()})()}catch(e){release[sid]={error:String(e)}}
  }));
- return window.RexProductionDashboard.build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,sourceQuality,visionsMetadata:release});
+ const combinedEvidence={...qualityEvidence,sourceQuality:[...(qualityEvidence.sourceQuality||[]),...(pixelReview.findings||[]).map(x=>({seriesId:x.seriesId,issueId:x.issueId,classification:x.type,summary:'['+x.id+'] '+x.observation+' Required action: '+x.requiredCorrection,source:'production/audits/visual_review_2026-10-25.json',scope:'published sampled/source provenance'}))]};
+ return window.RexProductionDashboard.build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence:combinedEvidence,sourceQuality,visionsMetadata:release,exportCoverage});
 }
 load().then(draw).catch(e=>{$('loadState').textContent='Portfolio data could not be verified: '+e.message;$('loadState').className='error'});
 })();
