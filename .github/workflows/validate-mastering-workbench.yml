@@ -1,0 +1,43 @@
+name: Validate Mastering Workbench
+on:
+  pull_request:
+    paths:
+      - 'tools/master_issue_proofs.py'
+      - 'docs/issue-mastering-workbench.md'
+      - '.github/workflows/validate-mastering-workbench.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/master_issue_proofs.py'
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13"
+      - run: python -m py_compile tools/master_issue_proofs.py
+      - name: Generate complete issue audit and visual contact sheet
+        run: python tools/master_issue_proofs.py --series rex-fleet --issue rex-fleet-i01 --out /tmp/rex-mastering --allow-incomplete
+      - name: Validate report contents
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          report=json.loads(pathlib.Path('/tmp/rex-mastering/mastering-report.json').read_text())
+          assert report['expectedUnits']==22
+          assert report['inspectedUnits']==22
+          assert report['pages'][0]['recipeId']=='RF_I01_COVER'
+          assert report['pages'][-1]['recipeId']=='RF_I01_EDITOR_CLOSE'
+          assert pathlib.Path('/tmp/rex-mastering/contact-sheet.jpg').is_file()
+          assert report['sourceArtworkModified'] is False
+          assert report['completion'] in ('incomplete','machine-preflight-only')
+          assert report['publicationApproval'].startswith('not granted')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rex-fleet-i01-mastering-preflight
+          path: /tmp/rex-mastering/
+          if-no-files-found: error
+          retention-days: 7
