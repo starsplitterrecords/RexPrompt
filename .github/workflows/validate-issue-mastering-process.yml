@@ -131,3 +131,76 @@ jobs:
           fi
           echo "PASS: untagged source cannot be silently assumed sRGB"
           python tools/render_mastering_grade_proof.py --source /tmp/mastering-grade-test/untagged.png --grade /tmp/mastering-grade-test/grade.json --out /tmp/mastering-grade-test/untagged-proof.png --untagged-srgb-evidence "Reviewed production export documentation establishes sRGB original."
+
+  other-series-audit:
+    if: github.event_name != 'workflow_dispatch'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - series: vikings-2026
+            issue: vikings-2026-s1-e02
+            expected: 23
+          - series: stardust-station
+            issue: stardust-station-e02
+            expected: 25
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13"
+      - name: Audit incomplete series without inventing page content
+        env:
+          SERIES: ${{ matrix.series }}
+          ISSUE: ${{ matrix.issue }}
+          EXPECTED: ${{ matrix.expected }}
+        run: |
+          python tools/issue_mastering_session.py --series "$SERIES" --issue "$ISSUE" --out "/tmp/mastering/$ISSUE"
+          python - <<'PY'
+          import os,json
+          from pathlib import Path
+          root=Path('/tmp/mastering')/os.environ['ISSUE']
+          record=json.loads((root/'mastering-session.json').read_text())
+          assert record['machine']['expected']==int(os.environ['EXPECTED'])
+          assert record['approval']['status']=='not-approved'
+          assert record['machine']['inspected']<=record['machine']['expected']
+          assert len(record['pages'])==int(os.environ['EXPECTED'])
+          print('AUDIT ONLY:',os.environ['ISSUE'],'verified images',record['machine']['inspected'],
+                'of',record['machine']['expected'])
+          for item in record['pages']:
+              if item['machineDeficiencies']:
+                  print('DEFICIENCY:',item['recipeId'],','.join(item['machineDeficiencies']))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mastering-other-series-${{ matrix.issue }}
+          path: /tmp/mastering/${{ matrix.issue }}/
+          retention-days: 7
+          if-no-files-found: error
+  requested-issue:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13"
+      - name: Run on-demand issue mastering session
+        env:
+          SERIES: ${{ inputs.series }}
+          ISSUE: ${{ inputs.issue }}
+        run: |
+          python tools/issue_mastering_session.py --series "$SERIES" --issue "$ISSUE" --out /tmp/on-demand-mastering --native-tiles
+      - uses: actions/upload-artifact@v4
+        with:
+          name: on-demand-mastering-session
+          path: /tmp/on-demand-mastering/
+          retention-days: 7
+          if-no-files-found: error
