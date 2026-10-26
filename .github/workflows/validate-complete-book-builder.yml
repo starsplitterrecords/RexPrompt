@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'tools/build_complete_book.py'
+      - 'tools/test_complete_book_export.py'
       - 'docs/complete-book-export.md'
       - '.github/workflows/validate-complete-book-builder.yml'
   push:
@@ -18,7 +19,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install "Pillow>=10,<13" "reportlab>=4,<5" "pypdf>=5,<7"
-      - run: python -m py_compile tools/build_complete_book.py
+      - run: python -m py_compile tools/build_complete_book.py tools/test_complete_book_export.py
+      - run: python tools/test_complete_book_export.py
       - run: python tools/build_complete_book.py --series rex-fleet --issue rex-fleet-i01 --out /tmp/rex-book
       - name: Assert complete PDF, book order and original binary hashes
         run: |
