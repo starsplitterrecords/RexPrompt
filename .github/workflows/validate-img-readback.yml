@@ -7,6 +7,7 @@ on:
       - 'tools/persist_approved_draft.cjs'
       - 'tools/test_img_readback.cjs'
       - 'tools/test_img_transport_matrix.cjs'
+      - 'tools/test_img_portfolio_inventory.cjs'
       - 'tools/test_atomic_img_persistence.cjs'
       - '.github/workflows/img-binary-readback.yml'
       - '.github/workflows/img-issue-readback.yml'
@@ -52,11 +53,14 @@ jobs:
           node --check tools/persist_approved_draft.cjs
           node --check tools/test_img_readback.cjs
           node --check tools/test_img_transport_matrix.cjs
+          node --check tools/test_img_portfolio_inventory.cjs
           node --check tools/test_atomic_img_persistence.cjs
       - name: Validate already-approved exact image retrieval
         run: node tools/test_img_readback.cjs
       - name: Cross-series complete/incomplete issue and negative-image transport matrix
         run: node tools/test_img_transport_matrix.cjs
+      - name: Full portfolio native-image decode and exact original audit
+        run: node tools/test_img_portfolio_inventory.cjs
       - name: Atomic persistence transaction and concurrency rejection
         run: node tools/test_atomic_img_persistence.cjs
       - name: Prepare independent session proof originals using canonical helper
