@@ -61,3 +61,17 @@ Append each inspected issue with exact page / recipe IDs, observed continuity, n
 | C3-SSD-I01-003 | `page-020.jpg` | **Inspection blocked, not image defect** | GitHub source returns a capped 1,048,592-character base64 string despite correct JPEG path; pixel readback did not display an image. | Retrieve full original bytes via Actions-artifact bridge or alternate binary transport, visually inspect P19–P21 transition and update audit. |
 
 **Not verified:** exact lettering and speaker match for each panel, all 22 pages' full-resolution mastering, approved lookdev packs, and unit-ID mapping.
+
+## Rex Fleet — published Issue 01
+**Directly inspected:** all 19/19 canonical published JPEG files, `page-001.jpg`–`page-019.jpg`. Exact source: `starsplitterrecords/StarSplitterVisions/main/sites/visions/public/images/pages/rex-fleet/issue-01/`.
+
+**Continuity observations:** navy/gold Fleet insignia and bridge setting, olive/rust Verge freight infrastructure and ordinary civilians, Shard white/red armored uniforms and fleet, Auric's patterned market canopies, repeated freighter and convoy geometry are visible with largely coherent faction separation. Illyra Venn's gray-haired navy officer portrayal carries through bridge, memorial, and tribunal material but must be rechecked against approved model sheets. This does **not** establish exact recipe or dialogue fidelity, print-ready native pixel density, or released PDF completeness.
+
+### Defect / confirmation queue
+| ID | Image and recipe mapping | Severity | Visual evidence | Required correction / verification |
+|---|---|---|---|---|
+| C3-RF-I01-001 | `page-015.jpg`, exact RexPrompt recipe mapping pending | **Local technical-production defect candidate — degraded clarity** | In 3-panel Auric market negotiation scene, dialog lettering and especially inset faces/edges appear visibly coarse and less sharp than pages 014 and 016. Same repository JPEG source directly inspected. | Compare native dimensions and full-resolution master source. Reassemble only from sufficiently sharp original source; **do not just resize** and never redraw passing story/actor identity without approval. |
+| C3-RF-I01-002 | `page-009.jpg`, recipe mapping pending | **Local technical-production defect candidate — softened text** | Multiple dialogue balloons on marketplace scene are visibly softer than neighboring panels/pages, notably the shorter 'They came' and 'Flow finds...' lettering and background faces. | Evaluate original image resolution and compression/color grading relative to adjacent releases, preserve approved content and only master from legitimate high-resolution source when available. |
+| C3-RF-I01-003 | Pages 002–019, issue-wide | **Review — grading/rendering variability** | Alternating photorealistic harbor/freight, crisp naval bridge, high-contrast Shard, soft market dialogue, and brilliant Core chamber show noticeable texture/sharpness differences. Differences may be intentional faction-specific styling. | Assemble a full-issue side-by-side contact sheet, check actual color space, source dimensions, master quality and published lookdev approval; do not globally normalize intentional faction aesthetics. |
+
+**Reader-sequence audit:** initial Verge freighter/convoy and Fleet rescue thread (P02–P07), memorial/market and Shard action/council threads (P08–P16), Fleet/Crown conference (P17–P18), dark ominous closing spread (P19). Page 001 editorial. No decisive obvious duplicated character within a single panel was identified at this review level; no page approved by this audit.
