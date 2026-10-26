@@ -61,3 +61,17 @@ Evidence:
 - The live Git Data API was separately exercised in a noncanonical test-only branch revision: image and JSON metadata blobs appeared in **one** tree and one commit, both independently re-fetched; the temporary files were removed from the active branch afterward. This verified real atomic Git Data semantics without approving or altering production artwork.
 
 **Scope of proof:** actual image pixels reached and were visually inspected in the **engineering conversation that executed this test**. A future or different IMG conversation must run the bridge and verify visible pixels independently. Connector permissions, transient artifact retention, and attachment behavior are session-specific. A GitHub download success alone does not pass this final gate. An actual newly generated *approved* page was not available to this test, so new-production persistence is supported by the production utility, mocked end-to-end tests, the live Git Data atomic probe, and existing durable artwork re-retrieval—not a falsely claimed new artwork approval.
+
+## Known source-integrity blocker: Vikings Issue 1 page P09
+
+The exhaustive October 25/26, 2026 audit found one existing approved binary that is **corrupt at rest**, unrelated to GitHub Actions packaging:
+- Key: vikings-2026::vikings-2026-s1-e01::VIK_S1I01_P09
+- Source: production/drafts/vikings-2026/vikings-2026-s1-e01/vik_s1i01_p09.png
+- Exact corrupted SHA-256: 9962326c108115d7a6bd7107d4a6cef58b238b29262bfb14e7e4ab269442d023
+- Git blob SHA: e04743c80f06c8c1a05382a71a58ed86833bfccd
+- Size: 11,012,093 bytes; header advertises 2400 × 3840, but the PNG chunk body overruns the source and Pillow fails to load the complete pixels.
+- This file remains approved in the manifest, but it **cannot currently pass binary readback**. Never replace with a thumbnail, resized picture or different generation. Recover the exact authorized original through the appropriate asset recovery process and atomically replace it after approval.
+
+For normal CI, node tools/test_img_portfolio_inventory.cjs --allow-exact-known-blocker permits **only this exact key + exact corrupted SHA-256** as a loud reported BLOCKED item. Every other new issue fails the check. The default command and explicit --strict option fail when this source is encountered, preserving the full-portfolio readiness gate. This targeted exception is not a second approval state and does not change the canonical manifest or allow the defective file through readback.
+
+The initial full scan successfully read/decode-verified **112 draft originals and 41 Keeper references** while rejecting this one source. A completely clean 113/113 draft state is still pending original-file recovery.
