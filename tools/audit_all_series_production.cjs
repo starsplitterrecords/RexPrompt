@@ -153,6 +153,9 @@ for(const show of shows){
  const row={showId:show.id,seriesId:sid,issueId,unitLabel:show.unitLabel||null,
   registeredUnits:keys.size,approvedUnits:covered,notInApprovedDraftManifest:Math.max(0,keys.size-covered),
   canonicalSource:'RexPrompt registered recipe',draftAuthority:'RexPrompt approved-draft manifest',
+  recipeIds:[...keys], approvedRecipeIds:[...keys].filter(k=>approved.has(k)),
+  unmatchedApprovedIds:extra, sourceFiles:(show.scenesFiles||[show.scenesFile||'scenes.json']).map(p=>(show.basePath||'data')+'/'+p),
+  sourceOverlays:(show.sceneOverlays||[]).map(x=>({file:(show.basePath||'data')+'/'+x.file,mode:x.mergeById?'merge':'append-or-replace',encoding:x.encoding||'json'})),
   examplesMissing:[...keys].filter(k=>!approved.has(k)).slice(0,8)};
  rows.push(row);
  aggregateUnits+=keys.size;aggregateCovered+=covered;
@@ -183,6 +186,11 @@ const reportPath=process.argv.includes('--out')?process.argv[process.argv.indexO
 if(reportPath){
  fs.mkdirSync(path.dirname(reportPath),{recursive:true});
  fs.writeFileSync(reportPath,JSON.stringify(report,null,2)+'\n');
+}
+if(process.argv.includes('--emit-base64')){
+ const raw=Buffer.from(JSON.stringify(report)).toString('base64');
+ for(let i=0;i<raw.length;i+=4096)console.log('PORTFOLIO_JSON_CHUNK:'+String(i/4096).padStart(4,'0')+':'+raw.slice(i,i+4096));
+ console.log('PORTFOLIO_JSON_COMPLETE:'+Math.ceil(raw.length/4096));
 }
 console.log('ALL-SERIES PRODUCTION INVENTORY: '+JSON.stringify(report.counts));
 for(const x of report.series)console.log('SERIES '+x.seriesId+': '+x.registeredConfigurations+' registered configs / '+x.registeredUnits+' recipe units / '+x.approvedUnits+' matching draft records / '+x.keeperReferences+' Keeper assets / '+x.releaseLinkRecords+' RexPrompt release links');
