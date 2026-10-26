@@ -9,6 +9,15 @@ try{
  assert.equal(p.status,0,'assembler source audit failed: '+p.stderr.slice(-5000));
  inventory=read(tmp);
 }finally{fs.rmSync(tmp,{force:true})}
+const qualityOut=path.join(os.tmpdir(),'rex-portfolio-image-'+process.pid+'.json');
+let native;
+try{
+ const p=cp.spawnSync(process.execPath,['tools/build_portfolio_source_quality.cjs','--out',qualityOut],{encoding:'utf8',maxBuffer:12*1024*1024});
+ assert.equal(p.status,0,'raster source audit failed: '+p.stdout+' '+p.stderr);
+ native=read(qualityOut);
+}finally{fs.rmSync(qualityOut,{force:true})}
+const storedQuality=read('production/portfolio-source-quality.json');
+assert.deepEqual(storedQuality,native,'Native source-quality snapshot is stale; regenerate from approved originals');
 const snapshot=read('production/portfolio-recipe-inventory.json');
 assert.deepEqual(snapshot,inventory,'Cached portfolio recipe IDs are stale; regenerate from assembler-aware source audit');
 const shows=read('data/shows.json'),draftManifest=read('production/drafts/manifest.json'),
@@ -18,9 +27,10 @@ const visionsMetadata={
  'rex-fleet':{releases:[{issueNumber:1,publicationType:'E',catalogId:'REX-E001-2026-001',title:'Green Corridor',externalLink:'/issues/rex-fleet/issue-01/rex-fleet-issue-01-green-corridor.pdf'}]},
  'azure-reach':{releases:[{issueNumber:1,publicationType:'E',catalogId:'AZR-E001-2026-002',title:'Sea Turtle Thursdays',externalLink:'/issues/azure-reach/issue-01/book.pdf'}]},
  'vikings-2026':{releases:[{issueNumber:1,publicationType:'E',catalogId:'VIK-E001-2026-001',title:'Issue 01',externalLink:'/issues/vikings-2026/issue-01/book.pdf'}]},
+ 'stardust-station':{releases:[{issueNumber:1,publicationType:'E',catalogId:'SDS-E001-2026-001',title:'Mandatory Proximity',externalLink:'/issues/stardust-station/issue-01/book.pdf'}]},
  'backyard-rockets':{releases:[{issueNumber:1,publicationType:'E',catalogId:'BYR-E001-2026-001',title:'Issue 01',externalLink:'/issues/backyard-rockets/issue-01/book.pdf'},{issueNumber:2,publicationType:'E',catalogId:'BYR-E002-2026-002',title:'Issues 01–02 combined',externalLink:'/issues/backyard-rockets/issue-02/book.pdf'}]}
 };
-const model=build({shows,inventory,draftManifest,referenceManifest:refs,books,releasedLinks:released,qualityEvidence:quality,visionsMetadata});
+const model=build({shows,inventory,draftManifest,referenceManifest:refs,books,releasedLinks:released,qualityEvidence:quality,sourceQuality:native,visionsMetadata});
 assert.equal(model.totals.registeredConfigurations,shows.length);
 assert.equal(model.totals.approvedDraftManifestEntries,Object.keys(draftManifest.drafts).length);
 assert.equal(model.totals.keeperReferences,Object.keys(refs.references).length);
@@ -30,6 +40,10 @@ const row=(s,id)=>model.rows.find(x=>x.seriesId===s&&x.issueId===id);
 const rf1=row('rex-fleet','rex-fleet-i01'),rf2=row('rex-fleet','rex-fleet-i02'),rf3=row('rex-fleet','rex-fleet-i03');
 assert.equal(rf1.denominator,22);assert.equal(rf1.denominatorSource,'curated-book');
 assert.equal(rf2.denominator,24);
+assert.equal(model.totals.sourceImagesAudited,Object.keys(draftManifest.drafts).length);
+assert.equal(rf1.sourceQualitySummary.audited,22);
+assert.equal(rf1.units.find(x=>x.recipeId==='RF_I01_P18').sourceQualityObservation.width,2400);
+assert.equal(rf1.mastering,'unverified');
 assert.equal(rf3.denominator,35);
 assert.equal(rf3.approvedIndexed,30);
 assert.deepEqual(rf3.units.filter(x=>x.inBook&&x.draftState!=='approved-draft-indexed').map(x=>x.recipeId),
@@ -44,6 +58,7 @@ assert(vk&&vk.units.some(x=>x.recipeId==='VIK_S1E02_P01'),'Cover recipe required
 assert.equal(vk.denominator,23);
 const sd=row('stardust-station','stardust-station-e02');
 assert.equal(sd.denominator,25);
+assert.equal(row('stardust-station','stardust-station').published,'collected-edition-recorded','Issue 1 published despite unsuffixed configuration ID');
 assert(sd.units.some(x=>x.recipeId==='SDS_S1E02_TEASER'));
 const az=model.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach-s1');
 assert(az?.denominator>0,'Azure available assembled units must supply denominator');
