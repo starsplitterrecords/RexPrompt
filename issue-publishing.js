@@ -78,14 +78,14 @@ function noteMissing(p){return p.missing.length?' ('+p.missing.length+' missing 
 async function build(kind){const p=await prepare();const images=await downloadImages(p.approved);const {pdf}=await createPdf(images),stem=slug(p.sel);if(kind==='pdf'){download(stem+'.pdf',pdf,'application/pdf');report('PDF downloaded: '+images.length+' approved pages'+noteMissing(p));return}const files=[{name:stem+'.pdf',bytes:pdf},...images.map(im=>({name:stem+'/page-'+pad3(im.page)+'.'+im.ext,bytes:im.bytes}))];const bytes=makeZip(files);download(stem+'.zip',bytes,'application/zip');report('ZIP downloaded: '+images.length+' original images and PDF'+noteMissing(p))}
 async function git(token,repo,path,options){return request(api(repo,path),{token,...options})}
 async function release(){const p=await prepare();if(p.missing.length)throw Error('Release blocked. Missing approved pages: '+p.missing.map(x=>x.recipeId).join(', '));const source=await fetch('production/visual-sources.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json());const slugName=source.series?.[p.sel.seriesId]?.visionsSlug;if(!slugName)throw Error('No Visions series mapping. Set up release metadata before publishing.');
-const token=sessionStorage.getItem('rexprompt.githubToken');if(!token)throw Error('Enter a GitHub token using Upload Approved Draft first. It must also have Contents read/write access to StarSplitterVisions.');
+const token=window.RexPromptGithubAuth.getToken();if(!token)throw Error('Enter a fine-grained GitHub token using Upload Approved Draft first. To stage a Visions release it needs Contents and Pull requests read/write on StarSplitterVisions.');
 const metaPath='sites/visions/src/content/series/'+slugName+'.json',meta=await content(VISIONS,metaPath,token);if(!meta)throw Error('Visions series metadata not found: '+slugName);
 const n=issueNo(p.sel),dir='issue-'+pad(n),base=slugName+'-'+dir;
 const existing=(meta.releases||[]).find(r=>r.issueNumber===n&&r.publicationType==='E')||null;
 const cover=existing?.cover||'/images/covers/'+base+'.jpg',coverPath='sites/visions/public'+cover,coverExists=await request(api(VISIONS,'contents/'+coverPath+'?ref=main'),{token,allow404:true});
 if(!coverExists)throw Error('Release blocked: issue-specific cover missing: '+coverPath);
-const action=existing?'OVERWRITE the already published issue':'Release the issue';
-if(!window.confirm(action+' on PUBLIC Visions?\n\n'+p.sel.seriesName+' — '+p.sel.issueLabel+'\n'+p.pages.length+' approved pages.\n\n'+(existing?'This will REPLACE its published page images and collected PDF. Existing catalog identity and original release date will be retained.':'This will publish the pages, collected PDF, and release metadata.')+'\n\nAre you sure?'))return;
+const action=existing?'Stage changes to an existing issue':'Stage an issue for release';
+if(!window.confirm(action+' as a GitHub pull request?\n\n'+p.sel.seriesName+' — '+p.sel.issueLabel+'\n'+p.pages.length+' approved pages.\n\nNo public release will change until the pull request passes required checks and is merged.\n\nContinue?'))return;
 const images=await downloadImages(p.approved),{pdf,converted}=await createPdf(images);
 report('Preparing canonical GitHub release…');
 const ref=await git(token,VISIONS,'git/ref/heads/main'),head=ref.object.sha,commit=await git(token,VISIONS,'git/commits/'+head);
@@ -101,9 +101,17 @@ const entries=[];for(const im of converted){report('Staging canonical page '+im.
 for(const [path,bytes,encoding] of [[pdfPath,pdf,'base64'],[metaPath,new TextEncoder().encode(JSON.stringify(meta,null,2)+'\n'),'utf-8']]){const blob=await git(token,VISIONS,'git/blobs',{method:'POST',body:encoding==='base64'?{content:bytesToB64(bytes),encoding}:{content:new TextDecoder().decode(bytes),encoding}});entries.push({path,mode:'100644',type:'blob',sha:blob.sha})}
 const tree=await git(token,VISIONS,'git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree:entries}});
 const next=await git(token,VISIONS,'git/commits',{method:'POST',body:{message:(existing?'Replace published ':'Release ')+p.sel.seriesName+' '+releaseRecord.title,tree:tree.sha,parents:[head]}});
-await git(token,VISIONS,'git/refs/heads/main',{method:'PATCH',body:{sha:next.sha,force:false}});
-report((existing?'Overwrite committed':'Release committed')+' to Visions main: '+next.sha.slice(0,7)+'. Site deployment and public links still require verification.');}
+// Create a review branch from the prepared commit; never update main from the browser.
+const branch='release/'+namePart(slugName)+'-issue-'+pad(n)+'-'+Date.now().toString(36);
+await git(token,VISIONS,'git/refs',{method:'POST',body:{ref:'refs/heads/'+branch,sha:next.sha}});
+const pr=await git(token,VISIONS,'pulls',{method:'POST',body:{
+  title:(existing?'Replace published ':'Release ')+p.sel.seriesName+' '+releaseRecord.title,
+  head:branch,
+  base:'main',
+  body:'Prepared from approved RexPrompt production drafts. Verify page order, exact lettering, artwork and cover, collected PDF, public links, and site build before merging. Publication occurs only after merge.'
+}});
+report('Release prepared for review: '+pr.html_url+'. This is not published yet. Merge only after validation and visual approval.');}
 async function run(kind){if(busy)return;busy=true;const buttons=[byId('issuePdfBtn'),byId('issueZipBtn'),byId('issueReleaseBtn')];buttons.forEach(b=>b.disabled=true);try{await (kind==='release'?release():build(kind))}catch(e){report((kind==='release'?'Release':'Export')+' failed: '+(e?.message||e))}finally{busy=false;buttons.forEach(b=>b.disabled=false)}}
-function setup(){const issue=byId('issueSel');if(!issue)return;const host=byId('issuePackagingMount')||issue.parentElement;const buttons=document.createElement('div');buttons.className='issue-packaging';buttons.style.cssText='display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px';buttons.innerHTML='<button type="button" id="issuePdfBtn">Download Draft PDF</button><button type="button" id="issueZipBtn">Download Issue ZIP</button><button type="button" id="issueReleaseBtn">Release Issue to Visions</button>';host.appendChild(buttons);const status=document.createElement('div');status.id='issuePackageStatus';status.className='status';status.setAttribute('role','status');host.appendChild(status);byId('issuePdfBtn').onclick=()=>run('pdf');byId('issueZipBtn').onclick=()=>run('zip');byId('issueReleaseBtn').onclick=()=>run('release')}
+function setup(){const issue=byId('issueSel');if(!issue)return;const host=byId('issuePackagingMount')||issue.parentElement;const buttons=document.createElement('div');buttons.className='issue-packaging';buttons.style.cssText='display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px';buttons.innerHTML='<button type="button" id="issuePdfBtn">Download Draft PDF</button><button type="button" id="issueZipBtn">Download Issue ZIP</button><button type="button" id="issueReleaseBtn">Prepare Visions Release PR</button>';host.appendChild(buttons);const status=document.createElement('div');status.id='issuePackageStatus';status.className='status';status.setAttribute('role','status');host.appendChild(status);byId('issuePdfBtn').onclick=()=>run('pdf');byId('issueZipBtn').onclick=()=>run('zip');byId('issueReleaseBtn').onclick=()=>run('release')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();
