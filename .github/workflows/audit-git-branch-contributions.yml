@@ -1,0 +1,38 @@
+name: Audit historical Git branch contributions
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_git_branch_contributions.py'
+      - '.github/workflows/audit-git-branch-contributions.yml'
+      - 'docs/reconciliation/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  history-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: rexprompt
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/checkout@v4
+        with:
+          repository: starsplitterrecords/StarSplitterVisions
+          path: visions
+          fetch-depth: 0
+          filter: blob:none
+      - name: Check Python syntax
+        run: python -m py_compile rexprompt/tools/audit_git_branch_contributions.py
+      - name: Enumerate retained branches against current main
+        run: |
+          python rexprompt/tools/audit_git_branch_contributions.py --repo rexprompt --out reports/rexprompt-history.json
+          python rexprompt/tools/audit_git_branch_contributions.py --repo visions --out reports/visions-history.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cross-repository-branch-disposition-evidence
+          path: reports/*.json
+          if-no-files-found: warn
