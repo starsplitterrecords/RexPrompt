@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "reference-keeper-ingest",
+  "applicability": [
+    "IMG",
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "ingest",
+    "selected",
+    "approved",
+    "references"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "selected approved original bytes",
+    "live Keeper manifest"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

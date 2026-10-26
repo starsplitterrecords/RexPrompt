@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-binary-readback",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "inspect",
+    "original",
+    "image",
+    "pixels",
+    "readback"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "exact original path and current session pixel access"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

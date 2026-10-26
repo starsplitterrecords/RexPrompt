@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "visions-release",
+  "applicability": [
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "publish",
+    "approved",
+    "issue",
+    "site"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "explicit release authorization",
+    "approved assets",
+    "live site verification"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

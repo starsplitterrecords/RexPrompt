@@ -1,0 +1,3 @@
+# ChatGPT Project loader distribution
+
+This directory provides **25 loaders**: 24 IMG series families and one Visions project loader, plus the shared IMG template. The loader itself belongs in the matching ChatGPT Project instructions after selecting a tested skill commit SHA, not merely as a linked URL. In every fresh chat: load registry, semantically route user intent, read selected SKILL.md plus dependencies, check live repositories and tool capabilities, and run the universal Rex Fleet-derived state/approval/pixel-gate sequence. Series profiles list live show IDs for identification, not a hard-coded production cursor. No project installs or IMG asset migrations are implied by the existence of these documents.

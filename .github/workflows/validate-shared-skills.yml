@@ -1,0 +1,27 @@
+name: Validate Shared Skills
+on:
+  push:
+    paths:
+      - 'docs/skills/**'
+      - 'docs/loaders/**'
+      - 'docs/standards/**'
+      - 'tools/validate_skill_registry.cjs'
+      - 'tools/test_skill_loader_routes.cjs'
+      - '.github/workflows/validate-shared-skills.yml'
+  pull_request:
+    paths:
+      - 'docs/skills/**'
+      - 'docs/loaders/**'
+      - 'docs/standards/**'
+      - 'tools/validate_skill_registry.cjs'
+      - 'tools/test_skill_loader_routes.cjs'
+jobs:
+  shared-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/validate_skill_registry.cjs
+      - run: node tools/test_skill_loader_routes.cjs

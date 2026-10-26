@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-production-recovery",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "recover",
+    "lost",
+    "generated",
+    "page",
+    "restore",
+    "historical",
+    "work"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "original candidate bytes",
+    "approval/recipe evidence"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

@@ -1,0 +1,3 @@
+# Skills Migration plan recovery notice
+
+The full original implementation plan remains saved in the user's ChatGPT Library as `Star_Splitter_Skills_Consolidation_Implementation_Plan.md` (created October 26, 2026). This file is a pointer, **not** a copy: the Library read API did not return the full document during this recovery. The recovered GitHub implementation follows the plan's specified 16-skill registry, common Rex Fleet workflow, 25 per-project loaders, original-byte preservation, and no Division Threshold exception. Original full plan must be copied only if its exact bytes can be accessed; do not mislabel a summary as the original document.

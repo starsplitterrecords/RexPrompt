@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "reference-keeper-curation",
+  "applicability": [
+    "IMG",
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "curate",
+    "visual",
+    "reference",
+    "packs"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "approved references",
+    "actual inspected reference pixels"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

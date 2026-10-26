@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-color-normalization",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "grade",
+    "color",
+    "match",
+    "saturation"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "issue palette baseline",
+    "originals preserved"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}
