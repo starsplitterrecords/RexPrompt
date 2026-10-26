@@ -6,6 +6,7 @@ on:
       - 'tools/test_book_export_manifest.cjs'
       - 'production/book-manifests.json'
       - 'production/book-export-coverage.json'
+      - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
       - '.github/workflows/portfolio-book-audit.yml'
   push:
     branches: [main]
@@ -14,6 +15,7 @@ on:
       - 'tools/test_book_export_manifest.cjs'
       - 'production/book-manifests.json'
       - 'production/book-export-coverage.json'
+      - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
 permissions:
   contents: write
 jobs:
@@ -34,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add production/book-manifests.json production/book-export-coverage.json
+          git add production/book-manifests.json production/book-export-coverage.json production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md
           if ! git diff --cached --quiet; then
             git commit -m "Refresh source-verified portfolio book inventories"
             git fetch origin "${{ github.head_ref }}"
