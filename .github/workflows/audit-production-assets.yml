@@ -1,0 +1,26 @@
+name: Audit production asset bytes
+on:
+  pull_request:
+    paths:
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'tools/audit_production_asset_integrity.cjs'
+      - '.github/workflows/audit-production-assets.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'tools/audit_production_asset_integrity.cjs'
+      - '.github/workflows/audit-production-assets.yml'
+  workflow_dispatch:
+jobs:
+  scan-production-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check auditor syntax
+        run: node --check tools/audit_production_asset_integrity.cjs
+      - name: Verify saved image binaries and manifest associations
+        run: node tools/audit_production_asset_integrity.cjs --strict
