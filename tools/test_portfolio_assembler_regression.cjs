@@ -10,7 +10,7 @@ const exists=p=>fs.existsSync(path.join(root,p));
 const html=read('index.html'),first=html.indexOf('const SHOW_MANIFEST='),last=html.indexOf('function safeFilePart(',first);
 assert(first>=0&&last>first,'Could not extract current production assembler');
 const catalogs=json('data/shows.json'),approved=json('production/drafts/manifest.json').drafts;
-const report={baseCommit:process.env.GITHUB_SHA||null,configurations:catalogs.length,loadedConfigurations:0,assembledRecipes:0,sourceFormats:{array:0,object:0,encodedGzipBase64:0,overlayMerge:0,overlayReplace:0,overlayAppend:0,dialogueOverlay:0,scopedCastConfigurations:0},series:{},issues:[],failures:[],historicalExceptions:[],risks:{highDensity:[],ambiguousDialogueMapping:[],unresolvedSpeaker:[]},mutationCases:{},approved:{records:Object.keys(approved).length,resolved:0,unresolved:[]},untested:['Image pixels and rendered character likeness','Physical balloon tails and text appearance','Rendered panel reading order and geometry','True print resolution and issue-wide mastering','Intentionality of creative dialogue and continuity','User approval beyond manifest status']};
+const report={baseCommit:process.env.GITHUB_SHA||null,configurations:catalogs.length,loadedConfigurations:0,assembledRecipes:0,sourceFormats:{array:0,object:0,encodedGzipBase64:0,overlayMerge:0,overlayReplace:0,overlayAppend:0,dialogueOverlay:0,scopedCastConfigurations:0},series:{},issues:[],failures:[],historicalExceptions:[],risks:{highDensity:[],ambiguousDialogueMapping:[],unresolvedSpeaker:[],panelMetadataDiscrepancies:[]},mutationCases:{},approved:{records:Object.keys(approved).length,resolved:0,unresolved:[]},untested:['Image pixels and rendered character likeness','Physical balloon tails and text appearance','Rendered panel reading order and geometry','True print resolution and issue-wide mastering','Intentionality of creative dialogue and continuity','User approval beyond manifest status']};
 const sandbox=vm.createContext({fetch:async p=>{
  const relative=String(p);
  if(relative.startsWith('/')||relative.includes('..'))throw Error('Unsafe load path '+relative);
@@ -18,7 +18,7 @@ const sandbox=vm.createContext({fetch:async p=>{
  if(!fs.existsSync(f))return {ok:false,status:404,json:async()=>null,text:async()=>''};
  return {ok:true,status:200,json:async()=>json(relative),text:async()=>read(relative)};
 },Blob,Response,DecompressionStream,atob});
-vm.runInContext(html.slice(first,last)+';globalThis.api={loadShow,assembleScene,pageAssembly,validatePageLayout,pageLayoutWarnings,visibleCharacterHandles,applyOverlay,applyDialogueOverlay,prepareCleanPanelPlan,preparePanelLettering,expandIssues};',sandbox);
+vm.runInContext(html.slice(first,last)+';globalThis.api={loadShow,assembleScene,pageAssembly,validatePageLayout,pageLayoutWarnings,visibleCharacterHandles,applyOverlay,applyDialogueOverlay,prepareCleanPanelPlan,preparePanelLettering,expandIssues,normalizeScenes,normalizeOverlay};',sandbox);
 const api=sandbox.api;
 function recordFailure(code,show,scene,reason){report.failures.push({code,show,scene,reason:String(reason).slice(0,500)})}
 const asJson=value=>JSON.stringify(value);
@@ -81,7 +81,19 @@ function checkScene(show,store,scene,index){
     }
    }else if(lines.length>=6&&!lines.every(d=>/^Panel\s+\d+$/i.test(String(d.subtext||''))))report.risks.ambiguousDialogueMapping.push({show:show.id,recipe:scene.id,reason:'No explicit map for all dialogue lines'});
  }
- const warnings=api.pageLayoutWarnings(scene);
+ if(Number.isInteger(scene.panelCount)&&Array.isArray(scene.panelPlan)&&scene.panelCount!==scene.panelPlan.length){
+  const detail={show:show.id,recipe:scene.id,declared:scene.panelCount,panels:scene.panelPlan.length};
+  report.risks.panelMetadataDiscrepancies.push(detail);
+  if(show.id==='azure-reach-s1'&&scene.id==='AZR_S1E01_P03'&&scene.panelCount===10&&scene.panelPlan.length===5)
+    report.historicalExceptions.push({...detail,reason:'Published Azure Reach I01 P03 has older panelCount metadata; existing source is not rewritten.'});
+}
+const chars=store['characters.json']||{};
+for(const line of scene.dialogueInline||[]){
+ const token=line.handle;
+ if(typeof token!=='string'||!token.startsWith('@'))continue;
+ if(!Object.values(chars).some(v=>v?.handle===token||(v?.aliases||[]).includes(token)))report.risks.unresolvedSpeaker.push({show:show.id,recipe:scene.id,handle:token});
+}
+const warnings=api.pageLayoutWarnings(scene);
  if(warnings.length)report.risks.highDensity.push({show:show.id,recipe:scene.id,warnings:[...warnings]});
  report.assembledRecipes++;
  return result;
@@ -124,6 +136,10 @@ async function main(){
  assert.equal(report.loadedConfigurations,catalogs.length,'Not all configurations loaded');
  assert.equal(report.issues.length,catalogs.length,'Not all configured issue rows processed');
  const sample=selected.get('vikings-2026')||[...selected.values()][0];
+ mutation('map-shaped-scene-input',()=>{const x=api.normalizeScenes({PAGE_A:{summary:'one'},PAGE_B:{summary:'two'}});assert.equal(x.length,2);assert.equal(x[0].id,'PAGE_A');assert.equal(x[1].summary,'two')});
+ mutation('pages-wrapper-overlay-input',()=>{const x=api.normalizeOverlay({pages:[{id:'A',summary:'first'}]});assert.equal(x.length,1);assert.equal(x[0].id,'A')});
+ mutation('episode-replacement-order',()=>{const before=[{id:'old1',episode:'S1E01'},{id:'old2',episode:'S1E01'},{id:'middle',episode:'S1E02'}];const out=api.applyOverlay(before,[{id:'new1',episode:'S1E01'}],{replaceEpisode:'S1E01'});assert.deepEqual(out.map(x=>x.id),['new1','middle']);assert.equal(before.length,3)});
+ mutation('overlay-insertion-after-id',()=>{const out=api.applyOverlay([{id:'A'},{id:'B'}],[{id:'C'}],{afterId:'A'});assert.deepEqual(out.map(x=>x.id),['A','C','B'])});
  mutation('strict-overlay-rejects-orphan',()=>expectedFailure(()=>api.applyOverlay([{id:'A',summary:'keep'}],[{id:'B',summary:'insert'}],{mergeById:true,strict:true,file:'negative.json'}),'Orphan strict'));
  mutation('strict-overlay-rejects-duplicate-id',()=>expectedFailure(()=>api.applyOverlay([{id:'A'}],[{id:'A',summary:'one'},{id:'A',summary:'two'}],{mergeById:true,strict:true,file:'negative.json'}),'Duplicate strict'));
  mutation('strict-overlay-preserves-original',()=>{const src=[{id:'A',summary:'keep',panelPlan:['one']}],before=asJson(src),out=api.applyOverlay(src,[{id:'A',promptSettingMode:'label'}],{mergeById:true,strict:true});assert.equal(out.length,1);assert.deepEqual(out[0].panelPlan,['one']);assert.equal(out[0].summary,'keep');assert.equal(asJson(src),before)});
@@ -136,7 +152,7 @@ async function main(){
  mutation('empty-visible-reference-overrides-inherited-cast',()=>{const original=sample.scenes.find(p=>p.characters?.length||p.charactersInline?.length);assert(original);const scene={...original,promptVisibleCharacters:[],promptVisibleCastOnly:true};const r=api.assembleScene(scene,{...sample.store,__show:{...sample.store.__show,promptVisibleCastOnly:true}},0);assert(r.startsWith('=== '),'Suppressed refs still leaked into prompt')});
  mutation('setting-suppression-requires-panel-locations',()=>expectedFailure(()=>api.pageAssembly({id:'bad-setting',setting:'ROOM',promptSuppress:['setting'],panelPlan:['Somewhere']},{}),'Cannot suppress setting'));
  mutation('indexed-dialogue-invalid-mapping',()=>{const fixture={id:'bad-index',panelPlan:[{panel:1,action:'One',dialogueIndices:[2]}],dialogueInline:[{speaker:'A',text:'Hi'}]};expectedFailure(()=>api.prepareCleanPanelPlan(fixture),'Invalid or duplicated dialogue index')});
- console.log('PORTFOLIO REGRESSION SUMMARY '+JSON.stringify({configurations:report.configurations,loaded:report.loadedConfigurations,recipesAssembled:report.assembledRecipes,sourceFormats:report.sourceFormats,approved:report.approved,mutationCases:report.mutationCases,failures:report.failures.length,risks:{highDensity:report.risks.highDensity.length,ambiguousDialogueMapping:report.risks.ambiguousDialogueMapping.length,unresolvedSpeaker:report.risks.unresolvedSpeaker.length}}));
+ console.log('PORTFOLIO REGRESSION SUMMARY '+JSON.stringify({configurations:report.configurations,loaded:report.loadedConfigurations,recipesAssembled:report.assembledRecipes,sourceFormats:report.sourceFormats,approved:report.approved,mutationCases:report.mutationCases,failures:report.failures.length,risks:{highDensity:report.risks.highDensity.length,ambiguousDialogueMapping:report.risks.ambiguousDialogueMapping.length,unresolvedSpeaker:report.risks.unresolvedSpeaker.length,panelMetadataDiscrepancies:report.risks.panelMetadataDiscrepancies.length},historicalExceptions:report.historicalExceptions}));
  for(const e of report.failures.slice(0,100))console.error('FAIL '+JSON.stringify(e));
  for(const e of report.approved.unresolved.slice(0,30))console.error('APPROVED MISSING '+JSON.stringify(e));
  console.log('REGRESSION COVERAGE '+JSON.stringify(report.issues.map(x=>({id:x.id,assembled:x.assembled,recipes:x.recipes,highDensity:x.highDensity,riskCount:x.riskCount}))));
