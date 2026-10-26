@@ -33,6 +33,17 @@
 - **Stardust E01:** pages 002–003 and 021 retain the established colorful crew and station design. Page 020 is present but did not successfully render through this inspection tool in one attempt, so is excluded from passing scope.
 - **Vikings E01:** pages 019–020 preserve rooftop setting and two foreground character identities; pages 001–003 were also inspected. Edition-to-recipe mapping remains unresolved.
 
+## Published-image geometry and structural QC
+
+Independent `StarSplitterVisions` PR #141 scans the actual 157 released JPEG page files (136 bitwise distinct files; 21 intentional repeats in the Backyard Rockets combined edition). It reports no missing published daily-page paths or missing linked collected PDFs.
+
+**Exact released-image source issues (P2 source inspection; do not replace artwork without approval):**
+- Rex Fleet Issue 1: `page-002.jpg`, `page-004.jpg`, `page-009.jpg`, `page-011.jpg`, `page-015.jpg` have no terminal JPEG EOI marker.
+- Stardust Station Issue 1: `page-020.jpg` lacks EOI. That same original file did not render through the image-inspection bridge on one attempt. This warrants a targeted source decode and PDF comparison, not an assumption that canon is invalid.
+- Azure Reach Issue 1, Rex Fleet Issue 1, and Vikings Issue 1 contain mixed page-image geometries. Digital previews should not be mistaken for print-native masters. Resolve resolution and consistency through the separately owned issue-mastering workflow.
+
+These six page-path findings are individually recorded with evidence and required correction in the machine-readable visual review manifest.
+
 ## Series-by-series disposition
 
 | Series | Registered units | Keeper refs | RexPrompt approved drafts | Current QC disposition |
