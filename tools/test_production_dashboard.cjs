@@ -43,14 +43,14 @@ assert.equal(rf2.denominator,24);
 assert.equal(model.totals.sourceImagesAudited,Object.keys(draftManifest.drafts).length);
 assert.equal(rf1.sourceQualitySummary.audited,22);
 assert.equal(rf1.units.find(x=>x.recipeId==='RF_I01_P18').sourceQualityObservation.width,2400);
-assert.equal(rf1.mastering,'unverified');
+assert.equal(rf1.mastering,'native-review-required');
 assert.equal(rf3.denominator,35);
 assert.equal(rf3.approvedIndexed,30);
 assert.deepEqual(rf3.units.filter(x=>x.inBook&&x.draftState!=='approved-draft-indexed').map(x=>x.recipeId),
  ['RF_I03_P28','RF_I03_P29','RF_I03_P30','RF_I03_EDITOR_ENDMATTER','RF_I03_EDITOR_CLOSE']);
 assert(rf3.units.find(x=>x.recipeId==='RF_I03_EDITOR_ENDMATTER').recovery,'Preserved editorial source must be visible');
 assert(rf3.units.some(x=>x.recipeId==='RF_I03_EDITOR_CLOSE'&&x.recovery),'Unmastered teaser source must remain visible');
-assert.equal(rf1.published,'collected-edition-recorded');assert.equal(rf1.mastering,'unverified','Published does not assert mastered');
+assert.equal(rf1.published,'collected-edition-recorded');assert.equal(rf1.mastering,'native-review-required','Published book may still require native source review');
 assert.equal(rf2.published,'no-matching-edition-record');
 assert.equal(rf3.exported,'unverified');
 const vk=row('vikings-2026','vikings-2026-s1-e02');
@@ -74,7 +74,7 @@ const back=model.rows.filter(x=>x.seriesId==='backyard-rockets');
 assert(back.length>1,'Combined season must drill down to issues');
 assert(back.some(x=>x.issueNumber===1&&x.releases.length),'Released issue must appear even with no draft manifest');
 assert(back.some(x=>x.issueNumber===2&&x.releases.length),'Combined second edition must not disappear');
-assert(model.rows.every(x=>x.mastering==='unverified'),'Do not infer mastering approval');
+assert(model.rows.every(x=>x.mastering!=='mastered'),'Do not infer mastering approval');
 assert(model.rows.every(x=>x.denominatorSource==='curated-book'||x.denominatorSource==='assembled-recipes'||x.denominatorSource==='no-assembled-configuration'));
 for(const s of model.series){assert(s.distinctRecipeUnits>=0);assert(s.keeper.total>=0)}
 assert.throws(()=>build({shows:shows.slice(1),inventory,draftManifest,referenceManifest:refs,books,releasedLinks:released}),/disagrees/);
