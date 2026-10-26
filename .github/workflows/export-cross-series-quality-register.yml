@@ -1,0 +1,44 @@
+name: Export C3 cross-series quality register
+on:
+  pull_request:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/book-manifests.json'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/audits/**'
+      - 'tools/audit_all_series_production.cjs'
+      - 'tools/build_cross_series_quality_register.cjs'
+      - '.github/workflows/export-cross-series-quality-register.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/book-manifests.json'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/audits/**'
+      - 'tools/audit_all_series_production.cjs'
+      - 'tools/build_cross_series_quality_register.cjs'
+      - '.github/workflows/export-cross-series-quality-register.yml'
+  workflow_dispatch:
+jobs:
+  cross-series-quality-register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check exporter syntax
+        run: node --check tools/build_cross_series_quality_register.cjs
+      - name: Generate portfolio and exact issue registry
+        run: node tools/build_cross_series_quality_register.cjs --output-dir /tmp/visions-c3-register
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cross-series-quality-defects-and-recovery
+          path: /tmp/visions-c3-register/
+          if-no-files-found: error
