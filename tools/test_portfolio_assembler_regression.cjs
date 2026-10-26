@@ -144,6 +144,19 @@ async function main(){
    if(assembled.has(draft.seriesId+'::'+draft.recipeId))report.approved.resolved++;
    else report.approved.unresolved.push({key,recipeId:draft.recipeId});
  }
+ const baseline=json('tools/fixtures/portfolio-untriaged-risks.json');
+ assert.equal(baseline.schemaVersion,1,'Risk register requires schemaVersion 1');
+ for(const [category,items,key] of [['density',report.risks.highDensity,'show'],['ambiguity',report.risks.ambiguousDialogueMapping,'show'],['speakers',report.risks.unresolvedSpeaker,'show']]){
+   const prior=new Set(baseline[category]||[]);
+   for(const risk of items){
+     const id=risk.show+'::'+risk.recipe+(category==='speakers'?'::'+risk.handle:'');
+     if(!prior.has(id))recordFailure('NEW_UNREVIEWED_'+category.toUpperCase(),risk.show,risk.recipe,'New risk not present in the untriaged legacy inventory: '+id);
+   }
+ }
+ for(const risk of report.risks.panelMetadataDiscrepancies){
+   if(!(risk.show==='azure-reach-s1'&&risk.recipe==='AZR_S1E01_P03'&&risk.declared===10&&risk.panels===5))
+     recordFailure('UNEXPECTED_PANEL_COUNT_MISMATCH',risk.show,risk.recipe,'New or changed panel metadata mismatch');
+ }
  if(report.approved.unresolved.length)recordFailure('APPROVED_RECIPE_LOST','portfolio','',report.approved.unresolved.map(x=>x.key).slice(0,6).join(', '));
  assert.equal(report.loadedConfigurations,catalogs.length,'Not all configurations loaded');
  assert.equal(report.issues.length,catalogs.length,'Not all configured issue rows processed');

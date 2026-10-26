@@ -9,3 +9,7 @@ Strong distinction: high density or weakly mapped historical dialogue is **repor
 Strict scene merge now rejects orphan/duplicate IDs rather than quietly appending stray story pages. Existing strict overlay data should be regression-verified before merging.
 
 CI triggers on the entire show tree and assembler changes, with `workflow_dispatch` for audit on demand.
+
+Known risk register: `tools/fixtures/portfolio-untriaged-risks.json` preserves per-recipe **unresolved** dialogue density, ambiguous balloon assignment, and unresolved speaker identities observed on the initial full-portfolio run. It is **not an exception list granting approval**. CI fails if a newly introduced recipe has any of these problems until a developer inspects and either fixes the issue or deliberately updates the register with an explanation. Old flagged recipes remain candidates for future creative/IMG QC, without modifying approved script.
+
+The one narrow accepted historical metadata exception is released Azure Reach Issue 1 page P03 (panelCount 10 with 5 panelPlan entries). The suite explicitly rejects new panel-count discrepancies. Reconciliation here does not correct released canon.
