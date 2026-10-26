@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "skillId": "collaboration-continuity",
+  "applicability": [
+    "IMG",
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "resume",
+    "recover",
+    "work",
+    "context"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "verified current checkpoint and approvals"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

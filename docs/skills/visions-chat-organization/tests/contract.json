@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "skillId": "visions-chat-organization",
+  "applicability": [
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "archive",
+    "organize",
+    "chats"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "durable preservation before archival"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

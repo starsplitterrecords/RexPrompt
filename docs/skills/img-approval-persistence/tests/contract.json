@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-approval-persistence",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "save",
+    "approved",
+    "draft",
+    "atomically"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "substantial pass",
+    "original image bytes",
+    "fresh branch head"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

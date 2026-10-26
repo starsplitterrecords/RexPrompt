@@ -27,21 +27,30 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-binary-readback",
+        "img-approval-persistence"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "image-generation",
+        "image-pixel-inspection",
+        "github-write"
       ],
       "standards": [
         "comic-page-master-standard"
       ],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "img-sequential-production",
@@ -61,19 +70,27 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-page-production",
+        "img-production-recovery"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "image-generation",
+        "image-pixel-inspection"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "img-production-recovery",
@@ -96,19 +113,27 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-binary-readback",
+        "img-approval-persistence"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "original-binary-access",
+        "github-write"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "img-binary-readback",
@@ -135,13 +160,17 @@
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-actions-artifact-download",
+        "image-pixel-inspection"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "img-approval-persistence",
@@ -167,13 +196,17 @@
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-write",
+        "original-binary-access"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "img-issue-audit",
@@ -194,21 +227,28 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-binary-readback",
+        "img-page-production"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "image-pixel-inspection"
       ],
       "standards": [
         "comic-page-master-standard"
       ],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "img-issue-mastering",
@@ -229,19 +269,27 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-issue-audit",
+        "img-color-normalization"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "book-export",
+        "image-processing"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "img-color-normalization",
@@ -261,19 +309,25 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-issue-audit"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "image-pixel-inspection",
+        "image-processing"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "reference-keeper-ingest",
@@ -293,20 +347,27 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "img-binary-readback"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG",
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write",
+        "original-binary-access"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "reference-keeper-curation",
@@ -326,20 +387,27 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "reference-keeper-ingest"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "IMG",
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write",
+        "image-pixel-inspection"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": true
     },
     {
       "id": "rexprompt-development",
@@ -360,19 +428,25 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "collaboration-continuity"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "rexprompt-data-sanitization",
@@ -391,19 +465,25 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "rexprompt-development"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "rexprompt-identity-normalization",
@@ -424,19 +504,25 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "rexprompt-development"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "visions-release",
@@ -457,18 +543,25 @@
         "quoted example without operational intent"
       ],
       "dependencies": [],
-      "conditionalDependencies": [],
+      "conditionalDependencies": [
+        "img-issue-mastering"
+      ],
       "applicability": [
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "github-read",
+        "github-write",
+        "site-verification"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": true,
+      "requiresPixels": false
     },
     {
       "id": "visions-chat-organization",
@@ -487,19 +580,24 @@
       "nonTriggers": [
         "quoted example without operational intent"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "collaboration-continuity"
+      ],
       "conditionalDependencies": [],
       "applicability": [
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "conversation-navigation"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     },
     {
       "id": "collaboration-continuity",
@@ -526,13 +624,17 @@
         "Visions"
       ],
       "requiredCapabilities": [
-        "GitHub repository read"
+        "project-history-read",
+        "github-read"
       ],
       "standards": [],
       "outputs": [
-        "verified change or explicit blocker"
+        "verified source-specific outcome",
+        "explicit unresolved blockers"
       ],
-      "replaces": []
+      "replaces": [],
+      "mayPublish": false,
+      "requiresPixels": false
     }
   ]
 }

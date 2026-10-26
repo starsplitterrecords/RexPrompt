@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-issue-mastering",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "master",
+    "issue",
+    "build",
+    "export",
+    "PDF"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "validated full reading order",
+    "approved originals"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-issue-audit",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "audit",
+    "full",
+    "issue",
+    "continuity",
+    "resolution"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "whole assembled issue sequence",
+    "actual page pixels"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

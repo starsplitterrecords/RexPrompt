@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "skillId": "rexprompt-data-sanitization",
+  "applicability": [
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "sanitize",
+    "prompt",
+    "contamination"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "approved source writing",
+    "actual assembler outputs"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

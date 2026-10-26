@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "img-page-production",
+  "applicability": [
+    "IMG"
+  ],
+  "positiveIntentCases": [
+    "generate",
+    "render",
+    "repair",
+    "page"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "assembled exact recipe",
+    "live same-series visual baseline",
+    "actual reference pixels"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}

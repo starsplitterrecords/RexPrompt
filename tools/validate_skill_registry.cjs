@@ -14,6 +14,10 @@ for(const s of registry.skills){
  if(s.path!==`docs/skills/${s.id}/SKILL.md`)fail('wrong skill path '+s.id);
  if(!fs.existsSync(path.join(root,s.path)))fail('missing file '+s.path);
  if(!s.intents.length||!s.applicability.length)fail('unroutable '+s.id);
+ const fixturePath=path.join(root,'docs/skills',s.id,'tests/contract.json');
+ if(!fs.existsSync(fixturePath))fail('missing contract fixture '+s.id);
+ const fixture=JSON.parse(fs.readFileSync(fixturePath,'utf8'));
+ if(fixture.skillId!==s.id||!fixture.positiveIntentCases.length||!fixture.negativeIntentCases.length||!fixture.requiredPreconditions.length)fail('bad skill test fixture '+s.id);
  for(const std of s.standards||[])if(!fs.existsSync(path.join(root,'docs/standards',std+'.md')))fail('missing standard '+std);
 }
 for(const s of registry.skills)for(const d of s.dependencies||[])if(!ids.has(d))fail('unresolved dependency '+s.id+' -> '+d);

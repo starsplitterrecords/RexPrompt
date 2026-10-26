@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "skillId": "rexprompt-identity-normalization",
+  "applicability": [
+    "Visions"
+  ],
+  "positiveIntentCases": [
+    "rename",
+    "cast",
+    "merge",
+    "duplicate",
+    "identities"
+  ],
+  "negativeIntentCases": [
+    "quoted example without operational intent"
+  ],
+  "requiredPreconditions": [
+    "approved name mapping",
+    "decoded and readable source access"
+  ],
+  "mustNot": [
+    "invent approved state",
+    "delete unpreserved work",
+    "claim multimodal visual inspection from metadata"
+  ],
+  "expectedResult": "verified artifact or exact blocker"
+}
