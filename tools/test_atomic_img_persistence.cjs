@@ -35,7 +35,7 @@ const server=http.createServer(async(req,res)=>{
  }
  if(req.method==='POST'&&p==='/git/trees'){
   assert.ok(body.tree.some(x=>x.path==='production/drafts/manifest.json'));
-  assert.ok(body.tree.some(x=>x.path.endsWith('fixture_p01.png')));
+  assert.ok(body.tree.some(x=>/fixture_p0[12]\.png$/.test(x.path)));
   const id=crypto.createHash('sha1').update(JSON.stringify(body)).digest('hex');
   trees.set(id,body);treeWrites.push(body);
   return respond(res,201,{sha:id});
@@ -83,6 +83,42 @@ async function main(){
   assert.equal(blobs.get(record.gitBlobSha).compare(original),0);
   assert.equal(head,record.revision,'Commit must become authoritative head');
   console.log('PASS writeback: one Git commit, exact binary, manifest, independent read-after-write');
+  // Two-page sequential production integration: same issue, two distinct original PNGs,
+  // each approved and persisted in its own atomic commit. This is infrastructure
+  // evidence only; fixture pixels are not generated or approved comic pages.
+  const sequence=['FIXTURE_P01','FIXTURE_P02','FIXTURE_P03'];
+  const keyFor=id=>'fixture::fixture-i01::'+id;
+  const next=(drafts)=>sequence.find(id=>!drafts[keyFor(id)])||null;
+  assert.equal(next(manifest.drafts),'FIXTURE_P02',
+    'After first approved page, next selection must advance to page 2');
+  const imageTwo=path.join(fixtures,'second-original.png');
+  const madeTwo=cp.spawnSync('python3',['-c',
+    'from PIL import Image; import sys; Image.new("RGB",(33,25),(18,130,220)).save(sys.argv[1],format="PNG")',imageTwo],{encoding:'utf8'});
+  assert.equal(madeTwo.status,0,madeTwo.stderr);
+  const secondBytes=fs.readFileSync(imageTwo);
+  assert.ok(!secondBytes.equals(original),'Consecutive pages must have distinct original images');
+  const second=await exec(port,{SOURCE_IMAGE:imageTwo,RECIPE_ID:'FIXTURE_P02'});
+  assert.equal(second.status,0,second.stderr);
+  const secondRecord=JSON.parse(second.stdout);
+  assert.equal(secondRecord.status,'persisted-and-readback-verified');
+  assert.equal(secondRecord.sha256,digest(secondBytes));
+  assert.equal(secondRecord.gitBlobSha,sha(secondBytes));
+  assert.equal(refUpdates,2,'Two approved pages require two atomic commits');
+  assert.equal(treeWrites.length,2,'Every page requires its own atomic tree');
+  assert.equal(treeWrites[1].tree.length,2,'Second image and manifest must be committed together');
+  assert.ok(treeWrites[1].tree.some(x=>x.path.endsWith('fixture_p02.png')&&x.sha===sha(secondBytes)));
+  assert.ok(blobs.get(record.gitBlobSha).equals(original),'Page 1 original changed after page 2');
+  assert.ok(blobs.get(secondRecord.gitBlobSha).equals(secondBytes),'Page 2 original changed');
+  assert.ok(manifest.drafts[keyFor('FIXTURE_P01')],'First approved page missing after second commit');
+  assert.ok(manifest.drafts[keyFor('FIXTURE_P02')],'Second approved page missing after second commit');
+  assert.equal(next(manifest.drafts),'FIXTURE_P03',
+    'After second approved page, next selection must advance to page 3');
+  const withGap={...manifest.drafts,[keyFor('FIXTURE_P03')]:{status:'approved-production-draft'}};
+  delete withGap[keyFor('FIXTURE_P02')];
+  assert.equal(next(withGap),'FIXTURE_P02',
+    'Later approved page must never cause a missing earlier page to be skipped');
+  console.log('PASS two-page sequence: P01→P02→P03 derived from durable approved manifest, including gap return');
+  console.log('PASS two distinct image originals, two atomic Git commits, no overwritten prior approval');
   const prior=head,priorWrites=gitBlobWrites;
   const denied=await exec(port);assert.notEqual(denied.status,0);assert.equal(head,prior);
   assert.equal(gitBlobWrites,priorWrites,'Unapproved overwrite must not even create blobs');
@@ -100,7 +136,7 @@ async function main(){
   assert.equal(replaced.status,0,replaced.stderr);
   const replacementRecord=JSON.parse(replaced.stdout);
   assert.equal(replacementRecord.sha256,digest(replacementBytes));
-  assert.equal(refUpdates,2);
+  assert.equal(refUpdates,3);
   const changes=treeWrites.at(-1).tree;
   assert.ok(changes.some(x=>x.path.endsWith('fixture_p01.jpg')&&x.sha===sha(replacementBytes)));
   assert.ok(changes.some(x=>x.path.endsWith('fixture_p01.png')&&x.sha===null),'Old approved path must be removed in same tree');
@@ -111,7 +147,7 @@ async function main(){
   head=baseHead;manifest={schemaVersion:1,drafts:{}};race=true;
   const collided=await exec(port,{EXPECTED_HEAD_SHA:baseHead});
   assert.notEqual(collided.status,0,'Non-fast-forward race must fail');
-  assert.equal(head,'c'.repeat(40));assert.equal(refUpdates,2);
+  assert.equal(head,'c'.repeat(40));assert.equal(refUpdates,3);
   console.log('PASS concurrent branch update rejected, no partial image/manifest state visible');
  }finally{
   server.close();fs.rmSync(fixtures,{recursive:true,force:true});
