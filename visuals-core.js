@@ -158,8 +158,8 @@ function createUi(){
         </div>
         <div id="githubTokenPanel" class="visual-token-panel" hidden>
           <label for="githubTokenInput">GitHub fine-grained token · Contents: Read and write</label>
-          <label class="visual-remember"><input id="rememberGithubToken" type="checkbox"> Remember GitHub token on this device</label>
-          <div class="visual-remember-hint">Optional. Saved tokens persist across Safari restarts and can be accessed by scripts on this site. Avoid on shared devices.</div>
+          <label class="visual-remember" style="display:none!important"><input id="rememberGithubToken" type="checkbox" disabled> Persistent token storage disabled</label>
+          <div class="visual-remember-hint">For security, tokens are available only to the current browser tab. Use a fine-grained token limited to the repositories and permissions required.</div>
           <div class="visual-token-row"><input id="githubTokenInput" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"><button id="saveGithubTokenBtn" type="button">Use Token</button><button id="cancelGithubTokenBtn" type="button" class="secondary">Cancel</button></div>
         </div>
         <div id="draftUploadStatus" class="visual-upload-status"></div>
@@ -192,7 +192,7 @@ function createUi(){
     if(utilities){
       const rememberRow=document.createElement('label');
       rememberRow.className='visual-remember';
-      rememberRow.innerHTML='<input type="checkbox" id="rememberGithubTokenUtility"> Remember GitHub token on this device';
+      rememberRow.innerHTML='<input type="checkbox" id="rememberGithubTokenUtility" disabled> Persistent token storage disabled';rememberRow.style.setProperty('display','none','important');
       utilities.append(rememberRow,ui.forgetTokenBtn);
       const hint=document.createElement('div');hint.className='visual-remember-hint';
       hint.textContent='Optional. Persistent tokens are readable by scripts on this site. Avoid on shared devices.';
