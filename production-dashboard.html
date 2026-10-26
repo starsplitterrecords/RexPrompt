@@ -1,30 +1,36 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RexPrompt — Production Dashboard</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RexPrompt · Portfolio Production Operations</title>
 <style>
-:root{color-scheme:light dark;font-family:system-ui,-apple-system,sans-serif}body{max-width:1320px;margin:auto;padding:24px;line-height:1.45;background:Canvas;color:CanvasText}
+:root{color-scheme:light dark;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{max-width:1600px;padding:22px;margin:0 auto;line-height:1.48;background:Canvas;color:CanvasText}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-a{color:LinkText}h1{margin:0;font-size:1.7rem}h2{font-size:1.2rem;margin-top:26px}
-.muted{color:GrayText;font-size:.84rem}.error{color:#b51e2b}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
-.metric{border:1px solid GrayText;border-radius:8px;padding:15px}.metric-value{font-size:1.7rem;font-weight:700}
-.controls{display:flex;gap:12px;margin:16px 0;flex-wrap:wrap}input,select{padding:9px;min-width:220px;color:CanvasText;background:Canvas;border:1px solid GrayText;border-radius:5px}
-.table-container{max-width:100%;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}td,th{text-align:left;padding:10px 11px;border-bottom:1px solid GrayText;vertical-align:top}th{font-weight:650;white-space:nowrap}tbody tr:hover{background:color-mix(in srgb,CanvasText 5%, Canvas)}
-details{max-width:350px}details p{overflow-wrap:anywhere}summary{cursor:pointer}footer{font-size:.85rem;margin:28px 0}
-</style>
-</head>
-<body>
-<header><div><h1>Production dashboard</h1><div class="muted">Durable state, not a claim of visual approval</div></div><nav><a href="index.html">Assembler and Reference Keeper</a></nav></header>
-<p id="status" role="status">Loading production manifests…</p>
-<div class="stats" id="stats" aria-label="Production totals"></div>
-<h2>Issue and production-package readiness</h2>
-<p class="muted">Asset completeness is only asserted for units with a curated complete-book manifest. Mastering and publication readiness remain unverified without explicit checks. A registered script is not an approved image.</p>
-<div class="controls"><label>Series <select id="seriesFilter"></select></label><label>Find <input id="search" type="search" placeholder="Issue, series or title"></label></div>
-<p id="count" class="muted"></p>
-<div class="table-container"><table><thead><tr><th>Series</th><th>Issue/package</th><th>Approved / required</th><th>Asset state</th><th>Mastering</th><th>Publishing</th><th>Evidence</th></tr></thead><tbody id="rows"></tbody></table></div>
-<h2>Series overview</h2>
-<div class="table-container"><table><thead><tr><th>Series</th><th>Registered configurations</th><th>Approved drafts</th><th>Keeper refs</th><th>Canon links</th><th>Release metadata</th></tr></thead><tbody id="seriesRows"></tbody></table></div>
-<footer><p>Source of truth: RexPrompt working scripts, approved-draft and Keeper manifests; StarSplitterVisions alone establishes released canon. A reference count of zero means no Keeper references are registered, not that visual references are absent everywhere.</p></footer>
-<script src="production-dashboard-core.js"></script><script src="production-dashboard.js"></script>
-</body></html>
+h1{font-size:1.8rem;margin:0}h2{font-size:1.15rem;margin:22px 0 8px}h3{font-size:1rem}p{max-width:1000px}
+a{color:LinkText}.muted,small{display:block;font-size:.78rem;color:GrayText}.error{color:#bb2432}.warning{color:#b9781e}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:22px 0}
+.metric{border:1px solid GrayText;border-radius:9px;padding:12px}.metric strong{display:block;font-size:1.65rem}
+.chip{display:inline-block;border:1px solid GrayText;border-radius:5px;padding:3px 6px;white-space:normal;overflow-wrap:anywhere;font-size:.73rem}
+.chip.ok{border-color:#25835b}.chip.warn{border-color:#b9781e}.chip.neutral{border-color:GrayText}
+.filters{display:flex;flex-wrap:wrap;align-items:end;gap:12px;margin:12px 0 16px}
+label{font-size:.85rem}select,input{display:block;background:Canvas;color:CanvasText;border:1px solid GrayText;border-radius:5px;padding:9px;min-width:180px}
+#query{min-width:300px}table{border-collapse:collapse;width:100%;font-size:.84rem}
+th,td{padding:8px 10px;border-bottom:1px solid GrayText;text-align:left;vertical-align:top}
+th{font-weight:650;white-space:nowrap}tbody>tr:hover{background:color-mix(in srgb,CanvasText 4%,Canvas)}
+.scroll{width:100%;overflow:auto}.scroll table{min-width:700px}
+summary{cursor:pointer;white-space:nowrap;font-weight:600}details{max-width:560px}details p{max-width:470px;overflow-wrap:anywhere}
+.units{font-size:.75rem;min-width:730px}.units td:first-child{font-family:monospace}
+#issueTable{min-width:1450px}.foot{font-size:.82rem;margin-top:27px;padding-bottom:30px}
+</style></head>
+<body><header><div><h1>Production operations</h1><small>Cross-series accounting · evidence before inference</small></div><a href="index.html">RexPrompt assembler</a></header>
+<p id="loadState" role="status">Reconstructing portfolio from authenticated repository inventory…</p>
+<section id="metrics" class="metrics" aria-label="Production metrics"></section>
+<h2>Series coverage</h2><p class="muted">Configuration count is a menu selection count. Recipe count is the deduplicated inventory of actual production units from assembler data. Keeper count measures indexed references, not full visual coverage.</p>
+<div class="scroll"><table><thead><tr><th>Series</th><th>Show configurations</th><th>Distinct recipes</th><th>Approved draft IDs</th><th>Keeper refs</th><th>Released-unit links</th><th>Visions editions</th></tr></thead><tbody id="seriesList"></tbody></table></div>
+<h2>Issue and recipe evidence</h2>
+<p class="muted">A curated book inventory governs complete export ordering when available; otherwise the assembled recipe IDs give a valid recipe denominator, not a complete-book count. "Not indexed" is not "never generated". No generated, mastered, exported or published status is inferred from draft absence.</p>
+<div class="filters"><label>Series <select id="seriesFilter"></select></label><label>Search issue or exact recipe ID<input id="query" type="search" placeholder="RF_I03_P28, Issue 3, series…"></label><label>Evidence filter<select id="qualityFilter"><option value="all">All</option><option value="gaps">Unindexed draft IDs</option><option value="recovery">Recovery leads</option><option value="quality">Source quality findings</option><option value="published">Published edition records</option></select></label></div>
+<p id="resultCount" class="muted"></p>
+<div class="scroll"><table id="issueTable"><thead><tr><th>Series</th><th>Issue/config</th><th>Assembled recipes</th><th>Required units</th><th>Drafts</th><th>Not indexed</th><th>References</th><th>Mastering</th><th>Exporter readiness</th><th>Release state</th><th>Exact IDs / evidence</th></tr></thead><tbody id="issueRows"></tbody></table></div>
+<h2>Source integrity</h2><p id="audit" class="muted">Loading validation facts…</p>
+<p class="foot muted">Sources: RexPrompt assembler-aware series audit, approved-draft manifest, Reference Keeper and scoped quality/recovery records; StarSplitterVisions series metadata for published editions. Visual and lettering quality cannot be determined from index counts. This dashboard never grants creative, mastering or publication approval.</p>
+<script src="production-dashboard-core.js"></script><script src="production-dashboard.js"></script></body></html>
