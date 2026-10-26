@@ -90,6 +90,36 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
    seenPairs.add(key(sid,originalIssue));
   }
  }
+ // Curated books without a registered executable assembler configuration still count as scoped
+ // book inventories. They must not disappear merely because no draft image has ever been indexed.
+ for(const [bookKey,book] of Object.entries(bookList)){
+  if(rows.some(x=>x.seriesId===book.seriesId&&x.issueId===book.issueId))continue;
+  const sid=book.seriesId,iid=book.issueId,g=ensure(sid);
+  const evidence=visionsMetadata[sid];
+  const n=issueNumber(iid);
+  const releases=(evidence?.releases||[]).filter(x=>x.publicationType==='E'&&Number.isInteger(x.issueNumber)&&n===x.issueNumber);
+  const quality=sourceFindings.filter(x=>x.seriesId===sid&&x.issueId===iid);
+  const candidates=recoveryCandidates.filter(x=>x.seriesId===sid&&x.issueId===iid);
+  const ids=distinct(book.units||[]),units=ids.map(id=>{
+   const draft=byDraft.get(key(sid,iid,id)),candidate=candidates.find(x=>x.recipeId===id)||null;
+   return {recipeId:id,inRecipe:false,inBook:true,draftState:draft?.status==='approved-production-draft'?'approved-draft-indexed':candidate?'recovery-candidate':'not-indexed-in-RexPrompt',
+     imagePath:draft?.image||null,sourceQualityObservation:imageFacts[key(sid,iid,id)]||null,
+     recovery:candidate,releaseLinks:releaseLinks.get(key(sid,iid,id))||[],confidence:draft?'approved draft mapping; artistic QC unknown':candidate?'unresolved recovery evidence':'other storage unknown'};
+  });
+  const facts=units.filter(x=>x.sourceQualityObservation),approved=units.filter(x=>x.draftState==='approved-draft-indexed').length;
+  const row={seriesId:sid,issueId:iid,configurationId:null,issueNumber:n,issueLabel:'Curated book '+iid,denominator:ids.length,denominatorSource:'curated-book',
+   assembledCount:null,approvedIndexed:approved,notIndexedCount:units.length-approved,keeperCoverage:g.keeper,bookKnown:true,
+   exporterReadiness:approved===ids.length?'inventory-complete-not-mastered':'blocked-on-approved-drafts',
+   quality:quality.length?quality:[{classification:'unknown',summary:'No mastering assessment registered'}],
+   sourceQualitySummary:{audited:facts.length,profileUnspecified:facts.filter(x=>x.sourceQualityObservation.colorProfile==='unspecified').length,
+    shortEdgeUnder2000:facts.filter(x=>Math.min(x.sourceQualityObservation.width,x.sourceQualityObservation.height)<2000).length},
+   mastering:'unverified',exported:releases.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
+   published:releases.length?'collected-edition-recorded':evidence?.error?'source-unavailable':'no-matching-edition-record',
+   releases,sourceHealthy:false,sourceFiles:[],sourceOverlays:[],units,recoveryCandidates:candidates,extraBookUnits:ids,
+   invalid:true,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
+  rows.push(row);g.rows.push(row);seenPairs.add(bookKey);
+  for(const u of units)if(u.draftState==='approved-draft-indexed')g.approvedDraftKeys.add(key(sid,iid,u.recipeId));
+ }
  for(const [sidIssue,items] of issueDrafts){
   if(seenPairs.has(sidIssue))continue;
   const first=items[0],g=ensure(first.seriesId);
