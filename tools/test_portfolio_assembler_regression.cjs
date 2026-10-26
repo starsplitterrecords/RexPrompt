@@ -95,7 +95,7 @@ async function main(){
   let store;
   try{addFormat(show);store=await api.loadShow(show);assert(store.__scenes.length>0,'No registered production units');report.loadedConfigurations++}
   catch(e){recordFailure('LOAD_SHOW',show.id,'',e.message);continue}
-  const scenes=store.__scenes,ids=new Set(),series=show.seriesId||store.__show.seriesId||show.basePath;
+  const scenes=store.__scenes,ids=new Set(),series=show.seriesId||store.__show.seriesId||path.posix.basename(show.basePath||show.id).replace(/-s1$/,'');
   if(!report.series[series])report.series[series]={configurations:0,units:0,assembled:0};
   report.series[series].configurations++;
   report.series[series].units+=scenes.length;
@@ -128,7 +128,7 @@ async function main(){
  mutation('strict-overlay-rejects-duplicate-id',()=>expectedFailure(()=>api.applyOverlay([{id:'A'}],[{id:'A',summary:'one'},{id:'A',summary:'two'}],{mergeById:true,strict:true,file:'negative.json'}),'Duplicate strict'));
  mutation('strict-overlay-preserves-original',()=>{const src=[{id:'A',summary:'keep',panelPlan:['one']}],before=asJson(src),out=api.applyOverlay(src,[{id:'A',promptSettingMode:'label'}],{mergeById:true,strict:true});assert.equal(out.length,1);assert.deepEqual(out[0].panelPlan,['one']);assert.equal(out[0].summary,'keep');assert.equal(asJson(src),before)});
  mutation('unsafe-prompt-suppression',()=>expectedFailure(()=>api.pageAssembly({id:'synthetic',promptSuppress:['dialogue']},{}),'Invalid or protected prompt suppression'));
- mutation('bad-layout-panel-reference',()=>expectedFailure(()=>api.validatePageLayout({id:'synthetic',panelPlan:['panel1'],pageLayout:{composition:'grid',visualPriority:'a',readingFlow:'a',panels:[{panel:2,role:'dominant',scale:'large',placement:'a'}]}}),'Invalid 1-based panel reference'));
+ mutation('bad-layout-panel-reference',()=>expectedFailure(()=>api.validatePageLayout({id:'synthetic',panelPlan:['panel1'],pageLayout:{composition:'grid',visualPriority:'a',readingFlow:'a',panels:[{panel:2,role:'dominant',scale:'large',placement:'a'}]}}),'invalid 1-based panel reference'));
  mutation('incorrect-balloon-panel-ownership',()=>{const fixture={id:'mutation-dialogue',panelPlan:[{panel:1,action:'A',dialogueIndices:[0]},{panel:2,action:'B',dialogueIndices:[]}],dialogueInline:[{speaker:'A',text:'Hello',subtext:'Panel 2'}]};expectedFailure(()=>api.prepareCleanPanelPlan(fixture),'conflicts with authored subtext')});
  mutation('wrong-panel-lettering-speaker',()=>{const fixture={id:'mutation-lettering',promptPanelLetteringMode:'indexed',panelPlan:['Close-up. EXACT SCRIPTED LETTERING: ALICE: “Hello”'],dialogueInline:[{speaker:'BOB',text:'Hello'}]};expectedFailure(()=>api.preparePanelLettering(fixture),'differs from canonical dialogueInline')});
  mutation('dense-dialogue-warning-without-rewrite',()=>{const fixture={id:'dense',panelPlan:Array.from({length:3},(_,i)=>({panel:i+1,action:'beat',dialogueIndices:i===0?Array.from({length:16},(_,n)=>n):[]})),dialogueInline:Array.from({length:16},(_,i)=>({speaker:'A',text:'These lines are deliberately dense and must remain authoritative '+i}))};const original=asJson(fixture),warnings=api.pageLayoutWarnings(fixture);assert(warnings.length>0);assert.equal(original,asJson(fixture))});
