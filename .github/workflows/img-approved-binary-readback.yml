@@ -1,0 +1,32 @@
+name: IMG Approved Binary Readback
+on:
+  workflow_dispatch:
+    inputs:
+      series_id: {description: Exact RexPrompt series ID, required: true, type: string}
+      issue_id: {description: Exact RexPrompt issue ID, required: true, type: string}
+      recipe_id: {description: Exact RexPrompt recipe ID, required: true, type: string}
+  pull_request:
+    paths:
+      - '.github/workflows/img-approved-binary-readback.yml'
+      - 'tools/prepare_img_readback.py'
+permissions:
+  contents: read
+jobs:
+  exact-approved-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract approved original image and provenance
+        env:
+          SERIES_ID: ${{ inputs.series_id || 'azure-reach' }}
+          ISSUE_ID: ${{ inputs.issue_id || 'azure-reach-s1-e02' }}
+          RECIPE_ID: ${{ inputs.recipe_id || 'AZR_S1E02_P11' }}
+          SOURCE_COMMIT: ${{ github.sha }}
+        run: python3 tools/prepare_img_readback.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: approved-image-${{ inputs.recipe_id || 'AZR_S1E02_P11' }}
+          path: img-readback/
+          retention-days: 2
+          compression-level: 0
+          if-no-files-found: error
