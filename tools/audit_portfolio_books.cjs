@@ -6,11 +6,12 @@
  * a complete registry coverage report. --check rejects stale committed data.
  * Does not infer or invent missing production units.
  */
-const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const ROOT=path.resolve(__dirname,'..');
 const SHOWS=JSON.parse(fs.readFileSync(path.join(ROOT,'data/shows.json'),'utf8'));
 const BOOK_PATH=path.join(ROOT,'production/book-manifests.json');
 const AUDIT_PATH=path.join(ROOT,'production/book-export-coverage.json');
+const HUMAN_PATH=path.join(ROOT,'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md');
 const CURRENT=JSON.parse(fs.readFileSync(BOOK_PATH,'utf8'));
 const DRAFTS=JSON.parse(fs.readFileSync(path.join(ROOT,'production/drafts/manifest.json'),'utf8')).drafts;
 const cache=new Map(),issues={},rows=[],diagnostics=[];
@@ -104,14 +105,31 @@ function supplement(show,selected){
  return {units:[...before,...selected,...after],risks:structuralRisk};
 }
 function countApproved(series,issue,units){
- const approved=[],missing=[],invalid=[];
+ const approved=[],missing=[],invalid=[],corrupt=[];
  for(const id of units){
   const entry=DRAFTS[[series,issue,id].join('::')];
-  if(entry?.status==='approved-production-draft'&&entry.image)approved.push(id);
-  else if(entry)invalid.push(id);
-  else missing.push(id);
+  if(!entry){missing.push(id);continue;}
+  if(entry.status!=='approved-production-draft'||!entry.image){invalid.push(id);continue;}
+  const image=path.resolve(ROOT,entry.image),approvedDir=path.resolve(ROOT,'production/drafts');
+  if(!image.startsWith(approvedDir+path.sep)||!fs.existsSync(image)||!fs.statSync(image).isFile()){
+    corrupt.push({id,reason:'approved-binary-unavailable'});continue;
+  }
+  const bytes=fs.readFileSync(image);
+  if(bytes.subarray(0,40).toString().startsWith('version https://git-lfs.github.com')){
+    corrupt.push({id,reason:'git-lfs-pointer-not-image'});continue;
+  }
+  const sig=bytes.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex'))?'image/png':
+    bytes.length>=3&&bytes.subarray(0,3).equals(Buffer.from('ffd8ff','hex'))?'image/jpeg':
+    bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP'?'image/webp':null;
+  if(sig!==entry.mimeType){corrupt.push({id,reason:'MIME-or-signature-mismatch'});continue;}
+  const hash=crypto.createHash('sha256').update(bytes).digest('hex');
+  if(entry.sha256&&hash!==entry.sha256.toLowerCase()){
+    corrupt.push({id,reason:'SHA-256-mismatch'});continue;
+  }
+  approved.push(id);
  }
- return {approvedCount:approved.length,missingImages:missing,unapprovedImages:invalid,missingCount:missing.length+invalid.length};
+ return {approvedCount:approved.length,missingImages:missing,unapprovedImages:invalid,
+   corruptImages:corrupt,missingCount:missing.length+invalid.length+corrupt.length};
 }
 function structureCheck(units){
  const errs=[];
@@ -160,7 +178,7 @@ for(const show of SHOWS){
  const counts=countApproved(seriesId,issueId,book?.units||proposed);
  rows.push({selectorId:issueId,seriesId,kind:'issue',status:!book?'uncurated':counts.missingCount?'blocked-missing-images':'complete-draft-export-supported',
    expectedUnits:book?.units.length||proposed.length,approvedImages:counts.approvedCount,missingImageCount:counts.missingCount,
-   missingImageIds:counts.missingImages,unapprovedImageIds:counts.unapprovedImages,
+   missingImageIds:counts.missingImages,unapprovedImageIds:counts.unapprovedImages,corruptImageIds:counts.corruptImages,
    reason:errs.length?errs.join(', '):counts.missingCount?'missing-approved-images':null,
    inventorySource:cur?'preexisting-verified':book?'derived-from-registered-source':'candidate-needs-curation',
    sourceShowId:show.id});
@@ -178,12 +196,23 @@ const report={schemaVersion:1,registrySelectors:SHOWS.length,
   entries:rows,diagnostics};
 const manifest={...CURRENT,issues:Object.fromEntries(Object.entries(issues).sort(([a],[b])=>a.localeCompare(b)))};
 const normalized=x=>JSON.stringify(x,null,2)+'\n';
+function markdown(){
+ const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes shelves and non-comic selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'','## Individual issue inventories','','| Series | Registered selector | Inventory | Approved / expected | Blocking reason |','|---|---|---|---:|---|'];
+ for(const r of rows.filter(x=>x.status!=='not-a-book')){
+   const expected=r.expectedUnits??'?',approved=r.approvedImages??0;
+   const reason=(r.reason||'—').replace(/\|/g,'/');
+   lines.push('| '+r.seriesId+' | '+r.selectorId+' | '+r.status+' | '+approved+' / '+expected+' | '+reason+' |');
+ }
+ lines.push('','The machine-readable `production/book-export-coverage.json` contains the exact missing IDs and source provenance for every selector. No unknown cover, cast, editorial or teaser is invented. A manifest-backed and fully approved issue supports a review export; a mastered and approved release is a separate editorial/production gate.','','Generated by `node tools/audit_portfolio_books.cjs --write`.');return lines.join('\n')+'\n';
+}
 if(process.argv.includes('--write')){
  fs.writeFileSync(BOOK_PATH,normalized(manifest));
  fs.writeFileSync(AUDIT_PATH,normalized(report));
+ fs.writeFileSync(HUMAN_PATH,markdown());
 }else if(process.argv.includes('--check')){
  assert.equal(fs.readFileSync(BOOK_PATH,'utf8'),normalized(manifest),'Complete-book inventory out of sync with registered source');
  assert.equal(fs.readFileSync(AUDIT_PATH,'utf8'),normalized(report),'Portfolio coverage audit out of sync with registered source');
+ assert.equal(fs.readFileSync(HUMAN_PATH,'utf8'),markdown(),'Portfolio human coverage report out of sync');
 }
 console.log('AUDIT_SUMMARY '+JSON.stringify({registered:report.registrySelectors,manifests:report.issuesWithManifest,statuses:report.statuses,issues:rows.filter(x=>x.kind==='issue').length}));
 for(const r of rows)console.log('AUDIT_ISSUE '+JSON.stringify({selector:r.selectorId,series:r.seriesId,status:r.status,expected:r.expectedUnits,approved:r.approvedImages,missing:r.missingImageCount,reason:r.reason}));
