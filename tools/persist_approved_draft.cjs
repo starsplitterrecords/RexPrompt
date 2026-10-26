@@ -21,6 +21,23 @@ const isPng=original.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex'))
 const isJpeg=original[0]===255&&original[1]===216&&original.subarray(-2).equals(Buffer.from('ffd9','hex'));
 const isWebp=original.toString('ascii',0,4)==='RIFF'&&original.toString('ascii',8,12)==='WEBP'&&original.readUInt32LE(4)===original.length-8;
 if(!(isPng&&mimeType==='image/png'||isJpeg&&mimeType==='image/jpeg'||isWebp&&mimeType==='image/webp'))throw Error('Image MIME does not match actual bytes');
+if(isPng){
+ if(original.readUInt32BE(8)!==13||original.toString('ascii',12,16)!=='IHDR'||!original.readUInt32BE(16)||!original.readUInt32BE(20))throw Error('Invalid PNG IHDR');
+ const table=Array.from({length:256},(_,n)=>{for(let i=0;i<8;i++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0});
+ let pos=8,seenIEND=false;
+ while(pos<original.length){
+  if(pos+12>original.length)throw Error('Truncated PNG');
+  const n=original.readUInt32BE(pos),end=pos+12+n;
+  if(end>original.length)throw Error('PNG chunk exceeds file');
+  let crc=0xffffffff;
+  for(let i=pos+4;i<pos+8+n;i++)crc=table[(crc^original[i])&255]^(crc>>>8);
+  if(((crc^0xffffffff)>>>0)!==original.readUInt32BE(pos+8+n))throw Error('PNG CRC mismatch');
+  const type=original.toString('ascii',pos+4,pos+8);pos=end;
+  if(type==='IEND'){if(n!==0||pos!==original.length)throw Error('Invalid PNG IEND');seenIEND=true;break}
+ }
+ if(!seenIEND)throw Error('PNG missing IEND');
+}
+if(isWebp&&(!['VP8 ','VP8L','VP8X'].includes(original.toString('ascii',12,16))))throw Error('Invalid WebP payload signature');
 const imageHash=crypto.createHash('sha256').update(original).digest('hex');
 const gitHash=buffer=>crypto.createHash('sha1').update('blob '+buffer.length+'\0').update(buffer).digest('hex');
 const apiBase=env.GITHUB_API_URL||'https://api.github.com';
