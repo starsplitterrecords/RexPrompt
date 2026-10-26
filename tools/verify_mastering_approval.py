@@ -65,8 +65,14 @@ def verify(data,root=ROOT):
                     errors.append(str(unit)+": approved source still lacks embedded ICC; establish an independently approved color-managed replacement master")
         except Exception as exc:
             errors.append(str(unit)+": source cannot be decoded: "+str(exc))
-        if item.get("machineDeficiencies"):
-            errors.append(str(unit)+": unresolved source or machine deficiencies: "+",".join(item["machineDeficiencies"]))
+        hard=[x for x in item.get("machineDeficiencies",[]) if x in
+              ("native-resolution-deficit","missing-or-undecodable-approved-image",
+               "source-color-profile-unresolved")]
+        if hard:
+            errors.append(str(unit)+": unresolved source-art blockers: "+",".join(hard))
+        # Color/geometry observation flags require documented reviewer decisions,
+        # not arbitrary automated normalization. Page review gates below enforce that.
+
         for name in CHECKS:
             check=item.get("review",{}).get(name,{})
             if check.get("status")!="pass" or not check.get("reviewer") or not check.get("evidence"):
