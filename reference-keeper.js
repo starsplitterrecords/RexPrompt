@@ -14,7 +14,7 @@ async function loadCurrentManifest(){
   }
   return load(C.manifest,{schemaVersion:1,references:{}});
 }
-function seriesFrom(shows){const m=new Map;function add(name){name=String(name||'').split(' — ')[0].replace(/\s+Covers?$/i,'').trim();const id=safe(name);if(name&&!m.has(id))m.set(id,{id,name})}(Array.isArray(shows)?shows:[]).forEach(x=>add(x.seriesName||x.name||x.id));Object.values(S.manifest.references||{}).forEach(x=>add(x?.seriesName||x?.seriesId));return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name))}
+function seriesFrom(shows){const m=new Map;function add(id,name){name=String(name||id||'').split(' — ')[0].replace(/\s+Covers?$/i,'').trim();id=String(id||'').trim()||safe(name);if(name&&id&&!m.has(id))m.set(id,{id,name})}(Array.isArray(shows)?shows:[]).forEach(x=>add(x.seriesId,x.seriesName||x.name||x.id));Object.values(S.manifest.references||{}).forEach(x=>add(x?.seriesId,x?.seriesName||x?.seriesId));return [...m.values()].sort((a,b)=>a.name.localeCompare(b.name))}
 function setMode(mode){const k=mode==='keeper';$('#assemblerMode').hidden=k;$('#referenceKeeperMode').hidden=!k;$('#assemblerModeBtn').setAttribute('aria-pressed',String(!k));$('#referenceKeeperModeBtn').setAttribute('aria-pressed',String(k));$('#appTitle').textContent=k?'RexPrompt Reference Keeper':'RexPrompt Assembler';document.title=$('#appTitle').textContent;localStorage.setItem('rexprompt.mode',k?'keeper':'assembler');if(k)render()}
 function token(){return window.RexPromptGithubAuth.getToken()}
 function syncToken(){S.ui.forget.hidden=!token();S.ui.remember.checked=window.RexPromptGithubAuth.isRemembered()}
