@@ -33,3 +33,17 @@ This review is **page-image visual inspection**, not automated OCR and not full 
 
 ## Future updates
 Append each inspected issue with exact page / recipe IDs, observed continuity, narrow confirmed defects, review-only uncertainties, and outstanding source-image or reference blockers. Do not alter approved art or silently migrate visual canon.
+
+## Vikings 2026 — published Issue 01
+**Inspected: all 26/26 original published JPEG page images, P01–P26** (including cover/editorial/end-credit pages). Evidence: `starsplitterrecords/StarSplitterVisions/main/sites/visions/public/images/pages/vikings-2026/issue-01/page-###.jpg`.
+
+**Broad passing observations, limited to visual inspection:** Bjorn's buzzed light-brown hair, full beard, heavy black fur-lined coat and medallion, and Gunnar's long blond hair, facial paint, leather/fur armor and shield remain readily distinguishable in the principal panels. Carrie maintains tied grey hair, navy city jacket, and office setting. The historical longship, modern harbor/DTI transport, municipal cubicle, and Brooklyn roof sequences are legible scene shifts; no overall issue approval is asserted.
+
+### Defect / confirmation queue
+| ID | Exact image and tentative recipe | Severity | Original-pixel evidence | Smallest correction / verification |
+|---|---|---|---|---|
+| C3-VIK-I01-001 | `page-007.jpg`, corresponding script page ID **mapping pending** | **Blocker candidate — duplicate identity** | In lower-right panel the short-haired, fur-coated Bjorn is at the right foreground, with a second short-haired/fur-coated version of himself at background left beside Gunnar. Appears to duplicate the protagonist in a single continuous panel. | Reconcile character roster and stage geography with exact assembled script; if duplicated, remove only background copy, protecting the correct foreground and Gunnar. |
+| C3-VIK-I01-002 | `page-016.jpg`, recipe mapping pending | **Local defect candidate — background duplicate identity** | Second wide roof panel has Carrie and fur-coated Bjorn foreground; a similarly fur-coated short-haired Bjorn-shaped man stands near Gunnar and another crew member in the background. Could be a third Norse crew member; no cast-confirmation yet. | Use exact panel cast and reference sheet to confirm identity; do not delete a legitimate supporting actor. |
+| C3-VIK-I01-003 | `page-009.jpg`, recipe mapping pending | **Review — dialogue pointer ambiguity** | First van panel says 'HERE, YOU'LL NEED TO FILL THESE OUT.' Balloon appears to point toward a figure inside the van as offscreen paperwork is passed from the left. Potential wrong attribution or confusing balloon tail. | Compare line owner in assembled dialogue; letter-tail repair only if necessary. |
+
+**End matter:** page 026 is the published credits/closing form with a screenshot of a prior image. Not a duplicated story page. **Status:** Every published image visually inspected; exact line-by-line recipe comparison, external reference-sheet matching and print-specific pixel analysis remain unverified.
