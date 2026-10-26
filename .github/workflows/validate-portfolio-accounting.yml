@@ -1,0 +1,37 @@
+name: Validate portfolio production accounting
+on:
+  pull_request:
+    paths:
+      - 'production-dashboard*'
+      - 'tools/test_production_portfolio.cjs'
+      - 'production/dashboard-*.json'
+      - 'data/shows.json'
+      - 'production/drafts/manifest.json'
+      - 'production/book-manifests.json'
+      - 'production/book-export-coverage.json'
+      - 'production/audits/visual_review_2026-10-25.json'
+      - '.github/workflows/validate-portfolio-accounting.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'production-dashboard*'
+      - 'tools/test_production_portfolio.cjs'
+      - 'production/dashboard-*.json'
+      - 'data/shows.json'
+      - 'production/book-manifests.json'
+      - 'production/book-export-coverage.json'
+      - 'production/audits/visual_review_2026-10-25.json'
+      - '.github/workflows/validate-portfolio-accounting.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check production-dashboard-core.js
+      - run: node --check production-dashboard.js
+      - run: node --check tools/test_production_portfolio.cjs
+      - run: node tools/test_production_portfolio.cjs
