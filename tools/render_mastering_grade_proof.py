@@ -44,8 +44,9 @@ def main():
         if src.read_bytes()!=raw:
             raise ValueError("Source changed during proof operation")
     out=args.out.resolve()
-    if out==src or out.is_relative_to(src.parent) and out.name==src.name:
-        p.error("Proof may not overwrite its source")
+    drafts=(Path(__file__).resolve().parents[1]/"production/drafts").resolve()
+    if out==src or out.is_relative_to(drafts):
+        p.error("Review proof must be outside canonical approved image storage")
     out.parent.mkdir(parents=True,exist_ok=True)
     profile=ImageCms.ImageCmsProfile(ImageCms.createProfile("sRGB")).tobytes()
     result.save(out,format="PNG",icc_profile=profile)
