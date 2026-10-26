@@ -1,0 +1,35 @@
+name: IMG Complete Issue Binary Readback
+on:
+  workflow_dispatch:
+    inputs:
+      series_id: {description: Exact series ID, required: true, type: string}
+      issue_id: {description: Exact issue ID, required: true, type: string}
+      allow_incomplete: {description: Permit review-only partial export, required: true, type: boolean, default: false}
+  pull_request:
+    paths:
+      - 'tools/prepare_issue_readback.cjs'
+      - '.github/workflows/img-issue-readback.yml'
+      - 'production/book-manifests.json'
+permissions:
+  contents: read
+jobs:
+  originals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: node --check tools/prepare_issue_readback.cjs
+      - name: Copy every approved source image in book order
+        env:
+          SERIES_ID: ${{ inputs.series_id || 'rex-fleet' }}
+          ISSUE_ID: ${{ inputs.issue_id || 'rex-fleet-i01' }}
+          ALLOW_INCOMPLETE: ${{ inputs.allow_incomplete || 'false' }}
+        run: node tools/prepare_issue_readback.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rexprompt-issue-originals-${{ inputs.issue_id || 'rex-fleet-i01' }}
+          path: issue-readback/
+          retention-days: 2
+          compression-level: 0
+          if-no-files-found: error
