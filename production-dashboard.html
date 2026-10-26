@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RexPrompt — Production Dashboard</title>
+<style>
+:root{color-scheme:light dark;font-family:system-ui,-apple-system,sans-serif}body{max-width:1320px;margin:auto;padding:24px;line-height:1.45;background:Canvas;color:CanvasText}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+a{color:LinkText}h1{margin:0;font-size:1.7rem}h2{font-size:1.2rem;margin-top:26px}
+.muted{color:GrayText;font-size:.84rem}.error{color:#b51e2b}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+.metric{border:1px solid GrayText;border-radius:8px;padding:15px}.metric-value{font-size:1.7rem;font-weight:700}
+.controls{display:flex;gap:12px;margin:16px 0;flex-wrap:wrap}input,select{padding:9px;min-width:220px;color:CanvasText;background:Canvas;border:1px solid GrayText;border-radius:5px}
+.table-container{max-width:100%;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}td,th{text-align:left;padding:10px 11px;border-bottom:1px solid GrayText;vertical-align:top}th{font-weight:650;white-space:nowrap}tbody tr:hover{background:color-mix(in srgb,CanvasText 5%, Canvas)}
+details{max-width:350px}details p{overflow-wrap:anywhere}summary{cursor:pointer}footer{font-size:.85rem;margin:28px 0}
+</style>
+</head>
+<body>
+<header><div><h1>Production dashboard</h1><div class="muted">Durable state, not a claim of visual approval</div></div><nav><a href="index.html">Assembler and Reference Keeper</a></nav></header>
+<p id="status" role="status">Loading production manifests…</p>
+<div class="stats" id="stats" aria-label="Production totals"></div>
+<h2>Issue and production-package readiness</h2>
+<p class="muted">Asset completeness is only asserted for units with a curated complete-book manifest. Mastering and publication readiness remain unverified without explicit checks. A registered script is not an approved image.</p>
+<div class="controls"><label>Series <select id="seriesFilter"></select></label><label>Find <input id="search" type="search" placeholder="Issue, series or title"></label></div>
+<p id="count" class="muted"></p>
+<div class="table-container"><table><thead><tr><th>Series</th><th>Issue/package</th><th>Approved / required</th><th>Asset state</th><th>Mastering</th><th>Publishing</th><th>Evidence</th></tr></thead><tbody id="rows"></tbody></table></div>
+<h2>Series overview</h2>
+<div class="table-container"><table><thead><tr><th>Series</th><th>Registered units</th><th>Approved drafts</th><th>Keeper refs</th><th>Canon links</th><th>Release metadata</th></tr></thead><tbody id="seriesRows"></tbody></table></div>
+<footer><p>Source of truth: RexPrompt working scripts, approved-draft and Keeper manifests; StarSplitterVisions alone establishes released canon. A reference count of zero means no Keeper references are registered, not that visual references are absent everywhere.</p></footer>
+<script src="production-dashboard-core.js"></script><script src="production-dashboard.js"></script>
+</body></html>
