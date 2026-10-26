@@ -4,6 +4,12 @@ on:
     paths:
       - 'tools/audit_asset_recovery.cjs'
       - 'reference-keeper.js'
+      - 'reference-keeper-contract.js'
+      - 'index.html'
+      - 'tools/validate_reference_keeper.cjs'
+      - 'tools/test_keeper_portfolio.cjs'
+      - 'tools/prepare_img_readback.cjs'
+      - 'production/references/**/keeper/**'
       - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
@@ -20,6 +26,12 @@ on:
     paths:
       - 'tools/audit_asset_recovery.cjs'
       - 'reference-keeper.js'
+      - 'reference-keeper-contract.js'
+      - 'index.html'
+      - 'tools/validate_reference_keeper.cjs'
+      - 'tools/test_keeper_portfolio.cjs'
+      - 'tools/prepare_img_readback.cjs'
+      - 'production/references/**/keeper/**'
       - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
@@ -45,3 +57,9 @@ jobs:
       - run: node tools/test_reference_keeper_series.cjs
       - run: node --check tools/test_keeper_curated_byte_identity.cjs
       - run: node tools/test_keeper_curated_byte_identity.cjs
+      - run: node --check reference-keeper-contract.js
+      - run: node --check reference-keeper.js
+      - run: node --check tools/validate_reference_keeper.cjs
+      - run: node tools/validate_reference_keeper.cjs
+      - run: node --check tools/test_keeper_portfolio.cjs
+      - run: node tools/test_keeper_portfolio.cjs

@@ -11,13 +11,14 @@ const start = src.indexOf('function seriesFrom(shows){');
 const end = src.indexOf('\nfunction setMode', start);
 assert(start >= 0 && end > start, 'Keeper series resolver must be present');
 const snippet = src.slice(start, end);
-const safe = s => String(s || 'item').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'item';
+const K=require('../reference-keeper-contract.js');
+const safe=K.safe;
 const S = {manifest: {references: {
   e1: {seriesId:'echoes-forgotten-war',seriesName:'Echoes of a Forgotten War'},
   r1: {seriesId:'rex-fleet',seriesName:'Rex Fleet'},
   extra: {seriesId:'custom-registered',seriesName:'Custom Registered Name'}
 }}};
-const resolve = vm.runInNewContext(snippet + '\nseriesFrom', {S,safe});
+const resolve = vm.runInNewContext(snippet + '\nseriesFrom', {S,safe,K});
 const shows = [
   {seriesId:'echoes-forgotten-war',seriesName:'Echoes of a Forgotten War'},
   {seriesId:'rex-fleet',seriesName:'Rex Fleet'},
@@ -32,9 +33,9 @@ for (const [id,name] of [
   ['rex-fleet','Rex Fleet'],
   ['rex-fleet-academy-anomalies','Rex Fleet Academy: Anomalies of Broken Space'],
   ['division-threshold','Division Threshold'],
-  ['stardust-station','Stardust Station'],
-  ['custom-registered','Custom Registered Name']
+  ['stardust-station','Stardust Station']
 ]) assert.equal(lookup.get(id),name,'Keeper series selection must preserve canonical id '+id);
+assert.equal(lookup.has('custom-registered'),false,'Unknown manifest-only series must not appear as upload target');
 assert.equal(lookup.has('echoes-of-a-forgotten-war'),false,'Display-name slug must not create a phantom Echoes series');
 assert.equal(rows.filter(x=>x.id==='echoes-forgotten-war').length,1,'Only one Echoes option');
 console.log('Reference Keeper canonical series ID tests passed ('+rows.length+' options).');
