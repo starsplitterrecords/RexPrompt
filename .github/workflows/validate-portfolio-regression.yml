@@ -5,8 +5,10 @@ on:
       - 'index.html'
       - 'data/shows.json'
       - 'data/shows/**'
-      - 'production/drafts/manifest.json'
+      - 'production/drafts/**'
       - 'tools/test_portfolio_assembler_regression.cjs'
+      - 'tools/fixtures/approved-draft-blob-locks.json'
+      - 'tools/fixtures/portfolio-untriaged-risks.json'
       - '.github/workflows/validate-portfolio-regression.yml'
   push:
     branches: [main]
@@ -14,8 +16,10 @@ on:
       - 'index.html'
       - 'data/shows.json'
       - 'data/shows/**'
-      - 'production/drafts/manifest.json'
+      - 'production/drafts/**'
       - 'tools/test_portfolio_assembler_regression.cjs'
+      - 'tools/fixtures/approved-draft-blob-locks.json'
+      - 'tools/fixtures/portfolio-untriaged-risks.json'
       - '.github/workflows/validate-portfolio-regression.yml'
   workflow_dispatch:
 jobs:
