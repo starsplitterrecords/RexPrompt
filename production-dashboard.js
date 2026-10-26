@@ -18,6 +18,7 @@ function draw(m){
  ['Distinct assembled recipes',m.totals.distinctAssembledUnits],
  ['Approved draft records',m.totals.approvedDraftManifestEntries],
  ['Keeper references',m.totals.keeperReferences],
+ ['Source images audited',m.totals.sourceImagesAudited],
  ['Unindexed book units',m.totals.knownBookGaps],
  ['Recorded recovery leads',m.totals.unresolvedCandidates]
  ];
@@ -61,6 +62,7 @@ function draw(m){
    const intro=el('p','Unindexed here is not evidence that the image was never generated or is absent from other storage. Approved draft records are not artistic, mastering, or export certification.','muted');
    d.append(intro);
    if(!r.sourceHealthy)d.append(el('p','Recipe inventory has source warnings or no assembled IDs; investigate before relying on its denominator.','warning'));
+   if(r.sourceQualitySummary?.audited){d.append(el('p','Binary source facts: '+r.sourceQualitySummary.audited+' files examined; '+r.sourceQualitySummary.profileUnspecified+' with unspecified color profile; '+r.sourceQualitySummary.shortEdgeUnder2000+' with a native short edge below 2,000 pixels. These are observations, not a universal print standard.','muted'))}
    if(r.quality.length){const qblock=el('div');qblock.append(el('b','Source-quality findings: '));for(const item of r.quality)qblock.append(el('p',item.summary+' ('+item.source+')','muted'));d.append(qblock)}
    if(r.recoveryCandidates.length){d.append(el('b','Recovery candidates'));const ul=el('ul');r.recoveryCandidates.forEach(x=>ul.append(el('li',x.recipeId+' — '+x.status+': '+x.note)));d.append(ul)}
    if(r.releases.length){const pub=el('p');pub.append(el('b','Authoritative collected edition: '));r.releases.forEach(x=>{pub.append(showLink('https://star-splitter-visions.vercel.app'+x.externalLink,x.catalogId+' · '+x.title));pub.append(document.createTextNode(' '))});d.append(pub)}
@@ -70,22 +72,22 @@ function draw(m){
    r.units.forEach(u=>{const item=el('tr');td(item,u.recipeId);td(item,u.inBook?'Book + '+(u.inRecipe?'recipe':'editorial/extra'):u.inRecipe?'Recipe':'Unresolved');
      const status=el('td');status.append(chip(u.draftState,u.draftState==='approved-draft-indexed'?'ok':u.recovery?'warn':'neutral'));
      if(u.imagePath){status.append(el('small',' ', 'muted'),showLink(githubFile(u.imagePath),'source image'))}
-     item.append(status);td(item,u.recovery?u.recovery.status:'Not recorded');const link=el('td');if(u.releaseLinks?.length){u.releaseLinks.forEach(x=>{link.append(showLink('https://star-splitter-visions.vercel.app'+x.path,x.label||'Released image'));link.append(document.createTextNode(' '))})}else link.textContent='Not linked';item.append(link);tb.append(item)});
+     item.append(status);if(u.sourceQualityObservation){const z=u.sourceQualityObservation;status.append(el('small',z.width+'×'+z.height+' · '+z.colorProfile+' · '+z.mimeType,'muted'))}td(item,u.recovery?u.recovery.status:'Not recorded');const link=el('td');if(u.releaseLinks?.length){u.releaseLinks.forEach(x=>{link.append(showLink('https://star-splitter-visions.vercel.app'+x.path,x.label||'Released image'));link.append(document.createTextNode(' '))})}else link.textContent='Not linked';item.append(link);tb.append(item)});
    table.append(tb);let wrap=el('div',undefined,'scroll');wrap.append(table);d.append(wrap);detail.append(d);tr.append(detail);issueRows.append(tr);
   }
  }
  seriesFilter.onchange=render;query.oninput=render;qualityFilter.onchange=render;render();
 }
 async function load(){
- const inputs=await Promise.all([get('data/shows.json'),get('production/portfolio-recipe-inventory.json'),get('production/drafts/manifest.json'),get('production/references/reference-keeper-manifest.json'),get('production/book-manifests.json'),get('production/released-links.json'),get('production/portfolio-quality-evidence.json'),get('production/visual-sources.json')]);
- const [shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,visuals]=inputs;
+ const inputs=await Promise.all([get('data/shows.json'),get('production/portfolio-recipe-inventory.json'),get('production/drafts/manifest.json'),get('production/references/reference-keeper-manifest.json'),get('production/book-manifests.json'),get('production/released-links.json'),get('production/portfolio-quality-evidence.json'),get('production/visual-sources.json'),get('production/portfolio-source-quality.json')]);
+ const [shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,visuals,sourceQuality]=inputs;
  const release={};
  await Promise.all(Object.entries(visuals.series||{}).map(async([sid,v])=>{
   if(!v.visionsSlug)return;
   const url='https://raw.githubusercontent.com/starsplitterrecords/StarSplitterVisions/main/sites/visions/src/content/series/'+encodeURIComponent(v.visionsSlug)+'.json';
   try{release[sid]=await (async()=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r.json()})()}catch(e){release[sid]={error:String(e)}}
  }));
- return window.RexProductionDashboard.build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,visionsMetadata:release});
+ return window.RexProductionDashboard.build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence,sourceQuality,visionsMetadata:release});
 }
 load().then(draw).catch(e=>{$('loadState').textContent='Portfolio data could not be verified: '+e.message;$('loadState').className='error'});
 })();
