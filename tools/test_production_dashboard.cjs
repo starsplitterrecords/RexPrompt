@@ -64,6 +64,8 @@ const az=model.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach
 assert(az?.denominator>0,'Azure available assembled units must supply denominator');
 assert.equal(az.denominatorSource,'curated-book');
 assert.equal(az.denominator,25);
+const az3=row('azure-reach','azure-reach-s1-e03');assert.equal(az3.denominator,25);assert.equal(az3.assembledCount,null,'Curated book without show must not falsely imply compiled recipes');
+assert.equal(az3.notIndexedCount,25,'Book-only issue must retain exact missing draft slots');
 assert(az.units.some(x=>x.draftState!=='approved-draft-indexed'),'Unindexed means not stored here, not never generated');
 const low=model.rows.find(x=>x.seriesId==='low-tide-signal');
 assert(low?.denominator>0&&low.approvedIndexed===0,'Zero-draft registered series must be shown');
