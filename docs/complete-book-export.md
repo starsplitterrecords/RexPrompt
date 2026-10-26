@@ -27,3 +27,22 @@ Add each issue to `production/book-manifests.json` using **actual** approved Rex
 ## Verification
 
 Compare PDF page count and order to the complete-book manifest, visually inspect rendered spreads/pages, review lettering and trims, and validate links on the eventual released Visions site. The package alone cannot establish print-grade source resolution; B2 audits native pixel geometry against the chosen trim size.
+
+
+## Portfolio-wide source inventory and blockers
+
+\`production/book-manifests.json\` is the shared, authoritative issue reading-order contract for both the browser and the offline builder. Coverage is auditable with:
+
+\`\`\`bash
+node tools/audit_portfolio_books.cjs --check
+node tools/test_book_export_manifest.cjs
+python tools/test_complete_book_export.py
+\`\`\`
+
+The audited source-backed inventories and per-issue blockers are published in \`production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md\` and \`production/book-export-coverage.json\`. Each audit walks all registered shows and their source arrays, including compressed payloads, distinct cover/editorial shelves and book-specific page ordering. It verifies each approved source against its actual image bytes, declared MIME and optional SHA-256. It does not invent missing covers, cast pages or editorial units.
+
+A selector with no defensible complete-book boundary stays **uncurated**. A curated issue missing images stays **blocked** for full offline export and Visions release staging. Incomplete or unverified browser review packages remain conspicuously labeled and list omitted unit IDs. A machine-complete book is **not** a mastered or approved publication.
+
+Season-wide selectors containing multiple stories (for example Backyard Rockets and Echoes) appear with per-episode source group IDs in the audit, but do not become issue-book selectors without separately defined, source-backed book inventory and UI selection. This preserves the distinction between a season playlist and an actual book.
+
+The validator's \`--write\` mode is used for deliberate inventory reconciliation, not regular release publishing. Review all generated manifest additions and provenance before merging. Full issue PDFs still require an independent mastering and editorial signoff.
