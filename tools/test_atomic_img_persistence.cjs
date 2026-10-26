@@ -48,8 +48,8 @@ const server=http.createServer(async(req,res)=>{
  if(req.method==='PATCH'&&p==='/git/refs/heads/test-branch'){
   assert.equal(body.force,false,'Never force-update production branch');
   if(race){head='c'.repeat(40);return respond(res,422,{message:'non fast forward'});}
-  assert.equal(commit.parents[0],head,'Unexpected parent revision');
   const commit=commits.get(body.sha),tree=trees.get(commit?.tree?.sha);
+  assert.equal(commit.parents[0],head,'Unexpected parent revision');
   assert.ok(tree,'Commit missing tree');
   const mEntry=tree.tree.find(x=>x.path==='production/drafts/manifest.json');
   manifest=JSON.parse(blobs.get(mEntry.sha).toString('utf8'));
