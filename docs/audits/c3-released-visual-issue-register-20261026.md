@@ -47,3 +47,17 @@ Append each inspected issue with exact page / recipe IDs, observed continuity, n
 | C3-VIK-I01-003 | `page-009.jpg`, recipe mapping pending | **Review — dialogue pointer ambiguity** | First van panel says 'HERE, YOU'LL NEED TO FILL THESE OUT.' Balloon appears to point toward a figure inside the van as offscreen paperwork is passed from the left. Potential wrong attribution or confusing balloon tail. | Compare line owner in assembled dialogue; letter-tail repair only if necessary. |
 
 **End matter:** page 026 is the published credits/closing form with a screenshot of a prior image. Not a duplicated story page. **Status:** Every published image visually inspected; exact line-by-line recipe comparison, external reference-sheet matching and print-specific pixel analysis remain unverified.
+
+## Stardust Station — published Issue 01
+**Directly inspected:** pages P01–P19, P21–P22 (21/22); **P20 pixel inspection blocked**. Canonical JPEG `sites/visions/public/images/pages/stardust-station/issue-01/page-020.jpg` exists in StarSplitterVisions `main`, but the GitHub connector returned a uniformly capped 1,048,592-character base64 payload; the decoded JPEG could not be displayed. This is a **readback-access failure**, not a defect in published artwork. The other 21 images were displayed successfully.
+
+**Observed continuity:** Astr(a) purple bob, cobalt suit; Mira dark tightly curled hair and white lab coat; Jax brown hair, blue jumpsuit and prosthetic forearm; orange monkey Zib in ochre vest; heavy orange rocky Brick in dark fedora and coat; white/blue android Pixa; purple octopus Noola in dome; green antennae character and pink HR blob remain distinguishable across the visible sequence. Purple-crystal machinery and blue station architecture recur intentionally. The issue uses multiple densely staged ensemble scenes; density alone is not a defect. Do not treat this as full cast/reference or exact-dialogue approval.
+
+### Defect / confirmation queue
+| ID | Exact image / recipe | Severity | Original-pixel evidence | Required action |
+|---|---|---|---|---|
+| C3-SSD-I01-001 | `page-008.jpg`, RexPrompt exact recipe mapping pending | **Blocker candidate — duplicate actor in same panel** | Panel 2 depicts orange-furred Zib in yellow utility vest **twice**: left operating an open access panel and again mid-frame beside the inspector in the same wide corridor view. Page 008 original JPEG pixels directly inspected. | Check exact RexPrompt panel staging for number of Zibs; if duplication is unintended, preserve rest of successful composition and remove duplicate copy only. |
+| C3-SSD-I01-002 | `page-017.jpg`, recipe mapping pending | **Review — hairstyle variation** | Mira's hair appears larger/looser with a purple hairband in the first panel compared with earlier tightly bunched curls. Could be acceptable style variance or a story/wardrobe change. | Compare P16→P17 with approved Mira identity references before any action. No modification indicated solely by this variation. |
+| C3-SSD-I01-003 | `page-020.jpg` | **Inspection blocked, not image defect** | GitHub source returns a capped 1,048,592-character base64 string despite correct JPEG path; pixel readback did not display an image. | Retrieve full original bytes via Actions-artifact bridge or alternate binary transport, visually inspect P19–P21 transition and update audit. |
+
+**Not verified:** exact lettering and speaker match for each panel, all 22 pages' full-resolution mastering, approved lookdev packs, and unit-ID mapping.
