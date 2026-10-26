@@ -12,13 +12,31 @@ vm.runInContext(html.slice(start,end)+';globalThis.pageTest={assembleScene,valid
 const {assembleScene:assemble,validatePageLayout:validate,pageLayoutWarnings}=context.pageTest;
 const shows=load('data/shows.json');
 const targets=[
-{show:'rex-fleet-i02',file:'data/shows/rex-fleet-s1/pages_i02.json'},
+{show:'rex-fleet-i02',file:'data/shows/rex-fleet-s1/pages_i02.json',overlay:'data/shows/rex-fleet-s1/page_layout_i02.json'},
 {show:'vikings-2026-s1-e02',file:'data/shows/vikings-2026-s1/pages_i02.json'}
 ];
 function store(show){const value={__show:show};for(const name of ['characters','settings','factions','regions','direction','dialogue'])value[name+'.json']=load(show.basePath+'/'+name+'.json');return value}
 for(const target of targets){
 const show=shows.find(x=>x.id===target.show);assert(show,'Missing show '+target.show);
-const pages=load(target.file),s=store(show),names=new Set();
+const rawPages=load(target.file),s=store(show),names=new Set();
+let pages=rawPages;
+if(target.overlay){
+  // The current strict merge overlay is the sole authority for curated compositions.
+  const descriptor=(show.sceneOverlays||[]).find(o=>show.basePath+'/'+o.file===target.overlay);
+  assert(descriptor?.mergeById&&descriptor?.strict,'Layout must remain an ID-strict overlay');
+  const overlays=load(target.overlay),byId=new Map(overlays.map(o=>[o.id,o]));
+  assert.equal(overlays.length,rawPages.length,'Missing Rex Issue 2 layout');
+  assert.equal(byId.size,overlays.length,'Duplicate Rex Issue 2 layout ID');
+  assert(rawPages.every(p=>!Object.hasOwn(p,'pageLayout')),'Redundant layout embedded in story page');
+  for(const item of overlays){
+    assert.deepEqual(Object.keys(item).sort(),['id','pageLayout'],'Overlay must not modify story content '+item.id);
+  }
+  pages=rawPages.map(p=>{
+    const profile=byId.get(p.id);
+    assert(profile,'Orphaned or missing Rex Issue 2 layout '+p.id);
+    return {...p,pageLayout:profile.pageLayout};
+  });
+}
 assert(pages.length>0,'Empty issue '+target.show);
 for(const [i,page] of pages.entries()){
   assert(page.id&&!names.has(page.id),'Missing/duplicate page identity '+page.id);names.add(page.id);
