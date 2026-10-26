@@ -49,7 +49,7 @@ for(const [id,draft] of Object.entries(approved)){
  if(!lock){throw Error('New approved draft not byte-locked: '+id+' (run explicit approved-asset baseline update)')}
  if(lock.image!==draft.image)throw Error('Protected approved draft moved without lock review: '+id);
  const data=fs.readFileSync(path.join(root,draft.image));
- const actual=crypto.createHash('sha1').update('blob '+data.length+'\\0').update(data).digest('hex');
+ const actual=crypto.createHash('sha1').update('blob '+data.length+'\0').update(data).digest('hex');
  if(actual!==lock.gitBlobSha)throw Error('Protected approved artwork bytes changed: '+id+' '+draft.image);
  knownKeys.delete(id);
 }
