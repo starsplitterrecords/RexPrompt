@@ -25,12 +25,18 @@ def main():
         im.load()
         original=ImageOps.exif_transpose(im)
         embedded=im.info.get("icc_profile")
+        if original.mode in ("RGBA","LA") or "transparency" in im.info:
+            p.error("Image alpha requires a separately approved background composite; transparent pixels cannot be silently flattened")
         if embedded:
             src_profile=ImageCms.ImageCmsProfile(io.BytesIO(embedded))
-            normalized=ImageCms.profileToProfile(original.convert("RGB"),src_profile,
+            # Preserve CMYK source channels until the ICC conversion stage.
+            source_image=original if original.mode in ("RGB","CMYK","L") else original.convert("RGB")
+            normalized=ImageCms.profileToProfile(source_image,src_profile,
                         ImageCms.createProfile("sRGB"),outputMode="RGB",renderingIntent=0)
             source_class="ICC-transformed-to-sRGB"
         else:
+            if original.mode=="CMYK":
+                p.error("Untagged CMYK source cannot be interpreted as sRGB; identify original press profile")
             if not args.untagged_srgb_evidence or len(args.untagged_srgb_evidence.strip())<12:
                 p.error("Untagged source blocked: provide --untagged-srgb-evidence documenting source-space identification")
             normalized=original.convert("RGB")
