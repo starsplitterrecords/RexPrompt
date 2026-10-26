@@ -1,0 +1,17 @@
+name: Audit C3 source-to-image alignment evidence
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_c3_source_alignment.cjs'
+      - '.github/workflows/audit-c3-source-alignment.yml'
+  workflow_dispatch:
+jobs:
+  story-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/audit_c3_source_alignment.cjs
+      - run: node tools/audit_c3_source_alignment.cjs
