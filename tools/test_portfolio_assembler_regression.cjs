@@ -156,6 +156,7 @@ async function main(){
  for(const e of report.failures.slice(0,100))console.error('FAIL '+JSON.stringify(e));
  for(const e of report.approved.unresolved.slice(0,30))console.error('APPROVED MISSING '+JSON.stringify(e));
  console.log('REGRESSION COVERAGE '+JSON.stringify(report.issues.map(x=>({id:x.id,assembled:x.assembled,recipes:x.recipes,highDensity:x.highDensity,riskCount:x.riskCount}))));
+ console.log('PORTFOLIO_RISK_IDS '+JSON.stringify({density:report.risks.highDensity.map(x=>x.show+'::'+x.recipe),ambiguity:report.risks.ambiguousDialogueMapping.map(x=>x.show+'::'+x.recipe),speakers:report.risks.unresolvedSpeaker.map(x=>x.show+'::'+x.recipe+'::'+x.handle)}));
  console.log('LIMITATION: mechanically assembled prompts do not verify rendered image content, balloon tails, canon, or final book.');
  const file=process.argv.includes('--out')?process.argv[process.argv.indexOf('--out')+1]:null;
  if(file){fs.mkdirSync(path.dirname(path.resolve(file)),{recursive:true});fs.writeFileSync(file,JSON.stringify(report,null,2)+'\n')}
