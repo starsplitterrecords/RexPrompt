@@ -24,5 +24,9 @@ for(const [key,book] of Object.entries(inv.issues)){
 }
 assert.ok(incomplete>=0);
 assert.match(exporter,/-INCOMPLETE-DRAFT/,'Incomplete preview must be labeled');
+assert.match(exporter,/-UNVERIFIED-BOOK-DRAFT/,'Missing complete-book inventory must be labeled');
+assert.match(exporter,/book-export-manifest\.json/,'ZIP must include machine-readable source inventory');
+assert.match(exporter,/im\.type==='image\/jpeg'\?await nativeJpeg/,'Original JPEG bytes should be preserved in PDF');
+assert.match(exporter,/if\(!p\.book\)throw Error\('Release blocked/,'All releases require complete-book inventories');
 assert.match(exporter,/MISSING_APPROVED_PAGES\.txt/,'Incomplete archive requires gap list');
 console.log('Complete-book manifest contract verified.');
