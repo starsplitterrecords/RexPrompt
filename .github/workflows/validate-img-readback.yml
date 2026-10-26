@@ -59,3 +59,17 @@ jobs:
         run: node tools/test_img_transport_matrix.cjs
       - name: Atomic persistence transaction and concurrency rejection
         run: node tools/test_atomic_img_persistence.cjs
+      - name: Prepare independent session proof originals using canonical helper
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          ASSET_KIND=draft ASSET_KEY='azure-reach::azure-reach-s1-e02::AZR_S1E02_P09' READBACK_OUTPUT=/tmp/transport-proof/draft node tools/prepare_img_readback.cjs
+          ASSET_KIND=reference ASSET_KEY='division-threshold::character::axiom' READBACK_OUTPUT=/tmp/transport-proof/reference node tools/prepare_img_readback.cjs
+      - name: Upload exact source image proof bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: img-session-visual-proof
+          path: /tmp/transport-proof/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
