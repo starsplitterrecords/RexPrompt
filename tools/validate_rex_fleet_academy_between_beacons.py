@@ -27,7 +27,11 @@ def main():
     assert entry["id"]=="rex-fleet-academy-between-beacons-i01"
     assert entry["basePath"]=="data/shows/rex-fleet-academy-between-beacons"
     assert entry["scenesFile"]=="pages_base.json"
-    assert entry["sceneOverlays"]==[{"file":"pages_i01.json"}]
+    expected_overlays=[
+        {"file":"pages_i01.json"},
+        {"file":"editorial/visual_faction_pages_i01.json","mergeById":True,"strict":True},
+    ]
+    assert entry["sceneOverlays"]==expected_overlays, "Between the Beacons page scope changed"
     assert entry["includeIdPattern"]=="^RFA_BB_I01_"
     assert "between the beacons" in entry["generationLine"].lower()
     assert "26-page" in entry["formatNote"]
