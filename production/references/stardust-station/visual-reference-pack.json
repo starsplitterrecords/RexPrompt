@@ -193,6 +193,25 @@
         "@sds.Kreeb"
       ],
       "use": "Primary released Break Room environment and workplace-scale reference. Use for room geography, ordinary furniture/appliance language, practical clutter and small-group staging; released character identity remains governed by the normal character reference order."
+    },
+    {
+      "id": "noola-approved-character-study",
+      "type": "approved-current-production-reference",
+      "image": "production/references/stardust-station/keeper/character/sds-character-noola.png",
+      "scope": [
+        "character-identity"
+      ],
+      "characters": [
+        "@sds.Noola"
+      ],
+      "use": "User-designated Noola reference, preserved as original PNG. Inspect alongside released Issue 1 canon for Noola's current model. This character reference does not control interior page layout, lettering, captions, or story staging.",
+      "notFor": [
+        "page layout",
+        "headers",
+        "lettering",
+        "title treatment",
+        "story staging"
+      ]
     }
   ],
   "characterReferenceOrder": {
@@ -212,6 +231,7 @@
       "issue-01-page-005-office-group"
     ],
     "@sds.Noola": [
+      "noola-approved-character-study",
       "core-cast-approved-lineup",
       "issue-01-page-005-office-group",
       "issue-01-page-001-ensemble"
