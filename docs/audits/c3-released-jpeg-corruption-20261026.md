@@ -25,3 +25,13 @@ Scan found 126/163 JPEGs have source width under 200 pixels per inch **under a h
 - Several visually previewed Rex Fleet pages were incompletely encoded JPEG files, even though forgiving preview rendering showed partial images. Such previews do not count as production-quality passes.
 - The earlier Rex Fleet P009/P015 ‘soft-text’ observations are superseded by the stronger binary source-corruption blocker.
 - No image files were changed by this audit. Restore originals from known approved provenance and rebuild only affected releases when authorized.
+
+
+## Canonical draft and Keeper PNG/JPEG completeness (second gate)
+A separate **successful** read-only GitHub Actions scan on the same audit branch (workflow `Audit canonical source image completeness`, run https://github.com/starsplitterrecords/RexPrompt/actions/runs/40318935436) checked all 113 approved-draft images plus 41 registered Keeper references for fully bounded PNG chunks with complete IEND or JPEG SOI/EOI. It found **1 source-incomplete image out of 154**.
+
+| Defect ID | Series / issue / exact recipe | Severity | Stored file and source evidence | Required correction |
+|---|---|---|---|---|
+| C3-VIK-I01-BIN-P09 | Vikings 2026, Issue 01, **`VIK_S1I01_P09`** | **Blocker: truncated approved production draft PNG** | `production/drafts/vikings-2026/vikings-2026-s1-e01/vik_s1i01_p09.png`; 11,012,093 stored bytes; PNG scan reports **IDAT chunk extends past end of source**. This is an actual source-integrity failure even though existing signature-only tests passed. | Recover the *same approved complete generation* from historical IMG or authoritative original, confirm source provenance, and revalidate its full chunk chain and render. Never fabricate PNG IEND bytes, simply resize, or silently replace approved art. Review published `Vikings Issue 1 page-009.jpg` separately for its known speech-balloon attribution/current-script discrepancy; the draft file's corruption does not, by itself, prove the released JPEG is corrupt. |
+
+All other **112** draft files and **41** Keeper image files passed this stronger chunk/EOI completeness scan. Passing byte structure does **not** establish visual quality or approval, and direct pixel readback of those PNG files through the GitHub connector remains unavailable in this session. See new script `tools/audit_c3_canonical_source_images.cjs`, report artifact `canonical-source-image-completeness`, and CI workflow `.github/workflows/audit-c3-canonical-sources.yml`.
