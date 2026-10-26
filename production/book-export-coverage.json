@@ -1,24 +1,25 @@
 {
   "schemaVersion": 1,
   "registrySelectors": 126,
-  "issuesWithManifest": 68,
+  "issuesWithManifest": 74,
   "sourceAudit": "registered show sources, including gzip-base64 overlays and separate cover/editorial shelves",
   "statuses": {
-    "blocked-missing-images": 65,
+    "blocked-missing-images": 71,
     "complete-draft-export-supported": 3,
     "not-a-book": 38,
-    "uncurated": 20
+    "uncurated": 14
   },
   "entries": [
     {
       "selectorId": "shattering-i01",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I01_COVER",
         "SHAT_I01_P01",
         "SHAT_I01_P02",
         "SHAT_I01_P03",
@@ -45,19 +46,20 @@
         "SHAT_I01_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I01_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i01"
     },
     {
       "selectorId": "shattering-i02",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I02_COVER",
         "SHAT_I02_P01",
         "SHAT_I02_P02",
         "SHAT_I02_P03",
@@ -84,19 +86,20 @@
         "SHAT_I02_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I02_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i02"
     },
     {
       "selectorId": "shattering-i03",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I03_COVER",
         "SHAT_I03_P01",
         "SHAT_I03_P02",
         "SHAT_I03_P03",
@@ -123,19 +126,20 @@
         "SHAT_I03_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I03_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i03"
     },
     {
       "selectorId": "shattering-i04",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I04_COVER",
         "SHAT_I04_P01",
         "SHAT_I04_P02",
         "SHAT_I04_P03",
@@ -162,19 +166,20 @@
         "SHAT_I04_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I04_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i04"
     },
     {
       "selectorId": "shattering-i05",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I05_COVER",
         "SHAT_I05_P01",
         "SHAT_I05_P02",
         "SHAT_I05_P03",
@@ -201,19 +206,20 @@
         "SHAT_I05_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I05_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i05"
     },
     {
       "selectorId": "shattering-i06",
       "seriesId": "shattering",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "SHAT_I06_COVER",
         "SHAT_I06_P01",
         "SHAT_I06_P02",
         "SHAT_I06_P03",
@@ -240,8 +246,8 @@
         "SHAT_I06_P24"
       ],
       "unapprovedImageIds": [],
-      "reason": "referenced-cover-not-found:SHAT_I06_COVER, book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "shattering-i06"
     },
     {
@@ -3641,48 +3647,6 @@
     }
   ],
   "diagnostics": [
-    {
-      "selectorId": "shattering-i01",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I01_COVER",
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "shattering-i02",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I02_COVER",
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "shattering-i03",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I03_COVER",
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "shattering-i04",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I04_COVER",
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "shattering-i05",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I05_COVER",
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "shattering-i06",
-      "errors": [
-        "referenced-cover-not-found:SHAT_I06_COVER",
-        "book-cover-not-established"
-      ]
-    },
     {
       "selectorId": "rex-fleet-academy-anomalies-i01",
       "errors": [
