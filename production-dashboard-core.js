@@ -80,8 +80,8 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
     denominator:requiredIds.length,denominatorSource:source,assembledCount:recipeIds.length,approvedIndexed:approved,notIndexedCount:unmatched.length,
     keeperCoverage:group.keeper,bookKnown:!!namedBook,exporterReadiness:namedBook?(unmatched.filter(x=>x.inBook).length?'blocked-on-approved-drafts':'inventory-complete-not-mastered'):'book-inventory-unavailable',
     quality:quality.length?quality:[{classification:'unknown',summary:'No issue-scoped artistic/native mastering assessment has been registered.'}],sourceQualitySummary,
-    mastering:mastered?'mastered':'unverified',exported:exported?'exported':exactRelease.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
-    published:exactRelease.length?'collected-edition-recorded':metadata?.error?'source-unavailable':'no-matching-edition-record',
+    mastering:mastered?'mastered':quality.some(x=>x.mastered===false)?'native-review-required':'unverified',exported:exported?'exported':exactRelease.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
+    published:exactRelease.length?'collected-edition-recorded':metadata?.error?'source-unavailable':metadata?'no-matching-edition-record':'unknown-release-source',
     releases:exactRelease,sourceHealthy:sourceValid,sourceFiles:c.sourceFiles||[],sourceOverlays:c.sourceOverlays||[],
     units,recoveryCandidates:issueCandidates,extraBookUnits,invalid:!sourceValid,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
    rows.push(row);group.rows.push(row);
@@ -113,8 +113,8 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
    quality:quality.length?quality:[{classification:'unknown',summary:'No mastering assessment registered'}],
    sourceQualitySummary:{audited:facts.length,profileUnspecified:facts.filter(x=>x.sourceQualityObservation.colorProfile==='unspecified').length,
     shortEdgeUnder2000:facts.filter(x=>Math.min(x.sourceQualityObservation.width,x.sourceQualityObservation.height)<2000).length},
-   mastering:'unverified',exported:releases.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
-   published:releases.length?'collected-edition-recorded':evidence?.error?'source-unavailable':'no-matching-edition-record',
+   mastering:quality.some(x=>x.mastered===false)?'native-review-required':'unverified',exported:releases.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
+   published:releases.length?'collected-edition-recorded':evidence?.error?'source-unavailable':evidence?'no-matching-edition-record':'unknown-release-source',
    releases,sourceHealthy:false,sourceFiles:[],sourceOverlays:[],units,recoveryCandidates:candidates,extraBookUnits:ids,
    invalid:true,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
   rows.push(row);g.rows.push(row);seenPairs.add(bookKey);
