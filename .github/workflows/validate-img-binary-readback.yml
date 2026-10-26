@@ -1,0 +1,33 @@
+name: Validate IMG Binary Readback
+on:
+  pull_request:
+    paths:
+      - 'tools/prepare_img_readback.cjs'
+      - '.github/workflows/img-binary-readback.yml'
+      - '.github/workflows/validate-img-binary-readback.yml'
+      - 'production/IMG_BINARY_READBACK.md'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/prepare_img_readback.cjs'
+      - '.github/workflows/img-binary-readback.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/prepare_img_readback.cjs
+      - run: node tools/prepare_img_readback.cjs --series rex-fleet --issue rex-fleet-i01 --recipe RF_I01_P01 --out /tmp/img-readback
+      - name: Verify output is pixel-identical and metadata is correct
+        run: |
+          node - <<'JS'
+          const fs=require('fs'),crypto=require('crypto'),assert=require('assert/strict');
+          const m=JSON.parse(fs.readFileSync('/tmp/img-readback/readback.json'));
+          const b=fs.readFileSync('/tmp/img-readback/'+m.filename);
+          assert.equal(m.sha256,crypto.createHash('sha256').update(b).digest('hex'));
+          assert.equal(m.gitBlobSha,crypto.createHash('sha1').update(Buffer.concat([Buffer.from('blob '+b.length+'\0'),b])).digest('hex'));
+          assert.equal(m.identity,'rex-fleet::rex-fleet-i01::RF_I01_P01');
+          JS
