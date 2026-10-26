@@ -65,7 +65,8 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
-    ]
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E004_P02",
@@ -192,6 +193,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -258,6 +264,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -319,6 +330,12 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -368,6 +385,12 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -421,11 +444,17 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
     "id": "DT_E004_P08",
-    "summary": "Ostra and John literally share the load, holding the transfer deck while Nico redirects crowd movement and Nathan organizes evacuation below.",
+    "summary": "Ostra and John literally share the failing deck's load and become intimate with each other's physical limits under pressure. Nico and Nathan turn the crowd into active participants in their own evacuation, making the rescue a relationship among bodies rather than a demonstration of capability categories.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
@@ -442,16 +471,40 @@
     ],
     "dialogueInline": [
       {
-        "handle": "@dt.Nico14",
-        "text": "Left side first. Don't run."
+        "handle": "@dt.JohnMercer",
+        "text": "Your side dropped."
       },
       {
-        "speaker": "CIVILIAN",
-        "text": "The deck is moving!"
+        "handle": "@dt.Ostra9",
+        "text": "Three centimeters."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "You can feel that?"
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I can feel your knee overheating."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "Limiter is already gone."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I didn't ask about the limiter. Give me the counterforce."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "On three."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Move on two."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Walking keeps it predictable."
+        "text": "Left side first. Walking keeps the load predictable."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -473,6 +526,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -521,6 +579,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -586,6 +650,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -647,6 +717,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -700,6 +775,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -753,6 +832,10 @@
     "factions": [
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -813,6 +896,11 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -882,6 +970,12 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -946,6 +1040,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -995,6 +1094,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1063,6 +1168,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1129,6 +1238,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1197,6 +1312,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1263,6 +1384,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -1318,7 +1445,8 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E004_P23",
@@ -1372,6 +1500,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1440,11 +1572,17 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
     "id": "DT_E004_P25",
-    "summary": "After the crisis, Kellen, John, Ostra and Nico try to name what changed. Their conversation stays grounded in the specific decisions they just watched: humans still sign orders, but more and more of those orders are meaningful only after Intelligence reconciliation explains their consequences.",
+    "summary": "After the interchange crisis, four exhausted people try to describe what actually happened rather than debate a theory. John's overheated knee, Ostra's memory of useless permissions, Nico's attention to the last operational step and Kellen's faith in signatures no longer fit one clean account of where authority lived.",
     "characters": [
       "DT_KellenCartwright",
       "DT_JohnMercer",
@@ -1462,47 +1600,31 @@
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "So tell me that's not control."
+        "text": "My knee's still hot from a decision nobody could make fast enough."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "It isn't that simple."
+        "text": "A human official signed the exception."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Nothing moved until Axiom said how."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "People still signed every order."
+        "text": "After Axiom told him which exception wouldn't kill someone."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "After asking which signature wouldn't break something else."
+        "text": "That makes the signature the last step, not the whole decision."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Like the gates."
+        "text": "At the gates, everyone had permission. Nobody could move."
       },
       {
-        "handle": "@dt.JohnMercer",
-        "text": "What about them?"
+        "handle": "@dt.KellenCartwright",
+        "text": "I don't know what to call that."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Everyone had permission. Nobody could move."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "That's what changed."
-      },
-      {
-        "handle": "@dt.JohnMercer",
-        "text": "You have a name for it?"
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "Not one I trust yet."
+        "text": "Then don't name it yet."
       }
     ],
     "setting": "DT_SharedDistrictRooftop",
@@ -1511,6 +1633,10 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   },
   {
@@ -1565,6 +1691,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSuppress": [
+      "region"
     ]
   }
 ]

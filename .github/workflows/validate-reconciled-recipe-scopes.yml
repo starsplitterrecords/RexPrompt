@@ -1,0 +1,29 @@
+name: Validate reconciled recipe scopes
+on:
+  pull_request:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/backyard-rockets-s1/**'
+      - 'data/shows/division-threshold-s1/**'
+      - 'data/shows/stardust-station/editorial/recipe_scope_e03.json'
+      - 'data/shows/rex-fleet-s1/settings.json'
+      - 'tools/test_recipe_scope_rollout.cjs'
+      - '.github/workflows/validate-reconciled-recipe-scopes.yml'
+  push:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/backyard-rockets-s1/**'
+      - 'data/shows/division-threshold-s1/**'
+      - 'data/shows/stardust-station/editorial/recipe_scope_e03.json'
+      - 'data/shows/rex-fleet-s1/settings.json'
+      - 'tools/test_recipe_scope_rollout.cjs'
+      - '.github/workflows/validate-reconciled-recipe-scopes.yml'
+jobs:
+  recipe-scopes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check scope regression script
+        run: node --check tools/test_recipe_scope_rollout.cjs
+      - name: Validate page-scoped recipe integrity
+        run: node tools/test_recipe_scope_rollout.cjs
