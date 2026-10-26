@@ -6,7 +6,7 @@
 
 - All **126** registered RexPrompt configurations assemble as reported by the existing all-series audit, covering **24** series and **2,546** recipe units (including a musical whose comic visual QC is not applicable).
 - Current inventory at this check: **113** RexPrompt approved-draft records; **41** Keeper references; **five** exact book inventories. GitHub Actions verified source/overlay loading and structural integrity, not the appearance of every stored picture.
-- **Six** published editions contain **157** public daily-page JPEG paths, with **six** linked PDF paths. Every referenced path exists in the release tree. Actual pixels were inspected in a **sample of 20 pages** spanning Azure Reach, Backyard Rockets (both editions), Rex Fleet, Stardust Station, and Vikings. The full 157-page visual sequence is NOT marked passed.
+- **Six** published editions contain **157** public daily-page JPEG paths, with **six** linked PDF paths. Every referenced path exists in the release tree. Actual pixels were inspected in a **sample of 22 pages** spanning Azure Reach, Backyard Rockets (both editions), Rex Fleet, Stardust Station, and Vikings. The full 157-page visual sequence is NOT marked passed.
 - Exact selected samples, passing-scope limitations, and evidence are in `production/audits/visual_review_2026-10-25.json`.
 - Approved draft PNG binary readback into this model's visual context was unsuccessful; therefore no approved RexPrompt draft is claimed visually verified. Keeper references were structurally indexed but not inspected as pixels here. Other IMG renders in conversation histories remain recovery-dependent.
 
