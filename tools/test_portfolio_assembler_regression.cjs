@@ -10,7 +10,7 @@ const exists=p=>fs.existsSync(path.join(root,p));
 const html=read('index.html'),first=html.indexOf('const SHOW_MANIFEST='),last=html.indexOf('function safeFilePart(',first);
 assert(first>=0&&last>first,'Could not extract current production assembler');
 const catalogs=json('data/shows.json'),approved=json('production/drafts/manifest.json').drafts;
-const report={baseCommit:process.env.GITHUB_SHA||null,configurations:catalogs.length,loadedConfigurations:0,assembledRecipes:0,sourceFormats:{array:0,object:0,encodedGzipBase64:0,overlayMerge:0,overlayReplace:0,overlayAppend:0,dialogueOverlay:0,scopedCastConfigurations:0},series:{},issues:[],failures:[],historicalExceptions:[],risks:{highDensity:[],ambiguousDialogueMapping:[],unresolvedSpeaker:[],panelMetadataDiscrepancies:[]},mutationCases:{},approved:{records:Object.keys(approved).length,resolved:0,unresolved:[]},untested:['Image pixels and rendered character likeness','Physical balloon tails and text appearance','Rendered panel reading order and geometry','True print resolution and issue-wide mastering','Intentionality of creative dialogue and continuity','User approval beyond manifest status']};
+const report={baseCommit:process.env.GITHUB_SHA||null,configurations:catalogs.length,loadedConfigurations:0,assembledRecipes:0,sourceFormats:{array:0,object:0,encodedGzipBase64:0,overlayMerge:0,overlayReplace:0,overlayAppend:0,dialogueOverlay:0,scopedCastConfigurations:0},series:{},issues:[],failures:[],historicalExceptions:[],risks:{highDensity:[],ambiguousDialogueMapping:[],unresolvedSpeaker:[],panelMetadataDiscrepancies:[]},mutationCases:{},approved:{records:Object.keys(approved).length,resolved:0,unresolved:[]},issueRegistration:{expandedIssues:0,identities:[],duplicateIds:[]},untested:['Image pixels and rendered character likeness','Physical balloon tails and text appearance','Rendered panel reading order and geometry','True print resolution and issue-wide mastering','Intentionality of creative dialogue and continuity','User approval beyond manifest status']};
 const sandbox=vm.createContext({fetch:async p=>{
  const relative=String(p);
  if(relative.startsWith('/')||relative.includes('..'))throw Error('Unsafe load path '+relative);
@@ -102,7 +102,19 @@ function mutation(name,fn){try{fn();report.mutationCases[name]='PASS'}catch(e){r
 function expectedFailure(fn,needle){let threw=false;try{fn()}catch(e){threw=true;assert(String(e.message).includes(needle),'Expected '+needle+' but got '+e.message)}assert(threw,'Expected failure '+needle)}
 async function main(){
  assert(catalogs.length>0,'No registered configurations');
- const assembled=new Set(),selected=new Map(),foundFormats=new Set();
+ const assembled=new Set(),selected=new Map(),foundFormats=new Set(),expandedIds=new Set();
+ for(const config of catalogs){
+  const issues=api.expandIssues(config);
+  assert(Array.isArray(issues)&&issues.length>0,'Show has no expansion '+config.id);
+  report.issueRegistration.expandedIssues+=issues.length;
+  for(const issue of issues){
+   const id=issue.issueId;
+   if(!id||expandedIds.has(id)){report.issueRegistration.duplicateIds.push(id);recordFailure('DUPLICATE_ISSUE_REGISTRATION',config.id,id,'expandIssues generated missing/duplicate issueId')}
+   expandedIds.add(id);
+   report.issueRegistration.identities.push({from:config.id,issueId:id,issueLabel:issue.issueLabel});
+  }
+ }
+ 
  for(const show of catalogs){
   let store;
   try{addFormat(show);store=await api.loadShow(show);assert(store.__scenes.length>0,'No registered production units');report.loadedConfigurations++}
@@ -152,7 +164,7 @@ async function main(){
  mutation('empty-visible-reference-overrides-inherited-cast',()=>{const original=sample.scenes.find(p=>p.characters?.length||p.charactersInline?.length);assert(original);const scene={...original,promptVisibleCharacters:[],promptVisibleCastOnly:true};const r=api.assembleScene(scene,{...sample.store,__show:{...sample.store.__show,promptVisibleCastOnly:true}},0);assert(r.startsWith('=== '),'Suppressed refs still leaked into prompt')});
  mutation('setting-suppression-requires-panel-locations',()=>expectedFailure(()=>api.pageAssembly({id:'bad-setting',setting:'ROOM',promptSuppress:['setting'],panelPlan:['Somewhere']},{}),'Cannot suppress setting'));
  mutation('indexed-dialogue-invalid-mapping',()=>{const fixture={id:'bad-index',panelPlan:[{panel:1,action:'One',dialogueIndices:[2]}],dialogueInline:[{speaker:'A',text:'Hi'}]};expectedFailure(()=>api.prepareCleanPanelPlan(fixture),'Invalid or duplicated dialogue index')});
- console.log('PORTFOLIO REGRESSION SUMMARY '+JSON.stringify({configurations:report.configurations,loaded:report.loadedConfigurations,recipesAssembled:report.assembledRecipes,sourceFormats:report.sourceFormats,approved:report.approved,mutationCases:report.mutationCases,failures:report.failures.length,risks:{highDensity:report.risks.highDensity.length,ambiguousDialogueMapping:report.risks.ambiguousDialogueMapping.length,unresolvedSpeaker:report.risks.unresolvedSpeaker.length,panelMetadataDiscrepancies:report.risks.panelMetadataDiscrepancies.length},historicalExceptions:report.historicalExceptions}));
+ console.log('PORTFOLIO REGRESSION SUMMARY '+JSON.stringify({configurations:report.configurations,loaded:report.loadedConfigurations,recipesAssembled:report.assembledRecipes,expandedIssueRegistrations:report.issueRegistration.expandedIssues,sourceFormats:report.sourceFormats,approved:report.approved,mutationCases:report.mutationCases,failures:report.failures.length,risks:{highDensity:report.risks.highDensity.length,ambiguousDialogueMapping:report.risks.ambiguousDialogueMapping.length,unresolvedSpeaker:report.risks.unresolvedSpeaker.length,panelMetadataDiscrepancies:report.risks.panelMetadataDiscrepancies.length},historicalExceptions:report.historicalExceptions}));
  for(const e of report.failures.slice(0,100))console.error('FAIL '+JSON.stringify(e));
  for(const e of report.approved.unresolved.slice(0,30))console.error('APPROVED MISSING '+JSON.stringify(e));
  console.log('REGRESSION COVERAGE '+JSON.stringify(report.issues.map(x=>({id:x.id,assembled:x.assembled,recipes:x.recipes,highDensity:x.highDensity,riskCount:x.riskCount}))));
