@@ -1,0 +1,28 @@
+name: Validate Complete Book Exports
+on:
+  pull_request:
+    paths:
+      - 'issue-publishing.js'
+      - 'production/book-manifests.json'
+      - 'production/drafts/manifest.json'
+      - 'tools/test_book_export_manifest.cjs'
+      - '.github/workflows/validate-book-export.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'issue-publishing.js'
+      - 'production/book-manifests.json'
+      - 'production/drafts/manifest.json'
+      - 'tools/test_book_export_manifest.cjs'
+      - '.github/workflows/validate-book-export.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check issue-publishing.js
+      - run: node --check tools/test_book_export_manifest.cjs
+      - run: node tools/test_book_export_manifest.cjs
