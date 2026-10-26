@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "registryVersion": "2026.10.26-recovery.1",
+  "state": "candidate",
+  "authority": {
+    "production": "starsplitterrecords/RexPrompt",
+    "released": "starsplitterrecords/StarSplitterVisions",
+    "approvalPolicy": "production/approval-policy.json",
+    "draftManifest": "production/drafts/manifest.json"
+  },
+  "skills": [
+    {
+      "id": "img-page-production",
+      "title": "Img Page Production",
+      "status": "stable",
+      "path": "docs/skills/img-page-production/SKILL.md",
+      "description": "generate render repair page",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "generate",
+        "render",
+        "repair",
+        "page"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [
+        "comic-page-master-standard"
+      ],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-sequential-production",
+      "title": "Img Sequential Production",
+      "status": "stable",
+      "path": "docs/skills/img-sequential-production/SKILL.md",
+      "description": "next continue finish issue",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "next",
+        "continue",
+        "finish",
+        "issue"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-production-recovery",
+      "title": "Img Production Recovery",
+      "status": "stable",
+      "path": "docs/skills/img-production-recovery/SKILL.md",
+      "description": "recover lost generated page restore historical work",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "recover",
+        "lost",
+        "generated",
+        "page",
+        "restore",
+        "historical",
+        "work"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-binary-readback",
+      "title": "Img Binary Readback",
+      "status": "stable",
+      "path": "docs/skills/img-binary-readback/SKILL.md",
+      "description": "inspect original image pixels readback",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "inspect",
+        "original",
+        "image",
+        "pixels",
+        "readback"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-approval-persistence",
+      "title": "Img Approval Persistence",
+      "status": "stable",
+      "path": "docs/skills/img-approval-persistence/SKILL.md",
+      "description": "save approved draft atomically",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "save",
+        "approved",
+        "draft",
+        "atomically"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-issue-audit",
+      "title": "Img Issue Audit",
+      "status": "experimental",
+      "path": "docs/skills/img-issue-audit/SKILL.md",
+      "description": "audit full issue continuity resolution",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "audit",
+        "full",
+        "issue",
+        "continuity",
+        "resolution"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [
+        "comic-page-master-standard"
+      ],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-issue-mastering",
+      "title": "Img Issue Mastering",
+      "status": "experimental",
+      "path": "docs/skills/img-issue-mastering/SKILL.md",
+      "description": "master issue build export PDF",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "master",
+        "issue",
+        "build",
+        "export",
+        "PDF"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "img-color-normalization",
+      "title": "Img Color Normalization",
+      "status": "experimental",
+      "path": "docs/skills/img-color-normalization/SKILL.md",
+      "description": "grade color match saturation",
+      "domains": [
+        "img"
+      ],
+      "intents": [
+        "grade",
+        "color",
+        "match",
+        "saturation"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "reference-keeper-ingest",
+      "title": "Reference Keeper Ingest",
+      "status": "stable",
+      "path": "docs/skills/reference-keeper-ingest/SKILL.md",
+      "description": "ingest selected approved references",
+      "domains": [
+        "reference"
+      ],
+      "intents": [
+        "ingest",
+        "selected",
+        "approved",
+        "references"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG",
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "reference-keeper-curation",
+      "title": "Reference Keeper Curation",
+      "status": "experimental",
+      "path": "docs/skills/reference-keeper-curation/SKILL.md",
+      "description": "curate visual reference packs",
+      "domains": [
+        "reference"
+      ],
+      "intents": [
+        "curate",
+        "visual",
+        "reference",
+        "packs"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG",
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "rexprompt-development",
+      "title": "Rexprompt Development",
+      "status": "stable",
+      "path": "docs/skills/rexprompt-development/SKILL.md",
+      "description": "ingest extend enhance writing recipes",
+      "domains": [
+        "rexprompt"
+      ],
+      "intents": [
+        "ingest",
+        "extend",
+        "enhance",
+        "writing",
+        "recipes"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "rexprompt-data-sanitization",
+      "title": "Rexprompt Data Sanitization",
+      "status": "stable",
+      "path": "docs/skills/rexprompt-data-sanitization/SKILL.md",
+      "description": "sanitize prompt contamination",
+      "domains": [
+        "rexprompt"
+      ],
+      "intents": [
+        "sanitize",
+        "prompt",
+        "contamination"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "rexprompt-identity-normalization",
+      "title": "Rexprompt Identity Normalization",
+      "status": "stable",
+      "path": "docs/skills/rexprompt-identity-normalization/SKILL.md",
+      "description": "rename cast merge duplicate identities",
+      "domains": [
+        "rexprompt"
+      ],
+      "intents": [
+        "rename",
+        "cast",
+        "merge",
+        "duplicate",
+        "identities"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "visions-release",
+      "title": "Visions Release",
+      "status": "stable",
+      "path": "docs/skills/visions-release/SKILL.md",
+      "description": "publish approved issue site",
+      "domains": [
+        "visions"
+      ],
+      "intents": [
+        "publish",
+        "approved",
+        "issue",
+        "site"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "visions-chat-organization",
+      "title": "Visions Chat Organization",
+      "status": "stable",
+      "path": "docs/skills/visions-chat-organization/SKILL.md",
+      "description": "archive organize chats",
+      "domains": [
+        "visions"
+      ],
+      "intents": [
+        "archive",
+        "organize",
+        "chats"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    },
+    {
+      "id": "collaboration-continuity",
+      "title": "Collaboration Continuity",
+      "status": "stable",
+      "path": "docs/skills/collaboration-continuity/SKILL.md",
+      "description": "resume recover work context",
+      "domains": [
+        "collaboration"
+      ],
+      "intents": [
+        "resume",
+        "recover",
+        "work",
+        "context"
+      ],
+      "nonTriggers": [
+        "quoted example without operational intent"
+      ],
+      "dependencies": [],
+      "conditionalDependencies": [],
+      "applicability": [
+        "IMG",
+        "Visions"
+      ],
+      "requiredCapabilities": [
+        "GitHub repository read"
+      ],
+      "standards": [],
+      "outputs": [
+        "verified change or explicit blocker"
+      ],
+      "replaces": []
+    }
+  ]
+}
