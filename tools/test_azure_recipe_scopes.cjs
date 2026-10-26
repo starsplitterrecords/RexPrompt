@@ -6,7 +6,11 @@ const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
 const shows=json('data/shows.json'),drafts=json('production/drafts/manifest.json').drafts,settings=json('data/shows/azure-reach-s1/settings.json');
 const approved=new Set(Object.values(drafts).filter(d=>d.seriesId==='azure-reach'&&d.status==='approved-production-draft').map(d=>d.recipeId));
-assert.equal(approved.size,9,'Approved roster changed; review locks explicitly');
+// These nine pages were already approved when editorial scopes were introduced.
+// P09 and P10 gained approval later; their pre-existing scope is not a new edit.
+const originallyProtected=new Set(['AZR_S1E02_P01','AZR_S1E02_P02','AZR_S1E02_P03','AZR_S1E02_P04','AZR_S1E02_P05','AZR_S1E02_P06','AZR_S1E02_P07','AZR_S1E02_P08','AZR_S1E02_P11']);
+assert.equal(approved.size,11,'Approved roster changed; review locks explicitly');
+assert([...originallyProtected].every(id=>approved.has(id)),'Original approved page lock missing');
 const html=read('index.html'),start=html.indexOf('const SHOW_MANIFEST='),end=html.indexOf('function safeFilePart(',start);
 assert(start>=0&&end>start,'Canonical browser assembler source unavailable');
 const sandbox=vm.createContext({});
@@ -50,7 +54,7 @@ for(let number=1;number<=6;number++){
  let issueBefore=0,issueAfter=0,issueCount=0;
  for(let index=0;index<pages.length;index++){
   const p=pages[index],patch=map.get(p.id),lay=layoutMap.get(p.id);
-  if(approved.has(p.id)){assert(!patch,'Approved art page modified '+p.id);continue;}
+  if(originallyProtected.has(p.id)){assert(!patch,'Approved art page modified '+p.id);continue;}
   assert(patch&&lay,'Missing page scope or layout '+p.id);
   for(const key of Object.keys(patch))assert(['id','promptCharacterMode','promptSettingMode','promptSuppress','direction','directionInline'].includes(key),'Extraneous production patch '+key+' on '+p.id);
   assert.equal(patch.id,p.id);

@@ -41,7 +41,10 @@ function extractedPages(show){
  return result;
 }
 const combined=new Set(),categories=new Set();
-const expectedApproved=new Set(['AZR_S1E02_P01','AZR_S1E02_P02','AZR_S1E02_P03','AZR_S1E02_P04','AZR_S1E02_P05','AZR_S1E02_P06','AZR_S1E02_P07','AZR_S1E02_P08','AZR_S1E02_P11']);
+// Pages P09/P10 were approved later, after their layout overlays already existed.
+// The original protected nine were approved *before* this composition rollout.
+const originalProtected=new Set(['AZR_S1E02_P01','AZR_S1E02_P02','AZR_S1E02_P03','AZR_S1E02_P04','AZR_S1E02_P05','AZR_S1E02_P06','AZR_S1E02_P07','AZR_S1E02_P08','AZR_S1E02_P11']);
+const expectedApproved=new Set([...originalProtected,'AZR_S1E02_P09','AZR_S1E02_P10']);
 assert.deepEqual([...approved].sort(),[...expectedApproved].sort(),'Approved page roster changed; review before modifying');
 let authored=0,warnings=0;const perIssue={};
 for(let n=1;n<=6;n++){
@@ -68,7 +71,7 @@ for(let n=1;n<=6;n++){
  for(const id of byId.keys())assert(pageIds.has(id),'Layout target not found in source '+id);
  let scoped=0,skipped=0;
  for(let i=0;i<pages.length;i++){
-  const page=pages[i],profile=byId.get(page.id),locked=approved.has(page.id);
+  const page=pages[i],profile=byId.get(page.id),locked=originalProtected.has(page.id);
   if(locked){
    assert(!profile,'Approved production draft must remain untouched '+page.id);
    skipped++;

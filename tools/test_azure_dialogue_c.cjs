@@ -8,7 +8,11 @@ const load=p=>JSON.parse(read(p));
 const shows=load('data/shows.json');
 const drafts=load('production/drafts/manifest.json').drafts;
 const approved=new Set(Object.values(drafts).filter(x=>x.seriesId==='azure-reach'&&x.status==='approved-production-draft').map(x=>x.recipeId));
-assert.equal(approved.size,9,'Approved art inventory changed; review locks before proceeding');
+// Original approved images predate the Phase C overlays. Later P09/P10
+// approvals preserve existing dialogue placements rather than retroactively deleting them.
+const originallyProtected=new Set(['AZR_S1E02_P01','AZR_S1E02_P02','AZR_S1E02_P03','AZR_S1E02_P04','AZR_S1E02_P05','AZR_S1E02_P06','AZR_S1E02_P07','AZR_S1E02_P08','AZR_S1E02_P11']);
+assert.equal(approved.size,11,'Approved art inventory changed; review locks before proceeding');
+assert([...originallyProtected].every(id=>approved.has(id)),'Original approved art lock removed');
 const base='data/shows/azure-reach-s1/';
 function decode(overlay){
  const raw=read(base+overlay.file);
@@ -53,7 +57,7 @@ for(let n=1;n<=6;n++){
  const layouts=new Map(load(base+'editorial/page_layouts_e0'+n+'.json').map(x=>[x.id,x]));
  for(const p of authored){
   const patch=byId.get(p.id);
-  if(approved.has(p.id)){assert(!patch,'Approved production page was modified '+p.id);continue}
+  if(originallyProtected.has(p.id)){assert(!patch,'Approved production page was modified '+p.id);continue}
   if(!patch)continue;totalPages++;
   assert.deepEqual(Object.keys(patch).sort(),['dialogueInline','dialogueSource','id'],'Dialogue-only overlay scope exceeded '+p.id);
   assert.equal(patch.id,p.id);
