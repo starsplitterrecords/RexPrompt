@@ -102,7 +102,9 @@ def main():
             }))
         proof.save()
         manifest={"schemaVersion":1,"seriesId":args.series,"issueId":args.issue,
-                  "pageCount":len(units),"trimInches":[args.trim_width,args.trim_height],
+                  "pageCount":len(units),"expectedUnits":len(units),"packagedUnits":len(sources),
+                  "complete":True,"missingUnits":[],"originalBinariesPreserved":True,
+                  "trimInches":[args.trim_width,args.trim_height],
                   "masteringStatus":"NOT APPROVED — review export only",
                   "pages":[metadata for _,_,metadata in sources]}
         with zipfile.ZipFile(zip_file,"w",allowZip64=True) as z:
