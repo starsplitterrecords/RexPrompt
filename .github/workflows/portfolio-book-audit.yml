@@ -37,6 +37,8 @@ jobs:
           git add production/book-manifests.json production/book-export-coverage.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh source-verified portfolio book inventories"
+            git fetch origin "${{ github.head_ref }}"
+            git rebase "origin/${{ github.head_ref }}"
             git push origin "HEAD:${{ github.head_ref }}"
           fi
   verify-inventory:
