@@ -5,7 +5,7 @@
 <title>RexPrompt Assembler</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.dataset.theme=localStorage.getItem("rexprompt.theme")==="dark"?"dark":"light"</script>
-<script src="github-auth.js?v=20261009-remember-1"></script>
+<script src="github-auth.js?v=20261025-sessiononly-1"></script>
 <script src="github-writes.js?v=20261009-writefix-1"></script>
 <style>
 :root{color-scheme:light;--bg:#fff;--fg:#111;--muted:#666;--surface:#eee;--surface-soft:#f7f7f7;--border:#ddd;--control-bg:#fff;--control-fg:#111;--accent:#0645ad}
@@ -507,8 +507,8 @@ buildBtn.onclick=build;sceneSel.onchange=build;issueSel.onchange=()=>void select
 init().catch(err=>document.getElementById("out").textContent=err instanceof Error?err.message:String(err));
 </script>
 <script src="prompt-suppress.js?v=20261018-data-profile-1"></script>
-<script src="visuals.js?v=20261020-issue-image-coverage-1"></script>
-<script src="reference-keeper.js?v=20261009-writefix-1"></script>
+<script src="visuals.js?v=20261025-security-1"></script>
+<script src="reference-keeper.js?v=20261025-security-1"></script>
 <script src="issue-publishing.js?v=20261011-order-1"></script>
 </body>
 </html>
