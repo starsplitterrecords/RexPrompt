@@ -5,7 +5,7 @@
 ## What was and was not verified
 
 - All **126** registered RexPrompt configurations assemble as reported by the existing all-series audit, covering **24** series and **2,546** recipe units (including a musical whose comic visual QC is not applicable).
-- Current inventory at this check: **113** RexPrompt approved-draft records; **41** Keeper references; **five** exact book inventories. GitHub Actions verified source/overlay loading and structural integrity, not the appearance of every stored picture.
+- Current inventory at this check: **113** RexPrompt approved-draft records; **41** Keeper references; **74** exact book inventories. GitHub Actions verified source/overlay loading and structural integrity, not the appearance of every stored picture.
 - **Six** published editions contain **157** public daily-page JPEG paths, with **six** linked PDF paths. Every referenced path exists in the release tree. Actual pixels were inspected in a **sample of 22 pages** spanning Azure Reach, Backyard Rockets (both editions), Rex Fleet, Stardust Station, and Vikings. The full 157-page visual sequence is NOT marked passed.
 - Exact selected samples, passing-scope limitations, and evidence are in `production/audits/visual_review_2026-10-25.json`.
 - Approved draft PNG binary readback into this model's visual context was unsuccessful; therefore no approved RexPrompt draft is claimed visually verified. Keeper references were structurally indexed but not inspected as pixels here. Other IMG renders in conversation histories remain recovery-dependent.
@@ -20,7 +20,7 @@
 | VIS-C3-004 | Azure Reach / E01 / `AZR_S1E01_P03` | P2 recipe metadata | Existing validator exposes 10 declared panels versus five panel-plan entries; first reconcile the script with released page geometry and editorial approval. |
 | VIS-C3-005 | Backyard Rockets / E02 / `BR_S1E02_EDITOR_OPEN` (candidate page mapping) | P2 local lettering | Low-contrast white paragraph on public `page-023.jpg`; consider lettering-only proof, not art regeneration. |
 
-**Production-completeness gates established by exact manifests (not proof images never existed):**
+**Active production-completeness gates established by exact manifests (not proof images never existed):**
 - Rex Fleet I03: 5 missing approved entries: `RF_I03_P28`, `RF_I03_P29`, `RF_I03_P30`, `RF_I03_EDITOR_ENDMATTER`, `RF_I03_EDITOR_CLOSE`.
 - Vikings 2026 E02: 19 missing approved entries: `VIK_S1E02_P05`–`VIK_S1E02_P23`.
 - Stardust Station E02: 21 missing approved entries: `SDS_S1E02_COVER`, `SDS_S1E02_EDITOR`, `SDS_S1E02_P01`, `SDS_S1E02_P05`, `SDS_S1E02_P07`–`SDS_S1E02_P22`, `SDS_S1E02_TEASER`.
@@ -72,6 +72,10 @@ These six page-path findings are individually recorded with evidence and require
 | The Sun Comes Through (musical) | 16 | 0 | 0 | Non-comic: comic image/lettering QC not applicable; included to avoid inventory omission |
 | Sunforge Outlaw | 296 | 6 | 0 | Character/world concepts indexed, 12 issues scripted; artwork not inspected |
 | Vikings 2026 | 296 | 2 | 22 | E01 released sample passes limited identity/staging; 18 current recipes vs 26 publication pages; E02 19 book units not in draft manifest |
+
+## Current book-inventory boundary
+
+The book-export lane has since registered **74** source-verified issue inventories. The expanded inventory has **1,796** units not recorded as approved RexPrompt draft images, of which **45** are currently actionable approved-production recovery gaps in Rex Fleet I03, Vikings E02 and Stardust E02. The remaining **1,751** are unapproved production backlog/unknown external-art status—not defects and not evidence that the user never generated those images. Historical recovered art and released pages must be reconciled before classification changes.
 
 ## All 126 registered production issues
 
