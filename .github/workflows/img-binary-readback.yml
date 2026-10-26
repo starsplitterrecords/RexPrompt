@@ -1,0 +1,42 @@
+name: IMG Exact Binary Readback
+on:
+  workflow_dispatch:
+    inputs:
+      series_id:
+        description: 'Exact seriesId from approved-draft manifest'
+        required: true
+        type: string
+      issue_id:
+        description: 'Exact issueId from approved-draft manifest'
+        required: true
+        type: string
+      recipe_id:
+        description: 'Exact recipeId from approved-draft manifest'
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify and copy exact approved binary
+        env:
+          SERIES: ${{ inputs.series_id }}
+          ISSUE: ${{ inputs.issue_id }}
+          RECIPE: ${{ inputs.recipe_id }}
+        run: node tools/prepare_img_readback.cjs --series "$SERIES" --issue "$ISSUE" --recipe "$RECIPE" --out img-readback
+      - name: Transport image and checksum metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: img-exact-readback
+          path: img-readback/
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0
