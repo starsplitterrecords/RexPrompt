@@ -51,6 +51,7 @@ try{
   console.log('PASS book '+series+'::'+issue+' '+report.approved+'/'+report.expected+' native originals in order');
  }
  book('rex-fleet','rex-fleet-i01');
+ book('rex-fleet','rex-fleet-i02');
  // Incomplete issue is a *review-only* bundle with explicit missing-page inventory.
  book('vikings-2026','vikings-2026-s1-e02',true);
  book('stardust-station','stardust-station-e02',true);
@@ -77,14 +78,18 @@ try{
  assert.match(bad.stderr,/PNG CRC mismatch|PNG chunk/);
  assert.ok(!fs.existsSync(path.join(sandbox,'output')),'Corruption produced readback artifact');
  bad=fixture(canonical,{sha256:'f'.repeat(64)});assert.notEqual(bad.status,0,'Wrong digest accepted');
+ fs.unlinkSync(path.join(sandbox,imagePath));
+ bad=run('tools/prepare_img_readback.cjs',{ASSET_KIND:'draft',ASSET_KEY:key,READBACK_OUTPUT:path.join(sandbox,'output')},sandbox);
+ assert.notEqual(bad.status,0,'Missing original binary accepted');
  bad=fixture(canonical,{mimeType:'image/jpeg'});assert.notEqual(bad.status,0,'MIME mismatch accepted');
  bad=fixture(canonical,{status:'rejected'});assert.notEqual(bad.status,0,'Rejected art accepted');
  // Symlink in parent directory, not just a symlink at the image path.
+ fixture(canonical);
  const alias=path.join(sandbox,'production/drafts/fixture/fixture-i01');
  fs.renameSync(alias,alias+'-real');fs.symlinkSync(alias+'-real',alias,'dir');
  bad=run('tools/prepare_img_readback.cjs',{ASSET_KIND:'draft',ASSET_KEY:key,READBACK_OUTPUT:path.join(sandbox,'output')},sandbox);
  assert.notEqual(bad.status,0,'Parent-directory symlink was allowed');
- console.log('PASS negative fixtures: corrupt PNG, mismatched digest/MIME, rejected page, symlinked storage');
+ console.log('PASS negative fixtures: corrupt PNG, missing binary, mismatched digest/MIME, rejected page, symlinked storage');
  // Format capability test: isolated original WebP and JPEG images, created solely for the test.
  fs.rmSync(alias,{force:true});fs.renameSync(alias+'-real',alias);
  for(const format of ['WEBP','JPEG']){
