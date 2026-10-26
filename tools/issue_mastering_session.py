@@ -27,8 +27,8 @@ def role(unit):
     s=unit.upper()
     if "COVER" in s or s.endswith("_P01") and s.startswith("VIK"):return "cover"
     if "CAST" in s:return "cast"
-    if "EDITOR" in s:return "editorial"
     if "ENDMATTER" in s:return "endmatter"
+    if "EDITOR" in s:return "editorial"
     if "TEASER" in s:return "teaser"
     return "story"
 
@@ -140,7 +140,7 @@ def main():
              "nativePixels":[item["nativeWidth"],item["nativeHeight"]] if item else None,
              "effectiveDpiOnBleedCanvas":item["effectiveDpiAtTrim"] if item else None,
              "machineDeficiencies":issues,"machineCorrectionRequirements":instructions,
-             "gradeProposal":look.get(unit),"proposedColorDecision":"unreviewed",
+             "gradeProposal":look.get(unit),"gradeProofSha256":None,"proposedColorDecision":"unreviewed",
              "review":review}
         records.append(rec)
         corrections.append((index,unit,rec["role"],issues,instructions))
