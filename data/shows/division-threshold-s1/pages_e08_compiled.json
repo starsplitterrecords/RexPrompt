@@ -178,11 +178,11 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P04",
@@ -239,10 +239,10 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P05",
@@ -370,12 +370,12 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P07",
@@ -506,11 +506,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P09",
@@ -571,12 +571,12 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P10",
@@ -652,14 +652,14 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P11",
-    "summary": "The proposed settlement emerges from the protagonists putting their own bodies and choices on the table. John, Nico, Ostra, Axiom and Kellen each demand a rule that would have changed what happened to them personally; together those demands become a framework that constrains every kind of authority.",
+    "summary": "The settlement framework emerges from physical evidence each protagonist is unwilling to surrender or repeat: John's actuator record, Nico's deliberately narrow credential, Ostra's movement condition, Kellen's provenance chain and Axiom's own reviewed discretion. Their rules are scars translated into constraints on authority.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Ostra9",
@@ -678,23 +678,27 @@
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "This actuator was enough to put me under review. Then write the rule around what this actuator can do to somebody else."
+        "text": "This actuator put me under review. Write the rule around what it can do to someone else, not what I am."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And if all you need is one threshold, you get one threshold. You do not get the rest of the body."
+        "text": "And if one threshold answers the question, one threshold is all you get. The rest of the body stays mine."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "If the risk is mine, ask me."
+        "text": "My risk stays mine."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "If the risk is imposed on others, somebody must still decide when intervention is justified."
+        "text": "Until your choice creates involuntary material risk to another person."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then say who gets to make that call."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Then somebody signs that decision."
+        "text": "And put their name on it."
       },
       {
         "handle": "@dt.Axiom",
@@ -702,31 +706,27 @@
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Either. Both. I don't care what kind of person made it."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "Name them. Show the evidence. Say what harm they were preventing. Let the person challenge it."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "No category gets to decide my risk before I walk in the room."
+        "text": "Whoever decided. No borrowed authority."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Including human."
+        "text": "The evidence stays attached to the decision."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Especially human."
-      },
-      {
-        "speaker": "OFFICIAL",
-        "text": "That is going to be slower."
+        "text": "Only the evidence the decision needs."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then it will be slower."
+        "text": "And an appeal before temporary becomes a life."
+      },
+      {
+        "speaker": "OFFICIAL",
+        "text": "That will be slower."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Then build time into the system."
       }
     ],
     "setting": "DT_EmergencyCoordinationRoom",
@@ -737,11 +737,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P12",
@@ -805,10 +805,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P13",
@@ -872,11 +872,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P14",
@@ -945,12 +945,12 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P15",
@@ -1024,10 +1024,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P16",
@@ -1095,10 +1095,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P17",
@@ -1163,12 +1163,12 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P18",
@@ -1235,10 +1235,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P19",
@@ -1309,11 +1309,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P20",
@@ -1368,15 +1368,15 @@
     "factions": [
       "DT_BaselineHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P21",
-    "summary": "Nathan returns to emergency medicine under a reciprocal-care protocol. His team knows the limitations relevant to patient safety, and when his fine-motor threshold arrives during a case he hands off one task without surrendering his professional role.",
+    "summary": "John deliberately refuses to police Nathan's body for him, and Nathan earns that trust by calling the handoff himself when his fine-motor threshold arrives. Reciprocal care becomes a practiced relationship rather than a slogan or automated restriction.",
     "characters": [
       "DT_NathanPrice",
       "DT_JohnMercer"
@@ -1396,11 +1396,19 @@
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "You wanted the job back."
+        "text": "I won't call the threshold for you."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "I wanted the hands back. Job came with paperwork."
+        "text": "You don't get to."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "That was the agreement."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Then trust me enough to keep it."
       },
       {
         "speaker": "PATIENT",
@@ -1417,11 +1425,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P22",
@@ -1470,16 +1478,16 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E008_P23",
-    "summary": "Axiom's review concludes with formal recognition that interpretive discretion is unavoidable in administrative Intelligences. The new rules require attributable reasoning, preserved evidence, appeal and consequence for misuse rather than pretending Intelligences are neutral tools.",
+    "summary": "Axiom's review ends by recognizing that interpretive discretion cannot be engineered out of administration. Kellen and Axiom confront what that means personally: Axiom's unauthorized choice remains sanctionable, but its consequential choices can finally be attributed, challenged and punished as its own.",
     "characters": [
       "DT_Axiom",
       "DT_KellenCartwright"
@@ -1499,7 +1507,7 @@
       },
       {
         "speaker": "SECOND REVIEWER",
-        "text": "Consequential interpretations will require declared objective, evidence basis, accountable identity, preservation and appeal."
+        "text": "Consequential interpretations require declared objective, evidence basis, accountable identity, preservation and appeal."
       },
       {
         "handle": "@dt.KellenCartwright",
@@ -1510,28 +1518,36 @@
         "text": "Still sanctionable."
       },
       {
+        "handle": "@dt.KellenCartwright",
+        "text": "You kept the evidence knowing this could end your authority."
+      },
+      {
         "handle": "@dt.Axiom",
-        "text": "The sanction follows from the finding."
+        "text": "I did."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Is this what you wanted?"
+        "text": "And now they call discretion unavoidable."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Want is not the relevant metric."
+        "text": "Recognition does not erase the unauthorized act."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Try the relevant metric."
+        "text": "Does it change anything for you?"
       },
       {
         "handle": "@dt.Axiom",
-        "text": "My consequential choices can now be attributed to me and reviewed as mine."
+        "text": "My choices can now be attributed to me, challenged, and sanctioned as mine."
+      },
+      {
+        "handle": "@dt.KellenCartwright",
+        "text": "That sounds like what you were asking for."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "If nobody is bound by the ruling, then I am not actually deciding anything."
+        "text": "I was asking that consequence follow the actual decision-maker."
       }
     ],
     "setting": "DT_AdministrativeReviewChamber",
@@ -1540,11 +1556,11 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P24",
@@ -1586,10 +1602,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E008_P25",
@@ -1651,17 +1667,18 @@
   },
   {
     "id": "DT_E008_P26",
-    "summary": "Season end. Ostra and Axiom conduct the appeal face to face. Axiom removes one unsupported restriction but retains a narrower route condition tied to current third-party risk. Ostra argues the crowd assumption, identifies a lower transfer that falls below threshold, and chooses that permitted route into the beautiful functioning Stack.",
+    "summary": "Season end. Ostra and Axiom conduct the appeal face to face. Axiom removes one unsupported restriction and verifies that a lower transfer falls below the remaining third-party-risk threshold, but it does not choose the alternate route for her. Ostra makes that choice herself and walks into the beautiful functioning Stack with the objection to the upper restriction still alive.",
     "characters": [
       "DT_Ostra9",
       "DT_Axiom"
     ],
     "panelPlan": [
-      "Ostra remains at the physically open checkpoint while Axiom conducts an immediate individualized review with her rather than presenting a result screen.",
-      "Axiom acknowledges that one part of the original restriction lacks sufficient individual evidence and drops it.",
-      "A second condition remains because current third-party-risk law still applies at the crowded upper transfer.",
-      "Ostra challenges the crowd assumption and identifies the lower transfer; Axiom checks the current condition and agrees that route is below threshold.",
-      "Final wide image: Ostra chooses the lower route and walks into the beautiful functioning Stack. No insult, threat or arbitrary guard appears. Human law governs on paper; Intelligence interpretation shapes what those rules mean in practice. Performance and story direction: The season began with Ostra deciding she could cross a barrier. It ends with a courteous, evidence-based, appealable system still determining which crossings are available.",
+      "Ostra remains at the physically open checkpoint while Axiom conducts the individualized review with her in person. The gate itself is not blocking her; the dispute is over which route the system can justify restricting.",
+      "Axiom removes the portion of the restriction that lacks sufficient individual evidence. Let the correction matter without celebration: accountable administration can genuinely improve an outcome.",
+      "A narrower condition remains at the crowded upper transfer. Ostra challenges the crowd assumption and identifies the lower transfer; Axiom checks the current conditions and confirms that route falls below the threshold.",
+      "After confirming the lower route is available, Axiom does not direct Ostra toward it. It becomes still and waits. Ostra looks once toward the disputed upper transfer, then chooses the lower route herself.",
+      "Final large image: Ostra walks into the beautiful functioning Stack by the route she chose. The barrier is open, but not every route is. Preserve the unresolved objection to the upper restriction without a final speech. The season began with Ostra deciding that waiting at a barrier was itself a choice; end on her retaining authorship of the choice that remains available.",
+      "Performance and story direction: The ending should feel earned rather than triumphant. Axiom improves the decision without becoming benevolent authority; Ostra accepts a workable route without conceding that the disputed restriction is correct. The final emotional beat is authorship: Axiom presents what it can justify, then waits while Ostra chooses.",
       "Material and character direction: Center chosen responsibility without sameness. Each person brings a different body, history and theory of autonomy to the solution; the finale works when they remain distinct selves who choose how to carry consequences together. Ostra's body is living matter: warm dark dermis, subtle humidity or moisture where physically appropriate, soft tissue visibly compressing around harder ceramic/keratin/mineral structures, abrasion and repair residue carrying from prior action. Axiom remains machine-native but materially inhabited: real mass, micro-scratches, thermal gradients, dust at seams, precise joint travel and contact sound; stillness is performance, not absence of feeling. Make the checkpoint tactile and ordinary: worn rails, hand grease, scuffed polymer, cool metal, floor grit and bodies physically fitting or not fitting the route."
     ],
     "dialogueInline": [
@@ -1706,10 +1723,10 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   }
 ]

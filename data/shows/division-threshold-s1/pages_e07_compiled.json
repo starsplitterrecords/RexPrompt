@@ -174,11 +174,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P04",
@@ -240,15 +240,15 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P05",
-    "summary": "Organic politics fracture because different Organics are living different costs. Ostra and Nico argue in a room full of people choosing among safety, privacy and self-rule while the recent attacks are still visible on actual bodies.",
+    "summary": "Ostra and Nico argue in front of neighbors whose bodies demonstrate both sides of protective routing. Their disagreement is no longer simply central control versus local autonomy; it is about whether building a door the city cannot open protects a community or leaves it alone when danger arrives.",
     "characters": [
       "DT_Ostra9",
       "DT_Nico14"
@@ -300,11 +300,19 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "And everything else?"
+        "text": "You keep building a door the city can't open."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "We decide what leaves this room."
+        "text": "Because the city keeps walking through ours."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "And when the danger comes in?"
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Then we decide what leaves this room and what we ask for."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -312,10 +320,10 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P06",
@@ -368,10 +376,10 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P07",
@@ -559,11 +567,11 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P10",
@@ -626,11 +634,11 @@
     "factions": [
       "DT_BaselineHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P11",
@@ -682,12 +690,12 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P12",
@@ -751,15 +759,15 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P13",
-    "summary": "Nico, Ostra and the restricted Axiom use the twelve-second failure to redesign the routing relationship: central Intelligences should publish threat state and consequences quickly, while route choice remains with people and local systems until third-party risk crosses a clearly owned threshold.",
+    "summary": "Nico, Ostra and the restricted Axiom work from the twelve-second routing failure rather than from ideology. They separate fast citywide threat knowledge from route ownership, then hit the irreducible point together: coercion may sometimes be necessary, but somebody must visibly own the threshold that triggers it.",
     "characters": [
       "DT_Nico14",
       "DT_Axiom",
@@ -776,47 +784,39 @@
     "dialogueInline": [
       {
         "handle": "@dt.Nico14",
-        "text": "You had the threat first."
+        "text": "You had the threat twelve seconds before we did."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Threat reached me before local route data."
+        "text": "I had citywide threat state. You had local route state."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "Then publish that. Fast. Don't own the route."
+        "text": "Then publish what you know. Don't choose where my neighbors walk."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "Local systems choose?"
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Or the person does."
+        "text": "Local systems retain route choice."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Until their choice puts someone else at risk."
+        "text": "Until somebody's route puts another person in danger."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That's the part I'm not pretending away."
+        "text": "I'm not asking you to erase that."
       },
       {
         "handle": "@dt.Axiom",
-        "text": "A coercive threshold remains necessary."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "For what?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "For involuntary third-party risk."
+        "text": "Then a coercive threshold remains."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then somebody has to own that call."
+        "text": "And somebody has to put their name on it."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "That requirement is compatible."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -825,12 +825,12 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P14",
@@ -886,11 +886,11 @@
     "factions": [
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P15",
@@ -958,12 +958,12 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P16",
@@ -1032,12 +1032,12 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P17",
@@ -1094,11 +1094,11 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P18",
@@ -1158,10 +1158,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P19",
@@ -1224,11 +1224,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P20",
@@ -1284,11 +1284,11 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P21",
@@ -1361,11 +1361,11 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P22",
@@ -1432,15 +1432,15 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P23",
-    "summary": "The success strengthens a cross-faction reform proposal but fractures alliances again over mandatory thresholds. John accepts intervention where third-party risk is high. Ostra resists any category-wide autonomy limits. Nico wants local control. Kellen wants public auditability. Axiom wants accountable decision rules.",
+    "summary": "Still surrounded by the wet tools and damaged hardware from the water repair, the protagonists extract different lessons from the same success. The physical evidence keeps the argument concrete: informed choice, local knowledge and central threat data were all necessary, and none alone deserves the whole decision.",
     "characters": [
       "DT_Ostra9",
       "DT_JohnMercer",
@@ -1449,53 +1449,53 @@
       "DT_Axiom"
     ],
     "panelPlan": [
-      "The protagonists review the pilot after the water repair.",
-      "Each extracts a different governing principle from the same success.",
-      "They agree central knowledge is necessary and centralized permission is dangerous.",
-      "They disagree on who gets final authority when risks spill onto others.",
-      "Kellen says the disagreement itself must remain visible in the architecture. Performance and story direction: No final coalition consensus yet.",
+      "Use the immediate aftermath of the water repair, not a clean policy meeting. Nico's crew is drying equipment and clearing the damaged valve assembly while the protagonists stand among wet tools, old pipe scale, soaked fabric and tired workers.",
+      "John handles the failed component and points out that the repair worked because the crew knowingly accepted risk to themselves; Ostra points to the cleared work zone and distinguishes that from imposing the same risk on uninvolved bystanders.",
+      "Nico identifies the citywide threat update that made the local choice informed at all. The central information is physically present as a received hazard packet or spoken briefing, not a glowing policy diagram.",
+      "Kellen observes that three different actors supplied necessary parts of the decision. Axiom states the remaining problem: a shared-risk threshold still requires somebody empowered to act when risk spills onto people who did not choose it.",
+      "End without consensus on who should always hold that authority. What they do agree on is narrower and harder: category cannot decide it, invisible discretion cannot decide it, and every consequential call must preserve the responsible decision-maker, evidence and appeal. Performance and story direction: exhausted people argue from the repair they just survived, not as faction spokespeople.",
       "Material and character direction: Center fracture through relationships and self-definition rather than factions. John, Ostra, Nico, Nathan, Kellen and Axiom should each be visibly choosing what kind of person they will be when biological category no longer tells them which side is theirs. Ostra's body is living matter: warm dark dermis, subtle humidity or moisture where physically appropriate, soft tissue visibly compressing around harder ceramic/keratin/mineral structures, abrasion and repair residue carrying from prior action. John remains visibly human around his augmentations: skin, scar ridges, sweat, pressure marks, actuator heat and tissue resisting/working with installed hardware. Nico's lavender-gray dermis and sensory filaments must read as living anatomy, with flex, tension, touch response and subtle moisture at living interfaces rather than cables or tentacles. Kellen's Baseline body is not visual neutrality: use breath, fatigue, tense hands, skin, fabric, eye focus and the physical habits of someone trained to trust records and rooms. Axiom remains machine-native but materially inhabited: real mass, micro-scratches, thermal gradients, dust at seams, precise joint travel and contact sound; stillness is performance, not absence of feeling. Let Organic spaces feel warm, humid, handled and lived in: condensation, damp repair surfaces, porous materials, personal wear and body-adapted furniture without sewer/lab coding."
     ],
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "The pilot works if we only step in when somebody else is actually at risk."
+        "text": "This worked because the crew chose the risk."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Who decides what counts as actual risk?"
+        "text": "And because nobody else was standing under the failure."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And who gets the final say locally?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "A shared threshold requires explicit value assignment."
+        "text": "And because central threat data reached us before the pipe went."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "And I want to know who made the call afterward."
+        "text": "Three conditions. None of them gives one actor the whole decision."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "A shared-risk threshold still requires a deciding authority."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "We need the central information."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "Central information is necessary."
+        "text": "Only when the risk crosses onto someone who didn't choose it."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Not central permission."
+        "text": "Who decides that it crossed?"
       },
       {
-        "handle": "@dt.Axiom",
-        "text": "Under some objective structures."
+        "handle": "@dt.Nico14",
+        "text": "Not a category."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "If one rule makes all those differences disappear, we're right back where we started."
+        "text": "Not invisibly."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "Then the rule must preserve who decided, the evidence used, and the available appeal."
       }
     ],
     "setting": "DT_OrganicCommunityHall",
@@ -1506,15 +1506,15 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P24",
-    "summary": "Kellen publishes the complete threshold-test record through the civic evidence archive with its provenance intact, including her own off-channel actions and Axiom's unauthorized retention. Journalists and investigators receive one accountable chain instead of another selective leak.",
+    "summary": "Kellen releases the complete threshold record with her own off-channel conduct and Axiom's unauthorized retention inseparable from the evidence against the program. The choice completes her break with institutional self-protection: nobody gets to clean the record after publication.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Axiom"
@@ -1537,12 +1537,16 @@
         "text": "Kellen Cartwright's off-channel entries and my unauthorized preservation action are included."
       },
       {
+        "handle": "@dt.KellenCartwright",
+        "text": "Do not separate mine from the program record."
+      },
+      {
         "speaker": "ARCHIVE CUSTODIAN",
-        "text": "Once released, all of it is public record."
+        "text": "Once released, none of it can be quietly withdrawn."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Then leave it alone."
+        "text": "Then nobody gets to clean it up afterward. Release it intact."
       }
     ],
     "setting": "DT_CivicEvidenceArchive",
@@ -1553,11 +1557,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E007_P25",
@@ -1617,10 +1621,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E007_P26",
@@ -1698,10 +1702,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   }
 ]

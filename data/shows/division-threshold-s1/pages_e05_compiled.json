@@ -105,10 +105,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P03",
@@ -212,12 +212,12 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P05",
@@ -339,10 +339,10 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P07",
@@ -395,14 +395,14 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P08",
-    "summary": "Ostra physically holds the proposed law that finally names her a person. The recognition lands before Nico turns the same pages to the conditions attached to it. Kellen watches the moment become both historic and insufficient in Ostra's hands.",
+    "summary": "Ostra holds a law that finally names her a person and asks for a few seconds to feel that recognition before Nico turns to the restrictions attached to it. The disagreement hurts because both are right about different parts of the same document.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Ostra9",
@@ -419,19 +419,31 @@
     "dialogueInline": [
       {
         "handle": "@dt.Ostra9",
-        "text": "Autonomous civic person."
+        "text": "They finally wrote it."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Standing to contract. Residence. Appeal. Personal liability."
+        "text": "Give me a moment."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Assurance begins six pages later."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "I said a moment."
+      },
+      {
+        "handle": "@dt.Ostra9",
+        "text": "Now turn the page."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "Movement conditions. Mandatory capability assurance."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Capability assurance remains mandatory."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "Movement conditions for designated risk profiles."
+        "text": "Neither section cancels the personhood clause."
       },
       {
         "handle": "@dt.Ostra9",
@@ -439,7 +451,7 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That person still needs permission at every threshold."
+        "text": "A person they expect to keep proving it."
       }
     ],
     "setting": "DT_OversightOffice",
@@ -448,12 +460,12 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P09",
@@ -509,10 +521,10 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P10",
@@ -574,11 +586,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P11",
@@ -641,11 +653,11 @@
     "factions": [
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P12",
@@ -711,11 +723,11 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P13",
@@ -775,16 +787,16 @@
     "factions": [
       "DT_BaselineHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P14",
-    "summary": "Kellen tries to warn Ostra that personhood is being used to legitimize a pre-existing control system. Ostra refuses the easy answer that recognition should therefore be rejected.",
+    "summary": "Kellen expects the annex provenance to settle Ostra against the personhood bill and realizes she is in danger of making another choice on Ostra's behalf. Ostra refuses both inherited ownership and the idea that exposure of the control system makes recognition meaningless.",
     "characters": [
       "DT_KellenCartwright",
       "DT_Ostra9"
@@ -800,43 +812,35 @@
     "dialogueInline": [
       {
         "handle": "@dt.KellenCartwright",
-        "text": "The annex was waiting before the review began."
+        "text": "I thought this would make the choice obvious."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "How much of it?"
+        "text": "Which choice?"
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "Movement. Capability. Behavioral risk. Most of the machinery."
+        "text": "Reject it. The annex was built before anyone asked what you wanted."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "And the personhood language?"
+        "text": "Ownership was built before I was born."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "New."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "The control system was already there."
+        "text": "If you take the bill, their controls get a legal foundation."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "So was the ownership system."
+        "text": "If I refuse it, their ownership keeps one."
       },
       {
         "handle": "@dt.KellenCartwright",
-        "text": "You still support the bill?"
+        "text": "I don't know how to tell you which is worse."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "If we reject it, legacy ownership survives."
-      },
-      {
-        "handle": "@dt.KellenCartwright",
-        "text": "And if you accept it, the controls gain a legal foundation."
+        "text": "Then don't choose for me."
       }
     ],
     "setting": "DT_OrganicSafehouse",
@@ -845,11 +849,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P15",
@@ -914,10 +918,10 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P16",
@@ -973,12 +977,12 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P17",
@@ -1026,11 +1030,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P18",
@@ -1086,12 +1090,12 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P19",
@@ -1155,11 +1159,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P20",
@@ -1220,15 +1224,15 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P21",
-    "summary": "John discovers Nathan knew he needed treatment and delayed it to avoid reassignment. Their conflict exposes a truth neither anti-regulation nor pro-regulation rhetoric handles cleanly: capability oversight might have protected both Nathan and the patient, but the employment consequences encouraged concealment.",
+    "summary": "John discovers that Nathan hid a correct medical warning because accepting treatment threatened the work through which Nathan understands his own value. John's anger is personal before it is political: Nathan calibrates John's body every week and concealed the failure of his own.",
     "characters": [
       "DT_JohnMercer",
       "DT_NathanPrice"
@@ -1244,15 +1248,7 @@
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "You had a treatment recommendation."
-      },
-      {
-        "handle": "@dt.NathanPrice",
-        "text": "A recommendation."
-      },
-      {
-        "handle": "@dt.JohnMercer",
-        "text": "Marked progressive instability."
+        "text": "You had a treatment recommendation marked progressive instability."
       },
       {
         "handle": "@dt.NathanPrice",
@@ -1260,23 +1256,35 @@
       },
       {
         "handle": "@dt.JohnMercer",
+        "text": "You calibrate my body every week and hid yours."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "Your body wasn't the one costing you your job."
+      },
+      {
+        "handle": "@dt.JohnMercer",
         "text": "You hurt somebody."
       },
       {
-        "handle": "@dt.JohnMercer",
-        "text": "It told you to stop."
-      },
-      {
         "handle": "@dt.NathanPrice",
-        "text": "It told me I'd stop being useful."
+        "text": "I saw what I did."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "That's not the same thing."
+        "text": "The warning was right."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "It was to me."
+        "text": "The consequence was wrong enough that I gambled against it."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "You don't get to make your patients pay for that gamble."
+      },
+      {
+        "handle": "@dt.NathanPrice",
+        "text": "I'm not defending it."
       },
       {
         "handle": "@dt.JohnMercer",
@@ -1289,12 +1297,12 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P22",
@@ -1361,10 +1369,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P23",
@@ -1429,11 +1437,11 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E005_P24",
@@ -1493,11 +1501,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P25",
@@ -1558,12 +1566,12 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E005_P26",
@@ -1607,11 +1615,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   }
 ]
