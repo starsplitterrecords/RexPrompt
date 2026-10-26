@@ -105,6 +105,61 @@ Targeted raw-byte availability is heterogeneous: some historically generated ima
 
 This exhaustive returned-image listing does **not** provide a machine-verifiable reverse mapping for descriptively named artifacts to all active page recipes or durable approval decisions from every original conversation. It also excludes non-image ZIP/PDF archives, some of which may have different access controls. For that reason no unsupported assertion of permanent inaccessibility is made.
 
+## Validated all-series production coverage (GitHub Actions)
+
+The complete `all-series-production-inventory.json` artifact from [validated all-series workflow run 40266711324](https://github.com/starsplitterrecords/RexPrompt/actions/runs/40266711324) loads **126/126** show configurations and reports **2,546 recipe units across 24 series**, **113 active approved-draft mappings**, zero errors and zero structural warnings. These are source recipe counts, not estimates of missing or lost generated images.
+
+| Series | Configurations | Assembled recipe units | Manifest-approved drafts |
+| --- | ---: | ---: | ---: |
+| `azure-reach` | 7 | 150 | 11 |
+| `backyard-rockets` | 1 | 178 | 0 |
+| `division-threshold` | 24 | 228 | 0 |
+| `echoes-forgotten-war` | 2 | 157 | 0 |
+| `low-tide-signal` | 14 | 199 | 0 |
+| `rex-fleet` | 12 | 314 | 76 |
+| `rex-fleet-academy-anomalies` | 1 | 24 | 0 |
+| `rex-fleet-academy-between-beacons` | 2 | 27 | 0 |
+| `rex-fleet-academy-core-worlds` | 1 | 24 | 0 |
+| `rex-fleet-academy-doctrine-many-crowns` | 1 | 24 | 0 |
+| `rex-fleet-academy-navigating-mirrorfold` | 1 | 24 | 0 |
+| `rex-fleet-academy-physics-lattice` | 1 | 24 | 0 |
+| `rex-fleet-aegis-vigil` | 1 | 24 | 0 |
+| `rex-fleet-crimson-warden` | 1 | 28 | 0 |
+| `rex-fleet-ghostwind-arrow` | 1 | 22 | 0 |
+| `rex-fleet-glass-horizon` | 1 | 24 | 0 |
+| `rex-fleet-slip-knife` | 1 | 22 | 0 |
+| `rex-fleet-stormwell-archive` | 1 | 22 | 0 |
+| `rfa-reach-resolve` | 1 | 24 | 0 |
+| `shattering` | 7 | 150 | 0 |
+| `stardust-station` | 20 | 249 | 4 |
+| `sun-comes-through-musical` | 1 | 16 | 0 |
+| `sunforge-outlaw` | 12 | 296 | 0 |
+| `vikings-2026` | 12 | 296 | 22 |
+| **Total** | **126** | **2,546** | **113** |
+
+Per-configuration issue/unit breakdown is present in the generated workflow's `configurations` records; RexPrompt only has **five** fully curated `production/book-manifests.json` inventories. No other issue is called complete based only on those unit counts.
+
+## Newly established approved-but-unmapped historical work
+
+### Division Threshold Issue 1 — Project-source approval and changed current script
+
+Historical IMG production rules establish that uploading `DT_E001_P##` to Project Sources is the approval event. Conversation history documents P01 as “perfect” and P03 explicitly approved; project rules name `DT_E001_P05.png` as approved. Additional Library files are visible for P02 and P04. The source review identified:
+
+| Original Library filename | Library file ID | Original bytes | Historical state |
+| --- | --- | ---: | --- |
+| `DT_E001_P01.png` | `file_000000002e2881f5b6670cc8e3e64919` | 2299096 | Explicitly accepted historical P01 |
+| `DT_E001_P02.png` | `file_0000000009e481f58d5d20bda0ee9266` | 2809628 | Candidate; approval unproven |
+| `DT_E001_P03.jpeg` | `file_00000000d3e481f59460cacb33142a37` | 587447 | Historic P03 approved, PNG replacement unresolved |
+| `DT_E001_P04.png` | `file_00000000502881f59d9842d4553e9481` | 3040927 | Candidate; approval unproven |
+| `DT_E001_P05.png` | `file_0000000084ec81f59af6fc74b0c802dd` | 2904518 | Named historical approved Project Source |
+| `DT_E001_P05(1).png` | `file_00000000711c81f5b29ae17a06b63f77` | 2756783 | Alternate; not approved by filename alone |
+
+The current `data/shows/division-threshold-s1/pages_e01_compiled.json` contains **22 current pages**, and the actual script has **changed meaning**: P01 is now Ostra-9 at Checkpoint 9 and a failing overpass, P03 is overpass rescue, P05 is aftermath with security drones. Original historical P01 visibly depicts a trauma patient/surgery; P03 depicts stable city-grid operations and an AI asking WHY; P05 depicts Ostra at the checkpoint. Thus **historical approval is not an approval of the current recipe** and the source images cannot safely be registered under today's identical-looking IDs. Attempts to materialize all five original binaries were refused by Project-file access restrictions; pixels can be previewed, but original-byte transfer is blocked. See [recovery issue #334](https://github.com/starsplitterrecords/RexPrompt/issues/334).
+
+### Low Tide Signal Chapter 1 — historical approved `S` vs active `P` page model
+
+Contemporaneous September IMG recovery checkpoint and user instruction identify **eight approved scene-pages `LTS_C01_S01`–`S08`**, expected original SHA-256 records, and prior blob-transfer failures; current RexPrompt approved-draft manifest contains **none**. Live Chapter 1 now has page recipes `LTS_C01_P01`–`P24`, not one-to-one `S` recipes. Accordingly, preserve the original approvals as historical only until original image hashes and a deliberately validated scene-to-page crosswalk are obtained. See [recovery issue #335](https://github.com/starsplitterrecords/RexPrompt/issues/335). **Do not re-label eight scene images as eight arbitrary page approvals.**
+
 ## Boundaries and next recovery blockers
 
 1. **No new approvals have been fabricated**; a found image, successful generation, native-size page canvas, or user request to generate does not itself prove final approval.
