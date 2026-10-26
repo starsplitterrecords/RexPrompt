@@ -6,7 +6,7 @@
 
 - All **126** registered RexPrompt configurations assemble as reported by the existing all-series audit, covering **24** series and **2,546** recipe units (including a musical whose comic visual QC is not applicable).
 - Current inventory at this check: **113** RexPrompt approved-draft records; **41** Keeper references; **74** exact book inventories. GitHub Actions verified source/overlay loading and structural integrity, not the appearance of every stored picture.
-- **Six** published editions contain **157** public daily-page JPEG paths, with **six** linked PDF paths. Every referenced path exists in the release tree. Actual pixels were inspected in a **sample of 22 pages** spanning Azure Reach, Backyard Rockets (both editions), Rex Fleet, Stardust Station, and Vikings. The full 157-page visual sequence is NOT marked passed.
+- **Six** published editions contain **157** public daily-page JPEG paths, with **six** linked PDF paths. Every referenced path exists in the release tree. Actual pixels were inspected in a **sample of 32 pages** spanning Azure Reach, Backyard Rockets (both editions), Rex Fleet, Stardust Station, and Vikings. The full 157-page visual sequence is NOT marked passed.
 - Exact selected samples, passing-scope limitations, and evidence are in `production/audits/visual_review_2026-10-25.json`.
 - Approved draft PNG binary readback into this model's visual context was unsuccessful; therefore no approved RexPrompt draft is claimed visually verified. Keeper references were structurally indexed but not inspected as pixels here. Other IMG renders in conversation histories remain recovery-dependent.
 
@@ -27,11 +27,11 @@
 
 ## Visual samples / qualified passing findings
 
-- **Azure Reach E01:** pages 002–003 and 018–019 share recognizable Maya/model, facility palette and ensemble (observed); exact dialogue not compared.
-- **Backyard Rockets E01:** pages 010–011 keep the central woman's sidecut and consistent Mojave hardware language (observed); the combined E02 pages 022–024 were inspected separately.
-- **Rex Fleet E01:** pages 017–018 maintain the council-room geography, Fleet navy/gold uniforms and central female officer's facial identity. Pages 001–003 also visually sampled; full issue not passed.
-- **Stardust E01:** pages 002–003 and 021 retain the established colorful crew and station design. Page 020 is present but did not successfully render through this inspection tool in one attempt, so is excluded from passing scope.
-- **Vikings E01:** pages 019–020 preserve rooftop setting and two foreground character identities; pages 001–003 were also inspected. Edition-to-recipe mapping remains unresolved.
+- **Azure Reach E01:** pages 002–003, 009–010 and 018–019 share recognizable Maya/model, facility palette and ensemble (observed); exact dialogue not compared.
+- **Backyard Rockets E01:** pages 010–011 keep the central woman's sidecut and consistent Mojave hardware language (observed); the combined E02 pages 022–024 and 033–034 were inspected separately.
+- **Rex Fleet E01:** pages 012–013 and 017–018 maintain the council-room geography, Fleet navy/gold uniforms and central female officer's facial identity. Pages 001–003 also visually sampled; full issue not passed.
+- **Stardust E01:** pages 002–003, 010–011 and 021 retain the established colorful crew and station design. Page 020 is present but did not successfully render through this inspection tool in one attempt, so is excluded from passing scope.
+- **Vikings E01:** pages 010–011 and 019–020 preserve rooftop setting and two foreground character identities; pages 001–003 were also inspected. Edition-to-recipe mapping remains unresolved.
 
 ## Published-image geometry and structural QC
 
