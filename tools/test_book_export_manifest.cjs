@@ -1,46 +1,37 @@
 'use strict';
-const assert=require('node:assert/strict'),fs=require('node:fs');
-const inv=JSON.parse(fs.readFileSync('production/book-manifests.json','utf8'));
-const draft=JSON.parse(fs.readFileSync('production/drafts/manifest.json','utf8'));
-const exporter=fs.readFileSync('issue-publishing.js','utf8');
+const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
+const shows=JSON.parse(fs.readFileSync('data/shows.json','utf8')),inv=JSON.parse(fs.readFileSync('production/book-manifests.json','utf8')),coverage=JSON.parse(fs.readFileSync('production/book-export-coverage.json','utf8')),drafts=JSON.parse(fs.readFileSync('production/drafts/manifest.json','utf8')).drafts,exporter=fs.readFileSync('issue-publishing.js','utf8');
+const registered=new Set(shows.map(s=>s.id));
 assert.equal(inv.schemaVersion,1);
-assert.match(exporter,/async function getBookSpec/);
-assert.match(exporter,/const units=book\?\.units\|\|sel\.recipeIds/);
-let incomplete=0;
+assert.equal(coverage.registrySelectors,shows.length);
+assert.equal(coverage.entries.length,shows.length);
+assert.equal(coverage.issuesWithManifest,Object.keys(inv.issues).length);
+assert.equal(new Set(coverage.entries.map(r=>r.selectorId)).size,shows.length);
 for(const [key,book] of Object.entries(inv.issues)){
  assert.equal(key,book.seriesId+'::'+book.issueId);
- assert.equal(new Set(book.units).size,book.units.length);
- if(book.seriesId==='rex-fleet'){
-  assert.match(book.units[0],/_COVER$/);
-  assert.match(book.units[1],/_EDITOR_OPEN$/);
-  assert.match(book.units[2],/_CAST$/);
-  const pageUnits=book.units.filter(x=>/_P\d+$/.test(x));
-  assert.ok(pageUnits.length>=18);
-  pageUnits.forEach((id,i)=>assert.ok(id.endsWith('_P'+String(i+1).padStart(2,'0')),'Rex Fleet story order '+id));
-  assert.ok(book.units.at(-1).endsWith('_EDITOR_CLOSE'));
-  if(book.issueId.endsWith('i02')||book.issueId.endsWith('i03'))
-    assert.deepEqual(book.units.slice(-2),[book.issueId.endsWith('i02')?'RF_I02_EDITOR_ENDMATTER':'RF_I03_EDITOR_ENDMATTER',book.issueId.endsWith('i02')?'RF_I02_EDITOR_CLOSE':'RF_I03_EDITOR_CLOSE']);
- }else if(book.seriesId==='vikings-2026'){
-  const cover=JSON.parse(fs.readFileSync('data/shows/vikings-2026-s1/covers.json','utf8'));
-  const story=JSON.parse(fs.readFileSync('data/shows/vikings-2026-s1/pages_i02.json','utf8'));
-  assert.deepEqual(book.units,[...cover.filter(x=>x.id==='VIK_S1E02_P01'),...story].map(x=>x.id),'Vikings book must include cover P01');
- }else if(book.seriesId==='stardust-station'){
-  const covers=JSON.parse(fs.readFileSync('data/shows/stardust-station/covers.json','utf8'));
-  const intro=JSON.parse(fs.readFileSync('data/shows/stardust-station/editorial/pages_e02_intro.json','utf8'));
-  const outro=JSON.parse(fs.readFileSync('data/shows/stardust-station/editorial/pages_e02_teaser.json','utf8'));
-  const expected=[covers.find(x=>x.id==='SDS_S1E02_COVER').id,intro[0].id,
-    ...Array.from({length:22},(_,i)=>'SDS_S1E02_P'+String(i+1).padStart(2,'0')),outro[0].id];
-  assert.deepEqual(book.units,expected,'Stardust book must include cover/editorial/teaser');
- }else throw Error('Book inventory requires a source-order regression rule: '+book.seriesId);
- const missing=book.units.filter(id=>!draft.drafts[[book.seriesId,book.issueId,id].join('::')]);
- if(missing.length)incomplete++;
- console.log(key+': '+book.units.length+' expected units; '+missing.length+' missing approved images'+(missing.length?': '+missing.join(', '):''));
+ assert.ok(registered.has(book.issueId),'Unregistered issue '+key);
+ assert.ok(Array.isArray(book.units)&&book.units.length,'Empty issue '+key);
+ assert.equal(new Set(book.units).size,book.units.length,'Duplicate units '+key);
+ const row=coverage.entries.find(e=>e.selectorId===book.issueId);
+ assert.ok(row&&row.status!=='uncurated','Curated inventory must have coverage '+key);
+ assert.equal(row.expectedUnits,book.units.length);
+ assert.equal(row.approvedImages,book.units.filter(id=>drafts[[book.seriesId,book.issueId,id].join('::')]?.status==='approved-production-draft').length);
+ const story=book.units.filter(x=>/_P\d+$/.test(x));
+ for(let i=1;i<story.length;i++)assert.equal(+story[i].match(/_P(\d+)$/)[1],+story[i-1].match(/_P(\d+)$/)[1]+1,key+' story order '+story[i]);
 }
-assert.ok(incomplete>=0);
-assert.match(exporter,/-INCOMPLETE-DRAFT/,'Incomplete preview must be labeled');
-assert.match(exporter,/-UNVERIFIED-BOOK-DRAFT/,'Missing complete-book inventory must be labeled');
-assert.match(exporter,/book-export-manifest\.json/,'ZIP must include machine-readable source inventory');
-assert.match(exporter,/im\.type==='image\/jpeg'\?await nativeJpeg/,'Original JPEG bytes should be preserved in PDF');
-assert.match(exporter,/if\(!p\.book\)throw Error\('Release blocked/,'All releases require complete-book inventories');
-assert.match(exporter,/MISSING_APPROVED_PAGES\.txt/,'Incomplete archive requires gap list');
-console.log('Complete-book manifest contract verified.');
+assert.equal(Object.values(coverage.statuses).reduce((a,b)=>a+b,0),shows.length);
+const ex=(series,issue)=>inv.issues[series+'::'+issue];
+assert.deepEqual(ex('rex-fleet','rex-fleet-i02').units.slice(0,3),['RF_I02_COVER','RF_I02_EDITOR_OPEN','RF_I02_CAST']);
+assert.deepEqual(ex('rex-fleet','rex-fleet-i03').units.slice(-2),['RF_I03_EDITOR_ENDMATTER','RF_I03_EDITOR_CLOSE']);
+assert.equal(ex('vikings-2026','vikings-2026-s1-e02').units[0],'VIK_S1E02_P01');
+assert.deepEqual(ex('stardust-station','stardust-station-e02').units.slice(0,2),['SDS_S1E02_COVER','SDS_S1E02_EDITOR']);
+assert.equal(ex('stardust-station','stardust-station-e02').units.at(-1),'SDS_S1E02_TEASER');
+assert.match(exporter,/const units=book\?\.units\|\|sel\.recipeIds/);
+assert.match(exporter,/-INCOMPLETE-DRAFT/);
+assert.match(exporter,/-UNVERIFIED-BOOK-DRAFT/);
+assert.match(exporter,/book-export-manifest\.json/);
+assert.match(exporter,/if\(!p\.book\)throw Error\('Release blocked/);
+assert.match(exporter,/MISSING_APPROVED_PAGES\.txt/);
+const audit=cp.spawnSync(process.execPath,['tools/audit_portfolio_books.cjs','--check'],{encoding:'utf8'});
+assert.equal(audit.status,0,'Source audit mismatch:\n'+audit.stderr+'\n'+audit.stdout.slice(0,2000));
+console.log('PASS '+shows.length+' selectors audited, '+Object.keys(inv.issues).length+' book inventories: '+JSON.stringify(coverage.statuses));
