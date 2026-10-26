@@ -1,0 +1,36 @@
+name: Validate portfolio assembler regression
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/manifest.json'
+      - 'tools/test_portfolio_assembler_regression.cjs'
+      - '.github/workflows/validate-portfolio-regression.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/manifest.json'
+      - 'tools/test_portfolio_assembler_regression.cjs'
+      - '.github/workflows/validate-portfolio-regression.yml'
+  workflow_dispatch:
+jobs:
+  portfolio-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/test_portfolio_assembler_regression.cjs
+      - run: node tools/test_portfolio_assembler_regression.cjs --out portfolio-regression-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portfolio-regression-report
+          path: portfolio-regression-report.json
+          if-no-files-found: warn
