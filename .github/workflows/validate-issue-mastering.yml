@@ -1,0 +1,25 @@
+name: Validate Mastering Preflight
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_issue_mastering.cjs'
+      - 'docs/issue-mastering-preflight.md'
+      - 'production/drafts/manifest.json'
+      - '.github/workflows/validate-issue-mastering.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/audit_issue_mastering.cjs'
+      - 'production/drafts/manifest.json'
+      - '.github/workflows/validate-issue-mastering.yml'
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/audit_issue_mastering.cjs
+      - run: node tools/audit_issue_mastering.cjs --series azure-reach --issue azure-reach-s1-e02
+      - run: node tools/audit_issue_mastering.cjs --series rex-fleet --issue rex-fleet-i01
