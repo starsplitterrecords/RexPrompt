@@ -14,6 +14,7 @@ const ids=K.canonicalSeries(shows).map(s=>s.id);
 assert(series.length>=6,'Existing six-series Keeper inventory must not shrink without review');
 for(const sid of series)assert(ids.includes(sid),'Current Keeper series must be registered: '+sid);
 const report=K.checkManifest(manifest,shows);
+assert(fs.readFileSync(path.join(root,'reference-keeper.js'),'utf8').includes('K.selectEntries(S.manifest'), 'UI must use the shared Keeper search/filter contract');
 assert.deepEqual(report.errors,[],'All existing Keeper records must be structurally valid');
 let passed=0;
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
@@ -61,6 +62,30 @@ try{
      passed++;
    }
  }
+ // Every registered RexPrompt series must support all four categories, including
+ // series with zero Keeper entries. These tests never commit/promote originals.
+ const catalog=K.canonicalSeries(shows);
+ assert(catalog.length>=series.length,'Registered series disappeared');
+ const existingPng=entries.find(x=>x.mimeType==='image/png');
+ const fixture=new Uint8Array(fs.readFileSync(path.join(root,existingPng.image)));
+ let futureCategoryTests=0;
+ for(const registered of catalog){
+   for(const category of K.TYPES){
+     const name='Portfolio Probe '+category;
+     const plan=K.planIntake({manifest,shows,seriesId:registered.id,type:category,
+       name,fileName:'portfolio-probe.png',mimeType:'image/png',bytes:fixture,now:'2026-10-25T00:00:00.000Z'});
+     assert.equal(plan.entry.seriesId,registered.id);
+     assert.equal(plan.entry.type,category);
+     assert(plan.image.startsWith('production/references/'+registered.id+'/keeper/'+category+'/'));
+     const simulated=JSON.parse(JSON.stringify(manifest));
+     simulated.references[plan.entry.id]=plan.entry;
+     assert.deepEqual(K.checkManifest(simulated,shows).errors,[],'New category entry should validate: '+registered.id+'/'+category);
+     assert(K.selectEntries(JSON.parse(JSON.stringify(simulated)),{
+       seriesId:registered.id,type:category,query:'portfolio probe'}).some(x=>x.id===plan.entry.id));
+     futureCategoryTests++;
+   }
+ }
+
  const png=entries.find(x=>x.mimeType==='image/png'),jpg=entries.find(x=>x.mimeType==='image/jpeg');
  assert(png&&jpg,'Expect original PNG and JPEG references');
  const original=fs.readFileSync(path.join(root,png.image));
@@ -84,5 +109,5 @@ try{
    'Known malformed Checkpoint 9 image must stay out of Keeper');
  console.log(JSON.stringify({seriesTested:series,categoriesTested:passed,
    uploadedIntoTemporaryManifests:passed,exactByteReadbacks:passed,
-   currentKeeperEntries:entries.length,malformedCheckpoint9Excluded:true},null,2));
+   currentKeeperEntries:entries.length,allRegisteredSeries:catalog.length,futureCategoryTests,malformedCheckpoint9Excluded:true},null,2));
 }finally{fs.rmSync(refDir,{recursive:true,force:true})}
