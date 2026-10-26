@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet-slip-knife",
+  "sourcePackage": "data/shows/rex-fleet-slip-knife/",
+  "auditScope": "source-shelf subject inventory, not evidence of visual approval",
+  "authorityNote": "Spinoff vessels and crew lack released standalone appearance approval; Rex Fleet Issue 1 remains reference for shared Fleet language only.",
+  "subjectShelves": {
+    "characters": {
+      "source": "data/shows/rex-fleet-slip-knife/characters.json",
+      "subjects": [
+        {
+          "id": "C_sk_rhea_kell",
+          "name": "Rhea Kell",
+          "handle": "@rex.slip.rhea"
+        },
+        {
+          "id": "C_sk_tomas_reeve",
+          "name": "Tomas Reeve",
+          "handle": "@rex.slip.tomas"
+        },
+        {
+          "id": "C_sk_nadi_korr",
+          "name": "Nadi Korr",
+          "handle": "@rex.slip.nadi"
+        },
+        {
+          "id": "C_sk_bram_ellis",
+          "name": "Bram Ellis",
+          "handle": "@rex.slip.bram"
+        },
+        {
+          "id": "C_sk_emi_varn",
+          "name": "Emi Varn",
+          "handle": "@rex.slip.emi"
+        },
+        {
+          "id": "C_sk_jonas_pell",
+          "name": "Jonas Pell",
+          "handle": "@rex.slip.jonas"
+        }
+      ]
+    },
+    "settings": {
+      "source": "data/shows/rex-fleet-slip-knife/settings.json",
+      "subjects": [
+        {
+          "id": "SK_Luminara_Loading",
+          "name": "Luminara Verge loading ring",
+          "handle": null
+        },
+        {
+          "id": "SK_CargoDeck",
+          "name": "Slip Knife cargo deck",
+          "handle": null
+        },
+        {
+          "id": "SK_Bridge",
+          "name": "Slip Knife bridge",
+          "handle": null
+        },
+        {
+          "id": "SK_EngineBay",
+          "name": "Slip Knife engine bay",
+          "handle": null
+        },
+        {
+          "id": "SK_Auric_Gate",
+          "name": "Auric Gate debris corridor",
+          "handle": null
+        },
+        {
+          "id": "SK_Auric_Freeport",
+          "name": "Auric Freeport outer docks",
+          "handle": null
+        },
+        {
+          "id": "SK_Ember_Cantina",
+          "name": "Ember Cantina",
+          "handle": null
+        }
+      ]
+    },
+    "factions": {
+      "source": "data/shows/rex-fleet-slip-knife/factions.json",
+      "subjects": [
+        {
+          "id": "F_SK_Crew",
+          "name": "Slip Knife crew / Verge runner auxiliary",
+          "handle": null
+        },
+        {
+          "id": "F_Luminara",
+          "name": "Luminara agricultural cooperatives",
+          "handle": null
+        },
+        {
+          "id": "F_Auric_Blockade",
+          "name": "Auric Gate splinter blockade",
+          "handle": null
+        }
+      ]
+    }
+  }
+}
