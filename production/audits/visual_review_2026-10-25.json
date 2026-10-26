@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-10-25",
+  "scope": "C3 read-only cross-series visual and provenance audit",
+  "canonRule": "Published StarSplitterVisions images remain untouched; approved drafts remain untouched. No passing artwork is reopened based only on a repository audit.",
+  "inspectedReleasedPages": [
+    {
+      "seriesId": "azure-reach",
+      "issue": "issue-01",
+      "pages": [
+        2,
+        3,
+        18,
+        19
+      ],
+      "sampledPass": [
+        "Maya's bun, uniform and Azure Reach room design consistent across inspected samples",
+        "Host and main ensemble stay distinguishable in inspected late-sequence pages"
+      ],
+      "limitations": [
+        "No full scripted lettering comparison",
+        "Issue-wide review incomplete"
+      ]
+    },
+    {
+      "seriesId": "backyard-rockets",
+      "issue": "issue-01",
+      "pages": [
+        10,
+        11
+      ],
+      "sampledPass": [
+        "Short-sidecut dark-haired woman retained characteristic haircut and uniform",
+        "Rocket and workshop technology retain a grounded Mojave aesthetic"
+      ],
+      "limitations": [
+        "Transition script not verified line for line"
+      ]
+    },
+    {
+      "seriesId": "backyard-rockets",
+      "issue": "issue-02",
+      "pages": [
+        22,
+        23,
+        24
+      ],
+      "sampledPass": [
+        "Issue 2 is an explicitly labeled combined edition; its 21 repeated pages are intentional",
+        "Issue 2 opening page and subsequent working cast remain recognizable"
+      ],
+      "limitations": [
+        "All original Chapter 2 story pages not reviewed",
+        "Page 23 editorial low-contrast line recorded as local issue"
+      ]
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issue": "issue-01",
+      "pages": [
+        1,
+        2,
+        3,
+        17,
+        18
+      ],
+      "sampledPass": [
+        "The female Fleet officer retains gray-streaked low-bun appearance across reviewed council pages 17–18",
+        "Navy/gold Core council architecture, uniforms and map table are stable across the reviewed council sequence"
+      ],
+      "limitations": [
+        "Released opening editorial name differs from active character shelf; source authority needs explicit review",
+        "Other 14 released daily pages not visually inspected"
+      ]
+    },
+    {
+      "seriesId": "stardust-station",
+      "issue": "issue-01",
+      "pages": [
+        2,
+        3,
+        21
+      ],
+      "unrenderedButLocated": [
+        20
+      ],
+      "sampledPass": [
+        "Purple-haired manager, blue-gray robot, orange monkey and teal insect remain visually recognizable across examined scenes",
+        "Station blue-purple maintained interior and overall line-art style broadly consistent"
+      ],
+      "limitations": [
+        "Page 20 image exists but was not renderable through this session's inspection bridge",
+        "Exact dialogue-to-balloon mapping not independently checked"
+      ]
+    },
+    {
+      "seriesId": "vikings-2026",
+      "issue": "issue-01",
+      "pages": [
+        1,
+        2,
+        3,
+        19,
+        20
+      ],
+      "sampledPass": [
+        "Bjorn and Carrie retain recognizable coat, fur mantle, bun and overall identities across inspected pages 19–20",
+        "Same rooftop and mechanical equipment carry between pages 19 and 20",
+        "North Atlantic longship images preserve the basic two-lead costume silhouette established in cover"
+      ],
+      "limitations": [
+        "RexPrompt issue 1 recipe count differs from the released 26-page archive; page mapping incomplete",
+        "Remaining released pages unreviewed"
+      ]
+    }
+  ],
+  "pixelReadback": {
+    "releasedAssets": "20 released JPEG page images successfully inspected as displayed; page-020 of Stardust Issue 1 returned unreadable in one inspection attempt, not established corrupted.",
+    "approvedDrafts": "Original PNG bytes exist and pass structural integrity CI, but GitHub connector binary fetch returned no base64 content for tested draft paths. None was marked visually passing in this audit.",
+    "keeper": "Keeper manifest assets indexed and structurally verified; original reference pixels were not brought into multimodal comparison context.",
+    "historicalImg": "Prior IMG conversation render files outside current project attachments were not systematically available as original pixels. Historical recovery PRs remain separate."
+  },
+  "findings": [
+    {
+      "id": "VIS-C3-001",
+      "type": "canonical-identity-provenance",
+      "severity": "P1-authorship-decision",
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i01",
+      "recipeId": "RF_I01_EDITOR_OPEN",
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-001.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-001.jpg",
+        "https://github.com/starsplitterrecords/RexPrompt/blob/main/data/shows/rex-fleet-s1/characters.json"
+      ],
+      "observation": "Released editorial identifies Commodore Ilyra Venn; current RexPrompt character shelf identifies Commodore Ella Venn. This is a real published-versus-current name discrepancy, but may reflect later explicitly approved identity normalization.",
+      "requiredCorrection": "Find the explicit identity approval; if approved, document specific released-canon exception or correction process without silently altering the published page. Otherwise retain released identity as authority."
+    },
+    {
+      "id": "VIS-C3-002",
+      "type": "editorial-recipe-provenance",
+      "severity": "P2-review",
+      "seriesId": "backyard-rockets",
+      "issueId": "backyard-rockets-s1-e02",
+      "recipeId": "BR_S1E02_EDITOR_OPEN",
+      "releasedPage": "sites/visions/public/images/pages/backyard-rockets/issue-02/page-023.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/backyard-rockets/issue-02/page-023.jpg",
+        "https://github.com/starsplitterrecords/RexPrompt/blob/main/data/shows/backyard-rockets-s1/editorial_e02_open.json"
+      ],
+      "observation": "Published combined-edition editorial is prose titled 'A Note from the Editor'; current RexPrompt recipe specifies an illustrated Launch-Shop map/title splash with different exact captions. No evidence this is an accidental post-release change.",
+      "requiredCorrection": "Reconcile provenance and approvals before reusing the RexPrompt opening recipe to master or replace the published editorial; preserve released art."
+    },
+    {
+      "id": "VIS-C3-003",
+      "type": "edition-inventory-version",
+      "severity": "P2-review",
+      "seriesId": "vikings-2026",
+      "issueId": "vikings-2026-s1-e01",
+      "recipeId": "VIK_S1I01_P01..P18",
+      "releasedPage": "sites/visions/public/images/pages/vikings-2026/issue-01/",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/RexPrompt/blob/main/data/shows/vikings-2026-s1/pages_i01_reordered.json",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/src/content/series/vikings-2026.json"
+      ],
+      "observation": "The current Issue 1 recipe file contains 18 units while published Issue 1 daily-page metadata contains 26 page images. File paths and sequencing of the released set are valid; one-to-one recipe mapping has not been reconciled.",
+      "requiredCorrection": "Establish exact approved edition mapping by page and recipe ID before comparing all published text or rebuilding the book; do not assume extra released pages are erroneous."
+    },
+    {
+      "id": "VIS-C3-004",
+      "type": "structural-script-metadata",
+      "severity": "P2-recipe",
+      "seriesId": "azure-reach",
+      "issueId": "azure-reach-s1",
+      "recipeId": "AZR_S1E01_P03",
+      "releasedPage": "sites/visions/public/images/pages/azure-reach/issue-01/page-003.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/RexPrompt/blob/main/data/shows/azure-reach-s1/encoded/pages_e01_p01_p06.json.gzb64",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/azure-reach/issue-01/page-003.jpg"
+      ],
+      "observation": "The Azure Reach legacy validator reports 10 declared panels versus five panel-plan entries on this page. The published image was inspected and has many narrow panels; mismatch is confirmed in recipe metadata, not adjudicated as a visual-story failure.",
+      "requiredCorrection": "Correct the unreleased/derived recipe metadata only after inspecting released panel sequence and approved source. Do not rewrite released artwork from a count mismatch."
+    },
+    {
+      "id": "VIS-C3-005",
+      "type": "released-editorial-lettering-contrast",
+      "severity": "P2-local",
+      "seriesId": "backyard-rockets",
+      "issueId": "backyard-rockets-s1-e02",
+      "recipeId": "BR_S1E02_EDITOR_OPEN (candidate provenance mapping)",
+      "releasedPage": "sites/visions/public/images/pages/backyard-rockets/issue-02/page-023.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/backyard-rockets/issue-02/page-023.jpg"
+      ],
+      "observation": "The paragraph beginning 'What comes next...' is set in low-contrast light text over the blue sky and bright desert transition. Reduced contrast is visible in the released page readback.",
+      "requiredCorrection": "Prepare a lettering-only high-contrast proof that preserves the existing approved prose and artwork. Do not overwrite released image without explicit editorial approval."
+    }
+  ],
+  "verifiedNonDefects": [
+    {
+      "seriesId": "backyard-rockets",
+      "issueId": "issue-01/issue-02",
+      "evidence": "All 21 page image blob SHAs of Issue 1 match the first 21 of Issue 2; Issue 2 explicitly carries the title Issues 01–02: Combined Edition.",
+      "result": "Intentional collected-edition inclusion, not duplicate-page error."
+    },
+    {
+      "seriesId": "all-released",
+      "issueId": "six published editions",
+      "evidence": "157/157 cited daily page paths and 6/6 linked PDF paths found; sequential metadata was verified in previous C3 run.",
+      "result": "Released file-path and numbering integrity pass; PDF internal page count and pixels still require mastering audit."
+    }
+  ]
+}
