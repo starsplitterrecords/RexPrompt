@@ -41,14 +41,14 @@ const server=http.createServer(async(req,res)=>{
   return respond(res,201,{sha:id});
  }
  if(req.method==='POST'&&p==='/git/commits'){
-  assert.ok(trees.has(body.tree));assert.ok(body.parents.includes(baseHead));
+  assert.ok(trees.has(body.tree));assert.equal(body.parents[0],head,'Commit parent must be current branch head');
   const id=crypto.createHash('sha1').update(JSON.stringify(body)).digest('hex');
   commits.set(id,{tree:{sha:body.tree},parents:body.parents});return respond(res,201,{sha:id});
  }
  if(req.method==='PATCH'&&p==='/git/refs/heads/test-branch'){
   assert.equal(body.force,false,'Never force-update production branch');
   if(race){head='c'.repeat(40);return respond(res,422,{message:'non fast forward'});}
-  assert.equal(head,baseHead,'Unexpected parent revision');
+  assert.equal(commit.parents[0],head,'Unexpected parent revision');
   const commit=commits.get(body.sha),tree=trees.get(commit?.tree?.sha);
   assert.ok(tree,'Commit missing tree');
   const mEntry=tree.tree.find(x=>x.path==='production/drafts/manifest.json');
@@ -90,11 +90,28 @@ async function main(){
   const noApproval=await exec(port,{REVIEWED_APPROVAL:'false',REPLACE_APPROVED:'true'});
   assert.notEqual(noApproval.status,0);assert.equal(head,prior);
   console.log('PASS unreviewed draft rejected without branch modification');
+  // Replacement in a different image format must atomically remove the old active path.
+  const replacementFile=path.join(fixtures,'approved-replacement.jpg');
+  const replacementMade=cp.spawnSync('python3',['-c',
+   'from PIL import Image; import sys; Image.new("RGB",(30,22),(15,205,110)).save(sys.argv[1],format="JPEG")',replacementFile],{encoding:'utf8'});
+  assert.equal(replacementMade.status,0,replacementMade.stderr);
+  const replacementBytes=fs.readFileSync(replacementFile);
+  const replaced=await exec(port,{SOURCE_IMAGE:replacementFile,REPLACE_APPROVED:'true'});
+  assert.equal(replaced.status,0,replaced.stderr);
+  const replacementRecord=JSON.parse(replaced.stdout);
+  assert.equal(replacementRecord.sha256,digest(replacementBytes));
+  assert.equal(refUpdates,2);
+  const changes=treeWrites.at(-1).tree;
+  assert.ok(changes.some(x=>x.path.endsWith('fixture_p01.jpg')&&x.sha===sha(replacementBytes)));
+  assert.ok(changes.some(x=>x.path.endsWith('fixture_p01.png')&&x.sha===null),'Old approved path must be removed in same tree');
+  assert.equal(manifest.drafts['fixture::fixture-i01::FIXTURE_P01'].image,'production/drafts/fixture/fixture-i01/fixture_p01.jpg');
+  assert.ok(blobs.get(record.gitBlobSha).equals(original),'Prior original must remain preserved as an immutable blob');
+  console.log('PASS approved replacement: JPEG original stored, superseded PNG removed in one atomic tree');
   // Simulate another actor advancing main before a ref update.
   head=baseHead;manifest={schemaVersion:1,drafts:{}};race=true;
   const collided=await exec(port,{EXPECTED_HEAD_SHA:baseHead});
   assert.notEqual(collided.status,0,'Non-fast-forward race must fail');
-  assert.equal(head,'c'.repeat(40));assert.equal(refUpdates,1);
+  assert.equal(head,'c'.repeat(40));assert.equal(refUpdates,2);
   console.log('PASS concurrent branch update rejected, no partial image/manifest state visible');
  }finally{
   server.close();fs.rmSync(fixtures,{recursive:true,force:true});
