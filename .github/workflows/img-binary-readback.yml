@@ -1,0 +1,36 @@
+name: IMG Binary Readback
+on:
+  workflow_dispatch:
+    inputs:
+      asset_kind:
+        description: "Approved draft or Reference Keeper image"
+        required: true
+        type: choice
+        options: [draft, reference]
+      asset_key:
+        description: "Exact draft or Keeper manifest key"
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  exact-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Copy manifest-authorized original image
+        env:
+          ASSET_KIND: ${{ inputs.asset_kind }}
+          ASSET_KEY: ${{ inputs.asset_key }}
+          READBACK_OUTPUT: readback
+        run: node tools/prepare_img_readback.cjs
+      - name: Export exact binary artifact and checksums
+        uses: actions/upload-artifact@v4
+        with:
+          name: rexprompt-img-readback-${{ github.run_id }}
+          path: readback/
+          if-no-files-found: error
+          retention-days: 1
