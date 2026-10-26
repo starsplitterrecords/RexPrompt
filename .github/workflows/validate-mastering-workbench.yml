@@ -20,7 +20,7 @@ jobs:
       - run: python -m pip install "Pillow>=10,<13"
       - run: python -m py_compile tools/master_issue_proofs.py
       - name: Generate complete issue audit and visual contact sheet
-        run: python tools/master_issue_proofs.py --series rex-fleet --issue rex-fleet-i01 --out /tmp/rex-mastering
+        run: python tools/master_issue_proofs.py --series rex-fleet --issue rex-fleet-i01 --out /tmp/rex-mastering --allow-incomplete
       - name: Validate report contents
         run: |
           python - <<'PY'
@@ -32,6 +32,8 @@ jobs:
           assert report['pages'][-1]['recipeId']=='RF_I01_EDITOR_CLOSE'
           assert pathlib.Path('/tmp/rex-mastering/contact-sheet.jpg').is_file()
           assert report['sourceArtworkModified'] is False
+          assert report['completion'] in ('incomplete','machine-preflight-only')
+          assert report['publicationApproval'].startswith('not granted')
           PY
       - uses: actions/upload-artifact@v4
         with:
