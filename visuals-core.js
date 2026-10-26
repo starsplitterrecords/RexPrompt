@@ -13,7 +13,7 @@ const CONFIG={
   acceptedTypes:new Set(['image/jpeg','image/png','image/webp'])
 };
 
-const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false};
+const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false,pendingFile:null};
 
 function injectStyles(){
   const style=document.createElement('style');
@@ -152,7 +152,7 @@ function createUi(){
         <div class="visual-badge draft">Approved production draft · not released</div>
         <div id="draftBody" class="visual-empty">No approved production draft stored for this unit.</div>
         <div class="visual-actions">
-          <button id="uploadDraftBtn" type="button" title="Upload an approved production draft for this page">Upload Image</button>
+          <button id="uploadDraftBtn" type="button" title="Upload an approved production draft for this page, or paste an image with Ctrl+V / Cmd+V">Upload Image</button>
           <button id="forgetGithubTokenBtn" type="button" class="secondary" hidden>Forget GitHub Token</button>
           <input id="draftFileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
         </div>
@@ -177,11 +177,12 @@ function createUi(){
     section,
     draftBody:section.querySelector('#draftBody'),canonBody:section.querySelector('#canonBody'),uploadBtn:section.querySelector('#uploadDraftBtn'),fileInput:section.querySelector('#draftFileInput'),uploadStatus:section.querySelector('#draftUploadStatus'),rememberToggle:section.querySelector('#rememberGithubToken'),forgetTokenBtn:section.querySelector('#forgetGithubTokenBtn'),tokenPanel:section.querySelector('#githubTokenPanel'),tokenInput:section.querySelector('#githubTokenInput'),saveTokenBtn:section.querySelector('#saveGithubTokenBtn'),cancelTokenBtn:section.querySelector('#cancelGithubTokenBtn'),stateNote:section.querySelector('#visualStateNote')
   };
-  ui.uploadBtn.addEventListener('click',()=>{if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;showTokenPanel();return}ui.fileInput.click()});
+  ui.uploadBtn.addEventListener('click',()=>{if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;state.pendingFile=null;showTokenPanel();return}ui.fileInput.click()});
   ui.fileInput.addEventListener('change',()=>{const file=ui.fileInput.files?.[0];ui.fileInput.value='';if(file)void uploadApprovedDraft(file)});
+  document.addEventListener('paste',event=>{const item=Array.from(event.clipboardData?.items||[]).find(x=>x.kind==='file'&&String(x.type||'').startsWith('image/'));if(!item)return;const file=item.getAsFile();if(!file)return;event.preventDefault();if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;state.pendingFile=file;showTokenPanel();return}void uploadApprovedDraft(file)});
   ui.saveTokenBtn.addEventListener('click',()=>saveTokenFromPanel());
   ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
-  ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
+  ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;state.pendingFile=null;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
   ui.forgetTokenBtn.addEventListener('click',()=>{window.RexPromptGithubAuth.forgetToken();syncTokenButton();ui.uploadStatus.textContent='GitHub token forgotten on this device and in this tab.'});
   // The single existing upload control lives in the sticky production toolbar.
   // Move its original DOM nodes rather than duplicating upload handlers.
@@ -216,7 +217,7 @@ function syncTokenButton(){if(state.ui)state.ui.forgetTokenBtn.hidden=!window.Re
 function syncRememberControls(){const u=state.ui;if(!u)return;const remembered=window.RexPromptGithubAuth.isRemembered();u.rememberToggle.checked=remembered;if(u.rememberUtility)u.rememberUtility.checked=remembered}
 function showTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenPanel.hidden=false;ui.uploadStatus.textContent='GitHub authorization is required only to store an approved draft.';setTimeout(()=>ui.tokenInput.focus(),0)}
 function hideTokenPanel(){const ui=state.ui;if(!ui)return;ui.tokenInput.value='';ui.tokenPanel.hidden=true}
-function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}try{window.RexPromptGithubAuth.setToken(token)}catch(error){ui.uploadStatus.textContent=error.message;return}hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent=window.RexPromptGithubAuth.isRemembered()?'GitHub token saved on this device.':'GitHub token is available for this browser tab only.';if(state.pendingUpload){state.pendingUpload=false;setTimeout(()=>ui.fileInput.click(),0)}}
+function saveTokenFromPanel(){const ui=state.ui;if(!ui)return;const token=ui.tokenInput.value.trim();if(!token){ui.uploadStatus.textContent='Enter a GitHub token or cancel.';return}try{window.RexPromptGithubAuth.setToken(token)}catch(error){ui.uploadStatus.textContent=error.message;return}hideTokenPanel();syncTokenButton();ui.uploadStatus.textContent=window.RexPromptGithubAuth.isRemembered()?'GitHub token saved on this device.':'GitHub token is available for this browser tab only.';if(state.pendingUpload){const file=state.pendingFile;state.pendingUpload=false;state.pendingFile=null;setTimeout(()=>{if(file)void uploadApprovedDraft(file);else ui.fileInput.click()},0)}}
 
 function setDraftBody(sel,entry){
   const ui=state.ui;if(!ui)return;
@@ -326,7 +327,7 @@ function updateIssueImageCoverage(sel,pageSet){
 
 async function refreshVisuals(preserveUploadStatus=false){
   const ui=state.ui,sel=currentSelection();if(!ui||!sel)return;
-  const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='';
+  const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='Paste an image with Ctrl+V / Cmd+V, or use Upload Image.';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
   const explicit=explicitCanon(sel),pageSet=await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
   decorateSceneOptions(sel,Boolean(pageSet));
