@@ -13,7 +13,14 @@ try{
    const result=cp.spawnSync(process.execPath,['tools/prepare_img_readback.cjs'],{
     env:{...process.env,ASSET_KIND:kind,ASSET_KEY:key,READBACK_OUTPUT:path.join(out,'one')},
     encoding:'utf8',maxBuffer:500000});
-   if(result.status!==0){failed.push(key+': '+result.stderr.trim().slice(0,300));continue}
+   if(result.status!==0){
+    const raw=fs.readFileSync(entry.image);
+    const decoded=cp.spawnSync('python3',['-c',
+      'from PIL import Image; import sys; im=Image.open(sys.argv[1]); print("Pillow format",im.format,"size",im.size); im.load(); print("Pillow full decode OK")',entry.image],{encoding:'utf8'});
+    console.error('SOURCE FORENSICS '+JSON.stringify({key,sha256:crypto.createHash('sha256').update(raw).digest('hex'),bytes:raw.length,
+      tailHex:raw.subarray(-32).toString('hex'),pillowStatus:decoded.status,pillowOutput:decoded.stdout.trim(),pillowError:decoded.stderr.trim().slice(0,200)}));
+    failed.push(key+': '+result.stderr.trim().slice(0,300));continue
+   }
    try{
     const meta=JSON.parse(fs.readFileSync(path.join(out,'one/readback.json')));
     const copy=fs.readFileSync(path.join(out,'one',meta.assetFilename)),original=fs.readFileSync(entry.image);
