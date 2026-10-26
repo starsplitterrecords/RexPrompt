@@ -13,3 +13,5 @@ The original sources remain in File Library under the exact `fileLibraryId` and 
 Prior 2026-09-06 limitations: a GitHub Actions unauthenticated File Library resolver returned HTTP 401. This older transport failure does not mean the original image bytes were destroyed or inherently unrecoverable; the October 25 authorized Library materialization succeeded. Do not assume those local bytes have been committed to GitHub.
 
 Do not insert binary proxies, resized versions, inferred page-ID matches, or approved-draft manifest records. For each source, use the existing `reference-inventory.json` candidate span to inspect the exact modern recipe and obtain explicit approval before promotion.
+
+Each original must be inspected and mapped to one **exact active page recipe** before any approval or draft registration.
