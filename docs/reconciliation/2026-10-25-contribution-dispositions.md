@@ -68,20 +68,20 @@ API inventory: RexPrompt 311 pull requests (286 merged, 25 closed without merge,
 2. **Keeper A2/A4:** one production/references/reference-keeper-manifest.json; retain valid SHA-matched #285/#293/#297/#306/#317, follow #305/#310 UI resolver; do not re-add the truncated Checkpoint 9 image rejected by #304.
 3. **A3 pages:** #287 Azure image mappings and #308 evidence-only Shattering/Rex Fleet recovery retained; no automatic new approval.
 4. **B1:** #298/#307 plus canonical prepare_img_readback.cjs and single-image workflow; #311 removes #299 Python/workflow duplicate and adds original-image issue bundles. Closed #300's workflow, runtime docs and JS test integration are already exact SHA matches to main.
-5. **B2:** #289 native preflight + #301 contact sheet proofing are compatible; work/b2-production-mastering-gates-20261025 adds a *different* human approval/press gate, not yet validated/merged. Retain as pending publication specification and test decision; never treat color grades or upscales as approved source.
-6. **B3:** #288/#295 browser/export guards + #302 strict offline ZIP/PDF builder + #318 curated Vikings/Stardust Issue 2 book inventories. Work/b3-complete-book-rebase-20261025 is divergent, including a stale story-recipe fallback in its test text, contrary to the no-incomplete-release decision. Do not merge as-is; salvage only proven stronger validations independently.
-7. **C1/C2/C3:** #286/#290/#291/#294, #292, #296/#303/#309 remain complementary. #321 fixes the dashboard config count per #316; unit count requires assembled recipe inventory, not data/shows.json length.
-8. **D2/D3:** Notion remains editorial/status authority; StarSplitterVisions release approval remains separate. Visions #136/#138/#139 enforce releases and deployed deep links. Their passing GitHub CI is not proof of mastering/lettering visual pass.
+5. **B2:** #289 native preflight + #301 contact-sheet proofing + merged #322 evidence-gated mastering, publication profiles and approval verification are one compatible current-main pipeline. #322 passed mastering CI but does **not** certify existing artwork for print; profiles require actual printer approval.
+6. **B3:** #288/#295 browser/export guards + #302 strict offline ZIP/PDF builder + #318 and newly merged #324 curated portfolio book inventories. Work/b3-complete-book-rebase-20261025 remains divergent, including a stale story-recipe fallback in its test text, contrary to the no-incomplete-release decision. Do not merge as-is; salvage only proven stronger validations independently.
+7. **C1/C2/C3:** #286/#290/#291/#294, #292, #296/#303/#309 plus merged #323 strict portfolio assembler regression and #333 source-byte lock remain complementary. #321 fixes the dashboard config count per #316; unit count requires assembled recipe inventory, not data/shows.json length.
+8. **D1/D2/D3:** Dashboard PRs #328 and #329 are overlapping assembler-backed revisions and should be reconciled into one validated implementation, not blindly merged sequentially. PR #330 separately tracks C3 real visual/provenance defects. Notion remains editorial/status authority; StarSplitterVisions release approval remains separate. Visions #136/#138/#139 enforce releases and deployed deep links. Their passing GitHub CI is not proof of mastering/lettering visual pass.
 9. **Autonomous production:** last.
 
 ## Important retained branches without a current PR
 
 | Branch or cohort | Verified tip/main evidence | Disposition |
 |---|---|---|
-| work/b2-production-mastering-gates-20261025 | Divergent: six files covering publication profiles, mastering record/evidence verifier and grade proof; main does not have equivalent complete signoff gate | **Missing but deliberately retained** for B2-owner review and verified printer/profile requirements. Do not promote draft profiles to printer-approved. |
+| work/b2-production-mastering-gates-20261025 | Merged through #322 after issue-level proof and approval-gate tests; the historical branch is retained | **Incorporated through merged PR**, not a missing capability. Current profile status remains working until actual printer/human signoff. |
 | work/b3-complete-book-rebase-20261025 | Divergent: five exporter/docs/test files; code and test reference legacy story-unit fallback | **Unresolved implementation conflict.** Do not merge unless rewritten to strictly enforce curated book manifests and tested with #318 inventories. |
 | work/img-universal-readback-persistence-20261025 | Divergent: persist_approved_draft.cjs and cross-transport test, plus changes to canonical readback scripts | **Missing compatible write path candidate.** Requires B1 byte-preserving atomic-persistence testing, approval and hash checks; do not overwrite active B1 transport. |
-| docs/verified-library-artwork-recovery-20261025 | Two unmerged documentary files concerning Rex Fleet I03 SVG/PNG originals and Shattering File Library source mappings | **Retained recovery provenance.** Evidence must be byte-checked against A3 records before any original art or approval mapping changes. |
+| docs/verified-library-artwork-recovery-20261025 | Rex Fleet I03 SVG/PNG originals and Shattering File Library mappings; recovery provenance was merged in #308 and extended in #327 | **Incorporated as evidence**, not automatically approved draft images. Verify originals/pixels before any further approval or publishing. |
 | debug-reference-keeper-delete-20261009 | Divergent deletes/replaces Keeper reference file and manifest | **Rejected as unsafe to replay** without explicit identity/approval decision and current byte verification. |
 | complete/rex-fleet-issue-03 | Divergent earlier Issue 3 story recipes and recovery utility | **Retained historical candidate**; later current story/editing authority wins. Requires editorial proof before transplant. |
 | rex-fleet-rewrite-recover* (11 variants) | Divergent temporary base64 tool payloads and recovery workflows, multiple aliases/attempts | **Historical probe only**; do not promote temporary .b64 files to production canon. |
@@ -96,14 +96,14 @@ API inventory: RexPrompt 311 pull requests (286 merged, 25 closed without merge,
 
 - Historical Issue 2 layout conflict: #291/#294 enforce one pageLayout overlay authority; #286 and associated tests avoid changing already-approved Vikings pages.
 - B1 duplicate readback: #311 removes the obsolete Python/workflow path; #307/#300 regression tests and binary readback runtime guide remain main's accepted workflow.
-- Keeper byte identity: #317 verifies approved retrieved sources, while #304 rejects the invalid truncated image.
-- Dashboard contract: merged #321 renames registered show configuration counts; exact assembled unit coverage comes from #309.
-- B3 complete-book gate: #288/#295/#302/#318 and validation prevent silent omissions and distinguish review-only packages.
+- Keeper byte identity: #317 verifies approved retrieved sources, #325/#331 protect Keeper intake/display, while #304 rejects the invalid truncated image.
+- Dashboard contract: merged #321 renames registered show configuration counts; exact assembled unit coverage comes from #309/#323. Do not merge both #328 and #329 unchanged.
+- B3 complete-book gate: #288/#295/#302/#318/#324 and validation prevent silent omissions and distinguish review-only packages.
 - Published Visions: #136/#138/#139 validate deployed reader paths and linked release files.
 
 ## Retained exceptions and further proof required
 
-**Technical:** B1 draft persistence branch has not been certified against present readback; B2 signoff/profile gate is distinct unmerged functionality; B3 alternate exporter requires removal of stale fallback and preservation of newer offline/browse paths. The presence of branch differences is not authorization to merge.
+**Technical:** PR #326's B1 atomic approved-draft persistence/readback hardening remains under review against canonical byte transport. B2's human/press gate was merged in #322 but existing books remain unmastered until real approval. B3 alternative exporter branch still has stale fallback and should not supersede current browser/offline plus #324 curated inventory. PRs #328 and #329 are overlapping production dashboard plans; select one compatible integration. PR #330 is a distinct C3 visual/provenance quality register, not another dashboard source of truth. The presence of branch differences is not authorization to merge.
 
 **Creative/recovery:** Rex Fleet Issue 5 old #224, Vikings old normalized #124, Stardust old #22/#56/#96, Echoes old #24, and multiple Sunforge/recovery candidate refs have unproven unique authored beats or incomplete provenance. Existing approved or released versions must remain untouched pending specific source/editorial review.
 
