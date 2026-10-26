@@ -1,0 +1,45 @@
+name: Verify Live Production Dashboard
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'production-dashboard.html'
+      - 'production-dashboard.js'
+      - 'production-dashboard-core.js'
+      - 'production/portfolio-recipe-inventory.json'
+      - 'production/portfolio-source-quality.json'
+      - '.github/workflows/verify-live-production-dashboard.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pages-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compare live Pages deployment with expected dashboard contracts
+        env:
+          BASE: https://starsplitterrecords.github.io/RexPrompt
+        run: |
+          set -eu
+          for attempt in $(seq 1 12); do
+            if curl -fsSL --max-time 15 "$BASE/production-dashboard.html" -o /tmp/dashboard.html &&
+               curl -fsSL --max-time 15 "$BASE/production-dashboard-core.js" -o /tmp/dashboard-core.js &&
+               curl -fsSL --max-time 15 "$BASE/production/portfolio-recipe-inventory.json" -o /tmp/portfolio.json &&
+               curl -fsSL --max-time 15 "$BASE/production/portfolio-source-quality.json" -o /tmp/raster.json; then
+              if grep -q 'Cross-series accounting' /tmp/dashboard.html &&
+                 grep -q 'sourceQuality' /tmp/dashboard-core.js &&
+                 node -e 'const fs=require("fs"),p=JSON.parse(fs.readFileSync("/tmp/portfolio.json")),q=JSON.parse(fs.readFileSync("/tmp/raster.json"));if(p.counts.registeredConfigurations!==126||p.configurations.length!==126||q.examined!==q.expectedRecords)process.exit(1)'; then
+                echo 'Deployed dashboard HTML/JS and fresh portfolio/raster inventories verified'
+                exit 0
+              fi
+            fi
+            echo "Deployment not yet serving expected data (attempt $attempt of 12)"
+            sleep 15
+          done
+          echo 'Pages deployment could not be verified to current dashboard data'
+          exit 1
