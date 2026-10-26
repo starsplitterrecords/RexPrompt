@@ -17,7 +17,24 @@ function b64ToBytes(s){const t=atob(s.replace(/\s/g,''));return Uint8Array.from(
 async function request(url,{token,method='GET',body,allow404=false}={}){const r=await fetch(url,{cache:'no-store',method,headers:{Accept:'application/vnd.github+json',...(token?{Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28'}:{}),...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});if(allow404&&r.status===404)return null;if(!r.ok){let msg='HTTP '+r.status;try{msg=(await r.json()).message||msg}catch{}throw Error(msg)}return r.json()}
 async function content(repo,path,token){const x=await request(api(repo,'contents/'+path+'?ref=main'),{token,allow404:true});return x?JSON.parse(new TextDecoder().decode(b64ToBytes(x.content))):null}
 async function getManifest(){const r=await fetch(DRAFTS+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not read draft manifest');return r.json()}
-async function prepare(){const sel=selection(),manifest=await getManifest();if(!sel.recipeIds.length)throw Error('Issue has no production pages');const pages=sel.recipeIds.map((recipeId,i)=>({recipeId,page:i+1,entry:manifest.drafts?.[[sel.seriesId,sel.issueId,recipeId].join('::')]}));const approved=pages.filter(p=>p.entry?.status==='approved-production-draft'&&p.entry.image);if(!approved.length)throw Error('There are no approved draft images for this issue');return {sel,pages,approved,missing:pages.filter(p=>!approved.includes(p))}}
+async function getBookSpec(sel){
+  const r=await fetch('production/book-manifests.json?v='+Date.now(),{cache:'no-store'});
+  if(r.status===404)return null;
+  if(!r.ok)throw Error('Could not read complete-book inventory ('+r.status+')');
+  const all=await r.json();
+  return all.issues?.[[sel.seriesId,sel.issueId].join('::')]||null;
+}
+async function prepare(){
+  const sel=selection(),manifest=await getManifest(),book=await getBookSpec(sel);
+  const units=book?.units||sel.recipeIds;
+  if(!Array.isArray(units)||!units.length)throw Error('Issue has no production units');
+  if(new Set(units).size!==units.length)throw Error('Complete-book inventory contains duplicate units');
+  if(book&&(book.seriesId!==sel.seriesId||book.issueId!==sel.issueId))throw Error('Complete-book inventory identity mismatch');
+  const pages=units.map((recipeId,i)=>({recipeId,page:i+1,entry:manifest.drafts?.[[sel.seriesId,sel.issueId,recipeId].join('::')]}));
+  const approved=pages.filter(p=>p.entry?.status==='approved-production-draft'&&p.entry.image);
+  if(!approved.length)throw Error('There are no approved draft images for this issue');
+  return {sel,pages,approved,missing:pages.filter(p=>!approved.includes(p)),book};
+}
 async function downloadImages(pages){const result=[];for(const p of pages){report('Reading page '+p.page+' of '+pages.length+'…');const url='https://raw.githubusercontent.com/'+R+'/RexPrompt/main/'+p.entry.image;let response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('Cannot retrieve '+p.recipeId+' ('+response.status+')');const bytes=new Uint8Array(await response.arrayBuffer());const prefix=new TextDecoder().decode(bytes.slice(0,120));if(prefix.startsWith('version https://git-lfs.github.com/spec/v1'))throw Error('Draft '+p.recipeId+' is a Git LFS pointer, not an image. File: '+p.entry.image);if(prefix.trimStart().startsWith('<'))throw Error('Draft '+p.recipeId+' returned an HTML response instead of image bytes: '+p.entry.image);const signature=bytes[0]===137&&bytes[1]===80&&bytes[2]===78&&bytes[3]===71?'image/png':bytes[0]===255&&bytes[1]===216?'image/jpeg':prefix.startsWith('RIFF')&&prefix.slice(8,12)==='WEBP'?'image/webp':null;if(!signature)throw Error('Draft '+p.recipeId+' does not contain a supported PNG, JPEG, or WebP image: '+p.entry.image+' ('+bytes.length+' bytes)');const type=signature;result.push({...p,bytes,type,ext:type==='image/jpeg'?'jpg':type==='image/webp'?'webp':'png'})}return result}
 
 async function jpeg(bytes,type){
@@ -77,7 +94,7 @@ function download(name,bytes,mime){const u=URL.createObjectURL(new Blob([bytes],
 function noteMissing(p){return p.missing.length?' ('+p.missing.length+' missing pages omitted: '+p.missing.map(x=>x.recipeId).join(', ')+')':''}
 async function build(kind){const p=await prepare();const images=await downloadImages(p.approved);const {pdf}=await createPdf(images),stem=slug(p.sel);if(kind==='pdf'){download(stem+'.pdf',pdf,'application/pdf');report('PDF downloaded: '+images.length+' approved pages'+noteMissing(p));return}const files=[{name:stem+'.pdf',bytes:pdf},...images.map(im=>({name:stem+'/page-'+pad3(im.page)+'.'+im.ext,bytes:im.bytes}))];const bytes=makeZip(files);download(stem+'.zip',bytes,'application/zip');report('ZIP downloaded: '+images.length+' original images and PDF'+noteMissing(p))}
 async function git(token,repo,path,options){return request(api(repo,path),{token,...options})}
-async function release(){const p=await prepare();if(p.missing.length)throw Error('Release blocked. Missing approved pages: '+p.missing.map(x=>x.recipeId).join(', '));const source=await fetch('production/visual-sources.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json());const slugName=source.series?.[p.sel.seriesId]?.visionsSlug;if(!slugName)throw Error('No Visions series mapping. Set up release metadata before publishing.');
+async function release(){const p=await prepare();if(p.sel.seriesId==='rex-fleet'&&!p.book)throw Error('Release blocked: Rex Fleet requires a complete-book manifest');if(p.missing.length)throw Error('Release blocked. Missing approved pages: '+p.missing.map(x=>x.recipeId).join(', '));const source=await fetch('production/visual-sources.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.json());const slugName=source.series?.[p.sel.seriesId]?.visionsSlug;if(!slugName)throw Error('No Visions series mapping. Set up release metadata before publishing.');
 const token=window.RexPromptGithubAuth.getToken();if(!token)throw Error('Enter a fine-grained GitHub token using Upload Approved Draft first. To stage a Visions release it needs Contents and Pull requests read/write on StarSplitterVisions.');
 const metaPath='sites/visions/src/content/series/'+slugName+'.json',meta=await content(VISIONS,metaPath,token);if(!meta)throw Error('Visions series metadata not found: '+slugName);
 const n=issueNo(p.sel),dir='issue-'+pad(n),base=slugName+'-'+dir;
