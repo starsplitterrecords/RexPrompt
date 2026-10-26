@@ -1,0 +1,39 @@
+name: Validate Complete Book Builder
+on:
+  pull_request:
+    paths:
+      - 'tools/build_complete_book.py'
+      - 'docs/complete-book-export.md'
+      - '.github/workflows/validate-complete-book-builder.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/build_complete_book.py'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13" "reportlab>=4,<5" "pypdf>=5,<7"
+      - run: python -m py_compile tools/build_complete_book.py
+      - run: python tools/build_complete_book.py --series rex-fleet --issue rex-fleet-i01 --out /tmp/rex-book
+      - name: Assert complete PDF, book order and original binary hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,zipfile,hashlib
+          from pypdf import PdfReader
+          folder=Path('/tmp/rex-book')
+          pdf=next(folder.glob('*.pdf'))
+          with zipfile.ZipFile(next(folder.glob('*.zip'))) as z:
+              metadata=json.loads(z.read('book-export-manifest.json'))
+              assert metadata['pageCount']==22
+              assert metadata['pages'][0]['recipeId']=='RF_I01_COVER'
+              assert metadata['pages'][-1]['recipeId']=='RF_I01_EDITOR_CLOSE'
+              assert len(PdfReader(str(pdf)).pages)==22
+              for page in metadata['pages']:
+                  assert hashlib.sha256(z.read(page['outputFile'])).hexdigest()==page['sha256']
+          PY
