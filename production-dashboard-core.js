@@ -1,71 +1,113 @@
 (function(root,factory){
-  const api=factory();
-  if(typeof module==='object'&&module.exports)module.exports=api;
-  else root.RexProductionDashboard=api;
+ const api=factory();
+ if(typeof module==='object'&&module.exports)module.exports=api;
+ else root.RexProductionDashboard=api;
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
-function assertData(s){if(!s||typeof s!=='object')throw Error('Missing dashboard source');}
-function deriveSeries(show){
-  if(show.seriesId)return show.seriesId;
-  const path=String(show.basePath||'');
-  return path.split('/').at(-1)?.replace(/-s1$/,'')||'unclassified';
+const key=(s,i,r)=>s+'::'+i+(r?'::'+r:'');
+const indexed=(map,field)=>new Map(Object.values(map||{}).map(x=>[x[field],x]));
+const distinct=a=>[...new Set(a)];
+const nullish=x=>x===undefined||x===null;
+function issueNumber(s){
+ let m=String(s||'').match(/(?:^|[-_])(?:issue[-_]?|i)(\d{1,2})(?:$|[-_])/i);
+ if(!m)m=String(s||'').match(/(?:^|[-_])(?:S\d+E|E)(\d{2})(?:$|[-_])/i);
+ return m?Number(m[1]):null;
 }
-function build({shows,draftManifest,referenceManifest,books,releasedLinks,visionsMetadata={}}){
-  if(!Array.isArray(shows))throw Error('Missing live shows registry');
-  [draftManifest,referenceManifest,books,releasedLinks].forEach(assertData);
-  const drafts=Object.values(draftManifest.drafts||{});
-  const refs=Object.values(referenceManifest.references||{});
-  const bookMap=books.issues||{},links=releasedLinks.links||{};
-  const series=new Map();
-  function ensure(id){if(!series.has(id))series.set(id,{id,registeredConfigurations:0,draftUnits:0,referenceUnits:0,linkedCanonUnits:0,issues:[],publishedMetadata:'unknown',publishedEditions:0});return series.get(id)}
-  const rows=[],activeKeys=new Set();
-  for(const show of shows){
-    const seriesId=deriveSeries(show);ensure(seriesId).registeredConfigurations++;
-    const issueId=show.id;
-    const key=seriesId+'::'+issueId,book=bookMap[key];
-    const entries=drafts.filter(x=>x.seriesId===seriesId&&x.issueId===issueId);
-    if(book||entries.length){
-      const approved=new Set(entries.filter(x=>x.status==='approved-production-draft'&&x.image).map(x=>x.recipeId));
-      const missing=book?.units.filter(id=>!approved.has(id))||null;
-      const row={seriesId,issueId,name:show.name||issueId,approved:approved.size,required:book?.units.length??null,
-        missing,assetsComplete:book?missing.length===0:null,mastering:'unverified',publishing:'unverified',
-        registry:'registered',draftIds:entries.map(x=>x.recipeId)};
-      rows.push(row);ensure(seriesId).issues.push(row);activeKeys.add(key);
-    }
-  }
-  for(const [key,book] of Object.entries(bookMap)){
-    if(activeKeys.has(key))continue;
-    const id=book.seriesId;const entries=drafts.filter(x=>x.seriesId===id&&x.issueId===book.issueId);
-    const approved=new Set(entries.map(x=>x.recipeId));
-    const missing=book.units.filter(x=>!approved.has(x));
-    const row={seriesId:id,issueId:book.issueId,name:book.issueId,approved:approved.size,required:book.units.length,
-      missing,assetsComplete:missing.length===0,mastering:'unverified',publishing:'unverified',registry:'book manifest',draftIds:entries.map(x=>x.recipeId)};
-    rows.push(row);ensure(id).issues.push(row);activeKeys.add(key);
-  }
-  for(const v of drafts){
-    ensure(v.seriesId).draftUnits++;
-    const key=v.seriesId+'::'+v.issueId;
-    if(activeKeys.has(key))continue;
-    let row=rows.find(x=>x.seriesId===v.seriesId&&x.issueId===v.issueId);
-    if(!row){
-      row={seriesId:v.seriesId,issueId:v.issueId,name:v.issueId,approved:0,required:null,missing:null,assetsComplete:null,
-        mastering:'unverified',publishing:'unverified',registry:'draft manifest only',draftIds:[]};
-      rows.push(row);ensure(v.seriesId).issues.push(row);
-    }
-    row.approved++;row.draftIds.push(v.recipeId);
-  }
-  for(const r of refs)ensure(r.seriesId).referenceUnits++;
-  for(const key of Object.keys(links)){const id=key.split('::')[0];ensure(id).linkedCanonUnits++}
-  for(const [id,state] of Object.entries(visionsMetadata)){
-    const s=ensure(id);
-    if(state===null||state.error){s.publishedMetadata='unavailable';continue}
-    s.publishedMetadata='loaded';
-    s.publishedEditions=(state.releases||[]).filter(r=>r.publicationType==='E').length;
-  }
-  rows.sort((a,b)=>a.seriesId.localeCompare(b.seriesId)||a.issueId.localeCompare(b.issueId));
-  return {totals:{registeredConfigurations:shows.length,drafts:drafts.length,references:refs.length,completeBooks:rows.filter(x=>x.required!==null&&x.assetsComplete).length,
-    bookInventoryCount:rows.filter(x=>x.required!==null).length,knownMissing:rows.flatMap(x=>x.missing||[]).length},
-    series:[...series.values()].sort((a,b)=>a.id.localeCompare(b.id)),rows};
+function partition(row){
+ const ids=Array.isArray(row.recipeIds)?row.recipeIds:[];
+ const codes=ids.map(id=>(String(id).match(/[_-]S\d+E(\d{2})(?:[_-]|$)/i)||[])[1]||null);
+ const unique=distinct(codes.filter(Boolean));
+ if(unique.length<=1)return [{...row,issueNumber:issueNumber(row.issueId)||issueNumber(row.showId)||(!nullish(unique[0])?Number(unique[0]):null),parentConfiguration:row.showId}];
+ const groups=new Map();
+ for(let i=0;i<ids.length;i++){const c=codes[i]||'unassigned';if(!groups.has(c))groups.set(c,[]);groups.get(c).push(ids[i])}
+ return [...groups].map(([code,recipeIds])=>({...row,issueId:row.showId+'-issue-'+code,episodeGroup:code,issueNumber:code==='unassigned'?null:Number(code),
+  parentConfiguration:row.showId,recipeIds,registeredUnits:recipeIds.length,
+  approvedRecipeIds:(row.approvedRecipeIds||[]).filter(id=>recipeIds.includes(id)),approvedUnits:(row.approvedRecipeIds||[]).filter(id=>recipeIds.includes(id)).length}));
 }
-return {build,deriveSeries};
+function build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence={},visionsMetadata={}}){
+ if(!Array.isArray(shows)||!Array.isArray(inventory?.configurations))throw Error('Assembler-backed portfolio inventory is required');
+ if(inventory.counts?.registeredConfigurations!==shows.length)throw Error('Portfolio snapshot disagrees with registered configuration count');
+ const configIds=new Set(shows.map(s=>s.id));
+ const repeated=inventory.configurations.filter(x=>!configIds.has(x.showId));
+ if(repeated.length)throw Error('Inventory references nonexistent configuration '+repeated[0].showId);
+ const manifest=draftManifest?.drafts||{},keepers=referenceManifest?.references||{},bookList=books?.issues||{},links=releasedLinks?.links||{};
+ const byDraft=new Map(Object.entries(manifest));
+ const issueDrafts=new Map(),referenceCounts=new Map(),releaseLinks=new Map();
+ for(const [k,x] of Object.entries(manifest)){const id=key(x.seriesId,x.issueId);if(!issueDrafts.has(id))issueDrafts.set(id,[]);issueDrafts.get(id).push({...x,manifestKey:k})}
+ for(const x of Object.values(keepers)){if(!referenceCounts.has(x.seriesId))referenceCounts.set(x.seriesId,{total:0,types:{}});const z=referenceCounts.get(x.seriesId);z.total++;z.types[x.type]=(z.types[x.type]||0)+1}
+ for(const [k,x] of Object.entries(links)){if(!releaseLinks.has(k))releaseLinks.set(k,[]);releaseLinks.get(k).push(...(x.images||[]))}
+ const sourceFindings=qualityEvidence.sourceQuality||[],recoveryCandidates=qualityEvidence.recoveryCandidates||[];
+ const explicitMastering=qualityEvidence.mastering||[],explicitExports=qualityEvidence.exported||[];
+ const rows=[],series=new Map(),auditIssues=inventory.errors||[];
+ function ensure(s){if(!series.has(s))series.set(s,{id:s,configurationCount:0,recipeIds:new Set(),approvedDraftKeys:new Set(),keeper:referenceCounts.get(s)||{total:0,types:{}},rows:[],released:visionsMetadata[s]?.releases?.filter(x=>x.publicationType==='E')||[],releaseMetadata:visionsMetadata[s]?.error?'unavailable':visionsMetadata[s]?'available':'not-configured'});return series.get(s)}
+ for(const c of shows)ensure(c.seriesId||String(c.basePath||'').split('/').at(-1).replace(/-s1$/,'')).configurationCount++;
+ const seenPairs=new Set();
+ for(const report of inventory.configurations){
+  for(const c of partition(report)){
+   const sid=c.seriesId,iid=c.issueId,group=ensure(sid),originalIssue=c.parentConfiguration||c.showId;
+   const recipeIds=distinct(c.recipeIds||[]);
+   const namedBook=bookList[key(sid,iid)]||bookList[key(sid,originalIssue)]||null;
+   const requiredIds=namedBook?namedBook.units:recipeIds;
+   const source=namedBook?'curated-book':'assembled-recipes';
+   const approvedIds=recipeIds.filter(id=>byDraft.get(key(sid,originalIssue,id))?.status==='approved-production-draft');
+   const verifiedUnitSet=new Set(requiredIds);
+   const extraBookUnits=namedBook?requiredIds.filter(id=>!recipeIds.includes(id)):[];
+   const allIds=distinct([...requiredIds,...recipeIds]);
+   const issueCandidates=recoveryCandidates.filter(x=>x.seriesId===sid&&(x.issueId===iid||x.issueId===originalIssue));
+   const metadata=visionsMetadata[sid];
+   const exactRelease=(metadata?.releases||[]).filter(x=>x.publicationType==='E'&&Number.isInteger(x.issueNumber)&&c.issueNumber!==null&&c.issueNumber===x.issueNumber);
+   const quality=sourceFindings.filter(x=>x.seriesId===sid&&(x.issueId===iid||x.issueId===originalIssue));
+   const mastered=explicitMastering.find(x=>x.seriesId===sid&&(x.issueId===iid||x.issueId===originalIssue)&&x.status==='mastered'&&x.evidence);
+   const exported=explicitExports.find(x=>x.seriesId===sid&&(x.issueId===iid||x.issueId===originalIssue)&&x.status==='exported'&&x.evidence);
+   const units=allIds.map(id=>{
+    const draft=byDraft.get(key(sid,originalIssue,id))||byDraft.get(key(sid,iid,id));
+    const candidate=issueCandidates.find(x=>x.recipeId===id)||null;
+    const images=releaseLinks.get(key(sid,originalIssue,id))||releaseLinks.get(key(sid,iid,id))||[];
+    const state=draft?.status==='approved-production-draft'?'approved-draft-indexed':candidate?'recovery-candidate':'not-indexed-in-RexPrompt';
+    return {recipeId:id,inRecipe:recipeIds.includes(id),inBook:!!namedBook&&verifiedUnitSet.has(id),draftState:state,
+      imagePath:draft?.image||null,sourceQuality:quality.map(x=>x.classification),recovery:candidate,releaseLinks:images,
+      confidence:draft?'recorded manifest approval; separate artistic QC unknown':candidate?'recovery lead, no verified approved original':'unknown outside RexPrompt'};
+   });
+   const approved=units.filter(x=>x.draftState==='approved-draft-indexed').length;
+   const unmatched=units.filter(x=>x.draftState!=='approved-draft-indexed');
+   const sourceValid=recipeIds.length>0&&!auditIssues.some(e=>e.startsWith(c.showId+':'));
+   const row={seriesId:sid,issueId:iid,configurationId:originalIssue,issueNumber:c.issueNumber,issueLabel:c.episodeGroup?'Issue '+c.episodeGroup:((shows.find(x=>x.id===originalIssue)||{}).issueLabel||c.name||iid),
+    denominator:requiredIds.length,denominatorSource:source,assembledCount:recipeIds.length,approvedIndexed:approved,notIndexedCount:unmatched.length,
+    keeperCoverage:group.keeper,bookKnown:!!namedBook,exporterReadiness:namedBook?(unmatched.filter(x=>x.inBook).length?'blocked-on-approved-drafts':'inventory-complete-not-mastered'):'book-inventory-unavailable',
+    quality:quality.length?quality:[{classification:'unknown',summary:'No issue-scoped quality report has been registered.'}],
+    mastering:mastered?'mastered':'unverified',exported:exported?'exported':exactRelease.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
+    published:exactRelease.length?'collected-edition-recorded':metadata?.error?'source-unavailable':'no-matching-edition-record',
+    releases:exactRelease,sourceHealthy:sourceValid,sourceFiles:c.sourceFiles||[],sourceOverlays:c.sourceOverlays||[],
+    units,recoveryCandidates:issueCandidates,extraBookUnits,invalid:!sourceValid,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
+   rows.push(row);group.rows.push(row);
+   for(const id of recipeIds)group.recipeIds.add(id);
+   for(const v of units)if(v.draftState==='approved-draft-indexed')group.approvedDraftKeys.add(key(sid,originalIssue,v.recipeId));
+   seenPairs.add(key(sid,originalIssue));
+  }
+ }
+ for(const [sidIssue,items] of issueDrafts){
+  if(seenPairs.has(sidIssue))continue;
+  const first=items[0],g=ensure(first.seriesId);
+  const units=items.map(x=>({recipeId:x.recipeId,inRecipe:false,inBook:false,draftState:x.status==='approved-production-draft'?'approved-draft-indexed':x.status,imagePath:x.image,recovery:null,releaseLinks:releaseLinks.get(key(x.seriesId,x.issueId,x.recipeId))||[]}));
+  const r={seriesId:first.seriesId,issueId:first.issueId,configurationId:null,issueNumber:issueNumber(first.issueId),issueLabel:first.issueId,
+    denominator:null,denominatorSource:'no-assembled-configuration',assembledCount:null,approvedIndexed:units.length,notIndexedCount:null,
+    keeperCoverage:g.keeper,bookKnown:false,exporterReadiness:'book-inventory-unavailable',
+    quality:[],mastering:'unverified',exported:'unverified',published:'unknown',releases:[],sourceHealthy:false,
+    sourceFiles:[],sourceOverlays:[],units,recoveryCandidates:[],extraBookUnits:[],invalid:true,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
+  rows.push(r);g.rows.push(r);for(const x of units)g.approvedDraftKeys.add(key(first.seriesId,first.issueId,x.recipeId));
+ }
+ for(const [sid,b] of Object.entries(visionsMetadata))if(b&&!b.error)ensure(sid);
+ const perSeries=[...series.values()].map(x=>({id:x.id,configurationCount:x.configurationCount,distinctRecipeUnits:x.recipeIds.size,approvedDraftUnits:x.approvedDraftKeys.size,
+   keeper:x.keeper,linkedUnits:x.rows.reduce((n,r)=>n+r.linkedUnits,0),publishedEditions:x.released,
+   releaseMetadata:x.releaseMetadata,issueCount:x.rows.length}));
+ const compiledUnique=new Set([...series].flatMap(([sid,x])=>[...x.recipeIds].map(id=>sid+'::'+id)));
+ rows.sort((a,b)=>a.seriesId.localeCompare(b.seriesId)||(a.issueNumber??999)-(b.issueNumber??999)||a.issueId.localeCompare(b.issueId));
+ const totals={registeredConfigurations:shows.length,distinctSeries:perSeries.length,distinctAssembledUnits:compiledUnique.size,approvedDraftManifestEntries:Object.keys(manifest).length,
+  keeperReferences:Object.keys(keepers).length,configurationRecipeOccurrences:inventory.counts.registeredRecipeUnitsAcrossConfigurations,
+  knownBookGaps:rows.filter(x=>x.bookKnown).reduce((n,x)=>n+x.units.filter(u=>u.inBook&&u.draftState!=='approved-draft-indexed').length,0),
+  unresolvedCandidates:recoveryCandidates.length};
+ return {totals,series:perSeries.sort((a,b)=>a.id.localeCompare(b.id)),rows,evidence:{auditErrors:auditIssues,auditWarnings:inventory.warnings||[],
+  inventorySource:inventory.generatedFrom,recoveryCandidates:recoveryCandidates.length,qualityFindings:sourceFindings.length}};
+}
+return {build,issueNumber,partition};
 });
