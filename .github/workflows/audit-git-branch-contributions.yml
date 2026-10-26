@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  pull-requests: read
 jobs:
   history-inventory:
     runs-on: ubuntu-latest
@@ -26,10 +27,12 @@ jobs:
           filter: blob:none
       - name: Check Python syntax
         run: python -m py_compile rexprompt/tools/audit_git_branch_contributions.py
-      - name: Enumerate retained branches against current main
+      - name: Enumerate retained branches, compare file changes, and verify PR disposition
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python rexprompt/tools/audit_git_branch_contributions.py --repo rexprompt --out reports/rexprompt-history.json
-          python rexprompt/tools/audit_git_branch_contributions.py --repo visions --out reports/visions-history.json
+          python rexprompt/tools/audit_git_branch_contributions.py --repo rexprompt --slug starsplitterrecords/RexPrompt --decisions rexprompt/docs/reconciliation/closed-pr-dispositions.json --out reports/rexprompt-history.json
+          python rexprompt/tools/audit_git_branch_contributions.py --repo visions --slug starsplitterrecords/StarSplitterVisions --decisions rexprompt/docs/reconciliation/closed-pr-dispositions.json --out reports/visions-history.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
