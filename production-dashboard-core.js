@@ -9,7 +9,7 @@ const indexed=(map,field)=>new Map(Object.values(map||{}).map(x=>[x[field],x]));
 const distinct=a=>[...new Set(a)];
 const nullish=x=>x===undefined||x===null;
 function issueNumber(s){
- let m=String(s||'').match(/(?:^|[-_])(?:issue[-_]?|i)(\d{1,2})(?:$|[-_])/i);
+ let m=String(s||'').match(/\bIssue\s*(\d{1,2})\b/i)||String(s||'').match(/(?:^|[-_])(?:issue[-_]?|i)(\d{1,2})(?:$|[-_])/i);
  if(!m)m=String(s||'').match(/(?:^|[-_])(?:S\d+E|E)(\d{2})(?:$|[-_])/i);
  return m?Number(m[1]):null;
 }
@@ -17,7 +17,7 @@ function partition(row){
  const ids=Array.isArray(row.recipeIds)?row.recipeIds:[];
  const codes=ids.map(id=>(String(id).match(/[_-]S\d+E(\d{2})(?:[_-]|$)/i)||[])[1]||null);
  const unique=distinct(codes.filter(Boolean));
- if(unique.length<=1)return [{...row,issueNumber:issueNumber(row.issueId)||issueNumber(row.showId)||(!nullish(unique[0])?Number(unique[0]):null),parentConfiguration:row.showId}];
+ if(unique.length<=1)return [{...row,issueNumber:issueNumber(row.issueId)||issueNumber(row.showId)||issueNumber(row.issueLabel)||(!nullish(unique[0])?Number(unique[0]):null),parentConfiguration:row.showId}];
  const groups=new Map();
  for(let i=0;i<ids.length;i++){const c=codes[i]||'unassigned';if(!groups.has(c))groups.set(c,[]);groups.get(c).push(ids[i])}
  return [...groups].map(([code,recipeIds])=>({...row,issueId:row.showId+'-issue-'+code,episodeGroup:code,issueNumber:code==='unassigned'?null:Number(code),
