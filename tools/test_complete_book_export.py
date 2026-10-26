@@ -32,7 +32,7 @@ def case(root,name,units,missing=()):
                                                     'orderPolicy':'fixture-explicit','units':units}}}
     (root/'production/book-manifests.json').write_text(json.dumps(inv))
     (store/'manifest.json').write_text(json.dumps({'drafts':entry}))
-    out=root/'output'
+    out=root/'output'/name
     result=subprocess.run([sys.executable,str(root/'tools/build_complete_book.py'),
         '--series',series,'--issue',issue,'--out',str(out)],capture_output=True,text=True)
     if missing:
