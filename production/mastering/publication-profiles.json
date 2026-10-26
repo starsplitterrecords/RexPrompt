@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "description": "Working production targets. Printer-specific ICC, cover wrap, trim approval and print signoff must be separately verified. Do not infer approval from this configuration.",
+  "profiles": {
+    "standard-us-comic-print-v1": {
+      "status": "working-target-not-printer-approved",
+      "medium": "print",
+      "trimInches": {
+        "width": 6.625,
+        "height": 10.25
+      },
+      "bleedInches": 0.125,
+      "safeInches": 0.25,
+      "minNativeDpi": 300,
+      "aspectTolerance": 0.03,
+      "color": {
+        "reviewWorkingSpace": "sRGB IEC61966-2.1",
+        "pressOutputICC": "unresolved",
+        "pressIntent": "requires-printer-confirmation",
+        "renderingIntent": "relative-colorimetric-with-black-point-compensation-if-printer-approved",
+        "missingSourceICC": "manual-profile-determination-required",
+        "prohibitBlindProfileAssignment": true
+      },
+      "lettering": {
+        "proofAtNativePixels": true,
+        "exactScriptRequired": true,
+        "safeAreaReview": true,
+        "minimumTypeLegibility": "human-review-in-final-print-size",
+        "balloonOrderRequired": true
+      },
+      "grade": {
+        "autoNormalize": false,
+        "flagLuminanceDifference": 35,
+        "flagSaturationDifference": 45,
+        "requireIntentionalDifferenceReview": true
+      },
+      "geometry": {
+        "rasterSource": "complete-trim-plus-bleed-if-page-is-full-bleed",
+        "noUpscaling": true,
+        "coverWrap": "requires-separate-printer-spec",
+        "safeAreaNotAutomaticCrop": true
+      }
+    }
+  },
+  "seriesProfiles": {
+    "rex-fleet": "standard-us-comic-print-v1",
+    "vikings-2026": "standard-us-comic-print-v1",
+    "stardust-station": "standard-us-comic-print-v1"
+  },
+  "additionalSeriesPolicy": "select-explicit-profile-before-mastering; all series use the same mandatory gate schema"
+}
