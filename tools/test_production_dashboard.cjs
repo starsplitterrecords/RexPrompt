@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const build=require('../production-dashboard-core.js').build;
+const j=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const out=build({shows:j('data/shows.json'),draftManifest:j('production/drafts/manifest.json'),referenceManifest:j('production/references/reference-keeper-manifest.json'),books:j('production/book-manifests.json'),releasedLinks:j('production/released-links.json')});
+assert.equal(out.totals.registeredUnits,j('data/shows.json').length);
+assert.equal(out.totals.drafts,Object.keys(j('production/drafts/manifest.json').drafts).length);
+assert.equal(out.totals.references,Object.keys(j('production/references/reference-keeper-manifest.json').references).length);
+const issue=(s,i)=>out.rows.find(x=>x.seriesId===s&&x.issueId===i);
+assert.equal(issue('rex-fleet','rex-fleet-i01').assetsComplete,true);
+assert.equal(issue('rex-fleet','rex-fleet-i02').assetsComplete,true);
+assert.deepEqual(issue('rex-fleet','rex-fleet-i03').missing,['RF_I03_P28','RF_I03_P29','RF_I03_P30','RF_I03_EDITOR_ENDMATTER','RF_I03_EDITOR_CLOSE']);
+const azure=issue('azure-reach','azure-reach-s1-e02');
+assert(azure&&azure.required===null,'Do not invent unknown Azure page denominator');
+assert(out.series.some(x=>x.id==='echoes-forgotten-war'&&x.referenceUnits>=13));
+for(const x of out.rows)assert.equal(x.mastering,'unverified','A mapped page is not a mastered page');
+console.log('PASS production dashboard inventory, complete-book gates, unverified safety statuses');
