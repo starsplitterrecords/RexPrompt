@@ -8,6 +8,7 @@ on:
       - 'index.html'
       - 'tools/validate_reference_keeper.cjs'
       - 'tools/test_keeper_portfolio.cjs'
+      - 'tools/test_keeper_render.cjs'
       - 'tools/prepare_img_readback.cjs'
       - 'production/references/**/keeper/**'
       - 'tools/test_reference_keeper_series.cjs'
@@ -30,6 +31,7 @@ on:
       - 'index.html'
       - 'tools/validate_reference_keeper.cjs'
       - 'tools/test_keeper_portfolio.cjs'
+      - 'tools/test_keeper_render.cjs'
       - 'tools/prepare_img_readback.cjs'
       - 'production/references/**/keeper/**'
       - 'tools/test_reference_keeper_series.cjs'
@@ -63,3 +65,5 @@ jobs:
       - run: node tools/validate_reference_keeper.cjs
       - run: node --check tools/test_keeper_portfolio.cjs
       - run: node tools/test_keeper_portfolio.cjs
+      - run: node --check tools/test_keeper_render.cjs
+      - run: node tools/test_keeper_render.cjs
