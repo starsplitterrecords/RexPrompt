@@ -229,3 +229,14 @@ For each recovered candidate:
 5. Add the matching `approved-production-draft` entry to `production/drafts/manifest.json`.
 6. Commit image + manifest atomically and verify both.
 7. Never publish to StarSplitterVisions solely because recovery succeeds.
+
+
+## Verified raw-byte recovery — October 25, 2026
+
+The historical statement above that File Library binaries were inaccessible is superseded for the **29 candidate files** listed in `reference-inventory.json`. All 29 original PNGs were retrieved through the authenticated ChatGPT Files materialization capability using their exact recorded Library file IDs; no proxy screenshots or reconstructed artwork were used. Each file's source ID, original filename, byte length, native image dimensions, and SHA-256 were recorded in the recovery archive's `RECOVERY_MANIFEST.json`. The originals were verified as distinct, readable PNGs and visually sampled in three contact sheets. The recovered originals are generally 864 × 1821 pixels (with minor variants); they are **not** thereby suitable for a final native-resolution production master.
+
+Persistent Library archive: `/Star Splitter Visions/Recovered Artwork/Shattering_original_candidates_29.zip` (29 original PNGs, checksums and contact sheets).
+
+**The approval and identity gate has not changed.** These remain original historical recovery candidates, not authoritative references or approved page drafts. Their original scene IDs are known, but the evidence is insufficient to assign every candidate uniquely to its active page recipe, especially where multiple generations share a source scene. Do not write candidates to `production/drafts/manifest.json` or Reference Keeper's approved identities without exact visual/recipe evaluation. The archive is durable source recovery outside RexPrompt, not a published image package or new production state authority.
+
+Current GitHub connector actions accept UTF-8 file writes and Git blob content but do not accept local container-file input, so this recovery has **not** yet transported the 29 PNG binaries into the RexPrompt Git repository. Do not represent the Library archive path as a GitHub repository path or as pixel availability in a new IMG chat without retrieving the actual archive.
