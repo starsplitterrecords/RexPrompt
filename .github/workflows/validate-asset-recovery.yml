@@ -7,6 +7,12 @@ on:
       - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
+      - 'production/references/**/visual-reference-pack.json'
+      - 'production/references/**/characters/**'
+      - 'production/references/**/assets/characters/**'
+      - 'production/references/**/keeper/character/**'
+      - 'production/references/stardust-station/issue-2-cast-promo-thumb.jpg'
+      - 'tools/test_keeper_curated_byte_identity.cjs'
       - 'production/book-manifests.json'
       - '.github/workflows/validate-asset-recovery.yml'
   push:
@@ -17,6 +23,12 @@ on:
       - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
+      - 'production/references/**/visual-reference-pack.json'
+      - 'production/references/**/characters/**'
+      - 'production/references/**/assets/characters/**'
+      - 'production/references/**/keeper/character/**'
+      - 'production/references/stardust-station/issue-2-cast-promo-thumb.jpg'
+      - 'tools/test_keeper_curated_byte_identity.cjs'
       - 'production/book-manifests.json'
       - '.github/workflows/validate-asset-recovery.yml'
 jobs:
@@ -31,3 +43,5 @@ jobs:
       - run: node tools/audit_asset_recovery.cjs
       - run: node --check tools/test_reference_keeper_series.cjs
       - run: node tools/test_reference_keeper_series.cjs
+      - run: node --check tools/test_keeper_curated_byte_identity.cjs
+      - run: node tools/test_keeper_curated_byte_identity.cjs
