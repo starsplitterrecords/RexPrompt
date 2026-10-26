@@ -2,7 +2,7 @@
 'use strict';
 // Portfolio regression: exercise the LIVE browser loader and assembler, not a duplicate model.
 // Structural pass is NOT approval of rendered pixels, visual identity, balloon tails or publication.
-const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),zlib=require('node:zlib');
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),zlib=require('node:zlib'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const json=p=>JSON.parse(read(p));
@@ -41,6 +41,19 @@ function addFormat(show){
  report.sourceFormats.dialogueOverlay+=(cfg.dialogueOverlays||[]).length;
  if(cfg.promptVisibleCastOnly)report.sourceFormats.scopedCastConfigurations++;
 }
+const lockfile=json('tools/fixtures/approved-draft-blob-locks.json');
+assert.equal(lockfile.schemaVersion,1,'Invalid approved art byte-lock schema');
+const knownKeys=new Set(Object.keys(lockfile.records));
+for(const [id,draft] of Object.entries(approved)){
+ const lock=lockfile.records[id];
+ if(!lock){throw Error('New approved draft not byte-locked: '+id+' (run explicit approved-asset baseline update)')}
+ if(lock.image!==draft.image)throw Error('Protected approved draft moved without lock review: '+id);
+ const data=fs.readFileSync(path.join(root,draft.image));
+ const actual=crypto.createHash('sha1').update('blob '+data.length+'\0').update(data).digest('hex');
+ if(actual!==lock.gitBlobSha)throw Error('Protected approved artwork bytes changed: '+id+' '+draft.image);
+ knownKeys.delete(id);
+}
+assert.equal(knownKeys.size,0,'Stale removed approved page locks: '+[...knownKeys].slice(0,5).join(', '));
 const displayedLines=scene=>{
  const result=[];
  for(const d of scene.dialogueInline||[])if(typeof d.text==='string')result.push(d.text);
