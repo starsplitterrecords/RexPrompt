@@ -63,9 +63,13 @@ function seriesOf(show){
  return base||null;
 }
 function findSupplement(show,pattern){
- const full=pathOf(show,'covers.json');
- if(!fs.existsSync(full))return [];
- return load(full).map(x=>x.id).filter(id=>pattern.test(id));
+ const result=[];
+ const local=pathOf(show,'covers.json');
+ if(fs.existsSync(local))result.push(...load(local).map(x=>x.id));
+ for(const shelf of SHOWS.filter(s=>s.unitLabel==='COVER'&&seriesOf(s)===seriesOf(show))){
+   try{result.push(...select(shelf));}catch(e){diagnostics.push({selectorId:shelf.id,errors:['cover-shelf-unreadable:'+e.message]});}
+ }
+ return [...new Set(result)].filter(id=>pattern.test(id));
 }
 function groupOf(id){
  const match=id.match(/^(EFW_S1E|BR_S1E)(\d{2})_/);
