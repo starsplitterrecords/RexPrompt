@@ -62,7 +62,8 @@ assert.equal(row('stardust-station','stardust-station').published,'collected-edi
 assert(sd.units.some(x=>x.recipeId==='SDS_S1E02_TEASER'));
 const az=model.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach-s1');
 assert(az?.denominator>0,'Azure available assembled units must supply denominator');
-assert.equal(az.denominatorSource,'assembled-recipes');
+assert.equal(az.denominatorSource,'curated-book');
+assert.equal(az.denominator,25);
 assert(az.units.some(x=>x.draftState!=='approved-draft-indexed'),'Unindexed means not stored here, not never generated');
 const low=model.rows.find(x=>x.seriesId==='low-tide-signal');
 assert(low?.denominator>0&&low.approvedIndexed===0,'Zero-draft registered series must be shown');
