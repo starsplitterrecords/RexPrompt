@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: '22'
       - run: node --check tools/audit_all_series_production.cjs
-      - run: node tools/audit_all_series_production.cjs --out all-series-production-inventory.json
+      - run: node tools/audit_all_series_production.cjs --out all-series-production-inventory.json --emit-base64
       - uses: actions/upload-artifact@v4
         if: always()
         with:
