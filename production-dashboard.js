@@ -23,7 +23,7 @@ async function load(){
 }
 function draw(model){
  $('status').textContent='Source: current RexPrompt manifests; released metadata is separately loaded from StarSplitterVisions where available. No visual approval is inferred.';
- const stats=[['Registered production units',model.totals.registeredUnits],['Approved draft mappings',model.totals.drafts],['Keeper references',model.totals.references],['Complete book inventories',model.totals.completeBooks+' / '+model.totals.bookInventoryCount],['Known book gaps',model.totals.knownMissing]];
+ const stats=[['Registered show configurations',model.totals.registeredConfigurations],['Approved draft mappings',model.totals.drafts],['Keeper references',model.totals.references],['Complete book inventories',model.totals.completeBooks+' / '+model.totals.bookInventoryCount],['Known book gaps',model.totals.knownMissing]];
  const area=$('stats');area.replaceChildren();for(const [label,value] of stats){let b=node('div',{class:'metric'});b.append(node('div',{class:'metric-value'},value),node('div',{class:'muted'},label));area.append(b)}
  const filter=$('seriesFilter');filter.replaceChildren(node('option',{value:''},'All series'));
  for(const x of model.series)filter.append(node('option',{value:x.id},x.id));
@@ -45,7 +45,7 @@ function draw(model){
   const covered=$('seriesRows');covered.replaceChildren();
   for(const x of model.series.filter(x=>!value||x.id===value)){
    const tr=node('tr');
-   for(const v of [x.id,x.registeredUnits,x.draftUnits,x.referenceUnits,x.linkedCanonUnits,x.publishedMetadata==='loaded'?x.publishedEditions+' collected release records':x.publishedMetadata==='unavailable'?'Unreachable':'Not queried'])tr.append(node('td',{},v));
+   for(const v of [x.id,x.registeredConfigurations,x.draftUnits,x.referenceUnits,x.linkedCanonUnits,x.publishedMetadata==='loaded'?x.publishedEditions+' collected release records':x.publishedMetadata==='unavailable'?'Unreachable':'Not queried'])tr.append(node('td',{},v));
    covered.append(tr);
   }
  }

@@ -17,10 +17,10 @@ function build({shows,draftManifest,referenceManifest,books,releasedLinks,vision
   const refs=Object.values(referenceManifest.references||{});
   const bookMap=books.issues||{},links=releasedLinks.links||{};
   const series=new Map();
-  function ensure(id){if(!series.has(id))series.set(id,{id,registeredUnits:0,draftUnits:0,referenceUnits:0,linkedCanonUnits:0,issues:[],publishedMetadata:'unknown',publishedEditions:0});return series.get(id)}
+  function ensure(id){if(!series.has(id))series.set(id,{id,registeredConfigurations:0,draftUnits:0,referenceUnits:0,linkedCanonUnits:0,issues:[],publishedMetadata:'unknown',publishedEditions:0});return series.get(id)}
   const rows=[],activeKeys=new Set();
   for(const show of shows){
-    const seriesId=deriveSeries(show);ensure(seriesId).registeredUnits++;
+    const seriesId=deriveSeries(show);ensure(seriesId).registeredConfigurations++;
     const issueId=show.id;
     const key=seriesId+'::'+issueId,book=bookMap[key];
     const entries=drafts.filter(x=>x.seriesId===seriesId&&x.issueId===issueId);
@@ -63,7 +63,7 @@ function build({shows,draftManifest,referenceManifest,books,releasedLinks,vision
     s.publishedEditions=(state.releases||[]).filter(r=>r.publicationType==='E').length;
   }
   rows.sort((a,b)=>a.seriesId.localeCompare(b.seriesId)||a.issueId.localeCompare(b.issueId));
-  return {totals:{registeredUnits:shows.length,drafts:drafts.length,references:refs.length,completeBooks:rows.filter(x=>x.required!==null&&x.assetsComplete).length,
+  return {totals:{registeredConfigurations:shows.length,drafts:drafts.length,references:refs.length,completeBooks:rows.filter(x=>x.required!==null&&x.assetsComplete).length,
     bookInventoryCount:rows.filter(x=>x.required!==null).length,knownMissing:rows.flatMap(x=>x.missing||[]).length},
     series:[...series.values()].sort((a,b)=>a.id.localeCompare(b.id)),rows};
 }
