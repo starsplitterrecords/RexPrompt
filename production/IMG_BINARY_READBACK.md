@@ -1,68 +1,51 @@
-# IMG Binary Readback
+# Universal IMG image readback and durable approved-artwork persistence
 
-This document defines the canonical method for retrieving RexPrompt production images into a fresh IMG session as actual image pixels.
+Canonical authority: RexPrompt main contains approved unpublished image binaries and manifests; StarSplitterVisions contains released canon. Existing scripts are the ONLY image-transport implementation. These operations do not create a new archive, approval state, or production cursor.
 
-## Core rule
+## Exact single-image readback
 
-A manifest entry, repository path, Git SHA, filename, prior-chat description, or claim that an image exists is not visual inspection.
+Run the existing GitHub Actions workflow **IMG Binary Readback**, selecting kind draft/reference and the exact manifest key. Authorized IDs come from production/drafts/manifest.json and production/references/reference-keeper-manifest.json. The canonical prepare_img_readback.cjs checks current approved-state, manifest identity, storage confinement (including realpaths), MIME, byte counts, PNG chunk CRCs, WebP RIFF boundaries, and expected SHA-256 when recorded. It copies the original file with no transformations. readback.json contains original path, ID, MIME, byte count, SHA-256, Git blob SHA, repository source revision, and pixelInspectionVerified=false.
 
-When continuity requires an existing production image, the actual image pixels must be transported into the active ChatGPT session and visually inspected before image generation.
+Download and extract the GitHub Actions artifact, verify the checksum against the extracted original, and load the **actual image pixels** into the destination IMG conversation. An artifact, hash, filename, path or successful workflow check is NOT equivalent to visual inspection.
 
-## Canonical RexPrompt retrieval method
+## Exact complete-issue readback
 
-For an approved RexPrompt production draft:
+Run the existing **IMG Complete Issue Binary Readback** workflow using exact series and issue IDs from production/book-manifests.json. prepare_issue_readback.cjs delegates every page to the same original-image helper. No separate transport format exists. Output image files follow the complete-book reading order and are mapped by recipe ID, book page, exact original path, byte length, MIME, SHA-256 and Git blob SHA in issue-readback.json.
 
-1. Resolve the exact image from `production/drafts/manifest.json`.
-2. Resolve its repository path and recipe identity.
-3. Do not rely on normal GitHub text-file/blob fetch for PNG/JPEG retrieval when that path attempts UTF-8 decoding.
-4. Use a GitHub Actions artifact bridge:
-   - check out the required RexPrompt revision,
-   - select the exact approved draft image,
-   - upload the image or a small reference bundle with `actions/upload-artifact`,
-   - retrieve the artifact with the GitHub binary artifact-download capability,
-   - extract the image into the active session/runtime.
-5. Open and inspect the extracted image as actual pixels.
-6. Verify identity against the manifest and, when available, verify reconstructed bytes against the expected Git blob SHA.
-7. Only after the actual pixels have been inspected may the image be used as immediate continuity/reference input.
+Default incomplete-issue policy: fail before copying any images when required approved slots are absent. Setting allow_incomplete=true permits an explicitly review-only partial bundle, preserving missing-page positions. Corrupt approved files fail even in partial-review mode; they are not quietly skipped. Bundle metadata sets pixelInspectionVerified=false.
 
-The artifact bridge is transport only. RexPrompt remains the durable authority for approved unpublished production drafts. StarSplitterVisions remains the authority for released canon.
+## Verified regression scope
 
-## Exactness
+CI: .github/workflows/validate-img-readback.yml. Local equivalent:
 
-The artifact bridge must preserve the original file bytes. It is not a visual recreation, screenshot, raster approximation, or metadata reconstruction.
+    python3 -m pip install Pillow
+    node tools/test_img_readback.cjs
+    node tools/test_img_transport_matrix.cjs
+    node tools/test_atomic_img_persistence.cjs
 
-If a ZIP artifact is used, extract the original file unchanged.
+The matrix checks actual PNG drafts and PNG/JPEG Keeper files from each indexed series; SHA-256 and Git blob SHA; exact original bytes; and full Pillow image decoding. It checks complete Rex Fleet Issues 1 and 2, incomplete-review Vikings and Stardust Issue 2, and failure of incomplete Rex Fleet Issue 3 when complete source is required. Sandboxed fixtures check missing binaries, corrupted PNG CRCs, wrong hashes and MIME types, rejected images, parent-directory symlink escapes, and synthetic JPEG/WebP original-byte transport.
 
-If a base64 bridge is required as a fallback, it must encode the original image bytes losslessly. Chunking is allowed if necessary; concatenate exactly, decode locally, and verify the resulting Git blob SHA or cryptographic digest when available.
+A test that Pillow decodes a file on a CI runner is a binary image-integrity test; it is **not** proof that an IMG chat inspected that image.
 
-Do not store base64 copies in RexPrompt production data merely to support readback.
+## Durable approved-artwork persistence
 
-## Mandatory inspection gate
+The existing authorized operation is direct Git Data image-plus-manifest atomic persistence, defined in production/drafts/README.md and production/approval-policy.json. The optional implementation tools/persist_approved_draft.cjs consumes an already-reviewed original image available as a local file in an authorized runtime; it requires actual approval evidence and a runtime-provided GitHub token. Never send a token in chat text or commit it.
 
-Before generation, if the selected unit depends on an existing production image for immediate continuity:
+Required environment variables: GITHUB_REPOSITORY, GITHUB_TOKEN, TARGET_BRANCH, SOURCE_IMAGE, SERIES_ID, ISSUE_ID, RECIPE_ID, APPROVAL_METHOD, EVALUATION_SUMMARY, REVIEWED_APPROVAL=true. ALLOW_MAIN_WRITE=true is separately required for main. REPLACE_APPROVED=true is required for replacing an existing approved page. EXPECTED_HEAD_SHA can pin the preflight revision.
 
-- retrieve the predecessor/reference image pixels,
-- place them in active multimodal context,
-- visually inspect them,
-- then generate.
+The utility:
+1. Reads the current target-branch commit, tree and approved-draft manifest.
+2. Creates a Git blob from the **exact** original image bytes (no recompression/resizing) and a second blob for the approved-draft manifest update.
+3. Creates one tree containing image and manifest entries plus any superseded-path removal; creates one commit based on the original head.
+4. Advances the ref once with force=false, rejecting concurrent non-fast-forward updates.
+5. Independently fetches the committed manifest and image blob from GitHub to confirm the recorded original-image SHA-256 and the full image bytes.
 
-If the image can be identified but its pixels cannot be transported into the active session, generation is blocked. State the resolved current unit, the exact predecessor/reference image that must be inspected, and the transport failure. Do not silently fall back to memory, summaries, paths, SHAs, or textual descriptions.
+tools/test_atomic_img_persistence.cjs exercises those operations against a disposable local Git API mock (including rejected overwrite, rejected nonapproved generation and branch race). No real production image/manifest is modified in the mock tests. Follow any real write with the **normal** readback workflow from an independent fresh session to prove durability.
 
-The immediately preceding image is never the sole style/identity authority; combine it with released canon and curated identity/world references as applicable.
+## Session/connector limit and mandatory multimodal gate
 
-## Session independence
+GitHub Actions artifact ZIPs are temporary transport, not durable archives. Some GitHub connector APIs expose a connector-local ZIP reference but no extracted PNG/JPEG attachment into the model context; direct GitHub binary fetch can fail while UTF-8 decoding. A successful workflow and artifact download cannot be represented as actual image vision.
 
-A fresh IMG chat must be able to recover visual continuity from durable sources without depending on another chat. The user should not normally have to re-upload a RexPrompt production image manually.
+The target IMG chat must verify that the original pixels are accessible **in that conversation**, and visually examine them before generating related art. If the tool chain stops at an opaque ZIP reference, record the visual-reference gate as BLOCKED, not PASSED; use an actual supported image attachment path. No workflow may claim this final gate merely from metadata or Pillow decoding in Actions.
 
-Manual attachment is a last-resort recovery path only after the canonical artifact bridge has been attempted and genuinely cannot transport the image.
-
-## Proven reference case
-
-The method was proven end-to-end on:
-
-- repository: `starsplitterrecords/RexPrompt`
-- image: `production/drafts/azure-reach/azure-reach-s1-e02/azr_s1e02_p11.png`
-- recipe: `AZR_S1E02_P11`
-- Git blob SHA: `1d02c6157318d0662f3222d671952ab406e3c805`
-
-The downloaded artifact reconstructed the exact original PNG bytes and the Git blob SHA matched.
+All source images remain unchanged. Mastering, creative approval and publishing are separate gates.
