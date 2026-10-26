@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "policy": "Evidence is issue/recipe-scoped. Unlisted issues have unknown quality, recovery, mastering and export states. Neither absent RexPrompt drafts nor metadata imply never generated. Findings do not change approval.",
+  "sourceQuality": [
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i01",
+      "classification": "native-resolution-review-required",
+      "summary": "GitHub Actions mastering preflight found most approved images at approximately 1024 × 1536; P18 and editorial close at 2400 × 3840. Color-profile detection was inconsistent or unspecified.",
+      "source": "tools/audit_issue_mastering.cjs; GitHub Actions Validate Mastering Preflight (October 25, 2026)",
+      "scope": "issue",
+      "mastered": false
+    },
+    {
+      "seriesId": "azure-reach",
+      "issueId": "azure-reach-s1-e02",
+      "classification": "native-resolution-review-required",
+      "summary": "Mastering preflight found 11 available images predominantly around 1024 × 1536 pixels; no print-master approval established.",
+      "source": "tools/audit_issue_mastering.cjs; GitHub Actions Validate Mastering Preflight (October 25, 2026)",
+      "scope": "issue",
+      "mastered": false
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "classification": "mixed-source-resolution-and-recovery-gaps",
+      "summary": "Original end-matter PNG is 2400 × 3840 and stored in recovered source archive, not approved draft; closing teaser SVG includes a 991 × 1587 embedded raster, insufficient to claim native 2400 × 3840 master.",
+      "source": "docs/rex-fleet-i03-recovered-editorial-sources.md",
+      "scope": "issue",
+      "mastered": false
+    }
+  ],
+  "recoveryCandidates": [
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "recipeId": "RF_I03_EDITOR_ENDMATTER",
+      "status": "source-preserved-not-promoted",
+      "source": "docs/rex-fleet-i03-recovered-editorial-sources.md",
+      "note": "2400×3840 PNG recorded in Library and recovered archive; approval and exact binary persistence still required."
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "recipeId": "RF_I03_EDITOR_CLOSE",
+      "status": "source-preserved-needs-native-validation",
+      "source": "docs/rex-fleet-i03-recovered-editorial-sources.md",
+      "note": "Source SVG preserved; embedded image is 991×1587, not native production master."
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "recipeId": "RF_I03_P28",
+      "status": "historical-generation-to-reconcile",
+      "source": "Rex Fleet IMG Issue 3 production discussions, October 2026",
+      "note": "Generated image activity reported. Original binary and approval have not been independently verified in this repository."
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "recipeId": "RF_I03_P29",
+      "status": "historical-generation-to-reconcile",
+      "source": "Rex Fleet IMG Issue 3 production discussions, October 2026",
+      "note": "Generated image activity reported. Original binary and approval have not been independently verified in this repository."
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i03",
+      "recipeId": "RF_I03_P30",
+      "status": "historical-generation-to-reconcile",
+      "source": "Rex Fleet IMG Issue 3 production discussions, October 2026",
+      "note": "Generated image activity reported. Original binary and approval have not been independently verified in this repository."
+    }
+  ],
+  "mastering": [],
+  "exported": []
+}

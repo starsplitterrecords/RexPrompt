@@ -9,6 +9,7 @@ on:
       - 'production/book-manifests.json'
       - 'production/released-links.json'
       - 'tools/audit_all_series_production.cjs'
+      - 'tools/build_portfolio_source_quality.cjs'
       - '.github/workflows/audit-all-series-production.yml'
   push:
     branches: [main]
@@ -31,10 +32,13 @@ jobs:
         with:
           node-version: '22'
       - run: node --check tools/audit_all_series_production.cjs
-      - run: node tools/audit_all_series_production.cjs --out all-series-production-inventory.json
+      - run: node tools/audit_all_series_production.cjs --out all-series-production-inventory.json --emit-base64
+      - run: node tools/build_portfolio_source_quality.cjs --out all-series-source-quality.json --emit-base64
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: all-series-production-inventory
-          path: all-series-production-inventory.json
+          path: |-
+            all-series-production-inventory.json
+            all-series-source-quality.json
           if-no-files-found: warn

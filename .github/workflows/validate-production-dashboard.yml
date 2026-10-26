@@ -1,7 +1,7 @@
 name: Validate production dashboard
 on:
   pull_request:
-    paths: ['production-dashboard*','tools/test_production_dashboard.cjs','index.html','production/drafts/manifest.json','production/book-manifests.json','.github/workflows/validate-production-dashboard.yml']
+    paths: ['production-dashboard*','tools/test_production_dashboard.cjs','index.html','production/drafts/manifest.json','production/book-manifests.json','production/portfolio-recipe-inventory.json','production/portfolio-quality-evidence.json','tools/audit_all_series_production.cjs','tools/build_portfolio_source_quality.cjs','production/portfolio-source-quality.json','data/shows/**','.github/workflows/validate-production-dashboard.yml']
   push:
     branches: [main]
     paths: ['production-dashboard*','tools/test_production_dashboard.cjs','index.html','production/drafts/manifest.json','production/book-manifests.json','.github/workflows/validate-production-dashboard.yml']
