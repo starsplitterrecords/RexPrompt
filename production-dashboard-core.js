@@ -24,7 +24,7 @@ function partition(row){
   parentConfiguration:row.showId,recipeIds,registeredUnits:recipeIds.length,
   approvedRecipeIds:(row.approvedRecipeIds||[]).filter(id=>recipeIds.includes(id)),approvedUnits:(row.approvedRecipeIds||[]).filter(id=>recipeIds.includes(id)).length}));
 }
-function build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence={},visionsMetadata={}}){
+function build({shows,inventory,draftManifest,referenceManifest,books,releasedLinks,qualityEvidence={},sourceQuality={},visionsMetadata={}}){
  if(!Array.isArray(shows)||!Array.isArray(inventory?.configurations))throw Error('Assembler-backed portfolio inventory is required');
  if(inventory.counts?.registeredConfigurations!==shows.length)throw Error('Portfolio snapshot disagrees with registered configuration count');
  const configIds=new Set(shows.map(s=>s.id));
@@ -37,6 +37,7 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
  for(const x of Object.values(keepers)){if(!referenceCounts.has(x.seriesId))referenceCounts.set(x.seriesId,{total:0,types:{}});const z=referenceCounts.get(x.seriesId);z.total++;z.types[x.type]=(z.types[x.type]||0)+1}
  for(const [k,x] of Object.entries(links)){if(!releaseLinks.has(k))releaseLinks.set(k,[]);releaseLinks.get(k).push(...(x.images||[]))}
  const sourceFindings=qualityEvidence.sourceQuality||[],recoveryCandidates=qualityEvidence.recoveryCandidates||[];
+ const imageFacts=sourceQuality.images||{};
  const explicitMastering=qualityEvidence.mastering||[],explicitExports=qualityEvidence.exported||[];
  const rows=[],series=new Map(),auditIssues=inventory.errors||[];
  function ensure(s){if(!series.has(s))series.set(s,{id:s,configurationCount:0,recipeIds:new Set(),approvedDraftKeys:new Set(),keeper:referenceCounts.get(s)||{total:0,types:{}},rows:[],released:visionsMetadata[s]?.releases?.filter(x=>x.publicationType==='E')||[],releaseMetadata:visionsMetadata[s]?.error?'unavailable':visionsMetadata[s]?'available':'not-configured'});return series.get(s)}
@@ -64,17 +65,21 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
     const candidate=issueCandidates.find(x=>x.recipeId===id)||null;
     const images=releaseLinks.get(key(sid,originalIssue,id))||releaseLinks.get(key(sid,iid,id))||[];
     const state=draft?.status==='approved-production-draft'?'approved-draft-indexed':candidate?'recovery-candidate':'not-indexed-in-RexPrompt';
+    const sourceQualityObservation=draft?imageFacts[key(sid,originalIssue,id)]||imageFacts[key(sid,iid,id)]||null:null;
     return {recipeId:id,inRecipe:recipeIds.includes(id),inBook:!!namedBook&&verifiedUnitSet.has(id),draftState:state,
-      imagePath:draft?.image||null,sourceQuality:quality.map(x=>x.classification),recovery:candidate,releaseLinks:images,
+      imagePath:draft?.image||null,sourceQuality:quality.map(x=>x.classification),sourceQualityObservation,recovery:candidate,releaseLinks:images,
       confidence:draft?'recorded manifest approval; separate artistic QC unknown':candidate?'recovery lead, no verified approved original':'unknown outside RexPrompt'};
    });
    const approved=units.filter(x=>x.draftState==='approved-draft-indexed').length;
+   const factUnits=units.filter(x=>x.sourceQualityObservation);
+   const sourceQualitySummary={audited:factUnits.length,profileUnspecified:factUnits.filter(x=>x.sourceQualityObservation.colorProfile==='unspecified').length,
+     shortEdgeUnder2000:factUnits.filter(x=>Math.min(x.sourceQualityObservation.width,x.sourceQualityObservation.height)<2000).length};
    const unmatched=units.filter(x=>x.draftState!=='approved-draft-indexed');
    const sourceValid=recipeIds.length>0&&!auditIssues.some(e=>e.startsWith(c.showId+':'));
    const row={seriesId:sid,issueId:iid,configurationId:originalIssue,issueNumber:c.issueNumber,issueLabel:c.episodeGroup?'Issue '+c.episodeGroup:((shows.find(x=>x.id===originalIssue)||{}).issueLabel||c.name||iid),
     denominator:requiredIds.length,denominatorSource:source,assembledCount:recipeIds.length,approvedIndexed:approved,notIndexedCount:unmatched.length,
     keeperCoverage:group.keeper,bookKnown:!!namedBook,exporterReadiness:namedBook?(unmatched.filter(x=>x.inBook).length?'blocked-on-approved-drafts':'inventory-complete-not-mastered'):'book-inventory-unavailable',
-    quality:quality.length?quality:[{classification:'unknown',summary:'No issue-scoped quality report has been registered.'}],
+    quality:quality.length?quality:[{classification:'unknown',summary:'No issue-scoped artistic/native mastering assessment has been registered.'}],sourceQualitySummary,
     mastering:mastered?'mastered':'unverified',exported:exported?'exported':exactRelease.some(x=>x.externalLink)?'published-PDF-recorded':'unverified',
     published:exactRelease.length?'collected-edition-recorded':metadata?.error?'source-unavailable':'no-matching-edition-record',
     releases:exactRelease,sourceHealthy:sourceValid,sourceFiles:c.sourceFiles||[],sourceOverlays:c.sourceOverlays||[],
@@ -92,7 +97,7 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
   const r={seriesId:first.seriesId,issueId:first.issueId,configurationId:null,issueNumber:issueNumber(first.issueId),issueLabel:first.issueId,
     denominator:null,denominatorSource:'no-assembled-configuration',assembledCount:null,approvedIndexed:units.length,notIndexedCount:null,
     keeperCoverage:g.keeper,bookKnown:false,exporterReadiness:'book-inventory-unavailable',
-    quality:[],mastering:'unverified',exported:'unverified',published:'unknown',releases:[],sourceHealthy:false,
+    quality:[],sourceQualitySummary:{audited:0,profileUnspecified:0,shortEdgeUnder2000:0},mastering:'unverified',exported:'unverified',published:'unknown',releases:[],sourceHealthy:false,
     sourceFiles:[],sourceOverlays:[],units,recoveryCandidates:[],extraBookUnits:[],invalid:true,linkedUnits:units.filter(x=>x.releaseLinks.length).length};
   rows.push(r);g.rows.push(r);for(const x of units)g.approvedDraftKeys.add(key(first.seriesId,first.issueId,x.recipeId));
  }
@@ -103,11 +108,11 @@ function build({shows,inventory,draftManifest,referenceManifest,books,releasedLi
  const compiledUnique=new Set([...series].flatMap(([sid,x])=>[...x.recipeIds].map(id=>sid+'::'+id)));
  rows.sort((a,b)=>a.seriesId.localeCompare(b.seriesId)||(a.issueNumber??999)-(b.issueNumber??999)||a.issueId.localeCompare(b.issueId));
  const totals={registeredConfigurations:shows.length,distinctSeries:perSeries.length,distinctAssembledUnits:compiledUnique.size,approvedDraftManifestEntries:Object.keys(manifest).length,
-  keeperReferences:Object.keys(keepers).length,configurationRecipeOccurrences:inventory.counts.registeredRecipeUnitsAcrossConfigurations,
+  keeperReferences:Object.keys(keepers).length,sourceImagesAudited:sourceQuality.examined||0,configurationRecipeOccurrences:inventory.counts.registeredRecipeUnitsAcrossConfigurations,
   knownBookGaps:rows.filter(x=>x.bookKnown).reduce((n,x)=>n+x.units.filter(u=>u.inBook&&u.draftState!=='approved-draft-indexed').length,0),
   unresolvedCandidates:recoveryCandidates.length};
  return {totals,series:perSeries.sort((a,b)=>a.id.localeCompare(b.id)),rows,evidence:{auditErrors:auditIssues,auditWarnings:inventory.warnings||[],
-  inventorySource:inventory.generatedFrom,recoveryCandidates:recoveryCandidates.length,qualityFindings:sourceFindings.length}};
+  inventorySource:inventory.generatedFrom,qualitySource:sourceQuality.method||'Not available',qualityIntegrityIssues:sourceQuality.issues||[],recoveryCandidates:recoveryCandidates.length,qualityFindings:sourceFindings.length}};
 }
 return {build,issueNumber,partition};
 });
