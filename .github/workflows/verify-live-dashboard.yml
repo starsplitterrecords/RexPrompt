@@ -1,0 +1,32 @@
+name: Verify deployed portfolio dashboard
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'production-dashboard-core.js'
+      - 'production-dashboard.js'
+      - 'production-dashboard.html'
+      - 'production/dashboard-source-quality.json'
+      - 'production/dashboard-recovery-candidates.json'
+      - 'tools/test_dashboard_live.cjs'
+      - '.github/workflows/verify-live-dashboard.yml'
+  pull_request:
+    paths:
+      - 'tools/test_dashboard_live.cjs'
+      - '.github/workflows/verify-live-dashboard.yml'
+  workflow_dispatch:
+jobs:
+  source-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/test_dashboard_live.cjs
+      - name: Probe live deployed GitHub Pages (post-merge only)
+        if: github.event_name != 'pull_request'
+        timeout-minutes: 4
+        env:
+          REXPROMPT_LIVE_RETRIES: '6'
+        run: node tools/test_dashboard_live.cjs
