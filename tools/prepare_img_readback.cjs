@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+'use strict';
+// Byte-exact, manifest-authorized export; never changes approved source art.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const kind=process.env.ASSET_KIND||'',key=process.env.ASSET_KEY||'';
+if(!['draft','reference'].includes(kind))throw Error('Invalid asset kind');
+if(!key||key.length>500||!/^[A-Za-z0-9_.:-]+$/.test(key))throw Error('Invalid asset key');
+const manifestFile=kind==='draft'?'production/drafts/manifest.json':'production/references/reference-keeper-manifest.json';
+const m=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
+const entry=kind==='draft'?m.drafts?.[key]:m.references?.[key];
+if(!entry)throw Error('Asset missing from authoritative manifest: '+key);
+if(kind==='draft'&&(entry.status!=='approved-production-draft'||key!==[entry.seriesId,entry.issueId,entry.recipeId].join('::')))throw Error('Draft is not approved');
+if(kind==='reference'&&key!==entry.id)throw Error('Reference key mismatch');
+const root=path.resolve(kind==='draft'?'production/drafts':'production/references');
+const file=path.resolve(entry.image||'');
+if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||fs.lstatSync(file).isSymbolicLink())throw Error('Unsafe or missing source image');
+if(kind==='draft'&&!entry.image.startsWith('production/drafts/'+entry.seriesId+'/'+entry.issueId+'/'))throw Error('Unexpected draft storage');
+if(kind==='reference'&&!entry.image.startsWith('production/references/'+entry.seriesId+'/keeper/'+entry.type+'/'))throw Error('Unexpected reference storage');
+const bytes=fs.readFileSync(file);
+if(bytes.length<24||bytes.length>50*1024*1024)throw Error('Invalid image byte count');
+const png=bytes.toString('hex',0,8)==='89504e470d0a1a0a';
+const jpg=bytes[0]===255&&bytes[1]===216&&bytes[bytes.length-2]===255&&bytes[bytes.length-1]===217;
+const webp=bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP';
+const mime=png?'image/png':jpg?'image/jpeg':webp?'image/webp':null;
+if(!mime||mime!==entry.mimeType)throw Error('Signature and MIME type disagree');
+const out=path.resolve(process.env.READBACK_OUTPUT||'readback');
+fs.mkdirSync(out,{recursive:true});
+const filename='original.'+(png?'png':jpg?'jpg':'webp');
+fs.writeFileSync(path.join(out,filename),bytes,{flag:'wx'});
+const result={kind,key,seriesId:entry.seriesId,repoPath:entry.image,mimeType:mime,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),gitBlobSha:crypto.createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex'),assetFilename:filename};
+fs.writeFileSync(path.join(out,'readback.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify(result));
