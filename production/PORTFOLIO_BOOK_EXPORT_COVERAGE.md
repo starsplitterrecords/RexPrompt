@@ -38,6 +38,14 @@ Generated from live registered source recipes, curated inventories and exact app
 | rex-fleet-stormwell-archive | rex-fleet-stormwell-archive-i01 | uncurated | 0 / 22 | book-cover-not-established |
 | rex-fleet-glass-horizon | rex-fleet-glass-horizon-i01 | uncurated | 0 / 24 | book-cover-not-established |
 | backyard-rockets | backyard-rockets-s1 | uncurated | 0 / ? | season-combines-multiple-issues |
+| backyard-rockets | BR_S1E01 (not separately registered) | uncurated subissue | 0 / 22 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E02 (not separately registered) | uncurated subissue | 0 / 26 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E03 (not separately registered) | uncurated subissue | 0 / 21 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E04 (not separately registered) | uncurated subissue | 0 / 20 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E05 (not separately registered) | uncurated subissue | 0 / 23 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E06 (not separately registered) | uncurated subissue | 0 / 21 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E07 (not separately registered) | uncurated subissue | 0 / 21 | season-selector-not-split-into-issue-inventories |
+| backyard-rockets | BR_S1E08 (not separately registered) | uncurated subissue | 0 / 24 | season-selector-not-split-into-issue-inventories |
 | azure-reach | azure-reach-s1 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | stardust-station | stardust-station | blocked-missing-images | 0 / 25 | missing-approved-images |
 | stardust-station | stardust-station-e02 | blocked-missing-images | 4 / 25 | missing-approved-images |
@@ -82,6 +90,14 @@ Generated from live registered source recipes, curated inventories and exact app
 | division-threshold | division-threshold-s1-e07 | blocked-missing-images | 0 / 29 | missing-approved-images |
 | division-threshold | division-threshold-s1-e08 | blocked-missing-images | 0 / 29 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1 | uncurated | 0 / ? | season-combines-multiple-issues |
+| echoes-forgotten-war | EFW_S1E01 (not separately registered) | uncurated subissue | 0 / 23 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E02 (not separately registered) | uncurated subissue | 0 / 18 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E03 (not separately registered) | uncurated subissue | 0 / 17 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E04 (not separately registered) | uncurated subissue | 0 / 18 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E05 (not separately registered) | uncurated subissue | 0 / 18 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E06 (not separately registered) | uncurated subissue | 0 / 17 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E07 (not separately registered) | uncurated subissue | 0 / 18 | season-selector-not-split-into-issue-inventories |
+| echoes-forgotten-war | EFW_S1E08 (not separately registered) | uncurated subissue | 0 / 20 | season-selector-not-split-into-issue-inventories |
 | sunforge-outlaw | sunforge-outlaw-s1-e01 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e02 | blocked-missing-images | 0 / 23 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e03 | blocked-missing-images | 0 / 23 | missing-approved-images |
