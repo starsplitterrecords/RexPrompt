@@ -64,8 +64,14 @@ const az=model.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach
 assert(az?.denominator>0,'Azure available assembled units must supply denominator');
 assert.equal(az.denominatorSource,'curated-book');
 assert.equal(az.denominator,25);
-const az3=row('azure-reach','azure-reach-s1-e03');assert.equal(az3.denominator,25);assert.equal(az3.assembledCount,null,'Curated book without show must not falsely imply compiled recipes');
-assert.equal(az3.notIndexedCount,25,'Book-only issue must retain exact missing draft slots');
+const az3=row('azure-reach','azure-reach-s1-e03');assert.equal(az3.denominator,25);assert.equal(az3.assembledCount,24,'Registered Azure Issue 3 should contain actual assembled recipes');
+const excluded=shows.filter(x=>x.id!=='azure-reach-s1-e03');
+const adjusted={...inventory,counts:{...inventory.counts,registeredConfigurations:excluded.length},configurations:inventory.configurations.filter(x=>x.showId!=='azure-reach-s1-e03')};
+const synthetic=build({shows:excluded,inventory:adjusted,draftManifest,referenceManifest:refs,books,releasedLinks:released,qualityEvidence:quality,sourceQuality:native,visionsMetadata});
+const bookOnly=synthetic.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach-s1-e03');
+assert(bookOnly&&bookOnly.assembledCount===null,'Curated book without show must retain unknown recipe inventory');
+assert.equal(bookOnly.denominator,25,'Book-only issue preserves exact complete-book requirements');
+assert.equal(bookOnly.notIndexedCount,25,'Book-only issue must retain exact unindexed slots');
 assert(az.units.some(x=>x.draftState!=='approved-draft-indexed'),'Unindexed means not stored here, not never generated');
 const low=model.rows.find(x=>x.seriesId==='low-tide-signal');
 assert(low?.denominator>0&&low.approvedIndexed===0,'Zero-draft registered series must be shown');
