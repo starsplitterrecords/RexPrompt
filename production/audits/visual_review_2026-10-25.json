@@ -194,6 +194,96 @@
       ],
       "observation": "The paragraph beginning 'What comes next...' is set in low-contrast light text over the blue sky and bright desert transition. Reduced contrast is visible in the released page readback.",
       "requiredCorrection": "Prepare a lettering-only high-contrast proof that preserves the existing approved prose and artwork. Do not overwrite released image without explicit editorial approval."
+    },
+    {
+      "id": "VIS-C3-JPEG-rex-fleet-002",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "rex-fleet",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-002.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-002.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
+    },
+    {
+      "id": "VIS-C3-JPEG-rex-fleet-004",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "rex-fleet",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-004.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-004.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
+    },
+    {
+      "id": "VIS-C3-JPEG-rex-fleet-009",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "rex-fleet",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-009.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-009.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
+    },
+    {
+      "id": "VIS-C3-JPEG-rex-fleet-011",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "rex-fleet",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-011.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-011.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
+    },
+    {
+      "id": "VIS-C3-JPEG-rex-fleet-015",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "rex-fleet",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/rex-fleet/issue-01/page-015.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/rex-fleet/issue-01/page-015.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
+    },
+    {
+      "id": "VIS-C3-JPEG-stardust-station-020",
+      "type": "published-JPEG-marker-termination",
+      "severity": "P2-asset-source-inspection",
+      "seriesId": "stardust-station",
+      "issueId": "issue-01",
+      "recipeId": null,
+      "releasedPage": "sites/visions/public/images/pages/stardust-station/issue-01/page-020.jpg",
+      "sourceEvidence": [
+        "https://github.com/starsplitterrecords/StarSplitterVisions/blob/main/sites/visions/public/images/pages/stardust-station/issue-01/page-020.jpg",
+        "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130"
+      ],
+      "observation": "Read-only scan of the original released JPEG reports missing terminal FF D9 EOI bytes. The file may still decode partially in readers; this is a risk flag, not proof the artwork itself is wrong. Direct image readback failed for Stardust page 020 in this session.",
+      "requiredCorrection": "Compare against the original approved image bytes and existing collected PDF. Verify full decoding, cropping, and any missing pixel rows. If an intact source exists, prepare a non-destructive repackaging proof and seek explicit release approval before replacing canonical images."
     }
   ],
   "verifiedNonDefects": [
@@ -209,5 +299,26 @@
       "evidence": "157/157 cited daily page paths and 6/6 linked PDF paths found; sequential metadata was verified in previous C3 run.",
       "result": "Released file-path and numbering integrity pass; PDF internal page count and pixels still require mastering audit."
     }
-  ]
+  ],
+  "publishedGeometryAudit": {
+    "source": "https://github.com/starsplitterrecords/StarSplitterVisions/pull/141",
+    "sourceRun": "https://github.com/starsplitterrecords/StarSplitterVisions/actions/runs/40267321130",
+    "verifiedPageImagePaths": 157,
+    "distinctBitwisePageImages": 136,
+    "intentionalCollectedEditionRepeatPaths": 21,
+    "missingJpegEoiPaths": [
+      "rex-fleet/issue-01/page-002.jpg",
+      "rex-fleet/issue-01/page-004.jpg",
+      "rex-fleet/issue-01/page-009.jpg",
+      "rex-fleet/issue-01/page-011.jpg",
+      "rex-fleet/issue-01/page-015.jpg",
+      "stardust-station/issue-01/page-020.jpg"
+    ],
+    "mixedGeometryIssues": [
+      "azure-reach/issue-01",
+      "rex-fleet/issue-01",
+      "vikings-2026/issue-01"
+    ],
+    "note": "Digital preview geometry is not equivalent to native print source resolution. No image byte was changed."
+  }
 }
