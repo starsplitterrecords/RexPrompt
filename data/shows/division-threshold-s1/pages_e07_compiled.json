@@ -119,6 +119,9 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
+    ],
+    "promptSuppress": [
+      "factions"
     ]
   },
   {
@@ -170,7 +173,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P04",
@@ -231,7 +239,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P05",
@@ -298,7 +311,11 @@
     "region": "DT_OrganicDistricts",
     "factions": [
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P06",
@@ -350,7 +367,11 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
-    ]
+    ],
+    "promptSuppress": [
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P07",
@@ -469,6 +490,10 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
     ]
   },
   {
@@ -533,7 +558,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P10",
@@ -595,7 +625,12 @@
     "region": "DT_GovernanceUpperLevels",
     "factions": [
       "DT_BaselineHumans"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P11",
@@ -646,7 +681,13 @@
     "region": "DT_OrganicDistricts",
     "factions": [
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P12",
@@ -709,7 +750,12 @@
     "region": "DT_OrganicDistricts",
     "factions": [
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P13",
@@ -778,7 +824,13 @@
     "factions": [
       "DT_Organosynthetics",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P14",
@@ -833,7 +885,12 @@
     "region": "DT_Stack",
     "factions": [
       "DT_AugmentedHumans"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P15",
@@ -900,7 +957,13 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P16",
@@ -968,7 +1031,13 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P17",
@@ -1024,7 +1093,12 @@
     "factions": [
       "DT_BaselineHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P18",
@@ -1083,7 +1157,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P19",
@@ -1145,7 +1223,12 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P20",
@@ -1200,7 +1283,12 @@
     "region": "DT_CivicServiceLevels",
     "factions": [
       "DT_Organosynthetics"
-    ]
+    ],
+    "promptSuppress": [
+      "region",
+      "factions"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P21",
@@ -1272,7 +1360,12 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P22",
@@ -1338,7 +1431,12 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P23",
@@ -1407,7 +1505,12 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P24",
@@ -1449,7 +1552,12 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "DT_E007_P25",
@@ -1508,7 +1616,11 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "DT_E007_P26",
@@ -1585,6 +1697,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans",
       "DT_Intelligences"
-    ]
+    ],
+    "promptSuppress": [
+      "region"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   }
 ]
