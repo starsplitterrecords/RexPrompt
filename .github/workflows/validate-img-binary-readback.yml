@@ -1,0 +1,26 @@
+name: Validate IMG Binary Readback
+on:
+  pull_request:
+    paths:
+      - 'tools/prepare_img_readback.cjs'
+      - 'tools/test_img_readback.cjs'
+      - '.github/workflows/img-binary-readback.yml'
+      - '.github/workflows/validate-img-binary-readback.yml'
+      - 'docs/img-readback-runtime.md'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/prepare_img_readback.cjs'
+      - 'tools/test_img_readback.cjs'
+      - '.github/workflows/img-binary-readback.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/prepare_img_readback.cjs
+      - run: node --check tools/test_img_readback.cjs
+      - run: node tools/test_img_readback.cjs
