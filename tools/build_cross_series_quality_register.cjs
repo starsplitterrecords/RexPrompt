@@ -18,8 +18,21 @@ const draftByIssue={};
 for(const v of Object.values(draft))(draftByIssue[v.seriesId+'::'+v.issueId]??=[]).push(v.recipeId);
 const books=new Map(inventory.books.map(x=>[x.key,x]));
 const findings=visual.findings.map(x=>({...x,sourceReviewed:true,artModified:false}));
+// Only the three issues with established active approved-production recovery frontiers
+// are actionable recovery findings. Other expected book units are production backlog,
+// not defects and not proof their original IMG renders are missing.
+const activeRecoveryIssues=new Set([
+ 'rex-fleet::rex-fleet-i03',
+ 'vikings-2026::vikings-2026-s1-e02',
+ 'stardust-station::stardust-station-e02'
+]);
+const unapprovedBookBacklog=[];
 for(const b of inventory.books){
  const sep=b.key.indexOf('::'),seriesId=b.key.slice(0,sep),issueId=b.key.slice(sep+2);
+ if(!activeRecoveryIssues.has(b.key)){
+  for(const recipeId of b.missingUnits)unapprovedBookBacklog.push({seriesId,issueId,recipeId,status:'NOT_APPROVED_IN_REXPROMPT; NOT A DEFECT; OTHER SOURCE ART UNKNOWN'});
+  continue;
+ }
  for(const recipeId of b.missingUnits)findings.push({
   id:'BOOK-GAP::'+b.key+'::'+recipeId,type:'missing-approved-draft-record',
   severity:'P1-recovery-gate',seriesId,issueId,recipeId,
@@ -43,9 +56,10 @@ const report={
  schemaVersion:1,generatedAt:new Date().toISOString(),
  authority:'RexPrompt scripts/manifest; released StarSplitterVisions as immutable visual canon',
  disclaimer:'Absent RexPrompt draft records do not prove generated art is absent from historical IMG or published archives. Technical validation does not constitute creative approval.',
- counts:{...inventory.counts,sourceVerifiedBookGaps:findings.filter(x=>x.type==='missing-approved-draft-record').length,
+ counts:{...inventory.counts,sourceVerifiedActiveRecoveryGaps:findings.filter(x=>x.type==='missing-approved-draft-record').length,
+  notYetApprovedBookUnits:unapprovedBookBacklog.length,
  publishedPagePaths:157,publishedEditions:6,actuallyInspectedReleasedPixels:visual.inspectedReleasedPages.reduce((n,x)=>n+x.pages.length,0)},
- series:inventory.series,issues,bookIssues:inventory.books,findings,
+ series:inventory.series,issues,bookIssues:inventory.books,unapprovedBookBacklog,findings,
  inspectedReleasedPages:visual.inspectedReleasedPages,
  readbackLimitations:visual.pixelReadback,nonDefects:visual.verifiedNonDefects,
  mechanicalWarnings:inventory.warnings,mechanicalErrors:inventory.errors
