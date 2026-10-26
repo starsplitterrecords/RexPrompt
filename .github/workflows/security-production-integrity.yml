@@ -1,0 +1,37 @@
+name: Security and production integrity
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  production-integrity:
+    name: Production integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate browser JavaScript syntax
+        run: |
+          node --check github-auth.js
+          node --check github-writes.js
+          node --check reference-keeper.js
+          node --check visuals.js
+          node --check visuals-core.js
+          node --check issue-publishing.js
+      - name: Validate Rex Fleet production data
+        run: python tools/validate_rex_fleet.py
+      - name: Validate visual state
+        run: python tools/validate_visual_state.py
