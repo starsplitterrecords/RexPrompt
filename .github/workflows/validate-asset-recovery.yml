@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'tools/audit_asset_recovery.cjs'
+      - 'reference-keeper.js'
+      - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
       - 'production/book-manifests.json'
@@ -11,6 +13,8 @@ on:
     branches: [main]
     paths:
       - 'tools/audit_asset_recovery.cjs'
+      - 'reference-keeper.js'
+      - 'tools/test_reference_keeper_series.cjs'
       - 'production/drafts/manifest.json'
       - 'production/references/reference-keeper-manifest.json'
       - 'production/book-manifests.json'
@@ -25,3 +29,5 @@ jobs:
           node-version: '22'
       - run: node --check tools/audit_asset_recovery.cjs
       - run: node tools/audit_asset_recovery.cjs
+      - run: node --check tools/test_reference_keeper_series.cjs
+      - run: node tools/test_reference_keeper_series.cjs
