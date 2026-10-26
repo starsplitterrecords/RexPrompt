@@ -1,0 +1,133 @@
+name: Validate Complete Issue Mastering Process
+on:
+  pull_request:
+    paths:
+      - 'tools/issue_mastering_session.py'
+      - 'tools/render_mastering_grade_proof.py'
+      - 'tools/verify_mastering_approval.py'
+      - 'production/mastering/publication-profiles.json'
+      - '.github/workflows/validate-issue-mastering-process.yml'
+      - 'docs/issue-mastering-production.md'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/issue_mastering_session.py'
+      - 'tools/render_mastering_grade_proof.py'
+      - 'tools/verify_mastering_approval.py'
+      - 'production/mastering/publication-profiles.json'
+  workflow_dispatch:
+    inputs:
+      series:
+        type: string
+        required: true
+        description: Exact series ID registered in publication profiles
+      issue:
+        type: string
+        required: true
+        description: Exact issue ID from complete-book manifest
+jobs:
+  inspect:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - series: rex-fleet
+            issue: rex-fleet-i01
+            expected: 22
+          - series: rex-fleet
+            issue: rex-fleet-i02
+            expected: 24
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13"
+      - name: Compile production mastering tools
+        run: python -m py_compile tools/issue_mastering_session.py tools/verify_mastering_approval.py tools/render_mastering_grade_proof.py
+      - name: Inspect complete issue and create correction plan
+        env:
+          SERIES: ${{ matrix.series }}
+          ISSUE: ${{ matrix.issue }}
+        run: |
+          python tools/issue_mastering_session.py --series "$SERIES" --issue "$ISSUE" --out "/tmp/mastering/$ISSUE"
+      - name: Regression assertions and negative final-master gate
+        env:
+          ISSUE: ${{ matrix.issue }}
+          EXPECTED: ${{ matrix.expected }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path('/tmp/mastering')/os.environ['ISSUE']
+          report=json.loads((p/'mastering-session.json').read_text())
+          assert report['machine']['expected']==int(os.environ['EXPECTED'])
+          assert report['machine']['inspected']==int(os.environ['EXPECTED'])
+          assert len(report['pages'])==int(os.environ['EXPECTED'])
+          assert report['pages'][0]['role']=='cover'
+          assert report['pages'][1]['role']=='editorial'
+          assert report['pages'][2]['role']=='cast'
+          assert report['pages'][-1]['role']=='editorial'
+          assert report['approval']['status']=='not-approved'
+          assert any('native-resolution-deficit' in x['machineDeficiencies'] for x in report['pages'])
+          assert (p/'contact-sheet.jpg').exists()
+          assert (p/'palette-diagnostic.png').exists()
+          assert (p/'corrective-requirements.md').exists()
+          print('REGRESSION PASS: ordered issue, cover/editorial/cast/story/end matter, native deficit, no false approval')
+          for page in report['pages']:
+            print('PAGE',page['recipeId'],'pixels',page['nativePixels'],
+                  'dpi',page['effectiveDpiOnBleedCanvas'],
+                  'deficiencies',','.join(page['machineDeficiencies']))
+          PY
+          if python tools/verify_mastering_approval.py --record "/tmp/mastering/$ISSUE/mastering-session.json" > /tmp/approval-output 2>&1; then
+             echo "ERROR: unreviewed issue unexpectedly passed final mastering gate"; exit 1
+          fi
+          echo "PASS: Unreviewed issue correctly blocked from mastering approval."
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mastering-session-${{ matrix.issue }}
+          path: /tmp/mastering/${{ matrix.issue }}/
+          retention-days: 14
+          if-no-files-found: error
+  grade-controls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "Pillow>=10,<13"
+      - name: Synthetic grade control regression and ICC proof
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageCms
+          from pathlib import Path
+          import json
+          p=Path('/tmp/mastering-grade-test');p.mkdir(exist_ok=True)
+          im=Image.new('RGB',(400,600),(100,88,120))
+          im.save(p/'source.png',icc_profile=ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes())
+          im.save(p/'untagged.png')
+          (p/'grade.json').write_text(json.dumps({'brightness':1.05,'saturation':0.95}))
+          PY
+          python tools/render_mastering_grade_proof.py --source /tmp/mastering-grade-test/source.png --grade /tmp/mastering-grade-test/grade.json --out /tmp/mastering-grade-test/proof.png
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import json
+          p=Path('/tmp/mastering-grade-test')
+          with Image.open(p/'proof.png') as im:
+              assert im.size==(400,600)
+              assert im.info.get('icc_profile')
+          m=json.loads((p/'proof.json').read_text())
+          assert m['pressReady'] is False
+          assert m['state']=='PROPOSED-UNAPPROVED-REVIEW-PROOF'
+          assert (p/'proof-compare.jpg').exists()
+          PY
+          if python tools/render_mastering_grade_proof.py --source /tmp/mastering-grade-test/untagged.png --grade /tmp/mastering-grade-test/grade.json --out /tmp/mastering-grade-test/untagged-proof.png; then
+            echo "ERROR: untagged source accepted without documented interpretation"; exit 1
+          fi
+          echo "PASS: untagged source cannot be silently assumed sRGB"
+          python tools/render_mastering_grade_proof.py --source /tmp/mastering-grade-test/untagged.png --grade /tmp/mastering-grade-test/grade.json --out /tmp/mastering-grade-test/untagged-proof.png --untagged-srgb-evidence "Reviewed production export documentation establishes sRGB original."
