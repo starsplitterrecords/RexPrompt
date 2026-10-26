@@ -150,7 +150,7 @@ for(const show of shows){
  for(const id of keys){if(approved.has(id))covered++}
  const extra=[...approved.keys()].filter(k=>!keys.has(k));
  if(extra.length)warnings.push(show.id+': '+extra.length+' approved draft IDs not in its assembled recipe list: '+extra.slice(0,5).join(', '));
- const row={showId:show.id,seriesId:sid,issueId,unitLabel:show.unitLabel||null,
+ const row={showId:show.id,seriesId:sid,issueId,issueLabel:show.issueLabel||show.name||null,unitLabel:show.unitLabel||null,
   registeredUnits:keys.size,approvedUnits:covered,notInApprovedDraftManifest:Math.max(0,keys.size-covered),
   canonicalSource:'RexPrompt registered recipe',draftAuthority:'RexPrompt approved-draft manifest',
   recipeIds:[...keys], approvedRecipeIds:[...keys].filter(k=>approved.has(k)),
