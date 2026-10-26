@@ -1,0 +1,27 @@
+name: Validate Asset Recovery Integrity
+on:
+  pull_request:
+    paths:
+      - 'tools/audit_asset_recovery.cjs'
+      - 'production/drafts/manifest.json'
+      - 'production/references/reference-keeper-manifest.json'
+      - 'production/book-manifests.json'
+      - '.github/workflows/validate-asset-recovery.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/audit_asset_recovery.cjs'
+      - 'production/drafts/manifest.json'
+      - 'production/references/reference-keeper-manifest.json'
+      - 'production/book-manifests.json'
+      - '.github/workflows/validate-asset-recovery.yml'
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/audit_asset_recovery.cjs
+      - run: node tools/audit_asset_recovery.cjs
