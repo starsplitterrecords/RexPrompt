@@ -17,9 +17,12 @@ for(const [key,book] of Object.entries(inv.issues)){
  assert.ok(pageUnits.length>=18,'expected all story pages in '+key);
  pageUnits.forEach((id,i)=>assert.ok(id.endsWith('_P'+String(i+1).padStart(2,'0')),'story order '+id));
  assert.ok(book.units.at(-1).endsWith('_EDITOR_CLOSE')||book.units.at(-1).endsWith('_EDITOR_ENDMATTER'));
+ if(book.issueId.endsWith('i02')||book.issueId.endsWith('i03')) assert.deepEqual(book.units.slice(-2),[book.issueId.endsWith('i02')?'RF_I02_EDITOR_ENDMATTER':'RF_I03_EDITOR_ENDMATTER',book.issueId.endsWith('i02')?'RF_I02_EDITOR_CLOSE':'RF_I03_EDITOR_CLOSE'],'Final editorial order must agree with show overlay');
  const missing=book.units.filter(id=>!draft.drafts[[book.seriesId,book.issueId,id].join('::')]);
  if(missing.length)incomplete++;
  console.log(key+': '+book.units.length+' expected units; '+missing.length+' missing approved images'+(missing.length?': '+missing.join(', '):''));
 }
 assert.ok(incomplete>=0);
+assert.match(exporter,/-INCOMPLETE-DRAFT/,'Incomplete preview must be labeled');
+assert.match(exporter,/MISSING_APPROVED_PAGES\.txt/,'Incomplete archive requires gap list');
 console.log('Complete-book manifest contract verified.');
