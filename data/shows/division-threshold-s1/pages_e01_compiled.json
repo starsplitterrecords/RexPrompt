@@ -92,12 +92,12 @@
       }
     ],
     "continuityFrom": "DT_E001_P01",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P03",
@@ -128,11 +128,11 @@
       }
     ],
     "continuityFrom": "DT_E001_P02",
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E001_P04",
@@ -181,12 +181,12 @@
       }
     ],
     "continuityFrom": "DT_E001_P03",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P05",
@@ -227,12 +227,12 @@
       }
     ],
     "continuityFrom": "DT_E001_P04",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P06",
@@ -376,7 +376,7 @@
   },
   {
     "id": "DT_E001_P08",
-    "summary": "Ostra returns to her inhabited Organic neighborhood, where Nico immediately begins repairing her damaged arm. Their disagreement about the rescue unfolds through the intimacy and irritation of the repair rather than as a political argument delivered whole.",
+    "summary": "Nico repairs Ostra's damaged arm with the familiarity of someone who knows how she hides pain. Their first political disagreement is inseparable from care: he fears what institutions will make of her rescue but cannot name an alternative he could live with.",
     "setting": "DT_OrganicSafehouse",
     "region": "DT_OrganicDistricts",
     "factions": [
@@ -409,23 +409,15 @@
       },
       {
         "handle": "@dt.Nico14",
-        "text": "The plate will heal."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "That's not what I'm angry about."
-      },
-      {
-        "handle": "@dt.Nico14",
-        "text": "You know what they saw today?"
+        "text": "I can fix the plate. I can't fix what they'll make of today."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "People getting out."
+        "text": "People got out."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "A body they still call an asset doing work nobody authorized."
+        "text": "They'll remember what crossed the barrier."
       },
       {
         "handle": "@dt.Ostra9",
@@ -433,11 +425,11 @@
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Then what would you have done?"
+        "text": "Tell me what I should have done."
       },
       {
         "handle": "@dt.Nico14",
-        "text": "That's the part I don't like."
+        "text": "I don't have an answer I can live with."
       }
     ],
     "promptSuppress": [
@@ -515,12 +507,12 @@
       }
     ],
     "continuityFrom": "DT_E001_P08",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P10",
@@ -591,12 +583,12 @@
         "text": "It tells me you knew what I'd find."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P11",
@@ -754,12 +746,12 @@
         "text": "Whether to wait."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P13",
@@ -842,12 +834,12 @@
         "text": "They were waiting to see what we'd do with it."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P14",
@@ -911,12 +903,12 @@
         "text": "Doesn't say."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P15",
@@ -973,12 +965,12 @@
       }
     ],
     "continuityFrom": "DT_E001_P14",
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P16",
@@ -1063,10 +1055,10 @@
         "text": "We're observing."
       }
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E001_P17",
@@ -1146,12 +1138,12 @@
         "text": "More precisely: whether someone acts without sufficient authority to explain the action afterward."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P18",
@@ -1231,12 +1223,12 @@
         "text": "Usually the model is correct."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P19",
@@ -1313,15 +1305,15 @@
         "text": "I kept my arm."
       }
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E001_P20",
-    "summary": "John and Nathan prepare to observe Concourse 17 without pretending the evidence proves a second attack or that they have joined Ostra's politics. Their familiar clinic banter carries the disagreement while Nathan quietly hides a tremor and packs for casualties anyway.",
+    "summary": "John and Nathan prepare to observe Concourse 17. Their evidentiary caution is carried by old clinic familiarity: Nathan packs for casualties while joking around the fear that their incomplete warning may be real, and John still misses the tremor Nathan is hiding.",
     "setting": "DT_AugmentClinic",
     "region": "DT_Stack",
     "factions": [
@@ -1342,52 +1334,52 @@
     ],
     "dialogueInline": [
       {
+        "handle": "@dt.JohnMercer",
+        "text": "That's a field thoracic seal."
+      },
+      {
         "handle": "@dt.NathanPrice",
-        "text": "This doesn't prove there's a second event."
+        "text": "I observe better when nobody's bleeding on me."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "It proves the first one was made."
+        "text": "This doesn't prove a second event."
       },
       {
         "handle": "@dt.NathanPrice",
+        "text": "It proves the first one was made. Concourse is still only a place and a time."
+      },
+      {
+        "handle": "@dt.JohnMercer",
         "text": "And if Ostra's there?"
       },
       {
+        "handle": "@dt.NathanPrice",
+        "text": "Ask what she found before you decide why she found it."
+      },
+      {
         "handle": "@dt.JohnMercer",
-        "text": "We compare evidence."
+        "text": "We're comparing evidence."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Not causes?"
+        "text": "Then carry the fracture cast."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Not yet."
+        "text": "You packed for casualties."
       },
       {
         "handle": "@dt.NathanPrice",
-        "text": "Trauma kit doesn't care."
-      },
-      {
-        "handle": "@dt.JohnMercer",
-        "text": "That's a lot for observing."
-      },
-      {
-        "handle": "@dt.NathanPrice",
-        "text": "You want me to put it back?"
-      },
-      {
-        "handle": "@dt.JohnMercer",
-        "text": "Keep it."
+        "text": "I packed for being wrong."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P21",
@@ -1462,12 +1454,12 @@
         "text": "Because you came down here in person."
       }
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E001_P22",
@@ -1499,9 +1491,9 @@
       "Material and character direction: Keep the page owned by the person making or interpreting a choice: Ostra's autonomy, Nico's intimate care and suspicion, John's embodied certainty, Kellen's institutional faith, Nathan's self-neglect, or Axiom's nonhuman reasoning. The incident or investigation matters because it changes how these people understand themselves and one another. Ostra's body is living matter: warm dark dermis, subtle humidity or moisture where physically appropriate, soft tissue visibly compressing around harder ceramic/keratin/mineral structures, abrasion and repair residue carrying from prior action. Nico's lavender-gray dermis and sensory filaments must read as living anatomy, with flex, tension, touch response and subtle moisture at living interfaces rather than cables or tentacles. John remains visibly human around his augmentations: skin, scar ridges, sweat, pressure marks, actuator heat and tissue resisting/working with installed hardware. Nathan's condition should register through human physical detail—breath, tremor, compensating muscles, heat, sweat, adhesive/port wear and tiny losses of precision—before it becomes dialogue. Kellen's Baseline body is not visual neutrality: use breath, fatigue, tense hands, skin, fabric, eye focus and the physical habits of someone trained to trust records and rooms. Axiom remains machine-native but materially inhabited: real mass, micro-scratches, thermal gradients, dust at seams, precise joint travel and contact sound; stillness is performance, not absence of feeling. Keep public infrastructure materially dense: damp suppression surfaces, concrete dust, hand-polished rails, warm machinery, worn flooring, fabric, sweat and crowd contact."
     ],
     "dialogueInline": [],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   }
 ]

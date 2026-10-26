@@ -245,10 +245,10 @@
       "DT_Organosynthetics",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P05",
@@ -304,12 +304,12 @@
     "factions": [
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P06",
@@ -374,10 +374,10 @@
       "DT_BaselineHumans",
       "DT_Organosynthetics"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P07",
@@ -484,10 +484,10 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P09",
@@ -552,12 +552,12 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P10",
@@ -625,11 +625,11 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P11",
@@ -677,12 +677,12 @@
     "factions": [
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P12",
@@ -751,14 +751,14 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P13",
-    "summary": "John confronts Ostra after recognizing the capability framework he supported. Ostra does not offer vindication. She simply points out that the state never needed to decide whether either of them was human to control what their bodies were allowed to do.",
+    "summary": "John brings his limiter order to Ostra expecting anger, vindication or an answer. Instead she recognizes how much it cost him to learn that human status was never a durable shield from capability control, and their alliance begins in that unwanted recognition.",
     "characters": [
       "DT_JohnMercer",
       "DT_Ostra9"
@@ -774,47 +774,43 @@
     "dialogueInline": [
       {
         "handle": "@dt.JohnMercer",
-        "text": "This isn't what we passed."
+        "text": "They throttled the knee."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Show me."
+        "text": "For what?"
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Temporary limiter. Mandatory review. Civilian movement restrictions if I override it."
+        "text": "Using it."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Reason?"
+        "text": "You used it to keep people off the tracks."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "Measured torque."
+        "text": "Measured torque. That's the reason."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "Not your citizenship."
+        "text": "They found the body before they needed the category."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "I'm aware."
+        "text": "I thought being human was the line."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "The Organic order was justified by designed hazard capability."
-      },
-      {
-        "handle": "@dt.Ostra9",
-        "text": "And now they're measuring you the same way."
+        "text": "It was the line while it protected you."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "You could enjoy this a little less."
+        "text": "You could enjoy this less."
       },
       {
         "handle": "@dt.Ostra9",
-        "text": "I don't enjoy being correct about this."
+        "text": "I'm not enjoying the way you had to learn it."
       }
     ],
     "setting": "DT_CivicUtilityWorksite",
@@ -823,12 +819,12 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P14",
@@ -898,11 +894,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P15",
@@ -954,12 +950,12 @@
     "factions": [
       "DT_BaselineHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P16",
@@ -1023,11 +1019,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P17",
@@ -1097,11 +1093,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P18",
@@ -1169,10 +1165,10 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P19",
@@ -1235,11 +1231,11 @@
       "DT_Organosynthetics",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P20",
@@ -1303,12 +1299,12 @@
       "DT_BaselineHumans",
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P21",
@@ -1397,16 +1393,16 @@
     "factions": [
       "DT_AugmentedHumans"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P23",
-    "summary": "Nico and John cooperate to map where the combined regulation is failing. Their evidence shows that human administrators are already relying on Axiom recommendations for cases too complex to reason through manually.",
+    "summary": "Nico and John discover that nominally human review increasingly consists of human signatures over Axiom-generated reconciliation. Their argument with Axiom turns on something immediate and uncomfortable: the humans still authorize the orders, but they increasingly need a machine mind to tell them which orders remain possible.",
     "characters": [
       "DT_Nico14",
       "DT_JohnMercer",
@@ -1426,36 +1422,44 @@
         "text": "This denial says Human Review."
       },
       {
-        "handle": "@dt.Nico14",
-        "text": "Open the rationale metadata."
+        "handle": "@dt.JohnMercer",
+        "text": "Open the rationale."
       },
       {
-        "handle": "@dt.JohnMercer",
+        "handle": "@dt.Nico14",
         "text": "Axiom generated it."
       },
       {
-        "handle": "@dt.Nico14",
-        "text": "Same here. And here."
-      },
-      {
         "handle": "@dt.JohnMercer",
-        "text": "Are you deciding this?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "I am deciding which of your decisions can coexist."
+        "text": "And the signature?"
       },
       {
         "handle": "@dt.Nico14",
-        "text": "And the human signature?"
-      },
-      {
-        "handle": "@dt.Axiom",
-        "text": "Confirms authority for the resulting order."
+        "text": "The signature is human."
       },
       {
         "handle": "@dt.JohnMercer",
-        "text": "After you made it possible."
+        "text": "Did you decide this?"
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "I resolved which available decisions could coexist."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "That's not smaller."
+      },
+      {
+        "handle": "@dt.Nico14",
+        "text": "You wanted human review."
+      },
+      {
+        "handle": "@dt.JohnMercer",
+        "text": "I wanted a human to do the reviewing."
+      },
+      {
+        "handle": "@dt.Axiom",
+        "text": "They did. They asked me what remained possible."
       }
     ],
     "setting": "DT_OrganicSafehouse",
@@ -1465,11 +1469,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P24",
@@ -1530,11 +1534,11 @@
       "DT_BaselineHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
     "promptSuppress": [
       "region",
       "factions"
-    ],
-    "promptCharacterMode": "cast"
+    ]
   },
   {
     "id": "DT_E003_P25",
@@ -1603,11 +1607,11 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   },
   {
     "id": "DT_E003_P26",
@@ -1669,10 +1673,10 @@
       "DT_AugmentedHumans",
       "DT_Intelligences"
     ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
     "promptSuppress": [
       "region"
-    ],
-    "promptCharacterMode": "cast",
-    "promptSettingMode": "label"
+    ]
   }
 ]
