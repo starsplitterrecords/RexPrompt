@@ -4,7 +4,7 @@ Keeper stores visual reference images in RexPrompt; it does not grant creative a
 
 ## Inventory and authority
 
-- Canonical series IDs come directly from data/shows.json, never inferred by slugging a display title. All registered series can use Keeper, including those with no entries yet.
+- Canonical series IDs follow RexPrompt index.html seriesId(show): use an explicit seriesId when present; for legacy shows without one, derive the ID from the normalized seriesName (not individual issue titles). All registered series can use Keeper, including those with no entries yet.
 - The sole manifest is production/references/reference-keeper-manifest.json (schemaVersion 1). Each entry has a stable key, seriesId, seriesName, type, name, image, mimeType, sourceFilename and updatedAt.
 - Categories: character, setting, vehicle, item.
 - Files: production/references/SERIES_ID/keeper/CATEGORY/REFERENCE_NAME.png (or .jpg/.webp).

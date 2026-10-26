@@ -24,7 +24,9 @@ const shows = [
   {seriesId:'rex-fleet',seriesName:'Rex Fleet'},
   {seriesId:'rex-fleet-academy-anomalies',seriesName:'Rex Fleet Academy: Anomalies of Broken Space'},
   {seriesId:'division-threshold',seriesName:'Division Threshold'},
-  {seriesId:'stardust-station',seriesName:'Stardust Station'}
+  {seriesId:'stardust-station',seriesName:'Stardust Station'},
+  {id:'vikings-2026-s1-e01',seriesName:'Vikings 2026',name:'Vikings 2026 — Issue 1'},
+  {id:'backyard-rockets-s1',name:'Backyard Rockets — Season 1'}
 ];
 const rows = resolve(shows);
 const lookup = new Map(rows.map(x => [x.id,x.name]));
@@ -33,7 +35,9 @@ for (const [id,name] of [
   ['rex-fleet','Rex Fleet'],
   ['rex-fleet-academy-anomalies','Rex Fleet Academy: Anomalies of Broken Space'],
   ['division-threshold','Division Threshold'],
-  ['stardust-station','Stardust Station']
+  ['stardust-station','Stardust Station'],
+  ['vikings-2026','Vikings 2026'],
+  ['backyard-rockets','Backyard Rockets']
 ]) assert.equal(lookup.get(id),name,'Keeper series selection must preserve canonical id '+id);
 assert.equal(lookup.has('custom-registered'),false,'Unknown manifest-only series must not appear as upload target');
 assert.equal(lookup.has('echoes-of-a-forgotten-war'),false,'Display-name slug must not create a phantom Echoes series');

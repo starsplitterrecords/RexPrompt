@@ -17,9 +17,11 @@
     const out=new Map();
     if(!Array.isArray(shows))return [];
     for(const show of shows){
-      const id=show?.seriesId;
+      // Mirror index.html seriesName(show) and seriesId(show), including legacy
+      // show records without an explicit seriesId (e.g. Vikings and Backyard Rockets).
+      const name=String(show?.seriesName||show?.name||show?.id||'').split(' — ')[0].trim();
+      const id=show?.seriesId||name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
       if(!validSlug(id))continue;
-      const name=String(show.seriesName||show.name||id).split(' — ')[0].replace(/\s+Covers?$/i,'').trim()||id;
       if(!out.has(id))out.set(id,{id,name});
     }
     return [...out.values()].sort((a,b)=>a.name.localeCompare(b.name));
