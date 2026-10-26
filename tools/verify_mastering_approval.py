@@ -7,6 +7,8 @@ NOT a substitute for actual human visual, lettering or print review.
 import argparse
 import hashlib
 import json
+import math
+from PIL import Image
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -33,6 +35,9 @@ def verify(data,root=ROOT):
     if not config:errors.append("Publication profile unresolved")
     elif config.get("status")!="printer-approved":
         errors.append("Publication profile is a working target, not printer-approved")
+    geometry=config["trimInches"] if config else None
+    need_w=math.ceil((geometry["width"]+2*config["bleedInches"])*config["minNativeDpi"]) if geometry else 0
+    need_h=math.ceil((geometry["height"]+2*config["bleedInches"])*config["minNativeDpi"]) if geometry else 0
     expected=book["units"]
     records=data.get("pages",[])
     if [x.get("recipeId") for x in records]!=expected:
@@ -52,6 +57,14 @@ def verify(data,root=ROOT):
         hash=hashlib.sha256(path.read_bytes()).hexdigest()
         if item.get("sourceSha256")!=hash:
             errors.append(str(unit)+": source image changed since recorded review")
+        try:
+            with Image.open(path) as im:
+                if im.width<need_w or im.height<need_h:
+                    errors.append(str(unit)+f": actual pixels {im.width}x{im.height} below native print canvas {need_w}x{need_h}")
+                if not im.info.get("icc_profile"):
+                    errors.append(str(unit)+": approved source still lacks embedded ICC; establish an independently approved color-managed replacement master")
+        except Exception as exc:
+            errors.append(str(unit)+": source cannot be decoded: "+str(exc))
         if item.get("machineDeficiencies"):
             errors.append(str(unit)+": unresolved source or machine deficiencies: "+",".join(item["machineDeficiencies"]))
         for name in CHECKS:
@@ -60,6 +73,8 @@ def verify(data,root=ROOT):
                 errors.append(f"{unit}: {name} requires documented human pass")
         if item.get("proposedColorDecision") not in ("approved-unchanged","approved-graded"):
             errors.append(str(unit)+": grading intent decision not approved")
+        if item.get("proposedColorDecision")=="approved-graded" and not item.get("gradeProofSha256"):
+            errors.append(str(unit)+": graded proof source/approval checksum missing")
     for k in ISSUE_CHECKS:
         check=data.get("issueReviews",{}).get(k,{})
         if check.get("status")!="pass" or not check.get("reviewer") or not check.get("evidence"):
