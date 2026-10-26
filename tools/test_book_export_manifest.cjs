@@ -15,7 +15,8 @@ for(const [key,book] of Object.entries(inv.issues)){
  const row=coverage.entries.find(e=>e.selectorId===book.issueId);
  assert.ok(row&&row.status!=='uncurated','Curated inventory must have coverage '+key);
  assert.equal(row.expectedUnits,book.units.length);
- assert.equal(row.approvedImages,book.units.filter(id=>drafts[[book.seriesId,book.issueId,id].join('::')]?.status==='approved-production-draft').length);
+ assert.ok(row.approvedImages<=book.units.filter(id=>drafts[[book.seriesId,book.issueId,id].join('::')]?.status==='approved-production-draft').length,'Binary integrity cannot increase approved count');
+ assert.equal(row.approvedImages+row.missingImageCount,book.units.length,'Every required unit must be counted as passing or blocked');
  const story=book.units.filter(x=>/_P\d+$/.test(x));
  for(let i=1;i<story.length;i++)assert.equal(+story[i].match(/_P(\d+)$/)[1],+story[i-1].match(/_P(\d+)$/)[1]+1,key+' story order '+story[i]);
 }
