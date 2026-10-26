@@ -97,6 +97,14 @@ RexPrompt contains **126 show configurations** across page, scene and cover mode
 | rex-fleet-slip-knife | `rex-fleet-slip-knife-i01` |
 | rex-fleet-crimson-warden | `rex-fleet-crimson-warden-i01` |
 
+## Full accessible Library image search (completed)
+
+An image-filtered, recursive Library listing exhausted all **3,534** currently returned image records across 18 API pages (descending creation order, back to 2025-03-29). Relevant top-level Library folders included `/Visions/` **958**, `/IMG Rex Fleet/` **387**, `/IMG Vikings/` **319**, `/IMG Stardust Station/` **74**, `/IMG Echoes of a Forgotten War/` **50**, `/IMG Division Threshold/` **37**, `/IMG Low Tide Signal/` **24**, `/IMG Sunforge Outlaw/` **7**, `/IMG Backyard Rockets/` **6**, and `/IMG Azure Reach/` **2** image entries. Many others are outside IMG or stored with non-identifying filenames. These folder tallies are discovery counts, **not** approved-page or original-master counts.
+
+Targeted raw-byte availability is heterogeneous: some historically generated images materialized intact; five additional named Vikings Issue 2 P05 revisions were found but denied raw-byte materialization in this Project (`VIK_S1E02_P05_four_line_exchange_master.png`, `VIK_S1E02_P05_dialogue_edit_master.png`, `VIK_S1E02_P05_apartment_revised_candidate.png`, `VIK_S1E02_P05_remake_candidate.png`, `VIK_S1E02_P05_repaired_candidate.png`). Prior production notes identify P05 remake/apartment variants as unapproved and record outstanding panel-continuity repairs. **No P05 image is added to RexPrompt.**
+
+This exhaustive returned-image listing does **not** provide a machine-verifiable reverse mapping for descriptively named artifacts to all active page recipes or durable approval decisions from every original conversation. It also excludes non-image ZIP/PDF archives, some of which may have different access controls. For that reason no unsupported assertion of permanent inaccessibility is made.
+
 ## Boundaries and next recovery blockers
 
 1. **No new approvals have been fabricated**; a found image, successful generation, native-size page canvas, or user request to generate does not itself prove final approval.
