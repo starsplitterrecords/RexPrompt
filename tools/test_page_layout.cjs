@@ -34,7 +34,9 @@ function storeFor(sample){
 function sourcePage(sample){
   const page=load('data/shows/'+sample.series+'/'+sample.file).find(p=>p.id===sample.id);
   assert(page,'Missing source page '+sample.id);
-  return page;
+  // Fixtures begin from a script-only page even where production has an approved composition.
+  const scriptOnly={...page};delete scriptOnly.pageLayout;
+  return scriptOnly;
 }
 for(const [i,example] of fixtures.entries()){
   const base=sourcePage(example),store=storeFor(example);

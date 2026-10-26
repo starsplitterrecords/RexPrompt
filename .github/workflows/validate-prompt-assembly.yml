@@ -45,6 +45,7 @@ on:
       - 'tools/test_vikings_issue2_compositions.cjs'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_issue2_layout_rollout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
       - 'tools/test_sunforge_recipe_sanitation.cjs'
@@ -123,6 +124,7 @@ on:
       - 'tools/test_vikings_issue2_compositions.cjs'
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
+      - 'tools/test_issue2_layout_rollout.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
       - 'tools/test_sunforge_recipe_sanitation.cjs'
@@ -213,6 +215,7 @@ jobs:
           node tools/test_rex_fleet_issue05_density.cjs
           node tools/test_rex_fleet_recipe_scopes.cjs
           node tools/test_page_layout.cjs
+          node tools/test_issue2_layout_rollout.cjs
           node tools/test_stardust_visual_refs.cjs
           node tools/test_rex_academy_visual_scope.cjs
           node tools/test_rex_ship_visual_scope.cjs

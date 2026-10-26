@@ -102,7 +102,30 @@
     "status": "production-ready",
     "source": "Issue 2 full tonal redevelopment, October 2026.",
     "continuityFrom": "VIK_S1I01_P17",
-    "panelCount": 1
+    "panelCount": 1,
+    "pageLayout": {
+      "composition": "splash",
+      "primaryPanel": 1,
+      "visualPriority": "The steep climb makes 'successful placement' painfully premature.",
+      "readingFlow": "One continuous upward climb; seven editorial captions step up the stairwell in sequence.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full portrait stairwell with Carrie well ahead and the exhausted household scattered naturally across landings."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "plain vertical stairwell walls and open shaft above shoulders",
+          "purpose": "seven integrated captions, increasing upward toward the title"
+        }
+      ],
+      "lettering": {
+        "strategy": "Seven editorial captions, not balloons, arranged as legible steps that preserve the exact text and ascent."
+      }
+    }
   },
   {
     "id": "VIK_S1E02_P03",
@@ -273,7 +296,54 @@
       }
     ],
     "status": "production-ready",
-    "panelCount": 5
+    "panelCount": 5,
+    "pageLayout": {
+      "composition": "vertical",
+      "primaryPanel": 1,
+      "visualPriority": "Five flights of stairs should feel physically longer than Carrie's administrative explanation.",
+      "readingFlow": "Climb to the fifth landing, cross 5B's threshold, and discover the rear escape route on the last beat.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Tall opening shaft with Carrie above dispersed, worn-out kin; uninterrupted vertical depth."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Door and brass key at a compressed fifth-floor landing."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "large",
+          "placement": "Threshold view reveals the spare room and dispersed people without multiplying them."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Carrie/Bjorn exchange near the open door receives space for four lines."
+        },
+        {
+          "panel": 5,
+          "role": "detail",
+          "scale": "medium",
+          "placement": "Gunnar finds the rear fire escape as a clean last eyeline."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "bare upper stairwell wall beside the landing",
+          "purpose": "room for Carrie's doorway dialogue without burying the climb"
+        }
+      ],
+      "lettering": {
+        "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
+      }
+    }
   },
   {
     "id": "VIK_S1E02_P04",
@@ -417,7 +487,53 @@
       }
     ],
     "status": "production-ready",
-    "panelCount": 5
+    "panelCount": 5,
+    "pageLayout": {
+      "composition": "open",
+      "visualPriority": "The household physically occupies the empty room before the orientation ever begins.",
+      "readingFlow": "Begin wide to define 5B, then observe Carrie being ignored, table movement, exit testing, and her defeated folder.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "large",
+          "placement": "Single wide room geography: every household member has one practical station, with no redundant portrait lineup."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Carrie opens her folder into empty attention."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Table nearly blocks door; allocate space for five lines of correction."
+        },
+        {
+          "panel": 4,
+          "role": "detail",
+          "scale": "medium",
+          "placement": "Gunnar's window and Bjorn's route-check remain recognizably within the same room."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Return wide to show the room functioning before Carrie's talk ends."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "undecorated bare wall near the now-lowered folder",
+          "purpose": "keep the joke visual instead of filling the room with captions"
+        }
+      ],
+      "lettering": {
+        "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
+      }
+    }
   },
   {
     "id": "VIK_S1E02_P05",
