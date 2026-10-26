@@ -1,0 +1,40 @@
+name: Audit all-series production coverage
+on:
+  pull_request:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/book-manifests.json'
+      - 'production/released-links.json'
+      - 'tools/audit_all_series_production.cjs'
+      - '.github/workflows/audit-all-series-production.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/book-manifests.json'
+      - 'production/released-links.json'
+      - 'tools/audit_all_series_production.cjs'
+      - '.github/workflows/audit-all-series-production.yml'
+  workflow_dispatch:
+jobs:
+  all-series:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check tools/audit_all_series_production.cjs
+      - run: node tools/audit_all_series_production.cjs --out all-series-production-inventory.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: all-series-production-inventory
+          path: all-series-production-inventory.json
+          if-no-files-found: warn
