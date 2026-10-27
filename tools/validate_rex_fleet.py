@@ -271,9 +271,53 @@ def page_blob(issue, page_id):
         raise SystemExit(f"Required continuity page missing: {page_id}")
     return json.dumps(page, ensure_ascii=False)
 
-bridge = page_blob(4, "RF_I04_P04")
-if not any(phrase in bridge.lower() for phrase in ("temporary field authority", "emergency field commission")) or "tribunal" not in bridge.lower():
-    raise SystemExit("Venn Issue 3→4 command-status bridge regressed")
+# Issue 3 transfers Thunderbreak to Deka; Issue 4 must not silently restore Venn
+# or grant non-Fleet captains authority over the cruiser's command.
+bridge = json.loads(page_blob(4, "RF_I04_P04"))
+if "tribunal" not in json.dumps(bridge).lower():
+    raise SystemExit("Issue 3→4 tribunal continuity missing")
+if "Lieutenant Erin Deka" not in [c.get("name") for c in bridge.get("charactersInline", [])]:
+    raise SystemExit("Issue 4 bridge must be commanded by Erin Deka")
+for page_id in ("RF_I04_P04", "RF_I04_P05", "RF_I04_P12", "RF_I04_P14", "RF_I04_P19", "RF_I04_P21"):
+    page = json.loads(page_blob(4, page_id))
+    cast = {c.get("name") for c in page.get("charactersInline", [])}
+    if "Lieutenant Erin Deka" not in cast or "Commodore Ella Venn" in cast:
+        raise SystemExit(f"{page_id}: Thunderbreak command not assigned to Deka")
+    if any(d.get("speaker") == "Venn" for d in page.get("dialogueInline", [])):
+        raise SystemExit(f"{page_id}: relieved Venn still giving Issue 4 orders")
+for page_id in ("RF_I04_P04", "RF_I04_P05"):
+    page = json.loads(page_blob(4, page_id))
+    all_text = " ".join(d.get("text", "") for d in page.get("dialogueInline", []))
+    if "Naomi and Tess know this ship" in all_text or "refused a replacement captain" in all_text:
+        raise SystemExit(f"{page_id}: outsiders improperly select Thunderbreak commander")
+discipline = json.loads(page_blob(4, "RF_I04_P22"))
+if not any("Deka" in d.get("text", "") for d in discipline.get("dialogueInline", [])):
+    raise SystemExit("Issue 4 after-action record omits Deka's command responsibility")
+
+# Carry the same authenticated Fleet chain of command through the relief convoys.
+for issue, page_ids in (
+    (5, ("RF_I05_P13",)),
+    (6, ("RF_I06_P04", "RF_I06_P09", "RF_I06_P15")),
+):
+    for page_id in page_ids:
+        page = json.loads(page_blob(issue, page_id))
+        cast = {c.get("name") for c in page.get("charactersInline", [])}
+        if "Lieutenant Erin Deka" not in cast or "Commodore Ella Venn" in cast:
+            raise SystemExit(f"{page_id}: Deka's acting command must continue")
+        if any(d.get("speaker") == "Venn" for d in page.get("dialogueInline", [])):
+            raise SystemExit(f"{page_id}: relieved Venn is still directing Thunderbreak")
+for issue, page_id in ((5, "RF_I05_P18"), (6, "RF_I06_P09")):
+    page = json.loads(page_blob(issue, page_id))
+    if "deka" not in json.dumps(page).lower():
+        raise SystemExit(f"{page_id}: Deka-led shield coordination missing")
+
+# Non-diegetic material must agree with the actual command scenes.
+for issue in (4, 5, 6):
+    cast_page = json.loads(page_blob(issue, f"RF_I0{issue}_CAST"))
+    labels = [d.get("text") for d in cast_page.get("dialogueInline", [])]
+    if "Lieutenant Erin Deka" not in labels or "Commodore Ella Venn" in labels:
+        raise SystemExit(f"Issue {issue} cast directory contradicts current Fleet command")
+
 
 for issue, page_id in ((5, "RF_I05_P12"), (9, "RF_I09_P08"), (12, "RF_I12_P17")):
     if "tali" not in page_blob(issue, page_id).lower():
