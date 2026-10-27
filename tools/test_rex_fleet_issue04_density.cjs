@@ -41,7 +41,7 @@ for(let i=0;i<pages.length;i++){
  let prior=0;
  for(const d of p.dialogueInline||[]){
   assert(d.text?.trim()&&d.handle&&d.speaker,'Incomplete spoken line '+p.id);
-  const m=String(d.subtext).match(/^Panel (\\d+)$/);
+  const m=String(d.subtext).match(/^Panel (\d+)$/);
   assert(m,'Explicit speaker panel assignment required '+p.id);
   const n=Number(m[1]);
   assert(n>=1&&n<=p.panelPlan.length&&n>=prior,'Balloon ownership out of order '+p.id);
