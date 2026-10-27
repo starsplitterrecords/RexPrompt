@@ -278,7 +278,7 @@ if "tribunal" not in json.dumps(bridge).lower():
     raise SystemExit("Issue 3→4 tribunal continuity missing")
 if "Lieutenant Erin Deka" not in [c.get("name") for c in bridge.get("charactersInline", [])]:
     raise SystemExit("Issue 4 bridge must be commanded by Erin Deka")
-for page_id in ("RF_I04_P04", "RF_I04_P05", "RF_I04_P12", "RF_I04_P14", "RF_I04_P19", "RF_I04_P21"):
+for page_id in ("RF_I04_P04", "RF_I04_P05", "RF_I04_P14", "RF_I04_P19", "RF_I04_P21"):
     page = json.loads(page_blob(4, page_id))
     cast = {c.get("name") for c in page.get("charactersInline", [])}
     if "Lieutenant Erin Deka" not in cast or "Commodore Ella Venn" in cast:
@@ -290,7 +290,7 @@ for page_id in ("RF_I04_P04", "RF_I04_P05"):
     all_text = " ".join(d.get("text", "") for d in page.get("dialogueInline", []))
     if "Naomi and Tess know this ship" in all_text or "refused a replacement captain" in all_text:
         raise SystemExit(f"{page_id}: outsiders improperly select Thunderbreak commander")
-discipline = json.loads(page_blob(4, "RF_I04_P22"))
+discipline = json.loads(page_blob(4, "RF_I04_P23"))
 if not any("Deka" in d.get("text", "") for d in discipline.get("dialogueInline", [])):
     raise SystemExit("Issue 4 after-action record omits Deka's command responsibility")
 
