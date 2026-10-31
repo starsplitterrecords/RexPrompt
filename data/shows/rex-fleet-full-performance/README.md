@@ -3,14 +3,14 @@
 Parallel RexPrompt series: `rex-fleet-full-performance`. It never overwrites the canonical `rex-fleet` source.
 
 ## Status
-Working creative adaptation of the supplied full-series draft package v1. **Not approved story, lettering, art, or publication.** Publication issue boundaries remain provisional; current issues map 1:1 to source-script issues only for comparison.
+Working creative adaptation of the Season One Dramatic Rewrite v4 Library checkpoint. **Not approved story, lettering, art, or publication.** Publication issue boundaries remain provisional; current issues map 1:1 to source-script issues only for comparison.
 
 ## Writing and pagination rules
-- Script source: `source_drafts/Rex_Fleet_Expanded_Issue_NN_Script_v1.md`, unchanged.
+- Script source: `source_drafts/Rex_Fleet_Expanded_Issue_NN_Script_vX.md`, using versions listed in `Rex_Fleet_Full_Series_Manifest_v4.json`, unchanged.
 - Paginated drafts: `pages_iNN.json`; page IDs `RFFP_INN_PNNN` are unique to this edition.
-- All source dialogue is retained verbatim in source order. No additional character dialogue is invented.
+- All source dialogue is retained verbatim, preserving order within each scene. In Issue 4 the explicitly proposed inquiry has been moved ahead of the coda after the evacuation, as the source itself requests. No additional character dialogue is invented.
 - Every scene starts with a **location and/or time** CAPTION from the scene’s stated setting, or a broad inherited scene area when unspecified. Captions are editorial additions, not dialogue from the source. Check ambiguous location captions before lettering approval.
-- Each panel plan contains only 1–3 brief action/acting cues; canonical artwork and actual references determine ship/faction/character design. Within a scene, immediately prior approved panels/pages control local continuity. Do not use an unapproved generation as visual canon.
+- Each panel plan contains only 1–3 brief action/acting cues, with complete prose actions retained separately in `sourceActionBeats` for editorial audit; canonical artwork and actual references determine ship/faction/character design. Within a scene, immediately prior approved panels/pages control local continuity. Do not use an unapproved generation as visual canon.
 - Pagination is an editorial working pass, generally under ~116 spoken words and nine balloons per page, preserving dialogue/action order. Dramatic beats and visually silent panels may require further manual regrouping.
 - Script sections may intercut locations; the current scene-start caption is not a guarantee every sub-location is yet captioned. Add explicit transition captions during visual-story audit without inventing locations.
 - Original released Issues 1–3 stay canon in the **original** series. This alternative can develop expanded versions, but has no authority to retcon the published work.
