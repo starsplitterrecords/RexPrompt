@@ -27,3 +27,16 @@ Working creative adaptation of the Season One Dramatic Rewrite v7 Library checkp
 7. Approve exact script and references before art production.
 
 **This is a first pass, not final page production recipes.**
+
+## Writing v8 editorial integration (developmental)
+
+The **v7 narrative remains byte-for-byte unchanged**: 362 pages / 122 scenes, including all nine Venn scenes. V8 adds only editorial prose and source-linked original editorial units.
+
+- **New opening prose**: 27 draft editorial pages. Issue 1's spoiler-free 734-word introduction uses five pages; Issues 2–12 use two each. Prose paragraphs and exact spelling are preserved in order (no summaries or inserted captions).
+- **Original carry-forward**: all 12 original cast directories, 12 original editorial end-matter entries, and 10 original NEXT ISSUE teasers. They are cloned with separate RFFP IDs but their dialogue/display text is unchanged. The 12 end-matter records were cross-checked against the v8 verbatim JSON.
+- **Assembler ordering** per issue: v8 opening prose → original cast directory (review pending) → v7 story pages → original end matter → original teaser (where applicable).
+- **423 development units** total (362 story + 27 new prose + 34 source-linked editorial). The new units are not approved artwork, lettering, character-directory revisions or final publishing pagination.
+- V8 source documents and editorial notes are archived under `source_drafts/writing_v8/` without changing the original v7 scripts.
+- Known editorial questions (Issue 4 end-matter teaser chronology, Issue 12 twelve-issue reference, Issue 4–6 cast completeness) remain open. No silent copy changes.
+
+Production gate: verify exact lettering and layout before image generation; use established Rex Fleet references. No unscripted readable text.
