@@ -33,7 +33,7 @@ jobs:
                curl -fsSL --max-time 15 "$BASE/production/portfolio-source-quality.json" -o /tmp/raster.json &&
                curl -fsSL --max-time 15 "$BASE/data/shows.json" -o /tmp/shows.json &&
                curl -fsSL --max-time 15 "$BASE/production/drafts/manifest.json" -o /tmp/drafts.json; then
-              if grep -q 'Cross-series accounting' /tmp/dashboard.html &&
+              if grep -q '<h1>Visions production operations</h1>' /tmp/dashboard.html &&
                  grep -q 'sourceQuality' /tmp/dashboard-core.js &&
                  node -e 'const fs=require("fs"),p=JSON.parse(fs.readFileSync("/tmp/portfolio.json")),q=JSON.parse(fs.readFileSync("/tmp/raster.json"));const s=JSON.parse(fs.readFileSync("/tmp/shows.json")),d=JSON.parse(fs.readFileSync("/tmp/drafts.json")),n=Object.keys(d.drafts).length;if(p.counts.registeredConfigurations!==s.length||p.configurations.length!==s.length||p.counts.approvedDraftRecords!==n||q.examined!==n||q.expectedRecords!==n)process.exit(1)'; then
                 echo 'Deployed dashboard and live-derived portfolio/raster counts verified'
