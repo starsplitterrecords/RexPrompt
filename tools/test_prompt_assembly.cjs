@@ -33,7 +33,7 @@ function linesKept(recipe,text){
 }
 function panelsKept(recipe,text){
   for(const panel of recipe.panelPlan||[]){
-    const line=typeof panel==='string'?panel:panel.text||panel.name||panel.summary||JSON.stringify(panel);
+    const line=typeof panel==='string'?panel:panel.action||panel.text||panel.name||panel.summary||JSON.stringify(panel);
     assert(text.includes(line),'Dropped panel instruction');
   }
 }
