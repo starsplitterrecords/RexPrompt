@@ -403,6 +403,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   }else if(!show.omitCameoHandles)cameos.forEach(h=>out.push(h));
   out.push("\n=== "+(show.unitLabel||"SCENE")+": "+key+" ===");
   if(include("summary")&&!show.omitSummary&&s.summary)out.push(s.summary.trim());
+  // A scene's source-locked song title is a cue, not visible on-page lettering.
+  if(typeof s.songTitle==="string"&&s.songTitle.trim())
+    out.push("\n[SONG CUE]\nTitle: "+s.songTitle.trim());
   if(include("production")&&show.generationLine)out.push(show.generationLine);
   if(include("setting")){
     if(s.settingText){
@@ -415,6 +418,18 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
       const e=targetStore["settings.json"]?.[s.setting];
       if(e)out.push("\n[SETTING]\n"+(settingMode==="label"?(e.name||s.setting):formatEntry(e)));
     }
+  }
+  // Reused/relettered artwork and explicitly new artwork are different operations.
+  // Keep the recorded mode and historical source locator; do not infer a new panel grid.
+  if(s.assetReuse&&typeof s.assetReuse==="object"&&!Array.isArray(s.assetReuse)){
+    const reuse=s.assetReuse,details=[];
+    if(typeof reuse.mode==="string"&&reuse.mode.trim())details.push("Action: "+reuse.mode.trim());
+    if(reuse.sourceIssue!==undefined||reuse.sourcePage!==undefined){
+      const source=[reuse.sourceIssue!==undefined?"Issue "+reuse.sourceIssue:"",reuse.sourcePage!==undefined?"page "+reuse.sourcePage:""].filter(Boolean);
+      if(source.length)details.push("Source artwork: "+source.join(", "));
+    }
+    if(typeof reuse.notes==="string"&&reuse.notes.trim())details.push("Notes: "+reuse.notes.trim());
+    if(details.length)out.push("\n[ARTWORK PRODUCTION]\n"+details.join("\n"));
   }
   if(include("region")){
     if(s.regionText)out.push("\n[REGION]\n"+s.regionText);
@@ -435,6 +450,11 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     if(entries.length)out.push(characterMode==="cast"
       ?"\n[CAST]\n"+entries.map(e=>e.name).filter(Boolean).join(", ")
       :"\n[CHARACTERS]\n"+entries.map(e=>e.full).join("\n"));
+  }
+  // Relationship beats are authored source direction, not inferred dialogue or new staging.
+  if(include("direction")&&Array.isArray(s.relationshipFocus)){
+    const focus=s.relationshipFocus.filter(x=>typeof x==="string"&&x.trim());
+    if(focus.length)out.push("\n[RELATIONSHIP FOCUS]\n"+focus.map(x=>"- "+x.trim()).join("\n"));
   }
   if(s.pageLayout!==undefined)out.push("\n"+formatPageLayout(s));
   if(s.panelPlan?.length){
