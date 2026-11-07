@@ -13,7 +13,7 @@ const CONFIG={
   acceptedTypes:new Set(['image/jpeg','image/png','image/webp'])
 };
 
-const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false,pendingFile:null};
+const state={draftManifest:{schemaVersion:1,drafts:{}},releasedLinks:{schemaVersion:1,links:{}},sources:null,visionsCache:new Map(),masterComplianceCache:new Map(),ui:null,refreshNonce:0,pendingUpload:false,pendingFile:null,sourceQuality:{images:{}},pendingSourceAudit:new Set()};
 
 function injectStyles(){
   const style=document.createElement('style');
@@ -38,7 +38,13 @@ function injectStyles(){
   .visual-remember{display:flex!important;align-items:center;gap:7px;font-size:.83rem;color:var(--fg)!important;margin:8px 0}.visual-remember input{margin:0;width:auto;flex:none}.visual-remember-hint{font-size:.75rem;color:var(--muted);line-height:1.35;margin:4px 0 8px}.visual-token-panel{margin-top:10px;padding:10px;border:1px solid var(--border);border-radius:5px;background:var(--surface-soft)}.visual-token-panel label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}.visual-token-row{display:flex;gap:8px;flex-wrap:wrap}.visual-token-row input{flex:1 1 260px;min-width:0;padding:9px;background:var(--control-bg);color:var(--control-fg);border:1px solid var(--border);border-radius:4px}.visual-token-row button{font-size:.82rem;padding:8px 10px;margin:0}
   .visual-canon-list{display:grid;gap:10px}.visual-canon-item .visual-meta{margin-top:5px}
   .visual-state-note{margin-top:10px;font-size:.82rem;color:var(--muted)}
-  .issue-image-coverage{margin-left:8px;font-size:.72rem;font-weight:700;white-space:nowrap;color:var(--fg)}
+  .issue-image-coverage{margin-left:8px;font-size:.72rem;font-weight:700;white-space:normal;color:var(--fg)}
+  .issue-quality-panel{margin-top:10px;padding:10px 12px;border:1px solid var(--border);border-radius:7px;background:var(--surface-soft);font-size:.83rem;line-height:1.5}
+  .issue-quality-panel strong{font-weight:750}.issue-quality-panel .qc-good{color:#1f8f4d}.issue-quality-panel .qc-attention{color:#b9781e}
+  .issue-quality-panel .qc-details{margin-top:6px}.issue-quality-panel summary{cursor:pointer;font-weight:650}
+  .issue-quality-panel ul{margin:7px 0 0;padding-left:20px;max-height:240px;overflow:auto}
+  .issue-quality-panel li{margin:4px 0;overflow-wrap:anywhere}
+  .issue-quality-panel small{display:block;color:var(--muted);margin-top:4px}
   @media(max-width:850px){.visual-grid{grid-template-columns:1fr}.visual-image-wrap img{max-height:none}}
   `;
   document.head.appendChild(style);
@@ -85,12 +91,7 @@ function withCacheBust(path,stamp){const sep=path.includes('?')?'&':'?';return p
 function draftImageUrl(entry){if(entry.commitSha)return 'https://raw.githubusercontent.com/'+CONFIG.owner+'/'+CONFIG.repo+'/'+entry.commitSha+'/'+entry.image;return withCacheBust(entry.image,entry.updatedAt)}
 
 function masterStandard(sel){
-  // Vikings explicitly specifies the interior geometry for its covers.
-  if(sel.assetKind==='cover'){
-    if(sel.seriesId==='vikings-2026')return {kind:'cover',width:2400,height:3840,ratio:'5:8',note:'Vikings 2026 series cover specification'};
-    return {kind:'cover',width:1800,height:2700,ratio:'2:3',note:'Visions issue cover specification'};
-  }
-  return {kind:'interior',width:2400,height:3840,ratio:'5:8',note:'Interior comic master specification'};
+  return window.RexProductionCoverage.masterStandard(sel.seriesId,sel.assetKind);
 }
 function inspectMasterPng(bytes,standard){
   const reasons=[];
@@ -282,47 +283,91 @@ function automaticPageCanon(sel,pageSet){
   return [{url:pageSet.siteBase+page.image,label:'Released canon · '+sel.issueLabel+' · Page '+page.pageNumber+(page.releaseDate?' · '+page.releaseDate:'')}];
 }
 
-function decorateSceneOptions(sel,canonMode=false){
+function optionRecipeId(option){
+  const base=option.dataset.recipeId||option.dataset.visualBaseLabel||option.textContent||'';
+  return base.split(' - ')[0].replace(/\\s+\\[(?:DRAFT|CANON|SIZE OFF|SIZE \\?)\\]/g,'').trim();
+}
+function issueProductionAudit(sel,pageSet){
+  const options=[...document.getElementById('sceneSel').options];
+  const facts={...(state.sourceQuality?.images||{})};
+  // An upload can update the binary before the repository's read-only raster snapshot refreshes.
+  for(const key of state.pendingSourceAudit)delete facts[key];
+  return window.RexProductionCoverage.audit({
+    seriesId:sel.seriesId,issueId:sel.issueId,
+    units:options.map(option=>{
+      const recipeId=optionRecipeId(option);
+      return {recipeId,assetKind:option.dataset.assetKind||undefined,
+        released:explicitCanon({...sel,recipeId}).length>0};
+    }),
+    drafts:state.draftManifest?.drafts||{},facts,
+    publishedAll:Boolean(pageSet&&pageSet.pages?.length===options.length)
+  });
+}
+function decorateSceneOptions(sel,canonMode=false,audit=null){
   const sceneSel=document.getElementById('sceneSel');if(!sceneSel)return;
   const issueNo=parseIssueNumber(sel.issueLabel),autoCanon=canonMode&&sel.unitIsPage&&issueNo;
+  const byId=new Map((audit?.findings||[]).map(item=>[item.recipeId,item]));
   for(const option of sceneSel.options){
     if(!option.dataset.visualBaseLabel)option.dataset.visualBaseLabel=option.textContent||'';
-    const recipeId=(option.dataset.recipeId||option.dataset.visualBaseLabel.split(' - ')[0]).trim();option.dataset.recipeId=recipeId;
-    const probe={...sel,recipeId,recipeIndex:Number(option.value)};const key=visualKey(probe);
-    const hasDraft=Boolean(state.draftManifest?.drafts?.[key]);
+    const recipeId=optionRecipeId(option);option.dataset.recipeId=recipeId;
+    const probe={...sel,recipeId};const key=visualKey(probe);
+    const hasDraft=Boolean(state.draftManifest?.drafts?.[key]?.status==='approved-production-draft');
     const hasExplicit=Boolean(state.releasedLinks?.links?.[key]);
     const tags=[];if(hasDraft)tags.push('[DRAFT]');if(hasExplicit||autoCanon)tags.push('[CANON]');
+    const item=byId.get(recipeId);
+    if(item?.sizeState==='wrong')tags.push('[SIZE OFF]');
+    else if(item?.sizeState==='unverified'&&hasDraft)tags.push('[SIZE ?]');
+    else if(item?.sizeState==='missing')tags.push('[NO IMAGE]');
     option.textContent=option.dataset.visualBaseLabel+(tags.length?' '+tags.join(' '):'');
   }
 }
-
-function updateIssueImageCoverage(sel,pageSet){
-  // An image for every current page is a coverage milestone, not a quality or release approval.
+function updateIssueImageCoverage(sel,audit){
   const heading=document.querySelector('label[for="issueSel"] > span');
-  const sceneSel=document.getElementById('sceneSel');
-  if(!heading||!sceneSel)return;
+  const dock=document.getElementById('productionDock');
+  if(!heading||!dock||!audit.total)return;
   let indicator=document.getElementById('issueImageCoverage');
   if(!indicator){
-    indicator=document.createElement('span');
-    indicator.id='issueImageCoverage';
-    indicator.className='issue-image-coverage';
-    indicator.style.display='none';
-    heading.appendChild(indicator);
+    indicator=document.createElement('span');indicator.id='issueImageCoverage';
+    indicator.className='issue-image-coverage';heading.appendChild(indicator);
   }
-  const options=[...sceneSel.options];
-  const fullPublishedIssue=Boolean(pageSet&&pageSet.pages?.length===options.length);
-  const covered=options.filter(option=>{
-    const label=option.dataset.recipeId||option.dataset.visualBaseLabel||option.textContent||'';
-    const recipeId=label.split(' - ')[0].replace(/\s+\[(?:DRAFT|CANON)\]/g,'').trim();
-    const key=visualKey({...sel,recipeId});
-    const draft=state.draftManifest?.drafts?.[key];
-    return (draft?.status==='approved-production-draft'&&Boolean(draft.image))||
-      explicitCanon({...sel,recipeId}).length>0||fullPublishedIssue;
-  }).length;
-  const complete=sel.unitIsPage&&options.length>0&&covered===options.length;
-  indicator.textContent=complete?'✓ All images':'';
-  indicator.title=complete?'Images recorded for all '+covered+' pages (approved drafts or released canon). This does not mean the issue passed review or is released.':'';
-  indicator.style.display=complete?'inline':'none';
+  indicator.textContent='Images '+audit.covered+'/'+audit.total+' · Sizes '+audit.sizeCorrect+'/'+audit.covered;
+  indicator.title='Size checks use original indexed image dimensions against RexPrompt\'s existing master geometry. Missing or unverified images do not pass.';
+  indicator.style.display='inline';
+  let panel=document.getElementById('issueQualityPanel');
+  if(!panel){
+    panel=document.createElement('section');panel.id='issueQualityPanel';
+    panel.className='issue-quality-panel';panel.setAttribute('aria-label','Issue production quality');
+    const actions=dock.querySelector('.production-actions');
+    if(actions)actions.insertAdjacentElement('afterend',panel);else dock.appendChild(panel);
+  }
+  const coverage=document.createElement('div');
+  coverage.appendChild(document.createTextNode('Image coverage: '));
+  const imageCount=document.createElement('strong');imageCount.className=audit.allImages?'qc-good':'qc-attention';
+  imageCount.textContent=audit.covered+' / '+audit.total+(audit.allImages?' complete':' indexed or released');
+  coverage.appendChild(imageCount);
+  coverage.appendChild(document.createTextNode(' · Required dimensions: '));
+  const sizeCount=document.createElement('strong');sizeCount.className=audit.allSizesCorrect?'qc-good':'qc-attention';
+  sizeCount.textContent=audit.sizeCorrect+' / '+audit.total+(audit.allSizesCorrect?' correct':' verified correct');
+  coverage.appendChild(sizeCount);
+  const counts=document.createElement('div');
+  counts.textContent=audit.missing+' not indexed · '+audit.sizeWrong+' wrong size · '+audit.sizeUnverified+' size unverified';
+  const details=document.createElement('details');details.className='qc-details';
+  const gaps=audit.findings.filter(item=>item.sizeState!=='correct');
+  const summary=document.createElement('summary');summary.textContent=gaps.length?'Inspect '+gaps.length+' production gap(s)':'All indexed image dimensions match the required size';
+  details.appendChild(summary);
+  if(gaps.length){
+    const list=document.createElement('ul');
+    for(const item of gaps){
+      const li=document.createElement('li');
+      const required=item.required.width+'×'+item.required.height+' px';
+      li.textContent=item.recipeId+' — '+(item.sizeState==='missing'?'No approved draft or mapped release indexed':item.sizeState==='unverified'?'Size unverified (required '+required+')':'Wrong size: '+item.actual.width+'×'+item.actual.height+' px; required '+required);
+      list.appendChild(li);
+    }
+    details.appendChild(list);
+  }
+  const note=document.createElement('small');
+  note.textContent='An unindexed image may exist elsewhere. Size uses original raster observations, not print-DPI, lettering, artistic review, or mastering approval. Released canon without source-size evidence remains unverified.';
+  panel.replaceChildren(coverage,counts,details,note);
 }
 
 async function refreshVisuals(preserveUploadStatus=false){
@@ -330,8 +375,9 @@ async function refreshVisuals(preserveUploadStatus=false){
   const nonce=++state.refreshNonce;if(!preserveUploadStatus)ui.uploadStatus.textContent='Paste an image with Ctrl+V / Cmd+V, or use Upload Image.';
   const entry=state.draftManifest?.drafts?.[visualKey(sel)]||null;setDraftBody(sel,entry);
   const explicit=explicitCanon(sel),pageSet=await automaticPageSet(sel),canon=explicit.length?explicit:automaticPageCanon(sel,pageSet);if(nonce!==state.refreshNonce)return;renderCanonItems(sel,canon);
-  decorateSceneOptions(sel,Boolean(pageSet));
-  updateIssueImageCoverage(sel,pageSet);
+  const audit=issueProductionAudit(sel,pageSet);
+  decorateSceneOptions(sel,Boolean(pageSet),audit);
+  updateIssueImageCoverage(sel,audit);
   const bits=[];if(entry)bits.push('approved draft stored');if(canon.length)bits.push('released canon available');ui.stateNote.textContent=bits.length?('Production state: '+bits.join(' · ')):'Production state: no approved draft or mapped released canon for this unit.';
 }
 
@@ -402,6 +448,7 @@ async function uploadApprovedDraft(file){
       })
     );
     state.draftManifest=result.manifest;
+    state.pendingSourceAudit.add(key);
     ui.uploadStatus.textContent='Approved draft stored. Git commit '+result.sha.slice(0,7)+'.';
     await refreshVisuals(true);
   }catch(err){
@@ -413,14 +460,16 @@ async function uploadApprovedDraft(file){
 }
 
 async function loadState(){
-  const [drafts,released,sources]=await Promise.all([
+  const [drafts,released,sources,sourceQuality]=await Promise.all([
     loadOptionalJson(CONFIG.draftManifestPath,{schemaVersion:1,drafts:{}}),
     loadOptionalJson(CONFIG.releasedLinksPath,{schemaVersion:1,links:{}}),
-    loadOptionalJson(CONFIG.visualSourcesPath,{schemaVersion:1,series:{}})
+    loadOptionalJson(CONFIG.visualSourcesPath,{schemaVersion:1,series:{}}),
+    loadOptionalJson('production/portfolio-source-quality.json',{images:{}})
   ]);
   state.draftManifest={schemaVersion:1,drafts:{},...drafts,drafts:drafts.drafts||{}};
   state.releasedLinks={schemaVersion:1,links:{},...released,links:released.links||{}};
   state.sources=sources||{schemaVersion:1,series:{}};
+  state.sourceQuality=sourceQuality||{images:{}};
 }
 function bindRefreshEvents(){
   ['showSel','issueSel'].forEach(id=>document.getElementById(id)?.addEventListener('change',()=>{const indicator=document.getElementById('issueImageCoverage');if(indicator)indicator.style.display='none'}));
