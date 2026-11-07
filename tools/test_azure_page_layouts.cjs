@@ -11,8 +11,10 @@ for(const s of ['characters','dialogue','settings','regions','factions','directi
 let layouts=0;
 for(let i=1;i<=6;i++){
  const show=shows.find(s=>s.id===(i===1?'azure-reach-s1':'azure-reach-s1-e0'+i));assert(show,'Missing issue '+i);
+ if(i>1)assert(!show.sceneOverlays.some(x=>/editorial\/page_layouts_e0/.test(x.file)),'Normalized layout still registered as overlay '+i);
  const pages=show.sceneOverlays.filter(x=>/^encoded\/pages_e0/.test(x.file)).flatMap(x=>JSON.parse(zlib.gunzipSync(Buffer.from(read(base+x.file).trim(),'base64')).toString('utf8')));
  assert.equal(pages.length,22,'Page count '+i);
+ if(i===1)assert(pages.every(x=>!x.pageLayout),'Published Issue 1 may not acquire an unapproved layout');
  for(const [index,page] of pages.entries()){
   if(!page.pageLayout)continue;
   validate(page);layouts++;
@@ -22,4 +24,5 @@ for(let i=1;i<=6;i++){
   for(const d of page.dialogueInline||[])assert(output.includes(d.text),'Dialogue omitted '+page.id);
  }
 }
+assert.equal(layouts,101,'Existing page composition coverage changed');
 console.log('PASS Azure Reach: '+layouts+' normalized page compositions assembled and matched to authored panel plans');
