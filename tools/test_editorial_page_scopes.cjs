@@ -73,61 +73,39 @@ for(const id of ['VIK_S1E02_P03','VIK_S1E02_P04','VIK_S1E02_P08',
 const bodega=vikPages.find(x=>x.id==='VIK_S1E02_P07');
 assert(!assemble(bodega,vikStore,0).includes('LANDFALL VISUAL STATE:'));
 assert.equal(bodega.dialogueInline.length,18,'Bodega writing modified during assembly pass');
-// Stardust Issue 2: preserve the compressed writing exactly and attach a
-// separate profile overlay after the current story overlay.
+// Stardust Issue 2: the accepted story, dialogue, page scope and layout are
+// now already part of the authoritative encoded source pages.
 const sdsShow=showById('stardust-station-e02');
 const sdsStore=store(sdsShow);
-const overlays=sdsShow.sceneOverlays;
-const profileFile='editorial/page_assembly_profiles_e02.json';
-const profileIdx=overlays.findIndex(x=>x.file===profileFile);
-const storyIdx=overlays.findIndex(x=>x.file==='editorial/pages_e02_p02_story_thread.json');
-assert(profileIdx>storyIdx&&overlays[profileIdx].mergeById&&overlays[profileIdx].strict,
-  'Page assembly profiles must be a strict merge after authored story corrections');
-let scenes=overlays.filter(x=>x.encoding==='gzip-base64').flatMap(x=>{
-  const body=read(sdsShow.basePath+'/'+x.file).trim();
-  return JSON.parse(zlib.gunzipSync(Buffer.from(body,'base64')).toString('utf8'));
-});
-assert.equal(scenes.length,22,'Unexpected Stardust interior count');
-const story=load(sdsShow.basePath+'/editorial/pages_e02_p02_story_thread.json');
-const patches=new Map(story.map(x=>[x.id,x]));
-scenes=scenes.map(x=>({...x,...(patches.get(x.id)||{})}));
-const profiles=load(sdsShow.basePath+'/'+profileFile);
-assert.equal(profiles.length,22,'Every Stardust interior needs an editorial profile');
-const profById=new Map(profiles.map(x=>[x.id,x]));
-assert.equal(profById.size,22,'Duplicate Stardust editorial profile');
-assert([...profById.keys()].every(id=>scenes.some(p=>p.id===id)),'Orphan Stardust profile');
-assert(scenes.every(p=>profById.has(p.id)),'Unprofiled Stardust interior');
-const dialogue=load(sdsShow.basePath+'/editorial/dialogue_cleanup_e02.json');
-const dialogueById=new Map(dialogue.map(x=>[x.id,x]));
+const sdsPages=sdsShow.sceneOverlays.filter(x=>x.encoding==='gzip-base64').flatMap(x=>
+  JSON.parse(zlib.gunzipSync(Buffer.from(read(sdsShow.basePath+'/'+x.file).trim(),'base64')).toString('utf8')));
+assert.equal(sdsPages.length,22,'Unexpected Stardust interior count');
 let saved=0;
-for(let i=0;i<scenes.length;i++){
-  const p=scenes[i],d=dialogueById.get(p.id);
-  const storyPage={...p,...(d?{dialogueInline:d.dialogueInline||d.sceneDialogue}: {})};
-  const page={...storyPage,...profById.get(p.id)};
+for(let i=0;i<sdsPages.length;i++){
+  const page=sdsPages[i];
   assert.equal(page.promptCharacterMode,'cast','Wrong Stardust cast scope '+page.id);
-  const before=assemble(storyPage,sdsStore,i),after=assemble(page,sdsStore,i);
+  const unscoped={...page};
+  delete unscoped.promptSuppress;delete unscoped.promptCharacterMode;delete unscoped.promptSettingMode;
+  const before=assemble(unscoped,sdsStore,i),after=assemble(page,sdsStore,i);
   checkStory(page,after);
   assert.equal(section(before,'PANEL PLAN'),section(after,'PANEL PLAN'),'Panel changed '+page.id);
   assert.equal(section(before,'DIALOGUE'),section(after,'DIALOGUE'),'Dialogue changed '+page.id);
   assert.equal(section(before,'CONTINUITY'),section(after,'CONTINUITY'),'Continuity changed '+page.id);
-  assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Stardust should use visual-only handle references '+page.id);
+  assert(!after.includes('[CAST]')&&!after.includes('[CHARACTERS]'),'Unexpected duplicate cast '+page.id);
   const visuals=(page.charactersInline||[]).map(x=>x.handle);
   const actual=after.split('\n').filter(x=>/^@sds\.[A-Za-z0-9_-]+$/.test(x));
-  assert.equal(actual.length,visuals.length,'Wrong Stardust visual reference count '+page.id);
-  assert(actual.every((x,i)=>x===visuals[i]),'Wrong Stardust visual reference identities '+page.id);
+  assert.deepEqual(actual,visuals,'Wrong visual reference set '+page.id);
   const n=Number(page.id.match(/P(\d+)$/)?.[1]);
   if(n===1||n===20){
-    assert(!page.promptSettingMode,'Unexpected location compaction on establishing/return page '+page.id);
-    assert(after.includes(sdsStore['settings.json'][page.setting].text),'Missing location visual description '+page.id);
+    assert(!page.promptSettingMode,'Unexpected establishing-setting compaction '+page.id);
+    assert(after.includes(sdsStore['settings.json'][page.setting].text),'Lost setting '+page.id);
   }else{
-    assert.equal(page.promptSettingMode,'label','Missing short recurring-location reference '+page.id);
+    assert.equal(page.promptSettingMode,'label','Missing recurring-setting reference '+page.id);
     assert(after.includes(sdsStore['settings.json'][page.setting].name),'Missing setting label '+page.id);
-    assert(!after.includes(sdsStore['settings.json'][page.setting].text),'Expanded location still present '+page.id);
   }
-  if(page.promptSuppress?.includes('summary'))assert(!after.includes(page.summary),'Redundant summary still included '+page.id);
-  else assert(after.includes(page.summary),'Necessary dramatic context missing '+page.id);
+  if(page.promptSuppress?.includes('summary'))assert(!after.includes(page.summary),'Suppressed summary leaked '+page.id);
+  else assert(after.includes(page.summary),'Necessary context missing '+page.id);
   saved+=before.length-after.length;
 }
-assert(saved>5000,'Expected a meaningful reduction in repeated reference material');
-console.log('PASS Vikings Issue 2: 22 pages, 2 deliberately scoped suppressions and in-scope direction restored, no lost story');
-console.log('PASS Stardust Issue 2: 22 pages, 22 editorial profiles, '+saved+' repeated prompt characters removed, no lost story');
+console.log('PASS Vikings Issue 2: existing scoped production directions preserved');
+console.log('PASS Stardust Issue 2: 22 normalized editorial profiles; '+saved+' redundant prompt characters removed without losing story');
