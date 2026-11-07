@@ -489,10 +489,7 @@
           3,
           4,
           5,
-          6,
-          7,
-          8,
-          9
+          6
         ]
       },
       {
@@ -501,9 +498,9 @@
         "shotType": "SEQUENTIAL",
         "action": "Wide: Carrie cannot give them a satisfying mechanical explanation. Astrid keeps the water running while the others continue unpacking around this impossible convenience.",
         "dialogueIndices": [
-          10,
-          11,
-          12
+          7,
+          8,
+          9
         ]
       }
     ],
@@ -522,7 +519,7 @@
       },
       {
         "fid": "VIK_S1E02_P05_L03",
-        "text": "Yes. Sink, drain, pipes. Those are the names. I am not expecting any of this to mean anything yet.",
+        "text": "Sink, drain, pipes. Those are the names. The rest takes longer.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
@@ -540,31 +537,13 @@
       },
       {
         "fid": "VIK_S1E02_P05_L06",
-        "text": "Then who carries the water up here?",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P05_L07",
-        "text": "Nobody carries it.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P05_L08",
-        "text": "Five floors.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P05_L09",
-        "text": "Water does not climb because a woman turns a piece of metal.",
+        "text": "Then why does water climb five floors when Astrid turns that metal?",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
       {
         "fid": "VIK_S1E02_P05_L10",
-        "text": "That is an excellent objection and I cannot explain water pressure well enough to survive it.",
+        "text": "I can't explain water pressure well enough to survive that question.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -641,7 +620,15 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar",
+      "@vik.Astrid"
+    ]
   },
   {
     "id": "VIK_S1E02_P06",
@@ -696,8 +683,7 @@
         "dialogueIndices": [
           2,
           3,
-          4,
-          5
+          4
         ]
       },
       {
@@ -713,22 +699,20 @@
         "shotType": "SEQUENTIAL",
         "action": "Medium at the rear window: Gunnar smells food from the street below; outside, pigeons are visible on the iron structure beyond the window, but nobody comments on them yet.",
         "dialogueIndices": [
+          5,
           6,
-          7,
-          8,
-          9,
-          10
+          7
         ]
       },
       {
         "panel": 5,
         "location": "Bushwick studio kitchenette/table",
         "shotType": "SEQUENTIAL",
-        "action": "Wide: Carrie puts her coat back on and deliberately takes only Bjorn and Gunnar. Astrid and the two male Kin remain in the apartment with the unpacked gear and nearly empty food bag.",
+        "action": "At the doorway Carrie puts on her coat while Bjorn and Gunnar prepare to leave with her. Astrid answers from beside the nearly empty food bag. The two male Kin remain in the studio continuing their unpacking, secondary to the decision about who goes out.",
         "dialogueIndices": [
-          11,
-          12,
-          13
+          8,
+          9,
+          10
         ]
       }
     ],
@@ -746,12 +730,6 @@
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P06_L03",
-        "text": "It would not establish lunch.",
-        "subtext": "Panel 2",
-        "handle": "@vik.Bjorn"
-      },
-      {
         "fid": "VIK_S1E02_P06_L04",
         "text": "Two bars. Six crackers. Water.",
         "subtext": "Panel 2",
@@ -765,31 +743,19 @@
       },
       {
         "fid": "VIK_S1E02_P06_L06",
-        "text": "My department assumed I would get you somewhere with food.",
+        "text": "My department assumed I'd get you somewhere with food.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P06_L07",
-        "text": "There is food below us. Bread. Onions. Something frying.",
+        "text": "Bread, onions. Something frying below.",
         "subtext": "Panel 4",
         "handle": "@vik.Gunnar"
       },
       {
         "fid": "VIK_S1E02_P06_L08",
-        "text": "There's a shop on the corner.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P06_L09",
-        "text": "At night?",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P06_L10",
-        "text": "This is New York. Food is one of the things we're unusually good at.",
+        "text": "Corner shop. Open all night.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -872,7 +838,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P07",
@@ -919,27 +887,22 @@
         "panel": 3,
         "location": "Recurring Bushwick neighborhood bodega",
         "shotType": "SEQUENTIAL",
-        "action": "Counter close: Bjorn places a small piece of hacksilver beside the groceries.",
+        "action": "Counter close: Bjorn sets a small piece of hacksilver beside the groceries. The owner examines the offered metal and calmly refuses it.",
         "dialogueIndices": [
           0,
           1,
-          2,
-          3
+          2
         ]
       },
       {
         "panel": 4,
         "location": "Recurring Bushwick neighborhood bodega",
         "shotType": "SEQUENTIAL",
-        "action": "Two-shot owner/Carrie: the owner refuses the silver without ceremony. Carrie uses her modern payment card/terminal while Bjorn and Gunnar watch the unfamiliar exchange.",
+        "action": "Medium at the payment terminal: Carrie taps her modern card while the owner waits and Bjorn and Gunnar study the unfamiliar exchange.",
         "dialogueIndices": [
+          3,
           4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ]
       },
       {
@@ -948,10 +911,10 @@
         "shotType": "SEQUENTIAL",
         "action": "Medium: Bjorn watches the owner bag the food and watches Carrie's transaction complete; his concern is that Carrie has somehow paid, not how the mechanism works.",
         "dialogueIndices": [
-          11,
-          12,
-          13,
-          14
+          6,
+          7,
+          8,
+          9
         ]
       },
       {
@@ -960,9 +923,9 @@
         "shotType": "SEQUENTIAL",
         "action": "Close: the owner slides the hacksilver back to Bjorn.",
         "dialogueIndices": [
-          15,
-          16,
-          17
+          10,
+          11,
+          12
         ]
       }
     ],
@@ -975,21 +938,15 @@
       },
       {
         "fid": "VIK_S1E02_P07_L02",
-        "text": "I can't take that.",
+        "text": "Sorry. Can't take silver.",
         "subtext": "Panel 3",
         "handle": "@vik.BodegaOwner"
       },
       {
         "fid": "VIK_S1E02_P07_L03",
-        "text": "It is silver.",
+        "text": "Good silver.",
         "subtext": "Panel 3",
         "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P07_L04",
-        "text": "I believe you. Still can't take it.",
-        "subtext": "Panel 3",
-        "handle": "@vik.BodegaOwner"
       },
       {
         "fid": "VIK_S1E02_P07_L05",
@@ -998,32 +955,8 @@
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P07_L06",
-        "text": "With what?",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P07_L07",
-        "text": "This.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
         "fid": "VIK_S1E02_P07_L08",
-        "text": "You touched a black thing to another black thing.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P07_L09",
-        "text": "And now he has money.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P07_L10",
-        "text": "I saw no money.",
+        "text": "You touched two black things. Where is the money?",
         "subtext": "Panel 4",
         "handle": "@vik.Bjorn"
       },
@@ -1035,7 +968,7 @@
       },
       {
         "fid": "VIK_S1E02_P07_L12",
-        "text": "How much did you give him?",
+        "text": "How much?",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
@@ -1088,7 +1021,7 @@
       "composition": "asymmetric",
       "primaryPanel": 4,
       "visualPriority": "A valid card payment remains completely unintelligible to Bjorn; human relationships trump spectacle.",
-      "readingFlow": "Enter store, select groceries, present silver, sit with the long counter exchange, then observe the debt and returned silver.",
+      "readingFlow": "Enter the bodega, pick the groceries, watch the silver refused at the counter, then follow Carrie's card payment, Bjorn's recorded debt, and the returned silver.",
       "panels": [
         {
           "panel": 1,
@@ -1106,13 +1039,13 @@
           "panel": 3,
           "role": "supporting",
           "scale": "large",
-          "placement": "Hacksilver and groceries at register; the dialogue needs visibly distinct speakers."
+          "placement": "Hacksilver and groceries at the counter as the owner refuses good metal; preserve separate speaking faces."
         },
         {
           "panel": 4,
           "role": "dominant",
           "scale": "large",
-          "placement": "Generous owner/Carrie and Bjorn sightline for the crucial payment refusal; card and terminal are legible."
+          "placement": "Generous Carrie/Bjorn/owner sightlines for the unfamiliar card payment; this panel does not repeat the silver refusal."
         },
         {
           "panel": 5,
@@ -1139,7 +1072,9 @@
     },
     "promptSuppress": [
       "direction"
-    ]
+    ],
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P08",
@@ -1180,7 +1115,7 @@
         "panel": 1,
         "location": "Bushwick studio apartment kitchenette/table",
         "shotType": "SEQUENTIAL",
-        "action": "Wide from inside 5B: the door opens and Carrie, Bjorn and Gunnar return carrying grocery bags. Astrid and First Male Kin are arranging bedding and the room. Second Male Kin is at the rear window beside a bowl containing one very alive pigeon.",
+        "action": "Medium-wide from inside 5B: Carrie enters carrying groceries, with Bjorn and Gunnar behind her. Beside the rear window, Second Male Kin stands next to a bowl containing one very alive pigeon. Astrid and First Male Kin continue arranging bedding elsewhere in the studio; the primary view stays on Carrie, Second Male Kin, and the bird.",
         "dialogueIndices": [
           0,
           1,
@@ -1212,13 +1147,11 @@
         "panel": 4,
         "location": "Bushwick studio apartment kitchenette/table",
         "shotType": "SEQUENTIAL",
-        "action": "Two-shot Bjorn/Second Male Kin: Bjorn regards the successful catch as competent work, while Carrie is already walking toward the window to inspect where it happened.",
+        "action": "Medium: Carrie walks toward the rear window as she asks everyone to leave the pigeon alone. Bjorn turns to answer from beside Second Male Kin, who remains by the bowl. Carrie's movement and Bjorn's reaction are the focus.",
         "dialogueIndices": [
           8,
           9,
-          10,
-          11,
-          12
+          10
         ]
       },
       {
@@ -1276,18 +1209,6 @@
         "fid": "VIK_S1E02_P08_L08",
         "text": "It worked.",
         "subtext": "Panel 3",
-        "handle": "@vik.KinMan2"
-      },
-      {
-        "fid": "VIK_S1E02_P08_L09",
-        "text": "Quickly.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P08_L10",
-        "text": "They are not cautious birds.",
-        "subtext": "Panel 4",
         "handle": "@vik.KinMan2"
       },
       {
@@ -1363,7 +1284,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P09",
@@ -1424,8 +1347,7 @@
         "dialogueIndices": [
           1,
           2,
-          3,
-          4
+          3
         ]
       },
       {
@@ -1434,12 +1356,11 @@
         "shotType": "SEQUENTIAL",
         "action": "Medium on Second Male Kin: he looks at the cord crossing part of that route and concedes the placement problem, not the hunting premise.",
         "dialogueIndices": [
+          4,
           5,
           6,
           7,
-          8,
-          9,
-          10
+          8
         ]
       },
       {
@@ -1448,8 +1369,8 @@
         "shotType": "SEQUENTIAL",
         "action": "Wide: Second Male Kin frees the pigeon and removes the cord from their section. Unknown to them, a separate loose end remains beyond the neighboring window.",
         "dialogueIndices": [
-          11,
-          12
+          9,
+          10
         ]
       }
     ],
@@ -1461,14 +1382,8 @@
         "handle": "@vik.Carrie"
       },
       {
-        "fid": "VIK_S1E02_P09_L02",
-        "text": "It reaches the ground.",
-        "subtext": "Panel 3",
-        "handle": "@vik.Bjorn"
-      },
-      {
         "fid": "VIK_S1E02_P09_L03",
-        "text": "That's the idea. The city calls it a fire escape.",
+        "text": "The city calls it a fire escape.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
@@ -1485,14 +1400,8 @@
         "handle": "@vik.Gunnar"
       },
       {
-        "fid": "VIK_S1E02_P09_L06",
-        "text": "No one was using it.",
-        "subtext": "Panel 4",
-        "handle": "@vik.KinMan2"
-      },
-      {
         "fid": "VIK_S1E02_P09_L07",
-        "text": "When they need it, they need it immediately.",
+        "text": "An exit has to stay clear. Immediately.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -1587,7 +1496,15 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar",
+      "@vik.KinMan2"
+    ]
   },
   {
     "id": "VIK_S1E02_P10",
@@ -1664,8 +1581,7 @@
           7,
           8,
           9,
-          10,
-          11
+          10
         ]
       },
       {
@@ -1674,8 +1590,8 @@
         "shotType": "SEQUENTIAL",
         "action": "Wide: Neighbor walks away with the problem settled only provisionally. Carrie closes the door while Second Male Kin looks at the now-returned cord in his hand.",
         "dialogueIndices": [
-          12,
-          13
+          11,
+          12
         ]
       }
     ],
@@ -1733,12 +1649,6 @@
         "text": "Spicy.",
         "subtext": "Panel 4",
         "handle": "@vik.Astrid"
-      },
-      {
-        "fid": "VIK_S1E02_P10_L10",
-        "text": "I'll take it.",
-        "subtext": "Panel 4",
-        "handle": "@vik.UpstairsNeighbor"
       },
       {
         "fid": "VIK_S1E02_P10_L11",
@@ -1822,6 +1732,15 @@
     },
     "promptSuppress": [
       "direction"
+    ],
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Astrid",
+      "@vik.KinMan2",
+      "@vik.UpstairsNeighbor"
     ]
   },
   {
@@ -1893,22 +1812,19 @@
         "dialogueIndices": [
           3,
           4,
-          5,
-          6
+          5
         ]
       },
       {
         "panel": 5,
         "location": "Bushwick studio apartment kitchenette/table",
         "shotType": "SEQUENTIAL",
-        "action": "The alarm is quiet and the burner is low. Astrid finishes serving the food; the six adults eat around the cramped table and kitchenette. Bjorn and Gunnar look up once more at the ceiling device while Carrie sets the towel aside.",
+        "action": "Medium-wide at table height: the smoke alarm is quiet and the burner low. Astrid serves the groceries; Bjorn, Carrie, Second Male Kin and Astrid form the readable speaking group. Gunnar and First Male Kin remain at the edge of the cramped table. Carrie sets the towel aside as the conversation resolves.",
         "dialogueIndices": [
+          6,
           7,
           8,
-          9,
-          10,
-          11,
-          12
+          9
         ]
       }
     ],
@@ -1939,7 +1855,7 @@
       },
       {
         "fid": "VIK_S1E02_P11_L05",
-        "text": "Nobody hit the ceiling. It's warning us about the smoke.",
+        "text": "Don't hit the ceiling. It senses smoke and warns us.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -1950,26 +1866,8 @@
         "handle": "@vik.Bjorn"
       },
       {
-        "fid": "VIK_S1E02_P11_L07",
-        "text": "The thing on the ceiling cannot.",
-        "subtext": "Panel 4",
-        "handle": "@vik.Carrie"
-      },
-      {
-        "fid": "VIK_S1E02_P11_L08",
-        "text": "Then how does it know?",
-        "subtext": "Panel 5",
-        "handle": "@vik.Gunnar"
-      },
-      {
-        "fid": "VIK_S1E02_P11_L09",
-        "text": "It senses smoke.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
-      },
-      {
         "fid": "VIK_S1E02_P11_L10",
-        "text": "But does not know there is smoke.",
+        "text": "So it senses smoke but doesn't know what smoke is?",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
       },
@@ -2046,7 +1944,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P12",
@@ -2201,7 +2101,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P13",
@@ -2399,7 +2301,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P14",
@@ -2492,7 +2396,7 @@
       },
       {
         "fid": "VIK_S1E02_P14_L02",
-        "text": "Review can change the placement. So can serious damage, violence, blocking an exit, repeated safety problems, or refusing conditions that actually matter.",
+        "text": "Review can change the placement. So can serious damage, violence, blocked exits, repeated safety problems or refusing essential terms.",
         "subtext": "Panel 2",
         "handle": "@vik.Carrie"
       },
@@ -2516,7 +2420,7 @@
       },
       {
         "fid": "VIK_S1E02_P14_L06",
-        "text": "That is why I cared about the cord more than the pigeon.",
+        "text": "That's why I cared about the cord more than the pigeon.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -2528,7 +2432,7 @@
       },
       {
         "fid": "VIK_S1E02_P14_L08",
-        "text": "Which is why you're still having this conversation in the room instead of downstairs with me explaining it to Housing.",
+        "text": "Which is why you're still here instead of explaining it to Housing.",
         "subtext": "Panel 4",
         "handle": "@vik.Carrie"
       },
@@ -2599,7 +2503,14 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.KinMan2"
+    ]
   },
   {
     "id": "VIK_S1E02_P15",
@@ -2754,7 +2665,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P16",
@@ -2879,9 +2792,6 @@
     "directionInline": [
       {
         "text": "Use the same ordinary scratched brass apartment key established throughout the issue."
-      },
-      {
-        "text": "LANDFALL VISUAL STATE: Apartment 5B is assigned emergency housing on the first night, not a cozy home. Keep it sparse, cramped, worn and underfurnished: bare walls, hard practical ceiling/street light, portable or mismatched bedding, bundled travel gear, limited furniture, exposed ordinary radiator/pipes, and no decorative domestic warmth. Functional order may increase page by page, but do not add rugs, lamps, plants, framed art, plush furnishings, warm golden ambience, or other visual shorthand for settled comfort."
       }
     ],
     "status": "production-ready",
@@ -2933,7 +2843,14 @@
       "lettering": {
         "strategy": "Keep the inset visually following the first lock test; do not invent additional key or exchange."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar"
+    ]
   },
   {
     "id": "VIK_S1E02_P17",
@@ -3122,7 +3039,14 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar"
+    ]
   },
   {
     "id": "VIK_S1E02_P18",
@@ -3353,7 +3277,15 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar",
+      "@vik.Astrid"
+    ]
   },
   {
     "id": "VIK_S1E02_P19",
@@ -3435,8 +3367,7 @@
           5,
           6,
           7,
-          8,
-          9
+          8
         ]
       }
     ],
@@ -3479,21 +3410,15 @@
       },
       {
         "fid": "VIK_S1E02_P19_L07",
-        "text": "That is not damage.",
+        "text": "It's not damaged. Just don't hang anything on it.",
         "subtext": "Panel 5",
         "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P19_L08",
-        "text": "It is danger above the bedding.",
+        "text": "Danger above the bedding is worth a record.",
         "subtext": "Panel 5",
         "handle": "@vik.Bjorn"
-      },
-      {
-        "fid": "VIK_S1E02_P19_L09",
-        "text": "It is only danger if somebody hangs wet wool from it.",
-        "subtext": "Panel 5",
-        "handle": "@vik.Carrie"
       },
       {
         "fid": "VIK_S1E02_P19_L10",
@@ -3556,7 +3481,14 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.KinMan1"
+    ]
   },
   {
     "id": "VIK_S1E02_P20",
@@ -3724,7 +3656,14 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar"
+    ]
   },
   {
     "id": "VIK_S1E02_P21",
@@ -3844,7 +3783,7 @@
       },
       {
         "fid": "VIK_S1E02_P21_L06",
-        "text": "If there is fire, get out. If somebody is badly hurt or something happens you cannot handle, knock on the neighbor's door or go to the food shop. Tell them to summon help.",
+        "text": "Fire means leave. For injury or anything you can't handle, find the neighbor or the shopkeeper. Ask them to call for help.",
         "subtext": "Panel 3",
         "handle": "@vik.Carrie"
       },
@@ -3927,7 +3866,14 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true,
+    "promptVisibleCharacters": [
+      "@vik.Carrie",
+      "@vik.Bjorn",
+      "@vik.Gunnar"
+    ]
   },
   {
     "id": "VIK_S1E02_P22",
@@ -4123,7 +4069,9 @@
       "lettering": {
         "strategy": "Keep existing dialogue assigned to its exact scripted panels; reserve readable balloons without covering character reactions."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   },
   {
     "id": "VIK_S1E02_P23",
@@ -4239,6 +4187,8 @@
       "lettering": {
         "strategy": "Treat all nine captions as exact integrated editorial text, never dialogue balloons; leave roof mystery unillustrated."
       }
-    }
+    },
+    "promptPanelMode": "clean",
+    "promptVisibleCastOnly": true
   }
 ]
