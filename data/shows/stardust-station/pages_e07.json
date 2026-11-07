@@ -49,7 +49,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P02",
@@ -102,7 +106,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P03",
@@ -161,7 +169,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P04",
@@ -217,11 +230,15 @@
       }
     ],
     "settingText": "Berth 3 service corridor on Stardust Station; sleeping-berth wall, accessible ventilation grille, ordinary hand tools and a narrow maintained service chase.",
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P05",
-    "summary": "Primary composition: 5-panel page in Main Bullpen / Admin Hub. Opening image: the program produces three kinds of information at once. Middle image: Pixa and Mira preserve the distinctions instead of collapsing them. Closing image: the personal card remains visibly unconverted.",
+    "summary": "Five separate beats distinguish equipment reports, process confusion, and an anonymous personal disclosure. Pixa and Mira resist falsely interpreting the cards, Glorp defends anonymity, Kreeb exposes his temptation to recognize handwriting, and the crew routes only the actual repair work.",
     "setting": "SDS_Admin_Hub",
     "characters": [
       "SDS_Pixa",
@@ -233,32 +250,32 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Back in operations, three very different cards sit apart on the table: cold-sticking hatch, conflicting handoff checklists, and I MISS HOME ON LATE SHIFT."
+        "text": "PANEL 1 — Three visibly separate cards rest on the operations table: COLD-STICKING HATCH, CONFLICTING HANDOFF CHECKLISTS and I MISS HOME ON LATE SHIFT. Pixa reads them without collapsing their purposes."
       },
       {
-        "text": "PANEL 2 — Pixa identifies that the three entries request different outcomes without deriving a common emotion category."
+        "text": "PANEL 2 — Mira examines the hatch report with a scanner at hand but leaves the personal card untouched; she can investigate the physical fault, not the feeling."
       },
       {
-        "text": "PANEL 3 — Mira reacts with genuine pleasure at the clean separation while Pixa absorbs the feedback."
+        "text": "PANEL 3 — Astra reaches toward the anonymous personal card and asks about its author. Glorp turns it face-down to preserve the box's promise of anonymity."
       },
       {
-        "text": "PANEL 4 — Astra routes the hatch to field work and Glorp takes the checklist problem to the people who actually use it."
+        "text": "PANEL 4 — Kreeb looks at the handwriting on the card while Noola, standing nearby, dryly rejects his amateur-detective impulse. Keep their exchange private and not an accusation."
       },
       {
-        "text": "PANEL 5 — Kreeb keeps the personal card out of both work streams; Noola sees the distinction from across the room."
+        "text": "PANEL 5 — Pixa leaves the personal author field blank while Astra sends the hatch fault to maintenance and Glorp takes the conflicting checklists for ordinary process repair. Three distinct outcomes remain visually separate."
       }
     ],
     "dialogueInline": [
       {
         "handle": "@sds.Pixa",
         "speaker": "Pixa",
-        "text": "Some cards describe feelings, some describe equipment, and one appears to be a restaurant review.",
+        "text": "One card needs a wrench, one needs a checklist, and one doesn't ask us for anything.",
         "subtext": "Panel 1"
       },
       {
         "handle": "@sds.Mira",
         "speaker": "Mira Klare",
-        "text": "I can test the noise. I can't test whether the cafe deserved one star.",
+        "text": "I can test a hatch noise. I can't test whether someone misses home.",
         "subtext": "Panel 2"
       },
       {
@@ -292,7 +309,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P06",
@@ -351,7 +372,11 @@
       }
     ],
     "settingText": "East hatch service area in Stardust Station's maintained corridor network; ordinary access hardware, thermal history display, guide track and safe local test area.",
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P07",
@@ -411,7 +436,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P08",
@@ -475,11 +504,16 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P09",
-    "summary": "Primary composition: 3-panel page in Quiet Room. Opening image: Noola claims the card privately. Middle image: she states the feeling without converting it into a defect. Closing image: Kreeb accepts that expression itself can be the entire outcome.",
+    "summary": "In the quiet room, Noola privately acknowledges writing the card about missing home on late shift. Kreeb initially treats that as something to fix but comes to understand she wanted a place to say it. No personal disclosure is added to the work board.",
     "setting": "SDS_Quiet_Room",
     "characters": [
       "SDS_Noola",
@@ -487,60 +521,64 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — In the quiet room, Kreeb places the personal card in the locked local envelope as Noola enters and identifies it as hers."
+        "text": "PANEL 1 — Kreeb places the anonymous personal card into the quiet room's local envelope. Noola enters, identifies the I MISS HOME ON LATE SHIFT card as hers, and stays by the open doorway."
       },
       {
-        "text": "PANEL 2 — Noola explains that late shift makes her miss home and that she wanted somewhere to say it, not a repair ticket."
+        "text": "PANEL 2 — Seated in a quiet two-shot, Noola explains missing home without wanting a repair ticket, and Kreeb recognizes how often he tries to fix her feelings or her water rig. The card remains private."
       },
       {
-        "text": "PANEL 3 — Kreeb asks only whether she wants anything changed, accepts no for an answer, and lets the conversation end without solving her."
+        "text": "PANEL 3 — Kreeb offers company rather than a procedure. Noola permits him to sit but leaves her feelings unmeasured. End with quiet space around the pair, not a successful counseling-session pose."
       }
     ],
     "dialogueInline": [
       {
         "handle": "@sds.Noola",
         "speaker": "Noola Vaneel",
-        "text": "I wrote the one about people asking if I'm all right.",
+        "text": "That card about missing home on late shift? I wrote it.",
         "subtext": "Panel 1"
       },
       {
         "handle": "@sds.Kreeb",
         "speaker": "Kreeb",
-        "text": "Oh. I thought you were annoyed about the quiet room.",
+        "text": "I thought you were upset about the quiet room.",
         "subtext": "Panel 1"
       },
       {
         "handle": "@sds.Noola",
         "speaker": "Noola Vaneel",
-        "text": "I like the room. I don't like being told what my water rig must feel like by people who have never worn it.",
+        "text": "No. I miss home. Late shifts make it worse. I wasn't asking anyone to fix that.",
         "subtext": "Panel 2"
       },
       {
         "handle": "@sds.Kreeb",
         "speaker": "Kreeb",
-        "text": "Have I done that?",
+        "text": "Have I been treating everything you say like a problem?",
         "subtext": "Panel 2"
       },
       {
         "handle": "@sds.Noola",
         "speaker": "Noola Vaneel",
-        "text": "Quite often. But I like you, so I've been kind about it.",
+        "text": "Sometimes. I like you, Kreeb, but some things can stay unfinished.",
         "subtext": "Panel 2"
       },
       {
         "handle": "@sds.Kreeb",
         "speaker": "Kreeb",
-        "text": "I was going to ask how you are.",
+        "text": "Then I won't make a ticket. Would you like me to stay?",
         "subtext": "Panel 3"
       },
       {
         "handle": "@sds.Noola",
         "speaker": "Noola Vaneel",
-        "text": "You may ask whether the room is warm. Then I'll tell you.",
+        "text": "You can sit. Just don't turn it into a report.",
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P10",
@@ -600,7 +638,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P11",
@@ -641,7 +683,11 @@
       }
     ],
     "settingText": "Berth 3 service corridor on Stardust Station; sleeping-berth wall, accessible ventilation grille, ordinary hand tools and a narrow maintained service chase.",
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P12",
@@ -656,16 +702,16 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — By afternoon, the work board shows several concrete repairs and one reconciled process originating from the morning disclosures."
+        "text": "PANEL 1 — The afternoon operations work board records several completed mechanical fixes and one reconciled checklist, with no personal disclosure or inferred authors listed. Glorp points to the properly closed noise complaint."
       },
       {
-        "text": "PANEL 2 — Glorp posts the single handoff checklist while removing the conflicting pair."
+        "text": "PANEL 2 — Glorp replaces the conflicting handoff pages with one working checklist; Kreeb confirms that the operational information was sufficient to find the defect."
       },
       {
-        "text": "PANEL 3 — Pixa carries the repaired stool back to its normal place and reports the operational closure counts while Astra and Glorp notice the unassigned helpfulness."
+        "text": "PANEL 3 — Noola passes the repaired corridor and acknowledges that someone else's shift will now be quieter. Astra agrees that the physical outcome matters more than identifying a person."
       },
       {
-        "text": "PANEL 4 — Noola passes Kreeb near the nearly irrelevant participation table; her personal issue remains private and unchanged."
+        "text": "PANEL 4 — Pixa returns the repaired stool and files the equipment trace without names from the personal cards. In the background Kreeb lets Noola pass without asking for an emotional update."
       }
     ],
     "dialogueInline": [
@@ -700,7 +746,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P13",
@@ -715,19 +765,19 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — The corporate dashboard finally objects: LOW CATEGORY COMPLETION MAY LIMIT INTERPRETABILITY."
+        "text": "PANEL 1 — Pixa points out the central dashboard's notice: LOW CATEGORY COMPLETION MAY LIMIT INTERPRETABILITY. The work board remains visibly full of actual closures."
       },
       {
-        "text": "PANEL 2 — A second request asks for de-identified disclosure themes and output correlation, trying to pull the different outcomes back into one model."
+        "text": "PANEL 2 — Astra reads the demand for inferred disclosure categories and insists that completed repairs count without profiling coworkers."
       },
       {
-        "text": "PANEL 3 — Mira rejects the unsupported correlation while Kreeb closes the local personal envelope."
+        "text": "PANEL 3 — Mira looks at the lab results: no demonstrated relationship between the physical residue measurements and personal cards. Kreeb seals the private envelope nearby."
       },
       {
-        "text": "PANEL 4 — Glorp points to routed work and completion states; Pixa adds that no inferred categories were created."
+        "text": "PANEL 4 — Glorp keeps only the completed operational tasks in the outgoing data while Pixa retains empty inference fields; the request for categories remains visibly unanswered."
       },
       {
-        "text": "PANEL 5 — Astra orders the response to use only the information the day actually produced."
+        "text": "PANEL 5 — Kreeb reminds Astra that coworkers trusted the collection process not to turn their stories into scores. Astra holds the factual response ready to send."
       }
     ],
     "dialogueInline": [
@@ -762,7 +812,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P14",
@@ -813,7 +868,15 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptVisibleCharacters": [
+      "SDS_Mira",
+      "SDS_Astra"
+    ]
   },
   {
     "id": "SDS_S1E07_P15",
@@ -871,7 +934,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E07_P16",
@@ -934,7 +1001,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P17",
@@ -983,7 +1055,16 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptVisibleCharacters": [
+      "SDS_Jax",
+      "SDS_Astra"
+    ]
   },
   {
     "id": "SDS_S1E07_P18",
@@ -1035,7 +1116,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P19",
@@ -1092,7 +1178,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P20",
@@ -1154,7 +1245,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P21",
@@ -1212,7 +1308,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E07_P22",
@@ -1259,6 +1360,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   }
 ]
