@@ -456,6 +456,9 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
         const speaker=d.speaker||e?.name||d.handle||"TEXT";
         const panel=!cleanPanels&&/^Panel\s+\d+$/i.test(String(d.subtext||"").trim())?String(d.subtext).trim()+" — ":"";
         out.push(panelPrefix+panel+speaker+': "'+(d.text||'')+'"');
+        // Compact cover DISPLAY lettering still needs its authored placement/trade-dress subtext.
+        if(speaker==="DISPLAY"&&d.subtext&&!/^Panel\s+\d+$/i.test(String(d.subtext).trim()))
+          out.push("  ("+d.subtext+")");
       }else{
         const rawSpeaker=d.handle||d.speaker||"TEXT";
         const sp=visibleCastOnly
