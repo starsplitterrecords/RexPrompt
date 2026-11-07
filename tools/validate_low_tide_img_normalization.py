@@ -351,24 +351,15 @@ def validate_show_registration() -> None:
 
         overlays = record.get("sceneOverlays") or []
         chapter = int(sid[-2:])
+        assert len(overlays) == 3, f"{sid}: expected normalized opener, story, and closing"
+        assert overlays[0].get("file") == EDITORIAL_FILES[0], f"{sid}: opener order changed"
+        assert overlays[2].get("file") == EDITORIAL_FILES[1], f"{sid}: closer order changed"
+        story = overlays[1]
         if chapter <= 3:
-            assert len(overlays) == 3, f"{sid}: expected normalized opener, story and closing sources"
+            assert story.get("file") == "pages_ch01_ch03_compiled.json", f"{sid}: source drift"
         else:
-            assert len(overlays) == 5, f"{sid}: expected opener, story, closing, scope and layout"
-        assert overlays[0].get("file") == EDITORIAL_FILES[0], f"{sid}: editorial opener overlay drift"
-        assert overlays[2].get("file") == EDITORIAL_FILES[1], f"{sid}: editorial closing overlay drift"
-        story_overlay = overlays[1]
-        if chapter <= 3:
-            assert story_overlay.get("file") == "pages_ch01_ch03_compiled.json", f"{sid}: C1-C3 source drift"
-            assert record.get("dialogueOverlays") == [], f"{sid}: normalized dialogue should not be overlaid again"
-        else:
-            assert story_overlay.get("encoding") == "gzip-base64", f"{sid}: encoded chapter lost encoding declaration"
-            expected_scope = f"editorial/page_assembly_profiles_c{chapter:02d}.json"
-            expected_layout = f"editorial/page_layouts_c{chapter:02d}.json"
-            for overlay, expected_file in ((overlays[3], expected_scope), (overlays[4], expected_layout)):
-                assert overlay.get("file") == expected_file, f"{sid}: unexpected overlay order or path: {overlay}"
-                assert overlay.get("mergeById") and overlay.get("strict"), f"{sid}: page edits must be strict ID merges"
-                assert (SHOW_DIR / expected_file).is_file(), f"{sid}: missing active page overlay {expected_file}"
+            assert story.get("encoding") == "gzip-base64", f"{sid}: encoded chapter lost encoding"
+        assert record.get("dialogueOverlays") == [], f"{sid}: dialogue must not be overlaid twice"
 
 
 def validate_show_visual_rules() -> None:
