@@ -8,219 +8,219 @@
 
 **23 units.** Layout: 0 flagged; visual: 19; environment: 0; blocking: 21; acting: 22.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E01_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S01` | 4 | OK | RV | OK | RV | RV | visual: 136 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 8 action cues, 2 spatial cues; dialogue not fully panel-assigned |
-| `EFW_S1E01_S02` | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S03` | 3 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S04` | 4 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S05` | 4 | OK | RV | OK | OK | OK | visual: 111 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
-| `EFW_S1E01_S06` | 4 | OK | RV | OK | RV | RV | visual: 118 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 1 spatial cues |
-| `EFW_S1E01_S07` | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S08` | 4 | OK | GAP | OK | RV | RV | visual: Only 130 panel words and 1 concrete visual cues |
-| `EFW_S1E01_S09` | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S10` | 4 | OK | OK | OK | RV | RV | blocking: 3 action cues, 1 spatial cues; dialogue not fully panel-assigned; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E01_S11` | 4 | OK | GAP | OK | RV | RV | visual: Only 129 panel words and 1 concrete visual cues |
-| `EFW_S1E01_S12` | 4 | OK | GAP | OK | RV | GAP | visual: Only 145 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S13` | 4 | OK | GAP | OK | RV | RV | visual: Only 133 panel words and 1 concrete visual cues |
-| `EFW_S1E01_S14` | 4 | OK | GAP | OK | GAP | GAP | visual: Only 96 panel words and 0 concrete visual cues; blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E01_S15` | 4 | OK | RV | OK | RV | RV | visual: 142 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 1 spatial cues |
-| `EFW_S1E01_S16` | 4 | OK | RV | OK | RV | RV | visual: 133 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 0 spatial cues |
-| `EFW_S1E01_S17` | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E01_S18` | 4 | OK | GAP | OK | RV | RV | visual: Only 145 panel words and 0 concrete visual cues |
-| `EFW_S1E01_S19` | 4 | OK | OK | OK | RV | RV | blocking: 2 action cues, 5 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E01_S20` | 4 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E01_S21` | 4 | OK | RV | OK | RV | RV | visual: 138 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 4 action cues, 0 spatial cues |
-| `EFW_S1E01_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E01_EDITOR_OPEN` | Concise editorial opening, preserving the first mystery and withholding visual spoilers. | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S01` | At shift end Theo refuses to stop drilling; Vark sees ordinary work endangered by a conviction Theo cannot explain. | 4 | OK | RV | OK | RV | RV | visual: 136 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 8 action cues, 2 spatial cues; dialogue not fully panel-assigned |
+| `EFW_S1E01_S02` | The drill strikes a manufactured seam, and Vark cuts power before the crew can be hurt. | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S03` | The Desert Marker is exposed. Theo recognizes its damaged seam from repeated dreams. | 3 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S04` | Theo deliberately touches the Marker only after ensuring the crew is moving away. | 4 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S05` | Contact reveals the ancient battlefield and Starbreaker preparing a terrible act, then returns Theo to an injured present. | 4 | OK | RV | OK | OK | OK | visual: 111 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
+| `EFW_S1E01_S06` | Theo secretly keeps a fragment; Vark treats the workers' welfare as more important than the mystery. | 4 | OK | RV | OK | RV | RV | visual: 118 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 1 spatial cues |
+| `EFW_S1E01_S07` | At Zenith, Rae discovers an erased Olyria entry and REDLIN PROTOCOL returning on their own. | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S08` | Caelum confronts Rae but worries about real casualties instead of simply forbidding questions. | 4 | OK | GAP | OK | RV | RV | visual: Only 130 panel words and 1 concrete visual cues |
+| `EFW_S1E01_S09` | Rae tests the physical evidence against her dream and preserves her own trace before access disappears. | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S10` | Adrian arrives at Olyria following Vark's call, offering practical attention rather than supernatural authority. | 4 | OK | OK | OK | RV | RV | blocking: 3 action cues, 1 spatial cues; dialogue not fully panel-assigned; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E01_S11` | Adrian confirms Starbreaker's historical existence but genuinely cannot explain Theo's memory. | 4 | OK | GAP | OK | RV | RV | visual: Only 129 panel words and 1 concrete visual cues |
+| `EFW_S1E01_S12` | Vark records the injuries accurately while choosing to conceal the buried structure and close the dangerous tier. | 4 | OK | GAP | OK | RV | GAP | visual: Only 145 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S13` | Caelum admits earlier records were deliberately withheld but regards uncontrolled recovery as an immediate hazard. | 4 | OK | GAP | OK | RV | RV | visual: Only 133 panel words and 1 concrete visual cues |
+| `EFW_S1E01_S14` | Rae discovers a surviving transfer trail pointing toward physical records at Nuxis. | 4 | OK | GAP | OK | GAP | GAP | visual: Only 96 panel words and 0 concrete visual cues; blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E01_S15` | Rae leaves Zenith with her evidence; Caelum's loyalty prevents him from detaining her but offers no assurance. | 4 | OK | RV | OK | RV | RV | visual: 142 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 1 spatial cues |
+| `EFW_S1E01_S16` | Vark operates excavation equipment while Theo and Adrian help conceal the Marker behind real collapse damage. | 4 | OK | RV | OK | RV | RV | visual: 133 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 0 spatial cues |
+| `EFW_S1E01_S17` | An approaching inspector forces Vark and Adrian to defend a temporary closure, leaving future discovery possible. | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E01_S18` | Theo challenges Adrian for keeping a map of the concealed site; Adrian admits the risk and gives him a duplicate. | 4 | OK | GAP | OK | RV | RV | visual: Only 145 panel words and 0 concrete visual cues |
+| `EFW_S1E01_S19` | Rae leaves an actual home and ordinary life behind, traveling with her independent notes toward Nuxis. | 4 | OK | OK | OK | RV | RV | blocking: 2 action cues, 5 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E01_S20` | Theo shows Adrian the secret shard and decides to seek surviving physical evidence at Nuxis. | 4 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E01_S21` | A fragmentary memory sound makes Adrian react as a firsthand witness to the destroyed sky. | 4 | OK | RV | OK | RV | RV | visual: 138 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 4 action cues, 0 spatial cues |
+| `EFW_S1E01_EDITOR_CLOSE` | Brief next-issue teaser for the planned convergence at Nuxis without revealing the ancient battle. | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Issue 2 (echoes-forgotten-war-s1-issue-2)
 
 **18 units.** Layout: 0 flagged; visual: 8; environment: 0; blocking: 6; acting: 18.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E02_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S01` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S02` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S03` | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S04` | 4 | OK | RV | OK | OK | RV | visual: 148 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E02_S05` | 3 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S06` | 6 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S07` | 4 | OK | OK | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S08` | 6 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E02_S09` | 4 | OK | RV | OK | OK | RV | visual: 150 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E02_S10` | 3 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S11` | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S12` | 3 | OK | OK | OK | RV | RV | blocking: 2 action cues, 2 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E02_S13` | 3 | OK | RV | OK | OK | RV | visual: 116 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E02_S14` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_S15` | 5 | OK | RV | OK | RV | RV | visual: 230 panel words and 4 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 4 spatial cues; dialogue not fully panel-assigned |
-| `EFW_S1E02_S16` | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E02_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E02_EDITOR_OPEN` | Opening previously page for Issue 2. Re-arms the unresolved memories, names and Adrian's withholding without introducing Redlin visually or revealing the Desert Mark | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S01` | Theo and Rae's separate memories of the Desert Marker appear incompatible. Their papers and Theo's retained shard trigger a complete ancient sequence; Adrian confirm | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S02` | A physical fracture advances through the inhabited Desert Marker settlement. Starbreaker urges a decisive strike before it reaches the east road, but Mero withholds  | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S03` | Redlin arrives helping Sena and Iva, who have an elderly relative trapped near the west bridge. His and Starbreaker's familiar rescue habits show they once depended  | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S04` | Redlin brings Mero among the people whose evacuation depends on his order. Mero helps carry Sena's father and hears Redlin acknowledge what failure would cost. | 4 | OK | RV | OK | OK | RV | visual: 148 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E02_S05` | Starbreaker shows Mero a deserted civilian district already destroyed by delay; his wish to end the threat is motivated by keeping the east road available, not lust  | 3 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S06` | Mero orders one more hour of evacuation and reserves the strike decision to himself. The threat's advance undermines the plan immediately; command is a consequential | 6 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S07` | Mero physically joins an effort to evacuate Sena's father, but the advancing fracture begins threatening the much more crowded east road as well. | 4 | OK | OK | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S08` | Redlin successfully protects the main east-road evacuation and places Iva safely with another adult, but chooses to redirect his limited containment away from the oc | 6 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E02_S09` | Starbreaker helps Redlin hold the evacuation route, revealing their former cooperation. A familiar repaired gauntlet underscores mutual trust that is being broken. R | 4 | OK | RV | OK | OK | RV | visual: 150 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E02_S10` | Their last private appeal is about a person they both know is stranded, not another iteration of their philosophies. Starbreaker cannot claim ignorance of the cost i | 3 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S11` | Near the end of Mero's hour the west bridge remains occupied while the shifting fracture turns toward the densely populated east road. Mero attempts another rescue a | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S12` | Starbreaker defies Mero's order to stop the advancing seam from reaching the east road. Redlin's hold keeps the fleeing crowd alive, but the strike collapses the now | 3 | OK | OK | OK | RV | RV | blocking: 2 action cues, 2 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E02_S13` | The spreading threat has stopped and the east road survives, but the west bridge is destroyed. Redlin finds Sena dead beneath the wreckage, turning both champions' d | 3 | OK | RV | OK | OK | RV | visual: 116 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E02_S14` | Mero continues to command and work in the rescue, Starbreaker helps clear fallen supports, and Redlin faces the death of the person he tried to protect. Iva survives | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_S15` | Theo and Rae return to Nuxis with different human details and a disagreement grounded in their partial memories. Redlin's instruction to take Iva to Vael-Tor matches | 5 | OK | RV | OK | RV | RV | visual: 230 panel words and 4 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 4 spatial cues; dialogue not fully panel-assigned |
+| `EFW_S1E02_S16` | At Nuxis's ordinary service exit Adrian gives a practical fact about Vael-Tor arrival records, admits he does not understand the reason for Theo's and Rae's differen | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E02_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 2. Points toward Vael-Tor and the material survival of the war without revealing Atlas or the buried dreadnought. | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Issue 3 (echoes-forgotten-war-s1-issue-3)
 
 **17 units.** Layout: 0 flagged; visual: 7; environment: 1; blocking: 8; acting: 16.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E03_EDITOR_OPEN` | 1 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E03_S01` | 5 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S02` | 4 | OK | OK | OK | GAP | RV | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E03_S03` | 3 | OK | GAP | CR | RV | RV | visual: Only 64 panel words and 0 concrete visual cues |
-| `EFW_S1E03_S04` | 6 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S05` | 2 | OK | OK | OK | RV | RV | blocking: 7 action cues, 1 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S06` | 4 | OK | RV | CR | RV | RV | visual: 70 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 2 spatial cues |
-| `EFW_S1E03_S07` | 6 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E03_S08` | 5 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E03_S09` | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S10` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E03_S11` | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S12` | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E03_S13` | 3 | OK | GAP | CR | RV | RV | visual: Only 78 panel words and 1 concrete visual cues |
-| `EFW_S1E03_S14` | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E03_S15` | 3 | OK | RV | RV | RV | RV | visual: 151 panel words and 3 concrete cues; judge specificity and repeat scaffolding; setting: Location label or sparse setting: 2 concrete cues |
-| `EFW_S1E03_EDITOR_CLOSE` | 1 | OK | RV | OK | RV | RV | visual: 41 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 1 spatial cues |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E03_EDITOR_OPEN` | Opening previously page for Issue 3. Carries forward the contradictory memories and moral ambiguity, then points toward the material persistence of the forgotten war | 1 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E03_S01` | Theo, Rae and Adrian arrive at Vael-Tor following a place-name recovered from the Desert Marker memories. The world feels stubbornly normal until Rae recognizes a st | 5 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S02` | Rae follows impossible recognition into Vael-Tor's public records and finds an older city emerging beneath the present map. | 4 | OK | OK | OK | GAP | RV | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E03_S03` | The name Atlas rises in Rae before she understands it; Theo recognizes the name too just as a refugee emergency interrupts them. | 3 | OK | GAP | CR | RV | RV | visual: Only 64 panel words and 0 concrete visual cues |
+| `EFW_S1E03_S04` | A refugee transport requests emergency landing while Vael-Tor's dormant defenses begin treating it as an enemy. Adrian recognizes the old defensive behavior and urge | 6 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S05` | Atlas debuts in memory physically holding a populated world together under catastrophic strain. | 2 | OK | OK | OK | RV | RV | blocking: 7 action cues, 1 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S06` | Starbreaker challenges Atlas with the cost of carrying disaster elsewhere; Atlas refuses to turn the population into an acceptable loss. | 4 | OK | RV | CR | RV | RV | visual: 70 panel words and 2 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 2 spatial cues |
+| `EFW_S1E03_S07` | Rae comes out of the Atlas memory as the refugee ship is still descending. She chooses to help current workers open a path instead of chasing the memory for answers. | 6 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E03_S08` | Theo follows the Marker fragment toward a sealed lower level and finds Adrian already trying to stop him. Adrian admits Vael-Tor was built over something the Reset d | 5 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E03_S09` | Rae joins port workers manually clearing the approach while the old defenses keep threatening the refugee transport. She rejects an official suggestion to sacrifice  | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S10` | Theo and Adrian reach the buried hull. Theo understands that the city has literally been living on top of forgotten war matter. Adrian admits the Reset erased meanin | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E03_S11` | Rae's effort gives the refugee transport a path to the ground. Theo returns from below as the city begins physically shifting around the buried ship. | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S12` | The refugee landing succeeds as the ground beyond the field begins to move and modern Vael-Tor cracks around buried war matter. | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E03_S13` | An ancient dreadnought becomes visible beneath streets, homes and utilities, turning forgotten history into public physical fact. | 3 | OK | GAP | CR | RV | RV | visual: Only 78 panel words and 1 concrete visual cues |
+| `EFW_S1E03_S14` | Rae and Theo watch living passengers emerge from the refugee ship. The immediate rescue matters more than the ancient object behind them. Theo begins to understand w | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E03_S15` | Theo asks Adrian how something this large could survive while its history vanished. Adrian gives the series' material rule: forgetting removed the history, not the t | 3 | OK | RV | RV | RV | RV | visual: 151 panel words and 3 concrete cues; judge specificity and repeat scaffolding; setting: Location label or sparse setting: 2 concrete cues |
+| `EFW_S1E03_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 3. Points toward Pax-Aeterna's remembered decision without revealing Arbiter, the extinction-level ruling, or Theo and Rae's iden | 1 | OK | RV | OK | RV | RV | visual: 41 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 2 action cues, 1 spatial cues |
 
 ## Issue 4 (echoes-forgotten-war-s1-issue-4)
 
 **18 units.** Layout: 0 flagged; visual: 8; environment: 2; blocking: 7; acting: 15.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E04_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S01` | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S02` | 3 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S03` | 5 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S04` | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E04_S05` | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S06` | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S07` | 7 | OK | OK | CR | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S08` | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E04_S09` | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S10` | 4 | OK | GAP | RV | RV | GAP | visual: Only 97 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S11` | 5 | OK | RV | CR | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S12` | 3 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S13` | 3 | OK | GAP | RV | RV | OK | visual: Only 105 panel words and 1 concrete visual cues |
-| `EFW_S1E04_S14` | 5 | OK | RV | CR | OK | RV | visual: 79 panel words and 2 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E04_S15` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_S16` | 3 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 3 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E04_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | RV | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E04_EDITOR_OPEN` | Opening previously page for Issue 4. Establishes that forgotten physical history survived and turns the reader toward Pax-Aeterna without revealing Arbiter or Theo a | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S01` | Theo, Rae and Adrian enter Pax-Aeterna looking for the source of a shared recurring image: an empty chair at a black table. The room remembers before any of them tou | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S02` | Mero prepares for a negotiation nobody believes will hold. Atlas demands that evacuation continue regardless of any agreement; Redlin insists a ceasefire is still wo | 3 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S03` | Arbiter debuts as a person carrying responsibility rather than a cold embodiment of judgment. Arbiter already knows the evacuation agreement and asks who will own th | 5 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S04` | Atlas confronts Arbiter privately over the possibility of sacrificing the threatened system. Arbiter refuses to pretend that refusing sacrifice means no one will die | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E04_S05` | Starbreaker arrives and immediately distrusts the ceasefire. Redlin accuses him of wanting the negotiation to fail; Starbreaker accuses Redlin of treating every paus | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S06` | The ceasefire begins failing through human consequences: routes close, ships turn back and separated families run out of time. | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S07` | The principals fall back onto their characteristic answers while the negotiation collapses around civilians. | 7 | OK | OK | CR | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S08` | Mero asks Arbiter whether they can live with the extinction decision. Arbiter says living with it is not the same as being entitled to make it, but someone will make | 4 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E04_S09` | Atlas, Redlin and Starbreaker work together to move civilians even while arguing about the larger decision. The scene prevents ideology from erasing shared action: e | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S10` | The final evacuation limit arrives. Arbiter begins the irreversible decision in a room where no clean option remains. | 4 | OK | GAP | RV | RV | GAP | visual: Only 97 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S11` | Arbiter makes the civilization-scale choice. Each principal reacts differently, and Mero does not stop it. | 5 | OK | RV | CR | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S12` | Atlas remains with Arbiter after everyone else leaves. He tells Arbiter that taking responsibility does not make the act right. Arbiter agrees. Their disagreement su | 3 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S13` | The ancient treaty room empties into the exact present-day empty-chair composition. | 3 | OK | GAP | RV | RV | OK | visual: Only 105 panel words and 1 concrete visual cues |
+| `EFW_S1E04_S14` | Theo and Rae recall details that were never inside the memory they just witnessed, proving they were not outside observers. | 5 | OK | RV | CR | OK | RV | visual: 79 panel words and 2 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E04_S15` | Theo asks the question Adrian has been avoiding: were they physically there? Adrian finally says yes. | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_S16` | Adrian reveals that Rae served beside Arbiter and Theo served Mero. The mystery becomes their own participation. | 3 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 3 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E04_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 4. Uses the newly revealed truth that Theo and Rae were present in the ancient war and converts it into the personal question tha | 1 | OK | RV | OK | GAP | RV | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality |
 
 ## Issue 5 (echoes-forgotten-war-s1-issue-5)
 
 **18 units.** Layout: 0 flagged; visual: 11; environment: 0; blocking: 11; acting: 17.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E05_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S01` | 5 | OK | OK | OK | RV | RV | blocking: 8 action cues, 6 spatial cues; dialogue not fully panel-assigned; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S02` | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S03` | 4 | OK | RV | OK | RV | RV | visual: 74 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 5 action cues, 1 spatial cues |
-| `EFW_S1E05_S04` | 4 | OK | RV | OK | OK | OK | visual: 139 panel words and 3 concrete cues; judge specificity and repeat scaffolding |
-| `EFW_S1E05_S05` | 5 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S06` | 5 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 5 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S07` | 5 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S08` | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S09` | 5 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S10` | 3 | OK | RV | CR | OK | RV | visual: 70 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S11` | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S12` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S13` | 5 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S14` | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E05_S15` | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_S16` | 4 | OK | GAP | CR | GAP | GAP | visual: Only 57 panel words and 0 concrete visual cues; blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E05_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E05_EDITOR_OPEN` | Opening previously page for Issue 5. Carries forward the midpoint identity reveal and shifts the loaded question from what happened to what Theo and Rae personally c | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S01` | After Adrian's revelation, Theo and Rae refuse to accept that they are the same people who lived through the war. Adrian offers no mystical proof; he tells them to r | 5 | OK | OK | OK | RV | RV | blocking: 8 action cues, 6 spatial cues; dialogue not fully panel-assigned; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S02` | The Issue 1 Starbreaker memory returns in the same composition the reader already knows. | 4 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S03` | The remembered frame widens and reveals ancient Theo behind Mero, turning spectacle into autobiographical evidence. | 4 | OK | RV | OK | RV | RV | visual: 74 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 5 action cues, 1 spatial cues |
+| `EFW_S1E05_S04` | Theo is shaken less by seeing himself than by the ordinary familiarity of Mero saying his name. Rae realizes recognition can restore relationship before it restores  | 4 | OK | RV | OK | OK | OK | visual: 139 panel words and 3 concrete cues; judge specificity and repeat scaffolding |
+| `EFW_S1E05_S05` | The Issue 4 Arbiter memory returns in the same composition the reader already knows. | 5 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S06` | The frame widens beyond the old edge and reveals ancient Rae seated beside Arbiter, recording the ruling as ordinary work. | 5 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 5 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S07` | Rae recognizes that she did not merely witness Arbiter's decisions; she helped preserve and frame them. She turns her anger on Adrian for allowing both of them to be | 5 | OK | OK | OK | OK | RV | emotion: 3 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S08` | Afterlight debuts among survivors, restoring what she can one person and place at a time. Atlas arrives expecting reassurance and finds her exhausted beyond anything | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S09` | Starbreaker approaches Afterlight after reconstruction work, carrying the assumptions of an old relationship rather than a new ideological debate. | 5 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S10` | Afterlight refuses to let what she can repair become moral permission for what Starbreaker destroys. | 3 | OK | RV | CR | OK | RV | visual: 70 panel words and 4 concrete cues; judge specificity and repeat scaffolding; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S11` | Theo and Rae search physical remnants now that they know they belonged to this world. Theo finds Mero's old staff roster and his own name in it; Rae finds a handwrit | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S12` | Afterlight admits to Atlas that she cannot keep pace with the destruction. It is not a cosmic theorem; it is an exhausted person saying there are now more places ask | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S13` | Theo and Rae compare the roles they recovered. Both want to believe proximity to power was not participation. Neither can make that belief hold. | 5 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S14` | Theo remembers a private routine with Mero. Mero asks the junior attaché what he thinks about a decision the senior staff could not resolve. The memory cuts before T | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E05_S15` | Theo and Rae each recover the beginning of an ancient answer but not the choice itself; their own agency remains selectively absent. | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_S16` | Paired images of Mero waiting for Theo and Arbiter waiting for Rae turn the missing choices into the next story engine. | 4 | OK | GAP | CR | GAP | GAP | visual: Only 57 panel words and 0 concrete visual cues; blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E05_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 5. Signals that the returning war memory is about to escape the protagonists without revealing Flux or the specific public-memory | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Issue 6 (echoes-forgotten-war-s1-issue-6)
 
 **17 units.** Layout: 0 flagged; visual: 8; environment: 3; blocking: 7; acting: 15.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E06_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E06_S01` | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S02` | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E06_S03` | 4 | OK | RV | RV | GAP | RV | blocking: 0 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E06_S04` | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S05` | 5 | OK | RV | CR | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E06_S06` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E06_S07` | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E06_S08` | 4 | OK | RV | RV | RV | RV | visual: 185 panel words and 2 concrete cues; judge specificity and repeat scaffolding; setting: Location label or sparse setting: 2 concrete cues |
-| `EFW_S1E06_S09` | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S10` | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S11` | 3 | OK | OK | OK | RV | RV | blocking: 2 action cues, 3 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S12` | 4 | OK | GAP | RV | RV | OK | visual: Only 95 panel words and 1 concrete visual cues |
-| `EFW_S1E06_S13` | 4 | OK | RV | CR | GAP | RV | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E06_S14` | 5 | OK | RV | OK | OK | RV | visual: 83 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_S15` | 3 | OK | OK | CR | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E06_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E06_EDITOR_OPEN` | Opening previously page for Issue 6. Re-arms Theo and Rae's newly recovered participation and the missing choices without spoiling Flux, public memory return, or the | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E06_S01` | Theo recognizes an object in a public display as his old attaché satchel before reading the label. The museum calls it an anonymous ritual case from a vanished cultu | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S02` | Flux debuts over a cup of something going cold while Afterlight asks why everyone keeps demanding answers from someone who has spent the war learning how many answer | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E06_S03` | Rae finds one of her ancient annotations bound into a later civic record. Successive generations of apparent history have treated her handwriting as anonymous source | 4 | OK | RV | RV | GAP | RV | blocking: 0 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E06_S04` | Mero asks Flux which choice survives. Flux hears the request as an attempt to move responsibility into the future. | 4 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S05` | Flux refuses to certify Mero's decision and makes him own the choice himself. | 5 | OK | RV | CR | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E06_S06` | Theo asks whether he woke up thousands of years after the war. Adrian finally tells him that the question assumes a clean gap that the Reset did not leave behind. | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E06_S07` | Starbreaker asks Flux whether decisive action will prevent the catastrophe he fears. Flux refuses to bless the choice. Starbreaker accuses Flux of hiding behind unce | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E06_S08` | Theo and Rae step into an ordinary Tyrellis market while messages from Vark and Caelum remind them that the memory crisis is already altering jobs, records and insti | 4 | OK | RV | RV | RV | RV | visual: 185 panel words and 2 concrete cues; judge specificity and repeat scaffolding; setting: Location label or sparse setting: 2 concrete cues |
+| `EFW_S1E06_S09` | Afterlight finds Flux preparing to leave. Flux says everyone now hears only the future they want from them. Afterlight asks where Flux will go; Flux genuinely does n | 4 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S10` | Adrian admits the Reset did not create a false universe by design. It removed meaning so comprehensively that institutions, stories and ordinary lives settled around | 5 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S11` | Mero comes looking for Flux. The cup from the previous night is still on the table. Flux is gone. There is no message that explains where, why, or whether disappeara | 3 | OK | OK | OK | RV | RV | blocking: 2 action cues, 3 spatial cues; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S12` | Theo clearly hears his ancient self advising Mero that certainty is becoming contagious, recovering evidence of his own agency. | 4 | OK | GAP | RV | RV | OK | visual: Only 95 panel words and 1 concrete visual cues |
+| `EFW_S1E06_S13` | Rae remembers challenging Arbiter's language about civilians while still helping make the triage legible and actionable. | 4 | OK | RV | CR | GAP | RV | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E06_S14` | An ordinary transit worker corrects an erased district name without knowing how he knows it. | 5 | OK | RV | OK | OK | RV | visual: 83 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_S15` | The transit worker remembers a brother who does not exist in his present biography. His current partner arrives from the same shift and stays with him, making the co | 3 | OK | OK | CR | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E06_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 6. Escalates the now-public return of memory toward social identity and conflict without revealing Oryon or Issue 7's specific po | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Issue 7 (echoes-forgotten-war-s1-issue-7)
 
 **18 units.** Layout: 0 flagged; visual: 13; environment: 2; blocking: 10; acting: 16.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E07_EDITOR_OPEN` | 1 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S01` | 7 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S02` | 4 | OK | RV | OK | OK | OK | visual: 153 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
-| `EFW_S1E07_S03` | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E07_S04` | 4 | OK | RV | OK | OK | RV | visual: 178 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E07_S05` | 7 | OK | RV | OK | OK | RV | visual: 222 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 4 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E07_S06` | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E07_S07` | 6 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S08` | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S09` | 7 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S10` | 4 | OK | RV | OK | OK | RV | visual: 67 panel words and 7 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E07_S11` | 6 | OK | GAP | OK | RV | RV | visual: Only 172 panel words and 1 concrete visual cues |
-| `EFW_S1E07_S12` | 5 | OK | GAP | RV | RV | GAP | visual: Only 80 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S13` | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S14` | 4 | OK | GAP | RV | RV | GAP | visual: Only 83 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S15` | 7 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E07_S16` | 4 | OK | RV | OK | GAP | RV | blocking: 0 physical action cues across 4 beats; insufficient blocking/causality |
-| `EFW_S1E07_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E07_EDITOR_OPEN` | Opening previously page for Issue 7. Establishes that memory has escaped the trio and is becoming a public problem without revealing Oryon or the issue's later polic | 1 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S01` | Public memory return reaches Neo-Vectra through a present-day couple whose ordinary morning commute is suddenly interrupted by a recovered south-gate memory neither  | 7 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S02` | Oryon debuts by telling Arbiter that every future in which they wait ends with Neo-Vectra becoming the doorway to a wider catastrophe. Arbiter asks whether Oryon has | 4 | OK | RV | OK | OK | OK | visual: 153 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
+| `EFW_S1E07_S03` | Recovered factional symbols begin attracting people who do not know why they feel loyal to them. Theo wants to tell everyone the truth immediately; Rae insists that  | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E07_S04` | Atlas refuses Oryon's demand to abandon Neo-Vectra. Mero sees both arguments: Atlas is saving people in front of him; Oryon believes staying will kill people far bey | 4 | OK | RV | OK | OK | RV | visual: 178 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E07_S05` | The same Neo-Vectra couple from the opening reaches the concourse footprint. The man recovers fear tied to the woman's ancient affiliation even while their present-d | 7 | OK | RV | OK | OK | RV | visual: 222 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 4 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E07_S06` | Oryon pushes for pre-emptive action, Starbreaker agrees the danger cannot be allowed to widen, and Redlin sees certainty feeding escalation. Flux's unexplained absen | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E07_S07` | Adrian proposes cutting people off from memory-triggering sites. Theo hears the beginning of another Reset. Rae rejects both Adrian's suppression instinct and Theo's | 6 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S08` | Ancient Mero asks Theo for the perspective the senior champions cannot give him. | 4 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S09` | Recovered loyalties become organizations, testimony exchanges and mutual-aid groups. The recurring couple refuses the easy visual answer of choosing opposite queues: | 7 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S10` | Ancient Theo tells Mero to put the people, not only their arguments, in one room, helping cause the final council. | 4 | OK | RV | OK | OK | RV | visual: 67 panel words and 7 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E07_S11` | Theo sees that restored truth produces agency rather than harmony. The same couple remains together among people making different choices about old loyalties, while  | 6 | OK | GAP | OK | RV | RV | visual: Only 172 panel words and 1 concrete visual cues |
+| `EFW_S1E07_S12` | Ancient Rae forces names and people back into Arbiter's triage language before being asked who receives evacuation priority. | 5 | OK | GAP | RV | RV | GAP | visual: Only 80 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S13` | Theo and Rae admit their ancient selves influenced decisions that led toward the Reset. Their remembered identities no longer feel like foreign people they can simpl | 6 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 6 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S14` | Rae chooses the south gate and river housing first, leaving the north waiting without knowing how long. | 4 | OK | GAP | RV | RV | GAP | visual: Only 83 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S15` | Rae discovers that the temporary separation policy she supported has become identity-based movement control. The recurring couple is now physically split by the barr | 7 | OK | RV | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E07_S16` | After Rae shuts the policy down, she asks Adrian whether the original Reset also began as something temporary. His answer connects her mistake to his. | 4 | OK | RV | OK | GAP | RV | blocking: 0 physical action cues across 4 beats; insufficient blocking/causality |
+| `EFW_S1E07_EDITOR_CLOSE` | Closing NEXT ISSUE teaser for Issue 7. Sends the trio toward the site of the Reset and frames their disagreement without revealing Kyn, the final council, or the fin | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Issue 8 (echoes-forgotten-war-s1-issue-8)
 
 **20 units.** Layout: 0 flagged; visual: 11; environment: 0; blocking: 11; acting: 18.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E08_EDITOR_OPEN` | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S01` | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
-| `EFW_S1E08_S02` | 3 | OK | GAP | OK | RV | GAP | visual: Only 71 panel words and 0 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S03` | 5 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S04` | 6 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S05` | 5 | OK | GAP | OK | RV | GAP | visual: Only 93 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S06` | 4 | OK | RV | OK | OK | RV | visual: 93 panel words and 2 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_S07` | 5 | OK | RV | OK | OK | RV | visual: 108 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_S08` | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_S09` | 4 | OK | RV | OK | OK | OK | visual: 138 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
-| `EFW_S1E08_S10` | 6 | OK | OK | OK | RV | RV | blocking: 4 action cues, 5 spatial cues; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_S11` | 6 | OK | RV | OK | RV | RV | visual: 84 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 3 spatial cues |
-| `EFW_S1E08_S12` | 4 | OK | OK | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S13` | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S14` | 6 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S15` | 7 | OK | GAP | OK | RV | GAP | visual: Only 83 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E08_S16` | 5 | OK | GAP | OK | GAP | GAP | visual: Only 83 panel words and 1 concrete visual cues; blocking: 1 physical action cues across 5 beats; insufficient blocking/causality |
-| `EFW_S1E08_S17` | 6 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_S18` | 3 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
-| `EFW_S1E08_EDITOR_CLOSE` | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E08_EDITOR_OPEN` | Opening previously page for Issue 8. Re-arms the public-memory crisis and Adrian's admission about the Reset, then points toward the final convergence without reveal | 1 | OK | RV | OK | GAP | GAP | blocking: 0 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S01` | Theo, Rae and Adrian reach the site where the forgotten war was erased from lived continuity. Present architecture no longer fully hides the ancient place beneath it | 5 | OK | OK | OK | OK | OK | No structural gap detected; sequence still requires editorial review |
+| `EFW_S1E08_S02` | Kyn debuts as one exhausted person describing the war through specific ordinary suffering rather than strategic abstraction. | 3 | OK | GAP | OK | RV | GAP | visual: Only 71 panel words and 0 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S03` | Kyn, Oryon and Arbiter argue over suffering, prevention and responsibility before the full ancient council assembles. | 5 | OK | RV | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S04` | Theo and Rae begin experiencing their ancient selves continuously rather than as discrete visions. They do not converse across time; each present action restores the | 6 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S05` | The surviving ancient principals gather with Flux's place empty, each old virtue now visibly carrying its failure mode. | 5 | OK | GAP | OK | RV | GAP | visual: Only 93 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S06` | The argument tightens until Kyn points out that they are still waiting for a clean option that does not exist. | 4 | OK | RV | OK | OK | RV | visual: 93 panel words and 2 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_S07` | Adrian offers to close the scar again while Theo insists stolen memory must be restored rather than erased. | 5 | OK | RV | OK | OK | RV | visual: 108 panel words and 3 concrete cues; judge specificity and repeat scaffolding; emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_S08` | Rae recognizes that forced forgetting and forced restoration both assume the right to decide what other people should carry. | 6 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_S09` | Kyn asks Afterlight whether people can recover if the war ends. Afterlight says recovery is possible only if they stop demanding that recovery restore what was lost. | 4 | OK | RV | OK | OK | OK | visual: 138 panel words and 4 concrete cues; judge specificity and repeat scaffolding |
+| `EFW_S1E08_S10` | Ancient Arbiter asks Rae whether she will record the Reset decision; Rae agrees but refuses to rename coercion as mercy. | 6 | OK | OK | OK | RV | RV | blocking: 4 action cues, 5 spatial cues; emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_S11` | Rae records the decision in exact language without pretending she has found a clean alternative to it. | 6 | OK | RV | OK | RV | RV | visual: 84 panel words and 3 concrete cues; judge specificity and repeat scaffolding; blocking: 3 action cues, 3 spatial cues |
+| `EFW_S1E08_S12` | Mero asks ancient Adrian to execute the Reset because Adrian crossed every factional boundary and understands what is being taken. | 4 | OK | OK | OK | GAP | GAP | blocking: 1 physical action cues across 4 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S13` | Adrian invokes neutrality and Mero destroys that refuge: carrying every side's messages did not place Adrian outside responsibility. | 5 | OK | OK | OK | OK | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S14` | Theo recovers his final ancient contribution. Mero asked whether people could become something other than the war if the memory of it were removed. Theo answered tha | 6 | OK | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S15` | Ancient Reset gestures and present attempts to repeat or reverse them align in matched geometry as Adrian and Theo reach toward opposite coercive solutions. | 7 | OK | GAP | OK | RV | GAP | visual: Only 83 panel words and 1 concrete visual cues; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E08_S16` | Rae physically interrupts Theo and Adrian, breaking the repeated composition and refusing both forced restoration and forced forgetting. | 5 | OK | GAP | OK | GAP | GAP | visual: Only 83 panel words and 1 concrete visual cues; blocking: 1 physical action cues across 5 beats; insufficient blocking/causality |
+| `EFW_S1E08_S17` | Nothing resolves cleanly, but the consequence is shown through people already known: Vark protects workers rather than reporting impossible recollections, Caelum lea | 6 | OK | OK | OK | OK | RV | emotion: 2 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_S18` | The trio sees that a familiar region of the night sky is simply wrong: stars everyone remembers are absent. Nobody can tell whether they were erased, belonged only t | 3 | OK | OK | OK | OK | RV | emotion: 1 acting cues; assess reaction ownership, changes and specific expression |
+| `EFW_S1E08_EDITOR_CLOSE` | Season-closing From the Editor page. Uses only post-finale knowledge and keeps the remaining mysteries alive: survivors, disappearances and the universe's returning  | 1 | OK | RV | OK | GAP | GAP | blocking: 1 physical action cues across 1 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
 ## Season 1 Cover Shelf (echoes-forgotten-war-s1-covers)
 
 **8 units.** Layout: 8 flagged; visual: 0; environment: 0; blocking: 8; acting: 8.
 
-| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
-|---|---:|---|---|---|---|---|---|
-| `EFW_S1E01_COVER` | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 4 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
-| `EFW_S1E02_COVER` | 9 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E03_COVER` | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 1 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
-| `EFW_S1E04_COVER` | 8 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E05_COVER` | 7 | RV | OK | OK | GAP | GAP | blocking: 1 physical action cues across 7 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
-| `EFW_S1E06_COVER` | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 1 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
-| `EFW_S1E07_COVER` | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 3 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
-| `EFW_S1E08_COVER` | 8 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |
+|---|---|---:|---|---|---|---|---|---|
+| `EFW_S1E01_COVER` | Sell Issue 1 as the first overwhelming resurfacing of a forgotten heroic age: Theo is tiny in the present-day trench while an immense, still-unreadable ancient prese | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 4 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
+| `EFW_S1E02_COVER` | Sell Issue 2 as a mythic collision between two ancient heroic powers with coherent opposing solutions. Starbreaker and Redlin are immense memory-presences occupying  | 9 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E03_COVER` | Sell Issue 3 at civilization scale: the modern city is tiny beneath the resurfacing memory of Atlas, whose colossal blue-black-gold form seems to hold architecture,  | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 1 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
+| `EFW_S1E04_COVER` | Sell Issue 4 as remembered judgment at impossible scale. Arbiter should loom like a civilization-sized tribunal above and through Pax-Aeterna, while the black treaty | 8 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E05_COVER` | Sell Issue 5 as personal identity swallowed by mythic recovered history. Theo and Rae remain small present-day silhouettes while colossal ancient presences and align | 7 | RV | OK | OK | GAP | GAP | blocking: 1 physical action cues across 7 beats; insufficient blocking/causality; emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
+| `EFW_S1E06_COVER` | Sell Issue 6 as reality itself becoming uncertain under the resurfacing memory of Flux. Flux should dominate the cover as an enormous black-violet multiplied presenc | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 1 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
+| `EFW_S1E07_COVER` | Sell Issue 7 as the return of ancient predictive power reproducing itself as modern control. Oryon should loom at colossal scale over Neo-Vectra in pale geometric li | 8 | RV | OK | OK | RV | RV | layout: 8 beats, 3 shot/scale cues; no validated page composition; blocking: Dense staging/lettering: 8 beats / 3 dialogue items / 0 assembler warnings |
+| `EFW_S1E08_COVER` | Sell the finale as full mythic convergence. Theo, Rae and Adrian are tiny present-day figures at the Reset scar while Kyn emerges as an immense empathic presence acr | 8 | RV | OK | OK | RV | GAP | emotion: No specific emotional acting or reaction instructions despite characters/dialogue |
 
