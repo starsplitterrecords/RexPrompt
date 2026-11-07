@@ -18,9 +18,40 @@ function clean(obj){return JSON.parse(JSON.stringify(obj));}
 function withoutAssemblyFields(p){
  const copy=clean(p);delete copy.promptSuppress;delete copy.promptCharacterMode;delete copy.promptSettingMode;return copy;
 }
+// Chapters 1–3 store the same audited scopes directly on page records.
+function verifyInline(show,config){
+ const base=show.basePath,store={__show:config};
+ for(const f of ['characters','settings','regions','factions','direction','dialogue'])
+   store[f+'.json']=json(base+'/'+f+'.json');
+ let pages=[];
+ const input=Array.isArray(config.scenesFiles)?config.scenesFiles:[config.scenesFile||'scenes.json'];
+ for(const f of input)pages.push(...normalizeOverlay(unpack(base+'/'+f)));
+ for(const layer of config.sceneOverlays||[]){
+   const data=normalizeOverlay(unpack(base+'/'+layer.file,layer.encoding));
+   pages=applyOverlay(pages,data,layer);
+ }
+ pages=pages.filter(x=>new RegExp(config.includeIdPattern).test(x.id));
+ let saved=0,count=0;
+ for(const page of pages){
+   assert(page.pageLayout&&page.panelPlan?.length,'Missing normalized production page fields '+page.id);
+   valid(page);
+   const old=assemble(withoutAssemblyFields(page),store,0),now=assemble(page,store,0);
+   const split=v=>{const a=v.indexOf('\n[PAGE COMPOSITION]'),b=v.indexOf('\n[PANEL PLAN]');return v.slice(a>=0?a:b)};
+   assert.equal(split(now),split(old),'Changed protected panel, layout or dialogue content '+page.id);
+   saved+=old.length-now.length;
+   if(page.promptSuppress?.includes('summary'))totals.summary++;
+   if(page.promptCharacterMode==='cast')totals.cast++;
+   if(page.promptCharacterMode==='full')totals.fullCast++;
+   if(page.promptSettingMode==='label')totals.settings++;
+   count++;totals.pages++;
+ }
+ totals.scoped+=count;totals.saved+=saved;
+ reports.push(show.id+': '+count+' authoritative pages, '+saved+' repeated chef characters removed');
+}
 function verify(show){
  const base=show.basePath,configFile=base+'/assembler.json',config={...(fs.existsSync(path.join(root,configFile))?json(configFile):{}),...show};
  const profilePath=(config.sceneOverlays||[]).find(x=>/page_assembly_profiles_(?:c|e)\d\d\.json$/.test(x.file));
+ if(!profilePath&&/^low-tide-signal-c0[1-3]$/.test(show.id))return verifyInline(show,config);
  assert(profilePath,'Missing assembly profile for '+show.id);
  assert(profilePath.mergeById&&profilePath.strict,'Assembly profiles must be strict ID merges: '+show.id);
  const originalProfile=normalizeOverlay(unpack(base+'/'+profilePath.file,profilePath.encoding));
