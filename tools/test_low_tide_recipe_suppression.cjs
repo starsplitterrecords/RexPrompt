@@ -51,7 +51,7 @@ function verifyInline(show,config){
 function verify(show){
  const base=show.basePath,configFile=base+'/assembler.json',config={...(fs.existsSync(path.join(root,configFile))?json(configFile):{}),...show};
  const profilePath=(config.sceneOverlays||[]).find(x=>/page_assembly_profiles_(?:c|e)\d\d\.json$/.test(x.file));
- if(!profilePath&&/^low-tide-signal-c0[1-3]$/.test(show.id))return verifyInline(show,config);
+ if(!profilePath&&/^low-tide-signal-c0[1-7]$/.test(show.id))return verifyInline(show,config);
  assert(profilePath,'Missing assembly profile for '+show.id);
  assert(profilePath.mergeById&&profilePath.strict,'Assembly profiles must be strict ID merges: '+show.id);
  const originalProfile=normalizeOverlay(unpack(base+'/'+profilePath.file,profilePath.encoding));
