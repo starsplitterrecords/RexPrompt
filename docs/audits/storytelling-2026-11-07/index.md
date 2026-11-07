@@ -11,10 +11,10 @@
 **25 distinct series / 152 issue configurations / 2971 production units.**
 
 - layout: 1276 OK, 0 carried, 610 review, 1069 missing/invalid
-- visual: 776 OK, 0 carried, 1294 review, 901 missing/invalid
+- visual: 776 OK, 0 carried, 1294 review, 885 missing/invalid
 - setting: 1507 OK, 1072 carried, 392 review, 0 missing/invalid
-- blocking: 583 OK, 0 carried, 1473 review, 902 missing/invalid
-- emotion: 132 OK, 0 carried, 1098 review, 1728 missing/invalid
+- blocking: 583 OK, 0 carried, 1473 review, 886 missing/invalid
+- emotion: 132 OK, 0 carried, 1098 review, 1712 missing/invalid
 
 ## Issue and page-level reports
 
@@ -32,7 +32,7 @@
 | [Vikings 2026!](series/vikings-2026.md) | 12 | 296 | 268 | 137 | 16 | 168 | 287 |
 | [Low Tide Signal](series/low-tide-signal.md) | 14 | 199 | 7 | 180 | 11 | 127 | 190 |
 | [Division Threshold](series/division-threshold.md) | 24 | 228 | 228 | 105 | 20 | 224 | 161 |
-| [Sun Comes Through — The Musical](series/sun-comes-through-musical.md) | 1 | 16 | 0 | 16 | 3 | 16 | 16 |
+| [Sun Comes Through — The Musical](series/sun-comes-through-musical.md) | 1 | 16 | 0 | 0 | 3 | 0 | 0 |
 | [Echoes of a Forgotten War](series/echoes-forgotten-war.md) | 9 | 157 | 8 | 85 | 8 | 89 | 145 |
 | [Sunforge Outlaw](series/sunforge-outlaw.md) | 12 | 296 | 36 | 227 | 0 | 259 | 285 |
 | [Rex Fleet Academy: Navigating the Mirrorfold](series/rex-fleet-academy-navigating-mirrorfold.md) | 1 | 24 | 24 | 12 | 0 | 14 | 24 |
