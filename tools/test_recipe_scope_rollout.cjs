@@ -119,10 +119,10 @@ assert.equal(divisionPages,204,'Division canonical flat page count changed');
 assert.equal(divisionScoped,194,'Missing Division editorial page policy');
 counts['division-threshold-s1']={issues:8,profiles:divisionScoped,savedCharacters:divisionSavings,suppressions:0};
 
-assert.equal(selected.length,2,'Unexpected remaining overlay-backed show configurations');
+assert.equal(selected.length,1,'Unexpected remaining overlay-backed show configurations');
 assert([...Object.values(counts)].every(x=>x.savedCharacters>0),'No reference reduction in one or more series');
 assert(!selected.some(x=>/^vikings-2026-s1/.test(x.id)),'Already-compact Vikings unexpectedly modified');
-assert.equal(Object.keys(counts).length,3,'Expected only Rockets, Division Threshold, Stardust Issue 3');
+assert.equal(Object.keys(counts).length,2,'Expected Rockets overlay plus Division Threshold flat source; Stardust now normalized');
 console.log('PASS: '+(selected.length+divisionShows.length)+' scoped show configurations across '+Object.keys(counts).length+' series; no source panels, dialogue, continuity, layout or scene count changed.');
 for(const [series,x] of Object.entries(counts))console.log('PASS '+series+': '+x.issues+' issue/chapter targets, '+x.profiles+' profiles, '+x.savedCharacters+' prompt characters trimmed.');
 console.log('PASS: protected chef ingredients identical; Division flat pages remain canonical; short names resolve from durable setting shelves.');
