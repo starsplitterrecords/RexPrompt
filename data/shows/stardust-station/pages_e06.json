@@ -54,7 +54,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P02",
@@ -114,7 +118,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P03",
@@ -177,7 +185,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P04",
@@ -231,7 +243,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P05",
@@ -289,7 +305,10 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ]
   },
   {
     "id": "SDS_S1E06_P06",
@@ -350,11 +369,16 @@
       }
     ],
     "continuityFrom": "SDS_S1E06_P05",
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P07",
-    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing the same morning session. Opening image: the official program finally starts. Middle image: the unresolved physical problem continues underneath it. Closing image: the door remains an explicit option.",
+    "summary": "Wellness Week begins in the overheated multipurpose room while the real ventilation problem continues. Each exchange belongs to the people visibly involved; the exit is available rather than theatrically offered.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Astra",
@@ -366,16 +390,16 @@
     "continuityFrom": "SDS_S1E06_P06",
     "panelPlan": [
       {
-        "text": "PANEL 1 — The baseline block begins; synthetic calm audio fills the already-warm room."
+        "text": "PANEL 1 — Astra starts the required wellness block in the bright but uncomfortably warm multipurpose room, making the no-personal-disclosure boundary explicit."
       },
       {
-        "text": "PANEL 2 — Zib watches the temperature and reminds Astra that the damper still needs ten minutes."
+        "text": "PANEL 2 — Kreeb tries to enjoy the session while Noola, uncomfortable inside her warming water dome, tells him to enjoy it without involving her."
       },
       {
-        "text": "PANEL 3 — Noola adjusts her dome cooling while Kreeb keeps the exit path visibly available."
+        "text": "PANEL 3 — Zib checks the rattling vent behind the blocked service wall as the program continues; Noola adjusts the cooling controls at the edge of the room. Keep the diagnostic action identifiable."
       },
       {
-        "text": "PANEL 4 — Astra confirms that anyone may leave, refusing to turn required participation into physical confinement."
+        "text": "PANEL 4 — Pixa points out the clear exit route while Noola gives a dry approving response, still standing near the door. Astra need not appear in this close exchange."
       }
     ],
     "dialogueInline": [
@@ -416,7 +440,18 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptVisibleCharacters": [
+      "SDS_Astra",
+      "SDS_Zib",
+      "SDS_Kreeb",
+      "SDS_Noola"
+    ]
   },
   {
     "id": "SDS_S1E06_P08",
@@ -476,11 +511,16 @@
       }
     ],
     "continuityFrom": "SDS_S1E06_P07",
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P09",
-    "summary": "Primary composition: 4-panel page in Multipurpose Room, continuing directly after the exits. Opening image: the remaining head count becomes morally and scientifically useless. Middle image: Astra stops defending baseline completeness. Closing image: the room is handed back to maintenance.",
+    "summary": "The failed baseline turns back into a maintenance handoff: Astra refuses a meaningless attendance count, Zib asks for access, Kreeb clears the chairs, Mira plans a post-repair measurement, and Jax helps move furniture rather than pose as a participant.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Astra",
@@ -492,16 +532,16 @@
     "continuityFrom": "SDS_S1E06_P08",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Jax lingers by the door and offers to stay only if Astra needs the count; Astra refuses to use him that way."
+        "text": "PANEL 1 — Near the multipurpose-room door, Jax offers to stay only if Astra needs a head count. Astra refuses to count a session held in an unsafe room; their two-shot captures the decision."
       },
       {
-        "text": "PANEL 2 — Mira shows that the baseline is already compromised by the known room condition, and Astra owns the original delay decision."
+        "text": "PANEL 2 — Zib requests full access to the wall as Kreeb begins shifting chairs out of the service hatch's clearance area. Neither needs a crowd watching."
       },
       {
-        "text": "PANEL 3 — Kreeb starts clearing the room before the final order, trusting where the conversation is going."
+        "text": "PANEL 3 — Mira takes a baseline temperature reading for comparison after repair, noting the compromised environmental data while Kreeb finishes opening the access path."
       },
       {
-        "text": "PANEL 4 — Astra ends the baseline block and gives Zib the wall."
+        "text": "PANEL 4 — Jax carries the last chair out of Zib's way as Astra officially ends the wellness block. Jax's exit joke can land over the departing chair."
       }
     ],
     "dialogueInline": [
@@ -536,7 +576,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P10",
@@ -598,7 +643,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P11",
@@ -657,11 +707,16 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P12",
-    "summary": "Primary composition: 5-panel page in Multipurpose Room later that day. Opening image: the repaired room is useful again without a program. Middle image: Jax and Noola return for ordinary reasons while Kreeb restores only the practical amenities. Closing image: Zib closes the actual repair as normal room use resumes.",
+    "summary": "The repaired multipurpose room returns to useful everyday service without a wellness session. Noola verifies her water-rig comfort, Jax jokes about napping through the repair, Kreeb asks whether anyone is staying, and Noola chooses to remain for herself.",
     "setting": "SDS_Multipurpose_Room",
     "characters": [
       "SDS_Jax",
@@ -671,19 +726,19 @@
     ],
     "panelPlan": [
       {
-        "text": "PANEL 1 — Later, the repaired multipurpose room is cooler and the wellness equipment is pushed aside; no official session is running."
+        "text": "PANEL 1 — Later, the multipurpose room is cool again and the program seats are pushed aside. Noola steps in, checks her dome temperature, and acknowledges the comfortable result."
       },
       {
-        "text": "PANEL 2 — Jax returns for his abandoned coffee and tests the room with exaggerated caution."
+        "text": "PANEL 2 — Jax retrieves his abandoned coffee and jokes that he preferred sleeping in the warmer room, while the repaired vent runs quietly overhead."
       },
       {
-        "text": "PANEL 3 — Noola enters, checks her dome temperature once and chooses a chair without comment from anyone else."
+        "text": "PANEL 3 — Near the service hatch, Zib finishes a normal repair log and answers Jax, who is holding his coffee; both faces and their relationship to the repaired unit are clear."
       },
       {
-        "text": "PANEL 4 — Kreeb returns the water pitcher without restarting the program or asking for reflection."
+        "text": "PANEL 4 — Kreeb refills an ordinary water pitcher and asks Noola whether she intends to stay for any subsequent session. No program official is present."
       },
       {
-        "text": "PANEL 5 — Zib closes the service log at the doorway while coworkers occupy the room for ordinary reasons."
+        "text": "PANEL 5 — Noola chooses a window-side chair because the room is pleasant, not because of enrollment. Zib closes the final repair check from the doorway in the background."
       }
     ],
     "dialogueInline": [
@@ -724,7 +779,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P13",
@@ -785,7 +845,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P14",
@@ -837,7 +901,17 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptVisibleCharacters": [
+      "SDS_Jax",
+      "SDS_Noola",
+      "SDS_Glorp"
+    ]
   },
   {
     "id": "SDS_S1E06_P15",
@@ -897,7 +971,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P16",
@@ -958,7 +1036,15 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptVisibleCharacters": [
+      "SDS_Mira",
+      "SDS_Zib"
+    ]
   },
   {
     "id": "SDS_S1E06_P17",
@@ -1016,7 +1102,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P18",
@@ -1067,7 +1157,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P19",
@@ -1119,7 +1214,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P20",
@@ -1178,7 +1278,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E06_P21",
@@ -1227,7 +1332,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E06_P22",
@@ -1275,6 +1384,10 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   }
 ]
