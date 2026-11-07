@@ -426,9 +426,29 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
     if(typeof reuse.mode==="string"&&reuse.mode.trim())details.push("Action: "+reuse.mode.trim());
     if(reuse.sourceIssue!==undefined||reuse.sourcePage!==undefined){
       const source=[reuse.sourceIssue!==undefined?"Issue "+reuse.sourceIssue:"",reuse.sourcePage!==undefined?"page "+reuse.sourcePage:""].filter(Boolean);
-      if(source.length)details.push("Source artwork: "+source.join(", "));
+      if(source.length)details.push("Historical artwork locator: "+source.join(", "));
     }
     if(typeof reuse.notes==="string"&&reuse.notes.trim())details.push("Notes: "+reuse.notes.trim());
+    // The rebuilt Backyard Rockets Issues 1–2 reletter existing published panels.
+    // Their historical sourcePage locators refer to a different, pre-rebuild order.
+    // The published release preserves the actual panel geometry in rebuilt reading order.
+    const backyardReletter=show.id==="backyard-rockets-s1"
+      && /^BR_S1E0[12]_R2_P\d{2}$/.test(key)
+      && typeof reuse.mode==="string"&&reuse.mode.endsWith("_reletter")
+      && !(Array.isArray(s.panelPlan)&&s.panelPlan.length)
+      && Number.isInteger(s.productionPage);
+    if(backyardReletter){
+      const firstIssue=s.episode==="S1E01",secondIssue=s.episode==="S1E02";
+      const n=s.productionPage;
+      if((firstIssue&&n>=1&&n<=20)||(secondIssue&&n>=1&&n<=24)){
+        const published=firstIssue?n+1:n+23;
+        const issue=firstIssue?"issue-01":"issue-02";
+        const file="page-"+String(published).padStart(3,"0")+".jpg";
+        const path="sites/visions/public/images/pages/backyard-rockets/"+issue+"/"+file;
+        details.push("Existing published panel structure: starsplitterrecords/StarSplitterVisions/main/"+path);
+        details.push("Use the actual published image pixels as the panel-boundary, panel-order, and staging reference. This is an existing-art reletter/reuse operation, not an instruction to invent a new panel plan. Preserve the authored current dialogue and story instructions separately; if they cannot fit the existing art, flag the conflict instead of fabricating panels.");
+      }
+    }
     if(details.length)out.push("\n[ARTWORK PRODUCTION]\n"+details.join("\n"));
   }
   if(include("region")){
