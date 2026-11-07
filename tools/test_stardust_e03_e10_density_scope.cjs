@@ -38,13 +38,16 @@ for(let ep=3;ep<=10;ep++){
   assert.equal(new Set(sourcePages.map(p=>p.id)).size,expected,'Duplicate source page id '+id);
   const densityPath='editorial/pages_e'+String(ep).padStart(2,'0')+'_density_pass.json';
   const densityIdx=overlays.findIndex(x=>x.file===densityPath);
-  assert(densityIdx>=0&&overlays[densityIdx].mergeById&&overlays[densityIdx].strict,
-    'Missing strict editorial overlay '+id);
+  if(ep===3)
+    assert(densityIdx>=0&&overlays[densityIdx].mergeById&&overlays[densityIdx].strict,
+      'Issue 3 still uses strict density patch');
+  else assert(densityIdx===-1,
+    'Issues 4–10 must use their normalized authoritative source pages');
   const density=load(seriesBase+'/'+densityPath);
   const edited=makeMap(density,densityPath);
   assert.equal(edited.size,expectedChanged[ep],'Unexpected edit count '+id);
   let pages=sourcePages.map(x=>({...x}));
-  for(const overlay of overlays.slice(0)){
+  if(ep===3)for(const overlay of overlays.slice(0)){
     if(!overlay.mergeById)continue;
     const patches=load(seriesBase+'/'+overlay.file);
     const byId=makeMap(patches,overlay.file);
@@ -54,7 +57,12 @@ for(let ep=3;ep<=10;ep++){
   }
   const dlgName='editorial/dialogue_cleanup_e'+String(ep).padStart(2,'0')+'.json';
   const d=makeMap(load(seriesBase+'/'+dlgName),dlgName);
-  pages=pages.map(p=>{const edit=d.get(p.id);return edit?{...p,dialogueInline:edit.dialogueInline||edit.sceneDialogue}:p});
+  if(ep===3)pages=pages.map(p=>{
+    const edit=d.get(p.id);
+    return edit?{...p,dialogueInline:edit.dialogueInline||edit.sceneDialogue}:p;
+  });
+  // Issues 4–10 already carry these accepted dialogue records in source.
+
   data.__show=show;
   let lines=0;
   const changedIds=[];

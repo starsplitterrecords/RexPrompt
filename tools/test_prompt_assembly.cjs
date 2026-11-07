@@ -67,11 +67,11 @@ for(const id of ['SDS_S1E04_P01','SDS_S1E04_P02','SDS_S1E04_P03']){
   }
   linesKept(p,result);panelsKept(p,result);
 }
-// Legacy pages retain full descriptions until explicitly configured.
+// Current Stardust pages already include their accepted per-page scope.
 const unchanged=page('stardust-station','pages_e04.json','SDS_S1E04_P04');
 const legacy=assemble(unchanged,sdsStore,0);
-assert(legacy.includes(unchanged.summary));
-assert(legacy.includes('[CHARACTERS]'));
+assert(!legacy.includes(unchanged.summary),'Redundant scoped summary unexpectedly emitted');
+assert(legacy.includes('[CAST]')&&!legacy.includes('[CHARACTERS]'),'Normalized cast scoping was not delivered');
 linesKept(unchanged,legacy);
 // Rex Fleet: suppress only detailed recurring setting text, not the visible location.
 const rexStore=store('rex-fleet-s1',{unitLabel:'PAGE',generationLine:'Rex art direction'});

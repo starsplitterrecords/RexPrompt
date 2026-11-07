@@ -57,7 +57,10 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ]
   },
   {
     "id": "SDS_S1E08_P02",
@@ -107,7 +110,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P03",
@@ -176,7 +183,11 @@
         "subtext": "Panel 6"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P04",
@@ -237,7 +248,16 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label",
+    "promptVisibleCharacters": [
+      "SDS_Mira",
+      "SDS_Liaison"
+    ]
   },
   {
     "id": "SDS_S1E08_P05",
@@ -294,7 +314,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P06",
@@ -344,7 +368,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P07",
@@ -392,7 +420,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P08",
@@ -452,7 +484,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P09",
@@ -468,19 +505,19 @@
     "continuityFrom": "SDS_S1E08_P08",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib opens the manifold cabinet while Mira pulls the sensor history beside him."
+        "text": "PANEL 1 — Zib opens the galley branch regulator cabinet and points to low pressure while Mira retrieves the sensor history beside him. The Liaison stays behind the safe work line."
       },
       {
-        "text": "PANEL 2 — Mira dates the pressure drop and Zib immediately locates the sticking regulator actuator."
+        "text": "PANEL 2 — Mira logs readings while Zib safely isolates the sticking actuator; they keep their tools and data separate."
       },
       {
-        "text": "PANEL 3 — Astra asks whether the branch can be isolated without broad service loss."
+        "text": "PANEL 3 — Astra asks the team whether the visitor should return to the lab as access is blocked. The local sink branch is isolated without shutting down the whole galley."
       },
       {
-        "text": "PANEL 4 — Zib points to the secondary sink branch and gives the problem its actual size."
+        "text": "PANEL 4 — The Operations Liaison answers Astra from behind the safety tape: they would rather observe the real crew response if they are not in the way. Keep it a two-person exchange outside the work zone."
       },
       {
-        "text": "PANEL 5 — The station announcement takes only Galley Sink Two offline while the Liaison watches the crew refuse to inflate the incident."
+        "text": "PANEL 5 — Zib marks the stay-behind-this-line boundary as the station notice takes only Galley Sink Two offline. The repair is small, safe and legible, not a wide station crisis."
       }
     ],
     "dialogueInline": [
@@ -515,11 +552,15 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P10",
-    "summary": "Primary composition: 6-panel page in Galley Service Corridor. Opening image: Zib isolates the affected branch. Middle image: Zib removes the actuator cover. Closing image: The Liaison asks Astra quietly.",
+    "summary": "During the galley regulator repair, each coworker holds a distinct function while the visiting liaison observes. Zib isolates and opens the actuator, Jax keeps access clear, Mira records physical readings, Pixa reports clearance and the Liaison notices the crew's practiced teamwork.",
     "setting": "SDS_Galley_Service_Corridor",
     "characters": [
       "SDS_Zib",
@@ -532,22 +573,22 @@
     "continuityFrom": "SDS_S1E08_P09",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib isolates the affected branch."
+        "text": "PANEL 1 — Zib isolates the galley actuator while Jax hands him the correctly tipped driver; the isolation tag is clear."
       },
       {
-        "text": "PANEL 2 — Jax keeps the service path clear and updates the route slate."
+        "text": "PANEL 2 — Jax makes room for the service cart and answers Zib's familiar complaint about worn tools. Do not expand the working pair into a crew lineup."
       },
       {
-        "text": "PANEL 3 — Mira compares commanded and actual actuator position."
+        "text": "PANEL 3 — Mira compares commanded and actual actuator response beside the open cabinet, joking about the screwdriver history without interfering with Zib's work."
       },
       {
-        "text": "PANEL 4 — Zib removes the actuator cover."
+        "text": "PANEL 4 — Zib takes off the actuator cover while Pixa confirms that the access route around the repair remains open; Pixa is at a separate status station, not holding the tool."
       },
       {
-        "text": "PANEL 5 — Pixa logs elapsed response time and affected service count."
+        "text": "PANEL 5 — The Operations Liaison watches the practiced repair from outside the barrier and remarks on how naturally the crew works together. Pixa's elapsed timer remains incidental in the background."
       },
       {
-        "text": "PANEL 6 — The Liaison asks Astra quietly. Astra watches the crew."
+        "text": "PANEL 6 — Astra watches Zib and Jax at work and answers the Liaison's observation with a dry distinction between their optional arguments and essential competence."
       }
     ],
     "dialogueInline": [
@@ -588,11 +629,16 @@
         "subtext": "Panel 6"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P11",
-    "summary": "Primary composition: 4-panel page in Galley Service Corridor, continuing the repair. Opening image: several small jobs occur simultaneously around the same incident. Middle image: ownership is distributed by function rather than command. Closing image: the Liaison recognizes the station's actual operating pattern.",
+    "summary": "Galley branch service continues with clear individual ownership: Zib and Jax work the actuator, Mira documents the seal, Glorp records isolation, Kreeb marks sink access and the Liaison sees the distributed response rather than a contrived team portrait.",
     "setting": "SDS_Galley_Service_Corridor",
     "characters": [
       "SDS_Zib",
@@ -606,16 +652,16 @@
     "continuityFrom": "SDS_S1E08_P10",
     "panelPlan": [
       {
-        "text": "PANEL 1 — Zib cleans the actuator track while Mira verifies response at the cabinet."
+        "text": "PANEL 1 — At the isolated actuator, Zib reseats the track and asks Jax, beside him, to hold the removed cover. Mira's reader stays visible beyond their tools."
       },
       {
-        "text": "PANEL 2 — Jax turns a supply cart away from the open service zone as Astra handles the sink notice and nearby complaints."
+        "text": "PANEL 2 — Jax holds the service cover as Mira photographs the actuator seal, not anybody's hands. The access cart is safely parked behind the service boundary."
       },
       {
-        "text": "PANEL 3 — Glorp logs the isolation while Kreeb posts a plain sign on the unavailable sink."
+        "text": "PANEL 3 — Glorp files the actual isolation notice while Kreeb posts a plain sign at the unavailable sink. Both do their separate small jobs in one compact two-shot."
       },
       {
-        "text": "PANEL 4 — The Liaison sees the distributed response happen at once and asks Astra who is directing it; Astra answers that it depends which part."
+        "text": "PANEL 4 — The Liaison, behind the safety line near Astra, notices that nobody has treated the visitor as the central event. Their remark follows the completed distribution of tasks; no invented direction question or reply."
       }
     ],
     "dialogueInline": [
@@ -656,7 +702,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P12",
@@ -716,7 +767,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P13",
@@ -776,7 +832,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P14",
@@ -826,7 +887,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P15",
@@ -896,7 +961,12 @@
         "subtext": "Panel 6"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P16",
@@ -947,7 +1017,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P17",
@@ -1007,7 +1082,12 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P18",
@@ -1069,7 +1149,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P19",
@@ -1120,7 +1204,12 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   },
   {
     "id": "SDS_S1E08_P20",
@@ -1179,7 +1268,11 @@
         "subtext": "Panel 5"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P21",
@@ -1230,7 +1323,11 @@
         "subtext": "Panel 4"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast"
   },
   {
     "id": "SDS_S1E08_P22",
@@ -1278,6 +1375,11 @@
         "subtext": "Panel 3"
       }
     ],
-    "dialogueSource": "Season 1 relationship-first production rewrite 2026-10-11"
+    "dialogueSource": "scene-dialogue overlay",
+    "promptSuppress": [
+      "summary"
+    ],
+    "promptCharacterMode": "cast",
+    "promptSettingMode": "label"
   }
 ]
