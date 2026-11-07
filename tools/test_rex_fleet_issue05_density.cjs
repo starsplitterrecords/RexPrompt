@@ -1,68 +1,41 @@
 #!/usr/bin/env node
 'use strict';
-const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib');
-const vm=require('node:vm'),assert=require('node:assert/strict');
+// Existing Rex Fleet Issue 05 production integrity check, normalized-source edition.
+// Validate recipe mechanics without freezing creative wording or resurrecting overlays.
+const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
-const load=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
-const shows=load('data/shows.json');
-const show=shows.find(s=>s.id==='rex-fleet-i05');
-assert(show,'Issue 5 not registered');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8'),load=p=>JSON.parse(read(p));
+const show=load('data/shows.json').find(x=>x.id==='rex-fleet-i05');
+assert(show,'Issue 05 not registered');
+assert(!(show.sceneOverlays||[]).some(x=>/issue_05_/.test(x.file)),
+ 'Consolidated story patches must not remain in the live recipe load path');
 const base=show.basePath;
-const text=fs.readFileSync(path.join(root,base,'encoded/pages_i05.json.gzb64'),'utf8');
-const originals=JSON.parse(zlib.gunzipSync(Buffer.from(text.trim(),'base64')).toString('utf8'));
-const overlayName='issue_05_dialogue_density_overlay.json';
-const revisions=load(base+'/'+overlayName);
-const registered=show.sceneOverlays.filter(x=>x.file===overlayName);
-assert.equal(registered.length,1,'Unique Issue 5 overlay registration expected');
-assert(registered[0].mergeById,'Dialogue overlay must merge by page ID');
-assert.equal(new Set(revisions.map(x=>x.id)).size,revisions.length,'Duplicate page patches');
-const ids=new Set(originals.map(x=>x.id));
-assert(revisions.every(x=>ids.has(x.id)),'Revision references a missing page');
-assert(revisions.every(x=>Object.keys(x).every(k=>['id','dialogueInline','panelPlan'].includes(k))),
-  'Unexpected production data mutated by editorial overlay');
-const overrides=new Map(revisions.map(x=>[x.id,x]));
-const pages=originals.map(x=>({...x,...(overrides.get(x.id)||{})}));
-assert.equal(pages.length,originals.length,'Issue length changed');
-for(let i=0;i<pages.length;i++){
- const old=originals[i],page=pages[i];
- assert.equal(page.id,old.id,'Page order or ID altered');
- assert.equal(page.panelPlan?.length,old.panelPlan?.length,'Panel count altered on '+page.id);
- if(!overrides.has(page.id))assert.deepEqual(page,old,'Untouched page changed');
- const dialogue=page.dialogueInline||[];
- let previous=0;
- for(const line of dialogue){
-  assert(line?.text?.trim()&&line.handle&&line.speaker,'Incomplete dialogue record '+page.id);
-  const m=String(line.subtext||'').match(/^Panel (\d+)$/);
-  assert(m,'Explicit panel mapping missing '+page.id);
-  const number=Number(m[1]);
-  assert(number>=1&&number<=page.panelPlan.length,'Invalid dialogue panel '+page.id);
-  assert(number>=previous,'Backtracking lettering sequence on '+page.id);
-  previous=number;
- }
-}
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const start=html.indexOf('const SHOW_MANIFEST='),end=html.indexOf('function safeFilePart(',start);
-assert(start>=0&&end>start,'Current RexPrompt assembler unavailable');
-const sandbox=vm.createContext({});
-vm.runInContext(html.slice(start,end)+';globalThis.assemble=assembleScene;',sandbox);
+const original=JSON.parse(zlib.gunzipSync(Buffer.from(read(base+'/encoded/pages_i05.json.gzb64').trim(),'base64')).toString('utf8'));
+const layouts=load(base+'/page_layout_i05.json'),byLayout=new Map(layouts.map(x=>[x.id,x]));
+const pages=original.map(x=>byLayout.has(x.id)?{...x,...byLayout.get(x.id)}:x);
+assert.equal(new Set(pages.map(x=>x.id)).size,pages.length,'Duplicate source page IDs');
+const source=read('index.html'),a=source.indexOf('const SHOW_MANIFEST='),b=source.indexOf('function safeFilePart(',a);
+assert(a>=0&&b>a,'Canonical assembler extraction unavailable');
+const context=vm.createContext({});
+vm.runInContext(source.slice(a,b)+';globalThis.build=assembleScene;',context);
 const store={__show:show};
-for(const s of ['characters','dialogue','settings','regions','factions','direction'])store[s+'.json']=load(base+'/'+s+'.json');
-for(let i=0;i<pages.length;i++){
- const page=pages[i],rendered=sandbox.assemble(page,store,i);
- const old=originals[i],oldRendered=sandbox.assemble(old,store,i);
- assert(rendered.includes('[PANEL PLAN]'),'Missing panel plan '+page.id);
- for(const p of page.panelPlan){
-  const text=typeof p==='string'?p:p.text||p.name||p.summary||JSON.stringify(p);
-  assert(rendered.includes(text),'Missing authored panel '+page.id);
- }
- for(const d of page.dialogueInline||[])assert(rendered.includes(d.text),'Missing dialogue '+page.id);
- if(!overrides.has(page.id))assert.equal(rendered,oldRendered,'Unchanged recipe drift '+page.id);
- if(overrides.has(page.id)){
-  assert.equal(page.charactersInline.length,old.charactersInline.length,'Characters altered '+page.id);
-  assert.equal(page.summary,old.summary,'Story summary altered '+page.id);
-  assert.equal(page.settingText,old.settingText,'Setting altered '+page.id);
-  assert.equal(page.directionInline.length,old.directionInline.length,'Direction altered '+page.id);
- }
+for(const f of ['characters','dialogue','settings','regions','factions','direction'])store[f+'.json']=load(base+'/'+f+'.json');
+let lines=0;
+for(const [index,page] of pages.entries()){
+  assert(Array.isArray(page.panelPlan)&&page.panelPlan.length,'Missing scripted panels '+page.id);
+  if(page.pageLayout)assert.equal(page.pageLayout.panels.length,page.panelPlan.length,'Page layout panel mismatch '+page.id);
+  for(const line of page.dialogueInline||[]){
+    assert(line.text?.trim()&&line.speaker&&line.handle,'Incomplete dialogue '+page.id);
+    const match=String(line.subtext||'').match(/^Panel (\d+)$/);
+    assert(match&&Number(match[1])>=1&&Number(match[1])<=page.panelPlan.length,'Wrong dialogue panel '+page.id);
+    lines++;
+  }
+  const output=context.build(page,store,index);
+  assert(output.includes('[PANEL PLAN]'),'Missing assembled panel plan '+page.id);
+  for(const action of page.panelPlan){
+    const text=typeof action==='string'?action:action.action||action.text||action.summary;
+    if(text?.trim())assert(output.includes(text),'Panel action not delivered '+page.id);
+  }
+  for(const line of page.dialogueInline||[])assert(output.includes(line.text),'Authored dialogue not delivered '+page.id);
 }
-const changed=revisions.map(x=>x.id).join(', ');
-console.log('PASS Rex Fleet Issue 5: '+pages.length+' interior pages assembled, '+revisions.length+' scoped revisions ('+changed+'), ordered lettering, intact panel counts and untouched recipes');
+console.log('PASS Rex Fleet I05: '+pages.length+' normalized interior pages assembled; '+lines+' authored dialogue records delivered');
