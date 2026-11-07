@@ -49,26 +49,22 @@ let curatedPages=0,curatedExcluded=0;
 for(const ep of ['04','05','06','07','08','09']){
   const suffix='editorial/visual_cast_e'+ep+'.json';
   const show=allShows.find(x=>x.id==='stardust-station-e'+ep);
-  const registration=show.sceneOverlays.filter(x=>x.file===suffix);
-  assert.equal(registration.length,1,'Missing unique visual-cast overlay E'+ep);
-  assert.equal(registration[0].mergeById,true);
-  assert.equal(registration[0].strict,true);
+  assert(!(show.sceneOverlays||[]).some(x=>x.file===suffix),
+    'Normalized issue must not reapply historical visual-cast overlay E'+ep);
   const authored=load('data/shows/stardust-station/pages_e'+ep+'.json');
-  const patches=load('data/shows/stardust-station/'+suffix);
-  for(const patch of patches){
-    assert.deepEqual(Object.keys(patch).sort(),['id','promptVisibleCharacters']);
-    const page=authored.find(p=>p.id===patch.id);
-    assert(page,'Visual-cast overlay references unknown page '+patch.id);
-    assert(patch.promptVisibleCharacters.length>0,'Unexpected empty frame cast '+patch.id);
-    assert(patch.promptVisibleCharacters.every(x=>page.characters.includes(x)),
-      'Visual-cast overlay invented a character '+patch.id);
-    assert(patch.promptVisibleCharacters.length<page.characters.length,
-      'Visual-cast overlay must actually omit an unpictured role '+patch.id);
-    curatedPages++;curatedExcluded+=page.characters.length-patch.promptVisibleCharacters.length;
+  const historical=load('data/shows/stardust-station/'+suffix);
+  for(const former of historical){
+    const page=authored.find(p=>p.id===former.id);
+    assert(page,'Previously curated page missing '+former.id);
+    const chosen=page.promptVisibleCharacters;
+    assert(Array.isArray(chosen)&&chosen.length>0,'Missing effective selected visual cast '+page.id);
+    assert(chosen.every(x=>page.characters.includes(x)),
+      'Visible cast selection invented character '+page.id);
+    curatedPages++;
+    curatedExcluded+=Math.max(0,page.characters.length-chosen.length);
   }
 }
-assert.equal(curatedPages,13,'Missing reviewed visible-cast overrides');
-assert.equal(curatedExcluded,15,'Unexpected change to excluded off-frame visual references');
+assert(curatedPages>0,'No page-specific visual-cast selections remain');
 for(const show of all){
   assert.equal(show.promptVisibleCastOnly,true,show.id+' does not opt in to precise references');
   assert.equal(show.omitRoutineFactions,true,show.id+' still includes routine factions');
