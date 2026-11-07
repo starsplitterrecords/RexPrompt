@@ -1,0 +1,40 @@
+name: Export RexPrompt production sources for chef-delivery audit
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/audit-chef-delivery-export.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package current assembler and source data without artwork
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, zipfile
+          included = ["index.html","data/shows.json","tools/test_portfolio_assembler_regression.cjs",
+                      "tools/audit_all_series_production.cjs",
+                      "production/portfolio-recipe-inventory.json",
+                      "production/drafts/manifest.json",
+                      "tools/fixtures/portfolio-untriaged-risks.json"]
+          for root, dirs, files in os.walk("data"):
+              dirs[:] = [d for d in dirs if not d.startswith(".")]
+              for name in files:
+                  p = os.path.join(root,name)
+                  if p not in included and (name.endswith((".json",".txt",".md",".b64",".json.gz")) or ("compressed" in name and not name.endswith((".png",".jpg",".jpeg",".webp")))):
+                      included.append(p)
+          with zipfile.ZipFile("chef-delivery-source-snapshot.zip","w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+              for p in sorted(set(included)):
+                  if os.path.isfile(p): z.write(p)
+          size = os.stat("chef-delivery-source-snapshot.zip").st_size
+          print("Source files:",len(included),"compressed bytes:",size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chef-delivery-source-snapshot
+          path: chef-delivery-source-snapshot.zip
+          retention-days: 30
