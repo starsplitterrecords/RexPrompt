@@ -1,0 +1,38 @@
+name: Compile full page-level storytelling recipe survey
+on:
+  push:
+    branches:
+      - audit/page-by-page-storytelling-2026-11-07
+    paths:
+      - 'tools/audit_recipe_storytelling_coverage.cjs'
+      - '.github/workflows/audit-recipe-storytelling-coverage.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: recipe-storytelling-survey
+  cancel-in-progress: false
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/page-by-page-storytelling-2026-11-07
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Load real current RexPrompt recipes and produce all issue/page surveys
+        run: node tools/audit_recipe_storytelling_coverage.cjs docs/audits/storytelling-2026-11-07
+      - name: Preserve the audit results on the review branch
+        run: |
+          set -eu
+          git add docs/audits/storytelling-2026-11-07
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Save complete source-grounded series/issue/page narrative audit'
+          git fetch origin audit/page-by-page-storytelling-2026-11-07
+          git rebase origin/audit/page-by-page-storytelling-2026-11-07
+          git push origin HEAD:audit/page-by-page-storytelling-2026-11-07
