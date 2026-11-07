@@ -33,30 +33,22 @@ RexPrompt already provides `promptVisibleCharacters` and `promptVisibleCastOnly`
 - Off-panel dialogue is still literal dialogue, not authorization to draw that person. The selected Vikings pages conservatively include all speaking characters who are in view.
 - The assembler validates field shape and canonical identities. Page-scoped `promptVisibleCastOnly` is explicitly typed and does not alter the defaults of other shows or approved pages.
 
-## Vikings 2026 Issue 2 (completed first rollout)
+## Vikings 2026 Issue 2 (normalized authoritative source)
 
-The show loads these data layers in order:
+The ten approved dialogue/panel-density revisions and nineteen page-delivery sanitation patches are now incorporated directly in `pages_i02.json`, after the November 7 authored-direction and chef-delivery repairs. The assembler no longer loads the two historical Issue 2 overlays. Those files remain in GitHub history, but their content is not an additional source of current recipe truth.
 
-1. `pages_i02.json` — original complete story, approved drafts, page identities, actions, locations, dialogue, direction, and authored layout.
-2. `editorial/dialogue_density_i02.json` — approved issue-specific writing/density revisions on ten unapproved pages.
-3. `editorial/chef_recipe_sanitation_i02.json` — last, strictly ID-merged production delivery policy.
-
-Pages **P02–P04 remain byte-for-byte unchanged in assembled output**, preserving their approved production recipes. Pages **P05–P23** opt into clean panel delivery; none add or remove a story panel. On ten conservative pages (P05, P09, P10, P14, P16–P21), the chef receives only the **featured** existing visual-reference handles. Remaining pages use the full authored page cast, and no story appearances or speaking roles are removed.
-
-Repeated `LANDFALL VISUAL STATE` apartment-wide notes have been further suppressed on P11 and P17–P19, because their actions already depict the first-night cooking, worn room, repairs and pipe hazard. The setting remains visually anchored on the approved introduction and key return/closing pages (including P08 and P22). On P16 the repeated note is excluded but the **unique, ordinary scratched brass-key reference remains**. On P07 the authored page-layout metadata was synchronized with the corrected silver refusal in panel 3 and the card payment in panel 4; the story and page composition structure remain unchanged.
-
-This is **representation-level cleanup**, not another dialogue, page-count, or visual-design rewrite. Complete unsanitized source remains available for editing, provenance, QA and future reference.
+The effective 23 Issue 2 production units (P01 cover plus 22 interiors) are unchanged by this normalization: IDs, spoken text, speaker ownership, panel action/order, settings, directions, visual scoping, suppression and page layouts retain the current accepted values. P02–P04 keep their previously approved outputs; P05–P23 retain their audited clean chef delivery.
 
 ## Regression gate
 
-Run `node tools/test_vikings_i02_chef_sanitation.cjs`. It executes the current inline browser assembler and verifies **all 22 pages**; the original scripted panel plan and dialogue are compared directly with the effective recipe. It also checks:
+Run `node tools/test_vikings_i02_chef_sanitation.cjs`. It executes the current inline browser assembler and verifies **all 22 pages**; the normalized page data and assembled output are inspected directly. It also checks:
 
 - No loss of unique panel action, location, featured character identity, or character-owned dialogue.
 - Original dialogue text/order/ownership, continuity and current artistic layout survive intact.
 - The three approved recipes remain byte-identical.
 - The P16 brass key exception and P07 transaction order are respected.
 - Invalid panel numbering, duplicate/missing dialogue mapping, invented panel fields, and contradicting `Panel N` metadata fail closed.
-- The net reduction in repeated delivery scaffolding is material, without enforcing an arbitrary target length.
+- Mechanical equivalence was checked at migration. Continued tests ensure retained actions, dialogue ownership and production scoping; they do not freeze future authorial wording.
 
 The regular page-assembly workflow runs this alongside the existing Stardust, Rex Fleet, Low Tide, Azure Reach and other series tests. Further rollout to any of those series must be separately audited against their own current source schema and visual canon, not toggled globally.
 

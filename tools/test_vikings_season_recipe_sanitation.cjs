@@ -138,8 +138,8 @@ for(const show of list){
   stats.pages+=pages.length;stats.before+=before;stats.after+=after;
 }
 assert.equal(stats.pages,285,'Unexpected Vikings Season 1 interior inventory');
-assert.equal(stats.original,40,'Approved issues or deliberate exceptions changed');
-assert.equal(stats.structured,20,'Unexpected Issue 3 structured scope');
+assert.equal(stats.original,21,'Approved issues or deliberate exceptions changed');
+assert.equal(stats.structured,39,'Unexpected Issue 3 structured scope');
 assert.equal(stats.prose,225,'Unexpected Issues 4–12 prose scope');
 assert(stats.before-stats.after>12000,'Sanitation regression: insufficient reduction');
 const sample=json(base+'pages_i04_iron_worm.json').find(x=>x.id==='VIK_S1E04_P03');

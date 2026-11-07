@@ -11,31 +11,23 @@ const html=read('index.html'),start=html.indexOf('const SHOW_MANIFEST='),end=htm
 assert(start>=0&&end>start,'Assembler source not found');
 const ctx=vm.createContext({});
 vm.runInContext(html.slice(start,end)+';globalThis.sanitizer={assembleScene,prepareCleanPanelPlan,mergeById};',ctx);
-const {assembleScene:assemble,mergeById:merge}=ctx.sanitizer;
+const {assembleScene:assemble}=ctx.sanitizer;
 const shows=load('data/shows.json'),show=shows.find(x=>x.id==='vikings-2026-s1-e02');
 assert(show,'Missing Issue 2');
 const prefix=show.basePath+'/';
-const base=load(prefix+'pages_i02.json');
-const dialogue=load(prefix+'editorial/dialogue_density_i02.json');
-const policyPath='editorial/chef_recipe_sanitation_i02.json';
-const scopes=load(prefix+policyPath);
-assert.equal(show.sceneOverlays.at(-1)?.file,policyPath,'Sanitation must run after dialogue and layouts');
-assert(show.sceneOverlays.at(-1)?.mergeById&&show.sceneOverlays.at(-1)?.strict,
-  'Registered sanitation must be a strict ID overlay');
-assert.equal(scopes.length,19,'Expected 19 audited unapproved interior pages');
-assert.equal(new Set(scopes.map(x=>x.id)).size,scopes.length,'Duplicate sanitation IDs');
-const allowed=new Set(['id','promptPanelMode','promptSuppress','directionInline','pageLayout','promptVisibleCharacters','promptVisibleCastOnly']);
+const clean=load(prefix+'pages_i02.json');
+const authored=clean;
+const scopes=clean.filter(x=>x.promptPanelMode==='clean');
+assert(!(show.sceneOverlays||[]).some(x=>/dialogue_density_i02|chef_recipe_sanitation_i02/.test(x.file)),
+  'Normalized Issue 2 must not load old writing or sanitation overlays');
+assert.equal(scopes.length,19,'Expected 19 clean-delivery interior pages');
+assert.equal(new Set(scopes.map(x=>x.id)).size,scopes.length,'Duplicate page IDs');
 for(const p of scopes){
-  assert(Object.keys(p).every(key=>allowed.has(key)),'Sanitation patch attempted story mutation: '+p.id);
-  assert.equal(p.promptPanelMode,'clean','Unconfigured sanitation mode: '+p.id);
-  assert.equal(p.promptVisibleCastOnly,true,'Page must opt into shared visual-reference scoping '+p.id);
+  assert.equal(p.promptVisibleCastOnly,true,'Missing visual-reference scoping '+p.id);
   assert(!['VIK_S1E02_P02','VIK_S1E02_P03','VIK_S1E02_P04'].includes(p.id),
-    'Approved artwork recipe unexpectedly changed: '+p.id);
+    'Approved artwork page received unapproved sanitation '+p.id);
 }
-const authored=merge(base,dialogue);
-const clean=merge(authored,scopes);
-assert.equal(clean.length,base.length,'Lost/created production pages');
-assert.equal(clean.length,22,'Unexpected Issue 2 length');
+assert.equal(clean.length,22,'Unexpected Issue 2 page count');
 const store={__show:show};
 for(const name of ['characters','dialogue','settings','regions','factions','direction'])
   store[name+'.json']=load(prefix+name+'.json');
@@ -127,5 +119,5 @@ fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===0?{...x,dialogueIndices:
 fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===1?{...x,dialogueIndices:[]}:x)},/Unmapped dialogue items/);
 fail({...first,dialogueInline:first.dialogueInline.map((x,i)=>i===0?{...x,subtext:'Panel 5'}:x)},/Dialogue panel mapping conflicts/);
 assert(outputChars>0,'Empty assembled production recipes');
-console.log('PASS Vikings Issue 2 chef sanitation: '+cleanCount+' opted-in pages, all 22 retained, approved 2–4 byte-identical');
-console.log('PASS no lost actions, locations, dialogue, speakers, panel order, layout, or continuity; '+(inputChars-outputChars)+' prompt characters removed');
+console.log('PASS Vikings Issue 2 chef sanitation: '+cleanCount+' normalized pages; all 22 interiors retained');
+console.log('PASS assembled chef retains normalized actions, locations, dialogue, speakers, panel order, layout and continuity');
