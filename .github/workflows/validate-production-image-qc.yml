@@ -1,0 +1,29 @@
+name: Validate production image QC
+on:
+  pull_request:
+    paths:
+      - 'production-coverage-core.js'
+      - 'visuals-core.js'
+      - 'visuals.js'
+      - 'tools/test_production_coverage.cjs'
+      - '.github/workflows/validate-production-image-qc.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'production-coverage-core.js'
+      - 'visuals-core.js'
+      - 'visuals.js'
+      - 'tools/test_production_coverage.cjs'
+      - '.github/workflows/validate-production-image-qc.yml'
+jobs:
+  image-qc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check production-coverage-core.js
+      - run: node --check visuals-core.js
+      - run: node --check visuals.js
+      - run: node tools/test_production_coverage.cjs
