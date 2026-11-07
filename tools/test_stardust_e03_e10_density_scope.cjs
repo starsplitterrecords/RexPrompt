@@ -37,24 +37,23 @@ for(let ep=3;ep<=10;ep++){
   assert.equal(sourcePages.length,expected,id+' page count changed');
   assert.equal(new Set(sourcePages.map(p=>p.id)).size,expected,'Duplicate source page id '+id);
   const densityPath='editorial/pages_e'+String(ep).padStart(2,'0')+'_density_pass.json';
-  const densityIdx=overlays.findIndex(x=>x.file===densityPath);
-  assert(densityIdx>=0&&overlays[densityIdx].mergeById&&overlays[densityIdx].strict,
-    'Missing strict editorial overlay '+id);
+  assert(!overlays.some(x=>x.file===densityPath),
+    'Consolidated density overlay must not override the authoritative issue pages');
   const density=load(seriesBase+'/'+densityPath);
   const edited=makeMap(density,densityPath);
   assert.equal(edited.size,expectedChanged[ep],'Unexpected edit count '+id);
-  let pages=sourcePages.map(x=>({...x}));
-  for(const overlay of overlays.slice(0)){
-    if(!overlay.mergeById)continue;
-    const patches=load(seriesBase+'/'+overlay.file);
-    const byId=makeMap(patches,overlay.file);
-    for(const target of byId.keys())assert(pages.some(p=>p.id===target),
-      'Unknown overlay page '+target+' in '+overlay.file);
-    pages=pages.map(p=>({...p,...(byId.get(p.id)||{})}));
-  }
+  // The accepted density, panel-scope, visual-cast and dialogue revisions are
+  // now already present in the active issue source. Historical patches remain
+  // readable here to confirm that their effective values survived the move.
+  const pages=sourcePages;
   const dlgName='editorial/dialogue_cleanup_e'+String(ep).padStart(2,'0')+'.json';
-  const d=makeMap(load(seriesBase+'/'+dlgName),dlgName);
-  pages=pages.map(p=>{const edit=d.get(p.id);return edit?{...p,dialogueInline:edit.dialogueInline||edit.sceneDialogue}:p});
+  const dialogueHistory=makeMap(load(seriesBase+'/'+dlgName),dlgName);
+  for(const [pageId,p] of dialogueHistory){
+    const actual=pages.find(x=>x.id===pageId);
+    assert(actual,'Historical dialogue has no authoritative page '+pageId);
+    assert.deepEqual(actual.dialogueInline,p.dialogueInline||p.sceneDialogue,
+      'Accepted dialogue was not consolidated '+pageId);
+  }
   data.__show=show;
   let lines=0;
   const changedIds=[];
@@ -82,7 +81,7 @@ for(let ep=3;ep<=10;ep++){
     const delta=edited.get(p.id);
     if(delta){
       changedIds.push(p.id);
-      assert.equal(delta.panelPlan.length,base.panelPlan.length,'Edited panel count drift '+p.id);
+      assert.deepEqual(p.panelPlan,delta.panelPlan,'Accepted panel edit not consolidated '+p.id);
       assert.deepEqual(Object.keys(delta).sort(),(delta.summary?['id','panelPlan','summary']:['id','panelPlan']),
         'Density overlay carries unrelated production data '+p.id);
       for(let n=0;n<delta.panelPlan.length;n++){
