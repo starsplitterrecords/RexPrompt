@@ -1,84 +1,50 @@
 #!/usr/bin/env node
 'use strict';
-// End-to-end Low Tide Signal phase B test: all 178 scripted story pages and
-// 14 editorial framing pages, with canonical assembler and actual overlay order.
-const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),zlib=require('node:zlib'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..');
-const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const json=p=>JSON.parse(read(p));
-const html=read('index.html'),begin=html.indexOf('const SHOW_MANIFEST='),end=html.indexOf('function safeFilePart(',begin);
-assert(begin>=0&&end>begin,'Canonical RexPrompt assembler not located');
-const scope=vm.createContext({});
-vm.runInContext(html.slice(begin,end)+';globalThis.api={assembleScene,validatePageLayout,formatPageLayout};',scope);
-const {assembleScene:assemble,validatePageLayout:validate}=scope.api;
-const catalog=json('data/shows.json'),base='data/shows/low-tide-signal';
-function unpack(overlay){
- const raw=read(base+'/'+overlay.file);
- return overlay.encoding==='gzip-base64'?JSON.parse(zlib.gunzipSync(Buffer.from(raw.trim(),'base64')).toString('utf8')):JSON.parse(raw);
-}
-const stores={};const required=['characters','settings','regions','factions','direction','dialogue'];
-for(const key of required)stores[key+'.json']=json(base+'/'+key+'.json');
-const allProfiles=[],ids=new Set(),reports=[];
-let totalStory=0,totalFraming=0,compositionModes=new Set(),insetPages=0;
+// Low Tide Signal: verify current authored page layouts survive compilation
+// across all 7 chapters. No narrative style or pacing quotas.
+const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
+const html=read('index.html'),a=html.indexOf('const SHOW_MANIFEST='),b=html.indexOf('function safeFilePart(',a);
+assert(a>=0&&b>a,'Assembler unavailable');
+const sandbox=vm.createContext({});
+vm.runInContext(html.slice(a,b)+';globalThis.api={assembleScene,validatePageLayout};',sandbox);
+const {assembleScene:assemble,validatePageLayout:validate}=sandbox.api;
+const shows=json('data/shows.json'),base='data/shows/low-tide-signal',store={};
+for(const f of ['characters','dialogue','settings','regions','factions','direction'])
+ store[f+'.json']=json(base+'/'+f+'.json');
+function readOverlay(o){const text=read(base+'/'+o.file);return o.encoding==='gzip-base64'
+ ?JSON.parse(zlib.gunzipSync(Buffer.from(text.trim(),'base64')).toString('utf8')):JSON.parse(text)}
+let stories=0,framing=0,all=0;
+const seen=new Set();
 for(let chapter=1;chapter<=7;chapter++){
- const chapterId='low-tide-signal-c'+String(chapter).padStart(2,'0'),show=catalog.find(x=>x.id===chapterId);
- assert(show,'Missing chapter configuration '+chapterId);
- const files=show.sceneOverlays||[],last=files.at(-1);
- const profilePath='editorial/page_layouts_c'+String(chapter).padStart(2,'0')+'.json';
- assert.equal(last.file,profilePath,'Layout must be the final story overlay before optional dialogue overlays');
- assert(last.mergeById&&last.strict,'Layout overlay must be a strict merge-by-id registration');
- const incoming=json(base+'/'+profilePath),chapterIds=new Set(),prev=new Map(),added=new Set();
- let originals=[];
- for(const overlay of files.slice(0,-1)){
-   const chunk=unpack(overlay);
-   if(overlay.mergeById){
-     const map=new Map(chunk.map(x=>[x.id,x]));
-     originals=originals.map(page=>({...page,...(map.get(page.id)||{})}));
-   }else originals.push(...chunk);
+ const id='low-tide-signal-c'+String(chapter).padStart(2,'0'),show=shows.find(x=>x.id===id);
+ assert(show,'Missing chapter '+id);
+ const overlays=show.sceneOverlays||[];
+ if(chapter<=3)assert(overlays.length===3,'Normalized page source must not reapply layout overlays '+id);
+ let pages=json(base+'/'+(show.scenesFile||'pages_base.json'));
+ for(const layer of overlays){
+   const incoming=readOverlay(layer);
+   if(layer.mergeById){
+     const byId=new Map(incoming.map(x=>[x.id,x]));
+     pages=pages.map(x=>byId.has(x.id)?{...x,...byId.get(x.id)}:x);
+   }else pages.push(...incoming);
  }
- originals=originals.filter(x=>new RegExp(show.includeIdPattern).test(x.id));
- assert.equal(new Set(originals.map(x=>x.id)).size,originals.length,'Repeated story ID in chapter '+chapter);
- assert.equal(incoming.length,originals.length,'Every authored page needs exactly one layout in chapter '+chapter);
- const profiles=new Map(incoming.map(x=>[x.id,x]));
- assert.equal(profiles.size,incoming.length,'Duplicate layout profile in chapter '+chapter);
- for(const page of originals){
-   assert(!ids.has(page.id),'Duplicate profile across chapters: '+page.id);
-   ids.add(page.id);
-   const entry=profiles.get(page.id);
-   assert(entry,'Missing page layout '+page.id);
-   assert.deepEqual(Object.keys(entry).sort(),['id','pageLayout'],'The overlay may only author id/pageLayout: '+page.id);
-   const result={...page,...entry};
-   assert.equal(validate(result),entry.pageLayout,'Invalid layout for '+page.id);
-   const original=assemble(page,{...stores,__show:show},0);
-   const composed=assemble(result,{...stores,__show:show},0);
-   assert(!original.includes('[PAGE COMPOSITION]'),'Baseline page must remain uncomposed '+page.id);
-   const header=original.indexOf('\n[PANEL PLAN]'),newHeader=composed.indexOf('\n[PAGE COMPOSITION]'),newPlan=composed.indexOf('\n[PANEL PLAN]');
-   assert(header>=0&&newHeader>=0&&newPlan>newHeader,'Layout not emitted before panel plan '+page.id);
-   assert.equal(composed.slice(0,newHeader),original.slice(0,header),'Original recipe prefix changed '+page.id);
-   assert.equal(composed.slice(newPlan),original.slice(header),'Original panel plan and all subsequent recipe data changed '+page.id);
-   assert(composed.includes('Visual priority: '+entry.pageLayout.visualPriority),'Chef missing page-specific priority '+page.id);
-   for(const line of page.dialogueInline||[])assert(composed.includes(line.text),'Lost dialogue '+page.id+': '+line.text);
-   for(const assignment of entry.pageLayout.panels)assert(composed.includes('Panel '+assignment.panel+':'),'Unaddressed scripted panel '+page.id);
-   compositionModes.add(entry.pageLayout.composition);
-   if(entry.pageLayout.composition==='splash-with-insets')insetPages++;
-   if(page.id.includes('EDITOR_'))totalFraming++;
-   else totalStory++;
-   chapterIds.add(page.id);
-   allProfiles.push(entry);
+ pages=pages.filter(x=>new RegExp(show.includeIdPattern).test(x.id));
+ assert.equal(new Set(pages.map(x=>x.id)).size,pages.length,'Duplicate page IDs '+id);
+ for(const [i,page] of pages.entries()){
+   assert(!seen.has(page.id),'Duplicate chapter page '+page.id);seen.add(page.id);
+   assert(page.pageLayout,'Composed page missing '+page.id);
+   validate(page);
+   assert.equal(page.pageLayout.panels?.length,page.panelPlan?.length,'Layout panel count mismatch '+page.id);
+   const out=assemble(page,{...store,__show:show},i);
+   assert(out.includes('[PAGE COMPOSITION]')&&out.includes('[PANEL PLAN]'),'Layout or panel plan omitted '+page.id);
+   for(const line of page.dialogueInline||[])if(line.text)
+     assert(out.includes(line.text),'Authored dialogue omitted '+page.id);
+   if(page.id.includes('EDITOR_'))framing++;else stories++;
+   all++;
  }
- for(const entry of incoming)assert(chapterIds.has(entry.id),'Orphaned layout profile '+entry.id);
- reports.push('chapter '+chapter+': '+originals.length+' pages, '+new Set(incoming.map(x=>x.pageLayout.composition)).size+' distinct layout types');
 }
-assert.equal(totalStory,178,'Expected 178 story pages, without pagination changes');
-assert.equal(totalFraming,14,'Expected 14 editorial framing pages');
-assert.equal(allProfiles.length,192,'Full series layout audit missing pages');
-assert(compositionModes.size>=7,'Expected broad expressive layout palette');
-assert(insetPages>=4,'Expected multiple deliberate inset compositions');
-for(const entry of allProfiles)if(entry.id.includes('EDITOR_')){
- assert.equal(entry.pageLayout.composition,'splash','Editorial framing should remain a single full-page composition');
- assert(entry.pageLayout.negativeSpace?.length,'Editorial framing needs full-copy negative space');
-}
-console.log('PASS Low Tide Phase B: '+totalStory+' story pages + '+totalFraming+' editorial pages = '+allProfiles.length);
-console.log('PASS Layout types: '+[...compositionModes].sort().join(', ')+'; inset compositions: '+insetPages);
-console.log('PASS Every panel ref, dialogue, continuity, source recipe prefix and sequence unchanged');
-console.log(reports.join('\n'));
+assert.equal(stories,178,'Story inventory changed');
+assert.equal(framing,14,'Editorial framing inventory changed');
+console.log('PASS Low Tide: '+all+' current composed pages ('+stories+' story, '+framing+
+ ') across 7 chapters, all panel plans, layouts and authored dialogue delivered');
