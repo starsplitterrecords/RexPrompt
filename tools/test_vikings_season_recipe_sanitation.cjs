@@ -16,13 +16,6 @@ assert.equal(list.length,12,'Vikings Season 1 issue manifest changed');
 const base='data/shows/vikings-2026-s1/';
 const store={};
 for(const f of ['characters','settings','regions','factions','direction','dialogue'])store[f+'.json']=json(base+f+'.json');
-const issue3=json(base+'editorial/chef_recipe_sanitation_i03.json');
-const exception6=json(base+'editorial/chef_recipe_exceptions_i06.json');
-const byId=(entries)=>new Map(entries.map(p=>[p.id,p]));
-assert.equal(issue3.length,20,'Issue 3 should have 20 audited structured pages');
-assert.equal(new Set(issue3.map(p=>p.id)).size,20,'Issue 3 duplicate sanitation ID');
-assert(issue3.every(x=>Object.keys(x).length===2&&x.promptPanelMode==='clean'),'Issue 3 sanitation must be delivery metadata only');
-assert.deepEqual(exception6,[{id:'VIK_S1E06_P23',promptDialogueMode:'original'}],'Unexpected exception expansion');
 const groups=[];
 const stats={pages:0,original:0,structured:0,prose:0,balloons:0,before:0,after:0};
 function section(output,heading){
@@ -47,39 +40,25 @@ for(const show of list){
   store.__show=show;
   const source=show.scenesFiles.filter(f=>f!=='covers.json').flatMap(f=>json(base+f))
     .filter(p=>new RegExp(show.includeIdPattern).test(p.id||''));
-  let pages=source;
+  const pages=source;
+  assert(!(show.sceneOverlays||[]).some(x=>/chef_recipe_sanitation|chef_recipe_exceptions/.test(x.file)),
+    'Normalized issue must not load legacy sanitizer overlays: '+show.id);
   if(number===3){
-    const overlays=show.sceneOverlays||[];
-    assert(overlays.some(o=>o.file==='editorial/chef_recipe_sanitation_i03.json'&&o.strict&&o.mergeById),
-      'Issue 3 overlay must be registered as strict merge');
-    const map=byId(issue3);
-    assert(source.every(p=>p.id.endsWith('P01')||map.has(p.id)),'Unprofiled Issue 3 interior');
-    assert(!map.has('VIK_S1E03_P01'),'Issue 3 special editorial P01 must be unchanged');
-    pages=source.map(p=>({...p,...(map.get(p.id)||{})}));
+    assert.equal(pages.filter(x=>x.promptPanelMode==='clean').length,20,
+      'Issue 3 structured panels were not normalized');
   }
   if(number>=4){
     assert(!show.promptPanelMode&&!show.promptDialogueMode,
-      'Numbered prose may only apply to audited pages; do not enable on covers '+show.id);
-    const overlayPath='editorial/chef_recipe_sanitation_i'+String(number).padStart(2,'0')+'.json';
-    const registered=(show.sceneOverlays||[]).filter(o=>o.file===overlayPath&&o.strict&&o.mergeById);
-    assert.equal(registered.length,1,'Missing unique strict issue delivery overlay '+show.id);
-    const patches=json(base+overlayPath);
-    assert.equal(new Set(patches.map(p=>p.id)).size,patches.length,'Duplicate prose policy IDs '+show.id);
-    assert.equal(patches.length,source.length,'Unscoped interior recipe '+show.id);
-    assert(patches.every(p=>Object.keys(p).length===3&&p.promptPanelMode==='prose-numbered'&&p.promptDialogueMode==='grouped'),
-      'Unexpected story mutations in delivery overlay '+show.id);
-    const map=byId(patches);
-    assert(source.every(p=>map.has(p.id)),'Orphan/missing issue page scope '+show.id);
-    pages=source.map(p=>({...p,...map.get(p.id)}));
+      'No show-wide prose mode on cover or editorial units');
+    assert(pages.every(x=>x.promptPanelMode==='prose-numbered'),
+      'Unnormalized prose panel setting on '+show.id);
   }
   if(number===6){
-    const overlays=show.sceneOverlays||[];
-    assert(overlays.some(o=>o.file==='editorial/chef_recipe_exceptions_i06.json'&&o.strict&&o.mergeById),
-      'Issue 6 out-of-order mapping exception not registered');
-    const map=byId(exception6);pages=pages.map(p=>({...p,...(map.get(p.id)||{})}));
+    const exception=pages.find(x=>x.id==='VIK_S1E06_P23');
+    assert.equal(exception.promptDialogueMode,'original','Issue 6 authored dialogue exception lost');
   }
   if(number<=2)assert(!show.promptPanelMode&&!show.promptDialogueMode,
-    'Released/approved issues must keep existing recipe delivery');
+    'No show-wide mode for released/approved issue');
   let before=0,after=0,changed=0;
   for(let i=0;i<pages.length;i++){
     const page=pages[i];
