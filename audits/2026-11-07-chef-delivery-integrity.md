@@ -10,7 +10,7 @@ Method: execute the actual `index.html` loader and assembler in Node VM against 
 - Assemble: 2,968; rejected: **3**.
 - Units with clear assembly blocker / source-to-chef instruction loss / absent page plan: **130 distinct units**.
   - Blockers: **3** (Full Performance I01 `RFFP_I01_EDITOR_V8_OPEN_05`, `RFFP_I01_P001`, `RFFP_I01_P002`; composition identifiers `three-panel` / `four-panel` unsupported).
-  - Clearly truncated panel descriptions: **41 panels / 39 units**, exclusively Full Performance I01–I12. Examples: `RFFP_I01_P003` “evident in the.”, `RFFP_I02_P019` “Abby sees the.”, `RFFP_I11_P013` “she isn't a.”
+  - Clearly truncated panel descriptions: **41 panels / 39 units**, exclusively Full Performance I01–I12. Examples: `RFFP_I01_P003` “evident in the.”, `RFFP_I02_P019` “Abby sees the.”, `RFFP_I11_P013` “she isn't a.” **All 41 are recoverable in their complete original `sourceActionBeats` entries; the defect is in their compiled `panelPlan`, not the original writing.**
   - Source direction explicitly suppressed: **50 units**, Vikings I02 (15) and Sunforge I01–I03 (35). Their `direction` or `directionInline` source exists, but `promptSuppress` prevents the direction block from reaching chef; sometimes some content is repeated in other sections.
   - Vikings covers I02–I12: **44** free-form lettering-placement `dialogueInline.subtext` instructions silently lost on **11** units by `compactDialogue`; visible lettering still delivered.
   - Backyard Rockets S1E01 and S1E02: **25** units contain dialogue but no `panelPlan` (20 in E01 and 5 in E02).
