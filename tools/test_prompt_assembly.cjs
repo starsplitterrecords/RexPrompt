@@ -79,7 +79,7 @@ const bridge=page('rex-fleet-s1','pages_i02.json','RF_I02_P04');
 const r=assemble(bridge,rexStore,0);
 assert(r.includes('[SETTING]\n'));
 assert(!r.includes('[SETTING CONTINUITY]'));
-assert(r.includes('[CAST]')&&!r.includes('[CHARACTERS]'));
+assert(!r.includes('[CAST]')&&!r.includes('[CHARACTERS]'),'Rex Fleet source should deliver references without duplicate cast prose');
 linesKept(bridge,r);panelsKept(bridge,r);
 // Never allow suppression labels to silently remove story action or dialogue.
 const forced={...bridge,promptSuppress:['summary','production','characters']};
