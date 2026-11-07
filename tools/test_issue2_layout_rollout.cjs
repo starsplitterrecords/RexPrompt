@@ -21,21 +21,10 @@ const show=shows.find(x=>x.id===target.show);assert(show,'Missing show '+target.
 const rawPages=load(target.file),s=store(show),names=new Set();
 let pages=rawPages;
 if(target.overlay){
-  // The current strict merge overlay is the sole authority for curated compositions.
-  const descriptor=(show.sceneOverlays||[]).find(o=>show.basePath+'/'+o.file===target.overlay);
-  assert(descriptor?.mergeById&&descriptor?.strict,'Layout must remain an ID-strict overlay');
-  const overlays=load(target.overlay),byId=new Map(overlays.map(o=>[o.id,o]));
-  assert.equal(overlays.length,rawPages.length,'Missing Rex Issue 2 layout');
-  assert.equal(byId.size,overlays.length,'Duplicate Rex Issue 2 layout ID');
-  assert(rawPages.every(p=>!Object.hasOwn(p,'pageLayout')),'Redundant layout embedded in story page');
-  for(const item of overlays){
-    assert.deepEqual(Object.keys(item).sort(),['id','pageLayout'],'Overlay must not modify story content '+item.id);
-  }
-  pages=rawPages.map(p=>{
-    const profile=byId.get(p.id);
-    assert(profile,'Orphaned or missing Rex Issue 2 layout '+p.id);
-    return {...p,pageLayout:profile.pageLayout};
-  });
+  // Rex Fleet Issue 2 now keeps its existing curated composition in page source.
+  assert(!(show.sceneOverlays||[]).some(x=>show.basePath+'/'+x.file===target.overlay),
+    'Normalized Rex issue must not reapply obsolete composition overlay');
+  assert(rawPages.every(page=>page.pageLayout),'Rex Fleet Issue 2 lost its composed source layouts');
 }
 assert(pages.length>0,'Empty issue '+target.show);
 for(const [i,page] of pages.entries()){
