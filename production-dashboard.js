@@ -12,11 +12,11 @@ function showLink(url,label){
 }
 function githubFile(p){return 'https://github.com/starsplitterrecords/RexPrompt/blob/main/'+p.split('/').map(encodeURIComponent).join('/')}
 function draw(m){
- $('loadState').textContent='All 126 registered configurations reconciled against assembler-produced recipe IDs, approved drafts and curated books. Released metadata is independently queried; unknown states are not treated as missing artwork.';
+ $('loadState').textContent='All '+m.totals.registeredConfigurations+' production configurations reconciled with assembled recipes, approved artwork and curated books. Released editions are independently verified; unknown does not mean missing.';
  const cards=[
- ['Registered configurations',m.totals.registeredConfigurations],
- ['Distinct assembled recipes',m.totals.distinctAssembledUnits],
- ['Approved draft records',m.totals.approvedDraftManifestEntries],
+ ['Production configurations',m.totals.registeredConfigurations],
+ ['Distinct production recipe IDs',m.totals.distinctAssembledUnits],
+ ['Approved artwork records',m.totals.approvedDraftManifestEntries],
  ['Keeper references',m.totals.keeperReferences],
  ['Source images audited',m.totals.sourceImagesAudited],
  ['Unindexed book units',m.totals.knownBookGaps],
