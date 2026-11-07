@@ -13,6 +13,7 @@ const base=show.basePath;
 const original=JSON.parse(zlib.gunzipSync(Buffer.from(read(base+'/encoded/pages_i05.json.gzb64').trim(),'base64')).toString('utf8'));
 const layouts=load(base+'/page_layout_i05.json'),byLayout=new Map(layouts.map(x=>[x.id,x]));
 const pages=original.map(x=>byLayout.has(x.id)?{...x,...byLayout.get(x.id)}:x);
+assert.equal(pages.length,21,'Issue 05 authoritative page count changed');
 assert.equal(new Set(pages.map(x=>x.id)).size,pages.length,'Duplicate source page IDs');
 const source=read('index.html'),a=source.indexOf('const SHOW_MANIFEST='),b=source.indexOf('function safeFilePart(',a);
 assert(a>=0&&b>a,'Canonical assembler extraction unavailable');
