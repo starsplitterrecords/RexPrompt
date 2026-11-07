@@ -82,6 +82,12 @@ function assess(s,store,previous){
  else if(acting>=1)emotion=result('review',acting+' acting cues; assess reaction ownership, changes and specific expression');
  else if(d||cast)emotion=result('gap','No specific emotional acting or reaction instructions despite characters/dialogue');
  else emotion=result('review','No acting directions; verify whether characters or reactions are required');
+ // A musical SCENE is not a comic page. Do not score missing comic-page scaffolding as an editorial defect.
+ if(show.unitLabel==='SCENE'){
+  visual=result('na','Not a comic production page; scene visual-adaptation scope has not been defined');
+  blocking=result('na','Not a panel-based comic production unit');
+  emotion=result('na','Song/scene dramatic acting is not specified by a comic-page storyboard');
+ }
  return {layout,visual,setting,blocking,emotion,layoutError,assemblyError,panels:n,dialogue:d,cast,shot,geo,env,move,acting,sample:clean(panelText).slice(0,190),warnings};
 }
 function sum(rs){
