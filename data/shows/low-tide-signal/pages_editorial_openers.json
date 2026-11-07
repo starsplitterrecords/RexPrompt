@@ -85,7 +85,31 @@
     "source": "Low Tide Signal — editorial framing pages",
     "panelPlan": [
       "Single full-page rainy Harbor Phase cityscape with real civic life and functioning infrastructure. Reserve a large quiet vertical text field in rain-dark sky and reflected glass; body copy reads cleanly in restrained editorial blocks, with FROM THE EDITOR small at top, YOU GOING TONIGHT? given one strong display beat, and TURN THE PAGE isolated at bottom. No cover trade dress, no character lineup, no decorative cyberpunk UI."
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "The specific chapter location supports a readable, typography-led editorial invitation; do not fabricate scenes or character portraits.",
+      "readingFlow": "One continuous background image. Read the scripted editorial display heading first, then body copy downward, finishing on the isolated display or closing line.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page atmospheric environment with a large typographic field; retain the actual place design and restrict identifiable characters as scripted."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "broad calm background field established in this page's scripted direction",
+          "purpose": "the entire editor letter or teaser copy, laid out as genuinely legible publishing typography"
+        }
+      ],
+      "lettering": {
+        "strategy": "Editorial copy has priority; preserve every printed line and its order. Do not overlay body copy on critical visual landmarks.",
+        "reservedZone": "Full quiet column sized for the long exact authored text."
+      }
+    }
   },
   {
     "id": "LTS_C02_EDITOR_OPEN",
