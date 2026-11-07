@@ -70,12 +70,13 @@ function scan(p,c,refs,prev,i,provenance){
  settingContinuity:!!(p.settingText&&p.setting),region:!!(p.regionText||p.region),
  factions:!!(p.factions||[]).length,characters:cast,direction:!!((p.direction||[]).length||(p.directionInline||[]).length)
  };
- const emitted={summary:!!p.summary&&!c.omitSummary&&!suppression.includes('summary'),
- production:!!c.generationLine&&!suppression.includes('production'),
+ const emitted={summary:!!p.summary&&!!text&&text.includes(p.summary.trim())&&!c.omitSummary&&!suppression.includes('summary'),
+ production:!!c.generationLine&&!!text&&text.includes(c.generationLine)&&!suppression.includes('production'),
  setting:has('SETTING'),settingContinuity:has('SETTING CONTINUITY'),region:has('REGION'),
  factions:has('FACTIONS'),characters:has('CHARACTERS')||has('CAST'),direction:has('DIRECTION')};
  const status={};
  for(const k of names){
+   if(error){status[k]=present[k]?'UNVERIFIED':'N/A';continue;}
    if(!present[k])status[k]='N/A';
    else if(k==='characters'&&visible&&charMode!=='none')status[k]=text.indexOf('\n=== ')>0?'VISUAL-REFS':'VISUAL-REFS?';
    else if(emitted[k])status[k]='ON';
@@ -144,7 +145,7 @@ const main=[
  '# RexPrompt — All-series, issue-by-issue, page-by-page ingredient suppression audit','',
  'Source: current RexPrompt repository, AFTER applying all configured scene and dialogue overlays, including compressed sources. Assembled output uses the actual pageAssembly and assembleScene functions from index.html. No creative source or suppression setting changed.','',
  'Interpretation: PAGE means authored per-page setting; CONFIG means series/configuration inheritance; DEFAULT means assembler fallback. An empty promptSuppress means no page-specific suppression, NOT proof that the section is emitted. No ingredient content is different from an actively suppressed ingredient.','',
- 'Flags identify candidates for inspection, not editorial findings or permission to suppress. Full content and neighboring beats require human review before changing any page. Full Performance is kept separate from Rex Fleet.','',
+ 'Flags identify candidates, not editorial findings or permission to suppress. Repeated setting descriptions across separate generation calls are often NECESSARY for continuity; they are not duplication inside a page prompt. Full content and neighboring beats require review before changing any page. Full Performance is separate from Rex Fleet.','',
  '## Coverage','',
  '- '+shows.length+' registered configurations; '+occurrences.length+' configured appearances; '+units.length+' unique series/unit pairs; '+sid.length+' distinct production series.',
  '- '+errors.length+' source loading failures; '+units.filter(x=>x.error).length+' assembly failures.',
@@ -179,7 +180,7 @@ main.push('','## Flag explanation','',
  '- ASSEMBLY_ERROR / PANEL_NOT_EMITTED / DIALOGUE_NOT_EMITTED / CONTINUITY_NOT_EMITTED: verify assembler correctness; page does not have a validated complete output.',
  '- VISUAL_CAST_SUPPRESSED: explicitly suppressed cast despite visible-only character references; inspect visual reference sufficiency.',
  '- FULL_CAST_BY_DEFAULT / REPEATED_FULL_CAST: full-character prose is implicit or repeated, potentially unnecessary alongside established identities.',
- '- REPEATED_FULL_SETTING / REPEATED_SETTING_CONTINUITY: adjacent same-setting pages include duplicate persistent environment descriptions.',
+ '- REPEATED_FULL_SETTING / REPEATED_SETTING_CONTINUITY: adjacent independently generated pages share environmental detail. Usually valid for continuity; review only for stale, internally duplicated or disproportionate text.',
  '- TEMPLATE_SUMMARY / DUPLICATE_SUMMARY: repeated or formulaic summary may duplicate actual panel/action writing.',
  '- CROSS_CONFIGURATION_CONFLICT: same unit resolves differently across production configurations; investigate before making policy assumptions.',
  '',
