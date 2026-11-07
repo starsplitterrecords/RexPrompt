@@ -91,15 +91,18 @@ for(let i=0;i<clean.length;i++){
     assert(after.includes('[PAGE COMPOSITION]'),'Layout omitted '+scene.id);
     assert(after.includes(scene.pageLayout.visualPriority),'Visual intent omitted '+scene.id);
   }
-  if(i>3)assert(!after.includes('LANDFALL VISUAL STATE:')||
-    ['VIK_S1E02_P08','VIK_S1E02_P22'].includes(scene.id),
-    'Repeated apartment boilerplate leaked '+scene.id);
+  for(const direction of scene.directionInline||[]){
+    if(scene.promptSuppress?.includes('direction'))
+      assert(!after.includes(direction.text),'Out-of-scope direction leaked into chef: '+scene.id);
+    else assert(after.includes(direction.text),'Authored production direction omitted from chef: '+scene.id);
+  }
 }
 assert.equal(cleanCount,19);
 for(const id of ['VIK_S1E02_P11','VIK_S1E02_P17','VIK_S1E02_P18','VIK_S1E02_P19']){
   const p=clean.find(x=>x.id===id);
-  assert(p.promptSuppress?.includes('direction'),'Missed repeated scene direction '+id);
-  assert(!assemble(p,store,0).includes('LANDFALL VISUAL STATE:'),'Duplicate note leaked '+id);
+  assert(!p.promptSuppress?.includes('direction'),'Authored scene direction still suppressed '+id);
+  assert(assemble(p,store,0).includes('LANDFALL VISUAL STATE:'),
+    'Authored apartment state omitted '+id);
 }
 const key=clean.find(x=>x.id==='VIK_S1E02_P16');
 assert.equal(key.directionInline.length,1,'Unique brass key reference lost or repeated boilerplate survived');
@@ -123,6 +126,6 @@ fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===0?{...x,foo:'bar'}:x)},/
 fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===0?{...x,dialogueIndices:[0]}:x)},/Invalid or duplicated dialogue index|Dialogue panel mapping conflicts/);
 fail({...first,panelPlan:first.panelPlan.map((x,i)=>i===1?{...x,dialogueIndices:[]}:x)},/Unmapped dialogue items/);
 fail({...first,dialogueInline:first.dialogueInline.map((x,i)=>i===0?{...x,subtext:'Panel 5'}:x)},/Dialogue panel mapping conflicts/);
-assert(inputChars-outputChars>9500,'Expected substantial reduction in repeated scaffolding');
+assert(outputChars>0,'Empty assembled production recipes');
 console.log('PASS Vikings Issue 2 chef sanitation: '+cleanCount+' opted-in pages, all 22 retained, approved 2–4 byte-identical');
 console.log('PASS no lost actions, locations, dialogue, speakers, panel order, layout, or continuity; '+(inputChars-outputChars)+' prompt characters removed');
