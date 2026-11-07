@@ -48,9 +48,7 @@ const vikShow=showById('vikings-2026-s1-e02');
 const vikStore=store(vikShow);
 const vikPages=load('data/shows/vikings-2026-s1/pages_i02.json');
 assert.equal(vikPages.length,22,'Unexpected Vikings issue count');
-const reducedIds=['VIK_S1E02_P05','VIK_S1E02_P06','VIK_S1E02_P09',
-  'VIK_S1E02_P10','VIK_S1E02_P12','VIK_S1E02_P13',
-  'VIK_S1E02_P14','VIK_S1E02_P15','VIK_S1E02_P20','VIK_S1E02_P21'];
+const reducedIds=['VIK_S1E02_P07','VIK_S1E02_P10'];
 for(let i=0;i<vikPages.length;i++){
   const page=vikPages[i],chef=assemble(page,vikStore,i);
   checkStory(page,chef);
@@ -62,6 +60,9 @@ for(let i=0;i<vikPages.length;i++){
     const before=assemble({...page,promptSuppress:(page.promptSuppress||[]).filter(x=>x!=='direction')},vikStore,i);
     assert.equal(section(before,'DIALOGUE'),section(chef,'DIALOGUE'));
     assert.equal(section(before,'PANEL PLAN'),section(chef,'PANEL PLAN'));
+  } else if(page.directionInline?.[0]?.text?.startsWith('LANDFALL VISUAL STATE:')){
+    assert(chef.includes('LANDFALL VISUAL STATE:'),
+      'In-scope authored apartment condition omitted '+page.id);
   }
 }
 for(const id of ['VIK_S1E02_P03','VIK_S1E02_P04','VIK_S1E02_P08',
@@ -128,5 +129,5 @@ for(let i=0;i<scenes.length;i++){
   saved+=before.length-after.length;
 }
 assert(saved>5000,'Expected a meaningful reduction in repeated reference material');
-console.log('PASS Vikings Issue 2: 22 pages, 10 targeted new suppressed directions, no lost story');
+console.log('PASS Vikings Issue 2: 22 pages, 2 deliberately scoped suppressions and in-scope direction restored, no lost story');
 console.log('PASS Stardust Issue 2: 22 pages, 22 editorial profiles, '+saved+' repeated prompt characters removed, no lost story');
