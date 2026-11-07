@@ -91,8 +91,11 @@ for(let i=0;i<clean.length;i++){
     assert(after.includes('[PAGE COMPOSITION]'),'Layout omitted '+scene.id);
     assert(after.includes(scene.pageLayout.visualPriority),'Visual intent omitted '+scene.id);
   }
-  for(const direction of scene.directionInline||[])
-    assert(after.includes(direction.text),'Authored production direction omitted from chef: '+scene.id);
+  for(const direction of scene.directionInline||[]){
+    if(scene.promptSuppress?.includes('direction'))
+      assert(!after.includes(direction.text),'Out-of-scope direction leaked into chef: '+scene.id);
+    else assert(after.includes(direction.text),'Authored production direction omitted from chef: '+scene.id);
+  }
 }
 assert.equal(cleanCount,19);
 for(const id of ['VIK_S1E02_P11','VIK_S1E02_P17','VIK_S1E02_P18','VIK_S1E02_P19']){
