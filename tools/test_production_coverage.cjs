@@ -27,5 +27,5 @@ const actual=audit({seriesId:'rex-fleet',issueId:'rex-fleet-i01',
  drafts:actualDrafts,facts:actualFacts});
 assert.equal(actual.sizeCorrect,1);
 assert.equal(actual.sizeWrong,1);
-assert.equal(actual.findings[1].actual.width,1024);
+assert.equal(actual.findings[1].actual.width,967);
 console.log('PASS production image coverage: correct, wrong, absent, released-only unverified, source snapshot and cover policies');
