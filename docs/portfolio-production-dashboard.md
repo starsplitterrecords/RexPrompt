@@ -5,7 +5,7 @@
 ## Evidence and authority
 
 - `data/shows.json` contains **show configurations**, not a count of pages or individual generated production units.
-- `tools/audit_all_series_production.cjs` reconstructs **all 126 registered configurations** from the same base scenes, encoded gzip-base64 overlays, replacement/merge rules, exclusions, dialogue overlays, and ID filters as the browser assembler. Its exact recipe IDs and error report are cached as `production/portfolio-recipe-inventory.json`.
+- `tools/audit_all_series_production.cjs` reconstructs **all registered configurations** from the same base scenes, encoded gzip-base64 overlays, replacement/merge rules, exclusions, dialogue overlays, and ID filters as the browser assembler. Its exact recipe IDs and error report are cached as `production/portfolio-recipe-inventory.json`.
 - The displayed **assembled recipe denominator** is the number of distinct reconstructed IDs. Where `production/book-manifests.json` defines a complete book, that curated inventory controls the *full-book denominator* (including cover, editorial, cast, and back matter), even if the corresponding configuration is missing.
 - `production/drafts/manifest.json` establishes a specific **approved draft record**, not independent artistic, source-quality, mastering, or publication approval.
 - `production/references/reference-keeper-manifest.json` counts Keeper images, not every reference in IMG projects, Project files, personal Library, visual packs, or released canon.
@@ -29,7 +29,7 @@ Issue drill-down shows exact IDs, editorial slots, known recovery candidates, ap
 
 ### Keeping it current
 
-When production recipes, overlays, approved-image manifests, reference manifests or curated books change, regenerate both read-only derived snapshots **from current main/branch**:
+When production recipes, overlays, approved-image manifests, reference manifests or curated books change, regenerate both read-only derived snapshots **from current main/branch**. The refresh workflow automatically regenerates and commits these snapshots on in-repository pull requests and main-branch source changes:
 
 ```bash
 node tools/audit_all_series_production.cjs --out production/portfolio-recipe-inventory.json
@@ -37,12 +37,12 @@ node tools/build_portfolio_source_quality.cjs --out production/portfolio-source-
 node tools/test_production_dashboard.cjs
 ```
 
-The dashboard CI reconstructs and compares the complete snapshots against the real files and will fail on a stale inventory, including newly added editorial pages or new book manifests. The files are data caches, **not** a replacement for the assembler. Do not edit snapshot counts manually. If another chat changes `production/book-manifests.json` concurrently, rebase and regenerate the snapshots before merging.
+The dashboard CI reconstructs and compares the complete snapshots against the real files and will fail on a stale inventory, including newly added editorial pages or new book manifests. The files are data caches, **not** a replacement for the assembler. Keep separate series IDs for separate creative editions such as `rex-fleet` and `rex-fleet-full-performance`; do not merge production drafts or publication status across them. Do not edit snapshot counts manually. If another chat changes `production/book-manifests.json` concurrently, rebase and regenerate the snapshots before merging.
 
 ### Verification
 
 1. Run `node tools/test_production_dashboard.cjs` and the all-series audit in GitHub Actions.
-2. Verify 126 registered configurations, 24 series (or current live values), real compiled recipe counts, source raster inspection, zero-draft series, book-only issues, and correct scope of published editions.
+2. Verify current registered configuration and distinct canonical series counts, real compiled recipe counts, source raster inspection, zero-draft series, book-only issues, and correct scope of published editions.
 3. Confirm Rex Fleet Issue 3 retains all 35 required book slots, including the five not yet indexed as approved drafts; no absent art is described as definitively lost.
 4. Review the main dashboard in a browser and open several exact recipe IDs; verify labels, links, reading order and the user-visible state separation.
 5. Check the live Pages deployment responds with current `production-dashboard.html`, `production-dashboard-core.js`, both production snapshots and fresh `data/shows.json`. Do not call the deployment visually verified solely because GitHub Actions passed.

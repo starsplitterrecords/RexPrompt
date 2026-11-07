@@ -1,0 +1,68 @@
+name: Refresh production dashboard inventories
+on:
+  pull_request:
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/book-manifests.json'
+      - 'production/released-links.json'
+      - 'production/portfolio-recipe-inventory.json'
+      - 'production/portfolio-source-quality.json'
+      - 'tools/audit_all_series_production.cjs'
+      - 'tools/build_portfolio_source_quality.cjs'
+      - '.github/workflows/refresh-production-dashboard.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/shows.json'
+      - 'data/shows/**'
+      - 'production/drafts/**'
+      - 'production/references/**'
+      - 'production/book-manifests.json'
+      - 'production/released-links.json'
+      - 'tools/audit_all_series_production.cjs'
+      - 'tools/build_portfolio_source_quality.cjs'
+      - '.github/workflows/refresh-production-dashboard.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dashboard-refresh-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild assembler-backed portfolio inventory
+        run: node tools/audit_all_series_production.cjs --out production/portfolio-recipe-inventory.json
+      - name: Reinspect approved original image files
+        run: node tools/build_portfolio_source_quality.cjs --out production/portfolio-source-quality.json
+      - name: Test fully refreshed portfolio
+        run: node tools/test_production_dashboard.cjs
+      - name: Save refreshed snapshots on the source branch
+        shell: bash
+        env:
+          TARGET_BRANCH: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+        run: |
+          set -eu
+          git add production/portfolio-recipe-inventory.json production/portfolio-source-quality.json
+          if git diff --cached --quiet; then
+            echo 'Production snapshot is already current'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh production dashboard inventory from current source'
+          git fetch origin "$TARGET_BRANCH"
+          git rebase "origin/$TARGET_BRANCH"
+          git push origin "HEAD:$TARGET_BRANCH"

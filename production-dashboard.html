@@ -21,12 +21,12 @@ summary{cursor:pointer;white-space:nowrap;font-weight:600}details{max-width:560p
 .units{font-size:.75rem;min-width:730px}.units td:first-child{font-family:monospace}
 #issueTable{min-width:1450px}.foot{font-size:.82rem;margin-top:27px;padding-bottom:30px}
 </style></head>
-<body><header><div><h1>Production operations</h1><small>Cross-series accounting · evidence before inference</small></div><a href="index.html">RexPrompt assembler</a></header>
+<body><header><div><h1>Visions production operations</h1><small>Series → Issue/Chapter → Production Unit · one publishing identity across RexPrompt and Visions</small></div><a href="index.html">RexPrompt assembler</a></header>
 <p id="loadState" role="status">Reconstructing portfolio from authenticated repository inventory…</p>
 <section id="metrics" class="metrics" aria-label="Production metrics"></section>
-<h2>Series coverage</h2><p class="muted">Configuration count is a menu selection count. Recipe count is the deduplicated inventory of actual production units from assembler data. Keeper count measures indexed references, not full visual coverage.</p>
-<div class="scroll"><table><thead><tr><th>Series</th><th>Show configurations</th><th>Distinct recipes</th><th>Approved draft IDs</th><th>Keeper refs</th><th>Released-unit links</th><th>Visions editions</th></tr></thead><tbody id="seriesList"></tbody></table></div>
-<h2>Issue and recipe evidence</h2>
+<h2>Series coverage</h2><p class="muted">A series is a distinct creative production line, including deliberately separate editions such as Rex Fleet — Full Performance. A configuration is a technical assembler source, not another series. Production units are individual pages, scenes, covers, or editorial assets. Keeper counts are reference indexes, not complete visual coverage.</p>
+<div class="scroll"><table><thead><tr><th>Series</th><th>Assembler configurations</th><th>Distinct recipes</th><th>Approved draft IDs</th><th>Keeper refs</th><th>Released-unit links</th><th>Visions editions</th></tr></thead><tbody id="seriesList"></tbody></table></div>
+<h2>Issue / chapter and production-unit evidence</h2>
 <p class="muted">A curated book inventory governs complete export ordering when available; otherwise the assembled recipe IDs give a valid recipe denominator, not a complete-book count. "Not indexed" is not "never generated". No generated, mastered, exported or published status is inferred from draft absence.</p>
 <div class="filters"><label>Series <select id="seriesFilter"></select></label><label>Search issue or exact recipe ID<input id="query" type="search" placeholder="RF_I03_P28, Issue 3, series…"></label><label>Evidence filter<select id="qualityFilter"><option value="all">All</option><option value="gaps">Unindexed draft IDs</option><option value="recovery">Recovery leads</option><option value="quality">Source quality findings</option><option value="published">Published edition records</option></select></label></div>
 <p id="resultCount" class="muted"></p>
