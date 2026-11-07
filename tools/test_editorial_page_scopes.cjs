@@ -37,7 +37,7 @@ function checkStory(page,text){
   for(const line of page.dialogueInline||[])
     assert(text.includes(line.text),page.id+' omitted dialogue '+line.text);
   for(const panel of page.panelPlan||[]){
-    const p=typeof panel==='string'?panel:panel.text||panel.name||panel.summary||JSON.stringify(panel);
+    const p=typeof panel==='string'?panel:panel.action||panel.text||panel.name||panel.summary||JSON.stringify(panel);
     assert(text.includes(p),page.id+' omitted panel direction');
   }
   if(page.continuityFrom)assert(section(text,'CONTINUITY')!==null,page.id+' lost continuity');
