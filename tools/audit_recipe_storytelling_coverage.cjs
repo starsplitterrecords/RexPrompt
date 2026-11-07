@@ -142,15 +142,15 @@ async function main(){
    const t=sum(i.rows);
    doc.push('## '+i.label+' ('+i.id+')','',
      '**'+i.rows.length+' units.** Layout: '+unclosed(t.layout)+' flagged; visual: '+unclosed(t.visual)+'; environment: '+unclosed(t.setting)+'; blocking: '+unclosed(t.blocking)+'; acting: '+unclosed(t.emotion)+'.','',
-     '| Unit | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |',
-     '|---|---:|---|---|---|---|---|---|');
+     '| Unit | Story beat | Panels | Composition | Image detail | Setting | Blocking | Acting | Review note |',
+     '|---|---|---:|---|---|---|---|---|---|');
    for(const r of i.rows){
     const ks=['layout','visual','setting','blocking','emotion'];
     const grades=ks.map(k=>score[r[k]]||'?');
     let reasons=ks.filter(k=>['gap','invalid'].includes(r[k])).map(k=>k+': '+r[k+'Why']);
     if(!reasons.length)reasons=ks.filter(k=>r[k]==='review').map(k=>k+': '+r[k+'Why']);
     const note=reasons.length?safe(reasons.slice(0,2).join('; ')).slice(0,260):'No structural gap detected; sequence still requires editorial review';
-    doc.push('| '+q+r.recipeId+q+' | '+r.panels+' | '+grades[0]+' | '+grades[1]+' | '+grades[2]+' | '+grades[3]+' | '+grades[4]+' | '+note+' |');
+    doc.push('| '+q+r.recipeId+q+' | '+safe(r.summary).slice(0,165)+' | '+r.panels+' | '+grades[0]+' | '+grades[1]+' | '+grades[2]+' | '+grades[3]+' | '+grades[4]+' | '+note+' |');
    }
    doc.push('');
   }
