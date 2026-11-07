@@ -665,6 +665,30 @@
     "source": "Low Tide Signal — editorial framing pages",
     "panelPlan": [
       "Single full-page flats landscape in dawn-blue fog with black mud, shallow teal water channels and a narrow trail of footprints heading offshore. Harbor Phase is dim behind; the district is only a distant silhouette ahead. No people visible. Use the open fog and sky as the copy field, keeping the footprints as the page-turn vector."
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "The specific chapter location supports a readable, typography-led editorial invitation; do not fabricate scenes or character portraits.",
+      "readingFlow": "One continuous background image. Read the scripted editorial display heading first, then body copy downward, finishing on the isolated display or closing line.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page atmospheric environment with a large typographic field; retain the actual place design and restrict identifiable characters as scripted."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "broad calm background field established in this page's scripted direction",
+          "purpose": "the entire editor letter or teaser copy, laid out as genuinely legible publishing typography"
+        }
+      ],
+      "lettering": {
+        "strategy": "Editorial copy has priority; preserve every printed line and its order. Do not overlay body copy on critical visual landmarks.",
+        "reservedZone": "Full quiet column sized for the long exact authored text."
+      }
+    }
   }
 ]
