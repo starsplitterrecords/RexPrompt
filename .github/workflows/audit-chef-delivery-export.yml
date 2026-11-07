@@ -25,7 +25,7 @@ jobs:
               dirs[:] = [d for d in dirs if not d.startswith(".")]
               for name in files:
                   p = os.path.join(root,name)
-                  if p not in included and (name.endswith((".json",".txt",".md",".b64",".json.gz")) or ("compressed" in name and not name.endswith((".png",".jpg",".jpeg",".webp")))):
+                  if p not in included and (name.endswith((".json",".txt",".md",".b64",".json.gz",".gzb64")) or ("compressed" in name and not name.endswith((".png",".jpg",".jpeg",".webp")))):
                       included.append(p)
           with zipfile.ZipFile("chef-delivery-source-snapshot.zip","w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
               for p in sorted(set(included)):
