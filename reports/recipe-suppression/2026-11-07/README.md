@@ -4,7 +4,7 @@ Source: current RexPrompt repository, AFTER applying all configured scene and di
 
 Interpretation: PAGE means authored per-page setting; CONFIG means series/configuration inheritance; DEFAULT means assembler fallback. An empty promptSuppress means no page-specific suppression, NOT proof that the section is emitted. No ingredient content is different from an actively suppressed ingredient.
 
-Flags identify candidates for inspection, not editorial findings or permission to suppress. Full content and neighboring beats require human review before changing any page. Full Performance is kept separate from Rex Fleet.
+Flags identify candidates, not editorial findings or permission to suppress. Repeated setting descriptions across separate generation calls are often NECESSARY for continuity; they are not duplication inside a page prompt. Full content and neighboring beats require review before changing any page. Full Performance is separate from Rex Fleet.
 
 ## Coverage
 
@@ -46,7 +46,7 @@ Flags identify candidates for inspection, not editorial findings or permission t
 - ASSEMBLY_ERROR / PANEL_NOT_EMITTED / DIALOGUE_NOT_EMITTED / CONTINUITY_NOT_EMITTED: verify assembler correctness; page does not have a validated complete output.
 - VISUAL_CAST_SUPPRESSED: explicitly suppressed cast despite visible-only character references; inspect visual reference sufficiency.
 - FULL_CAST_BY_DEFAULT / REPEATED_FULL_CAST: full-character prose is implicit or repeated, potentially unnecessary alongside established identities.
-- REPEATED_FULL_SETTING / REPEATED_SETTING_CONTINUITY: adjacent same-setting pages include duplicate persistent environment descriptions.
+- REPEATED_FULL_SETTING / REPEATED_SETTING_CONTINUITY: adjacent independently generated pages share environmental detail. Usually valid for continuity; review only for stale, internally duplicated or disproportionate text.
 - TEMPLATE_SUMMARY / DUPLICATE_SUMMARY: repeated or formulaic summary may duplicate actual panel/action writing.
 - CROSS_CONFIGURATION_CONFLICT: same unit resolves differently across production configurations; investigate before making policy assumptions.
 
