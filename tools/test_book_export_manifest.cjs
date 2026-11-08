@@ -100,7 +100,6 @@ for(const [series,prefix] of [['backyard-rockets','backyard-rockets-s1'],['echoe
   assert.ok(entry&&entry.selectorRegistered&&entry.readingOrder==='curated-complete-book',id);
   assert.equal(entry.specialUnits[0].role,'cover',id+' cover must be first');
   assert.equal(entry.specialUnits[1].role,'opening-editorial',id+' opening must follow cover');
-  assert.equal(entry.specialUnits[0].role,'opening-editorial');
   assert.equal(entry.specialUnits.at(-1).role,'closing-editorial');
  }
 }
