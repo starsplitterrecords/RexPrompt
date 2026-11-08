@@ -82,7 +82,7 @@ assert.equal(role('rex-fleet','rex-fleet-i02','RF_I02_CAST'),'cast');
 assert.equal(role('rex-fleet','rex-fleet-i02','RF_I02_EDITOR_ENDMATTER'),'end-matter');
 assert.equal(role('rex-fleet-academy-between-beacons','rex-fleet-academy-between-beacons-i01','RFA_BB_I01_P01'),'opening-editorial');
 const fp=structure.issues['rex-fleet-full-performance::rex-fleet-full-performance-i01'];
-assert.ok(fp&&fp.readingOrder==='source-order-only'&&fp.coverStatus==='not-established');
+assert.ok(fp&&fp.readingOrder==='curated-complete-book'&&fp.coverStatus==='ordered');
 assert.equal(fp.specialUnits.filter(x=>x.role==='opening-editorial').length,7);
 assert.equal(role('rex-fleet-full-performance','rex-fleet-full-performance-i01','RFFP_I01_CAST'),'cast');
 for(let i=1;i<=12;i++){
@@ -97,12 +97,14 @@ for(const [series,prefix] of [['backyard-rockets','backyard-rockets-s1'],['echoe
  for(let i=1;i<=8;i++){
   const id=series+'::'+prefix+'-e'+String(i).padStart(2,'0');
   const entry=structure.issues[id];
-  assert.ok(entry&&!entry.selectorRegistered&&entry.readingOrder==='source-order-only',id);
+  assert.ok(entry&&entry.selectorRegistered&&entry.readingOrder==='curated-complete-book',id);
+  assert.equal(entry.specialUnits[0].role,'cover',id+' cover must be first');
+  assert.equal(entry.specialUnits[1].role,'opening-editorial',id+' opening must follow cover');
   assert.equal(entry.specialUnits[0].role,'opening-editorial');
   assert.equal(entry.specialUnits.at(-1).role,'closing-editorial');
  }
 }
-assert.equal(structure.issues['echoes-forgotten-war::echoes-forgotten-war-s1-e01'].coverStatus,'available-in-separate-shelf');
+assert.equal(structure.issues['echoes-forgotten-war::echoes-forgotten-war-s1-e01'].coverStatus,'ordered');
 assert.match(exporter,/const ordered=book\?\.units\|\|sel\.recipeIds/);
 assert.match(exporter,/issueIncludeCast/);
 assert.match(exporter,/omittedOptionalUnits:p.omittedCast/);
