@@ -59,7 +59,31 @@
       {
         "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "Opening previously page for Issue 5. Carries forward the midpoint identity reveal and shifts the loaded question from what happened to what Theo and Rae personally chose, without introducing Afterlight. Leave future reveals out of the image.",
+      "readingFlow": "A single continuous image under exact editorial captions in supplied order.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page continuous image, with faces and objects held away from the text field; no internal gutters."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "upper center or quiet outer margin",
+          "purpose": "full exact title and editorial caption sequence"
+        }
+      ],
+      "lettering": {
+        "strategy": "Lettering carries the editorial meaning; keep entire caption sequence intact.",
+        "reservedZone": "Broad high-contrast calm field, not across faces."
+      }
+    }
   },
   {
     "id": "EFW_S1E05_S01",
@@ -118,7 +142,54 @@
         "text": "Remember it yourself."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Theo and Rae cannot reject their ancient selves without facing the evidence.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ],
+      "lettering": {
+        "strategy": "Keep scripted dialogue exact and speakers clearly attributed; flag any overfull panel for editorial repair.",
+        "reservedZone": "Calm supporting-panel margins, not gestures or facial expressions."
+      }
+    }
   },
   {
     "id": "EFW_S1E05_S02",
@@ -153,7 +224,45 @@
       {
         "text": "Reconstruct the Issue 1 Starbreaker-memory geometry. Do not reveal ancient Theo yet."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "grid",
+      "visualPriority": "The familiar Starbreaker memory repeats exactly before its missing edge is shown.",
+      "readingFlow": "Read 1–4 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large upper/left narrative anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E05_S03",
@@ -189,7 +298,46 @@
         "text": "Reuse the same camera axes but widen beyond the earlier frame edge so ancient Theo is revealed in formerly empty space."
       }
     ],
-    "continuityFrom": "EFW_S1E05_S02"
+    "continuityFrom": "EFW_S1E05_S02",
+    "pageLayout": {
+      "composition": "asymmetric",
+      "visualPriority": "The widened memory reveals ancient Theo beside Mero, not another cosmic spectacle.",
+      "readingFlow": "Read 1–4 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S04",
@@ -236,7 +384,45 @@
         "text": "I know."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Hearing Mero say Theo's name restores an ordinary, personal bond.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S05",
@@ -282,7 +468,51 @@
       {
         "text": "Reconstruct the Arbiter ruling memory geometry from Issue 4. Do not reveal ancient Rae yet."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "grid",
+      "visualPriority": "The earlier Arbiter decision frame must match without secretly including Rae.",
+      "readingFlow": "Read 1–5 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large upper/left narrative anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 5,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E05_S06",
@@ -321,7 +551,52 @@
         "text": "Reuse those camera axes and widen past the old frame edge so ancient Rae appears beside Arbiter doing ordinary record work."
       }
     ],
-    "continuityFrom": "EFW_S1E05_S05"
+    "continuityFrom": "EFW_S1E05_S05",
+    "pageLayout": {
+      "composition": "asymmetric",
+      "visualPriority": "Ancient Rae quietly records the ruling beyond the old image edge.",
+      "readingFlow": "Read 1–5 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 5,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 5,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S07",
@@ -372,7 +647,51 @@
         "text": "I don't know anymore."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Rae's anger lands on Adrian's concealment rather than the ancient set.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S08",
@@ -422,7 +741,45 @@
         "text": "Then give me the hour."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "open",
+      "visualPriority": "Afterlight physically tends individual survivors and is visibly exhausted.",
+      "readingFlow": "Follow authored panels 1–4; let panel 2 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 2,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E05_S09",
@@ -463,7 +820,51 @@
         "text": "More than there would have been."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Old familiarity between Afterlight and Starbreaker must feel strained, not ceremonial.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S10",
@@ -499,7 +900,39 @@
       }
     ],
     "directionInline": [],
-    "continuityFrom": "EFW_S1E05_S09"
+    "continuityFrom": "EFW_S1E05_S09",
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Afterlight refuses to let healing authorize destruction.",
+      "readingFlow": "Quietly follow 1–3; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S11",
@@ -549,7 +982,46 @@
         "text": "Mine."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "asymmetric",
+      "visualPriority": "Real names and recognizably personal handwriting make identity undeniable.",
+      "readingFlow": "Follow authored panels 1–5; let panel 4 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 5,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S12",
@@ -599,7 +1071,45 @@
         "text": "I can't keep up."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Afterlight cannot keep up, admitted to Atlas at working distance.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S13",
@@ -641,7 +1151,51 @@
         "text": "That doesn't make us them."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Neither Theo nor Rae can place themselves outside ancient responsibility.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S14",
@@ -691,7 +1245,45 @@
         "text": "What do you think we should do?"
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Mero's ordinary confidence in junior Theo makes the interrupted answer consequential.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S15",
@@ -745,7 +1337,58 @@
       {
         "text": "Balanced split structure: Theo's missing answer on one side, Rae's on the other. The scene is built from work objects and interrupted tasks, not floating heads."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "montage",
+      "visualPriority": "Two partial memories approach the missing decision without completing it.",
+      "readingFlow": "Read 1–6 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 6,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 5,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 6,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_S16",
@@ -786,7 +1429,46 @@
       }
     ],
     "directionInline": [],
-    "continuityFrom": "EFW_S1E05_S15"
+    "continuityFrom": "EFW_S1E05_S15",
+    "pageLayout": {
+      "composition": "open",
+      "visualPriority": "Paired waiting figures—Mero for Theo, Arbiter for Rae—turn absence into tension.",
+      "readingFlow": "Read 1–4 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E05_EDITOR_CLOSE",
@@ -824,6 +1506,30 @@
       {
         "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "Closing NEXT ISSUE teaser for Issue 5. Signals that the returning war memory is about to escape the protagonists without revealing Flux or the specific public-memory incident. Leave future reveals out of the image.",
+      "readingFlow": "A single continuous image under exact editorial captions in supplied order.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page continuous image, with faces and objects held away from the text field; no internal gutters."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "upper center or quiet outer margin",
+          "purpose": "full exact title and editorial caption sequence"
+        }
+      ],
+      "lettering": {
+        "strategy": "Lettering carries the editorial meaning; keep entire caption sequence intact.",
+        "reservedZone": "Broad high-contrast calm field, not across faces."
+      }
+    }
   }
 ]

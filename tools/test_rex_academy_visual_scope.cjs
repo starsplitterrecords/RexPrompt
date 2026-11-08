@@ -35,9 +35,8 @@ let total=0,factioned=0,baselineFactions=0,refs=0,speakerOnly=0;
 for(const show of shows){
  assert.equal(show.promptVisibleCastOnly,true,show.id+' has no visual cast mode');
  assert.equal(show.omitRoutineFactions,true,show.id+' has no faction suppression');
- const filenames=(show.sceneOverlays||[]).filter(x=>/visual_faction_pages_i01/.test(x.file));
- assert.equal(filenames.length,1,'Missing page-local exception data '+show.id);
- const exceptions=json(show.basePath+'/'+filenames[0].file);
+ assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Academy must load canonical faction selections '+show.id);
+ const exceptions=json(show.basePath+'/editorial/visual_faction_pages_i01.json');
  assert(exceptions.length>=1,show.id+' must retain essential faction visual context');
  const expectedExceptionIds=new Set(exceptions.map(x=>x.id));
  assert.equal(expectedExceptionIds.size,exceptions.length);
@@ -67,7 +66,7 @@ for(const show of shows){
   if(p.factions?.length)baselineFactions++;
   local++;refs+=expected.length;
  }
- assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Unapplied faction exceptions '+show.id);
+ assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Archived faction selections missing from canonical source '+show.id);
  total+=local;console.log('PASS '+show.id+': '+local+' pages, only cited cast and intentional factions');
 }
 assert(baselineFactions>factioned,'Faction scoping must substantially reduce repeated prose');

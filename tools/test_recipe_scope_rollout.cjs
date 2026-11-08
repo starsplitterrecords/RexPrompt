@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-// Verify every new page-scope recipe profile against the *current* RexPrompt assembler.
-// This compares each issue with and without the page-scoping overlay while keeping
-// all authored story, dialogue, page-layout and other editorial overlays identical.
+// Verify canonical page-scoped recipe policies against the current assembler.
+// Archived policy files serve as migration fixtures, not active override layers.
 const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
@@ -13,7 +12,7 @@ vm.runInContext(html.slice(begin,end)+';globalThis.recipeFunctions={assembleScen
 const {assembleScene,pageAssembly}=ctx.recipeFunctions;
 const catalog=json('data/shows.json');
 const policyFile=f=>/^(editorial_recipe_scope_|editorial\/recipe_scope_)/.test(f||'');
-const selected=catalog.filter(x=>!x.sourceSeasonId&&x.sceneOverlays?.some(o=>policyFile(o.file)));
+const selected=catalog.filter(x=>x.id==='backyard-rockets-s1');
 function decode(base,file,encoding){const p=base+'/'+file;
   return encoding==='gzip-base64'?JSON.parse(zlib.gunzipSync(Buffer.from(read(p).trim(),'base64')).toString('utf8')):json(p)}
 function normalize(raw){if(Array.isArray(raw))return raw;if(Array.isArray(raw?.pages))return raw.pages;return Object.entries(raw||{}).map(([id,scene])=>({id,...scene}))}
@@ -48,44 +47,42 @@ function load(show,applyScope){
 }
 const names=new Set(),idList=new Set(),counts={};
 for(const show of selected){
- const base=show.basePath,source=load(show,false),scoped=load(show,true);
- assert.equal(source.length,scoped.length,'Scene count changed on '+show.id);
- const before=new Map(source.map(x=>[x.id,x])),after=new Map(scoped.map(x=>[x.id,x]));
- assert.equal(before.size,source.length,'Duplicate base scene id '+show.id);
- assert.equal(after.size,scoped.length,'Duplicate scoped scene id '+show.id);
+ assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Canonical Backyard pages must not use field overlays');
+ const base=show.basePath,scoped=load(show,true),after=new Map(scoped.map(x=>[x.id,x]));
+ assert.equal(after.size,scoped.length,'Duplicate assembled page IDs '+show.id);
  const store={__show:show};
  for(const file of ['characters','settings','regions','factions','dialogue','direction'])
    store[file+'.json']=json(base+'/'+file+'.json');
  let pages=0,bytes=0,suppressionCount=0;
- for(const entry of show.sceneOverlays.filter(x=>policyFile(x.file))){
-   assert(entry.mergeById&&entry.strict,'Scope overlay must be strict ID merge '+show.id);
-   const policies=normalize(decode(base,entry.file,entry.encoding));
-   const unique=new Set();
+ for(let issue=3;issue<=8;issue++){
+   const n=String(issue).padStart(2,'0'),file='editorial_recipe_scope_e'+n+'.json';
+   const policies=normalize(decode(base,file)),unique=new Set();
    for(const item of policies){
-     assert(item.id&&!unique.has(item.id),'Duplicate scope id '+entry.file);unique.add(item.id);
+     assert(item.id&&!unique.has(item.id),'Duplicate archived scope '+item.id);unique.add(item.id);
      const fields=Object.keys(item);
-     assert(fields.every(x=>['id','promptSuppress','promptCharacterMode','promptSettingMode'].includes(x)),'Scope introduced a story or layout field '+item.id);
-     assert(before.has(item.id)&&after.has(item.id),'Orphan scope record '+item.id);
-     const a=before.get(item.id),b=after.get(item.id);
-     assert.deepEqual(Object.keys(a).filter(x=>!fields.includes(x)).sort(),Object.keys(b).filter(x=>!fields.includes(x)).sort(),
-       'A story ingredient key changed '+item.id);
-     for(const f of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','directionInline','settingText','summary']){
-       assert.equal(JSON.stringify(a[f]),JSON.stringify(b[f]),'Changed protected authored field '+item.id+' '+f);
-     }
-     const old=assembleScene(a,store,0),now=assembleScene(b,store,0);
-     function protectedTail(txt){const first=txt.indexOf('\n[PAGE COMPOSITION]');const panel=txt.indexOf('\n[PANEL PLAN]');const pos=first>=0?first:panel;assert(pos>=0,'Missing panel plan '+item.id);return txt.slice(pos)}
-     assert.equal(protectedTail(old),protectedTail(now),'Assembly changed protected story/layout/dialogue '+item.id);
+     assert(fields.every(x=>['id','promptSuppress','promptCharacterMode','promptSettingMode'].includes(x)),
+       'Scope fixture includes story or layout fields '+item.id);
+     const canonical=after.get(item.id);
+     assert(canonical,'Missing canonical page '+item.id);
+     for(const [key,value] of Object.entries(item))if(key!=='id')
+       assert.deepEqual(canonical[key],value,'Canonical source does not carry editorial scope '+item.id+' '+key);
+     const bare={...canonical};
+     for(const key of fields)if(key!=='id')delete bare[key];
+     for(const f of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','directionInline','settingText','summary'])
+       assert.equal(JSON.stringify(bare[f]),JSON.stringify(canonical[f]),'Protected field changed '+item.id+' '+f);
+     const old=assembleScene(bare,store,0),now=assembleScene(canonical,store,0);
+     function protectedTail(txt){const layout=txt.indexOf('\n[PAGE COMPOSITION]'),panel=txt.indexOf('\n[PANEL PLAN]');
+       const pos=layout>=0?layout:panel;assert(pos>=0,'Missing panel plan '+item.id);return txt.slice(pos);}
+     assert.equal(protectedTail(old),protectedTail(now),'Canonical policy altered protected layout or dialogue '+item.id);
      assert(now.length<=old.length+40,'Policy unexpectedly expanded prompt '+item.id);
-     if(item.promptSettingMode==='label'&&b.setting&&!b.settingText)assert(store['settings.json'][b.setting]?.name,'Human-readable setting label missing '+item.id);
-     pageAssembly(b,show);
-     if(item.promptSuppress?.length)suppressionCount++;
-     bytes+=old.length-now.length;pages++;
-     idList.add(item.id);
+     if(item.promptSettingMode==='label'&&canonical.setting&&!canonical.settingText)
+       assert(store['settings.json'][canonical.setting]?.name,'Human-readable setting label missing '+item.id);
+     pageAssembly(canonical,show);
+     suppressionCount+=+(item.promptSuppress?.length>0);
+     bytes+=old.length-now.length;pages++;idList.add(item.id);
    }
  }
- const group=show.id.replace(/(?:-e\d\d|-i\d\d|-c\d\d|-issue-\d+)$/,'');
- if(!counts[group])counts[group]={issues:0,profiles:0,savedCharacters:0,suppressions:0};
- counts[group].issues++;counts[group].profiles+=pages;counts[group].savedCharacters+=bytes;counts[group].suppressions+=suppressionCount;
+ counts['backyard-rockets-s1']={issues:1,profiles:pages,savedCharacters:bytes,suppressions:suppressionCount};
  names.add(show.id);
 }
 // Division Threshold intentionally stores page scope *inside its flat compiled page
@@ -119,10 +116,10 @@ assert.equal(divisionPages,204,'Division canonical flat page count changed');
 assert.equal(divisionScoped,194,'Missing Division editorial page policy');
 counts['division-threshold-s1']={issues:8,profiles:divisionScoped,savedCharacters:divisionSavings,suppressions:0};
 
-assert.equal(selected.length,1,'Unexpected remaining overlay-backed show configurations');
+assert.equal(selected.length,1,'Backyard season configuration missing');
 assert([...Object.values(counts)].every(x=>x.savedCharacters>0),'No reference reduction in one or more series');
 assert(!selected.some(x=>/^vikings-2026-s1/.test(x.id)),'Already-compact Vikings unexpectedly modified');
-assert.equal(Object.keys(counts).length,2,'Expected Rockets overlay plus Division Threshold flat source; Stardust now normalized');
-console.log('PASS: '+(selected.length+divisionShows.length)+' scoped show configurations across '+Object.keys(counts).length+' series; no source panels, dialogue, continuity, layout or scene count changed.');
+assert.equal(Object.keys(counts).length,2,'Expected canonical Backyard and Division Threshold policies');
+console.log('PASS: '+(selected.length+divisionShows.length)+' scoped configurations across '+Object.keys(counts).length+' series; no source panels, dialogue, continuity, layout or scene count changed.');
 for(const [series,x] of Object.entries(counts))console.log('PASS '+series+': '+x.issues+' issue/chapter targets, '+x.profiles+' profiles, '+x.savedCharacters+' prompt characters trimmed.');
 console.log('PASS: protected chef ingredients identical; Division flat pages remain canonical; short names resolve from durable setting shelves.');

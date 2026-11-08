@@ -55,7 +55,31 @@
       {
         "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "Opening previously page for Issue 6. Re-arms Theo and Rae's newly recovered participation and the missing choices without spoiling Flux, public memory return, or the transit-worker incident. Leave future reveals out of the image.",
+      "readingFlow": "A single continuous image under exact editorial captions in supplied order.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page continuous image, with faces and objects held away from the text field; no internal gutters."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "upper center or quiet outer margin",
+          "purpose": "full exact title and editorial caption sequence"
+        }
+      ],
+      "lettering": {
+        "strategy": "Lettering carries the editorial meaning; keep entire caption sequence intact.",
+        "reservedZone": "Broad high-contrast calm field, not across faces."
+      }
+    }
   },
   {
     "id": "EFW_S1E06_S01",
@@ -102,7 +126,39 @@
         "text": "Don't read the sign."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "grid",
+      "visualPriority": "Theo recognizes his old satchel before the exhibit's false interpretation.",
+      "readingFlow": "Follow authored panels 1–4; let panel 2 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 2,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E06_S02",
@@ -155,7 +211,51 @@
         "text": "Mero wants me to bless the answer he already likes."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "open",
+      "visualPriority": "Flux's uncertainty arrives as exhaustion over a cooling drink.",
+      "readingFlow": "Follow authored panels 1–5; let panel 2 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 2,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 5,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E06_S03",
@@ -201,7 +301,45 @@
         "text": "Because nobody preserved it. They just kept using it."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Rae recognizes her anonymous annotation in the physical civic archive.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S04",
@@ -239,7 +377,44 @@
         "text": "I haven't slept in months."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Mero's attempted transfer of responsibility fails in Flux's ordinary presence.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E06_S05",
@@ -281,7 +456,51 @@
       }
     ],
     "directionInline": [],
-    "continuityFrom": "EFW_S1E06_S04"
+    "continuityFrom": "EFW_S1E06_S04",
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Flux refuses to certify a convenient future and leaves Mero with choice.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S06",
@@ -331,7 +550,45 @@
         "text": "The gap filled in. Records, families, institutions—everything kept going."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Adrian dismantles the idea of a clean historical gap in human terms.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S07",
@@ -384,7 +641,51 @@
         "text": "Maybe. I'm still not giving you permission."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "open",
+      "visualPriority": "Starbreaker's craving for certainty becomes dangerous in Flux's refusal.",
+      "readingFlow": "Follow authored panels 1–5; let panel 4 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Wide central visual anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 5,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Subordinate following frame below/right of the anchor. Respect figure scale and balloon clearance."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "beyond the dominant action",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    }
   },
   {
     "id": "EFW_S1E06_S08",
@@ -446,7 +747,44 @@
       {
         "text": "PAGE VISUAL CONTEXT — Present-day scenes: stable geography, human-scale acting and clearly bounded panels without prescribing equal panel size. Let Vark and Caelum recur through ordinary recorded messages rather than physically appearing in Tyrellis. Their messages must feel like ongoing human relationships with consequences, not exposition drops. Stage Theo and Rae through walking, handling groceries/papers and navigating an occupied market."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "grid",
+      "visualPriority": "Ordinary marketplace lives are disrupted by recovered messages and records.",
+      "readingFlow": "Follow authored panels 1–4; let panel 4 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Respect figure scale and balloon clearance."
+        }
+      ],
+      "lettering": {
+        "strategy": "Keep scripted dialogue exact and speakers clearly attributed; flag any overfull panel for editorial repair.",
+        "reservedZone": "Calm supporting-panel margins, not gestures or facial expressions."
+      }
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S09",
@@ -496,7 +834,45 @@
         "text": "Then maybe I'll finally be surprised."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "Afterlight watches Flux leave without a neat prophetic explanation.",
+      "readingFlow": "Quietly follow 1–4; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S10",
@@ -550,7 +926,46 @@
         "text": "I don't think there's one clean boundary."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "asymmetric",
+      "visualPriority": "Adrian's account of absent meaning spreads across everyday institutional evidence.",
+      "readingFlow": "Follow authored panels 1–5; let panel 5 carry the dramatic weight while others establish or resolve it.",
+      "primaryPanel": 5,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 3,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 4,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Respect figure scale and balloon clearance."
+        },
+        {
+          "panel": 5,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Respect figure scale and balloon clearance."
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S11",
@@ -597,7 +1012,39 @@
         "text": "Yes."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "The untouched cup and Flux's empty place reveal a disappearance.",
+      "readingFlow": "Quietly follow 1–3; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "wide real historical landscape",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S12",
@@ -635,7 +1082,46 @@
       {
         "text": "Pair present Theo with ancient Theo through matching body position and eyeline while ancient Theo is carrying papers or doing staff work."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "montage",
+      "visualPriority": "Present Theo's physical posture unlocks an ancient warning about certainty.",
+      "readingFlow": "Read 1–4 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S13",
@@ -678,7 +1164,46 @@
         "text": "Repeat the mixed-page logic for Rae using Arbiter's workroom and Rae's correction gesture as the bridge."
       }
     ],
-    "continuityFrom": "EFW_S1E06_S12"
+    "continuityFrom": "EFW_S1E06_S12",
+    "pageLayout": {
+      "composition": "montage",
+      "visualPriority": "Rae's recovered accountability lives in ordinary triage language.",
+      "readingFlow": "Read 1–4 in script order through recognizable repeated body positions; distinguish ancient and modern geography.",
+      "primaryPanel": 4,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 2,
+          "role": "supporting",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve exact matched camera axes and clear period identity."
+        },
+        {
+          "panel": 4,
+          "role": "dominant",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve exact matched camera axes and clear period identity."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "clean separation between the paired time periods",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S14",
@@ -724,7 +1249,51 @@
         "text": "You just said you did."
       }
     ],
-    "directionInline": []
+    "directionInline": [],
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "An ordinary transit worker corrects a lost district name without understanding why.",
+      "readingFlow": "Quietly follow 1–5; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "detail",
+          "scale": "small",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 4,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 5,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_S15",
@@ -777,7 +1346,39 @@
         "text": "PAGE VISUAL CONTEXT — Quiet consequence page: larger acting panels, held reaction, ordinary work objects. Establish the PARTNER as this worker's present-day relationship and preserve both for the Issue 8 social-resolution montage. The partner does not validate or deny the impossible biography; they simply stay."
       }
     ],
-    "continuityFrom": "EFW_S1E06_S14"
+    "continuityFrom": "EFW_S1E06_S14",
+    "pageLayout": {
+      "composition": "quiet",
+      "visualPriority": "A partner's decision to stay carries the worker's impossible brother memory.",
+      "readingFlow": "Quietly follow 1–3; hold gestures, pauses and realistic faces instead of multiplying action.",
+      "panels": [
+        {
+          "panel": 1,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 2,
+          "role": "quiet",
+          "scale": "medium",
+          "placement": "Smaller antecedent framing above/left of the anchor. Preserve silence and unforced human expression."
+        },
+        {
+          "panel": 3,
+          "role": "quiet",
+          "scale": "large",
+          "placement": "Large final/lower narrative anchor. Preserve silence and unforced human expression."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "between human faces and handled objects",
+          "purpose": "unhurried human acting and unobstructed dialogue"
+        }
+      ]
+    },
+    "promptCharacterMode": "cast"
   },
   {
     "id": "EFW_S1E06_EDITOR_CLOSE",
@@ -819,6 +1420,30 @@
       {
         "text": "Treat every supplied CAPTION line as exact finished lettering. Do not omit, paraphrase, duplicate, reorder, or invent text. Do not add environmental text, logos, labels, page numbers, credits, or signage beyond the supplied lettering. Keep the prose effortless to read over the art with deliberate high-contrast text fields and premium prestige-comic editorial typography."
       }
-    ]
+    ],
+    "pageLayout": {
+      "composition": "splash",
+      "visualPriority": "Closing NEXT ISSUE teaser for Issue 6. Escalates the now-public return of memory toward social identity and conflict without revealing Oryon or Issue 7's specific policy plot. Leave future reveals out of the image.",
+      "readingFlow": "A single continuous image under exact editorial captions in supplied order.",
+      "primaryPanel": 1,
+      "panels": [
+        {
+          "panel": 1,
+          "role": "dominant",
+          "scale": "splash",
+          "placement": "Full-page continuous image, with faces and objects held away from the text field; no internal gutters."
+        }
+      ],
+      "negativeSpace": [
+        {
+          "where": "upper center or quiet outer margin",
+          "purpose": "full exact title and editorial caption sequence"
+        }
+      ],
+      "lettering": {
+        "strategy": "Lettering carries the editorial meaning; keep entire caption sequence intact.",
+        "reservedZone": "Broad high-contrast calm field, not across faces."
+      }
+    }
   }
 ]

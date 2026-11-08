@@ -35,16 +35,8 @@ def main() -> None:
     expected_files = [p.name for p in SCENE_FILES]
     if entry.get("scenesFiles") != expected_files:
         raise RuntimeError("Echoes manifest issue files are missing or reordered")
-    expected_overlays = [
-        entry
-        for i in range(1, 9)
-        for entry in (
-            {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True},
-            {"file": f"editorial/page_recipe_scope_e{i:02d}.json", "mergeById": True, "strict": True},
-        )
-    ]
-    if entry.get("sceneOverlays") != expected_overlays:
-        raise RuntimeError("Echoes must use eight strict layout and recipe-scope overlay pairs")
+    if entry.get("sceneOverlays"):
+        raise RuntimeError("Echoes must use canonical page fields, not active editorial overlays")
 
     total = 0
     for issue, path in enumerate(SCENE_FILES, start=1):
@@ -54,6 +46,12 @@ def main() -> None:
         if ids != expected:
             raise RuntimeError(f"{path.name}: page order/IDs changed")
         total += len(pages)
+        canonical = {p["id"]: p for p in pages}
+        for name in (f"editorial/page_layouts_e{issue:02d}.json", f"editorial/page_recipe_scope_e{issue:02d}.json"):
+            for item in load(SHOW / name):
+                page = canonical.get(item["id"])
+                if page is None or any(page.get(k) != val for k, val in item.items() if k != "id"):
+                    raise RuntimeError(f"Unbaked field from {name} on {item['id']}")
 
         for page in (pages[0], pages[-1]):
             if not page.get("summary") or not page.get("settingText"):
