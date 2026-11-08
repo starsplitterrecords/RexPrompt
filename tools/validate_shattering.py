@@ -57,12 +57,7 @@ def main():
     assert len(entries) == 6, f"Expected 6 Shattering issue entries, found {len(entries)}"
 
     cover_entries = [s for s in shows if s.get("seriesId") == "shattering" and s.get("unitLabel") == "COVER"]
-    assert len(cover_entries) == 1, f"Expected 1 Shattering cover shelf, found {len(cover_entries)}"
-    cover_show = cover_entries[0]
-    assert cover_show.get("id") == "shattering-covers", "Shattering cover shelf id mismatch"
-    assert cover_show.get("basePath") == "data", "Shattering cover shelf basePath mismatch"
-    assert cover_show.get("scenesFiles") == ["shows/shattering/covers.json"], "Shattering cover shelf file mismatch"
-    assert cover_show.get("includeIdPattern") == r"^SHAT_I0[1-6]_COVER$", "Shattering cover shelf include pattern mismatch"
+    assert not cover_entries, "Shattering covers must be baked into issues, not separate registry selections"
 
     all_pages = []
     all_page_ids = set()
@@ -79,7 +74,11 @@ def main():
 
         expected_file = f"shows/shattering/pages_i{issue:02d}.json"
         assert entry.get("basePath") == "data", f"Issue {issue}: unexpected basePath"
-        assert entry.get("scenesFile") == expected_file, f"Issue {issue}: active page file mismatch"
+        assert entry.get("scenesFile") == expected_file, f"Issue {issue}: active story file mismatch"
+        assert entry.get("scenesFiles") == ["shows/shattering/covers.json", expected_file], (
+            f"Issue {issue}: cover must be the first assembled source before the 24 unchanged story pages"
+        )
+        assert entry["includeIdPattern"] == f"^SHAT_I{issue:02d}_", "Cover must be selected by this issue only"
         assert entry.get("includeIdPattern") == f"^SHAT_I{issue:02d}_", f"Issue {issue}: include pattern mismatch"
         assert entry.get("scenesFile") != "scenes_shattering.json", f"Issue {issue}: source scene file still active"
 
