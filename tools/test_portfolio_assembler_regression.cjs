@@ -115,7 +115,7 @@ function mutation(name,fn){try{fn();report.mutationCases[name]='PASS'}catch(e){r
 function expectedFailure(fn,needle){let threw=false;try{fn()}catch(e){threw=true;assert(String(e.message).includes(needle),'Expected '+needle+' but got '+e.message)}assert(threw,'Expected failure '+needle)}
 async function main(){
  assert(catalogs.length>0,'No registered configurations');
- const assembled=new Set(),selected=new Map(),foundFormats=new Set(),expandedIds=new Set();
+ const assembled=new Set(),selected=new Map(),foundFormats=new Set(),expandedIds=new Set(),sourceRecipeSets=new Map();
  for(const config of catalogs){
   const issues=api.expandIssues(config);
   assert(Array.isArray(issues)&&issues.length>0,'Show has no expansion '+config.id);
@@ -133,6 +133,8 @@ async function main(){
   try{addFormat(show);store=await api.loadShow(show);assert(store.__scenes.length>0,'No registered production units');report.loadedConfigurations++}
   catch(e){recordFailure('LOAD_SHOW',show.id,'',e.message);continue}
   const scenes=store.__scenes,ids=new Set(),series=show.seriesId||store.__show.seriesId||path.posix.basename(show.basePath||show.id).replace(/-s1$/,'');
+  sourceRecipeSets.set(show.id,new Set(scenes.map(x=>x.id)));
+
   if(!report.series[series])report.series[series]={configurations:0,units:0,assembled:0};
   report.series[series].configurations++;
   report.series[series].units+=scenes.length;
@@ -162,7 +164,12 @@ async function main(){
  for(const [category,items,key] of [['density',report.risks.highDensity,'show'],['ambiguity',report.risks.ambiguousDialogueMapping,'show'],['speakers',report.risks.unresolvedSpeaker,'show']]){
    const prior=new Set(baseline[category]||[]);
    for(const risk of items){
-     const id=risk.show+'::'+risk.recipe+(category==='speakers'?'::'+risk.handle:'');
+     const show=catalogs.find(x=>x.id===risk.show);
+     // Derived episode selectors reuse the exact historical season recipes. Look up
+     // existing risks under that original source identity, but keep all NEW cover
+     // IDs and previously unseen risks subject to the same strict review gate.
+     const legacy=show?.sourceSeasonId&&sourceRecipeSets.get(show.sourceSeasonId)?.has(risk.recipe)?show.sourceSeasonId:null;
+     const id=(legacy||risk.show)+'::'+risk.recipe+(category==='speakers'?'::'+risk.handle:'');
      if(!prior.has(id))recordFailure('NEW_UNREVIEWED_'+category.toUpperCase(),risk.show,risk.recipe,'New risk not present in the untriaged legacy inventory: '+id);
    }
  }
