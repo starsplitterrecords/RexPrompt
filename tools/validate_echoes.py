@@ -42,15 +42,16 @@ def validate_manifest() -> None:
     entry = matches[0]
     assert entry.get("basePath") == "data/shows/echoes-forgotten-war-s1"
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
-    expected_overlays = [
-        entry
-        for i in range(1, 9)
-        for entry in (
-            {"file": f"editorial/page_layouts_e{i:02d}.json", "mergeById": True, "strict": True},
-            {"file": f"editorial/page_recipe_scope_e{i:02d}.json", "mergeById": True, "strict": True},
-        )
-    ]
-    assert entry.get("sceneOverlays") == expected_overlays, "Expected eight isolated layout and recipe-scope overlay pairs"
+    assert not entry.get("sceneOverlays"), "Echoes must use canonical per-episode fields, not overlays"
+    for issue in range(1, 9):
+        source = {p["id"]: p for p in load(SHOW / f"scenes_e{issue:02d}.json")}
+        for fixture in (f"editorial/page_layouts_e{issue:02d}.json", f"editorial/page_recipe_scope_e{issue:02d}.json"):
+            for patch in load(SHOW / fixture):
+                canonical = source.get(patch["id"])
+                assert canonical is not None, f"Missing canonical page for {patch['id']}"
+                for key, value in patch.items():
+                    if key != "id":
+                        assert canonical.get(key) == value, f"Unconsolidated field: {patch['id']} {key}"
     assert entry.get("unitLabel") == "PAGE"
     assert entry.get("seriesId") == "echoes-forgotten-war"
     assert entry.get("seriesName") == "Echoes of a Forgotten War"
