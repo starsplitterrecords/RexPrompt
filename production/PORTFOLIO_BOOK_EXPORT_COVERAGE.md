@@ -4,12 +4,12 @@ Generated from live registered source recipes, curated inventories and exact app
 
 ## Summary
 
-- Registered selectors: 154 (includes shelves and non-comic selectors)
+- Registered selectors: 125 (includes non-book editorial and legacy season sources; no standalone cover shelves)
 - Curated complete-book inventories: 114
 - Full approved draft coverage: 4
 - Curated but missing approved images: 110
 - Uncurated issue/season selectors: 0
-- Auxiliary selectors not representing books: 40
+- Auxiliary selectors not representing books: 11
 
 - Source-evidenced issue structure records: 114
 - Covers ordered in issue reading order: 114
