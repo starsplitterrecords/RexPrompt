@@ -64,7 +64,7 @@ const az=model.rows.find(x=>x.seriesId==='azure-reach'&&x.issueId==='azure-reach
 assert(az?.denominator>0,'Azure available assembled units must supply denominator');
 assert.equal(az.denominatorSource,'curated-book');
 assert.equal(az.denominator,25);
-const az3=row('azure-reach','azure-reach-s1-e03');assert.equal(az3.denominator,25);assert.equal(az3.assembledCount,24,'Registered Azure Issue 3 should contain actual assembled recipes');
+const az3=row('azure-reach','azure-reach-s1-e03');assert.equal(az3.denominator,25);assert.equal(az3.assembledCount,25,'Registered Azure Issue 3 must include its cover in assembled recipes');
 const excluded=shows.filter(x=>x.id!=='azure-reach-s1-e03');
 const adjusted={...inventory,counts:{...inventory.counts,registeredConfigurations:excluded.length},configurations:inventory.configurations.filter(x=>x.showId!=='azure-reach-s1-e03')};
 const synthetic=build({shows:excluded,inventory:adjusted,draftManifest,referenceManifest:refs,books,releasedLinks:released,qualityEvidence:quality,sourceQuality:native,visionsMetadata});
