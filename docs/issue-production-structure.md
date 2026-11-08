@@ -38,3 +38,18 @@ The read-only book audit workflow checks these artifacts after committed changes
 ## Unresolved content versus resolved data defects
 
 A missing cover, unapproved art, no curated order, and missing publication metadata are actual production prerequisites. Record them explicitly rather than supplying new creative content without approval. A stale snapshot, unidentified embedded editorial page, or hidden season issue is a data/automation defect and should be fixed mechanically.
+
+## November 8, 2026 cover-source completion
+
+The portfolio now has **114 registered, curated complete-book issue orders** and **154 assembler configurations** across **25 production series**. The issue-structure audit identifies a cover ordered in position 1 for **all 114**. This closes the previously tracked **8 shelf-only cover integrations** and **32 absent cover-recipe definitions**.
+
+- Existing `Echoes of a Forgotten War` covers (`EFW_S1E01_COVER` through `EFW_S1E08_COVER`) were reused without altering their content; the eight new issue selectors assemble each cover followed by that episode's original story units.
+- `Backyard Rockets` retains its complete Season 1 source and now has eight issue-level selections and eight new source-grounded commercial-cover recipes. The existing **published** Issue 1 and Issues 1–2 combined edition covers in StarSplitterVisions remain authoritative and must **not** be overwritten or assumed to match future independent issue covers.
+- `Rex Fleet — Full Performance` has its own twelve distinct new cover recipes, registered ahead of its existing editorial and story pages. These are **not** regular Rex Fleet cover variants or merged production records.
+- Twelve separate Rex Fleet/Academy single-issue stories have source-grounded cover recipes registered first. No original authored story page is removed or rewritten.
+- For newly authored covers, `scene.generationLine` is a cover-scoped override; the original `show.generationLine` still applies to every unchanged interior story page.
+
+**Source readiness is not image readiness.** These 32 newly authored cover recipes are original *production prompts*, not approved rendered image files. The cover artwork must pass the Comic Production Continuity Skill's actual-pixel reference gate, generation, artistic review, approval, and mastering before a collected book can be released. The existing book-export coverage report independently measures approved image completeness. As of this repair, that report flags **110 of 114** curated books as missing one or more approved image binaries; four have full approved-draft coverage, which itself does not assert mastering or release approval.
+
+The two legacy season selectors (`backyard-rockets-s1` and `echoes-forgotten-war-s1`) are retained as aggregate working sources and are **not** additional books. Their real eight-issue selectors are the authoritative book-unit production selections.
+
