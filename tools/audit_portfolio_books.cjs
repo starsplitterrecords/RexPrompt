@@ -201,15 +201,19 @@ for(const show of SHOWS){
      const actual=selected.filter(id=>groupOf(id)===group);
      const prefix=group+'_COVER',coverCandidates=findSupplement(show,/_COVER$/).filter(id=>id===prefix);
      const derivedId=show.id+'-e'+group.slice(-2);
-     recordStructure(show,derivedId,actual,'source-order-only',{
+     const issueRegistered=SHOWS.some(s=>s.id===derivedId&&seriesOf(s)===seriesId);
+     if(!issueRegistered)recordStructure(show,derivedId,actual,'source-order-only',{
        selectorRegistered:false,issueLabel:'Episode '+Number(group.slice(-2)),coverCandidates});
      return {sourceGroup:group,sourceUnitCount:actual.length,
        firstUnit:actual[0],lastUnit:actual.at(-1),
-       issueSelectorRegistered:false,
-       status:'uncurated',reason:'season-selector-not-split-into-issue-inventories'};
+       issueSelectorRegistered:issueRegistered,
+       status:issueRegistered?'registered-issue-selector':'uncurated',
+       reason:issueRegistered?'issue-has-separate-registered-reading-order':'season-selector-not-split-into-issue-inventories'};
    });
-   rows.push({selectorId:issueId,seriesId,kind:'multi-issue-season-selector',status:'uncurated',
-     reason:'season-combines-multiple-issues',groupCount:groups.length,groups,subissues,sourceUnitCount:selected.length});
+   const registeredAll=subissues.every(s=>s.issueSelectorRegistered);
+   rows.push({selectorId:issueId,seriesId,kind:'multi-issue-season-selector',status:registeredAll?'not-a-book':'uncurated',
+     reason:registeredAll?'legacy-season-aggregate-not-a-book':'season-combines-multiple-issues',
+     groupCount:groups.length,groups,subissues,sourceUnitCount:selected.length});
    continue;
  }
  const cur=CURRENT.issues[[seriesId,issueId].join('::')];
