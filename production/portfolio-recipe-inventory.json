@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 186,
-    "approvedDraftRecords": 186,
+    "matchedApprovedUnitsAcrossConfigurations": 187,
+    "approvedDraftRecords": 187,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -204,7 +204,7 @@
       "seriesId": "echoes-forgotten-war",
       "registeredConfigurations": 9,
       "registeredUnits": 306,
-      "approvedUnits": 5,
+      "approvedUnits": 6,
       "keeperReferences": 17,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -247,7 +247,7 @@
         {
           "showId": "echoes-forgotten-war-s1-e07",
           "registeredUnits": 19,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "echoes-forgotten-war-s1-e08",
@@ -9064,8 +9064,8 @@
       "issueLabel": "Issue 7 — Gravity and Consequence",
       "unitLabel": "PAGE",
       "registeredUnits": 19,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 19,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 18,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -9089,7 +9089,9 @@
         "EFW_S1E07_S16",
         "EFW_S1E07_EDITOR_CLOSE"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "EFW_S1E07_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/echoes-forgotten-war-s1/covers.json",
@@ -9097,14 +9099,14 @@
       ],
       "sourceOverlays": [],
       "examplesMissing": [
-        "EFW_S1E07_COVER",
         "EFW_S1E07_EDITOR_OPEN",
         "EFW_S1E07_S01",
         "EFW_S1E07_S02",
         "EFW_S1E07_S03",
         "EFW_S1E07_S04",
         "EFW_S1E07_S05",
-        "EFW_S1E07_S06"
+        "EFW_S1E07_S06",
+        "EFW_S1E07_S07"
       ]
     },
     {
@@ -10619,9 +10621,8 @@
     {
       "key": "echoes-forgotten-war::echoes-forgotten-war-s1-e07",
       "expectedUnits": 19,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "EFW_S1E07_COVER",
         "EFW_S1E07_EDITOR_OPEN",
         "EFW_S1E07_S01",
         "EFW_S1E07_S02",
