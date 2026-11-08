@@ -242,8 +242,32 @@ function mount({button,getContext,onSaved,compile}){
     if(!model)return;
     tabBtns.forEach(btn=>btn.setAttribute('aria-selected',String(btn.dataset.tab===model.tab)));
     list.replaceChildren();
-    if(!model.rows.length)list.append(el('p',{class:'rp-dialogue-empty'},'This production page has no dialogue lines. Add a line only if it is intended.'));
-    for(const row of model.rows)list.append(model.tab==='page'?pageLine(row):scriptLine(row));
+    if(model.tab==='script'){
+      const context=el('section',{class:'rp-dialogue-scene-context'});
+      context.append(el('h3',{},'Page / scene context'));
+      if(model.scene.summary)context.append(el('p',{},model.scene.summary));
+      list.append(context);
+      const panels=Array.isArray(model.scene.panelPlan)?model.scene.panelPlan:[];
+      for(const [i,panel] of panels.entries()){
+        const group=el('section',{class:'rp-dialogue-panel-group'});
+        const action=typeof panel==='string'?panel:(panel?.action||panel?.text||JSON.stringify(panel));
+        group.append(el('h3',{},'Panel '+(i+1)),el('p',{class:'rp-dialogue-panel-action'},action));
+        const assigned=model.rows.filter(row=>row.panel===i+1);
+        if(!assigned.length)group.append(el('p',{class:'rp-dialogue-panel-silent'},'No dialogue assigned to this panel.'));
+        else for(const row of assigned)group.append(scriptLine(row));
+        list.append(group);
+      }
+      const unassigned=model.rows.filter(row=>row.panel===null||row.panel<1||row.panel>panels.length);
+      if(unassigned.length){
+        const group=el('section',{class:'rp-dialogue-panel-group'});
+        group.append(el('h3',{},panels.length?'Unassigned dialogue':'Dialogue'));
+        for(const row of unassigned)group.append(scriptLine(row));
+        list.append(group);
+      }
+    }else{
+      if(!model.rows.length)list.append(el('p',{class:'rp-dialogue-empty'},'This production page has no dialogue lines. Add a line only if it is intended.'));
+      for(const row of model.rows)list.append(pageLine(row));
+    }
     preview();
   }
   function close(){
