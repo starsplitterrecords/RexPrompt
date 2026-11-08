@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-// Echoes editorial layout contract: exact story preservation across all 149
-// page recipes, including editorial bookends and eight issue-scoped overlays.
+// Echoes canonical layout contract: exact story preservation across all 149
+// page recipes, including editorial bookends and eight direct production sources.
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
@@ -31,13 +31,7 @@ for(let issue=1;issue<=8;issue++){
  const issueShow=issueShows[issue-1];
  assert.equal(issueShow.scenesFiles.length,1,'Unexpected issue file count '+suffix);
  assert.equal(issueShow.scenesFiles[0],'scenes_e'+suffix+'.json');
- assert.equal(issueShow.sceneOverlays.length,2,'Expected exactly layout and scoping overlays '+suffix);
- assert.equal(issueShow.sceneOverlays[0].file,'editorial/page_layouts_e'+suffix+'.json');
- assert.equal(issueShow.sceneOverlays[0].mergeById,true);
- assert.equal(issueShow.sceneOverlays[0].strict,true);
- assert.equal(issueShow.sceneOverlays[1].file,'editorial/page_recipe_scope_e'+suffix+'.json');
- assert.equal(issueShow.sceneOverlays[1].mergeById,true);
- assert.equal(issueShow.sceneOverlays[1].strict,true);
+ assert(!(issueShow.sceneOverlays||[]).some(x=>x.mergeById),'Canonical Echoes issue must have no field overlays '+suffix);
  const source=json(base+'/scenes_e'+suffix+'.json'),patches=json(base+'/editorial/page_layouts_e'+suffix+'.json');
  assert.equal(source.length,expectedCounts[issue-1],'Source issue count drift '+suffix);
  assert.equal(patches.length,source.length,'Layout inventory mismatch '+suffix);
@@ -52,16 +46,25 @@ for(let issue=1;issue<=8;issue++){
    assert.deepEqual(Object.keys(p).sort(),['id','promptCharacterMode'],'Scope overlay modified story data '+p.id);
    assert.equal(p.promptCharacterMode,'cast','Unsupported Echoes character scope '+p.id);
  }
- const effective=mergeById(mergeById(source,patches),scopes);
- assert.equal(effective.length,source.length,'Overlay appended new story units '+suffix);
+ const layouts=new Map(patches.map(p=>[p.id,p])),scoped=new Map(scopes.map(p=>[p.id,p]));
+ for(const page of source){
+   const archived=layouts.get(page.id);
+   assert.deepEqual(page.pageLayout,archived?.pageLayout,'Canonical layout differs from archived layout '+page.id);
+   const override=scoped.get(page.id);
+   if(override)for(const [key,value] of Object.entries(override))if(key!=='id')
+     assert.deepEqual(page[key],value,'Canonical recipe scope differs from archived scope '+page.id+' '+key);
+ }
+ const effective=source;
+ assert.equal(effective.length,source.length,'Canonical source issue count changed '+suffix);
  for(let i=0;i<source.length;i++){
   const original=source[i],page=effective[i],layout=page.pageLayout;
   assert.equal(original.id,page.id);
-  assert(!original.pageLayout,'Layout data belongs in the authoritative overlay, not duplicate story fields '+page.id);
+  assert(original.pageLayout,'Layout missing from authoritative source '+page.id);
   assert.equal(validatePageLayout(page),layout,'Invalid layout for '+page.id);
   assert.equal(layout.panels.length,original.panelPlan.length,'Panel count mismatch '+page.id);
-  const originalOutput=assembleScene(original,store,i),layoutOutput=assembleScene(page,store,i);
-  assert(!originalOutput.includes('[PAGE COMPOSITION]'),'Unprofiled page gained composition '+page.id);
+  const bare={...original};delete bare.pageLayout;
+  const originalOutput=assembleScene(bare,store,i),layoutOutput=assembleScene(page,store,i);
+  assert(!originalOutput.includes('[PAGE COMPOSITION]'),'Bare test page gained composition '+page.id);
   assert(layoutOutput.includes('[PAGE COMPOSITION]'),'Missing compiled composition '+page.id);
   const added=layoutOutput.indexOf('\n[PAGE COMPOSITION]');
   const retained=layoutOutput.indexOf('\n[PANEL PLAN]',added);
