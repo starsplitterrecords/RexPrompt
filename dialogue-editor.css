@@ -42,3 +42,11 @@
 body.rp-dialogue-open{overflow:hidden}
 @media(max-width:1000px){.rp-dialogue-line{grid-template-columns:75px minmax(90px,1fr) minmax(90px,1fr) minmax(180px,2fr)}.rp-dialogue-line .rp-dialogue-note{grid-column:2/4}.rp-dialogue-line-actions{grid-column:4}}
 @media(max-width:650px){.rp-dialogue-modal{padding:0}.rp-dialogue-dialog{height:100dvh;border-radius:0}.rp-dialogue-header,.rp-dialogue-footer{padding:10px}.rp-dialogue-body{padding:10px}.rp-dialogue-line{display:grid;grid-template-columns:68px minmax(0,1fr);gap:7px}.rp-dialogue-line label:nth-child(n+3){grid-column:1/-1}.rp-dialogue-line-actions{grid-column:1/-1}.rp-dialogue-script-line{grid-template-columns:1fr;gap:8px}.rp-dialogue-preview-columns{grid-template-columns:1fr}.rp-dialogue-footer button{font-size:.8rem;padding:9px}.rp-dialogue-title{min-width:100%}}
+
+.rp-dialogue-scene-context{max-width:1000px;margin:0 auto 16px;padding:14px 18px;border-left:3px solid var(--accent);background:var(--surface-soft)}
+.rp-dialogue-scene-context h3,.rp-dialogue-panel-group h3{font-size:.94rem;margin:0 0 8px}
+.rp-dialogue-scene-context p,.rp-dialogue-panel-group p{margin:0;line-height:1.48;white-space:pre-wrap}
+.rp-dialogue-panel-group{max-width:1000px;width:100%;margin:0 auto 14px;padding:13px 15px;border:1px solid var(--border);border-radius:9px;box-sizing:border-box}
+.rp-dialogue-panel-group .rp-dialogue-script-line{margin-top:12px;margin-bottom:0}
+.rp-dialogue-panel-action{font-size:.88rem;color:var(--fg)}
+.rp-dialogue-panel-silent{color:var(--muted);font-style:italic;font-size:.83rem}
