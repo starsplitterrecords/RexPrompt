@@ -11,6 +11,13 @@ Generated from live registered source recipes, curated inventories and exact app
 - Uncurated issue/season selectors: 26
 - Auxiliary selectors not representing books: 38
 
+- Source-evidenced issue structure records: 114
+- Covers ordered in issue reading order: 74
+- Covers found in separate shelf but not yet book-ordered: 8
+- Issue records without a source-established cover: 32
+
+Detailed issue roles and ordinal positions: `production/issue-structure.json`. A cast page may be omitted from review PDFs/ZIPs by explicit choice, but not from canonical issue release preparation.
+
 ## Individual issue inventories
 
 | Series | Registered selector | Inventory | Approved / expected | Blocking reason |
