@@ -43,7 +43,7 @@ for(const book of Object.values(inv.issues)){
  const files=Array.isArray(show.scenesFiles)?show.scenesFiles:[show.scenesFile||'scenes.json'];
  const coverFile=files[0];
  assert.ok(coverFile,'Issue has no source files '+book.issueId);
- if(/_COVER$/.test(title))assert.ok(files.some(f=>/covers\.json$/.test(f)), 'Cover must be loaded by the issue itself: '+book.issueId);
+ if(/_COVER$/.test(title))assert.ok(files.some(f=>/covers\.json$/.test(f))||(show.sceneOverlays||[]).some(o=>/covers\.json$/.test(o.file)&&(!o.includeIds||o.includeIds.includes(title))), 'Cover must be loaded by issue source or its explicit cover overlay: '+book.issueId);
 }
 const registered=new Set(shows.map(s=>s.id));
 assert.equal(structure.schemaVersion,1);
