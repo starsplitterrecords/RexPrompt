@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-// Validate phase-B composition overlays using the live RexPrompt assembler.
-// The original episode scripts remain immutable source: layouts may never alter dialogue, panel beats or order.
+// Validate composition fields embedded directly in encoded canonical episode sources.
+// Archived layout records are comparison fixtures; dialogue, panel beats and order stay unchanged.
 const fs=require('node:fs'),vm=require('node:vm'),zlib=require('node:zlib'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
@@ -25,10 +25,9 @@ const allLayouts=new Set(),architectures=new Map();let total=0,sourcePanels=0;
 for(let ep=3;ep<=8;ep++){
  const tag=String(ep).padStart(2,'0');
  const src=originalEpisode(ep),name='editorial_page_layouts_e'+tag+'.json';
- const layoutEntry=show.sceneOverlays.findIndex(x=>x.file===name);
- const sourceEntry=show.sceneOverlays.findIndex(x=>x.encoding==='gzip-base64'&&x.file.includes('scenes_e'+tag+'_'));
- assert(sourceEntry>=0&&layoutEntry===sourceEntry+1,'Layout must follow its episode source: E'+tag);
- assert(show.sceneOverlays[layoutEntry].mergeById&&show.sceneOverlays[layoutEntry].strict,'Layout overlay must strict merge');
+ const sourceEntry=(show.sceneOverlays||[]).findIndex(x=>x.encoding==='gzip-base64'&&x.file.includes('scenes_e'+tag+'_'));
+ assert(sourceEntry>=0,'Canonical encoded episode not registered: E'+tag);
+ assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Active Backyard field overlay remains: E'+tag);
  const data=json(show.basePath+'/'+name);
  assert.equal(data.length,src.length,'Missing layout profiles for E'+tag);
  const index=new Map(data.map(x=>[x.id,x]));
@@ -40,9 +39,10 @@ for(let ep=3;ep<=8;ep++){
    assert.deepEqual(Object.keys(profile).sort(),['id','pageLayout'],'Overlay must contain layout only: '+original.id);
    assert(!allLayouts.has(original.id),'Duplicate source ID '+original.id);
    allLayouts.add(original.id);
-   const active={...original,pageLayout:profile.pageLayout};
-   assert.equal(validate(active),profile.pageLayout);
-   const before=assemble(original,store,i),after=assemble(active,store,i);
+   assert.deepEqual(original.pageLayout,profile.pageLayout,'Layout not embedded in encoded source '+original.id);
+   const active=original,bare={...original};delete bare.pageLayout;
+   assert.equal(validate(active),active.pageLayout);
+   const before=assemble(bare,store,i),after=assemble(active,store,i);
    const panelMarker='\n[PANEL PLAN]';
    assert(before.includes(panelMarker),'No original panel plan '+original.id);
    assert.equal(after.slice(after.indexOf(panelMarker)),before.slice(before.indexOf(panelMarker)),
