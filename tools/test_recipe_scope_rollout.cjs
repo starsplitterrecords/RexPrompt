@@ -13,7 +13,7 @@ vm.runInContext(html.slice(begin,end)+';globalThis.recipeFunctions={assembleScen
 const {assembleScene,pageAssembly}=ctx.recipeFunctions;
 const catalog=json('data/shows.json');
 const policyFile=f=>/^(editorial_recipe_scope_|editorial\/recipe_scope_)/.test(f||'');
-const selected=catalog.filter(x=>x.sceneOverlays?.some(o=>policyFile(o.file)));
+const selected=catalog.filter(x=>!x.sourceSeasonId&&x.sceneOverlays?.some(o=>policyFile(o.file)));
 function decode(base,file,encoding){const p=base+'/'+file;
   return encoding==='gzip-base64'?JSON.parse(zlib.gunzipSync(Buffer.from(read(p).trim(),'base64')).toString('utf8')):json(p)}
 function normalize(raw){if(Array.isArray(raw))return raw;if(Array.isArray(raw?.pages))return raw.pages;return Object.entries(raw||{}).map(([id,scene])=>({id,...scene}))}
