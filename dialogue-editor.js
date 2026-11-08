@@ -298,12 +298,18 @@ function mount({button,getContext,onSaved,compile}){
     $('.rp-dialogue-subtitle',modal).textContent=(context.show?.seriesName||context.show?.name||'')+' · '+context.scene.id;
     syncAuth();saveBtn.disabled=true;message('Locating the current source record…');
     render();saveBtn.disabled=true;
+    const opened=model;
     try{
-      model.source=await locateSource(context.show,context.scene);
-      message('Editing authoritative source: '+model.source.dialogue.path);
+      const source=await locateSource(context.show,context.scene);
+      if(model!==opened||modal.hidden)return;
+      model.source=source;
+      message('Editing authoritative source: '+source.dialogue.path);
       preview();
-    }catch(err){model.source=null;saveBtn.disabled=true;message(err.message,true)}
-    $('.rp-dialogue-close',modal).focus();
+    }catch(err){
+      if(model!==opened||modal.hidden)return;
+      model.source=null;saveBtn.disabled=true;message(err.message,true);
+    }
+    if(model===opened&&!modal.hidden)$('.rp-dialogue-close',modal).focus();
   };
   saveBtn.onclick=async()=>{
     if(!model||busy||!model.source)return;
