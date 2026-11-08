@@ -228,12 +228,14 @@ function mount({button,getContext,onSaved,compile}){
   function scriptLine(row){
     const wrapper=el('div',{class:'rp-dialogue-script-line'});
     const meta=el('div');
-    meta.append(field('Speaker',makeInput('text',row.speaker||row.handle,v=>{if(row.speaker)row.speaker=v;else row.handle=v;update()},'Speaker'),'rp-dialogue-speaker'));
+    meta.append(field('Speaker',makeInput('text',row.speaker,v=>{row.speaker=v;update()},'Speaker'),'rp-dialogue-speaker'));
+    meta.append(field('Handle',makeInput('text',row.handle,v=>{row.handle=v;update()},'@... (optional)')));
     const panel=makeInput('text',row.panel===null?'':String(row.panel),v=>{row.panel=v.trim()===''?null:Number(v);update()},'—');
     meta.append(field('Panel',panel,'rp-dialogue-script-panel'));
+    meta.append(lineButtons(row,model,render));
     const fields=el('div',{class:'rp-dialogue-script-fields'});
     fields.append(field('Line',makeInput('textarea',row.text,v=>{row.text=v;update()})));
-    if(row.note)fields.append(field('Direction',makeInput('textarea',row.note,v=>{row.note=v;update()}),'rp-dialogue-script-notes'));
+    fields.append(field('Direction',makeInput('textarea',row.note,v=>{row.note=v;update()}),'rp-dialogue-script-notes'));
     wrapper.append(meta,fields);return wrapper;
   }
   function render(){
