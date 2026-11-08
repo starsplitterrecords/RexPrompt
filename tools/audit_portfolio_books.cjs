@@ -64,46 +64,28 @@ function seriesOf(show){
  if(base==='sunforge-outlaw-s1')return 'sunforge-outlaw';
  return base||null;
 }
-function findSupplement(show,pattern){
- const result=[];
- const local=pathOf(show,'covers.json');
- if(fs.existsSync(local))result.push(...load(local).map(x=>x.id));
- for(const shelf of SHOWS.filter(s=>s.unitLabel==='COVER'&&seriesOf(s)===seriesOf(show))){
-   try{result.push(...select(shelf));}catch(e){diagnostics.push({selectorId:shelf.id,errors:['cover-shelf-unreadable:'+e.message]});}
- }
- return [...new Set(result)].filter(id=>pattern.test(id));
-}
 function groupOf(id){
  const match=id.match(/^(EFW_S1E|BR_S1E)(\d{2})_/);
  return match?match[1]+match[2]:null;
 }
 function supplement(show,selected){
- const series=seriesOf(show);
- const example=selected[0]||'';
- let cover=null,front=null,back=null,structuralRisk=[];
- if(series==='shattering'){const m=example.match(/^(SHAT_I\d\d)_/);if(m)cover=m[1]+'_COVER';}
- if(series==='low-tide-signal'){const m=example.match(/^(LTS_C\d\d)_/);if(m)cover=m[1]+'_COVER';}
- if(series==='azure-reach'){const m=example.match(/^(AZR_S1E\d\d)_/);if(m)cover=m[1]+'_COVER';}
- if(series==='stardust-station'){const m=example.match(/^(SDS_S1E\d\d)_/);if(m)cover=m[1]+'_COVER';}
- if(series==='rex-fleet-academy-between-beacons'){cover='RFA_BB_I01_COVER';}
- if(series==='division-threshold'){const m=example.match(/^(DT_E\d{3})_/);if(m){cover=m[1]+'_COVER';front=m[1]+'_INTRO';back=m[1]+'_TEASER';}}
- let before=[],after=[];
- if(cover&&!selected.includes(cover)){
-   const names=findSupplement(show,/COVER$/);
-   if(names.includes(cover))before.push(cover);
-   else structuralRisk.push('referenced-cover-not-found:'+cover);
+ // Existing Division Threshold editorial material may be compiled separately.
+ // Covers are NEVER supplied by a fallback: every issue selector loads its own
+ // cover before story pages. A missing cover is a source error, not a shelf lookup.
+ const example=selected[0]||'',before=[],after=[],risks=[];
+ if(seriesOf(show)==='division-threshold'){
+   const match=example.match(/^(DT_E\d{3})_/);
+   if(match){
+     const file=pathOf(show,'editorial_pages.json');
+     const available=fs.existsSync(file)?new Set(load(file).map(x=>x.id)):new Set();
+     for(const [id,target] of [[match[1]+'_INTRO',before],[match[1]+'_TEASER',after]]){
+       if(selected.includes(id))continue;
+       if(available.has(id))target.push(id);
+       else risks.push('editorial-unit-not-found:'+id);
+     }
+   }
  }
- if(front&&!selected.includes(front)){
-   const file=pathOf(show,'editorial_pages.json');
-   if(fs.existsSync(file)&&load(file).some(x=>x.id===front))before.push(front);
-   else structuralRisk.push('editorial-intro-not-found:'+front);
- }
- if(back&&!selected.includes(back)){
-   const file=pathOf(show,'editorial_pages.json');
-   if(fs.existsSync(file)&&load(file).some(x=>x.id===back))after.push(back);
-   else structuralRisk.push('editorial-teaser-not-found:'+back);
- }
- return {units:[...before,...selected,...after],risks:structuralRisk};
+ return {units:selected.length?[selected[0],...before,...selected.slice(1),...after]:[...before,...after],risks};
 }
 // Production role evidence is derived from registered source units, never invented pages.
 function sourceRecords(show,ids){
@@ -199,7 +181,7 @@ for(const show of SHOWS){
  if(groups.length>1){
    const subissues=groups.map(group=>{
      const actual=selected.filter(id=>groupOf(id)===group);
-     const prefix=group+'_COVER',coverCandidates=findSupplement(show,/_COVER$/).filter(id=>id===prefix);
+     const coverCandidates=[]; // Legacy aggregate only; actual episode covers live in registered issue selectors.
      const derivedId=show.id+'-e'+group.slice(-2);
      const issueRegistered=SHOWS.some(s=>s.id===derivedId&&seriesOf(s)===seriesId);
      if(!issueRegistered)recordStructure(show,derivedId,actual,'source-order-only',{
@@ -220,6 +202,13 @@ for(const show of SHOWS){
  const sup=supplement(show,selected);
  const proposed=sup.units;
  const errs=[...sup.risks,...structureCheck(proposed)];
+ // A cover recorded only by an external shelf or a historic book manifest
+ // cannot make the current issue complete. Require it in the loaded issue
+ // selector itself, first in the compiled order.
+ const directCover=seriesId==='vikings-2026'
+    ?selected[0]&&/_P01$/.test(selected[0])
+    :selected[0]&&/(?:_COVER|_COVER_PAGE)$/.test(selected[0]);
+ if(!directCover)errs.push('cover-not-baked-into-issue-selector');
  const coverPresent=proposed.some(x=>/(?:_COVER|_COVER_PAGE)$/.test(x))||(
  seriesId==='vikings-2026'&&proposed[0]&&/_P01$/.test(proposed[0]));
  // No cover or other defined book-start marker: source pages alone don't
@@ -254,7 +243,7 @@ for(const [key,value] of Object.entries(CURRENT.issues)){
 }
 const report={schemaVersion:1,registrySelectors:SHOWS.length,
   issuesWithManifest:Object.keys(issues).length,
-  sourceAudit:'registered show sources, including gzip-base64 overlays and separate cover/editorial shelves',
+  sourceAudit:'registered issue sources, including gzip-base64 overlays and explicitly authored editorial material; covers must load directly as first issue units',
   statuses:Object.fromEntries([...new Set(rows.map(r=>r.status))].sort().map(s=>[s,rows.filter(r=>r.status===s).length])),
   entries:rows,diagnostics};
 const manifest={...CURRENT,issues:Object.fromEntries(Object.entries(issues).sort(([a],[b])=>a.localeCompare(b)))};
@@ -265,7 +254,7 @@ function markdown(){
  const structures=Object.values(issueStructures);
  const coverCounts={ordered:0,'available-in-separate-shelf':0,'not-established':0};
  for(const entry of structures)coverCounts[entry.coverStatus]=(coverCounts[entry.coverStatus]||0)+1;
- const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes shelves and non-comic selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'',
+ const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes legacy season aggregates and non-comic selectors; no cover-only selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'',
  '- Source-evidenced issue structure records: '+structures.length,
  '- Covers ordered in issue reading order: '+coverCounts.ordered,
  '- Covers found in separate shelf but not yet book-ordered: '+coverCounts['available-in-separate-shelf'],
