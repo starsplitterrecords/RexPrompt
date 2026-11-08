@@ -24,7 +24,12 @@ const retired=[
  /^data\/shows\/sunforge-outlaw-s1\/editorial\/page_(?:layouts|assembly)_e\d\d\.json$/,
  /^data\/shows\/echoes-forgotten-war-s1\/editorial\/page_(?:layouts|recipe_scope)_e\d\d\.json$/,
  /^data\/shows\/backyard-rockets-s1\/editorial_(?:page_layouts|recipe_scope)_e\d\d\.json$/,
- /^data\/shows\/(?:rex-fleet-[\w-]+|rex-fleet-academy-[\w-]+|rfa-reach-resolve)\/editorial\/visual_faction_pages_i\d\d\.json$/
+ /^data\/shows\/(?:rex-fleet-[\w-]+|rex-fleet-academy-[\w-]+|rfa-reach-resolve)\/editorial\/visual_faction_pages_i\d\d\.json$/,
+ /^data\/shows\/azure-reach-s1\/editorial\/(?:dialogue_c_e|page_layouts_e|page_recipe_scopes_e)\d\d\.json$/,
+ /^data\/shows\/low-tide-signal\/editorial\/page_(?:assembly_profiles|layouts)_c\d\d\.json$/,
+ /^data\/shows\/rex-fleet-s1\/(?:editorial\/page_assembly_scope_i\d\d|page_layout_i\d\d|issue_\d\d_[\w-]*(?:overlay|revision))\.json$/,
+ /^data\/shows\/stardust-station\/editorial\/(?:dialogue_cleanup_e\d\d|page_assembly_profiles_e\d\d|page_layouts_e\d\d|pages_e\d\d_density_pass|pages_e02_p02_story_thread|recipe_scope_e\d\d|visual_cast_e\d\d)\.json$/,
+ /^data\/shows\/vikings-2026-s1\/editorial\/(?:chef_recipe_(?:sanitation|exceptions)_i\d\d|dialogue_density_i\d\d)\.json$
 ];
 let checked=0;function walk(dir){
  for(const e of fs.readdirSync(dir,{withFileTypes:true})){
