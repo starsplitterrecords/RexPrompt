@@ -79,21 +79,25 @@ function supplement(show,selected){
  if(series==='stardust-station'){const m=example.match(/^(SDS_S1E\d\d)_/);if(m)cover=m[1]+'_COVER';}
  if(series==='rex-fleet-academy-between-beacons'){cover='RFA_BB_I01_COVER';}
  if(series==='division-threshold'){const m=example.match(/^(DT_E\d{3})_/);if(m){cover=m[1]+'_COVER';front=m[1]+'_INTRO';back=m[1]+'_TEASER';}}
- let before=[],after=[];
+ let assembled=selected.slice(),after=[];
  if(cover&&!selected.includes(cover)){
    structuralRisk.push('issue-cover-not-baked-into-source:'+cover);
  }
  if(front&&!selected.includes(front)){
    const file=pathOf(show,'editorial_pages.json');
-   if(fs.existsSync(file)&&load(file).some(x=>x.id===front))before.push(front);
-   else structuralRisk.push('editorial-intro-not-found:'+front);
+   if(fs.existsSync(file)&&load(file).some(x=>x.id===front)){
+     // Division's editorial intro follows the cover embedded at source position 1.
+     // It must never displace the issue's cover from the first slot.
+     const index=cover&&assembled[0]===cover?1:0;
+     assembled.splice(index,0,front);
+   }else structuralRisk.push('editorial-intro-not-found:'+front);
  }
  if(back&&!selected.includes(back)){
    const file=pathOf(show,'editorial_pages.json');
    if(fs.existsSync(file)&&load(file).some(x=>x.id===back))after.push(back);
    else structuralRisk.push('editorial-teaser-not-found:'+back);
  }
- return {units:[...before,...selected,...after],risks:structuralRisk};
+ return {units:[...assembled,...after],risks:structuralRisk};
 }
 // Production role evidence is derived from registered source units, never invented pages.
 function sourceRecords(show,ids){
