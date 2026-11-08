@@ -103,7 +103,7 @@ for(const show of shows){
 }
 assert.equal(corrected,4,'Expected four reviewed Shattering visual cast exceptions');
 assert.equal(totals.shattering,150,'Shattering must cover 144 interiors plus 6 covers');
-assert.equal(totals['division-threshold'],200,'Division Threshold must cover 176 original story pages, 8 issue covers and 16 editorial pages');
+assert.equal(totals['division-threshold'],228,'Division Threshold must cover all 204 original flat story pages, 8 issue-owned covers and 16 editorial pages');
 assert(totals['echoes-forgotten-war']>=149,'Echoes issue content missing');
 console.log('PASS: '+JSON.stringify(totals)+' pages; '+visibleReferences+
  ' precise visual references, '+JSON.stringify(factionHidden)+' repeated faction sections removed.');
