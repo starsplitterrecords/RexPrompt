@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "method": "Direct binary signature and intrinsic pixel/header readback via tools/audit_issue_mastering.cjs; no image recompression, enlargement, artistic approval or color grade.",
-  "expectedRecords": 183,
-  "examined": 183,
+  "expectedRecords": 184,
+  "examined": 184,
   "issues": [],
   "images": {
     "azure-reach::azure-reach-s1-e02::AZR_S1E02_P01": {
@@ -1650,6 +1650,15 @@
       "colorProfile": "unspecified",
       "bytes": 3271378,
       "sha256": "c99dc96760c0fa5107503509efa714a0b8919f165757710170b9b8bb82e7cc14",
+      "source": "tools/audit_issue_mastering.cjs"
+    },
+    "echoes-forgotten-war::echoes-forgotten-war-s1-e03::EFW_S1E03_COVER": {
+      "width": 992,
+      "height": 1586,
+      "mimeType": "image/png",
+      "colorProfile": "unspecified",
+      "bytes": 3315084,
+      "sha256": "b3ee141ef75f6621289b661fec6c1463cdf963779c09f33da064ebae593e565b",
       "source": "tools/audit_issue_mastering.cjs"
     }
   }

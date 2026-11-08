@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 183,
-    "approvedDraftRecords": 183,
+    "matchedApprovedUnitsAcrossConfigurations": 184,
+    "approvedDraftRecords": 184,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -204,7 +204,7 @@
       "seriesId": "echoes-forgotten-war",
       "registeredConfigurations": 9,
       "registeredUnits": 306,
-      "approvedUnits": 2,
+      "approvedUnits": 3,
       "keeperReferences": 17,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -227,7 +227,7 @@
         {
           "showId": "echoes-forgotten-war-s1-e03",
           "registeredUnits": 18,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "echoes-forgotten-war-s1-e04",
@@ -8860,8 +8860,8 @@
       "issueLabel": "Issue 3 — The Architecture of Ruin",
       "unitLabel": "PAGE",
       "registeredUnits": 18,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 18,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 17,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -8884,7 +8884,9 @@
         "EFW_S1E03_S15",
         "EFW_S1E03_EDITOR_CLOSE"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "EFW_S1E03_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/echoes-forgotten-war-s1/covers.json",
@@ -8892,14 +8894,14 @@
       ],
       "sourceOverlays": [],
       "examplesMissing": [
-        "EFW_S1E03_COVER",
         "EFW_S1E03_EDITOR_OPEN",
         "EFW_S1E03_S01",
         "EFW_S1E03_S02",
         "EFW_S1E03_S03",
         "EFW_S1E03_S04",
         "EFW_S1E03_S05",
-        "EFW_S1E03_S06"
+        "EFW_S1E03_S06",
+        "EFW_S1E03_S07"
       ]
     },
     {
@@ -10514,9 +10516,8 @@
     {
       "key": "echoes-forgotten-war::echoes-forgotten-war-s1-e03",
       "expectedUnits": 18,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "EFW_S1E03_COVER",
         "EFW_S1E03_EDITOR_OPEN",
         "EFW_S1E03_S01",
         "EFW_S1E03_S02",
