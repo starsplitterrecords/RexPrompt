@@ -1,6 +1,6 @@
 # IMG Low Tide Signal — shared skill loader
 
-**Project identity:** Low Tide Signal. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `low-tide-signal-c01`, `low-tide-signal-c02`, `low-tide-signal-c03`, `low-tide-signal-c04`, `low-tide-signal-c05`, `low-tide-signal-c06`, `low-tide-signal-c07`, `low-tide-signal-cover-c01`, `low-tide-signal-cover-c02`, `low-tide-signal-cover-c03`, `low-tide-signal-cover-c04`, `low-tide-signal-cover-c05`, `low-tide-signal-cover-c06`, `low-tide-signal-cover-c07`.
+**Project identity:** Low Tide Signal. **Canonical seriesId:** `low-tide-signal`. **Selector:** select the registered issue or chapter; its cover is already the first production unit, never an independent shelf. Verified candidate show IDs: `low-tide-signal-c01`, `low-tide-signal-c02`, `low-tide-signal-c03`, `low-tide-signal-c04`, `low-tide-signal-c05`, `low-tide-signal-c06`, `low-tide-signal-c07`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 
