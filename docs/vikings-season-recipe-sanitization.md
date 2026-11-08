@@ -8,9 +8,9 @@ This is the Vikings-only follow-through to [the Issue 2 sanitation contract](che
 | --- | ---: | --- |
 | Issue 1 — Arrival in Time | 18 | **Protected, unchanged.** Released/approved pages retain their exact recipes. |
 | Issue 2 — Landfall Bushwick | 22 | **Normalized.** All ten dialogue revisions and nineteen sanitation policies now live in the authoritative pages; legacy overlay registrations removed after Item 1 chef-delivery fixes. Approved production preserved. |
-| Issue 3 — Territory | 20 | **20 structured pages converted to clean chef delivery**, via strict by-ID overlay `editorial/chef_recipe_sanitation_i03.json`. No source panels, dialogues, or creative directions modified. |
-| Issues 4–12 | 225 | **225 already-authored prose-panel pages audited**. These do not leak panel JSON and must *not* be treated as structured panels. Enable `promptPanelMode: "prose-numbered"` and `promptDialogueMode: "grouped"` **only on audited interior pages through strict per-issue overlays**. Special covers, openings, and other editorial units retain legacy delivery. |
-| Issue 6 Page 23 | Included above | **Dialogue grouping exception** `editorial/chef_recipe_exceptions_i06.json`; panel-4 dialogue appears before panel-3 dialogue in existing authored order. Preserve it verbatim and flag for later writing QA. |
+| Issue 3 — Territory | 20 | **20 structured pages with clean chef delivery now stored directly** in `pages_i03_territory.json`. No source panels, dialogues, or creative directions modified. |
+| Issues 4–12 | 225 | **225 authored prose-panel pages use normalized page-level delivery controls** directly in their Issue 4–12 source files, without active sanitizer overlays. Special covers, openings, and other editorial units retain legacy delivery. |
+| Issue 6 Page 23 | Included above | **Dialogue grouping exception** is now recorded directly on Issue 6 P23; panel-4 dialogue appears before panel-3 dialogue in existing authored order. Preserve it verbatim and flag for later writing QA. |
 
 ## What is and is not suppressed
 
@@ -27,8 +27,8 @@ This is the Vikings-only follow-through to [the Issue 2 sanitation contract](che
 
 ## Validation
 
-Run `node tools/test_vikings_season_recipe_sanitation.cjs`, alongside the existing Issue 2 and production tests. The test rejects show-wide prose defaults and requires each of Issues 4–12 to register its own strict ID-scoped delivery overlay. Issue 2 is separately verified against the normalized authoritative pages. The regression loads the **live inline browser assembler**, all **285 registered season interior pages**, issue overlays, and the original source. It verifies exact action prose, every dialogue line, scene setting, character and faction handling, story order, continuity and page layout; validates the special exception; checks source panel counts; and confirms no changes on the previously approved issues.
+Run `node tools/test_vikings_season_recipe_sanitation.cjs`, alongside the existing Issue 2 and production tests. The test rejects show-wide prose defaults and checks each existing page-level delivery setting directly in the normalized authoritative source. Issue 2 has a separate check for the normalized source. The regression loads the **live inline browser assembler**, all **285 registered season interior pages**, issue overlays, and the original source. It verifies exact action prose, every dialogue line, scene setting, character and faction handling, story order, continuity and page layout; validates the special exception; checks source panel counts; and confirms no changes on the previously approved issues.
 
-The observed chef-delivery size reduction at implementation was **13,280 characters across 285 interior pages**, concentrated in Issue 3's structured panels; the prose issues were already comparatively clean. A smaller prompt is not automatically a better page, and actual generated art still requires visual/lettering review.
+The original chef-delivery size reduction at implementation was **13,280 characters across 285 interior pages**, concentrated in Issue 3's structured panels; the prose issues were already comparatively clean. A smaller prompt is not automatically a better page, and actual generated art still requires visual/lettering review.
 
 New shows or schema variants should be audited before using either mode; there is intentionally no global default for all RexPrompt productions.
