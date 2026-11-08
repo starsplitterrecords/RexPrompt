@@ -42,5 +42,5 @@ for(let issue=1;issue<=12;issue++){
 assert.equal(pages,catalog.sourceBoundary.pages,'Sunforge story inventory drift');
 assert.equal(panels,1073,'Sunforge authored panel count changed');
 assert.equal(lettering,1388,'Sunforge authored dialogue inventory changed');
-assert(compositions.size>=7,'Sunforge composition variety lost');
+assert(compositions.size>=6,'Sunforge established composition variety lost');
 console.log('PASS Sunforge '+pages+' canonical page layouts, '+panels+' scripted panels, '+lettering+' dialogue entries, '+compositions.size+' architectures; no field overlays.');

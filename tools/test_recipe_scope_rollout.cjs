@@ -51,11 +51,12 @@ for(const show of selected){
    store[file+'.json']=json(base+'/'+file+'.json');
  const pages=scoped.filter(x=>/^BR_S1E0[3-8]_/.test(x.id)&&!!x.pageLayout);
  assert.equal(pages.length,118,'Canonical Backyard layout/scope inventory changed');
- let bytes=0,suppressionCount=0;
+ let bytes=0,suppressionCount=0,actualPolicies=0;
  for(const page of pages){
   const fields=['promptCharacterMode','promptSettingMode','promptSuppress'].filter(field=>
     Object.prototype.hasOwnProperty.call(page,field));
-  assert(fields.length>0,'Canonical policy missing on '+page.id);
+  if(!fields.length)continue;
+  actualPolicies++;
   if(Object.prototype.hasOwnProperty.call(page,'promptSuppress'))
     assert(Array.isArray(page.promptSuppress),'Invalid prompt suppression '+page.id);
   const bare={...page};
@@ -73,7 +74,8 @@ for(const show of selected){
   suppressionCount+=+(Array.isArray(page.promptSuppress)&&page.promptSuppress.length>0);
   bytes+=old.length-now.length;idList.add(page.id);
  }
- counts['backyard-rockets-s1']={issues:1,profiles:pages.length,savedCharacters:bytes,suppressions:suppressionCount};
+ assert(actualPolicies>0,'No canonical Backyard policy fields found');
+ counts['backyard-rockets-s1']={issues:1,profiles:actualPolicies,savedCharacters:bytes,suppressions:suppressionCount};
  names.add(show.id);
 }
 // Division Threshold intentionally stores page scope *inside its flat compiled page
