@@ -17,7 +17,7 @@ vm.runInContext(html.slice(from,to)+';globalThis.testing={assembleScene,visibleC
 const {assembleScene:assemble,visibleCharacterHandles:visible}=ctx.testing;
 const series=new Set(['shattering','division-threshold','echoes-forgotten-war']);
 const shows=json('data/shows.json').filter(s=>series.has(s.seriesId)&&!s.sourceSeasonId);
-assert.equal(shows.length,33,'Unexpected count of targeted show configurations');
+assert.equal(shows.length,23,'Expected 6 Shattering issues, 8 Division issues, 8 Division editorial selectors, and the Echoes season aggregate; cover-only selectors are retired');
 const cache=new Map();
 const get=(p)=>{if(!cache.has(p))cache.set(p,json(p));return cache.get(p)};
 const normalize=raw=>Array.isArray(raw)?raw:Array.isArray(raw?.pages)?raw.pages:Object.entries(raw).map(([id,scene])=>({id,...scene}));
