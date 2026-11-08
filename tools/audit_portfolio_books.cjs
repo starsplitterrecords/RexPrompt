@@ -233,7 +233,7 @@ for(const show of SHOWS){
  }else if(!errs.length){
    issues[[seriesId,issueId].join('::')]={
      seriesId,issueId,orderPolicy:'source-verified-series-specific-reading-order',
-     sourceShowId:show.id,units:proposed
+     sourceShowId:show.id,inventorySource:'derived-from-registered-source',units:proposed
    };
  }
  const book=issues[[seriesId,issueId].join('::')];
@@ -243,7 +243,7 @@ for(const show of SHOWS){
    expectedUnits:book?.units.length||proposed.length,approvedImages:counts.approvedCount,missingImageCount:counts.missingCount,
    missingImageIds:counts.missingImages,unapprovedImageIds:counts.unapprovedImages,corruptImageIds:counts.corruptImages,
    reason:errs.length?errs.join(', '):counts.missingCount?'missing-approved-images':null,
-   inventorySource:cur?'preexisting-verified':book?'derived-from-registered-source':'candidate-needs-curation',
+   inventorySource:cur?.inventorySource||(cur?'preexisting-verified':book?'derived-from-registered-source':'candidate-needs-curation'),
    sourceShowId:show.id});
  if(errs.length)diagnostics.push({selectorId:show.id,errors:errs});
 }
