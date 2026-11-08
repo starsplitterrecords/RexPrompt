@@ -5,8 +5,8 @@
     "loadedConfigurations": 154,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3338,
-    "matchedApprovedUnitsAcrossConfigurations": 180,
-    "approvedDraftRecords": 180,
+    "matchedApprovedUnitsAcrossConfigurations": 181,
+    "approvedDraftRecords": 181,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -919,7 +919,7 @@
       "seriesId": "sunforge-outlaw",
       "registeredConfigurations": 12,
       "registeredUnits": 296,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "keeperReferences": 6,
       "releaseLinkRecords": 0,
       "hasVisualSource": false,
@@ -932,7 +932,7 @@
         {
           "showId": "sunforge-outlaw-s1-e02",
           "registeredUnits": 23,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "sunforge-outlaw-s1-e03",
@@ -6530,8 +6530,8 @@
       "issueLabel": "Issue 2 — Dead Weight in the Basin",
       "unitLabel": "PAGE",
       "registeredUnits": 23,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 23,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 22,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -6559,7 +6559,9 @@
         "SUN_S1E02_P20",
         "SUN_S1E02_TEASER"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "SUN_S1E02_P02"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/sunforge-outlaw-s1/pages_base.json"
@@ -6590,11 +6592,11 @@
         "SUN_S1E02_COVER",
         "SUN_S1E02_EDITOR",
         "SUN_S1E02_P01",
-        "SUN_S1E02_P02",
         "SUN_S1E02_P03",
         "SUN_S1E02_P04",
         "SUN_S1E02_P05",
-        "SUN_S1E02_P06"
+        "SUN_S1E02_P06",
+        "SUN_S1E02_P07"
       ]
     },
     {
@@ -13973,12 +13975,11 @@
     {
       "key": "sunforge-outlaw::sunforge-outlaw-s1-e02",
       "expectedUnits": 23,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
         "SUN_S1E02_COVER",
         "SUN_S1E02_EDITOR",
         "SUN_S1E02_P01",
-        "SUN_S1E02_P02",
         "SUN_S1E02_P03",
         "SUN_S1E02_P04",
         "SUN_S1E02_P05",

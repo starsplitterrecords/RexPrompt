@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "method": "Direct binary signature and intrinsic pixel/header readback via tools/audit_issue_mastering.cjs; no image recompression, enlargement, artistic approval or color grade.",
-  "expectedRecords": 180,
-  "examined": 180,
+  "expectedRecords": 181,
+  "examined": 181,
   "issues": [],
   "images": {
     "azure-reach::azure-reach-s1-e02::AZR_S1E02_P01": {
@@ -1623,6 +1623,15 @@
       "colorProfile": "unspecified",
       "bytes": 2905576,
       "sha256": "426e8ab19a83627aea8e22af6077a8f21ee1dd4bd283122ab9d1bc4988b83ebd",
+      "source": "tools/audit_issue_mastering.cjs"
+    },
+    "sunforge-outlaw::sunforge-outlaw-s1-e02::SUN_S1E02_P02": {
+      "width": 992,
+      "height": 1585,
+      "mimeType": "image/png",
+      "colorProfile": "unspecified",
+      "bytes": 3219511,
+      "sha256": "c4fe3cd2f1961fd9a90a4019539d31b17614ceac9c898dafddbdf3309f3afa06",
       "source": "tools/audit_issue_mastering.cjs"
     }
   }

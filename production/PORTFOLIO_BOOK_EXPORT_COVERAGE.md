@@ -88,7 +88,7 @@ Detailed issue roles and ordinal positions: `production/issue-structure.json`. A
 | division-threshold | division-threshold-s1-e07 | blocked-missing-images | 0 / 29 | missing-approved-images |
 | division-threshold | division-threshold-s1-e08 | blocked-missing-images | 0 / 29 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e01 | blocked-missing-images | 0 / 25 | missing-approved-images |
-| sunforge-outlaw | sunforge-outlaw-s1-e02 | blocked-missing-images | 0 / 23 | missing-approved-images |
+| sunforge-outlaw | sunforge-outlaw-s1-e02 | blocked-missing-images | 1 / 23 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e03 | blocked-missing-images | 0 / 23 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e04 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | sunforge-outlaw | sunforge-outlaw-s1-e05 | blocked-missing-images | 0 / 25 | missing-approved-images |
