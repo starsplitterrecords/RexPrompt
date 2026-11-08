@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 182,
-    "approvedDraftRecords": 182,
+    "matchedApprovedUnitsAcrossConfigurations": 183,
+    "approvedDraftRecords": 183,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -204,7 +204,7 @@
       "seriesId": "echoes-forgotten-war",
       "registeredConfigurations": 9,
       "registeredUnits": 306,
-      "approvedUnits": 1,
+      "approvedUnits": 2,
       "keeperReferences": 17,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -222,7 +222,7 @@
         {
           "showId": "echoes-forgotten-war-s1-e02",
           "registeredUnits": 19,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "echoes-forgotten-war-s1-e03",
@@ -8808,8 +8808,8 @@
       "issueLabel": "Issue 2 — Glass Dust and Violet Light",
       "unitLabel": "PAGE",
       "registeredUnits": 19,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 19,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 18,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -8833,7 +8833,9 @@
         "EFW_S1E02_S16",
         "EFW_S1E02_EDITOR_CLOSE"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "EFW_S1E02_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/echoes-forgotten-war-s1/covers.json",
@@ -8841,14 +8843,14 @@
       ],
       "sourceOverlays": [],
       "examplesMissing": [
-        "EFW_S1E02_COVER",
         "EFW_S1E02_EDITOR_OPEN",
         "EFW_S1E02_S01",
         "EFW_S1E02_S02",
         "EFW_S1E02_S03",
         "EFW_S1E02_S04",
         "EFW_S1E02_S05",
-        "EFW_S1E02_S06"
+        "EFW_S1E02_S06",
+        "EFW_S1E02_S07"
       ]
     },
     {
@@ -10487,9 +10489,8 @@
     {
       "key": "echoes-forgotten-war::echoes-forgotten-war-s1-e02",
       "expectedUnits": 19,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "EFW_S1E02_COVER",
         "EFW_S1E02_EDITOR_OPEN",
         "EFW_S1E02_S01",
         "EFW_S1E02_S02",
