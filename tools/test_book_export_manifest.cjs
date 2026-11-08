@@ -53,8 +53,8 @@ for(const oldCover of retired.retiredConfigurationEntries){
   }
  }
 }
-assert.equal(allCoverIds.size,38,'All 38 former shelf-sourced covers must be baked into issues');
-assert.equal(bakedIssueCount,38,'Cover migration did not reach all issue configurations');
+assert.equal(allCoverIds.size,46,'All 46 preserved cover recipes must be issue-owned (38 newly integrated, 8 already baked into Echoes)');
+assert.equal(bakedIssueCount,46,'Every retired selector cover must be found in exactly one issue');
 
 const registered=new Set(shows.map(s=>s.id));
 assert.equal(structure.schemaVersion,1);
