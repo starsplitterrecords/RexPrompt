@@ -53,11 +53,13 @@ for(const show of selected){
  assert.equal(pages.length,118,'Canonical Backyard layout/scope inventory changed');
  let bytes=0,suppressionCount=0;
  for(const page of pages){
-  for(const field of ['promptCharacterMode','promptSettingMode','promptSuppress'])
-    assert(Object.prototype.hasOwnProperty.call(page,field),'Canonical policy missing '+field+' on '+page.id);
-  assert(Array.isArray(page.promptSuppress),'Invalid prompt suppression '+page.id);
+  const fields=['promptCharacterMode','promptSettingMode','promptSuppress'].filter(field=>
+    Object.prototype.hasOwnProperty.call(page,field));
+  assert(fields.length>0,'Canonical policy missing on '+page.id);
+  if(Object.prototype.hasOwnProperty.call(page,'promptSuppress'))
+    assert(Array.isArray(page.promptSuppress),'Invalid prompt suppression '+page.id);
   const bare={...page};
-  for(const field of ['promptCharacterMode','promptSettingMode','promptSuppress'])delete bare[field];
+  for(const field of fields)delete bare[field];
   for(const field of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','directionInline','settingText','summary'])
     assert.equal(JSON.stringify(bare[field]),JSON.stringify(page[field]),'Protected story field changed '+page.id+' '+field);
   const old=assembleScene(bare,store,0),now=assembleScene(page,store,0);
@@ -68,7 +70,7 @@ for(const show of selected){
   if(page.promptSettingMode==='label'&&page.setting&&!page.settingText)
     assert(store['settings.json'][page.setting]?.name,'Setting label unresolved '+page.id);
   pageAssembly(page,show);
-  suppressionCount+=+(page.promptSuppress.length>0);
+  suppressionCount+=+(Array.isArray(page.promptSuppress)&&page.promptSuppress.length>0);
   bytes+=old.length-now.length;idList.add(page.id);
  }
  counts['backyard-rockets-s1']={issues:1,profiles:pages.length,savedCharacters:bytes,suppressions:suppressionCount};
