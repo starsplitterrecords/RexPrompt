@@ -53,3 +53,14 @@ The portfolio now has **114 registered, curated complete-book issue orders** and
 
 The two legacy season selectors (`backyard-rockets-s1` and `echoes-forgotten-war-s1`) are retained as aggregate working sources and are **not** additional books. Their real eight-issue selectors are the authoritative book-unit production selections.
 
+
+## November 8, 2026 — Cover shelf retirement
+
+**Every cover belongs to its issue configuration.** All 114 curated issue manifests must be recoverable from the issue's own source load, with the cover at position 1. `covers.json` remains a legitimate internal source file and is retained unmodified; a `COVER` assembler configuration is **not** a legitimate separate menu entry.
+
+The 29 original cover-only registry entries were permanently saved, verbatim, in `production/archives/legacy-cover-selectors-20261108.json` before retirement. These archived selectors are **not active shows** and must not be reinstated to inflate series or configuration counts.
+
+The existing cover files are now loaded directly through the appropriate issue selector's `scenesFiles` array (or an issue-local, explicitly filtered cover overlay for other series). All existing cover IDs, artwork, and source instructions remain unchanged. Legacy `scenesFile` fields on these records can remain for old tooling, but `scenesFiles` is authoritative for actual assembly.
+
+A source audit must never synthesize an issue's cover from a separate cover selector or discover one solely in a historical book manifest. Missing issue-local cover or incorrect order is a **blocking production integrity error**. No cover-only configurations may exist in active `data/shows.json`.
+
