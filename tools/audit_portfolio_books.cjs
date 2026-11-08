@@ -258,7 +258,16 @@ const structure={schemaVersion:1,description:'Source-supported page roles and is
   issues:Object.fromEntries(Object.entries(issueStructures).sort(([a],[b])=>a.localeCompare(b)))};
 const normalized=x=>JSON.stringify(x,null,2)+'\n';
 function markdown(){
- const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes shelves and non-comic selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'','## Individual issue inventories','','| Series | Registered selector | Inventory | Approved / expected | Blocking reason |','|---|---|---|---:|---|'];
+ const structures=Object.values(issueStructures);
+ const coverCounts={ordered:0,'available-in-separate-shelf':0,'not-established':0};
+ for(const entry of structures)coverCounts[entry.coverStatus]=(coverCounts[entry.coverStatus]||0)+1;
+ const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes shelves and non-comic selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'',
+ '- Source-evidenced issue structure records: '+structures.length,
+ '- Covers ordered in issue reading order: '+coverCounts.ordered,
+ '- Covers found in separate shelf but not yet book-ordered: '+coverCounts['available-in-separate-shelf'],
+ '- Issue records without a source-established cover: '+coverCounts['not-established'],
+ '',
+ 'Detailed issue roles and ordinal positions: `production/issue-structure.json`. A cast page may be omitted from review PDFs/ZIPs by explicit choice, but not from canonical issue release preparation.','','## Individual issue inventories','','| Series | Registered selector | Inventory | Approved / expected | Blocking reason |','|---|---|---|---:|---|'];
  for(const r of rows.filter(x=>x.status!=='not-a-book')){
    const expected=r.expectedUnits??'?',approved=r.approvedImages??0;
    const reason=(r.reason||'—').replace(/\|/g,'/');
