@@ -117,7 +117,9 @@ function sourceRecords(show,ids){
 }
 function roleOf(id,record,index,total){
  const kind=String(record?.pageKind||'').toLowerCase(),title=String(record?.title||''),summary=String(record?.summary||'');
- if(/_COVER$|_COVER_PAGE$/.test(id)||kind==='cover'||/^Issue\s+\d+\s+Cover\b/i.test(title))return ['cover','source-id-or-page-kind'];
+ if(/_COVER$|_COVER_PAGE$/.test(id))return ['cover','source-id'];
+ if(kind==='cover')return ['cover','source-page-kind'];
+ if(/^Issue\s+\d+\s+Cover\b/i.test(title))return ['cover','source-title'];
  if(/_CAST$/.test(id)||kind==='cast')return ['cast','source-id-or-page-kind'];
  if(/_EDITOR_ENDMATTER$/.test(id))return ['end-matter','source-id'];
  if(/_DOC_[A-Z0-9]+$/.test(id))return ['interstitial-document','source-id'];
