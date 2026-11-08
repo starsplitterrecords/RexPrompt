@@ -22,7 +22,7 @@ Episode source sequences inside Backyard Rockets and Echoes of a Forgotten War a
 
 ## Cast-page options
 
-A cast unit is distinct from an ordinary story page. The review PDF/ZIP interface now permits explicit omission of a cast page, with a distinct `-NO-CAST-DRAFT` filename and `complete: false` in the export manifest. The full curated issue still includes cast pages by default. **Release preparation cannot silently omit them**; any canonical release-order change must be a separate approved editorial decision.
+A cast unit is distinct from an ordinary story page. The browser review PDF/ZIP interface permits explicit omission of a cast page, with a distinct `-NO-CAST-DRAFT` filename and `complete: false` in the export manifest. The offline exporter offers the same **review-only** behavior with `--omit-cast-for-review`, provided the source-evidenced issue structure marks the unit as cast. The full curated issue still includes cast pages by default. **Release preparation cannot silently omit them**; any canonical release-order change must be a separate approved editorial decision.
 
 ## Refresh and validation
 
