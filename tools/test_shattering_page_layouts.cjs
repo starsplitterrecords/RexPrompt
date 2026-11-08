@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Shattering layout compilation regression: verify 132 authored story-page compositions
+// Shattering canonical layout regression: verify 132 authored story-page compositions
 // while keeping all six issues' story content, dialogue, panel order, and bookends intact.
 const fs=require('node:fs');
 const vm=require('node:vm');
@@ -33,10 +33,9 @@ for(let issue=1;issue<=6;issue++){
   const ids=new Set(rules.map(r=>r.id));
   assert.equal(ids.size,22,'Duplicate layout assignment in Issue '+number);
   assert.deepEqual([...ids],[...book.slice(1,23).map(p=>p.id)],'Layout IDs must follow exact story page sequence');
-  const reg=(show.sceneOverlays||[]).find(o=>o.file===file);
-  assert(reg&&reg.mergeById&&reg.strict,'Shattering layout overlay is not registered as a strict merge for Issue '+number);
-  const compiled=applyOverlay(book,rules,reg);
-  assert.equal(compiled.length,24,'Layout overlay unexpectedly changed issue page count');
+  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Shattering must not use field overlays for Issue '+number);
+  const compiled=book;
+  assert.equal(compiled.length,24,'Canonical issue page count changed');
   const store={...dataStore,__show:show};
   for(let k=0;k<book.length;k++){
     const source=book[k],page=compiled[k];
@@ -45,15 +44,16 @@ for(let issue=1;issue<=6;issue++){
     assert.deepEqual(page.dialogueInline,source.dialogueInline,'Scripted dialogue changed on '+page.id);
     assert.equal(page.summary,source.summary,'Story summary changed on '+page.id);
     assert.equal(page.continuityFrom,source.continuityFrom,'Continuation pointer changed on '+page.id);
-    const before=assembleScene(source,store,k);
+    const noLayout={...page};delete noLayout.pageLayout;
+    const before=assembleScene(noLayout,store,k);
     const after=assembleScene(page,store,k);
     if(k===0||k===23){
       assert.equal(after,before,'Existing editorial full-page splash changed on '+page.id);
       assert.equal(page.pageLayout,undefined,'Do not lay out the editorial bookend as story panels');
       continue;
     }
-    assert.deepEqual(Object.keys(rules[k-1]),['id','pageLayout'],'Layout overlay must not alter story data');
-    assert(page.pageLayout,'No authored pageLayout on '+page.id);
+    assert.deepEqual(Object.keys(rules[k-1]),['id','pageLayout'],'Archived layout fixture must not alter story data');
+    assert.deepEqual(page.pageLayout,rules[k-1].pageLayout,'Canonical page layout differs from archived authored layout '+page.id);
     validatePageLayout(page);
     compositionKinds.add(page.pageLayout.composition);
     const compositionMarker='\n[PAGE COMPOSITION]';
