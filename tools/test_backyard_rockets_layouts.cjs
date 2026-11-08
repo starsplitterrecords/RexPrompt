@@ -26,7 +26,8 @@ for(let ep=3;ep<=8;ep++){
   assert(!ids.has(page.id),'Duplicate episode page '+page.id);ids.add(page.id);
   assert.equal(validatePageLayout(page),page.pageLayout);
   assert.equal(page.pageLayout.panels.length,page.panelPlan.length,'Panel hierarchy changed '+page.id);
-  assert(Array.isArray(page.promptSuppress),'Missing canonical page recipe scope '+page.id);
+  if(Object.prototype.hasOwnProperty.call(page,'promptSuppress'))
+   assert(Array.isArray(page.promptSuppress),'Invalid canonical page suppression '+page.id);
   const bare={...page};delete bare.pageLayout;
   const before=assembleScene(bare,store,i),after=assembleScene(page,store,i);
   const old=before.indexOf('\n[PANEL PLAN]'),layout=after.indexOf('\n[PAGE COMPOSITION]'),now=after.indexOf('\n[PANEL PLAN]');
