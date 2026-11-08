@@ -93,6 +93,7 @@ const ex=(series,issue)=>inv.issues[series+'::'+issue];
 assert.deepEqual(ex('rex-fleet','rex-fleet-i02').units.slice(0,3),['RF_I02_COVER','RF_I02_EDITOR_OPEN','RF_I02_CAST']);
 assert.deepEqual(ex('rex-fleet','rex-fleet-i03').units.slice(-2),['RF_I03_EDITOR_ENDMATTER','RF_I03_EDITOR_CLOSE']);
 assert.equal(ex('vikings-2026','vikings-2026-s1-e02').units[0],'VIK_S1E02_P01');
+assert.deepEqual(ex('division-threshold','division-threshold-s1-e01').units.slice(0,3),['DT_E001_COVER','DT_E001_INTRO','DT_E001_P01'],'Division cover must precede its editorial introduction');
 assert.deepEqual(ex('stardust-station','stardust-station-e02').units.slice(0,2),['SDS_S1E02_COVER','SDS_S1E02_EDITOR']);
 assert.equal(ex('stardust-station','stardust-station-e02').units.at(-1),'SDS_S1E02_TEASER');
 function role(series,issue,id){return structure.issues[series+'::'+issue]?.specialUnits.find(x=>x.unitId===id)?.role||null}
