@@ -1,6 +1,6 @@
 # IMG Echoes of a Forgotten War — shared skill loader
 
-**Project identity:** Echoes of a Forgotten War. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `echoes-forgotten-war-s1`, `echoes-forgotten-war-s1-covers`.
+**Project identity:** Echoes of a Forgotten War. **Canonical seriesId:** `echoes-forgotten-war`. **Selector:** select the registered issue or chapter; its cover is already the first production unit, never an independent shelf. Verified candidate show IDs: `echoes-forgotten-war-s1`, `echoes-forgotten-war-s1-e01`, `echoes-forgotten-war-s1-e02`, `echoes-forgotten-war-s1-e03`, `echoes-forgotten-war-s1-e04`, `echoes-forgotten-war-s1-e05`, `echoes-forgotten-war-s1-e06`, `echoes-forgotten-war-s1-e07`, `echoes-forgotten-war-s1-e08`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 
