@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),zlib=require('node:zlib'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
 const html=read('index.html'),start=html.indexOf('const SHOW_MANIFEST='),end=html.indexOf('function safeFilePart(',start);
 assert(start>=0&&end>start);const context=vm.createContext({});
@@ -79,8 +79,14 @@ for(const show of thunder){
  assert.equal(show.promptVisibleCastOnly,undefined,'Do not overwrite established Thunderbreak page-level cast decisions');
  assert.equal(show.omitRoutineFactions,undefined,'Do not replace existing Thunderbreak faction policies');
  const id=show.id.match(/i(\d{2})$/)[1];
- const shelf=json('data/shows/rex-fleet-s1/editorial/page_assembly_scope_i'+id+'.json');
- assert(shelf.length>=12,'Thunderbreak page scopes missing '+show.id);
- assert(shelf.every(p=>p.promptVisibleCastOnly===true),'Existing visible-cast scope compromised '+show.id);
+ const contents=(show.sceneOverlays||[]).flatMap(o=>{
+  const raw=read(show.basePath+'/'+o.file);
+  if(o.encoding==='gzip-base64')
+   return JSON.parse(zlib.gunzipSync(Buffer.from(raw.trim(),'base64')).toString('utf8'));
+  return JSON.parse(raw);
+ });
+ const interiors=contents.filter(p=>/^RF_I\d\d_P\d\d$/.test(p.id));
+ assert(interiors.length>=12,'Thunderbreak authored interior count changed '+show.id);
+ assert(interiors.every(p=>p.promptVisibleCastOnly===true),'Thunderbreak page-scope contract missing '+show.id);
 }
 console.log('PASS Fleet ships: '+shipIds.length+' spin-off issues / '+pagesTotal+' pages / '+handles+' visible references; '+keptFactionPages+' of '+baseFactionPages+' authored faction pages preserved as essential; '+offPanel+' off-panel speakers excluded. Thunderbreak: 12 issue policies unchanged.');

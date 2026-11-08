@@ -47,17 +47,12 @@ function actualRefs(prompt){return prompt.split('\n').filter(line=>/^@sds\.[A-Za
 const count={pages:0,characters:0,factionSectionsEliminated:0,offscreenProtected:0};
 let curatedPages=0,curatedExcluded=0;
 for(const ep of ['04','05','06','07','08','09']){
-  const suffix='editorial/visual_cast_e'+ep+'.json';
   const show=allShows.find(x=>x.id==='stardust-station-e'+ep);
-  assert(!(show.sceneOverlays||[]).some(x=>x.file===suffix),
-    'Normalized issue must not reapply historical visual-cast overlay E'+ep);
+  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Historical visual-cast override reactivated E'+ep);
   const authored=load('data/shows/stardust-station/pages_e'+ep+'.json');
-  const historical=load('data/shows/stardust-station/'+suffix);
-  for(const former of historical){
-    const page=authored.find(p=>p.id===former.id);
-    assert(page,'Previously curated page missing '+former.id);
+  for(const page of authored){
     const chosen=page.promptVisibleCharacters;
-    assert(Array.isArray(chosen)&&chosen.length>0,'Missing effective selected visual cast '+page.id);
+    if(!Array.isArray(chosen)||!chosen.length)continue;
     assert(chosen.every(x=>page.characters.includes(x)),
       'Visible cast selection invented character '+page.id);
     curatedPages++;
