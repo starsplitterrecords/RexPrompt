@@ -45,7 +45,7 @@ function fromSpec(show,spec){
 }
 function select(show){
  const entries=[];
- const loadList=[...(show.scenesFiles||[]),...(show.scenesFile?[show.scenesFile]:[])];
+ const loadList=Array.isArray(show.scenesFiles)?show.scenesFiles:(show.scenesFile?[show.scenesFile]:[]);
  for(const file of loadList)entries.push(...fromSpec(show,file));
  for(const overlay of show.sceneOverlays||[]){if(!overlay.mergeById)entries.push(...fromSpec(show,overlay));}
  const regex=show.includeIdPattern?new RegExp(show.includeIdPattern):null;
@@ -108,7 +108,7 @@ function supplement(show,selected){
 // Production role evidence is derived from registered source units, never invented pages.
 function sourceRecords(show,ids){
  const wanted=new Set(ids),found=new Map();
- const specs=[...(show.scenesFiles||[]),...(show.scenesFile?[show.scenesFile]:[]),
+ const specs=[...(Array.isArray(show.scenesFiles)?show.scenesFiles:(show.scenesFile?[show.scenesFile]:[])),
    ...(show.sceneOverlays||[]).filter(o=>!o.mergeById)];
  for(const spec of specs)for(const item of fromSpec(show,spec)){
    if(wanted.has(item.id)&&!found.has(item.id))found.set(item.id,item);
