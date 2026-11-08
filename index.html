@@ -408,7 +408,10 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   // A scene's source-locked song title is a cue, not visible on-page lettering.
   if(typeof s.songTitle==="string"&&s.songTitle.trim())
     out.push("\n[SONG CUE]\nTitle: "+s.songTitle.trim());
-  if(include("production")&&(s.generationLine||show.generationLine))out.push(s.generationLine||show.generationLine);
+  // Covers are issue-owned first pages. Never inherit interior-page visual instructions.
+  const isCover=s.unit==="COVER"||s.pageKind==="cover"||/(?:_COVER|_COVER_PAGE)$/.test(key);
+  const productionLine=s.generationLine||(isCover?"Finished full-color PORTRAIT COMIC COVER: one commercial full-bleed image with professionally integrated trade dress and exact authored lettering. Do not compose as an interior sequential page or add a panel grid. Preserve approved series references and released cover authority.":show.generationLine);
+  if(include("production")&&productionLine)out.push(productionLine);
   if(include("setting")){
     if(s.settingText){
       out.push("\n[SETTING]\n"+s.settingText);
