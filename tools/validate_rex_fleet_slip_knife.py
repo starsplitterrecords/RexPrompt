@@ -42,11 +42,12 @@ for key, value in expected_manifest.items():
 expected_overlays = [{"file": "pages_i01.json"}]
 if entry.get("sceneOverlays") != expected_overlays:
     raise SystemExit("Slip Knife must load scripted pages without field overlays")
-exceptions = load_json(SHOW / "editorial/visual_faction_pages_i01.json")
-actual_pages = {p["id"]: p for p in load_json(SHOW / "pages_i01.json")}
-for item in exceptions:
-    if actual_pages[item["id"]].get("promptIncludeFactions") != item["promptIncludeFactions"]:
-        raise SystemExit(f"Unconsolidated Slip Knife faction field: {item['id']}")
+canonical_pages = load_json(SHOW / "pages_i01.json")
+faction_pages = [p for p in canonical_pages if p.get("promptIncludeFactions") is True]
+if len(faction_pages) != 4:
+    raise SystemExit("Slip Knife expected four intentional faction-visual pages")
+if any(not p.get("factions") for p in faction_pages):
+    raise SystemExit("Faction-visual page has no authored faction reference")
 generation = entry.get("generationLine", "")
 for required in ("comic page", "Verge Campaign", "Flanking Rule", "Slip Knife"):
     if required not in generation:

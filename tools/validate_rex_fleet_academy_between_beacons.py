@@ -29,11 +29,9 @@ def main():
     assert entry["scenesFile"]=="pages_base.json"
     expected_overlays=[{"file":"pages_i01.json"}]
     assert entry["sceneOverlays"]==expected_overlays, "Between the Beacons must have canonical page scope"
-    exceptions=load(SHOW_DIR/"editorial/visual_faction_pages_i01.json")
-    expected_factions={p["id"]:p["promptIncludeFactions"] for p in exceptions}
-    for page in pages:
-        if page["id"] in expected_factions:
-            assert page.get("promptIncludeFactions")==expected_factions[page["id"]], "Faction scope not embedded"
+    faction_pages=[p for p in pages if p.get("promptIncludeFactions") is True]
+    assert len(faction_pages)==3, "Expected three canonical faction-visual pages"
+    assert all(p.get("factions") for p in faction_pages), "Faction context missing"
     assert entry["includeIdPattern"]=="^RFA_BB_I01_"
     assert "between the beacons" in entry["generationLine"].lower()
     assert "26-page" in entry["formatNote"]
