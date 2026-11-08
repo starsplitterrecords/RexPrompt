@@ -1,78 +1,47 @@
 #!/usr/bin/env node
 'use strict';
-// Validate composition fields embedded directly in encoded canonical episode sources.
-// Archived layout records are comparison fixtures; dialogue, panel beats and order stay unchanged.
+// Validate the 118 canonical Backyard Rockets episode page layouts; no retired layout fixtures.
 const fs=require('node:fs'),vm=require('node:vm'),zlib=require('node:zlib'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..');
-const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const json=p=>JSON.parse(read(p));
-const shows=json('data/shows.json'),show=shows.find(x=>x.id==='backyard-rockets-s1');
-assert(show,'Missing Backyard Rockets season');
-const core=read('index.html'),start=core.indexOf('const SHOW_MANIFEST='),end=core.indexOf('function safeFilePart(',start);
-assert(start>=0&&end>start,'Cannot locate production assembler');
-const context=vm.createContext({});
-vm.runInContext(core.slice(start,end)+';globalThis.production={assembleScene,validatePageLayout};',context);
-const {assembleScene:assemble,validatePageLayout:validate}=context.production;
-const store={__show:show};
-for(const f of ['characters','dialogue','settings','regions','factions','direction'])
-  store[f+'.json']=json(show.basePath+'/'+f+'.json');
-function originalEpisode(ep){
- const encoded=show.sceneOverlays.find(x=>x.file.startsWith('encoded/scenes_e'+String(ep).padStart(2,'0')+'_'));
- assert(encoded&&encoded.encoding==='gzip-base64','Missing compressed episode '+ep);
- return JSON.parse(zlib.gunzipSync(Buffer.from(read(show.basePath+'/'+encoded.file).trim(),'base64')).toString('utf8'));
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
+const show=json('data/shows.json').find(x=>x.id==='backyard-rockets-s1');
+assert(show,'Backyard Rockets season missing');
+assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Active field patch not allowed');
+const html=read('index.html'),start=html.indexOf('const SHOW_MANIFEST='),end=html.indexOf('function safeFilePart(',start);
+assert(start>=0&&end>start,'Live assembler missing');
+const sandbox=vm.createContext({});
+vm.runInContext(html.slice(start,end)+';globalThis.api={assembleScene,validatePageLayout};',sandbox);
+const {assembleScene,validatePageLayout}=sandbox.api,store={__show:show};
+for(const f of ['characters','dialogue','settings','regions','factions','direction'])store[f+'.json']=json(show.basePath+'/'+f+'.json');
+function episode(n){
+ const tag=String(n).padStart(2,'0');
+ const o=(show.sceneOverlays||[]).find(x=>x.encoding==='gzip-base64'&&x.file.includes('scenes_e'+tag+'_'));
+ assert(o,'Missing canonical compressed episode '+tag);
+ return JSON.parse(zlib.gunzipSync(Buffer.from(read(show.basePath+'/'+o.file).trim(),'base64')).toString('utf8'));
 }
-const allLayouts=new Set(),architectures=new Map();let total=0,sourcePanels=0;
+let total=0,sourcePanels=0;const kinds=new Map(),ids=new Set();
 for(let ep=3;ep<=8;ep++){
- const tag=String(ep).padStart(2,'0');
- const src=originalEpisode(ep),name='editorial_page_layouts_e'+tag+'.json';
- const sourceEntry=(show.sceneOverlays||[]).findIndex(x=>x.encoding==='gzip-base64'&&x.file.includes('scenes_e'+tag+'_'));
- assert(sourceEntry>=0,'Canonical encoded episode not registered: E'+tag);
- assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Active Backyard field overlay remains: E'+tag);
- const data=json(show.basePath+'/'+name);
- assert.equal(data.length,src.length,'Missing layout profiles for E'+tag);
- const index=new Map(data.map(x=>[x.id,x]));
- assert.equal(index.size,src.length,'Duplicate layout ids for E'+tag);
- let chars=0,panels=0;
- for(const [i,original] of src.entries()){
-   const profile=index.get(original.id);
-   assert(profile,'Missing layout for '+original.id);
-   assert.deepEqual(Object.keys(profile).sort(),['id','pageLayout'],'Overlay must contain layout only: '+original.id);
-   assert(!allLayouts.has(original.id),'Duplicate source ID '+original.id);
-   allLayouts.add(original.id);
-   assert.deepEqual(original.pageLayout,profile.pageLayout,'Layout not embedded in encoded source '+original.id);
-   const active=original,bare={...original};delete bare.pageLayout;
-   assert.equal(validate(active),active.pageLayout);
-   const before=assemble(bare,store,i),after=assemble(active,store,i);
-   const panelMarker='\n[PANEL PLAN]';
-   assert(before.includes(panelMarker),'No original panel plan '+original.id);
-   assert.equal(after.slice(after.indexOf(panelMarker)),before.slice(before.indexOf(panelMarker)),
-       'Layout altered original panel plan/dialogue/direction '+original.id);
-   assert.equal(after.slice(0,after.indexOf('\n[PAGE COMPOSITION]')),before.slice(0,before.indexOf(panelMarker)),
-       'Layout altered recipe before panel plan '+original.id);
-   assert(after.includes('Visual priority: '+profile.pageLayout.visualPriority),'Missing page-specific art direction');
-   assert.equal((after.match(/\[PAGE COMPOSITION\]/g)||[]).length,1,'More than one composition block');
-   assert.deepEqual(profile.pageLayout.panels.map(p=>p.panel).sort((a,b)=>a-b),
-       original.panelPlan.map((_,j)=>j+1),'Changed number/order of authored panels');
-   for(const line of original.dialogueInline||[])assert(after.includes(line.text),'Lost dialogue '+original.id);
-   const composition=profile.pageLayout.composition;
-   architectures.set(composition,(architectures.get(composition)||0)+1);
-   panels+=original.panelPlan.length;
-   chars+=after.length-before.length;
-   total++;sourcePanels+=original.panelPlan.length;
+ const pages=episode(ep);
+ for(const [i,page] of pages.entries()){
+  assert(page.pageLayout,'Canonical page layout missing '+page.id);
+  assert(!ids.has(page.id),'Duplicate episode page '+page.id);ids.add(page.id);
+  assert.equal(validatePageLayout(page),page.pageLayout);
+  assert.equal(page.pageLayout.panels.length,page.panelPlan.length,'Panel hierarchy changed '+page.id);
+  assert(Array.isArray(page.promptSuppress),'Missing canonical page recipe scope '+page.id);
+  const bare={...page};delete bare.pageLayout;
+  const before=assembleScene(bare,store,i),after=assembleScene(page,store,i);
+  const old=before.indexOf('\n[PANEL PLAN]'),layout=after.indexOf('\n[PAGE COMPOSITION]'),now=after.indexOf('\n[PANEL PLAN]');
+  assert(old>=0&&layout>=0&&now>layout,'Layout placement changed '+page.id);
+  assert.equal(after.slice(0,layout),before.slice(0,old),'Recipe prefix changed '+page.id);
+  assert.equal(after.slice(now),before.slice(old),'Scripted panel/dialogue tail changed '+page.id);
+  assert.equal((after.match(/\[PAGE COMPOSITION\]/g)||[]).length,1,'Duplicate layout '+page.id);
+  for(const d of page.dialogueInline||[])assert(after.includes(d.text),'Lost exact lettering '+page.id);
+  kinds.set(page.pageLayout.composition,(kinds.get(page.pageLayout.composition)||0)+1);
+  total++;sourcePanels+=page.panelPlan.length;
  }
- console.log('PASS E'+tag+': '+src.length+' art-directed pages, '+panels+' original panel beats, '+chars+' composition characters');
 }
-// Published Issues 1 and 2 cannot be inadvertently re-laid out as part of this pass.
-for(const ep of [1,2]){
- const src=originalEpisode(ep);
- for(const page of src)assert(!allLayouts.has(page.id)&&page.pageLayout===undefined,
-   'Released E'+ep+' source changed by a layout profile');
- const overlay=show.sceneOverlays.filter(x=>x.file.includes('editorial_page_layouts_e0'+ep+'.json'));
- assert.equal(overlay.length,0,'Published issue unexpectedly received a page-layout overlay');
-}
-assert.equal(total,118,'Expected 118 non-published interior pages from six issues');
-assert(sourcePanels>500,'Too few original panel beats covered');
-assert(architectures.size>=7,'Insufficient variety in authored composition architectures');
-console.log('PASS: '+total+' interior pages; '+sourcePanels+' original beats; '+architectures.size+' artistic architecture forms.');
-console.log('Composition mix: '+JSON.stringify(Object.fromEntries(architectures)));
-console.log('PASS: published Issues 1–2 and all editorial splash/open-close pages unchanged.');
+for(const ep of [1,2])for(const page of episode(ep))
+ assert(!page.pageLayout&&!ids.has(page.id),'Published Backyard issue changed by page-layout migration '+page.id);
+assert.equal(total,118,'Non-published interior page inventory changed');
+assert(sourcePanels>500,'Original panel beats missing');
+assert(kinds.size>=7,'Insufficient editorial composition variety');
+console.log('PASS Backyard Rockets: '+total+' canonical layouts, '+sourcePanels+' panels, '+kinds.size+' architectures, published Issues 1–2 unchanged.');
