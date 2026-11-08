@@ -70,7 +70,7 @@ for(const [series,prefix] of [['backyard-rockets','backyard-rockets-s1'],['echoe
  }
 }
 assert.equal(structure.issues['echoes-forgotten-war::echoes-forgotten-war-s1-e01'].coverStatus,'available-in-separate-shelf');
-assert.match(exporter,/const units=book?.units||sel.recipeIds/);
+assert.match(exporter,/const ordered=book\?\.units\|\|sel\.recipeIds/);
 assert.match(exporter,/issueIncludeCast/);
 assert.match(exporter,/omittedOptionalUnits:p.omittedCast/);
 
