@@ -37,9 +37,8 @@ for(let chapter=1;chapter<=7;chapter++){
  const chapterId='low-tide-signal-c'+String(chapter).padStart(2,'0');
  const show=showConfigs.find(s=>s.id===chapterId);
  assert(show,'Missing chapter '+chapterId);
- if(chapter<=3)assert(Array.isArray(show.dialogueOverlays)&&show.dialogueOverlays.length===0,
-   'Normalized Chapters 1–3 must not inherit the old dialogue overlay');
- else assert(!show.dialogueOverlays,'Other chapters still inherit package dialogue overlay');
+ assert(Array.isArray(show.dialogueOverlays)&&show.dialogueOverlays.length===0,
+   'All seven normalized chapters must disable the package dialogue override');
  const assembledShow={...packageConfig,...show};
  let pages=json(base+'/'+(show.scenesFile||'pages_base.json'));
  for(const layer of show.sceneOverlays||[]){
@@ -50,7 +49,7 @@ for(let chapter=1;chapter<=7;chapter++){
  }
  pages=pages.filter(p=>new RegExp(show.includeIdPattern).test(p.id));
  assert.equal(new Set(pages.map(p=>p.id)).size,pages.length,'Duplicate authored page IDs for '+chapterId);
- const layered=chapter<=3?pages:patchDialogue(pages,incoming);
+ const layered=pages;
  assert.equal(layered.length,pages.length,'Dialogue changed page inventory');
  for(let i=0;i<pages.length;i++){
   const original=pages[i],page=layered[i],update=byId.get(page.id);
