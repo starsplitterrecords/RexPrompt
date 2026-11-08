@@ -73,6 +73,13 @@ const legacy=assemble(unchanged,sdsStore,0);
 assert(!legacy.includes(unchanged.summary),'Redundant scoped summary unexpectedly emitted');
 assert(legacy.includes('[CAST]')&&!legacy.includes('[CHARACTERS]'),'Normalized cast scoping was not delivered');
 linesKept(unchanged,legacy);
+// Issue-owned covers must never inherit the active issue's interior-page generation line.
+const issueCover=page('stardust-station','covers.json','SDS_S1E04_COVER');
+const coverText=assemble(issueCover,sdsStore,0);
+assert(coverText.includes('PORTRAIT COMIC COVER'),'Cover art direction missing');
+assert(coverText.includes('Do not compose as an interior sequential page'),'Cover rendered as interior');
+assert(!coverText.includes('Stardust art direction'),'Cover inherited interior-page instructions');
+linesKept(issueCover,coverText);panelsKept(issueCover,coverText);
 // Rex Fleet: suppress only detailed recurring setting text, not the visible location.
 const rexStore=store('rex-fleet-s1',{unitLabel:'PAGE',generationLine:'Rex art direction'});
 const bridge=page('rex-fleet-s1','pages_i02.json','RF_I02_P04');
