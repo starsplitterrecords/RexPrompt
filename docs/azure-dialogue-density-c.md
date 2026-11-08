@@ -8,7 +8,7 @@ The principal problem was not excessively long dialogue. Across the 101 eligible
 
 ## Editorial implementation
 
-- `editorial/dialogue_c_e02.json` through `e06.json` are **dialogue-only overlays**. They load through the existing `dialogueOverlays` pipeline after all script, recipe-suppression and layout overlays. The original compressed source files are immutable.
+- The accepted dialogue edits, panel ownership, and original reading order are stored directly in the canonical compressed issue page records. The former editorial patches have been retired from the working tree; their history remains in Git.
 - Every unapproved page has an authored `subtext: "Panel N"` for each existing dialogue/caption line, in the **original reading order**. This uses the current production assembler's existing field instead of introducing a new storage schema.
 - Twelve selective voice and specificity revisions were made where dialogue sounded like a theme declaration, over-described the stakes, or asserted more about animal behavior than staff could justify. Dialogue elsewhere was retained, including joke timing, character friction and institutional/animal-care boundaries.
 - One unnecessary final balloon, the sponsor's spoken "Congratulations" on `AZR_S1E06_P20`, was removed so the reef-school reveal remains silent and the final staff invitation has fewer competing speakers. Sponsor acknowledgment is visual and remains compatible with the existing scripted scene.
@@ -31,9 +31,9 @@ The principal problem was not excessively long dialogue. Across the 101 eligible
 
 ## Production verification
 
-`node tools/test_azure_dialogue_c.cjs` loads the canonical gzip/base64 scripts and production drafts, executes the **live** RexPrompt assembler, verifies exactly 101 eligible pages, checks all preserved speaker handles and character attribution, checks monotonically increasing panel placement, enforces 12 listed text edits and one explicit line removal, and confirms the assembled setting, layout, panels, continuity and direction sections remain identical.
+`node tools/test_azure_dialogue_c.cjs` loads canonical gzip/base64 pages, executes the **live** RexPrompt assembler, checks page and dialogue inventories, panel-number attribution, and preservation of every authored line in assembled output. The historical dialogue decisions listed above remain part of the editorial record, not a second active source.
 
-Original published and approved pages receive **no** overlays. The separate original Azure mechanical validator's historical `AZR_S1E01_P03` `panelPlan`/`panelCount` mismatch is not modified by this pass.
+Original published and approved pages retain their existing source content, without layered dialogue overrides. The separate original Azure mechanical validator's historical `AZR_S1E01_P03` `panelPlan`/`panelCount` mismatch is not modified by this pass.
 
 ## Visual follow-up
 
