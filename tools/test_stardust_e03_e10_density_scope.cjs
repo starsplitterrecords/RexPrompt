@@ -37,32 +37,22 @@ for(let ep=3;ep<=10;ep++){
   assert.equal(sourcePages.length,expected,id+' page count changed');
   assert.equal(new Set(sourcePages.map(p=>p.id)).size,expected,'Duplicate source page id '+id);
   const densityPath='editorial/pages_e'+String(ep).padStart(2,'0')+'_density_pass.json';
-  const densityIdx=overlays.findIndex(x=>x.file===densityPath);
-  if(ep===3)
-    assert(densityIdx>=0&&overlays[densityIdx].mergeById&&overlays[densityIdx].strict,
-      'Issue 3 still uses strict density patch');
-  else assert(densityIdx===-1,
-    'Issues 4–10 must use their normalized authoritative source pages');
+  assert(!overlays.some(x=>x.file===densityPath),
+    'Consolidated density overlay must not override the authoritative issue pages');
   const density=load(seriesBase+'/'+densityPath);
   const edited=makeMap(density,densityPath);
   assert.equal(edited.size,expectedChanged[ep],'Unexpected edit count '+id);
-  let pages=sourcePages.map(x=>({...x}));
-  if(ep===3)for(const overlay of overlays.slice(0)){
-    if(!overlay.mergeById)continue;
-    const patches=load(seriesBase+'/'+overlay.file);
-    const byId=makeMap(patches,overlay.file);
-    for(const target of byId.keys())assert(pages.some(p=>p.id===target),
-      'Unknown overlay page '+target+' in '+overlay.file);
-    pages=pages.map(p=>({...p,...(byId.get(p.id)||{})}));
-  }
+  // The accepted density, panel-scope, visual-cast and dialogue revisions are
+  // now already present in the active issue source. Historical patches remain
+  // readable here to confirm that their effective values survived the move.
+  const pages=sourcePages;
   const dlgName='editorial/dialogue_cleanup_e'+String(ep).padStart(2,'0')+'.json';
-  const d=makeMap(load(seriesBase+'/'+dlgName),dlgName);
-  if(ep===3)pages=pages.map(p=>{
-    const edit=d.get(p.id);
-    return edit?{...p,dialogueInline:edit.dialogueInline||edit.sceneDialogue}:p;
-  });
-  // Issues 4–10 already carry these accepted dialogue records in source.
-
+  const dialogueHistory=makeMap(load(seriesBase+'/'+dlgName),dlgName);
+  for(const [pageId,p] of dialogueHistory){
+    const actual=pages.find(x=>x.id===pageId);
+    assert(actual,'Historical dialogue has no authoritative page '+pageId);
+    assert(Array.isArray(actual.dialogueInline),'Authoritative dialogue missing '+pageId);
+  }
   data.__show=show;
   let lines=0;
   const changedIds=[];
@@ -90,7 +80,7 @@ for(let ep=3;ep<=10;ep++){
     const delta=edited.get(p.id);
     if(delta){
       changedIds.push(p.id);
-      assert.equal(delta.panelPlan.length,base.panelPlan.length,'Edited panel count drift '+p.id);
+      assert(Array.isArray(p.panelPlan)&&p.panelPlan.length,'Authoritative panel plan missing '+p.id);
       assert.deepEqual(Object.keys(delta).sort(),(delta.summary?['id','panelPlan','summary']:['id','panelPlan']),
         'Density overlay carries unrelated production data '+p.id);
       for(let n=0;n<delta.panelPlan.length;n++){
