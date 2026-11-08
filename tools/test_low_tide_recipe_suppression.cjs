@@ -31,6 +31,9 @@ function verifyInline(show,config){
    pages=applyOverlay(pages,data,layer);
  }
  pages=pages.filter(x=>new RegExp(config.includeIdPattern).test(x.id));
+ assert.equal(pages[0]?.id,config.includeIdPattern.match(/LTS_C(\d\d)_/)?.[0].slice(0,-1)+'_COVER','Low Tide issue must assemble its cover first');
+ // The cover is deliberately not an interior story page with page-layout scope fields.
+ pages=pages.filter(x=>!/_COVER$/.test(x.id));
  let saved=0,count=0;
  for(const page of pages){
    assert(page.pageLayout&&page.panelPlan?.length,'Missing normalized production page fields '+page.id);
