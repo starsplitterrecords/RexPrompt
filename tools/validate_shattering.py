@@ -57,12 +57,7 @@ def main():
     assert len(entries) == 6, f"Expected 6 Shattering issue entries, found {len(entries)}"
 
     cover_entries = [s for s in shows if s.get("seriesId") == "shattering" and s.get("unitLabel") == "COVER"]
-    assert len(cover_entries) == 1, f"Expected 1 Shattering cover shelf, found {len(cover_entries)}"
-    cover_show = cover_entries[0]
-    assert cover_show.get("id") == "shattering-covers", "Shattering cover shelf id mismatch"
-    assert cover_show.get("basePath") == "data", "Shattering cover shelf basePath mismatch"
-    assert cover_show.get("scenesFiles") == ["shows/shattering/covers.json"], "Shattering cover shelf file mismatch"
-    assert cover_show.get("includeIdPattern") == r"^SHAT_I0[1-6]_COVER$", "Shattering cover shelf include pattern mismatch"
+    assert not cover_entries, "Shattering cover selectors must be retired; covers belong to issue pages"
 
     all_pages = []
     all_page_ids = set()
@@ -80,6 +75,9 @@ def main():
         expected_file = f"shows/shattering/pages_i{issue:02d}.json"
         assert entry.get("basePath") == "data", f"Issue {issue}: unexpected basePath"
         assert entry.get("scenesFile") == expected_file, f"Issue {issue}: active page file mismatch"
+        assert entry.get("scenesFiles") == ["shows/shattering/covers.json", expected_file], (
+            f"Issue {issue}: cover is not loaded first by the issue's own assembler configuration"
+        )
         assert entry.get("includeIdPattern") == f"^SHAT_I{issue:02d}_", f"Issue {issue}: include pattern mismatch"
         assert entry.get("scenesFile") != "scenes_shattering.json", f"Issue {issue}: source scene file still active"
 
@@ -169,7 +167,7 @@ def main():
 
         all_pages.extend(pages)
 
-    assert COVERS.exists(), "Shattering cover recipe shelf missing"
+    assert COVERS.exists(), "Shattering cover source file missing"
     covers = load(COVERS)
     assert isinstance(covers, list) and len(covers) == 6, f"Expected 6 Shattering cover recipes, found {len(covers) if isinstance(covers, list) else 'non-list'}"
     expected_cover_ids = [f"SHAT_I{issue:02d}_COVER" for issue in range(1, 7)]
