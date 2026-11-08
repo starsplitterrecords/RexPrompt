@@ -120,7 +120,7 @@ Detailed issue roles and ordinal positions: `production/issue-structure.json`. A
 | rex-fleet-full-performance | rex-fleet-full-performance-i10 | blocked-missing-images | 0 / 28 | missing-approved-images |
 | rex-fleet-full-performance | rex-fleet-full-performance-i11 | blocked-missing-images | 0 / 24 | missing-approved-images |
 | rex-fleet-full-performance | rex-fleet-full-performance-i12 | blocked-missing-images | 0 / 28 | missing-approved-images |
-| echoes-forgotten-war | echoes-forgotten-war-s1-e01 | blocked-missing-images | 0 / 24 | missing-approved-images |
+| echoes-forgotten-war | echoes-forgotten-war-s1-e01 | blocked-missing-images | 1 / 24 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e02 | blocked-missing-images | 0 / 19 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e03 | blocked-missing-images | 0 / 18 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e04 | blocked-missing-images | 0 / 19 | missing-approved-images |
