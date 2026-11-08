@@ -211,6 +211,8 @@ for(const show of SHOWS){
  const sup=supplement(show,selected);
  const proposed=sup.units;
  const errs=[...sup.risks,...structureCheck(proposed)];
+ // The book cover must be in the actual assembler source, not prepended by an audit-time shelf lookup.
+ if(proposed[0]!==selected[0])errs.push('book-first-unit-not-in-issue-assembler-position-1');
  const coverPresent=proposed.some(x=>/(?:_COVER|_COVER_PAGE)$/.test(x))||(
  seriesId==='vikings-2026'&&proposed[0]&&/_P01$/.test(proposed[0]));
  // No cover or other defined book-start marker: source pages alone don't
