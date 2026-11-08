@@ -110,8 +110,9 @@ const token=window.RexPromptGithubAuth.getToken();if(!token)throw Error('Enter a
 const metaPath='sites/visions/src/content/series/'+slugName+'.json',meta=await content(VISIONS,metaPath,token);if(!meta)throw Error('Visions series metadata not found: '+slugName);
 const n=issueNo(p.sel),dir='issue-'+pad(n),base=slugName+'-'+dir;
 const existing=(meta.releases||[]).find(r=>r.issueNumber===n&&r.publicationType==='E')||null;
-const cover=existing?.cover||'/images/covers/'+base+'.jpg',coverPath='sites/visions/public'+cover,coverExists=await request(api(VISIONS,'contents/'+coverPath+'?ref=main'),{token,allow404:true});
-if(!coverExists)throw Error('Release blocked: issue-specific cover missing: '+coverPath);
+const cover=existing?.cover||'/images/covers/'+base+'.jpg';
+if(!cover.startsWith('/images/covers/')||cover.includes('..')||cover.includes('?')||cover.includes('#'))throw Error('Release blocked: invalid canonical issue cover path: '+cover);
+if((meta.releases||[]).some(r=>r!==existing&&r.cover===cover))throw Error('Release blocked: issue cover path is shared with another release: '+cover);
 const action=existing?'Stage changes to an existing issue':'Stage an issue for release';
 if(!window.confirm(action+' as a GitHub pull request?\n\n'+p.sel.seriesName+' — '+p.sel.issueLabel+'\n'+p.pages.length+' approved pages.\n\nNo public release will change until the pull request passes required checks and is merged.\n\nContinue?'))return;
 const images=await downloadImages(p.approved),{pdf,converted}=await createPdf(images);
@@ -119,13 +120,13 @@ report('Preparing canonical GitHub release…');
 const ref=await git(token,VISIONS,'git/ref/heads/main'),head=ref.object.sha,commit=await git(token,VISIONS,'git/commits/'+head);
 const date=new Date().toISOString().slice(0,10),fileStem=base+'.pdf';
 const prev=meta.releases||[],maxSeq=Math.max(0,...prev.map(r=>Number(r.catalogSequence)||0)),maxPub=Math.max(0,...prev.filter(r=>r.publicationType==='E').map(r=>Number(r.publicationNumber)||0));
-const pub=maxPub+1,releaseRecord=existing?{...existing}:{catalogId:(meta.seriesCode||slugName.toUpperCase())+'-E'+String(pub).padStart(3,'0')+'-'+new Date().getFullYear()+'-'+String(maxSeq+1).padStart(3,'0'),publicationType:'E',publicationNumber:pub,catalogSequence:maxSeq+1,issueNumber:n,title:'Issue '+pad(n),releaseType:'Collected comic issue',releaseDate:date,cover,description:'Complete collected issue.',externalLink:'/issues/'+slugName+'/'+dir+'/'+fileStem};
+const pub=maxPub+1,releaseRecord=existing?{...existing,cover}:{catalogId:(meta.seriesCode||slugName.toUpperCase())+'-E'+String(pub).padStart(3,'0')+'-'+new Date().getFullYear()+'-'+String(maxSeq+1).padStart(3,'0'),publicationType:'E',publicationNumber:pub,catalogSequence:maxSeq+1,issueNumber:n,title:'Issue '+pad(n),releaseType:'Collected comic issue',releaseDate:date,cover,description:'Complete collected issue.',externalLink:'/issues/'+slugName+'/'+dir+'/'+fileStem};
 const pdfRuntimePath=releaseRecord.externalLink?.startsWith('/issues/')?releaseRecord.externalLink:'/issues/'+slugName+'/'+dir+'/'+fileStem;
 const pdfPath='sites/visions/public'+pdfRuntimePath;
 if(!existing){meta.releases=[releaseRecord,...prev];meta.currentRelease=releaseRecord.title;meta.status='active';meta.developmentStatus='Publishing';meta.homepage={...(meta.homepage||{}),issue:releaseRecord.title,cover};}
 const pagePrefix='/images/pages/'+slugName+'/'+dir+'/';
 meta.dailyPages=[...(meta.dailyPages||[]).filter(p=>!String(p.image||'').startsWith(pagePrefix)),...converted.map(x=>({pageNumber:x.page,releaseDate:existing?.releaseDate||date,image:pagePrefix+'page-'+pad3(x.page)+'.jpg'}))];
-const entries=[];for(const im of converted){report('Staging canonical page '+im.page+' of '+converted.length+'…');const blob=await git(token,VISIONS,'git/blobs',{method:'POST',body:{content:bytesToB64(im.jpg.bytes),encoding:'base64'}});entries.push({path:'sites/visions/public/images/pages/'+slugName+'/'+dir+'/page-'+pad3(im.page)+'.jpg',mode:'100644',type:'blob',sha:blob.sha})}
+const entries=[];for(const im of converted){report('Staging canonical page '+im.page+' of '+converted.length+'…');const blob=await git(token,VISIONS,'git/blobs',{method:'POST',body:{content:bytesToB64(im.jpg.bytes),encoding:'base64'}});entries.push({path:'sites/visions/public/images/pages/'+slugName+'/'+dir+'/page-'+pad3(im.page)+'.jpg',mode:'100644',type:'blob',sha:blob.sha});if(im.page===1){entries.push({path:'sites/visions/public'+cover,mode:'100644',type:'blob',sha:blob.sha})}}
 for(const [path,bytes,encoding] of [[pdfPath,pdf,'base64'],[metaPath,new TextEncoder().encode(JSON.stringify(meta,null,2)+'\n'),'utf-8']]){const blob=await git(token,VISIONS,'git/blobs',{method:'POST',body:encoding==='base64'?{content:bytesToB64(bytes),encoding}:{content:new TextDecoder().decode(bytes),encoding}});entries.push({path,mode:'100644',type:'blob',sha:blob.sha})}
 const tree=await git(token,VISIONS,'git/trees',{method:'POST',body:{base_tree:commit.tree.sha,tree:entries}});
 const next=await git(token,VISIONS,'git/commits',{method:'POST',body:{message:(existing?'Replace published ':'Release ')+p.sel.seriesName+' '+releaseRecord.title,tree:tree.sha,parents:[head]}});
