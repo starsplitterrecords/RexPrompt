@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "RexPrompt/data/shows.json",
-  "revisionNote": "Selectors verified from live main on October 26, 2026; recheck before project installation",
+  "revisionNote": "Verified from live RexPrompt source on 2026-11-08; each issue owns its cover as the first production unit; retired cover-only selectors are not addressable.",
   "profiles": [
     {
       "id": "shattering",
@@ -13,9 +13,9 @@
         "shattering-i03",
         "shattering-i04",
         "shattering-i05",
-        "shattering-i06",
-        "shattering-covers"
-      ]
+        "shattering-i06"
+      ],
+      "seriesId": "shattering"
     },
     {
       "id": "rex-fleet",
@@ -34,7 +34,8 @@
         "rex-fleet-i10",
         "rex-fleet-i11",
         "rex-fleet-i12"
-      ]
+      ],
+      "seriesId": "rex-fleet"
     },
     {
       "id": "rex-fleet-academy-anomalies",
@@ -42,7 +43,8 @@
       "path": "docs/loaders/series/rex-fleet-academy-anomalies.md",
       "showIds": [
         "rex-fleet-academy-anomalies-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-academy-anomalies"
     },
     {
       "id": "rfa-reach-resolve",
@@ -50,7 +52,8 @@
       "path": "docs/loaders/series/rfa-reach-resolve.md",
       "showIds": [
         "rfa-reach-resolve-i01"
-      ]
+      ],
+      "seriesId": "rfa-reach-resolve"
     },
     {
       "id": "rex-fleet-stormwell-archive",
@@ -58,7 +61,8 @@
       "path": "docs/loaders/series/rex-fleet-stormwell-archive.md",
       "showIds": [
         "rex-fleet-stormwell-archive-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-stormwell-archive"
     },
     {
       "id": "rex-fleet-glass-horizon",
@@ -66,15 +70,25 @@
       "path": "docs/loaders/series/rex-fleet-glass-horizon.md",
       "showIds": [
         "rex-fleet-glass-horizon-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-glass-horizon"
     },
     {
       "id": "backyard-rockets",
       "name": "Backyard Rockets",
       "path": "docs/loaders/series/backyard-rockets.md",
       "showIds": [
-        "backyard-rockets-s1"
-      ]
+        "backyard-rockets-s1",
+        "backyard-rockets-s1-e01",
+        "backyard-rockets-s1-e02",
+        "backyard-rockets-s1-e03",
+        "backyard-rockets-s1-e04",
+        "backyard-rockets-s1-e05",
+        "backyard-rockets-s1-e06",
+        "backyard-rockets-s1-e07",
+        "backyard-rockets-s1-e08"
+      ],
+      "seriesId": "backyard-rockets"
     },
     {
       "id": "azure-reach",
@@ -86,9 +100,9 @@
         "azure-reach-s1-e03",
         "azure-reach-s1-e04",
         "azure-reach-s1-e05",
-        "azure-reach-s1-e06",
-        "azure-reach-s1-covers"
-      ]
+        "azure-reach-s1-e06"
+      ],
+      "seriesId": "azure-reach"
     },
     {
       "id": "stardust-station",
@@ -104,18 +118,9 @@
         "stardust-station-e07",
         "stardust-station-e08",
         "stardust-station-e09",
-        "stardust-station-e10",
-        "stardust-station-cover-e01",
-        "stardust-station-cover-e02",
-        "stardust-station-cover-e03",
-        "stardust-station-cover-e04",
-        "stardust-station-cover-e05",
-        "stardust-station-cover-e06",
-        "stardust-station-cover-e07",
-        "stardust-station-cover-e08",
-        "stardust-station-cover-e09",
-        "stardust-station-cover-e10"
-      ]
+        "stardust-station-e10"
+      ],
+      "seriesId": "stardust-station"
     },
     {
       "id": "vikings",
@@ -134,7 +139,8 @@
         "vikings-2026-s1-e10",
         "vikings-2026-s1-e11",
         "vikings-2026-s1-e12"
-      ]
+      ],
+      "seriesId": "vikings-2026"
     },
     {
       "id": "low-tide-signal",
@@ -147,15 +153,9 @@
         "low-tide-signal-c04",
         "low-tide-signal-c05",
         "low-tide-signal-c06",
-        "low-tide-signal-c07",
-        "low-tide-signal-cover-c01",
-        "low-tide-signal-cover-c02",
-        "low-tide-signal-cover-c03",
-        "low-tide-signal-cover-c04",
-        "low-tide-signal-cover-c05",
-        "low-tide-signal-cover-c06",
-        "low-tide-signal-cover-c07"
-      ]
+        "low-tide-signal-c07"
+      ],
+      "seriesId": "low-tide-signal"
     },
     {
       "id": "division-threshold",
@@ -170,14 +170,6 @@
         "division-threshold-s1-e06",
         "division-threshold-s1-e07",
         "division-threshold-s1-e08",
-        "division-threshold-s1-cover-e01",
-        "division-threshold-s1-cover-e02",
-        "division-threshold-s1-cover-e03",
-        "division-threshold-s1-cover-e04",
-        "division-threshold-s1-cover-e05",
-        "division-threshold-s1-cover-e06",
-        "division-threshold-s1-cover-e07",
-        "division-threshold-s1-cover-e08",
         "division-threshold-s1-editorial-e01",
         "division-threshold-s1-editorial-e02",
         "division-threshold-s1-editorial-e03",
@@ -186,7 +178,8 @@
         "division-threshold-s1-editorial-e06",
         "division-threshold-s1-editorial-e07",
         "division-threshold-s1-editorial-e08"
-      ]
+      ],
+      "seriesId": "division-threshold"
     },
     {
       "id": "sun-comes-through-musical",
@@ -194,7 +187,8 @@
       "path": "docs/loaders/series/sun-comes-through-musical.md",
       "showIds": [
         "sun-comes-through-musical-s1"
-      ]
+      ],
+      "seriesId": "sun-comes-through-musical"
     },
     {
       "id": "echoes-forgotten-war",
@@ -202,8 +196,16 @@
       "path": "docs/loaders/series/echoes-forgotten-war.md",
       "showIds": [
         "echoes-forgotten-war-s1",
-        "echoes-forgotten-war-s1-covers"
-      ]
+        "echoes-forgotten-war-s1-e01",
+        "echoes-forgotten-war-s1-e02",
+        "echoes-forgotten-war-s1-e03",
+        "echoes-forgotten-war-s1-e04",
+        "echoes-forgotten-war-s1-e05",
+        "echoes-forgotten-war-s1-e06",
+        "echoes-forgotten-war-s1-e07",
+        "echoes-forgotten-war-s1-e08"
+      ],
+      "seriesId": "echoes-forgotten-war"
     },
     {
       "id": "sunforge-outlaw",
@@ -222,7 +224,8 @@
         "sunforge-outlaw-s1-e10",
         "sunforge-outlaw-s1-e11",
         "sunforge-outlaw-s1-e12"
-      ]
+      ],
+      "seriesId": "sunforge-outlaw"
     },
     {
       "id": "rex-fleet-academy-navigating-mirrorfold",
@@ -230,7 +233,8 @@
       "path": "docs/loaders/series/rex-fleet-academy-navigating-mirrorfold.md",
       "showIds": [
         "rex-fleet-academy-navigating-mirrorfold-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-academy-navigating-mirrorfold"
     },
     {
       "id": "rex-fleet-academy-doctrine-many-crowns",
@@ -238,16 +242,17 @@
       "path": "docs/loaders/series/rex-fleet-academy-doctrine-many-crowns.md",
       "showIds": [
         "rex-fleet-academy-doctrine-many-crowns-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-academy-doctrine-many-crowns"
     },
     {
       "id": "rex-fleet-academy-between-beacons",
       "name": "Rex Fleet Academy: Between Beacons",
       "path": "docs/loaders/series/rex-fleet-academy-between-beacons.md",
       "showIds": [
-        "rex-fleet-academy-between-beacons-i01",
-        "rex-fleet-academy-between-beacons-cover-i01"
-      ]
+        "rex-fleet-academy-between-beacons-i01"
+      ],
+      "seriesId": "rex-fleet-academy-between-beacons"
     },
     {
       "id": "rex-fleet-academy-core-worlds",
@@ -255,7 +260,8 @@
       "path": "docs/loaders/series/rex-fleet-academy-core-worlds.md",
       "showIds": [
         "rex-fleet-academy-core-worlds-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-academy-core-worlds"
     },
     {
       "id": "rex-fleet-academy-physics-lattice",
@@ -263,7 +269,8 @@
       "path": "docs/loaders/series/rex-fleet-academy-physics-lattice.md",
       "showIds": [
         "rex-fleet-academy-physics-lattice-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-academy-physics-lattice"
     },
     {
       "id": "rex-fleet-aegis-vigil",
@@ -271,7 +278,8 @@
       "path": "docs/loaders/series/rex-fleet-aegis-vigil.md",
       "showIds": [
         "rex-fleet-aegis-vigil-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-aegis-vigil"
     },
     {
       "id": "rex-fleet-ghostwind-arrow",
@@ -279,7 +287,8 @@
       "path": "docs/loaders/series/rex-fleet-ghostwind-arrow.md",
       "showIds": [
         "rex-fleet-ghostwind-arrow-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-ghostwind-arrow"
     },
     {
       "id": "rex-fleet-slip-knife",
@@ -287,7 +296,8 @@
       "path": "docs/loaders/series/rex-fleet-slip-knife.md",
       "showIds": [
         "rex-fleet-slip-knife-i01"
-      ]
+      ],
+      "seriesId": "rex-fleet-slip-knife"
     },
     {
       "id": "rex-fleet-crimson-warden",
@@ -295,6 +305,27 @@
       "path": "docs/loaders/series/rex-fleet-crimson-warden.md",
       "showIds": [
         "rex-fleet-crimson-warden-i01"
+      ],
+      "seriesId": "rex-fleet-crimson-warden"
+    },
+    {
+      "id": "rex-fleet-full-performance",
+      "seriesId": "rex-fleet-full-performance",
+      "name": "Rex Fleet — Full Performance",
+      "path": "docs/loaders/series/rex-fleet-full-performance.md",
+      "showIds": [
+        "rex-fleet-full-performance-i01",
+        "rex-fleet-full-performance-i02",
+        "rex-fleet-full-performance-i03",
+        "rex-fleet-full-performance-i04",
+        "rex-fleet-full-performance-i05",
+        "rex-fleet-full-performance-i06",
+        "rex-fleet-full-performance-i07",
+        "rex-fleet-full-performance-i08",
+        "rex-fleet-full-performance-i09",
+        "rex-fleet-full-performance-i10",
+        "rex-fleet-full-performance-i11",
+        "rex-fleet-full-performance-i12"
       ]
     }
   ]
