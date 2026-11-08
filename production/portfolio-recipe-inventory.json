@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 185,
-    "approvedDraftRecords": 185,
+    "matchedApprovedUnitsAcrossConfigurations": 186,
+    "approvedDraftRecords": 186,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -204,7 +204,7 @@
       "seriesId": "echoes-forgotten-war",
       "registeredConfigurations": 9,
       "registeredUnits": 306,
-      "approvedUnits": 4,
+      "approvedUnits": 5,
       "keeperReferences": 17,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -242,7 +242,7 @@
         {
           "showId": "echoes-forgotten-war-s1-e06",
           "registeredUnits": 18,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "echoes-forgotten-war-s1-e07",
@@ -9013,8 +9013,8 @@
       "issueLabel": "Issue 6 — The Margin of Error",
       "unitLabel": "PAGE",
       "registeredUnits": 18,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 18,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 17,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -9037,7 +9037,9 @@
         "EFW_S1E06_S15",
         "EFW_S1E06_EDITOR_CLOSE"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "EFW_S1E06_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/echoes-forgotten-war-s1/covers.json",
@@ -9045,14 +9047,14 @@
       ],
       "sourceOverlays": [],
       "examplesMissing": [
-        "EFW_S1E06_COVER",
         "EFW_S1E06_EDITOR_OPEN",
         "EFW_S1E06_S01",
         "EFW_S1E06_S02",
         "EFW_S1E06_S03",
         "EFW_S1E06_S04",
         "EFW_S1E06_S05",
-        "EFW_S1E06_S06"
+        "EFW_S1E06_S06",
+        "EFW_S1E06_S07"
       ]
     },
     {
@@ -10593,9 +10595,8 @@
     {
       "key": "echoes-forgotten-war::echoes-forgotten-war-s1-e06",
       "expectedUnits": 18,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "EFW_S1E06_COVER",
         "EFW_S1E06_EDITOR_OPEN",
         "EFW_S1E06_S01",
         "EFW_S1E06_S02",
