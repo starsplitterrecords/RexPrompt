@@ -17,7 +17,7 @@ vm.runInContext(html.slice(from,to)+';globalThis.testing={assembleScene,visibleC
 const {assembleScene:assemble,visibleCharacterHandles:visible}=ctx.testing;
 const series=new Set(['shattering','division-threshold','echoes-forgotten-war']);
 const shows=json('data/shows.json').filter(s=>series.has(s.seriesId)&&!s.sourceSeasonId);
-assert.equal(shows.length,33,'Unexpected count of targeted show configurations');
+assert.equal(shows.length,23,'Six Shattering issues + eight Division issues and eight editorial selectors + one Echoes season; no duplicate cover shelves');
 const cache=new Map();
 const get=(p)=>{if(!cache.has(p))cache.set(p,json(p));return cache.get(p)};
 const normalize=raw=>Array.isArray(raw)?raw:Array.isArray(raw?.pages)?raw.pages:Object.entries(raw).map(([id,scene])=>({id,...scene}));
@@ -60,13 +60,14 @@ const panelSection=text=>{
 };
 for(const show of shows){
  assert.equal(show.promptVisibleCastOnly,true,'Missing visible-only reference policy '+show.id);
- const cover=/cover/i.test(show.id);
- const shouldHideFactions=(show.seriesId==='shattering'&&!cover)||(show.seriesId==='division-threshold'&&!cover);
- if(shouldHideFactions)assert.equal(show.omitRoutineFactions,true,'Missing faction scoping '+show.id);
+ const scopeFactions=(show.seriesId==='shattering'||show.seriesId==='division-threshold');
+ if(scopeFactions)assert.equal(show.omitRoutineFactions,true,'Missing faction scoping '+show.id);
  const shelf=store(show),pages=scenes(show);
  assert(pages.length>0,'No assembled pages for '+show.id);
  for(let i=0;i<pages.length;i++){
   const page=pages[i];
+  const isCoverPage=/_COVER$/.test(page.id);
+  const shouldHideFactions=scopeFactions&&!isCoverPage;
   const assembled=assemble(page,shelf,i);
   const expected=Array.from(visible(page,shelf['characters.json']));
   assert.deepEqual(tags(assembled),expected,'Wrong visual reference handles for '+page.id);
@@ -102,7 +103,7 @@ for(const show of shows){
 }
 assert.equal(corrected,4,'Expected four reviewed Shattering visual cast exceptions');
 assert.equal(totals.shattering,150,'Shattering must cover 144 interiors plus 6 covers');
-assert.equal(totals['division-threshold'],228,'Division Threshold must cover all 204 interiors plus editorial/cover pages');
+assert.equal(totals['division-threshold'],228,'Division Threshold must cover all 204 original flat story pages, 8 issue-owned covers and 16 editorial pages');
 assert(totals['echoes-forgotten-war']>=149,'Echoes issue content missing');
 console.log('PASS: '+JSON.stringify(totals)+' pages; '+visibleReferences+
  ' precise visual references, '+JSON.stringify(factionHidden)+' repeated faction sections removed.');

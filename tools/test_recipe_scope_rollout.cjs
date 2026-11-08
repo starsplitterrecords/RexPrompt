@@ -88,7 +88,10 @@ for(const show of divisionShows){
   const scenes=load(show,true),store={__show:show},base=show.basePath;
   for(const file of ['characters','settings','regions','factions','dialogue','direction'])
     store[file+'.json']=json(base+'/'+file+'.json');
-  for(const page of scenes){
+  // Cover is a separate non-story production unit; measure the original
+  // canonical flat page recipe set without counting its newly embedded cover.
+  assert.equal(scenes[0]?.id.match(/^DT_E\d{3}_COVER$/)?.[0], 'DT_E'+show.id.match(/e(\d{2})$/)[1].padStart(3,'0')+'_COVER', 'Issue must assemble cover before original compiled story pages');
+  for(const page of scenes.filter(p=>!/_COVER$/.test(p.id))){
     divisionPages++;
     const policy=Object.fromEntries(Object.entries(page).filter(([key])=>
       ['promptSuppress','promptCharacterMode','promptSettingMode'].includes(key)));

@@ -31,8 +31,9 @@ function verifyInline(show,config){
    pages=applyOverlay(pages,data,layer);
  }
  pages=pages.filter(x=>new RegExp(config.includeIdPattern).test(x.id));
+ assert.match(pages[0]?.id||'',/^LTS_C\d{2}_COVER$/,'Low Tide cover must be the first loaded production unit');
  let saved=0,count=0;
- for(const page of pages){
+ for(const page of pages.slice(1)){ // Count original story pages; cover has a different production contract.
    assert(page.pageLayout&&page.panelPlan?.length,'Missing normalized production page fields '+page.id);
    valid(page);
    const old=assemble(withoutAssemblyFields(page),store,0),now=assemble(page,store,0);
@@ -72,6 +73,7 @@ function verify(show){
  }
  // Additional layout overlays after the profiles must be retained for comparison.
  const active=stages.filter(p=>new RegExp(config.includeIdPattern).test(p.id));
+ assert.match(active[0]?.id||'',/^LTS_C\d{2}_COVER$/,'Low Tide cover must be embedded first');
  if(config.dialogueOverlays?.length){
   let final=active;
   for(const overlay of config.dialogueOverlays){
