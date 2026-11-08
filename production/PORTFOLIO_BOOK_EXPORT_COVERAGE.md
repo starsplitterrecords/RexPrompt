@@ -124,7 +124,7 @@ Detailed issue roles and ordinal positions: `production/issue-structure.json`. A
 | echoes-forgotten-war | echoes-forgotten-war-s1-e02 | blocked-missing-images | 1 / 19 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e03 | blocked-missing-images | 1 / 18 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e04 | blocked-missing-images | 0 / 19 | missing-approved-images |
-| echoes-forgotten-war | echoes-forgotten-war-s1-e05 | blocked-missing-images | 0 / 19 | missing-approved-images |
+| echoes-forgotten-war | echoes-forgotten-war-s1-e05 | blocked-missing-images | 1 / 19 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e06 | blocked-missing-images | 0 / 18 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e07 | blocked-missing-images | 0 / 19 | missing-approved-images |
 | echoes-forgotten-war | echoes-forgotten-war-s1-e08 | blocked-missing-images | 0 / 21 | missing-approved-images |

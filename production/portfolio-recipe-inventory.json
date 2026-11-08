@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 184,
-    "approvedDraftRecords": 184,
+    "matchedApprovedUnitsAcrossConfigurations": 185,
+    "approvedDraftRecords": 185,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -204,7 +204,7 @@
       "seriesId": "echoes-forgotten-war",
       "registeredConfigurations": 9,
       "registeredUnits": 306,
-      "approvedUnits": 3,
+      "approvedUnits": 4,
       "keeperReferences": 17,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -237,7 +237,7 @@
         {
           "showId": "echoes-forgotten-war-s1-e05",
           "registeredUnits": 19,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "echoes-forgotten-war-s1-e06",
@@ -8961,8 +8961,8 @@
       "issueLabel": "Issue 5 — Embers of the Zenith",
       "unitLabel": "PAGE",
       "registeredUnits": 19,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 19,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 18,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -8986,7 +8986,9 @@
         "EFW_S1E05_S16",
         "EFW_S1E05_EDITOR_CLOSE"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "EFW_S1E05_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/echoes-forgotten-war-s1/covers.json",
@@ -8994,14 +8996,14 @@
       ],
       "sourceOverlays": [],
       "examplesMissing": [
-        "EFW_S1E05_COVER",
         "EFW_S1E05_EDITOR_OPEN",
         "EFW_S1E05_S01",
         "EFW_S1E05_S02",
         "EFW_S1E05_S03",
         "EFW_S1E05_S04",
         "EFW_S1E05_S05",
-        "EFW_S1E05_S06"
+        "EFW_S1E05_S06",
+        "EFW_S1E05_S07"
       ]
     },
     {
@@ -10566,9 +10568,8 @@
     {
       "key": "echoes-forgotten-war::echoes-forgotten-war-s1-e05",
       "expectedUnits": 19,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "EFW_S1E05_COVER",
         "EFW_S1E05_EDITOR_OPEN",
         "EFW_S1E05_S01",
         "EFW_S1E05_S02",
