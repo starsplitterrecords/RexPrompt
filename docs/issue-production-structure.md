@@ -14,11 +14,11 @@ The canonical publishing hierarchy is Universe → Series → Issue/Chapter → 
 
 `readingOrder: curated-complete-book` means the exact source-backed book sequence has been verified and can be used as the issue export inventory. `source-order-only` means the registered recipe sequence has been preserved, **not** that cover/editorial/cast pages exist or that release can proceed.
 
-`specialUnits` gives the exact existing unit ID, 1-based position, editorial role, and evidence source. A cover can be `ordered`, `available-in-separate-shelf`, or `not-established`. A cover in a separate shelf is **not** silently added to a book. Do not invent a cover, cast page, editor's note, or teaser merely to satisfy a template.
+`specialUnits` gives the exact existing unit ID, 1-based position, editorial role, and evidence source. **The cover must be part of the issue assembler's source sequence, in position 1; book audits must not prepend it from a separate shelf.** Source files such as `covers.json` may be shared internally, but `data/shows.json` must register only the issue, not a standalone cover selection. Do not invent covers or any other pages to satisfy a template.
 
 Embedded comic pages keep their existing IDs. In Vikings 2026!, for example, P01 is the cover, P02 is an editorial intro, and the last numbered page is a closing editorial or teaser. This is source-derived classification, **not** a rename, resequence, or new page.
 
-Episode source sequences inside Backyard Rockets and Echoes of a Forgotten War are indexed separately with `selectorRegistered: false`. These entries are **not new assembler configurations** and they are not published issues. Echoes' separate cover shelf is reported as available, but not yet book-ordered.
+Backyard Rockets and Echoes of a Forgotten War each have eight registered, cover-first issue selectors. The original season selectors remain as non-book source archives, not extra published issues. Each episode's cover is baked into the source sequence of the real issue selector.
 
 ## Cast-page options
 
@@ -41,7 +41,7 @@ A missing cover, unapproved art, no curated order, and missing publication metad
 
 ## November 8, 2026 cover-source completion
 
-The portfolio now has **114 registered, curated complete-book issue orders** and **154 assembler configurations** across **25 production series**. The issue-structure audit identifies a cover ordered in position 1 for **all 114**. This closes the previously tracked **8 shelf-only cover integrations** and **32 absent cover-recipe definitions**.
+At the initial cover-source completion checkpoint, the portfolio had **114 registered, curated complete-book issue orders** and **154 assembler configurations** across **25 production series**. All 114 books had a cover ordered first, but 29 redundant cover-only selectors still existed in the registry. Those were retired in the following normalization.
 
 - Existing `Echoes of a Forgotten War` covers (`EFW_S1E01_COVER` through `EFW_S1E08_COVER`) were reused without altering their content; the eight new issue selectors assemble each cover followed by that episode's original story units.
 - `Backyard Rockets` retains its complete Season 1 source and now has eight issue-level selections and eight new source-grounded commercial-cover recipes. The existing **published** Issue 1 and Issues 1–2 combined edition covers in StarSplitterVisions remain authoritative and must **not** be overwritten or assumed to match future independent issue covers.
@@ -52,4 +52,12 @@ The portfolio now has **114 registered, curated complete-book issue orders** and
 **Source readiness is not image readiness.** These 32 newly authored cover recipes are original *production prompts*, not approved rendered image files. The cover artwork must pass the Comic Production Continuity Skill's actual-pixel reference gate, generation, artistic review, approval, and mastering before a collected book can be released. The existing book-export coverage report independently measures approved image completeness. As of this repair, that report flags **110 of 114** curated books as missing one or more approved image binaries; four have full approved-draft coverage, which itself does not assert mastering or release approval.
 
 The two legacy season selectors (`backyard-rockets-s1` and `echoes-forgotten-war-s1`) are retained as aggregate working sources and are **not** additional books. Their real eight-issue selectors are the authoritative book-unit production selections.
+
+## November 8, 2026 — no standalone cover configurations
+
+The source registry is normalized to **125 configurations: 114 curated issues plus 11 non-book technical/season/editorial selections**. The **29 cover-only selectors** formerly included in the 154-configuration registry have been permanently archived, unchanged, in `production/migrations/retired-cover-selectors-2026-11-08.json` for historical provenance. No raw cover recipes, original approved images, assets, character references, or dialogue files are deleted.
+
+All **38 issue covers** previously accessible only through those 29 cover selectors now appear in their own issue's registered `scenesFiles` **before** the existing story source. These are the six Shattering issues, eight Division Threshold issues, seven Low Tide Signal chapters, six Azure Reach issues, ten Stardust Station issues and one Between the Beacons issue.
+
+The cover is now a normal **first production unit of the issue assembler**, not an audit-time supplement, a separate menu entry, or an independently tracked release. The book audit explicitly rejects attempts to create a complete book by finding a cover outside the registered issue source. Regression tests assert that the retired cover IDs are found in exactly one issue each and occupy position 1. A shared `covers.json` source file remains permitted as an internal storage detail, never as a separate production configuration.
 
