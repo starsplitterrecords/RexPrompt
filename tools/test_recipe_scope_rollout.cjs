@@ -95,7 +95,8 @@ assert.equal(divisionShows.length,8,'Missing flat Division issues');
 let divisionPages=0,divisionScoped=0,divisionSavings=0;
 for(const show of divisionShows){
   assert(!show.sceneOverlays?.length,'Division must remain flat '+show.id);
-  const scenes=load(show,true),store={__show:show},base=show.basePath;
+  const scenes=load(show,true).filter(page=>!/_COVER$/.test(page.id)),store={__show:show},base=show.basePath;
+  // The cover is now baked into each complete issue, but the flat page-scope baseline protects 204 original story/editorial pages only.
   for(const file of ['characters','settings','regions','factions','dialogue','direction'])
     store[file+'.json']=json(base+'/'+file+'.json');
   for(const page of scenes){
