@@ -408,7 +408,7 @@ function assembleScene(s,targetStore,i,{includeManual=false}={}){
   // A scene's source-locked song title is a cue, not visible on-page lettering.
   if(typeof s.songTitle==="string"&&s.songTitle.trim())
     out.push("\n[SONG CUE]\nTitle: "+s.songTitle.trim());
-  if(include("production")&&(s.generationLine||show.generationLine))out.push(s.generationLine||show.generationLine);
+  if(include("production")){const coverUnit=s.pageKind==="cover"||s.unit==="COVER"||/(?:_COVER|_COVER_PAGE)$/.test(key);const productionLine=s.generationLine||(coverUnit&&show.coverGenerationLine)||show.generationLine;if(productionLine)out.push(productionLine);}
   if(include("setting")){
     if(s.settingText){
       out.push("\n[SETTING]\n"+s.settingText);
