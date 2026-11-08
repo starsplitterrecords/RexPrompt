@@ -4,18 +4,18 @@ Generated from live registered source recipes, curated inventories and exact app
 
 ## Summary
 
-- Registered selectors: 126 (includes shelves and non-comic selectors)
+- Registered selectors: 138 (includes shelves and non-comic selectors)
 - Curated complete-book inventories: 74
-- Full approved draft coverage: 3
-- Curated but missing approved images: 71
-- Uncurated issue/season selectors: 14
+- Full approved draft coverage: 4
+- Curated but missing approved images: 70
+- Uncurated issue/season selectors: 26
 - Auxiliary selectors not representing books: 38
 
 ## Individual issue inventories
 
 | Series | Registered selector | Inventory | Approved / expected | Blocking reason |
 |---|---|---|---:|---|
-| shattering | shattering-i01 | blocked-missing-images | 0 / 25 | missing-approved-images |
+| shattering | shattering-i01 | blocked-missing-images | 24 / 25 | missing-approved-images |
 | shattering | shattering-i02 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | shattering | shattering-i03 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | shattering | shattering-i04 | blocked-missing-images | 0 / 25 | missing-approved-images |
@@ -59,8 +59,8 @@ Generated from live registered source recipes, curated inventories and exact app
 | stardust-station | stardust-station-e10 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | azure-reach | azure-reach-s1-e02 | blocked-missing-images | 11 / 25 | missing-approved-images |
 | vikings-2026 | vikings-2026-s1-e01 | complete-draft-export-supported | 18 / 18 | — |
-| vikings-2026 | vikings-2026-s1-e02 | blocked-missing-images | 4 / 23 | missing-approved-images |
-| vikings-2026 | vikings-2026-s1-e03 | blocked-missing-images | 0 / 21 | missing-approved-images |
+| vikings-2026 | vikings-2026-s1-e02 | complete-draft-export-supported | 23 / 23 | — |
+| vikings-2026 | vikings-2026-s1-e03 | blocked-missing-images | 2 / 21 | missing-approved-images |
 | vikings-2026 | vikings-2026-s1-e04 | blocked-missing-images | 0 / 27 | missing-approved-images |
 | vikings-2026 | vikings-2026-s1-e05 | blocked-missing-images | 0 / 24 | missing-approved-images |
 | vikings-2026 | vikings-2026-s1-e06 | blocked-missing-images | 0 / 27 | missing-approved-images |
@@ -119,6 +119,18 @@ Generated from live registered source recipes, curated inventories and exact app
 | rex-fleet-ghostwind-arrow | rex-fleet-ghostwind-arrow-i01 | uncurated | 0 / 22 | book-cover-not-established |
 | rex-fleet-slip-knife | rex-fleet-slip-knife-i01 | uncurated | 0 / 22 | book-cover-not-established |
 | rex-fleet-crimson-warden | rex-fleet-crimson-warden-i01 | uncurated | 0 / 28 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i01 | uncurated | 22 / 53 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i02 | uncurated | 0 / 40 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i03 | uncurated | 0 / 36 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i04 | uncurated | 0 / 54 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i05 | uncurated | 0 / 43 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i06 | uncurated | 0 / 48 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i07 | uncurated | 0 / 27 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i08 | uncurated | 0 / 23 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i09 | uncurated | 0 / 24 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i10 | uncurated | 0 / 27 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i11 | uncurated | 0 / 23 | book-cover-not-established |
+| rex-fleet-full-performance | rex-fleet-full-performance-i12 | uncurated | 0 / 27 | book-cover-not-established |
 
 The machine-readable `production/book-export-coverage.json` contains the exact missing IDs and source provenance for every selector. No unknown cover, cast, editorial or teaser is invented. A manifest-backed and fully approved issue supports a review export; a mastered and approved release is a separate editorial/production gate.
 
