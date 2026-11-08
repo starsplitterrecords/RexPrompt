@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "registrySelectors": 154,
+  "registrySelectors": 125,
   "issuesWithManifest": 114,
-  "sourceAudit": "registered show sources, including gzip-base64 overlays and separate cover/editorial shelves",
+  "sourceAudit": "registered issue sources, including gzip-base64 overlays and explicitly authored editorial material; covers must load directly as first issue units",
   "statuses": {
     "blocked-missing-images": 110,
     "complete-draft-export-supported": 4,
-    "not-a-book": 40
+    "not-a-book": 11
   },
   "entries": [
     {
@@ -230,12 +230,6 @@
       "reason": "missing-approved-images",
       "inventorySource": "preexisting-verified",
       "sourceShowId": "shattering-i06"
-    },
-    {
-      "selectorId": "shattering-covers",
-      "kind": "auxiliary-shelf",
-      "seriesId": "shattering",
-      "status": "not-a-book"
     },
     {
       "selectorId": "rex-fleet-academy-anomalies-i01",
@@ -2770,12 +2764,6 @@
       "sourceUnitCount": 149
     },
     {
-      "selectorId": "echoes-forgotten-war-s1-covers",
-      "kind": "auxiliary-shelf",
-      "seriesId": "echoes-forgotten-war",
-      "status": "not-a-book"
-    },
-    {
       "selectorId": "sunforge-outlaw-s1-e01",
       "seriesId": "sunforge-outlaw",
       "kind": "issue",
@@ -3388,12 +3376,6 @@
       "sourceShowId": "rex-fleet-academy-between-beacons-i01"
     },
     {
-      "selectorId": "rex-fleet-academy-between-beacons-cover-i01",
-      "kind": "auxiliary-shelf",
-      "seriesId": "rex-fleet-academy-between-beacons",
-      "status": "not-a-book"
-    },
-    {
       "selectorId": "rex-fleet-academy-core-worlds-i01",
       "seriesId": "rex-fleet-academy-core-worlds",
       "kind": "issue",
@@ -3554,162 +3536,6 @@
       "reason": "missing-approved-images",
       "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-ghostwind-arrow-i01"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e01",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e02",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e03",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e04",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e05",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e06",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e07",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "division-threshold-s1-cover-e08",
-      "kind": "auxiliary-shelf",
-      "seriesId": "division-threshold",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c01",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c02",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c03",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c04",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c05",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c06",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "low-tide-signal-cover-c07",
-      "kind": "auxiliary-shelf",
-      "seriesId": "low-tide-signal",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "azure-reach-s1-covers",
-      "kind": "auxiliary-shelf",
-      "seriesId": "azure-reach",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e01",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e02",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e03",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e04",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e05",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e06",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e07",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e08",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e09",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
-    },
-    {
-      "selectorId": "stardust-station-cover-e10",
-      "kind": "auxiliary-shelf",
-      "seriesId": "stardust-station",
-      "status": "not-a-book"
     },
     {
       "selectorId": "division-threshold-s1-editorial-e01",
