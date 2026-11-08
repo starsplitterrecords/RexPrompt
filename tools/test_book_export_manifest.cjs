@@ -48,6 +48,10 @@ for(const oldCover of retired.retiredConfigurationEntries){
    const sources=shows.filter(s=>s.seriesId===oldCover.seriesId&&
      (s.scenesFiles?.[0]===file)&&inv.issues[s.seriesId+'::'+s.id]?.units[0]===record.id);
    assert.equal(sources.length,1,'Exactly one real issue must own cover in assembler position one: '+record.id);
+   assert(sources[0].includeIdPattern,'Every issue using a shared cover source must be scoped to its own cover');
+   const sourceScope=new RegExp(sources[0].includeIdPattern);
+   const ownedCovers=records.filter(row=>/_COVER$/.test(row.id)&&sourceScope.test(row.id));
+   assert.deepEqual(ownedCovers.map(x=>x.id),[record.id],'Shared cover file leaked a second issue cover into '+sources[0].id);
    assert.equal(sources[0].unitLabel==='COVER',false,'Cover cannot be a standalone selector');
    bakedIssueCount++;
   }
