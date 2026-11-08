@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// RexPrompt Sunforge sanitation regression: original story shelves remain authoritative.
+// RexPrompt Sunforge sanitation regression: the canonical page source owns its final scope.
 // The chef receives shorter references and zero duplicated exact dialogue where opted in.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const assert=require('node:assert/strict');
@@ -27,9 +27,7 @@ for(let issue=1;issue<=12;issue++){
  const keys=new Set(profiles.map(x=>x.id));
  assert.equal(keys.size,stories.length,'Duplicate profile '+id);
  assert(stories.every(x=>keys.has(x.id)),'Orphan/missing sanitation profile '+id);
- const li=show.sceneOverlays.findIndex(x=>x.file==='editorial/page_layouts_e'+n+'.json');
- const pi=show.sceneOverlays.findIndex(x=>x.file==='editorial/page_assembly_e'+n+'.json');
- assert(pi>li&&show.sceneOverlays[pi].mergeById&&show.sceneOverlays[pi].strict,'Sanitation must merge after pageLayout '+id);
+ assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Active Sunforge field overlay remains '+id);
  store.__show=show;
  for(let i=0;i<stories.length;i++){
    const page=stories[i],layout=layouts.find(x=>x.id===page.id),profile=profiles.find(x=>x.id===page.id);
@@ -39,7 +37,12 @@ for(let issue=1;issue<=12;issue++){
      'Unexpected sanitation fields '+page.id);
    for(const f of ['panelPlan','dialogueInline','summary','characters','direction','pageLayout'])
      assert(!(f in profile),'Sanitation overlay must not rewrite story '+page.id+' field '+f);
-   const baseline={...page,...layout},clean={...baseline,...profile};
+   assert.deepEqual(page.pageLayout,layout.pageLayout,'Canonical layout differs from archived profile '+page.id);
+   for(const [key,value] of Object.entries(profile))if(key!=='id')
+     assert.deepEqual(page[key],value,'Canonical scope differs from archived profile '+page.id+' '+key);
+   const clean=page,baseline={...page};
+   for(const key of ['promptCharacterMode','promptSettingMode','promptSuppress','promptPanelLetteringMode'])
+     delete baseline[key];
    validatePageLayout(clean);
    const before=assemble(baseline,store,i),after=assemble(clean,store,i);
    assert(after.includes(show.generationLine),'Production brief disappeared '+page.id);
@@ -86,7 +89,7 @@ assert.equal(panels,1073,'Canonical panel inventory changed');
 assert.equal(indexedPages,40,'Source-specific exact-lettering cleanup should remain opt-in');
 const pct=((oldSize-newSize)*100/oldSize).toFixed(1);
 assert(oldSize>newSize,'Prompts were not decluttered');
-const corrected=json(prefix+'editorial/page_assembly_e03.json').find(x=>x.id==='SUN_S1E03_P01');
+const corrected=json(prefix+'pages_e03.json').find(x=>x.id==='SUN_S1E03_P01');
 assert.equal(corrected.setting,'sunfields','The road approach must not inherit Mirage Club location');
 // Deliberate corruption must fail loudly, never silently move or drop a balloon.
 const rawSample=json(prefix+'pages_e02.json').find(p=>p.id==='SUN_S1E02_P01');
