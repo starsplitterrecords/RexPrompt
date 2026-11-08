@@ -39,11 +39,11 @@ for(const id of shipIds){
  for(const shelf of ['characters','dialogue','settings','regions','factions','direction'])
   store[shelf+'.json']=json(base+'/'+shelf+'.json');
  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Ship must load faction decisions from canonical pages '+id);
- const exceptions=id==='rex-fleet-glass-horizon-i01'?
-   []:json(base+'/editorial/visual_faction_pages_i01.json');
- const retained=new Set(exceptions.map(x=>x.id));
- assert.equal(retained.size,exceptions.length,'Duplicate ship exception ID');
  const pages=loadPages(show);assert(pages.length>=22,'Unexpected issue size '+id);
+ const exceptions=pages.filter(p=>p.promptIncludeFactions===true);
+ const retained=new Set(exceptions.map(p=>p.id));
+ if(id==='rex-fleet-glass-horizon-i01')assert.equal(retained.size,0,'Glass Horizon acquired faction exceptions');
+ else assert(retained.size>0,'Canonical faction exceptions missing '+id);
  let localCount=0;
  for(const [i,p] of pages.entries()){
   const txt=assembleScene(p,store,i),expected=Array.from(visibleCharacterHandles(p,store['characters.json']));
@@ -68,7 +68,7 @@ for(const id of shipIds){
   }
   handles+=refs.length;localCount++;
  }
- assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Canonical page source lost a faction exception '+id);
+ assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Canonical faction selection inconsistent '+id);
  pagesTotal+=localCount;console.log('PASS '+id+': '+localCount+' pages; visible cast only, selective faction visuals');
 }
 assert(baseFactionPages>keptFactionPages,'Repeated faction prose was not reduced');

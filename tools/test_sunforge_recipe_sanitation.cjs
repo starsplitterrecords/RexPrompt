@@ -21,25 +21,15 @@ for(let issue=1;issue<=12;issue++){
  const show=catalog.find(x=>x.id===id);assert(show,'No show '+id);
  const source=json(prefix+'pages_e'+n+'.json');
  const stories=source.filter(x=>new RegExp('^SUN_S1E'+n+'_P\\d\\d$').test(x.id));
- const layouts=json(prefix+'editorial/page_layouts_e'+n+'.json');
- const profiles=json(prefix+'editorial/page_assembly_e'+n+'.json');
- assert.equal(profiles.length,stories.length,'Missing sanitation records '+id);
- const keys=new Set(profiles.map(x=>x.id));
- assert.equal(keys.size,stories.length,'Duplicate profile '+id);
- assert(stories.every(x=>keys.has(x.id)),'Orphan/missing sanitation profile '+id);
+ const keys=new Set(stories.map(x=>x.id));
+ assert.equal(keys.size,stories.length,'Duplicate canonical Sunforge page IDs '+id);
  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Active Sunforge field overlay remains '+id);
  store.__show=show;
  for(let i=0;i<stories.length;i++){
-   const page=stories[i],layout=layouts.find(x=>x.id===page.id),profile=profiles.find(x=>x.id===page.id);
-   assert(layout,'Missing pageLayout '+page.id);
-   assert.deepEqual(Object.keys(profile).filter(k=>k!=='id'&&k!=='setting').sort(),
-     (issue===2||issue===3?['promptCharacterMode','promptPanelLetteringMode','promptSettingMode','promptSuppress']:['promptCharacterMode','promptSettingMode','promptSuppress']).sort(),
-     'Unexpected sanitation fields '+page.id);
-   for(const f of ['panelPlan','dialogueInline','summary','characters','direction','pageLayout'])
-     assert(!(f in profile),'Sanitation overlay must not rewrite story '+page.id+' field '+f);
-   assert.deepEqual(page.pageLayout,layout.pageLayout,'Canonical layout differs from archived profile '+page.id);
-   for(const [key,value] of Object.entries(profile))if(key!=='id')
-     assert.deepEqual(page[key],value,'Canonical scope differs from archived profile '+page.id+' '+key);
+   const page=stories[i],profile=page;
+   assert(page.pageLayout,'Missing canonical page layout '+page.id);
+   assert(Array.isArray(page.promptSuppress),'Missing canonical recipe suppression '+page.id);
+   assert(['cast','full'].includes(page.promptCharacterMode),'Invalid character mode '+page.id);
    const clean=page,baseline={...page};
    for(const key of ['promptCharacterMode','promptSettingMode','promptSuppress','promptPanelLetteringMode'])
      delete baseline[key];

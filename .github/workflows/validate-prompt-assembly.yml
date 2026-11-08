@@ -21,9 +21,6 @@ on:
       - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_rex_academy_visual_scope.cjs'
       - 'tools/test_rex_ship_visual_scope.cjs'
-      - 'data/shows/rex-fleet-*/editorial/visual_faction_pages_i*.json'
-      - 'data/shows/rex-fleet-academy-*/editorial/visual_faction_pages_i*.json'
-      - 'data/shows/rfa-reach-resolve/editorial/visual_faction_pages_i*.json'
       - 'tools/test_four_series_visual_scope.cjs'
       - 'tools/test_three_series_visual_scope.cjs'
       - 'data/shows/shattering/visual_cast_i*.json'
@@ -46,13 +43,11 @@ on:
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_issue2_layout_rollout.cjs'
+      - 'tools/validate_canonical_source_integrity.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
       - 'tools/test_sunforge_recipe_sanitation.cjs'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
       - 'docs/sunforge-recipe-sanitation.md'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
       - 'tools/test_azure_page_layouts.cjs'
       - 'tools/test_azure_recipe_scopes.cjs'
@@ -62,7 +57,6 @@ on:
       - 'data/shows/azure-reach-s1/settings.json'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/test_backyard_rockets_layouts.cjs'
-      - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
       - 'tools/test_low_tide_dialogue_overlay.cjs'
       - 'data/shows/low-tide-signal/assembler.json'
@@ -105,9 +99,6 @@ on:
       - 'tools/test_stardust_visual_refs.cjs'
       - 'tools/test_rex_academy_visual_scope.cjs'
       - 'tools/test_rex_ship_visual_scope.cjs'
-      - 'data/shows/rex-fleet-*/editorial/visual_faction_pages_i*.json'
-      - 'data/shows/rex-fleet-academy-*/editorial/visual_faction_pages_i*.json'
-      - 'data/shows/rfa-reach-resolve/editorial/visual_faction_pages_i*.json'
       - 'tools/test_four_series_visual_scope.cjs'
       - 'tools/test_recipe_sanitation_rollout.cjs'
       - 'tools/test_vikings_i02_chef_sanitation.cjs'
@@ -125,13 +116,11 @@ on:
       - 'data/shows/stardust-station/editorial/page_assembly_profiles_e*.json'
       - 'tools/test_page_layout.cjs'
       - 'tools/test_issue2_layout_rollout.cjs'
+      - 'tools/validate_canonical_source_integrity.cjs'
       - 'tools/test_sunforge_page_layouts.cjs'
       - 'tools/test_sunforge_all_layouts.cjs'
       - 'tools/test_sunforge_recipe_sanitation.cjs'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_assembly_e*.json'
       - 'docs/sunforge-recipe-sanitation.md'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e*.json'
-      - 'data/shows/sunforge-outlaw-s1/editorial/page_layouts_e01.json'
       - 'data/shows/sunforge-outlaw-s1/pages_e01.json'
       - 'tools/test_azure_page_layouts.cjs'
       - 'tools/test_azure_recipe_scopes.cjs'
@@ -141,7 +130,6 @@ on:
       - 'data/shows/azure-reach-s1/settings.json'
       - 'data/shows/azure-reach-s1/editorial/page_layouts_e*.json'
       - 'tools/test_backyard_rockets_layouts.cjs'
-      - 'data/shows/backyard-rockets-s1/editorial_page_layouts_e*.json'
       - 'tools/test_low_tide_page_layout.cjs'
       - 'tools/test_low_tide_dialogue_overlay.cjs'
       - 'data/shows/low-tide-signal/assembler.json'
@@ -174,6 +162,7 @@ jobs:
       - name: Validate JavaScript
         run: |
           node --check prompt-suppress.js
+          node --check tools/validate_canonical_source_integrity.cjs
           node --check tools/test_prompt_assembly.cjs
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_recipe_sanitation_rollout.cjs
@@ -204,6 +193,7 @@ jobs:
           node --check tools/test_stardust_e03_e10_density_scope.cjs
       - name: Test assembled page content
         run: |
+          node tools/validate_canonical_source_integrity.cjs
           node tools/test_prompt_assembly.cjs
           node tools/test_editorial_page_scopes.cjs
           node tools/test_recipe_sanitation_rollout.cjs

@@ -1,6 +1,6 @@
 # Backyard Rockets — issue-level page-composition rollout
 
-**Scope:** Season 1, scripted interior pages of Issues 3–8. Art direction is encoded in the exact current RexPrompt `pageLayout` contract as strict, ID-matched overlays. These are **production page-layout choices**, not story rewrites or finalized generated artwork.
+**Scope:** Season 1, scripted interior pages of Issues 3–8. Art direction is encoded in the exact current RexPrompt `pageLayout` contract directly within each canonical compressed production page. These are **production page-layout choices**, not story rewrites or finalized generated artwork.
 
 **Released boundary:** Issues 1–2 are already published in StarSplitterVisions as an opening combined edition. They use earlier production structures, including some pages with no explicit `panelPlan`. This rollout does not touch their scripts, page layouts, approved artwork, or publication state. The editorial opening and closing splashes in all eight issues already express a single-page design through existing production prose, so they have not been wrongly treated as separate narrative panels.
 
@@ -17,26 +17,26 @@
 
 The eight allowed production architectures used are `asymmetric`, `montage`, `freeform`, `vertical`, `grid`, `quiet`, `open`, and `splash-with-insets`. The style distribution is intentional rather than a hard quota. No scene gains or loses panels.
 
-## Technical locations
+## Canonical production sources
 
-Each layout is saved independently of compressed source writing:
+The page layouts and chef-facing scope fields are stored directly in the compressed episode data:
 
 ```text
-data/shows/backyard-rockets-s1/editorial_page_layouts_e03.json
-data/shows/backyard-rockets-s1/editorial_page_layouts_e04.json
-data/shows/backyard-rockets-s1/editorial_page_layouts_e05.json
-data/shows/backyard-rockets-s1/editorial_page_layouts_e06.json
-data/shows/backyard-rockets-s1/editorial_page_layouts_e07.json
-data/shows/backyard-rockets-s1/editorial_page_layouts_e08.json
+data/shows/backyard-rockets-s1/encoded/scenes_e03_public_sky.json.gzb64
+data/shows/backyard-rockets-s1/encoded/scenes_e04_trip_point.json.gzb64
+data/shows/backyard-rockets-s1/encoded/scenes_e05_reserve_margin.json.gzb64
+data/shows/backyard-rockets-s1/encoded/scenes_e06_ground_loop.json.gzb64
+data/shows/backyard-rockets-s1/encoded/scenes_e07_ablative_armor.json.gzb64
+data/shows/backyard-rockets-s1/encoded/scenes_e08_sky_piercer.json.gzb64
 ```
 
-Each overlay is registered immediately after its corresponding encoded episode with `mergeById: true` and `strict: true`. Records contain only an exact existing page `id` and an optional `pageLayout` value; story prose, scene membership, dialogue, cast references and panel plans remain authored in their original files.
+There is no separate layout or recipe-scope override. Dialogue, scene membership, cast references, panel plans and production direction remain in those same canonical records. Git history holds the former revision layers.
 
 ## Validation and next production gate
 
 Run `node tools/test_backyard_rockets_layouts.cjs` and the general page assembly tests. The issue-wide regression compares each assembled recipe with the unprofiled original. The entire original `[PANEL PLAN]` and every downstream ingredient must remain exactly identical after page-layout addition. It confirms:
 
-- 118 layout profiles against 118 existing interiors
+- 118 embedded compositions across 118 existing interiors
 - all 559 original panel beats, no extra or duplicate references
 - exact scripted dialogue/order/continuity preserved
 - eight permitted composition architectures

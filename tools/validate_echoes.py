@@ -44,14 +44,13 @@ def validate_manifest() -> None:
     assert entry.get("scenesFiles") == [p.name for p in SCENE_FILES]
     assert not entry.get("sceneOverlays"), "Echoes must use canonical per-episode fields, not overlays"
     for issue in range(1, 9):
-        source = {p["id"]: p for p in load(SHOW / f"scenes_e{issue:02d}.json")}
-        for fixture in (f"editorial/page_layouts_e{issue:02d}.json", f"editorial/page_recipe_scope_e{issue:02d}.json"):
-            for patch in load(SHOW / fixture):
-                canonical = source.get(patch["id"])
-                assert canonical is not None, f"Missing canonical page for {patch['id']}"
-                for key, value in patch.items():
-                    if key != "id":
-                        assert canonical.get(key) == value, f"Unconsolidated field: {patch['id']} {key}"
+        pages = load(SHOW / f"scenes_e{issue:02d}.json")
+        for page in pages:
+            layout = page.get("pageLayout")
+            assert isinstance(layout, dict) and layout.get("composition"), f"Missing canonical layout on {page['id']}"
+            assert len(layout.get("panels", [])) == len(page.get("panelPlan", [])), f"Panel coverage changed on {page['id']}"
+            if page.get("promptCharacterMode") is not None:
+                assert page["promptCharacterMode"] == "cast", f"Invalid canonical character scope on {page['id']}"
     assert entry.get("unitLabel") == "PAGE"
     assert entry.get("seriesId") == "echoes-forgotten-war"
     assert entry.get("seriesName") == "Echoes of a Forgotten War"

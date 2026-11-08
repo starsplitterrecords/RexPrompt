@@ -11,7 +11,6 @@ const ctx=vm.createContext({});
 vm.runInContext(html.slice(begin,end)+';globalThis.recipeFunctions={assembleScene,pageAssembly};',ctx);
 const {assembleScene,pageAssembly}=ctx.recipeFunctions;
 const catalog=json('data/shows.json');
-const policyFile=f=>/^(editorial_recipe_scope_|editorial\/recipe_scope_)/.test(f||'');
 const selected=catalog.filter(x=>x.id==='backyard-rockets-s1');
 function decode(base,file,encoding){const p=base+'/'+file;
   return encoding==='gzip-base64'?JSON.parse(zlib.gunzipSync(Buffer.from(read(p).trim(),'base64')).toString('utf8')):json(p)}
@@ -31,7 +30,6 @@ function load(show,applyScope){
  let scenes=files.flatMap(f=>normalize(decode(base,f)));
  if(show.excludeSceneIds?.length){const x=new Set(show.excludeSceneIds);scenes=scenes.filter(p=>!x.has(p.id))}
  for(const x of show.sceneOverlays||[]){
-   if(policyFile(x.file)&&!applyScope)continue;
    let items=normalize(decode(base,x.file,x.encoding));
    if(x.includeIds?.length){const set=new Set(x.includeIds);items=items.filter(v=>set.has(v.id))}
    if(x.excludeIds?.length){const set=new Set(x.excludeIds);items=items.filter(v=>!set.has(v.id))}
@@ -47,42 +45,37 @@ function load(show,applyScope){
 }
 const names=new Set(),idList=new Set(),counts={};
 for(const show of selected){
- assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Canonical Backyard pages must not use field overlays');
- const base=show.basePath,scoped=load(show,true),after=new Map(scoped.map(x=>[x.id,x]));
- assert.equal(after.size,scoped.length,'Duplicate assembled page IDs '+show.id);
- const store={__show:show};
+ assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Canonical Backyard sources must not use field patches');
+ const scoped=load(show,true),store={__show:show},base=show.basePath;
  for(const file of ['characters','settings','regions','factions','dialogue','direction'])
    store[file+'.json']=json(base+'/'+file+'.json');
- let pages=0,bytes=0,suppressionCount=0;
- for(let issue=3;issue<=8;issue++){
-   const n=String(issue).padStart(2,'0'),file='editorial_recipe_scope_e'+n+'.json';
-   const policies=normalize(decode(base,file)),unique=new Set();
-   for(const item of policies){
-     assert(item.id&&!unique.has(item.id),'Duplicate archived scope '+item.id);unique.add(item.id);
-     const fields=Object.keys(item);
-     assert(fields.every(x=>['id','promptSuppress','promptCharacterMode','promptSettingMode'].includes(x)),
-       'Scope fixture includes story or layout fields '+item.id);
-     const canonical=after.get(item.id);
-     assert(canonical,'Missing canonical page '+item.id);
-     for(const [key,value] of Object.entries(item))if(key!=='id')
-       assert.deepEqual(canonical[key],value,'Canonical source does not carry editorial scope '+item.id+' '+key);
-     const bare={...canonical};
-     for(const key of fields)if(key!=='id')delete bare[key];
-     for(const f of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','directionInline','settingText','summary'])
-       assert.equal(JSON.stringify(bare[f]),JSON.stringify(canonical[f]),'Protected field changed '+item.id+' '+f);
-     const old=assembleScene(bare,store,0),now=assembleScene(canonical,store,0);
-     function protectedTail(txt){const layout=txt.indexOf('\n[PAGE COMPOSITION]'),panel=txt.indexOf('\n[PANEL PLAN]');
-       const pos=layout>=0?layout:panel;assert(pos>=0,'Missing panel plan '+item.id);return txt.slice(pos);}
-     assert.equal(protectedTail(old),protectedTail(now),'Canonical policy altered protected layout or dialogue '+item.id);
-     assert(now.length<=old.length+40,'Policy unexpectedly expanded prompt '+item.id);
-     if(item.promptSettingMode==='label'&&canonical.setting&&!canonical.settingText)
-       assert(store['settings.json'][canonical.setting]?.name,'Human-readable setting label missing '+item.id);
-     pageAssembly(canonical,show);
-     suppressionCount+=+(item.promptSuppress?.length>0);
-     bytes+=old.length-now.length;pages++;idList.add(item.id);
-   }
+ const pages=scoped.filter(x=>/^BR_S1E0[3-8]_/.test(x.id)&&!!x.pageLayout);
+ assert.equal(pages.length,118,'Canonical Backyard layout/scope inventory changed');
+ let bytes=0,suppressionCount=0,actualPolicies=0;
+ for(const page of pages){
+  const fields=['promptCharacterMode','promptSettingMode','promptSuppress'].filter(field=>
+    Object.prototype.hasOwnProperty.call(page,field));
+  if(!fields.length)continue;
+  actualPolicies++;
+  if(Object.prototype.hasOwnProperty.call(page,'promptSuppress'))
+    assert(Array.isArray(page.promptSuppress),'Invalid prompt suppression '+page.id);
+  const bare={...page};
+  for(const field of fields)delete bare[field];
+  for(const field of ['panelPlan','dialogueInline','dialog','continuityFrom','pageLayout','directionInline','settingText','summary'])
+    assert.equal(JSON.stringify(bare[field]),JSON.stringify(page[field]),'Protected story field changed '+page.id+' '+field);
+  const old=assembleScene(bare,store,0),now=assembleScene(page,store,0);
+  const tail=txt=>{const layout=txt.indexOf('\n[PAGE COMPOSITION]'),panel=txt.indexOf('\n[PANEL PLAN]');
+    assert(panel>=0,'Panel plan missing '+page.id);return txt.slice(layout>=0?layout:panel)};
+  assert.equal(tail(old),tail(now),'Canonical scope altered story composition or dialogue '+page.id);
+  assert(now.length<=old.length+40,'Page scope unexpectedly expanded prompt '+page.id);
+  if(page.promptSettingMode==='label'&&page.setting&&!page.settingText)
+    assert(store['settings.json'][page.setting]?.name,'Setting label unresolved '+page.id);
+  pageAssembly(page,show);
+  suppressionCount+=+(Array.isArray(page.promptSuppress)&&page.promptSuppress.length>0);
+  bytes+=old.length-now.length;idList.add(page.id);
  }
- counts['backyard-rockets-s1']={issues:1,profiles:pages,savedCharacters:bytes,suppressions:suppressionCount};
+ assert(actualPolicies>0,'No canonical Backyard policy fields found');
+ counts['backyard-rockets-s1']={issues:1,profiles:actualPolicies,savedCharacters:bytes,suppressions:suppressionCount};
  names.add(show.id);
 }
 // Division Threshold intentionally stores page scope *inside its flat compiled page

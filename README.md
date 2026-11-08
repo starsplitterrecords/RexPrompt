@@ -75,49 +75,35 @@ Series-specific source packages may remain in `data/` when they serve provenance
 
 A show may optionally provide `assembler.json` in its `basePath`. This augments or overrides the manifest entry without adding show-specific logic to `index.html`.
 
-Use it when a production package has multiple authoritative page/scene files or needs deterministic overlays:
+Use it when a production package has multiple authoritative page/scene source files. A page's dialogue, panel composition, visible cast, and chef-facing production fields belong in **one canonical page record**, not an override file.
 
 ```json
 {
   "scenesFiles": [
     "pages_e01_compiled.json",
     "pages_e02_compiled.json"
-  ],
-  "sceneOverlays": [
-    {
-      "file": "issue_01_rebuild.json",
-      "mergeById": true,
-      "strict": true
-    }
-  ],
-  "dialogueOverlays": [
-    {
-      "file": "issue_01_scene_dialogue.json",
-      "strict": true
-    }
   ]
 }
 ```
 
-`sceneOverlays` with `mergeById` replace only the fields supplied for matching production IDs while preserving the rest of each page/scene recipe. `dialogueOverlays` replace the matched recipe's `dialogueInline` with either `dialogueInline` or `sceneDialogue` from the overlay. They do **not** create detached generation units.
+Additional, non-competing page or cover files may be included through `scenesFiles` or existing append-only source registration. They contribute **new production IDs**, not replacement fields for existing IDs.
 
-Set `strict: true` for production overlays. Strict overlays fail when they reference an ID that is not present in the assembled production set. RexPrompt also rejects duplicate base/assembled IDs. This prevents development data from silently existing outside the generation path.
+**Do not create `mergeById` field overlays or `dialogueOverlays` for editorial changes.** Edit the authoritative page directly. Git history preserves previous revisions. CI runs `node tools/validate_canonical_source_integrity.cjs` to reject conflicting production layers and retired field-overlay files.
 
-The authoritative generation unit remains the assembled page/scene recipe: summary, setting/region, factions, characters, panel plan, dialogue, continuity, and direction are emitted together.
+The authoritative generation unit remains the page/scene recipe: summary, setting/region, factions, characters, panel plan, dialogue, continuity, direction, and page-specific art direction live together.
 
 ## How assembly works
 
 When a show is selected:
 
 1. RexPrompt loads that show's JSON dictionaries.
-2. If present, `assembler.json` loads the package's production file list and deterministic overlays.
-3. Page/scene overlays are applied to the production recipes by configured rules.
-4. Dialogue overlays are merged into those same recipes by page/scene ID.
-5. The selected assembled recipe resolves IDs against the show dictionaries.
-6. Character IDs become Star Splitter handles.
-7. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
-8. Setting, region, factions, characters, panel plan, continuity, and direction are appended as formatted prompt sections.
-9. The assembled result is displayed and can be copied directly to the clipboard.
+2. If present, `assembler.json` supplies package-local source configuration.
+3. Canonical pages and non-competing additional production files are loaded in registered order.
+4. The selected page resolves IDs against the show dictionaries.
+5. Character IDs become Star Splitter handles.
+6. Dialogue is assembled with the speaker handle, spoken line, and subtext when present.
+7. Setting, region, factions, characters, panel plan, continuity, and direction are appended as formatted prompt sections.
+8. The assembled result is displayed and can be copied directly to the clipboard.
 
 A generated prompt follows roughly this structure:
 
@@ -207,7 +193,7 @@ Run `node tools/test_prompt_assembly.cjs` to test these rules against current Vi
 
 ## Thunderbreak page-visible reference scope
 
-Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` in the **strict per-page assembly scope overlays**. Interior pages emit a single canonical reference handle for each registered visual identity in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. Unregistered incidental roles (such as a merchant or crew member) remain drawable through the panel instructions and attributed dialogue but have no invented canonical reference. Two Issue 3 pages further narrow the visual cast where listed people are not depicted. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
+Thunderbreak's 12 mainline issues enable `promptVisibleCastOnly: true` directly in **canonical page-scoped production fields**. Interior pages emit a single canonical reference handle for each registered visual identity in their authored `charactersInline` list; dialogue speakers outside that artwork cast do not create new visual reference tags. Unregistered incidental roles (such as a merchant or crew member) remain drawable through the panel instructions and attributed dialogue but have no invented canonical reference. Two Issue 3 pages further narrow the visual cast where listed people are not depicted. No duplicate `[CAST]` or `[CHARACTERS]` prose is generated for these interior pages. Authored dialogue content and speaker names, panels, layouts, setting and continuity remain available to the chef.
 
 Covers and editorial opens/closes intentionally retain their original reference behavior. They are not included in the visible-only override.
 
@@ -221,7 +207,7 @@ Shattering (six issues and covers), Division Threshold (eight issues, covers and
 
 Routine `[FACTIONS]` material is suppressed on **Shattering and Division Threshold interior/issue and editorial recipes** via `omitRoutineFactions`. Cover-specific faction art direction is preserved; pages with a special need for faction notes can explicitly use `promptIncludeFactions: true`. Echoes has no faction entries in its issue source, so only its character scoping changes.
 
-A targeted Shattering Issue 1 `mergeById` overlay removes unpictured co-leads from the Liora discovery and the transit scenes without changing source cast data or dialogue. Use `node tools/test_three_series_visual_scope.cjs` to validate every relevant issue, cover, and editorial unit. These source-level reference handles should also control any separate image attachment workflow; plain prompt filtering cannot itself remove manually attached images.
+Shattering Issue 1 stores its reviewed visual-cast exclusions directly in the affected canonical page records; unpictured co-leads are omitted from image references without changing dialogue. Use `node tools/test_three_series_visual_scope.cjs` to validate every relevant issue, cover, and editorial unit. These source-level reference handles should also control any separate image attachment workflow; plain prompt filtering cannot itself remove manually attached images.
 
 ## Page-visible image references: Azure Reach, Low Tide, Sunforge and Vikings
 
@@ -261,7 +247,7 @@ Sunforge's issue-wide suppression/decluttering policy, including its character/s
 
 Page recipes may opt into `promptPanelMode: "clean"` to output readable, numbered panel actions and only the necessary location changes, without leaking raw JSON indexes or repeated locations to the image generator. This is separate from `promptSuppress` and does not alter the stored story, dialogue, continuity or page layout. Pages can also opt into `promptVisibleCastOnly: true` and select `promptVisibleCharacters` to transmit only the established visual reference handles of scene-driving characters, reusing RexPrompt's shared character-reference contract. It validates every panel-to-dialogue reference and rejects unknown panel fields.
 
-The first audited rollout uses a strict per-page overlay for **Vikings 2026 Issue 2**, after the dialogue-density overlay, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
+The audited **Vikings 2026 Issue 2** rollout stores chef-facing page fields directly in its canonical page data, with 19 unapproved interior pages opted in and approved pages P02–P04 unchanged. See [docs/chef-recipe-sanitation.md](docs/chef-recipe-sanitation.md) and `node tools/test_vikings_i02_chef_sanitation.cjs`.
 
 **Vikings-wide rollout:** [Season 1 chef recipe audit](docs/vikings-season-recipe-sanitization.md) protects Issues 1–2, converts Issue 3's 20 structured pages to clean delivery, and numbers/groups original prose panels across Issues 4–12 without rewriting scripts. Run `node tools/test_vikings_season_recipe_sanitation.cjs`.
 
@@ -295,7 +281,7 @@ See `production/README.md` and `production/drafts/README.md` for the complete vi
 Each show supplies:
 
 - `scenes.json` (or the configured `scenesFile` / `scenesFiles`) — production scene/page recipes and summaries
-- `assembler.json` (optional) — package-local production file and overlay configuration
+- `assembler.json` (optional) — package-local source-file configuration; not an editorial override layer
 - `characters.json` — characters, names, handles, roles, and notes
 - `dialogue.json` — dialogue lines and character subtext
 - `direction.json` — scene direction entries
