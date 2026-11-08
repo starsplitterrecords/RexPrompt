@@ -2,6 +2,20 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
 const shows=JSON.parse(fs.readFileSync('data/shows.json','utf8')),inv=JSON.parse(fs.readFileSync('production/book-manifests.json','utf8')),coverage=JSON.parse(fs.readFileSync('production/book-export-coverage.json','utf8')),drafts=JSON.parse(fs.readFileSync('production/drafts/manifest.json','utf8')).drafts,exporter=fs.readFileSync('issue-publishing.js','utf8');
 const structure=JSON.parse(fs.readFileSync('production/issue-structure.json','utf8'));
+const structures=Object.values(structure.issues);
+const curated=structures.filter(x=>x.readingOrder==='curated-complete-book');
+const derived=structures.filter(x=>!x.selectorRegistered);
+assert.equal(curated.length,Object.keys(inv.issues).length,'Every curated book must have an issue structure');
+assert.equal(derived.length,coverage.entries.filter(x=>x.kind==='multi-issue-season-selector').reduce((n,row)=>n+row.groupCount,0),
+ 'Embedded season episodes must have individual structural identities');
+for(const issue of structures){
+ assert.equal(issue.sourceUnitCount>0,true,'Empty issue structure '+issue.issueId);
+ const ids=issue.specialUnits.map(x=>x.unitId);
+ assert.equal(new Set(ids).size,ids.length,'Duplicate special unit '+issue.issueId);
+ if(issue.coverStatus==='ordered')assert.ok(issue.specialUnits.some(x=>x.role==='cover'&&x.position===1),'Unverified cover order '+issue.issueId);
+ if(issue.coverStatus==='available-in-separate-shelf')assert.ok(issue.separateCoverCandidates?.length,'Unavailable cover candidate '+issue.issueId);
+ if(issue.readingOrder==='curated-complete-book')assert.equal(issue.coverStatus,'ordered','Curated issue must establish a cover '+issue.issueId);
+}
 const registered=new Set(shows.map(s=>s.id));
 assert.equal(structure.schemaVersion,1);
 
