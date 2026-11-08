@@ -153,7 +153,6 @@
     "seriesName": "Rex Fleet Academy: Anomalies of Broken Space",
     "issueLabel": "Issue 1 — What Is Broken Space?",
     "basePath": "data/shows/rex-fleet-academy-anomalies",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -168,7 +167,12 @@
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior story comic page for Rex Fleet Academy: Anomalies of Broken Space. Prestige educational science-fiction drama inside the established Rex Fleet universe: mature Fleet Academy blue/gold/ion-white design, natural young-adult acting, rigorous physically grounded anomaly visualization, clear sequential storytelling, and professional integrated lettering. Treat Lattice phenomena as objective measurable physics, not magic, mysticism, dream imagery, or generic psychedelic abstraction. Preserve exact scripted dialogue, recurring character identity, Academy geography, simulation state, and the distinction between ordinary local physics and damaged geometric relationships. Use established mature Rex Fleet visual canon for Fleet uniforms and infrastructure where applicable. Interior story page only—no cover, dossier, textbook infographic, character labels, or promotional framing unless explicitly scripted. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rfa-reach-resolve-i01",
@@ -177,7 +181,6 @@
     "seriesName": "Rex Fleet Academy: Reach and Resolve",
     "issueLabel": "Issue 1 — The Two Failures",
     "basePath": "data/shows/rfa-reach-resolve",
-    "scenesFile": "pages_i01.json",
     "includeIdPattern": "^RFA_RR_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Reach and Resolve. Prestige instructional political science fiction with lived-in human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Academy framing must function as drama rather than textbook exposition; historical case studies are lived scenes with practical consequences. Preserve established Rex Fleet and Shattering continuity where referenced, especially early post-Break technology and character identity. Do not import mature faction design into early historical sequences. Preserve exact scripted dialogue and render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
@@ -190,7 +193,12 @@
         "mergeById": true,
         "strict": true
       }
-    ]
+    ],
+    "scenesFiles": [
+      "covers.json",
+      "pages_i01.json"
+    ],
+    "scenesFile": "pages_i01.json"
   },
   {
     "id": "rex-fleet-i01",
@@ -760,7 +768,6 @@
     "seriesName": "Rex Fleet: Stormwell Archive",
     "issueLabel": "Issue 1",
     "basePath": "data/shows/rex-fleet-stormwell-archive-s1",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -775,7 +782,12 @@
     "generationLine": "Finished full-color portrait interior story comic page for Rex Fleet: Stormwell Archive. Forensic science fiction about archival evidence, provenance, reconstruction, metrology, and uncertainty within established Rex Fleet canon. Use released Rex Fleet visual canon for shared Fleet identity; make Stormwell Archive a working research vessel, not a shrine. Preserve causal action, evidence handling, data interpretation, exact scripted dialogue, and integrated lettering. No mystical archive symbolism unless directly required by story. Minimize environmental text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-glass-horizon-i01",
@@ -784,12 +796,16 @@
     "seriesName": "Rex Fleet: Glass Horizon",
     "issueLabel": "Issue 1 — The Quiet Route",
     "basePath": "data/shows/rex-fleet-glass-horizon",
-    "scenesFile": "pages_i01.json",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Glass Horizon. Exploratory hard-science-fiction mystery with lived-in human-scale acting, rigorous physical cause-and-effect, clear sequential storytelling, varied page composition, and professional integrated lettering. Preserve mature Rex Fleet blue/gold/Ion White design, restrained survey-violet instrumentation, fractured-crystal Glass Horizon heraldry, established character identity, Lattice physics, beacon-status meaning, and exact scripted dialogue. Treat anomalies as physical systems rather than magic or monsters. Render the story, editorial, or teaser page exactly as scripted; do not invent dossier or infographic framing. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Issue 1 contains an art-directed editorial opener, 22 story pages, and a closing teaser; story length follows the needs of the investigation rather than a fixed monthly page target.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_i01.json"
+    ],
+    "scenesFile": "pages_i01.json"
   },
   {
     "id": "backyard-rockets-s1",
@@ -2521,7 +2537,6 @@
     "seriesName": "Rex Fleet Academy: Navigating the Mirrorfold",
     "issueLabel": "Issue 1 — The First Instrument",
     "basePath": "data/shows/rex-fleet-academy-navigating-mirrorfold",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -2537,7 +2552,12 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Navigating the Mirrorfold. Prestige science-fiction Academy drama grounded in mature Rex Fleet canon, with natural cadet/instructor acting, clear sequential storytelling, rigorous fictional navigation logic, varied page composition, and professional integrated lettering. Instruction must be dramatized through questions, simulations, case logs, field decisions, mistakes, and consequences rather than presented as detached infographic exposition. Mature Fleet visual grammar is blue, gold, and Ion White. Mirrorfold space uses Warp Black depth with Nova Blue, Plasma Violet, and Ion White refractions; public-route beacon green means verified low-tension route state, while red means unsafe, unverified, or sensor failure. Reflections, duplicated figures, echoing signals, and folded corridors must remain spatially coherent enough for the reader to follow the navigational problem. Preserve exact scripted dialogue, established character identity, causal action, panel intent, and Rex Fleet continuity. No generic cyberpunk, mystical magic, random kaleidoscope geometry, or unscripted environmental text. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Rex Fleet Academy topic-series. Issue length follows the instructional drama rather than a fixed monthly page target; later issues should extend the same cohort and subject without rewriting this issue.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-academy-doctrine-many-crowns-i01",
@@ -2546,7 +2566,6 @@
     "seriesName": "Rex Fleet Academy: Doctrine of Many Crowns",
     "issueLabel": "Issue 1 — Five Answers",
     "basePath": "data/shows/rex-fleet-academy-doctrine-many-crowns",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -2561,7 +2580,12 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Doctrine of Many Crowns. Prestige political science-fiction Academy story with human-scale acting, clear sequential storytelling, varied page composition, and professional integrated lettering. Lecture framing must lead into dramatized historical or operational cases rather than static exposition. Preserve released Rex Fleet canon as the mature visual authority. Crown ideology is not a five-color faction code: preserve current Fleet blue/gold/white grammar and distinguish Crowns primarily through crest motifs, materials, ritual objects, and restrained lineage accents. Historical Shattering-era reconstructions predate mature Fleet uniforms and formal Crown standardization; do not copy later designs wholesale. Preserve exact scripted dialogue, source uncertainty, causal action, and the distinction between documented record, later tradition, and Academy reconstruction. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Variable-length Academy issue; Issue 1 is a 24-page seminar and historical-case story.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-academy-between-beacons-i01",
@@ -2609,7 +2633,6 @@
     "seriesName": "Rex Fleet Academy: The Core Worlds",
     "issueLabel": "Issue 1 — Meridian Is Not the Core",
     "basePath": "data/shows/rex-fleet-academy-core-worlds",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -2625,7 +2648,12 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: The Core Worlds. Prestige educational political science fiction framed through Academy instruction, with lived-in human-scale acting, clear sequential storytelling, concrete civic infrastructure, varied page composition, and professional integrated lettering. Treat the Core as a functioning civilization of many institutions and communities, not a generic utopia, sterile capital, or secret villain. Preserve established Rex Fleet Crown, Meridian, Bastion Spire, Core Spire, and corridor visual canon where applicable. Fleet and Academy identity is blue, gold, and white; verified safe corridors are green; unsafe or held corridors are red. The lecture frame must remain dramatic: students question, choose, disagree, revise, and learn through concrete cases rather than passive exposition. Render only exact scripted dialogue, captions, display text, and story-page elements required by the recipe; do not invent readable environmental text, labels, signage, or logos. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Rex Fleet Academy topic-series. Issue length follows the instructional drama rather than a fixed monthly page target; later issues should extend the same cohort and subject without rewriting this issue.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-academy-physics-lattice-i01",
@@ -2634,7 +2662,6 @@
     "seriesName": "Rex Fleet Academy: Physics of the Lattice",
     "issueLabel": "Issue 1 — The Shortest Path",
     "basePath": "data/shows/rex-fleet-academy-physics-lattice",
-    "scenesFile": "pages_base.json",
     "includeIdPattern": "^RFAPL_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet Academy: Physics of the Lattice. Story-first science-fiction instructional drama at the mature Rex Fleet Academy with natural human acting, clear sequential causality, varied modern page composition, and professional integrated lettering. Fleet institutional palette is blue, white, and restrained gold; verified public corridor beacons and safe low-tension volumes are green; unsafe or sensor-failed/unverified beacons are red. Treat Lattice physics as observable cause and effect through geometry, navigation, instrumentation, and ship response—not magic. Preserve recurring character identity, exact scripted dialogue, established corridor rules, and page-to-page continuity. No infographic or textbook-page framing, no generic portal tunnel, and no incidental environmental lettering unless the recipe specifies it. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
@@ -2650,7 +2677,12 @@
       }
     ],
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-aegis-vigil-i01",
@@ -2659,7 +2691,6 @@
     "seriesName": "Rex Fleet: Aegis Vigil",
     "issueLabel": "Issue 1 — One More Ship",
     "basePath": "data/shows/rex-fleet-aegis-vigil",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -2675,7 +2706,12 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Aegis Vigil. Grounded mature Rex Fleet rescue-and-convoy procedural with natural adult acting, physically legible ship operations, and protection expressed through navigation, engineering, rescue, medicine, logistics, restraint, and command judgment rather than speeches or combat spectacle. RFV Aegis Vigil is a large working heavy cruiser in mature Fleet blue, Ion White, and restrained gold: scarred, maintained, redundant, dependable, and built to put itself between danger and smaller vessels. Aegis Crown refers only to the political and philosophical Crown tradition; never use Aegis Crown as the ship name. Public corridor beacon green means verified low-tension route state; red means unsafe, unverified, or sensor failure; do not invent a yellow beacon state. Preserve exact scripted dialogue, established character identity, civilian competence, causal rescue geometry, panel intent, and Rex Fleet continuity. No generic cyberpunk, no magical shield imagery, no invulnerable hero-ship staging, no gratuitous weapons spectacle, and no unscripted environmental text. Render only story-page elements required by the recipe. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Rex Fleet ship-series. Issues may be self-contained one-off protection, rescue, convoy, engineering, disaster, or survival stories centered on Aegis Vigil and its recurring crew. Carry character relationships, ship wear, and consequences forward without forcing every issue into Thunderbreak's political-drama structure.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-ghostwind-arrow-i01",
@@ -2684,7 +2720,6 @@
     "seriesName": "Rex Fleet: Ghostwind Arrow",
     "issueLabel": "Issue 1 — Observed Twice",
     "basePath": "data/shows/rex-fleet-ghostwind-arrow-s1",
-    "scenesFile": "pages_i01.json",
     "includeIdPattern": "^GWA_I01_",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Ghostwind Arrow. Grounded reconnaissance science fiction in the mature Rex Fleet world: compact scout-ship spaces, disciplined Fleet blue/gold/white identity, violet survey/anomaly instrumentation only as technical language, physically legible corridor geometry, naturalistic crew acting, restrained Lattice strangeness, and professional integrated lettering. Preserve exact scripted dialogue and causal action. Strange phenomena must remain physically observed and testable; do not substitute supernatural explanation, generic horror imagery, cyberpunk neon, or abstract infographic staging for the story. Use released Rex Fleet Issue 1 as shared Fleet visual canon where applicable; new Ghostwind Arrow hull and crew designs remain provisional until approved. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
@@ -2697,7 +2732,12 @@
         "mergeById": true,
         "strict": true
       }
-    ]
+    ],
+    "scenesFiles": [
+      "covers.json",
+      "pages_i01.json"
+    ],
+    "scenesFile": "pages_i01.json"
   },
   {
     "id": "division-threshold-s1-cover-e01",
@@ -3214,7 +3254,6 @@
     "seriesName": "Rex Fleet: Slip Knife",
     "issueLabel": "Issue 1 — First Cut",
     "basePath": "data/shows/rex-fleet-slip-knife",
-    "scenesFile": "pages_base.json",
     "unitLabel": "PAGE",
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Slip Knife. Prestige frontier space adventure in the Star Splitter Rex universe: fast blockade-running, cramped working-ship interiors, practical cargo handling, natural human acting, Auric Verge scarcity culture, golden mineral haze, subtle cyan runner accents, Verge green, and sparse Shard-red threat identifiers. This issue is set during the Verge Campaign era before the Flanking Rule is codified. Preserve Slip Knife as a lean patched blockade runner rather than a pristine Fleet warship; preserve cargo mass, damage, route geometry, causal action, established character identity, and exact scripted dialogue. No generic cyberpunk, no clean naval luxury, no invented environmental lettering, and no heroic destruction where the recipe calls for passage or evasion. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "sceneOverlays": [
@@ -3229,7 +3268,12 @@
     ],
     "formatNote": "Ship-centered Rex Fleet series; issues may be self-contained missions. Page count follows story structure rather than a fixed monthly target.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-crimson-warden-i01",
@@ -3239,7 +3283,6 @@
     "issueLabel": "Issue 1 — Stay on Station",
     "basePath": "data/shows/rex-fleet-crimson-warden",
     "packageConfigFile": "assembler.json",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "pages_i01.json"
@@ -3255,7 +3298,12 @@
     "generationLine": "Finished full-color portrait interior comic page for Rex Fleet: Crimson Warden. Prestige carrier-operations space drama in the established Rex Fleet universe, with lived-in human-scale acting, exact scripted dialogue, readable launch/recovery geography, and clear operational cause-and-effect. Crimson Warden is an Ember-lineage Fleet carrier: institutional Fleet blue, gold and Ion White remain the base visual grammar, with disciplined ember-crimson lineage accents and dark industrial deck spaces. Treat launch, recovery, maintenance, medicine, rescue and command as connected work performed by specific people. Preserve established Rex Fleet corridor logic and do not use one unmarked raider splinter group as shorthand for all Shards. Avoid generic military spectacle, propaganda poses, gratuitous flame motifs, throne imagery or abstract laser clutter. Interior story page only. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
     "formatNote": "Variable-length collected issue; page count follows story structure rather than a fixed monthly page target.",
     "promptVisibleCastOnly": true,
-    "omitRoutineFactions": true
+    "omitRoutineFactions": true,
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i01",
@@ -3264,7 +3312,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 1",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3299,7 +3346,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i02",
@@ -3308,7 +3360,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 2",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3339,7 +3390,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i03",
@@ -3348,7 +3404,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 3",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3379,7 +3434,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i04",
@@ -3388,7 +3448,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 4",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3419,7 +3478,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i05",
@@ -3428,7 +3492,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 5",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3459,7 +3522,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i06",
@@ -3468,7 +3536,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 6",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3499,7 +3566,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i07",
@@ -3508,7 +3580,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 7",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3539,7 +3610,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i08",
@@ -3548,7 +3624,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 8",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3579,7 +3654,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i09",
@@ -3588,7 +3668,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 9",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3619,7 +3698,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i10",
@@ -3628,7 +3712,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 10",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3659,7 +3742,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i11",
@@ -3668,7 +3756,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 11",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3699,7 +3786,12 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
   },
   {
     "id": "rex-fleet-full-performance-i12",
@@ -3708,7 +3800,6 @@
     "seriesName": "Rex Fleet — Full Performance",
     "issueLabel": "Draft Issue 12",
     "basePath": "data/shows/rex-fleet-full-performance",
-    "scenesFile": "pages_base.json",
     "sceneOverlays": [
       {
         "file": "v8_editorial_openings.json",
@@ -3738,6 +3829,543 @@
     "generationLine": "Finished full-color portrait Rex Fleet comic story page. Follow exact scripted dialogue and captions with clear sequential storytelling and human-scale acting. Use actual approved Rex Fleet style, cast, faction, vessel and location references for design. In a continuing scene, carry physical and emotional state from the preceding approved page. Keep spatial action coherent, and visual direction restrained. Never invent readable text. Development-only draft: not production-approved.",
     "promptVisibleCastOnly": true,
     "omitRoutineFactions": true,
-    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes."
+    "formatNote": "Full Performance developmental edition. Original v7 dramatic pages are preserved. Writing v8 adds prose opening pages and source-linked original editorial/cast/teaser pages; editorial text requires lettering approval. No canon or released image changes.",
+    "scenesFiles": [
+      "covers.json",
+      "pages_base.json"
+    ],
+    "scenesFile": "pages_base.json"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e01",
+    "name": "Echoes of a Forgotten War — Issue 1 — The Weight of Dead Iron",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 1 — The Weight of Dead Iron",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e01.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e01.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e01.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E01_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e02",
+    "name": "Echoes of a Forgotten War — Issue 2 — Glass Dust and Violet Light",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 2 — Glass Dust and Violet Light",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e02.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e02.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e02.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E02_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e03",
+    "name": "Echoes of a Forgotten War — Issue 3 — The Architecture of Ruin",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 3 — The Architecture of Ruin",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e03.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e03.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e03.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E03_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e04",
+    "name": "Echoes of a Forgotten War — Issue 4 — Silence in the Vault",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 4 — Silence in the Vault",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e04.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e04.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e04.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E04_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e05",
+    "name": "Echoes of a Forgotten War — Issue 5 — Embers of the Zenith",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 5 — Embers of the Zenith",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e05.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e05.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e05.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E05_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e06",
+    "name": "Echoes of a Forgotten War — Issue 6 — The Margin of Error",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 6 — The Margin of Error",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e06.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e06.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e06.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E06_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e07",
+    "name": "Echoes of a Forgotten War — Issue 7 — Gravity and Consequence",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 7 — Gravity and Consequence",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e07.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e07.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e07.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E07_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "echoes-forgotten-war-s1-e08",
+    "name": "Echoes of a Forgotten War — Issue 8 — The Shape of Tomorrow",
+    "seriesId": "echoes-forgotten-war",
+    "seriesName": "Echoes of a Forgotten War",
+    "issueLabel": "Issue 8 — The Shape of Tomorrow",
+    "basePath": "data/shows/echoes-forgotten-war-s1",
+    "scenesFiles": [
+      "covers.json",
+      "scenes_e08.json"
+    ],
+    "sceneOverlays": [
+      {
+        "file": "editorial/page_layouts_e08.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial/page_recipe_scope_e08.json",
+        "mergeById": true,
+        "strict": true
+      }
+    ],
+    "includeIdPattern": "^EFW_S1E08_",
+    "unitLabel": "PAGE",
+    "promptVisibleCastOnly": true,
+    "sourceSeasonId": "echoes-forgotten-war-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e01",
+    "name": "Backyard Rockets — Issue 1 — The Oxidizer Gap",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 1 — The Oxidizer Gap",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E01_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e01_open.json"
+      },
+      {
+        "file": "encoded/scenes_e01_oxidizer_gap_rebuilt.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e01_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E01_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e02",
+    "name": "Backyard Rockets — Issue 2 — The Copper Lattice",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 2 — The Copper Lattice",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E02_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e02_open.json"
+      },
+      {
+        "file": "encoded/scenes_e02_copper_lattice_rebuilt.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_e02_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E02_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e03",
+    "name": "Backyard Rockets — Issue 3 — Public Sky",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 3 — Public Sky",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E03_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e03_open.json"
+      },
+      {
+        "file": "encoded/scenes_e03_public_sky.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e03.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e03.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e03_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E03_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e04",
+    "name": "Backyard Rockets — Issue 4 — The Trip Point",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 4 — The Trip Point",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E04_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e04_open.json"
+      },
+      {
+        "file": "encoded/scenes_e04_trip_point.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e04.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e04.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e04_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E04_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e05",
+    "name": "Backyard Rockets — Issue 5 — Reserve Margin",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 5 — Reserve Margin",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E05_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e05_open.json"
+      },
+      {
+        "file": "encoded/scenes_e05_reserve_margin.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e05.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e05.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e05_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E05_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e06",
+    "name": "Backyard Rockets — Issue 6 — Ground Loop",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 6 — Ground Loop",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E06_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e06_open.json"
+      },
+      {
+        "file": "encoded/scenes_e06_ground_loop.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e06.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e06.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e06_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E06_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e07",
+    "name": "Backyard Rockets — Issue 7 — Ablative Armor",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 7 — Ablative Armor",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E07_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e07_open.json"
+      },
+      {
+        "file": "encoded/scenes_e07_ablative_armor.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e07.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e07.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e07_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E07_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
+  },
+  {
+    "id": "backyard-rockets-s1-e08",
+    "name": "Backyard Rockets — Issue 8 — The Sky-Piercer",
+    "seriesId": "backyard-rockets",
+    "seriesName": "Backyard Rockets",
+    "issueLabel": "Issue 8 — The Sky-Piercer",
+    "basePath": "data/shows/backyard-rockets-s1",
+    "scenesFile": "scenes_base.json",
+    "sceneOverlays": [
+      {
+        "file": "covers.json",
+        "includeIds": [
+          "BR_S1E08_COVER"
+        ]
+      },
+      {
+        "file": "editorial_e08_open.json"
+      },
+      {
+        "file": "encoded/scenes_e08_sky_piercer.json.gzb64",
+        "encoding": "gzip-base64"
+      },
+      {
+        "file": "editorial_page_layouts_e08.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_recipe_scope_e08.json",
+        "mergeById": true,
+        "strict": true
+      },
+      {
+        "file": "editorial_e08_close.json"
+      }
+    ],
+    "includeIdPattern": "^BR_S1E08_",
+    "unitLabel": "PAGE",
+    "generationLine": "Finished full-color portrait interior story comic page for Backyard Rockets. Bright prestige Southwest science fiction with hard Mojave light, sun-bleached desert terrain, maintained mobile retro-aerospace hardware, organized field workspaces, practical salvage, tactile tools and readable mechanical systems. Natural working body language, varied cinematic sequential composition and clean professional integrated lettering. Use released Backyard Rockets Issues 1–2 as strict visual canon for established faces, apparent ages, clothing, Launch-Shop hardware, Tethergrid design language and rendering. Preserve scripted panel order, setting, physical geography, hardware and vehicle continuity, causal action and exact dialogue. Interior story page only; no cover, promotional, dossier or infographic framing unless explicitly scripted. No incidental environmental text, signage, labels, logos, serials, interface gibberish or background lettering unless explicitly scripted in the assembled recipe; render only exact scripted dialogue, captions and explicitly scripted display text. Fictional production. Use creative modern panel layouts that highlight the important scene details.",
+    "sourceSeasonId": "backyard-rockets-s1"
   }
 ]

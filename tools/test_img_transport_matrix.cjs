@@ -53,7 +53,9 @@ try{
  book('rex-fleet','rex-fleet-i01');
  book('rex-fleet','rex-fleet-i02');
  // Incomplete issue is a *review-only* bundle with explicit missing-page inventory.
- book('vikings-2026','vikings-2026-s1-e02',true);
+ // Vikings Issue 2 is now fully covered by approved originals, while Issue 3 remains incomplete.
+ book('vikings-2026','vikings-2026-s1-e02');
+ book('vikings-2026','vikings-2026-s1-e03',true);
  book('stardust-station','stardust-station-e02',true);
  const reject=run('tools/prepare_issue_readback.cjs',{SERIES_ID:'rex-fleet',ISSUE_ID:'rex-fleet-i03',ISSUE_READBACK_OUTPUT:path.join(tmp,'issue-rejected')});
  assert.notEqual(reject.status,0,'Incomplete issue incorrectly succeeded');assert.ok(/Incomplete issue/.test(reject.stderr));

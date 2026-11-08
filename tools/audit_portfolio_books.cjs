@@ -45,7 +45,7 @@ function fromSpec(show,spec){
 }
 function select(show){
  const entries=[];
- const loadList=[...(show.scenesFiles||[]),...(show.scenesFile?[show.scenesFile]:[])];
+ const loadList=Array.isArray(show.scenesFiles)?show.scenesFiles:(show.scenesFile?[show.scenesFile]:[]);
  for(const file of loadList)entries.push(...fromSpec(show,file));
  for(const overlay of show.sceneOverlays||[]){if(!overlay.mergeById)entries.push(...fromSpec(show,overlay));}
  const regex=show.includeIdPattern?new RegExp(show.includeIdPattern):null;
@@ -108,7 +108,7 @@ function supplement(show,selected){
 // Production role evidence is derived from registered source units, never invented pages.
 function sourceRecords(show,ids){
  const wanted=new Set(ids),found=new Map();
- const specs=[...(show.scenesFiles||[]),...(show.scenesFile?[show.scenesFile]:[]),
+ const specs=[...(Array.isArray(show.scenesFiles)?show.scenesFiles:(show.scenesFile?[show.scenesFile]:[])),
    ...(show.sceneOverlays||[]).filter(o=>!o.mergeById)];
  for(const spec of specs)for(const item of fromSpec(show,spec)){
    if(wanted.has(item.id)&&!found.has(item.id))found.set(item.id,item);
@@ -201,15 +201,19 @@ for(const show of SHOWS){
      const actual=selected.filter(id=>groupOf(id)===group);
      const prefix=group+'_COVER',coverCandidates=findSupplement(show,/_COVER$/).filter(id=>id===prefix);
      const derivedId=show.id+'-e'+group.slice(-2);
-     recordStructure(show,derivedId,actual,'source-order-only',{
+     const issueRegistered=SHOWS.some(s=>s.id===derivedId&&seriesOf(s)===seriesId);
+     if(!issueRegistered)recordStructure(show,derivedId,actual,'source-order-only',{
        selectorRegistered:false,issueLabel:'Episode '+Number(group.slice(-2)),coverCandidates});
      return {sourceGroup:group,sourceUnitCount:actual.length,
        firstUnit:actual[0],lastUnit:actual.at(-1),
-       issueSelectorRegistered:false,
-       status:'uncurated',reason:'season-selector-not-split-into-issue-inventories'};
+       issueSelectorRegistered:issueRegistered,
+       status:issueRegistered?'registered-issue-selector':'uncurated',
+       reason:issueRegistered?'issue-has-separate-registered-reading-order':'season-selector-not-split-into-issue-inventories'};
    });
-   rows.push({selectorId:issueId,seriesId,kind:'multi-issue-season-selector',status:'uncurated',
-     reason:'season-combines-multiple-issues',groupCount:groups.length,groups,subissues,sourceUnitCount:selected.length});
+   const registeredAll=subissues.every(s=>s.issueSelectorRegistered);
+   rows.push({selectorId:issueId,seriesId,kind:'multi-issue-season-selector',status:registeredAll?'not-a-book':'uncurated',
+     reason:registeredAll?'legacy-season-aggregate-not-a-book':'season-combines-multiple-issues',
+     groupCount:groups.length,groups,subissues,sourceUnitCount:selected.length});
    continue;
  }
  const cur=CURRENT.issues[[seriesId,issueId].join('::')];
@@ -229,7 +233,7 @@ for(const show of SHOWS){
  }else if(!errs.length){
    issues[[seriesId,issueId].join('::')]={
      seriesId,issueId,orderPolicy:'source-verified-series-specific-reading-order',
-     sourceShowId:show.id,units:proposed
+     sourceShowId:show.id,inventorySource:'derived-from-registered-source',units:proposed
    };
  }
  const book=issues[[seriesId,issueId].join('::')];
@@ -239,7 +243,7 @@ for(const show of SHOWS){
    expectedUnits:book?.units.length||proposed.length,approvedImages:counts.approvedCount,missingImageCount:counts.missingCount,
    missingImageIds:counts.missingImages,unapprovedImageIds:counts.unapprovedImages,corruptImageIds:counts.corruptImages,
    reason:errs.length?errs.join(', '):counts.missingCount?'missing-approved-images':null,
-   inventorySource:cur?'preexisting-verified':book?'derived-from-registered-source':'candidate-needs-curation',
+   inventorySource:cur?.inventorySource||(cur?'preexisting-verified':book?'derived-from-registered-source':'candidate-needs-curation'),
    sourceShowId:show.id});
  if(errs.length)diagnostics.push({selectorId:show.id,errors:errs});
 }

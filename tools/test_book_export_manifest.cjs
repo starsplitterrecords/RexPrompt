@@ -6,8 +6,19 @@ const structures=Object.values(structure.issues);
 const curated=structures.filter(x=>x.readingOrder==='curated-complete-book');
 const derived=structures.filter(x=>!x.selectorRegistered);
 assert.equal(curated.length,Object.keys(inv.issues).length,'Every curated book must have an issue structure');
-assert.equal(derived.length,coverage.entries.filter(x=>x.kind==='multi-issue-season-selector').reduce((n,row)=>n+row.groupCount,0),
- 'Embedded season episodes must have individual structural identities');
+const seasonAggregates=coverage.entries.filter(x=>x.kind==='multi-issue-season-selector');
+assert.equal(derived.length,seasonAggregates.reduce((n,row)=>n+row.subissues.filter(x=>!x.issueSelectorRegistered).length,0),
+ 'Virtual season issues must be omitted when real issue selectors exist');
+for(const season of seasonAggregates){
+ for(const part of season.subissues){
+  if(!part.issueSelectorRegistered)continue;
+  const episode=season.selectorId+'-e'+part.sourceGroup.slice(-2);
+  const key=season.seriesId+'::'+episode;
+  assert.ok(structure.issues[key]?.selectorRegistered,'Registered episode missing source-backed issue structure '+key);
+  assert.ok(inv.issues[key],'Registered episode missing curated book order '+key);
+  assert.equal(inv.issues[key].units[0],part.sourceGroup+'_COVER','Cover must lead episode '+key);
+ }
+}
 for(const issue of structures){
  assert.equal(issue.sourceUnitCount>0,true,'Empty issue structure '+issue.issueId);
  const ids=issue.specialUnits.map(x=>x.unitId);
@@ -71,19 +82,28 @@ assert.equal(role('rex-fleet','rex-fleet-i02','RF_I02_CAST'),'cast');
 assert.equal(role('rex-fleet','rex-fleet-i02','RF_I02_EDITOR_ENDMATTER'),'end-matter');
 assert.equal(role('rex-fleet-academy-between-beacons','rex-fleet-academy-between-beacons-i01','RFA_BB_I01_P01'),'opening-editorial');
 const fp=structure.issues['rex-fleet-full-performance::rex-fleet-full-performance-i01'];
-assert.ok(fp&&fp.readingOrder==='source-order-only'&&fp.coverStatus==='not-established');
+assert.ok(fp&&fp.readingOrder==='curated-complete-book'&&fp.coverStatus==='ordered');
 assert.equal(fp.specialUnits.filter(x=>x.role==='opening-editorial').length,7);
 assert.equal(role('rex-fleet-full-performance','rex-fleet-full-performance-i01','RFFP_I01_CAST'),'cast');
+for(let i=1;i<=12;i++){
+ const num=String(i).padStart(2,'0'),issue='rex-fleet-full-performance-i'+num;
+ assert.equal(inv.issues['rex-fleet-full-performance::'+issue].units[0],'RFFP_I'+num+'_COVER','Full Performance issue cover '+num);
+}
+for(const selector of ['rex-fleet-academy-anomalies-i01','rfa-reach-resolve-i01','rex-fleet-stormwell-archive-i01','rex-fleet-glass-horizon-i01','rex-fleet-academy-navigating-mirrorfold-i01','rex-fleet-academy-doctrine-many-crowns-i01','rex-fleet-academy-core-worlds-i01','rex-fleet-academy-physics-lattice-i01','rex-fleet-aegis-vigil-i01','rex-fleet-ghostwind-arrow-i01','rex-fleet-slip-knife-i01','rex-fleet-crimson-warden-i01']){
+ const book=Object.values(inv.issues).find(b=>b.issueId===selector);
+ assert.ok(book&&book.units[0].endsWith('_COVER'),'Missing distinct story-front cover '+selector);
+}
 for(const [series,prefix] of [['backyard-rockets','backyard-rockets-s1'],['echoes-forgotten-war','echoes-forgotten-war-s1']]){
  for(let i=1;i<=8;i++){
   const id=series+'::'+prefix+'-e'+String(i).padStart(2,'0');
   const entry=structure.issues[id];
-  assert.ok(entry&&!entry.selectorRegistered&&entry.readingOrder==='source-order-only',id);
-  assert.equal(entry.specialUnits[0].role,'opening-editorial');
+  assert.ok(entry&&entry.selectorRegistered&&entry.readingOrder==='curated-complete-book',id);
+  assert.equal(entry.specialUnits[0].role,'cover',id+' cover must be first');
+  assert.equal(entry.specialUnits[1].role,'opening-editorial',id+' opening must follow cover');
   assert.equal(entry.specialUnits.at(-1).role,'closing-editorial');
  }
 }
-assert.equal(structure.issues['echoes-forgotten-war::echoes-forgotten-war-s1-e01'].coverStatus,'available-in-separate-shelf');
+assert.equal(structure.issues['echoes-forgotten-war::echoes-forgotten-war-s1-e01'].coverStatus,'ordered');
 assert.match(exporter,/const ordered=book\?\.units\|\|sel\.recipeIds/);
 assert.match(exporter,/issueIncludeCast/);
 assert.match(exporter,/omittedOptionalUnits:p.omittedCast/);

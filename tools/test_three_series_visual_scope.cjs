@@ -16,7 +16,7 @@ const ctx=vm.createContext({});
 vm.runInContext(html.slice(from,to)+';globalThis.testing={assembleScene,visibleCharacterHandles};',ctx);
 const {assembleScene:assemble,visibleCharacterHandles:visible}=ctx.testing;
 const series=new Set(['shattering','division-threshold','echoes-forgotten-war']);
-const shows=json('data/shows.json').filter(s=>series.has(s.seriesId));
+const shows=json('data/shows.json').filter(s=>series.has(s.seriesId)&&!s.sourceSeasonId);
 assert.equal(shows.length,33,'Unexpected count of targeted show configurations');
 const cache=new Map();
 const get=(p)=>{if(!cache.has(p))cache.set(p,json(p));return cache.get(p)};

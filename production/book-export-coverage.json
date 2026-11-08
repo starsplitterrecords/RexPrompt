@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "registrySelectors": 138,
-  "issuesWithManifest": 74,
+  "registrySelectors": 154,
+  "issuesWithManifest": 114,
   "sourceAudit": "registered show sources, including gzip-base64 overlays and separate cover/editorial shelves",
   "statuses": {
-    "blocked-missing-images": 70,
+    "blocked-missing-images": 110,
     "complete-draft-export-supported": 4,
-    "not-a-book": 38,
-    "uncurated": 26
+    "not-a-book": 40
   },
   "entries": [
     {
@@ -242,11 +241,12 @@
       "selectorId": "rex-fleet-academy-anomalies-i01",
       "seriesId": "rex-fleet-academy-anomalies",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFAA_ABS_I01_COVER",
         "RFAA_ABS_I01_P01",
         "RFAA_ABS_I01_P02",
         "RFAA_ABS_I01_P03",
@@ -274,19 +274,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-academy-anomalies-i01"
     },
     {
       "selectorId": "rfa-reach-resolve-i01",
       "seriesId": "rfa-reach-resolve",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFA_RR_I01_COVER",
         "RFA_RR_I01_P01",
         "RFA_RR_I01_P02",
         "RFA_RR_I01_P03",
@@ -314,8 +315,8 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rfa-reach-resolve-i01"
     },
     {
@@ -750,11 +751,12 @@
       "selectorId": "rex-fleet-stormwell-archive-i01",
       "seriesId": "rex-fleet-stormwell-archive",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 22,
+      "status": "blocked-missing-images",
+      "expectedUnits": 23,
       "approvedImages": 0,
-      "missingImageCount": 22,
+      "missingImageCount": 23,
       "missingImageIds": [
+        "STORM_I01_COVER",
         "STORM_I01_P01",
         "STORM_I01_P02",
         "STORM_I01_P03",
@@ -780,19 +782,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-stormwell-archive-i01"
     },
     {
       "selectorId": "rex-fleet-glass-horizon-i01",
       "seriesId": "rex-fleet-glass-horizon",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "GH_I01_COVER",
         "GH_I01_EDITOR",
         "GH_I01_P01",
         "GH_I01_P02",
@@ -820,16 +823,16 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-glass-horizon-i01"
     },
     {
       "selectorId": "backyard-rockets-s1",
       "seriesId": "backyard-rockets",
       "kind": "multi-issue-season-selector",
-      "status": "uncurated",
-      "reason": "season-combines-multiple-issues",
+      "status": "not-a-book",
+      "reason": "legacy-season-aggregate-not-a-book",
       "groupCount": 8,
       "groups": [
         "BR_S1E01",
@@ -847,72 +850,72 @@
           "sourceUnitCount": 22,
           "firstUnit": "BR_S1E01_EDITOR_OPEN",
           "lastUnit": "BR_S1E01_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E02",
           "sourceUnitCount": 26,
           "firstUnit": "BR_S1E02_EDITOR_OPEN",
           "lastUnit": "BR_S1E02_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E03",
           "sourceUnitCount": 21,
           "firstUnit": "BR_S1E03_EDITOR_OPEN",
           "lastUnit": "BR_S1E03_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E04",
           "sourceUnitCount": 20,
           "firstUnit": "BR_S1E04_EDITOR_OPEN",
           "lastUnit": "BR_S1E04_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E05",
           "sourceUnitCount": 23,
           "firstUnit": "BR_S1E05_EDITOR_OPEN",
           "lastUnit": "BR_S1E05_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E06",
           "sourceUnitCount": 21,
           "firstUnit": "BR_S1E06_EDITOR_OPEN",
           "lastUnit": "BR_S1E06_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E07",
           "sourceUnitCount": 21,
           "firstUnit": "BR_S1E07_EDITOR_OPEN",
           "lastUnit": "BR_S1E07_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "BR_S1E08",
           "sourceUnitCount": 24,
           "firstUnit": "BR_S1E08_EDITOR_OPEN",
           "lastUnit": "BR_S1E08_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         }
       ],
       "sourceUnitCount": 178
@@ -2677,8 +2680,8 @@
       "selectorId": "echoes-forgotten-war-s1",
       "seriesId": "echoes-forgotten-war",
       "kind": "multi-issue-season-selector",
-      "status": "uncurated",
-      "reason": "season-combines-multiple-issues",
+      "status": "not-a-book",
+      "reason": "legacy-season-aggregate-not-a-book",
       "groupCount": 8,
       "groups": [
         "EFW_S1E01",
@@ -2696,72 +2699,72 @@
           "sourceUnitCount": 23,
           "firstUnit": "EFW_S1E01_EDITOR_OPEN",
           "lastUnit": "EFW_S1E01_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E02",
           "sourceUnitCount": 18,
           "firstUnit": "EFW_S1E02_EDITOR_OPEN",
           "lastUnit": "EFW_S1E02_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E03",
           "sourceUnitCount": 17,
           "firstUnit": "EFW_S1E03_EDITOR_OPEN",
           "lastUnit": "EFW_S1E03_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E04",
           "sourceUnitCount": 18,
           "firstUnit": "EFW_S1E04_EDITOR_OPEN",
           "lastUnit": "EFW_S1E04_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E05",
           "sourceUnitCount": 18,
           "firstUnit": "EFW_S1E05_EDITOR_OPEN",
           "lastUnit": "EFW_S1E05_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E06",
           "sourceUnitCount": 17,
           "firstUnit": "EFW_S1E06_EDITOR_OPEN",
           "lastUnit": "EFW_S1E06_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E07",
           "sourceUnitCount": 18,
           "firstUnit": "EFW_S1E07_EDITOR_OPEN",
           "lastUnit": "EFW_S1E07_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         },
         {
           "sourceGroup": "EFW_S1E08",
           "sourceUnitCount": 20,
           "firstUnit": "EFW_S1E08_EDITOR_OPEN",
           "lastUnit": "EFW_S1E08_EDITOR_CLOSE",
-          "issueSelectorRegistered": false,
-          "status": "uncurated",
-          "reason": "season-selector-not-split-into-issue-inventories"
+          "issueSelectorRegistered": true,
+          "status": "registered-issue-selector",
+          "reason": "issue-has-separate-registered-reading-order"
         }
       ],
       "sourceUnitCount": 149
@@ -3264,11 +3267,12 @@
       "selectorId": "rex-fleet-academy-navigating-mirrorfold-i01",
       "seriesId": "rex-fleet-academy-navigating-mirrorfold",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFA_NM_I01_COVER",
         "RFA_NM_I01_P01",
         "RFA_NM_I01_P02",
         "RFA_NM_I01_P03",
@@ -3296,19 +3300,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-academy-navigating-mirrorfold-i01"
     },
     {
       "selectorId": "rex-fleet-academy-doctrine-many-crowns-i01",
       "seriesId": "rex-fleet-academy-doctrine-many-crowns",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFA_DMC_I01_COVER",
         "RFA_DMC_I01_P01",
         "RFA_DMC_I01_P02",
         "RFA_DMC_I01_P03",
@@ -3336,8 +3341,8 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-academy-doctrine-many-crowns-i01"
     },
     {
@@ -3393,11 +3398,12 @@
       "selectorId": "rex-fleet-academy-core-worlds-i01",
       "seriesId": "rex-fleet-academy-core-worlds",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFA_CW_I01_COVER",
         "RFA_CW_I01_P01",
         "RFA_CW_I01_P02",
         "RFA_CW_I01_P03",
@@ -3425,19 +3431,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-academy-core-worlds-i01"
     },
     {
       "selectorId": "rex-fleet-academy-physics-lattice-i01",
       "seriesId": "rex-fleet-academy-physics-lattice",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFAPL_I01_COVER",
         "RFAPL_I01_P01",
         "RFAPL_I01_P02",
         "RFAPL_I01_P03",
@@ -3465,19 +3472,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-academy-physics-lattice-i01"
     },
     {
       "selectorId": "rex-fleet-aegis-vigil-i01",
       "seriesId": "rex-fleet-aegis-vigil",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RF_AV_I01_COVER",
         "RF_AV_I01_P01",
         "RF_AV_I01_P02",
         "RF_AV_I01_P03",
@@ -3505,19 +3513,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-aegis-vigil-i01"
     },
     {
       "selectorId": "rex-fleet-ghostwind-arrow-i01",
       "seriesId": "rex-fleet-ghostwind-arrow",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 22,
+      "status": "blocked-missing-images",
+      "expectedUnits": 23,
       "approvedImages": 0,
-      "missingImageCount": 22,
+      "missingImageCount": 23,
       "missingImageIds": [
+        "GWA_I01_COVER",
         "GWA_I01_P01",
         "GWA_I01_P02",
         "GWA_I01_P03",
@@ -3543,8 +3552,8 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-ghostwind-arrow-i01"
     },
     {
@@ -3755,11 +3764,12 @@
       "selectorId": "rex-fleet-slip-knife-i01",
       "seriesId": "rex-fleet-slip-knife",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 22,
+      "status": "blocked-missing-images",
+      "expectedUnits": 23,
       "approvedImages": 0,
-      "missingImageCount": 22,
+      "missingImageCount": 23,
       "missingImageIds": [
+        "RFSK_I01_COVER",
         "RFSK_I01_P01",
         "RFSK_I01_P02",
         "RFSK_I01_P03",
@@ -3785,19 +3795,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-slip-knife-i01"
     },
     {
       "selectorId": "rex-fleet-crimson-warden-i01",
       "seriesId": "rex-fleet-crimson-warden",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 28,
+      "status": "blocked-missing-images",
+      "expectedUnits": 29,
       "approvedImages": 0,
-      "missingImageCount": 28,
+      "missingImageCount": 29,
       "missingImageIds": [
+        "RFCW_I01_COVER",
         "RFCW_I01_P01",
         "RFCW_I01_P02",
         "RFCW_I01_P03",
@@ -3829,19 +3840,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-crimson-warden-i01"
     },
     {
       "selectorId": "rex-fleet-full-performance-i01",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 53,
+      "status": "blocked-missing-images",
+      "expectedUnits": 54,
       "approvedImages": 22,
-      "missingImageCount": 31,
+      "missingImageCount": 32,
       "missingImageIds": [
+        "RFFP_I01_COVER",
         "RFFP_I01_CAST",
         "RFFP_I01_P016",
         "RFFP_I01_P017",
@@ -3876,19 +3888,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i01"
     },
     {
       "selectorId": "rex-fleet-full-performance-i02",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 40,
+      "status": "blocked-missing-images",
+      "expectedUnits": 41,
       "approvedImages": 0,
-      "missingImageCount": 40,
+      "missingImageCount": 41,
       "missingImageIds": [
+        "RFFP_I02_COVER",
         "RFFP_I02_EDITOR_V8_OPEN_01",
         "RFFP_I02_EDITOR_V8_OPEN_02",
         "RFFP_I02_CAST",
@@ -3932,19 +3945,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i02"
     },
     {
       "selectorId": "rex-fleet-full-performance-i03",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 36,
+      "status": "blocked-missing-images",
+      "expectedUnits": 37,
       "approvedImages": 0,
-      "missingImageCount": 36,
+      "missingImageCount": 37,
       "missingImageIds": [
+        "RFFP_I03_COVER",
         "RFFP_I03_EDITOR_V8_OPEN_01",
         "RFFP_I03_EDITOR_V8_OPEN_02",
         "RFFP_I03_CAST",
@@ -3984,19 +3998,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i03"
     },
     {
       "selectorId": "rex-fleet-full-performance-i04",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 54,
+      "status": "blocked-missing-images",
+      "expectedUnits": 55,
       "approvedImages": 0,
-      "missingImageCount": 54,
+      "missingImageCount": 55,
       "missingImageIds": [
+        "RFFP_I04_COVER",
         "RFFP_I04_EDITOR_V8_OPEN_01",
         "RFFP_I04_EDITOR_V8_OPEN_02",
         "RFFP_I04_CAST",
@@ -4054,19 +4069,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i04"
     },
     {
       "selectorId": "rex-fleet-full-performance-i05",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 43,
+      "status": "blocked-missing-images",
+      "expectedUnits": 44,
       "approvedImages": 0,
-      "missingImageCount": 43,
+      "missingImageCount": 44,
       "missingImageIds": [
+        "RFFP_I05_COVER",
         "RFFP_I05_EDITOR_V8_OPEN_01",
         "RFFP_I05_EDITOR_V8_OPEN_02",
         "RFFP_I05_CAST",
@@ -4113,19 +4129,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i05"
     },
     {
       "selectorId": "rex-fleet-full-performance-i06",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 48,
+      "status": "blocked-missing-images",
+      "expectedUnits": 49,
       "approvedImages": 0,
-      "missingImageCount": 48,
+      "missingImageCount": 49,
       "missingImageIds": [
+        "RFFP_I06_COVER",
         "RFFP_I06_EDITOR_V8_OPEN_01",
         "RFFP_I06_EDITOR_V8_OPEN_02",
         "RFFP_I06_CAST",
@@ -4177,19 +4194,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i06"
     },
     {
       "selectorId": "rex-fleet-full-performance-i07",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 27,
+      "status": "blocked-missing-images",
+      "expectedUnits": 28,
       "approvedImages": 0,
-      "missingImageCount": 27,
+      "missingImageCount": 28,
       "missingImageIds": [
+        "RFFP_I07_COVER",
         "RFFP_I07_EDITOR_V8_OPEN_01",
         "RFFP_I07_EDITOR_V8_OPEN_02",
         "RFFP_I07_CAST",
@@ -4220,19 +4238,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i07"
     },
     {
       "selectorId": "rex-fleet-full-performance-i08",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 23,
+      "status": "blocked-missing-images",
+      "expectedUnits": 24,
       "approvedImages": 0,
-      "missingImageCount": 23,
+      "missingImageCount": 24,
       "missingImageIds": [
+        "RFFP_I08_COVER",
         "RFFP_I08_EDITOR_V8_OPEN_01",
         "RFFP_I08_EDITOR_V8_OPEN_02",
         "RFFP_I08_CAST",
@@ -4259,19 +4278,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i08"
     },
     {
       "selectorId": "rex-fleet-full-performance-i09",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 24,
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
       "approvedImages": 0,
-      "missingImageCount": 24,
+      "missingImageCount": 25,
       "missingImageIds": [
+        "RFFP_I09_COVER",
         "RFFP_I09_EDITOR_V8_OPEN_01",
         "RFFP_I09_EDITOR_V8_OPEN_02",
         "RFFP_I09_CAST",
@@ -4299,19 +4319,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i09"
     },
     {
       "selectorId": "rex-fleet-full-performance-i10",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 27,
+      "status": "blocked-missing-images",
+      "expectedUnits": 28,
       "approvedImages": 0,
-      "missingImageCount": 27,
+      "missingImageCount": 28,
       "missingImageIds": [
+        "RFFP_I10_COVER",
         "RFFP_I10_EDITOR_V8_OPEN_01",
         "RFFP_I10_EDITOR_V8_OPEN_02",
         "RFFP_I10_CAST",
@@ -4342,19 +4363,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i10"
     },
     {
       "selectorId": "rex-fleet-full-performance-i11",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 23,
+      "status": "blocked-missing-images",
+      "expectedUnits": 24,
       "approvedImages": 0,
-      "missingImageCount": 23,
+      "missingImageCount": 24,
       "missingImageIds": [
+        "RFFP_I11_COVER",
         "RFFP_I11_EDITOR_V8_OPEN_01",
         "RFFP_I11_EDITOR_V8_OPEN_02",
         "RFFP_I11_CAST",
@@ -4381,19 +4403,20 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i11"
     },
     {
       "selectorId": "rex-fleet-full-performance-i12",
       "seriesId": "rex-fleet-full-performance",
       "kind": "issue",
-      "status": "uncurated",
-      "expectedUnits": 27,
+      "status": "blocked-missing-images",
+      "expectedUnits": 28,
       "approvedImages": 0,
-      "missingImageCount": 27,
+      "missingImageCount": 28,
       "missingImageIds": [
+        "RFFP_I12_COVER",
         "RFFP_I12_EDITOR_V8_OPEN_01",
         "RFFP_I12_EDITOR_V8_OPEN_02",
         "RFFP_I12_CAST",
@@ -4424,155 +4447,609 @@
       ],
       "unapprovedImageIds": [],
       "corruptImageIds": [],
-      "reason": "book-cover-not-established",
-      "inventorySource": "candidate-needs-curation",
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
       "sourceShowId": "rex-fleet-full-performance-i12"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e01",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 24,
+      "approvedImages": 0,
+      "missingImageCount": 24,
+      "missingImageIds": [
+        "EFW_S1E01_COVER",
+        "EFW_S1E01_EDITOR_OPEN",
+        "EFW_S1E01_S01",
+        "EFW_S1E01_S02",
+        "EFW_S1E01_S03",
+        "EFW_S1E01_S04",
+        "EFW_S1E01_S05",
+        "EFW_S1E01_S06",
+        "EFW_S1E01_S07",
+        "EFW_S1E01_S08",
+        "EFW_S1E01_S09",
+        "EFW_S1E01_S10",
+        "EFW_S1E01_S11",
+        "EFW_S1E01_S12",
+        "EFW_S1E01_S13",
+        "EFW_S1E01_S14",
+        "EFW_S1E01_S15",
+        "EFW_S1E01_S16",
+        "EFW_S1E01_S17",
+        "EFW_S1E01_S18",
+        "EFW_S1E01_S19",
+        "EFW_S1E01_S20",
+        "EFW_S1E01_S21",
+        "EFW_S1E01_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e01"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e02",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 19,
+      "approvedImages": 0,
+      "missingImageCount": 19,
+      "missingImageIds": [
+        "EFW_S1E02_COVER",
+        "EFW_S1E02_EDITOR_OPEN",
+        "EFW_S1E02_S01",
+        "EFW_S1E02_S02",
+        "EFW_S1E02_S03",
+        "EFW_S1E02_S04",
+        "EFW_S1E02_S05",
+        "EFW_S1E02_S06",
+        "EFW_S1E02_S07",
+        "EFW_S1E02_S08",
+        "EFW_S1E02_S09",
+        "EFW_S1E02_S10",
+        "EFW_S1E02_S11",
+        "EFW_S1E02_S12",
+        "EFW_S1E02_S13",
+        "EFW_S1E02_S14",
+        "EFW_S1E02_S15",
+        "EFW_S1E02_S16",
+        "EFW_S1E02_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e02"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e03",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 18,
+      "approvedImages": 0,
+      "missingImageCount": 18,
+      "missingImageIds": [
+        "EFW_S1E03_COVER",
+        "EFW_S1E03_EDITOR_OPEN",
+        "EFW_S1E03_S01",
+        "EFW_S1E03_S02",
+        "EFW_S1E03_S03",
+        "EFW_S1E03_S04",
+        "EFW_S1E03_S05",
+        "EFW_S1E03_S06",
+        "EFW_S1E03_S07",
+        "EFW_S1E03_S08",
+        "EFW_S1E03_S09",
+        "EFW_S1E03_S10",
+        "EFW_S1E03_S11",
+        "EFW_S1E03_S12",
+        "EFW_S1E03_S13",
+        "EFW_S1E03_S14",
+        "EFW_S1E03_S15",
+        "EFW_S1E03_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e03"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e04",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 19,
+      "approvedImages": 0,
+      "missingImageCount": 19,
+      "missingImageIds": [
+        "EFW_S1E04_COVER",
+        "EFW_S1E04_EDITOR_OPEN",
+        "EFW_S1E04_S01",
+        "EFW_S1E04_S02",
+        "EFW_S1E04_S03",
+        "EFW_S1E04_S04",
+        "EFW_S1E04_S05",
+        "EFW_S1E04_S06",
+        "EFW_S1E04_S07",
+        "EFW_S1E04_S08",
+        "EFW_S1E04_S09",
+        "EFW_S1E04_S10",
+        "EFW_S1E04_S11",
+        "EFW_S1E04_S12",
+        "EFW_S1E04_S13",
+        "EFW_S1E04_S14",
+        "EFW_S1E04_S15",
+        "EFW_S1E04_S16",
+        "EFW_S1E04_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e04"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e05",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 19,
+      "approvedImages": 0,
+      "missingImageCount": 19,
+      "missingImageIds": [
+        "EFW_S1E05_COVER",
+        "EFW_S1E05_EDITOR_OPEN",
+        "EFW_S1E05_S01",
+        "EFW_S1E05_S02",
+        "EFW_S1E05_S03",
+        "EFW_S1E05_S04",
+        "EFW_S1E05_S05",
+        "EFW_S1E05_S06",
+        "EFW_S1E05_S07",
+        "EFW_S1E05_S08",
+        "EFW_S1E05_S09",
+        "EFW_S1E05_S10",
+        "EFW_S1E05_S11",
+        "EFW_S1E05_S12",
+        "EFW_S1E05_S13",
+        "EFW_S1E05_S14",
+        "EFW_S1E05_S15",
+        "EFW_S1E05_S16",
+        "EFW_S1E05_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e05"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e06",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 18,
+      "approvedImages": 0,
+      "missingImageCount": 18,
+      "missingImageIds": [
+        "EFW_S1E06_COVER",
+        "EFW_S1E06_EDITOR_OPEN",
+        "EFW_S1E06_S01",
+        "EFW_S1E06_S02",
+        "EFW_S1E06_S03",
+        "EFW_S1E06_S04",
+        "EFW_S1E06_S05",
+        "EFW_S1E06_S06",
+        "EFW_S1E06_S07",
+        "EFW_S1E06_S08",
+        "EFW_S1E06_S09",
+        "EFW_S1E06_S10",
+        "EFW_S1E06_S11",
+        "EFW_S1E06_S12",
+        "EFW_S1E06_S13",
+        "EFW_S1E06_S14",
+        "EFW_S1E06_S15",
+        "EFW_S1E06_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e06"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e07",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 19,
+      "approvedImages": 0,
+      "missingImageCount": 19,
+      "missingImageIds": [
+        "EFW_S1E07_COVER",
+        "EFW_S1E07_EDITOR_OPEN",
+        "EFW_S1E07_S01",
+        "EFW_S1E07_S02",
+        "EFW_S1E07_S03",
+        "EFW_S1E07_S04",
+        "EFW_S1E07_S05",
+        "EFW_S1E07_S06",
+        "EFW_S1E07_S07",
+        "EFW_S1E07_S08",
+        "EFW_S1E07_S09",
+        "EFW_S1E07_S10",
+        "EFW_S1E07_S11",
+        "EFW_S1E07_S12",
+        "EFW_S1E07_S13",
+        "EFW_S1E07_S14",
+        "EFW_S1E07_S15",
+        "EFW_S1E07_S16",
+        "EFW_S1E07_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e07"
+    },
+    {
+      "selectorId": "echoes-forgotten-war-s1-e08",
+      "seriesId": "echoes-forgotten-war",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 21,
+      "approvedImages": 0,
+      "missingImageCount": 21,
+      "missingImageIds": [
+        "EFW_S1E08_COVER",
+        "EFW_S1E08_EDITOR_OPEN",
+        "EFW_S1E08_S01",
+        "EFW_S1E08_S02",
+        "EFW_S1E08_S03",
+        "EFW_S1E08_S04",
+        "EFW_S1E08_S05",
+        "EFW_S1E08_S06",
+        "EFW_S1E08_S07",
+        "EFW_S1E08_S08",
+        "EFW_S1E08_S09",
+        "EFW_S1E08_S10",
+        "EFW_S1E08_S11",
+        "EFW_S1E08_S12",
+        "EFW_S1E08_S13",
+        "EFW_S1E08_S14",
+        "EFW_S1E08_S15",
+        "EFW_S1E08_S16",
+        "EFW_S1E08_S17",
+        "EFW_S1E08_S18",
+        "EFW_S1E08_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "echoes-forgotten-war-s1-e08"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e01",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 23,
+      "approvedImages": 0,
+      "missingImageCount": 23,
+      "missingImageIds": [
+        "BR_S1E01_COVER",
+        "BR_S1E01_EDITOR_OPEN",
+        "BR_S1E01_R2_P01",
+        "BR_S1E01_R2_P02",
+        "BR_S1E01_R2_P03",
+        "BR_S1E01_R2_P04",
+        "BR_S1E01_R2_P05",
+        "BR_S1E01_R2_P06",
+        "BR_S1E01_R2_P07",
+        "BR_S1E01_R2_P08",
+        "BR_S1E01_R2_P09",
+        "BR_S1E01_R2_P10",
+        "BR_S1E01_R2_P11",
+        "BR_S1E01_R2_P12",
+        "BR_S1E01_R2_P13",
+        "BR_S1E01_R2_P14",
+        "BR_S1E01_R2_P15",
+        "BR_S1E01_R2_P16",
+        "BR_S1E01_R2_P17",
+        "BR_S1E01_R2_P18",
+        "BR_S1E01_R2_P19",
+        "BR_S1E01_R2_P20",
+        "BR_S1E01_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e01"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e02",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 27,
+      "approvedImages": 0,
+      "missingImageCount": 27,
+      "missingImageIds": [
+        "BR_S1E02_COVER",
+        "BR_S1E02_EDITOR_OPEN",
+        "BR_S1E02_R2_P01",
+        "BR_S1E02_R2_P02",
+        "BR_S1E02_R2_P03",
+        "BR_S1E02_R2_P04",
+        "BR_S1E02_R2_P05",
+        "BR_S1E02_R2_P06",
+        "BR_S1E02_R2_P07",
+        "BR_S1E02_R2_P08",
+        "BR_S1E02_R2_P09",
+        "BR_S1E02_R2_P10",
+        "BR_S1E02_R2_P11",
+        "BR_S1E02_R2_P12",
+        "BR_S1E02_R2_P13",
+        "BR_S1E02_R2_P14",
+        "BR_S1E02_R2_P15",
+        "BR_S1E02_R2_P16",
+        "BR_S1E02_R2_P17",
+        "BR_S1E02_R2_P18",
+        "BR_S1E02_R2_P19",
+        "BR_S1E02_R2_P20",
+        "BR_S1E02_R2_P21",
+        "BR_S1E02_R2_P22",
+        "BR_S1E02_R2_P23",
+        "BR_S1E02_R2_P24",
+        "BR_S1E02_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e02"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e03",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 22,
+      "approvedImages": 0,
+      "missingImageCount": 22,
+      "missingImageIds": [
+        "BR_S1E03_COVER",
+        "BR_S1E03_EDITOR_OPEN",
+        "BR_S1E03_PS_A01_SC01",
+        "BR_S1E03_PS_A01_SC02",
+        "BR_S1E03_PS_A01_SC03",
+        "BR_S1E03_DOC_TG03",
+        "BR_S1E03_PS_A01_SC04",
+        "BR_S1E03_PS_A01_SC05",
+        "BR_S1E03_PS_A02_SC01",
+        "BR_S1E03_PS_A02_SC02",
+        "BR_S1E03_DOC_DL03",
+        "BR_S1E03_PS_A02_SC03",
+        "BR_S1E03_PS_A02_SC04",
+        "BR_S1E03_PS_A02_SC05",
+        "BR_S1E03_PS_A02_SC06",
+        "BR_S1E03_PS_A03_SC01",
+        "BR_S1E03_PS_A03_SC02",
+        "BR_S1E03_PS_A03_SC03",
+        "BR_S1E03_PS_A03_SC04",
+        "BR_S1E03_PS_A03_SC05",
+        "BR_S1E03_PS_A03_SC06",
+        "BR_S1E03_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e03"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e04",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 21,
+      "approvedImages": 0,
+      "missingImageCount": 21,
+      "missingImageIds": [
+        "BR_S1E04_COVER",
+        "BR_S1E04_EDITOR_OPEN",
+        "BR_S1E04_A01_SC01",
+        "BR_S1E04_A01_SC02",
+        "BR_S1E04_A01_SC03",
+        "BR_S1E04_DOC_DL04",
+        "BR_S1E04_A01_SC04",
+        "BR_S1E04_A01_SC05",
+        "BR_S1E04_A02_SC01",
+        "BR_S1E04_DOC_TG04",
+        "BR_S1E04_A02_SC02",
+        "BR_S1E04_A02_SC03",
+        "BR_S1E04_A02_SC04",
+        "BR_S1E04_A02_SC05",
+        "BR_S1E04_A02_SC06",
+        "BR_S1E04_A03_SC01",
+        "BR_S1E04_A03_SC02",
+        "BR_S1E04_A03_SC03",
+        "BR_S1E04_A03_SC04",
+        "BR_S1E04_A03_SC05",
+        "BR_S1E04_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e04"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e05",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 24,
+      "approvedImages": 0,
+      "missingImageCount": 24,
+      "missingImageIds": [
+        "BR_S1E05_COVER",
+        "BR_S1E05_EDITOR_OPEN",
+        "BR_S1E05_A01_SC01",
+        "BR_S1E05_A01_SC02",
+        "BR_S1E05_A01_SC03",
+        "BR_S1E05_A01_SC04",
+        "BR_S1E05_DOC_TG05",
+        "BR_S1E05_A01_SC05",
+        "BR_S1E05_A02_SC01",
+        "BR_S1E05_A02_SC02",
+        "BR_S1E05_DOC_DL05",
+        "BR_S1E05_A02_SC03",
+        "BR_S1E05_A02_SC04",
+        "BR_S1E05_A02_SC05",
+        "BR_S1E05_A02_SC06",
+        "BR_S1E05_A03_SC01",
+        "BR_S1E05_A03_SC02",
+        "BR_S1E05_DOC_TG06",
+        "BR_S1E05_DOC_DL06",
+        "BR_S1E05_A03_SC03",
+        "BR_S1E05_A03_SC04",
+        "BR_S1E05_A03_SC05",
+        "BR_S1E05_A03_SC06",
+        "BR_S1E05_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e05"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e06",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 22,
+      "approvedImages": 0,
+      "missingImageCount": 22,
+      "missingImageIds": [
+        "BR_S1E06_COVER",
+        "BR_S1E06_EDITOR_OPEN",
+        "BR_S1E06_A01_SC01",
+        "BR_S1E06_A01_SC02",
+        "BR_S1E06_A01_SC03",
+        "BR_S1E06_A01_SC04",
+        "BR_S1E06_A01_SC05",
+        "BR_S1E06_A02_SC01",
+        "BR_S1E06_A02_SC02",
+        "BR_S1E06_A02_SC03",
+        "BR_S1E06_A02_SC04",
+        "BR_S1E06_DOC_TG07",
+        "BR_S1E06_A02_SC05",
+        "BR_S1E06_A02_SC06",
+        "BR_S1E06_DOC_DL07",
+        "BR_S1E06_A03_SC01",
+        "BR_S1E06_A03_SC02",
+        "BR_S1E06_A03_SC03",
+        "BR_S1E06_A03_SC04",
+        "BR_S1E06_A03_SC05",
+        "BR_S1E06_A03_SC06",
+        "BR_S1E06_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e06"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e07",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 22,
+      "approvedImages": 0,
+      "missingImageCount": 22,
+      "missingImageIds": [
+        "BR_S1E07_COVER",
+        "BR_S1E07_EDITOR_OPEN",
+        "BR_S1E07_A01_SC01",
+        "BR_S1E07_A01_SC02",
+        "BR_S1E07_A01_SC03",
+        "BR_S1E07_A01_SC04",
+        "BR_S1E07_A01_SC05",
+        "BR_S1E07_A02_SC01",
+        "BR_S1E07_A02_SC02",
+        "BR_S1E07_A02_SC03",
+        "BR_S1E07_DOC_TG08",
+        "BR_S1E07_A02_SC04",
+        "BR_S1E07_DOC_DL08",
+        "BR_S1E07_A02_SC05",
+        "BR_S1E07_A02_SC06",
+        "BR_S1E07_A03_SC01",
+        "BR_S1E07_A03_SC02",
+        "BR_S1E07_A03_SC03",
+        "BR_S1E07_A03_SC04",
+        "BR_S1E07_A03_SC05",
+        "BR_S1E07_A03_SC06",
+        "BR_S1E07_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e07"
+    },
+    {
+      "selectorId": "backyard-rockets-s1-e08",
+      "seriesId": "backyard-rockets",
+      "kind": "issue",
+      "status": "blocked-missing-images",
+      "expectedUnits": 25,
+      "approvedImages": 0,
+      "missingImageCount": 25,
+      "missingImageIds": [
+        "BR_S1E08_COVER",
+        "BR_S1E08_EDITOR_OPEN",
+        "BR_S1E08_A01_SC01",
+        "BR_S1E08_A01_SC02",
+        "BR_S1E08_A01_SC03",
+        "BR_S1E08_A01_SC04",
+        "BR_S1E08_DOC_TG09",
+        "BR_S1E08_A01_SC05",
+        "BR_S1E08_DOC_DL09",
+        "BR_S1E08_A01_SC06",
+        "BR_S1E08_A02_SC01",
+        "BR_S1E08_A02_SC02",
+        "BR_S1E08_A02_SC03",
+        "BR_S1E08_A02_SC04",
+        "BR_S1E08_A02_SC05",
+        "BR_S1E08_A02_SC06",
+        "BR_S1E08_A03_SC01",
+        "BR_S1E08_A03_SC02",
+        "BR_S1E08_A03_SC03",
+        "BR_S1E08_A03_SC04",
+        "BR_S1E08_A03_SC05",
+        "BR_S1E08_A03_SC06",
+        "BR_S1E08_A03_SC07",
+        "BR_S1E08_A03_SC08",
+        "BR_S1E08_EDITOR_CLOSE"
+      ],
+      "unapprovedImageIds": [],
+      "corruptImageIds": [],
+      "reason": "missing-approved-images",
+      "inventorySource": "derived-from-registered-source",
+      "sourceShowId": "backyard-rockets-s1-e08"
     }
   ],
-  "diagnostics": [
-    {
-      "selectorId": "rex-fleet-academy-anomalies-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rfa-reach-resolve-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-stormwell-archive-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-glass-horizon-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-academy-navigating-mirrorfold-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-academy-doctrine-many-crowns-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-academy-core-worlds-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-academy-physics-lattice-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-aegis-vigil-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-ghostwind-arrow-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-slip-knife-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-crimson-warden-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i01",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i02",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i03",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i04",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i05",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i06",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i07",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i08",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i09",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i10",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i11",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    },
-    {
-      "selectorId": "rex-fleet-full-performance-i12",
-      "errors": [
-        "book-cover-not-established"
-      ]
-    }
-  ]
+  "diagnostics": []
 }

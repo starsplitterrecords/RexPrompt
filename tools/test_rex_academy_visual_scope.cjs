@@ -6,11 +6,11 @@ const html=read('index.html'),a=html.indexOf('const SHOW_MANIFEST='),b=html.inde
 assert(a>=0&&b>a);const context=vm.createContext({});
 vm.runInContext(html.slice(a,b)+';globalThis.exportsForTest={assembleScene,visibleCharacterHandles};',context);
 const {assembleScene,visibleCharacterHandles}=context.exportsForTest;
-const shows=json('data/shows.json').filter(s=>/^(rex-fleet-academy-(?!.*cover)|rfa-reach-resolve-i01)/.test(s.id)&&s.scenesFile);
+const shows=json('data/shows.json').filter(s=>/^(rex-fleet-academy-(?!.*cover)|rfa-reach-resolve-i01)/.test(s.id)&&(s.scenesFile||s.scenesFiles?.length));
 assert.equal(shows.length,7,'Seven registered Academy story issues expected');
 const normalize=raw=>Array.isArray(raw)?raw:(raw?.pages||Object.entries(raw||{}).map(([id,p])=>({id,...p})));
 function loadPages(show){
- const dir=show.basePath,pages=normalize(json(dir+'/'+show.scenesFile));
+ const dir=show.basePath,files=show.scenesFiles?.length?show.scenesFiles:[show.scenesFile],pages=files.flatMap(file=>normalize(json(dir+'/'+file)));
  let current=pages;
  for(const ov of show.sceneOverlays||[]){
   const incoming=normalize(json(dir+'/'+ov.file));
@@ -22,6 +22,8 @@ function loadPages(show){
   }else current.push(...incoming);
  }
  if(show.includeIdPattern)current=current.filter(p=>new RegExp(show.includeIdPattern).test(p.id));
+ // Cover units are audited independently. Preserve the established story-page visual-scope baseline.
+ current=current.filter(p=>!/_COVER$/.test(p.id));
  return current;
 }
 function section(text,key){
