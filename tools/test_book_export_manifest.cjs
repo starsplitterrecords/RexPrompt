@@ -31,7 +31,21 @@ for(const issue of structures){
 assert.equal(shows.filter(s=>s.unitLabel==='COVER').length,0,'No cover-only production selectors may be registered');
 assert.equal(shows.filter(s=>/cover shelf/i.test(s.name||'')).length,0,'No active cover shelves');
 assert.equal(Object.values(structure.issues).filter(x=>x.coverStatus!=='ordered').length,0,'Every issue must have an issue-ordered cover');
+const originalCoverRegistry=JSON.parse(fs.readFileSync('production/archives/legacy-cover-selectors-20261108.json','utf8'));
+assert.equal(originalCoverRegistry.retiredSelectorCount,29,'All removed cover selector configurations must remain archived');
+assert.equal(originalCoverRegistry.selectors.length,29,'Cover selector archive must be complete');
 const sourceById=new Map(shows.map(s=>[s.id,s]));
+let recoveredCoverProfiles=0;
+for(const book of Object.values(inv.issues)){
+ const show=sourceById.get(book.issueId),cover=book.units[0];
+ const predecessors=originalCoverRegistry.selectors.filter(x=>x.seriesId===book.seriesId&&x.includeIdPattern&&new RegExp(x.includeIdPattern).test(cover));
+ if(!predecessors.length)continue;
+ assert.equal(predecessors.length,1,'Ambiguous archived cover profile '+book.issueId);
+ assert.equal(show?.coverGenerationLine,predecessors[0].generationLine,'Cover-specific production brief lost '+book.issueId);
+ if(predecessors[0].formatNote)assert.equal(show.coverFormatNote,predecessors[0].formatNote,'Cover format note lost '+book.issueId);
+ recoveredCoverProfiles++;
+}
+assert.equal(recoveredCoverProfiles,46,'The six existing cover shelf series must retain 46 issue-bound cover briefs');
 for(const book of Object.values(inv.issues)){
  const show=sourceById.get(book.issueId);
  assert.ok(show,'Book has no issue selector '+book.issueId);
