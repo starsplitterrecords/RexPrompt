@@ -27,6 +27,35 @@ for(const issue of structures){
  if(issue.coverStatus==='available-in-separate-shelf')assert.ok(issue.separateCoverCandidates?.length,'Unavailable cover candidate '+issue.issueId);
  if(issue.readingOrder==='curated-complete-book')assert.equal(issue.coverStatus,'ordered','Curated issue must establish a cover '+issue.issueId);
 }
+// Every formerly standalone cover must now be addressable as page one of its
+// actual issue assembler, using the exact unchanged original cover record.
+const retired=JSON.parse(fs.readFileSync('production/migrations/retired-cover-selectors-2026-11-08.json','utf8'));
+assert.equal(retired.retiredCount,29,'Unexpected archived cover selector count');
+assert.equal(retired.originalRegistryCount,shows.length+retired.retiredCount,'Cover selector retirement did not preserve registry count');
+assert.equal(shows.filter(s=>s.unitLabel==='COVER'||/(?:^|-)covers?(?:-|$)/i.test(s.id)).length,0,
+ 'Cover-only selectors must not appear in the active production registry');
+const allCoverIds=new Set();
+let bakedIssueCount=0;
+for(const oldCover of retired.retiredConfigurationEntries){
+ const sourceFiles=oldCover.scenesFiles?.length?oldCover.scenesFiles:[oldCover.scenesFile];
+ for(const file of sourceFiles){
+  const full=(oldCover.basePath||'data')+'/'+file;
+  const records=JSON.parse(fs.readFileSync(full,'utf8'));
+  const match=new RegExp(oldCover.includeIdPattern);
+  for(const record of records.filter(row=>match.test(row.id))){
+   assert.ok(!allCoverIds.has(record.id),'Cover previously registered twice '+record.id);
+   allCoverIds.add(record.id);
+   const sources=shows.filter(s=>s.seriesId===oldCover.seriesId&&
+     (s.scenesFiles?.[0]===file)&&inv.issues[s.seriesId+'::'+s.id]?.units[0]===record.id);
+   assert.equal(sources.length,1,'Exactly one real issue must own cover in assembler position one: '+record.id);
+   assert.equal(sources[0].unitLabel==='COVER',false,'Cover cannot be a standalone selector');
+   bakedIssueCount++;
+  }
+ }
+}
+assert.equal(allCoverIds.size,38,'All 38 former shelf-sourced covers must be baked into issues');
+assert.equal(bakedIssueCount,38,'Cover migration did not reach all issue configurations');
+
 const registered=new Set(shows.map(s=>s.id));
 assert.equal(structure.schemaVersion,1);
 
