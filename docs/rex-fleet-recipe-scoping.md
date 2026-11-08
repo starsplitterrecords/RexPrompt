@@ -1,10 +1,10 @@
 # Rex Fleet — authored page ingredient scope
 
-RexPrompt assembles each Rex Fleet page from its authored story data and reference shelves. The per-page chef scope is stored in `data/shows/rex-fleet-s1/editorial/page_assembly_scope_iNN.json` for Issues 01–12.
+RexPrompt assembles each Rex Fleet page from its authored story data and reference shelves. The per-page chef scope is stored directly on canonical page records in `data/shows/rex-fleet-s1` for Issues 01–12.
 
 ## Contract
 
-Each interior page has one merge-by-ID profile, applied **after** all story, dialogue, and page-layout overlays. The existing RexPrompt `promptSuppress` and `promptCharacterMode` fields control assembled output; these files do not invent a schema or a second recipe.
+Each interior page carries its own `promptSuppress` and `promptCharacterMode` fields in the authoritative page source. There is no post-assembly profile or second version of a page.
 
 - `promptCharacterMode: "full"` keeps established visual and performance identity descriptions on selected anchor scenes.
 - `promptCharacterMode: "cast"` keeps the explicitly present cast names and separate speaker handles but omits repeated full character biographies.
@@ -19,7 +19,7 @@ Covers and editorial pages retain their complete prior assembled recipes. Releas
 
 ## Production boundary
 
-This is a **recipe-assembly sanitation pass**, not an image, layout, or dialogue rewrite. The original page data and compressed issue payloads are untouched. If a particular page requires more or less visual context, edit that page's final scope overlay, not browser-local overrides or unrelated source shelves.
+This is a **recipe-assembly sanitation pass**, not an image, layout, or dialogue rewrite. The current page data and compressed issue payloads are authoritative. If a particular page requires more or less visual context, edit its canonical production record, not an overlay or browser-local override.
 
 ## Mechanical review
 
@@ -30,4 +30,4 @@ node tools/test_rex_fleet_issue04_density.cjs
 node tools/test_rex_fleet_issue05_density.cjs
 ```
 
-The scope test assembles every Rex Fleet interior, cover and editorial unit using the current browser assembler, comparing original versus scoped recipes. It confirms strict page coverage, approved existing suppression, intact story ingredients, unchanged artistic layout, unaltered special pages, and shorter prompt output. Follow it with visual editorial review of selected newly generated pages: shorter recipes are not themselves proof of better artwork.
+The scope test assembles every Rex Fleet interior, cover and editorial unit using the current browser assembler. It checks page coverage, the stored suppression rules, intact story ingredients, unchanged artistic layouts, and unaltered special pages. Follow it with visual editorial review of selected newly generated pages: shorter recipes are not themselves proof of better artwork.

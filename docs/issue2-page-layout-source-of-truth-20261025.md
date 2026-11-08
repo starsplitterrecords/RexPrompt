@@ -1,9 +1,7 @@
-# Rex Fleet Issue 2 composition: single source of truth
+# Rex Fleet Issue 2 — Page composition ownership
 
-A historical integration introduced 19 editorial layouts into `pages_i02.json` while the current assembler already loads a strict ID-merge overlay, `page_layout_i02.json`, later synchronized by PR #291. Both sets of 19 layouts were compared and found byte-equivalent as parsed JSON before this cleanup.
+RexPrompt now stores Issue 2's approved, page-specific compositions directly in the canonical `pages_i02.json` production records. The assembler no longer loads a separate field-replacement file.
 
-To avoid two competing authorities, `pages_i02.json` now holds only source story and script material; `page_layout_i02.json` owns the 19 editorial compositions. The production manifest's strict overlay merge remains unchanged.
+The historical integration and normalization discussions remain recoverable through Git history. They do not constitute an alternative active production source.
 
-The updated `tools/test_issue2_layout_rollout.cjs` verifies the registered overlay, one-to-one page coverage, absence of source-embedded duplicate layouts, and that the assembled composition leaves panel plans, dialogue and continuity unchanged.
-
-No approved art, page content, publication state, dialogue or page order was changed.
+Run `node tools/test_issue2_layout_rollout.cjs` to validate page composition, original panel sequence, exact scripted dialogue, and unchanged continuity.

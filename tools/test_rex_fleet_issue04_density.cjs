@@ -11,8 +11,7 @@ assert(!(show.sceneOverlays||[]).some(x=>/issue_04_/.test(x.file)),
  'Consolidated story patches must not remain in the live recipe load path');
 const base=show.basePath;
 const original=JSON.parse(zlib.gunzipSync(Buffer.from(read(base+'/encoded/pages_i04.json.gzb64').trim(),'base64')).toString('utf8'));
-const layouts=load(base+'/page_layout_i04.json'),byLayout=new Map(layouts.map(x=>[x.id,x]));
-const pages=original.map(x=>byLayout.has(x.id)?{...x,...byLayout.get(x.id)}:x);
+const pages=original;
 assert.equal(pages.length,31,'Issue 04 authoritative page count changed');
 assert.equal(new Set(pages.map(x=>x.id)).size,pages.length,'Duplicate source page IDs');
 const source=read('index.html'),a=source.indexOf('const SHOW_MANIFEST='),b=source.indexOf('function safeFilePart(',a);
