@@ -76,4 +76,4 @@ The tests extract and execute the **actual browser assembler**, check five disti
 
 ## Editorial handoff to phase B
 
-Review the entire issue and chosen visual references. Create a page-specific `pageLayout` alongside authored story data (or as a strict `mergeById` overlay after the current story revisions). Prototype contrasting pages first, render with actual established references, and review caption readability, the dominant beat, page-turn effect, and reader eye path. Only then encode broader per-page plans. Keep the issue page count fixed unless an independent writing decision changes it.
+Review the entire issue and chosen visual references. Edit the page-specific `pageLayout` directly in the canonical page record alongside the authored story; do not create a competing field overlay. Prototype contrasting pages first, render with actual established references, and review caption readability, the dominant beat, page-turn effect, and reader eye path. Only then encode broader per-page plans. Keep the issue page count fixed unless an independent writing decision changes it.

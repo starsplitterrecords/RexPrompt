@@ -2,9 +2,9 @@
 
 **Scope:** 260 story interiors across Issues 1–12. Editorial introductions, covers, teasers and closing units are unchanged.
 
-## Authoritative layers
+## Authoritative page data
 
-The authored story stays in pages_eNN.json. The separately approved dramatic page composition stays in editorial/page_layouts_eNN.json. The new editorial/page_assembly_eNN.json overlay runs afterward and stores only chef-facing suppression and reference modes. All overlays are strict merge-by-ID; raw story dialogue, panel actions, and page count remain untouched. The one explicit correction is Issue 3 page 1's setting reference: the trio is still on a Sunfields road, not inside the Mirage Club.
+Each `pages_eNN.json` file contains the authoritative story, `pageLayout`, and chef-facing fields including `promptSuppress`, `promptCharacterMode` and `promptSettingMode`. There are no separate editorial field-overlays. Scripted dialogue, panel actions, and page counts remain unchanged. The Issue 3 page 1 location correction lives directly in that page: the trio is on a Sunfields road, not inside the Mirage Club.
 
 ## What gets through
 
@@ -24,7 +24,7 @@ The page-specific field `promptPanelLetteringMode: "indexed"` invokes the determ
 
 ## Continuity exceptions
 
-- Issue 3 P01: correct the road location to Sunfields at assembly only; P02 introduces the Mirage Club.
+- Issue 3 P01: the canonical page location is Sunfields; P02 introduces the Mirage Club.
 - Issue 8: retain unusually frequent full location/terrain references because the Rider's distance depends on believable repeated landmarks and precise spatial continuity.
 - Issues 9, 11 and 12: re-establish locations at consequential human or prop/chronology transitions, rather than every Nth page.
 - Issues 4–12: retain issue summaries and global acting direction, which the shorter panel plans cannot replace safely.
