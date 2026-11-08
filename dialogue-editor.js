@@ -69,7 +69,7 @@ function initialRows(scene){
   return (scene.dialogueInline||[]).map((d,i)=>({
     key:i+1,original:clone(d),speaker:String(d.speaker||''),handle:String(d.handle||''),
     text:String(d.text||''),note:/^Panel\s+\d+$/i.test(String(d.subtext||'').trim())?'':String(d.subtext||''),
-    panel:inferPanel(scene,i)
+    panel:inferPanel(scene,i),initialPanel:inferPanel(scene,i)
   }));
 }
 function draftPage(scene,rows){
@@ -81,16 +81,21 @@ function draftPage(scene,rows){
     if(row.panel!==null&&(!Number.isInteger(row.panel)||row.panel<1||row.panel>panelPlan.length))
       throw Error('Dialogue line '+(i+1)+' has a panel outside this page.');
     const d=clone(row.original);
-    if(row.speaker.trim())d.speaker=row.speaker.trim();else delete d.speaker;
-    if(row.handle.trim())d.handle=row.handle.trim();else delete d.handle;
-    d.text=row.text;
-    if(indexed){
-      if(row.note.trim())d.subtext=row.note;else if(row.panel!==null)d.subtext='Panel '+row.panel;else delete d.subtext;
-    }else{
-      if(row.panel!==null&&row.note.trim())
+    if(row.speaker!==String(row.original.speaker||'')){
+      if(row.speaker.trim())d.speaker=row.speaker.trim();else delete d.speaker;
+    }
+    if(row.handle!==String(row.original.handle||'')){
+      if(row.handle.trim())d.handle=row.handle.trim();else delete d.handle;
+    }
+    if(row.text!==String(row.original.text||''))d.text=row.text;
+    const oldNote=/^Panel\s+\d+$/i.test(String(row.original.subtext||'').trim())?'':String(row.original.subtext||'');
+    const changedPanel=row.panel!==row.initialPanel,changedNote=row.note!==oldNote;
+    if(changedPanel||changedNote){
+      if(!indexed&&row.panel!==null&&row.note.trim())
         throw Error('Line '+(i+1)+' has authored subtext as well as a panel assignment. The current page format cannot store both without a structured panel map; preserve the subtext and normalize panel ownership first.');
-      if(row.panel!==null)d.subtext='Panel '+row.panel;
-      else if(row.note.trim())d.subtext=row.note;
+      if(indexed&&row.note.trim())d.subtext=row.note;
+      else if(row.panel!==null)d.subtext='Panel '+row.panel;
+      else if(row.note!=='')d.subtext=row.note;
       else delete d.subtext;
     }
     return d;
@@ -251,7 +256,7 @@ function mount({button,getContext,onSaved,compile}){
   tabBtns.forEach(btn=>btn.onclick=()=>{if(model){model.tab=btn.dataset.tab;render()}});
   $('.rp-dialogue-add',modal).onclick=()=>{
     if(!model)return;
-    model.rows.push({key:nextKey++,original:{},speaker:'CAPTION',handle:'',text:'',note:'',panel:null});
+    model.rows.push({key:nextKey++,original:{},speaker:'CAPTION',handle:'',text:'',note:'',panel:null,initialPanel:null});
     render();list.lastElementChild?.scrollIntoView({block:'nearest'});
   };
   $('.rp-dialogue-revert',modal).onclick=()=>{if(model&&!busy){model.rows=initialRows(model.scene);render()}};
