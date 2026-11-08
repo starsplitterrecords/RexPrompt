@@ -64,5 +64,5 @@ for(let ep=3;ep<=10;ep++){
   summary.push({ep,pages:pages.length,lines});
 }
 console.log('PASS: Stardust E03-E10 issue-wide density integrity');
-for(const issue of summary)console.log('Issue '+issue.ep+': '+issue.pages+' pages, '+issue.changed+' scene repairs, '+issue.lines+' dialogue entries compiled');
-console.log('TOTAL: '+summary.reduce((n,x)=>n+x.pages,0)+' pages; '+summary.reduce((n,x)=>n+x.changed,0)+' focused repairs; no page IDs, scene order, scripted panel counts, or dialogue lost');
+for(const issue of summary)console.log('Issue '+issue.ep+': '+issue.pages+' canonical pages, '+issue.lines+' dialogue entries compiled');
+console.log('TOTAL: '+summary.reduce((n,x)=>n+x.pages,0)+' pages; no page IDs, scene order, scripted panel counts, or dialogue lost');

@@ -12,7 +12,7 @@ vm.runInContext(html.slice(start,end)+';globalThis.pageTest={assembleScene,valid
 const {assembleScene:assemble,validatePageLayout:validate,pageLayoutWarnings}=context.pageTest;
 const shows=load('data/shows.json');
 const targets=[
-{show:'rex-fleet-i02',file:'data/shows/rex-fleet-s1/pages_i02.json',overlay:'data/shows/rex-fleet-s1/page_layout_i02.json'},
+{show:'rex-fleet-i02',file:'data/shows/rex-fleet-s1/pages_i02.json'},
 {show:'vikings-2026-s1-e02',file:'data/shows/vikings-2026-s1/pages_i02.json'}
 ];
 function store(show){const value={__show:show};for(const name of ['characters','settings','factions','regions','direction','dialogue'])value[name+'.json']=load(show.basePath+'/'+name+'.json');return value}
@@ -20,10 +20,10 @@ for(const target of targets){
 const show=shows.find(x=>x.id===target.show);assert(show,'Missing show '+target.show);
 const rawPages=load(target.file),s=store(show),names=new Set();
 let pages=rawPages;
-if(target.overlay){
+if(target.show==='rex-fleet-i02'){
   // Rex Fleet Issue 2 now keeps its existing curated composition in page source.
-  assert(!(show.sceneOverlays||[]).some(x=>show.basePath+'/'+x.file===target.overlay),
-    'Normalized Rex issue must not reapply obsolete composition overlay');
+  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),
+    'Normalized Rex issue must not reapply field-patch overlays');
   assert(rawPages.every(page=>page.pageLayout),'Rex Fleet Issue 2 lost its composed source layouts');
 }
 assert(pages.length>0,'Empty issue '+target.show);
