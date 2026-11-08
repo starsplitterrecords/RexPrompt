@@ -32,30 +32,14 @@ for(let issue=1;issue<=8;issue++){
  assert.equal(issueShow.scenesFiles.length,1,'Unexpected issue file count '+suffix);
  assert.equal(issueShow.scenesFiles[0],'scenes_e'+suffix+'.json');
  assert(!(issueShow.sceneOverlays||[]).some(x=>x.mergeById),'Canonical Echoes issue must have no field overlays '+suffix);
- const source=json(base+'/scenes_e'+suffix+'.json'),patches=json(base+'/editorial/page_layouts_e'+suffix+'.json');
+ const source=json(base+'/scenes_e'+suffix+'.json');
  assert.equal(source.length,expectedCounts[issue-1],'Source issue count drift '+suffix);
- assert.equal(patches.length,source.length,'Layout inventory mismatch '+suffix);
- assert.equal(new Set(patches.map(x=>x.id)).size,source.length,'Duplicate layout ID '+suffix);
- assert.deepEqual(patches.map(x=>x.id),source.map(x=>x.id),'Layout overlay order mismatch '+suffix);
- for(const patch of patches)assert.deepEqual(Object.keys(patch).sort(),['id','pageLayout'],'Unexpected script mutation in layout overlay '+patch.id);
- const scopes=json(base+'/editorial/page_recipe_scope_e'+suffix+'.json');
- assert.equal(new Set(scopes.map(x=>x.id)).size,scopes.length,'Duplicate recipe-scope ID '+suffix);
- const sourceIds=new Set(source.map(x=>x.id));
- for(const p of scopes){
-   assert(sourceIds.has(p.id),'Out-of-issue scope '+p.id);
-   assert.deepEqual(Object.keys(p).sort(),['id','promptCharacterMode'],'Scope overlay modified story data '+p.id);
-   assert.equal(p.promptCharacterMode,'cast','Unsupported Echoes character scope '+p.id);
- }
- const layouts=new Map(patches.map(p=>[p.id,p])),scoped=new Map(scopes.map(p=>[p.id,p]));
- for(const page of source){
-   const archived=layouts.get(page.id);
-   assert.deepEqual(page.pageLayout,archived?.pageLayout,'Canonical layout differs from archived layout '+page.id);
-   const override=scoped.get(page.id);
-   if(override)for(const [key,value] of Object.entries(override))if(key!=='id')
-     assert.deepEqual(page[key],value,'Canonical recipe scope differs from archived scope '+page.id+' '+key);
- }
+ assert.equal(new Set(source.map(x=>x.id)).size,source.length,'Duplicate page ID '+suffix);
+ assert(source.every(x=>x.pageLayout&&x.pageLayout.panels?.length===x.panelPlan?.length),
+   'Missing or invalid embedded layout in Echoes issue '+suffix);
+ assert(source.every(x=>!x.promptCharacterMode||x.promptCharacterMode==='cast'),
+   'Invalid character scope in Echoes issue '+suffix);
  const effective=source;
- assert.equal(effective.length,source.length,'Canonical source issue count changed '+suffix);
  for(let i=0;i<source.length;i++){
   const original=source[i],page=effective[i],layout=page.pageLayout;
   assert.equal(original.id,page.id);

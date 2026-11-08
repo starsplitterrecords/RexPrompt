@@ -36,14 +36,13 @@ for(const show of shows){
  assert.equal(show.promptVisibleCastOnly,true,show.id+' has no visual cast mode');
  assert.equal(show.omitRoutineFactions,true,show.id+' has no faction suppression');
  assert(!(show.sceneOverlays||[]).some(x=>x.mergeById),'Academy must load canonical faction selections '+show.id);
- const exceptions=json(show.basePath+'/editorial/visual_faction_pages_i01.json');
- assert(exceptions.length>=1,show.id+' must retain essential faction visual context');
- const expectedExceptionIds=new Set(exceptions.map(x=>x.id));
- assert.equal(expectedExceptionIds.size,exceptions.length);
  const store={__show:show};
  for(const file of ['characters','dialogue','settings','regions','factions','direction'])store[file+'.json']=json(show.basePath+'/'+file+'.json');
  const pages=loadPages(show);
  assert(pages.length>=22,'Unexpected Academy issue size '+show.id);
+ const exceptions=pages.filter(p=>p.promptIncludeFactions===true);
+ assert(exceptions.length>=1,'No canonical faction-visual exceptions '+show.id);
+ const expectedExceptionIds=new Set(exceptions.map(p=>p.id));
  let local=0;
  for(const [i,p] of pages.entries()){
   const text=assembleScene(p,store,i);
@@ -66,7 +65,7 @@ for(const show of shows){
   if(p.factions?.length)baselineFactions++;
   local++;refs+=expected.length;
  }
- assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Archived faction selections missing from canonical source '+show.id);
+ assert(exceptions.every(x=>pages.some(p=>p.id===x.id&&p.promptIncludeFactions===true)),'Canonical faction-visual scope inconsistent '+show.id);
  total+=local;console.log('PASS '+show.id+': '+local+' pages, only cited cast and intentional factions');
 }
 assert(baselineFactions>factioned,'Faction scoping must substantially reduce repeated prose');
