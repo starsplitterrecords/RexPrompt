@@ -12,9 +12,10 @@ const SHOWS=JSON.parse(fs.readFileSync(path.join(ROOT,'data/shows.json'),'utf8')
 const BOOK_PATH=path.join(ROOT,'production/book-manifests.json');
 const AUDIT_PATH=path.join(ROOT,'production/book-export-coverage.json');
 const HUMAN_PATH=path.join(ROOT,'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md');
+const STRUCT_PATH=path.join(ROOT,'production/issue-structure.json');
 const CURRENT=JSON.parse(fs.readFileSync(BOOK_PATH,'utf8'));
 const DRAFTS=JSON.parse(fs.readFileSync(path.join(ROOT,'production/drafts/manifest.json'),'utf8')).drafts;
-const cache=new Map(),issues={},rows=[],diagnostics=[];
+const cache=new Map(),issues={},issueStructures={},rows=[],diagnostics=[];
 const isShelf=s=>s.unitLabel==='COVER'||s.unitLabel==='EDITORIAL PAGE'||/cover shelf/i.test(s.issueLabel||'')||/cover shelf/i.test(s.name||'');
 function pathOf(show,file){
  const base=show.basePath||'data';
@@ -104,6 +105,49 @@ function supplement(show,selected){
  }
  return {units:[...before,...selected,...after],risks:structuralRisk};
 }
+// Production role evidence is derived from registered source units, never invented pages.
+function sourceRecords(show,ids){
+ const wanted=new Set(ids),found=new Map();
+ const specs=[...(show.scenesFiles||[]),...(show.scenesFile?[show.scenesFile]:[]),
+   ...(show.sceneOverlays||[]).filter(o=>!o.mergeById)];
+ for(const spec of specs)for(const item of fromSpec(show,spec)){
+   if(wanted.has(item.id)&&!found.has(item.id))found.set(item.id,item);
+ }
+ return found;
+}
+function roleOf(id,record,index,total){
+ const kind=String(record?.pageKind||'').toLowerCase(),title=String(record?.title||''),summary=String(record?.summary||'');
+ if(/_COVER$|_COVER_PAGE$/.test(id)||kind==='cover'||/^Issue\s+\d+\s+Cover\b/i.test(title))return ['cover','source-id-or-page-kind'];
+ if(/_CAST$/.test(id)||kind==='cast')return ['cast','source-id-or-page-kind'];
+ if(/_EDITOR_ENDMATTER$/.test(id))return ['end-matter','source-id'];
+ if(/_DOC_[A-Z0-9]+$/.test(id))return ['interstitial-document','source-id'];
+ if(/_EDITOR_V8_OPEN_[0-9A-Z]+$|_EDITOR_OPEN$|_EDITOR_INTRO$|_INTRO$|_EDITOR$/.test(id))return ['opening-editorial','source-id'];
+ if(/_EDITOR_NEXT$|_EDITOR_TEASER$|_TEASER$/.test(id))return ['teaser','source-id'];
+ if(/_EDITOR_CLOSE$|_EDITOR_OUTRO$|_CLOSING$/.test(id))return ['closing-editorial','source-id'];
+ if(kind==='municipal-editorial'||/\b(?:Editor Intro|From the Editor)\b/i.test(title))return ['opening-editorial','source-page-kind-or-title'];
+ if(kind==='closing-editorial')return ['closing-editorial','source-page-kind'];
+ if(index===total-1&&(/^(Next:|Next Course\b)/i.test(title)||/Will Return/i.test(title)||/^Closing (?:Academy )?teaser\b/i.test(summary)))return ['teaser','source-final-title-or-summary'];
+ if(index===total-1&&/^Editorial closing splash/i.test(summary))return ['closing-editorial','source-final-summary'];
+ if(index===0&&/^Opening (?:Academy )?splash/i.test(summary))return ['opening-splash','source-first-summary'];
+ if(index===0&&/^Title splash/i.test(summary))return ['title-splash','source-first-summary'];
+ return null;
+}
+function recordStructure(show,issueId,units,bookState,options={}){
+ const key=[seriesOf(show),issueId].join('::');
+ const records=sourceRecords(show,units),specialUnits=[];
+ for(let i=0;i<units.length;i++){
+  const role=roleOf(units[i],records.get(units[i]),i,units.length);
+  if(role)specialUnits.push({unitId:units[i],position:i+1,role:role[0],evidence:role[1]});
+ }
+ const coverInOrder=specialUnits.some(u=>u.role==='cover'&&u.position===1);
+ const coverCandidates=options.coverCandidates||[];
+ issueStructures[key]={seriesId:seriesOf(show),issueId,issueLabel:options.issueLabel||show.issueLabel||show.name,
+  sourceSelectorId:show.id,selectorRegistered:options.selectorRegistered!==false,
+  readingOrder:bookState,sourceUnitCount:units.length,
+  specialUnits,coverStatus:coverInOrder?'ordered':coverCandidates.length?'available-in-separate-shelf':'not-established',
+  ...(coverCandidates.length?{separateCoverCandidates:coverCandidates}:{})};
+}
+
 function countApproved(series,issue,units){
  const approved=[],missing=[],invalid=[],corrupt=[];
  for(const id of units){
@@ -153,6 +197,10 @@ for(const show of SHOWS){
  if(groups.length>1){
    const subissues=groups.map(group=>{
      const actual=selected.filter(id=>groupOf(id)===group);
+     const prefix=group+'_COVER',coverCandidates=findSupplement(show,/_COVER$/).filter(id=>id===prefix);
+     const derivedId=show.id+'-e'+group.slice(-2);
+     recordStructure(show,derivedId,actual,'source-order-only',{
+       selectorRegistered:false,issueLabel:'Episode '+Number(group.slice(-2)),coverCandidates});
      return {sourceGroup:group,sourceUnitCount:actual.length,
        firstUnit:actual[0],lastUnit:actual.at(-1),
        issueSelectorRegistered:false,
@@ -183,6 +231,7 @@ for(const show of SHOWS){
    };
  }
  const book=issues[[seriesId,issueId].join('::')];
+ recordStructure(show,issueId,book?.units||proposed,book?'curated-complete-book':'source-order-only');
  const counts=countApproved(seriesId,issueId,book?.units||proposed);
  rows.push({selectorId:issueId,seriesId,kind:'issue',status:!book?'uncurated':counts.missingCount?'blocked-missing-images':'complete-draft-export-supported',
    expectedUnits:book?.units.length||proposed.length,approvedImages:counts.approvedCount,missingImageCount:counts.missingCount,
@@ -203,6 +252,8 @@ const report={schemaVersion:1,registrySelectors:SHOWS.length,
   statuses:Object.fromEntries([...new Set(rows.map(r=>r.status))].sort().map(s=>[s,rows.filter(r=>r.status===s).length])),
   entries:rows,diagnostics};
 const manifest={...CURRENT,issues:Object.fromEntries(Object.entries(issues).sort(([a],[b])=>a.localeCompare(b)))};
+const structure={schemaVersion:1,description:'Source-supported page roles and issue reading order. Source-order-only is not a verified complete book.',
+  issues:Object.fromEntries(Object.entries(issueStructures).sort(([a],[b])=>a.localeCompare(b)))};
 const normalized=x=>JSON.stringify(x,null,2)+'\n';
 function markdown(){
  const lines=['# Visions complete-book export portfolio audit','','Generated from live registered source recipes, curated inventories and exact approved binaries. This is **export coverage, not mastering or release approval**.','','## Summary','','- Registered selectors: '+report.registrySelectors+' (includes shelves and non-comic selectors)','- Curated complete-book inventories: '+report.issuesWithManifest,'- Full approved draft coverage: '+(report.statuses['complete-draft-export-supported']||0),'- Curated but missing approved images: '+(report.statuses['blocked-missing-images']||0),'- Uncurated issue/season selectors: '+(report.statuses.uncurated||0),'- Auxiliary selectors not representing books: '+(report.statuses['not-a-book']||0),'','## Individual issue inventories','','| Series | Registered selector | Inventory | Approved / expected | Blocking reason |','|---|---|---|---:|---|'];
@@ -218,10 +269,12 @@ if(process.argv.includes('--write')){
  fs.writeFileSync(BOOK_PATH,normalized(manifest));
  fs.writeFileSync(AUDIT_PATH,normalized(report));
  fs.writeFileSync(HUMAN_PATH,markdown());
+ fs.writeFileSync(STRUCT_PATH,normalized(structure));
 }else if(process.argv.includes('--check')){
  assert.equal(fs.readFileSync(BOOK_PATH,'utf8'),normalized(manifest),'Complete-book inventory out of sync with registered source');
  assert.equal(fs.readFileSync(AUDIT_PATH,'utf8'),normalized(report),'Portfolio coverage audit out of sync with registered source');
  assert.equal(fs.readFileSync(HUMAN_PATH,'utf8'),markdown(),'Portfolio human coverage report out of sync');
+ assert.equal(fs.readFileSync(STRUCT_PATH,'utf8'),normalized(structure),'Issue structural roles out of sync');
 }
 console.log('AUDIT_SUMMARY '+JSON.stringify({registered:report.registrySelectors,manifests:report.issuesWithManifest,statuses:report.statuses,issues:rows.filter(x=>x.kind==='issue').length}));
 for(const r of rows)console.log('AUDIT_ISSUE '+JSON.stringify({selector:r.selectorId,series:r.seriesId,status:r.status,expected:r.expectedUnits,approved:r.approvedImages,missing:r.missingImageCount,reason:r.reason}));
