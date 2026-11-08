@@ -27,6 +27,7 @@ def main():
     parser.add_argument("--out",required=True)
     parser.add_argument("--trim-width",type=float,default=6.625)
     parser.add_argument("--trim-height",type=float,default=10.25)
+    parser.add_argument("--omit-cast-for-review",action="store_true",help="Omit documented cast units in a NON-COMPLETE review draft; canonical order stays unchanged")
     args=parser.parse_args()
     if args.trim_width<=0 or args.trim_height<=0:
         parser.error("Trim must be positive")
@@ -36,7 +37,22 @@ def main():
     book=inventory.get(key)
     if not book or book.get("seriesId")!=args.series or book.get("issueId")!=args.issue:
         parser.error("Complete-book inventory not defined for "+key)
-    units=book.get("units",[])
+    source_units=book.get("units",[])
+    units=list(source_units)
+    omitted_cast=[]
+    roles={}
+    structure_file=ROOT/"production/issue-structure.json"
+    if structure_file.is_file():
+        structure=json.loads(structure_file.read_text()).get("issues",{}).get(key)
+        if structure:
+            roles={x["unitId"]:x["role"] for x in structure.get("specialUnits",[])}
+    if args.omit_cast_for_review:
+        if not roles:
+            parser.error("Cannot omit cast without current source-evidenced issue roles")
+        omitted_cast=[unit for unit in units if roles.get(unit)=="cast"]
+        if not omitted_cast:
+            parser.error("No source-evidenced cast units to omit for this issue")
+        units=[unit for unit in units if unit not in omitted_cast]
     if not units or len(units)!=len(set(units)):
         parser.error("No units or duplicate units in complete-book inventory")
     missing=[unit for unit in units if drafts.get(key+"::"+unit,{}).get("status")!="approved-production-draft"]
@@ -47,6 +63,7 @@ def main():
         parser.error("Output cannot be inside approved drafts")
     out.mkdir(parents=True,exist_ok=True)
     stem=re.sub(r"[^a-z0-9-]+","-",args.series+"-"+args.issue).strip("-")
+    if omitted_cast: stem+="-NO-CAST-DRAFT"
     pdf_file=out/(stem+".pdf")
     zip_file=out/(stem+".zip")
     page_w,page_h=args.trim_width*72,args.trim_height*72
@@ -96,14 +113,15 @@ def main():
                 raise ValueError("Output name collision")
             names.append(name)
             sources.append((name,data,{
-                "readingOrder":index,"recipeId":unit,"source":entry["image"],"outputFile":name,
+                "readingOrder":index,"recipeId":unit,"productionRole":roles.get(unit,"not-special-classified"),"source":entry["image"],"outputFile":name,
                 "nativeWidth":width,"nativeHeight":height,"mimeType":entry["mimeType"],
                 "sha256":digest,
             }))
         proof.save()
         manifest={"schemaVersion":1,"seriesId":args.series,"issueId":args.issue,
-                  "pageCount":len(units),"expectedUnits":len(units),"packagedUnits":len(sources),
-                  "complete":True,"missingUnits":[],"originalBinariesPreserved":True,
+                  "pageCount":len(units),"expectedUnits":len(source_units),"packagedUnits":len(sources),
+                  "complete":not bool(omitted_cast),"omittedOptionalUnits":omitted_cast,
+                  "missingUnits":[],"originalBinariesPreserved":True,
                   "trimInches":[args.trim_width,args.trim_height],
                   "masteringStatus":"NOT APPROVED — review export only",
                   "pages":[metadata for _,_,metadata in sources]}
@@ -127,7 +145,7 @@ def main():
         for temp in (pdf_file,zip_file):
             temp.unlink(missing_ok=True)
         raise
-    print("Complete book exported:",key,len(units),"units")
+    print("Review draft exported:" if omitted_cast else "Complete book exported:",key,len(units),"units")
     print("PDF:",pdf_file)
     print("ZIP:",zip_file)
     print("Mastering approval: NOT GRANTED")

@@ -12,7 +12,7 @@ def make_png(index):
     im=Image.new('RGB',(300+index*11,460+index*7),(index*23%255, index*67%255, 170))
     out=io.BytesIO();im.save(out,format='PNG');return out.getvalue(),im.size
 
-def case(root,name,units,missing=()):
+def case(root,name,units,missing=(),omit_cast=False):
     store=root/'production/drafts'
     store.mkdir(parents=True,exist_ok=True)
     src={}
@@ -32,9 +32,18 @@ def case(root,name,units,missing=()):
                                                     'orderPolicy':'fixture-explicit','units':units}}}
     (root/'production/book-manifests.json').write_text(json.dumps(inv))
     (store/'manifest.json').write_text(json.dumps({'drafts':entry}))
+    omitted=[u for u in units if u.endswith('_CAST')] if omit_cast else []
+    if omit_cast:
+        structure={'schemaVersion':1,'issues':{series+'::'+issue:{
+            'seriesId':series,'issueId':issue,'sourceUnitCount':len(units),
+            'specialUnits':[{'unitId':u,'role':'cast','position':units.index(u)+1} for u in omitted]}}}
+        (root/'production/issue-structure.json').write_text(json.dumps(structure))
+    packaged=[u for u in units if u not in omitted]
     out=root/'output'/name
-    result=subprocess.run([sys.executable,str(root/'tools/build_complete_book.py'),
-        '--series',series,'--issue',issue,'--out',str(out)],capture_output=True,text=True)
+    command=[sys.executable,str(root/'tools/build_complete_book.py'),
+             '--series',series,'--issue',issue,'--out',str(out)]
+    if omit_cast:command.append('--omit-cast-for-review')
+    result=subprocess.run(command,capture_output=True,text=True)
     if missing:
         assert result.returncode != 0,result.stdout
         for u in missing:assert u in result.stderr,(u,result.stderr)
@@ -42,13 +51,16 @@ def case(root,name,units,missing=()):
         return
     assert result.returncode==0,result.stderr
     pdf=next(out.glob('*.pdf'));archive=next(out.glob('*.zip'))
-    assert len(PdfReader(str(pdf)).pages)==len(units)
+    assert len(PdfReader(str(pdf)).pages)==len(packaged)
     with zipfile.ZipFile(archive) as z:
         assert z.testzip() is None
         report=json.loads(z.read('book-export-manifest.json'))
-        assert report['pageCount']==len(units)
+        assert report['pageCount']==len(packaged)
+        assert report['expectedUnits']==len(units)
+        assert report['complete']==(not omit_cast)
+        assert report['omittedOptionalUnits']==omitted
         assert report['masteringStatus'].startswith('NOT APPROVED')
-        assert [x['recipeId'] for x in report['pages']]==units
+        assert [x['recipeId'] for x in report['pages']]==packaged
         for i,page in enumerate(report['pages']):
             raw,dimensions=src[page['recipeId']]
             assert z.read(page['outputFile'])==raw
@@ -67,4 +79,5 @@ with tempfile.TemporaryDirectory() as d:
     case(root,'cover-is-page01',['VI_P01','VI_P02','VI_P03'])
     case(root,'chapter',['LT_C01_COVER','LT_C01_EDITOR_OPEN','LT_C01_P01','LT_C01_P02','LT_C01_EDITOR_NEXT'])
     case(root,'incomplete',['INC_COVER','INC_P01','INC_P02','INC_END'],missing=('INC_P02',))
+    case(root,'optional-cast-review',['TS_COVER','TS_EDITOR_OPEN','TS_CAST','TS_P01','TS_P02','TS_TEASER'],omit_cast=True)
 print('PASS export complete/incomplete/review-only regression suite')

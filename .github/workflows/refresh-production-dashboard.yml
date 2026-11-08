@@ -7,6 +7,12 @@ on:
       - 'production/drafts/**'
       - 'production/references/**'
       - 'production/book-manifests.json'
+      - 'production/book-export-coverage.json'
+      - 'production/issue-structure.json'
+      - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
+      - 'tools/audit_portfolio_books.cjs'
+      - 'tools/test_book_export_manifest.cjs'
+      - 'issue-publishing.js'
       - 'production/released-links.json'
       - 'production/portfolio-recipe-inventory.json'
       - 'production/portfolio-source-quality.json'
@@ -21,6 +27,12 @@ on:
       - 'production/drafts/**'
       - 'production/references/**'
       - 'production/book-manifests.json'
+      - 'production/book-export-coverage.json'
+      - 'production/issue-structure.json'
+      - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
+      - 'tools/audit_portfolio_books.cjs'
+      - 'tools/test_book_export_manifest.cjs'
+      - 'issue-publishing.js'
       - 'production/released-links.json'
       - 'tools/audit_all_series_production.cjs'
       - 'tools/build_portfolio_source_quality.cjs'
@@ -43,6 +55,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Rebuild issue book inventories and source-evidenced editorial roles
+        run: node tools/audit_portfolio_books.cjs --write
+      - name: Verify book export coverage and exact issue roles
+        run: node tools/test_book_export_manifest.cjs
       - name: Rebuild assembler-backed portfolio inventory
         run: node tools/audit_all_series_production.cjs --out production/portfolio-recipe-inventory.json
       - name: Reinspect approved original image files
@@ -55,14 +71,14 @@ jobs:
           TARGET_BRANCH: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
         run: |
           set -eu
-          git add production/portfolio-recipe-inventory.json production/portfolio-source-quality.json
+          git add production/portfolio-recipe-inventory.json production/portfolio-source-quality.json production/book-manifests.json production/book-export-coverage.json production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md production/issue-structure.json
           if git diff --cached --quiet; then
             echo 'Production snapshot is already current'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Refresh production dashboard inventory from current source'
+          git commit -m 'Refresh dashboard and complete-book inventories from current source'
           git fetch origin "$TARGET_BRANCH"
           git rebase "origin/$TARGET_BRANCH"
           git push origin "HEAD:$TARGET_BRANCH"
