@@ -27,6 +27,24 @@ for(const issue of structures){
  if(issue.coverStatus==='available-in-separate-shelf')assert.ok(issue.separateCoverCandidates?.length,'Unavailable cover candidate '+issue.issueId);
  if(issue.readingOrder==='curated-complete-book')assert.equal(issue.coverStatus,'ordered','Curated issue must establish a cover '+issue.issueId);
 }
+// Covers are issue units, not separate production configurations.
+assert.equal(shows.filter(s=>s.unitLabel==='COVER').length,0,'No cover-only production selectors may be registered');
+assert.equal(shows.filter(s=>/cover shelf/i.test(s.name||'')).length,0,'No active cover shelves');
+assert.equal(Object.values(structure.issues).filter(x=>x.coverStatus!=='ordered').length,0,'Every issue must have an issue-ordered cover');
+const sourceById=new Map(shows.map(s=>[s.id,s]));
+for(const book of Object.values(inv.issues)){
+ const show=sourceById.get(book.issueId);
+ assert.ok(show,'Book has no issue selector '+book.issueId);
+ const title=book.units[0];
+ if(show.seriesId==='vikings-2026'){
+  assert.match(title,/_P01$/,'Vikings issue cover must be an embedded numbered page');
+  continue;
+ }
+ const files=Array.isArray(show.scenesFiles)?show.scenesFiles:[show.scenesFile||'scenes.json'];
+ const coverFile=files[0];
+ assert.ok(coverFile,'Issue has no source files '+book.issueId);
+ if(/_COVER$/.test(title))assert.ok(files.some(f=>/covers\.json$/.test(f)), 'Cover must be loaded by the issue itself: '+book.issueId);
+}
 const registered=new Set(shows.map(s=>s.id));
 assert.equal(structure.schemaVersion,1);
 
