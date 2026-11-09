@@ -20,7 +20,9 @@ async function loadCurrentManifest(){
   return m;
 }
 function seriesFrom(shows){return K.canonicalSeries(shows)}
-function setMode(mode){const k=mode==='keeper';$('#assemblerMode').hidden=k;$('#referenceKeeperMode').hidden=!k;$('#assemblerModeBtn').setAttribute('aria-pressed',String(!k));$('#referenceKeeperModeBtn').setAttribute('aria-pressed',String(k));$('#appTitle').textContent=k?'RexPrompt Reference Keeper':'RexPrompt Assembler';document.title=$('#appTitle').textContent;localStorage.setItem('rexprompt.mode',k?'keeper':'assembler');if(k)render()}
+function setMode(mode){const k=mode==='keeper';if(k)syncSeriesFromAssembler();else syncSeriesToAssembler();$('#assemblerMode').hidden=k;$('#referenceKeeperMode').hidden=!k;$('#assemblerModeBtn').setAttribute('aria-pressed',String(!k));$('#referenceKeeperModeBtn').setAttribute('aria-pressed',String(k));$('#appTitle').textContent=k?'RexPrompt Reference Keeper':'RexPrompt Assembler';document.title=$('#appTitle').textContent;localStorage.setItem('rexprompt.mode',k?'keeper':'assembler');if(k)render()}
+function syncSeriesFromAssembler(){const id=document.getElementById('showSel')?.value||localStorage.getItem('rexprompt.selectedSeries');if(S.series.some(x=>x.id===id)){S.ui.series.value=id;localStorage.setItem('rexprompt.selectedSeries',id)}}
+function syncSeriesToAssembler(){const id=S.ui.series.value;if(id&&document.getElementById('showSel')?.value!==id)document.dispatchEvent(new CustomEvent('rexprompt:select-series',{detail:{seriesId:id}}))}
 function token(){return window.RexPromptGithubAuth.getToken()}
 function syncToken(){S.ui.forget.hidden=!token();S.ui.remember.checked=window.RexPromptGithubAuth.isRemembered()}
 function askToken(fn){if(token())return void fn();S.pending=fn;S.ui.tokenBox.hidden=false;S.ui.tokenInput.focus()}
@@ -51,8 +53,35 @@ u.forget.onclick=()=>{window.RexPromptGithubAuth.forgetToken();syncToken();u.sta
    }catch(e){u.status.textContent=e.message}
    syncToken();
  };
- window.addEventListener('rexprompt:github-auth-change',syncToken);$('#keeperUseToken').onclick=saveToken;$('#keeperCancelToken').onclick=()=>{S.pending=null;u.tokenBox.hidden=true};u.tokenInput.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();saveToken()}};u.series.onchange=()=>{localStorage.setItem('rexprompt.keeperSeries',u.series.value);render()};u.view.onchange=render;u.search.oninput=render;return u}
-function populate(){S.ui.series.innerHTML='';S.series.forEach(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;S.ui.series.append(o)});const saved=localStorage.getItem('rexprompt.keeperSeries');if(S.series.some(x=>x.id===saved))S.ui.series.value=saved}
+ window.addEventListener('rexprompt:github-auth-change',syncToken);$('#keeperUseToken').onclick=saveToken;$('#keeperCancelToken').onclick=()=>{S.pending=null;u.tokenBox.hidden=true};u.tokenInput.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();saveToken()}};u.series.onchange=()=>{localStorage.setItem('rexprompt.selectedSeries',u.series.value);syncSeriesToAssembler();render()};u.view.onchange=render;u.search.oninput=render;return u}
+function populate(){S.ui.series.innerHTML='';S.series.forEach(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;S.ui.series.append(o)});const saved=document.getElementById('showSel')?.value||localStorage.getItem('rexprompt.selectedSeries')||localStorage.getItem('rexprompt.keeperSeries');if(S.series.some(x=>x.id===saved))S.ui.series.value=saved}
+async function copyReferenceImage(e,report){
+  report.textContent='Copying image…';
+  try{
+    if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Image clipboard access is unavailable in this browser.');
+    const response=await fetch(imgUrl(e));
+    if(!response.ok)throw Error('Image fetch failed (HTTP '+response.status+').');
+    const bitmap=await createImageBitmap(await response.blob());
+    const canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;
+    const context=canvas.getContext('2d');if(!context)throw Error('Canvas unavailable.');
+    context.drawImage(bitmap,0,0);bitmap.close?.();
+    const png=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('PNG conversion failed.')),'image/png'));
+    await navigator.clipboard.write([new ClipboardItem({'image/png':png})]);
+    report.textContent='Image copied to clipboard.';
+  }catch(error){report.textContent='Copy failed: '+error.message}
+}
+function handleKeeperPaste(event){
+  if(document.getElementById('referenceKeeperMode')?.hidden)return;
+  const item=Array.from(event.clipboardData?.items||[]).find(x=>x.kind==='file'&&String(x.type||'').startsWith('image/'));
+  if(!item)return;
+  const file=item.getAsFile();if(!file)return;
+  event.preventDefault();event.stopImmediatePropagation();
+  const error=validate(file);if(error){S.ui.status.textContent=error;return}
+  const transfer=new DataTransfer();transfer.items.add(new File([file],file.name||'pasted-reference.png',{type:file.type||'image/png'}));
+  S.ui.file.files=transfer.files;
+  if(!S.ui.name.value.trim())S.ui.name.value='Pasted reference';
+  S.ui.status.textContent='Image pasted. Enter a reference name and type, then Store Reference.';
+}
 function imgUrl(e){return 'https://raw.githubusercontent.com/'+C.owner+'/'+C.repo+'/'+C.branch+'/'+e.image+'?v='+encodeURIComponent(e.updatedAt||Date.now())} function validate(f){return !f?'Choose an image.':!C.mime.includes(f.type)?'Use JPEG, PNG, or WebP.':f.size>C.max?'Image is larger than 50 MB.':''}
 function openLightbox(e){let box=$('#keeperLightbox');if(!box){box=document.createElement('div');box.id='keeperLightbox';box.className='keeper-lightbox';box.hidden=true;box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Reference image preview');box.innerHTML='<button type="button" class="keeper-lightbox-close" aria-label="Close preview">×</button><img alt=""><div class="keeper-lightbox-caption"></div>';document.body.append(box);box.querySelector('button').onclick=closeLightbox;box.addEventListener('click',ev=>{if(ev.target===box)closeLightbox()});document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&!box.hidden)closeLightbox()})}S.previousFocus=document.activeElement;box.querySelector('img').src=imgUrl(e);box.querySelector('img').alt=e.name+' reference';box.querySelector('.keeper-lightbox-caption').textContent=e.name;box.hidden=false;box.querySelector('button').focus()}function closeLightbox(){const box=$('#keeperLightbox');if(box)box.hidden=true;if(S.previousFocus?.isConnected)S.previousFocus.focus();S.previousFocus=null}
 function render(){
@@ -72,7 +101,7 @@ function render(){
     items.forEach(e=>{
       const c=document.createElement('article');
       c.className='keeper-card';
-      c.innerHTML='<img alt=""><div class="keeper-name"></div><div class="keeper-meta"></div><div class="keeper-actions"><button class="replace" type="button">Replace</button><button class="delete" type="button">Delete</button><input class="pick" type="file" accept="image/jpeg,image/png,image/webp" hidden></div><div class="keeper-card-status" role="status"></div>';
+      c.innerHTML='<img alt=""><div class="keeper-name"></div><div class="keeper-meta"></div><div class="keeper-actions"><button class="copy" type="button">Copy Image</button><button class="replace" type="button">Replace</button><button class="delete" type="button">Delete</button><input class="pick" type="file" accept="image/jpeg,image/png,image/webp" hidden></div><div class="keeper-card-status" role="status"></div>';
       const img=c.querySelector('img');
       img.src=imgUrl(e);
       img.onerror=()=>{const note=c.querySelector('.keeper-card-status');if(note)note.textContent='Image preview unavailable; verify the GitHub image path.'};
@@ -93,6 +122,7 @@ function render(){
       const deleteButton=c.querySelector('.delete');
       const actions=c.querySelector('.keeper-actions');
       const report=c.querySelector('.keeper-card-status');
+       c.querySelector('.copy').onclick=()=>void copyReferenceImage(e,report);
       const resetConfirmation=()=>{
         deleteButton.dataset.confirm='';
         deleteButton.textContent='Delete';
@@ -198,5 +228,5 @@ async function remove(e,card){
     syncToken();
   }
 }
-async function start(){inject();S.ui=ui();const [shows,m]=await Promise.all([load('data/shows.json',[]),loadCurrentManifest()]);S.shows=shows;S.manifest=m;const validation=K.checkManifest(m,shows);if(validation.errors.length){S.ui.store.disabled=true;S.ui.status.textContent='Keeper integrity errors: '+validation.errors.join('; ')}S.series=seriesFrom(shows);populate();syncToken();$('#assemblerModeBtn').onclick=()=>setMode('assembler');$('#referenceKeeperModeBtn').onclick=()=>setMode('keeper');setMode(localStorage.getItem('rexprompt.mode')==='keeper'?'keeper':'assembler')}
+async function start(){inject();S.ui=ui();const [shows,m]=await Promise.all([load('data/shows.json',[]),loadCurrentManifest()]);S.shows=shows;S.manifest=m;const validation=K.checkManifest(m,shows);if(validation.errors.length){S.ui.store.disabled=true;S.ui.status.textContent='Keeper integrity errors: '+validation.errors.join('; ')}S.series=seriesFrom(shows);populate();document.addEventListener('paste',handleKeeperPaste,true);syncToken();$('#assemblerModeBtn').onclick=()=>setMode('assembler');$('#referenceKeeperModeBtn').onclick=()=>setMode('keeper');setMode(localStorage.getItem('rexprompt.mode')==='keeper'?'keeper':'assembler')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>void start());else void start();})();
