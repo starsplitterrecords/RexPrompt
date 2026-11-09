@@ -50,9 +50,29 @@ def main():
     for filename in assembler["scenesFiles"]:
         pages.extend(load(filename))
 
+    all_scenes = pages
+    all_ids = [page["id"] for page in all_scenes]
+    assert len(all_ids) == 224, f"Expected 224 consolidated issue scenes, found {len(all_ids)}"
+    assert len(all_ids) == len(set(all_ids)), "Duplicate consolidated scene IDs"
+
+    for issue in range(1, 9):
+        tag = f"DT_E{issue:03d}_"
+        issue_ids = [pid for pid in all_ids if pid.startswith(tag)]
+        assert len(issue_ids) == 28, f"Issue {issue}: expected 28 scenes"
+        expected_prefix = ([f"DT_E001_PROLOGUE_{i:02d}" for i in range(1, 5)]
+                           if issue == 1 else [])
+        assert issue_ids[:len(expected_prefix)] == expected_prefix, "Issue 1 prologue order changed"
+        assert issue_ids[len(expected_prefix)] == tag + "INTRO", f"Issue {issue}: intro missing or misplaced"
+        assert issue_ids[-1] == tag + "TEASER", f"Issue {issue}: teaser missing or misplaced"
+
+    # Legacy 204-page production checks deliberately target story pages only.
+    # Editorial bookends and restored historical prologue are additional first-class scenes.
+    pages = [page for page in all_scenes if
+             page["id"].startswith("DT_E") and "_P" in page["id"] and
+             "_PROLOGUE_" not in page["id"]]
     ids = [page["id"] for page in pages]
-    assert len(ids) == 204, f"Expected 204 assembled pages, found {len(ids)}"
-    assert len(ids) == len(set(ids)), "Duplicate assembled page IDs"
+    assert len(ids) == 204, f"Expected 204 story pages, found {len(ids)}"
+    assert len(ids) == len(set(ids)), "Duplicate story page IDs"
 
     for issue in range(1, 9):
         prefix = f"DT_E{issue:03d}_P"
