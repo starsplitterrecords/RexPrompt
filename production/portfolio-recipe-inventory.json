@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 188,
-    "approvedDraftRecords": 188,
+    "matchedApprovedUnitsAcrossConfigurations": 189,
+    "approvedDraftRecords": 189,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -16,7 +16,7 @@
       "seriesId": "azure-reach",
       "registeredConfigurations": 6,
       "registeredUnits": 150,
-      "approvedUnits": 11,
+      "approvedUnits": 12,
       "keeperReferences": 2,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -24,7 +24,7 @@
         {
           "showId": "azure-reach-s1",
           "registeredUnits": 25,
-          "approvedUnits": 0
+          "approvedUnits": 1
         },
         {
           "showId": "azure-reach-s1-e02",
@@ -2932,8 +2932,8 @@
       "issueLabel": "Azure Reach — Season 1 / Issue 1",
       "unitLabel": "PAGE",
       "registeredUnits": 25,
-      "approvedUnits": 0,
-      "notInApprovedDraftManifest": 25,
+      "approvedUnits": 1,
+      "notInApprovedDraftManifest": 24,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -2963,7 +2963,9 @@
         "AZR_S1E01_P22",
         "AZR_S1E01_EDITOR_TEASER"
       ],
-      "approvedRecipeIds": [],
+      "approvedRecipeIds": [
+        "AZR_S1E01_COVER"
+      ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
         "data/shows/azure-reach-s1/covers.json",
@@ -3002,14 +3004,14 @@
         }
       ],
       "examplesMissing": [
-        "AZR_S1E01_COVER",
         "AZR_S1E01_EDITOR_INTRO",
         "AZR_S1E01_P01",
         "AZR_S1E01_P02",
         "AZR_S1E01_P03",
         "AZR_S1E01_P04",
         "AZR_S1E01_P05",
-        "AZR_S1E01_P06"
+        "AZR_S1E01_P06",
+        "AZR_S1E01_P07"
       ]
     },
     {
@@ -9762,9 +9764,8 @@
     {
       "key": "azure-reach::azure-reach-s1",
       "expectedUnits": 25,
-      "approvedUnits": 0,
+      "approvedUnits": 1,
       "missingUnits": [
-        "AZR_S1E01_COVER",
         "AZR_S1E01_EDITOR_INTRO",
         "AZR_S1E01_P01",
         "AZR_S1E01_P02",
