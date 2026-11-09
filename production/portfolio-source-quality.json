@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "method": "Direct binary signature and intrinsic pixel/header readback via tools/audit_issue_mastering.cjs; no image recompression, enlargement, artistic approval or color grade.",
-  "expectedRecords": 211,
-  "examined": 211,
+  "expectedRecords": 212,
+  "examined": 212,
   "issues": [],
   "images": {
     "azure-reach::azure-reach-s1-e02::AZR_S1E02_P01": {
@@ -1902,6 +1902,15 @@
       "colorProfile": "ICC embedded",
       "bytes": 10903928,
       "sha256": "6ab6a361da03fc24e101f69072e328efcc72e90e2dc84f3646652af47c195f39",
+      "source": "tools/audit_issue_mastering.cjs"
+    },
+    "azure-reach::azure-reach-s1::AZR_S1E01_EDITOR_TEASER": {
+      "width": 1055,
+      "height": 1491,
+      "mimeType": "image/png",
+      "colorProfile": "unspecified",
+      "bytes": 2591313,
+      "sha256": "5f1c318808c45f72ee76d8d9400f46df9f3b03fdab9cb4eace4bc6d6e8253716",
       "source": "tools/audit_issue_mastering.cjs"
     }
   }

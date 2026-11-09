@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 211,
-    "approvedDraftRecords": 211,
+    "matchedApprovedUnitsAcrossConfigurations": 212,
+    "approvedDraftRecords": 212,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -16,7 +16,7 @@
       "seriesId": "azure-reach",
       "registeredConfigurations": 6,
       "registeredUnits": 150,
-      "approvedUnits": 34,
+      "approvedUnits": 35,
       "keeperReferences": 2,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -24,7 +24,7 @@
         {
           "showId": "azure-reach-s1",
           "registeredUnits": 25,
-          "approvedUnits": 23
+          "approvedUnits": 24
         },
         {
           "showId": "azure-reach-s1-e02",
@@ -2932,8 +2932,8 @@
       "issueLabel": "Azure Reach — Season 1 / Issue 1",
       "unitLabel": "PAGE",
       "registeredUnits": 25,
-      "approvedUnits": 23,
-      "notInApprovedDraftManifest": 2,
+      "approvedUnits": 24,
+      "notInApprovedDraftManifest": 1,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -2986,7 +2986,8 @@
         "AZR_S1E01_P19",
         "AZR_S1E01_P20",
         "AZR_S1E01_P21",
-        "AZR_S1E01_P22"
+        "AZR_S1E01_P22",
+        "AZR_S1E01_EDITOR_TEASER"
       ],
       "unmatchedApprovedIds": [],
       "sourceFiles": [
@@ -3026,8 +3027,7 @@
         }
       ],
       "examplesMissing": [
-        "AZR_S1E01_EDITOR_INTRO",
-        "AZR_S1E01_EDITOR_TEASER"
+        "AZR_S1E01_EDITOR_INTRO"
       ]
     },
     {
@@ -9780,10 +9780,9 @@
     {
       "key": "azure-reach::azure-reach-s1",
       "expectedUnits": 25,
-      "approvedUnits": 23,
+      "approvedUnits": 24,
       "missingUnits": [
-        "AZR_S1E01_EDITOR_INTRO",
-        "AZR_S1E01_EDITOR_TEASER"
+        "AZR_S1E01_EDITOR_INTRO"
       ]
     },
     {
