@@ -44,7 +44,7 @@ Detailed issue roles and ordinal positions: `production/issue-structure.json`. A
 | rex-fleet | rex-fleet-i12 | blocked-missing-images | 0 / 25 | missing-approved-images |
 | rex-fleet-stormwell-archive | rex-fleet-stormwell-archive-i01 | blocked-missing-images | 0 / 23 | missing-approved-images |
 | rex-fleet-glass-horizon | rex-fleet-glass-horizon-i01 | blocked-missing-images | 0 / 25 | missing-approved-images |
-| azure-reach | azure-reach-s1 | blocked-missing-images | 2 / 25 | missing-approved-images |
+| azure-reach | azure-reach-s1 | blocked-missing-images | 3 / 25 | missing-approved-images |
 | stardust-station | stardust-station | blocked-missing-images | 0 / 25 | missing-approved-images |
 | stardust-station | stardust-station-e02 | blocked-missing-images | 4 / 25 | missing-approved-images |
 | stardust-station | stardust-station-e03 | blocked-missing-images | 0 / 25 | missing-approved-images |
