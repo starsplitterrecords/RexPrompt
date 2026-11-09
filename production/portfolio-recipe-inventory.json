@@ -5,8 +5,8 @@
     "loadedConfigurations": 125,
     "distinctSeries": 25,
     "registeredRecipeUnitsAcrossConfigurations": 3330,
-    "matchedApprovedUnitsAcrossConfigurations": 210,
-    "approvedDraftRecords": 210,
+    "matchedApprovedUnitsAcrossConfigurations": 211,
+    "approvedDraftRecords": 211,
     "keeperReferenceRecords": 41,
     "releasedLinkRecords": 26,
     "completeBookInventories": 114
@@ -16,7 +16,7 @@
       "seriesId": "azure-reach",
       "registeredConfigurations": 6,
       "registeredUnits": 150,
-      "approvedUnits": 33,
+      "approvedUnits": 34,
       "keeperReferences": 2,
       "releaseLinkRecords": 0,
       "hasVisualSource": true,
@@ -24,7 +24,7 @@
         {
           "showId": "azure-reach-s1",
           "registeredUnits": 25,
-          "approvedUnits": 22
+          "approvedUnits": 23
         },
         {
           "showId": "azure-reach-s1-e02",
@@ -2932,8 +2932,8 @@
       "issueLabel": "Azure Reach — Season 1 / Issue 1",
       "unitLabel": "PAGE",
       "registeredUnits": 25,
-      "approvedUnits": 22,
-      "notInApprovedDraftManifest": 3,
+      "approvedUnits": 23,
+      "notInApprovedDraftManifest": 2,
       "canonicalSource": "RexPrompt registered recipe",
       "draftAuthority": "RexPrompt approved-draft manifest",
       "recipeIds": [
@@ -2965,6 +2965,7 @@
       ],
       "approvedRecipeIds": [
         "AZR_S1E01_COVER",
+        "AZR_S1E01_P01",
         "AZR_S1E01_P02",
         "AZR_S1E01_P03",
         "AZR_S1E01_P04",
@@ -3026,7 +3027,6 @@
       ],
       "examplesMissing": [
         "AZR_S1E01_EDITOR_INTRO",
-        "AZR_S1E01_P01",
         "AZR_S1E01_EDITOR_TEASER"
       ]
     },
@@ -9780,10 +9780,9 @@
     {
       "key": "azure-reach::azure-reach-s1",
       "expectedUnits": 25,
-      "approvedUnits": 22,
+      "approvedUnits": 23,
       "missingUnits": [
         "AZR_S1E01_EDITOR_INTRO",
-        "AZR_S1E01_P01",
         "AZR_S1E01_EDITOR_TEASER"
       ]
     },
