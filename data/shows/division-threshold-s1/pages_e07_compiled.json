@@ -1,5 +1,76 @@
 [
   {
+    "id": "DT_E007_INTRO",
+    "issue": 7,
+    "title": "Splits — Editor Intro",
+    "summary": "Opening editorial states each major character's personal fracture rather than presenting political blocs.",
+    "settingText": "Shared district/community threshold where several protagonists cross paths without forming a posed group.",
+    "characters": [
+      "DT_JohnMercer",
+      "DT_Nico14",
+      "DT_Ostra9",
+      "DT_NathanPrice",
+      "DT_Axiom",
+      "DT_KellenCartwright"
+    ],
+    "panelPlan": [
+      "Use layered depth and genuine interaction rather than lineup composition. Each person is occupied with a different physical task or relationship.",
+      "Bodies should visibly carry accumulated history: Ostra repairs/scuffs, John's augmentation wear, Nathan's fatigue, Nico's living filaments, Axiom's surface wear, Kellen's exhaustion.",
+      "No faction colors, banners or symbolic split-screen.",
+      "Performance and story direction: This is a non-diegetic opening editorial page. It must hook through people and embodied identity, not summarize policy. Preserve exact caption text; do not reveal later issue solutions or final outcomes."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "DT_E007_INTRO_L01",
+        "speaker": "CAPTION",
+        "text": "John has been offered the safety of being ordinary human again.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L02",
+        "speaker": "CAPTION",
+        "text": "Nico has started building a way to need the city less.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L03",
+        "speaker": "CAPTION",
+        "text": "Ostra refuses a safer cage.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L04",
+        "speaker": "CAPTION",
+        "text": "Nathan can no longer pretend his body only costs him.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L05",
+        "speaker": "CAPTION",
+        "text": "Axiom made a choice it was not authorized to make.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L06",
+        "speaker": "CAPTION",
+        "text": "Kellen is about to tell everyone why.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L07",
+        "speaker": "CAPTION",
+        "text": "There is no clean side left.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_INTRO_L08",
+        "speaker": "CAPTION",
+        "text": "Welcome to SPLITS.",
+        "subtext": "Panel 1"
+      }
+    ]
+  },
+  {
     "id": "DT_E007_P01",
     "summary": "SPLITS opens under protective routing. The Stack still works, but bodies now encounter different physical paths: Ostra, John and Nico are each redirected by vulnerability profile while most Baselines continue through the open civic grid.",
     "characters": [
@@ -1706,6 +1777,74 @@
     "promptSettingMode": "label",
     "promptSuppress": [
       "region"
+    ]
+  },
+  {
+    "id": "DT_E007_TEASER",
+    "issue": 7,
+    "title": "Next: Pressure Line",
+    "summary": "Closing teaser centers Ostra recognizing the season's original choice again at city scale: wait for permission or accept responsibility for acting.",
+    "settingText": "Emergency coordination room with Kellen, Ostra and Axiom after full disclosure.",
+    "characters": [
+      "DT_Ostra9",
+      "DT_KellenCartwright",
+      "DT_Axiom"
+    ],
+    "panelPlan": [
+      "Center Ostra hearing the problem, not the citywide systems. Her face/body should echo Issue 1's moment of decision without literally repeating the pose.",
+      "Kellen is physically spent after disclosure; Axiom is still and present, not an abstract system.",
+      "Use handled notes, worn desks, glass, breath and material wear; avoid dashboard spectacle.",
+      "Performance and story direction: This is a non-diegetic closing editorial/teaser page. It must hook through people and embodied identity, not summarize policy. Preserve exact caption text; do not reveal later issue solutions or final outcomes."
+    ],
+    "dialogueInline": [
+      {
+        "fid": "DT_E007_TEASER_L01",
+        "speaker": "CAPTION",
+        "text": "Kellen tells the truth.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L02",
+        "speaker": "CAPTION",
+        "text": "It does not make anyone agree.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L03",
+        "speaker": "CAPTION",
+        "text": "The protections are compromised.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L04",
+        "speaker": "CAPTION",
+        "text": "The alternatives are slower.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L05",
+        "speaker": "CAPTION",
+        "text": "And the city now depends on decisions made by the very machinery everyone has reason to distrust.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L06",
+        "speaker": "CAPTION",
+        "text": "Ostra has heard this kind of choice before:",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L07",
+        "speaker": "CAPTION",
+        "text": "wait for permission, or act.",
+        "subtext": "Panel 1"
+      },
+      {
+        "fid": "DT_E007_TEASER_L08",
+        "speaker": "CAPTION",
+        "text": "NEXT: PRESSURE LINE.",
+        "subtext": "Panel 1"
+      }
     ]
   }
 ]
