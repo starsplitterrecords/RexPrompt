@@ -180,7 +180,7 @@ function createUi(){
   };
   ui.uploadBtn.addEventListener('click',()=>{if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;state.pendingFile=null;showTokenPanel();return}ui.fileInput.click()});
   ui.fileInput.addEventListener('change',()=>{const file=ui.fileInput.files?.[0];ui.fileInput.value='';if(file)void uploadApprovedDraft(file)});
-  document.addEventListener('paste',event=>{const item=Array.from(event.clipboardData?.items||[]).find(x=>x.kind==='file'&&String(x.type||'').startsWith('image/'));if(!item)return;const file=item.getAsFile();if(!file)return;event.preventDefault();if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;state.pendingFile=file;showTokenPanel();return}void uploadApprovedDraft(file)});
+  document.addEventListener('paste',event=>{if(!document.getElementById('referenceKeeperMode')?.hidden)return;const item=Array.from(event.clipboardData?.items||[]).find(x=>x.kind==='file'&&String(x.type||'').startsWith('image/'));if(!item)return;const file=item.getAsFile();if(!file)return;event.preventDefault();if(!window.RexPromptGithubAuth.getToken()){state.pendingUpload=true;state.pendingFile=file;showTokenPanel();return}void uploadApprovedDraft(file)});
   ui.saveTokenBtn.addEventListener('click',()=>saveTokenFromPanel());
   ui.tokenInput.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();saveTokenFromPanel()}});
   ui.cancelTokenBtn.addEventListener('click',()=>{state.pendingUpload=false;state.pendingFile=null;hideTokenPanel();ui.uploadStatus.textContent='Upload cancelled.'});
