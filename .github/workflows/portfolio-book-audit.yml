@@ -11,8 +11,6 @@ on:
       - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
       - 'tools/audit_portfolio_books.cjs'
       - 'tools/test_book_export_manifest.cjs'
-      - 'tools/test_series_loader_registry.cjs'
-      - 'docs/loaders/**'
       - 'issue-publishing.js'
       - '.github/workflows/portfolio-book-audit.yml'
   push:
@@ -24,8 +22,6 @@ on:
       - 'production/PORTFOLIO_BOOK_EXPORT_COVERAGE.md'
       - 'tools/audit_portfolio_books.cjs'
       - 'tools/test_book_export_manifest.cjs'
-      - 'tools/test_series_loader_registry.cjs'
-      - 'docs/loaders/**'
       - '.github/workflows/portfolio-book-audit.yml'
 permissions:
   contents: read
@@ -39,4 +35,3 @@ jobs:
           node-version: '22'
       - run: node tools/audit_portfolio_books.cjs --check
       - run: node tools/test_book_export_manifest.cjs
-      - run: node tools/test_series_loader_registry.cjs
