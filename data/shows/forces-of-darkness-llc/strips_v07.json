@@ -1273,54 +1273,49 @@
     "source": "Original new candidate based on series premises; no historic script claimed",
     "sourceStatus": "new-series-premise-candidate",
     "editorialStatus": "sharpened-unapproved",
-    "theme": "treasury access control",
+    "theme": "biometric treasury controls",
     "setting": "treasure-vault",
     "region": "R_fod_fortress",
     "characters": [
       "C_fod_smugesh",
       "C_fod_burz"
     ],
-    "summary": "The Vault Key — Burz requests the key to an armory payroll chest inside Smugesh's hoard",
+    "summary": "The Vault Key — Burz presents a payroll chest locked by Smugesh's living-scale signature while a line of unpaid orcs forms outside.",
     "panelPlan": [
       {
         "panel": 1,
-        "action": "Burz requests the key to an armory payroll chest inside Smugesh's hoard",
+        "action": "Burz presents a payroll chest locked by Smugesh's living-scale signature while a line of unpaid orcs forms outside.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 2,
-        "action": "Smugesh places a claw on a magical lock that only responds to dragon scales",
+        "action": "Smugesh presses his claw to the lock, which opens for one moment before snapping shut again.",
         "dialogueIndices": [
           1
         ]
       },
       {
         "panel": 3,
-        "action": "Burz gestures at unpaid guards gathering outside the hoard",
+        "action": "Burz tries to withdraw a payroll sack while the chest relocks and Smugesh withdraws his claw.",
         "dialogueIndices": [
-          2,
-          3
+          2
         ]
       }
     ],
     "dialogueInline": [
       {
         "speaker": "Burz",
-        "text": "The troops haven't been paid for two months."
+        "text": "Payday. Could you open the payroll chest?"
       },
       {
         "speaker": "Smugesh",
-        "text": "Security requires a single trusted custodian."
+        "text": "Security requires my living signature each time it opens."
       },
       {
         "speaker": "Burz",
-        "text": "They'll mutiny if you don't open it."
-      },
-      {
-        "speaker": "Smugesh",
-        "text": "See? This is why the gold needs protection."
+        "text": "You have to keep your claw there until I pay everyone?"
       }
     ],
     "direction": [
@@ -1358,7 +1353,7 @@
     "promptCharacterMode": "full",
     "status": "selected-draft",
     "directionInline": [
-      "Maintain production master 3600×1800, clean masthead, consistent cast faces and costumes, repeated props, and vivid evil-fantasy operations. Avoid added text, extra equipment or generic castle decoration."
+      "Keep one continuous and uncluttered scene across all panels, using the same identifiable props and costumes; characters and visual evil-work context remain consistent, with final panel reversal clear and crop-safe."
     ]
   },
   {
@@ -2137,58 +2132,53 @@
     "unit": "STRIP",
     "issue": 7,
     "page": 23,
-    "title": "Misrouted Tribute",
+    "title": "Counterfeit Tribute",
     "source": "Original new candidate based on series premises; no historic script claimed",
     "sourceStatus": "new-series-premise-candidate",
     "editorialStatus": "sharpened-unapproved",
-    "theme": "captured goods logistics",
+    "theme": "internal raider theft",
     "setting": "supply-yard",
     "region": "R_fod_fortress",
     "characters": [
       "C_fod_hork",
       "C_fod_lady_raindew"
     ],
-    "summary": "Misrouted Tribute — Hork searches for a wagon of tribute stolen from a border village",
+    "summary": "Counterfeit Tribute — Hork drags a wagon of tribute coins past Lady Raindew's elven border post, boasting about the haul.",
     "panelPlan": [
       {
         "panel": 1,
-        "action": "Hork searches for a wagon of tribute stolen from a border village",
+        "action": "Hork drags a wagon of tribute coins past Lady Raindew's elven border post, boasting about the haul.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 2,
-        "action": "Lady Raindew stands at the border with the wagon safely restored to the villagers",
+        "action": "Lady Raindew rubs gold paint from one coin and reveals a painted stone; Hork's raiders slip away in the background carrying heavy bags.",
         "dialogueIndices": [
           1
         ]
       },
       {
         "panel": 3,
-        "action": "Hork sees the sacks still bear the farmers' own delivery mark",
+        "action": "Hork opens a second chest of tribute to reveal more painted stones as the stolen gold disappears with his own soldiers.",
         "dialogueIndices": [
-          2,
-          3
+          2
         ]
       }
     ],
     "dialogueInline": [
       {
         "speaker": "Hork",
-        "text": "Where did the tribute wagon go?"
+        "text": "We collected an entire wagon of tribute."
       },
       {
         "speaker": "Lady Raindew",
-        "text": "Your courier followed the address on the original sacks."
+        "text": "Your own men replaced the gold with painted stones."
       },
       {
         "speaker": "Hork",
-        "text": "We never relabeled them."
-      },
-      {
-        "speaker": "Lady Raindew",
-        "text": "We noticed."
+        "text": "They robbed us? I trained them too well."
       }
     ],
     "direction": [
@@ -2226,7 +2216,7 @@
     "promptCharacterMode": "full",
     "status": "selected-draft",
     "directionInline": [
-      "Maintain production master 3600×1800, clean masthead, consistent cast faces and costumes, repeated props, and vivid evil-fantasy operations. Avoid added text, extra equipment or generic castle decoration."
+      "Keep one continuous and uncluttered scene across all panels, using the same identifiable props and costumes; characters and visual evil-work context remain consistent, with final panel reversal clear and crop-safe."
     ]
   },
   {
@@ -2331,58 +2321,53 @@
     "unit": "STRIP",
     "issue": 7,
     "page": 25,
-    "title": "The Good Neighbor",
+    "title": "The Better Records",
     "source": "Original new candidate based on series premises; no historic script claimed",
     "sourceStatus": "new-series-premise-candidate",
     "editorialStatus": "sharpened-unapproved",
-    "theme": "moral contrast in contested lands",
+    "theme": "elven intelligence versus prisoner bureaucracy",
     "setting": "elven-front",
     "region": "R_fod_fortress",
     "characters": [
       "C_fod_lady_raindew",
-      "C_fod_eric"
+      "C_fod_burz"
     ],
-    "summary": "The Good Neighbor — Eric watches Lady Raindew's people build a shelter outside an occupied village",
+    "summary": "The Better Records — Burz meets Lady Raindew at a defended elven checkpoint and refuses to disclose the company's prisoner list.",
     "panelPlan": [
       {
         "panel": 1,
-        "action": "Eric watches Lady Raindew's people build a shelter outside an occupied village",
+        "action": "Burz meets Lady Raindew at a defended elven checkpoint and refuses to disclose the company's prisoner list.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 2,
-        "action": "Lady Raindew welcomes displaced families while distant orc patrols return to the fortress",
+        "action": "Lady Raindew unfolds a complete cell-by-cell list of captured elves, compiled by her own scouts.",
         "dialogueIndices": [
           1
         ]
       },
       {
         "panel": 3,
-        "action": "Eric sees a child share bread with another refugee in the new shelter",
+        "action": "Burz compares Raindew's accurate prisoner list with his visibly incomplete, stained dungeon roster.",
         "dialogueIndices": [
-          2,
-          3
+          2
         ]
       }
     ],
     "dialogueInline": [
       {
-        "speaker": "Eric",
-        "text": "Doesn't helping them make the war harder to win?"
+        "speaker": "Burz",
+        "text": "Prisoner records are confidential."
       },
       {
         "speaker": "Lady Raindew",
-        "text": "It gives people somewhere to live after the fighting."
+        "text": "We already know every name and every cell."
       },
       {
-        "speaker": "Eric",
-        "text": "We could have built shelters too."
-      },
-      {
-        "speaker": "Lady Raindew",
-        "text": "You still can."
+        "speaker": "Burz",
+        "text": "Could I have a copy? Our records are incomplete."
       }
     ],
     "direction": [
@@ -2420,7 +2405,7 @@
     "promptCharacterMode": "full",
     "status": "selected-draft",
     "directionInline": [
-      "Maintain production master 3600×1800, clean masthead, consistent cast faces and costumes, repeated props, and vivid evil-fantasy operations. Avoid added text, extra equipment or generic castle decoration."
+      "Keep one continuous and uncluttered scene across all panels, using the same identifiable props and costumes; characters and visual evil-work context remain consistent, with final panel reversal clear and crop-safe."
     ]
   }
 ]
