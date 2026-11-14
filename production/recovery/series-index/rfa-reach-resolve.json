@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rfa-reach-resolve",
+  "sourcePackage": "data/shows/rfa-reach-resolve/",
+  "auditScope": "source-shelf subject inventory, not evidence of visual approval",
+  "authorityNote": "Rex Fleet shared released style does not confer approval upon unreleased spinoff-specific characters, vessels or environments.",
+  "subjectShelves": {
+    "characters": {
+      "source": "data/shows/rfa-reach-resolve/characters.json",
+      "subjects": [
+        {
+          "id": "C_merin",
+          "name": "Professor Talia Merin",
+          "handle": "@starsplit.academy.talia.merin"
+        },
+        {
+          "id": "C_oren",
+          "name": "Cadet Oren Pell",
+          "handle": "@starsplit.academy.oren.pell"
+        },
+        {
+          "id": "C_jo",
+          "name": "Cadet Jo Ardin",
+          "handle": "@starsplit.academy.jo.ardin"
+        },
+        {
+          "id": "C_senn",
+          "name": "Cadet Senn Tal",
+          "handle": "@starsplit.academy.senn.tal"
+        },
+        {
+          "id": "C_nadi",
+          "name": "Cadet Nadi Voss",
+          "handle": "@starsplit.academy.nadi.voss"
+        },
+        {
+          "id": "C_ava",
+          "name": "Ava Seltos",
+          "handle": "@starsplit.ava.seltos"
+        },
+        {
+          "id": "C_ruben",
+          "name": "Ruben Markham",
+          "handle": "@starsplit.ruben.markham"
+        },
+        {
+          "id": "C_mira",
+          "name": "Mira Cale",
+          "handle": "@starsplit.academy.case.mira.cale"
+        },
+        {
+          "id": "C_eshen",
+          "name": "Eshen Varr",
+          "handle": "@starsplit.academy.case.eshen.varr"
+        }
+      ]
+    },
+    "settings": {
+      "source": "data/shows/rfa-reach-resolve/settings.json",
+      "subjects": [
+        {
+          "id": "RRA_Academy_Lecture",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RRA_Academy_ArchiveLab",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RRA_Prototype_Interior",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RRA_Orison",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RRA_Varda",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RRA_Varda_Maintenance",
+          "name": null,
+          "handle": null
+        }
+      ]
+    },
+    "factions": {
+      "source": "data/shows/rfa-reach-resolve/factions.json",
+      "subjects": [
+        {
+          "id": "F_Academy",
+          "name": "Rex Fleet Academy",
+          "handle": null
+        },
+        {
+          "id": "F_EarlyRelief",
+          "name": "Early Multiworld Relief Crew",
+          "handle": null
+        },
+        {
+          "id": "F_Orison",
+          "name": "Orison Habitat",
+          "handle": null
+        },
+        {
+          "id": "F_Varda",
+          "name": "Varda Settlement",
+          "handle": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet-academy-anomalies",
+  "sourcePackage": "data/shows/rex-fleet-academy-anomalies/",
+  "auditScope": "source-shelf subject inventory, not evidence of visual approval",
+  "authorityNote": "Rex Fleet shared released style does not confer approval upon unreleased spinoff-specific characters, vessels or environments.",
+  "subjectShelves": {
+    "characters": {
+      "source": "data/shows/rex-fleet-academy-anomalies/characters.json",
+      "subjects": [
+        {
+          "id": "C_jia_morgan",
+          "name": "Jia Morgan",
+          "handle": "@starsplit.jia.morgan"
+        },
+        {
+          "id": "C_talia_quist",
+          "name": "Cadet Talia Quist",
+          "handle": "@starsplit.talia.quist"
+        },
+        {
+          "id": "C_jonah_creel",
+          "name": "Cadet Jonah Creel",
+          "handle": "@starsplit.jonah.creel"
+        },
+        {
+          "id": "C_jori_kest",
+          "name": "Cadet Jori Kest",
+          "handle": "@starsplit.jori.kest"
+        },
+        {
+          "id": "C_amel_varo",
+          "name": "Cadet Amel Varo",
+          "handle": "@starsplit.amel.varo"
+        }
+      ]
+    },
+    "settings": {
+      "source": "data/shows/rex-fleet-academy-anomalies/settings.json",
+      "subjects": [
+        {
+          "id": "RFAA_Lecture_Lab",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RFAA_Simulation_Skiff",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RFAA_Observation_Deck",
+          "name": null,
+          "handle": null
+        },
+        {
+          "id": "RFAA_SIM_EDDY_BOUNDARY",
+          "name": null,
+          "handle": null
+        }
+      ]
+    },
+    "factions": {
+      "source": "data/shows/rex-fleet-academy-anomalies/factions.json",
+      "subjects": [
+        {
+          "id": "F_Fleet",
+          "name": "Fleet / Reach and Resolve",
+          "handle": null
+        },
+        {
+          "id": "F_Academy",
+          "name": "Fleet Academy",
+          "handle": null
+        },
+        {
+          "id": "F_Lattice",
+          "name": "Lattice Research / Corridor Exploration",
+          "handle": null
+        }
+      ]
+    }
+  }
+}

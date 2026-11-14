@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet-stormwell-archive",
+  "sourcePackage": "data/shows/rex-fleet-stormwell-archive-s1/",
+  "auditScope": "source-shelf subject inventory, not evidence of visual approval",
+  "authorityNote": "Rex Fleet shared released style does not confer approval upon unreleased spinoff-specific characters, vessels or environments.",
+  "subjectShelves": {
+    "characters": {
+      "source": "data/shows/rex-fleet-stormwell-archive-s1/characters.json",
+      "subjects": [
+        {
+          "id": "C_imani_rusk",
+          "name": "Dr. Imani Rusk",
+          "handle": "@starsplit.imani.rusk"
+        },
+        {
+          "id": "C_keo_maren",
+          "name": "Keo Maren",
+          "handle": "@starsplit.keo.maren"
+        },
+        {
+          "id": "C_ansel_korr",
+          "name": "Chief Ansel Korr",
+          "handle": "@starsplit.ansel.korr"
+        },
+        {
+          "id": "C_captain_arden",
+          "name": "Captain Lysa Arden",
+          "handle": "@starsplit.lysa.arden"
+        },
+        {
+          "id": "C_mara_veld",
+          "name": "Mara Veld",
+          "handle": "@starsplit.mara.veld"
+        },
+        {
+          "id": "C_archivist_selene_stormwell",
+          "name": "Archivist Selene Stormwell",
+          "handle": "@starsplit.selene.stormwell"
+        }
+      ]
+    },
+    "settings": {
+      "source": "data/shows/rex-fleet-stormwell-archive-s1/settings.json",
+      "subjects": [
+        {
+          "id": "stormwell-evidence-lock",
+          "name": "Stormwell Archive — Evidence Lock",
+          "handle": null
+        },
+        {
+          "id": "stormwell-forensic-lab",
+          "name": "Stormwell Archive — Forensic Reconstruction Lab",
+          "handle": null
+        },
+        {
+          "id": "stormwell-analysis-gallery",
+          "name": "Stormwell Archive — Analysis Gallery",
+          "handle": null
+        },
+        {
+          "id": "stormwell-bridge",
+          "name": "Stormwell Archive — Bridge",
+          "handle": null
+        },
+        {
+          "id": "stormwell-hardware-vault",
+          "name": "Stormwell Archive — Hardware Reference Vault",
+          "handle": null
+        },
+        {
+          "id": "far-lantern-wreck",
+          "name": "Far Lantern Wreck Site",
+          "handle": null
+        },
+        {
+          "id": "lattice-harrow-fold",
+          "name": "Harrow Fold — Lattice Margin",
+          "handle": null
+        },
+        {
+          "id": "civil-survey-office",
+          "name": "Civil Survey Service — Remote Cartography Office",
+          "handle": null
+        }
+      ]
+    },
+    "factions": {
+      "source": "data/shows/rex-fleet-stormwell-archive-s1/factions.json",
+      "subjects": [
+        {
+          "id": "fleet",
+          "name": "Rex Fleet",
+          "handle": null
+        },
+        {
+          "id": "stormwell-service",
+          "name": "Stormwell Archive Service",
+          "handle": null
+        },
+        {
+          "id": "civil-survey",
+          "name": "Civil Survey Service",
+          "handle": null
+        }
+      ]
+    }
+  }
+}

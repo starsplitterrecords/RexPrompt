@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "seriesId": "rex-fleet-academy-core-worlds",
+  "sourcePackage": "data/shows/rex-fleet-academy-core-worlds/",
+  "auditScope": "source-shelf subject inventory, not evidence of visual approval",
+  "authorityNote": "Rex Fleet shared style references may inform Academy art but do not approve unillustrated instructors, academy equipment or contemporary interiors.",
+  "subjectShelves": {
+    "characters": {
+      "source": "data/shows/rex-fleet-academy-core-worlds/characters.json",
+      "subjects": [
+        {
+          "id": "C_aven_teral",
+          "name": "Professor Aven Teral",
+          "handle": "@starsplit.academy.aven.teral"
+        },
+        {
+          "id": "C_lysa_renn",
+          "name": "Cadet Lysa Renn",
+          "handle": "@starsplit.academy.lysa.renn"
+        },
+        {
+          "id": "C_corin_bale",
+          "name": "Cadet Corin Bale",
+          "handle": "@starsplit.academy.corin.bale"
+        },
+        {
+          "id": "C_jalen_kesh",
+          "name": "Cadet Jalen Kesh",
+          "handle": "@starsplit.academy.jalen.kesh"
+        },
+        {
+          "id": "C_ma_neris",
+          "name": "Ma Neris",
+          "handle": "@starsplit.academy.ma.neris"
+        },
+        {
+          "id": "C_tomas_kade",
+          "name": "Tomas Kade",
+          "handle": "@starsplit.academy.tomas.kade"
+        }
+      ]
+    },
+    "settings": {
+      "source": "data/shows/rex-fleet-academy-core-worlds/settings.json",
+      "subjects": [
+        {
+          "id": "S_AcademyCartography",
+          "name": "Rex Fleet Academy Systems Theater",
+          "handle": null
+        },
+        {
+          "id": "S_CrownGalleryTransit",
+          "name": "Crown Gallery Transit Walk",
+          "handle": null
+        },
+        {
+          "id": "S_AnchorMarketsCore",
+          "name": "Bastion Spire Anchor Markets",
+          "handle": null
+        },
+        {
+          "id": "S_NerisStall",
+          "name": "Ma Neris Shatterbread Stall",
+          "handle": null
+        },
+        {
+          "id": "S_MeridianFerry",
+          "name": "Bastion–Meridian Passenger Ferry",
+          "handle": null
+        },
+        {
+          "id": "S_CoreSpireLogistics",
+          "name": "Core Spire Station Logistics Ring",
+          "handle": null
+        }
+      ]
+    },
+    "factions": {
+      "source": "data/shows/rex-fleet-academy-core-worlds/factions.json",
+      "subjects": [
+        {
+          "id": "F_RFAcademy",
+          "name": "Rex Fleet Academy",
+          "handle": null
+        },
+        {
+          "id": "F_CoreCivil",
+          "name": "Core Civil Administration",
+          "handle": null
+        },
+        {
+          "id": "F_FleetLogistics",
+          "name": "Fleet and Civil Corridor Logistics",
+          "handle": null
+        }
+      ]
+    }
+  }
+}
