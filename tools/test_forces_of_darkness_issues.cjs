@@ -16,6 +16,7 @@ const fod=fodShows[0];
 assert.equal(fod.id,'forces-of-darkness-llc');
 assert.equal(fod.name,'The Forces of Darkness, LLC.');
 assert.equal(fod.issues?.length,2,'Expected two nested issues');
+assert.deepEqual(Array.from(fod.scenesFiles),['strips_v01.json','strips_v02.json'],'One parent must expose both scripts to portfolio audits');
 const issueChoices=Array.from(canonicalIssueList(Array.from(allShows.flatMap(expandIssues)))).filter(i=>i.seriesId==='forces-of-darkness-llc');
 assert.equal(issueChoices.length,2,'Issue selector must expose exactly Issue 1 and Issue 2');
 assert.equal(new Set(issueChoices.map(i=>i.issueId)).size,2,'Issue IDs must be distinct');

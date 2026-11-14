@@ -82,6 +82,7 @@ A series that shares one set of character, setting, faction, and art-direction s
   "seriesId": "forces-of-darkness-llc",
   "basePath": "data/shows/forces-of-darkness-llc",
   "unitLabel": "STRIP",
+  "scenesFiles": ["strips_v01.json", "strips_v02.json"],
   "issues": [
     {"number": 1, "id": "forces-of-darkness-llc-v01", "label": "Issue 1", "scenesFiles": ["strips_v01.json"], "includeIdPattern": "^FOD_V01_S"},
     {"number": 2, "id": "forces-of-darkness-llc-v02", "label": "Issue 2", "scenesFiles": ["strips_v02.json"], "includeIdPattern": "^FOD_V02_S"}
@@ -89,7 +90,7 @@ A series that shares one set of character, setting, faction, and art-direction s
 }
 ```
 
-The real entry also retains its established `generationLine` and shared production settings. The assembler expands these nested definitions into **Issue** choices beneath one **Series** choice; each issue loads only its own scenes while resolving the same shared shelves. This preserves original source files and selection IDs. New 25-strip issues append to the same `issues` array. Do not create a new top-level show for another issue in the same series.
+The real entry also retains its established `generationLine` and shared production settings. The top-level `scenesFiles` list provides a complete 50-strip source inventory for production audits; the nested `issues[*].scenesFiles` select only the relevant 25 recipes when assembling that issue. The assembler expands these nested definitions into **Issue** choices beneath one **Series** choice; each issue loads only its own scenes while resolving the same shared shelves. This preserves original source files and selection IDs. New 25-strip issues append to the same `issues` array. Do not create a new top-level show for another issue in the same series.
 
 ## Package-local production configuration
 

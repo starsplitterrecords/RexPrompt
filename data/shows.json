@@ -12,7 +12,7 @@
     "promptPanelMode": "clean",
     "promptDialogueMode": "grouped",
     "compactDialogue": true,
-    "formatNote": "One independent three-panel strip per recipe, arranged in editorial A-list order. These 25 scripts are selected draft production material, not released canon.",
+    "formatNote": "One series with two issues of 25 three-panel strips each. Source files are indexed together for portfolio inventory, but the assembler routes them as separate issue-scoped collections. Per-issue editorial/approval status is defined on the individual records and nested issue entries.",
     "issues": [
       {
         "number": 1,
@@ -34,6 +34,11 @@
         "includeIdPattern": "^FOD_V02_S",
         "formatNote": "25 three-panel editorial adaptations of historical script ideas. All original numbering is preserved in originStripNumber and provenance. Not released canon or original transcript text."
       }
+    ],
+    "scenesFile": "strips_v01.json",
+    "scenesFiles": [
+      "strips_v01.json",
+      "strips_v02.json"
     ]
   },
   {
