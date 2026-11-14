@@ -1,0 +1,39 @@
+name: Read-only assembler integrity survey
+on:
+  pull_request:
+    paths:
+      - 'tools/survey_assembler_readability.cjs'
+      - '.github/workflows/survey-assembler-readability.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Exercise current browser assembler for every registered unit
+        shell: bash
+        run: |
+          set +e
+          node tools/test_portfolio_assembler_regression.cjs --out portfolio-regression-report.json
+          rc=$?
+          set -e
+          test -s portfolio-regression-report.json
+          echo "Existing regression exit code: $rc (mechanical failures are retained in the report)"
+      - name: Rebuild source inventory from actual registered recipes
+        run: node tools/audit_all_series_production.cjs --out portfolio-inventory-current.json
+      - name: Cross-check and export one line per page/scene/production unit
+        run: node tools/survey_assembler_readability.cjs portfolio-regression-report.json portfolio-inventory-current.json assembler-integrity-survey
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rexprompt-assembler-integrity-unit-audit
+          path: |
+            assembler-integrity-survey/**
+            portfolio-regression-report.json
+            portfolio-inventory-current.json
+          if-no-files-found: error
