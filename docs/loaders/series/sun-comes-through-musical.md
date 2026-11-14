@@ -1,6 +1,6 @@
 # IMG Sun Comes Through Musical — shared skill loader
 
-**Project identity:** Sun Comes Through Musical. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `sun-comes-through-musical-s1`.
+**Canonical seriesId:** `sun-comes-through-musical`. **Project identity:** Sun Comes Through Musical. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `sun-comes-through-musical-s1`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 

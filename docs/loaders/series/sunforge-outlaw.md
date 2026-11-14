@@ -1,6 +1,6 @@
 # IMG Sunforge Outlaw — shared skill loader
 
-**Project identity:** Sunforge Outlaw. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `sunforge-outlaw-s1-e01`, `sunforge-outlaw-s1-e02`, `sunforge-outlaw-s1-e03`, `sunforge-outlaw-s1-e04`, `sunforge-outlaw-s1-e05`, `sunforge-outlaw-s1-e06`, `sunforge-outlaw-s1-e07`, `sunforge-outlaw-s1-e08`, `sunforge-outlaw-s1-e09`, `sunforge-outlaw-s1-e10`, `sunforge-outlaw-s1-e11`, `sunforge-outlaw-s1-e12`.
+**Canonical seriesId:** `sunforge-outlaw`. **Project identity:** Sunforge Outlaw. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `sunforge-outlaw-s1-e01`, `sunforge-outlaw-s1-e02`, `sunforge-outlaw-s1-e03`, `sunforge-outlaw-s1-e04`, `sunforge-outlaw-s1-e05`, `sunforge-outlaw-s1-e06`, `sunforge-outlaw-s1-e07`, `sunforge-outlaw-s1-e08`, `sunforge-outlaw-s1-e09`, `sunforge-outlaw-s1-e10`, `sunforge-outlaw-s1-e11`, `sunforge-outlaw-s1-e12`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 
