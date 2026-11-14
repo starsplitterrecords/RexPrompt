@@ -1,6 +1,6 @@
 # IMG Rex Fleet: Thunderbreak — shared skill loader
 
-**Project identity:** Rex Fleet: Thunderbreak. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `rex-fleet-i01`, `rex-fleet-i02`, `rex-fleet-i03`, `rex-fleet-i04`, `rex-fleet-i05`, `rex-fleet-i06`, `rex-fleet-i07`, `rex-fleet-i08`, `rex-fleet-i09`, `rex-fleet-i10`, `rex-fleet-i11`, `rex-fleet-i12`.
+**Canonical seriesId:** `rex-fleet`. **Project identity:** Rex Fleet: Thunderbreak. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `rex-fleet-i01`, `rex-fleet-i02`, `rex-fleet-i03`, `rex-fleet-i04`, `rex-fleet-i05`, `rex-fleet-i06`, `rex-fleet-i07`, `rex-fleet-i08`, `rex-fleet-i09`, `rex-fleet-i10`, `rex-fleet-i11`, `rex-fleet-i12`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 
