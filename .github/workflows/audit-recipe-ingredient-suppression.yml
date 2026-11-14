@@ -1,0 +1,34 @@
+name: Create page-by-page recipe suppression audit
+on:
+  push:
+    branches:
+      - audit/recipe-ingredient-suppression-20261107
+    paths:
+      - 'tools/audit_recipe_ingredient_suppression.cjs'
+      - '.github/workflows/audit-recipe-ingredient-suppression.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/recipe-ingredient-suppression-20261107
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inspect canonical assembled ingredients on every page
+        run: node tools/audit_recipe_ingredient_suppression.cjs
+      - name: Save full series and page evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/recipe-suppression/2026-11-07
+          if ! git diff --cached --quiet; then
+            git commit -m "Record effective series, issue and page ingredient-suppression audit"
+            git fetch origin audit/recipe-ingredient-suppression-20261107
+            git rebase origin/audit/recipe-ingredient-suppression-20261107
+            git push origin HEAD:audit/recipe-ingredient-suppression-20261107
+          fi
