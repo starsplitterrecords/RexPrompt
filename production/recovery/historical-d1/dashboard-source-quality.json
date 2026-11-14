@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "semantics": "Only findings supported by the stated audit are recorded. Lack of a finding means no test result, never a pass.",
+  "findings": [
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i01",
+      "kind": "native-resolution-and-aspect",
+      "severity": "blocking",
+      "observation": "October 25 source preflight decoded 22/22 approved images; only P18 and the closing editorial were 2400×3840. Most others were approximately 1024×1536, with mixed aspect ratios and absent embedded color-profile indicators.",
+      "evidence": "https://github.com/starsplitterrecords/RexPrompt/actions/runs/40260546362",
+      "gate": "Full-size original review, target trim/pixels, color profile and sequential issue grading required; not mastered."
+    },
+    {
+      "seriesId": "azure-reach",
+      "issueId": "azure-reach-s1-e02",
+      "kind": "native-resolution",
+      "severity": "blocking",
+      "observation": "October 25 source preflight found 11 decodable approved images with dimensions predominantly approximately 1024×1536; production trim/DPI adequacy remains unresolved.",
+      "evidence": "https://github.com/starsplitterrecords/RexPrompt/actions/runs/40260546362",
+      "gate": "Native-resolution review and mastering before any export approval."
+    },
+    {
+      "seriesId": "division-threshold",
+      "kind": "canonical-reference-integrity",
+      "severity": "needs-recovery",
+      "observation": "The historical Checkpoint 9 page-language sample is malformed and its Keeper mirror was intentionally unindexed. Not a current validated canon reference.",
+      "evidence": "https://github.com/starsplitterrecords/RexPrompt/pull/304",
+      "gate": "Recover a valid, pixel-inspected original before reindexing."
+    },
+    {
+      "seriesId": "rex-fleet",
+      "issueId": "rex-fleet-i01",
+      "kind": "released-asset-integrity",
+      "severity": "blocking",
+      "observation": "Public reader pages 002, 004, 009, 011 and 015 are hash-locked known JPEG EOF integrity defects; published reader state remains canonical but the images are not validated masters.",
+      "evidence": "https://github.com/starsplitterrecords/StarSplitterVisions/issues/137",
+      "gate": "Recover/replace approved artwork and remove byte-locked exception after full visual QC."
+    },
+    {
+      "seriesId": "stardust-station",
+      "issueId": "stardust-station",
+      "kind": "released-asset-integrity",
+      "severity": "blocking",
+      "observation": "Published Issue 1 reader page 020 has a known invalid JPEG EOF marker.",
+      "evidence": "https://github.com/starsplitterrecords/StarSplitterVisions/issues/137",
+      "gate": "Recover/replace and pass strict public-release audit."
+    }
+  ]
+}
