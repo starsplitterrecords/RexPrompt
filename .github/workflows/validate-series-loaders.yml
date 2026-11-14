@@ -1,0 +1,26 @@
+name: Verify current series loader registry
+on:
+  pull_request:
+    paths:
+      - 'docs/loaders/**'
+      - 'data/shows.json'
+      - 'tools/test_series_loader_registry.cjs'
+      - '.github/workflows/validate-series-loaders.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/loaders/**'
+      - 'data/shows.json'
+      - 'tools/test_series_loader_registry.cjs'
+      - '.github/workflows/validate-series-loaders.yml'
+permissions:
+  contents: read
+jobs:
+  verify-loaders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/test_series_loader_registry.cjs

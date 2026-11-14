@@ -26,7 +26,11 @@ const visited=new Set(),active=new Set();
 function dfs(id){if(active.has(id))fail('dependency cycle '+id);if(visited.has(id))return;active.add(id);for(const d of nodes.get(id).dependencies)dfs(d);active.delete(id);visited.add(id)}
 for(const id of ids)dfs(id);
 const index=JSON.parse(fs.readFileSync(path.join(root,'docs/loaders/series-index.json'),'utf8'));
-if(index.profiles.length!==24)fail('must have 24 IMG series loaders');
+const shows=JSON.parse(fs.readFileSync(path.join(root,'data/shows.json'),'utf8'));
+const seriesIds=new Set(shows.map(x=>x.seriesId));
+if(index.profiles.length!==seriesIds.size)fail('IMG series loader count must match current registry');
+const indexed=new Set(index.profiles.flatMap(x=>x.showIds));
+if(indexed.size!==shows.length||shows.some(x=>!indexed.has(x.id)))fail('loader selectors must match current production configurations');
 for(const x of index.profiles){if(!x.showIds.length)fail('empty show selector '+x.id);if(!fs.existsSync(path.join(root,x.path)))fail('missing loader '+x.path);const t=fs.readFileSync(path.join(root,x.path),'utf8');if(!t.includes('SKILLS_COMMIT_SHA')||!t.includes('production/approval-policy.json'))fail('loader contract '+x.id)}
 if(!fs.existsSync(path.join(root,'docs/loaders/visions.md')))fail('missing Visions loader');
 console.log('validated '+registry.skills.length+' skills, '+index.profiles.length+' IMG loaders, one Visions loader');

@@ -1,6 +1,6 @@
 # IMG Azure Reach — shared skill loader
 
-**Project identity:** Azure Reach. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `azure-reach-s1`, `azure-reach-s1-e02`, `azure-reach-s1-e03`, `azure-reach-s1-e04`, `azure-reach-s1-e05`, `azure-reach-s1-e06`, `azure-reach-s1-covers`.
+**Canonical seriesId:** `azure-reach`. **Project identity:** Azure Reach. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `azure-reach-s1`, `azure-reach-s1-e02`, `azure-reach-s1-e03`, `azure-reach-s1-e04`, `azure-reach-s1-e05`, `azure-reach-s1-e06`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 

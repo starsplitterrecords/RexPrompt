@@ -1,6 +1,6 @@
 # IMG Vikings — shared skill loader
 
-**Project identity:** Vikings. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `vikings-2026-s1-e01`, `vikings-2026-s1-e02`, `vikings-2026-s1-e03`, `vikings-2026-s1-e04`, `vikings-2026-s1-e05`, `vikings-2026-s1-e06`, `vikings-2026-s1-e07`, `vikings-2026-s1-e08`, `vikings-2026-s1-e09`, `vikings-2026-s1-e10`, `vikings-2026-s1-e11`, `vikings-2026-s1-e12`.
+**Canonical seriesId:** `vikings-2026`. **Project identity:** Vikings. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `vikings-2026-s1-e01`, `vikings-2026-s1-e02`, `vikings-2026-s1-e03`, `vikings-2026-s1-e04`, `vikings-2026-s1-e05`, `vikings-2026-s1-e06`, `vikings-2026-s1-e07`, `vikings-2026-s1-e08`, `vikings-2026-s1-e09`, `vikings-2026-s1-e10`, `vikings-2026-s1-e11`, `vikings-2026-s1-e12`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 

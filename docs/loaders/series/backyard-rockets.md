@@ -1,6 +1,6 @@
 # IMG Backyard Rockets — shared skill loader
 
-**Project identity:** Backyard Rockets. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `backyard-rockets-s1`.
+**Canonical seriesId:** `backyard-rockets`. **Project identity:** Backyard Rockets. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `backyard-rockets-s1`, `backyard-rockets-s1-e01`, `backyard-rockets-s1-e02`, `backyard-rockets-s1-e03`, `backyard-rockets-s1-e04`, `backyard-rockets-s1-e05`, `backyard-rockets-s1-e06`, `backyard-rockets-s1-e07`, `backyard-rockets-s1-e08`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 

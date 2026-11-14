@@ -1,6 +1,6 @@
 # IMG Rex Fleet Academy: Navigating Mirrorfold — shared skill loader
 
-**Project identity:** Rex Fleet Academy: Navigating Mirrorfold. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `rex-fleet-academy-navigating-mirrorfold-i01`.
+**Canonical seriesId:** `rex-fleet-academy-navigating-mirrorfold`. **Project identity:** Rex Fleet Academy: Navigating Mirrorfold. **Selector:** verify exact relevant live `data/shows.json` entries rather than treating this display title as a stable seriesId. Verified candidate show IDs: `rex-fleet-academy-navigating-mirrorfold-i01`.
 
 **Activation:** In the project instruction, set `SKILLS_COMMIT_SHA` to an independently tested immutable RexPrompt commit SHA. Then retrieve `docs/skills/registry.json` from `starsplitterrecords/RexPrompt` at THAT SHA; read matching skill files and all mandatory dependencies, not merely their URLs. A literal placeholder, inaccessible SHA, missing permissions or disconnected connector **blocks operational use**, not a silent fallback.
 
