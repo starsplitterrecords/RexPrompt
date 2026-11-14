@@ -11,6 +11,8 @@ on:
       - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
       - 'data/shows/rex-fleet-s1/encoded/pages_i05.json.gzb64'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_forces_of_darkness_issues.cjs'
+      - 'data/shows/forces-of-darkness-llc/strips_v*.json'
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
@@ -68,6 +70,8 @@ on:
       - 'data/shows/rex-fleet-s1/encoded/pages_i04.json.gzb64'
       - 'data/shows/rex-fleet-s1/encoded/pages_i05.json.gzb64'
       - 'tools/test_prompt_assembly.cjs'
+      - 'tools/test_forces_of_darkness_issues.cjs'
+      - 'data/shows/forces-of-darkness-llc/strips_v*.json'
       - 'tools/test_rex_fleet_issue04_density.cjs'
       - 'tools/test_rex_fleet_issue05_density.cjs'
       - 'tools/test_rex_fleet_recipe_scopes.cjs'
@@ -122,6 +126,7 @@ jobs:
           node --check prompt-suppress.js
           node --check tools/validate_canonical_source_integrity.cjs
           node --check tools/test_prompt_assembly.cjs
+          node --check tools/test_forces_of_darkness_issues.cjs
           node --check tools/test_editorial_page_scopes.cjs
           node --check tools/test_recipe_sanitation_rollout.cjs
           node --check tools/test_vikings_i02_chef_sanitation.cjs
@@ -149,6 +154,8 @@ jobs:
           node --check tools/test_stardust_e02_layouts.cjs
           node --check tools/test_stardust_e02_density_scope.cjs
           node --check tools/test_stardust_e03_e10_density_scope.cjs
+      - name: Validate single-series Forces of Darkness issues
+        run: node tools/test_forces_of_darkness_issues.cjs
       - name: Test assembled page content
         run: |
           node tools/validate_canonical_source_integrity.cjs

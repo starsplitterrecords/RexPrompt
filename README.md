@@ -71,6 +71,26 @@ After copying the JSON package into its directory, add one entry to `data/shows.
 
 Series-specific source packages may remain in `data/` when they serve provenance or migration-independent production support.
 
+## One series with multiple issues
+
+A series that shares one set of character, setting, faction, and art-direction shelves should use **one top-level** `data/shows.json` entry. When an issue needs separate source recipes, put explicit `issues` records inside that entry rather than registering the same series as multiple shows:
+
+```json
+{
+  "id": "forces-of-darkness-llc",
+  "name": "The Forces of Darkness, LLC.",
+  "seriesId": "forces-of-darkness-llc",
+  "basePath": "data/shows/forces-of-darkness-llc",
+  "unitLabel": "STRIP",
+  "issues": [
+    {"number": 1, "id": "forces-of-darkness-llc-v01", "label": "Issue 1", "scenesFiles": ["strips_v01.json"], "includeIdPattern": "^FOD_V01_S"},
+    {"number": 2, "id": "forces-of-darkness-llc-v02", "label": "Issue 2", "scenesFiles": ["strips_v02.json"], "includeIdPattern": "^FOD_V02_S"}
+  ]
+}
+```
+
+The real entry also retains its established `generationLine` and shared production settings. The assembler expands these nested definitions into **Issue** choices beneath one **Series** choice; each issue loads only its own scenes while resolving the same shared shelves. This preserves original source files and selection IDs. New 25-strip issues append to the same `issues` array. Do not create a new top-level show for another issue in the same series.
+
 ## Package-local production configuration
 
 A show may optionally provide `assembler.json` in its `basePath`. This augments or overrides the manifest entry without adding show-specific logic to `index.html`.

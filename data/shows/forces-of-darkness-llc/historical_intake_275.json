@@ -1985,5 +1985,25 @@
       "kind": "prior chat",
       "note": "Historical creative runs and original numbered catalog; only excerpts and summaries retrievable in current context"
     }
-  ]
+  ],
+  "assemblyOrganization": {
+    "seriesId": "forces-of-darkness-llc",
+    "manifest": "data/shows.json",
+    "topLevelShowEntries": 1,
+    "issues": [
+      {
+        "number": 1,
+        "id": "forces-of-darkness-llc-v01",
+        "file": "strips_v01.json",
+        "stripCount": 25
+      },
+      {
+        "number": 2,
+        "id": "forces-of-darkness-llc-v02",
+        "file": "strips_v02.json",
+        "stripCount": 25
+      }
+    ],
+    "futureIssueRule": "Add issues to the same top-level series; one 25-strip canonical JSON file per issue; do not create a new show."
+  }
 }
