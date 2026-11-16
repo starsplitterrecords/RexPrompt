@@ -2200,11 +2200,11 @@
       "C_fod_lady_raindew",
       "C_fod_villager"
     ],
-    "summary": "A Different Kind of Victory — Lady Raindew arrives to liberate an occupied village and is greeted by the mayor.",
+    "summary": "A Different Kind of Victory — Lady Raindew arrives to liberate the occupied village, whose mayor has deliberately waited for the orcs to complete a fortress before handing it over.",
     "panelPlan": [
       {
         "panel": 1,
-        "action": "Lady Raindew arrives to liberate an occupied village and is greeted by the mayor.",
+        "action": "Lady Raindew, in established green-and-gold elven attire, offers to liberate the occupied village. The delighted human mayor greets her; elven guards and a few villagers stand behind them. Establish the village street with a single orc-built occupation fortress farther down the same street, not an extra fortress on a hill or in the sky.",
         "dialogueIndices": [
           0,
           1
@@ -2212,7 +2212,7 @@
       },
       {
         "panel": 2,
-        "action": "The mayor points at a stout new occupation fortress built in the center of town.",
+        "action": "The mayor proudly gestures toward that SAME fortress, now seen closer. Make its origin indisputable: green orc masons and laborers in rough brown work armor lay the last gray stone blocks, a simple timber scaffold and a small handcart remain, and maroon banners bear the company's angular gold evil-eye sigil. The structure is one connected fortification, not multiple duplicated castles. Raindew looks skeptical.",
         "dialogueIndices": [
           2,
           3
@@ -2220,7 +2220,7 @@
       },
       {
         "panel": 3,
-        "action": "The mayor reveals that successive invasions were the only way to obtain the new infrastructure.",
+        "action": "Same village street and SAME newly completed orc-built fortress from panel 2, with matching gate, towers, banners, stonework and construction scaffold; change only camera framing, not architecture. Orc builders finish up in the background. The mayor smiles and offers the scheme's payoff, and Lady Raindew gives him a dry, unimpressed side-eye. Maintain clean negative space for the final balloon.",
         "dialogueIndices": [
           4
         ]
@@ -2229,23 +2229,23 @@
     "dialogueInline": [
       {
         "speaker": "Lady Raindew",
-        "text": "We can free you by morning."
+        "text": "We've come to liberate your village."
       },
       {
         "speaker": "Villager",
-        "text": "We appreciate that."
+        "text": "Oh, wonderful! We were hoping you'd arrive."
       },
       {
         "speaker": "Villager",
-        "text": "But please don't destroy the fortress."
+        "text": "The orcs just finished building us a new fortress."
       },
       {
         "speaker": "Lady Raindew",
-        "text": "Why not?"
+        "text": "And?"
       },
       {
         "speaker": "Villager",
-        "text": "It took us three invasions to get them to build it."
+        "text": "We thought we'd let you take it before they sent us the bill."
       }
     ],
     "direction": [
@@ -2253,7 +2253,7 @@
     ],
     "pageLayout": {
       "composition": "grid",
-      "visualPriority": "Three clear sequential beats; allow the final-panel reaction or visual reversal to land without competing lettering.",
+      "visualPriority": "Three clear sequential beats: welcoming elven liberators; unmistakably orc-built fortress nearing completion; mayor's billing dodge and Raindew's deadpan response. A single fortress appears consistently, never duplicated in the skyline.",
       "readingFlow": "Left to right across three distinct equal-width panels; preserve line order and speaker ownership.",
       "primaryPanel": 3,
       "panels": [
@@ -2261,23 +2261,23 @@
           "panel": 1,
           "role": "supporting",
           "scale": "medium",
-          "placement": "Left third; establish the location and premise."
+          "placement": "Left third; establish Raindew and mayor in village street with the one occupation fort in the distance."
         },
         {
           "panel": 2,
           "role": "supporting",
           "scale": "medium",
-          "placement": "Center third; develop the premise or complication."
+          "placement": "Center third; show same fort closer, actively finished by recognizable orc builders."
         },
         {
           "panel": 3,
           "role": "dominant",
           "scale": "medium",
-          "placement": "Right third; protect the visual punchline and final balloon."
+          "placement": "Right third; retain same fort and orc laborers; prioritize the mayor's final balloon and Raindew's unimpressed reaction."
         }
       ],
       "lettering": {
-        "strategy": "Place exact authored dialogue in the assigned panel, with large legible balloons and tails pointing to the correct speaker."
+        "strategy": "Place exact authored dialogue in its assigned panel with large crop-safe balloons and correct speaker tails. No additional signage, labels, paperwork text, or incidental environmental lettering; existing sigil banners only."
       }
     },
     "promptCharacterMode": "full",
