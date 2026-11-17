@@ -734,10 +734,10 @@
     "issue": 2,
     "page": 8,
     "title": "Conflict Resolution",
-    "source": "Editorially sharpened adaptation of historic original strip #27; original chat not fully exported",
+    "source": "User-directed replacement of previous Conflict Resolution concept in project conversation (2026-11-16)",
     "originStripNumber": 27,
-    "sourceStatus": "reconstructed-from-historical-dialogue-or-premise",
-    "editorialStatus": "sharpened-draft-not-user-approved",
+    "sourceStatus": "revised-from-user-approved-concept",
+    "editorialStatus": "user-approved-concept",
     "theme": "HR / violence",
     "setting": "training-room",
     "region": "R_fod_fortress",
@@ -746,47 +746,42 @@
       "C_fod_hork",
       "C_fod_orc_attendant"
     ],
-    "summary": "Conflict Resolution — Grov addresses two armed orcs beside a confiscated prisoner-processing chair; the training-room door reveals a working dungeon behind.",
+    "summary": "Conflict Resolution — Grov addresses complaints about violence between employees, and clarifies that orcs should stop giving away the company's core service to each other for free.",
     "panelPlan": [
       {
         "panel": 1,
-        "action": "Grov addresses two armed orcs beside a confiscated prisoner-processing chair; the training-room door reveals a working dungeon behind.",
+        "action": "Inside the fortress training room, Grov calmly addresses Hork and an orc dungeon attendant about complaints of violence between employees. Through the same open doorway, shackled captives and working cell guards are visibly present. No competing visual gag or explanatory signage.",
         "dialogueIndices": [
           0
         ]
       },
       {
         "panel": 2,
-        "action": "Hork and the orc attendant grasp opposite sides of the same chair and begin to draw swords.",
+        "action": "Hork, in his established large olive-green orc silhouette and brown work armor, gestures matter-of-factly toward the dungeon guards and captives: violence is the company's everyday business. The attendant remains nearby, listening, not fighting over furniture.",
         "dialogueIndices": [
-          1,
-          2
+          1
         ]
       },
       {
         "panel": 3,
-        "action": "Grov calmly checks the clipboard as both orcs brace for a fight, dungeon prisoners watching through bars.",
+        "action": "Grov faces Hork and explains the real HR concern with serene corporate pragmatism: employee-on-employee violence gives away the company's product for free. The same dungeon is visible through the door; both orcs register the dry commercial logic. Keep the final balloon unobstructed.",
         "dialogueIndices": [
-          3
+          2
         ]
       }
     ],
     "dialogueInline": [
       {
         "speaker": "Grov",
-        "text": "Today we'll learn to resolve conflict without violence."
+        "text": "We've received complaints about violence between employees."
       },
       {
         "speaker": "Hork",
-        "text": "THAT'S MY CHAIR!"
-      },
-      {
-        "speaker": "Orc attendant",
-        "text": "I WILL DESTROY YOU!"
+        "text": "We're orcs. Violence is literally our job."
       },
       {
         "speaker": "Grov",
-        "text": "Good. We've identified a practical exercise."
+        "text": "Precisely. Please stop providing it to each other for free."
       }
     ],
     "direction": [
@@ -794,7 +789,7 @@
     ],
     "pageLayout": {
       "composition": "grid",
-      "visualPriority": "Three distinct beats; final right panel carries the punchline.",
+      "visualPriority": "One coherent three-beat joke: HR complaint, orc's occupational objection, Grov's sinister commercial distinction; final right panel carries payoff.",
       "readingFlow": "Left to right through three crop-safe 1200 × 1500 story panels under the separate 300-pixel masthead.",
       "primaryPanel": 3,
       "panels": [
@@ -818,13 +813,13 @@
         }
       ],
       "lettering": {
-        "strategy": "Speech only from each panel's dialogueIndices; exact speaker, exact words, no invented prop or environmental lettering."
+        "strategy": "Exact three authored balloons, one per panel, each assigned to the correct speaker, no environmental or prop text."
       }
     },
     "promptCharacterMode": "full",
     "status": "selected-draft",
     "directionInline": [
-      "Show genuine evil-fantasy operations and concrete job consequences. Maintain one physical location or explicitly identified sightline across all three panels. Avoid background signage, written props, duplicate objects, or newly introduced words. Keep all active speaking characters visible and panel proportions exact."
+      "Keep one continuous fortress training room, consistent doorway sightline to active dungeon operations, matching character costumes, correct speaker orientation and eye contact, and sparse background objects. The humor must come from the actual company's violence-for-business model, not a chair fight. No invented signage, lettering, duplicate props, or extra gags."
     ]
   },
   {
